@@ -160,29 +160,29 @@ Yukarıda açıklanan sıfır geçici bazal etkisi ve AAPS'te AİNS azalması i�
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+AAPS'te bazal oran AİNS azalmasını dolaylı olarak etkilediği için, çok yüksek bazal oranlar çok yüksek bir İES değerini gizleyebilir. Bunun tersi de geçerlidir. Bu nedenle İES ve tepe değerini değiştirmeden önce bazal oranları dikkatlice ayarlamak mantıklıdır. Ayrıca İES ve tepe ayarlarının birbirini etkilediğini göz önünde bulundurun: İES'in etkisi tepe değerine bağlıdır, tepe değerinin etkisi de İES'e bağlıdır.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Bu grafikler, izin verilen değer aralığında İES ve tepe değerinin AİNS eğrileri üzerindeki tam etkisini gösterir.
 
-Adjusting DIA:
+İES'i ayarlama:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Tepe değerini ayarlama:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Son olarak, İES ve tepe değerinin birlikte ayarlandığı bir karşılaştırma. Buradaki mantık, iki değerin de aynı oranda değiştirilmesidir, yani `49/35 ~ 7/5`. Benzer şekilde `120/93 ~ 9/7`. Değişim oranı ikisi için de aynı olduğu sürece, başlangıçtaki İES veya tepe değeri ne olursa olsun aralıklar tutarlı kalır.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+İES ve tepe değeri bu şekilde ayarlandığında eğrideki her nokta aynı oranda kayar.
 
 ````
 
