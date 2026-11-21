@@ -39,7 +39,7 @@
 * [Профіль: «Базальна швидкість несумісна з поточною помпою»](#your-aaps-profile-basal-not-compatible)
 * [Помпа: «Дані надходять з іншої помпи»](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **«Не вдається прочитати налаштування AAPS»** під час запуску: налаштування зашифровані ключем, який Android зберігає для **AAPS**, і цей ключ більше їх не відкриває, наприклад після скидання сховища ключів телефона. Поки показано цей екран, **AAPS** не працює і не керує помпою. Натисніть **Повторити спробу**: це закриває **AAPS** і запускає його знову. Якщо це не допоможе, перезапустіть телефон. Використовуйте **Почати заново**, лише коли ніщо інше не допомагає: це відкладає файл налаштувань, який не вдається прочитати (його перейменовують і зберігають), і запускає **AAPS** з порожніми налаштуваннями. Потім імпортуйте ваш останній [експорт налаштувань](../Maintenance/ExportImportSettings.md).
 
 ### Використання
 
