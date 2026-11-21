@@ -19,7 +19,7 @@ Les tasques d'automatització es creen i es modifiquen a la pantalla **Automatit
 
 - Una o més accions que cal fer.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
+    Com una alarma, posar un percentatge del perfil o exportar la configuració d'AAPS a cada canvi de pod.
 
 
 Hi ha moltes opcions d'automatització; us recomanem estudiar-les a l'aplicació AAPS, a la secció Automatització. També podeu cercar exemples d'automatització d'altres usuaris als grups d'usuaris d'AAPS a [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) i a [**Discord**](https://discord.gg/4fQUWHZ4Mw).
@@ -38,11 +38,11 @@ L'exemple següent mostra com una **Automatització** pot estalviar passos.
 
 L'usuari fa esport cada matí a les 6:00: ha de recordar posar manualment un «Objectiu temporal Activitat (esport)» a AAPS a les 5:00, abans de fer esport.
 
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
+![Accions manuals sense automatització](../images/Automations/automation_concept_manual.png)
 
 L'usuari ha configurat una **Automatització** que activa a les 5:00 un «Objectiu temporal Activitat (esport)» perquè la seva **glucèmia** i el seu **IOB** siguin òptims per a l'esport de les 6:00:
 
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
+![Accions fetes per una automatització](../images/Automations/automation_concept_automated.png)
 
 ## Aspectes clau abans de començar amb les automatitzacions
 
@@ -50,7 +50,7 @@ L'usuari ha configurat una **Automatització** que activa a les 5:00 un «Object
 
 1. Com qualsevol tecnologia, els **CGM**, les **bombes** i els telèfons poden fallar: problemes tècnics o errors del sensor poden interrompre les accions de l'**Automatització**, i pot caldre una intervenció manual.
 
-1. **Requirements for Automations are likely to change as routines change**. Quan canvieu entre períodes de feina, d'escola o de vacances, poseu un recordatori al calendari per revisar quines **automatitzacions** estan actives (és fàcil activar-les i desactivar-les). Per exemple, si aneu de vacances i ja no necessiteu una automatització per a l'esport de l'escola o l'exercici diari, o si heu d'ajustar els horaris.
+1. **Les necessitats d'automatització probablement canviaran quan canviïn les rutines**. Quan canvieu entre períodes de feina, d'escola o de vacances, poseu un recordatori al calendari per revisar quines **automatitzacions** estan actives (és fàcil activar-les i desactivar-les). Per exemple, si aneu de vacances i ja no necessiteu una automatització per a l'esport de l'escola o l'exercici diari, o si heu d'ajustar els horaris.
 
 1. Les **automatitzacions** poden entrar en conflicte entre elles. És bo revisar amb cura la configuració de qualsevol **automatització** nova en un entorn segur, i entendre per què una **Automatització** s'ha activat o no com esperàveu.
 
@@ -91,12 +91,12 @@ Per configurar una **Automatització**, premeu el botó **+** a la pantalla Auto
 
 Per desactivar una tasca d'**Automatització**, desmarqueu la casella a l'esquerra del nom de l'**Automatització**. L'exemple següent mostra una **Automatització** activada («marcada») o desactivada («desmarcada»):
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Tasques d'automatització activades i desactivades](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Quan configureu una **Automatització**, primer la podeu provar activant l'opció «avís» a «Accions». Així **AAPS** primer mostra un avís en lloc de fer realment una acció automàtica. Quan estigueu segurs que l'avís s'ha activat a l'hora i en les condicions correctes, podeu actualitzar la tasca d'**Automatització** per substituir l'«Avís» per una «Acció».
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+![Accions d'alerta](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@ Hi ha límits de seguretat per a les **automatitzacions**:
 
 * Un **objectiu temporal** posat per una **Automatització** ha d'estar entre 72 i 180 mg/dl (o entre 4 i 10 mmol/l).
 * El **Percentatge de perfil** ha d'estar entre el 50% i el 130%.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* Hi ha un límit de temps de 5 minuts entre execucions de l'**Automatització** (i abans de la primera execució).
 
 ## Ús correcte dels valors negatius
 
@@ -127,7 +127,7 @@ Aneu amb compte quan trieu un valor negatiu a l'**Automatització**
 
 Aneu amb compte quan trieu un «valor negatiu» dins d'una «Condició» com «és més petit que» a les **automatitzacions**. Per exemple:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![Operadors de comparació](../images/Automations/automation_comparison_operators.png)
 
 **Exemple 1:** Crear una condició **«és més petit que»** «-0,1 mmol/l» (o «-2 mg/dl») farà:
 
@@ -222,15 +222,15 @@ cap
 * El **perfil** ha d'estar entre el 50% i el 130%
 * només funciona si el percentatge anterior és 100%
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**Accions:** **Canviar el suavitzat** (al grup **Llaç i insulina**)
 
 **Opcions:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
+* seleccioneu el [mètode de suavitzat](../CompatibleCgms/SmoothingBloodGlucoseData.md) que voleu fer servir. La llista és la mateixa que a **Configurador** > **Suavitzat**, i l'acció fa exactament el mateix que un canvi fet allà: el nou mètode es desa, se sincronitza amb els clients emparellats i les dades de glucèmia es tornen a suavitzar de seguida.
 * només s'executa si aquest mètode de suavitzat encara no està actiu: **AAPS** ho afegeix automàticament a la tasca com una línia «**Precondicions: El suavitzat … no està actiu**». Quan el suavitzat seleccionat ja està actiu, la tasca se salta sense avís.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* Exemple: un sensor nou sovint dona dades sorolloses durant el primer dia. Dues tasques amb l'activador **Edat del sensor** donen un filtratge més fort mentre el sensor s'estabilitza, i un suavitzat sense retard després:
+  * **Edat del sensor** menor de 24 h: **Canviar el suavitzat** a **Filtre de Kalman Unscented**
+  * **Edat del sensor** major de 24 h: **Canviar el suavitzat** a **Suavitzat per mitjana**
 
 **Accions:** **Nota** (al grup **Alertes** de la llista)
 
@@ -242,7 +242,7 @@ cap
 
 ![Els esdeveniments de l'acció Nota](../images/Automations/automation_action_careportal_events.png) ![L'acció Nota configurada com a Canvi de cànula](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**Accions:** **Enviar SMS a tots els números** (al grup **Alertes**)
 
 **Opcions:**
 
@@ -260,7 +260,7 @@ cap
 
 * trieu **On** o **Off**. Això canvia l'opció **Activar SMB** d'OpenAPS SMB, exactament com si l'haguéssiu canviat a **Configuració**, i es manté fins que vosaltres o una altra tasca la torneu a canviar.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
+**Accions:** **Executar Autotune** (al grup **Llaç i insulina**)
 
 **Opcions:**
 
@@ -270,7 +270,7 @@ cap
 
 **Opcions:**
 
-* cap. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Afegiu-la a una tasca que ha de tenir prioritat sobre les tasques que té a sota (vegeu [l'ordre de les automatitzacions](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* cap. Mentre les condicions d'una tasca amb aquesta acció es compleixen, **AAPS** no comprova les tasques que hi ha a sota a la llista. Quan les seves condicions tornen a no complir-se, les tasques de sota es comproven com sempre. Afegiu-la a una tasca que ha de tenir prioritat sobre les tasques que té a sota (vegeu [l'ordre de les automatitzacions](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Accions:** **Executar escena**, **Activar escena**, **Desactivar escena** (al grup **Escenes**)
 
@@ -280,39 +280,39 @@ cap
 
 Un cop afegida l'«Acció», cal canviar els valors per defecte pel número que voleu: feu clic als valors per defecte i ajusteu-los.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![Valors de l'acció d'objectiu temporal](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## L'ordre de les **automatitzacions** a la llista és important
- **AAPS** executarà les tasques creades per ordre de preferència, començant per la part de dalt de la llista d'**Automatització**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+ **AAPS** executarà les tasques creades per ordre de preferència, començant per la part de dalt de la llista d'**Automatització**. Per exemple, si l'**Automatització** «Baixa» és l'**Automatització** més important, per sobre de totes les altres tasques, aquesta **Automatització** ha d'aparèixer a dalt de tot de la llista d'**Automatització** de l'usuari, com es mostra a continuació:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![Llista de tasques d'automatització](../images/Automations/automation_rule_list.png)
 
-Per canviar la prioritat de les tasques d'**Automatització**, manteniu premuda la nansa **=** a la dreta de la tasca. Reorder the **Automations** by moving the rules up or down.
+Per canviar la prioritat de les tasques d'**Automatització**, manteniu premuda la nansa **=** a la dreta de la tasca. Reordeneu les **automatitzacions** movent les tasques amunt o avall.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![Reordenar les tasques d'automatització](../images/Automations/automation_rule_reorder.png)
 
 ## Com eliminar tasques d'automatització
 
 Per eliminar una tasca d'**Automatització**, feu clic a la icona de la paperera.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![Eliminar tasques d'automatització](../images/Automations/automation_rule_delete.png)
 
 ## Exemples d'automatitzacions
 
-A continuació hi ha exemples d'**automatitzacions**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. No copieu els exemples següents si no enteneu bé com funcionarà l'**Automatització**.
+A continuació hi ha exemples d'**automatitzacions**. Trobareu més debats sobre les **automatitzacions** i sobre com els usuaris han personalitzat la seva **Automatització** als grups de debat de Facebook o a Discord. No copieu els exemples següents si no enteneu bé com funcionarà l'**Automatització**.
 
 (automations-low-glucose-temp-target)=
 ### Objectiu temporal per glucèmia baixa
 
 Aquesta **Automatització** activa un **objectiu temporal** automàtic quan la **glucèmia** baixa d'un cert llindar: aquí, quan la glucèmia és més petita que 70 mg/dl, s'inicia un objectiu de 110 mg/dl durant 30 minuts:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![Exemple: tasca de glucèmia baixa](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Objectiu temporal a l'hora de dinar (amb «Ubicació»)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![Exemple: tasca del dinar](../images/Automations/automation_example_lunch_rule.png)
 
 Aquesta **Automatització** s'ha creat per a un usuari que dina a la feina cada dia feiner més o menys a la mateixa hora, però només s'activa si l'usuari és dins d'una «ubicació» definida.  Així, si un dia l'usuari no és a la feina, aquesta **Automatització** no s'activarà.
 
@@ -320,7 +320,7 @@ Aquesta **Automatització** posarà un **objectiu temporal** baix (Menjar aviat)
 
 L'«activador» d'ubicació té un nom, una posició (toqueu **Triar al mapa** o feu servir la vostra ubicació actual) i un radi en metres, i s'activa quan sou dins (o fora) de la zona:
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![Exemple: tasca del dinar amb condició d'ubicació](../images/Automations/automation_example_lunch_location_condition.png)
 
 A causa de l'enllaç «I», l'**Automatització** només passa durant l'«hora triada» i si l'usuari és a la ubicació seleccionada.
 
@@ -330,11 +330,11 @@ L'**Automatització** no s'activarà en cap altre moment en aquesta ubicació, n
 
 Fer servir un SSID de Wi-Fi és una bona opció per activar una **Automatització** quan sou dins de l'abast d'una xarxa Wi-Fi concreta (en comparació amb el GPS): és força precís, gasta menys bateria i funciona en espais tancats on el GPS i altres serveis d'ubicació potser no estan disponibles.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
+Aquí teniu un altre exemple de com posar un **objectiu temporal** només els dies feiners abans d'esmorzar (1).
 
 
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+L'**Automatització** s'activarà a les 5:30 només de dilluns a divendres (2)  
+i mentre el telèfon estigui connectat a una xarxa Wi-Fi de casa (3).
 
 
 Llavors posarà un **objectiu temporal** de 75 mg/dl durant 30 minuts (4). Un dels avantatges d'incloure la ubicació és que, per exemple, no s'activarà si l'usuari és de vacances.
@@ -350,7 +350,7 @@ Aquesta és la captura de pantalla amb el detall dels activadors de l'**Automati
 1) Sota la condició principal «I» (cal que es compleixin les dues condicions per activar-la) 1) Temps recurrent = Dl,Dt,Dc,Dj,Dv a les 5:30  
 1) WiFi SSID = My_Home_WiFi_Name
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+![Exemple: condició WiFi](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ A l'exemple següent, la tasca **Objectiu temporal per glucèmia baixa** (1) (ve
 
 Comproveu que la casella a l'esquerra del nom de l'**Automatització** està «marcada» per assegurar que la tasca està activada:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Tasques d'automatització activades i desactivades](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problema: __Les meves automatitzacions s'activen en un ordre incorrecte.__
 
