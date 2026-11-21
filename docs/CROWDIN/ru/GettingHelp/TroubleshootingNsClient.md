@@ -1,6 +1,6 @@
 (Устранение неполадок - NSClient-устранение неполадок - nsclient)=
 
-# Устранение неисправностей AAPSClient (старые названия- Клиент NS, NSClient - прим. перев.)
+# Устранение неполадок NSClient
 
 Для правильной работы AAPSClient требуется стабильное соединение с сайтом Nightscout. Нестабильная связь приводит к ошибкам синхронизации и высокой интенсивности использования данных.
 
@@ -10,7 +10,7 @@
 
 Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Если вы видите много повторных попыток соединения, то это свидетельство проблем со связью.
 
-* перезапуск
+* Перезапуск
 
 As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
@@ -44,4 +44,4 @@ If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSC
 
 Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
-Перед очисткой данных из базы данных и подумайте о передаче своих данных AAPS в проект Open Humans (для исследований). Инструкции находятся на странице конфигурации [OpenHumans](../SupportingAaps/OpenHumans.md).
+Перед очисткой базы данных, если вы еще этого не сделали, подумайте о передаче своих данных AAPS в проект Open Humans (для исследований). Инструкции находятся на странице конфигурации [OpenHumans](../SupportingAaps/OpenHumans.md).
