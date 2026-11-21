@@ -1,410 +1,410 @@
-# Automation
+# Automatisering
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-## What is an Automation?
+## Hvad er en automatisering?
 
-"**Automation**" is a feature which can automate tasks in AAPS.
+»**Automatisering**« er en funktion, der kan automatisere opgaver i AAPS.
 
-Automation performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Automatisering udfører bestemte handlinger ud fra en eller flere betingelser eller udløsere. Udløsere kan være uregelmæssige hændelser som lavt eller højt blodsukker (BS) eller en bestemt mængde negativ insulin om bord (IOB). Automatiseringer kan også klare tilbagevendende hændelser, f.eks. måltider eller motion på bestemte tidspunkter af dagen, eller når brugeren er inden for en bestemt afstand af en GPS-placering eller et område med et bestemt Wi-Fi SSID. Automatisering kan lave sikkerhedskopier af AAPS-indstillingerne efter en tidsplan eller ved hvert pod-skift.
 
-Automation rules are created and modified from the **Automation** screen (**Manage → Automation**). Each rule is defined by two properties:
+Automatiseringsregler oprettes og ændres på skærmen **Automatisering** (**Administrer → Automatisering**). Hver regel er bestemt af to dele:
 
-- One or more conditions or 'triggers' that start an action.
+- En eller flere betingelser eller »udløsere«, der starter en handling.
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    Tænk på et bestemt tidspunkt, en hændelse eller en værdi i AAPS
 
-- One or more actions to perform.
+- En eller flere handlinger, der skal udføres.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
-
-
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
-
-## How Automation can help
-
-1. **Automate recurring tasks:** Automatically executing programmed actions without user interaction.
-
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
-
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
-
-1. **Enabling AAPS to be highly customized** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
-
-The example below illustrates how an **Automation** can enable steps to be eliminated.
-
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
-
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
-
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
-
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
-
-## Key considerations before starting with Automations
-
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
-
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
-
-1. **Requirements for Automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
-
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
-
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
-
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/L for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/L for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
-
-## When can I start using Automation?
-
-**Automations** can be started in **objective 10**.
-
-## Where are Automations located in AAPS?
-
-Open **Manage** in the bottom navigation of the main screen and select **Automation**.
-
-## How can I set up an Automation?
-
-To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
-
-![Automation create](../images/Automations/automation_create.png)
-
-* give your ‘rule’ a title (Task name);
-* press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
-
-![Automation condition](../images/Automations/automation_trigger_editor.png)
-
-* add at least one trigger:
-
-![Automation triggers](../images/Automations/automation_triggers.png)
-
-* press "**ADD**" under **Action** and select one action:
-
-![Automation actions](../images/Automations/automation_actions.png)
-
-* save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
-
-![Automation activated](../images/Automations/automation_rule_activated.png)
-
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
-
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+    F.eks. en alarm, at sætte en profilprocent eller at eksportere AAPS-indstillingerne ved pod-skift.
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+Der er mange muligheder i automatisering, og brugerne opfordres til at sætte sig ind i dem i AAPS-appen, i afsnittet Automatisering. Du kan også søge i AAPS-brugergrupperne på [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) og [**Discord**](https://discord.gg/4fQUWHZ4Mw) efter eksempler på automatiseringer fra andre brugere.
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+## Sådan kan automatisering hjælpe
+
+1. **Automatiser tilbagevendende opgaver:** Programmerede handlinger bliver udført automatisk, uden at brugeren skal gøre noget.
+
+1. **Mindre beslutningstræthed:** Den største fordel ved **automatiseringer** er, at brugeren slipper for at skulle gribe ind manuelt i **AAPS**. [Forskning](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) anslår, at personer med type 1-diabetes i gennemsnit skal træffe 180 ekstra beslutninger hver dag. **Automatiseringer** kan mindske den mentale belastning, så brugeren får mere mental energi til andre dele af livet.
+
+1. **Måske bedre kontrol af blodsukkeret:** **Automatiseringer** kan f.eks. sørge for, at **midlertidige mål** altid bliver sat, når der er brug for dem, også i travle perioder, eller når man glemmer noget. Hvis et barn med diabetes f.eks. har idræt i skolen om tirsdagen kl. 10 og om torsdagen kl. 14 og skal have et højt midlertidigt mål (»TT«) sat 30 minutter før idrætten, kan det **midlertidige mål** aktiveres med en **automatisering**.
+
+1. **AAPS kan tilpasses meget**, så det er mere eller mindre aggressivt i bestemte situationer, som brugeren ønsker. For eksempel at udløse en midlertidigt lavere **profil**-% i en bestemt periode, hvis der opstår negativ **IOB** midt om natten, hvilket tyder på, at den nuværende **profil** måske er for stærk.
+
+Eksemplet nedenfor viser, hvordan en **automatisering** kan fjerne nogle trin.
+
+Brugeren træner hver morgen kl. 6: Han skal huske at sætte et »Midlertidigt mål - Aktivitet« manuelt i AAPS kl. 5, før han træner.
+
+![Manuelle handlinger uden automatisering](../images/Automations/automation_concept_manual.png)
+
+Brugeren har lavet en **automatisering**, der udløser et »Midlertidigt mål - Aktivitet« kl. 5, så **BS** og **IOB** er optimale som forberedelse til træningen kl. 6:
+
+![Handlinger udført af en automatisering](../images/Automations/automation_concept_automated.png)
+
+## Vigtige overvejelser, før du begynder med automatiseringer
+
+1. Før du opsætter visse automatiseringer, bør du have rimelig god kontrol over dit **BS** med **AAPS**. Automatiseringer må ikke bruges til at rette op på dårlige indstillinger for basal, **ISF** eller **CR** (mere om det nedenfor). Undgå at sætte et automatisk **profilskift** til at modvirke stigninger i **BS** på grund af _f.eks._ mad. Dem klarer du bedre med andre strategier (SMB'er osv.).
+
+1. Som al anden teknologi kan **CGM'er**, **pumper** og telefoner svigte: Tekniske problemer eller sensorfejl kan forstyrre handlingerne i en **automatisering**, og det kan være nødvendigt at gribe ind manuelt.
+
+1. **Behovet for automatiseringer ændrer sig sandsynligvis, når rutinerne ændrer sig**. Når du skifter mellem arbejde, skole og ferie, så sæt en påmindelse i din kalender om at gennemgå, hvilke **automatiseringer** der er aktive lige nu (de er lette at aktivere og deaktivere). For eksempel hvis du tager på ferie og ikke længere har brug for en automatisering til idræt i skolen eller daglig motion, eller hvis du skal justere tidspunkterne.
+
+1. **Automatiseringer** kan komme i konflikt med hinanden. Det er godt at gennemgå indstillingerne for nye **automatiseringer** grundigt i trygge omgivelser og forstå, hvorfor en **automatisering** måske er blevet udløst eller ikke er blevet udløst, som du forventede.
+
+1. Hvis du bruger Autosens, så prøv at bruge **midlertidige mål** i stedet for **profilskift**. **Midlertidige mål** nulstiller ikke Autosens til 0. **Profilskift** nulstiller Autosens.
+
+1. De fleste **automatiseringer** bør kun sættes for en **begrænset varighed**. Bagefter kan **AAPS** vurdere igen og gentage **automatiseringen**, hvis det er nødvendigt, og hvis betingelsen stadig er opfyldt. For eksempel »start midlertidigt mål på 7,0 mmol/l i 30 min« eller »start **profil** 110% i 10 min« _og_ »start midlertidigt mål på 5,0 mmol/l i 10 min«. Hvis du bruger **automatiseringer** til at lave varige ændringer (f.eks. til en stærkere profil-%), risikerer du hypoglykæmi.
+
+## Hvornår kan jeg begynde at bruge automatisering?
+
+**Automatiseringer** kan bruges fra **læringsmål 10**.
+
+## Hvor finder jeg automatiseringer i AAPS?
+
+Åbn **Administrer** i den nederste navigation på hovedskærmen, og vælg **Automatisering**.
+
+## Hvordan opsætter jeg en automatisering?
+
+For at opsætte en **automatisering** skal du trykke på knappen **+** på skærmen Automatisering for at oprette en »regel«:
+
+![Opret automatisering](../images/Automations/automation_create.png)
+
+* giv din »regel« en titel (navn på opgaven);
+* tryk på »**REDIGER**« under **Betingelse**. På skærmen **Betingelse** skal du vælge, hvordan udløserne kombineres (**Og**, **Eller**, **Eksklusiv eller**), og trykke på »**Tilføj udløser**«:
+
+![Betingelse for automatisering](../images/Automations/automation_trigger_editor.png)
+
+* tilføj mindst én udløser:
+
+![Udløsere for automatisering](../images/Automations/automation_triggers.png)
+
+* tryk på »**TILFØJ**« under **Handling**, og vælg én handling:
+
+![Handlinger i automatisering](../images/Automations/automation_actions.png)
+
+* gem reglen med knappen **Gem**, og sørg for, at der er »flueben« i feltet til venstre for regelnavnet, så **automatiseringen** er aktiveret:
+
+![Automatisering aktiveret](../images/Automations/automation_rule_activated.png)
+
+For at deaktivere en **automatiseringsregel** skal du fjerne fluebenet i feltet til venstre for navnet på **automatiseringen**. Eksemplet nedenfor viser en **automatisering**, der enten er aktiveret (»med flueben«) eller deaktiveret (»uden flueben«):
+
+![Automatiseringsregler slået til og fra](../images/Automations/automation_rule_activated_deactivated.png)
+
+
+Når du opsætter en **automatisering**, kan du først teste den ved at aktivere muligheden »Notifikation« under »Handlinger«. Så viser **AAPS** først en notifikation i stedet for at udføre en handling automatisk. Når du er tryg ved, at notifikationen er blevet udløst på det rigtige tidspunkt / under de rigtige betingelser, kan du opdatere **automatiseringsreglen** og erstatte »Notifikation« med en »Handling«.
+
+![Handlinger til alarmer](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
 
-**Automations** are still active when the Loop is disabled!
+**Automatiseringer** er stadig aktive, når loopet er deaktiveret!
 ```
 
 
-## When rules are checked
+## Hvornår reglerne bliver tjekket
 
-**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Rules are also checked when the phone starts charging, when the network or location changes, and when a Bluetooth device connects. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
+**AAPS** tjekker alle **automatiseringsregler**, hver gang en ny glukosemåling er behandlet. Reglerne bliver altså vurderet i samme tempo som din CGM, også mens telefonens skærm er slukket. Reglerne bliver også tjekket, når telefonen begynder at lade, når netværket eller placeringen ændrer sig, og når en Bluetooth-enhed forbinder. Der kører kun ét tjek ad gangen, så en regel, hvis handlinger tager lidt tid (f.eks. en pumpekommando), kan ikke blive udført to gange.
 
-## Safety limits
+## Sikkerhedsgrænser
 
-There are safety limits set for **Automations**:
+Der er sikkerhedsgrænser for **automatiseringer**:
 
-* A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
-* The **Profile Percentage** has to be between 50% and 130%.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* Et **midlertidigt mål**, der er sat af en **automatisering**, skal være mellem 72 og 180 mg/dl (eller 4 og 10 mmol/l).
+* **Profilprocent** skal være mellem 50% og 130%.
+* Der er en tidsgrænse på 5 minutter mellem udførelser af **automatisering** (og den første udførelse).
 
-## Correct use of negative values
+## Korrekt brug af negative værdier
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+Vær forsigtig, når du vælger en negativ værdi i **Automatisering**
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+Vær forsigtig, når du vælger en »negativ værdi« i »Betingelse«, f.eks. »er mindre end«, i **automatiseringer**. For eksempel:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![Sammenligningsoperatorer](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
+**Eksempel 1:** Hvis du opretter en betingelse **»er mindre end«** »-0,1 mmol/l« (eller »-2 mg/dl«), vil den:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+Udløs en **automatisering** for ethvert tal, som er **strengt mindre end** -0,1 (-2). Det gælder tal som -0,2, -0,3, -0,4 (-4, -6, -8) og så videre. Husk, at -0,1 (-2) selv **ikke** er med i denne betingelse. (Betingelsen »er lig med eller mindre end -0,1 mmol/l (-2 mg/dl)« _vil_ tage -0,1 mmol/l eller -2 mg/dl med).
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
+**Eksempel 2:** Hvis du opretter en betingelse »er større end« -0,1 mmol/l (-2 mg/dl), vil den:
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/L (-2mg/dL). This includes numbers like 0, 0.2, 0.4mmol/L, (0, 4, 8mg/dL) and any other positive number.
+Udløse en **automatisering** for ethvert tal, som er **større end** -0,1 mmol/l (-2 mg/dl). Det gælder tal som 0, 0,2, 0,4 mmol/l (0, 4, 8 mg/dl) og alle andre positive tal.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+Det er vigtigt, at du nøje overvejer, præcis hvad din **automatisering** skal gøre, når du vælger disse betingelser og værdier.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## Udløsere for automatisering
 
-![Automation Triggers](../images/Automations/automation_triggers.png)
+![Udløsere for automatisering](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Rul ned for at se resten af listen:
 
-![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
+![Udløsere for automatisering, fortsat](../images/Automations/automation_trigger_picker_2.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+Brugeren kan vælge mellem forskellige »udløsere«. Udløsere er de betingelser, der skal være opfyldt, for at automatiseringen bliver udført. Listen nedenfor er ikke fuldstændig:
 
-**Trigger:** connect conditions
+**Udløser:** forbind betingelser
 
-**Options:**
+**Muligheder:**
 
-Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+Flere betingelser kan forbindes med
+* »Og«
+* »Eller«
+* »Eksklusiv eller« (det betyder, at hvis én - og kun én - af betingelserne er opfyldt, bliver handlingen/handlingerne udført)
 
-**Trigger:** time vs. recurring time
+**Udløser:** tid og tilbagevendende tid
 
-**Options:**
+**Muligheder:**
 
-* time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+* tid = en enkelt hændelse på et bestemt tidspunkt
+* tilbagevendende tid = noget, der sker regelmæssigt (f.eks. en gang om ugen, hver hverdag osv.)
 
-**Trigger:** location
+**Udløser:** placering
 
-**Options:**
+**Muligheder:**
 
-* in [Settings > Automation](#preferences-maintenance-settings), the user can select their required location service.
+* i [Indstillinger > Automatisering](#preferences-maintenance-settings) kan brugeren vælge den placeringstjeneste, der skal bruges.
 
-**Trigger:** location service
+**Udløser:** placeringstjeneste
 
-**Options:**
+**Muligheder:**
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Brug passiv placering: **AAPS** henter kun placeringen, når andre apps beder om den.
+* Brug netværksplacering: placeringen af dit Wi-Fi.
+* Brug GPS-placering (Bemærk! Det kan bruge meget batteri!)
 
-**Triggers** : pump and sensor data
+**Udløsere**: pumpe- og sensordata
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* Udløser for kanylealder: findes for alle pumper
+* Udløser for insulinalder: findes for understøttede pumper
+* Udløser for batterialder: findes for understøttede pumper
+* Udløser for sensoralder: findes altid
+* Udløser for pod-aktivering: findes for patchpumper
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+Bemærk, at sammenligningen »er lig med« næppe udløses for alle udløsere, der har med alder at gøre. I det tilfælde skal du bruge to udløsere for at lave et interval
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Udløser for reservoirniveau: findes for alle pumper. Sammenligningen »NOT\_AVAILABLE« virker ikke for denne udløser, fordi værdien altid er udfyldt i **AAPS**
+* Udløser for pumpebatteriniveau: findes for understøttede pumper. Sammenligningen »NOT\_AVAILABLE« virker ikke for denne udløser, fordi værdien altid er udfyldt i **AAPS**
 
 (automations-automation-action)=
-## Action
+## Handling
 
-![Automation Actions](../images/Automations/automation_actions.png)
+![Handlinger i automatisering](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Rul ned for at se resten af listen:
 
-![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
+![Handlinger i automatisering, fortsat](../images/Automations/automation_action_picker_2.png)
 
-**Actions:** start **Temp Target**
+**Handlinger:** start **midlertidigt mål**
 
-**Options:**
+**Muligheder:**
 
-* **BG** must be between 72 mg/dL and 180 mg/dL (4 mmol/L and 10 mmol/L)
-* **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
+* **BS** skal være mellem 72 mg/dl og 180 mg/dl (4 mmol/l og 10 mmol/l)
+* **TT** virker kun, hvis der ikke allerede er et midlertidigt mål — **AAPS** tilføjer automatisk en linje »**Forudsætninger: Midlertidigt mål findes ikke**« til reglen
 
-**Actions:** stop **Temp Target**
+**Handlinger:** stop **midlertidigt mål**
 
-**Options:**
+**Muligheder:**
 
-none
+ingen
 
-**Actions:** **Profile Percentage**
+**Handlinger:** **Profilprocent**
 
-**Options:**
+**Muligheder:**
 
-* **Profile** must be between 50% and 130%
-* works only if the previous Percentage is 100%
+* **Profil** skal være mellem 50% og 130%
+* virker kun, hvis den forrige procent er 100%
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**Handlinger:** **Skift udjævning** (i gruppen **Loop & insulin**)
 
-**Options:**
+**Muligheder:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
-* runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* vælg den [udjævningsmetode](../CompatibleCgms/SmoothingBloodGlucoseData.md), der skal skiftes til. Listen er den samme som under **Konfiguration** > **Udjævning**, og handlingen gør præcis det samme som en ændring der: den nye metode bliver gemt, synkroniseret til parrede klienter, og BS-dataene bliver udjævnet igen med det samme.
+* kører kun, hvis den udjævningsmetode ikke allerede er aktiv — **AAPS** tilføjer automatisk en linje »**Forudsætninger: Udjævning … er ikke aktiv**« til reglen. Når den valgte udjævning er aktiv, bliver reglen sprunget over uden besked.
+* Eksempel: en ny sensor har ofte meget støj det første døgn. To regler med udløseren **Sensoralder** giver stærkere filtrering, mens sensoren falder til ro, og udjævning uden forsinkelse bagefter:
+  * **Sensoralder** mindre end 24 t: **Skift udjævning** til **Unscented Kalman-filter**
+  * **Sensoralder** mere end 24 t: **Skift udjævning** til **Gennemsnitlig udjævning**
 
-**Actions:** **Note** (in the **Alerts** group of the list)
+**Handlinger:** **Notat** (i gruppen **Alarmer** på listen)
 
-**Options:**
+**Muligheder:**
 
-* select the event to record: **Note**, **Exercise**, **Question**, **Announcement** or **Pump Site Change**, and an optional note. The name of the action changes to the event you select.
-* **Duration**: used for **Note**, **Exercise** and **Pump Site Change**. **Question** and **Announcement** have no duration: they record your current BG instead.
-* **Pump Site Change** resets the cannula age, as if you had recorded a site change by hand. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
+* vælg den hændelse, der skal registreres: **Notat**, **Motion**, **Spørgsmål**, **Meddelelse** eller **Skift indstikssted**, og eventuelt et notat. Handlingens navn skifter til den hændelse, du vælger.
+* **Varighed**: bruges til **Notat**, **Motion** og **Skift indstikssted**. **Spørgsmål** og **Meddelelse** har ingen varighed: de registrerer i stedet dit aktuelle BS.
+* **Skift indstikssted** nulstiller kanylealderen, som om du havde registreret et skift af infusionssæt manuelt. Eksempel: nogle pumper (som Combo) registrerer selv et reservoirskift, men ikke skiftet af infusionssæt. Hvis du altid skifter begge på samme tid, kan en regel med **Insulinalder** mindre end 1 time og **Kanylealder** mere end 24 timer registrere skiftet af infusionssæt for dig.
 
-![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
+![Hændelserne i handlingen Notat](../images/Automations/automation_action_careportal_events.png) ![Handlingen Notat sat til Skift indstikssted](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**Handlinger:** **Send SMS til alle numre** (i gruppen **Alarmer**)
 
-**Options:**
+**Muligheder:**
 
-* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
+* skriv teksten til beskeden. Den bliver sendt til alle de telefonnumre, der er tilladt i indstillingerne for [SMS-kommunikator](../RemoteFeatures/SMSCommands.md). Pluginet SMS-kommunikator skal være aktiveret.
 
-**Actions:** **Change profile to** (in the **Profile** group)
+**Handlinger:** **Skift profil til** (i gruppen **Profil**)
 
-**Options:**
+**Muligheder:**
 
-* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
+* vælg den **profil**, der skal aktiveres. Den bliver aktiveret med 100%, uden tidsforskydning. Hvis profilen allerede er aktiv, gør handlingen ingenting.
 
-**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
+**Handlinger:** **Aktiver/deaktiver SMB** (i gruppen **Loop & insulin**)
 
-**Options:**
+**Muligheder:**
 
-* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
+* vælg **Til** eller **Fra**. Det ændrer indstillingen **Aktiver SMB** i OpenAPS SMB, præcis som hvis du havde ændret den i **Indstillinger**, og den forbliver sådan, indtil du eller en anden regel ændrer den tilbage.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
+**Handlinger:** **Kør Autotune** (i gruppen **Loop & insulin**)
 
-**Options:**
+**Muligheder:**
 
-* select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
+* vælg den profil, der skal justeres, og antallet af dage: se [Kør Autotune med en automatiseringsregel](#autotune-run-autotune-with-an-automation-rule).
 
-**Actions:** **Stop processing** (in the **Loop & insulin** group)
+**Handlinger:** **Stop afvikling** (i gruppen **Loop & insulin**)
 
-**Options:**
+**Muligheder:**
 
-* none. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* ingen. Så længe betingelserne for en regel med denne handling er sande, tjekker **AAPS** ikke reglerne under den på listen. Så snart betingelserne er falske igen, bliver reglerne nedenunder tjekket som normalt. Føj den til en regel, der skal have forrang for reglerne under den (se [rækkefølgen af automatiseringerne](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
-**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+**Handlinger:** **Kør scene**, **Aktiver scene**, **Deaktiver scene** (i gruppen **Scener**)
 
-**Options:**
+**Muligheder:**
 
-* select the [scene](Scenes.md) to run, enable or disable.
+* vælg den [scene](Scenes.md), der skal køres, aktiveres eller deaktiveres.
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+Når »Handling« er tilføjet, skal standardværdierne ændres til det ønskede tal ved at klikke på dem og justere dem.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![Værdier for handlingen midlertidigt mål](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## Rækkefølgen af **automatiseringerne** på listen har betydning
+ **AAPS** udfører de oprettede regler i prioriteret rækkefølge, startende fra toppen af listen over **automatiseringer**. Hvis f.eks. **automatiseringen** »Lav« er den vigtigste **automatisering**, vigtigere end alle andre regler, skal denne **automatisering** stå øverst på brugerens liste over **automatiseringer**, som vist nedenfor:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![Liste over automatiseringsregler](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
+For at ændre prioriteten af **automatiseringsreglerne** skal du trykke og holde på håndtaget **=** i højre side af reglen. Skift rækkefølgen af **automatiseringerne** ved at flytte reglerne op eller ned.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![Skift rækkefølge af automatiseringsregler](../images/Automations/automation_rule_reorder.png)
 
-## How to delete Automation rules
+## Sådan sletter du automatiseringsregler
 
-To delete an **Automation** rule click on the trash icon.
+For at slette en **automatiseringsregel** skal du klikke på skraldespandsikonet.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![Slet automatiseringsregler](../images/Automations/automation_rule_delete.png)
 
-## Examples of Automations
+## Eksempler på automatiseringer
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Nedenfor er der eksempler på **automatiseringer**. Mere om **automatiseringer**, og hvordan brugere har tilpasset deres **automatisering**, kan du finde i diskussionsgrupper på Facebook eller på Discord. Eksemplerne nedenfor må ikke kopieres, uden at brugeren godt forstår, hvordan **automatiseringen** virker.
 
 (automations-low-glucose-temp-target)=
-### Low Glucose Temp Target
+### Midlertidigt mål ved lavt blodsukker
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+Denne **automatisering** udløser automatisk et **midlertidigt mål**, når **BS** falder under en bestemt grænse — her startes et mål på 110 mg/dl i 30 minutter, når glukosen er mindre end 70 mg/dl:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![Eksempel: regel for lavt blodsukker](../images/Automations/automation_example_low_glucose_rule.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### Midlertidigt mål ved frokost (med »Placering«)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![Eksempel: regel for frokost](../images/Automations/automation_example_lunch_rule.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will not activate.
+Denne **automatisering** er lavet til en bruger, der spiser frokost på arbejdet på cirka samme tidspunkt hver hverdag, men den udløses kun, hvis brugeren befinder sig inden for en bestemt »placering«.  Så hvis brugeren ikke er på arbejde en dag, bliver denne **automatisering** ikke aktiveret.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
+Denne **automatisering** sætter et lavt **midlertidigt mål** (Spiser snart) kl. 13:00 for at få BS ned på 90 mg/dl (eller 5 mmol/l) som forberedelse til frokost.
 
-The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
+»Udløser«-placeringen har et navn, en position (tryk på **Vælg på kort**, eller brug din nuværende placering) og en radius i meter, og den udløses, når du er inden for (eller uden for) området:
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![Eksempel: regel for frokost med betingelse for placering](../images/Automations/automation_example_lunch_location_condition.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+På grund af forbindelsen »Og« sker **automatiseringen** kun i det »valgte tidsrum«, og hvis brugeren er på den valgte placering.
 
-The **Automation** will not be triggered on any other time at this location or at this time outside the 50-metre radius around the chosen position.
+**Automatiseringen** bliver ikke udløst på noget andet tidspunkt på denne placering eller på dette tidspunkt uden for radiussen på 50 meter omkring den valgte position.
 
-### Wi-Fi SSID Location Automation
+### Automatisering med placering via Wi-Fi SSID
 
-Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
+Et Wi-Fi SSID er en god mulighed for at udløse en **automatisering**, når du er inden for rækkevidde af et bestemt Wi-Fi-netværk (sammenlignet med GPS): det er ret præcist, bruger mindre batteri og virker indendørs, hvor GPS og andre placeringstjenester måske ikke er tilgængelige.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+Her er et andet eksempel, hvor der kun sættes et **midlertidigt mål** på arbejdsdage før morgenmaden (1).
 
 
-It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
+**Automatiseringen** bliver udløst kl. 05:30 kun mandag-fredag (2)  
+og mens telefonen er forbundet til et Wi-Fi-netværk derhjemme (3).
 
-![Wi-Fi rule: task name (1), weekday time condition (2) and Wi-Fi SSID condition (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
+Den sætter så et **midlertidigt mål** på 75 mg/dl i 30 minutter (4). En af fordelene ved at tage placeringen med er, at den f.eks. ikke bliver udløst, hvis brugeren er ude at rejse på ferie.
 
-![Wi-Fi rule action: Start temp target of 75 mg/dL for 30 minutes (4)](../images/Automations/automation_example_wifi_action.png)
+![Wi-Fi-regel: navn på opgaven (1), betingelse for tidspunkt på hverdage (2) og betingelse for Wi-Fi SSID (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+Rul ned for at se handlingen: et **midlertidigt mål** på 75 mg/dl i 30 minutter (4).
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+![Handling i Wi-Fi-regel: Start midlertidigt mål på 75 mg/dl i 30 minutter (4)](../images/Automations/automation_example_wifi_action.png)
+
+Her er skærmbilledet med detaljer om udløserne for **automatisering**:
+
+1) Under hovedforbindelsen »OG« (begge betingelser skal være opfyldt for at udløse) 1) Tilbagevendende tid = M,T,O,T,F kl. 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+![Eksempel: betingelse for Wi-Fi](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
-## Automating Preference Settings Export
+## Automatisk eksport af indstillinger
 
-### Unattended Exports: scheduled (daily)
+### Automatisk eksport: planlagt (dagligt)
 
-Screenshots detailing the Automation triggers:
+Skærmbilleder med detaljer om udløserne for automatisering:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Betingelse: Tilbagevendende tid = M,T,O,T,F kl. 8:00 1) Handling: Eksport af indstillinger (skriv »Daglig« i »Tekst i behandlinger«)
 
-![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
+![Planlagte eksporter](../images/Automations/automation_settings_export_daily.png)
 
-Note: Export execution will be logged on Careportal
+Bemærk: Hver eksport bliver logget i Careportal
 
-### Unattended Exports: Pod Activation (patch pump only)
+### Automatisk eksport: pod-aktivering (kun patchpumpe)
 
-Screenshots detailing the Automation triggers:
+Skærmbilleder med detaljer om udløserne for automatisering:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Betingelse: Pod-aktivering 1) Handling: Eksport af indstillinger (skriv »Pod-aktivering: eksport af indstillinger« i »Tekst i behandlinger«)
 
-![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
+![Eksport ved pod-aktivering](../images/Automations/automation_settings_export_pod_activation.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Bemærk: Hver eksport bliver logget i Careportal. Bemærk: Automatiseringen bliver **slet ikke** udløst, hvis du ikke har lavet en manuel eksport af indstillinger før. Se [Indstillinger → Vedligeholdelse](#preferences-maintenance-settings) for at aktivere automatisk eksport af indstillinger korrekt.
 
 
-## Automation Logs
+## Log for automatisering
 
-**AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
+**AAPS** viser en log over de seneste hændelser i **automatisering** nederst på skærmen **Automatisering**, under reglerne. Brug den til at tjekke, at dine regler blev udløst, når du forventede det.
 
-In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose Temp Target](#automations-low-glucose-temp-target) above) is enabled. The log (2) shows that at 03:09 PM, glucose fell below 70 mg/dL and the rule triggered:
-* the action was "Start temp target: 110mg/dL@30 min": a **Temp Target** of 110 mg/dL for 30 minutes;
-* **OK** at the end means that the action was carried out successfully.
+I eksemplet nedenfor er reglen **Midlertidigt mål ved lavt blodsukker** (1) (se [Midlertidigt mål ved lavt blodsukker](#automations-low-glucose-temp-target) ovenfor) aktiveret. Loggen (2) viser, at glukosen kl. 15:09 faldt under 70 mg/dl, og at reglen blev udløst:
+* handlingen var »Start midlertidigt mål: 110mg/dL@30 min«: et **midlertidigt mål** på 110 mg/dl i 30 minutter;
+* **OK** til sidst betyder, at handlingen blev udført.
 
-![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
+![Skærmen Automatisering: en aktiveret regel (1) og dens linje i loggen (2)](../images/Automations/automation_example_log.png)
 
 (automations-troubleshooting)=
 
-## Troubleshooting
+## Fejlfinding
 
-* Problem: __My automations are not being triggered by AAPS?__
+* Problem: __Mine automatiseringer bliver ikke udløst af AAPS?__
 
-Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
+Tjek, at der er »flueben« i feltet til venstre for navnet på **automatiseringen**, så reglen er aktiveret:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Automatiseringsregler slået til og fra](../images/Automations/automation_rule_activated_deactivated.png)
 
-* Problem: __My automations are being triggered in the wrong order.__
+* Problem: __Mine automatiseringer bliver udløst i den forkerte rækkefølge.__
 
-Check your rule prioritization order as discussed above here.
+Tjek rækkefølgen af dine regler, som beskrevet ovenfor.
 
-* Problem: __A condition shows "Unknown trigger … - never true".__
+* Problem: __En betingelse viser »Ukendt udløser … - aldrig sand«.__
 
-The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Edit the rule and replace the trigger, or update **AAPS**.
+Reglen indeholder en udløser, som denne version af **AAPS** ikke kan læse, f.eks. efter at du er gået tilbage til en ældre version eller har importeret indstillinger fra en nyere version. Sådan en udløser er aldrig sand, så reglen kører ikke. Den bliver gemt uændret, så en nyere version stadig kan bruge den. Rediger reglen, og erstat udløseren, eller opdater **AAPS**.
 
-## Alternatives to Automations
+## Alternativer til automatiseringer
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+For øvede brugere er der andre muligheder for at automatisere opgaver med IFTTT eller en Android-app fra en tredjepart, der hedder Automate. 
