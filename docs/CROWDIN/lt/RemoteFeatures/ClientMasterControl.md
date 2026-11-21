@@ -367,11 +367,11 @@ Pirmiausia jį atsiekite (**Valdymas → Susieti su pagrindiniu įrenginiu → A
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Niekas nepakeista. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Niekas nepakeista. Pradėkite susiejimą iš naujo. Jei vis tiek nepavyksta, iš naujo paleiskite **AAPSClient** ir bandykite dar kartą.
 
-**The client says it is not paired**
+**Klientas rodo, kad jis nesusietas**
 
-Susiekite iš naujo per **Valdymas → Susieti su pagrindiniu įrenginiu**. Check that the client is **Active** in the master's **Authorized clients** list.
+Susiekite iš naujo per **Valdymas → Susieti su pagrindiniu įrenginiu**. Patikrinkite, ar klientas yra **Aktyvus** pagrindinio įrenginio sąraše **Autorizuoti klientai**.
 
 **Po susiejimo nieko nevyksta**
 
@@ -379,25 +379,25 @@ Patikrinkite, ar pagrindiniame įrenginyje ĮJUNGTA **Leisti valdyti iš kliento
 
 ### Commands
 
-**The client says the master is offline, or commands fail**
+**Klientas rodo, kad pagrindinis įrenginys neprisijungęs, arba komandos nepavyksta**
 
-Check that:
+Patikrinkite, ar:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- pagrindinio įrenginio telefonas nemiega ir **AAPS** veikia,
+- abu telefonai prisijungę per **NSClientV3** prie tos pačios Nightscout svetainės,
+- **websockets** įjungti abiejuose telefonuose.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Nuotoliniam valdymui iš **AAPSClient** websockets yra **būtini**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Pagrindinis įrenginys atmeta komandą**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Pagrindinis įrenginys dar kartą patikrina kiekvieną komandą pagal savo dabartinę būseną: pavyzdžiui, pasirinkto profilio nebėra arba nesutampa pompos tipas. Patikrinkite pagrindiniame įrenginyje.
 
 **Nightscout svetainėje įvesta terapija netaikoma**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Tai normalu [Sustiprintos apsaugos režime](#client-master-control-hardened-mode). Vietoj to įveskite juos susietame kliente.
 
-### Nightscout tokens and settings
+### Nightscout prieigos raktai ir nustatymai
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ Klientas anksčiau naudojo savo Nightscout prieigos raktą, o dabar rašo kitu, 
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-Klientas vis dar rašo prieigos raktu, kuris turi daugiau teisių, nei jam reikia. The master sends the client its own token after pairing, but only if the master has an admin token. Patikrinkite pagrindinio įrenginio prieigos raktą arba iš naujo nustatykite klientą QR kodu.
+Klientas vis dar rašo prieigos raktu, kuris turi daugiau teisių, nei jam reikia. Po susiejimo pagrindinis įrenginys siunčia klientui jo paties prieigos raktą, bet tik jei pagrindinis įrenginys turi admin prieigos raktą. Patikrinkite pagrindinio įrenginio prieigos raktą arba iš naujo nustatykite klientą QR kodu.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Kažkas kitas įrašė pagrindinio įrenginio nustatymų dokumentą, arba pagrindinis įrenginys turi naują raktą (pavyzdžiui, ištrynus jo duomenis). A paired client takes the new key by itself the next time it connects to Nightscout. Telefonui, kuris tik skaito Nightscout, vėl reikia pagrindinio įrenginio QR kodo (**Tik Nightscout duomenų skaitymas → Rodyti QR kodą**).
+Kažkas kitas įrašė pagrindinio įrenginio nustatymų dokumentą, arba pagrindinis įrenginys turi naują raktą (pavyzdžiui, ištrynus jo duomenis). Susietas klientas pats gauna naują raktą kitą kartą, kai prisijungia prie Nightscout. Telefonui, kuris tik skaito Nightscout, vėl reikia pagrindinio įrenginio QR kodo (**Tik Nightscout duomenų skaitymas → Rodyti QR kodą**).
 
 **Klientas nebegali skaityti Nightscout**
 
