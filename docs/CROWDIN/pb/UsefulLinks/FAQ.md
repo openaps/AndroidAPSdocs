@@ -74,7 +74,7 @@ Você precisa levar o mesmo equipamento de emergência que qualquer outra pessoa
   * o [apk](../SettingUpAaps/BuildingAaps.md) atual do AAPS e de todos os outros apps que você usa (por exemplo, xDrip, Juggluco, BYODA).
   * o seu arquivo de keystore (da compilação do apk) e a senha dele,
   * os seus arquivos mais recentes de exportação de configurações do AAPS e dos seus outros apps,
-  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
+  * your **AAPS** master password: you cannot import the settings file without it. Se você a esqueceu, veja [Como redefinir a senha mestra?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -175,7 +175,7 @@ Assim, você teria mais carboidratos ativos, mas ao mesmo tempo o loop reagiria 
 
 Com o loop, tente estes passos:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
+* Faça uma [troca de perfil](#ProfileSwitch-change-percentage) abaixo de 100%: toque no nome do perfil na tela principal, toque no botão redondo **▶** e defina **Porcentagem** e **Duração**.
 * Defina um [alvo temporário de atividade](#TempTargets-activity-temp-target) acima do seu alvo padrão. Com uma porcentagem abaixo de 100% e uma duração, a mesma tela **Ativar** oferece a chave **Alvo Temporário / Atividade**, que inicia os dois ao mesmo tempo.
 * Se você usa SMB, verifique se ["Ativar SMB com alvo temporário alto"](#Open-APS-features-enable-smb-with-high-temp-targets) e ["Ativar SMB sempre"](#Open-APS-features-enable-smb-always) estão desativados.
 
@@ -194,7 +194,7 @@ Você pode remover a bomba para ficar "livre", mas deve informar ao AAPS para qu
 Beber álcool é arriscado no modo de loop fechado, pois o algoritmo não consegue prever corretamente a glicose influenciada pelo álcool. Você precisa encontrar o seu próprio método para tratar isso usando as seguintes funções do AAPS:
 
 * Desativar o modo de loop fechado e tratar o diabetes manualmente ou
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
+* definir alvos temporários altos e desativar o UAM, para evitar que o loop aumente o IOB por causa de uma refeição não anunciada, ou
 * fazer uma [troca de perfil](#ProfileSwitch-change-percentage) para bem menos de 100% 
 
 O modelo de [cenário](#scenes) *Álcool* é um ponto de partida que você pode adaptar ao seu próprio método.
@@ -294,7 +294,7 @@ Se você esqueceu sua senha mestra, pode redefini-la para o número de série da
 1. Crie um arquivo vazio chamado `PasswordReset` (sem extensão de arquivo) na subpasta `extra` do seu diretório do AAPS (normalmente `AAPS/extra`).
 2. Reinicie o **AAPS**. Sua bomba precisa estar conectada: o **AAPS** mostra "Aguardando a bomba…" e precisa ler o número de série da bomba em até 30 segundos.
   
-  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+  Para reiniciar, feche o **AAPS** com **menu** (☰) > **Sair** e depois abra-o de novo. O **AAPS** só procura o arquivo quando inicia do zero. Fechar a tela ou deslizar o app para fora não é suficiente, porque o **AAPS** continua em execução em segundo plano. Se "Aguardando a bomba…" não aparecer, use **Forçar parada** em **Informações do app** do **AAPS** no Android, ou reinicie o telefone. Instalar de novo o seu apk atual do **AAPS** sobre o app instalado também funciona: as suas configurações são mantidas.
 
 3. O **AAPS** mostra "Senha foi definida!": sua senha mestra agora é o **número de série da bomba**. O arquivo `PasswordReset` é apagado automaticamente.
 
@@ -367,7 +367,7 @@ Você também pode mudar quando o alerta é disparado: toque no ícone **Configu
 
 #### Meu link/bomba/pod não responde (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+Com alguns telefones, há desconexões do Bluetooth com os Links (RL/OL/EmaLink).
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
@@ -423,5 +423,5 @@ O estado do Pod está incluído nas configurações exportadas, então um Pod at
 
 Leia estas seções primeiro:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
+* [Exportar e importar configurações](#omnipod-dash-export-import) na página do Omnipod DASH, e [Bombas sem tubo](#ExportImportSettings-tubeless-pumps): no novo telefone, marque **Substituir também as configurações da bomba** e use um arquivo exportado enquanto você usava o seu Pod atual,
 * [Descartar um pod](#omnipod-dash-discard-pod), para remover depois o Pod do telefone antigo. Mantenha o telefone antigo em modo avião até o Pod ser descartado, para que os dois telefones nunca se comuniquem com o Pod ao mesmo tempo.
