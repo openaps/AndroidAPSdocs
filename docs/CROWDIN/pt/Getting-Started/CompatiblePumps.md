@@ -1,6 +1,6 @@
 # Bombas compatíveis
 
-AAPS works with a number of insulin pumps. A lista seguinte mostra os dispositivos suportados neste momento. Entre parênteses, indica se o AAPS comunica com a bomba através da função Bluetooth nativa do seu telefone ou se precisa de um dispositivo compatível com o RileyLink.
+O AAPS funciona com várias bombas de insulina. A lista seguinte mostra os dispositivos suportados neste momento. Entre parênteses, indica se o AAPS comunica com a bomba através da função Bluetooth nativa do seu telefone ou se precisa de um dispositivo compatível com o RileyLink.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -38,12 +38,12 @@ AAPS works with a number of insulin pumps. A lista seguinte mostra os dispositiv
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (é preciso um [dispositivo de comunicação adicional](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## A minha bomba não está na lista
 
 Os detalhes sobre o estado de outras bombas que poderão funcionar com o AAPS estão na página [Futuros (possíveis) controladores de bombas](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Dispositivo de comunicação adicional
 
 Se não for indicado nenhum dispositivo de comunicação adicional, a comunicação entre a bomba de insulina e o **AAPS** usa o Bluetooth integrado do Android, sem precisar de um dispositivo de comunicação adicional para traduzir o protocolo de comunicação.
 
