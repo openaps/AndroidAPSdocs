@@ -17,7 +17,7 @@ You need to uninstall and reinstall **AAPS** when your new apk is signed with a 
 If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
 
 (reinstall-aaps-before)=
-## Before you start
+## Abans de començar
 
 - Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
 - The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
@@ -31,7 +31,7 @@ If you still have your keystore, you don't need this page: reuse it and [update 
 The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
 
 (reinstall-aaps-export)=
-### 1. Export your settings
+### 1. Exporteu la vostra configuració
 
 Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
 
@@ -113,7 +113,7 @@ Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Impor
 
 The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![Llista de fitxers de configuració per importar](../images/ReinstallAaps/reinstall_import_file_list.png)
 
 You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
 
