@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Veja as [Notas das Versões](#latestrelease) para saber o que há de novo e siga as instruções do [manual de atualização](./Maintenance/UpdateToNewVersion.md) para atualizar.
+31 de outubro de 2026: saiu a versão 4.0.0. Veja as [Notas das Versões](#latestrelease) para saber o que há de novo e siga as instruções do [manual de atualização](./Maintenance/UpdateToNewVersion.md) para atualizar.
 
 ```
 
@@ -17,7 +17,7 @@ Esta documentação explica como configurar e usar o **AAPS**. Pode navegar na d
 
 Na secção **1) Primeiros passos**, a [Introdução ao APS e ao AAPS](Getting-Started/Introduction.md) explica o conceito geral e o que um sistema de pâncreas artificial (APS) deve fazer. Descreve o contexto do loop em geral, explica porque é que o **AAPS** foi desenvolvido, compara o **AAPS** com outros sistemas e trata da segurança. Dá sugestões sobre como falar do **AAPS** com a sua equipa clínica, explica porque precisa de compilar a aplicação **AAPS** por si próprio em vez de apenas a descarregar e dá uma visão geral das ligações típicas de um sistema **AAPS**. Também trata da acessibilidade e de quem pode beneficiar do **AAPS**.
 
-[Preparar-se para começar com o AAPS](./Getting-Started/PreparingForAaps.md) dá mais detalhes sobre questões de segurança e sobre os telefones, CGM (monitores contínuos de glicose) e bombas de insulina compatíveis com o **AAPS**. Dá uma visão geral do processo que vai seguir e indica um calendário aproximado até ter todas as funções do **AAPS**. Esta secção prepara-o tecnicamente para montar o seu sistema **AAPS** da forma mais rápida e eficiente possível. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Preparar-se para começar com o AAPS](./Getting-Started/PreparingForAaps.md) dá mais detalhes sobre questões de segurança e sobre os telefones, CGM (monitores contínuos de glicose) e bombas de insulina compatíveis com o **AAPS**. Dá uma visão geral do processo que vai seguir e indica um calendário aproximado até ter todas as funções do **AAPS**. Esta secção prepara-o tecnicamente para montar o seu sistema **AAPS** da forma mais rápida e eficiente possível. A subsecção [CGM compatíveis](./Getting-Started/CompatiblesCgms.md) explica como otimizar a configuração do seu CGM e quais as opções de suavização mais adequadas.
 
 Agora que compreende bem o processo, pode começar a montar o seu loop **AAPS**.
 
@@ -107,14 +107,14 @@ Configurar o servidor de relatórios <./SettingUpAaps/SettingUpTheReportingServe
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Configurar o AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Assistente de Configuração do AAPS <./SettingUpAaps/SetupWizard.md>
+O seu perfil AAPS <./SettingUpAaps/YourAapsProfile.md>
+Alterar a configuração do AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuração (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Definições <./SettingUpAaps/Preferences.md>
+Concluir os objetivos <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -166,15 +166,15 @@ Site de partilha de watchfaces personalizadas <./ExchangeSiteCustomWatchfaces/in
 ```
 
 ```{toctree}
-:caption: 8) Maintenance of AAPS
+:caption: 8) Manutenção do AAPS
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Criar e restaurar cópias de segurança <./Maintenance/ExportImportSettings.md>
+Notas das Versões <./Maintenance/ReleaseNotes.md>
+O que mudou no AAPS v4 <./Maintenance/V4Changes.md>
+Atualizar para uma nova versão ou branch <./Maintenance/UpdateToNewVersion.md>
+- Atualização com um navegador (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Atualização com o Android Studio <./Maintenance/UpdateComputerBuild.md>
+Fim de vida <./Maintenance/EndOfLife.md>
 
 ```
 
