@@ -1,16 +1,16 @@
-# Settings
+# Indstillinger
 
-In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
+I **AAPS** v4 finder du indstillingerne på skærmen **Indstillinger**. Der er tre veje til dem - se [Ændringer i din AAPS-konfiguration](../SettingUpAaps/ChangeAapsConfiguration.md) for detaljer:
 
-1. Tap the **Settings** (gear) icon in the top-right corner of the main screen: all settings, grouped into expandable sections.
-2. In **Configuration**, tap "**Settings**" underneath an active plugin: only that plugin's settings.
-3. Use the **search bar** on top of the main screen: just start typing part of the text you are looking for. This finds individual settings (even those not visible in the Settings screen), dialogs and documentation.
+1. Tryk på ikonet **Indstillinger** (tandhjul) i øverste højre hjørne af hovedskærmen: alle indstillinger, samlet i sektioner, der kan foldes ud.
+2. Under **Konfiguration** skal du trykke på »**Indstillinger**« under et aktivt plugin: kun indstillingerne for det plugin.
+3. Brug **søgelinjen** øverst på hovedskærmen: begynd bare at skrive en del af den tekst, du leder efter. Den finder enkelte indstillinger (også dem, der ikke er synlige på skærmen Indstillinger), dialoger og dokumentation.
 
-![Search results for "target"](../images/preferences/settings_search.png)
+![Søgeresultater for "target"](../images/preferences/settings_search.png)
 
-- **Sections** are opened and closed by tapping them. The sections you see depend on the plugins you have enabled and on [Simple mode](#preferences-simple-mode).
+- **Sektioner** åbnes og lukkes ved at trykke på dem. Hvilke sektioner du ser, afhænger af de plugins, du har aktiveret, og af [simpel tilstand](#preferences-simple-mode).
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Skærmen Indstillinger med afsnit, som du kan folde ud](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -18,563 +18,563 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 ```
 
 (Preferences-general)=
-## General
+## Generelt
 
-![Settings > General](../images/preferences/settings_general.png)
+![Indstillinger > Generelt](../images/preferences/settings_general.png)
 
-**Units**
+**Enheder**
 
-- Set units to mmol/L or mg/dL depending on your preferences.
+- Indstil enhederne til mmol/l eller mg/dl, alt efter hvad du foretrækker.
 
-**Language**
+**Sprog**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- Som standard følger **AAPS** telefonens sprog (anbefales).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Hvis du vil have **AAPS** på et andet sprog end telefonen, så vælg det her. På Android 13 og nyere registrerer **AAPS** det som sit eget appsprog i Android, så alle dens skærme, hovedskærmen, widgets og den måde, tal skrives på, følger det.
 
-- When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Når du skifter sprog, skifter teksterne i **AAPS** straks til det nye sprog. Hvis nogle tekster stadig vises på det gamle sprog, så genstart **AAPS**.
+- På Android 12 vises denne indstilling ikke: **AAPS** bruger altid telefonens sprog.
+- Indstillingen er skjult i [simpel tilstand](#preferences-simple-mode).
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **Simpel tilstand**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+**Simpel tilstand** er aktiveret som standard, når du installerer **AAPS** første gang. I **simpel tilstand** er mange indstillinger skjult, og indstillingerne er erstattet af forudindstillede værdier. Du bør slå simpel tilstand fra, når du er blevet fortrolig med brugerfladen og indstillingerne i **AAPS**.
 
-**Insulin concentration support**
+**Understøttelse af insulinkoncentration**
 
-- Enables support for different insulin concentrations (U50, U200, ...). Only enable this if you really use a concentration other than U100, and read the warnings carefully.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Aktiverer understøttelse af forskellige insulinkoncentrationer (U50, U200, ...). Aktiver kun dette, hvis du virkelig bruger en anden koncentration end U100, og læs advarslerne grundigt.
+- Indstillingen er skjult i [simpel tilstand](#preferences-simple-mode).
 
-**Keep screen on**
+**Hold skærmen tændt**
 
-- Forces Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+- Tvinger Android til altid at holde skærmen tændt. Det er nyttigt til præsentationer osv. Men det bruger meget batteri. Derfor anbefales det at slutte telefonen til en oplader.
 
-**Instance name**
+**Navn på instans**
 
-- The name of the person using this phone. It tells this **AAPS** instance apart in reports and synchronization, for example if two children with type 1 diabetes in your family use **AAPS**.
-- Used in the names of exported settings files.
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- Navnet på den person, der bruger denne telefon. Det skelner denne **AAPS**-instans fra andre i rapporter og synkronisering, f.eks. hvis to børn med type 1-diabetes i din familie bruger **AAPS**.
+- Bruges i navnene på eksporterede indstillingsfiler.
+- Vises på [urskiven Dual](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
 ### Skin
 
-The skin selection from **AAPS** 3.x (Original, Low resolution, Large display...) no longer exists in **AAPS** 4. The new interface adapts to your screen automatically, and the color scheme can be changed in [Appearance](#preferences-appearance).
+Valget af skin fra **AAPS** 3.x (Original, Low resolution, Large display ...) findes ikke længere i **AAPS** 4. Den nye brugerflade tilpasser sig automatisk til din skærm, og farveskemaet kan ændres under [Udseende](#preferences-appearance).
 
 (preferences-appearance)=
-## Appearance
+## Udseende
 
-![Settings > Appearance](../images/preferences/settings_appearance.png)
+![Indstillinger > Udseende](../images/preferences/settings_appearance.png)
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Område for visualisering
 
-Choose the high and low marks for the BG-graph on **AAPS** main screen and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
+Vælg den øvre og nedre grænse for BS-grafen på hovedskærmen i **AAPS** og på smarturet. Det er kun visningen, ikke målområdet for dit BS. Eksempel: 70 - 180 mg/dl eller 3,9 - 10 mmol/l
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes in dialogs
+### Vis notater i dialoger
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Giver dig mulighed for at tilføje korte notater til dine behandlinger (bolusberegner, kulhydrater, insulin ...)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Indstillingen er skjult i [simpel tilstand](#preferences-simple-mode).
 
-### App Color Scheme
+### Farveskema for appen
 
-Choose between the light theme, the dark theme, or following the phone's system setting.
+Vælg mellem det lyse tema, det mørke tema eller at følge telefonens systemindstilling.
 
 (Preferences-protection)=
-## Protection
+## Beskyttelse
 
-![Settings > Protection](../images/preferences/settings_protection.png)
+![Indstillinger > Beskyttelse](../images/preferences/settings_protection.png)
 
 (Preferences-master-password)=
-### Master password
+### Hovedadgangskode
 
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+Påkrævet for at kunne [eksportere indstillinger](../Maintenance/ExportImportSettings.md), da de er krypteret fra version 2.7.
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+Hvis du har glemt din hovedadgangskode, så se [Hvordan nulstiller jeg hovedadgangskoden?](#FAQ-reset-master-password)
 
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+**Biometrisk beskyttelse virker måske ikke på OnePlus-telefoner. Det er et kendt problem hos OnePlus på nogle telefoner.**
 
-![Set master password](../images/preferences/master_password_dialog.png)
+![Indstil hovedadgangskode](../images/preferences/master_password_dialog.png)
 
 (Preferences-settings-protection)=
-### Settings protection
+### Beskyttelse af indstillinger
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
+- Beskyt dine indstillinger med en adgangskode eller telefonens biometriske godkendelse (f.eks. hvis [et barn bruger **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Hvis du aktiverer denne funktion, bliver du bedt om godkendelse, hver gang du vil åbne en visning, der har med indstillinger at gøre.
 
-- The management screens (**Profile**, **Insulin settings**, **Temp Target**, **QuickWizard**) then open **read-only**. You can still activate or use an entry, but adding, editing, cloning and deleting are hidden until you unlock your settings. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+- Administrationsskærmene (**Profil**, **Insulinindstillinger**, **Midlertidigt mål**, **Hurtigbolus**) åbner derefter **skrivebeskyttet**. Du kan stadig aktivere eller bruge et element, men tilføj, rediger, klon og slet er skjult, indtil du låser dine indstillinger op. Se [Beskyttelse af indstillinger låser nu også administrationsskærmene](#v4changes-read-only-management).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
+- En brugerdefineret adgangskode bør bruges, hvis du kun vil bruge hovedadgangskoden til at beskytte [eksporterede indstillinger](../Maintenance/ExportImportSettings.md) og bruge en anden adgangskode til at redigere indstillingerne.
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- Hvis du bruger en brugerdefineret adgangskode, så tryk på linjen »Adgangskode til indstillinger« for at indstille adgangskoden som beskrevet [ovenfor](#Preferences-master-password).
 
-### Application protection
+### Beskyttelse af appen
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
+Hvis appen er beskyttet, skal du indtaste adgangskoden eller bruge telefonens biometriske godkendelse for at åbne **AAPS**, og igen når du vender tilbage til den efter [timeout for beskyttelse](#Preferences-password-and-pin-retention).
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+**AAPS** lukker straks ned, hvis der indtastes en forkert adgangskode - men kører stadig i baggrunden, hvis den tidligere er blevet åbnet korrekt.
 
-### Bolus protection
+### Bolusbeskyttelse
 
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- Bolusbeskyttelse kan være nyttig, hvis **AAPS** bruges af et lille barn, og du [giver bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
-- **Bolus protection** can only be selected once **Settings protection** (Level 2) is set.
+- **Bolusbeskyttelse** kan først vælges, når **Beskyttelse af indstillinger** (niveau 2) er sat.
 
-- In the example below, bolus protection uses the **Master password**: **AAPS** asks for it before opening a treatment dialog such as **Insulin**. With **Biometric**, if biometric authentication does not work, you can enter the master password instead.
+- I eksemplet nedenfor bruger bolusbeskyttelsen **Hovedadgangskode**: **AAPS** beder om den, før en behandlingsdialog som **Insulin** åbnes. Med **Biometrisk** kan du indtaste hovedadgangskoden i stedet, hvis biometrisk godkendelse ikke virker.
 
-![Authentication required prompt asking for the master password](../images/preferences/bolus_protection_prompt.png)
+![Beskeden »Godkendelse påkrævet«, der beder om hovedadgangskoden](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
-### Password and PIN retention
+### Opbevaring af adgangskode og PIN
 
-**Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.
+**Timeout for beskyttelse** angiver, hvor længe (i sekunder) indstillingerne eller bolusfunktionerne forbliver låst op, efter at du har indtastet adgangskoden korrekt.
 
-## Treatment safety
+## Behandlingssikkerhed
 
-![Settings > Safety](../images/preferences/settings_safety.png)
+![Indstillinger > Sikkerhed](../images/preferences/settings_safety.png)
 
 (preferences-patient-type)=
-### Patient age
+### Patientens alder
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- Sikkerhedsgrænserne bliver sat ud fra den alder, du vælger i denne indstilling.
+- Hvis du begynder at ramme disse faste grænser (f.eks. maks. bolus), er det tid til at gå et trin op.
+- Det er en dårlig idé at vælge en højere alder end den rigtige, fordi det kan føre til overdosering, hvis du indtaster en forkert værdi i insulindialogen (f.eks. hvis du springer decimaltegnet over).
+- Hvis du vil kende de faktiske tal for disse faste sikkerhedsgrænser, så rul ned til den algoritmefunktion, du bruger, på [denne side](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
-### Maximum bolus
+### Maks. bolus
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Angiver den største mængde bolusinsulin i insulinenheder, som **AAPS** må give på én gang.
+- Denne indstilling er en sikkerhedsgrænse, der skal forhindre, at der bliver givet en meget stor bolus på grund af en fejlindtastning eller en brugerfejl.
+- Det anbefales at sætte denne værdi til en fornuftig mængde, som cirka svarer til den største mængde bolusinsulin, du nogensinde forventer at få brug for til et måltid eller en korrektionsdosis.
+- Denne begrænsning gælder også for resultaterne fra bolusberegneren.
 
-### Maximum carbs allowed
+### Maks. tilladte kulhydrater
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Angiver den største mængde kulhydrater i gram, som bolusberegneren i **AAPS** må beregne en dosis for.
+- Denne indstilling er en sikkerhedsgrænse, der skal forhindre, at der bliver givet en meget stor bolus på grund af en fejlindtastning eller en brugerfejl.
+- Det anbefales at sætte denne værdi til en fornuftig mængde, som cirka svarer til den største mængde kulhydrater, du nogensinde forventer at få brug for til et måltid.
 
-## BG source
+## BS-kilde
 
-The settings of your selected [BG source](#Config-Builder-bg-source) appear as their own section. For example with **xDrip+ BG**:
+Indstillingerne for din valgte [BS-kilde](#Config-Builder-bg-source) vises som deres egen sektion. For eksempel med **xDrip+ BS**:
 
-![Settings > xDrip+ BG](../images/preferences/settings_xdrip.png)
+![Indstillinger > xDrip+ BS](../images/preferences/settings_xdrip.png)
 
-- **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
-- **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
+- **Upload BS-data til NS**: lad **AAPS** uploade de modtagne BS-værdier til Nightscout. Aktiver kun dette, hvis CGM-appen ikke selv uploader dem allerede.
+- **Registrer sensorskift**: opret automatisk en behandlingshændelse for sensorskift, når sensoren bliver sat i.
 
-## The main screen
+## Hovedskærmen
 
-In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
+I **AAPS** 3.x var disse indstillinger samlet i en sektion med navnet »Oversigt«. I **AAPS** 4 bliver de indstillet direkte fra de elementer på hovedskærmen, som de hører til.
 
 (Preferences-buttons)=
-### QuickLaunch buttons
+### Hurtigstart-knapper
 
-Define which action buttons are visible on the main screen: tap the small **gear** at the bottom center of the main screen ("Configure QuickLaunch") and **Add** the actions you want quick access to (treatments, CGM actions, careportal entries...).
+Vælg, hvilke handlingsknapper der er synlige på hovedskærmen: tryk på det lille **tandhjul** nederst i midten af hovedskærmen (»Konfigurer Hurtigstart«), og **Tilføj** de handlinger, du vil have hurtig adgang til (behandlinger, CGM-handlinger, Careportal-indtastninger ...).
 
-![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
+![Konfigurer Hurtigstart](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
-### Quick Wizard
+### Hurtigbolus
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Useful for standard meals frequently eaten.
+Opret dine egne knapper til bestemte standardmåltider eller snacks, som vises på hovedskærmen. Nyttigt til standardmåltider, som du ofte spiser.
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your main screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
+For hver knap angiver du kulhydraterne og beregningsmetoden for bolussen. Derefter angiver du, i hvilket tidsrum knappen skal være synlig på hovedskærmen - kun én knap pr. tidsrum. Knappen er ikke synlig uden for det angivne tidsrum, eller hvis du har nok IOB til at dække kulhydraterne, der er angivet i Hurtigbolus-knappen. Hvis du angiver forskellige tidspunkter for de forskellige måltider, har du altid den rigtige knap til standardmåltidet på hovedskærmen, afhængigt af tidspunktet på dagen.
 
-To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
+For at administrere dine Hurtigbolus-forvalg skal du skrive »Hurtigbolus« i søgelinjen på hovedskærmen og åbne **Hurtigbolus - Administrer forvalg til hurtigbolus**.
 
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+Hvis du trykker på en Hurtigbolus-knap, beregner **AAPS** og foreslår en bolus for de kulhydrater ud fra dine aktuelle forhold (med blodsukkerværdien eller insulin om bord, hvis det er sat op).
 
-The proposal has to be confirmed before insulin is delivered.
+Forslaget skal bekræftes, før insulinen bliver givet.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Standardværdier for midlertidige mål
 
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
+[Midlertidige mål (TT)](../DailyLifeWithAaps/TempTargets.md) giver dig mulighed for at ændre dit blodsukkermål i en bestemt periode. Når du indstiller et standard-TT, kan du nemt ændre dit mål ved aktivitet, når du snart skal spise osv.
 
-Tap the **target range** on the main screen to open the **Temp Target** screen. Swipe through the preset cards (Eating Soon, Activity, Hypo) and change the target and the duration of each preset under **Preset Settings**. Preset values are:
+Tryk på **målområdet** på hovedskærmen for at åbne skærmen **Midlertidigt mål**. Swipe gennem forvalgskortene (Spiser snart, Aktivitet, Hypo), og ændr målet og varigheden for hvert forvalg under **Indstillinger for forvalg**. Forvalgte værdier er:
 
-* Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
-* Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
+* Spiser snart: mål 90 mg/dl / 5,0 mmol/l, varighed 45 min
+* Aktivitet: mål 140 mg/dl / 7,8 mmol/l, varighed 90 min
+* Hypo: mål 160 mg/dl / 8,9 mmol/l, varighed 60 min
 
-![Temp Target presets](../images/preferences/temp_target_presets.png)
+![Forvalg for midlertidige mål](../images/preferences/temp_target_presets.png)
 
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
+Lær, hvordan du [aktiverer midlertidige mål her](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Standardmængder insulin til Klargør/Fyld
 
-If you want to fill the tube or prime the cannula through **AAPS** you can do this with the **Prime/Fill** buttons in the expanded status panel of the main screen.
+Hvis du vil fylde slangen eller klargøre kanylen gennem **AAPS**, kan du gøre det med knapperne **Klargør/Fyld** i det udvidede statuspanel på hovedskærmen.
 
-The default amounts of the three fill buttons can be defined in the **Prime/Fill** settings, depending on the length of your catheter. Type "prime" in the main screen search bar to open them.
+Standardmængderne for de tre fyldknapper kan angives i indstillingerne for **Klargør/Fyld**, afhængigt af længden på din slange. Skriv »klargør« i søgelinjen på hovedskærmen for at åbne dem.
 
-![Prime/Fill standard amounts](../images/preferences/settings_prime_fill.png)
+![Standardmængder for Klargør/Fyld](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
-### Status lights
+### Statuslys
 
-Status lights give a visual warning for:
+Statuslys giver en visuel advarsel for:
 
-- Sensor age
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
-- Pump battery age
-- Pump battery level (%)
+- Sensoralder
+- Insulinalder (antal dage reservoiret har været i brug)
+- Reservoirniveau (enheder)
+- Kanylealder
+- Pumpebatteriets alder
+- Pumpebatteriets niveau (%)
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+Hvis advarselsgrænsen overskrides, vises værdierne med gult. Hvis den kritiske grænse overskrides, vises værdierne med rødt.
 
-To change the thresholds, expand the status panel on the main screen (chevron on the right of the status row) and tap the small **Settings** icon next to "Status":
+For at ændre grænserne skal du folde statuspanelet på hovedskærmen ud (pilen til højre i statuslinjen) og trykke på det lille ikon **Indstillinger** ved siden af »Status«:
 
-![Status lights](../images/preferences/status_lights.png)
+![Statuslys](../images/preferences/status_lights.png)
 
-Tap an item (**Cannula**, **Insulin**, **Sensor** or **Pump battery**) to open its warning and critical thresholds:
+Tryk på et element (**Kanyle**, **Insulin**, **Sensor** eller **Pumpebatteri**) for at åbne dets grænser for advarsel og kritisk niveau:
 
-![Status lights thresholds for the cannula](../images/preferences/status_lights_cannula.png)
+![Grænser for statuslys for kanylen](../images/preferences/status_lights_cannula.png)
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+Den sidste mulighed giver dig mulighed for at importere disse indstillinger fra Nightscout, hvis de er angivet der. Se [Nightscout-dokumentationen](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for mere information.
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Bolus wizard settings
+### Indstillinger for bolusberegner
 
-Type "bolus" in the main screen search bar to open the **Bolus wizard** settings:
+Skriv »bolus« i søgelinjen på hovedskærmen for at åbne indstillingerne for **Bolusberegner**:
 
-![Bolus wizard settings](../images/preferences/settings_bolus_wizard.png)
+![Indstillinger for bolusberegner](../images/preferences/settings_bolus_wizard.png)
 
-**Bolus percentage** sets the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+**Bolusprocent** angiver [standardprocenten](#AapsScreens-section-j) af den beregnede bolus, når du bruger bolusberegneren.
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+Standard er 100%: ingen korrektion. Selv om du indstiller en anden værdi her, kan du stadig ændre den, hver gang du bruger bolusberegneren. Hvis denne indstilling er 75%, og du skulle have givet 10 IE i bolus, vil bolusberegneren kun foreslå en måltidsbolus på 7,5 IE.
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+Når de bruger [SMB](#objectives-objective9), giver mange personer ikke 100% af den nødvendige insulin som måltidsbolus, men kun en del af den (f.eks. 75%), og lader SMB med UAM (registrering af uanmeldte måltider) klare resten. En værdi under 100% her kan være nyttig:
+* for personer med langsom fordøjelse: Hvis hele bolussen bliver givet på forhånd, kan det give hypo, fordi insulinen virker hurtigere end fordøjelsen.
+* for at give **AAPS** mere plads til selv at håndtere **stigende BS**. I begge tilfælde vil **AAPS** udligne den manglende del af bolussen med SMB'er, hvis og når det vurderes at være passende.
 
-**Use bolus advisor**
+**Brug bolusrådgiver**
 
-When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
+Når den er aktiveret, og du bruger bolusberegneren, mens du har hyperglykæmi, får du en advarsel, der spørger, om du vil give bolus nu og spise senere, når dit **BS** er tilbage i målområdet.
 
 (Preferences-advanced-settings-overview)=
 ### Superbolus
 
-The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 4.
+Superbolus-muligheden fra **AAPS** 3.x findes ikke som en indstilling i **AAPS** 4.
 
 ## Loop
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Se [AAPS-skærme > Hovedskærmen > Loop-status](#AapsScreens-loop-status) for at skifte loop-tilstand nu.
 
 (Preferences-minimal-request-change)=
-### Open mode minimum change
+### Mindste ændring i åbent loop
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting. This defines the relative change required to trigger a notification.
+Når du bruger **Åbent loop**, får du en notifikation, hver gang **AAPS** anbefaler at justere basalraten. For at få færre notifikationer kan du enten bruge et [bredere BS-målområde](#profile-glucose-targets) eller øge procenten i indstillingen »**Mindste ændring i åbent loop**«. Denne værdi angiver, hvor stor en relativ ændring der skal til, før der kommer en notifikation.
 
-![Settings > Loop](../images/preferences/settings_loop.png)
+![Indstillinger > Loop](../images/preferences/settings_loop.png)
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Advanced Meal Assist (AMA) eller Super Micro Bolus (SMB)
 
-Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Afhængigt af dine indstillinger under [Konfiguration > APS](../SettingUpAaps/ConfigBuilder.md) kan du vælge mellem to algoritmer:
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced Meal Assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - algoritmen, som den var i 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - den nyeste algoritme, anbefales til begyndere
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+Fra og med [**AAPS** version 3.3](#version3300) er funktionen [Dynamisk ISF](../DailyLifeWithAaps/DynamicISF.md) flyttet ind i OpenAPS SMB.
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Alle indstillinger for OpenAPS AMA er beskrevet i det særlige afsnit i [Vigtige AAPS-funktioner > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Alle indstillinger for OpenAPS SMB er beskrevet i det særlige afsnit i [Vigtige AAPS-funktioner > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-The list of settings you see depends on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) and on [Simple mode](#preferences-simple-mode). On a new installation only **Use dynamic sensitivity** is shown. Once the objectives are completed, the section looks like this:
+Listen over indstillinger, du ser, afhænger af, hvor langt du er kommet i [læringsmålene](../SettingUpAaps/CompletingTheObjectives.md), og af [simpel tilstand](#preferences-simple-mode). På en ny installation vises kun **Brug dynamisk følsomhed**. Når læringsmålene er gennemført, ser sektionen sådan ud:
 
-![Settings > OpenAPS SMB, first part](../images/preferences/settings_openaps_smb_1.png)
+![Indstillinger > OpenAPS SMB, første del](../images/preferences/settings_openaps_smb_1.png)
 
-![Settings > OpenAPS SMB, SMB options](../images/preferences/settings_openaps_smb_2.png)
+![Indstillinger > OpenAPS SMB, SMB-muligheder](../images/preferences/settings_openaps_smb_2.png)
 
-![Settings > OpenAPS SMB, UAM and carbs required](../images/preferences/settings_openaps_smb_3.png)
+![Indstillinger > OpenAPS SMB, UAM og nødvendige kulhydrater](../images/preferences/settings_openaps_smb_3.png)
 
-**Advanced Settings** at the bottom of the section holds values that you normally do not have to change:
+**Avancerede indstillinger** nederst i sektionen indeholder værdier, som du normalt ikke behøver at ændre:
 
-![Settings > OpenAPS SMB > Advanced Settings](../images/preferences/settings_openaps_smb_advanced.png)
+![Indstillinger > OpenAPS SMB > Avancerede indstillinger](../images/preferences/settings_openaps_smb_advanced.png)
 
-![Settings > OpenAPS SMB > Advanced Settings, continued](../images/preferences/settings_openaps_smb_advanced_2.png)
+![Indstillinger > OpenAPS SMB > Avancerede indstillinger, fortsat](../images/preferences/settings_openaps_smb_advanced_2.png)
 
-## Absorption settings
+## Indstillinger for absorbering
 
-![Settings > Absorption settings](../images/preferences/settings_absorption.png)
+![Indstillinger > Indstillinger for absorbering](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
-### SMB min 5m carbs impact (min_5m_carbimpact)
+### SMB min. kulhydratpåvirkning pr. 5 min (min_5m_carbimpact)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Indstillingen er skjult i [simpel tilstand](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+Algoritmen bruger BGI (blodsukkerpåvirkning) til at afgøre, hvornår [kulhydraterne er absorberet](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+Når kulhydratabsorptionen ikke kan beregnes dynamisk ud fra blodets reaktioner, bruger **AAPS** en standardnedbrydning af dine kulhydrater. Grundlæggende er det en sikkerhedsforanstaltning. Denne værdi bruges kun, når der mangler **CGM**-målinger, eller når fysisk aktivitet »bruger« hele den blodsukkerstigning, som ellers ville få **AAPS** til at nedbryde COB.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behavior, some carbs are absorbed/decayed. Big change=many carbs etc.
+Sagt enkelt: Algoritmen »ved«, hvordan dit blodsukker *burde* opføre sig, når det påvirkes af den aktuelle insulindosis osv. Hver gang der er en positiv afvigelse fra den forventede udvikling, bliver nogle kulhydrater regnet som absorberet/nedbrudt. Stor ændring = mange kulhydrater osv.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For the full parameter reference see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+min_5m_carbimpact angiver standardpåvirkningen fra kulhydratabsorption pr. 5 minutter. Den fulde beskrivelse af parametrene finder du i [OpenAPS-dokumentationen om indstillinger og sikkerhedsindstillinger](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 3, for SMB it's 8.
+Standardværdien for AMA er 3, for SMB er den 8.
 
-The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
+COB-grafen på hovedskærmen viser, når min_5m_carbimpact bliver brugt, ved at sætte orange prikker langs toppen af COB-kurven.
 
-![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
+![COB-graf](../images/main/cob_graph_min_5m_carbimpact.png)
 
-### Absorption cutoff
+### Absorptionsgrænse
 
-Time at which any meal is considered absorbed; remaining carbs will be cut off. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Tidspunktet, hvor et måltid regnes som absorberet; de resterende kulhydrater bliver fjernet. Hvis du ofte spiser måltider med meget fedt eller protein, skal du øge din absorptionstid for måltider.
 
-### Advanced settings - autosens ratio
+### Avancerede indstillinger - autosens-forhold
 
-![Absorption advanced settings](../images/preferences/settings_absorption_advanced.png)
+![Avancerede indstillinger for absorbering](../images/preferences/settings_absorption_advanced.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Angiv min. og maks. [autosens](#Open-APS-features-autosens)-forhold.
+- Normalt bør standardværdierne (maks. 1,2 og min. 0,7) ikke ændres.
 
-## Pump
+## Pumpe
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Indstillinger > Pumpe](../images/preferences/settings_pump.png)
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off Bluetooth for one second if no connection to the pump is possible. This may help on some phones where the Bluetooth stack freezes.
+Aktiver BT Watchdog, hvis det er nødvendigt (f.eks. til Dana-pumper). Den slår Bluetooth fra i ét sekund, hvis der ikke kan oprettes forbindelse til pumpen. Det kan hjælpe på nogle telefoner, hvor Bluetooth-stakken fryser.
 
-## Pump settings
+## Pumpeindstillinger
 
-The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+Mulighederne her afhænger af, hvilken pumpedriver du har valgt under [Konfiguration > Pumpe](#Config-Builder-pump). Par og opsæt din pumpe efter [vejledningen for din pumpe](../Getting-Started/CompatiblePumps.md).
 
-For example with the **Virtual Pump**, the section is called **Virtual pump settings**. You choose the **Pump type** the virtual pump imitates, and whether its status is uploaded to Nightscout:
+For eksempel med **Virtuel pumpe** hedder sektionen **Indstillinger for virtuel pumpe**. Du vælger den **Pumpetype**, som den virtuelle pumpe efterligner, og om dens status bliver uploadet til Nightscout:
 
-![Settings > Virtual pump settings](../images/preferences/settings_virtual_pump.png)
+![Indstillinger > Indstillinger for virtuel pumpe](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Mere information på siden [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
 ## NSClientV3
 
-![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
+![Indstillinger > NSClientV3](../images/preferences/settings_nsclient.png)
 
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. It uses the Nightscout API v3.
+NSClient-pluginet (vist som **NSClientV3** i menuen Konfiguration) synkroniserer dine data med Nightscout. Det bruger Nightscout API v3.
 
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Når du bruger NSClientV3, skal alle uploadere bruge Nightscout API v3. Hvis en anden uploader (f.eks. din CGM-app) ikke understøtter API v3, så **lad AAPS uploade alle data** (BS, behandlinger, ...) til Nightscout, og deaktiver den anden uploader.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Indstil din *Nightscout URL* (f.eks. <https://yoursitename.yourplatform.dom>).
+- **Sørg for, at URL'en er UDEN /api/v1/ til sidst.**
+- Opret en *[Admin-token](https://nightscout.github.io/nightscout/security/#create-a-token)* i Nightscout (kræver [Nightscout 15](https://nightscout.github.io/update/update/) for at bruge V3 API), og skriv den i **Nightscout-adgangstoken** (ikke din API Secret!). På **AAPSClient** kan du i stedet scanne hovedenhedens QR-kode, som opretter en token, der kun hører til klienten. En klient, der er parret med PIN, får sin egen token fra hovedenheden efter parringen. Se [Klientens egen Nightscout-token](#client-master-control-own-token).
+- Dette gør det muligt at læse og skrive data mellem Nightscout-hjemmesiden og **AAPS**.
+- Tjek grundigt for stavefejl her, hvis du sidder fast i læringsmål 1.
+- Lad »Brug websockets« være aktiveret (anbefales). Websockets er **påkrævet** for fjernstyring fra **AAPSClient** på begge telefoner.
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Synkronisering
 
-![Synchronization options](../images/preferences/settings_nsclient_sync.png)
+![Indstillinger for synkronisering](../images/preferences/settings_nsclient_sync.png)
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Valgene for synkronisering afhænger af, hvordan du vil bruge **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+Du kan vælge, hvilke data du vil [uploade til og downloade fra Nightscout](#Nightscout-aaps-settings).
 
-While client control is on (always in Simple Mode), these settings are hidden: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode), takes no changes made directly in Nightscout and uploads all its data.
+Mens klientstyring er slået til (altid i simpel tilstand), er disse indstillinger skjult: **AAPS** er så i [hærdet tilstand](#client-master-control-hardened-mode), tager ikke imod ændringer, der laves direkte i Nightscout, og uploader alle sine data.
 
-### Alarm options
+### Indstillinger for alarm
 
-![Alarm options](../images/preferences/settings_nsclient_alarms.png)
+![Indstillinger for alarm](../images/preferences/settings_nsclient_alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip or BYODA) then use those alarms instead of Nightscout Alarms.
-- NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+- Med indstillinger for alarm kan du vælge, hvilke Nightscout-alarmer du vil bruge gennem appen. **AAPS** giver alarm, når en Nightscout-alarm udløses.
+- For at alarmerne kan lyde, skal du indstille værdierne for alarmerne akut høj, høj, lav og akut lav i dine [Nightscout-variabler](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- De virker kun, mens du har forbindelse til Nightscout, og er beregnet til forældre/omsorgspersoner.
+- Hvis du har **CGM**-kilden på din telefon (f.eks. xDrip eller BYODA), så brug de alarmer i stedet for Nightscout-alarmer.
+- NS-meddelelser viser Nightscout-[meddelelser](https://nightscout.github.io/nightscout/discover/#announcement) i notifikationerne i **AAPS**.
+- Du kan ændre grænserne for alarmerne for forældede data og akut forældede data, når der ikke er modtaget data fra Nightscout efter en vis tid.
 
-### Remote control
+### Fjernstyring
 
-The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
+Kontakten »**Tillad styring fra klienter**« er ikke længere i disse indstillinger: den er øverst under **Administrer → Godkendte klienter**, hvor de parrede klienter administreres. Se siden [Styring mellem hovedenhed ↔ klient](../RemoteFeatures/ClientMasterControl.md), også om [hærdet tilstand](#client-master-control-hardened-mode), som denne kontakt slår til.
 
-### Connection settings
+### Indstillinger for forbindelse
 
-![NSClient connection settings](../images/preferences/settings_nsclient_connection.png)
+![Indstillinger for NSClient-forbindelse](../images/preferences/settings_nsclient_connection.png)
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Indstillinger for forbindelse bestemmer, hvornår forbindelsen til Nightscout er aktiveret.
+- Begræns upload til Nightscout til kun Wi-Fi eller endda til bestemte Wi-Fi-SSID'er.
+- Hvis du kun vil bruge et bestemt Wi-Fi-netværk, kan du skrive dets Wi-Fi-SSID.
+- Flere SSID'er kan adskilles med semikolon.
+- For at slette alle SSID'er skal du skrive et mellemrum i feltet.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Avancerede indstillinger (NSClientV3)
 
-![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
+![Avancerede indstillinger for NSClient](../images/preferences/settings_nsclient_advanced.png)
 
-Options in advanced settings are self-explanatory.
+Mulighederne under avancerede indstillinger burde forklare sig selv.
 
-## SMS Communicator
+## SMS-kommunikator
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Mere information på siden [SMS-kommandoer](../RemoteFeatures/SMSCommands.md).
 
 (preferences-wear)=
-## Wear
+## Ur
 
-This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) and [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md) pages.
+Denne sektion vises, når pluginet **Ur** er aktiveret under [Konfiguration > Kommunikation](#Config-Builder-wear). Mere information på siderne [Opsæt AAPS på dit Wear OS-ur](../WearOS/WearOsSmartwatch.md) og [Betjening af AAPS med dit Wear OS-smartur](../RemoteFeatures/RemoteControlWearOS.md).
 
-![Settings > Wear](../images/preferences/settings_wear.png)
+![Indstillinger > Ur](../images/preferences/settings_wear.png)
 
-- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data: the phone refuses any command from the watch, and tapping a complication that would open a control screen opens the **AAPS** menu on the watch instead.
+- **Styring fra ur**: tillad, at behandlinger og andre handlinger sendes fra uret. Uden den viser uret kun data: telefonen afviser alle kommandoer fra uret, og hvis du trykker på en komplikation, der ville åbne en styringsskærm, åbnes menuen for **AAPS** på uret i stedet.
 
-**Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
+**Indstillinger for beregner på ur** angiver, hvilke beregninger der indgår i resultatet fra bolusberegneren på uret. På uret indtaster du kun kulhydraterne; disse kontakter erstatter de valg, du ville træffe i bolusberegneren på telefonen:
 
-- **Include BG in wizard**: add a correction for the difference between your current glucose and your target.
-- **Include temp target in wizard**: use the running temp target instead of the profile target for this correction.
-- **Include trend in wizard**: take the current glucose trend into account.
-- **Include COB in wizard**: add insulin for the carbs that are still on board.
-- **Include IOB in wizard**: subtract the insulin that is still on board.
+- **Medtag BS i beregner**: tilføj en korrektion for forskellen mellem dit aktuelle glukoseniveau og dit mål.
+- **Medtag midlertidigt mål i beregner**: brug det aktive midlertidige mål i stedet for profilens mål til denne korrektion.
+- **Medtag trend i beregner**: tag højde for den aktuelle glukosetrend.
+- **Medtag COB i beregner**: tilføj insulin for de kulhydrater, der stadig er om bord.
+- **Medtag IOB i beregner**: træk den insulin fra, som stadig er om bord.
 
-![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
+![Indstillinger > Ur > Indstillinger for beregner på ur](../images/preferences/settings_wear_wear_wizard.png)
 
-**Custom Watchface Settings** contains **Authorize custom watchfaces**. A custom watchface file can include values for some watch settings. When this switch is on, loading such a watchface is allowed to change those settings on the watch; when it is off, the watchface is loaded but the settings stay as they are:
+**Brugerdefinerede urskiveindstillinger** indeholder **Godkend brugerdefinerede urskiver**. En fil med en brugerdefineret urskive kan indeholde værdier for nogle af urets indstillinger. Når denne kontakt er slået til, må en sådan urskive ændre disse indstillinger på uret, når den indlæses; når den er slået fra, bliver urskiven indlæst, men indstillingerne forbliver, som de er:
 
-![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
+![Indstillinger > Ur > Brugerdefinerede urskiveindstillinger](../images/preferences/settings_wear_custom_watchface.png)
 
-**General Settings** contains **Notify on SMB**, to get a notification on the watch each time an SMB is delivered:
+**Generelle indstillinger** indeholder **Giv besked ved SMB**, så du får en notifikation på uret, hver gang der bliver givet en SMB:
 
-![Settings > Wear > General Settings](../images/preferences/settings_wear_general.png)
+![Indstillinger > Ur > Generelle indstillinger](../images/preferences/settings_wear_general.png)
 
 ## Autotune
 
-This section is shown when the **Autotune** plugin is enabled in [Configuration > General](#Config-Builder-autotune). The settings are described on the dedicated [Autotune](../AdvancedOptions/Autotune.md) page.
+Denne sektion vises, når pluginet **Autotune** er aktiveret under [Konfiguration > Generelt](#Config-Builder-autotune). Indstillingerne er beskrevet på siden [Sådan bruger du Autotune-pluginet](../AdvancedOptions/Autotune.md).
 
-![Settings > Autotune](../images/preferences/settings_autotune.png)
+![Indstillinger > Autotune](../images/preferences/settings_autotune.png)
 
-## Automation
+## Automatisering
 
-![Settings > Automation](../images/preferences/settings_automation.png)
+![Indstillinger > Automatisering](../images/preferences/settings_automation.png)
 
-Select which location service shall be used:
+Vælg, hvilken placeringstjeneste der skal bruges:
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Brug passiv placering: **AAPS** henter kun placeringer, hvis andre apps beder om dem
+- Brug netværksplacering: placeringen af dit Wi-Fi
+- Brug GPS-placering (Bemærk! Kan bruge meget batteri!)
 
-## Local alerts
+## Lokale alarmer
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Indstillinger > Lokale alarmer](../images/preferences/settings_local_alerts.png)
 
-Settings should be self-explanatory.
+Indstillingerne burde forklare sig selv.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Tilsidesæt Forstyr ikke-tilstand** (slået til som standard): alarmerne i **AAPS** ringer, selv når telefonen er på lydløs eller i Forstyr ikke. Slå den fra, hvis **AAPS** skal respektere disse tilstande: så ringer alarmerne ikke, og i Forstyr ikke vibrerer de kun, på telefonen og på uret. Loop-forslag, der kommer under Forstyr ikke, vises uden lyd.
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Når en alarm ringer, giver alarmskærmen mulighederne **Lydløs i 5 minutter**, **Gør alarmen lydløs** (skærmen forbliver åben, så du kan læse beskeden) og **Lydløs og luk**. Hvis du swiper alarmnotifikationen væk i notifikationsområdet, bliver alarmen gjort lydløs. Når du senere åbner **AAPS**, bliver en alarm, du ikke har svaret på, vist igen.
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### Alarmlyd, lydstyrke og vibration
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **Lyd**: alarmlydene i **AAPS** er indbygget og kan ikke ændres.
+- **Lydstyrke**: **AAPS** har ingen egen indstilling for lydstyrke. Med **Tilsidesæt Forstyr ikke-tilstand** slået til følger alarmerne telefonens lydstyrke for alarmer. Når den er slået fra, følger de lydstyrken for notifikationer.
+- **Øg lydstyrken for notifikationer gradvist** (slået til som standard): alarmen starter stille og bliver højere. Slå den fra for at ringe med fuld lydstyrke med det samme.
+- **Vibration**: i telefonens indstillinger skal du gå til **Apps** > **AAPS** > **Notifikationer**. Listen **AAPS-alarmer** vises der efter den første alarm. Tryk på en alarm for at slå dens **Vibration** til eller fra. Hold disse alarmer slået til.
 
-![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+![AAPS-alarmer i telefonens indstillinger for notifikationer](../images/preferences/settings_alarm_channels.png) ![Indstilling for vibration for én AAPS-alarm](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- Glukosealarmer (høj, lav, ingen data) kommer fra din CGM-app eller Nightscout: indstil deres lyd og vibration der.
 
 (preferences-maintenance-settings)=
-## Maintenance settings
+## Indstillinger for vedligeholdelse
 
-![Settings > Maintenance](../images/preferences/settings_maintenance.png)
+![Indstillinger > Vedligeholdelse](../images/preferences/settings_maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**E-mailmodtager**: Standardmodtageren af logfiler er <logs@aaps.app>.
 
-**Number of logs to send**: how many of the most recent log files are attached when you send logs.
+**Antal logfiler, der skal sendes**: hvor mange af de nyeste logfiler der vedhæftes, når du sender logfiler.
 
-**Data Choices**
+**Valg af data**
 
-![Data choices](../images/preferences/settings_data_choices.png)
+![Valg af data](../images/preferences/settings_data_choices.png)
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+Du kan hjælpe med at udvikle **AAPS** ved at sende nedbrudsrapporter til udviklerne.
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manual export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**Automatisk eksport af indstillinger**<br/> Når du aktiverer denne funktion, tillader du **AAPS** at eksportere indstillinger, uden at du skal gøre noget. Til det gemmes hovedadgangskoden sikkert på din telefon (og kun der) ved den næste manuelle eksport. Den gemte adgangskode bruges i op til 4 uger. Efter 4 uger får du besked om, at adgangskoden snart udløber. I en frist på 1 uge kan adgangskoden derefter fornyes ved at eksportere indstillingerne manuelt fra menuen Vedligeholdelse.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password. [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+Når fristen på 1 uge er gået, udløber den gemte adgangskode, og alle automatiske eksporter af indstillinger bliver afbrudt, mens brugeren får besked og bliver bedt om at indtaste adgangskoden igen. [(**Automatiske eksporter af indstillinger**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) bliver registreret i listerne 'Careportal' og 'Brugerindtastning' under Behandlinger i **AAPS**.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Når du har aktiveret denne mulighed, skal du lave en manuel eksport af indstillingerne, hvor du bliver bedt om din adgangskode, så **AAPS** kan gemme den.
 
-### Log files
+### Logfiler
 
-AAPS will save logs for troubleshooting.
+AAPS gemmer logfiler til fejlfinding.
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+Slå ikke denne funktion fra: den hjælper med at forstå årsagen, hvis noget går galt.
 
-If you need to send the logs to the developers, make sure you accurately describe the issue in the email. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Hvis du skal sende logfilerne til udviklerne, så sørg for at beskrive problemet præcist i e-mailen. Det er bedst kun at sende logfiler, når du er blevet bedt om det, efter en [fejlrapport på GitHub](https://github.com/nightscout/AndroidAPS/issues).
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Du kan finde logfilerne fra AAPS i telefonens hukommelse -> Android -> data -> info.nightscout.androidaps -> files.
 
-Log handling (log settings, sending and deleting logs) and file management are found on the **Maintenance** screen, opened from the **menu** (☰) in the top-left corner of the main screen:
+Håndtering af logfiler (indstillinger for logfiler, afsendelse og sletning af logfiler) og filhåndtering finder du på skærmen **Vedligeholdelse**, som du åbner fra **menuen** (☰) i øverste venstre hjørne af hovedskærmen:
 
-![Maintenance screen](../images/preferences/maintenance_file_management.png)
+![Skærmen Vedligeholdelse](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### Indstilling af den lokale AAPS-mappe
 
-The **Maintenance** screen also includes the **AAPS directory**. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Once a directory is chosen, its path (for example `Documents/AAPS`) is shown below **AAPS directory**, so you can always see where your files are saved.
+Skærmen **Vedligeholdelse** indeholder også **AAPS-mappe**. Med denne indstilling kan brugeren vælge en mappe på telefonen, hvor **AAPS** gemmer indstillinger, logfiler og andre filer. Når en mappe er valgt, vises dens sti (f.eks. `Documents/AAPS`) under **AAPS-mappe**, så du altid kan se, hvor dine filer bliver gemt.
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+Det anbefales kraftigt at bruge en mappe direkte i hovedniveauet af telefonens hukommelse. Standard er AAPS.
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+![Placering af lokal mappe](../images/preferences/maintenance_settings_directory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+Hvis du vælger en undermappe til AAPS, vil du se en fejlmeddelelse. Tryk på »OK«, og prøv igen, hvor du vælger den rigtige mappe (et niveau højere). Vælg ikke »AFVIS«, medmindre du ved præcis, hvad du gør.
 
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+![Placering af lokal mappe](../images/preferences/maintenance_settings_wrongdirectory.png)
 
-Android can silently take the directory permission away, for example after you reinstall **AAPS** or clear its storage. When that happens, **AAPS** shows a persistent **Access to the AAPS directory was lost** notification and local settings export stops working until you come back here and select the directory again. Do this promptly, otherwise your backups on the phone are no longer refreshed.
+Android kan uden varsel fjerne tilladelsen til mappen, f.eks. når du geninstallerer **AAPS** eller rydder dens lager. Når det sker, viser **AAPS** en vedvarende notifikation **Adgangen til AAPS-mappen er mistet**, og lokal eksport af indstillinger holder op med at virke, indtil du kommer tilbage hertil og vælger mappen igen. Gør det hurtigt, ellers bliver dine sikkerhedskopier på telefonen ikke længere opdateret.
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### Opsætning af en skymappe
 
-You can export your settings, logs and CSV data to a cloud service.
+Du kan eksportere dine indstillinger, logfiler og CSV-data til en skytjeneste.
 
-1. Open the **menu** (☰), select **Maintenance** and tap **Cloud Directory** (under **File management**).
+1. Åbn **menuen** (☰), vælg **Vedligeholdelse**, og tryk på **Skymappe** (under **Filhåndtering**).
 
-   ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
+   ![Skymappe i menuen Vedligeholdelse](../images/preferences/maintenance_settings_cloud.png)
 
-2. In **Select Storage Type**, select **Google Drive**.
+2. Vælg **Google Drive** i **Vælg lagertype**.
 
-   ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
+   ![Dialogen Vælg lagertype](../images/preferences/maintenance_cloud_select_storage.png)
 
-3. A Google sign-in page opens. Choose the Google account that will hold your backups (you can use a [dedicated Google account](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
+3. En Google-loginside åbnes. Vælg den Google-konto, der skal gemme dine sikkerhedskopier (du kan bruge en [separat Google-konto](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
 
-   ![Google sign-in page: choose an account](../images/preferences/maintenance_cloud_google_account.png)
+   ![Google-loginside: vælg en konto](../images/preferences/maintenance_cloud_google_account.png)
 
-4. Check that the account is the right one and tap **Continue** to give **AAPS** access. If you set up the cloud directory before, the page says that **AAPS** already has some access.
+4. Tjek, at det er den rigtige konto, og tryk på **Continue** for at give **AAPS** adgang. Hvis du har sat skymappen op før, står der på siden, at **AAPS** allerede har en vis adgang.
 
-   ![Google page asking to give AAPS access, with the Continue button](../images/preferences/maintenance_cloud_google_access.png)
+   ![Google-side, der beder om at give AAPS adgang, med knappen Continue](../images/preferences/maintenance_cloud_google_access.png)
 
-5. Back in **AAPS**, the message **Cloud storage authentication successful** appears at the bottom of the main screen:
+5. Tilbage i **AAPS** vises beskeden **Godkendelse af skylager lykkedes** nederst på hovedskærmen:
 
-   ![Cloud storage authentication successful message](../images/preferences/maintenance_cloud_auth_success.png)
+   ![Beskeden Godkendelse af skylager lykkedes](../images/preferences/maintenance_cloud_auth_success.png)
 
-   In the **Maintenance** menu, **Cloud Directory** now has a green dot, and the **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** are available.
+   I menuen **Vedligeholdelse** har **Skymappe** nu en grøn prik, og knapperne **Sky** ved siden af **Send logfiler**, **Eksporter indstillinger**, **Importer indstillinger** og **Eksporter brugerindtastninger til Excel (csv)** er tilgængelige.
 
-   ![Maintenance menu with cloud storage set up: Cloud buttons available and the clear icon on Cloud Directory](../images/preferences/maintenance_settings_cloud_ready.png)
+   ![Menuen Vedligeholdelse med skylager sat op: knapperne Sky er tilgængelige, og ikonet til at rydde ved Skymappe](../images/preferences/maintenance_settings_cloud_ready.png)
 
-To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the end of the **Cloud Directory** row in the **Maintenance** menu (it is shown once a cloud service is set up) and confirm **Clear Cloud Settings**. This switches back to local storage and clears the authorization.
+For at stoppe eksport til skyen skal du trykke på ikonet **✕** (**Ryd indstillinger**) i slutningen af rækken **Skymappe** i menuen **Vedligeholdelse** (det vises, når en skytjeneste er sat op) og bekræfte **Ryd skyindstillinger**. Det skifter tilbage til lokal lagring og fjerner godkendelsen.
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+Du kan hjælpe fællesskabet ved at donere dine data til forskningsprojekter! Detaljer er beskrevet på siden [Open Humans Uploader](../SupportingAaps/OpenHumans.md).
 
-In **Settings → Open Humans**, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+Under **Indstillinger → Open Humans** kan du angive, hvornår data skal uploades
+- kun når der er forbindelse til Wi-Fi
+- kun under opladning
