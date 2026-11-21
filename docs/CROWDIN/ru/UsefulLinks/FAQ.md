@@ -6,9 +6,9 @@ How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/H
 
 ### Can I just download the AAPS installation file?
 
-Нет. Для AndroidAPS не предоставляется загружаемый файл apk. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Причина вот в чем:
+Нет. Для AAPS нет готового apk-файла для скачивания. Вам нужно [собрать](../SettingUpAaps/BuildingAaps.md) его самостоятельно. Причина вот в чем:
 
-AndroidAPS создан для управления помпой и подачи инсулина. В соответствии с действующим Европейским законодательством, все системы, классифицируемые как IIa или IIb, являются медицинскими устройствами, подлежащими обязательной сертификации (получение знака CE), что в свою очередь требует соответствующих исследований и одобрений. Распространение несертифицированных устройств незаконно. Аналогичные законы существуют и в других частях мира.
+AAPS используется для управления помпой и подачи инсулина. В соответствии с действующим Европейским законодательством, все системы, классифицируемые как IIa или IIb, являются медицинскими устройствами, подлежащими обязательной сертификации (получение знака CE), что в свою очередь требует соответствующих исследований и одобрений. Распространение несертифицированных устройств незаконно. Аналогичные законы существуют и в других частях мира.
 
 Это положение не ограничивается торговлей, но относится к любому виду распространения (даже безвозмездному). Создание медицинского устройства для себя является единственным вариантом, не затрагиваемым этими правилами.
 
@@ -22,13 +22,13 @@ Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md
 
 Прежде всего, нужно **подготовить компоненты, которые работают с ипж**:
 
-* A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-* an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-* a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+* [поддерживаемая инсулиновая помпа](../Getting-Started/CompatiblePumps.md), 
+* [смартфон на Android](../Getting-Started/Phones.md) (Apple iOS не поддерживается AAPS – можно посмотреть [iOS Loop](https://loopkit.github.io/loopdocs/)) и
+* [система непрерывного мониторинга глюкозы](../Getting-Started/CompatiblesCgms.md). 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Во-вторых, нужно **настроить программные компоненты**: [AAPS](../SettingUpAaps/BuildingAaps.md), [источник данных CGM/FGM](../Getting-Started/CompatiblesCgms.md) и [сервер отчетности](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. Все рекомендации, выдаваемые ИПЖ предполагают, что ваши базовые потребности в инсулине удовлетворены и любые пики и провалы характеристики ГК - следствие других факторов, требующих дополнительных настроек ( нагрузка, стресс и пр.). В настройках ИПЖ введены ограничения безопасности (см. максимально допустимый базальный уровень в [Архитектуре OpenAPS](https://openaps.org/reference-design/)), которые означают, что вам не придется тратить допустимые дозировки на исправление неправильной базы. Например, если перед едой вы часто ставите временную цель на пониженный уровень ГК, вам, скорее всего, требуется настройка базы. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+В-третьих, нужно изучить и **понять архитектуру OpenAPS (reference design), чтобы проверить параметры вашей терапии**. Основной принцип замкнутого цикла – ваши [базальная скорость и углеводный коэффициент](../SettingUpAaps/YourAapsProfile.md) точны. Все рекомендации, выдаваемые ИПЖ предполагают, что ваши базовые потребности в инсулине удовлетворены и любые пики и провалы характеристики ГК - следствие других факторов, требующих дополнительных настроек ( нагрузка, стресс и пр.). Изменения, которые может вносить замкнутый цикл, ради безопасности ограничены (см. максимально допустимую временную базальную скорость в [Архитектуре OpenAPS](https://openaps.org/reference-design/)). Поэтому не стоит тратить допустимые дозы на исправление неправильного базала. Например, если перед едой у вас часто включается пониженный временный базал, то, скорее всего, ваш базал нужно настроить. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Или можно проверить и настроить базал [традиционным способом](https://integrateddiabetes.com/basal-testing/).
 
 ### What practicalities of looping do I have?
 
@@ -44,7 +44,7 @@ If you use the AAPS watch app to bolus or change settings, every request has to 
 
 #### Disconnect pump
 
-Если вы снимаете помпу на время душа, купания, занятия спортом или других действий, то, чтобы активный инсулин IOB правильно отражался в системе, следует проинформировать AAPS, что инсулин не вводится,.
+Если вы снимаете помпу на время душа, ванны, плавания, занятий спортом или других дел, обязательно сообщите AAPS, что инсулин не подается, чтобы IOB считался правильно.
 
 The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the AAPS main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, press the icon again and pick a new duration: you don't need to reconnect first. See [Disconnecting the pump for showering or activity](#pumps-cannulas-disconnecting) for how to avoid a lack of insulin during long disconnections.
 
@@ -64,9 +64,9 @@ There are several blogs with good tips to help you understand the practicalities
 
 (what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
 
-### What emergency equipment is recommended to take with me?
+### Какое запасное оборудование рекомендуется брать с собой?
 
-Прежде всего, вам необходимо иметь стандартный набор для больного диабетом 1го типа. При пользовании AAPS настоятельно рекомендуется также иметь:
+У вас всегда должен быть с собой тот же запасной набор, что и у любого человека с диабетом 1 типа на помповой терапии. При пользовании AAPS настоятельно рекомендуется также иметь:
 
 * Банк батарей и кабель для зарядки смартфона, часов и (если это необходимо) BT reader или Link device
 * Батарейки для помпы
@@ -86,7 +86,7 @@ Export settings very regularly: after each pod or reservoir change, after modify
 
 ### How can I safely and securely attach the CGM/FGM?
 
-Его можно закрепить лейкопластырем. Существует несколько предварительно перфорированных 'накладок' для распространенных систем мониторинга (искать в Google, eBay. Amazon. Озон, Wildberries и т. п.). Некоторые пользователи ИПЖ применяют более дешевые стандартные кинезезиотейпы или лейкопластыри.
+Его можно закрепить лейкопластырем. Существует несколько предварительно перфорированных 'накладок' для распространенных систем мониторинга (искать в Google, eBay. Amazon. Озон, Wildberries и т. п.). Некоторые пользователи применяют более дешевые стандартные кинезиотейпы или rocktape.
 
 Его можно закрепить держателем. В продаже есть держатели CGM/FGM с повязками (поиск Google, eBay Amazon, Озон, Wildberries).
 
@@ -98,7 +98,7 @@ With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** sh
 
 ![OpenAPS AMA plugin screen with dia 3.0 in the profile data](../images/screens/openaps_ama_plugin.png)
 
-В помощнике болюса AMA "DIA" не означает "длительность действия инсулина". Этот параметр раньше привязывался к длительности действия инсулина DIA. Теперь же он означает, 'время, за которое нужно завершить коррекцию'. Он не имеет ничего общего с расчетом активного инсулина IOB. В алгоритме OpenAPS SMB больше нет необходимости в этом параметре.
+В AMA параметр DIA на самом деле не означает «длительность действия инсулина». Этот параметр раньше привязывался к длительности действия инсулина DIA. Теперь же он означает, 'время, за которое нужно завершить коррекцию'. Он не имеет ничего общего с расчетом активного инсулина IOB. В алгоритме OpenAPS SMB больше нет необходимости в этом параметре.
 
 ## Other settings
 
@@ -136,16 +136,16 @@ Looping can reduce the pump battery faster than normal use because the system in
 * Нажимать кнопки помпы только для перезагрузки; для просмотра журналов, уровня батареи и объема резервуара помпы пользоваться смартфоном с AAPS.
 * На некоторых телефонах AAPS периодически закрывается для экономии энергии или высвобождения оперативной памяти. Когда AAPS вновь инициализируется, то при каждом старте устанавливает соединение Bluetooth с помпой и перечитывает текущую базальную скорость и журнал болюсов. Это расходует батарею. To see if this is happening, enable **Log app start event** in the NSClient **Advanced settings**: Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, turn off battery optimization for AAPS so that the phone stops closing it down: see [battery savings](#FAQ-battery-savings) below.
 * протирайте контакты батареи спиртовыми салфетками, чтобы на ней не оставались следы заводской смазки.
-* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%. Либо удалите и заново вставьте батарею 2-3 раза до тех пор, пока на экране помпы заряд батареи не покажет 100%, либо замкните контакты батареи на долю секунды при помощи ключа батареи, чтобы удалить этот налет.
-* see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%. Либо извлеките и снова вставьте батарею 2–3 раза, пока на экране не появится 100%, либо перед установкой на долю секунды замкните оба контакта батареи ключом для батареи.
+* см. также советы для [разных типов батарей](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
-#### Changing reservoirs and cannulas
+#### Замена резервуаров и катетеров
 
 The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Follow the step-by-step [guide for changing the pump reservoir and cannula](#pumps-cannulas-changing-reservoir-and-cannula).
 
 ### Wallpaper
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+Обои AAPS для телефона можно найти на [странице о телефонах](#Phones-phone-wallpaper).
 
 ### Daily usage
 
@@ -157,11 +157,11 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 ##### What to do when taking a shower or bath?
 
-Помпу можно снять при приеме душа или ванной. За этот короткий промежуток времени вам может не понадобиться, но вы должны сообщить AAPS о том, что отключились для того, чтобы вычисления IOB были правильными. See [description above](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
+Помпу можно снять при приеме душа или ванной. За этот короткий промежуток времени вам может не понадобиться, но вы должны сообщить AAPS о том, что отключились для того, чтобы вычисления IOB были правильными. См. [описание выше](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
 
 #### Work
 
-В зависимости от вида работы, возможно, вы используете иные методы терапии в рабочие дни. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. Например, профиль больше 100% можно установить, если работа не очень тяжелая (напр. сидя за столом), или меньше 100%, если вы активны и на ногах весь день. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need, or save your workday settings as a [scene](#scenes).
+В зависимости от вида работы, возможно, вы используете иные методы терапии в рабочие дни. Если вы пользуетесь циклом, подумайте о [переключении профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) для вашего обычного рабочего дня. Например, профиль больше 100% можно установить, если работа не очень тяжелая (напр. сидя за столом), или меньше 100%, если вы активны и на ногах весь день. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need, or save your workday settings as a [scene](#scenes).
 
 ### Leisure activities
 
@@ -169,29 +169,29 @@ Many of the situations below can be prepared once as a [scene](#scenes): a prese
 
 #### Sports
 
-Пересмотрите свои старые спортивные привычки доаппсовских времен. Если вы как и прежде съедаете один или несколько углеводов на спорт, теперь система замкнутого цикла распознает их и соответствующим образом скорректирует.
+Пересмотрите свои старые спортивные привычки, которые были до замкнутого цикла. Если вы как и прежде съедаете один или несколько углеводов на спорт, теперь система замкнутого цикла распознает их и соответствующим образом скорректирует.
 
-Итак, в организме будет больше углеводов, но в то же время петля будет противодействовать и подавать инсулин.
+Итак, в организме будет больше углеводов, но в то же время цикл будет противодействовать и подавать инсулин.
 
 При работе с алгоритмом ИПЖ следует выполнить следующие действия:
 
 * Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
-* Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+* Установите [временную цель «Нагрузка»](#TempTargets-activity-temp-target) выше вашей обычной цели. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
+* Если вы пользуетесь SMB, убедитесь, что [«Включить SMB при высокой временной цели»](#Open-APS-features-enable-smb-with-high-temp-targets) и [«Всегда включать супер микро болюс SMB»](#Open-APS-features-enable-smb-always) выключены.
 
 Важное значение имеет предварительная и последующая обработка этих настроек. Внесите изменения до занятий спортом и учитывайте эффект наполнения мышц.
 
 The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these settings, so you can start them with one tap. If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) to start the profile switch and TT, or the scene. Автоматизация на основе геолокации также неплохая идея, но делает предварительную обработку более сложной.
 
-Процент изменения профиля, величина временной цели при нагрузках и наилучшее время для внесения изменений индивидуальны. Начните с более безопасных параметров (например с низким процентоом профиля и более высокими временными целями).
+Процент изменения профиля, величина временной цели при нагрузках и наилучшее время для внесения изменений индивидуальны. Если вы ищете подходящее для себя значение, начните с безопасной стороны (с меньшего процента профиля и более высокой временной цели).
 
 #### Sex
 
-Можете снять помпу для "свободы" но следует проинформировать об этом AAPS, чтобы расчеты активного инсулина IOB были правильными. See [description above](#FAQ-disconnect-pump).
+Можете снять помпу для "свободы" но следует проинформировать об этом AAPS, чтобы расчеты активного инсулина IOB были правильными. См. [описание выше](#FAQ-disconnect-pump).
 
 #### Drinking alcohol
 
-Употребление алкоголя является рискованным в режиме замкнутого цикла, так как алгоритм ИПЖ не может правильно предсказать влияние алкоголя на ГК. Следует выработать свой собственный метод подхода к этому вопросу с помощью следующих функций в AndroidAPS:
+Употребление алкоголя является рискованным в режиме замкнутого цикла, так как алгоритм ИПЖ не может правильно предсказать влияние алкоголя на ГК. Выработайте свой собственный подход к этому с помощью следующих функций AAPS:
 
 * Деактивировать режим замкнутого цикла и разбираться с диабетом вручную или
 * setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
@@ -199,17 +199,17 @@ The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these
 
 The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
 
-При употреблении алкоголя всегда нужно следить за мониторингом, чтобы вручную избежать гипокликемии, съедая углеводы.
+При употреблении алкоголя всегда нужно следить за CGM, чтобы вручную избежать гипогликемии, съедая углеводы.
 
-#### Sleeping
+#### Сон
 
 ##### How can I loop during the night without mobile and Wi-Fi radiation?
 
-Многие пользователи ночью переводят телефон в режим авиаперелета. If you want the loop to support you when you are sleeping, proceed as follows (this will only work if your CGM app runs on the same phone as AAPS, such as xDrip, Juggluco or BYODA; it will NOT work if you get the BG-readings via Nightscout):
+Многие пользователи ночью переводят телефон в режим полета. If you want the loop to support you when you are sleeping, proceed as follows (this will only work if your CGM app runs on the same phone as AAPS, such as xDrip, Juggluco or BYODA; it will NOT work if you get the BG-readings via Nightscout):
 
-1. Включите режим авиаперелета на вашем мобильном устройстве.
-2. Подождите, пока режим авиаперелета не будет активирован.
-3. Включите Блутус.
+1. Включите на телефоне режим полета.
+2. Подождите, пока режим полета не включится.
+3. Включите Bluetooth.
 
 Теперь вы не принимаете звонки и не подключены к Интернету. Но цикл продолжает работу.
 
@@ -229,13 +229,13 @@ If you want different settings at night (for example a higher target), the *Slee
 
 #### Hospitalization
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+Если вы хотите рассказать своим врачам об AAPS и самодельном замкнутом цикле, можно распечатать [Для врачей – общее введение и руководство по AAPS](../UsefulLinks/ClinicianGuideToAaps.md).
 
 #### Medical appointment with your endocrinologist
 
 ##### Reporting
 
-Вы можете либо распечатать отчеты вашего сайта Nightscout (https://вашсайт.com/report) или перейти в [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Вы можете показать отчеты вашего сайта Nightscout (https://YOUR-NS-SITE.com/report) или посмотреть [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
 ## Frequent questions on Discord and their answers...
 
@@ -260,7 +260,7 @@ Please check the troubleshooting page for the way you build **AAPS** (see [Build
 
 This error can happen when building with Android Studio: the build stops with an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
 
-Из Android Studio: Убедитесь, что "Gradle" завершил синхронизацию и индексирование после открытия проекта с GitHub. Выполните Build->Clean Project прежде чем выполнять Rebuild Project. Выполните команду File>Инвалидация кэша и перезагрузите Android Studio.
+Из Android Studio: Убедитесь, что "Gradle" завершил синхронизацию и индексирование после открытия проекта с GitHub. Выполните Build->Clean Project прежде чем выполнять Rebuild Project. Выполните File > Invalidate Caches and Restart в Android Studio.
 
 (FAQ-running-dev-version)=
 
@@ -339,7 +339,7 @@ Open the **menu** (☰) and select **Treatments history**. Long press an entry t
 #### AAPS stops everyday around the same time.
 
 * Google Play Protect may shut down **AAPS** every morning on some phones. If this happens, go to the Google Play options and disable **Google Play Protect**.
-* Проверьте "очистку" приложений (при помощи CCleaner и т. д.) и удалите их.
+* Проверьте, нет ли на телефоне приложений для «очистки» (например, CCleaner), и удалите их.
 * Turn off all battery optimizations for **AAPS** (see [battery savings](#FAQ-battery-savings) below).
 
 (FAQ-battery-savings)=
@@ -381,11 +381,11 @@ First try the **Reset RileyLink** button on the pump screen (see your pump's pag
 6. Start **AAPS**.
 7. On the pump screen, tap **Pair RileyLink** and select your Link again.
 
-### Remote control
+### Удаленное управление
 
 (FAQ-aapsclient)=
 
-#### Configuring and Using the AAPSClient remote app
+#### Настройка и использование приложения AAPSClient для удаленного управления
 
 **AAPSClient** is a separate app that lets a caregiver follow and control **AAPS** remotely. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
 
@@ -405,7 +405,7 @@ That is [hardened mode](#client-master-control-hardened-mode). While client cont
 
 The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
 
-A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. Если слишком много двойных ГК потребуется сбросить базы данных AAPS,. In this case, you'll also lose stats, IOB, COB, selected profile.
+A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. Если двойных значений ГК слишком много, возможно, потребуется сбросить базы данных AAPS. In this case, you'll also lose stats, IOB, COB, selected profile.
 
 Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
 
