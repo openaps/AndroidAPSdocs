@@ -1,104 +1,104 @@
 # Open Humans Uploader
 
-## Donate your data for science
+## Donér dine data til forskning
 
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Du kan hjælpe fællesskabet ved at donere dine data til forskningsprojekter! Det hjælper forskere med at give noget videre, udvikle nye videnskabelige idéer og gøre open source-systemer med lukket loop mere kendte. AAPS er klar til at synkronisere dine data med [Open Humans](https://www.openhumans.org), en platform, hvor du kan uploade, forbinde og gemme dine personlige data – f.eks. genetiske data, aktivitetsdata og sundhedsdata.
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Du har fuld kontrol over, hvad der sker med dine data, og hvilke projekter du vil støtte ved at give dem adgang til dine data. Afhængigt af det projekt, du er med i, bliver data vurderet og brugt på forskellige måder og i forskelligt omfang.
 
-The following data will be uploaded to your Open Humans account:
+Følgende data bliver uploadet til din Open Humans-konto:
 
-- Glucose values
-- Careportal events (except notes)
-- Extended boluses
-- Profile switches
-- Total daily doses
-- Temporary basals
-- Temp targets
-- Preferences
-- Application version
-- Device model
-- Screen dimensions
+- Glukoseværdier
+- Careportal-hændelser (undtagen notater)
+- Forlængede boluser
+- Profilskift
+- Samlede daglige doser
+- Midlertidige basaler
+- Midlertidige mål
+- Indstillinger
+- Appversion
+- Enhedsmodel
+- Skærmstørrelse
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Hemmelige eller private oplysninger som din Nightscout-URL eller API secret bliver ikke uploadet.
 
-## Setup
+## Opsætning
 
-1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
+1. Opret en konto på [Open Humans](https://www.openhumans.org), hvis du ikke allerede har gjort det. Du kan bruge din eksisterende Google- eller Facebook-konto, hvis du vil.
+2. Aktiver pluginet **Open Humans** i [**Konfiguration** > **Kommunikation**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
+![Open Humans aktiveret i Konfiguration > Kommunikation](../images/OHUploader1.png)
 
-3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+3. Tryk på **Indstillinger** på kortet **Open Humans**. Du kan begrænse uploads til de tidspunkter, hvor telefonen bruger wi-fi (**Kun WiFi**) og/eller oplader (**Kun under opladning**).
 
-![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+![Open Humans-indstillinger med Kun WiFi og Kun under opladning](../images/OHUploader_settings.png)
 
-4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+4. Tryk på **Åbn plugin** på kortet **Open Humans**, og tryk derefter på **Opsætning**.
 
-![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+![Skærmen for pluginet Open Humans med knappen Opsætning](../images/OHUploader_setup.png)
 
-5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
-6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+5. Tryk på **Næste** på skærmen **Velkommen til Open Humans**. Læs skærmen **Samtykke** grundigt: den viser vilkårene for brug, og hvilke data der bliver uploadet, og hvilke der ikke bliver.
+6. Slå **Jeg forstår og er enig.** (1) til, og tryk på **Login på Open Humans** (2).
 
-![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+![Skærmene Velkommen og Samtykke for Open Humans i AAPS](../images/OHUploader2.png)
 
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
-9. Click **Authorize project** (2).
+7. Open Humans-webstedet åbnes. Log ind med dine loginoplysninger.
+8. Vælg, om du vil skjule dit medlemskab af AAPS Uploader i din offentlige Open Humans-profil (1).
+9. Klik på **Authorize project** (2).
 
-![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
-```
-
-10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
-11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
-12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
-13. Tap **Logout** if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
-
-![Open Humans finish setup](../images/OHUploader3.png)
+![Login og godkendelse af projektet på Open Humans-webstedet](../images/OHUploader_web.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+Skærmbillederne ovenfor viser en tidligere version af Open Humans-webstedet og bruger stadig det gamle projektnavn **AndroidAPS Uploader**. Trinene er de samme.
 ```
 
-15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
+10. Tilbage i **AAPS** spørger skærmen **Afsluttende detaljer**, om du vil fortsætte. Tryk på **Fortsæt**.
+11. Vent, til **Vi er færdige!** vises, og tryk derefter på **Luk**. Fra nu af uploader din telefon data i baggrunden en gang imellem.
+12. Skærmen for pluginet **Open Humans** viser nu dit **Projektmedlems-ID**. Tryk på **Upload nu**, hvis du vil starte en upload med det samme.
+13. Tryk på **Log af**, hvis du vil stoppe med at uploade data til Open Humans.
+14. En Android-notifikation fortæller dig, når en upload kører.
 
-![Open Humans manage data](../images/OHWeb.png)
+![Open Humans: afslut opsætningen](../images/OHUploader3.png)
 
-## Sharing Opportunities
+```{admonition} Older screenshot
+:class: note
+Skærmbilledet ovenfor er fra en tidligere **AAPS**-version. I **AAPS** 4 hedder bekræftelsesskærmene **Afsluttende detaljer** og **Vi er færdige!**, der er ingen køstørrelse, og knapperne hedder **Upload nu** og **Log af**.
+```
 
-### [The 'OPEN' project](https://www.open-diabetes.eu/)
+15. Du kan administrere dine data ved at logge ind på [Open Humans-webstedet](https://www.openhumans.org).
 
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their [website](https://www.open-diabetes.eu/).
+![Open Humans: administrer data](../images/OHWeb.png)
 
-In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. A [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+## Muligheder for deling
+
+### [Projektet »OPEN«](https://www.open-diabetes.eu/)
+
+Projektet »OPEN« samler et internationalt og tværfagligt konsortium af patientinnovatører, klinikere, samfundsforskere, dataloger og patientorganisationer. Formålet er at undersøge forskellige sider af gør-det-selv kunstige bugspytkirtelsystemer (DIY APS), som et stigende antal mennesker med diabetes bruger. Se flere detaljer på deres [websted](https://www.open-diabetes.eu/).
+
+I september 2020 startede projektet »OPEN« et [spørgeskema](https://survey.open-diabetes.eu/), som også giver mulighed for at donere data, du har uploadet til Open Humans. En [vejledning](https://open-diabetes.eu/en/open-survey/survey-tutorials/) i, hvordan du donerer dine data til projektet »OPEN«, findes på deres websted og i selve spørgeskemaet.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
+OpenAPS Data Commons blev oprettet for at gøre det nemt at dele datasæt fra DIYAPS-fællesskabet til forskning. Data bliver delt både med traditionelle forskere, som laver traditionelle forskningsstudier, og med grupper eller personer fra fællesskabet, som vil se på data som en del af deres egne forskningsprojekter. OpenAPS Data Commons bruger platformen »Open Humans«, så folk nemt kan uploade og dele deres data fra DIYAPS, herunder AAPS, Loop og OpenAPS.
 
-You can get your data into Open Humans via one of three ways:
+Du kan få dine data ind i Open Humans på en af tre måder:
 
-1. use the AAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans.
+1. brug AAPS' uploader-mulighed til at få dine data ind i Open Humans
+2. brug Nightscout Data Transfer til at få dine data ind i Open Humans
+3. upload datafiler manuelt til Open Humans.
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+Når du har oprettet en konto, og dine data er begyndt at komme ind i Open Humans, skal du også tilmelde dig OpenAPS Data Commons, hvis du vil donere dine data til forskning.
 
-## Terms of Use
+## Vilkår for brug
 
-This is an open source tool that will copy your data to [Open Humans](https://www.openhumans.org). We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process. You can stop uploading and delete your upload data at any time via [www.openhumans.org](https://www.openhumans.org). Beware that some projects that receive data may not support this.
+Dette er et open source-værktøj, som kopierer dine data til [Open Humans](https://www.openhumans.org). Vi har ingen ret til at dele dine data med tredjeparter uden din udtrykkelige tilladelse. De data, som projektet og appen modtager, er kendetegnet ved et tilfældigt bruger-ID. De bliver kun overført sikkert til en Open Humans-konto, når du har givet tilladelse til det. Du kan når som helst stoppe uploads og slette dine uploadede data via [www.openhumans.org](https://www.openhumans.org). Vær opmærksom på, at nogle projekter, der modtager data, måske ikke understøtter dette.
 
-Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
+Se også [vilkårene for brug af Open Humans](https://www.openhumans.org/terms/).
 
-## Data Privacy
+## Databeskyttelse
 
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but not identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans beskytter dit privatliv ved at give dig et numerisk ID for hvert projekt. Det gør det muligt for projekter at genkende dig, men ikke at identificere dig. Det applikations-ID, som AAPS uploader, fungerer på samme måde og hjælper kun med at administrere data. Du kan finde flere oplysninger her:
 
-- [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
-- [Open Humans GDPR](https://www.openhumans.org/gdpr/)
+- [Open Humans' politik for brug af data](https://www.openhumans.org/data-use/)
+- [Open Humans og GDPR](https://www.openhumans.org/gdpr/)
