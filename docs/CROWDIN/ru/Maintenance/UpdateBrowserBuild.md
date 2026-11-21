@@ -6,18 +6,18 @@ You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AA
 
 ## Постройте сами вместо скачивания
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** is not available to download, due to regulations concerning medical devices. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! Подробности смотрите на странице [Часто задаваемые вопросы по работе ИПЖ](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Затем следуйте инструкции [Сборка **AAPS** через браузер](../SettingUpAaps/BrowserBuild.md) вместо этого руководства. Вместо создания нового хранилища ключей выберите то, которое вы скопировали с компьютера.
+Это нужно сделать только в первый раз; при следующих обновлениях вы сможете следовать этому руководству.
 ```
 
 ```{tip}
 **Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Обзор: обновление AAPS до новой версии через браузер
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
@@ -28,48 +28,48 @@ In case you experience problems, see separate page for [browser build troublesho
 
 ### Export your settings
 
-Export your settings from the existing **AAPS** version on your phone. Возможно, это не потребуется, но лучше обезопасить себя, чем потом жалеть.
+Экспортируйте настройки из текущей версии **AAPS** на телефоне. Возможно, это не потребуется, но лучше обезопасить себя, чем потом жалеть.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Если вы не помните, как это сделать, см. страницу [Создание и восстановление резервных копий](ExportImportSettings.md).
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Обновите свой репозиторий GitHub
 
-[Log into GitHub](https://github.com/login).
+[Войдите в GitHub](https://github.com/login).
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+1. Выберите Repositories.
+2. Прокрутите вниз и выберите свой репозиторий AndroidAPS.
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
+![Выбор репозитория AndroidAPS](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Проверьте, что вы используете свою копию AndroidAPS (Forked from nightscout/AndroidAPS)
+4. Нажмите Sync Fork, чтобы обновить ее (число отстающих коммитов может отличаться от картинки)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Синхронизация репозитория AndroidAPS](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Нажмите Update Branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Обновление репозитория AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Примечание: если вы по ошибке изменили свою копию AndroidAPS, вы увидите этот экран. Отмените все изменения (коммиты) (Discard), чтобы вернуться к выпущенной версии.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Отмена случайных изменений](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+You have now synchronized (updated) your own copy with the latest release of **AAPS**. Отлично.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Репозиторий синхронизирован](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Запустите workflow для сборки подписанного APK
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. В своей копии AndroidAPS на GitHub выберите Actions.
+2. Разверните All Workflows.
+3. Выберите AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Прокрутите вниз и нажмите Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
@@ -83,24 +83,24 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Вы увидите сообщение Workflow run was successfully requested. Обновите страницу браузера, и вы сможете следить за ходом сборки. Когда действие завершится, у действия AAPS CI появится зеленая галочка. You have successfully built the updated version of **AAPS**. Это значит, что APK основного приложения и APK для Wear теперь сохраняются прямо на ваш Google Диск (как описано ниже). APK AAPSClient можно скачать с Github > nightscout > AndroidAPS [здесь](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Отслеживание workflow](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Установите APK AAPS
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Откройте свой Google Диск
+2. Откройте папку AAPS, выберите папку новой версии: в ней будут версии и для телефона, и для Android Wear.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Расположение на Google Диске](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+С сентября 2026 года [проверка разработчиков Android](#android-developer-verification) от Google может, в зависимости от вашей страны, блокировать установку APK нажатием на файл. Бесплатные обходные пути описаны на той странице.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Продолжите [здесь](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
@@ -112,4 +112,4 @@ Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
 
 Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Если нужна дополнительная помощь, обратитесь к другим пользователям **AAPS** в [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) или [Discord](https://discord.gg/4fQUWHZ4Mw).
