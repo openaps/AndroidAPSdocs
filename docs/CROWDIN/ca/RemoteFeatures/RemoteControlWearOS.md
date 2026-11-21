@@ -287,7 +287,7 @@ Si **AAPS** ha hagut de limitar la dosi, per exemple perquè el bolus calculat s
     | --- | --- | --- | --- | --- | --- |
     | ![Diàleg de tractament, pàgina d'insulina](../images/wearos/dialogs/dialog_treatment.png) | ![Diàleg d'insulina](../images/wearos/dialogs/dialog_insulin.png) | ![Diàleg de carbohidrats](../images/wearos/dialogs/dialog_carbs.png) | ![Diàleg d'e-carbs](../images/wearos/dialogs/dialog_ecarbs.png) | ![Diàleg d'objectiu temporal, pàgina de durada](../images/wearos/dialogs/dialog_temp_target.png) | ![Diàleg de canvi de perfil](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] A **Configuració** > **Interfície** del rellotge, activeu **Percentatge calculadora** per mostrar l'entrada de percentatge a la calculadora de bolus. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). Les altres opcions de la calculadora són les del telèfon, a **Configuració** > **Configuració de la calculadora de bolus**.
+    [1] A **Configuració** > **Interfície** del rellotge, activeu **Percentatge calculadora** per mostrar l'entrada de percentatge a la calculadora de bolus. El percentatge per defecte ve del [«Percentatge del bolus»](#Preferences-deliver-this-part-of-bolus-wizard-result) del telèfon. Les altres opcions de la calculadora són les del telèfon, a **Configuració** > **Configuració de la calculadora de bolus**.
     
     [2] A **Configuració** > **Interfície** del rellotge, activeu **Tipus d'àpat a la calculadora** per mostrar la pàgina **Tipus d'àpat**, on trieu **Pa**, **Pastís** o **Pizza** per dividir els carbohidrats d'un àpat lent en carbohidrats d'ara i e-carbs de més tard. Vegeu [Triar el tipus d'àpat](#WearOsSmartwatch-wizard-meal-type).
     
@@ -309,13 +309,13 @@ Si **AAPS** ha hagut de limitar la dosi, per exemple perquè el bolus calculat s
     
     Les entrades d'[Assistent ràpid](#quickwizards) del telèfon que tenen activat **Mostrar al rellotge**, dins de les seves hores vàlides. Una entrada de carbohidrats mostra els seus carbohidrats en g; una entrada d'insulina, la seva dosi fixa en U. Un toc executa l'entrada després d'una confirmació al rellotge. No hi ha res a configurar al rellotge: editeu les entrades al telèfon i activeu **Mostrar al rellotge** a **Selecció de dispositiu** per a cada entrada que vulgueu al mosaic. Fora de les hores vàlides de totes les vostres entrades, el mosaic mostra **Cap configuració disponible**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
+    ![Una entrada d'Assistent ràpid amb Mostrar al rellotge activat, i el mosaic on apareix](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Mosaic Escena
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![Mosaic Escena](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Cadascun dels quatre llocs es configura com a **Automàtic**, **Cap** o una escena a la configuració del mosaic. Un lloc **Automàtic** agafa la següent escena de la llista del telèfon que cap altre lloc no ha agafat. Un lloc configurat amb una escena que ja no existeix al telèfon mostra **No disponible**.
+    Les [escenes](#scenes-from-watch) del telèfon. Cadascun dels quatre llocs es configura com a **Automàtic**, **Cap** o una escena a la configuració del mosaic. Un lloc **Automàtic** agafa la següent escena de la llista del telèfon que cap altre lloc no ha agafat. Un lloc configurat amb una escena que ja no existeix al telèfon mostra **No disponible**.
     
     ![Configuració del mosaic Escena, quatre llocs posats a Automàtic](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -357,21 +357,21 @@ Si **AAPS** ha hagut de limitar la dosi, per exemple perquè el bolus calculat s
     
     El mode d'interfície simplificada està disponible per als watchfaces Digital Style i personalitzats. La interfície simplificada és opcional i es configura a la configuració del watchface (pulsació llarga al watchface i toqueu «editar» o la icona de l'engranatge). Seleccioneu l'opció «Simplificar la interfície» i poseu-la a «Durant la càrrega» o «Sempre encès i carregant».
     
-    Les opcions per a desenvolupadors d'Android permeten que el rellotge es mantingui despert mentre es carrega. Per fer disponibles les opcions per a desenvolupadors, vegeu la [documentació oficial](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
+    Les opcions per a desenvolupadors d'Android permeten que el rellotge es mantingui despert mentre es carrega. Per fer disponibles les opcions per a desenvolupadors, vegeu la [documentació oficial](https://developer.android.com/training/wearables/get-started/debugging). Poseu «Stay awake when charging» (Mantenir actiu durant la càrrega) a «on» a les opcions per a desenvolupadors.
     
     Nota: no totes les pantalles suporten bé el mode sempre actiu. Pot cremar la pantalla (marques permanents), sobretot a les pantalles OLED més antigues. En general, els rellotges enfosqueixen la pantalla per evitar que es cremi; consulteu el manual del rellotge, el fabricant o internet per tenir consells.
     
     ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
+    ![Interfície simplificada](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Alarmes del telèfon al rellotge
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![Una alarma del telèfon al rellotge](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. El rellotge vibra, i torna a vibrar cada mig minut durant cinc minuts fins que respongueu. Una notificació mostra el títol i el text de l'alarma, amb les mateixes respostes que el recordatori [Hora de menjar](#WearOsSmartwatch-wizard-carb-time):
+    El rellotge mostra les alarmes del telèfon, així veieu per què el telèfon fa soroll i podeu respondre des del canell. El rellotge vibra, i torna a vibrar cada mig minut durant cinc minuts fins que respongueu. Una notificació mostra el títol i el text de l'alarma, amb les mateixes respostes que el recordatori [Hora de menjar](#WearOsSmartwatch-wizard-carb-time):
     
     * **Silenciar**, o lliscar: l'alarma s'atura i la pantalla d'alarma del telèfon es tanca.
     * **Silenciar 5 min**: l'alarma s'atura i torna a sonar al cap de cinc minuts, al telèfon i al rellotge.
@@ -385,7 +385,7 @@ Si **AAPS** ha hagut de limitar la dosi, per exemple perquè el bolus calculat s
     
     ## Drecera per postposar alertes
     
-    El rellotge [mostra l'alarma](#WearOsSmartwatch-phone-alarms) ell mateix; la drecera és una segona manera de silenciar-la, amb una sola pulsació. Es pot crear una drecera per postposar les alertes/alarmes d'AAPS. Silenciar el so des del rellotge és còmode i més ràpid, sense haver d'agafar el telèfon. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. Si el rellotge té dos botons, podeu assignar una tecla al programa `AAPS Snooze Alert` (Postposar alerta AAPS).
+    El rellotge [mostra l'alarma](#WearOsSmartwatch-phone-alarms) ell mateix; la drecera és una segona manera de silenciar-la, amb una sola pulsació. Es pot crear una drecera per postposar les alertes/alarmes d'AAPS. Silenciar el so des del rellotge és còmode i més ràpid, sense haver d'agafar el telèfon. Nota: igualment heu de comprovar el missatge d'alarma al telèfon i fer el que calgui, però ho podeu fer més tard. Si el rellotge té dos botons, podeu assignar una tecla al programa `AAPS Snooze Alert` (Postposar alerta AAPS).
     
     Per enllaçar el botó al Samsung Watch 4, aneu a `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
@@ -400,7 +400,7 @@ Si **AAPS** ha hagut de limitar la dosi, per exemple perquè el bolus calculat s
     
     Els rellotges Wear OS són dispositius amb molt poca energia disponible. La mida de la caixa del rellotge limita la capacitat de la bateria que porta. Tot i els avenços recents en maquinari i programari, els rellotges Wear OS encara s'han de carregar cada dia.
     
-    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    Si la bateria dura menys d'un dia (de l'alba al vespre), aquí teniu uns quants consells per trobar la causa.
     
     Les parts que gasten més bateria són:
     
@@ -435,7 +435,7 @@ Si **AAPS** ha hagut de limitar la dosi, per exemple perquè el bolus calculat s
     
     Si voleu fer el vostre propi watchface, seguiu la [guia d'aquí](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. Quan s'accepti (merge) la pull request, l'equip de documentació extraurà el fitxer CustomWatchface.png i hi posarà davant el nom del fitxer zip.
+    Quan hàgiu fet un watchface personalitzat, podeu compartir el vostre watchface personalitzat d'**AAPS** amb altres persones: el fitxer zip es pot pujar a la carpeta "ExchangeSiteCustomWatchfaces" amb una pull request a GitHub. Quan s'accepti (merge) la pull request, l'equip de documentació extraurà el fitxer CustomWatchface.png i hi posarà davant el nom del fitxer zip.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
