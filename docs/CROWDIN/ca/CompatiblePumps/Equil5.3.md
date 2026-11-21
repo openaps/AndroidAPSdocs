@@ -1,29 +1,29 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Aquestes instruccions serveixen per configurar la bomba d'insulina Equil.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Capacitats de la bomba amb AAPS
 
 * Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
 * **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
 * While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
 * DST and timezone changes must be handled manually.
 
-## Hardware and software requirements
-* **Compatible Equil hardware**
+## Requisits de maquinari i programari
+* **Maquinari Equil compatible**
 
   Currently Equil 5.3 and 5.4 are supported.
 
 * **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
 
-## Setup
+## Configuració
 
-### Select Equil pump
+### Seleccionar la bomba Equil
 
 Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
 
@@ -31,11 +31,11 @@ Once it is selected, the **Equil** card shows two buttons, **Settings** and **Op
 
 ![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Abans d'emparellar una bomba, es veu així:
 
 ![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
 
-### Settings
+### Configuració
 
 Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
 
@@ -78,14 +78,14 @@ The wizard has these steps. Press **Next** to move on, or **Cancel** to leave th
    ![Pair device step with the pairing password](../images/Equil/activate3.png)
 
 1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Premeu **Següent**.
 
    ![Prime / Fill step](../images/Equil/prime_fill.png)
 1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
 1. **Attach pump**: attach the pump to its base plate.
 
    ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Premeu **Següent**.
 
    ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
 
@@ -114,15 +114,15 @@ Once the pump is paired, the pump screen shows these buttons:
 * **History**: shows the events recorded by the pump.
 * **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
 
-### Alarms
+### Alarmes
 
 * The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
 * Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
 * If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
 
-## Where to get help
+## On trobar ajuda
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Development of the Equil driver is done by the community on a **volunteer** basis. Abans de demanar ajuda:
 
 1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
 2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
