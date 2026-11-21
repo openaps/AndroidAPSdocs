@@ -114,7 +114,7 @@ Se a sua fonte de dados do **AAPS** não é o xDrip, mas você pode mostrar a gl
 
 ![imagem](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+O xDripSwift foi criado a partir da adaptação do app xDrip original para iOS e evoluiu para o "xDrip for iOS", escrito como **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ O [Sugarmate](https://sugarmate.io/) pode ser baixado para iPhone na App Store. 
 * Apple iPad (precisa da versão de software 13.0 ou mais recente)
 * Google Android (salve o web app na tela inicial)
 
-Usuários do Sugarmate relatam que ele pode ser usado com o Apple CarPlay nos EUA para mostrar as leituras de glicose ao dirigir. Ainda não se sabe se isso é possível em países fora dos EUA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Usuários do Sugarmate relatam que ele pode ser usado com o Apple CarPlay nos EUA para mostrar as leituras de glicose ao dirigir. Ainda não se sabe se isso é possível em países fora dos EUA. Se você sabe mais sobre isso, adicione os detalhes aqui na documentação fazendo um [pull request](../SupportingAaps/HowToEditTheDocs.md), o que é rápido e fácil.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
