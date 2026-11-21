@@ -2,97 +2,97 @@
 tocdepth: 1
 - - -
 
-# Docs updates & changes
+# Actualitzacions i canvis de la documentació
 
-## October 2026
+## Octubre de 2026
 
 - [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
-- [Smartwatches and AAPS](#watches-external-companion-apps): the **Samsung Tizen** section becomes **External Companion Apps** and lists the apps that read the **AAPS** broadcast (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 and later connect directly to **AAPS** without xDrip+: setup steps added, also summarized in [Configuration](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) and [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md). Bluejay watches: GTS discontinued, current model updated @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 6. The build steps now use exact, reviewed versions of GitHub's tools and build machine, and the build explains clearly when the wrong text was pasted into the `KEYSTORE_SET` secret. The [setup page](#aaps-builder-setup) is now part of the documentation and translated, checks your GitHub username, and has clearer help for the secret, "Page not found" (404) and the GitHub app. If your `.github/workflows/build.yml` says version 5 or earlier, replace it as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- [AAPS web installer](#web-installer): now a documentation page, translated like the others. The old address still works @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 3 adds the `aapsclient3Release` variant (**AAPSClient3**, AAPS 4.0 and later). To build it, replace your `.github/workflows/build.yml` as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- [Dexcom G7](../CompatibleCgms/DexcomG7.md): removed the patched Dexcom G7 app (DiaKEM), which no longer works for new installs @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 2. Automatic weekly builds are removed (no schedule, no `AUTO_BUILD` / `AUTO_VARIANT` variables, no `built/…` tags): every build is started by you, with the version and variant you choose, and the workflow only has read access to your repository. If your `.github/workflows/build.yml` says version 1, replace it as explained in [Updating AAPS](#aaps-builder-updates). Added screenshots for every step @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): the build workflow is now part of this documentation. No template repository: you create an empty private repository and add the workflow from the setup page (new step 2). The workflow no longer checks an outside repository for updates. If you created your repository from the earlier template, replace `.github/workflows/build.yml` with the workflow from the setup page as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- New page [Browser build with AAPS Builder](#aaps-builder): build AAPS from an Android phone with a setup page hosted on this site, with automatic weekly builds and no preparation file. It replaces the Android instructions of the browser build (File Manager Plus pages removed). AAPS Builder created by @dio99, docs @psonnera
+- [Rellotges intel·ligents i AAPS](#watches-external-companion-apps): la secció **Samsung Tizen** passa a ser **Apps complementàries externes** i mostra les aplicacions que llegeixen el broadcast d'**AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 i posteriors es connecten directament a **AAPS** sense xDrip+: s'hi han afegit els passos de configuració, també resumits a [Configuració](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) i [Monitoratge remot](../RemoteFeatures/RemoteMonitoring.md). Rellotges Bluejay: el GTS ja no es fabrica, model actual actualitzat @psonnera
+- [Compilació al navegador amb AAPS Builder](#aaps-builder): versió 6 del workflow de compilació. Els passos de compilació ara fan servir versions exactes i revisades de les eines i de la màquina de compilació de GitHub, i la compilació explica clarament quan s'ha enganxat un text incorrecte al secret `KEYSTORE_SET`. La [pàgina de configuració](#aaps-builder-setup) ara forma part de la documentació i està traduïda, comprova el vostre nom d'usuari de GitHub i té una ajuda més clara per al secret, per a «Page not found» (404) i per a l'aplicació de GitHub. Si el vostre `.github/workflows/build.yml` diu versió 5 o anterior, substituïu-lo com s'explica a [Actualitzar AAPS](#aaps-builder-updates) @psonnera
+- [Instal·lador web d'AAPS](#web-installer): ara és una pàgina de la documentació, traduïda com les altres. L'adreça antiga encara funciona @psonnera
+- [Compilació al navegador amb AAPS Builder](#aaps-builder): la versió 3 del workflow de compilació afegeix la variant `aapsclient3Release` (**AAPSClient3**, AAPS 4.0 i posteriors). Per compilar-la, substituïu el vostre `.github/workflows/build.yml` com s'explica a [Actualitzar AAPS](#aaps-builder-updates) @psonnera
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md): treta l'aplicació Dexcom G7 modificada (DiaKEM), que ja no funciona en instal·lacions noves @psonnera
+- [Compilació al navegador amb AAPS Builder](#aaps-builder): versió 2 del workflow de compilació. Es treuen les compilacions setmanals automàtiques (sense programació, sense les variables `AUTO_BUILD` / `AUTO_VARIANT`, sense etiquetes `built/…`): cada compilació la inicieu vosaltres, amb la versió i la variant que trieu, i el workflow només té accés de lectura al vostre repositori. Si el vostre `.github/workflows/build.yml` diu versió 1, substituïu-lo com s'explica a [Actualitzar AAPS](#aaps-builder-updates). Afegides captures de pantalla per a cada pas @psonnera
+- [Compilació al navegador amb AAPS Builder](#aaps-builder): el workflow de compilació ara forma part d'aquesta documentació. Sense repositori plantilla: creeu un repositori privat buit i hi afegiu el workflow des de la pàgina de configuració (nou pas 2). El workflow ja no comprova actualitzacions en un repositori extern. Si vau crear el vostre repositori a partir de la plantilla anterior, substituïu `.github/workflows/build.yml` pel workflow de la pàgina de configuració com s'explica a [Actualitzar AAPS](#aaps-builder-updates) @psonnera
+- Pàgina nova [Compilació al navegador amb AAPS Builder](#aaps-builder): compileu AAPS des d'un telèfon Android amb una pàgina de configuració allotjada en aquest lloc, amb compilacions setmanals automàtiques i sense fitxer de preparació. Substitueix les instruccions per a Android de la compilació al navegador (s'han tret les pàgines de File Manager Plus). AAPS Builder creat per @dio99, documentació de @psonnera
 
-## August 2026
+## Agost de 2026
 
-- [Transferring and Installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md): merged the *Android developer verification* page into the installation guide, added the [web installer](#android-developer-verification-web) (install the APK straight from the browser, exempt from verification) and wireless ADB @psonnera
+- [Transferir i instal·lar AAPS al vostre telèfon](../SettingUpAaps/TransferringAndInstallingAaps.md): la pàgina *Verificació de desenvolupadors d'Android* s'ha unit a la guia d'instal·lació, s'hi ha afegit l'[instal·lador web](#android-developer-verification-web) (instal·la l'APK directament des del navegador, sense verificació) i l'ADB sense fil @psonnera
 
-## July 2026
+## Juliol de 2026
 
-- [Introduction](../Getting-Started/Introduction.md): accuracy review of the APS section. Corrected the Frontiers citation title and link, reframed it as background rather than a current market guide, updated the dual-hormone and full closed loop statements, clarified that the controller is not always a phone app, removed commercial brand names and unsourced user counts, and fixed OS-AID to *Open-Source Automated Insulin Delivery* @psonnera
-- [Glossary](../UsefulLinks/Glossary.md): added **AID**, **FCL**, **HCL** and **OS-AID** entries, cross-linked from **APS** and **Closed Loop** @psonnera
-- New page [Android developer verification](#android-developer-verification): impact of Google's upcoming verification requirement on installing self-built apps, with free installation methods (ADB, advanced flow, limited distribution account) @psonnera
+- [Introducció a APS i AAPS](../Getting-Started/Introduction.md): revisió de l'exactitud de la secció APS. S'han corregit el títol i l'enllaç de la cita de Frontiers, s'ha presentat com a context i no com a guia actual del mercat, s'han actualitzat les afirmacions sobre el sistema bihormonal i el llaç tancat complet, s'ha aclarit que el controlador no sempre és una aplicació del telèfon, s'han tret els noms de marques comercials i les xifres d'usuaris sense font, i s'ha corregit OS-AID a *Open-Source Automated Insulin Delivery* @psonnera
+- [Glossari](../UsefulLinks/Glossary.md): afegides les entrades **AID**, **FCL**, **HCL** i **OS-AID**, amb enllaços des d'**APS** i **Llaç tancat** @psonnera
+- Pàgina nova [Verificació de desenvolupadors d'Android](#android-developer-verification): efecte del futur requisit de verificació de Google en la instal·lació d'aplicacions compilades per un mateix, amb maneres gratuïtes d'instal·lar (ADB, procés avançat, compte de distribució limitada) @psonnera
 
-## June 2026
+## Juny de 2026
 
-- [Browser Build](#browser-build): restructured into a decision-first, multi-page flow (Fork → keystore Option 1/Option 2 with a dedicated page per device → Google Drive → Build → Troubleshooting); removed nested tabs and made installing File Manager Plus a prominent step @psonnera
-- [Introduction](../Getting-Started/Introduction.md): terminology switched from *DIY* to *OS-AID* (Open-Source Automated Insulin Delivery), added Trio and Stelo, updated pump/CGM compatibility table @tmhastings
+- [Compilació al navegador](#browser-build): reorganitzada en un procés de diverses pàgines que comença per la decisió (Fork → magatzem de claus Opció 1/Opció 2 amb una pàgina pròpia per a cada dispositiu → Google Drive → Compilació → Resolució de problemes); tretes les pestanyes niuades, i la instal·lació de File Manager Plus ara és un pas ben visible @psonnera
+- [Introducció a APS i AAPS](../Getting-Started/Introduction.md): la terminologia passa de *DIY* a *OS-AID* (Open-Source Automated Insulin Delivery), s'hi han afegit Trio i Stelo, i s'ha actualitzat la taula de compatibilitat de bombes/CGM @tmhastings
 
-## March 2026
+## Març de 2026
 
-- [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
-- Rename *Computer Build* to *Android Studio Build*. Preserve file names for URLs.
+- [Afegida l'opció de compilació des de la línia d'ordres](../SettingUpAaps/CLIBuild.md) @je-l
+- *Compilació a l'ordinador* passa a dir-se *Compilació amb Android Studio*. Es mantenen els noms dels fitxers per a les URL.
 
-## January 2025
+## Gener de 2025
 
 - [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
-- CGM list update. Dexcom G5, Tomato, Glimp removed.
-- [Site rotation UI](#Aapsscreens-site-rotation)
-- [Running mode](#AapsScreens-running-mode)
+- Actualització de la llista de CGM. Trets Dexcom G5, Tomato i Glimp.
+- [Interfície de rotació de punts d'inserció](#Aapsscreens-site-rotation)
+- [Mode de funcionament](#AapsScreens-running-mode)
 - [Autotune](../AdvancedOptions/Autotune.md)
 
-## December 2025
+## Desembre de 2025
 
-- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
+- [Ajustar el perfil d'AAPS](../GettingHelp/ProfileTuning.md), de @robrub
 
-## October 2025
+## Octubre de 2025
 
-- DiaKEM: new installs don't work after servers upgrade @psonnera
-- Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
+- DiaKEM: les instal·lacions noves no funcionen després de l'actualització dels servidors @psonnera
+- Tret el Libre 2 amb aplicació modificada (obsolet): no funciona amb els sensors nous @psonnera
 - Reworked Omnipod DASH page @XiTatiON
 
-## August 2025
+## Agost de 2025
 
-- Updated versions and Android Studio prerequisites
-- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
-- Added [Browser Build](#browser-build) @Angus
+- Versions i requisits d'Android Studio actualitzats
+- Afegida la versió [3.3.2.1](#version3321), tretes les referències a Android 16 (corregit)
+- Afegida la [Compilació al navegador](#browser-build) @Angus
 
-## May 2025
+## Maig de 2025
 
-- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+- Afegida la [pàgina d'actualització a 3.2.0.4](#update-aaps-3204) @psonnera
 
-## January 2025
+## Gener de 2025
 
-- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
-- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
+- Assistent ràpid: [funció de prémer llargament](#Preferences-quick-wizard) @emilise
+- Pàgina [ISF dinàmic](../DailyLifeWithAaps/DynamicISF.md) reescrita @emilise
 
-## December 2024
+## Desembre de 2024
 
-- Documentation of [3.3 version](#version3300) @emilise
+- Documentació de la [versió 3.3](#version3300) @emilise
 
-## November 2024
+## Novembre de 2024
 
-- Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
+- Actualització d'[El vostre perfil d'AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
 - Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
-## October 2024
+## Octubre de 2024
 
-- Update of several pages:
+- Actualització de diverses pàgines:
   - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
-- [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
+  - [Càlcul del COB](../DailyLifeWithAaps/CobCalculation.md), [ISF dinàmic](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [Instruccions de compilació per a Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
 - Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
-Missing history from March 2022 to September 2024
+Falta l'historial de març de 2022 a setembre de 2024
 
-With 3.2 rework, some obsolete information was removed. You can find it in the previous documentation version:
+Amb la revisió per a la versió 3.2, s'ha tret informació obsoleta. La trobareu a la versió anterior de la documentació:
 
-AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/3.1/index.html).
+La documentació d'AAPS 3.1 està disponible [aquí](https://androidaps.readthedocs.io/en/3.1/index.html).
 
 ***
 
