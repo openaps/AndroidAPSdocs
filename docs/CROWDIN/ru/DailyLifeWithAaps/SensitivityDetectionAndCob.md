@@ -2,7 +2,7 @@
 
 # Определение чувствительности
 
-## Sensitivity algorithm
+## Алгоритм чувствительности
 
 **AAPS** currently offers 3 sensitivity detection models:
 
