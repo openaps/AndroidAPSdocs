@@ -773,7 +773,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Помічник профілю
 
 Відкрийте **меню** (☰) і виберіть **Помічник профілю**.
 
