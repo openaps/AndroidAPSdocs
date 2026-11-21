@@ -29,7 +29,7 @@ Acceptar dades de Nightscout (canvis de perfil, tractaments, ...) és opcional i
 
 #### No sincronitzar des de Nightscout
 
-Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Si manteniu desactivades totes les opcions «Rebre … de NS», AAPS no farà servir cap canvi de Nightscout:
 
 ![Només enviar a Nightscout](../images/preferences/settings_nsclient_sync.png)
 
