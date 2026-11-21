@@ -10,9 +10,9 @@ The buttons below open GitHub in a new Chrome tab. To come back to this page, ta
 
 (aaps-builder-setup-step1)=
 
-## Step 1 – Create your private build repository
+## Шаг 1 – Создайте свой приватный репозиторий сборки
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Only you can see it and the apps it builds. You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build.
+This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Только вы видите его и приложения, которые он собирает. Делать fork AndroidAPS **не** нужно: исходный код AAPS скачивается из официального репозитория AndroidAPS при каждой сборке.
 
 <label class="aapsb-label" for="aapsb-user">Your GitHub username</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
@@ -74,7 +74,7 @@ The build steps are updated for you: at every build, your repository runs the ve
 
 ## Step 2 – Your signing key
 
-The app must be signed with your own key. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Choose one of the two tabs.
+Приложение должно быть подписано вашим собственным ключом. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Выберите одну из двух вкладок.
 
 `````{tab-set}
 
@@ -175,7 +175,7 @@ Want an e-mail when the build is done? GitHub only e-mails you when a build fail
 [How to export settings](#ExportImportSettings-Settings-Export) · [AAPS FAQ: how to organize backups](#FAQ-organize-backups)
 ```
 
-1. Open this page on your phone, in the web browser (Chrome). Log in to github.com if asked.
+1. Open this page on your phone, in the web browser (Chrome). Если потребуется, войдите на github.com.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds</a>
 
    The GitHub app opened instead? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome (or "Copy link", then paste the link in Chrome's address bar). Continue in Chrome.
@@ -185,7 +185,7 @@ Want an e-mail when the build is done? GitHub only e-mails you when a build fail
    To stop GitHub links opening in the app: Android Settings → Apps → GitHub → Open by default → turn off "Open supported links".
 3. Tap the newest build with a green check ✅.
 4. Scroll down to the build summary and tap the big link "📱 Download AAPS …" (or scroll further down to "Artifacts" and tap aaps-….apk). Scroll with your finger on the text, not on the diagram of the build steps.
-5. When the download is done, tap the file and choose Install. If asked, allow installing apps from this source.
+5. When the download is done, tap the file and choose Install. Если потребуется, разрешите установку приложений из этого источника.
 6. aaps-wear-….apk is for a smartwatch. Skip it if you do not use one.
 
 The APK is not shown under "Code" in your repository, only on the build page. It is kept for 14 days.
