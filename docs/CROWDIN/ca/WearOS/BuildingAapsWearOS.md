@@ -1,4 +1,4 @@
-# Building the Wear AAPS app
+# Compilar l'aplicació AAPS per a Wear OS
 
 The **AAPS** app for a Wear OS smartwatch (the **Wear apk**, `aaps-wear-….apk`) is a separate installation file from the **AAPS** phone app. You need both: the phone app runs the loop, the watch app shows its data and can send commands to it. The watch app is installed from the phone, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
 
@@ -13,7 +13,7 @@ The simplest way to guarantee this is to build both apps **at the same time**, i
 Already using **AAPS** on your phone but no Wear apk from the same build? Build both apps again, with the same keystore, and reinstall the phone app too. A Wear apk built months later, or with a different Android Studio version, is unlikely to be compatible with the phone app.
 ```
 
-## Supported Wear OS versions
+## Versions de Wear OS compatibles
 
 **AAPS** runs on watches with **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer** (Wear OS 4, 5 and 6). Watches with Wear OS 2 are not supported.
 
@@ -43,11 +43,11 @@ Where to find the Wear apk:
 
 - **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Download it on the phone that runs **AAPS** if you install the watch app from the phone (Wear Installer 2 or Easy Fire Tools), or on your computer if you use ADB.
 
-  ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+  ![Artifacts amb les aplicacions del telèfon i del rellotge](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
 - **Fork with Google Drive**: open your Google Drive, folder `AAPS`, then the folder of the version you built. It contains the phone apk and the Wear apk, see [Step 4 – Build the APK](#github-build-apk).
 
-  ![Google Drive Location](../images/update/CI/GitHubActions5.png)
+  ![Ubicació a Google Drive](../images/update/CI/GitHubActions5.png)
 
 Keep the Wear apk together with the phone apk in your backups. With **AAPS Builder**, the files stay on the build page for 14 days only.
 
@@ -60,15 +60,15 @@ Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch]
 The Wear apk is built like the phone apk, as a second signed build. Do it right after the phone apk, with the same Android Studio version and the same keystore.
 
 - Follow the instructions for [Android Studio Build](../SettingUpAaps/ComputerBuild.md).
-- When you reach [module selection](#Building-APK-wearapk) in "Build the AAPS signed apk", make sure to select **`AndroidAPS.wear`**.
+- Quan arribeu a la [selecció del mòdul](#Building-APK-wearapk) a «Compilar l'apk signat d'AAPS», assegureu-vos de seleccionar **`AndroidAPS.wear`**.
 
-![Wear module](../images/Building-the-App/wear_build1.png)
+![Mòdul Wear](../images/Building-the-App/wear_build1.png)
 
-Select "**fullRelease**" to generate the **AAPS** Wear apk file.
+Seleccioneu «**fullRelease**» per generar el fitxer apk d'**AAPS** per a Wear.
 
-![Wear module](../images/Building-the-App/wear_build2.png)
+![Mòdul Wear](../images/Building-the-App/wear_build2.png)
 
-If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+Si ho preferiu, podeu compilar **“pumpcontrolRelease”** des del menú desplegable. Així només podreu controlar la bomba a distància, però sense llaç.
 
 Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
 
@@ -76,11 +76,11 @@ Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch]
 
 #### Troubleshooting the Android Studio build
 
-In the process of building the full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+In the process of building the full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. Això causa després errors de [canvis no confirmats](#troubleshooting_androidstudio-uncommitted-changes) quan intenteu compilar la següent aplicació signada, com ara l'aplicació d'**AAPS** per a Wear. La manera més ràpida de resoldre-ho és anar a la carpeta on s'ha compilat l'aplicació AAPS completa. Probablement la vostra carpeta és semblant a:
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file.
+Elimineu el fitxer .json que no cal o moveu-lo fora de la carpeta. Després torneu a provar de compilar l'aplicació d'**AAPS** per a Wear. Si això no funciona, la [guia de resolució de problemes](../GettingHelp/TroubleshootingAndroidStudio.md) més detallada us ajudarà a trobar el fitxer concret que causa el problema, que també podria ser el fitxer del magatzem de claus.
 
 (building-aaps-wear-os-cli)=
 
