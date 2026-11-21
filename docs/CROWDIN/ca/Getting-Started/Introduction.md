@@ -1,392 +1,392 @@
-# Introduction to APS and AAPS
+# Introducció a APS i AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-## What is an “Artificial Pancreas System”?
+## Què és un «sistema de pàncrees artificial»?
 
-A human pancreas does a lot of things besides regulating blood sugar. However, the term **“Artificial Pancreas System” (APS)** usually refers to a system which works to automatically keep blood sugar levels within healthy limits.
+Un pàncrees humà fa moltes coses a més de regular la glucèmia. Tanmateix, el terme **«sistema de pàncrees artificial» (APS)** normalment es refereix a un sistema que treballa per mantenir la glucèmia automàticament dins de límits saludables.
 
-The most basic way to do this is by detecting **glucose levels**, using these values to do **calculations**, and then delivering the (predicted) right amount of **insulin** to the body. It repeats the calculation, every few minutes, 24/7. It uses **alarms** and **alerts** to inform the user if intervention or attention is needed. This system is typically made up of a **glucose sensor**, an **insulin pump** and a **controller** which runs the calculations. In **AAPS** and other open-source systems the controller is an app on a phone. In most commercial systems it is software built into the pump itself, with a phone app used mainly for display and control.
+La manera més bàsica de fer-ho és detectar els **nivells de glucèmia**, fer servir aquests valors per fer **càlculs** i després lliurar al cos la quantitat correcta (prevista) d'**insulina**. Repeteix el càlcul cada pocs minuts, 24 hores al dia, 7 dies a la setmana. Fa servir **alarmes** i **alertes** per informar l'usuari quan cal que intervingui o que hi pari atenció. Aquest sistema normalment està format per un **sensor de glucosa**, una **bomba d'insulina** i un **controlador** que fa els càlculs. A **AAPS** i a altres sistemes de codi obert, el controlador és una aplicació en un telèfon. A la majoria dels sistemes comercials és un programari integrat a la mateixa bomba, amb una aplicació de telèfon que serveix sobretot per veure les dades i controlar el sistema.
 
-For background on how closed-loop systems developed and how they work, this 2022 review article is a good starting point. Bear in mind it predates most of the systems available today, so it is not a guide to what is currently on the market:
+Per saber com es van desenvolupar els sistemes de llaç tancat i com funcionen, aquest article de revisió del 2022 és un bon punt de partida. Tingueu en compte que és anterior a la majoria dels sistemes disponibles avui, així que no és una guia del que hi ha actualment al mercat:
 
 ![Frontiers](../images/FRONTIERS_Logo_Grey_RGB.png) [Closed-Loop Insulin Delivery Systems: Past, Present, and Future Directions](https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2022.919942/full) (Templer, _Frontiers in Endocrinology_, 2022).
 
-So-called “dual-hormone” systems infuse glucagon alongside insulin, with the aim of preventing severe hypos and allowing even tighter blood glucose control. A first system of this kind has been approved in Europe, but it is supplied only through studies and projects, and others are still in development. None is on general sale yet.
+Els anomenats sistemes «bihormonals» infonen glucagó a més d'insulina, amb l'objectiu de prevenir hipoglucèmies greus i permetre un control encara més estricte de la glucèmia. Ja s'ha aprovat a Europa un primer sistema d'aquest tipus, però només es subministra a través d'estudis i projectes, i n'hi ha d'altres encara en desenvolupament. Encara no se'n ven cap al públic general.
 
-An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/). What does that mean?
+Un pàncrees artificial es pot veure com un [«pilot automàtic per a la vostra diabetis»](https://www.artificialpancreasbook.com/). Què vol dir això?
 
-In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of constantly having to manage the aircraft, allowing the pilot to concentrate on wider monitoring. The autopilot receives signals from various sensors, a computer evaluates the data together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about continually making decisions and this analogy can be applied to **AAPS**.
+En un avió, el pilot automàtic no fa tota la feina del pilot humà: el pilot no pot dormir durant tot el vol. El pilot automàtic ajuda el pilot en la seva feina. Li treu la càrrega d'haver de controlar l'avió constantment, i així el pilot es pot concentrar en una supervisió més àmplia. El pilot automàtic rep senyals de diversos sensors, un ordinador avalua les dades juntament amb les indicacions del pilot i fa els ajustos necessaris, i avisa el pilot si hi ha algun problema. El pilot ja no s'ha de preocupar de prendre decisions contínuament, i aquesta comparació es pot aplicar a **AAPS**.
 
-![image](../images/autopilot.png)
+![imatge](../images/autopilot.png)
 
 (Introduction-what-does-hybrid-closed-loop-mean)=
-## What does hybrid closed loop mean?
+## Què vol dir llaç tancat híbrid?
 
-The best solution for type 1 diabetes would be a “functional cure” (probably an implant of pancreatic cells which are protected from the immune system). While the type 1 diabetic (T1D) community waits for that, a “full closed loop” artificial pancreas is probably the next best thing. This is a tech system that doesn’t need any user input (like bolusing insulin for meals, or announcing exercise), with good regulation of blood glucose levels. Nearly every system in everyday use is a “hybrid” closed loop, because it uses a combination of automated technology and user input. The first full closed loop systems were approved in Europe in 2026, but none is widely available yet.
+La millor solució per a la diabetis tipus 1 seria una «cura funcional» (probablement un implant de cèl·lules pancreàtiques protegides del sistema immunitari). Mentre la comunitat de persones amb diabetis tipus 1 (DT1) espera aquesta solució, un pàncrees artificial de «llaç tancat complet» és probablement la millor alternativa. Es tracta d'un sistema tecnològic que no necessita cap acció de l'usuari (com ara posar bolus d'insulina per als àpats o anunciar l'esport) i que regula bé la glucèmia. Gairebé tots els sistemes d'ús diari són de llaç tancat «híbrid», perquè combinen tecnologia automatitzada i accions de l'usuari. Els primers sistemes de llaç tancat complet es van aprovar a Europa el 2026, però encara no n'hi ha cap que estigui disponible de manera àmplia.
 
-## How and why did looping start?
+## Com i per què van començar els sistemes de llaç?
 
-The development of commercial technology for people with type 1 diabetes (T1D) is very slow. In 2013 the T1D community founded the #WeAreNotWaiting movement. They developed systems themselves using existing approved technology (insulin pumps and sensors) to improve blood glucose control, safety, and quality of life. These are known as OS-AID (Open-Source Automated Insulin Delivery) systems (formerly DIY systems), because they are not formally approved by health bodies (FDA, NHS etc). There are four main OS-AID systems available: [OpenAPS](https://openaps.org/what-is-openaps/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [Trio](https://triodocs.org).
+El desenvolupament de tecnologia comercial per a persones amb diabetis tipus 1 (DT1) és molt lent. El 2013, la comunitat DT1 va fundar el moviment #WeAreNotWaiting. Van desenvolupar ells mateixos sistemes amb tecnologia aprovada que ja existia (bombes d'insulina i sensors) per millorar el control de la glucèmia, la seguretat i la qualitat de vida. Es coneixen com a sistemes OS-AID (Open-Source Automated Insulin Delivery, lliurament automàtic d'insulina de codi obert), abans anomenats sistemes DIY, perquè no estan aprovats formalment per les autoritats sanitàries (FDA, NHS, etc.). Hi ha quatre sistemes OS-AID principals disponibles: [OpenAPS](https://openaps.org/what-is-openaps/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) i [Trio](https://triodocs.org).
 
-A great way to understand the fundamentals of OS-AID looping is to read Dana Lewis’s book “Automated Insulin Delivery”. You can access it [here](https://www.artificialpancreasbook.com/) for free (or buy a hardcopy of the book). If you want to understand more about [OpenAPS](https://openaps.org/what-is-openaps/), which **AAPS** has developed from, the [OpenAPS website](https://openaps.org/what-is-openaps/) is a great resource.
+Una molt bona manera d'entendre els fonaments dels llaços OS-AID és llegir el llibre de Dana Lewis «Automated Insulin Delivery». Podeu llegir-lo gratuïtament [aquí](https://www.artificialpancreasbook.com/) (o comprar el llibre en paper). Si voleu entendre millor [OpenAPS](https://openaps.org/what-is-openaps/), del qual s'ha desenvolupat **AAPS**, el [lloc web d'OpenAPS](https://openaps.org/what-is-openaps/) és un recurs molt bo.
 
-Several commercial hybrid closed loop systems have also been launched. These are very different to OS-AID systems, mainly because many of them include a “learning algorithm” which adjusts how much insulin is delivered according to your insulin needs from previous days. Many people in the OS-AID community have already tried out commercial systems and compared them with their OS-AID system. You can find out more about how the different systems compare by asking on the dedicated Facebook groups for those systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
+També s'han llançat diversos sistemes comercials de llaç tancat híbrid. Són molt diferents dels sistemes OS-AID, sobretot perquè molts inclouen un «algoritme d'aprenentatge» que ajusta la quantitat d'insulina lliurada segons les vostres necessitats d'insulina dels dies anteriors. Moltes persones de la comunitat OS-AID ja han provat sistemes comercials i els han comparat amb el seu sistema OS-AID. Per saber més sobre les diferències entre els sistemes, podeu preguntar als grups de Facebook dedicats a aquests sistemes, al [grup de Facebook d'AAPS](https://www.facebook.com/groups/AndroidAPSUsers/) o a [Discord](https://discord.com/invite/4fQUWHZ4Mw).
 
-## What is Android APS (AAPS)?
+## Què és Android APS (AAPS)?
 
-![image](../images/basic-outline-of-AAPS.png)
+![imatge](../images/basic-outline-of-AAPS.png)
 
-**Figure 1**. Basic outline of the Android APS (Artificial Pancreas System), AAPS.
+**Figura 1**. Esquema bàsic d'Android APS (sistema de pàncrees artificial), AAPS.
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting T1D community.
+Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Calcula les dosis d'insulina amb els algoritmes consolidats d'[OpenAPS](https://openaps.org/) (un conjunt de regles), desenvolupats per la comunitat DT1 #WeAreNotWaiting.
 
-Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was first developed in 2016 for a family member with type 1 diabetes. Since those early days, **AAPS** has been continually developed and refined by a team of volunteer computer developers and other enthusiasts who have a connection to the type 1 diabetes world. Today, **AAPS** is used by many thousands of people worldwide. It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes software and platforms. The fundamental components of the current **AAPS** system are outlined in **Figure 1** above.
-
-
-
-## What are the basic components of AAPS?
-
-The “brain” of AAPS is an **app** which you build yourself. There are detailed step-by-step instructions for this. You then install the **AAPS  app** on a [compatible](../Getting-Started/Phones.md) **Android smartphone** (**1**). A number of users prefer their loop on a separate phone to their main phone. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
-
-The **Android smartphone** will also need to have another app installed on it as well as **AAPS**. This [additional app](../Getting-Started/CompatiblesCgms.md) receives glucose data from a sensor (**2**) by Bluetooth, and then sends the data internally on the phone to the **AAPS app**.
-
-The **AAPS app** uses a decision making process (**algorithm**) from OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Which algorithm you use (oref0 or oref1), depends on which suits your specific situation best.  In both cases, the algorithm takes into account multiple factors, and performs rapid calculations every time a new reading comes in from the sensor. The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by Bluetooth. All the information can be sent by mobile data or Wi-Fi to the internet (**4**). This data can also be shared with followers if desired, and/or collected for analysis. Optionally, you can also pair a [smartwatch](../Getting-Started/Watches.md) (**5**) with the phone to see your data at a glance and, with some watches, send basic commands to **AAPS**.
-
-## What are the advantages of the AAPS system?
-
-The OpenAPS algorithm used by **AAPS** controls blood sugar levels in the absence of user input, according to the users’ defined parameters (important ones being basal rates, insulin sensitivity factors, insulin-to-carb ratios, duration of insulin activity etc.), reacting every 5 minutes to the new sensor data.
-
-Some of the reported advantages of using **AAPS** are extensive fine-tunable options, **Automations** and increased transparency of the system for the patient/caregiver. This can result in better control over your diabetes (or that of someone you are caring for), which in turn may give improved quality of life and increased peace of mind.
-
-With investment of your time, **AAPS** can potentially lead to:
-
-- alleviating the stress and burden of managing type 1 diabetes;
-
-- reducing the multitude of mundane decisions that arise from type 1 diabetes;
-
-- the provision of personalised and dynamic insulin dosing based on real-time data which can cut down the need for hypo treatments and reduce hyperglycemia episodes;
-
-- an increased knowledge of insulin management and confidence to better fine tune your settings;
-
-- the ability to create automatic settings (**automations**) that are tailored to fit in with your lifestyle;
-
-- improved sleep quality and overall reduction in the frequency of nighttime interventions;
-
-- remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics; and
-
-- streamlining of all your portable diabetic equipment (continuous glucose monitor receiver and insulin controlling devices) by using an Android phone controlled by **AAPS**.
+Com que OpenAPS només és compatible amb algunes bombes d'insulina antigues, **AAPS** (que es pot fer servir amb més tipus de bombes d'insulina) es va desenvolupar per primera vegada el 2016 per a un familiar amb diabetis tipus 1. Des d'aquells primers temps, un equip de desenvolupadors voluntaris i altres entusiastes relacionats amb el món de la diabetis tipus 1 ha continuat desenvolupant i millorant **AAPS**. Avui, molts milers de persones de tot el món fan servir **AAPS**. És un sistema molt personalitzable i versàtil i, com que és de codi obert, també és fàcilment compatible amb molts altres programes i plataformes de codi obert per a la diabetis. Els components fonamentals del sistema **AAPS** actual es mostren a la **Figura 1** de més amunt.
 
 
-Ultimately, **AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
 
-### Specific advantages include:
+## Quins són els components bàsics d'AAPS?
 
-#### 1) Safety built-in
-To read about the safety features of the algorithms, known as oref0 and oref1, [click here](https://openaps.org/reference-design/). The user is in control of their own safety constraints.
+El «cervell» d'AAPS és una **aplicació** que compileu vosaltres mateixos. Hi ha instruccions detallades pas a pas per fer-ho. Després instal·leu l'**aplicació AAPS** en un **telèfon intel·ligent Android** [compatible](../Getting-Started/Phones.md) (**1**). Alguns usuaris prefereixen tenir el llaç en un telèfon diferent del seu telèfon principal. Així, no cal que feu servir un telèfon Android per a tota la resta de la vostra vida, només per fer funcionar el vostre llaç AAPS.
 
-#### 2) Hardware flexibility
+Al **telèfon intel·ligent Android** també caldrà instal·lar una altra aplicació, a més d'**AAPS**. Aquesta [aplicació addicional](../Getting-Started/CompatiblesCgms.md) rep les dades de glucèmia d'un sensor (**2**) per Bluetooth i després les envia internament, dins del telèfon, a l'**aplicació AAPS**.
 
-**AAPS** works with a wide range of insulin pumps and sensors and offers flexibility as life changes. So for example, if you develop an allergy to Dexcom sensor patch glue, you could switch to using a Libre sensor instead. Users don't have to rebuild or reinstall the **AAPS** app, just select a different pump or BG source in **Configuration** to change your hardware. **AAPS** is independent of particular pump drivers and also contains a "virtual pump" so users can safely experiment before using it on themselves.
+L'**aplicació AAPS** fa servir un procés de presa de decisions (**algoritme**) d'OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Quin algoritme feu servir (oref0 o oref1) depèn de quin s'adapta millor a la vostra situació.  En tots dos casos, l'algoritme té en compte molts factors i fa càlculs ràpids cada vegada que arriba una nova lectura del sensor. Després, l'algoritme envia per Bluetooth instruccions a la bomba d'insulina (**3**) sobre quanta insulina ha de lliurar. Tota la informació es pot enviar a internet (**4**) per dades mòbils o Wi-Fi. Si voleu, aquestes dades també es poden compartir amb seguidors i/o recollir per analitzar-les. Opcionalment, també podeu emparellar un [rellotge intel·ligent](../Getting-Started/Watches.md) (**5**) amb el telèfon per veure les vostres dades d'un cop d'ull i, amb alguns rellotges, enviar ordres bàsiques a **AAPS**.
 
-#### 3) Highly customisable, with wide parameters
+## Quins avantatges té el sistema AAPS?
 
-Users can easily add or remove modules or functionality, and **AAPS** can be used in both open and closed loop mode. Here are some examples of the possibilities with the **AAPS** system:
+L'algoritme d'OpenAPS que fa servir **AAPS** controla la glucèmia sense accions de l'usuari, segons els paràmetres que l'usuari ha definit (els més importants són les taxes basals, els factors de sensibilitat a la insulina, les ràtios insulina:carbohidrats, la durada de l'acció de la insulina, etc.), i reacciona cada 5 minuts a les noves dades del sensor.
 
- a) The ability to set a lower **BG** target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
+Alguns dels avantatges d'**AAPS** que esmenten els usuaris són les moltes opcions que es poden ajustar, les **automatitzacions** i una transparència més gran del sistema per al pacient/cuidador. Això pot donar un millor control de la vostra diabetis (o de la de la persona que cuideu), cosa que alhora pot millorar la qualitat de vida i donar més tranquil·litat.
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). The automation will last according to the scheduled time you set. Such an automation could be set to only be active on certain days of the week, at certain times of day, and even at certain locations.
+Si hi dediqueu temps, **AAPS** us pot ajudar a aconseguir:
+
+- menys estrès i menys càrrega en la gestió de la diabetis tipus 1;
+
+- menys decisions rutinàries de les moltes que comporta la diabetis tipus 1;
+
+- una dosificació d'insulina personalitzada i dinàmica, basada en dades en temps real, que pot reduir la necessitat de tractar hipoglucèmies i reduir els episodis d'hiperglucèmia;
+
+- més coneixements sobre la gestió de la insulina i més confiança per ajustar millor la vostra configuració;
+
+- la possibilitat de crear configuracions automàtiques (**automatitzacions**) adaptades al vostre estil de vida;
+
+- una millor qualitat del son i, en general, menys intervencions durant la nit;
+
+- monitoratge remot i administració del lliurament d'insulina per als cuidadors de persones amb diabetis tipus 1; i
+
+- tenir tot el vostre equip portàtil per a la diabetis (receptor del monitor continu de glucosa i dispositius de control de la insulina) unificat en un telèfon Android controlat per **AAPS**.
+
+
+Al final, **AAPS** pot ajudar les persones a gestionar millor la seva diabetis, amb glucèmies estables i una salut millor a llarg termini.
+
+### Avantatges concrets:
+
+#### 1) Seguretat integrada
+Per llegir sobre les funcions de seguretat dels algoritmes, coneguts com a oref0 i oref1, [feu clic aquí](https://openaps.org/reference-design/). L'usuari controla els seus propis límits de seguretat.
+
+#### 2) Flexibilitat de maquinari
+
+**AAPS** funciona amb una gran varietat de bombes d'insulina i sensors i ofereix flexibilitat quan la vida canvia. Per exemple, si desenvolupeu una al·lèrgia a la cola del pegat del sensor Dexcom, podeu canviar a un sensor Libre. Els usuaris no han de tornar a compilar ni reinstal·lar l'aplicació **AAPS**: per canviar de maquinari, només cal seleccionar una altra bomba o un altre origen de glucèmia al **Configurador**. **AAPS** no depèn de controladors de bomba concrets i també inclou una «bomba virtual», perquè els usuaris puguin experimentar de manera segura abans de fer-lo servir amb ells mateixos.
+
+#### 3) Molt personalitzable, amb paràmetres amplis
+
+Els usuaris poden afegir o treure mòduls o funcions fàcilment, i **AAPS** es pot fer servir tant en mode de llaç obert com de llaç tancat. Aquests són alguns exemples de les possibilitats del sistema **AAPS**:
+
+ a) La possibilitat de definir un objectiu de **glucèmia** més baix 30 min abans de menjar; podeu posar l'objectiu fins a 72 mg/dl (4,0 mmol/l).
+
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). L'automatització durarà segons l'horari que hàgiu definit. Aquesta automatització es pot configurar perquè només estigui activa certs dies de la setmana, a certes hores del dia i fins i tot en certs llocs.
 
  c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
 
- d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Any insulin not required can be overridden by just “cancelling” the missed basal.
+ d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. La insulina que no calgui es pot evitar simplement «cancel·lant» la basal que no s'ha lliurat.
 
- e) **AAPS** has the facility for you to set different profiles for different situations and easily switch between them. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
+ e) **AAPS** us permet definir perfils diferents per a situacions diferents i canviar fàcilment d'un a l'altre. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
 
-These are all examples, the full range of features gives huge flexibility for daily life including sport, illness, hormone cycles _etc_. Ultimately, it is for the user to decide how to use this flexibility, and there is no one-size-fits-all automation for this.
+Tot això són exemples; el conjunt complet de funcions dona una gran flexibilitat per a la vida diària, incloent-hi l'esport, la malaltia, els cicles hormonals, _etc_. Al final, és l'usuari qui decideix com fer servir aquesta flexibilitat, i no hi ha cap automatització que serveixi per a tothom.
 
-#### 4) Remote monitoring
-There are multiple possible monitoring channels (Sugarmate, Dexcom Follow, xDrip, Android Auto _etc._) which are useful for parents/carers and adults in certain scenarios (sleeping/driving) who need customisable alerts. In some apps (xDrip) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
+#### 4) Monitoratge remot
+Hi ha diversos canals de monitoratge possibles (Sugarmate, Dexcom Follow, xDrip, Android Auto, _etc._) que són útils per a pares/cuidadors i per a adults en certes situacions (dormint/conduint) que necessiten alertes personalitzables. En algunes aplicacions (xDrip) també podeu desactivar del tot les alarmes. Això va molt bé si teniu un sensor nou en període d'adaptació («soaking») i encara no voleu fer servir el llaç amb ell.
 
-#### 5) Remote control
-A significant advantage of **AAPS** over commercial systems is that it is possible for followers, using authenticated text (SMS) commands or a paired **AAPSClient** app to send a wide range of commands back to the **AAPS** system. This feature is used extensively by parents of kids with type 1 diabetes who use **AAPS**.
+#### 5) Control remot
+Un avantatge important d'**AAPS** respecte als sistemes comercials és que els seguidors poden enviar moltes ordres al sistema **AAPS**, amb ordres de text autenticades (SMS) o amb una aplicació **AAPSClient** emparellada. Els pares de nens amb diabetis tipus 1 que fan servir **AAPS** utilitzen molt aquesta funció.
 
-The remote control features can be very useful: for example, in the playground, if you want to pre-bolus for a snack from your own phone, and your child is busy playing. It is also possible to monitor the system from a smartwatch (_e.g._ Garmin) or send basic commands from it (_e.g._ a Wear OS watch such as the Samsung Galaxy Watch).
+Les funcions de control remot poden ser molt útils: per exemple, al parc, si voleu posar un prebolus per a un berenar des del vostre propi telèfon mentre el vostre fill està ocupat jugant. També és possible vigilar el sistema des d'un rellotge intel·ligent (_p. ex._ Garmin) o enviar-li ordres bàsiques des del rellotge (_p. ex._ un rellotge Wear OS com el Samsung Galaxy Watch).
 
-#### 6) No commercial constraints, due to open application interfaces
-Beyond the use of an open-source approach, which allows the source code of **AAPS** to be viewed at any time, the general principle of providing open programming interfaces gives other developers the opportunity to contribute new ideas too. **AAPS** is closely integrated with Nightscout. This accelerates development and allows users to add on features to make life with diabetes even more convenient. Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), xDrip, [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki) etc. There is ongoing dialogue between open-source developers and those developing commercial systems. Many of the OS-AID innovations are gradually adopted by commercial systems, where developments are understandably slower, partly because interfaces between systems from different companies (pumps, apps, sensors _etc_) need to be carefully negotiated and licenced. This can also slow innovations which are convenient for the patient (or a small sub-population of patients, who have a very specific requirement) but do not generate any sizable profit.
+#### 6) Sense limitacions comercials, gràcies a interfícies d'aplicació obertes
+A més de l'enfocament de codi obert, que permet veure el codi font d'**AAPS** en qualsevol moment, el principi general d'oferir interfícies de programació obertes també dona a altres desenvolupadors l'oportunitat d'aportar noves idees. **AAPS** està molt integrat amb Nightscout. Això accelera el desenvolupament i permet als usuaris afegir funcions per fer la vida amb diabetis encara més còmoda. Bons exemples d'aquestes integracions són [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), xDrip, [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki), etc. Hi ha un diàleg continu entre els desenvolupadors de codi obert i els que desenvolupen sistemes comercials. Els sistemes comercials adopten a poc a poc moltes de les innovacions OS-AID. En aquests sistemes, el desenvolupament és lògicament més lent, en part perquè les interfícies entre sistemes de diferents empreses (bombes, aplicacions, sensors, _etc_) s'han de negociar i llicenciar amb cura. Això també pot alentir innovacions que són pràctiques per al pacient (o per a un petit grup de pacients amb una necessitat molt específica) però que no generen cap benefici econòmic important.
 
-#### 7) Detailed app interface
-With **AAPS** it is easy to keep track of things like: pump insulin levels, cannula age, sensor age, pump battery age, insulin-on-board _etc_. Many actions can be done through the **AAPS** app (priming the pump, disconnecting the pump _etc_.), instead of on the pump itself, which means the pump can stay in your pocket or belt (or that of someone you are caring for).
+#### 7) Interfície de l'aplicació detallada
+Amb **AAPS** és fàcil controlar coses com: el nivell d'insulina de la bomba, l'edat de la cànula, l'edat del sensor, l'edat de la pila de la bomba, la insulina a bord, _etc_. Moltes accions es poden fer amb l'aplicació **AAPS** (encebar la bomba, desconnectar la bomba, _etc_.) en lloc de fer-les a la mateixa bomba. Així, la bomba es pot quedar a la butxaca o al cinturó (vostre o de la persona que cuideu).
 
-#### 8) Accessibility and affordability
-**AAPS** gives people who currently can’t afford to self-fund, or don’t have funding/insurance, access to a hybrid closed looping system which is conceptually years ahead, in terms of development, of the commercial systems. You currently need a reporting server (Nightscout or Tidepool) to set up **AAPS**, although it is not required for day-to-day running of the **AAPS** loop. Many people continue to use Nightscout for collecting their data, and for remote monitoring. Although **AAPS** itself is free, setting up Nightscout through one of the various platforms may incur a fee (€0 - €12), depending on what level of support you want (see comparison table) and whether you want to keep using Nightscout after setup or not. **AAPS** works with a wide range of affordable (starting from approx €150) [Android phones](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true). Different versions are available for specific locations and languages, and AAPS can also be used by people who are [blind](#accessibility-for-users-aaps-who-are-partially-or-completely-blind).
+#### 8) Accessibilitat i preu assequible
+**AAPS** dona a les persones que ara no poden pagar-se un sistema, o que no tenen finançament/assegurança, accés a un sistema de llaç tancat híbrid que, conceptualment, està anys per davant dels sistemes comercials pel que fa al desenvolupament. Actualment necessiteu un servidor d'informes (Nightscout o Tidepool) per configurar **AAPS**, tot i que no cal per al funcionament diari del llaç **AAPS**. Molta gent continua fent servir Nightscout per recollir les seves dades i per al monitoratge remot. Tot i que **AAPS** és gratuït, configurar Nightscout en una de les diverses plataformes pot tenir un cost (0–12 €), segons el nivell de suport que vulgueu (vegeu la taula comparativa) i si voleu continuar fent servir Nightscout després de la configuració o no. **AAPS** funciona amb una gran varietat de [telèfons Android](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) assequibles (a partir d'uns 150 €). Hi ha versions diferents per a llocs i idiomes concrets, i AAPS també el poden fer servir persones [cegues](#accessibility-for-users-aaps-who-are-partially-or-completely-blind).
 
-#### 9) Support
-No automated insulin delivery system is perfect. Commercial and open-source systems share many common glitches in both communications and temporary hardware failure. There is support available from community of AAPS users on Facebook, Discord and GitHub who designed, developed and are currently using **AAPS**, all over the world. There are also Facebook support groups and help from clinic/commercial companies for the commercial APS systems -  it is worth speaking to the users, or former users of these systems to get feedback on the common glitches, the quality of the education programme and the level of ongoing support provided.
+#### 9) Suport
+Cap sistema de lliurament automàtic d'insulina és perfecte. Els sistemes comercials i els de codi obert tenen molts errors en comú, tant de comunicació com de fallades temporals del maquinari. Hi ha suport de la comunitat d'usuaris d'AAPS a Facebook, Discord i GitHub: persones de tot el món que han dissenyat, desenvolupat i fan servir actualment **AAPS**. Per als sistemes APS comercials també hi ha grups de suport a Facebook i ajuda de les clíniques i de les empreses. Val la pena parlar amb usuaris, o antics usuaris, d'aquests sistemes per saber quins errors comuns tenen, quina qualitat té el programa de formació i quin nivell de suport continu ofereixen.
 
-#### 10) Predictability, transparency and safety
-**AAPS** is transparent, logical and predictable, which may make it easier to know when a setting is wrong, and to adjust it accordingly. You can see exactly what the system is doing, why it is doing it, and set its operational limits, which puts the control (and responsibility) in your hands. This can provide the user with confidence, and a sounder sleep.
+#### 10) Previsibilitat, transparència i seguretat
+**AAPS** és transparent, lògic i previsible. Això pot fer més fàcil saber quan una configuració és incorrecta i ajustar-la. Podeu veure exactament què fa el sistema i per què ho fa, i definir-ne els límits de funcionament. Així, el control (i la responsabilitat) és a les vostres mans. Això pot donar confiança a l'usuari i un son més tranquil.
 
-#### 11) Access to advanced features through development (dev) modes including full closed loop
-This **AAPS** documentation focuses on the mainstream **“master”** branch of **AAPS**. However, research and development is going on all the time. More experienced users may wish to explore the experimental features in the **development** branch. The development innovations focus on strategies for full closed looping (not having to bolus for meals _etc._), and generally trying to make life with type 1 diabetes as convenient as possible.
+#### 11) Accés a funcions avançades a través dels modes de desenvolupament (dev), inclòs el llaç tancat complet
+Aquesta documentació d'**AAPS** se centra en la branca principal **«master»** d'**AAPS**. Tanmateix, la recerca i el desenvolupament no s'aturen mai. Els usuaris amb més experiència poden explorar les funcions experimentals de la branca de **desenvolupament**. Les innovacions en desenvolupament se centren en estratègies per al llaç tancat complet (sense haver de posar bolus per als àpats, _etc._) i, en general, en fer la vida amb diabetis tipus 1 tan còmoda com sigui possible.
 
-#### 12) Ability to contribute yourself to further improvements
-Type 1 diabetes can be highly frustrating and isolating. Having control over your own diabetes tech, with the possibility to “pay it forward” as soon as you are making progress by helping others on their journey can be really rewarding. You can educate yourself, discover the roadblocks and look for, and even contribute, to new developments and the documentation. There will be others in the community with the same quest that you can bounce ideas off and work with. This is the essence of #WeAreNotWaiting.
+#### 12) Possibilitat de contribuir vosaltres mateixos a noves millores
+La diabetis tipus 1 pot ser molt frustrant i fer que us sentiu sols. Tenir el control de la vostra pròpia tecnologia per a la diabetis pot ser molt gratificant, també perquè, tan aviat com feu progressos, podeu «tornar el favor» ajudant altres persones en el seu camí. Podeu formar-vos, descobrir els obstacles, buscar novetats i fins i tot contribuir al desenvolupament i a la documentació. A la comunitat hi haurà altres persones amb el mateix objectiu amb qui podreu compartir idees i treballar. Aquesta és l'essència de #WeAreNotWaiting.
 
-## How does AAPS compare to MDI and open looping?
+## Com es compara AAPS amb les MDI i amb el llaç obert?
 
-Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve giving an injection of a long-lasting insulin (_e.g._ Tresiba) once a day, with injections of faster-acting insulin (_e.g._ Novorapid, Fiasp) at mealtimes, or for corrections. Open pumping (b) involves using a pump to deliver basal at pre-programmed rates of rapid-acting insulin, and then boluses through the pump at mealtimes or for corrections. The basics of a looping system are that the looping app uses the sensor glucose data to instruct the pump to stop insulin delivery when it predicts you are heading for a low, and to give you extra insulin if your glucose levels are rising and predicted to go too high (c). Although this figure is oversimplified compared to real-life, it aims to demonstrate the key differences of the approaches. It is possible to achieve exceptionally good glucose control with any of these three approaches.
+Les múltiples injeccions diàries (MDI, (a) a la **Figura 2** de més avall) normalment consisteixen en una injecció d'insulina d'acció prolongada (_p. ex._ Tresiba) un cop al dia, i injeccions d'insulina d'acció més ràpida (_p. ex._ Novorapid, Fiasp) als àpats o per a correccions. La bomba en llaç obert (b) consisteix a fer servir una bomba que lliura la basal d'insulina d'acció ràpida a taxes programades i, a més, posar bolus amb la bomba als àpats o per a correccions. La base d'un sistema de llaç és que l'aplicació del llaç fa servir les dades de glucèmia del sensor per indicar a la bomba que aturi el lliurament d'insulina quan preveu que aneu cap a una hipoglucèmia, i que us doni insulina addicional si la glucèmia puja i es preveu que serà massa alta (c). Aquesta figura és molt més simple que la vida real, però vol mostrar les diferències clau entre els enfocaments. És possible aconseguir un control de la glucèmia excepcionalment bo amb qualsevol d'aquests tres enfocaments.
 
 ![21-06-23 AAPS glucose MDI etc](../images/basic-overview-mdi-open-and-closed-loop.png)
 
 
-**Figure 2**. Basic overview of (a) MDI, (b) open-loop pumping and (c) hybrid closed loop pumping.
+**Figura 2**. Visió general bàsica de (a) MDI, (b) bomba en llaç obert i (c) bomba en llaç tancat híbrid.
 
-## How does AAPS compare to other looping systems?
+## Com es compara AAPS amb altres sistemes de llaç?
 
-As of June 25 2023, there are four major open source closed loop systems available: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [Trio](https://triodocs.org), (formerly FreeAPS X). The features of the different systems are shown in the table below:
-
-
-| Device type | Name                                                                | [AAPS](https://wiki.aaps.app)             | [Loop](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [Trio](https://triodocs.org)              |
-| ----------- | ------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------- | ----------------------------------------------------- | ----------------------------------------- |
-| Phone       | Android                                                             | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| Phone       | iPhone                                                              | ![unavailable](../images/unavailable.png) | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| Rig         | tiny computer (1)                                                   | ![unavailable](../images/unavailable.png) | ![unavailable](../images/unavailable.png)   | ![available](../images/available.png)                 | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Dana I](../CompatiblePumps/DanaRS-Insulin-Pump.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)                | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)                  | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Medtrum TouchCare Nano 200U](../CompatiblePumps/MedtrumNano.md)    | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Medtrum TouchCare 300U](../CompatiblePumps/MedtrumNano.md)         | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Roche Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)        | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Roche Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Older Medtronic](../CompatiblePumps/MedtronicPump.md)              | ![available](../images/available.png)     | ![available](../images/available.png)       | ![available](../images/available.png)                 | ![available](../images/available.png)     |
-| PUMP        | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [CareLevo](../CompatiblePumps/CareLevo.md)                          | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| CGM         | [Dexcom G7/One+/Stelo](../CompatibleCgms/DexcomG7.md)               | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| CGM         | [Dexcom One](../CompatibleCgms/DexcomG6.md)                         | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| CGM         | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                          | ![available](../images/available.png)     | ![available](../images/available.png)       | ![available](../images/available.png)                 | ![available](../images/available.png)     |
-| CGM         | [Libre 3/3+](../CompatibleCgms/Libre3.md)                           | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| CGM         | [Libre 2/2+](../CompatibleCgms/Libre2.md)                           | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| CGM         | [Libre 1](../CompatibleCgms/Libre1.md)                              | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| CGM         | [Eversense](../CompatibleCgms/Eversense.md)                         | ![available](../images/available.png)     | ![available](../images/available.png)       | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| CGM         | [MM640g/MM630g](../CompatibleCgms/MM640g.md)                        | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| CGM         | [PocTech](../CompatibleCgms/PocTech.md)                             | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| CGM         | [Ottai](../CompatibleCgms/OttaiM8.md)                               | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| CGM         | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)                          | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)   | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| CGM         | [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md) | ![available](../images/available.png)     | ![available](../images/available.png)       | ![available](../images/available.png)                 | ![available](../images/available.png)     |
-
-_Table notes:_
-1. A **rig** is a small computer which you carry around with you, without a monitor. One supported device type is Intel Edison + Explorer Board and the other Raspberry Pi + Explorer HAT or Adafruit RFM69HCW Bonnet. The first APS systems were based on this setup, as mobile phones were not capable of running the required algorithms. Use of these systems has declined, as the setup on mobile phones has become easier, and phones have a display included. Intel has also stopped selling the Intel Edison. The excellent OpenAPS algorithms **oref0** and **oref1** are now incorporated in AAPS and Trio.
+A 25 de juny de 2023, hi ha quatre sistemes principals de llaç tancat de codi obert disponibles: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) i [Trio](https://triodocs.org) (abans FreeAPS X). Les característiques dels diferents sistemes es mostren a la taula següent:
 
 
-An international peer-reviewed consensus statement containing practical guidance on open source looping was written by and for health-care professionals, and published in a leading medical journal in 2022: [_Lancet Diabetes Endocrinol_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_). It is well worth a read (including for your diabetes clinic) and summarizes the main technical differences between the different open-source hybrid closed loop systems.
+| Tipus de dispositiu | Nom                                                                             | [AAPS](https://wiki.aaps.app)               | [Llaç](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [Trio](https://triodocs.org)                |
+| ------------------- | ------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ----------------------------------------------------- | ------------------------------------------- |
+| Telèfon             | Android                                                                         | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| Telèfon             | iPhone                                                                          | ![no disponible](../images/unavailable.png) | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| Rig                 | ordinador petit (1)                                                             | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png) | ![disponible](../images/available.png)                | ![no disponible](../images/unavailable.png) |
+| PUMP                | [Dana I](../CompatiblePumps/DanaRS-Insulin-Pump.md)                             | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| PUMP                | [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)                            | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| PUMP                | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)                              | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| PUMP                | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md)                             | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| PUMP                | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)                             | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| PUMP                | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                                   | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| PUMP                | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                                     | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| PUMP                | [Medtrum TouchCare Nano 200U](../CompatiblePumps/MedtrumNano.md)                | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| PUMP                | [Medtrum TouchCare 300U](../CompatiblePumps/MedtrumNano.md)                     | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| PUMP                | [Roche Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)                    | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| PUMP                | [Roche Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)                   | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| PUMP                | [Medtronic antigues](../CompatiblePumps/MedtronicPump.md)                       | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)                | ![disponible](../images/available.png)      |
+| PUMP                | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                                     | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| PUMP                | [CareLevo](../CompatiblePumps/CareLevo.md)                                      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| CGM                 | [Dexcom G7/One+/Stelo](../CompatibleCgms/DexcomG7.md)                           | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| CGM                 | [Dexcom One](../CompatibleCgms/DexcomG6.md)                                     | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| CGM                 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)                | ![disponible](../images/available.png)      |
+| CGM                 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                       | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| CGM                 | [Libre 2/2+](../CompatibleCgms/Libre2.md)                                       | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| CGM                 | [Libre 1](../CompatibleCgms/Libre1.md)                                          | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| CGM                 | [Eversense](../CompatibleCgms/Eversense.md)                                     | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| CGM                 | [MM640g/MM630g](../CompatibleCgms/MM640g.md)                                    | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| CGM                 | [PocTech](../CompatibleCgms/PocTech.md)                                         | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| CGM                 | [Ottai](../CompatibleCgms/OttaiM8.md)                                           | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| CGM                 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)                                      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| CGM                 | [Nightscout com a origen de glucèmia](../CompatibleCgms/CgmNightscoutUpload.md) | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)                | ![disponible](../images/available.png)      |
 
-It is hard to get a “feel” for any system without using it, or talking to others who are using it, so do reach out to others on Facebook/Discord and ask. Most people find that **AAPS** is incredibly sophisticated in comparison to other hybrid closed loop systems (particularly the commercial systems), with a huge number of potentially customizable settings and features, discussed above. Some people can find this a little overwhelming at the beginning, but there is no rush to investigate all the possibilities at once. You can progress as slowly or as fast as you would like, and there is help available at every step of the way.
+_Notes de la taula:_
+1. Un **rig** és un ordinador petit, sense pantalla, que porteu a sobre. Un tipus de dispositiu compatible és Intel Edison + Explorer Board i l'altre és Raspberry Pi + Explorer HAT o Adafruit RFM69HCW Bonnet. Els primers sistemes APS es basaven en aquesta configuració, perquè els telèfons mòbils no podien executar els algoritmes necessaris. L'ús d'aquests sistemes ha disminuït, perquè la configuració als telèfons mòbils és més fàcil i els telèfons ja tenen pantalla. A més, Intel ha deixat de vendre l'Intel Edison. Els excel·lents algoritmes d'OpenAPS **oref0** i **oref1** ara estan incorporats a AAPS i a Trio.
 
 
-## Does AAPS use artificial intelligence or any learning algorithm?
+Una declaració de consens internacional, revisada per experts, amb orientació pràctica sobre els sistemes de llaç de codi obert, va ser escrita per i per a professionals sanitaris i publicada el 2022 en una revista mèdica de referència: [_Lancet Diabetes Endocrinol_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_). Val molt la pena llegir-lo (també per a la vostra clínica de diabetis): resumeix les principals diferències tècniques entre els diferents sistemes de llaç tancat híbrid de codi obert.
 
-The current version of **AAPS** (4.0) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. As such, the system is open and transparent in how it works, and has the ability to be understood not just by experts, but also by clinicians and patients. It also means that if you have a sharply varying schedule (maybe switching from a stressful week at work to a relaxing holiday) and are likely to need a significantly different amount of insulin, you can immediately switch **AAPS** to run a weaker/stronger customized profile. A ‘learning system’ will do this adjustment for you automatically, but is likely to take longer to adjust the insulin delivery.
+És difícil fer-se una idea de qualsevol sistema sense fer-lo servir o sense parlar amb persones que el fan servir. Per això, no dubteu a contactar amb altres usuaris a Facebook/Discord i preguntar. La majoria de la gent troba que **AAPS** és molt sofisticat en comparació amb altres sistemes de llaç tancat híbrid (sobretot els comercials), amb un gran nombre de configuracions i funcions personalitzables, com s'ha explicat més amunt. A algunes persones això els pot semblar una mica aclaparador al principi, però no cal investigar totes les possibilitats de cop. Podeu avançar tan a poc a poc o tan de pressa com vulgueu, i hi ha ajuda disponible a cada pas.
+
+
+## AAPS fa servir intel·ligència artificial o algun algoritme d'aprenentatge?
+
+La versió actual d'**AAPS** (4.0) no té cap algoritme d'aprenentatge automàtic, ni models de resposta a la insulina amb múltiples paràmetres, ni intel·ligència artificial. Per tant, el funcionament del sistema és obert i transparent, i el poden entendre no només els experts, sinó també els metges i els pacients. També vol dir que, si el vostre horari canvia molt (per exemple, passeu d'una setmana estressant a la feina a unes vacances relaxades) i probablement necessitareu una quantitat d'insulina molt diferent, podeu canviar immediatament **AAPS** a un perfil personalitzat més feble/més fort. Un «sistema d'aprenentatge» farà aquest ajust automàticament, però probablement trigarà més a ajustar el lliurament d'insulina.
 
 (which-system-is-right-for-me-or-my-dependent)=
-## Which system is right for me or someone I am caring for?
+## Quin sistema és el millor per a mi o per a la persona que cuido?
 
-Practically, your choice of system is often restricted by which pump you already have, or can obtain from your medical provider, and your choice of phone (Apple or Android). If you don’t yet have a pump you have the biggest choice of systems. Technology is continually evolving, pumps are being discontinued and new pumps and sensors are being released. Most open-source systems work with the main sensors (Libre and Dexcom) or are quickly adapted to work with new sensors a year or so after they are released (with a bit of time delay for safety and stability testing).
+A la pràctica, la vostra elecció de sistema sovint depèn de quina bomba ja teniu o podeu obtenir del vostre proveïdor mèdic, i del vostre telèfon (Apple o Android). Si encara no teniu bomba, podeu triar entre més sistemes. La tecnologia evoluciona contínuament: algunes bombes es deixen de fabricar i surten noves bombes i nous sensors. La majoria dels sistemes de codi obert funcionen amb els sensors principals (Libre i Dexcom) o s'adapten ràpidament als sensors nous, aproximadament un any després que surtin (amb una mica de retard per fer proves de seguretat i estabilitat).
 
-Most **AAPS** users report more time in range, HbA1c reductions, as well as quality of life improvements from having a system that can auto-adjust basal rates overnight during sleep, and this is true for most hybrid closed loop systems. Some people have a preference for a very simple system which is not very customizable (which means you may prefer a commercial system), and others find this lack of control very frustrating (you may prefer an open-source system). If you (or someone you are caring for) are newly diagnosed, a common route is to get used to using MDI plus a glucose sensor first, then progress to a pump which has the potential for looping, then progress to **AAPS**, but some people (especially small kids) may go straight to a pump.
+La majoria dels usuaris d'**AAPS** diuen que tenen més temps en rang, una HbA1c més baixa i una millor qualitat de vida gràcies a un sistema que pot ajustar automàticament les taxes basals a la nit, mentre dormen. Això és cert per a la majoria dels sistemes de llaç tancat híbrid. Algunes persones prefereixen un sistema molt senzill i poc personalitzable (llavors potser preferireu un sistema comercial), i a d'altres aquesta falta de control els resulta molt frustrant (llavors potser preferireu un sistema de codi obert). Si vosaltres (o la persona que cuideu) acabeu de rebre el diagnòstic, un camí habitual és acostumar-se primer a les MDI amb un sensor de glucosa, després passar a una bomba que es pugui fer servir en llaç i després passar a **AAPS**. Però algunes persones (sobretot nens petits) poden passar directament a una bomba.
 
-It is important to note that the **AAPS** user needs to be proactive to troubleshoot and fix problems themselves, with help from the community. This is a very different mindset to that when using a commercial system. With **AAPS** a user has more control, but also the responsibility, and needs to be comfortable with that.
+És important tenir en compte que l'usuari d'**AAPS** ha de ser proactiu per detectar i resoldre els problemes ell mateix, amb l'ajuda de la comunitat. Aquesta manera de pensar és molt diferent de la d'un usuari d'un sistema comercial. Amb **AAPS**, l'usuari té més control, però també més responsabilitat, i s'hi ha de sentir còmode.
 
-## Is it safe to use open-source systems like AAPS?
+## És segur fer servir sistemes de codi obert com AAPS?
 
-### Safety of the AAPS system
-A more accurate question is probably “is it safe **compared** with my current insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with **AAPS**. A recent [paper](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) looked at the use of **AAPS** in a computer-simulated setup, which was an effective way to objectively trial how safe and effective the system is. More generally, many thousands of individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
+### Seguretat del sistema AAPS
+Probablement, una pregunta més precisa és: «És segur **en comparació** amb el meu sistema actual de lliurament d'insulina?», ja que cap mètode de lliurament d'insulina està lliure de riscos. **AAPS** té molts controls i mecanismes de seguretat. Un [article](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) recent va estudiar l'ús d'**AAPS** en una simulació per ordinador, que és una manera eficaç de provar objectivament com de segur i eficaç és el sistema. En general, molts milers de persones de tot el món fan servir sistemes de codi obert de lliurament automàtic d'insulina, i el seu ús continua creixent a tot el món.
 
-Any device that uses radio communications could be hacked, and this is true for a non-looping insulin pump as well. Currently, we are not aware of anyone attempting to harm individuals by hacking their diabetes-related medical equipment. However, there are multiple ways to protect against such risks:
+Qualsevol dispositiu que faci servir comunicacions per ràdio podria ser piratejat, i això també és cert per a una bomba d'insulina sense llaç. Actualment no sabem de ningú que hagi intentat fer mal a persones piratejant el seu equip mèdic per a la diabetis. Tot i així, hi ha diverses maneres de protegir-se d'aquests riscos:
 
-1.  In the pump settings, limit both the max bolus allowed and max temporary basal settings to amounts that you believe are safest. These are hard limits that we do not believe any malicious hacker could circumvent.
+1.  A la configuració de la bomba, limiteu tant el bolus màxim permès com la basal temporal màxima als valors que considereu més segurs. Són límits fixos que creiem que cap pirata informàtic no es pot saltar.
 
-2.  Set your CGM alarms enabled for both highs and lows.
+2.  Activeu les alarmes del CGM tant per a glucèmia alta com baixa.
 
-3.  Monitor your insulin delivery online. Nightscout users can set additional alarms to alert for a wide variety of conditions, including conditions that are much more likely to occur than a malicious attack. In addition to highs and lows, Nightscout can display diagnostic data useful for verifying that the pump is operating as desired, including current IOB, pump temporary basal history, pump bolus history. It can also be configured to proactively alert users to undesirable conditions, such as predicted highs and lows, low insulin reservoir, and low pump battery.
+3.  Controleu el lliurament d'insulina en línia. Els usuaris de Nightscout poden definir alarmes addicionals per avisar en moltes situacions, incloses situacions molt més probables que un atac malintencionat. A més de les glucèmies altes i baixes, Nightscout pot mostrar dades de diagnòstic útils per comprovar que la bomba funciona com cal, com ara l'IOB actual, l'historial de basals temporals i l'historial de bolus de la bomba. També es pot configurar perquè avisi els usuaris de situacions no desitjades, com ara glucèmies altes i baixes previstes, poca insulina al reservori i pila de la bomba baixa.
 
-If a malicious attack was made on your insulin pump, these strategies would significantly mitigate the risk. Every potential **AAPS** user needs to weigh the risks associated with using **AAPS**, versus the risks of using a different system.
+Si hi hagués un atac malintencionat a la vostra bomba d'insulina, aquestes estratègies reduirien molt el risc. Cada possible usuari d'**AAPS** ha de valorar els riscos de fer servir **AAPS** en comparació amb els riscos de fer servir un altre sistema.
 
-#### Safety considerations around improving blood glucose control too fast
+#### Seguretat: quan la glucèmia millora massa de pressa
 
-A rapid reduction in HbA1c and improved blood glucose control sounds appealing. However, reducing average blood glucose levels _too fast_ by starting any closed loop system can cause permanent damage, including to the eyes, and painful neuropathy that never goes away. This damage can be avoided simply by reducing levels more slowly. If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a time plan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the safety section [here](#preparing-safety-first).
+Una reducció ràpida de l'HbA1c i un millor control de la glucèmia semblen atractius. Tanmateix, reduir la glucèmia mitjana _massa de pressa_ en començar qualsevol sistema de llaç tancat pot causar danys permanents, també als ulls, i una neuropatia dolorosa que no desapareix mai. Aquests danys es poden evitar simplement reduint els nivells més a poc a poc. Si ara teniu una HbA1c elevada i passeu a AAPS (o a qualsevol altre sistema de llaç tancat), parleu d'aquest possible risc amb el vostre equip mèdic abans de començar i acordeu-hi un calendari. Trobareu informació més general sobre com reduir la glucèmia de manera segura, amb enllaços a literatura mèdica, a la secció de seguretat, [aquí](#preparing-safety-first).
 
-#### Medical safety around devices, consumable supplies and other medications
+#### Seguretat mèdica: dispositius, consumibles i altres medicaments
 
-Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an artificial pancreas loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, do not use these for creating an AAPS system.
+Per a un llaç de pàncrees artificial, feu servir una bomba d'insulina i un CGM provats, que funcionin del tot i que estiguin aprovats per la FDA o tinguin el marcatge CE. Les modificacions de maquinari o de programari d'aquests components poden causar dosis d'insulina inesperades i un risc greu per a l'usuari. Si trobeu o us ofereixen bombes d'insulina o receptors de CGM trencats, modificats o fets a casa, no els feu servir per crear un sistema AAPS.
 
-Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
+Feu servir consumibles originals, com ara insertors, cànules i reservoris d'insulina aprovats pel fabricant de la vostra bomba i del vostre CGM. Fer servir material no provat o modificat pot causar errors de lectura del CGM i errors en la dosi d'insulina. La insulina és molt perillosa si la dosi és incorrecta: no jugueu amb la vostra vida manipulant els consumibles.
 
-Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
+No preneu inhibidors de l'SGLT-2 (gliflozines) quan feu servir **AAPS**, perquè fan baixar la glucèmia d'una manera que no es pot calcular. Combinar aquest efecte amb un sistema que redueix les taxes basals per fer pujar la glucèmia és perillós. Trobareu més detalls a la [secció principal de seguretat](#preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
-## How can I approach discussing AAPS with my clinical team?
+## Com puc parlar d'AAPS amb el meu equip mèdic?
 
-Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other OS-AID loop, for that matter). Transparency and trust between patient and doctor is paramount.
+Recomanem als usuaris que parlin amb els seus metges sobre la seva intenció de fer servir **AAPS**. No tingueu por de parlar amb sinceritat amb el vostre equip de diabetis si teniu intenció de fer servir **AAPS** (o qualsevol altre llaç OS-AID). La transparència i la confiança entre pacient i metge són fonamentals.
 
-### Suggested approach:
-Start a conversation with your clinician to determine their familiarity and attitude towards diabetic technology such as CGMs,  pumps, hybrid loops and commercial looping. Your clinician/endocrinologist should be aware of the basic technology and be willing to discuss with you recent advancements with commercial loop products available within their regions.
+### Enfocament suggerit:
+Comenceu una conversa amb el vostre metge per saber què coneix de la tecnologia per a la diabetis i quina actitud hi té: els CGM, les bombes, els llaços híbrids i els sistemes de llaç comercials. El vostre metge/endocrinòleg hauria de conèixer la tecnologia bàsica i estar disposat a parlar amb vosaltres dels avenços recents en els productes de llaç comercials disponibles a la seva regió.
 
-#### Local precedent
+#### Precedents locals
 
-Obtain your clinicians/endocrinologists’ views on OS-AID loop _vs_ commercial looping, and gauge their knowledge in this area. Are they familiar with **AAPS** and can they share with you any helpful experience of working with patients with OS-AID looping?
+Pregunteu l'opinió dels vostres metges/endocrinòlegs sobre els llaços OS-AID _vs_ els llaços comercials, i valoreu què en saben. Coneixen **AAPS** i us poden explicar alguna experiència útil amb pacients que fan servir llaços OS-AID?
 
-Ask if your team has any patients under their care who already use OS-AID looping. Due to patient confidentiality, doctors cannot pass other patient’s details to you without obtaining the individual’s consent. However, if you want to, you **can** ask them to pass **your** contact details to an existing OS-AID looping patient if there is one the clinician feels you might "click” with, suggesting that you would be happy for the patient to contact you to discuss OS-AID looping. Clinicians are not obliged to do this, but some are happy to, since they realise the importance of peer-to-peer support in type 1 diabetes management. You may also find it useful to meet local friendly OS-AID loopers. This is of course up to you, and not entirely necessary.
+Pregunteu si el vostre equip té pacients que ja fan servir llaços OS-AID. Per la confidencialitat dels pacients, els metges no us poden donar les dades d'altres pacients sense el consentiment de la persona. Tanmateix, si voleu, **sí que** els podeu demanar que donin les **vostres** dades de contacte a un pacient que ja fa servir un llaç OS-AID, si n'hi ha algun amb qui el metge creu que us podeu entendre bé. Podeu dir que us agradaria que aquest pacient us contactés per parlar dels llaços OS-AID. Els metges no estan obligats a fer-ho, però alguns ho fan de gust, perquè entenen la importància del suport entre iguals en el tractament de la diabetis tipus 1. També us pot ser útil conèixer usuaris de llaços OS-AID de la vostra zona. Això, és clar, depèn de vosaltres i no és del tot necessari.
 
-#### National and International Precedent
+#### Precedents nacionals i internacionals
 
-If you feel unsupported by your team to loop with **AAPS**, the following discussion points may help:
+Si sentiu que el vostre equip no us dona suport per fer servir el llaç amb **AAPS**, aquests arguments us poden ajudar:
 
-a) The **AAPS** system has been designed BY patients and their caregivers. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are many thousands of **AAPS** users worldwide. There is therefore likely to be other patients using OS-AID looping in your clinic's patient population (whether they know about it or not).
+a) El sistema **AAPS** l'han dissenyat ELS PACIENTS i els seus cuidadors. S'ha dissenyat sobretot pensant en la seguretat, però també a partir de l'experiència profunda dels pacients. Hi ha molts milers d'usuaris d'**AAPS** a tot el món. Per tant, és probable que hi hagi altres pacients de la vostra clínica que fan servir llaços OS-AID (tant si la clínica ho sap com si no).
 
 b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
 
-c) Starting with **AAPS** involves a _gradual_ migration from “open” loop pumping, through low-glucose suspend, through to hybrid “closed” looping, by completing a number of objectives. There is therefore a structured programme, requiring the user to demonstrate a level of competence at each stage and fine-tuning their basic settings (basal, ISF and ICR) before they can close the loop.
+c) Començar amb **AAPS** implica un pas _gradual_ des de la bomba en llaç «obert», passant per la suspensió per glucèmia baixa, fins al llaç «tancat» híbrid, completant una sèrie d'objectius. Per tant, hi ha un programa estructurat: l'usuari ha de demostrar un nivell de competència a cada etapa i ajustar bé la seva configuració bàsica (basal, ISF i ràtio I:C) abans de poder tancar el llaç.
 
-d) Technical support is available to you from the OS-AID community through GitHub, Discord and Facebook closed groups.
+d) La comunitat OS-AID us ofereix suport tècnic a través de GitHub, Discord i grups tancats de Facebook.
 
-e) You will be able to provide **both CGM and insulin looping/pumping information** as combined reports at clinic meetings (through Nightscout or Tidepool), either printed out or on-screen (if you bring a laptop/tablet). The streamlining of both CGM and insulin data will allow more effective use of your clinician’s time to review your reports and aid their discussions in assessing your progress.
+e) Podreu presentar **la informació tant del CGM com del llaç/bomba d'insulina** en informes combinats a les visites a la clínica (a través de Nightscout o Tidepool), impresos o a la pantalla (si porteu un portàtil/tauleta). Tenir junts les dades del CGM i les de la insulina permetrà aprofitar millor el temps del vostre metge per revisar els vostres informes i l'ajudarà a valorar el vostre progrés.
 
-f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
+f) Si el vostre equip encara s'hi oposa fermament, doneu al vostre metge còpies impreses dels articles de referència enllaçats en aquest text, i també l'enllaç a la secció d'**AAPS** per a metges: [Per a professionals sanitaris – Introducció general i guia d'**AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
 
-#### Support for OS-AID looping by other clinicians
+#### Suport d'altres metges als llaços OS-AID
 
 The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
 
-a) **Assurance** for professionals that OS-AID artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
+a) **Garantia** per als professionals que els sistemes de pàncrees artificial OS-AID / de codi obert són una opció de «tractament segur i eficaç» per a la diabetis tipus 1, i orientació sobre recomanacions, converses, suport i documentació;
 
-b) **Recognition** that open-source automated insulin delivery (“AID”) systems can increase time in range (TIR) while reducing variability in blood glucose concentrations and the amount of hypo and hyperglycaemic episodes in various age groups, genders and communities;
+b) **Reconeixement** que els sistemes de codi obert de lliurament automàtic d'insulina («AID») poden augmentar el temps en rang (TIR) i alhora reduir la variabilitat de la glucèmia i el nombre d'episodis d'hipoglucèmia i d'hiperglucèmia en diversos grups d'edat, gèneres i comunitats;
 
-c) **Recommendation** that healthcare workers should **support** type 1 patients or their caregivers who choose to manage their diabetes with an open source AID system;
+c) **Recomanació** que els professionals sanitaris **donin suport** als pacients amb diabetis tipus 1, o als seus cuidadors, que decideixen tractar la seva diabetis amb un sistema AID de codi obert;
 
-d) Recommendation that healthcare workers should attempt to learn about all treatment options that might benefit patients including available open-source AID systems.  If health care professionals do not have resources to educate themselves, or have legal or regulatory concerns, they should consider **cooperating, or teaming up with other healthcare professionals** who do;
+d) Recomanació que els professionals sanitaris intentin conèixer totes les opcions de tractament que poden beneficiar els pacients, inclosos els sistemes AID de codi obert disponibles.  Si els professionals sanitaris no tenen recursos per formar-se, o tenen dubtes legals o normatius, haurien de pensar a **cooperar o formar equip amb altres professionals sanitaris** que sí que en tenen;
 
-e) Emphasis that all users of CGMs should have real-time and open-access to **their own health data** at all times
+e) Èmfasi que tots els usuaris de CGM han de tenir accés obert i en temps real a **les seves pròpies dades de salut** en tot moment
 
-f) Emphasis that these open source systems have not undergone the same regulatory evaluations as commercially available medical technologies, and there is no commercial technical support. However, **extensive community support is available**; and
+f) Èmfasi que aquests sistemes de codi obert no han passat les mateixes avaluacions reguladores que les tecnologies mèdiques comercials, i que no hi ha suport tècnic comercial. Tanmateix, **hi ha un ampli suport de la comunitat**; i
 
-g) A recommendation that **regulation and legal frameworks** should be updated to ensure clarity on permitting ethical and effective treatment of such open source systems.
+g) Una recomanació que els **marcs reguladors i legals** s'actualitzin per deixar clar que es permet un tractament ètic i eficaç amb aquests sistemes de codi obert.
 
-Another paper in [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) also highlights the UK General Medical Council’s ‘consent guidance’ places a strong emphasis on doctor and patients making decisions together. The doctor should explain the potential benefits, risks, burdens and side-effects on OS-AID APS and may recommend a particular option without pressuring the patient.
+Un altre article a [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) també destaca que la «guia de consentiment» del General Medical Council del Regne Unit posa molt d'èmfasi en el fet que el metge i el pacient prenguin les decisions junts. El metge hauria d'explicar els possibles beneficis, riscos, càrregues i efectes secundaris dels APS OS-AID, i pot recomanar una opció concreta sense pressionar el pacient.
 
-Ultimately it is up to the patient to weigh up these factors, along with any non-clinical issues relevant to them and decide which treatment option, if any, to accept.
+Al final, és el pacient qui ha de valorar aquests factors, juntament amb qualsevol aspecte no clínic que l'afecti, i decidir quina opció de tractament accepta, si n'accepta alguna.
 
-If a doctor discovers in a clinic that their patient is looping with an OS-AID system, they are not exempted from their obligations to monitor the patient, simply because they did not prescribe the particular piece of technology the patient is using; clinicians must continue to monitor patients.
+Si un metge descobreix a la consulta que el seu pacient fa servir un sistema OS-AID, no queda exempt de les seves obligacions de fer el seguiment del pacient pel simple fet de no haver receptat aquella tecnologia concreta; els metges han de continuar fent el seguiment dels pacients.
 
-Doctors (at least in the UK) are not prohibited from prescribing unlicensed medicines and can use their clinical discretion. They should therefore use their clinical judgement to decide if an OS-AID APS is suitable for a specific patient, and discuss what they consider to be the pros and cons with the patient.
+Als metges (almenys al Regne Unit) no se'ls prohibeix receptar medicaments sense llicència i poden fer servir el seu criteri clínic. Per tant, haurien de fer servir el seu criteri clínic per decidir si un APS OS-AID és adequat per a un pacient concret, i parlar amb el pacient dels pros i contres que hi veuen.
 
-#### The articles referenced above, and other useful links and position statements are listed below:
+#### Els articles citats més amunt, i altres enllaços útils i declaracions de posició, es mostren a continuació:
 
 1. Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals [_Lancet Diabetes Endocrinol_, (2022) _10_, 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
 2. [In Silico Trials of an Open-Source Android-Based Artificial Pancreas: A New Paradigm to Test Safety and Efficacy of Do-It-Yourself Systems, 2020](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
 3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
-5. [Berlin Institute of Health position statement, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
+5. [Declaració de posició del Berlin Institute of Health, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
 6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
-7.  Netherlands (EN/NL) - for clinicians - [how to help people on open source automated insulin delivery systems](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
+7.  Països Baixos (EN/NL) - per a metges - [com ajudar les persones que fan servir sistemes de codi obert de lliurament automàtic d'insulina](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
 8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 10. Outcomes of the OPEN project, an EU-funded project into the Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology (https://www.open-diabetes.eu/publications)
 
 
 
-## Why can’t I just download AAPS and use it straight away?
+## Per què no puc simplement descarregar AAPS i fer-lo servir de seguida?
 
-The **AAPS** app is not provided in Google Play - you have to build it from source code by yourself for legal reasons. **AAPS** is unlicensed, meaning that it does not have approval by any regulatory body authority in any country. **AAPS** is deemed to be carrying out a medical experiment on yourself, and is carried out at the user’s own risk.
+L'aplicació **AAPS** no és a Google Play: per motius legals, l'heu de compilar vosaltres mateixos a partir del codi font. **AAPS** no té llicència, és a dir, no té l'aprovació de cap autoritat reguladora de cap país. Es considera que, amb **AAPS**, feu un experiment mèdic amb vosaltres mateixos, i el feu sota la vostra pròpia responsabilitat.
 
-Setting up the system requires patience, determination and the gradual development of technical knowledge. All the information and support can be found in these documents, elsewhere online, or from others who have already done it. Many thousands of people have successfully built and are currently using **AAPS** worldwide.
+Configurar el sistema demana paciència, determinació i anar adquirint coneixements tècnics a poc a poc. Tota la informació i el suport es poden trobar en aquests documents, en altres llocs d'internet o a través d'altres persones que ja ho han fet. Molts milers de persones de tot el món han compilat **AAPS** amb èxit i el fan servir actualment.
 
-The developers of **AAPS** take safety incredibly seriously, and want others to have a good experience of using **AAPS**. That is why it is essential that every user (or carer, if the user is a child):
+Els desenvolupadors d'**AAPS** es prenen la seguretat molt seriosament i volen que altres persones tinguin una bona experiència amb **AAPS**. Per això és essencial que cada usuari (o cuidador, si l'usuari és un nen):
 
-- builds the AAPS system themself and works through the **objectives** so that they have reasonably good personalised settings and understand the basics of how **AAPS** works by the time they “close the loop”;
+- compili el sistema AAPS ell mateix i completi els **objectius**, de manera que tingui una configuració personal raonablement bona i entengui com funciona **AAPS** en general abans de «tancar el llaç»;
 
-- backs up their system by exporting and saving important files (like keystore and settings .json file) somewhere safe, so you can set up again quickly if needed;
+- faci una còpia de seguretat del sistema: exporti i desi els fitxers importants (com el magatzem de claus i el fitxer .json de configuració) en un lloc segur, per poder tornar a configurar-ho tot ràpidament si cal;
 
-- updates to newer master versions as and when they become available; and
+- actualitzi a les noves versions master quan estiguin disponibles; i
 
-- maintains and monitors the system to ensure it is working properly.
+- mantingui i controli el sistema per assegurar-se que funciona correctament.
 
-## What is the connectivity of the AAPS system?
+## Quina connectivitat té el sistema AAPS?
 
-**Figure 3 (below)** shows one example of the **AAPS** system for a user who does not require any followers interacting with the system. Additional open-source software and platforms which are not shown can also be integrated.
+La **Figura 3 (a sota)** mostra un exemple del sistema **AAPS** per a un usuari que no necessita cap seguidor que interactuï amb el sistema. També es poden integrar altres programes i plataformes de codi obert que no es mostren aquí.
 
 ![21-06-23 AAPS connectivity no followers](../images/AAPS-connectivity-no-followers.png)
 
 
-**Figure 4 (below)** shows the full potential of the **AAPS** system for a user who has followers and needs to monitor and adjust the system remotely (like a child with type 1 diabetes). Additional open-source software and platforms which are not shown can also be integrated.
+La **Figura 4 (a sota)** mostra tot el potencial del sistema **AAPS** per a un usuari que té seguidors i necessita controlar i ajustar el sistema a distància (com un nen amb diabetis tipus 1). També es poden integrar altres programes i plataformes de codi obert que no es mostren aquí.
 
 ![21-06-23 AAPS overview with followers](../images/AAPS-overview-with-followers.png)
 
-## How does AAPS get continually developed and improved?
+## Com es desenvolupa i es millora contínuament AAPS?
 
-Most **AAPS** users use the fully tested **master** version of AAPS, which has been tested for bugs and problems, before being released to the community. Behind the scenes, the developers try out new improvements, and test these out in “developer” (**dev**) versions of **AAPS** with a user community who are happy to do bug updates at short notice. If the improvements work well, they are then released as a new “master” version of **AAPS**. Any new master release is announced on the Facebook group, so that the mainstream **AAPS** users can read about and update to the new master version.
+La majoria dels usuaris d'**AAPS** fan servir la versió **master** d'AAPS, que està completament provada: s'ha revisat per trobar errors i problemes abans de publicar-la per a la comunitat. En segon pla, els desenvolupadors proven noves millores en versions de «desenvolupament» (**dev**) d'**AAPS**, amb una comunitat d'usuaris disposats a instal·lar actualitzacions de correcció d'errors amb poc temps d'avís. Si les millores funcionen bé, es publiquen com una nova versió «master» d'**AAPS**. Cada nova versió master s'anuncia al grup de Facebook, perquè els usuaris habituals d'**AAPS** puguin llegir-ne les novetats i actualitzar a la nova versió master.
 
-Some experienced and confident **AAPS** users conduct experiments with emerging technologies and with dev versions of the **AAPS** app, which can be interesting for the less adventurous users to read about, without having to do it themselves! People tend to share these experiments on the Facebook group too.
+Alguns usuaris d'**AAPS** amb experiència i confiança fan experiments amb tecnologies noves i amb versions dev de l'aplicació **AAPS**. Pot ser interessant llegir-ho per als usuaris menys aventurers, sense haver-ho de fer ells mateixos! La gent també sol compartir aquests experiments al grup de Facebook.
 
-You can read more about some of these experiments and discussion on emerging tech here:
+Podeu llegir més sobre alguns d'aquests experiments i debats sobre tecnologies noves aquí:
 
 Tim Street [https://www.diabettech.com/](https://www.diabettech.com/)
 
 David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
-## Who can benefit from AAPS?
+## Qui es pot beneficiar d'AAPS?
 
-| User Type                                   |
-| ------------------------------------------- |
-| ✔️ type 1 diabetic                          |
-| ✔️ caregiver or parent of a type 1 diabetic |
-| ✔️ blind users type 1 diabetic              |
-| ✔️ *clinicians and healthcare professionals |
+| Tipus d'usuari                                             |
+| ---------------------------------------------------------- |
+| ✔️ persona amb diabetis tipus 1                            |
+| ✔️ cuidador o pare/mare d'una persona amb diabetis tipus 1 |
+| ✔️ usuaris cecs amb diabetis tipus 1                       |
+| ✔️ *metges i professionals sanitaris                       |
 
-The above table assumes that the user has access to both a continuous glucose monitor and an insulin pump.
+La taula anterior suposa que l'usuari té accés tant a un monitor continu de glucosa com a una bomba d'insulina.
 
-*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioral considerations.
+*Totes les dades d'**AAPS** es poden posar a disposició dels professionals sanitaris a través de plataformes per compartir dades, com Nightscout, que ofereix registre i monitoratge en temps real de les dades del CGM, el lliurament d'insulina, les entrades de carbohidrats, les prediccions i la configuració. Els registres de Nightscout inclouen informes diaris i setmanals que poden ajudar els professionals sanitaris a parlar amb els pacients amb diabetis tipus 1 amb dades més precises sobre el control glucèmic i sobre aspectes de comportament.
 
 (accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
-### Accessibility for AAPS users who are partially or completely blind
+### Accessibilitat per a usuaris d'AAPS amb ceguesa parcial o total
 
-#### Day to day AAPS use:
-AAPS can be used by blind people. On Android devices, the operating system has a program called TalkBack. This allows screen orientation via voice output as part of the operating system. By using TalkBack you can operate both your smartphone and AAPS without needing to be able to see.
+#### Ús diari d'AAPS:
+AAPS el poden fer servir persones cegues. Als dispositius Android, el sistema operatiu té un programa anomenat TalkBack. Permet orientar-se a la pantalla amb sortida de veu, com a part del sistema operatiu. Amb TalkBack podeu fer servir tant el telèfon com AAPS sense necessitat de veure-hi.
 
-#### Building the AAPS app:
-As a user you will build the AAPS app in Android Studio. Many people use Microsoft Windows for this purpose, where there is the screen reader analogous to TalkBack. Since Android Studio is a Java application, the “Java Access Bridge” component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+#### Compilar l'aplicació AAPS:
+Com a usuaris, compilareu l'aplicació AAPS amb Android Studio. Molta gent fa servir Microsoft Windows per a això. Windows té un lector de pantalla semblant a TalkBack. Com que Android Studio és una aplicació Java, cal activar el component «Java Access Bridge» al Tauler de control. Si no, el lector de pantalla de l'ordinador no llegirà res a Android Studio.
 
-How you do this depends on your operating system, two methods are outlined below:
+Com fer-ho depèn del vostre sistema operatiu. A continuació hi ha dos mètodes:
 
-1) In the Windows Start menu, enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+1) Al menú Inici de Windows, escriviu «Control Panel» (Tauler de control) al camp de cerca i obriu-lo amb Retorn. S'obre: «All Control Panel Items» (Tots els elements del Tauler de control).
 
-Open the "Ease of Access Centre".
+Obriu «Ease of Access Centre» (Centre d'accessibilitat).
 
-Then open “Use computer without a display” with Enter.
+Després obriu «Use computer without a display» (Utilitzar l'ordinador sense pantalla) amb Retorn.
 
-Under **Hear text read aloud**, select **turn on narrator** and **turn on audio display**, then click **apply**.
+A **Hear text read aloud** (Escoltar el text en veu alta), seleccioneu **turn on narrator** (activar el Narrador) i **turn on audio display** (activar la descripció d'àudio), i després feu clic a **apply** (aplicar).
 
-or:
+o bé:
 
-2) Press Windows key and enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+2) Premeu la tecla Windows, escriviu «Control Panel» (Tauler de control) al camp de cerca i obriu-lo amb Retorn. S'obre: «All Control Panel Items» (Tots els elements del Tauler de control).
 
 Press the letter E to get to “Ease of Access Centre”, open with Enter.
 
-Then open “Use computer without a display” with Enter.
+Després obriu «Use computer without a display» (Utilitzar l'ordinador sense pantalla) amb Retorn.
 
-There, at the bottom, you will find the checkbox “Enable Java Access Bridge”, select it.
+Allà, a la part de baix, trobareu la casella «Enable Java Access Bridge». Marqueu-la.
 
-Done, just close the window! The screen reader should work now.
+Fet! Només cal tancar la finestra. Ara el lector de pantalla hauria de funcionar.
 
 
 
-Interested in how to get started with setting up AAPS? Take a look at the [preparing](../Getting-Started/PreparingForAaps.md) section.
+Us interessa saber com començar a configurar AAPS? Doneu un cop d'ull a la secció [Preparació per començar amb AAPS](../Getting-Started/PreparingForAaps.md).
