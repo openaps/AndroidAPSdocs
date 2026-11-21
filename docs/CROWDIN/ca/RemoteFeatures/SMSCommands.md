@@ -21,11 +21,11 @@ Si activeu el **Comunicador SMS** a **AAPS**, tingueu en compte que el telèfon 
 
 A més, es recomana permetre un [segon número de telèfon](#SMSCommands-authorized-phone-numbers) per a les ordres SMS. Així podeu fer servir el segon número per [desactivar](#SMSCommands-other) el comunicador SMS si el vostre telèfon remot principal queda compromès.
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Per motius de seguretat, heu d'afegir com a mínim dos números de telèfon autoritzats per canviar-ho a un temps d'espera més curt. Si intenteu fer un altre bolus remot abans de 15 minuts després de l'anterior, rebreu la resposta «Bolus remot no disponible. Torneu-ho a intentar més tard.»
+El temps mínim per defecte entre ordres de bolus és de 15 minuts, comptats des del moment en què la bomba accepta un bolus. Per motius de seguretat, heu d'afegir com a mínim dos números de telèfon autoritzats per canviar-ho a un temps d'espera més curt. Si intenteu fer un altre bolus remot abans de 15 minuts després de l'anterior, rebreu la resposta «Bolus remot no disponible. Torneu-ho a intentar més tard.»
 
 AAPS també us informarà per missatge de text si les vostres ordres remotes, com un bolus o un canvi de perfil, s'han executat. És recomanable configurar-ho perquè els textos de confirmació s'enviïn com a mínim a dos números de telèfon diferents, per si roben un dels telèfons que els reben.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**Si feu un bolus amb ordres SMS, heu d'introduir els carbohidrats per separat (segon SMS, AAPSClient...)!** Si no ho feu, l'IOB serà correcta però el COB serà massa baix, i això pot fer que no es faci un bolus de correcció, perquè **AAPS** suposa que teniu massa insulina activa.
 
 Per a les ordres sensibles, s'ha de fer servir una app d'autenticació amb una contrasenya d'un sol ús basada en el temps, per augmentar la seguretat.
 
@@ -110,10 +110,10 @@ Per motius de seguretat, el codi de resposta ha d'anar seguit d'un PIN. Trieu un
 
 Requisits del PIN:
 
-* at least 6 digits
-* digits only
+* com a mínim 6 xifres
+* només xifres
 
-For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
+Per tenir un PIN més segur, no feu servir la mateixa xifra moltes vegades (_p. ex._ 111111) ni una seqüència (_p. ex._ 123456).
 
 ![PIN obligatori addicional al final del token](../images/remote_control_and_following/sms_pin.png)
 
@@ -123,54 +123,54 @@ For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a seque
 * Obriu l'app d'autenticació instal·lada al _telèfon del cuidador_, configureu una connexió nova i
 * Feu servir el telèfon del cuidador per escanejar el codi QR que es mostra a **Escanejar el codi per configurar els codis OTP d'AAPS**.
 
-![Authenticator setup with QR code](../images/remote_control_and_following/sms_authenticator_setup.png)
+![Configuració de l'Autenticador amb codi QR](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * A **Provar clau d'un sol ús**, introduïu a **Codi per comprovar** la contrasenya d'un sol ús de l'app d'autenticació del telèfon del cuidador, seguida del vostre PIN:
 
-Example:
+Exemple:
 * El token de l'app d'autenticació és 457051
 * El vostre PIN obligatori és 2401
 * Codi per comprovar: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+Si l'entrada és correcta, el text vermell «PIN INCORRECTE» canviarà automàticament a un «OK» verd. **No hi ha cap botó per prémer!** El procés ja s'ha acabat; no cal prémer cap botó «OK» després d'introduir el codi:
 
-![Test One-Time-Password and Reset Authenticators](../images/remote_control_and_following/sms_authenticator_test.png)
+![Provar clau d'un sol ús i Restablir autenticadors](../images/remote_control_and_following/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+Ara ja hauríeu de tenir les ordres SMS configurades.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Feu servir el botó **Restablir autenticadors** a la part de baix de la pantalla **Configuració de l'Autenticador** si voleu eliminar els autenticadors configurats. (En restablir l'autenticador, TOTS els autenticadors ja configurats deixen de ser vàlids. Els haureu de tornar a configurar.)
 
 ## Ús de les ordres SMS
 
 ### Primers passos amb les ordres SMS
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  Per comprovar que ho heu configurat tot correctament, proveu la connexió escrivint «bg» en un SMS des del telèfon del cuidador al telèfon d'**AAPS**. Hauríeu de rebre una resposta semblant a aquesta:
 
 ![imatge](../images/remote_control_and_following/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+Si no rebeu cap resposta, consulteu la secció [Resolució de problemes](#SMSCommands-troubleshooting) de més avall.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  Ara proveu una ordre SMS que necessiti l'autenticador, _p. ex._ «target hypo». El telèfon del cuidador rebrà un text de resposta que us demanarà introduir la **contrasenya de sis xifres** de l'app d'autenticació, seguida del **PIN** secret addicional que només coneixen els cuidadors/seguidors (en total una cadena de dotze xifres, si el vostre PIN té 6 xifres).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+Quan proveu d'enviar una ordre SMS per primera vegada, feu-ho amb el telèfon d'**AAPS** al davant, per veure com funciona:
 
 ![imatge](../images/remote_control_and_following/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+El telèfon del cuidador rebrà un SMS de resposta d'**AAPS** per confirmar si l'ordre SMS remota s'ha executat correctament.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+Si l'ordre té èxit, rebreu una resposta que ho confirma. Si hi ha un problema, rebreu un missatge d'error. Vegeu [Resolució de problemes](#SMSCommands-troubleshooting) més avall per als errors habituals.
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Consell**: si s'envien molts SMS, pot ser útil tenir SMS il·limitats a la tarifa del telèfon (per a cada telèfon que es faci servir).
 
 ### Lliurar bolus d'àpat amb ordres SMS
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+El bolus d'insulina remot es pot fer amb les **ordres SMS** o amb un **AAPSClient** emparellat (vegeu [Control principal ↔ client (control remot signat)](#client-master-control)); no es pot fer des del lloc web de Nightscout. Els carbohidrats també es poden anunciar per SMS o amb **AAPSClient**. Amb SMS, no és possible enviar ordres de carbohidrats i d'insulina en un sol missatge SMS. Aquestes ordres s'han d'enviar per separat, així:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  Envieu el bolus d'insulina (_p. ex._ «bolus 2» ordena un bolus de 2 unitats); amb ordres SMS això equival a **Tractaments** → **Insulina** a **AAPS**. 2)  Envieu els carbohidrats (_p. ex._ «carbs 20» anuncia 20 g de carbohidrats). Això equival a **Tractaments** → **Carbs** a **AAPS**.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+Per evitar hipos, és bona idea començar amb prudència i fer un bolus amb **menys insulina** de la que caldria segons la vostra ràtio de carbohidrats, perquè no teniu en compte el nivell de glucèmia actual ni la seva tendència.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**L'ordre en què envieu aquestes ordres és important**. Si anuncieu una quantitat gran de carbohidrats per qualsevol via i teniu els SMB activats, **AAPS** pot respondre de seguida donant un bolus parcial d'insulina. Per tant, si proveu d'enviar un bolus d'insulina _després_ d'anunciar els carbohidrats, podeu tenir un retard molest i un missatge de «bolus en curs», i llavors haureu de comprovar què s'ha donat com a SMB. O bé, si no us adoneu que s'està lliurant un SMB i el vostre propi bolus posterior també té èxit, es pot lliurar massa insulina per a l'àpat en total. Per això, si feu bolus d'àpat a distància, envieu sempre el bolus d'insulina _abans_ d'anunciar els carbohidrats. Si ho preferiu, podeu combinar **AAPSClient** amb les ordres SMS: els carbohidrats introduïts en un **AAPSClient** emparellat no necessiten codi d'autenticació i per això són més ràpids que les ordres SMS. Els carbohidrats o altres tractaments introduïts al lloc web de Nightscout **no** s'apliquen mentre el control des del client està activat; llavors **AAPS** està en [mode reforçat](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## Ordres
@@ -180,39 +180,39 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+Les ordres s'han d'enviar en anglès; la resposta serà en el vostre idioma si el text de resposta ja està [traduït](#translations-translate-strings-for-AAPS-app). Les ordres no distingeixen entre majúscules i minúscules; podeu fer servir les unes o les altres.
 
-![SMS Commands Example](../images/remote_control_and_following/SMSCommands.png)
+![Exemple d'ordres SMS](../images/remote_control_and_following/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+Les **taules d'ordres SMS** de més avall mostren totes les ordres SMS possibles. Es donen _valors d'exemple_ per ajudar a entendre-les. Les ordres tenen el mateix rang de valors possibles (objectius, percentatge del perfil, etc.) que es permet a la mateixa app **AAPS**.
 
 (authentication-or-not)=
 ### Amb autenticació o sense?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+Algunes ordres SMS donen una resposta immediata, i altres necessiten una **autenticació** forta amb l'app d'autenticació. Una consulta senzilla com «**BG**» (que demana la glucèmia actual) és ràpida d'escriure, no necessita autenticació i retorna la informació d'estat d'**AAPS** que es mostra a sota:
 
 ![imatge](../images/remote_control_and_following/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Les ordres que necessiten més seguretat demanen introduir un codi, per exemple:
 
-![SMS authenticated](../images/remote_control_and_following/remote-control-07.png)
+![SMS autenticat](../images/remote_control_and_following/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+La columna *Autenticació* de les taules de més avall indica si cada ordre necessita aquesta autenticació forta.
 
 ### Dades del CGM
 
-| Ordre      | Autenticació | Funció & *Resposta*                                                                                                                                                                                                               |
-| ---------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No           | Retorna: darrera glucèmia, delta, IOB (bolus i basal), COB<br/>*Darrera glucèmia: 5,6 fa 4min, Delta: -0,2 mmol, IOB: 0,20U (Bolus: 0,10U Basal: 0,10U)*                                                                    |
-| CAL 5.6/90 | Sí           | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| Ordre      | Autenticació | Funció & *Resposta*                                                                                                                                                                                                                                          |
+| ---------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BG         | No           | Retorna: darrera glucèmia, delta, IOB (bolus i basal), COB<br/>*Darrera glucèmia: 5,6 fa 4min, Delta: -0,2 mmol, IOB: 0,20U (Bolus: 0,10U Basal: 0,10U)*                                                                                               |
+| CAL 5.6/90 | Sí           | Calibrarà el CGM amb un valor de 5.6/90<br/>(feu servir el valor adequat a les vostres unitats de glucèmia)<br/>Només funciona si està ben configurat a **AAPS**.<br/>*Calibració enviada. Cal que la recepció a xDrip+ estigui activada.* |
 
 ### Bomba
 
-| Ordre                | Autenticació | Funció & *Resposta*                                                                                  |
-| -------------------- | ------------ | ---------------------------------------------------------------------------------------------------- |
-| PUMP                 | No           | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Sí           | Per desconnectar la bomba durant *30* minuts                                                         |
-| PUMP CONNECT         | Sí           | Bomba reconnectada                                                                                   |
+| Ordre                | Autenticació | Funció & *Resposta*                                                                               |
+| -------------------- | ------------ | ------------------------------------------------------------------------------------------------- |
+| PUMP                 | No           | ÚltConn: fa 1 min<br/>Temp: 0,00U/h @11:38 5/30min<br/>IOB: 0,5U Reserv: 34U Bat: 100 |
+| PUMP DISCONNECT *30* | Sí           | Per desconnectar la bomba durant *30* minuts                                                      |
+| PUMP CONNECT         | Sí           | Bomba reconnectada                                                                                |
 
 ### Basal
 
@@ -224,23 +224,23 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | BASAL 30% 50      | Sí           | Per iniciar una basal del 30% durant 50 min    |
 | BASAL STOP/CANCEL | Sí           | Per aturar la basal temporal                   |
 
-Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+Algunes bombes només accepten la basal temporal en percentatge, i altres només en U/h. Si feu servir l'altra forma, **AAPS** respon *«Aquesta bomba només accepta la basal temporal en percentatge, no en U/h.»* (o al revés) i no estableix res. La durada ha de ser un múltiple del pas de durada de la basal temporal de la vostra bomba.
 
 
 ### Llaç
 
-| Ordre             | Autenticació | Funció & *Resposta*                                                                                                                                                                                                                                                                |
-| ----------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ESTAT DEL LLAÇ    | No           | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Sí           | La bomba torna a la taxa basal programada.<br/>*El llaç s'ha desactivat*                                                                                                                                                                                                     |
-| LOOP SUSPEND 20   | Sí           | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Sí           | *Llaç reprès*                                                                                                                                                                                                                                                                      |
-| LOOP CLOSED       | Sí           | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Sí           | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| Ordre             | Autenticació | Funció & *Resposta*                                                                                                                                                                                                                                                              |
+| ----------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ESTAT DEL LLAÇ    | No           | La resposta depèn de l'estat real:<br/> - *Llaç desactivat* si el llaç està desactivat<br/> - *Llaç activat* si el llaç és tancat, obert o LGS<br/> - *Bomba desconnectada* si la bomba està desconnectada<br/> - *Aturat (10 m)* si el llaç està suspès |
+| LOOP STOP/DISABLE | Sí           | La bomba torna a la taxa basal programada.<br/>*El llaç s'ha desactivat*                                                                                                                                                                                                   |
+| LOOP SUSPEND 20   | Sí           | *Llaç suspès*                                                                                                                                                                                                                                                                    |
+| LOOP RESUME       | Sí           | *Llaç reprès*                                                                                                                                                                                                                                                                    |
+| LOOP CLOSED       | Sí           | *Mode de funcionament actual: Llaç tancat*                                                                                                                                                                                                                                       |
+| LOOP LGS          | Sí           | *Mode de funcionament actual: Suspensió per glucèmia baixa*                                                                                                                                                                                                                      |
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+El bolus remot no està permès durant 15 min (aquest valor només es pot editar si hi ha 2 números de telèfon afegits) després de l'última ordre de bolus o de les ordres remotes! En aquest cas, la resposta seria *Bolus remot no disponible. Torneu-ho a intentar més tard.* Aquesta resposta també s'envia quan la bomba està lliurant un bolus.
 
 | Ordre                | Autenticació | Funció & *Resposta*                                                                                                                                                              |
 | -------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -260,7 +260,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | PROFILE 1      | Sí           | Per canviar al perfil 1 de la llista.<br/>Feu servir els números que retorna **PROFILE LIST**,<br/>no els noms dels perfils tal com els vau desar |
 | PROFILE 2 30   | Sí           | Per canviar al perfil Profile2 al 30%                                                                                                                         |
 
-The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
+El percentatge ha d'estar entre 30 i 250%, com a l'app. Un valor fora d'aquest rang es rebutja abans que se us demani el codi d'autenticació.
 
 ### Objectius temporals
 
@@ -276,7 +276,7 @@ The percentage must be between 30 and 250 %, as in the app. A value outside this
 | Ordre            | Autenticació | Funció & *Resposta*                                                                                                                                                                                                                                                               |
 | ---------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RESTART          | Sí           | Reinicia AAPS. Útil si teniu problemes que normalment es resolen amb un reinici.                                                                                                                                                                                                  |
-| SMS DISABLE/STOP | Sí           | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                                  |
+| SMS DISABLE/STOP | Sí           | Per desactivar el Servei Remot d'SMS, contesteu amb el codi.<br/>Tingueu en compte que només el podreu reactivar<br/>directament des del mòbil principal d'**AAPS**.                                                                                                  |
 | HELP             | No           | Retorna totes les funcions que es poden consultar:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Envieu després l'ordre ***HELP ***FUNCIÓ****** per veure<br/>totes les opcions disponibles d'aquesta secció. |
 | HELP BOLUS       |              | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                              |
 
@@ -290,27 +290,27 @@ The percentage must be between 30 and 250 %, as in the app. A value outside this
 
 ### Què _no_ podem fer amb les ordres SMS?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1)  **No podeu establir un canvi de perfil _temporal_** (per exemple, posar «profile exercise» durant 60 minuts), tot i que sí que podeu canviar de manera permanent a «profile exercise». Els canvis de perfil temporals es poden fer amb **AAPSClient**.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **No podeu cancel·lar automatitzacions** ni **establir objectius definits per l'usuari**, però hi ha solucions aproximades: Per exemple, imagineu que l'objectiu normal del perfil és 5,5. Heu creat una automatització a AAPS per establir sempre un objectiu alt de 7,0 entre les 14:30 i les 15:30, per una classe d'esport a l'escola, i una condició de l'automatització és que «no hi hagi cap objectiu temporal». Aquesta setmana us diuen amb poc temps que la classe d'esport s'ha anul·lat i que la substitueix una estona per menjar pizza, però el vostre fill ja és a l'escola amb el telèfon d'**AAPS**. Si l'automatització inicia l'objectiu temporal alt de 7,0 i el cancel·leu (al telèfon d'**AAPS** o a distància), les condicions de l'automatització encara es compleixen i **AAPS** simplement tornarà a establir l'objectiu alt un minut més tard.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**Si teniu accés al telèfon d'AAPS**, podeu desmarcar o modificar l'automatització o, si no ho voleu fer, podeu simplement establir un objectiu temporal nou de 5,6 durant 60 min prement l'objectiu a la pantalla principal, o amb **Gestionar** → **Objectiu temporal**. Així evitaríeu que l'automatització establís l'objectiu alt de 7,0.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**Si no teniu accés al telèfon d'AAPS**, podeu fer servir les ordres SMS com a solució aproximada: per exemple, amb l'ordre «target meal» per establir un objectiu de 5,0 durant 45 min (els altres objectius per defecte són 8,0 per a activitat o hipo; vegeu la taula). Però amb les ordres SMS no podeu indicar un valor d'objectiu _concret_ (per exemple, 5,6 durant 60 minuts); per fer-ho, hauríeu de fer servir **AAPSClient**.
 
 ### Què passa si canvio d'opinió sobre una ordre que acabo d'enviar?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS** només executarà l'ordre més recent. Per tant, si escriviu «bolus 1.5» i després, sense autenticar-vos, envieu una ordre nova «bolus 1», s'ignorarà l'ordre anterior d'1.5. **AAPS** sempre enviarà al telèfon del cuidador una resposta per confirmar quina és l'ordre SMS abans de demanar-vos el codi d'autenticació, i també una resposta després de l'acció.
 
 ### Per què no he rebut cap resposta a una ordre SMS?
 
-It could be for one of these reasons:
+Pot ser per un d'aquests motius:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  El missatge no ha arribat al telèfon (problemes de xarxa). 2)  **AAPS** encara està processant la petició (_p. ex._ un bolus, que pot trigar una estona a lliurar-se segons la velocitat de bolus). 3)  El telèfon d'**AAPS** no té una bona connexió Bluetooth amb la bomba quan rep l'ordre, i l'ordre ha fallat (normalment això crea una alarma al telèfon d'**AAPS**).
 
 ### Cap resposta a les ordres SMS
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
+Al telèfon del cuidador i/o al telèfon d'**AAPS**, proveu de desactivar les opcions següents:
 * **Envia com a missatge de xat** (Send as chat message) ![Desactivar l'SMS com a missatge de xat](../images/remote_control_and_following/SMSdisableChat.png)
 * Si feu servir l'app Missatges d'Android o Google Missatges, desactiveu els missatges RCS:
   - obriu la conversa d'SMS concreta a Missatges
@@ -320,7 +320,7 @@ On the caregiver phone and/or **AAPS** phone, try disabling the following option
 
 ### Errors en executar les ordres
 
-There are several possible reasons the command may not be successful:
+Hi ha diversos motius possibles pels quals l'ordre pot no tenir èxit:
 
 * La configuració de les ordres SMS no és completa o correcta
 * Heu enviat una ordre amb un format incorrecte (com «disconnect pump 45» en lloc de «pump disconnect 45»)
@@ -329,25 +329,25 @@ There are several possible reasons the command may not be successful:
 * El telèfon d'**AAPS** està fora d'abast o sense contacte amb la bomba
 * El sistema ja està ocupat lliurant un bolus
 
-Common errors are shown in the examples below:
+Els errors habituals es mostren als exemples de sota:
 
 ![imatge](../images/remote_control_and_following/remote-control-17.png)
 
 ### Com puc aturar una ordre un cop s'ha autenticat?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+No podeu. Però podeu cancel·lar un bolus enviat per SMS al mateix telèfon d'**AAPS**, simplement cancel·lant-lo a la finestra emergent del bolus, si sou ràpids. Moltes ordres SMS (excepte els bolus i els anuncis de carbohidrats) es poden desfer fàcilment, o es poden prendre mesures per reduir els efectes no desitjats si us equivoqueu.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+Per als errors en bolus i anuncis de carbohidrats, encara podeu actuar. Per exemple, si heu anunciat 20 g de carbohidrats però el vostre fill només en menja 10 g, i vosaltres (o un cuidador que hi sigui) no podeu eliminar el tractament directament al telèfon d'**AAPS**, podeu establir un objectiu temporal alt o un perfil reduït perquè **AAPS** sigui menys agressiu.
 
 ### Diversos SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+Si rebeu el mateix missatge una vegada i una altra (_p. ex._ un canvi de perfil), potser heu creat sense voler un bucle amb altres apps. Per exemple, podria ser xDrip. En aquest cas, assegureu-vos que xDrip (o qualsevol altra app) no envia tractaments a NightScout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Si l'altra app està instal·lada en diversos telèfons, assegureu-vos de desactivar l'enviament a tots.
 
 (sms-commands-too-many-messages)=
 ### Rebo massa missatges de text de les ordres SMS. Puc reduir-ne la freqüència o fer que s'aturin?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+Fer servir ordres SMS pot generar molts missatges automàtics del telèfon d'**AAPS** al telèfon del cuidador. També rebreu missatges, per exemple «Perfil de basal actualitzat a la bomba», si teniu automatitzacions configurades a **AAPS**. Si s'envien molts SMS, pot ser útil tenir SMS il·limitats a la tarifa del telèfon d'**AAPS** (i de cada telèfon de cuidador que es faci servir), i desactivar les notificacions, les alarmes o les vibracions dels SMS a tots els telèfons. No és possible fer servir les ordres SMS sense rebre aquestes actualitzacions. Per això potser voldreu una altra manera de comunicar-vos directament amb el vostre fill (si té prou edat), en lloc dels SMS. Entre les apps de comunicació alternatives que fan servir els cuidadors d'**AAPS** hi ha WhatsApp, LINE, Telegram i Facebook Messenger.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+És possible desactivar l'SMS «Perfil de basal actualitzat a la bomba» quan el canvi de perfil ve de Nightscout. Per fer-ho, creeu un fitxer anomenat **exactament** `do_not_send_sms_on_profile_change` a la carpeta `extra` del vostre directori d'AAPS.
