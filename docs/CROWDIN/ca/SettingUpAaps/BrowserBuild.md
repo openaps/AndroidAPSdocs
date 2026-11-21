@@ -26,7 +26,7 @@ També funciona des del navegador d'un ordinador.
 
 **→ [Compilació al navegador amb AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### En un ordinador o un iPhone / iPad: fork i fitxer de preparació
 
 Feu una còpia (fork) del codi font d'AAPS a GitHub, creeu el vostre magatzem de claus amb un fitxer de preparació, i l'aplicació compilada es desa al vostre Google Drive. Seguiu els quatre passos de més avall.
 
@@ -44,11 +44,11 @@ Haureu de saltar d'una pestanya a una altra: comenceu amb totes les pestanyes ta
 
 #### Què necessitareu
 
-- A **Google account**, so the built app can be saved to your Google Drive.
+- Un **compte de Google**, perquè l'aplicació compilada es pugui desar al vostre Google Drive.
 - Un **compte de GitHub** (gratuït) – el creareu al Pas 1.
 - Un **navegador web** que pugui tenir diverses pestanyes obertes alhora (més avall es fa servir Chrome).
 - Una petita **eina per executar el fitxer de preparació**. La que necessiteu depèn del dispositiu des del qual compileu – ara no cal instal·lar res, el Pas 2 us guia per al vostre dispositiu:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
+  - **Ordinador (Windows / Mac / Linux):** Simple Web Server.
   - **iPhone / iPad:** cap aplicació addicional – feu servir l'aplicació Fitxers i el navegador que ja hi ha.
 
 #### Els passos
@@ -60,7 +60,7 @@ La compilació al navegador és una sèrie d'eleccions. Seguiu aquests passos en
 3. **[Autoritzeu Google Drive](BrowserBuildGoogleDrive.md)** – permeteu que GitHub desi l'aplicació compilada al vostre Google Drive.
 4. **[Compileu l'APK](BrowserBuildAPK.md)** – executeu el workflow de GitHub Actions i trieu la versió i la variant.
 
-Si teniu problemes, vegeu **[Compilació al navegador: resolució de problemes](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Si teniu problemes, vegeu **[Compilació al navegador: resolució de problemes](../GettingHelp/BrowserBuildTroubleshooting.md)**. Per a operacions opcionals amb un fork, vegeu [exportar el vostre magatzem de claus](#ci-keystore-export) o [fer cherry-pick d'un commit](#github-cherry-pick).
 
 ----
 
