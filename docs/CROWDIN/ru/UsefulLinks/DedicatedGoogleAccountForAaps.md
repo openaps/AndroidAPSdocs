@@ -1,16 +1,16 @@
 # Специальная учетная запись Google для AAPS (необязательно)
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+Некоторые пользователи **AAPS** предпочитают использовать для **AAPS** свою основную учетную запись электронной почты. Другие пользователи **AAPS** (или их опекуны) создают отдельную учетную запись электронной почты для **AAPS**. Это необязательно, ниже мы покажем пример, как это сделать.
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+Если вы не хотите создавать отдельную учетную запись Gmail для **AAPS**, сразу переходите к следующему разделу, [Сборка AAPS](../SettingUpAaps/BuildingAaps.md).
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
 - Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. Если ваш ПК или телефон украдут, вы его потеряете или он сломается, доступ у вас все равно останется.
 - By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
+- В зависимости от настройки (см. ниже) у вас будет отдельное имя (псевдоним) для общения в сообществе, которое может защитить вашу личную информацию. 
 - Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
 - Gmail allows you to register up to 4 accounts under the same phone number.
 ```
@@ -24,16 +24,16 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 Требования:
 
 * You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. Оба компонента должны иметь все последние обновления безопасности, доступ в интернет и права администратора, так как некоторые шаги требуют загрузки и установки программ.
-* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
+* На телефоне Android уже настроен ваш личный «повседневный» адрес электронной почты, например учетная запись Gmail.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+- Из соображений конфиденциальности можно использовать имя, отличное от вашего, которое связано с учетной записью (например, t1dsuperstar). You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
+- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. Для проверки она будет использовать ваш «повседневный» адрес электронной почты;
+- Мы настроим пересылку, чтобы все письма, отправленные на новую учетную запись AAPS, пересылались на основную (так не нужно проверять два разных почтовых ящика);
+- Используйте разные пароли для своей _повседневной_ учетной записи Gmail и учетной записи Gmail для AAPS
+- Если вы используете в Google «двухэтапную аутентификацию» (многофакторную) для одной учетной записи Gmail, используйте ее и для второй.
+- If you plan to use Google “Passkeys”, make sure you register multiple devices. Так вы не потеряете доступ к своей учетной записи. Делайте это только на устройствах, к которым никто кроме вас не имеет доступа (_например_, не на ПК с общей учетной записью, которую могут разблокировать другие люди).
 ```
 
 
@@ -44,23 +44,23 @@ Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/
 
  В этом видео показаны шаги:
 
-In this example: 
+В этом примере: 
 - Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+- Ваша новая учетная запись Gmail для «_AAPS_» будет: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
 ### Go to <https://myaccount.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Если вы уже вошли в Google, вы попадете на страницу **My Account** своей «повседневной» учетной записи. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Enter your NEW dedicated account details: 
+### Введите данные своей НОВОЙ отдельной учетной записи: 
 
-- Enter the new account: 
+- Введите данные новой учетной записи: 
 - Создайте учётную запись
-- for my personal use. 
+- для личного использования. 
 
 
 ### Введите личные данные:
@@ -68,50 +68,50 @@ In this example: 
  - фамилия
  - дату рождения (должна быть для взрослого)
 
-### Choose your NEW email address & password
+### Выберите НОВЫЙ адрес электронной почты и пароль
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+В этом примере к существующему адресу Donald Muck добавлено «.AAPS»…\
+Задайте пароль
 
-### Enter a phone number which can receive the SMS verification
+### Введите номер телефона, на который может прийти SMS для проверки
 
 Теперь Gmail отправит вам уникальный код для проверки.
 
-### Enter the recovery email address
+### Введите резервный адрес электронной почты
 
-In this case it will be your existing “_everyday_” email…
+В этом случае это будет ваш существующий «_повседневный_» адрес электронной почты…
 
 ### Завершите регистрацию учетной записи
 
-Gmail покажет имя аккаунта. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail покажет имя аккаунта. Вас попросят принять условия использования Gmail и подтвердить настройки персонализации.
 
 ### Настройте отображение нового профиля
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. По умолчанию изображение профиля будет установлено на первую букву вашего имени. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Теперь вы должны быть на странице MyAccount в Gmail, где показана ваша новая учетная запись электронной почты для **AAPS**. По умолчанию изображение профиля будет установлено на первую букву вашего имени. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
 ### Откройте веб-сайт Gmail в обоих окнах для настройки новой учетной записи
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. Чтобы упростить задачу, откройте два отдельных окна браузера поверх друг друга:
+Чтобы не следить за отдельной учетной записью электронной почты, перешлите все письма с новой учетной записи для **AAPS** на свою повседневную учетную запись\
+Эта часть может немного запутать, потому что вам придется переключаться между двумя учетными записями туда и обратно. Чтобы упростить задачу, откройте два отдельных окна браузера поверх друг друга:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
-2. Right click on your Browser logo in your taskbar
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. Переместите открытое окно браузера в верхнюю часть экрана и измените его размер так, чтобы оно занимало примерно верхнюю половину экрана…
+2. Нажмите правой кнопкой мыши на значок браузера на панели задач
+3. В меню выберите «New Window» (новое окно)... и расположите его так, чтобы оно занимало только нижнюю половину экрана.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Откройте <https://gmail.com> в каждом окне браузера. Убедитесь, что ваша личная учетная запись открыта вверху, а новая учетная запись для **AAPS** – внизу, и ее легко узнать по изображению профиля в правом верхнем углу. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Главные страницы Gmail должны выглядеть так:\
 ![](../images/Building-the-App/building_0010.png)
 
- ### In the new Gmail account (bottom window), open Gmail settings…
+ ### В новой учетной записи Gmail (нижнее окно) откройте настройки Gmail…
 
-- Click on the gear on the left of the profile picture
-- then select “**See all Settings**”
+- Нажмите на значок шестеренки слева от изображения профиля
+- затем выберите «**See all Settings**» (все настройки)
 
 ![](../images/Building-the-App/building_0011.png)
 
@@ -120,7 +120,7 @@ Your Gmail homepages screen should look like this:\
 - Нажмите на вкладку «Переадресация и POP/IMAP»
 - Нажмите «добавить адрес переадресации»
 - Добавьте свой повседневный адрес электронной почты
-- Gmail will send a verification code to your “everyday” email address.
+- Gmail отправит код подтверждения на ваш «повседневный» адрес электронной почты.
 - Вернитесь к своему повседневному профилю и щелкните ссылку, чтобы подтвердить, что вы принимаете переадресацию (или получите код из письма с подтверждением Gmail в своем «повседневном» окне Gmail, а затем вырежете и вставите его в свое «новое выделенное для AAPS» окно Gmail).
 
 Между окнами придется немного попереключаться, но это будет гарантировать, что при проверке писем вашей повседневной учетной записи, вы также увидите письма, переадресованные с вашей учетной записи AAPS, такие, как оповещения Gmail.
@@ -129,8 +129,8 @@ Your Gmail homepages screen should look like this:\
 
 ### Подтверждение адреса переадресации электронной почты
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Откройте его и нажмите на ссылку для подтверждения запроса"
+- В «повседневном» Gmail (верхнее окно) вы получите письмо «Gmail forwarding Confirmation».
+- Откройте его и нажмите на ссылку, чтобы подтвердить запрос
 
 ### Архивируйте переадресованные письма в новом специально выделенном аккаунте Gmail (в нижнем окне)
 
@@ -139,9 +139,9 @@ Your Gmail homepages screen should look like this:\
 1. Обновите нижнее окно
 2. Выделите «переслать входящие письма»
 3. И архивируйте копию Gmail (чтобы сохранить ваш новый специально выделенный почтовый ящик чистым)
-4. Scroll all the way to the bottom to save your changes\
+4. Прокрутите страницу до самого низа, чтобы сохранить изменения\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Поздравляем! Итак, вы создали учетную запись Google, специально выделенную для AAPS. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Поздравляем! Итак, вы создали учетную запись Google, специально выделенную для AAPS. Следующий шаг – [Сборка AAPS](../SettingUpAaps/BuildingAaps.md).
