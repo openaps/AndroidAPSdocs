@@ -32,9 +32,9 @@ Android може перевести ваш телефон у режим сну. 
 
 Обхідний шлях для проблем зі з’єднанням в Azure: в Application settings встановіть HTTP protocol на 2.0, а Websockets на ON
 
-    {admonition} Remote control needs websockets
+    {admonition} Віддалене керування потребує websockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    Websockets **обовʼязкові** для віддаленого керування з **AAPSClient**, на обох телефонах. Якщо з'єднання websocket постійно розривається, віддалене керування не працює. Синхронізація даних і далі працює, але повільніше. Ваш хостинг Nightscout має підтримувати websockets.
 
 * Немає даних ГК з Nightscout
 
@@ -42,6 +42,6 @@ Android може перевести ваш телефон у режим сну. 
 
 * Якщо помилка все ще є...
 
-Перевірте розмір вашої бази даних у MongoDB (або за допомогою плагіна розміру бази даних у Nightscout). Якщо ви використовуєте безкоштовний тариф MongoDB, 496 МБ означає, що база даних заповнена і її треба очистити. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Перевірте розмір вашої бази даних у MongoDB (або за допомогою плагіна розміру бази даних у Nightscout). Якщо ви використовуєте безкоштовний тариф MongoDB, 496 МБ означає, що база даних заповнена і її треба очистити. [Дотримуйтеся цих інструкцій Nightscout, щоб перевірити розмір бази даних і видалити з неї дані](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Перш ніж видаляти дані з бази даних, подумайте про те, щоб передати ваші дані AAPS у проєкт Open Humans (для досліджень), якщо ви ще цього не налаштували. Інструкції є на [сторінці налаштування OpenHumans](../SupportingAaps/OpenHumans.md).
