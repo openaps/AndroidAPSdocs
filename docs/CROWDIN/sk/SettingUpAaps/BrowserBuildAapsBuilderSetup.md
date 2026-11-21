@@ -37,7 +37,7 @@ Váš repozitár:<code class="aapsb-repoUrl"></code>
 
 Skôr než použijete tlačidlá nižšie, skontrolujte tento názov: stránka si pamätá názov z vašej poslednej návštevy.
 
-<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository</a>
+<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Vytvoriť môj súkromný repozitár</a>
 
 Na stránke GitHubu, ktorá sa otvorí, je už všetko vyplnené: šablóna `nightscout/aaps-builder`, váš účet ako vlastník, názov vášho repozitára a **Private**. Nič nemeňte a voľbu **Include all branches** nechajte nezaškrtnutú.
 
@@ -78,7 +78,7 @@ Aplikácia musí byť podpísaná vaším vlastným kľúčom. Vždy používajt
 
 `````{tab-set}
 
-````{tab-item} I already have a keystore
+````{tab-item} Už mám úložisko kľúčov
 Napríklad z Android Studia (.jks).
 
 <label class="aapsb-label" for="aapsb-ksFile">Súbor úložiska kľúčov</label>
@@ -100,10 +100,10 @@ Napríklad z Android Studia (.jks).
 
 </div>
 
-<button class="aapsb-btn" type="button" id="aapsb-haveGo">Check and continue</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-haveGo">Skontrolovať a pokračovať</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
 ````
 
-````{tab-item} Create a new key
+````{tab-item} Vytvoriť nový kľúč
 Zostavujete AAPS prvýkrát? Nový kľúč sa vytvorí tu, vo vašom prehliadači. Nič sa nikam neposiela.
 
 <label class="aapsb-label" for="aapsb-newPass">Zvoľte heslo (aspoň 8 znakov, bez písmen s diakritikou)</label>
@@ -112,7 +112,7 @@ Zostavujete AAPS prvýkrát? Nový kľúč sa vytvorí tu, vo vašom prehliadač
 <label class="aapsb-label" for="aapsb-newPass2">Zopakujte heslo</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass2" autocomplete="new-password">
 
-<button class="aapsb-btn" type="button" id="aapsb-newGo">Create key</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-newGo">Vytvoriť kľúč</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
 
 <div class="aapsb-box" id="aapsb-backupBox" hidden>
 
@@ -126,7 +126,7 @@ Stiahnite súbor. Tieto tri veci uchovávajte spolu na bezpečnom mieste mimo te
 
 Všetky tri budete potrebovať, ak niekedy budete AAPS zostavovať iným spôsobom, napr. v Android Studiu.
 
-<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Download backup (aaps-keystore.jks)</button>
+<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Stiahnuť zálohu (aaps-keystore.jks)</button>
 
 </div>
 ````
@@ -137,12 +137,12 @@ Všetky tri budete potrebovať, ak niekedy budete AAPS zostavovať iným spôsob
 <span id="aapsb-s3wait">Najprv dokončite krok 2.</span>
 
 <div id="aapsb-s3ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Otvorí: <code class="aapsb-repoUrl"></code> Zobrazuje sa „Page not found“ (404)? Najprv skontrolujte, či ste v tomto prehliadači prihlásení na github.com: GitHub ukazuje 404 pri súkromných repozitároch, keď nie ste prihlásení. Inak sa vaše používateľské meno alebo názov repozitára v kroku 1 nezhoduje s vaším repozitárom: skontrolujte ich na github.com a zadajte ich v kroku 1. 2. Ťuknite na „Copy name“ a vložte ho do malého poľa „Name“: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Ťuknite na „Copy secret“ a vložte dlhý kód do veľkého poľa „Secret“: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Secret je veľmi dlhý kód (tisícky znakov), NIE slovo KEYSTORE_SET. Najprv skopírujte a vložte názov, potom dlhý kód. 4. Ťuknite na „Add secret“. Hotovo, toto už nikdy nebudete musieť robiť znova.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Otvoriť stránku secretov</a> Otvorí: <code class="aapsb-repoUrl"></code> Zobrazuje sa „Page not found“ (404)? Najprv skontrolujte, či ste v tomto prehliadači prihlásení na github.com: GitHub ukazuje 404 pri súkromných repozitároch, keď nie ste prihlásení. Inak sa vaše používateľské meno alebo názov repozitára v kroku 1 nezhoduje s vaším repozitárom: skontrolujte ich na github.com a zadajte ich v kroku 1. 2. Ťuknite na „Kopírovať názov“ a vložte ho do malého poľa „Name“: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Kopírovať názov</button> 3. Ťuknite na „Kopírovať secret“ a vložte dlhý kód do veľkého poľa „Secret“: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Kopírovať secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Secret je veľmi dlhý kód (tisícky znakov), NIE slovo KEYSTORE_SET. Najprv skopírujte a vložte názov, potom dlhý kód. 4. Ťuknite na „Add secret“. Hotovo, toto už nikdy nebudete musieť robiť znova.
 </div>
 (aaps-builder-setup-step4)=
 ## Krok 4 – Zostavte aplikáciu
 
-1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Open the build page</a>
+1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Otvoriť stránku zostavenia</a>
 
    Otvorí: <code class="aapsb-repoUrl"></code>
 
@@ -176,7 +176,7 @@ Chcete e-mail, keď je zostavenie hotové? GitHub vám pošle e-mail, iba keď z
 ```
 
 1. Otvorte túto stránku v telefóne, vo webovom prehliadači (Chrome). Ak sa to vyžaduje, prihláste sa na github.com.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds</a>
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Otvoriť moje zostavenia</a>
 
    Namiesto toho sa otvorila aplikácia GitHub? Nedokáže sťahovať zostavenia. V aplikácii otvorte najnovšie zostavenie a ťuknite na „Artifacts ↗“ alebo ťuknite na ikonu zdieľania a zvoľte Chrome (alebo „Copy link“ a potom vložte odkaz do panela s adresou v Chrome). Pokračujte v Chrome.
 
