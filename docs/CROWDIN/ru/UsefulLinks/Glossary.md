@@ -14,7 +14,7 @@
 
 **Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Settings** between 1% and 300%. Он действует как множитель суточной дозы **TDD**. See [Wiki - DynamicISF adjustment factor](#dyn-isf-adjustment-factor)
 
-**Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → [Wiki - 'android auto'](../RemoteFeatures/AndroidAuto.md).
+**Android Auto** = система, которая показывает некоторые функции смартфона Android, в том числе **AAPS**, на дисплее автомобиля. Further info → [Wiki - 'android auto'](../RemoteFeatures/AndroidAuto.md).
 
 **APK, апк** = Android application Package. Установочный файл приложения для андроида. Further info → [Wiki - 'Building APK'](../SettingUpAaps/BuildingAaps.md).
 
@@ -26,17 +26,17 @@
 
 **BG, ГК, СК** = глюкоза крови, гликемия.
 
-**BGI** = воздействие на глюкозу в крови. Показывает, в какой степени ГК "должна" подниматься или падать, только на основании активности инсулина.
+**BGI** = воздействие на глюкозу в крови. Показывает, насколько **ГК** «должна» подниматься или падать только на основании активности инсулина.
 
 **BG source** = An AAPS setting for configuring the source for blood glucose data. See [Wiki - BG Source](#Config-Builder-bg-source)
 
-**Bridge, Трансмиттер** = дополнительное устройство, превращающее **ФНМГ** в **НМГ**.
+**Bridge, Трансмиттер** = дополнительное устройство, которое превращает **FGM** в **CGM**.
 
 **BR, БС** = Базальная скорость. Количество инсулина в заданном отрезке времени, которое позволяет **ГК** оставаться стабильной, ровной. → см. так же **IC** / **ISF**.
 
-**BYODA** = Самостоятельно собранное приложение Dexcom. Способ собрать собственное приложение для чтения датчиков Dexcom G6.
+**BYODA** = Build Your Own Dexcom App (самостоятельно собранное приложение Dexcom). Способ собрать собственное приложение Dexcom для чтения данных сенсора Dexcom G6.
 
-**CAGE** = Возраст канюли. Не имеет аналога в русском переводе. Displayed on **AAPS'** main screen and in Nightscout, based on the user's **Prime/Fill** careportal entries → see also **Nightscout**.
+**CAGE** = Cannula AGE (возраст катетера). Displayed on **AAPS'** main screen and in Nightscout, based on the user's **Prime/Fill** careportal entries → see also **Nightscout**.
 
 **CAN** = status light for overdue cannula change, shown in the status row of **AAPS'** main screen → see also **BAT** / **RES** / **SEN**.
 
@@ -78,37 +78,37 @@
 
 **LGS, ЛГС** = Приостановка на низкой ГК. See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
 
-**LineageOS** = free and open-source operating system for smartphones etc. When using Accu-Chek Combo see [Wiki - Combo pump](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
+**LineageOS** = бесплатная операционная система с открытым исходным кодом для смартфонов и других устройств. When using Accu-Chek Combo see [Wiki - Combo pump](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md).
 
-**Логи** = записи действий пользователя, которые делает **AAPS** (полезны для поиска и разбора ошибок и дефектов приложения). Further info → [Wiki - 'log files'](../GettingHelp/AccessingLogFiles.md).
+**Файлы журналов** = записи действий пользователя, которые делает **AAPS** (полезны для поиска и устранения неполадок и ошибок). Further info → [Wiki - 'log files'](../GettingHelp/AccessingLogFiles.md).
 
 **maxIOB** = максимальное значение IOB. Это функция безопасности, которая не дает **AAPS** подать больше инсулина, чем указано в настройках пользователя. Further info → [Wiki - 'Maximum total IOB OpenAPS can’t go over'](#Open-APS-features-maximum-total-iob-openaps-cant-go-over).
 
 **min_5m_carbimpact** = функция безопасности, которая указывает скорость списания углеводов для случая, когда эта скорость не может быть высчитана на основании изменения показаний ГК. Further info → [Wiki - 'min_5m_carbimpact'](#Preferences-min_5m_carbimpact).
 
-**Nightscout** = open source project to access and report **CGM** data. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** = проект с открытым исходным кодом для доступа к данным **CGM** и отчетов по ним. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
-**Nightscout** → see also **Nightscout Reporter**. This is particularly useful for parents following their child's diabetes management.
+**Nightscout** → см. также **Nightscout Reporter**. Это особенно полезно для родителей, которые следят за лечением диабета у своего ребенка.
 
-**Nightscout Reporter Tool** = a tool which generates PDFs reports from Nightscout web app data. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
+**Nightscout Reporter Tool** = инструмент, который создает отчеты в формате PDF из данных веб-приложения Nightscout. См. «Nightscout Reporter», «NS Reporter» в Facebook.
 
 **NSClient** (**NSClientV3**) = the **AAPS** plugin that synchronizes data with **Nightscout** (**Configuration** → **Communication**). It is not the same as **AAPSClient**, the follower app. Further info → [Wiki - 'NSClient'](#Preferences-nsclient).
 
 **OpenAPS** = Open Artificial Pancreas System, the predecessor project and basis of AAPS.
 
-**Open Loop system** = an **AAPS** feature that will recommend adjustments and which must be performed manually by the user on **AAPS**. Further info → [Wiki - 'Open Loop'](#KeyAapsFeatures-OpenLoop).
+**Система открытого цикла** = функция **AAPS**, которая рекомендует изменения; пользователь должен выполнить их вручную в **AAPS**. Further info → [Wiki - 'Open Loop'](#KeyAapsFeatures-OpenLoop).
 
-**Oref0 / Oref1** = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
+**Oref0 / Oref1** = определение чувствительности и «reference design implementation version 0/1» (эталонная реализация, версия 0/1). It is the key algorithm behind OpenAPS. Further info → [Wiki - 'sensitivity detection'](../DailyLifeWithAaps/SensitivityDetectionAndCob.md).
 
 **OS-AID** = Open-Source Automated Insulin Delivery. An **AID** system built from open-source software, such as **AAPS**, **OpenAPS**, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also **AID**.
 
-**Peak time** = time of maximum effect of insulin given. Further info → [Wiki - 'Duration of insulin action (DIA) and peak'](#Config-Builder-insulin-dia).
+**Время пика** = время максимального действия введенного инсулина. Further info → [Wiki - 'Duration of insulin action (DIA) and peak'](#Config-Builder-insulin-dia).
 
-**PH** = Pump History. This can be accessed in **AAPS’** treatments history: open the **menu** (☰) at the top left of the main screen and select **Treatments**.
+**PH** = Pump History (история помпы). This can be accessed in **AAPS’** treatments history: open the **menu** (☰) at the top left of the main screen and select **Treatments**.
 
-**Predictions** = predictions for **BG** in the future based on different calculations. Further info → [Wiki - 'prediction lines'](#aaps-screens-prediction-lines).
+**Прогнозы** = прогнозы **ГК** на будущее на основе разных расчетов. Further info → [Wiki - 'prediction lines'](#aaps-screens-prediction-lines).
 
-**Profile** = the user’s basic treatment settings (basal rate, **DIA**, **IC**, **ISF**, **BG** target). **AAPS** only uses profiles created within **AAPS** (**Manage** → **Profile**), but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
+**Профиль** = основные настройки терапии пользователя (базальная скорость, **DIA**, **IC**, **ISF**, целевое значение **ГК**). **AAPS** only uses profiles created within **AAPS** (**Manage** → **Profile**), but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
 
 **Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
 
@@ -118,34 +118,34 @@
 
 **RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
 
-**SAGE** = sensor age. This is displayed on the main screen of **AAPS** and in **Nightscout**, based on the user's **Sensor Insert** careportal entries → see also **Nightscout**.
+**SAGE** = Sensor AGE (возраст сенсора). This is displayed on the main screen of **AAPS** and in **Nightscout**, based on the user's **Sensor Insert** careportal entries → see also **Nightscout**.
 
 **SEN** = status light for overdue sensor change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **RES**.
 
 **Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Sensor noise** = a term used to describe the unstable **CGM’s** readings leading to "jumping" **BG** values. Further info → [Wiki - 'Smoothing blood glucose data'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Шум сенсора** = так называют нестабильные показания **CGM**, из-за которых значения **ГК** «скачут». Further info → [Wiki - 'Smoothing blood glucose data'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-**SMB** = Super Micro Bolus. An **AAPS** feature for faster insulin delivery in order to adjust **BG**. Further info → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) and see also **UAM**.
+**SMB** = Super Micro Bolus (супер микроболюс). Функция **AAPS** для более быстрой подачи инсулина, чтобы скорректировать **ГК**. Further info → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) and see also **UAM**.
 
-**Super bolus** = shift of basal to bolus insulin for faster **BG** adjustment.
+**Суперболюс** = перенос базального инсулина в болюс для более быстрой коррекции **ГК**.
 
-**TBB** = total base basal (sum of basal rate within 24 hours) → see also **TBR** / **TDD**.
+**TBB** = total base basal (сумма базальной скорости за 24 часа) → см. также **TBR** / **TDD**.
 
 **TBR** = temporary basal rate → see also **TBB** / **TDD**.
 
-**TDD** = total daily dose (bolus + basal per day) → see also **TBB** / **TBR**.
+**TDD** = total daily dose, суммарная суточная доза (болюс + базал за сутки) → см. также **TBB** / **TBR**.
 
 **TT** = temporary target: temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Further info → [Wiki - 'temp targets'](../DailyLifeWithAaps/TempTargets.md).
 
-**UAM** = unannounced meals. Detection of significant increase in **BG** levels due to meals, adrenaline or other influences and attempt to adjust this. Further info → [Wiki - 'UAM'](#enable-uam) and see also **SMB**.
+**UAM** = unannounced meals (непредвиденный прием пищи). Обнаружение значительного роста **ГК** из-за еды, адреналина или других влияний и попытка это скорректировать. Further info → [Wiki - 'UAM'](#enable-uam) and see also **SMB**.
 
 **Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions, or lets PWD whose pump model has no **AAPS** driver use **AAPS** as an open loop → see also **Open Loop**.
 
-**Wallpaper** = **AAPS** background image see phones page.
+**Обои** = фоновое изображение **AAPS**, см. страницу о телефонах.
 
 **xDrip** = open source software to read **CGM** systems.
 
-**Zero-temp** = temporary basal rate with 0% (no basal insulin delivery).
+**Zero-temp** = временная базальная скорость 0% (базальный инсулин не подается).
 
-→ see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
+→ см. также [документацию OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
