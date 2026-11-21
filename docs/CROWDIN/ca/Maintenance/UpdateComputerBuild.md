@@ -5,7 +5,7 @@
 **AAPS** no es pot descarregar a causa de les normes sobre dispositius mèdics. És legal compilar l'aplicació per al vostre ús propi, però no en podeu donar una còpia a altres persones! Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més detalls.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Després seguiu el [procediment de compilació inicial d'**AAPS**](../SettingUpAaps/BuildingAaps.md) en lloc d'aquesta guia. L'única diferència és que, en lloc de crear un magatzem de claus nou, podeu seleccionar el que heu copiat a l'ordinador nou.
+Si voleu compilar **AAPS** en un ordinador nou: copieu el fitxer de còpia de seguretat del vostre magatzem de claus a l'ordinador nou. Després seguiu el [procediment de compilació inicial d'**AAPS**](../SettingUpAaps/BuildingAaps.md) en lloc d'aquesta guia. L'única diferència és que, en lloc de crear un magatzem de claus nou, podeu seleccionar el que heu copiat a l'ordinador nou.
 ```
 
 ## Visió general de l'actualització a una nova versió d'AAPS amb Android Studio
@@ -15,7 +15,7 @@ In case you want to build **AAPS** on a new computer: copy your back-up keystore
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Si teniu problemes, consulteu la pàgina separada [Resolució de problemes d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### Exporteu la vostra configuració
 
@@ -53,7 +53,7 @@ La versió mínima necessària es descriu a les [instruccions de compilació](#B
 * Espereu mentre es fa la descàrrega; ho veureu com a informació a la barra de baix. Quan acabi, veureu un missatge d'èxit.
 
   ```{note}
-  Els fitxers actualitzats poden ser diferents! This is not an indication of a problem.
+  Els fitxers actualitzats poden ser diferents! Això no indica cap problema.
   ```
 
    ![Android Studio - Pull correcte](../images/update/06_GitPullSuccess.png)
@@ -83,7 +83,7 @@ Si heu compilat a Android Studio amb el mateix magatzem de claus que ja teníeu,
 En altres casos, per exemple si heu creat un nou magatzem de claus a Android Studio per a l'apk signat, haureu d'eliminar l'aplicació antiga abans d'instal·lar l'apk. **Assegureu-vos d'exportar la configuració!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Consulteu les instruccions a [Transferir i instal·lar AAPS al vostre telèfon](../SettingUpAaps/TransferringAndInstallingAaps.md). Allà on s'aplica la [verificació de desenvolupadors d'Android](#android-developer-verification) de Google (a partir de setembre de 2026, segons el vostre país), instal·leu amb [ADB](#android-developer-verification-adb) en lloc de tocar el fitxer APK.
 
 Continueu [aquí](#Update-to-new-version-check-aaps-version-on-phone).
 
@@ -95,6 +95,6 @@ Si alguna cosa va malament, no us espanteu.
 
 Respireu a fons!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Després comproveu si el vostre problema ja està documentat a la pàgina separada [Resolució de problemes d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Si necessiteu més ajuda, contacteu amb altres usuaris d'**AAPS** a [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o a [Discord](https://discord.gg/4fQUWHZ4Mw).
