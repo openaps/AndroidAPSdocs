@@ -1,10 +1,10 @@
 # Tidepool
 
-Tidepool — це сторонній інструмент, який збирає дані про ГК, інсулін і вуглеводи (а також нотатки, які ви додаєте до записів терапії). З його допомогою можна аналізувати ці дані й ділитися ними з вашою медичною командою. Починаючи з версії AAPS 3.2, Tidepool можна використовувати замість Nightscout, щоб виконати частину Завдання 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool — це сторонній інструмент, який збирає дані про ГК, інсулін і вуглеводи (а також нотатки, які ви додаєте до записів терапії). З його допомогою можна аналізувати ці дані й ділитися ними з вашою медичною командою. Починаючи з версії AAPS 3.2, Tidepool можна використовувати замість Nightscout, щоб виконати частину Завдання 1. Його також можна використовувати разом з Nightscout як альтернативну платформу для звітів, яка добре підходить для роботи з лікарями. Це може бути бажаним варіантом для дітей, які користуються AAPS: вони отримують від Nightscout віддалений моніторинг і віддалене керування, а для звітів мають платформу, з якою їхній медичній команді зручніше працювати.
 
-Важливо розуміти, що Tidepool призначений лише для звітів. It is NOT a real-time follow app. Якщо вам потрібні послідовники, крім основного телефону з AAPS, ви також повинні налаштувати Nightscout.
+Важливо розуміти, що Tidepool призначений лише для звітів. Це НЕ застосунок для стеження в реальному часі. Якщо вам потрібні послідовники, крім основного телефону з AAPS, ви також повинні налаштувати Nightscout.
 
-Примітка: організація Tidepool вивела на ринок продукт iOS Loop зі схваленням FDA. This effort has nothing to do with their data reporting platform or AAPS.
+Примітка: організація Tidepool вивела на ринок продукт iOS Loop зі схваленням FDA. Ця робота ніяк не пов'язана з їхньою платформою звітів про дані або з AAPS.
 
 
 ## Крок 1 – Створіть обліковий запис Tidepool
