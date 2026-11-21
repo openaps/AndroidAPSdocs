@@ -1,9 +1,9 @@
-# State of translation for the app and the documentation
+# Estado da tradução do app e da documentação
 
 O estado é atualizado uma vez por hora e reflete apenas o estado no Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
+Atenção: a porcentagem de revisão é sempre menor ou igual à porcentagem de tradução, mas o Crowdin a mostra por cima da barra de tradução.
 É melhor olhar apenas para o nível percentual das traduções para ver se há trabalho a ser feito.
 ```
 
