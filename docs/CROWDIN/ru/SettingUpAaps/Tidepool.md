@@ -1,10 +1,10 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs (and the notes you add to your treatments) and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool is a third party tool that collects data regarding BG, insulin and carbs (and the notes you add to your treatments) and can be used to analyze and share this data with your clinical team. Начиная с версии AAPS 3.2, Tidepool можно использовать вместо Nightscout для выполнения части Цели 1. Его также можно использовать вместе с Nightscout как дополнительную платформу отчетов, которая хорошо подходит для работы с врачами. Это может быть удобно для детей с AAPS: родители хотят иметь удаленный мониторинг и управление через Nightscout, но им нужна платформа отчетов, с которой их медицинской команде удобнее работать.
 
-It is important to understand that Tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone, you must set up Nightscout as well.
+It is important to understand that Tidepool is for reporting only. Это НЕ приложение для слежения в реальном времени. If you need to have followers apart from the main AAPS phone, you must set up Nightscout as well.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
+Примечание: организация Tidepool вывела на рынок продукт iOS Loop с одобрением FDA. Это никак не связано с их платформой отчетов или с AAPS.
 
 
 ## Step 1 - Set up a Tidepool account
@@ -44,7 +44,7 @@ Note: the Tidepool organization has brought the iOS Loop product to market with 
 
 ![Connection settings with Use Nightscout connection settings on](../images/v4/Tidepool/tidepool_connection_settings.png) ![Separate connection settings for Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+Подробнее о том, как работать с данными после загрузки в Tidepool, читайте здесь: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
 
 (tidepool-menu)=
 ## The Tidepool buttons
