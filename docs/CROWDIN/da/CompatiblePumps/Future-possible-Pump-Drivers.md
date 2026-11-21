@@ -1,62 +1,62 @@
-# Future (possible) Pump Drivers
+# Fremtidige (mulige) pumpedrivere
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Dette er en liste over nogle pumper på markedet, status for deres understøttelse i andre loop-systemer og deres status i AAPS. Til sidst er der nogle oplysninger om, hvad en pumpe skal kunne for at kunne bruges i et loop.
 
-    {contents} Table of contents
+    {contents} Indholdsfortegnelse
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Pumper, som er ved at blive integreret i AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Kommer snart:** Drivere til disse pumper er under udvikling og kører allerede i test-builds.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([Hjemmeside](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Driver til Omnipod 5 under udvikling](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([Hjemmeside](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Driver til Tandem t:Mobi under udvikling](../images/future-pumps/tandem-mobi-driver.png)
 
-## Pumps that are Loopable
+## Pumper, som kan bruges i et loop
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([Hjemmeside](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Loop-status:** Pumpen er en kandidat til loop, men protokollen er ukendt på nuværende tidspunkt. Producenten er ikke interesseret i open source.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Krav til hardware for AAPS:** Ingen. Den ser ud til at have BT.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([Hjemmeside](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Loop-status:** Mulig kandidat til loop i fremtiden. Håbet er, at t:slim X3 vil kunne styres helt fra en telefon. Det vil gøre det muligt at understøtte den i AAPS, men tidsplanen og funktionerne er stadig ukendte.
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**Krav til hardware for AAPS:** Ingen. Den forventes at have Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Kommentarer:** Ikke udgivet endnu. t:slim X3 ser ud til gang på gang at blive nedprioriteret i Tandems planer til fordel for t:Mobi (også en version uden slange) og Sigi (deres patchpumpe).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([Hjemmeside](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Loop-status:** Kandidat til loop.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Krav til hardware for AAPS:** Ingen. Den har Bluetooth.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Willcare insulinpumpe ([Hjemmeside](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Loop-status:** Lige nu er den ikke en kandidat til loop, men firmaets medarbejdere har kontaktet os, og de er interesserede i at gøre pumpen klar til loop (det ser ud til, at der kun mangler kommandoerne til at hente/sætte profil).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Krav til hardware for AAPS:** Ingen. Den ser ud til at have BT.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Kommentarer:** Da firmaet er interesseret i at blive integreret med AAPS, laver de måske selv implementeringen.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([Hjemmeside](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Loop-status:** Kandidat til loop. Fællesskabet har afkodet pumpens Bluetooth-protokol (reverse engineering), så det er i princippet muligt at kommunikere med den.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Krav til hardware for AAPS:** Ingen. Den har Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Kommentarer:** Ypsopump beskytter sin Bluetooth-kommunikation med stærk kryptering fra en tredjepart. Det er teknisk krævende at arbejde med, og det gør det svært at bygge og vedligeholde en pålidelig driver. Der findes endnu ingen AAPS-driver, som er klar til brug.
 
-## Pumps no longer sold (companies no longer operating)
+## Pumper, som ikke længere sælges (firmaer, som ikke længere findes)
 
 ### Animas Vibe
 
@@ -66,53 +66,53 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Kommentarer:** Support ophørte i marts 2025.
 
-## Pumps that aren't Loopable
+## Pumper, som ikke kan bruges i et loop
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Kommentarer:** Medtronic [trak sig](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([Hjemmeside](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Kommentarer:** Tandems Bluetooth-protokol er blevet afkodet (reverse engineering), men på t:slim X2 kan der kun gives boluser — basaltilførslen kan ikke styres — så den kan ikke bruges sikkert i et loop. Det ændrer sig sandsynligvis ikke, medmindre Tandem tillader fuld styring af X2 fra en telefon. Det kommer mere sandsynligt med t:slim X3 i stedet.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Kommentarer:** Det er ikke lykkedes for fællesskabet at kommunikere med Solo-pumpen.
 
-## Requirements for pumps being loopable
+## Krav til pumper, som skal kunne bruges i et loop
 
-**Prerequisite**
+**Forudsætning**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Pumpen skal kunne fjernstyres på en eller anden måde. (BT, radiofrekvens osv.)
+- Protokollen er hacket, dokumenteret eller lignende.
 
-**Minimal requirement**
+**Minimumskrav**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Sæt midlertidig basalrate
+- Hent status
+- Annuller midlertidig basalrate
 
-**For oref1(SMB) or Bolusing:**
+**For oref1 (SMB) eller for at give bolus:**
 
-- Set Bolus
+- Giv bolus
 
-**Good to have**
+**Godt at have**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Annuller bolus
+- Hent basalprofil (næsten et krav)
+- Sæt basalprofil (rart at have)
+- Læs historik 
 
-**Other (not required but good to have)**
+**Andet (ikke et krav, men godt at have)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Sæt forlænget bolus
+- Annuller forlænget bolus
+- Læs historik
+- Læs TDD
 
-### Other pumps support
+### Understøttelse af andre pumper
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Hvis du gerne vil se status for andre pumper, så kontakt os på Discord.
