@@ -128,7 +128,7 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a batter
 ### Функция пролонгированного (расширенного) болюса
 
 - Если вы пользуетесь пролонгированным болюсом, замкнутый цикл будет деактивирован.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Почему пролонгированный болюс не работает в замкнутом цикле, подробно описано [на этой странице](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment).
 
 ## Куда обращаться за помощью
 
