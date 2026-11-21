@@ -13,9 +13,9 @@ Encara hi ha alguns ponts al mercat:
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) de venedors europeus ([BubbleShop](https://bubbleshop.eu/)) o, per a usuaris de Rússia, [aquí](https://vk.com/saharmonitor/). També disponible a AliExpress.
 -   Atom per a usuaris de Rússia.
 
-## 1. Using xDrip
+## 1. Ús de xDrip
 
--   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   xDrip és compatible amb Miaomiao, Bubble, Blucon, Atom i LibreAlarm.
 -   Podeu descarregar sense problemes l'[últim APK (estable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), tret que necessiteu funcions recents; en aquest cas, feu servir l'últim [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Seguiu les instruccions de configuració de la pàgina [Configuració de xDrip](../CompatibleCgms/xDrip.md).
 -    També necessiteu OOP2 per al Libre 1 dels EUA (i per al Libre 2 europeu).
