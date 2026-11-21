@@ -2,7 +2,7 @@
 
 Aquesta secció explica què és un **Canvi de perfil** i un **Percentatge del perfil**. Podeu aprendre a crear un **Perfil** a [El vostre perfil d'AAPS](#your-aaps-profile-create-and-edit-profiles).
 
-Quan comenceu amb **AAPS**, haureu de crear un **Perfil**, entendre com fer un **Canvi de perfil** i aprendre l'efecte d'un **Percentatge del perfil** dins d'**AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+Quan comenceu amb **AAPS**, haureu de crear un **Perfil**, entendre com fer un **Canvi de perfil** i aprendre l'efecte d'un **Percentatge del perfil** dins d'**AAPS**. Les funcions de **Canvi de perfil** o de **Percentatge del perfil** poden ser especialment útils per a:
 
 - el cicle menstrual: un ajust de percentatge dins d'un **Perfil** es pot configurar a **Automatització** perquè **AAPS** s'adapti a les diferents fases del cicle hormonal i a la resistència a la insulina prevista.
 
@@ -10,7 +10,7 @@ Quan comenceu amb **AAPS**, haureu de crear un **Perfil**, entendre com fer un *
 
 - el treball de nit o per torns: un desplaçament horari al **Perfil** es pot configurar per a qui treballa per torns. Canvieu el nombre d'hores del **Perfil** segons quantes hores més tard o més d'hora l'usuari anirà a dormir o es llevarà.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Així **AAPS** calcula un ajust equilibrat quan administra la insulina de l'usuari. Una reducció de la basal al **Perfil** d'**AAPS** serveix de poc si l'algoritme continua fent servir les mateixes ràtios d'ISF i I:C.
+Per què fer servir un **Percentatge del perfil** en lloc d'un ajust temporal de la basal? Per ser més eficaç, un **Percentatge del perfil** aplica una reducció o un augment proporcional a: la basal, l'ISF i la I:C. Així **AAPS** calcula un ajust equilibrat quan administra la insulina de l'usuari. Una reducció de la basal al **Perfil** d'**AAPS** serveix de poc si l'algoritme continua fent servir les mateixes ràtios d'ISF i I:C.
 
 (ProfileSwitch-change-percentage)=
 
@@ -22,7 +22,7 @@ Necessiteu almenys un **Perfil** desat. Un **Percentatge del perfil** sempre s'a
 
     <br />1. A la pantalla principal, **toqueu el nom del perfil** (al costat de la icona de l'estrella). La [pantalla Perfil](#ProfileSwitch-manage-v4) s'obre a la targeta del **Perfil** en ús, marcada com a **ACTIU**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
+       ![Toqueu el nom del perfil a la pantalla principal per obrir la pantalla Perfil](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Per mantenir el mateix **Perfil**, deixeu seleccionada la targeta **ACTIU**. Per canviar de **Perfil** al mateix temps, llisqueu fins a una altra targeta.
     3. Toqueu el botó rodó **▶** (**Activar**) a baix a la dreta. S'obre la pantalla **Activar**.
@@ -54,9 +54,9 @@ Necessiteu almenys un **Perfil** desat. Un **Percentatge del perfil** sempre s'a
 
 A **AAPS** v4 els perfils es gestionen i s'activen des de la pantalla **Gestionar** (navegació inferior) → **Perfil** (*«Gestionar i activar perfils»*).
 
-La pantalla Perfil mostra els vostres perfils com un **carrusel de targetes que podeu lliscar**. La targeta del perfil en ús està marcada com a **ACTIU** i mostra la seva basal diària total (p. ex. *∑ 30,15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+La pantalla Perfil mostra els vostres perfils com un **carrusel de targetes que podeu lliscar**. La targeta del perfil en ús està marcada com a **ACTIU** i mostra la seva basal diària total (p. ex. *∑ 30,15 U*). Sota la targeta seleccionada veieu els detalls d'aquell perfil: el tipus d'**Insulina** i els horaris d'**IC**, **ISF**, **basal** i **objectiu**, amb gràfics.
 
-When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
+Quan hi ha en ús un canvi temporal, la targeta **ACTIU** mostra el seu percentatge i el seu desplaçament horari amb el temps que queda, per exemple *110% +2 h · 2 h 40 min*, sobre una barra de progrés. Tots dos s'actualitzen cada 30 segons. Llavors els detalls de sota tenen dues columnes: els valors del perfil en blau, i els valors que es fan servir amb el percentatge en vermell.
 
 ![La pantalla Perfil: carrusel de perfils, detalls i barra d'accions](../images/v4/Profiles/profile_manage.png)
 
@@ -78,7 +78,7 @@ Seleccioneu un perfil i toqueu **▶ Activar**. La pantalla **Activar** us perme
 
 ![La pantalla Activar: percentatge, durada, desplaçament horari, hora](../images/v4/Profiles/profile_activate.png)
 
-- **Percentatge** (30–250%, comença al 100% cada vegada): escala tot el perfil. El 100% el fa servir tal com és; per exemple, el 70% redueix la basal i la dosi d'insulina calculada (tant els bolus d'àpat com les correccions) un 30%. No canvia els vostres objectius de glucèmia ni l'absorció de carbohidrats. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
+- **Percentatge** (30–250%, comença al 100% cada vegada): escala tot el perfil. El 100% el fa servir tal com és; per exemple, el 70% redueix la basal i la dosi d'insulina calculada (tant els bolus d'àpat com les correccions) un 30%. No canvia els vostres objectius de glucèmia ni l'absorció de carbohidrats. Vegeu [Percentatge del perfil](#ProfileSwitch-profile-percentage) per conèixer tot l'efecte.
 - **Durada** (0–10080 minuts, és a dir, fins a 7 dies): quant de temps dura el canvi. **0 = indefinit** (fins que torneu a canviar); un valor diferent de zero torna al perfil anterior quan acaba.
 - **Objectiu temporal / Activitat (esport)**: només apareix quan configureu una **Durada** i un **Percentatge** per sota del 100%. Activeu-lo per iniciar també un [objectiu temporal d'activitat](#TempTargets-activity-temp-target) amb la mateixa durada, com faríeu abans de fer esport.
 - **Decalatge horari** (desplaçament horari): mostra *0h*; toqueu **Canviar** per moure l'horari endavant o enrere fins a 23 hores (útil per al treball per torns o per als viatges). Vegeu [Desplaçament horari](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -127,27 +127,27 @@ L'efecte d'un percentatge del **Perfil** es resumeix a la taula següent:
 
 | Canvi de perfil  
 Percentatge |    Efecte     |     I:C  
-g/U     | Example  
+g/U     | Exemple  
 15 g |          ISF  
-mmol/L/U  
-mg/dL/U          | U to lower  
-2mmol/L  
-40mg/dL |
-|:-----------------------------:|:-------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
+mmol/l/U  
+mg/dl/U          | U per baixar  
+2 mmol/l  
+40 mg/dl |
+|:-----------------------------:|:-------------:|:-----------------:|:--------------:|:------------------------------------------:|:----------------------------------:|
 |              90%              |   Més feble   | 5/0,9  
-=**5,55** |     2.7 U      | 2,2/0,9  
+=**5,55** |     2,7 U      | 2,2/0,9  
 =**2,4**  
   
 40/0,9  
-=**44,4** |             0.8 U              |
+=**44,4** |               0,8 U                |
 |           **100%**            | **Estàndard** |       **5**       |    **3 U**     |                **2,2  
-40**                |           **0.9** U            |
+40**                |             **0,9** U              |
 |             130%              |   Més fort    | 5/1,3  
-=**3,85** |     3.9 U      | 2,2/1,3  
+=**3,85** |     3,9 U      | 2,2/1,3  
 =**1,7**  
   
 40/1,3  
-=**30,8** |             1.2 U              |
+=**30,8** |               1,2 U                |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
@@ -155,7 +155,7 @@ mg/dL/U          | U to lower
 
 Un «desplaçament horari» al **Perfil** de l'usuari mou la configuració del **Perfil** al llarg del rellotge del dia («circadià») el nombre d'hores que s'introdueix. Això pot ser útil per a:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
+- **treballadors de nit o per torns**: per als torns de nit, canvieu al **Perfil** el nombre d'hores segons quantes hores més tard o més d'hora l'usuari anirà a dormir o es llevarà; 
 - **usuaris que canvien de fus horari quan viatgen**; o
 - **nens amb diabetis tipus 1**: que tenen una rutina fixa per anar a dormir i una resistència a la insulina tinguda en compte al seu **Perfil**. Si per algun motiu el nen anirà a dormir més tard, el cuidador pot aplicar un «desplaçament horari» al **Perfil** del nen. Així **AAPS** reacciona a la resistència a la insulina en el període que l'usuari vol.
 
@@ -171,7 +171,7 @@ La pregunta sempre és: la configuració del **Perfil** de quina hora ha de subs
 
 ![Direccions del desplaçament horari en el canvi de perfil](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Aquest mecanisme de fer instantànies del **Perfil** permet un càlcul del passat molt més precís i la possibilitat de seguir els canvis del **Perfil**.
 
 (ProfileSwitch-keep-for-later)=
 
