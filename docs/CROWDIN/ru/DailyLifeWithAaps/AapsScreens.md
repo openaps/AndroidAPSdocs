@@ -27,7 +27,7 @@
 
 The latest blood glucose reading from your CGM is shown in the big circle on the left, together with the difference to the previous reading (delta) and the age of the reading.
 
-Цвет показаний ГК соответствует настроенному [даипазону](#Preferences-range-for-visualization).
+Цвет значения ГК показывает его положение относительно заданного [диапазона](#Preferences-range-for-visualization).
 
 * green = in range
 * red = below range
@@ -133,7 +133,7 @@ A validation is required after each selection.
 
 * Активирован ли мост Dexcom на сайте NS? Отключите мост, перейдя в панель управления сайта NS, отредактируйте переменную «enable» и удалите оттуда "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Данные о ГК поступают в Nightscout (NS) из нескольких источников? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
-* Есть ли у вас подписчики (фолоуеры), которые могут получать ГК и снова передавать ее на ваш сайт NS?
+* Есть ли у вас фолловеры, которые получают ваши данные ГК, но также снова загружают их на ваш сайт Nightscout?
 * Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
 
 To remove the warning immediately and get your loop correcting again, delete the duplicate entries from the BG source screen: tap the shortcut in the bottom bar. The duplicate reading is highlighted in red. Long press a reading to start selecting, tick the duplicates and tap the trash icon at the top right.
@@ -230,7 +230,7 @@ Press the teal button to see the temporary basal rate that is running, when it s
 
 Уведомления об углеводах значительно сложнее, чем уведомления калькулятора болюса. You might see a carbs suggestion while the bolus calculator does not show missing carbs.
 
-При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS. 
+При желании уведомления о нужных углеводах можно отправлять в Nightscout. В этом случае будет показано и разослано оповещение.
 
 ### Section C - Status row
 
@@ -366,7 +366,7 @@ When two predictions give the same values, their dots overlap and you only see o
     
     Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Устарело и имеет ограниченную полезность.
     
-    *Эта линия появляется только при использовании устаревшего алгоритма помощника болюса[AMA](#Config-Builder-aps).*
+    *Эта линия появляется только при использовании более старого алгоритма [AMA](#Config-Builder-aps).*
 
 Обычно реальная кривая глюкозы находится где-то между этих линий, или близка к той, которая ближе всего описывает вашу текущую ситуацию.
 
@@ -440,7 +440,7 @@ The new graph is added below the others — here a second additional graph with 
 
 SMBs are shown on this graph as blue triangles, in three sizes following the amount compared with the largest SMB of the day.
 
-Активный инсулин IOB может быть отрицательным, если у васне осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
+IOB может быть отрицательным, если у вас не осталось болюсного инсулина, а нулевой или низкий временный базал работал долгое время.
 
 Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin-dia).
 
@@ -448,7 +448,7 @@ Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin
 
 Показывает активные углеводы в организме (= еще не усвоенные углеводы).
 
-Усвоение инсулина зависит от [отклонений, замеченных алгоритмом](../DailyLifeWithAaps/CobCalculation.md).
+Усвоение углеводов зависит от [отклонений, которые обнаруживает алгоритм](../DailyLifeWithAaps/CobCalculation.md).
 
 Если обнаружится более быстрое усвоение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (с учетом настроек безопасности).
 
@@ -458,7 +458,7 @@ Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin
 
 Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. До достижения этой цели линия Autosens на диаграмме отображается только для информации.
+Обратите внимание: чтобы определение чувствительности/[Autosens](#Open-APS-features-autosens) могло автоматически менять количество подаваемого инсулина, вы должны быть на [Цели 8](#objectives-objective8). До достижения этой цели линия Autosens на диаграмме отображается только для информации.
 
 ### Variable sensitivity (VSENS)
 
@@ -759,7 +759,7 @@ Open the **menu** (☰) and select **Treatments history** to view, check and cor
 
 Open the **menu** (☰) and select **History browser**.
 
-Позволяет перемещаться по журналу **AAPS**. См соответствующую страницу - [ Просмотр данных > Журнал истории](../Maintenance/Reviewing.md).
+Позволяет перемещаться по журналу **AAPS**. См. отдельную страницу [Анализ ваших данных > Просмотр журнала](../Maintenance/Reviewing.md).
 
 (aaps-screens-statistics)=
 
@@ -769,11 +769,11 @@ Open the **menu** (☰) and select **History browser**.
 
 Open the **menu** (☰) and select **Statistics**.
 
-Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. См соответствующую страницу - [Просмотр данных > Статистика](#reviewing-statistics).
+Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. См. отдельную страницу [Анализ ваших данных > Статистика](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Помощник профиля
 
 Open the **menu** (☰) and select **Profile helper**.
 
