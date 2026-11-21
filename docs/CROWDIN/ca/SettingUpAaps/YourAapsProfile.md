@@ -21,7 +21,7 @@ Podeu fer servir [Autotune](https://autotuneweb.azurewebsites.net/) com a ajuda 
 :class: note
 Els **Perfils** canvien molt d'una persona a una altra.
 
-Per a les taxes basals (BR), els factors de sensibilitat a la insulina (ISF) i les ràtios insulina-carbohidrats (IC o ICR), els valors absoluts i les tendències de les necessitats d'insulina canvien molt d'una persona a una altra, segons la vostra biologia, sexe, edat, forma física, etc., i també per factors de curt termini com una malaltia o l'esport recent. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Per a les taxes basals (BR), els factors de sensibilitat a la insulina (ISF) i les ràtios insulina-carbohidrats (IC o ICR), els valors absoluts i les tendències de les necessitats d'insulina canvien molt d'una persona a una altra, segons la vostra biologia, sexe, edat, forma física, etc., i també per factors de curt termini com una malaltia o l'esport recent. Per a més orientació sobre això, el llibre [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) d'Adam Brown és un llibre excel·lent.
 
 ```
 
@@ -91,7 +91,7 @@ La **figura de sota** mostra un exemple de com es poden configurar les taxes bas
 
 ![Taxes basals](../images/v4/Profiles/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Les taxes basals s'ajusten per prova i error, i cal fer-ho d'acord amb el vostre equip de diabetis.
 
 Hi ha mètodes de prova de la basal que normalment consisteixen a observar les taxes basals i les necessitats d'insulina durant un dejuni <u>intermitent</u> en un període de 24 hores. Encara que heu de provar les taxes basals de tot el dia, no es recomana dejunar 24 h seguides. Això és perquè el cos activa mecanismes, com les hormones, per compensar-ho. Una manera recomanada és dejunar 8 hores en 3 dies diferents.
 
@@ -131,17 +131,17 @@ El factor de sensibilitat a la insulina (de vegades anomenat factor de correcci�
 
 **En unitats mmol/l:** Si teniu un **ISF** d'1,5, cada unitat d'insulina baixarà la vostra glucèmia uns 1,5 mmol/l (per exemple, de 8 mmol/l a 6,5 mmol/l).
 
-Amb aquests exemples podeu veure que, com _més petit_ és el valor de l'**ISF**, menys sensibles sou a la insulina. Per tant, si baixeu l'ISF de 40 a 35 (mg/dl) o d'1,5 a 1,3 (mmol/l), sovint es diu que feu més fort el vostre **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Amb aquests exemples podeu veure que, com _més petit_ és el valor de l'**ISF**, menys sensibles sou a la insulina. Per tant, si baixeu l'ISF de 40 a 35 (mg/dl) o d'1,5 a 1,3 (mmol/l), sovint es diu que feu més fort el vostre **ISF**. Al contrari, augmentar el valor de l'**ISF** de 40 a 45 (mg/dl) o d'1,5 a 1,8 (mmol/l) fa més feble el vostre **ISF**.
 
 ### Impacte
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Això fa que el llaç faci una correcció més agressiva / més forta amb **més insulina**. Si el vostre **ISF** és massa fort (valor petit), pot provocar una **glucèmia** baixa.
+Un **ISF més baix / més fort** (per exemple 40 en lloc de 50) vol dir que la insulina baixa menys la vostra **glucèmia** per unitat. Això fa que el llaç faci una correcció més agressiva / més forta amb **més insulina**. Si el vostre **ISF** és massa fort (valor petit), pot provocar una **glucèmia** baixa.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Això fa que el llaç faci una correcció menys agressiva / més feble amb **menys insulina**. Si el vostre **ISF** és massa feble (valor gran), pot provocar una **glucèmia** alta.
+Un **ISF més alt / més feble** (per exemple 45 en lloc de 35) vol dir que la insulina baixa més la vostra **glucèmia** per unitat. Això fa que el llaç faci una correcció menys agressiva / més feble amb **menys insulina**. Si el vostre **ISF** és massa feble (valor gran), pot provocar una **glucèmia** alta.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+**Exemple:**
+* La **glucèmia** és de 190 mg/dl (10,5 mmol/l) i l'objectiu és de 100 mg/dl (5,6 mmol/l).
+* Per tant, voleu una correcció de `190 - 100 = 90 mg/dL` o `10.5 - 5.6 = 4.9 mmol/L`
 * Si `ISF = 30` -> `90 / 30 = 3` o `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 unitats d'insulina
 * Si `ISF = 45` -> `90 / 45 = 2` o `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 unitats d'insulina
 
@@ -193,7 +193,7 @@ Si la vostra **ICR** és més feble (valor més alt), per exemple 1:20, només n
 > 
 > Amb la **ICR**, la quantitat d'insulina és fixa i la quantitat de carbohidrats és variable. («Quants g de carbohidrats es poden cobrir amb una unitat d'insulina?»)
 > 
-> Example:
+> Exemple:
 > 
 > Factor d'unitat de pa (BU = 12 g de carbohidrats): 2,4 U/BU -> Necessiteu 2,4 unitats d'insulina quan mengeu una unitat de pa.
 > 
@@ -201,7 +201,7 @@ Si la vostra **ICR** és més feble (valor més alt), per exemple 1:20, només n
 > 
 > Factor BU 2,4 U / 12 g   ===>   IC = 12 g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Hi ha taules de conversió a internet, per exemple [aquí](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impacte
 
@@ -300,7 +300,7 @@ L'Assistent de perfil ofereix dades de dos hospitals diferents per trobar el per
 4. Canvieu a la pestanya **Perfil 2**.
 5. Premeu **Tipus de perfil** i seleccioneu «Perfil DPV per defecte».
 6. Ajusteu el perfil DPV per defecte (basat en les dades d'un altre hospital) introduint l'edat del nen, el TDD Total i el percentatge de basal. Tingueu en compte que les dades DPV només donen **taxes basals**, per això IC i ISF es mostren com a zero en aquest perfil.
-7. Open the **Comparison** tab. Es mostrarà la comparació dels dos perfils ajustats (vegeu la captura de pantalla de sota).
+7. Obriu la pestanya **Comparació**. Es mostrarà la comparació dels dos perfils ajustats (vegeu la captura de pantalla de sota).
 8. Si voleu començar a ajustar el vostre perfil a partir d'una d'aquestes propostes, feu servir el botó **Duplicar** a la part de sota de la comparació.
 
 ![Assistent de perfil per a nens 2](../images/v4/Profiles/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ També podeu fer servir l'[Assistent de perfil](#aaps-screens-profile-helper) (m
 4. Canvieu a la pestanya **Perfil 2**.
 5. A **Tipus de perfil**, seleccioneu «Canvi de perfil» per triar a l'historial de tots els vostres **Canvis de perfil**.
 6. Trieu el **Canvi de perfil** amb el qual voleu comparar.
-7. Open the **Comparison** tab. Es mostrarà la comparació dels dos perfils (vegeu la captura de pantalla de sota).
+7. Obriu la pestanya **Comparació**. Es mostrarà la comparació dels dos perfils (vegeu la captura de pantalla de sota).
 
 ![Assistent de perfil 2](../images/v4/Profiles/ProfileHelper2.png)
