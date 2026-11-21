@@ -15,15 +15,15 @@
 - Gmail дозволяє зареєструвати до 4 акаунтів на один номер телефону.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## Як налаштувати окремий акаунт Google для AAPS
 
-(⌛About 10 minutes)
+(⌛Приблизно 10 хвилин)
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+Вимоги:
 
-* У вас є ПК з Windows (Windows 10 або новіша) і телефон Android (Android 12 або новіший), на якому працюватиме застосунок **AAPS**. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* У вас є ПК з Windows (Windows 10 або новіша) і телефон Android (Android 12 або новіший), на якому працюватиме застосунок **AAPS**. На обох пристроях встановлено всі останні оновлення безпеки, є доступ до інтернету та права адміністратора, бо деякі кроки потребують завантаження і встановлення програм.
 * На телефоні Android уже налаштовано вашу особисту «повсякденну» адресу пошти, наприклад акаунт Gmail.
 
 ```{admonition} Things to consider when setting up your new account
@@ -42,7 +42,7 @@ Requirements:
 Натисніть [тут](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>), щоб переглянути відео про те, як створити окремий акаунт Google.
 ```
 
- These are the steps outlined in the video:
+ Ось кроки, показані у відео:
 
 У цьому прикладі: 
 - Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
@@ -59,14 +59,14 @@ Requirements:
 ### Введіть дані вашого НОВОГО окремого акаунта: 
 
 - Введіть новий акаунт: 
-- Create Account
+- Створіть акаунт
 - for my personal use (для особистого використання). 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Введіть дані своєї особи:
+ - Введіть ім'я
+ - прізвище
+ - дату народження (вік має бути дорослим)
 
 ### Виберіть НОВУ адресу пошти та пароль
 
@@ -75,27 +75,27 @@ Requirements:
 
 ### Введіть номер телефону, на який можна отримати SMS для перевірки
 
-Gmail will now send you a unique code to enter for validation.
+Тепер Gmail надішле вам унікальний код, який треба ввести для перевірки.
 
 ### Введіть резервну адресу пошти
 
 У цьому випадку це буде ваша наявна «_повсякденна_» адреса пошти…
 
-### Finish setting up the account
+### Завершіть налаштування акаунта
 
-Gmail will display the account name. Вас попросять прийняти умови використання Gmail і підтвердити налаштування персоналізації.
+Gmail покаже назву акаунта. Вас попросять прийняти умови використання Gmail і підтвердити налаштування персоналізації.
 
-### Customize the new profile display
+### Налаштуйте вигляд нового профілю
 
-Тепер ви маєте бути на сторінці MyAccount у Gmail, де показано ваш новий окремий акаунт пошти для **AAPS**. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Тепер ви маєте бути на сторінці MyAccount у Gmail, де показано ваш новий окремий акаунт пошти для **AAPS**. За замовчуванням фото профілю — це перша літера вашого імені. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Відкрийте сайт Gmail в обох вікнах, щоб налаштувати новий акаунт
 
 Щоб не стежити за окремою поштовою скринькою, пересилайте всі листи з нового окремого акаунта **AAPS** на ваш повсякденний акаунт\
-Ця частина може трохи заплутати, бо вам доведеться перемикатися між обома акаунтами. To make it easier, open 2 separate browser windows on top of each other:
+Ця частина може трохи заплутати, бо вам доведеться перемикатися між обома акаунтами. Для зручності відкрийте 2 окремі вікна браузера одне над одним:
 
 1. Перемістіть наявне вікно браузера у верхню частину екрана і змініть його розмір, щоб воно займало лише приблизно верхню половину екрана…
 2. Клацніть правою кнопкою миші на значку браузера на панелі завдань
@@ -115,33 +115,33 @@ Gmail will display the account name. Вас попросять прийняти 
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Налаштуйте пересилання…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
+- Клацніть на вкладку налаштувань «Forwarding and POP/IMAP» (пересилання і POP/IMAP)
+- Клацніть на «add a forwarding address» (додати адресу для пересилання)
+- Додайте свою «повсякденну» адресу пошти
 - Gmail надішле код перевірки на вашу «повсякденну» адресу пошти.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Ви перейдете назад до свого повсякденного профілю і клацнете на посилання, щоб підтвердити, що приймаєте пересилання (або візьміть код з листа перевірки від Gmail у вікні «повсякденного» Gmail і вставте його у вікно «нового окремого акаунта AAPS» в Gmail).
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Доведеться кілька разів перемикатися між вікнами, але так, перевіряючи листи в «повсякденному» акаунті, ви також бачитимете листи, переслані з окремого акаунта AAPS, наприклад сповіщення Gmail.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Підтвердіть адресу для пересилання
 
 - У «повсякденному» Gmail (верхнє вікно) ви отримаєте лист «Gmail forwarding Confirmation» (підтвердження пересилання Gmail).
-- Open it and “click the link to confirm the request”
+- Відкрийте його і «клацніть на посилання, щоб підтвердити запит»
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Архівуйте переслані листи в новому окремому акаунті Gmail (нижнє вікно)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
+1. Оновіть нижнє вікно
+2. Позначте «forward incoming email» (пересилати вхідні листи)
+3. І архівуйте копію в Gmail (щоб нова окрема поштова скринька залишалася чистою)
 4. Прокрутіть сторінку до самого низу, щоб зберегти зміни\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Вітаємо! Now you have created an AAPS-dedicated Google account. Наступний крок - [зібрати застосунок AAPS](../SettingUpAaps/BuildingAaps.md).
+Вітаємо! Тепер ви створили окремий акаунт Google для AAPS. Наступний крок - [зібрати застосунок AAPS](../SettingUpAaps/BuildingAaps.md).
