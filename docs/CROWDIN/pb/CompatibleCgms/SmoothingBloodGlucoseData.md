@@ -4,7 +4,7 @@ Se os dados de **BG** estiverem instáveis ou com ruído, o **AAPS** pode dosar 
 
 ## Suavização dos dados dentro do AAPS
 
-O **AAPS** oferece a opção de suavizar os dados dentro do **AAPS**, em vez de no aplicativo do CGM. Abra o **menu** (☰), selecione [**Configuração**](../SettingUpAaps/ConfigBuilder.md) e depois **Suavização**. Há quatro opções, e somente uma pode estar ativa por vez: **Sem Suavização**, **Suavização exponencial**, **Suavizar média** e **Filtro de Kalman Unscented**.
+O **AAPS** oferece a opção de suavizar os dados dentro do **AAPS**, em vez de no aplicativo do CGM. Abra o **menu** (☰), selecione [**Configuração**](../SettingUpAaps/ConfigBuilder.md) e depois **Suavização**. Há quatro opções, e somente uma pode estar ativa por vez: **Sem Suavização**, **Suavização exponencial**, **Suavização por média** e **Filtro de Kalman Unscented**.
 
 ![Configuração > Suavização](../images/v4/Configuration/configuration_smoothing.png)
 
@@ -22,7 +22,7 @@ Use esta opção somente se os dados do seu CGM já forem suavizados corretament
 
 ### Filtro de Kalman Unscented (UKF)
 
-Esta opção usa um modelo estatístico para estimar continuamente o seu valor real de glicose e a velocidade de mudança dele a partir das leituras recebidas (que podem ter ruído). Ela se adapta automaticamente ao nível atual de ruído do seu sensor. Ela também detecta e descarta leituras discrepantes repentinas. É uma alternativa mais avançada às opções Suavização exponencial e Suavizar média, útil se você quer que a suavização se ajuste sozinha ao nível de ruído variável do seu sensor, em vez de usar um método fixo.
+Esta opção usa um modelo estatístico para estimar continuamente o seu valor real de glicose e a velocidade de mudança dele a partir das leituras recebidas (que podem ter ruído). Ela se adapta automaticamente ao nível atual de ruído do seu sensor. Ela também detecta e descarta leituras discrepantes repentinas. É uma alternativa mais avançada às opções Suavização exponencial e Suavização por média, útil se você quer que a suavização se ajuste sozinha ao nível de ruído variável do seu sensor, em vez de usar um método fixo.
 
 (smoothing-xdrip-dexcom-g6)=
 
@@ -30,10 +30,10 @@ Esta opção usa um modelo estatístico para estimar continuamente o seu valor r
 
 Você também pode mudar o método de suavização automaticamente, por exemplo de acordo com a idade do sensor, com a [ação de Automação](#automations-automation-action) **Alterar suavização**.
 
-|               | Exponential |  Average   | Sem Suavização |
-| ------------- |:-----------:|:----------:|:--------------:|
-| G5/G6/ONE     |  If noisy   |            |  Recommended   |
-| G7/ONE+/Stelo |  If noisy   | Se estável |                |
+|               |   Exponencial   |  Average   | Sem Suavização |
+| ------------- |:---------------:|:----------:|:--------------:|
+| G5/G6/ONE     | Se houver ruído |            |  Recomendado   |
+| G7/ONE+/Stelo | Se houver ruído | Se estável |                |
 
 Os sensores Libre têm ruído e podem precisar de suavização. Ao usar a conexão direta do xDrip ou a fonte de dados de aplicativo modificado (recebendo de outro aplicativo, incluindo o Juggluco), [a suavização já é feita dentro do aplicativo](#libre2-value-smoothing-raw-values).
 
