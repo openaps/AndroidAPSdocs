@@ -336,7 +336,7 @@ Si un cliente se restaura desde una copia de seguridad que hace retroceder su co
 
 Para problemas de Nightscout o de sincronización, consulta primero [Solución de problemas de NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-### Pairing
+### Emparejamiento
 
 **The QR code options cannot be chosen in the New client dialog**
 
@@ -367,11 +367,11 @@ Primero desvincúlalo (**Administrar → Emparejar con el máster → Desvincula
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-No se ha cambiado nada. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+No se ha cambiado nada. Vuelve a iniciar el emparejamiento. Si sigue fallando, reinicia **AAPSClient** e inténtalo una vez más.
 
-**The client says it is not paired**
+**El cliente dice que no está emparejado**
 
-Vuelve a emparejar desde **Administrar → Emparejar con el máster**. Check that the client is **Active** in the master's **Authorized clients** list.
+Vuelve a emparejar desde **Administrar → Emparejar con el máster**. Comprueba que el cliente está **Activo** en la lista **Clientes autorizados** del máster.
 
 **No pasa nada después del emparejamiento**
 
@@ -379,25 +379,25 @@ Asegúrate de que **Permitir control del cliente** está ACTIVADO en el máster 
 
 ### Comandos
 
-**The client says the master is offline, or commands fail**
+**El cliente dice que el máster está sin conexión, o los comandos fallan**
 
-Check that:
+Comprueba que:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- el teléfono máster está despierto y **AAPS** está en marcha,
+- los dos teléfonos están conectados en **NSClientV3** al mismo sitio de Nightscout,
+- los **websockets** están activados en los dos teléfonos.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Los websockets son **obligatorios** para el control remoto desde **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**El máster rechaza un comando**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+El máster vuelve a comprobar cada comando con su estado actual: por ejemplo, el perfil elegido ya no existe o el tipo de bomba no coincide. Compruébalo en el máster.
 
 **No se aplican los tratamientos introducidos en la web de Nightscout**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Esto es lo esperado en el [modo reforzado](#client-master-control-hardened-mode). En su lugar, introdúcelos en un cliente emparejado.
 
-### Nightscout tokens and settings
+### Tokens y ajustes de Nightscout
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ El cliente usaba antes su propio token de Nightscout y ahora escribe con otro, p
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-El cliente todavía escribe con un token que tiene más permisos de los que necesita. The master sends the client its own token after pairing, but only if the master has an admin token. Comprueba el token del máster, o vuelve a configurar el cliente con un código QR.
+El cliente todavía escribe con un token que tiene más permisos de los que necesita. El máster envía al cliente su propio token después del emparejamiento, pero solo si el máster tiene un token de administrador. Comprueba el token del máster, o vuelve a configurar el cliente con un código QR.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Otra persona escribió el documento de ajustes del máster, o el máster tiene una clave nueva (por ejemplo, después de borrar sus datos). A paired client takes the new key by itself the next time it connects to Nightscout. Un teléfono que solo lee Nightscout necesita otra vez el código QR del máster (**Leer solo Nightscout → mostrar el código**).
+Otra persona escribió el documento de ajustes del máster, o el máster tiene una clave nueva (por ejemplo, después de borrar sus datos). Un cliente emparejado recibe la nueva clave por sí solo la próxima vez que se conecta a Nightscout. Un teléfono que solo lee Nightscout necesita otra vez el código QR del máster (**Leer solo Nightscout → mostrar el código**).
 
 **Un cliente ya no puede leer Nightscout**
 
