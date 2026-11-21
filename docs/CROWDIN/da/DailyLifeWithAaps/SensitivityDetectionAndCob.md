@@ -1,34 +1,34 @@
 (Sensitivity-detection-and-COB-sensitivity-detection)=
 
-# Sensitivity detection
+# Detektering af følsomhed
 
-## Sensitivity algorithm
+## Følsomhedsalgoritme
 
-**AAPS** currently offers 3 sensitivity detection models:
+**AAPS** har i dag 3 modeller til detektering af følsomhed:
 
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Følsomhed AAPS
+* Følsomhed Vægtet Gennemsnit
+* Følsomhed Oref1
 
-### Sensitivity AAPS
+### Følsomhed AAPS
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Følsomheden beregnes på samme måde som i Oref1, men du kan angive, hvor langt tilbage i tiden der skal ses. Den minimale kulhydratabsorption beregnes ud fra den maksimale absorptionstid for kulhydrater, som er sat i indstillingerne.
 
-### Sensitivity WeightedAverage
+### Følsomhed Vægtet Gennemsnit
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+Følsomheden beregnes som et vægtet gennemsnit af afvigelserne. Du kan angive, hvor langt tilbage i tiden der skal ses. Nyere afvigelser vægter mere. Den minimale kulhydratabsorption beregnes ud fra den maksimale absorptionstid for kulhydrater, som er sat i indstillingerne. Denne algoritme er den hurtigste til at følge ændringer i følsomheden.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
-### Sensitivity Oref1
+### Følsomhed Oref1
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+Følsomheden beregnes ud fra data fra de sidste 8 timer, eller fra det sidste skift af infusionssæt, hvis det er mindre end 8 timer siden. Kulhydrater (hvis de ikke er absorberet) fjernes efter den tid, der er angivet i indstillingerne. Kun Oref1-algoritmen understøtter uanmeldte måltider (UAM). Det betyder, at perioder med registreret UAM ikke tælles med i beregningen af følsomheden. Så hvis du bruger SMB med UAM, skal du vælge Oref1-algoritmen, for at det virker korrekt. Du kan læse mere om UAM i afsnittet [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 er den anbefalede mulighed: Det er den eneste, der kan genkende UAM og virke sammen med [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), den nyeste algoritme.
 
-## Simultaneous carbs
+## Samtidige kulhydrater
 
-There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+Der er en stor forskel mellem algoritmerne Følsomhed AAPS og Følsomhed Vægtet Gennemsnit på den ene side og Oref1 på den anden side, når flere måltider overlapper.
 
-* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Oref1 regner med, at kun ét måltid bliver absorberet ad gangen: Det andet måltid begynder først at blive absorberet, når det første måltid er helt absorberet.
+* Følsomhed AAPS og Følsomhed Vægtet Gennemsnit begynder at absorbere kulhydraterne med det samme, når du indtaster dem. Hvis der er mere end ét måltid om bord, tilpasses den minimale kulhydratabsorption efter måltidets størrelse og den maksimale absorptionstid. Den minimale absorption vil derfor være højere end med Oref1.
