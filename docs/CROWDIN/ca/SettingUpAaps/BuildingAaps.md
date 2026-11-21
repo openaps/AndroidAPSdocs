@@ -1,36 +1,36 @@
-# Building AAPS
+# Compilar AAPS
 
-## Build yourself instead of download
+## Compileu-la vosaltres mateixos en lloc de descarregar-la
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**L'aplicació AAPS (un fitxer apk) no es pot descarregar, per les normes sobre dispositius mèdics. És legal compilar l'aplicació per al vostre ús propi, però no en podeu donar una còpia a altres persones!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més detalls.
 
 ---
 
-Three methods are available to build the AAPS app:
+Hi ha tres mètodes per compilar l'aplicació AAPS:
 
-### Build with a browser (recommended)
+### Compilar amb un navegador (recomanat)
 
 You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
+**[Seguiu aquestes instruccions.](./BrowserBuild.md)**
 
 ----
 
-### Build with Android Studio
+### Compilar amb Android Studio
 
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
+Podeu compilar l'aplicació al vostre ordinador amb Android Studio. Abans era l'única opció de compilació; ara Android Studio el fan servir sobretot els desenvolupadors que volen fer canvis al codi.
 
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Seguiu aquestes instruccions.](./ComputerBuild.md)**
 
 ----
 
-### Build using the command-line
+### Compilar des de la línia d'ordres
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Aquesta opció és per a qui prefereix compilar AAPS a la línia d'ordres local, sense instal·lar Android Studio.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Seguiu aquestes instruccions.](./CLIBuild.md)**
 
 ----
 
@@ -43,7 +43,7 @@ Each build method has its own troubleshooting section:
 * **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
 * **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Lost your keystore or its password? Vegeu [Reinstal·lar AAPS amb un nou magatzem de claus](#reinstall-aaps).
 
 If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
 
