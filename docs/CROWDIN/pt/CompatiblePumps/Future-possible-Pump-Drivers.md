@@ -1,6 +1,6 @@
 # Futuros (possíveis) controladores de bombas
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Esta é uma lista de algumas bombas no mercado, do estado do seu suporte noutros sistemas de loop e do seu estado no AAPS. No fim há alguma informação sobre o que uma bomba precisa para ser "compatível com o Loop".
 
     {contents} Índice
     :depth: 1
@@ -42,7 +42,7 @@ Tandem: t:Mobi ([Página inicial](https://www.tandemdiabetes.com/))
 
 ### Bomba de insulina Willcare ([Página inicial](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Estado do Loop:** Neste momento não é candidata a Loop, mas a equipa do fabricante contactou-nos e tem interesse em tornar a bomba compatível com o loop (parece que só faltam os comandos para ler/escrever o perfil).
 
 **Requisito de hardware para o AAPS:** nenhum. Parece ter Bluetooth.
 
