@@ -27,7 +27,7 @@ You already have this repository, for example from an earlier attempt. Close the
 ![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
 
 - **"No GitHub user with this name"** in stap 1: typ je GitHub-gebruikersnaam zoals die in je GitHub-profiel staat, niet je e-mailadres.
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
+- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Verwijder de repository (**Settings** → onderaan de pagina → **Delete this repository**) en doe [stap 1](#aaps-builder-step1) opnieuw met de knop **Mijn privé-repository maken**.
 
 ### Step 3: the secret
 
@@ -70,7 +70,7 @@ Right after the repository is created, GitHub may not have read its workflow fil
 
 #### The build failed (red cross)
 
-1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+1. Tik op de instellingspagina op **Mijn builds openen** en tik op de build met het rode kruis.
 
    ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
 
@@ -86,7 +86,7 @@ Right after the repository is created, GitHub may not have read its workflow fil
 - **De build stopt met "This repository is PUBLIC"**: open in je repository **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** en bouw opnieuw.
 - **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
 - **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"The secret is too short"**, **"The secret is not a valid code"** of **"The secret does not contain a keystore"**: er is verkeerde tekst in het secret geplakt, vaak het woord `KEYSTORE_SET` zelf, of maar een deel van de code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
+- **"The secret is too short"**, **"The secret is not a valid code"** of **"The secret does not contain a keystore"**: er is verkeerde tekst in het secret geplakt, vaak het woord `KEYSTORE_SET` zelf, of maar een deel van de code. Open in je repository **Settings** → **Secrets and variables** → **Actions**, bewerk `KEYSTORE_SET` en plak opnieuw de lange code van **Secret kopiëren** (doe eerst stap 2 van de instellingspagina opnieuw als je die gesloten hebt).
 - **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
 - **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
 - **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
