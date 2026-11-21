@@ -34,13 +34,13 @@ Abaixo mostram-se capturas de ecrã do **AAPS** de um perfil de _exemplo_. Note 
 ![Exemplo de perfil ativo](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Alvos de glicose
 
 ### Descrição
 
 O seu **alvo de glicose** é um valor central e todos os cálculos do **AAPS** se baseiam nele. É diferente do intervalo alvo em que normalmente tenta manter os seus valores de glicose. O alvo é usado nos cálculos do **AAPS**: se o **AAPS** prevê que a sua **glicose** vai ficar fora do intervalo alvo, atua para o trazer de volta a esse intervalo.
 
-The targets can be defined within those boundaries :
+Pode definir os alvos dentro destes limites:
 
 |        | Alvo _Baixo_           | Alvo _Alto_              |
 | ------ | ---------------------- | ------------------------ |
@@ -57,25 +57,25 @@ A **figura abaixo** mostra um exemplo de como o alvo pode ser definido num perfi
 
 ![Alvo](../images/v4/Profiles/Profile_Target.png)
 
-Os alvos de **glicose** são definidos de acordo com as suas preferências e necessidades pessoais. Por exemplo, se tem medo de hipoglicemias durante a noite, pode definir o alvo um pouco mais alto, 117 mg/dl (6,5 mmol/l), das 21h às 7h. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+Os alvos de **glicose** são definidos de acordo com as suas preferências e necessidades pessoais. Por exemplo, se tem medo de hipoglicemias durante a noite, pode definir o alvo um pouco mais alto, 117 mg/dl (6,5 mmol/l), das 21h às 7h. Se quiser ter bastante insulina ativa (IA) de manhã antes do bólus do pequeno-almoço, pode definir um alvo mais baixo de 81 mg/dl (4,5 mmol/l) das 7h às 8h.
 
 Em [Loop Aberto](#KeyAapsFeatures-OpenLoop), sobretudo enquanto avança pelos [primeiros objetivos](../SettingUpAaps/CompletingTheObjectives.md), usar um alvo com um intervalo largo pode ser uma boa opção enquanto aprende como o **AAPS** se comporta e ajusta o seu **Perfil**.<br/> Em [Loop Fechado](#KeyAapsFeatures-ClosedLoop) (a partir do **[Objetivo 6](#objectives-objective6)**), recomenda-se reduzir o intervalo até ter um único alvo para cada hora do dia (alvo _Baixo_ = alvo _Alto_), para que o **AAPS** reaja depressa às variações da **glicose**.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Taxas basais
 
 ### Descrição
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+A sua taxa basal de insulina (unidades/hora) fornece a insulina de fundo e mantém os seus níveis de glicose estáveis quando não come nem faz exercício.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. Para mais informação, o capítulo 6 do livro [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) de Gary Scheiner é muito útil.
+A bomba de insulina administra pequenas quantidades de insulina de ação rápida a cada poucos minutos, para impedir que o fígado liberte glicose a mais e para levar a glicose para as células do corpo. A insulina basal é normalmente 40–50 % da sua dose diária total (TID), conforme a sua alimentação, e segue em geral um ritmo circadiano, com um pico e um vale nas necessidades de insulina ao longo de 24 horas. Para mais informação, o capítulo 6 do livro [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) de Gary Scheiner é muito útil.
 
 A maioria dos educadores em diabetes tipo 1 (e das pessoas com diabetes tipo 1!) concorda que deve acertar primeiro as suas taxas basais, antes de tentar otimizar o FSI e o IHC.
 
 ### Impacto
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Com taxas basais corretas, acorda dentro do alvo e pode saltar refeições – ou comer – mais cedo ou mais tarde, sem a glicose ficar alta ou baixa.
 
 Uma taxa basal demasiado alta pode causar glicoses baixas. E vice-versa.
 
@@ -89,7 +89,7 @@ Pelo contrário, uma taxa basal demasiado baixa pode causar glicoses altas e imp
 
 A **figura abaixo** mostra um exemplo de como as taxas basais podem ser definidas num perfil do **AAPS**.
 
-![Basal rates](../images/v4/Profiles/Profile_BasalRates.png)
+![Taxas basais](../images/v4/Profiles/Profile_BasalRates.png)
 
 Acertar as suas taxas basais faz-se por tentativa e erro, e deve ser feito em conjunto com a sua equipa de diabetes.
 
@@ -121,11 +121,11 @@ O editor de perfis só permite começar taxas basais à hora certa. Uma taxa bas
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Fator de sensibilidade à insulina (FSI)
 
 ### Descrição
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+O fator de sensibilidade à insulina (por vezes chamado fator de correção) indica quanto o seu nível de glicose desce com 1 unidade de insulina.
 
 **Em mg/dl:** Se tiver um **FSI** de 40, cada unidade de insulina baixa a sua glicose cerca de 40 mg/dl (por exemplo, a sua glicose desce de 140 mg/dl para 100 mg/dl).
 
@@ -135,9 +135,9 @@ Por estes exemplos, pode ver que quanto _menor_ for o valor do **FSI**, menos se
 
 ### Impacto
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Isto leva a uma correção mais agressiva / mais forte do loop, com **mais insulina**. Se o seu **FSI** for demasiado forte (valor pequeno), pode causar **glicose** baixa.
+Um **FSI mais baixo / mais forte** (p. ex. 40 em vez de 50) quer dizer que a insulina baixa menos a sua **glicose** por unidade. Isto leva a uma correção mais agressiva / mais forte do loop, com **mais insulina**. Se o seu **FSI** for demasiado forte (valor pequeno), pode causar **glicose** baixa.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. Isto leva a uma correção menos agressiva / mais fraca do loop, com **menos insulina**. Se o seu **FSI** for demasiado fraco (valor grande), pode causar **glicose** alta.
+Um **FSI mais alto / mais fraco** (p. ex. 45 em vez de 35) quer dizer que a insulina baixa mais a sua **glicose** por unidade. Isto leva a uma correção menos agressiva / mais fraca do loop, com **menos insulina**. Se o seu **FSI** for demasiado fraco (valor grande), pode causar **glicose** alta.
 
 **Exemplo:**
 * A **glicose** está em 190 mg/dl (10,5 mmol/l) e o alvo é 100 mg/dl (5,6 mmol/l).
@@ -157,7 +157,7 @@ Veja na **figura abaixo** um exemplo de como os valores do FSI podem ser definid
 
 ![FSI do perfil](../images/v4/Profiles/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. Há mais detalhes no capítulo 7 do livro [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) de Gary Scheiner.
+Um ponto de partida simples para definir o seu FSI durante o dia é calculá-lo a partir da sua dose diária total (TID) com a regra dos 1700 (94). Há mais detalhes no capítulo 7 do livro [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) de Gary Scheiner.
 
 | 1700 (em mg/dl) ou 94 (em mmol/l) / TID = FSI aproximado.<br/><br/>Exemplo: TID = 40 U<br/>FSI aproximado (mg/dl) = 1700/40 = 43<br/>FSI aproximado (mmol/l) = 94/40 = 2,4 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -171,7 +171,7 @@ Tenha cuidado, porque este valor é muitas vezes definido demasiado baixo. Demas
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Rácio insulina/hidratos de carbono (IHC)
 
 ### Descrição
 
@@ -179,9 +179,9 @@ O **IHC** indica quantos gramas de hidratos de carbono são cobertos por uma uni
 
 Algumas pessoas usam também a abreviatura **I:C** em vez de **ICR** (no AAPS: IHC), ou falam de rácio de hidratos de carbono (em inglês «carb ratio»): **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Por exemplo, um rácio insulina/hidratos de carbono de 1 para 10 (1:10) quer dizer que toma 1 U de insulina por cada 10 gramas de hidratos de carbono que come. Uma refeição de 25 g de hidratos de carbono precisa de 2,5 U de insulina.
 
-Se o seu **IHC** for mais fraco (valor mais alto), por exemplo 1:20, só precisa de 0,5 U de insulina para cobrir 10 g de hidratos de carbono. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Se o seu **IHC** for mais fraco (valor mais alto), por exemplo 1:20, só precisa de 0,5 U de insulina para cobrir 10 g de hidratos de carbono. Uma refeição de 25 g de hidratos de carbono precisa de 25/20 = 1,25 U de insulina.
 
 É comum ter **IHC** diferentes a horas diferentes do dia, por causa dos níveis hormonais e da atividade física. Muitas pessoas têm o **IHC** mais baixo/mais forte à hora do pequeno-almoço, porque nessa altura costumam ser mais resistentes à insulina. Assim, por exemplo, o **IHC** de um adulto pode ser 1:8 ao pequeno-almoço, 1:10 ao almoço e 1:10 ao jantar, mas estes padrões não são iguais para todos: algumas pessoas são mais resistentes à insulina ao jantar e precisam de um **IHC** mais forte/mais pequeno nessa altura.
 
@@ -201,7 +201,7 @@ Se o seu **IHC** for mais fraco (valor mais alto), por exemplo 1:20, só precisa
 > 
 > Fator UP 2,4 U / 12 g   ===>   IHC = 12 g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Há tabelas de conversão na Internet, p. ex. [aqui](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impacto
 
@@ -226,11 +226,11 @@ Se as suas taxas basais estiverem corretas, pode testar ao verificar que a **IA*
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Porque é importante ter o perfil certo
 
 **Porque devo tentar acertar as definições do meu perfil? O loop não pode tratar disso sozinho?**
 
-Um loop fechado híbrido _pode_ tentar ajustar a administração de insulina para reduzir o mau controlo glicémico causado por valores errados no **Perfil**. It can do this, for example, by withholding insulin delivery if you are going to hypo. No entanto, pode ter um controlo glicémico muito melhor se as definições do seu **Perfil** já estiverem o mais perto possível do que o seu corpo precisa. Esta é uma das razões pelas quais o **AAPS** usa objetivos por etapas para passar do uso da bomba em loop aberto para o loop fechado híbrido. Além disso, haverá momentos em que precisa de abrir o loop (aquecimento do sensor, falha do sensor _etc._), às vezes a meio da noite, e vai querer ter as definições certas para essas situações.
+Um loop fechado híbrido _pode_ tentar ajustar a administração de insulina para reduzir o mau controlo glicémico causado por valores errados no **Perfil**. Pode fazê-lo, por exemplo, ao suspender a administração de insulina se estiver a caminho de uma hipoglicemia. No entanto, pode ter um controlo glicémico muito melhor se as definições do seu **Perfil** já estiverem o mais perto possível do que o seu corpo precisa. Esta é uma das razões pelas quais o **AAPS** usa objetivos por etapas para passar do uso da bomba em loop aberto para o loop fechado híbrido. Além disso, haverá momentos em que precisa de abrir o loop (aquecimento do sensor, falha do sensor _etc._), às vezes a meio da noite, e vai querer ter as definições certas para essas situações.
 
 Se começa a usar o **AAPS** depois de ter usado outro sistema de bomba em loop aberto ou fechado, já terá uma ideia razoável dos valores a usar para as taxas basais (**BR**), os fatores de sensibilidade à insulina (**FSI**) e os rácios insulina/hidratos de carbono (**IHC**).
 
@@ -300,7 +300,7 @@ O Assistente de Perfil oferece dados de dois hospitais diferentes para crianças
 4. Mude para o separador **Perfil 2**.
 5. Toque em **Tipo de Perfil** e selecione "Perfil Padrão DPV".
 6. Ajuste o Perfil Padrão DPV (baseado nos dados de outro hospital) ao introduzir a idade da criança, o TID Total e a percentagem de basal. Note que os dados DPV só fornecem **taxas basais**, por isso o IHC e o FSI aparecem como zero neste perfil.
-7. Open the **Comparison** tab. Vai aparecer a comparação dos dois perfis ajustados (veja a captura de ecrã abaixo).
+7. Abra o separador **Comparação**. Vai aparecer a comparação dos dois perfis ajustados (veja a captura de ecrã abaixo).
 8. Se quiser começar a ajustar o seu perfil com base numa destas sugestões, use o botão **Clonar** na parte de baixo da comparação.
 
 ![Assistente de Perfil para crianças 2](../images/v4/Profiles/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Também pode usar o [Assistente de Perfil](#aaps-screens-profile-helper) (menu �
 4. Mude para o separador **Perfil 2**.
 5. Em **Tipo de Perfil**, selecione "Troca de Perfil" para escolher no histórico de todas as suas **Trocas de Perfil**.
 6. Escolha a **Troca de Perfil** com a qual quer comparar.
-7. Open the **Comparison** tab. Vai aparecer a comparação dos dois perfis (veja a captura de ecrã abaixo).
+7. Abra o separador **Comparação**. Vai aparecer a comparação dos dois perfis (veja a captura de ecrã abaixo).
 
 ![Assistente de Perfil 2](../images/v4/Profiles/ProfileHelper2.png)
