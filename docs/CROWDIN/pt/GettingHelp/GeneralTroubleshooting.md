@@ -39,7 +39,7 @@ Se nenhum dos links resolver o seu problema, consulte [Onde posso obter ajuda?](
 * [Perfil: «Basal rate is not compatible with the current pump» (a taxa basal não é compatível com a bomba atual)](#your-aaps-profile-basal-not-compatible)
 * [Bomba: «Os dados vêm de uma bomba diferente»](#config-builder-wrong-pump-data)
 * [Cliente Nightscout](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **«Não é possível ler as definições do AAPS»** ao iniciar: as definições estão encriptadas com uma chave que o Android guarda para o **AAPS**, e essa chave já não as consegue abrir, por exemplo depois de o armazenamento de chaves do telefone ter sido reposto. Enquanto este ecrã é mostrado, o **AAPS** não está a funcionar e não controla a bomba. Toque em **Tentar Novamente**: fecha e reinicia o **AAPS**. Se isso não ajudar, reinicie o telefone. Use **Começar do zero** só quando mais nada ajudar: põe de lado o ficheiro de definições que não pode ser lido (muda-lhe o nome e guarda-o) e inicia o **AAPS** com definições vazias. Depois, importe a sua última [exportação de definições](../Maintenance/ExportImportSettings.md).
 
 ### Utilização
 
