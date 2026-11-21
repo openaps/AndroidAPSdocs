@@ -1,236 +1,236 @@
-# Temp-Targets
+# Objectius temporals
 
-## What are Temp-Targets and where can I set and configure them?
+## Què són els objectius temporals i on els puc establir i configurar?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+Un **objectiu temporal** (o, abreujat, **OT**) és una funció d'**AAPS** que permet a l'usuari canviar el seu [rang objectiu de **glucèmia**](#profile-glucose-targets) per a activitats planificades. **AAPS** ho aconsegueix ajustant la insulina que rep l'usuari.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Un objectiu de glucèmia, sobretot si és de curta durada (menys de 4 hores), no ha de ser el *valor real* que espereu o voleu que tingui la vostra glucèmia. És més aviat una bona manera de dir a **AAPS** que sigui més o menys agressiu, mantenint igualment la glucèmia dins del rang.
 
-Temporary targets can be defined within those boundaries :
+Els objectius temporals es poden definir dins d'aquests límits:
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|       | Objectiu temporal     |
+| ----- | --------------------- |
+| Mínim | 4 mmol/l o 72 mg/dl   |
+| Màxim | 10 mmol/l o 180 mg/dl |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS** té tres **objectius temporals** predefinits de sèrie: per a l'exercici (**Activitat (esport)**), els àpats (**Menjar aviat**) i una hipoglucèmia prevista (**Hipo**). Són a la pantalla **Objectiu temporal** (**Gestionar** → **Objectiu temporal**), que també podeu obrir simplement tocant el **xip de l'objectiu** a la pantalla principal.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Els usuaris han de tenir expectatives realistes sobre els resultats que es poden aconseguir quan seleccionen un **objectiu temporal** a **AAPS**. L'èxit per arribar a l'objectiu de **glucèmia** desitjat depèn de molts factors, com ara: la fiabilitat de la configuració d'**AAPS** de l'usuari, el control general de la **glucèmia**, la **IOB**, la sensibilitat a la insulina, la resistència a la insulina, la intensitat de l'esforç durant l'exercici, etc.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Un **objectiu temporal** pot necessitar uns 30 minuts o més per arribar a l'objectiu de **glucèmia** desitjat. **AAPS** no pot arribar a un objectiu de **glucèmia** amb efecte immediat, i els usuaris ho han de tenir en compte quan seleccionen un **objectiu temporal**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Els valors que es mostren són els valors per defecte; podeu [ajustar cada predefinit](#TempTargets-change-preset-defaults) a les vostres necessitats.
 
-### TT - Activity
+### OT - Activitat (esport)
 
-![TT Activity](../images/v4/TempTarget/TempTarget2.png)
+![OT Esport](../images/v4/TempTarget/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**Objectiu de glucèmia (predefinit per defecte, ajustable)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS intentarà arribar a 140 mg/dl o 7,8 mmol/l durant 1 h 30 min
 
-**Other considerations users may wish to factor in when selecting**:
+**Altres aspectes que els usuaris poden tenir en compte quan el seleccionen**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Segons la **glucèmia**, **AAPS** «reduirà» la insulina per arribar a l'objectiu de **glucèmia**. Si l'objectiu de **glucèmia** no és dins del rang (és a dir, és per sobre de l'objectiu de **glucèmia** seleccionat al **perfil** de l'usuari), **AAPS** pot mantenir la basal.
 
-In closed loop mode, **SMB**:
+En mode de llaç tancat, els **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *es poden* desactivar (vegeu més avall); i/o
+- la basal es pot activar si **AAPS** té **IOB** negativa, o <0.
 
-Users may also wish to consider:
+Els usuaris també poden considerar:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
+- *seleccionar* aquest **OT** 1–2 hores abans de l'exercici planificat, per assegurar una IOB més baixa (el moment adequat per a aquest OT varia d'una persona a una altra); i
+- *seleccionar* un perfil temporal (reduït) durant l'activitat planificada, per assegurar una **IOB** més baixa;
 - *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
 
-### TT - Eating soon
+### OT - Menjar aviat
 
-![TT Eating soon](../images/v4/TempTarget/TempTarget1.png)
+![OT Menjar aviat](../images/v4/TempTarget/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**Objectiu de glucèmia (predefinit per defecte, ajustable)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS intentarà arribar a 90 mg/dl o 5,0 mmol/l durant 45 minuts
 
-**Other considerations users may wish to factor in when selecting**:
+**Altres aspectes que els usuaris poden tenir en compte quan el seleccionen**:
 
-In closed loop mode, **SMB**:
+En mode de llaç tancat, els **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- continuaran activats; i/o
+- la basal també es pot activar segons la configuració del **perfil** de l'usuari.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Segons la **glucèmia**, **AAPS** «augmentarà» la insulina, dins dels paràmetres de configuració d'**AAPS** de l'usuari, per arribar a l'objectiu de **glucèmia** desitjat.
 
-### TT - Hypo
+### OT - Hipo
 
-![TT Hypo](../images/v4/TempTarget/TempTarget3.png)
+![OT Hipo](../images/v4/TempTarget/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**Objectiu de glucèmia (predefinit per defecte, ajustable)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS intentarà arribar a 160 mg/dl o 8,9 mmol/l durant 1 hora
 
-**Other considerations users may wish to factor in when selecting**:
+**Altres aspectes que els usuaris poden tenir en compte quan el seleccionen**:
 
-In closed loop mode, **SMB**:
+En mode de llaç tancat, els **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *es poden* desactivar (vegeu més avall); i/o
+- la basal es pot activar si **AAPS** té **IOB** negativa, o <0.
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## Establir i gestionar objectius temporals (Gestionar → Objectiu temporal)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+A **AAPS** v4, gestioneu els vostres OT **predefinits** i inicieu un objectiu temporal des de la pantalla **Gestionar** (navegació inferior) → **Objectiu temporal** (*«Gestionar i establir objectius temporals»*).
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![La pantalla Objectiu temporal: carrusel de predefinits, editor i barra d'accions](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+La pantalla té tres parts:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **Carrusel de predefinits** (a dalt): feu lliscar per veure els vostres OT predefinits. Cada targeta mostra el **nom**, l'**objectiu** i la **durada** del predefinit; l'OT que està en marxa queda destacat.
+2. **Editor** (al mig): l'**Objectiu temporal** i la **Durada** que s'aplicaran realment, i també una data/hora d'**Activació**.
+3. **Barra d'accions** (a baix): els botons **➕ afegir**, **‘️ eliminar** i **▶ activar**.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+Quan seleccioneu una targeta de predefinit, el seu **objectiu** i la seva **durada** es carreguen a l'editor.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} Predefinits de sèrie i personalitzats :class: note Els predefinits de sèrie (**Menjar aviat**, **Activitat (esport)** i **Hipo**) sempre existeixen i **no es poden eliminar** (però en podeu canviar els valors i desar-los). Els predefinits que creeu vosaltres són **personalitzats** i els podeu editar o eliminar lliurement.
 
-    <br />### Activating a temporary target
+    <br />### Activar un objectiu temporal
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    Feu lliscar fins al predefinit que vulgueu (els seus valors es carreguen a l'editor), si voleu ajusteu l'**objectiu**/la **durada** a l'editor, i després toqueu **▶ Activar**. A confirmation shows the exact target, duration and reason before anything starts:
     
     ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
     After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} Canviar els números és només per a una vegada: no canvia el predefinit
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    L'**objectiu** i la **durada** de l'editor són els valors que **Activar** farà servir *ara mateix*. Si els canvieu, el canvi és **temporal**: només s'aplica a aquesta activació i **no modifica el predefinit desat**. Així podeu «ajustar i activar» un OT puntual (per exemple, activar *Activitat (esport)* avui amb un objectiu una mica diferent) sense canviar el predefinit per sempre.
     
 
-### Saving changes to a preset
+### Desar canvis en un predefinit
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+Si *sí* que voleu conservar un valor editat, **deseu-lo**: quan l'editor és diferent del predefinit seleccionat, apareix una icona **Desar** a la barra d'eines superior. En tocar-la, l'**objectiu** i la **durada** actuals (i el nom, en els predefinits personalitzats) es desen al predefinit seleccionat. En els predefinits de sèrie, a la barra d'accions també apareix un botó **Restaurar valors per defecte** (↺): torna els valors per defecte del predefinit.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![Pantalla Objectiu temporal amb la icona Desar i el botó Restaurar valors per defecte](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+Per tant, la regla general és:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **Activar** → fer servir els números **una vegada** (el predefinit no canvia).
+- **Desar** → fer que els números siguin els **nous valors per defecte** del predefinit.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+Per tornar un predefinit de sèrie als valors originals, seleccioneu-lo i toqueu el botó **↺ Restaurar**. Només apareix a la barra d'accions per a un predefinit **de sèrie** amb valors diferents dels valors de fàbrica, i torna l'**objectiu** i la **durada** originals d'aquest predefinit.
 
-### Adding and removing presets
+### Afegir i eliminar predefinits
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ Afegir**: crea un **predefinit personalitzat nou** amb els valors actuals de l'editor. La targeta nova apareix al carrusel.
+- **‘️ Eliminar**: elimina el predefinit **personalitzat** seleccionat. Els predefinits de sèrie (*Menjar aviat*, *Activitat (esport)*, *Hipo*) no es poden eliminar.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Quan tingueu almenys dos predefinits **personalitzats**, també en podeu canviar l'ordre al carrusel: toqueu la icona **Reordenar** (⇅) a la barra superior, moveu la targeta del centre amb els **botons ◀ / ▶** i confirmeu amb **✓**. Els predefinits de sèrie no canvien de lloc: només es poden moure els predefinits personalitzats. (Els controls són els mateixos que per [reordenar perfils](ProfileSwitch-ProfilePercentage.md).)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+Els vostres predefinits formen part de la configuració sincronitzada, de manera que es comparteixen entre el telèfon principal i els clients emparellats.
 
-### Other ways to set a temporary target
+### Altres maneres d'establir un objectiu temporal
 
-A temporary target can also be set without opening this screen:
+També es pot establir un objectiu temporal sense obrir aquesta pantalla:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- amb els **interruptors d'OT del diàleg Carbs** (vegeu [més avall](#TempTargets-carbs-dialog)),
+- amb un **botó de predefinit a la [barra d'accés ràpid](QuickLaunch.md)**: la categoria *Objectius temporals predefinits* de *Configurar l'accés ràpid* ofereix un botó d'un sol toc per a cada predefinit,
+- des d'un **rellotge Wear OS** (l'element de menú / mosaic **Objectiu temporal**),
+- des d'un **client** emparellat (vegeu [Control principal ↔ client (control remot signat)](../RemoteFeatures/ClientMasterControl.md)),
+- com a part d'una **[escena](Scenes.md)** (l'acció *Objectiu temporal*), o
+- des d'una regla d'**Automatització** (*Iniciar objectiu temporal* / *Aturar objectiu temporal*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## On puc seleccionar un objectiu temporal?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+La manera més ràpida és tocar el **xip de l'objectiu** a la pantalla principal (mostra el vostre rang objectiu actual):
 
-![Target chip on the main screen](../images/v4/TempTarget/TempTarget6.png)
+![Xip de l'objectiu a la pantalla principal](../images/v4/TempTarget/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+Això obre la pantalla **Objectiu temporal** descrita més amunt: feu lliscar fins a un predefinit i toqueu **▶ Activar**. També podeu arribar a la mateixa pantalla des de **Gestionar** → **Objectiu temporal**.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= Quan introduïu carbohidrats, no cal que obriu la pantalla **Objectiu temporal**: el **diàleg Carbs** (**Tractaments** → **Carbs**) té a dalt els interruptors **Iniciar OT: Hipo**, **Iniciar OT: Menjar aviat** i **Iniciar OT: Esport**. Activeu-ne un i el predefinit corresponent s'activa juntament amb l'entrada de carbohidrats:
 
-![TT toggles in the Carbs dialog](../images/v4/TempTarget/TempTarget5.png)
+![Interruptors d'OT al diàleg Carbs](../images/v4/TempTarget/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} OT Hipo automàtic
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    Si obriu el **diàleg Carbs** quan la vostra glucèmia és inferior a 72 mg/dl (4 mmol/l), **AAPS** us preselecciona l'interruptor **Iniciar OT: Hipo** (tret que ja hi hagi en marxa un objectiu temporal més alt amb més temps restant).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## On puc canviar l'objectiu temporal per defecte i substituir-lo per les meves preferències?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+L'**objectiu** i la **durada** de cada predefinit s'editen directament a la pantalla **Objectiu temporal**; ja no hi ha cap entrada separada a la configuració per a això:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. Obriu la pantalla **Objectiu temporal** (toqueu el xip de l'objectiu, o **Gestionar** → **Objectiu temporal**).
+2. Feu lliscar fins al predefinit que voleu canviar.
+3. Ajusteu l'**Objectiu temporal** i/o la **Durada** a l'editor.
+4. Toqueu la icona **Desar** que apareix a la barra d'eines superior.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/v4/TempTarget/TempTarget7.png)
+![Editar un predefinit: icona Desar a la barra d'eines, Restaurar a la barra d'accions](../images/v4/TempTarget/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+Mentre l'editor sigui diferent dels valors de fàbrica d'un predefinit de sèrie, a la barra d'accions també apareix un botó **↺ Restaurar**: toqueu-lo per tornar l'objectiu i la durada originals del predefinit.
 
-## How do I cancel a Temp-Target?
+## Com cancel·lo un objectiu temporal?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+Mentre hi ha un objectiu temporal en marxa, el xip de l'objectiu de la pantalla principal mostra l'objectiu i el temps que queda. Toqueu-lo: a la pantalla **Objectiu temporal**, el predefinit en marxa queda destacat com a **ACTIU**, i apareix un botó vermell **✗ Cancel·lar** al final de la barra d'eines inferior, just a l'esquerra del botó **▶ Activar**. Toqueu-lo i confirmeu:
 
-![Cancelling a running temp target](../images/v4/TempTarget/TempTarget9.png)
+![Cancel·lar un objectiu temporal en marxa](../images/v4/TempTarget/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+Un objectiu temporal en marxa també es pot aturar des d'un **rellotge Wear OS**, des d'un **client** emparellat o amb una regla d'**Automatització** (*Aturar objectiu temporal*).
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## Objectiu temporal Hipo
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+L'**objectiu temporal Hipo** permet que **AAPS** eviti que l'usuari tingui una glucèmia baixa, reduint la insulina que rep. Si l'usuari preveu que la seva **glucèmia** baixarà: normalment **AAPS** ho hauria de gestionar, però depèn molt de l'estabilitat de la configuració d'**AAPS** de l'usuari. Un **objectiu temporal Hipo** permet a l'usuari anticipar-se a la baixada prevista i fer que **AAPS** redueixi la insulina.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+De vegades, quan es mengen carbohidrats per tractar una hipo, la **glucèmia** de l'usuari pot pujar ràpidament, i **AAPS** corregirà aquesta pujada ràpida de la **glucèmia** activant els **SMB**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+Alguns usuaris volen evitar que es donin **SMB** durant l'**objectiu temporal Hipo**. Per fer-ho, desactiveu *'Activar SMB amb objectiu temporal alt'* a **Configuració** → **OpenAPS SMB** (vegeu més avall):
 
 - Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
 - Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+Nota: si obriu el **diàleg Carbs** quan la vostra glucèmia és inferior a 72 mg/dl o 4 mmol/l, **AAPS** preselecciona automàticament l'interruptor **Iniciar OT: Hipo**.
 
 (TempTargets-activity-temp-target)=
 
-## Activity Temp-Target
+## Objectiu temporal Activitat (esport)
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Abans i durant l'exercici, l'usuari pot necessitar un objectiu més alt per evitar una hipoglucèmia durant l'activitat.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Per simplificar l'**objectiu temporal Activitat (esport)**, l'usuari pot configurar un **objectiu temporal Activitat (esport)** per defecte que faci pujar la **glucèmia** reduint la insulina, per frenar la baixada de la **glucèmia** i evitar la hipoglucèmia.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+Els usuaris nous d'**AAPS** potser hauran de fer proves i personalitzar els valors per defecte de l'**objectiu temporal Activitat (esport)** perquè aquesta funció els vagi el millor possible. Cada persona és diferent a l'hora d'aconseguir un control estable de la glucèmia durant l'exercici. Vegeu també la [secció d'esport de les preguntes freqüents](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Podeu iniciar tots dos en un sol pas: toqueu el nom del perfil a la pantalla principal, toqueu el botó rodó **▶**, establiu un **Percentatge** inferior al 100% i una **Durada**, i després activeu **Objectiu temporal / Activitat (esport)**. Vegeu [Canviar el percentatge del perfil](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+Avançat, objectiu 9: els usuaris poden activar *'Un objectiu temporal alt puja la sensibilitat'* per a **objectius temporals** de 100 mg/dl (5,6 mmol/l) o més a OpenAPS **SMB**. Un objectiu de 99 mg/dl (5,5 mmol/l) és un objectiu normal, ni alt ni baix. Aleshores **AAPS** és més sensible.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+A més, si *'Activar SMB amb objectiu temporal alt'* està desactivat, **AAPS** no lliurarà **SMB**, encara que hi hagi COB > 0, *'Activar SMB amb objectiu temporal baix'* o *'Activar SMB sempre'* estigui activat i OpenAPS **SMB** estigui actiu.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Eating soon Temp-Target
+## Objectiu temporal Menjar aviat
 
 **Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
 This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Podeu llegir més sobre el «mode Menjar aviat» a l'article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (en anglès) o [aquí](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+Avançat, [objectiu 9](#objectives-objective9): si feu servir OpenAPS SMB i teniu activat *'Un objectiu temporal baix baixa la sensibilitat'*, **AAPS** actua una mica més agressivament. Per a aquesta opció, cal que l'**objectiu temporal** sigui de 98 mg/dl (5,4 mmol/l) o menys.
 
-## How do I turn off SMB during Temp-Targets?
+## Com desactivo els SMB durant els objectius temporals?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+Per fer-ho, obriu **Configuració** → **OpenAPS SMB** i desactiveu *'Activar SMB amb objectiu temporal alt'*.
 
-![Enable SMB with high temp target preference](../images/v4/TempTarget/TempTargetSMB.png)
+![Opció Activar SMB amb objectiu temporal alt](../images/v4/TempTarget/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+Així us assegureu que **AAPS** no donarà **SMB**, encara que hi hagi COB > 0, *'Activar SMB amb objectiu temporal baix'* o *'Activar SMB sempre'* estigui activat i OpenAPS SMB estigui actiu.
