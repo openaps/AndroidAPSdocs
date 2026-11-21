@@ -1,171 +1,171 @@
-# DanaRS, Dana-i and Dana-i2
+# DanaRS, Dana-i og Dana-i2
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*Denne vejledning beskriver, hvordan du indstiller appen og din pumpe, hvis du har en DanaRS fra 2017 eller senere, en Dana-i eller en Dana-i2. Gå til [DanaR](./DanaR-Insulin-Pump.md), hvis du i stedet har den oprindelige DanaR.*
 
-**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+**Dana-i2 kan bruges fra AAPS version 4.0.** Den bruger den samme **Dana-i/RS**-driver som Dana-i.
 
-* In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
+* I DanaRS/i/i2-pumpen bruger appen »BASAL A«. Eksisterende data bliver overskrevet.
 
-    {contents} Table of contents
+    {contents} Indholdsfortegnelse
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Pumpens funktioner med AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually (see [Timezone traveling](#timezone-traveling-danarv2-danars)).
+* Kommunikerer med **AAPS** via telefonens indbyggede Bluetooth, uden en ekstra kommunikationsenhed.
+* Sommertid og skift af tidszone skal håndteres manuelt (se [Skift af tidszone og sommertid](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
-## Pairing pump
+## Parring af pumpen
 
-* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* Tap **Pump** and select **Dana-i/RS**.
+* Åbn **menuen** (☰) i øverste venstre hjørne af hovedskærmen i **AAPS**, og vælg **Konfiguration**.
+* Tryk på **Pumpe**, og vælg **Dana-i/RS**.
     
-    ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+    ![Konfiguration > Pumpe med Dana-i/RS-pluginet](../images/v4/Configuration/configuration_pump_list_2.png)
     
-    Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
+    Når det er valgt, viser kortet **Dana-i/RS** to knapper, **Indstillinger** og **Åbn plugin**:
     
-    ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+    ![Dana-i/RS-pluginet valgt under Konfiguration > Pumpe](../images/v4/Pumps/dana_i_rs_enabled.png)
     
-    **Settings** opens the settings of the Dana-i/RS driver:
+    **Indstillinger** åbner indstillingerne for Dana-i/RS-driveren:
     
-    ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+    ![Indstillinger for Dana-i/RS-driveren](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+    **Åbn plugin** (eller **Administrer** > **Pumpe**) åbner pumpeskærmen for Dana-i/RS. Før en pumpe er parret, ser den sådan ud:
     
-    ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+    ![Pumpeskærm for Dana-i/RS før parring](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* Tryk på **Parring** på pumpeskærmen. **AAPS** søger efter pumper i nærheden.
 
-* Tap the entry for your pump in the list.
+* Tryk på din pumpe i listen.
     
-    ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
+    ![Skærmen Parring med en Dana-pumpe, som søgningen har fundet](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
+* **Du skal bekræfte parringen på pumpen!** Det fungerer på samme måde som andre Bluetooth-parringer, du måske kender (for eksempel smartphone og bilradio).
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Dana RS bekræftelse af parring](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Følg parringen ud fra typen og firmwaren på din pumpe:
     
-    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
-    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+    * For DanaRS v1 beder **AAPS** om **Pumpeadgangskode (kun v1)**. Indtast adgangskoden til din pumpe (se [Standardadgangskode](#DanaRS-Insulin-Pump-default-password)).
+    * For DanaRS v3 beder **AAPS** dig om at trykke på OK på pumpen og indtaste de 2 rækker af tal og bogstaver, der vises på pumpen. Hold pumpens display tændt ved at trykke på minusknappen, indtil du er færdig. Tryk derefter på **Færdig**.
+    * For Dana-i og Dana-i2 vises Androids almindelige dialog til parring. Indtast det 6-cifrede tal, der vises på pumpen.
 
-* When **Pairing successful!** is shown, tap **Done**.
+* Når **Parring lykkedes!** vises, så tryk på **Færdig**.
     
-    ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    ![Parring lykkedes!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
-    You are back on the pump screen, which now shows your pump's status.
+    Du er tilbage på pumpeskærmen, som nu viser din pumpes status.
     
-    ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
+    ![Pumpeskærm for Dana-i/RS efter parring](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+* Vælg **Bolushastighed** under **Indstillinger** for at ændre standardhastigheden for bolus (12 s/E, 30 s/E eller 60 s/E).
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
-* Enable extended boluses on pump
+* Indstil basaltrinnet på pumpen til 0,01 E/t i lægemenuen (Doctors menu) (se pumpens brugervejledning).
+* Indstil bolustrinnet på pumpen til 0,05 E i lægemenuen (Doctors menu) (se pumpens brugervejledning). **AAPS** læser basal- og bolustrinnene fra pumpen og bruger dem til hver bolus, så en bolus altid passer til det trin, der er indstillet på pumpen. Pumpeskærmen viser dem i rækken **Basal-/bolustrin**.
+* Aktiver forlængede boluser på pumpen
 
-### Options shown only for some models
+### Indstillinger, der kun vises for nogle modeller
 
-* **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
-* **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
-* If a Dana-i2 refuses a bolus, **AAPS** shows the reason, for example *Pump is not primed*, *Not enough insulin in the reservoir* or *Easy sleep mode is on in the pump*.
+* **Autolås**: På en Dana-i2 har skærmen **Brugerindstillinger** (på pumpeskærmen, **Administrer** > **Pumpe**) en kontakt **Autolås** til pumpens indstilling for automatisk lås. Tryk på **Gem indstillinger på pumpen**, når du har ændret den.
+* **Easy-tilstand**: På pumpemodeller, der har en enkel menutilstand (easy mode), viser pumpeskærmen en række **Easy-tilstand** med **Tændt** eller **Slukket**.
+* Hvis en Dana-i2 afviser en bolus, viser **AAPS** årsagen, for eksempel *Pumpen er ikke klargjort*, *Ikke nok insulin i reservoiret* eller *Easy sleep-tilstand er slået til i pumpen*.
 
 (DanaRS-Insulin-Pump-default-password)=
 
-### Default password
+### Standardadgangskode
 
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* For DanaRS med firmware v1 og v2 er standardadgangskoden 1234.
+* For DanaRS med firmware v3 eller Dana-i bliver standardadgangskoden beregnet ud fra produktionsdatoen som MMDD, hvor MM er måneden og DD er dagen, hvor pumpen blev produceret (dvs. '0124' betyder måned 01 og dag 24).
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manufacturing date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
+    * Vælg REVIEW i MAIN MENU, og åbn derefter SHIPPING INFORMATION i undermenuen
+    * Nummer 3 er produktionsdatoen. 
+    * For v3/i bruges denne adgangskode kun til at låse menuen på pumpen. Den bruges ikke til kommunikation, og du skal ikke indtaste den i AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
-## Change password on pump
+## Skift adgangskoden på pumpen
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
+* Tryk på OK-knappen på pumpen
+* Vælg »OPTION« i hovedmenuen (gå til højre ved at trykke på pileknappen flere gange)
     
-    ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+    ![DanaRS hovedmenu](../images/DanaRSPW_01_MainMenu.png)
 
-* In options menu select "USER OPTION"
+* Vælg »USER OPTION« i menuen med indstillinger
     
-    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+    ![DanaRS menu med indstillinger](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. password"
+* Brug pileknappen til at rulle ned til »11. password«
     
-    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+    ![DanaRS 11. Adgangskode](../images/DanaRSPW_03_11PW.png)
 
-* Press OK to enter old password.
+* Tryk på OK for at indtaste den gamle adgangskode.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* Indtast den **gamle adgangskode** (standardadgangskoden, se [ovenfor](#DanaRS-Insulin-Pump-default-password)), og tryk på OK
     
-    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS Indtast gammel adgangskode](../images/DanaRSPW_04_11PWenter.png)
 
-* If wrong password is entered here there will be no message indicating failure!
+* Hvis du indtaster en forkert adgangskode her, kommer der ingen besked om, at det ikke virkede!
 
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* Indstil en **ny adgangskode** (skift tallene med knapperne + og - / gå til højre med pileknappen).
     
-    ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+    ![DanaRS Ny adgangskode](../images/DanaRSPW_05_PWnew.png)
 
-* Confirm with OK button.
+* Bekræft med OK-knappen.
 
-* Press OK to save setting.
+* Tryk på OK for at gemme indstillingen.
     
-    ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+    ![DanaRS Gem ny adgangskode](../images/DanaRSPW_06_PWnewSave.png)
 
-* Move down to "14. EXIT" and press OK to exit.
+* Gå ned til »14. EXIT«, og tryk på OK for at afslutte.
     
-    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+    ![DanaRS Afslut](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
-## Dana RS specific errors
+## Fejl, der er specifikke for Dana RS
 
-### Error during insulin delivery
+### Fejl under levering af insulin
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Hvis forbindelsen mellem AAPS og Dana RS bliver afbrudt under levering af en bolus (dvs. du går væk fra telefonen, mens Dana RS giver insulin), ser du følgende besked og hører en alarm.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarm ved levering af insulin](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
-* Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
-* The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
+* I de fleste tilfælde er det bare et kommunikationsproblem, og den rigtige mængde insulin er leveret.
+* Tjek i pumpens historik, at den rigtige bolus blev givet. Du kan gøre det på selve pumpen eller i **AAPS** på pumpeskærmen (**Administrer** > **Pumpe**) > **Pumpehistorik** > **Bolusser**.
+* Slet fejlposten under [behandlinger](#screens-bolus-carbs), hvis du vil.
+* Den rigtige mængde bliver læst og registreret ved næste forbindelse. For at gennemtvinge det kan du trykke på **Opdater** på pumpeskærmen eller bare vente på næste forbindelse.
 
-## Special note when switching phone
+## Vigtigt ved skift af telefon
 
-When switching to a new phone the following steps are necessary:
+Når du skifter til en ny telefon, skal du gøre følgende:
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone
+* [Eksporter indstillinger](../Maintenance/ExportImportSettings.md) på din gamle telefon
+* Overfør indstillinger fra den gamle til den nye telefon
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AAPS on the new phone.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* **Par Dana RS manuelt** med den nye telefon
+* Hvis du sætter flueben ved **Erstat også pumpeindstillinger**, når du importerer, bliver pumpens forbindelsesindstillinger også importeret, og AAPS på din nye telefon »kender« allerede pumpen og starter derfor ikke en Bluetooth-søgning. Derfor skal den nye telefon og pumpen parres manuelt.
+* Installer AAPS på den nye telefon.
+* [Importer indstillinger](../Maintenance/ExportImportSettings.md) på din nye telefon
 
 ### DanaRS v3, Dana-i, Dana-i2
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
+* Start parringen som beskrevet [ovenfor](#DanaRS-Insulin-Pump-pairing-pump).
+* Nogle gange skal du først slette parringsoplysningerne i **AAPS**. Tryk på **Ophæv parring** på pumpeskærmen (**Administrer** > **Pumpe**), og bekræft **Nulstil parringsinformation?**. Tryk derefter på **Parring** igen.
 
-## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
+## Skift af tidszone med pumperne DanaRS, Dana-i og Dana-i2
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Information om rejser på tværs af tidszoner finder du i afsnittet [Rejser over tidszoner med pumper](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## Hvor kan du få hjælp
 
-Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Driveren til DanaRS/Dana-i/Dana-i2 er udviklet af fællesskabet på **frivillig** basis. Før du beder om hjælp:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Læs** det relevante afsnit i denne dokumentation for at se, hvordan funktionen skal virke.
+2. **Spørg** i kanalen *#AAPS* på [Discord](https://discord.gg/4fQUWHZ4Mw) eller i en af de andre [kanaler i fællesskabet](../GettingHelp/WhereCanIGetHelp.md).
+3. **Rapporter en fejl** ved at søge i de [eksisterende issues](https://github.com/nightscout/AndroidAPS/issues); hvis din fejl ikke er der, så opret et [nyt issue](https://github.com/nightscout/AndroidAPS/issues), og vedhæft dine [logfiler](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Når du beder om hjælp, så angiv mærke og model på din telefon, Android-version, **AAPS**-version og en enkel og tydelig beskrivelse af problemet (hvad der er ændret, hvornår det sidst virkede).
