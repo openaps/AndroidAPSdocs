@@ -13,20 +13,20 @@
 
 **AAPS Builder** збирає для вас застосунок AAPS на GitHub – безкоштовному сайті для зберігання коду. На телефон нічого не треба встановлювати, і не треба відкривати файл підготовки.
 
-A setup page walks you through it. Перший раз це займає близько 10 хвилин:
+Сторінка налаштування проведе вас через усі кроки. Перший раз це займає близько 10 хвилин:
 
-1. Create your own **private copy** of AAPS Builder in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm. The build workflow, the file that tells GitHub how to build AAPS, is already in it.
-2. Create or upload your **signing key** (the keystore).
-3. Give the key to your repository as a GitHub **secret**.
-4. **Build** the app. One build takes 15 to 30 minutes.
-5. **Download and install** the app on your phone.
+1. Створіть власну **приватну копію** AAPS Builder у своєму обліковому записі GitHub: сторінка налаштування відкриває GitHub з усім уже заповненим, вам потрібно лише підтвердити. Робочий процес збірки – файл, який каже GitHub, як збирати AAPS, – уже є в ній.
+2. Створіть або вивантажте свій **ключ для підпису** (keystore).
+3. Передайте ключ своєму репозиторію як **секрет** GitHub.
+4. **Зберіть** застосунок. Одна збірка триває від 15 до 30 хвилин.
+5. **Завантажте і встановіть** застосунок на свій телефон.
 
 Вам **не** потрібно робити fork AndroidAPS: вихідний код AAPS завантажується з офіційного репозиторію AndroidAPS під час кожної збірки. Вам також **не** потрібен Google Drive: застосунок ви завантажуєте прямо з GitHub.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. Під час збірки робочий процес завантажує лише офіційний вихідний код AAPS і власні інструменти збірки GitHub. Ваш keystore ніколи не залишає ваш браузер і ваш приватний репозиторій.
+Робочий процес збірки підтримують розробники AAPS у репозиторії [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), а ваш репозиторій – це його копія. [Робочий процес](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) у вашій копії короткий: він запускає [кроки збірки](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml), які зберігаються в тому репозиторії, тож покращення доходять до вас без жодних змін у вашому репозиторії. Ви можете прочитати обидва файли. Під час збірки робочий процес завантажує лише офіційний вихідний код AAPS і власні інструменти збірки GitHub. Ваш keystore ніколи не залишає ваш браузер і ваш приватний репозиторій.
 ```
 
 (aaps-builder-before-you-start)=
@@ -37,11 +37,11 @@ The build workflow is maintained by the AAPS developers in the [nightscout/aaps-
 
 - **Обліковий запис GitHub** (безкоштовний). Якщо у вас його немає, спочатку створіть його на [github.com](https://github.com/signup).
 - **Веббраузер**: Chrome на телефоні або будь-який браузер на комп’ютері. Перш ніж почати, увійдіть на github.com у цьому браузері.
-- **На телефоні є застосунок GitHub?** Ви можете його залишити. Тоді деякі кнопки сторінки налаштування відкривають застосунок замість Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
+- **На телефоні є застосунок GitHub?** Ви можете його залишити. Тоді деякі кнопки сторінки налаштування відкривають застосунок замість Chrome. Збірка працює в застосунку, але застосунок **не може завантажити** готовий AAPS: [крок 5](#aaps-builder-step5) показує, як перейти в Chrome для завантаження.
 - Ваш **наявний keystore** (файл `.jks`), його пароль і псевдонім (alias), якщо ви вже збирали AAPS раніше і хочете оновити його без перевстановлення.
 
 ```{warning}
-**Ваш репозиторій для збірки має залишатися приватним.** Усе, що створює збірка, бачить кожен, хто може бачити репозиторій. Сторінка налаштування створює для вас приватний репозиторій. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
+**Ваш репозиторій для збірки має залишатися приватним.** Усе, що створює збірка, бачить кожен, хто може бачити репозиторій. Сторінка налаштування створює для вас приватний репозиторій. Ніколи не робіть його публічним і не робіть **fork** AAPS Builder замість копії: fork завжди публічний.
 
 Приватний репозиторій отримує 2000 безкоштовних хвилин GitHub Actions на місяць. Цього достатньо для кількох збірок.
 ```
@@ -49,8 +49,8 @@ The build workflow is maintained by the AAPS developers in the [nightscout/aaps-
 ```{warning}
 **Новий ключ чи наявний ключ: від цього залежить, чи зможете ви оновити AAPS.**
 
-- **AAPS вже є на вашому телефоні, і він зібраний з keystore, який у вас досі є**: виберіть на сторінці налаштування **I already have a keystore** (у мене вже є keystore) і вивантажте його. Ваша наступна збірка оновить AAPS без перевстановлення. Ви збирали AAPS попереднім способом збірки в браузері (власний fork)? Ваш keystore зберігається у вашому fork: [спочатку отримайте його копію](#aaps-builder-from-fork).
-- **Ви збираєте AAPS вперше, або ви втратили свій keystore чи його пароль**: виберіть **Create a new key** (створити новий ключ). Застосунок, підписаний новим ключем, **не може оновити** AAPS, підписаний іншим ключем. Ви маєте експортувати налаштування, скопіювати файл за межі телефона, видалити старий AAPS, встановити новий, а потім імпортувати налаштування: див. [Перевстановлення AAPS з новим keystore](#reinstall-aaps).
+- **AAPS вже є на вашому телефоні, і він зібраний з keystore, який у вас досі є**: виберіть на сторінці налаштування **У мене вже є keystore** і вивантажте його. Ваша наступна збірка оновить AAPS без перевстановлення. Ви збирали AAPS попереднім способом збірки в браузері (власний fork)? Ваш keystore зберігається у вашому fork: [спочатку отримайте його копію](#aaps-builder-from-fork).
+- **Ви збираєте AAPS вперше, або ви втратили свій keystore чи його пароль**: виберіть **Створити новий ключ**. Застосунок, підписаний новим ключем, **не може оновити** AAPS, підписаний іншим ключем. Ви маєте експортувати налаштування, скопіювати файл за межі телефона, видалити старий AAPS, встановити новий, а потім імпортувати налаштування: див. [Перевстановлення AAPS з новим keystore](#reinstall-aaps).
 
 Надалі завжди використовуйте той самий ключ. Коли ви створюєте новий ключ, завантажте резервну копію, яку пропонує сторінка, і зберігайте її разом з паролем і псевдонімом (`key0`) у безпечному місці поза телефоном.
 ```
@@ -61,15 +61,15 @@ The build workflow is maintained by the AAPS developers in the [nightscout/aaps-
 
 Пропустіть цей розділ, якщо ви ніколи не збирали AAPS попереднім способом збірки в браузері (власна копія, або fork, AndroidAPS на GitHub, з файлом підготовки і Google Drive).
 
-Ваш keystore зберігається як секрети у вашому fork. GitHub ніколи не показує секрет вдруге, тому ви не можете скопіювати його в новий репозиторій. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Ваш keystore зберігається як секрети у вашому fork. GitHub ніколи не показує секрет вдруге, тому ви не можете скопіювати його в новий репозиторій. Спочатку отримайте копію свого keystore, потім використайте її на [кроці 2](#aaps-builder-step2) з варіантом **У мене вже є keystore**.
 
 ```{warning}
-Не вибирайте **Create a new key**. AAPS, зібраний з новим ключем, не може оновити AAPS на вашому телефоні.
+Не вибирайте **Створити новий ключ**. AAPS, зібраний з новим ключем, не може оновити AAPS на вашому телефоні.
 ```
 
 Який випадок ваш?
 
-- **Ви використали Варіант 2** (ви вивантажили власний keystore з Android Studio), і у вас досі є файл `.jks`, його паролі та псевдонім: тут нічого робити не треба. Use that file in step 2.
+- **Ви використали Варіант 2** (ви вивантажили власний keystore з Android Studio), і у вас досі є файл `.jks`, його паролі та псевдонім: тут нічого робити не треба. Використайте цей файл на кроці 2.
 - **Ви використали Варіант 1** (ключ створив файл підготовки), або у вас більше немає файлу keystore: експортуйте його зі свого fork, як описано нижче.
 
 Щоб експортувати keystore зі свого fork:
@@ -82,27 +82,27 @@ The build workflow is maintained by the AAPS developers in the [nightscout/aaps-
    - `keyStoreInfo.txt`: ваші `KEYSTORE_PASSWORD`, `KEY_PASSWORD` і `ALIAS` (зазвичай `key0`).
 5. Скопіюйте `keystore.jks` на телефон (або на Google Drive, щоб вибрати його звідти).
 
-In [step 2](#aaps-builder-step2) of the setup page:
+На [кроці 2](#aaps-builder-step2) сторінки налаштування:
 
-1. Натисніть **I already have a keystore**.
-2. У полі **Keystore file** виберіть `keystore.jks`.
-3. У полі **Keystore password** введіть `KEYSTORE_PASSWORD` з `keyStoreInfo.txt`.
-4. У полі **Key alias** виберіть або введіть `ALIAS` з `keyStoreInfo.txt`.
-5. Якщо `KEY_PASSWORD` відрізняється від `KEYSTORE_PASSWORD`, зніміть позначку **Key password is the same as the keystore password** і введіть `KEY_PASSWORD`.
+1. Натисніть **У мене вже є keystore**.
+2. У полі **Файл keystore** виберіть `keystore.jks`.
+3. У полі **Пароль keystore** введіть `KEYSTORE_PASSWORD` з `keyStoreInfo.txt`.
+4. У полі **Псевдонім ключа (alias)** виберіть або введіть `ALIAS` з `keyStoreInfo.txt`.
+5. Якщо `KEY_PASSWORD` відрізняється від `KEYSTORE_PASSWORD`, зніміть позначку **Пароль ключа такий самий, як пароль keystore** і введіть `KEY_PASSWORD`.
 
 Зберігайте `keystore.zip` і його `ZIP_PASSWORD` у безпечному місці поза телефоном: це резервна копія вашого ключа.
 
-To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. Ви можете залишити свій fork, доки AAPS, зібраний з AAPS Builder, не буде встановлено на ваш телефон.
+Щоб також зберігати збірки AAPS Builder на Google Drive, виконайте [крок 6](#aaps-builder-google-drive): сторінка налаштування отримає для вас новий `GDRIVE_OAUTH2`. Ви можете залишити свій fork, доки AAPS, зібраний з AAPS Builder, не буде встановлено на ваш телефон.
 
 ## Відкрийте сторінку налаштування
 
 **→ [Відкрийте сторінку налаштування AAPS Builder](#aaps-builder-setup)**
 
-The setup page is part of this documentation, in your language. Keep this page open in another tab as well: the sections below explain each step of the setup page in more detail, with screenshots.
+Сторінка налаштування є частиною цієї документації, вашою мовою. Також тримайте цю сторінку відкритою в іншій вкладці: розділи нижче докладніше пояснюють кожен крок сторінки налаштування, зі знімками екрана.
 
 Сторінка налаштування відкриває кожну сторінку GitHub у новій вкладці Chrome. Щоб повернутися на сторінку налаштування, натисніть кнопку вкладок поруч з адресним рядком Chrome (квадрат із числом) і виберіть сторінку налаштування AAPS Builder.
 
-![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+![Перемикач вкладок](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
 
 Сторінка налаштування працює повністю у вашому браузері: ваш ключ і паролі нікуди не надсилаються, крім секрету GitHub, у який ви самі їх вставляєте. У GitHub надсилається лише ваше ім'я користувача GitHub, щоб перевірити, чи воно існує. Вона запам’ятовує ваше ім’я користувача GitHub і назву репозиторію, тож ви можете будь-коли повернутися до неї, щоб знову відкрити сторінку секретів або свої збірки.
 
@@ -112,80 +112,80 @@ The setup page is part of this documentation, in your language. Keep this page o
 
 ## Крок 1 – Створіть свій приватний репозиторій для збірки
 
-This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Лише ви бачите його і застосунки, які він збирає.
+Цей крок створює вашу власну приватну копію AAPS Builder у вашому обліковому записі GitHub, з робочим процесом збірки всередині. Лише ви бачите його і застосунки, які він збирає.
 
 1. Переконайтеся, що ви увійшли на github.com у цьому браузері.
 
-2. У полі **Your GitHub username** введіть своє ім’я користувача GitHub, а не адресу електронної пошти. Сторінка перевіряє його на GitHub: **✓ GitHub user found** означає, що все правильно.
+2. У полі **Ваше ім'я користувача GitHub** введіть своє ім’я користувача GitHub, а не адресу електронної пошти. Сторінка перевіряє його на GitHub: **✓ GitHub user found** означає, що все правильно.
 
-3. У полі **Name of your repository** залиште запропоновану назву `my-aaps`. Якщо ви вже створили свій репозиторій з іншою назвою, введіть точно цю назву.
+3. У полі **Назва вашого репозиторію** залиште запропоновану назву `my-aaps`. Якщо ви вже створили свій репозиторій з іншою назвою, введіть точно цю назву.
 
    ```{note}
-   **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+   **Вже маєте репозиторій AAPS Builder** (створений попередньою версією сторінки налаштування)? Не створюйте новий: введіть точно його назву, пропустіть кнопку **Створити мій приватний репозиторій** і один раз оновіть його робочий процес, як пояснено в розділі [Оновлення AAPS](#aaps-builder-updates). Ваші секрети залишаються такими, як є. Якщо ви все ж хочете новий репозиторій, виберіть назву, якої у вас ще немає, наприклад `my-aaps-2`, і використайте той самий keystore на кроці 2.
 
-   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   Не вводьте назву свого fork AndroidAPS: fork публічний, і він уже збирає за допомогою власного робочого процесу **AAPS CI**.
    ```
 
    ![Заповнений крок 1 сторінки налаштування](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Перевірте рядок **Your repository:** там має бути `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. Перевірте рядок **Ваш репозиторій:** там має бути `github.com/<your username>/my-aaps`. Сторінка налаштування запам’ятовує назву з вашого останнього відвідування: перевіряйте її щоразу, перш ніж натискати її кнопки.
 
-5. Натисніть **Create my private repository**.
+5. Натисніть **Створити мій приватний репозиторій**.
 
-   ![The repository line and the Create my private repository button](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Рядок репозиторію і кнопка «Створити мій приватний репозиторій»](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
-6. GitHub opens **Create a new repository** in a new tab. Everything is already filled in: under **Start with a template**, the template `nightscout/aaps-builder` with **Include all branches** off, and under **General**, your account as **Owner** and the name you chose.
+6. GitHub відкриває **Create a new repository** у новій вкладці. Усе вже заповнено: у розділі **Start with a template** – шаблон `nightscout/aaps-builder` з вимкненим **Include all branches**, а в розділі **General** – ваш обліковий запис як **Owner** і вибрана вами назва.
 
    ![Сторінка GitHub Create a new repository](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Don't change anything.
+   Нічого не змінюйте.
 
-7. Scroll down: under **Configuration**, **Choose visibility** is already **Private**. Tap the green **Create repository** button.
+7. Прокрутіть униз: у розділі **Configuration** для **Choose visibility** вже вибрано **Private**. Натисніть зелену кнопку **Create repository**.
 
-   ![Visibility Private and the Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
+   ![Visibility Private і кнопка Create repository](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Поверніться на вкладку сторінки налаштування** для кроку 2: натисніть кнопку вкладок поруч з адресним рядком Chrome і виберіть сторінку налаштування.
+   GitHub показує ваш новий репозиторій: він містить папку `.github` (з робочим процесом збірки) і файл `README.md`. **Поверніться на вкладку сторінки налаштування** для кроку 2: натисніть кнопку вкладок поруч з адресним рядком Chrome і виберіть сторінку налаштування.
 
-   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+   ![Новий репозиторій](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
 
 ```{warning}
-**Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+**Ваш новий репозиторій порожній**, без файлів? Його створено не з шаблону, і він не може збирати. Видаліть його (**Settings** → унизу сторінки → **Delete this repository**), потім знову натисніть **Створити мій приватний репозиторій** на сторінці налаштування.
 ```
 
 ```{tip}
-GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+GitHub каже **my-aaps already exists in this account**? Ваш репозиторій уже є: закрийте вкладку GitHub і продовжуйте на сторінці налаштування. Якщо ваш ключ уже в ньому, продовжуйте з [кроку 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
 
-## Step 2 – Your signing key
+## Крок 2 – Ваш ключ для підпису
 
 Застосунок має бути підписаний вашим власним ключем. Виберіть одну з двох вкладок. Спочатку прочитайте [попередження про новий чи наявний ключ](#aaps-builder-before-you-start).
 
-![Setup page step 2: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
+![Крок 2 сторінки налаштування: два варіанти ключа](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
-### I already have a keystore (у мене вже є keystore)
+### У мене вже є keystore
 
-1. Натисніть **I already have a keystore**.
-2. У полі **Keystore file** виберіть свій файл `.jks` (або `.keystore`, `.p12`, `.pfx`). На телефоні спочатку скопіюйте файл на телефон або на Google Drive.
-3. У полі **Keystore password** введіть пароль keystore.
-4. У полі **Key alias** виберіть свій псевдонім зі списку або введіть його, якщо списку немає. Для keystore, створених в Android Studio, це зазвичай `key0`.
-5. Якщо пароль ключа відрізняється від пароля keystore, зніміть позначку **Key password is the same as the keystore password** і введіть пароль ключа.
-6. Натисніть **Check and continue**.
+1. Натисніть **У мене вже є keystore**.
+2. У полі **Файл keystore** виберіть свій файл `.jks` (або `.keystore`, `.p12`, `.pfx`). На телефоні спочатку скопіюйте файл на телефон або на Google Drive.
+3. У полі **Пароль keystore** введіть пароль keystore.
+4. У полі **Псевдонім ключа (alias)** виберіть свій псевдонім зі списку або введіть його, якщо списку немає. Для keystore, створених в Android Studio, це зазвичай `key0`.
+5. Якщо пароль ключа відрізняється від пароля keystore, зніміть позначку **Пароль ключа такий самий, як пароль keystore** і введіть пароль ключа.
+6. Натисніть **Перевірити і продовжити**.
 
-Сторінка перевіряє пароль і псевдонім на вашому пристрої. **Keystore OK! Continue with step 3.** means everything is right. Якщо там написано, що пароль буде перевірено під час збірки, все одно продовжуйте: збірка повідомить вам, якщо щось не так.
+Сторінка перевіряє пароль і псевдонім на вашому пристрої. **Keystore OK! Continue with step 3.** означає, що все правильно. Якщо там написано, що пароль буде перевірено під час збірки, все одно продовжуйте: збірка повідомить вам, якщо щось не так.
 
-### Create a new key (створити новий ключ)
+### Створити новий ключ
 
-1. Натисніть **Create a new key**.
+1. Натисніть **Створити новий ключ**.
 
 2. Придумайте пароль і введіть його двічі. Правила: щонайменше 8 символів, лише літери a–z і A–Z, цифри 0–9 і символи, наприклад `! ? #`. Без пробілів, без літер з діакритикою (наголосами) і без символу `|`.
 
-3. Натисніть **Create key**. Мине кілька секунд, перш ніж з’явиться **Key created**.
+3. Натисніть **Створити ключ**. Мине кілька секунд, перш ніж з’явиться **Ключ створено**.
 
    ![Форма нового ключа з паролем, введеним двічі](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Натисніть **Download backup (aaps-keystore.jks)**. Якщо Chrome запитує **Download file again?** (Завантажити файл ще раз?), на телефоні вже є старіша резервна копія з такою самою назвою: натисніть **Download again** (Завантажити ще раз). Тоді Chrome зберігає новий ключ як `aaps-keystore (1).jks`: саме цей файл належить до цього ключа. Збережіть його і не плутайте зі старішим.
+4. Натисніть **Завантажити резервну копію (aaps-keystore.jks)**. Якщо Chrome запитує **Download file again?** (Завантажити файл ще раз?), на телефоні вже є старіша резервна копія з такою самою назвою: натисніть **Download again** (Завантажити ще раз). Тоді Chrome зберігає новий ключ як `aaps-keystore (1).jks`: саме цей файл належить до цього ключа. Збережіть його і не плутайте зі старішим.
 
    Зберігайте ці три речі разом, у безпечному місці поза телефоном (наприклад, у власному хмарному сховищі):
 
@@ -199,21 +199,21 @@ GitHub says **my-aaps already exists in this account**? You already have your re
 
 (aaps-builder-step3)=
 
-## Step 3 – Give the key to your repository
+## Крок 3 – Передайте ключ своєму репозиторію
 
-Step 3 unlocks when step 2 is done. Ваш ключ, його паролі та псевдонім упаковано в одне значення – секрет `KEYSTORE_SET`.
+Крок 3 стає доступним, коли виконано крок 2. Ваш ключ, його паролі та псевдонім упаковано в одне значення – секрет `KEYSTORE_SET`.
 
-1. Натисніть **Open the secrets page**.
+1. Натисніть **Відкрити сторінку секретів**.
 
-![Setup page step 3](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
+![Крок 3 сторінки налаштування](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
 2. GitHub відкриває сторінку **New secret** вашого репозиторію. На телефоні вона розташована під меню налаштувань: прокрутіть униз.
 
 ![Форма GitHub New secret](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Перейдіть на вкладку сторінки налаштування і натисніть **Copy name**. Поверніться на вкладку GitHub і вставте назву в маленьке поле **Name**. Назва – `KEYSTORE_SET`.
+3. Перейдіть на вкладку сторінки налаштування і натисніть **Копіювати назву**. Поверніться на вкладку GitHub і вставте назву в маленьке поле **Name**. Назва – `KEYSTORE_SET`.
 
-4. Перейдіть на вкладку сторінки налаштування і натисніть **Copy secret**. Поверніться на вкладку GitHub і вставте секрет у велике поле **Secret** (на телефоні довге натискання). Секрет – це дуже довгий код, тисячі символів: сторінка налаштування показує його перші символи поруч із кнопкою. Не вставляйте туди слово `KEYSTORE_SET`.
+4. Перейдіть на вкладку сторінки налаштування і натисніть **Копіювати секрет**. Поверніться на вкладку GitHub і вставте секрет у велике поле **Secret** (на телефоні довге натискання). Секрет – це дуже довгий код, тисячі символів: сторінка налаштування показує його перші символи поруч із кнопкою. Не вставляйте туди слово `KEYSTORE_SET`.
 
 5. Натисніть **Add secret**. `KEYSTORE_SET` тепер видно в розділі **Repository secrets**.
 
@@ -227,20 +227,20 @@ GitHub показує **Page not found** (404)? Спочатку перевір�
 
 (aaps-builder-step4)=
 
-## Step 4 – Build the app
+## Крок 4 – Зберіть застосунок
 
-1. На сторінці налаштування натисніть **Open the build page**. GitHub відкриває сторінку **Build AAPS** вашого репозиторію.
+1. На сторінці налаштування натисніть **Відкрити сторінку збірки**. GitHub відкриває сторінку **Build AAPS** вашого репозиторію.
 
    ![Сторінка GitHub Build AAPS з кнопкою Run workflow](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
    Якщо замість цього відкривається **застосунок GitHub**: натисніть **RUN WORKFLOW**, перевірте версію і варіант і ще раз натисніть **RUN WORKFLOW**. Застосунок може ще показувати **Nothing to see here**: потягніть список униз, щоб оновити його і побачити свою збірку. Потім продовжуйте з кроку 4 нижче.
 
-2. If GitHub asks, tap the green button to enable workflows.
+2. Якщо GitHub запитає, натисніть зелену кнопку, щоб увімкнути робочі процеси.
 
-   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+   Список робочих процесів містить два записи: використовуйте **Build AAPS**. Не звертайте уваги на **AAPS Builder**: він містить кроки збірки і не має кнопки **Run workflow**.
 
 3. Натисніть **Run workflow**. Відкриється невелика форма:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
+   - **Version**: залиште `latest`, щоб зібрати найновіший випуск AAPS, або введіть номер випуску, наприклад `4.0.0`.
    - **Variant**: залиште `fullRelease` для звичайного використання з помпою. Інші варіанти пояснено в розділі [варіанти збірки](#browserbuild-variant). `aapsclient3Release` збирає **AAPSClient3**, доступний з версії **AAPS** 4.0 (див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions)).
    - Натисніть зелену кнопку **Run workflow**.
 
@@ -260,20 +260,20 @@ GitHub показує **Page not found** (404)? Спочатку перевір�
 
 Якщо немає кнопки **Build AAPS** або **Run workflow**:
 
-- Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
-- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+- Відкрийте свій репозиторій і перевірте, що в ньому є папка `.github` з файлом `workflows/build.yml`. Якщо репозиторій порожній, його створено не з шаблону: видаліть його (**Settings** → унизу сторінки → **Delete this repository**) і знову виконайте [крок 1](#aaps-builder-step1) за допомогою кнопки.
+- Файл є, але GitHub показує **This workflow does not exist**: див. [усунення проблем](#aaps-builder-ts-workflow-not-found).
 - Відкрийте вкладку **Actions**. Якщо там написано, що робочі процеси вимкнено, натисніть зелену кнопку, щоб їх увімкнути, потім натисніть **Build AAPS** у списку.
 
 (aaps-builder-step5)=
 
-## Step 5 – Install the app on your phone
+## Крок 5 – Встановіть застосунок на телефон
 
 ```{warning}
 **Перед кожним оновленням** [експортуйте налаштування](#ExportImportSettings-Automating-Settings-Export) в AAPS і скопіюйте файл **за межі телефона** (Google Drive, Dropbox…). Зберігайте там також кілька старіших експортів і файли APK, щоб завжди можна було повернутися назад.
 ```
 
 1. На телефоні відкрийте сторінку налаштування в **Chrome**. Увійдіть на github.com, якщо буде запит.
-2. Натисніть **Open my builds**, потім найновішу збірку із зеленою галочкою.
+2. Натисніть **Відкрити мої збірки**, потім найновішу збірку із зеленою галочкою.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
@@ -313,39 +313,39 @@ GitHub показує **Page not found** (404)? Спочатку перевір�
 
 (aaps-builder-google-drive)=
 
-## Step 6 (optional) – Also save the app in Google Drive
+## Крок 6 (необов’язково) – Також зберігайте застосунок на Google Drive
 
 Ви також можете зберігати кожну збірку на своєму Google Drive, у папці `AAPS/<version>`. Це необов’язково: застосунок завжди доступний на сторінці збірки.
 
-Для цього потрібен ще один секрет – `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
+Для цього потрібен ще один секрет – `GDRIVE_OAUTH2`. Крок 6 сторінки налаштування отримує його від Google для вас, на телефоні або на комп’ютері. Тоді **AAPS** може бачити і змінювати лише ті файли, які він створює на вашому Google Drive, і нічого більше.
 
-1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
+1. На сторінці налаштування натисніть **Підключити Google Drive**. Google відкривається в новій вкладці.
 
-2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
+2. Виберіть свій обліковий запис Google і дозвольте доступ. Якщо Google каже, що застосунок не перевірено, натисніть **Advanced** (Додатково), потім **Go to …** (Перейти до …).
 
-   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+   ![Вибір облікового запису](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
 
-   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+   ![Продовжити](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
 
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). It starts with `http://127.0.0.1:47913/`.
+3. Потім нова вкладка показує помилку, наприклад **This site can't be reached** або **127.0.0.1 refused to connect**. **Так і має бути:** відповідь Google міститься в адресі цієї вкладки. Натисніть адресний рядок, потім значок копіювання поруч з адресою (на комп’ютері: виділіть усю адресу і скопіюйте її). Вона починається з `http://127.0.0.1:47913/`.
 
    ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
 
-   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+   ![Значок копіювання](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
-4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
+4. Поверніться на вкладку сторінки налаштування протягом кількох хвилин: відповідь Google дійсна лише короткий час і лише один раз. Вставте адресу в поле **Вставте сюди скопійовану адресу** і натисніть **Отримати GDRIVE_OAUTH2**. Сторінка показує **GDRIVE_OAUTH2 is ready**.
 
-   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+   ![Адресу вставлено](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
    ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
-5. Натисніть **Open the secrets page**. Натисніть **Copy name**, потім вставте назву в маленьке поле **Name** (назва – `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+5. Натисніть **Відкрити сторінку секретів**. Натисніть **Копіювати назву**, потім вставте назву в маленьке поле **Name** (назва – `GDRIVE_OAUTH2`). Натисніть **Копіювати секрет**, вставте секрет у велике поле **Secret** і натисніть **Add secret**.
 
-   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
+   ![Додавання секрету](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
 Починаючи з наступної збірки, APK також зберігаються на Google Drive.
 
-Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
+Вже маєте значення `GDRIVE_OAUTH2` з файлу підготовки інших способів збірки в браузері? Воно теж підходить: додайте його як секрет `GDRIVE_OAUTH2`.
 
 Google зупиняє доступ, якщо ви не збираєте 6 місяців або якщо ви змінили пароль Google. Тоді збірка повідомить вам про це: виконайте ці кроки знову. Див. [Термін дії Google Refresh Token минув](#aaps-ci-google-token-expired).
 
@@ -355,24 +355,24 @@ Google зупиняє доступ, якщо ви не збираєте 6 міс
 
 Ваш репозиторій ніколи нічого не збирає сам: ви вирішуєте, коли збирати, яку версію і який варіант. Коли виходить нова версія AAPS:
 
-1. [Back up your settings](#aaps-builder-step5) as explained in step 5.
-2. Build the new version as in [step 4](#aaps-builder-step4). Залиште `latest` або введіть номер випуску.
-3. Download and install it as in [step 5](#aaps-builder-step5).
+1. [Зробіть резервну копію налаштувань](#aaps-builder-step5), як пояснено на кроці 5.
+2. Зберіть нову версію, як на [кроці 4](#aaps-builder-step4). Залиште `latest` або введіть номер випуску.
+3. Завантажте і встановіть її, як на [кроці 5](#aaps-builder-step5).
 
-**Updates of the build steps** reach you by themselves: at every build, your repository runs the build steps released by the AAPS developers in nightscout/aaps-builder. Nothing changes in your repository, and there is no automatic build.
+**Оновлення кроків збірки** доходять до вас самі: під час кожної збірки ваш репозиторій запускає кроки збірки, випущені розробниками AAPS у nightscout/aaps-builder. У вашому репозиторії нічого не змінюється, і автоматичної збірки немає.
 
-**Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
+**Оновлення вашого файлу робочого процесу** бувають рідко: лише коли змінюється форма **Run workflow**, наприклад для нового варіанта збірки, або один раз, якщо ваш репозиторій створено попередньою версією сторінки налаштування (порожній репозиторій з коротким файлом робочого процесу) або зі старого шаблону. Про це повідомляє сторінка [Оновлення та зміни документації](../Maintenance/DocumentationUpdate.md). Ваш секрет `KEYSTORE_SET` залишається без змін. На сторінці налаштування відкрийте **Updating your copy** наприкінці кроку 1:
 
-1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
-3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-4. Tap **Commit changes…**, then **Commit changes**.
+1. Натисніть **Відкрити найновіший робочий процес**. На комп’ютері натисніть **значок копіювання** («Copy raw file») угорі праворуч від файлу. На телефоні натомість відкрийте **текстову версію**, натисніть і утримуйте текст, потім **Select all** (Вибрати все) і **Copy** (Копіювати).
+2. Натисніть **Відкрити мій файл робочого процесу**, потім меню **⋯** угорі праворуч від файлу і **Edit file… In place** (на комп’ютері натисніть олівець).
+3. Замініть весь текст скопійованим робочим процесом (довге натискання на телефоні: **Select all**, потім **Paste**).
+4. Натисніть **Commit changes…**, потім **Commit changes**.
 
-The first line of the file shows its version.
+Перший рядок файлу показує його версію.
 
 ## Усунення несправностей
 
-Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
+Something went wrong? Див. [Усунення проблем з AAPS Builder](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:
