@@ -1,116 +1,116 @@
-# Pumps and cannulas
+# Bombes i cànules
 
-## Changing infusion sets: insulin reservoirs and cannulas
+## Canvi dels sets d'infusió: reservoris d'insulina i cànules
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+El procediment que es descriu a continuació és només per a bombes amb tub. No s'aplica a bombes patch com Omnipod, Medtrum Nano, Accu-Chek Solo, etc. De vegades aquest procediment s'anomena «canvi de set»: un canvi de set «complet» inclou el reservori d'insulina i la cànula, i un canvi de set «parcial» és només el canvi de cànula.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+Les bombes patch s'omplen i s'enceben soles amb el seu propi assistent d'activació, i la cànula ja és dins del cos. **AAPS** no ofereix l'encebament per a aquestes bombes: **Encebar** no es mostra al full **Gestionar** ni a l'accés ràpid. Consulteu la pàgina de la vostra bomba a [Bombes compatibles](../Getting-Started/CompatiblePumps.md).
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+El canvi físic del cartutx o reservori no es pot fer amb **AAPS**: s'ha de fer directament a la bomba. Un cop fet, cal anotar-lo manualment a **AAPS**.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
-### Guide for changing both the pump reservoir and cannula
+### Guia per canviar el reservori de la bomba i la cànula
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. A **AAPS**, desconnecteu la bomba: premeu la [icona del llaç](#AapsScreens-loop-status) a la pantalla principal i seleccioneu **Desconnectar bomba** durant 1 hora. La icona canvia a un endoll gris, que indica que la bomba està desconnectada.
 
-2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+2. Canvieu físicament el reservori d'insulina: desconnecteu la bomba del cos i canvieu el reservori/cartutx i la cànula segons les instruccions del fabricant.
 
-3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3. Encebeu/ompliu el tub i la cànula: es pot fer directament a la bomba. Assegureu-vos d'eliminar totes les bombolles del tub.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. Col·loqueu la nova cànula al cos. Un cop inserida la cànula i retirada l'agulla, la cànula té un petit espai d'aire que també s'ha d'encebar. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Ara premeu la quantitat d'encebament de cànula predeterminada (normalment és d'unes 0,3 U, però comproveu que aquest valor sigui correcte per a la vostra cànula) i seleccioneu **OK**. Llegiu el missatge de resum i confirmeu l'encebament prement **OK**.
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![Encebar al full Gestionar amb una bomba amb tub](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. Reconnecteu la bomba a **AAPS**: premeu la icona de l'endoll gris i seleccioneu **Reconnectar bomba** per continuar amb el llaç.
 
-### Useful information concerning insulin/cannula changes
+### Informació útil sobre els canvis d'insulina i de cànula
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* Anotar un canvi de cànula restableix Autosens al 100%. També restableix els indicadors d'estat i les edats de la cànula i de la insulina a la pantalla principal d'**AAPS**.
 
-* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+* Podeu establir o ajustar les quantitats d'encebament predeterminades a la configuració d'**Encebar**: escriviu «prime» a la barra de cerca de la pantalla principal per obrir-la (vegeu [Configuració](../SettingUpAaps/Preferences.md)). Consulteu el full d'instruccions de la caixa de cànules per saber quantes unitats (segons la llargada de l'agulla i del tub) cal encebar per a la vostra cànula.
 
-* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* **AAPS** no té en compte la insulina lliurada amb la funció d'encebament quan calcula la insulina a bord (IOB), i a l'[Historial de tractaments](#aaps-screens-treatments) apareix marcada com a «Encebament».
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* **AAPS** tampoc no té en compte cap bolus fet des de la bomba mentre la bomba està desconnectada. Si feu un bolus directament des de la bomba mentre **AAPS** està desconnectat, quan reconnecteu la bomba podeu anotar aquesta insulina (sense fer el bolus) al diàleg **Insulina** (vegeu [Anotar insulina lliurada sense fer el bolus](#pumps-cannulas-announce-insulin) més avall).
 
-### Cannula, infusion site, tubing and/or pump issues
+### Problemes amb la cànula, el punt d'infusió, el tub o la bomba
 
-If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+Si esteu segurs que no heu rebut insulina durant un temps, tot i que **AAPS** ha registrat que sí, i sabeu exactament quan va començar el problema (_p. ex._ traieu la cànula i veieu que es va doblegar en inserir-la), ho podeu corregir a **AAPS**. Tingueu en compte, però, que potser la insulina sí que s'ha lliurat però actua lentament per algun motiu.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+Elimineu un lliurament d'insulina d'**AAPS** només amb MOLTA precaució, per si la insulina _sí_ que s'ha lliurat, i vigileu de prop la glucèmia durant les 24 h següents.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+Per eliminar bolus i SMB que sabeu que no s'han lliurat, obriu el **menú** (☰), seleccioneu [Historial de tractaments](#aaps-screens-treatments) i, a la pestanya **Carbohidrats i bolus**, elimineu amb prudència els bolus registrats des del moment en què va passar l'incident. Així es corregeix el valor d'«insulina a bord» (IOB), que és clau per als càlculs d'**AAPS**. Si ara torneu a la pantalla principal, veureu que l'IOB ha baixat. Tingueu en compte que no podeu eliminar la insulina basal que **AAPS** calcula que s'ha lliurat, i per tant **AAPS** la continuarà tenint en compte.
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+En casos menys clars de problemes de lliurament d'insulina, _p. ex._ fuites, oclusions o tunelització, en què no sabeu quan va començar el problema o creieu que una part de la insulina sí que s'ha lliurat, heu d'anar amb compte. Podeu detectar aquests problemes perquè «oloreu» la insulina, veieu l'adhesiu mullat, teniu valors de glucèmia alts o rebeu una alarma. Com que mai no sabreu quanta insulina ha quedat a la pell (i potser comença a actuar al cap d'una estona), és difícil saber quanta insulina cal restar del valor actual d'«insulina a bord» (IOB). Una estratègia és aturar el llaç durant 5 hores (o la vostra durada de l'acció de la insulina) després de resoldre el problema de lliurament d'insulina, i reprendre el llaç després. Així l'IOB serà correcte quan torneu a iniciar el llaç.
 
 (pumps-cannulas-disconnecting)=
-## Disconnecting the pump for showering or activity
+## Desconnectar la bomba per dutxar-se o fer activitat
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+Si us traieu la bomba per dutxar-vos, banyar-vos, nedar, fer esports de contacte o altres activitats, heu d'indicar a **AAPS** que no s'està lliurant insulina, perquè l'IOB sigui correcte. Podeu desconnectar la bomba amb la [icona del llaç](#AapsScreens-loop-status) a la pantalla principal: premeu-la i seleccioneu **Desconnectar bomba** amb la durada que necessiteu. Si l'activitat dura més del previst, torneu a obrir el mateix diàleg i trieu una nova durada a **Desconnectar bomba**: la desconnexió s'allarga i la nova durada compta des d'ara. No cal reconnectar primer.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+Com que no rebeu insulina mentre la bomba està desconnectada, us hauríeu de reconnectar cada dues hores per recuperar la basal que falta. Per fer-ho, connecteu la bomba i feu un bolus amb la basal que falta (_p. ex._ de les últimes dues hores) abans de tornar a desconnectar-la. Això ajuda a evitar una manca greu d'insulina, que podria provocar una cetoacidosi diabètica (CAD). Si és incòmode reconnectar la bomba durant l'activitat (el punt de la cànula queda tapat per un vestit de neoprè, _etc._), considereu fer una injecció amb ploma. Podeu anotar aquesta injecció manual a **AAPS**, i no cal fer-ho en el moment de la injecció (només apunteu l'hora), perquè quan reconnecteu la bomba podeu anotar la insulina i posar-hi l'hora real en què es va administrar.
 
 (pumps-cannulas-announce-insulin)=
-## To announce delivered insulin without actually bolusing
+## Anotar insulina lliurada sense fer el bolus
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Aleshores una fila **Hora** (posada a **Ara**) us permet anotar l'hora real de la injecció. La podeu ignorar si la injecció és recent. Si el bolus es va fer fa una estona, feu servir **-** per endarrerir l'hora (_p. ex._ -30 min), o obriu la fila amb la fletxa per triar la data i l'hora exactes. Aleshores **AAPS** tindrà en compte la durada de l'acció de la insulina i calcularà la insulina que encara queda al cos.
 
-If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+Si feu servir **AAPS** com a cuidador, podeu desconnectar (i reconnectar) la bomba a distància molt fàcilment amb una [ordre SMS](../RemoteFeatures/SMSCommands.md), per exemple "pump disconnect 120" i "pump connect 120". La durada de la desconnexió remota va d'1 a 120 min (en aquest exemple és de 120 minuts). Això és molt útil si no podeu accedir fàcilment al telèfon amb **AAPS**: per exemple, si va dins d'un cinturó portabomba d'un nen que corre cap a la piscina, o si un adolescent el vigila de prop (o el fa servir).
 
-## Reconnecting the pump after activity
+## Reconnectar la bomba després de l'activitat
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+Després d'una desconnexió llarga (1–2 hores), és força habitual que **AAPS** calculi que ara teniu un IOB negatiu. Quan reconnecteu la bomba, segons les vostres preferències, la glucèmia actual, el menjar previst o l'activitat que vingui després, podeu:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+a) Simplement reconnectar la bomba a **AAPS** (de gris a verd, en llaç tancat) i deixar que **AAPS** torni a lliurar insulina
 
-_or_
+_o_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) Si voleu ser més agressius (per exemple, aneu cap a una hiperglucèmia), podeu obrir la [Calculadora de bolus](#aaps-screens-bolus-wizard) i fer un bolus amb zero carbohidrats, per lliurar de seguida com a bolus la insulina que falta segons el càlcul.
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.
+L'estratègia preferida és molt personal, i el millor és trobar-la provant.
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## Rotació de punts d'inserció
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**Gestionar → Rotació de punts d'inserció** obre el diàleg de rotació de punts en mode de visualització:
 
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
+- Amb els dos botons de dalt (icona de cànula i icona de sensor) podeu mostrar només els punts de cànula, només els punts de sensor, o tots dos
 - All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+- Feu clic en una zona o en una entrada de la llista de sota per filtrar la llista i veure només les entrades de la zona seleccionada. La zona seleccionada es marca en verd clar.
+- Premeu la icona del **llapis** al costat d'una entrada per obrir la vista d'edició i canviar-ne la ubicació, la fletxa o la nota
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![Mode de visualització](../images/SiteRotation/ViewMode.png)
 
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+- La icona de l'**engranatge** (a dalt a la dreta) obre la configuració: **Perfil d'usuari per a la rotació del punt d'infusió** obre un diàleg on trieu **Home**, **Dona** o **Infant**, i els interruptors **Gestionar la rotació del punt d'infusió de la bomba** i **Gestionar la rotació del punt del CGM** trien quins punts gestioneu.
 
-![Settings](../images/SiteRotation/Settings.png)
+![Configuració](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![Diàleg del perfil d'usuari per a la rotació de punts](../images/SiteRotation/Type.png)
 
 *Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- Si el canvi de cànula s'ha fet directament a la bomba, heu d'obrir el mode de visualització i editar la nova entrada per triar la ubicació i la fletxa
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+El mode d'edició us permet triar la ubicació, la fletxa i la nota de l'entrada seleccionada:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
+- L'entrada que s'edita es mostra sota les imatges del cos, amb la icona del seu tipus (cànula o sensor)
+- Les vistes de davant i de darrere es mostren una al costat de l'altra: premeu la zona on l'heu col·locat
 - Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![Mode d'edició](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- Podeu afegir una fletxa opcional prement la icona de fletxa a la dreta de l'entrada: el diàleg **Seleccionar fletxa** us permet indicar una subzona o l'orientació del pod
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![Posició](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- També podeu afegir una **Nota** sobre el punt seleccionat
+- Premeu la icona de **desar** (a dalt a la dreta) per registrar el punt
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+Podeu filtrar de manera gràfica a la imatge, o fent clic en un esdeveniment de teràpia de la llista Per treure el filtre, feu clic a la imatge fora de qualsevol punt
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![Filtre](../images/SiteRotation/Filtering.png)
