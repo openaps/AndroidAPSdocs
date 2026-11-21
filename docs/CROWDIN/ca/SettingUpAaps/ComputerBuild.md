@@ -29,7 +29,7 @@ Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més det
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                                    | provat fins a Quail 4                                   | 8.11.1 | 21  |
 | [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                    | provat fins a Quail 4                                   | 8.13   | 21  |
 | [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                    | provat fins a Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                   | Latest                                                  | 9.8    | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                   | La més recent                                           | 9.8    | 21  |
 
 La «versió preferida» inclou la versió de JVM adequada. La versió preferida també és la versió mínima que podeu fer servir per compilar **AAPS**. **NO** podreu compilar amb una versió més antiga que la «preferida». Si feu servir una altra versió, pot ser que tingueu problemes amb la versió de JVM. Consulteu la pàgina [Resolució de problemes d'Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per resoldre aquests problemes. Si la vostra versió actual d'Android Studio no és a la taula, primer l'heu d'actualitzar.
 
@@ -41,27 +41,27 @@ La versió de Gradle va lligada al codi font: sempre tindreu la versió de Gradl
 <tbody>
   <tr>
     <th class="tg-baqh">Sistema operatiu (només 64 bits)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <td class="tg-baqh">Windows 10 o posterior</td>
+    <td class="tg-baqh">macOS 12 o posterior</td>
+    <td class="tg-baqh">Qualsevol distribució de Linux compatible amb Gnome, KDE o Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 o posterior</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU (només 64 bits)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">CPU x86_64 del 2017 o posterior (Intel Core i5 de 8a generació, AMD Ryzen o posterior) amb el <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">suport de virtualització</a> (Intel VT-x o AMD-V) activat a la BIOS</td>
+    <td class="tg-baqh">Apple Silicon (M1 o posterior), o Intel Core de 6a generació o posterior (el suport per als Mac amb Intel s'està retirant)</td>
+    <td class="tg-baqh">CPU x86_64 del 2017 o posterior (Intel Core i5 de 8a generació, AMD Ryzen o posterior) amb el suport de virtualització (Intel VT-x o AMD-V) activat a la BIOS</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB o més (8 GB és el mínim estricte només per a Android Studio; es recomanen 32 GB)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disc</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Es recomana un SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Com a mínim 32 GB d'espai lliure. Es recomana un SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Resolució</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 com a mínim (es recomana 1920 x 1080)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -93,7 +93,7 @@ Aneu directament a la [guia d'actualització](../Maintenance/UpdateToNewVersion.
 
 En aquesta guia trobareu captures de pantalla d'_exemple_ de la compilació del fitxer apk d'**AAPS**. **Android Studio**, el programari que fem servir per compilar l'apk d'**AAPS**, s'actualitza sovint. Per això, aquestes captures de pantalla poden no ser idèntiques a la vostra instal·lació, però les hauríeu de poder seguir igualment.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+Com que **Android Studio** funciona a Windows, Mac OS X i Linux, també hi pot haver petites diferències en els passos segons la plataforma.
 
 (install-git-if-you-dont-have-it)=
 ### Instal·lar Git
@@ -102,18 +102,18 @@ Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there mi
 :class: dropdown
 
 Git és un «_sistema de control de versions_» (VCS, de l'anglès *Versioning Control System*).\
-Git és un programa que permet seguir els canvis del codi i col·laborar amb altres persones. Fareu servir Git per fer una còpia del codi font d'**AAPS** del lloc web de GitHub al vostre ordinador. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git és un programa que permet seguir els canvis del codi i col·laborar amb altres persones. Fareu servir Git per fer una còpia del codi font d'**AAPS** del lloc web de GitHub al vostre ordinador. Després fareu servir Android Studio a l'ordinador per compilar l'aplicació **AAPS** (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
 #### Passos per instal·lar Git
 
-1.  Comproveu que no tingueu ja **Git** instal·lat. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Comproveu que no tingueu ja **Git** instal·lat. Ho podeu fer escrivint «git» a la barra de cerca de Windows. Si veieu **«Git bash»** o una altra forma de Git, ja està instal·lat i podeu anar directament a [instal·lar Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Qualsevol versió recent de Git hauria de funcionar. Seleccioneu la versió correcta per al vostre sistema: Mac, Windows o Linux.
+2. Si no teniu Git instal·lat, descarregueu i instal·leu la versió més recent per al vostre sistema des de la secció «Download» [**aquí**](https://git-scm.com/downloads). Qualsevol versió recent de Git hauria de funcionar. Seleccioneu la versió correcta per al vostre sistema: Mac, Windows o Linux.
 
 **Nota per als usuaris de Mac:** la pàgina web de Git també us guiarà per instal·lar un programa addicional anomenat «homebrew» que ajuda en la instal·lació. Si instal·leu Git amb homebrew, no cal canviar cap preferència.
 
@@ -141,7 +141,7 @@ Una de les coses més importants quan instal·leu Android Studio és **tenir pac
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. Aquesta guia mostra els passos amb la *interfície nova*. Les captures de pantalla es van fer amb «Ladybug», així que les versions més noves poden ser una mica diferents. Si encara feu servir la interfície antiga, potser primer voldreu canviar Android Studio a la interfície nova seguint [aquestes instruccions](#computerbuild-NewUI).
+Nota important: Android Studio ha canviat la seva interfície en les últimes versions. Aquesta guia mostra els passos amb la *interfície nova*. Les captures de pantalla es van fer amb «Ladybug», així que les versions més noves poden ser una mica diferents. Si encara feu servir la interfície antiga, potser primer voldreu canviar Android Studio a la interfície nova seguint [aquestes instruccions](#computerbuild-NewUI).
 ```
 
 La versió d'Android Studio és molt important. Vegeu les [instruccions anteriors](#Building-APK-recommended-specification-of-computer-for-building-apk-file) per triar la versió correcta d'Android Studio.
@@ -156,7 +156,7 @@ Instal·leu Android Studio fent clic a «Next», com es mostra a les captures de
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Si voleu estalviar espai al disc dur, podeu desmarcar Android Virtual Device: no es fa servir per compilar **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -170,7 +170,7 @@ Quan acabi, premeu «Next»
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+A l'últim pas, feu clic a «Finish» per iniciar Android Studio per primera vegada.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ A l'angle superior esquerre d'**Android Studio**, obriu el menú hamburguesa i a
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+Comproveu si **Android Studio** pot trobar automàticament el camí correcte a **Path to Git executable** fent clic al botó «Test» (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -314,7 +314,7 @@ Si la configuració automàtica funciona, la vostra versió actual de **Git** es
 
 Si **git.exe** no es troba automàticament, o si en fer clic a «Test» surt un error, podeu:
 * introduir a mà el camí que heu anotat [abans](#BuildingAaps-steps-for-installing-git), o bé
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* fer clic a la icona de la carpeta (1) i anar a mà fins al directori on s'ha instal·lat **git.exe** [abans](#BuildingAaps-steps-for-installing-git)
 * Comproveu la configuració amb el botó **Test**!
 
   ![Git no trobat](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Feu clic a «Create new...» (2) per començar a crear el vostre magatzem de cla
 ```{admonition} INFORMATION!
 :class: note
 Només cal que creeu el magatzem de claus una vegada.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Si ja heu compilat AAPS abans, NO creeu un magatzem de claus nou: seleccioneu el que ja teniu i introduïu-ne les contrasenyes!
 ```
 
 **_Nota:_** el magatzem de claus (keystore) és un fitxer on es desa la informació per signar l'aplicació. Està xifrat, i la informació està protegida amb contrasenyes.
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Anoteu on es desa el vostre magatzem de claus. You will need it when you build the next AAPS update!
+Anoteu on es desa el vostre magatzem de claus. La necessitareu quan compileu la propera actualització d'AAPS!
 ```
 
 * Ara trieu una contrasenya senzilla (i anoteu-la), escriviu-la al quadre de contrasenya (2) i confirmeu-la (2).
