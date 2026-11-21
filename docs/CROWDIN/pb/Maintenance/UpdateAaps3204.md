@@ -25,37 +25,37 @@ A versão do Gradle está ligada ao código-fonte. Você sempre terá a versão 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">Sistema operacional (somente 64 bits)</th>
+    <td class="tg-baqh">Windows 8 ou superior</td>
+    <td class="tg-baqh">Mac OS 10.14 ou superior</td>
+    <td class="tg-baqh">Qualquer Linux com suporte a Gnome, KDE ou Unity DE;&nbsp;&nbsp;GNU C Library 2.31 ou mais recente</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (somente 64 bits)</th>
+    <td class="tg-baqh">Arquitetura de CPU x86_64; Intel Core de 2ª geração ou mais novo, ou CPU AMD com suporte ao <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Chips baseados em ARM, ou Intel Core de 2ª geração ou mais novo com suporte ao <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Arquitetura de CPU x86_64; Intel Core de 2ª geração ou mais novo, ou processador AMD com suporte a AMD Virtualization (AMD-V) e SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8 GB ou mais</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Disco</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Pelo menos 30 GB de espaço livre. Recomenda-se um SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
+    <th class="tg-baqh"><p align="center">Resolução</th>
     <td class="tg-baqh" colspan="3"><p align="center">Mínimo 1280 x 800 <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Banda larga</td>
   </tr>
 </tbody>
 </table>
 
-**É altamente recomendado (não obrigatório) usar SSD (Solid State Disk) em vez de HDD (Hard Disk Drive), porque a compilação do arquivo apk do AAPS leva menos tempo.**  Você ainda pode usar um HDD para compilar o arquivo apk do **AAPS**. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**É altamente recomendado (não obrigatório) usar SSD (Solid State Disk) em vez de HDD (Hard Disk Drive), porque a compilação do arquivo apk do AAPS leva menos tempo.**  Você ainda pode usar um HDD para compilar o arquivo apk do **AAPS**. Se fizer isso, a compilação pode demorar muito para terminar, mas, depois de iniciada, você pode deixá-la rodando sem acompanhar.
 
 ## Ajuda e suporte durante a compilação da versão 3.2.0.4
 
