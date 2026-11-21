@@ -99,7 +99,7 @@
 
 ![Панель «Сцени» нижньої навігації](../images/v4/Scenes/scenes_sheet.png)
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+Якщо ввімкнено [Захист болюсу](#Preferences-protection), **AAPS** запитує його перед тим, як сцена почнеться або закінчиться. Щоб змінити сцену, натомість потрібен [Захист налаштувань](#Preferences-settings-protection).
 
 Перш ніж щось буде застосовано, ви отримаєте **підтвердження** з точним списком того, що зробить сцена, щоб ви могли це перевірити:
 
