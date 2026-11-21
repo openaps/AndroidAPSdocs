@@ -367,11 +367,11 @@ The dialog says why:
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-아무것도 바뀌지 않았습니다. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+아무것도 바뀌지 않았습니다. 페어링을 다시 시작하십시오. 계속 실패하면 **AAPSClient**를 다시 시작하고 한 번 더 시도하십시오.
 
-**The client says it is not paired**
+**클라이언트에 페어링되지 않았다고 표시됨**
 
-**관리 → 마스터와 페어링**에서 다시 페어링하십시오. Check that the client is **Active** in the master's **Authorized clients** list.
+**관리 → 마스터와 페어링**에서 다시 페어링하십시오. 마스터의 **허가된 클라이언트** 목록에서 클라이언트가 **활성** 상태인지 확인하십시오.
 
 **페어링 후 아무 일도 일어나지 않음**
 
@@ -379,25 +379,25 @@ The dialog says why:
 
 ### 명령
 
-**The client says the master is offline, or commands fail**
+**클라이언트에 마스터가 오프라인이라고 표시되거나 명령이 실패함**
 
-Check that:
+다음을 확인하십시오:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- 마스터 휴대폰이 깨어 있고 **AAPS**가 실행 중인지,
+- 두 휴대폰 모두 **NSClientV3**에서 같은 Nightscout 사이트에 연결되어 있는지,
+- 두 휴대폰 모두 **웹소켓**이 켜져 있는지.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+**AAPSClient**에서 원격 제어를 하려면 웹소켓이 **필수**입니다. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**마스터가 명령을 거부함**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+마스터는 모든 명령을 현재 상태와 다시 비교하여 확인합니다. 예를 들어 선택한 프로파일이 더 이상 없거나 펌프 종류가 맞지 않을 수 있습니다. 마스터에서 확인하십시오.
 
 **Nightscout 웹사이트에서 입력한 처치가 적용되지 않음**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+[강화 모드](#client-master-control-hardened-mode)에서는 정상적인 동작입니다. 대신 페어링된 클라이언트에서 입력하십시오.
 
-### Nightscout tokens and settings
+### Nightscout 토큰과 설정
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ This is expected in [hardened mode](#client-master-control-hardened-mode). Enter
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-클라이언트가 아직 필요보다 많은 권한을 가진 토큰으로 기록합니다. The master sends the client its own token after pairing, but only if the master has an admin token. 마스터의 토큰을 확인하거나, QR 코드로 클라이언트를 다시 설정하십시오.
+클라이언트가 아직 필요보다 많은 권한을 가진 토큰으로 기록합니다. 마스터는 페어링 후 클라이언트에 클라이언트 자신의 토큰을 보내지만, 마스터에 관리자 토큰이 있을 때만 보냅니다. 마스터의 토큰을 확인하거나, QR 코드로 클라이언트를 다시 설정하십시오.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-다른 누군가가 마스터의 설정 문서를 기록했거나, 마스터에 새 키가 생겼습니다(예: 데이터를 지운 뒤). A paired client takes the new key by itself the next time it connects to Nightscout. Nightscout를 읽기만 하는 휴대폰은 마스터의 QR 코드가 다시 필요합니다(**Nightscout 읽기만 → QR 코드 표시**).
+다른 누군가가 마스터의 설정 문서를 기록했거나, 마스터에 새 키가 생겼습니다(예: 데이터를 지운 뒤). 페어링된 클라이언트는 다음에 Nightscout에 연결할 때 새 키를 스스로 받습니다. Nightscout를 읽기만 하는 휴대폰은 마스터의 QR 코드가 다시 필요합니다(**Nightscout 읽기만 → QR 코드 표시**).
 
 **클라이언트가 더 이상 Nightscout를 읽을 수 없음**
 
