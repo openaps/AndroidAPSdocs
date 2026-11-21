@@ -21,7 +21,7 @@ Se ativar o **Comunicador SMS** no **AAPS**, tenha em conta que o telefone confi
 
 Além disso, recomenda-se permitir um [segundo número de telefone](#SMSCommands-authorized-phone-numbers) para os comandos SMS. Assim, pode usar o segundo número para [desativar](#SMSCommands-other) o Comunicador SMS, se o seu telefone remoto principal for comprometido.
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Por razões de segurança, tem de adicionar pelo menos dois números de telefone autorizados para mudar este intervalo para um valor mais curto. Se tentar dar outro bólus remoto nos 15 minutos seguintes ao bólus anterior, recebe a resposta “O bólus remoto não está disponível. Tente novamente mais tarde”
+O intervalo mínimo predefinido entre comandos de bólus é de 15 minutos, contados a partir do momento em que a bomba aceita um bólus. Por razões de segurança, tem de adicionar pelo menos dois números de telefone autorizados para mudar este intervalo para um valor mais curto. Se tentar dar outro bólus remoto nos 15 minutos seguintes ao bólus anterior, recebe a resposta “O bólus remoto não está disponível. Tente novamente mais tarde”
 
 O AAPS também o informa por mensagem de texto se os seus comandos remotos, como um bólus ou uma troca de perfil, foram executados. É aconselhável configurar isto de forma que as mensagens de confirmação sejam enviadas para, pelo menos, dois números de telefone diferentes, para o caso de um dos telefones ser roubado.
 
@@ -201,18 +201,18 @@ A coluna *Aut.* nas tabelas abaixo indica se cada comando exige esta autenticaç
 
 ### Dados do CGM
 
-| Comando    | Aut. | Função e *Resposta*                                                                                                                                                                                                               |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | Não  | Devolve: última glicose, delta, IA (bólus e basal), HCA<br/>*Última GLIC: 5.6 4min atrás, Delta: -0,2 mmol, IA: 0.20U (Bólus: 0.10U Basal: 0.10U)*                                                                          |
-| CAL 5.6/90 | Sim  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| Comando    | Aut. | Função e *Resposta*                                                                                                                                                                                                                  |
+| ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BG         | Não  | Devolve: última glicose, delta, IA (bólus e basal), HCA<br/>*Última GLIC: 5.6 4min atrás, Delta: -0,2 mmol, IA: 0.20U (Bólus: 0.10U Basal: 0.10U)*                                                                             |
+| CAL 5.6/90 | Sim  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receção tem de estar ativada na xDrip+.* |
 
 ### Bomba
 
-| Comando              | Aut. | Função e *Resposta*                                                                                  |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| PUMP                 | Não  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Sim  | Para desligar a bomba durante *30* minutos                                                           |
-| PUMP CONNECT         | Sim  | Bomba religada                                                                                       |
+| Comando              | Aut. | Função e *Resposta*                                                                             |
+| -------------------- | ---- | ----------------------------------------------------------------------------------------------- |
+| PUMP                 | Não  | ÚltLig: há 1 min<br/>Temp: 0.00U/h @11:38 5/30min<br/>IA: 0.5U Reserv: 34U Bat: 100 |
+| PUMP DISCONNECT *30* | Sim  | Para desligar a bomba durante *30* minutos                                                      |
+| PUMP CONNECT         | Sim  | Bomba religada                                                                                  |
 
 ### Basal
 
@@ -229,14 +229,14 @@ Algumas bombas só aceitam uma basal temporária em percentagem, outras só em U
 
 ### Loop
 
-| Comando           | Aut. | Função e *Resposta*                                                                                                                                                                                                                                                                |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | Não  | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Sim  | A bomba volta à taxa basal programada.<br/>*Loop foi desativado*                                                                                                                                                                                                             |
-| LOOP SUSPEND 20   | Sim  | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Sim  | *Loop retomado*                                                                                                                                                                                                                                                                    |
-| LOOP CLOSED       | Sim  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Sim  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| Comando           | Aut. | Função e *Resposta*                                                                                                                                                                                                                                                                               |
+| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Não  | A resposta depende do estado real:<br/> - *Loop está desativado* se o loop estiver desativado<br/> - *Loop ativado* se o loop estiver fechado, aberto ou em SGB<br/> - *Bomba desligada* se a bomba estiver desligada<br/> - *Suspenso (10 m)* se o loop estiver suspenso |
+| LOOP STOP/DISABLE | Sim  | A bomba volta à taxa basal programada.<br/>*Loop foi desativado*                                                                                                                                                                                                                            |
+| LOOP SUSPEND 20   | Sim  | *Loop suspended*                                                                                                                                                                                                                                                                                  |
+| LOOP RESUME       | Sim  | *Loop retomado*                                                                                                                                                                                                                                                                                   |
+| LOOP CLOSED       | Sim  | *Modo de funcionamento atual: Loop Fechado*                                                                                                                                                                                                                                                       |
+| LOOP LGS          | Sim  | *Modo de funcionamento atual: Suspensão Glicose Baixa*                                                                                                                                                                                                                                            |
 
 ### Bólus
 
@@ -348,6 +348,6 @@ Se a outra app estiver instalada em vários telefones, desative o envio em todos
 (sms-commands-too-many-messages)=
 ### Recebo demasiadas mensagens de texto dos comandos SMS. Posso reduzir a frequência ou fazer com que parem?
 
-Usar comandos SMS pode gerar muitas mensagens automáticas do telefone com o **AAPS** para o telefone do cuidador. Também recebe mensagens, por exemplo «Perfil Basal atualizado na bomba», se tiver automatizações configuradas no **AAPS**. Pode ser útil ter SMS ilimitados no tarifário do telefone com o **AAPS** (e de cada telefone de cuidador usado), se forem enviados muitos SMS, e desativar as notificações, alarmes ou vibrações dos SMS em todos os telefones. Não é possível usar comandos SMS sem receber estas atualizações. Por isso, pode querer outra forma de comunicar diretamente com a criança (se tiver idade para isso), em vez de SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+Usar comandos SMS pode gerar muitas mensagens automáticas do telefone com o **AAPS** para o telefone do cuidador. Também recebe mensagens, por exemplo «Perfil Basal atualizado na bomba», se tiver automatizações configuradas no **AAPS**. Pode ser útil ter SMS ilimitados no tarifário do telefone com o **AAPS** (e de cada telefone de cuidador usado), se forem enviados muitos SMS, e desativar as notificações, alarmes ou vibrações dos SMS em todos os telefones. Não é possível usar comandos SMS sem receber estas atualizações. Por isso, pode querer outra forma de comunicar diretamente com a criança (se tiver idade para isso), em vez de SMS. Outras apps de comunicação muito usadas pelos cuidadores do **AAPS** são o WhatsApp, o LINE, o Telegram e o Facebook Messenger.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+É possível desativar o SMS «Perfil Basal atualizado na bomba» quando a alteração do Perfil veio do Nightscout. Para isso, crie um ficheiro chamado **exatamente** `do_not_send_sms_on_profile_change` na pasta `extra` da pasta do AAPS.
