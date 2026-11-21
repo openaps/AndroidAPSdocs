@@ -1,16 +1,16 @@
-# Settings
+# Configuració
 
-In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
+A **AAPS** v4 la configuració es troba a la pantalla **Configuració**. Hi ha tres maneres d'arribar-hi; vegeu [Fer canvis a la configuració d'AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) per als detalls:
 
-1. Tap the **Settings** (gear) icon in the top-right corner of the main screen: all settings, grouped into expandable sections.
-2. In **Configuration**, tap "**Settings**" underneath an active plugin: only that plugin's settings.
-3. Use the **search bar** on top of the main screen: just start typing part of the text you are looking for. This finds individual settings (even those not visible in the Settings screen), dialogs and documentation.
+1. Premeu la icona **Configuració** (engranatge) a la cantonada superior dreta de la pantalla principal: tota la configuració, agrupada en seccions que es poden desplegar.
+2. A **Configurador**, premeu «**Configuració**» sota un plugin actiu: només la configuració d'aquell plugin.
+3. Feu servir la **barra de cerca** a la part superior de la pantalla principal: només cal que comenceu a escriure una part del text que busqueu. Així trobareu opcions concretes (fins i tot les que no es veuen a la pantalla Configuració), diàlegs i documentació.
 
-![Search results for "target"](../images/preferences/settings_search.png)
+![Resultats de la cerca de "target"](../images/preferences/settings_search.png)
 
-- **Sections** are opened and closed by tapping them. The sections you see depend on the plugins you have enabled and on [Simple mode](#preferences-simple-mode).
+- Les **seccions** s'obren i es tanquen en prémer-les. Les seccions que veieu depenen dels plugins que tingueu activats i del [mode simple](#preferences-simple-mode).
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![La pantalla Configuració amb les seves seccions desplegables](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -20,457 +20,457 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 (Preferences-general)=
 ## General
 
-![Settings > General](../images/preferences/settings_general.png)
+![Configuració > General](../images/preferences/settings_general.png)
 
-**Units**
+**Unitats**
 
-- Set units to mmol/L or mg/dL depending on your preferences.
+- Definiu les unitats en mmol/l o mg/dl segons les vostres preferències.
 
-**Language**
+**Idioma**
 
 - By default **AAPS** follows the language of the phone (recommended).
 
 - If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
-- When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
+- Quan canvieu l'idioma, els textos d'**AAPS** passen al nou idioma de seguida. Si alguns textos encara es mostren en l'idioma anterior, reinicieu **AAPS**.
 - On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Opció amagada en [mode simple](#preferences-simple-mode).
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **Mode simple**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+El **mode simple** està activat per defecte quan instal·leu **AAPS** per primera vegada. En **mode simple**, s'amaguen moltes opcions i la configuració es substitueix per valors predefinits. Quan ja conegueu bé la interfície i la configuració d'**AAPS**, desactiveu el mode simple.
 
-**Insulin concentration support**
+**Suport per a concentracions d'insulina**
 
-- Enables support for different insulin concentrations (U50, U200, ...). Only enable this if you really use a concentration other than U100, and read the warnings carefully.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Activa el suport per a diferents concentracions d'insulina (U50, U200, ...). Activeu-ho només si realment feu servir una concentració diferent d'U100, i llegiu els avisos amb atenció.
+- Opció amagada en [mode simple](#preferences-simple-mode).
 
-**Keep screen on**
+**Mantenir la pantalla encesa**
 
-- Forces Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+- Obliga Android a mantenir la pantalla sempre encesa. És útil per a presentacions, etc. Però gasta molta bateria. Per això es recomana connectar el telèfon a un cable de càrrega.
 
-**Instance name**
+**Nom de la instància**
 
-- The name of the person using this phone. It tells this **AAPS** instance apart in reports and synchronization, for example if two children with type 1 diabetes in your family use **AAPS**.
-- Used in the names of exported settings files.
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- El nom de la persona que fa servir aquest telèfon. Distingeix aquesta instància d'**AAPS** als informes i a la sincronització, per exemple si dos infants amb diabetis tipus 1 de la vostra família fan servir **AAPS**.
+- Es fa servir en els noms dels fitxers de configuració exportats.
+- Es mostra a la [watchface Dual](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Skin
+### Aspecte (skin)
 
-The skin selection from **AAPS** 3.x (Original, Low resolution, Large display...) no longer exists in **AAPS** 4. The new interface adapts to your screen automatically, and the color scheme can be changed in [Appearance](#preferences-appearance).
+La selecció d'aspecte (skin) d'**AAPS** 3.x (Original, Baixa resolució, Pantalla gran...) ja no existeix a **AAPS** 4. La nova interfície s'adapta automàticament a la vostra pantalla, i l'esquema de colors es pot canviar a [Aparença](#preferences-appearance).
 
 (preferences-appearance)=
-## Appearance
+## Aparença
 
-![Settings > Appearance](../images/preferences/settings_appearance.png)
+![Configuració > Aparença](../images/preferences/settings_appearance.png)
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Rang de visualització
 
-Choose the high and low marks for the BG-graph on **AAPS** main screen and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
+Trieu els límits alt i baix del gràfic de glucèmia a la pantalla principal d'**AAPS** i al rellotge intel·ligent. És només la visualització, no el rang objectiu de la vostra glucèmia. Exemple: 70 - 180 mg/dl o 3,9 - 10 mmol/l
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes in dialogs
+### Mostrar notes als diàlegs
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Us permet afegir notes curtes als tractaments (calculadora de bolus, carbohidrats, insulina...)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Opció amagada en [mode simple](#preferences-simple-mode).
 
-### App Color Scheme
+### Esquema de colors de l'app
 
-Choose between the light theme, the dark theme, or following the phone's system setting.
+Trieu entre el tema clar, el tema fosc o seguir la configuració del sistema del telèfon.
 
 (Preferences-protection)=
-## Protection
+## Protecció
 
-![Settings > Protection](../images/preferences/settings_protection.png)
+![Configuració > Protecció](../images/preferences/settings_protection.png)
 
 (Preferences-master-password)=
-### Master password
+### Clau mestra
 
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+És obligatòria per poder [exportar la configuració](../Maintenance/ExportImportSettings.md), ja que des de la versió 2.7 es xifra.
 
 If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
 
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+**És possible que la protecció biomètrica no funcioni en telèfons OnePlus. És un problema conegut d'OnePlus en alguns telèfons.**
 
-![Set master password](../images/preferences/master_password_dialog.png)
+![Definir la clau mestra](../images/preferences/master_password_dialog.png)
 
 (Preferences-settings-protection)=
-### Settings protection
+### Protecció de la configuració
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
+- Protegiu la configuració amb una contrasenya o amb l'autenticació biomètrica del telèfon (p. ex. si [un infant fa servir **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Si activeu aquesta funció, se us demanarà autenticació cada vegada que vulgueu obrir qualsevol pantalla relacionada amb la configuració.
 
-- The management screens (**Profile**, **Insulin settings**, **Temp Target**, **QuickWizard**) then open **read-only**. You can still activate or use an entry, but adding, editing, cloning and deleting are hidden until you unlock your settings. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+- Les pantalles de gestió (**Perfil**, **Configuració d'insulina**, **Objectiu temporal**, **Assistent ràpid**) s'obren llavors en **només lectura**. Encara podeu activar o fer servir una entrada, però les opcions d'afegir, editar, clonar i eliminar estan amagades fins que desbloquegeu la configuració. Vegeu [La protecció de la configuració ara també bloqueja les pantalles de gestió](#v4changes-read-only-management).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
+- Feu servir una contrasenya pròpia si voleu fer servir la clau mestra només per protegir la [configuració exportada](../Maintenance/ExportImportSettings.md) i una altra per editar la configuració.
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- Si feu servir una contrasenya pròpia, premeu la línia «Contrasenya de configuració» per definir-la com s'explica [més amunt](#Preferences-master-password).
 
-### Application protection
+### Protecció de l'aplicació
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
+Si l'aplicació està protegida, heu d'introduir la contrasenya o fer servir l'autenticació biomètrica del telèfon per obrir **AAPS**, i també quan hi torneu després del [temps d'espera de la protecció](#Preferences-password-and-pin-retention).
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+**AAPS** es tancarà immediatament si s'introdueix una contrasenya incorrecta, però continuarà funcionant en segon pla si abans s'havia obert correctament.
 
-### Bolus protection
+### Protecció del bolus
 
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- La protecció del bolus pot ser útil si **AAPS** el fa servir un infant petit i vosaltres [feu bolus per SMS](../RemoteFeatures/SMSCommands.md).
 
-- **Bolus protection** can only be selected once **Settings protection** (Level 2) is set.
+- La **Protecció del bolus** només es pot seleccionar quan la **Protecció de la configuració** (nivell 2) està definida.
 
-- In the example below, bolus protection uses the **Master password**: **AAPS** asks for it before opening a treatment dialog such as **Insulin**. With **Biometric**, if biometric authentication does not work, you can enter the master password instead.
+- A l'exemple de sota, la protecció del bolus fa servir la **Clau mestra**: **AAPS** la demana abans d'obrir un diàleg de tractament com **Insulina**. Amb **Biomètrica**, si l'autenticació biomètrica no funciona, podeu introduir la clau mestra.
 
-![Authentication required prompt asking for the master password](../images/preferences/bolus_protection_prompt.png)
+![Finestra d'autenticació que demana la clau mestra](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
-### Password and PIN retention
+### Retenció de contrasenya i PIN
 
-**Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.
+**Temps d'espera de la protecció** defineix quant de temps (en segons) la configuració o les funcions de bolus queden desbloquejades després d'introduir correctament la contrasenya.
 
-## Treatment safety
+## Seguretat dels tractaments
 
-![Settings > Safety](../images/preferences/settings_safety.png)
+![Configuració > Seguretat](../images/preferences/settings_safety.png)
 
 (preferences-patient-type)=
-### Patient age
+### Edat del pacient
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
+- Els límits de seguretat es fixen segons l'edat que seleccioneu en aquesta opció.
+- Si comenceu a arribar sovint a aquests límits fixos (com el bolus màxim), és el moment de pujar un nivell.
 - It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- Si voleu conèixer els valors concrets d'aquests límits de seguretat fixos, aneu a la funció de l'algoritme que feu servir a [aquesta pàgina](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
-### Maximum bolus
+### Bolus màxim
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Defineix la quantitat màxima d'insulina de bolus, en unitats d'insulina, que **AAPS** pot lliurar d'una sola vegada.
+- Aquesta opció és un límit de seguretat per evitar el lliurament d'un bolus enorme per una entrada accidental o un error de l'usuari.
+- Es recomana posar-hi un valor raonable que correspongui més o menys a la quantitat màxima d'insulina de bolus que pugueu necessitar mai per a un àpat o una correcció.
+- Aquest límit també s'aplica als resultats de la calculadora de bolus.
 
-### Maximum carbs allowed
+### Màxim de carbohidrats permesos
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Defineix la quantitat màxima de carbohidrats, en grams, per a la qual la calculadora de bolus d'**AAPS** pot calcular una dosi.
+- Aquesta opció és un límit de seguretat per evitar el lliurament d'un bolus enorme per una entrada accidental o un error de l'usuari.
+- Es recomana posar-hi un valor raonable que correspongui més o menys a la quantitat màxima de carbohidrats que pugueu necessitar mai per a un àpat.
 
-## BG source
+## Origen glucèmia
 
-The settings of your selected [BG source](#Config-Builder-bg-source) appear as their own section. For example with **xDrip+ BG**:
+La configuració de l'[origen de glucèmia](#Config-Builder-bg-source) que heu seleccionat apareix com a secció pròpia. Per exemple amb **Glucèmia xDrip+**:
 
-![Settings > xDrip+ BG](../images/preferences/settings_xdrip.png)
+![Configuració > Glucèmia xDrip+](../images/preferences/settings_xdrip.png)
 
-- **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
-- **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
+- **Enviar dades de glucèmia a NS**: **AAPS** envia a Nightscout els valors de glucèmia que rep. Activeu-ho només si l'aplicació del CGM no els envia ja.
+- **Registrar canvi de sensor**: crea automàticament un esdeveniment de teràpia de canvi de sensor quan s'insereix el sensor.
 
-## The main screen
+## La pantalla principal
 
-In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
+A **AAPS** 3.x aquestes opcions estaven agrupades en una secció «Resum». A **AAPS** 4 es configuren directament des dels elements de la pantalla principal on pertanyen.
 
 (Preferences-buttons)=
-### QuickLaunch buttons
+### Botons d'accés ràpid
 
-Define which action buttons are visible on the main screen: tap the small **gear** at the bottom center of the main screen ("Configure QuickLaunch") and **Add** the actions you want quick access to (treatments, CGM actions, careportal entries...).
+Definiu quins botons d'acció es veuen a la pantalla principal: premeu el petit **engranatge** a la part inferior central de la pantalla principal («Configurar l'accés ràpid») i premeu **Afegir** per a les accions que voleu tenir a mà (tractaments, accions del CGM, entrades del portal de cures...).
 
-![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
+![Configurar l'accés ràpid](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
-### Quick Wizard
+### Assistent ràpid
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Useful for standard meals frequently eaten.
+Creeu botons personalitzats per a certs àpats o snacks habituals, que es mostraran a la pantalla principal. Útil per als àpats habituals que mengeu sovint.
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your main screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
+Per a cada botó definiu els carbohidrats i el mètode de càlcul del bolus. Després definiu durant quin interval horari el botó es veurà a la pantalla principal; només un botó per interval. El botó no es veurà fora de l'interval horari indicat o si ja teniu prou IOB per cobrir els carbohidrats definits al botó de l'Assistent ràpid. Si definiu horaris diferents per als diferents àpats, sempre tindreu a la pantalla principal el botó d'àpat adequat segons l'hora del dia.
 
-To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
+Per gestionar els vostres predefinits de l'Assistent ràpid, escriviu «Assistent ràpid» a la barra de cerca de la pantalla principal i obriu **Assistent ràpid - Gestionar predefinits de l'assistent ràpid**.
 
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+Si premeu el botó de l'Assistent ràpid, **AAPS** calcularà i us proposarà un bolus per a aquests carbohidrats segons les vostres ràtios actuals (tenint en compte la glucèmia o la insulina a bord, si està configurat).
 
-The proposal has to be confirmed before insulin is delivered.
+Cal confirmar la proposta abans de lliurar la insulina.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Objectius temporals per defecte
 
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
+Els [objectius temporals (OT)](../DailyLifeWithAaps/TempTargets.md) us permeten canviar el vostre objectiu de glucèmia durant un temps determinat. Amb uns OT per defecte, podeu canviar fàcilment el vostre objectiu per a activitat, menjar aviat, etc.
 
-Tap the **target range** on the main screen to open the **Temp Target** screen. Swipe through the preset cards (Eating Soon, Activity, Hypo) and change the target and the duration of each preset under **Preset Settings**. Preset values are:
+Premeu el **rang objectiu** a la pantalla principal per obrir la pantalla **Objectiu temporal**. Passeu per les targetes predefinides (Menjar aviat, Activitat, Hipo) i canvieu l'objectiu i la durada de cada predefinit a **Configuració predefinida**. Els valors predefinits són:
 
-* Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
-* Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
+* Menjar aviat: objectiu 90 mg/dl / 5,0 mmol/l, durada 45 min
+* Activitat: objectiu 140 mg/dl / 7,8 mmol/l, durada 90 min
+* Hipo: objectiu 160 mg/dl / 8,9 mmol/l, durada 60 min
 
-![Temp Target presets](../images/preferences/temp_target_presets.png)
+![Objectius temporals predefinits](../images/preferences/temp_target_presets.png)
 
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
+Aprengueu com [activar objectius temporals aquí](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Quantitats estàndard d'insulina per encebar/omplir
 
-If you want to fill the tube or prime the cannula through **AAPS** you can do this with the **Prime/Fill** buttons in the expanded status panel of the main screen.
+Si voleu omplir el tub o encebar la cànula des d'**AAPS**, ho podeu fer amb els botons **Encebar** del panell d'estat desplegat de la pantalla principal.
 
-The default amounts of the three fill buttons can be defined in the **Prime/Fill** settings, depending on the length of your catheter. Type "prime" in the main screen search bar to open them.
+Les quantitats per defecte dels tres botons d'omplir es poden definir a la configuració d'**Encebar**, segons la llargada del vostre catèter. Escriviu «Encebar» a la barra de cerca de la pantalla principal per obrir-la.
 
-![Prime/Fill standard amounts](../images/preferences/settings_prime_fill.png)
+![Quantitats estàndard per encebar/omplir](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
-### Status lights
+### Llums d'estat
 
-Status lights give a visual warning for:
+Els llums d'estat donen un avís visual per a:
 
-- Sensor age
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
-- Pump battery age
-- Pump battery level (%)
+- Edat del sensor
+- Edat de la insulina (dies que fa que s'utilitza el reservori)
+- Nivell del reservori (unitats)
+- Edat de la cànula
+- Edat de la pila de la bomba
+- Nivell de la pila de la bomba (%)
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+Si se supera el llindar d'avís, els valors es mostraran en groc. Si se supera el llindar crític, els valors es mostraran en vermell.
 
-To change the thresholds, expand the status panel on the main screen (chevron on the right of the status row) and tap the small **Settings** icon next to "Status":
+Per canviar els llindars, desplegueu el panell d'estat a la pantalla principal (fletxa a la dreta de la fila d'estat) i premeu la petita icona **Configuració** al costat d'«Estat»:
 
-![Status lights](../images/preferences/status_lights.png)
+![Llums d'estat](../images/preferences/status_lights.png)
 
-Tap an item (**Cannula**, **Insulin**, **Sensor** or **Pump battery**) to open its warning and critical thresholds:
+Premeu un element (**Cànula**, **Insulina**, **Sensor** o **Pila de la bomba**) per obrir-ne els llindars d'avís i crítics:
 
-![Status lights thresholds for the cannula](../images/preferences/status_lights_cannula.png)
+![Llindars dels llums d'estat per a la cànula](../images/preferences/status_lights_cannula.png)
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+L'última opció us permet importar aquests valors de Nightscout, si hi estan definits. Vegeu la [documentació de Nightscout](https://nightscout.github.io/nightscout/setup_variables/#age-pills) per a més informació.
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Bolus wizard settings
+### Configuració de la calculadora de bolus
 
-Type "bolus" in the main screen search bar to open the **Bolus wizard** settings:
+Escriviu «bolus» a la barra de cerca de la pantalla principal per obrir la configuració de la **Calculadora de bolus**:
 
-![Bolus wizard settings](../images/preferences/settings_bolus_wizard.png)
+![Configuració de la calculadora de bolus](../images/preferences/settings_bolus_wizard.png)
 
-**Bolus percentage** sets the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+**Percentatge del bolus** defineix el [percentatge per defecte](#AapsScreens-section-j) del bolus calculat quan feu servir la calculadora de bolus.
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+El valor per defecte és 100%: sense correcció. Encara que poseu un altre valor aquí, el podeu canviar cada vegada que feu servir la calculadora de bolus. Si aquest valor és 75% i calia un bolus de 10 U, la calculadora de bolus proposarà un bolus d'àpat de només 7,5 unitats.
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+Quan fan servir [SMB](#objectives-objective9), moltes persones no fan el bolus d'àpat amb el 100% de la insulina necessària, sinó només amb una part (p. ex. 75%), i deixen que l'SMB amb UAM (detecció d'àpats no anunciats) faci la resta. Fer servir aquí un valor inferior al 100% pot ser útil:
+* per a persones amb digestió lenta: lliurar tot el bolus per avançat pot causar una hipoglucèmia, perquè la insulina actua més ràpid que la digestió.
+* per deixar més marge a **AAPS** perquè gestioni tot sol la **pujada de glucèmia**. En tots dos casos, **AAPS** compensarà la part del bolus que falta amb SMB, si ho considera adequat i quan ho consideri.
 
-**Use bolus advisor**
+**Utilitzar l'assessor de bolus**
 
-When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
+Si està activat i feu servir la calculadora de bolus quan esteu en hiperglucèmia, rebreu un avís que us pregunta si voleu fer el bolus abans i menjar més tard, quan la vostra **glucèmia** torni a estar dins del rang.
 
 (Preferences-advanced-settings-overview)=
 ### Superbolus
 
-The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 4.
+L'opció Superbolus d'**AAPS** 3.x no està disponible com a opció de configuració a **AAPS** 4.
 
-## Loop
+## Llaç
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Vegeu [Pantalles d'AAPS > La pantalla principal > Estat del llaç](#AapsScreens-loop-status) per canviar ara el mode del llaç.
 
 (Preferences-minimal-request-change)=
-### Open mode minimum change
+### Canvi mínim en mode obert
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting. This defines the relative change required to trigger a notification.
+Quan feu servir el **Llaç obert**, rebreu un avís cada vegada que **AAPS** recomani ajustar la taxa basal. Per reduir el nombre d'avisos, podeu fer servir un [rang objectiu de glucèmia més ampli](#profile-glucose-targets) o augmentar el percentatge de l'opció «**Canvi mínim en mode obert**». Defineix el canvi relatiu necessari per generar un avís.
 
-![Settings > Loop](../images/preferences/settings_loop.png)
+![Configuració > Llaç](../images/preferences/settings_loop.png)
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Advanced Meal Assist (AMA) o Super Micro Bolus (SMB)
 
-Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Segons la vostra configuració a [Configurador > APS](../SettingUpAaps/ConfigBuilder.md), podeu triar entre dos algoritmes:
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced Meal Assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama): l'estat de l'algoritme el 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb): l'algoritme més recent, recomanat per a principiants
 
 As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Tota la configuració d'OpenAPS AMA es descriu a la secció dedicada de [Funcions principals d'AAPS > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Tota la configuració d'OpenAPS SMB es descriu a la secció dedicada de [Funcions principals d'AAPS > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-The list of settings you see depends on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) and on [Simple mode](#preferences-simple-mode). On a new installation only **Use dynamic sensitivity** is shown. Once the objectives are completed, the section looks like this:
+La llista d'opcions que veieu depèn del vostre progrés als [Objectius](../SettingUpAaps/CompletingTheObjectives.md) i del [mode simple](#preferences-simple-mode). En una instal·lació nova només es mostra **Utilitzar sensibilitat dinàmica**. Quan s'han completat els objectius, la secció es veu així:
 
-![Settings > OpenAPS SMB, first part](../images/preferences/settings_openaps_smb_1.png)
+![Configuració > OpenAPS SMB, primera part](../images/preferences/settings_openaps_smb_1.png)
 
-![Settings > OpenAPS SMB, SMB options](../images/preferences/settings_openaps_smb_2.png)
+![Configuració > OpenAPS SMB, opcions de l'SMB](../images/preferences/settings_openaps_smb_2.png)
 
-![Settings > OpenAPS SMB, UAM and carbs required](../images/preferences/settings_openaps_smb_3.png)
+![Configuració > OpenAPS SMB, UAM i carbohidrats necessaris](../images/preferences/settings_openaps_smb_3.png)
 
-**Advanced Settings** at the bottom of the section holds values that you normally do not have to change:
+La **Configuració avançada**, al final de la secció, conté valors que normalment no cal canviar:
 
-![Settings > OpenAPS SMB > Advanced Settings](../images/preferences/settings_openaps_smb_advanced.png)
+![Configuració > OpenAPS SMB > Configuració avançada](../images/preferences/settings_openaps_smb_advanced.png)
 
-![Settings > OpenAPS SMB > Advanced Settings, continued](../images/preferences/settings_openaps_smb_advanced_2.png)
+![Configuració > OpenAPS SMB > Configuració avançada, continuació](../images/preferences/settings_openaps_smb_advanced_2.png)
 
-## Absorption settings
+## Configuració absorció
 
-![Settings > Absorption settings](../images/preferences/settings_absorption.png)
+![Configuració > Configuració absorció](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
-### SMB min 5m carbs impact (min_5m_carbimpact)
+### Impacte mínim dels carbohidrats en 5 min per a SMB (min_5m_carbimpact)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Opció amagada en [mode simple](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+L'algoritme fa servir el BGI (impacte en la glucèmia) per determinar quan [s'absorbeixen els carbohidrats](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+Quan l'absorció de carbohidrats no es pot calcular de manera dinàmica a partir de la reacció de la vostra glucèmia, **AAPS** aplica als carbohidrats una disminució per defecte. Bàsicament, és una mesura de seguretat. Aquest valor només es fa servir quan falten lectures del **CGM** o quan l'activitat física «gasta» tota la pujada de glucèmia que, si no, faria que **AAPS** reduís el COB.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behavior, some carbs are absorbed/decayed. Big change=many carbs etc.
+Dit de manera senzilla: l'algoritme «sap» com *hauria* de comportar-se la vostra glucèmia sota l'efecte de la dosi actual d'insulina, etc. Sempre que hi ha una desviació positiva respecte del comportament esperat, es considera que s'han absorbit/reduït alguns carbohidrats. Canvi gran = molts carbohidrats, etc.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For the full parameter reference see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+El min_5m_carbimpact defineix l'impacte per defecte de l'absorció de carbohidrats cada 5 minuts. Per a la referència completa dels paràmetres, vegeu la [documentació d'OpenAPS sobre preferències i configuració de seguretat](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 3, for SMB it's 8.
+El valor estàndard per a AMA és 3, per a SMB és 8.
 
-The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
+El gràfic de COB de la pantalla principal indica quan es fa servir min_5m_carbimpact posant punts taronja a la part superior de la corba de COB.
 
-![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
+![Gràfic de COB](../images/main/cob_graph_min_5m_carbimpact.png)
 
-### Absorption cutoff
+### Límit d'absorció
 
-Time at which any meal is considered absorbed; remaining carbs will be cut off. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Temps després del qual es considera que qualsevol àpat s'ha absorbit; els carbohidrats que queden s'eliminen. Si sovint mengeu àpats rics en greix o proteïna, haureu d'augmentar el temps d'absorció dels àpats.
 
-### Advanced settings - autosens ratio
+### Configuració avançada: ràtio d'Autosens
 
-![Absorption advanced settings](../images/preferences/settings_absorption_advanced.png)
+![Configuració avançada de l'absorció](../images/preferences/settings_absorption_advanced.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Definiu la ràtio mínima i màxima d'[Autosens](#Open-APS-features-autosens).
+- Normalment no cal canviar els valors estàndard (màx. 1,2 i mín. 0,7).
 
-## Pump
+## Bomba
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Configuració > Bomba](../images/preferences/settings_pump.png)
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off Bluetooth for one second if no connection to the pump is possible. This may help on some phones where the Bluetooth stack freezes.
+Activeu el BT Watchdog si cal (p. ex. per a bombes Dana). Desactiva el Bluetooth durant un segon si no es pot connectar amb la bomba. Això pot ajudar en alguns telèfons on el sistema Bluetooth es bloqueja.
 
-## Pump settings
+## Configuració de la bomba
 
-The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+Les opcions d'aquí canvien segons el controlador de bomba que hàgiu seleccionat a [Configurador > Bomba](#Config-Builder-pump). Emparelleu i configureu la bomba segons les [instruccions de cada bomba](../Getting-Started/CompatiblePumps.md).
 
-For example with the **Virtual Pump**, the section is called **Virtual pump settings**. You choose the **Pump type** the virtual pump imitates, and whether its status is uploaded to Nightscout:
+Per exemple, amb la **Bomba virtual**, la secció es diu **Configuració bomba virtual**. Hi trieu el **Tipus de bomba** que imita la bomba virtual, i si el seu estat s'envia a Nightscout:
 
-![Settings > Virtual pump settings](../images/preferences/settings_virtual_pump.png)
+![Configuració > Configuració bomba virtual](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Més informació a la pàgina dedicada [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
 ## NSClientV3
 
-![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
+![Configuració > NSClientV3](../images/preferences/settings_nsclient.png)
 
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. It uses the Nightscout API v3.
+El plugin NSClient (que es mostra com a **NSClientV3** al menú de configuració) sincronitza les vostres dades amb Nightscout. Fa servir l'API v3 de Nightscout.
 
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Quan feu servir NSClientV3, tots els programes que envien dades han de fer servir l'API v3 de Nightscout. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
 ```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+- **Assegureu-vos que l'URL NO acaba amb /api/v1/.**
+- A Nightscout, creeu un *[token d'administrador](https://nightscout.github.io/nightscout/security/#create-a-token)* (cal [Nightscout 15](https://nightscout.github.io/update/update/) per fer servir l'API V3) i introduïu-lo a **Token d'accés de Nightscout** (no el vostre API Secret!). A l'**AAPSClient** podeu escanejar en canvi el codi QR del telèfon principal, que configura un token propi del client. Un client emparellat amb el PIN rep el seu propi token del telèfon principal després de l'emparellament. Vegeu [El token de Nightscout propi del client](#client-master-control-own-token).
+- Això permet llegir i escriure dades entre el lloc web de Nightscout i **AAPS**.
+- Si us heu quedat encallats a l'Objectiu 1, comproveu bé que no hi hagi errors d'escriptura aquí.
 - Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Sincronització
 
-![Synchronization options](../images/preferences/settings_nsclient_sync.png)
+![Opcions de sincronització](../images/preferences/settings_nsclient_sync.png)
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Les opcions de sincronització depenen de com vulgueu fer servir **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+Podeu seleccionar quines dades voleu [enviar a Nightscout i descarregar-ne](#Nightscout-aaps-settings).
 
-While client control is on (always in Simple Mode), these settings are hidden: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode), takes no changes made directly in Nightscout and uploads all its data.
+Mentre el control des del client està activat (sempre en mode simple), aquestes opcions estan amagades: llavors **AAPS** està en [mode reforçat](#client-master-control-hardened-mode), no accepta canvis fets directament a Nightscout i envia totes les seves dades.
 
-### Alarm options
+### Configuració alarmes
 
-![Alarm options](../images/preferences/settings_nsclient_alarms.png)
+![Configuració alarmes](../images/preferences/settings_nsclient_alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip or BYODA) then use those alarms instead of Nightscout Alarms.
-- NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+- Configuració alarmes us permet triar quines alarmes de Nightscout voleu fer servir a l'aplicació. **AAPS** farà sonar una alarma quan salti una alarma de Nightscout.
+- Perquè les alarmes sonin, heu de definir els valors d'alarma Urgent High, High, Low i Urgent Low a les vostres [variables de Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Només funcionen mentre hi ha connexió amb Nightscout i estan pensades per a pares i cuidadors.
+- Si teniu l'origen del **CGM** al telèfon (p. ex. xDrip o BYODA), feu servir les seves alarmes en lloc de les alarmes de Nightscout.
+- Avisos de NS mostra els [anuncis](https://nightscout.github.io/nightscout/discover/#announcement) de Nightscout als avisos d'**AAPS**.
+- Podeu canviar el llindar de les alarmes de dades antigues i de dades antigues urgents, que sonen quan no arriben dades de Nightscout després d'un cert temps.
 
-### Remote control
+### Control remot
 
-The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
+L'interruptor «**Permetre el control des dels clients**» ja no és en aquesta configuració: és a la part superior de **Gestionar → Clients autoritzats**, on es gestionen els clients emparellats. Vegeu la pàgina dedicada [Control principal ↔ client (control remot signat)](../RemoteFeatures/ClientMasterControl.md), que també explica el [mode reforçat](#client-master-control-hardened-mode), que aquest interruptor activa.
 
-### Connection settings
+### Configuració de connexió
 
-![NSClient connection settings](../images/preferences/settings_nsclient_connection.png)
+![Configuració de connexió de NSClient](../images/preferences/settings_nsclient_connection.png)
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Configuració de connexió defineix quan s'activarà la connexió amb Nightscout.
+- Limiteu l'enviament a Nightscout només a la Wi-Fi, o fins i tot a certs SSID de Wi-Fi.
+- Si voleu fer servir només una xarxa Wi-Fi concreta, podeu escriure el seu SSID.
+- Podeu separar diversos SSID amb punt i coma.
+- Per esborrar tots els SSID, escriviu un espai en blanc al camp.
 
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClientV3)
 
-![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
+![Configuració avançada de NSClient](../images/preferences/settings_nsclient_advanced.png)
 
-Options in advanced settings are self-explanatory.
+Les opcions de la configuració avançada s'expliquen per si soles.
 
-## SMS Communicator
+## Comunicador SMS
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Més informació a la pàgina dedicada [Ordres SMS](../RemoteFeatures/SMSCommands.md).
 
 (preferences-wear)=
 ## Wear
 
-This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) and [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md) pages.
+Aquesta secció es mostra quan el plugin **Wear** està activat a [Configurador > Comunicació](#Config-Builder-wear). Més informació a les pàgines dedicades [Configurar AAPS al vostre rellotge Wear OS](../WearOS/WearOsSmartwatch.md) i [Controlar AAPS amb el vostre rellotge Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
-![Settings > Wear](../images/preferences/settings_wear.png)
+![Configuració > Wear](../images/preferences/settings_wear.png)
 
-- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data: the phone refuses any command from the watch, and tapping a complication that would open a control screen opens the **AAPS** menu on the watch instead.
+- **Control des de Wear**: permet enviar tractaments i altres accions des del rellotge. Sense aquesta opció, el rellotge només mostra dades: el telèfon rebutja qualsevol ordre del rellotge, i si premeu una complicació que obriria una pantalla de control, s'obre en canvi el menú d'**AAPS** al rellotge.
 
-**Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
+**Configuració de l'assistent de Wear** defineix quins càlculs s'inclouen al resultat de la calculadora de bolus del rellotge. Al rellotge només introduïu els carbohidrats; aquests interruptors substitueixen les opcions que triaríeu a la calculadora de bolus del telèfon:
 
-- **Include BG in wizard**: add a correction for the difference between your current glucose and your target.
-- **Include temp target in wizard**: use the running temp target instead of the profile target for this correction.
-- **Include trend in wizard**: take the current glucose trend into account.
-- **Include COB in wizard**: add insulin for the carbs that are still on board.
-- **Include IOB in wizard**: subtract the insulin that is still on board.
+- **Incloure glucèmia a la calculadora**: afegeix una correcció per la diferència entre la vostra glucèmia actual i el vostre objectiu.
+- **Incloure objectiu temporal a la calculadora**: fa servir l'objectiu temporal actiu en lloc de l'objectiu del perfil per a aquesta correcció.
+- **Incloure tendència a la calculadora**: té en compte la tendència actual de la glucèmia.
+- **Incloure COB a la calculadora**: afegeix insulina per als carbohidrats que encara queden a bord.
+- **Incloure IOB a la calculadora**: resta la insulina que encara queda a bord.
 
-![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
+![Configuració > Wear > Configuració de l'assistent de Wear](../images/preferences/settings_wear_wear_wizard.png)
 
-**Custom Watchface Settings** contains **Authorize custom watchfaces**. A custom watchface file can include values for some watch settings. When this switch is on, loading such a watchface is allowed to change those settings on the watch; when it is off, the watchface is loaded but the settings stay as they are:
+**Configuració del watchface personalitzat** conté **Autoritzar watchfaces personalitzats**. Un fitxer de watchface personalitzat pot incloure valors per a algunes opcions del rellotge. Quan aquest interruptor està activat, carregar un watchface així pot canviar aquestes opcions al rellotge; quan està desactivat, el watchface es carrega però les opcions es queden com estan:
 
-![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
+![Configuració > Wear > Configuració del watchface personalitzat](../images/preferences/settings_wear_custom_watchface.png)
 
-**General Settings** contains **Notify on SMB**, to get a notification on the watch each time an SMB is delivered:
+**Configuració general** conté **Avisar quan hi ha SMB**, per rebre un avís al rellotge cada vegada que es lliura un SMB:
 
-![Settings > Wear > General Settings](../images/preferences/settings_wear_general.png)
+![Configuració > Wear > Configuració general](../images/preferences/settings_wear_general.png)
 
 ## Autotune
 
-This section is shown when the **Autotune** plugin is enabled in [Configuration > General](#Config-Builder-autotune). The settings are described on the dedicated [Autotune](../AdvancedOptions/Autotune.md) page.
+Aquesta secció es mostra quan el plugin **Autotune** està activat a [Configurador > General](#Config-Builder-autotune). La configuració es descriu a la pàgina dedicada [Com utilitzar el plugin Autotune](../AdvancedOptions/Autotune.md).
 
-![Settings > Autotune](../images/preferences/settings_autotune.png)
+![Configuració > Autotune](../images/preferences/settings_autotune.png)
 
-## Automation
+## Automatització
 
-![Settings > Automation](../images/preferences/settings_automation.png)
+![Configuració > Automatització](../images/preferences/settings_automation.png)
 
-Select which location service shall be used:
+Seleccioneu quin servei d'ubicació s'ha de fer servir:
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Utilitzar ubicació passiva: **AAPS** només agafa ubicacions quan altres aplicacions les demanen
+- Utilitzar ubicació de la xarxa: ubicació de la vostra Wi-Fi
+- Utilitzar ubicació GPS (Atenció! Pot gastar molta bateria!)
 
-## Local alerts
+## Alertes locals
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Configuració > Alertes locals](../images/preferences/settings_local_alerts.png)
 
-Settings should be self-explanatory.
+Aquestes opcions s'expliquen per si soles.
 
 **Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
 
@@ -489,92 +489,92 @@ When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence a
 - Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
-## Maintenance settings
+## Configuració de manteniment
 
-![Settings > Maintenance](../images/preferences/settings_maintenance.png)
+![Configuració > Manteniment](../images/preferences/settings_maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**Destinatari del correu electrònic**: el destinatari estàndard dels registres és <logs@aaps.app>.
 
-**Number of logs to send**: how many of the most recent log files are attached when you send logs.
+**Nombre de registres a enviar**: quants dels fitxers de registre més recents s'adjunten quan envieu els registres.
 
-**Data Choices**
+**Opcions de dades**
 
-![Data choices](../images/preferences/settings_data_choices.png)
+![Opcions de dades](../images/preferences/settings_data_choices.png)
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+Podeu ajudar a millorar **AAPS** enviant informes d'error als desenvolupadors.
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manual export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**Exportació automàtica de la configuració**<br/> Si activeu aquesta funció, permeteu que **AAPS** exporti la configuració sense intervenció de l'usuari. For this the master password is securely stored on your phone (only) at the next manual export. La contrasenya desada es farà servir durant un màxim de 4 setmanes. Després de 4 setmanes rebreu un avís que la contrasenya està a punt de caducar. Durant un període de gràcia d'1 setmana, podeu renovar la contrasenya exportant la configuració manualment des del menú de manteniment.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password. [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+Quan ha passat el període de gràcia d'1 setmana, la contrasenya desada caduca i qualsevol exportació automàtica de la configuració s'aturarà i avisarà l'usuari, demanant-li que torni a introduir la contrasenya. [(**Exportacions automàtiques de la configuració**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) es registraran a les llistes «Portal de cures» i «Entrada d'usuari» d'**AAPS**, a Tractaments.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Després d'activar aquesta opció, feu una exportació manual de la configuració, on se us demanarà la contrasenya, perquè **AAPS** la pugui desar.
 
-### Log files
+### Arxius de registre
 
-AAPS will save logs for troubleshooting.
+AAPS desa registres per a la resolució de problemes.
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+No desactiveu aquesta funció: ajudarà a entendre les causes si alguna cosa va malament.
 
-If you need to send the logs to the developers, make sure you accurately describe the issue in the email. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Si heu d'enviar els registres als desenvolupadors, descriviu bé el problema al correu electrònic. És millor enviar els registres només quan us ho demanin, després d'un [informe d'incidència a GitHub](https://github.com/nightscout/AndroidAPS/issues).
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Trobareu els registres d'AAPS a la memòria del telèfon -> Android -> data -> info.nightscout.androidaps -> files.
 
-Log handling (log settings, sending and deleting logs) and file management are found on the **Maintenance** screen, opened from the **menu** (☰) in the top-left corner of the main screen:
+La gestió dels registres (configuració, enviament i eliminació de registres) i la gestió d'arxius es troben a la pantalla **Manteniment**, que s'obre des del **menú** (☰) a la cantonada superior esquerra de la pantalla principal:
 
-![Maintenance screen](../images/preferences/maintenance_file_management.png)
+![Pantalla Manteniment](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### Definir el directori local d'AAPS
 
-The **Maintenance** screen also includes the **AAPS directory**. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Once a directory is chosen, its path (for example `Documents/AAPS`) is shown below **AAPS directory**, so you can always see where your files are saved.
+La pantalla **Manteniment** també inclou **Directori d'AAPS**. Aquesta opció permet a l'usuari triar un directori del telèfon on **AAPS** desarà la configuració, els registres i altres fitxers. Quan heu triat un directori, el seu camí (per exemple `Documents/AAPS`) es mostra sota **Directori d'AAPS**, de manera que sempre podeu veure on es desen els vostres fitxers.
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+Es recomana molt fer servir un directori directament a l'arrel de la memòria del telèfon. El valor per defecte és AAPS.
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+![Ubicació del directori local](../images/preferences/maintenance_settings_directory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+Si seleccioneu un subdirectori d'AAPS, veureu un missatge d'error. Premeu «OK» i torneu-ho a provar seleccionant el directori correcte (un nivell més amunt). No seleccioneu «IGNORAR» tret que sapigueu clarament què feu.
 
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+![Ubicació del directori local](../images/preferences/maintenance_settings_wrongdirectory.png)
 
-Android can silently take the directory permission away, for example after you reinstall **AAPS** or clear its storage. When that happens, **AAPS** shows a persistent **Access to the AAPS directory was lost** notification and local settings export stops working until you come back here and select the directory again. Do this promptly, otherwise your backups on the phone are no longer refreshed.
+Android pot retirar el permís del directori sense avisar, per exemple després de reinstal·lar **AAPS** o d'esborrar-ne l'emmagatzematge. Quan passa això, **AAPS** mostra un avís permanent **S'ha perdut l'accés al directori AAPS** i l'exportació local de la configuració deixa de funcionar fins que torneu aquí i seleccioneu de nou el directori. Feu-ho de seguida; si no, les còpies de seguretat del telèfon ja no s'actualitzen.
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### Definir un directori al núvol
 
-You can export your settings, logs and CSV data to a cloud service.
+Podeu exportar la configuració, els registres i les dades CSV a un servei al núvol.
 
-1. Open the **menu** (☰), select **Maintenance** and tap **Cloud Directory** (under **File management**).
+1. Obriu el **menú** (☰), seleccioneu **Manteniment** i premeu **Carpeta al núvol** (a **Gestió d'arxius**).
 
-   ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
+   ![Carpeta al núvol al menú Manteniment](../images/preferences/maintenance_settings_cloud.png)
 
-2. In **Select Storage Type**, select **Google Drive**.
+2. A **Seleccionar tipus d'emmagatzematge**, seleccioneu **Google Drive**.
 
-   ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
+   ![Diàleg Seleccionar tipus d'emmagatzematge](../images/preferences/maintenance_cloud_select_storage.png)
 
-3. A Google sign-in page opens. Choose the Google account that will hold your backups (you can use a [dedicated Google account](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
+3. S'obre una pàgina d'inici de sessió de Google. Trieu el compte de Google que guardarà les vostres còpies de seguretat (podeu fer servir un [compte de Google dedicat](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
 
-   ![Google sign-in page: choose an account](../images/preferences/maintenance_cloud_google_account.png)
+   ![Pàgina d'inici de sessió de Google: trieu un compte](../images/preferences/maintenance_cloud_google_account.png)
 
-4. Check that the account is the right one and tap **Continue** to give **AAPS** access. If you set up the cloud directory before, the page says that **AAPS** already has some access.
+4. Comproveu que el compte és el correcte i premeu **Continue** per donar accés a **AAPS**. Si ja havíeu configurat la carpeta al núvol abans, la pàgina diu que **AAPS** ja té cert accés.
 
-   ![Google page asking to give AAPS access, with the Continue button](../images/preferences/maintenance_cloud_google_access.png)
+   ![Pàgina de Google que demana donar accés a AAPS, amb el botó Continue](../images/preferences/maintenance_cloud_google_access.png)
 
-5. Back in **AAPS**, the message **Cloud storage authentication successful** appears at the bottom of the main screen:
+5. De tornada a **AAPS**, apareix el missatge **Autenticació de l'emmagatzematge al núvol correcta** a la part inferior de la pantalla principal:
 
-   ![Cloud storage authentication successful message](../images/preferences/maintenance_cloud_auth_success.png)
+   ![Missatge d'autenticació de l'emmagatzematge al núvol correcta](../images/preferences/maintenance_cloud_auth_success.png)
 
-   In the **Maintenance** menu, **Cloud Directory** now has a green dot, and the **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** are available.
+   Al menú **Manteniment**, **Carpeta al núvol** ara té un punt verd, i els botons **Núvol** al costat d'**Enviar registres**, **Exportar configuració**, **Importar configuració** i **Exportar entrades d'usuari a Excel (csv)** estan disponibles.
 
-   ![Maintenance menu with cloud storage set up: Cloud buttons available and the clear icon on Cloud Directory](../images/preferences/maintenance_settings_cloud_ready.png)
+   ![Menú Manteniment amb l'emmagatzematge al núvol configurat: botons Núvol disponibles i la icona d'esborrar a Carpeta al núvol](../images/preferences/maintenance_settings_cloud_ready.png)
 
-To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the end of the **Cloud Directory** row in the **Maintenance** menu (it is shown once a cloud service is set up) and confirm **Clear Cloud Settings**. This switches back to local storage and clears the authorization.
+Per deixar d'exportar al núvol, premeu la icona **✕** (**Esborrar configuració**) al final de la fila **Carpeta al núvol** del menú **Manteniment** (es mostra quan hi ha un servei al núvol configurat) i confirmeu **Esborrar configuració del núvol**. Això torna a l'emmagatzematge local i esborra l'autorització.
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+Podeu ajudar la comunitat donant les vostres dades a projectes de recerca! Els detalls es descriuen a la pàgina [Open Humans Uploader](../SupportingAaps/OpenHumans.md).
 
-In **Settings → Open Humans**, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+A **Configuració → Open Humans**, podeu definir quan s'han d'enviar les dades
+- només si està connectat a la Wi-Fi
+- només si es carrega
