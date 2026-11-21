@@ -1,40 +1,40 @@
-# End of life
+# Ophør af support
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Selv om dit nuværende AAPS-system virker præcis, som du vil have det, er det stadig værd at opgradere. Nyere versioner giver sikkerhedsrettelser og fejlrettelser, som du måske aldrig lægger mærke til, før de betyder noget. De holder systemet kompatibelt med nye versioner af telefonens styresystem, CGM-apps, pumpefirmware og ændringer i Nightscout. De tilføjer forbedringer af algoritmen og funktioner, der er testet af et stort fællesskab. Og de sikrer, at du bliver på en version, som stadig er understøttet, og hvor andre faktisk kan hjælpe dig med fejlfinding. Nogle tidligere AAPS-versioner har med vilje ingen udløbsdato, så de kan blive ved med at virke på ældre Android-versioner. Når der ikke kommer en advarsel om udløb, er det derfor ikke et tegn på, at din version stadig er opdateret eller understøttet.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Hver AAPS-version kan have en slutdato. Efter denne dato kan AAPS [begrænse loopet](#version-enforcement). AAPS advarer dig, før en version udløber. Planlæg at opdatere før slutdatoen, og følg [vejledningen til opdatering](UpdateToNewVersion.md).
 
-## How to use this page
+## Sådan bruger du denne side
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. Åbn **menuen** (☰) øverst til venstre i AAPS, og vælg **Om**. Der kan du se din AAPS-version.
+2. Find den samme version i den første tabel nedenfor. Læs slutdatoen ved siden af den. Datoer er skrevet som **år-måned-dag**. For eksempel betyder `2026-10-30` den 30. oktober 2026.
+3. Læs [Udgivelsesnoter](ReleaseNotes.md) og [vejledningen til opdatering](UpdateToNewVersion.md), før du opdaterer. Hvilken version du kan bruge, afhænger også af telefonens Android-version.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+Tabellen viser ikke en slutdato for alle AAPS-versioner. Hvis din version mangler, er dens slutdato måske ikke fastsat endnu. Det betyder ikke, at den bliver understøttet for altid.
 
-## AAPS version end dates
+## Slutdatoer for AAPS-versioner
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">Indlæser data om AAPS-versioner…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Slå JavaScript til for at se tabellerne.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">AAPS-version</th><th scope="col">Slutdato</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## Android API-niveauer
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android giver hver systemversion et **API-niveau**, som er et tal, apps bruger. For eksempel er API-niveau 30 Android 11. Tabellen nedenfor bruger API-niveauer fra AAPS' versionsdata. AAPS-versionen i hver række er den værdi, der står for det viste API-niveau. Dette er ikke en komplet liste over de versioner, du kan installere.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Brug [vejledningen om Android-versioner i Udgivelsesnoter](#maintenance-android-version-aaps-version) for at vælge en AAPS-version til din telefon.
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Android API-niveau</th><th scope="col">Angivet AAPS-version</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     const label = list => list.length === 1 ? list[0]
-      : list.length === 2 ? `${list[0]} and ${list[1]}`
-      : `${list[0]} to ${list[list.length - 1]}`;
+      : list.length === 2 ? `${list[0]} og ${list[1]}`
+      : `${list[0]} til ${list[list.length - 1]}`;
     showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Please try again later.';
+    status.textContent = 'Kunne ikke indlæse data om AAPS-versioner. Prøv igen senere.';
   }
 });
 </script>
