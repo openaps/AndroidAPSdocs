@@ -160,29 +160,29 @@ Por la influencia de la basal temporal a cero explicada arriba y por la fórmula
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Como en AAPS la dosis basal influye de forma indirecta en la bajada de la IOB, unas dosis basales demasiado altas pueden ocultar una DIA demasiado alta, y al revés. Por eso tiene sentido ajustar primero con cuidado las dosis basales antes de cambiar la DIA y el pico. Ten en cuenta también que los ajustes de DIA y pico se influyen entre sí: el efecto de la DIA depende del pico, y al revés.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Estos gráficos muestran el efecto exacto de la DIA y del pico en las curvas de IOB, en todo el rango de valores permitidos.
 
-Adjusting DIA:
+Cambiar la DIA:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Cambiar el pico:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Por último, una comparación cambiando la DIA y el pico a la vez. La idea es que los dos valores cambian en la misma proporción, de modo que `49/35 ~ 7/5`. O, de la misma forma, `120/93 ~ 9/7`. Los intervalos son iguales sea cual sea la DIA o el pico de partida, siempre que el cambio relativo sea el mismo para los dos.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Cuando la DIA y el pico se cambian de esta forma, cada punto de la curva se desplaza en la misma proporción.
 
 ````
 
@@ -237,37 +237,37 @@ Choose how **AAPS** treats the values it receives from your sensor:
 
 How to use **Linear calibration**:
 
-1. Select **Linear calibration** in the **Calibration** category.
-2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+1. Selecciona **Calibración lineal** en la categoría **Calibración**.
+2. Cuando pongas un sensor nuevo, registra el cambio de sensor: usa **Registrar cambio de sensor** en la pantalla de calibración, o introduce una inserción de sensor MCG en el Portal de cuidados. Así **AAPS** sabe cuándo empezó la sesión del sensor. Si **AAPS** detecta un hueco de más de 30 minutos en los valores, puede pedirte que marques un cambio de sensor; este aviso solo aparece en el máster, no en un cliente.
+3. Abre el complemento y pulsa **Añadir calibración**. Introduce tu valor capilar. **AAPS** lo empareja con el valor del sensor de los últimos 10 minutos.
 
 A calibration is accepted only when:
 
 - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
 - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
 - there is a CGM reading from the last 10 minutes,
-- it is for the current moment. You cannot enter older fingerstick values.
+- it is for the current moment. No puedes introducir valores capilares más antiguos.
 
 How the correction works:
 
 - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-- Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
+- Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. Por eso la recta sigue a tu sensor cuando se desvía.
 - At least **2 pairs** are needed.
 - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
 - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-- Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+- Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. Esto te protege de una entrada errónea.
 
 What it changes:
 
-- The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-- A new sensor change starts from zero. Pairs from earlier sensors no longer count.
+- The corrected value is used everywhere: the BG on the main screen, the graph and the loop. Los valores del sensor en sí no se cambian. La corrección se aplica por encima, también a los valores anteriores del sensor actual.
+- A new sensor change starts from zero. Los pares de sensores anteriores ya no cuentan.
 - On the graph, a calibration is shown as a marker at the fingerstick value.
 - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
 
 Check and remove entries:
 
 - **Open plugin** shows the status (for example _Slope 0.85, mid-range correction -0.4_), a chart of your pairs with the line, and the list of entries.
-- If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+- If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. La recta se vuelve a calcular en el acto.
 
 ```{admonition} Using xDrip+ as BG source?
 :class: note
