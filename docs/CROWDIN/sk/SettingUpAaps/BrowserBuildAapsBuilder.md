@@ -61,7 +61,7 @@ Potom vždy používajte ten istý kľúč. Keď vytvoríte nový kľúč, stiah
 
 Túto časť preskočte, ak ste nikdy nezostavovali AAPS predchádzajúcim spôsobom zostavenia v prehliadači (vlastná kópia AndroidAPS na GitHube, teda fork, s prípravným súborom a Diskom Google).
 
-Vaše úložisko kľúčov je vo vašom forku uložené ako secrety. GitHub secret už nikdy znova neukáže, preto ho nemôžete skopírovať do nového repozitára. Najprv si vytvorte kópiu úložiska kľúčov a potom ju použite v [kroku 2](#aaps-builder-step2) s voľbou **I already have a keystore**.
+Vaše úložisko kľúčov je vo vašom forku uložené ako secrety. GitHub secret už nikdy znova neukáže, preto ho nemôžete skopírovať do nového repozitára. Najprv si vytvorte kópiu úložiska kľúčov a potom ju použite v [kroku 2](#aaps-builder-step2) s voľbou **Už mám úložisko kľúčov**.
 
 ```{warning}
 Nevyberajte **Vytvoriť nový kľúč**. AAPS zostavený s novým kľúčom nemôže aktualizovať AAPS vo vašom telefóne.
@@ -121,7 +121,7 @@ Tento krok vytvorí vo vašom účte GitHub vlastnú súkromnú kópiu AAPS Buil
 3. V poli **Názov vášho repozitára** ponechajte navrhnutý názov `my-aaps`. Ak ste už repozitár vytvorili s iným názvom, zadajte presne tento názov.
 
    ```{note}
-   **Už máte repozitár AAPS Builder** (vytvorený staršou verziou stránky nastavenia)? Nevytvárajte nový: zadajte jeho presný názov, preskočte **Create my private repository** a raz aktualizujte jeho workflow podľa postupu v časti [Aktualizácia AAPS](#aaps-builder-updates). Vaše secrety zostanú tak, ako sú. Ak aj tak chcete nový repozitár, zvoľte názov, ktorý ešte nemáte, napríklad `my-aaps-2`, a v kroku 2 použite to isté úložisko kľúčov.
+   **Už máte repozitár AAPS Builder** (vytvorený staršou verziou stránky nastavenia)? Nevytvárajte nový: zadajte jeho presný názov, preskočte **Vytvoriť môj súkromný repozitár** a raz aktualizujte jeho workflow podľa postupu v časti [Aktualizácia AAPS](#aaps-builder-updates). Vaše secrety zostanú tak, ako sú. Ak aj tak chcete nový repozitár, zvoľte názov, ktorý ešte nemáte, napríklad `my-aaps-2`, a v kroku 2 použite to isté úložisko kľúčov.
 
    Nezadávajte názov svojho forku AndroidAPS: fork je verejný a už sa zostavuje vlastným workflowom **AAPS CI**.
    ```
@@ -132,7 +132,7 @@ Tento krok vytvorí vo vašom účte GitHub vlastnú súkromnú kópiu AAPS Buil
 
 5. Ťuknite na **Vytvoriť môj súkromný repozitár**.
 
-   ![Riadok s repozitárom a tlačidlo Create my private repository](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Riadok s repozitárom a tlačidlo Vytvoriť môj súkromný repozitár](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
 6. GitHub otvorí na novej karte stránku **Create a new repository**. Všetko je už vyplnené: v časti **Start with a template** šablóna `nightscout/aaps-builder` s vypnutou voľbou **Include all branches** a v časti **General** váš účet ako **Owner** a názov, ktorý ste zvolili.
 
@@ -149,7 +149,7 @@ Tento krok vytvorí vo vašom účte GitHub vlastnú súkromnú kópiu AAPS Buil
    ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
 
 ```{warning}
-**Váš nový repozitár je prázdny**, bez súborov? Nevznikol zo šablóny a nedokáže zostavovať. Vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a potom na stránke nastavenia znova ťuknite na **Create my private repository**.
+**Váš nový repozitár je prázdny**, bez súborov? Nevznikol zo šablóny a nedokáže zostavovať. Vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a potom na stránke nastavenia znova ťuknite na **Vytvoriť môj súkromný repozitár**.
 ```
 
 ```{tip}
@@ -319,7 +319,7 @@ Každé zostavenie si môžete nechať uložiť aj na svoj Disk Google, do prie�
 
 Potrebuje to ešte jeden secret, `GDRIVE_OAUTH2`. Krok 6 stránky nastavenia ho za vás získa od Googlu, v telefóne aj v počítači. **AAPS** potom na vašom Disku Google vidí a mení iba súbory, ktoré sám vytvorí, nič iné.
 
-1. Na stránke nastavenia ťuknite na **Connect Google Drive**. Google sa otvorí na novej karte.
+1. Na stránke nastavenia ťuknite na **Pripojiť Disk Google**. Google sa otvorí na novej karte.
 
 2. Zvoľte svoj účet Google a povoľte prístup. Ak Google hlási, že aplikácia nie je overená, ťuknite na **Rozšírené** (Advanced) a potom na **Prejsť na …** (Go to …).
 
@@ -333,13 +333,13 @@ Potrebuje to ešte jeden secret, `GDRIVE_OAUTH2`. Krok 6 stránky nastavenia ho 
 
    ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
-4. Do niekoľkých minút sa vráťte na kartu so stránkou nastavenia: odpoveď Googlu platí iba krátko a iba raz. Vložte adresu do poľa **Paste the copied address here** a ťuknite na **Get GDRIVE_OAUTH2**. Stránka ukáže **GDRIVE_OAUTH2 is ready**.
+4. Do niekoľkých minút sa vráťte na kartu so stránkou nastavenia: odpoveď Googlu platí iba krátko a iba raz. Vložte adresu do poľa **Sem vložte skopírovanú adresu** a ťuknite na **Získať GDRIVE_OAUTH2**. Stránka ukáže **GDRIVE_OAUTH2 is ready**.
 
    ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
    ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
-5. Ťuknite na **Otvoriť stránku secretov**. Ťuknite na **Kopírovať názov** a vložte ho do malého poľa **Name** (názov je `GDRIVE_OAUTH2`). Ťuknite na **Copy secret**, vložte ho do veľkého poľa **Secret** a ťuknite na **Add secret**.
+5. Ťuknite na **Otvoriť stránku secretov**. Ťuknite na **Kopírovať názov** a vložte ho do malého poľa **Name** (názov je `GDRIVE_OAUTH2`). Ťuknite na **Kopírovať secret**, vložte ho do veľkého poľa **Secret** a ťuknite na **Add secret**.
 
    ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
@@ -363,8 +363,8 @@ Váš repozitár nikdy nič nezostaví sám: vy rozhodujete, kedy zostaviť, kto
 
 **Aktualizácie vášho súboru workflow** sú zriedkavé: iba keď sa zmení formulár **Run workflow**, napríklad kvôli novému variantu zostavenia, alebo raz, ak váš repozitár vznikol staršou verziou stránky nastavenia (prázdny repozitár s krátkym súborom workflow) alebo zo starej šablóny. Stránka [Aktualizácie a zmeny dokumentácie](../Maintenance/DocumentationUpdate.md) to vtedy oznámi. Váš secret `KEYSTORE_SET` zostáva bez zmeny. Na stránke nastavenia otvorte na konci kroku 1 časť **Updating your copy**:
 
-1. Ťuknite na **Open the newest workflow**. V počítači kliknite vpravo hore nad súborom na **ikonu kopírovania** („Copy raw file“). V telefóne namiesto toho otvorte **textovú verziu** (plain-text version), stlačte a podržte text a potom zvoľte **Vybrať všetko** (Select all) a **Kopírovať** (Copy).
-2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
+1. Ťuknite na **Otvoriť najnovší workflow**. V počítači kliknite vpravo hore nad súborom na **ikonu kopírovania** („Copy raw file“). V telefóne namiesto toho otvorte **textovú verziu** (plain-text version), stlačte a podržte text a potom zvoľte **Vybrať všetko** (Select all) a **Kopírovať** (Copy).
+2. Ťuknite na **Otvoriť môj súbor workflow**, potom na ponuku **⋯** vpravo hore v súbore a na **Edit file… In place** (on a computer, click the pencil).
 3. Nahraďte celý text skopírovaným workflowom (v telefóne dlho podržte prst: **Vybrať všetko**, potom **Prilepiť** (Paste)).
 4. Ťuknite na **Commit changes…** a potom na **Commit changes**.
 
