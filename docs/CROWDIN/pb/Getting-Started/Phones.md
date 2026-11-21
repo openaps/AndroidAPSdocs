@@ -26,11 +26,11 @@ Mantemos uma lista das [combinações de hardware testadas](https://docs.google.
 
 Esta lista mostra a experiência de usuários com um telefone usado junto com o **AAPS** e uma bomba e um CGM. Ela pode ajudar você a verificar se seu telefone / bomba / CGM já foi usado com sucesso por outros usuários.
 
-The document is read-only. Com CTRL-F, você pode pesquisar no texto da planilha do Google.
+O documento é somente leitura. Com CTRL-F, você pode pesquisar no texto da planilha do Google.
 
 Para registrar o teste da sua combinação de hardware, preencha este [formulário](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Depois que você preenche o formulário, a planilha é atualizada automaticamente a cada 5 minutos.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Se tiver algum problema com a planilha, entre em contato com a pessoa que a mantém, *@theodoor5137*, no Discord, ou veja a página [Onde posso obter ajuda?](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Não encontrei meu telefone
 
