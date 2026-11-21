@@ -53,7 +53,7 @@ Se a absorção mínima de carboidratos (min_5m_carbimpact) for usada em vez do 
 
 Normalmente, o __AAPS__ detecta a absorção de carboidratos pelos desvios de **BG**. Se o usuário inseriu carboidratos, mas o **AAPS** não consegue detectar a absorção estimada pelos desvios de **BG**, ele usa o método [min_5m_carbimpact](#Preferences-min_5m_carbimpact) para calcular a absorção (o chamado ‘fallback’). Como este método calcula apenas a absorção mínima de carboidratos, sem considerar os desvios de **BG**, ele pode levar a valores de COB incorretos.
 
-![Dica sobre valor de COB errado](../images/Calculator_SlowCarbAbsorption.png)
+![Dica sobre valor de COB errado](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Na captura de tela acima, em 66% do tempo a absorção de carboidratos foi calculada pelo min_5m_carbimpact em vez do valor detectado pelos desvios. Isto indica que o usuário pode ter tido menos **COB** do que o calculado pelo algoritmo.
 
