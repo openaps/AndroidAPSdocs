@@ -32,7 +32,7 @@ Aquests danys poden incloure **pèrdua de visió i neuropatia permanent (dolor)*
 
 #### Amb quina rapidesa puc reduir la meva HbA1c sense risc de danys permanents?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. Van suggerir que **«la baixada del valor d'HbA1c en qualsevol període de 6 mesos s'ha de limitar a menys del 2% per evitar la progressió de la retinopatia... Una baixada massa ràpida a l'inici del control glucèmic pot causar un agreujament greu o transitori de la progressió de la retinopatia.»**
+Un [estudi](https://pubmed.ncbi.nlm.nih.gov/1464975/) retrospectiu de 76 pacients va indicar que el risc de progressió de la retinopatia augmentava 1,6 vegades, 2,4 vegades i 3,8 vegades si l'HbA1c baixava un 1%, un 2% o un 3%, respectivament, en un període de 6 mesos. Van suggerir que **«la baixada del valor d'HbA1c en qualsevol període de 6 mesos s'ha de limitar a menys del 2% per evitar la progressió de la retinopatia... Una baixada massa ràpida a l'inici del control glucèmic pot causar un agreujament greu o transitori de la progressió de la retinopatia.»**
 
 N. B. Si feu servir altres unitats d'HbA1c (mmol/mol en lloc de %), feu clic [aquí](https://www.diabetes.co.uk/hba1c-units-converter.html) per a una calculadora d'HbA1c.
 
@@ -51,9 +51,9 @@ En general, s'accepta que les persones amb diabetis tipus 1 _recentment_ diagnos
 :class: danger
 Els inhibidors de l'SGLT-2, també anomenats gliflozines, inhibeixen la reabsorció de glucosa al ronyó. Les gliflozines baixen la glucèmia de manera impossible de calcular, i per això NO les HEU de prendre mentre feu servir un sistema de llaç tancat com AAPS! Hi hauria un risc important de cetoacidosi i/o d'hipoglucèmia! La combinació d'aquest medicament amb un sistema que baixa les taxes basals per fer pujar la glucèmia és especialment perillosa. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. El problema és que, sense que AAPS ho sàpiga, els inhibidors fan que el cos elimini una part dels carbohidrats. Això deixa el cos amb massa insulina en comparació amb els carbohidrats absorbits, i el resultat és una hipoglucèmia.
+En resum:
+- **Exemple 1: risc d'hipo**
+>A l'hora de dinar, feu servir **AAPS** per posar un bolus per a 45 g de carbohidrats. El problema és que, sense que AAPS ho sàpiga, els inhibidors fan que el cos elimini una part dels carbohidrats. Això deixa el cos amb massa insulina en comparació amb els carbohidrats absorbits, i el resultat és una hipoglucèmia.
 
 - **Exemple 2: risc de cetoacidosi**
 >Els inhibidors eliminen una part dels carbohidrats en segon pla, i això fa baixar la glucèmia. **AAPS** indicarà automàticament a la bomba que redueixi el lliurament d'insulina, inclosa la basal. Amb el temps, això pot fer que la glucèmia es mantingui per sota de l'objectiu, fins al punt que el cos no tingui prou insulina de fons per absorbir els carbohidrats, i el resultat és una cetoacidosi. Normalment, la cetoacidosi apareix en pacients amb DT1 perquè la bomba falla, cosa que activaria alertes al telèfon i es notaria per una glucèmia alta. Però el perill de les gliflozines és que AAPS no donaria cap alerta, perquè la bomba continua funcionant i la glucèmia es pot mantenir dins de l'objectiu.
@@ -80,7 +80,7 @@ En les primeres etapes amb **AAPS**, potser tindreu dificultats perquè tots els
 
 #### Temps de compilació de l'aplicació i progrés fins al llaç complet
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. Normalment, per a usuaris sense experiència, compilar **AAPS** pot trigar fins a mig dia o un dia sencer (amb l'ajuda de la comunitat). El procés serà molt més ràpid per a les noves versions d'**AAPS**, a mesura que tingueu més experiència.
+El temps per compilar l'aplicació **AAPS** depèn del vostre nivell d'experiència i de les vostres capacitats tècniques. Normalment, per a usuaris sense experiència, compilar **AAPS** pot trigar fins a mig dia o un dia sencer (amb l'ajuda de la comunitat). El procés serà molt més ràpid per a les noves versions d'**AAPS**, a mesura que tingueu més experiència.
 
 Diverses parts d'aquesta documentació us ajuden durant el procés de compilació:
 
@@ -123,7 +123,7 @@ No dubteu a contactar amb la comunitat d'AAPS si teniu qualsevol dubte: no hi ha
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
+#### [On puc trobar ajuda](../GettingHelp/WhereCanIGetHelp.md)?
 
 Aquesta secció vol donar als nous usuaris enllaços a recursos per obtenir ajuda, inclòs el suport de la comunitat, formada per usuaris nous i experimentats que poden aclarir dubtes i resoldre els problemes habituals d'AAPS.
 
@@ -173,12 +173,12 @@ Aquí teniu un calendari aproximat:
 | Configurar GitHub per permetre la compilació al navegador                  |            1–4 hores            |
 | Configurar un servidor d'informes                                          |             1 hora              |
 | Instal·lar una aplicació de CGM (xDrip, BYODA, …)                          |             1 hora              |
-| Configuring CGM → xDrip → AAPS initially                                   |             1 hora              |
+| Configurar CGM → xDrip → AAPS (inicial)                                    |             1 hora              |
 | Configurar AAPS → bomba (inicial)                                          |             1 hora              |
 | Configurar AAPS → Nightscout/Tidepool (només informes)                     |             1 hora              |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers                  |             1 hora              |
+| Opcional: configurar Nightscout ↔ **AAPS** i NSFollowers                   |             1 hora              |
 | Objectiu 1: Configuració de visualització i monitorització                 |             1 hora              |
-| Objectiu 2: Aprendre a controlar AAPS                                      |             2 hours             |
+| Objectiu 2: Aprendre a controlar AAPS                                      |             2 hores             |
 | Objectiu 3: Demostreu els vostres coneixements                             |         Fins a 14 dies          |
 | Objectiu 4: Iniciant llaç obert                                            |         Mínim de 7 dies         |
 | Objectiu 5: Entendre el vostre llaç obert                                  |             7 dies              |
