@@ -44,7 +44,7 @@ Install Simple Web Server<br/><br/> If you are a Windows or Mac user, you can in
 
 - Не закривайте Simple Web Server. Please switch to your browser and open<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 2 minutes 18 seconds.<br/><br/>
+- Наступні кроки дивіться у відео нижче, починаючи з 2 хвилин 18 секунд.<br/><br/>
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
