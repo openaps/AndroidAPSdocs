@@ -12,8 +12,8 @@ El Libre2 OOP (el trobareu [aquí](#Libre2_OOP2)) crea les mateixes lectures de 
 
 Hi ha algunes bones raons per fer servir un transmissor Bluetooth:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Podeu triar diverses estratègies de calibració OOP2 (1): tenir els valors del lector amb «no calibration», calibrar el sensor com un Libre 1 amb «calibrate based on raw» o, finalment, calibrar els valors semblants als del lector amb «calibrate based on glucose».  
+  Assegureu-vos de deixar OOP1 desactivat (2).
 
     → Menú hamburguesa → Settings → Less common settings → Other misc. options
 
@@ -30,9 +30,9 @@ Nota: el transmissor es pot fer servir alhora amb l'aplicació LibreLink sense i
 
 ![xDrip: iniciar el transmissor Libre i el sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-Això no inicia físicament cap sensor Libre2 ni s'hi comunica de cap manera. Això només serveix per indicar a xDrip que un sensor nou envia valors de glucèmia. If available, enter two blood-measured values for the initial calibration. Ara els valors de glucèmia s'haurien de mostrar a xDrip cada 5 minuts. Els valors que falten, per exemple perquè éreu massa lluny del telèfon, no es recuperen.
+Això no inicia físicament cap sensor Libre2 ni s'hi comunica de cap manera. Això només serveix per indicar a xDrip que un sensor nou envia valors de glucèmia. Si podeu, introduïu dos valors mesurats en sang per a la calibració inicial. Ara els valors de glucèmia s'haurien de mostrar a xDrip cada 5 minuts. Els valors que falten, per exemple perquè éreu massa lluny del telèfon, no es recuperen.
 
-Després d'un canvi de sensor, xDrip detecta automàticament el sensor nou i elimina totes les dades de calibració. You may check your blood glucose after activation and make a new initial calibration.
+Després d'un canvi de sensor, xDrip detecta automàticament el sensor nou i elimina totes les dades de calibració. Podeu comprovar la glucèmia després de l'activació i fer una nova calibració inicial.
 
 ### Configurar AAPS (només per fer el llaç)
 
@@ -40,7 +40,7 @@ Després d'un canvi de sensor, xDrip detecta automàticament el sensor nou i eli
 
 ![Configurador > Origen glucèmia amb xDrip+ seleccionat](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
+-   Si AAPS no rep valors de glucèmia quan el telèfon està en mode avió, feu servir «Identify receiver» com es descriu a la pàgina [Configuració de xDrip](#xdrip-identify-receiver).
 
 ## 2. Fer servir la connexió directa de xDrip
 
@@ -67,7 +67,7 @@ Tècnicament, el valor actual de glucèmia s'envia a xDrip cada minut. Un filtre
 
 Això és obligatori per fer el llaç. Les corbes són suaus i els resultats del llaç són molt bons. Els valors en brut en què es basen les alarmes salten una mica més, però corresponen als valors que també mostra el lector. A més, els valors en brut es poden mostrar al gràfic de xDrip per poder reaccionar a temps als canvis ràpids. Activeu Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" i "show Sensors Infos". Llavors els valors en brut també es mostren com a punts blancs petits i hi ha més informació del sensor al menú del sistema.
 
-Els valors en brut són molt útils quan la glucèmia canvia de pressa. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
+Els valors en brut són molt útils quan la glucèmia canvia de pressa. Encara que els punts salten més, veureu la tendència molt millor que amb la línia suavitzada, per prendre bones decisions de tractament.
 
 → Menú hamburguesa → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -77,7 +77,7 @@ Els valors en brut són molt útils quan la glucèmia canvia de pressa. Even if 
 
 #### Calibració
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). El pendent no es pot canviar. Comproveu-ho amb una punxada al dit després de posar un sensor nou; tingueu en compte que pot no ser precís les primeres 12 hores després d'inserir-lo. Com que hi pot haver grans diferències amb les mesures de sang, verifiqueu-ho cada 24 hores i calibreu si cal. Si el sensor està completament desajustat després d'uns quants dies, cal canviar-lo.
+Podeu calibrar el Libre2 **amb un desplaçament de -40 mg/dl a +20 mg/dl \[-2,2 mmol/l a +1,1 mmol/l\]** (intercepció). El pendent no es pot canviar. Comproveu-ho amb una punxada al dit després de posar un sensor nou; tingueu en compte que pot no ser precís les primeres 12 hores després d'inserir-lo. Com que hi pot haver grans diferències amb les mesures de sang, verifiqueu-ho cada 24 hores i calibreu si cal. Si el sensor està completament desajustat després d'uns quants dies, cal canviar-lo.
 
 ## 3. Fer servir Diabox
 
