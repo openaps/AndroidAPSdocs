@@ -1,278 +1,278 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The DASH driver is a well-established way to loop with Omnipod.
+Aquestes instruccions són per configurar la bomba de la generació **Omnipod DASH** **(NO Omnipod Eros)**. El controlador DASH és una manera ben establerta de fer llaç amb Omnipod.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Omnipod DASH specifications
+## Especificacions d'Omnipod DASH
 
-Key characteristics of the **Omnipod DASH** ('DASH'):
+Característiques principals de l'**Omnipod DASH** («DASH»):
 
-- The DASH pods are identified by a **blue needle cap** (the older EROS pod has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-- DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-- The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
-- **AAPS** will wait for pod's accessibility to send commands.
-- On pod activation, **AAPS** will find and connect to a new DASH pod.
-- Expected range from phone: 5-10 meters (YMMV).
+- Els pods DASH es reconeixen pel **tap de l'agulla blau** (el pod EROS, més antic, té el tap de l'agulla transparent). Per la resta, els pods són idèntics pel que fa a les mides físiques.
+- DASH no necessita cap dispositiu pont BLE (NO cal RileyLink, OrangeLink ni EmaLink).
+- La connexió Bluetooth del DASH només s'utilitza quan s'envia una ordre (per exemple, un bolus), i es desconnecta just després d'enviar l'ordre.
+- **AAPS** esperarà que el pod sigui accessible per enviar les ordres.
+- En activar el pod, **AAPS** trobarà un pod DASH nou i s'hi connectarà.
+- Abast previst des del telèfon: 5–10 metres (pot variar).
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to turn on **Bluetooth bonding** (in the **Advanced Settings** section of the [Dash settings](#omnipod-dash-advanced-settings)) to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- DST and timezone changes are not applied automatically. After a clock change you must update the pod manually: press **Refresh** on the DASH pump screen, then press **Set time** (shown when the pod and phone time zones differ) or perform a **Profile Switch** (see [Timezone change for Omnipod Dash](#timezone-traveling-with-pumps)).
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you open **Pod History** on the DASH pump screen, it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
-- The settings file contains the active Pod session. Export your settings after each Pod activation, and see [Export and import settings](#omnipod-dash-export-import) before importing settings.
-- When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
-- If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
+## Limitacions i problemes coneguts d'Omnipod DASH amb AAPS
+- En general es recomana fer servir **AAPS** amb Android 14 o 16. Amb Android 15, la comunitat ha informat de molts [problemes](https://github.com/nightscout/AndroidAPS/issues/3471). Tanmateix, si feu servir Android 15, probablement haureu d'activar la **Vinculació Bluetooth** (a la secció **Configuració avançada** de la [configuració de Dash](#omnipod-dash-advanced-settings)) per poder activar i fer servir els pods; vegeu [Resolució de problemes](../GettingHelp/GeneralTroubleshooting.md) per a més informació sobre la vinculació.
+- Els canvis d'horari d'estiu i de zona horària no s'apliquen automàticament. Després d'un canvi d'hora, heu d'actualitzar el pod manualment: premeu **Actualitzar** a la pantalla de la bomba DASH i després premeu **Configurar hora** (apareix quan la zona horària del pod i la del telèfon són diferents) o feu un **canvi de perfil** (vegeu [Canvi de zona horària amb Omnipod Dash](#timezone-traveling-with-pumps)).
+- Dash només admet la taxa basal en passos de 0,05 U/h. Si intenteu establir la basal en passos de 0,01 al vostre **perfil d'AAPS**, AAPS no mostrarà cap avís, tot i que el pod arrodonirà la taxa a passos de 0,05. Si obriu l'**Historial del pod** a la pantalla de la bomba DASH, hi veureu que s'ha establert una basal de 0,05. Això també vol dir que la taxa basal més baixa que admet el DASH a **AAPS** és 0,05 U/h.
+- El fitxer de configuració conté la sessió activa del pod. Exporteu la configuració després de cada activació de pod, i llegiu [Exportar i importar la configuració](#omnipod-dash-export-import) abans d'importar una configuració.
+- Quan s'estableix un nou perfil basal, DASH suspèn el lliurament abans d'establir el nou **perfil** basal. Si hi ha una interrupció o un error de comunicació, el perfil basal no es tornarà a iniciar automàticament. Vegeu la secció [Reprendre el lliurament d'insulina](#omnipod-dash-resuming-insulin-delivery) per a més detalls.
+- Si les alertes estan configurades i el pod està a punt de caducar, el pod continuarà fent bips fins que silencieu les alertes; vegeu [Silenciar les alertes del pod](#omnipod-dash-silencing-pod-alerts) per a més detalls.
+- Hi ha diversos problemes coneguts amb el Bluetooth que poden causar problemes en l'activació del pod. Vegeu [Problemes relacionats amb el Bluetooth](../GettingHelp/BluetoothTroubleshooting.md) per al problema conegut i les solucions.
 
 (hardware-software-requirements)=
 
 (omnipod-dash-hardware-software-requirements)=
-## Hardware and software requirements
+## Requisits de maquinari i programari
 
-- Omnipod DASH is identified by the blue needle cap.
+- Omnipod DASH es reconeix pel tap de l'agulla blau.
 
-![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
+![Pod Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
 - **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
-    -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
-      **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.
-       - **NOTE:**
-         - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) list for known working configurations when choosing the phone for an Omnipod DASH setup.
+    -  El controlador Omnipod Dash d'**AAPS** es connecta amb el pod DASH per Bluetooth.  
+      **AAPS** crea automàticament una nova connexió Bluetooth amb el pod cada vegada que ha d'enviar una ordre (per exemple, un bolus); després d'enviar l'ordre, la connexió Bluetooth es desconnecta immediatament.
+       - **NOTA:**
+         - La connexió Bluetooth es pot interrompre o pertorbar per altres dispositius Bluetooth connectats al telèfon on funciona **AAPS**, com ara auriculars, etc. Aquests dispositius poden causar errors de connexió o problemes d'activació del pod en alguns models de telèfon. Quan trieu el telèfon per a Omnipod DASH, és bona idea revisar la llista de [configuracions de maquinari provades](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), amb configuracions que se sap que funcionen.
          - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-    - The phone must run **Android 12 or newer**, with **AAPS** built and installed using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions. Always run the latest released version.
-- A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+    - El telèfon ha de tenir **Android 12 o més nou**, amb **AAPS** compilat i instal·lat segons les instruccions de [**Compilar AAPS**](../SettingUpAaps/BuildingAaps.md). Feu servir sempre l'última versió publicada.
+- Un [**monitor continu de glucosa (CGM)**](../Getting-Started/CompatiblesCgms.md) compatible
 
-The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
+Les instruccions següents expliquen com activar una nova sessió de pod amb **AAPS**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Un cop desactivat, un pod no es pot tornar a fer servir ni a activar: la desactivació és definitiva.
 
-## Before you begin
+## Abans de començar
 
-Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
+Assegureu-vos d'haver llegit i entès tota aquesta guia, la secció **Abans de començar** i també **[Limitacions i problemes d'Omnipod amb AAPS](#omnipod-dash-constraints)**, per evitar problemes coneguts.
 
-### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
-1. Extra pods (3 or more spare)
-2. Spare Insulin and MDI equipment
-3. A working Omnipod PDM (In case **AAPS** fails)
-4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
-5. Correct version of AAPS built and installed
+### **PRIMER, LA SEGURETAT**: **NO** intenteu connectar **AAPS** a un pod per primera vegada sense tenir a l'abast tot el següent:
+1. Pods de recanvi (3 o més)
+2. Insulina de recanvi i material per a injeccions múltiples (MDI)
+3. Un PDM d'Omnipod que funcioni (per si **AAPS** falla)
+4. Cal un telèfon compatible! (Vegeu [Requisits de maquinari i programari](#hardware-software-requirements))
+5. La versió correcta d'AAPS compilada i instal·lada
 
-### Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.
-- Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).
-- The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.
-- The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.
-- **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.
+### El PDM d'Omnipod Dash deixarà de ser necessari un cop el controlador Dash d'AAPS activi el pod.
+- Abans d'utilitzar **AAPS**, vosaltres o el vostre cuidador havíeu de gestionar el pod amb el PDM d'Omnipod (o, en algunes regions, amb una aplicació del telèfon) per enviar ordres al DASH (per exemple, un bolus).
+- El DASH només admet la connexió d'un sol dispositiu Bluetooth (per exemple, el PDM o el telèfon) per gestionar-lo i enviar-li ordres.
+- El dispositiu que activa el pod amb èxit és l'únic dispositiu que es pot comunicar amb aquest pod a partir d'aquell moment. Això vol dir que, un cop activeu un DASH amb el vostre telèfon Android amb **AAPS**, **ja no podreu fer servir el PDM amb aquest pod!** Mentre aquest pod estigui actiu, el controlador Dash d'**AAPS** del vostre telèfon Android és el nou PDM del pod.
+- **NO llenceu el PDM!** Es recomana guardar-lo com a reserva i per a emergències, per exemple si perdeu el telèfon o si **AAPS** no funciona correctament.
 
-### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
-Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
-As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
-When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
+### El pod **NO** deixarà de lliurar insulina quan no estigui connectat a AAPS.
+En activar el pod, s'hi programen les taxes basals per defecte tal com estan definides al [**perfil**](../SettingUpAaps/YourAapsProfile.md) actiu actual.  
+Mentre **AAPS** funcioni, enviarà ordres d'ajust de la taxa basal que duren un màxim de 120 minuts.  
+Si per algun motiu el pod no rep ordres noves (per exemple, perquè s'ha perdut la comunicació per la distància entre el pod ➜ telèfon), el pod tornarà automàticament a les taxes basals per defecte definides al vostre [**perfil**](../SettingUpAaps/YourAapsProfile.md).
 
-### AAPS Profile(s) do not support 30 minute basal rate time frames
-If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
-You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
+### Els perfils d'AAPS no admeten trams de taxa basal de 30 minuts
+Si sou nous a **AAPS** i configureu el [**perfil**](../SettingUpAaps/YourAapsProfile.md) de taxa basal per primera vegada, tingueu en compte que no s'admeten taxes basals que comencin a la mitja hora. Per exemple, si al PDM d'Omnipod teniu una taxa basal d'1,1 unitats que comença a les 09:30 i dura 2 hores fins a les 11:30, no és possible copiar exactament aquest **perfil** basal a **AAPS**.  
+Haureu de canviar aquesta taxa basal d'1,1 unitats a un interval de 9:00–11:00 o de 10:00–12:00. Tot i que el maquinari del DASH admet trams de 30 minuts al **perfil** basal, **AAPS** NO admet aquesta funció.
 
-### 0U/h Profile basal rates are NOT supported in AAPS
-While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
-Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
-**NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
+### AAPS NO admet taxes basals de 0 U/h al perfil
+Tot i que el DASH admet una taxa basal de zero, **AAPS** fa servir múltiples de la taxa basal del **perfil** de l'usuari per decidir el tractament automàtic; no pot funcionar amb una taxa basal de zero.  
+En lloc d'això, podeu aconseguir una taxa basal temporal de zero amb la funció «Desconnectar bomba», o combinant Desactivar llaç/basal temporal o Suspendre el llaç/basal temporal.  
+**NOTA:** La taxa basal més baixa que admet el DASH a **AAPS** és 0,05 U/h.
 
-## Selecting Dash in AAPS
+## Seleccionar Dash a AAPS
 
-There are **two** ways to select the Omnipod DASH driver in **AAPS**:
+Hi ha **dues** maneres de seleccionar el controlador Omnipod DASH a **AAPS**:
 
-### Option 1: New installations
+### Opció 1: Instal·lacions noves
 
-When you install **AAPS** for the first time, the **Setup Wizard** guides you through the key features and installation requirements of **AAPS**. When you reach the **Pump** step, select **Omnipod Dash**.
+Quan instal·leu **AAPS** per primera vegada, l'**Assistent de configuració** us guia per les funcions principals i els requisits d'instal·lació d'**AAPS**. Quan arribeu al pas **Bomba**, seleccioneu **Omnipod Dash**.
 
-![The Pump step of the setup wizard with Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
+![El pas Bomba de l'assistent de configuració amb Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-If you are not sure yet, you can select **Virtual Pump** for now and select **Omnipod Dash** later, after setting up **AAPS** (see Option 2).
+Si encara no esteu segurs, de moment podeu seleccionar **Bomba virtual** i seleccionar **Omnipod Dash** més tard, després de configurar **AAPS** (vegeu l'opció 2).
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: The Configuration screen
+### Opció 2: La pantalla Configurador
 
-On an existing installation you can select the **Omnipod Dash** pump from the **Configuration** screen:
+En una instal·lació existent, podeu seleccionar la bomba **Omnipod Dash** a la pantalla **Configurador**:
 
-1. Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration**.
-2. Tap **Pump** and select the radio button of **Omnipod Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
+1. Obriu el **menú** (☰) a la cantonada superior esquerra de la pantalla principal i seleccioneu **Configurador**.
+2. Toqueu **Bomba** i seleccioneu el botó d'opció d'**Omnipod Dash** (*«Integració de la bomba per Omnipod Dash (el nou model amb Bluetooth i agulla amb tap blau).»*).
 
-3. Once it is selected, the **Omnipod Dash** card shows two buttons:
-   - **Settings** opens the [Dash settings](#omnipod-dash-settings).
-   - **Open plugin** opens the [DASH pump screen](#omnipod-dash-tab).
+3. Un cop seleccionada, la targeta **Omnipod Dash** mostra dos botons:
+   - **Configuració** obre la [configuració de Dash](#omnipod-dash-settings).
+   - **Obrir plugin** obre la [pantalla de la bomba DASH](#omnipod-dash-tab).
 
-   ![The Omnipod Dash plugin enabled in Configuration > Pump](../images/v4/Pumps/dash_enabled.png)
+   ![El plugin Omnipod Dash activat a Configurador > Bomba](../images/v4/Pumps/dash_enabled.png)
 
-### Verification of Omnipod Driver Selection
+### Comprovar la selecció del controlador Omnipod
 
-To check that **Omnipod Dash** is selected, open **Manage** (bottom navigation of the main screen) and tap **Pump**. The DASH pump screen opens, as shown in the next section.
+Per comprovar que **Omnipod Dash** està seleccionat, obriu **Gestionar** (navegació inferior de la pantalla principal) i toqueu **Bomba**. S'obre la pantalla de la bomba DASH, tal com es mostra a la secció següent.
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## La pantalla de la bomba DASH
 
-The DASH pump screen is where you manage your pods: activate and deactivate them, refresh the pod status, silence alerts and look at the pod history. Open it with **Manage** > **Pump**, or with **Open plugin** on the **Omnipod Dash** card in **Configuration** > **Pump**.
+A la pantalla de la bomba DASH és on gestioneu els pods: activar-los i desactivar-los, actualitzar l'estat del pod, silenciar alertes i consultar l'historial del pod. Obriu-la amb **Gestionar** > **Bomba**, o amb **Obrir plugin** a la targeta **Omnipod Dash** de **Configurador** > **Bomba**.
 
-This is the screen without an active pod:
+Aquesta és la pantalla sense cap pod actiu:
 
-![The DASH pump screen without an active pod](../images/v4/Pumps/dash_pump_screen.png)
+![La pantalla de la bomba DASH sense cap pod actiu](../images/v4/Pumps/dash_pump_screen.png)
 
-And this is the screen with an active pod:
+I aquesta és la pantalla amb un pod actiu:
 
-![The DASH pump screen with an active pod](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
+![La pantalla de la bomba DASH amb un pod actiu](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-The **Settings** (gear) icon in the top-right corner opens the [Dash settings](#omnipod-dash-settings).
+La icona **Configuració** (engranatge) de la cantonada superior dreta obre la [configuració de Dash](#omnipod-dash-settings).
 
-***NOTE:** If a field on the pump screen shows (uncertain), press **Refresh** to update the pod status.*
+***NOTA:** Si un camp de la pantalla de la bomba mostra (dubtós), premeu **Actualitzar** per actualitzar l'estat del pod.*
 
-### Fields
+### Camps
 
-- **Bluetooth Address:** The Bluetooth address of the pod.
+- **Adreça Bluetooth:** L'adreça Bluetooth del pod.
 
-- **Connection quality:** How reliably **AAPS** connects to the pod, shown as *successful connections / all connection attempts :: success rate*, for example `412/420 :: 98.10 %`. After more than 50 successful connections, the value turns yellow below 90 % and red below 70 %. A low value points to a Bluetooth problem (see [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues)).
+- **Qualitat de la connexió:** Amb quina fiabilitat es connecta **AAPS** al pod, es mostra com a *connexions correctes / tots els intents de connexió :: percentatge d'èxit*, per exemple `412/420 :: 98.10 %`. Després de més de 50 connexions correctes, el valor es torna groc per sota del 90% i vermell per sota del 70%. Un valor baix indica un problema de Bluetooth (vegeu [Problemes relacionats amb el Bluetooth](#omnipod-dash-bluetooth-related-issues)).
 
-- **Delivery Status:** The raw delivery status reported by the pod. This field is shown only in engineering mode builds.
+- **Estat del lliurament:** L'estat del lliurament sense processar que informa el pod. Aquest camp només es mostra a les compilacions en mode enginyeria.
 
-- **Unique ID:** The unique ID **AAPS** gave to the pod during activation.
+- **ID únic:** L'ID únic que **AAPS** ha donat al pod durant l'activació.
 
-- **LOT Number:** The production lot number of the pod.
+- **Nr. LOT:** El número de lot de producció del pod.
 
-- **Sequence Number:** The sequence number of the pod.
+- **Nr. de seqüència:** El número de seqüència del pod.
 
-- **Firmware Version:** The firmware and Bluetooth versions of the pod.
+- **Versió del firmware:** Les versions del firmware i del Bluetooth del pod.
 
-- **Time on Pod:** The current time on the pod, with its time zone. The text turns red when the time zone of the pod is different from the time zone of the phone, and yellow when the pod time is more than 10 minutes off.
+- **Hora al pod:** L'hora actual del pod, amb la seva zona horària. El text es torna vermell quan la zona horària del pod és diferent de la del telèfon, i groc quan l'hora del pod té més de 10 minuts de diferència.
 
-- **Pod Expires:** The date and time when the pod expires (72 hours after activation). The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
+- **El pod expira:** La data i l'hora en què caduca el pod (72 hores després de l'activació). El text es torna groc durant les últimes 4 hores abans d'aquest moment. No es torna mai vermell, perquè el pod continua lliurant insulina després.
 
-- **Pod Hard End:** The end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
+- **Fi definitiva del pod:** El final del període de gràcia del pod (8 hores després de **El pod expira**, per a una vida màxima del pod de 80 hores). El text es torna groc quan comença el període de gràcia (a **El pod expira**) i vermell durant les últimes 4 hores abans de la fi definitiva. Durant el període de gràcia també mostra el temps que queda, per exemple *(queden 17m)*. El pod deixa de lliurar insulina a la fi definitiva i s'ha de canviar.
 
-- **Pod Status:** The state of the pod: **No Active Pod**, **Setup in progress**, **Running**, **Suspended** or, after a pod fault, **ALARM**.
+- **Estat pod:** L'estat del pod: **Cap pod actiu**, **Configuració en curs**, **Funcionant**, **Suspès** o, després d'un error del pod, **ALARM**.
 
-- **Last Connection:** How long ago **AAPS** last communicated with the pod.
+- **Última connexió:** Quant de temps fa que **AAPS** es va comunicar per última vegada amb el pod.
 
-  - *Moments ago* - less than 10 seconds ago.
+  - *Fa un moment*: fa menys de 10 segons.
 
-  - *Less than a minute ago* - between 10 and 60 seconds ago.
+  - *Fa menys d'un minut*: fa entre 10 i 60 segons.
 
-  - *XX minutes ago* - more than 1 minute ago (and *X hours and XX minutes ago* after an hour).
+  - *Fa XX minuts*: fa més d'1 minut (i *Fa X hores i XX minuts* després d'una hora).
 
-- **Last bolus:** The amount of the last bolus sent to the pod and how long ago it was given. An unconfirmed bolus is marked (uncertain).
+- **Darrer bolus:** La quantitat de l'últim bolus enviat al pod i quant de temps fa que es va lliurar. Un bolus no confirmat es marca com a (dubtós).
 
-- **Base Basal Rate:** The basal rate programmed for the current time in your basal **Profile**.
+- **Basal base:** La taxa basal programada per a l'hora actual al vostre **perfil** basal.
 
-- **Temp Basal Rate:** The temporary basal rate (TBR) that is currently running, with its start time and duration. This field is only shown while a TBR is running.
+- **Basal temporal:** La taxa basal temporal (TBR) que està en curs, amb l'hora d'inici i la durada. Aquest camp només es mostra mentre hi ha una TBR en curs.
 
-- **Reservoir:** Shows *Over 50 U left* when more than 50 units are left in the reservoir. Below 50 units, the exact amount is shown. The value turns red below 20 units.
+- **Reservori:** Mostra *Queden més de 50 U* quan queden més de 50 unitats al reservori. Per sota de 50 unitats, es mostra la quantitat exacta. El valor es torna vermell per sota de 20 unitats.
 
-- **Total Delivered:** The total amount of insulin delivered from the reservoir. This includes the insulin used for priming.
+- **Total lliurat:** La quantitat total d'insulina lliurada des del reservori. Inclou la insulina utilitzada per encebar.
 
-- **Active Pod Alerts:** Alerts that are currently active on the pod, for example *Pod will expire soon* or *Low Reservoir*.
+- **Alertes pod actiu:** Les alertes que estan actives al pod, per exemple *El pod està a punt de caducar* o *Reservori baix*.
 
-- **Errors:** The pod fault, if the pod has failed, shown in red as *Pod Fault:* followed by the fault code and name, for example *Pod Fault: 020 ALARM_OCCLUDED*. Review the [Pod History](#omnipod-dash-view-pod-history) and the log files for past errors and more detailed information. See [Pod Failures](#omnipod-dash-pod-failures).
+- **Errors:** L'error del pod, si el pod ha fallat, que es mostra en vermell com a *Error del pod:* seguit del codi i el nom de l'error, per exemple *Error del pod: 020 ALARM_OCCLUDED*. Reviseu l'[historial del pod](#omnipod-dash-view-pod-history) i els fitxers de registre per veure errors anteriors i informació més detallada. Vegeu [Errors del pod](#omnipod-dash-pod-failures).
 
-- **PDM Notification:** Shown only after a pod fault. It shows the fault the way the Omnipod PDM would have shown it: a title (for example *Occlusion Detected*, *Empty Reservoir* or *Pod Expired*), what happened (for example *Insulin delivery stopped. Change Pod now.*) and a *Ref:* code.
+- **Avís del PDM:** Només es mostra després d'un error del pod. Mostra l'error de la mateixa manera que l'hauria mostrat el PDM d'Omnipod: un títol (per exemple *Oclusió detectada*, *Reservori buit* o *Pod caducat*), què ha passat (per exemple *Lliurament d'insulina aturat. Canvieu el pod ara.*) i un codi *Ref:*.
 
-### Buttons
+### Botons
 
-The buttons at the bottom of the pump screen change with the state of the pod. Only the buttons that make sense at that moment are shown.
+Els botons de la part inferior de la pantalla de la bomba canvien segons l'estat del pod. Només es mostren els botons que tenen sentit en aquell moment.
 
-- **Refresh:** Asks the pod for its current status.
-  - *Use it to update the pod status and to clear fields that show (uncertain).*
-  - *See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for more information.*
+- **Actualitzar:** Demana al pod el seu estat actual.
+  - *Feu-lo servir per actualitzar l'estat del pod i per esborrar els camps que mostren (dubtós).*
+  - *Vegeu la secció [Resolució de problemes](#omnipod-dash-troubleshooting) més avall per a més informació.*
 
-- **Silence Alerts:** Stops the pod alert beeps (for example pod expiry or low reservoir). Shown only while the pod has an active alert. See [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts).
+- **Silenciar alertes:** Atura els bips d'alerta del pod (per exemple, de caducitat del pod o de reservori baix). Només es mostra mentre el pod té una alerta activa. Vegeu [Silenciar les alertes del pod](#omnipod-dash-silencing-pod-alerts).
 
-- **Resume Delivery:** Resumes insulin delivery on a suspended pod. Shown only when delivery is suspended. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
+- **Reprendre lliurament:** Reprèn el lliurament d'insulina d'un pod suspès. Només es mostra quan el lliurament està suspès. Vegeu [Reprendre el lliurament d'insulina](#omnipod-dash-resuming-insulin-delivery).
 
-- **Set time:** Updates the pod to the time zone of your phone by sending your basal **Profile** again. Shown only when the time zone of the pod differs from the time zone of your phone.
+- **Configurar hora:** Posa el pod a la zona horària del telèfon tornant a enviar el vostre **perfil** basal. Només es mostra quan la zona horària del pod és diferent de la del telèfon.
 
-- [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod. Shown when no pod is active.
+- [**Activar pod**](#omnipod-dash-activate-pod): enceba i activa un pod nou. Es mostra quan no hi ha cap pod actiu.
 
-- [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the active pod. Shown as soon as a pod is paired with **AAPS**, also when an activation stopped part-way (for example because the pod failed during activation). **AAPS** asks you to confirm before it deactivates the pod.
+- [**Desactivar pod**](#omnipod-dash-deactivate-pod): desactiva el pod actiu. Es mostra tan aviat com un pod està emparellat amb **AAPS**, també quan una activació s'ha aturat a mitges (per exemple, perquè el pod ha fallat durant l'activació). **AAPS** us demana confirmació abans de desactivar el pod.
 
-- **Play Test Beep:** Makes the pod play a single test beep.
+- **Fer sonar bip de prova:** Fa que el pod faci un sol bip de prova.
 
-- [**Pod History**](#omnipod-dash-view-pod-history): Shows the activity history of the active pod.
+- [**Historial del pod**](#omnipod-dash-view-pod-history): mostra l'historial d'activitat del pod actiu.
 
-- **Discard Pod:** Removes an unfinished pod from **AAPS**. Shown only when a pod activation stopped part-way. **AAPS** asks you to confirm. After discarding, **AAPS** can no longer communicate with that pod: remove it from your body.
+- **Descartar pod:** Elimina d'**AAPS** un pod que no s'ha acabat d'activar. Només es mostra quan l'activació d'un pod s'ha aturat a mitges. **AAPS** us demana confirmació. Després de descartar-lo, **AAPS** ja no es pot comunicar amb aquest pod: traieu-lo del cos.
 
-![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+![El menú de gestió del pod](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
+La captura de pantalla de dalt és d'una versió anterior d'**AAPS**, que tenia un menú **Gestió del pod** separat. A **AAPS** 4 totes aquestes accions, incloses **Activar pod**, **Desactivar pod**, **Fer sonar bip de prova** i **Historial del pod**, són botons amb text directament a la pantalla de la bomba.
 ```
 
 (omnipod-dash-activate-pod)=
 
-## Activate Pod
+## Activar pod
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Activate Pod**. The activation wizard opens.
+1. Obriu la pantalla de la bomba DASH (**Gestionar** > **Bomba**) i premeu **Activar pod**. S'obre l'assistent d'activació.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   La captura de pantalla de dalt és d'una versió anterior d'**AAPS**. A **AAPS** 4, **Activar pod** és un botó directament a la pantalla de la bomba DASH, en lloc d'estar al menú **Gestió del pod**.
    ```
 
-   If you have never activated a **Profile** in **AAPS** before, the wizard first shows the **Profile required** step: select the profile to apply on activation and continue.
+   Si mai no heu activat cap **perfil** a **AAPS**, l'assistent primer mostra el pas **Cal un perfil**: seleccioneu el perfil que s'aplicarà en l'activació i continueu.
 
-2. The **Fill Pod** step is shown. Fill a new pod with enough insulin for 3 days, **at least 80 units**. Listen for two beeps from the pod: they mean the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. Do not remove the pod's needle cap yet.
+2. Es mostra el pas **Omplir pod**. Ompliu un pod nou amb prou insulina per a 3 dies, **com a mínim 80 unitats**. Escolteu els dos bips del pod: volen dir que s'ha omplert la quantitat mínima de 80 unitats. Buideu del tot la xeringa d'ompliment, encara que ja hàgiu sentit els dos bips. No traieu encara el tap de l'agulla del pod.
 
-   ***NOTE:** When you calculate the amount of insulin you need for 3 days, remember that priming the pod uses about 3-10 units.*
+   ***NOTA:** Quan calculeu la quantitat d'insulina que necessiteu per a 3 dies, recordeu que encebar el pod fa servir unes 3–10 unitats.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)
 
    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-   Make sure that the new pod and the phone running **AAPS** are close to each other and press **Next**.
+   Assegureu-vos que el pod nou i el telèfon amb **AAPS** són a prop l'un de l'altre i premeu **Següent**.
 
-3. If you use more than one insulin in **AAPS**, the **Select Insulin** step is shown. It shows the **Currently active** insulin. If you filled the pod with a different insulin, press **Change** and select it. **AAPS** applies a **Profile Switch** with this insulin when the activation is finished. Press **Next**.
+3. Si feu servir més d'una insulina a **AAPS**, es mostra el pas **Seleccionar insulina**. Mostra la insulina **Activa actualment**. Si heu omplert el pod amb una altra insulina, premeu **Canviar** i seleccioneu-la. **AAPS** aplica un **canvi de perfil** amb aquesta insulina quan acaba l'activació. Premeu **Següent**.
 
-   ![The Select Insulin step](../images/v4/Pumps/dash_wizard_select_insulin.png)
+   ![El pas Seleccionar insulina](../images/v4/Pumps/dash_wizard_select_insulin.png)
 
-4. On the **Initialize Pod** step, **AAPS** pairs with the new pod and primes it. You hear a click followed by a series of ticking sounds as the pod primes itself. When this has finished successfully, the **Next** button appears. Press **Next**.
+4. Al pas **Inicialitzar pod**, **AAPS** s'emparella amb el pod nou i l'enceba. Sentireu un clic i després una sèrie de sons de tic-tac mentre el pod s'enceba. Quan això ha acabat correctament, apareix el botó **Següent**. Premeu **Següent**.
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-   ***NOTE**: If an error message such as _Scan failed_ or _'Could not find an available pod for activation'_ appears (this can happen), do not panic. Press **Retry**. In most cases the activation then continues successfully.*
+   ***NOTA**: Si apareix un missatge d'error com _Ha fallat l'escaneig_ o _«Could not find an available pod for activation»_ (no s'ha trobat cap pod disponible per activar; pot passar), no us espanteu. Premeu **Reintentar**. En la majoria dels casos, l'activació continua llavors correctament.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-   If the pod has failed (for example because its activation time was exceeded), **Deactivate Pod** is shown instead of **Retry**. Use it and start again with a new pod.
+   Si el pod ha fallat (per exemple, perquè s'ha superat el seu temps d'activació), es mostra **Desactivar pod** en lloc de **Reintentar**. Feu-lo servir i torneu a començar amb un pod nou.
 
-   If you press **Cancel** before the activation is finished, **AAPS** asks you to confirm that you want to exit. Press **OK** to leave the wizard, or **Cancel** to stay.
+   Si premeu **Cancel·lar** abans que acabi l'activació, **AAPS** us demana que confirmeu que voleu sortir. Premeu **OK** per sortir de l'assistent, o **Cancel·lar** per quedar-vos-hi.
 
-   ![The Exit confirmation](../images/v4/Pumps/dash_wizard_exit_confirm.png)
+   ![La confirmació de sortida](../images/v4/Pumps/dash_wizard_exit_confirm.png)
 
-5. If you manage pump site rotation in **AAPS** (**Manage pump site rotation** in the [Site Rotation](#Aapsscreens-site-rotation) settings), the **Site location** step is shown. Select where you are going to place the pod on the body diagram and press **Next**, or press **Skip**.
+5. Si gestioneu la rotació del punt d'infusió de la bomba a **AAPS** (**Gestionar la rotació del punt d'infusió de la bomba** a la configuració de [Rotació de punts d'inserció](#Aapsscreens-site-rotation)), es mostra el pas **Punt d'inserció**. Seleccioneu al diagrama del cos on col·locareu el pod i premeu **Següent**, o premeu **Ometre**.
 
-   ![The Site location step](../images/v4/Pumps/dash_wizard_site_location.png)
+   ![El pas Punt d'inserció](../images/v4/Pumps/dash_wizard_site_location.png)
 
-6. Next, prepare the infusion site for the new pod. Wash your hands to avoid any risk of infection. Clean the infusion site with soap and water or an alcohol wipe, and let the skin air dry completely before you continue. If the adhesive irritates your skin, consider using a barrier wipe or barrier spray.
+6. A continuació, prepareu el punt d'infusió per al pod nou. Renteu-vos les mans per evitar qualsevol risc d'infecció. Netegeu el punt d'infusió amb aigua i sabó o amb una tovalloleta d'alcohol, i deixeu que la pell s'assequi del tot a l'aire abans de continuar. Si l'adhesiu us irrita la pell, podeu fer servir una tovalloleta o un esprai de barrera.
 
-   On the **Attach Pod** step, remove the pod's blue plastic needle cap. If the cannula or anything else sticks out of the pod, or it looks unusual, **STOP**: press **Cancel** and start again with a new pod. If everything looks **OK**, take off the white paper backing from the adhesive and stick the pod to the chosen site on your body.
+   Al pas **Adherir pod**, traieu el tap blau de plàstic de l'agulla del pod. Si la cànula o qualsevol altra cosa sobresurt del pod, o té un aspecte estrany, **ATUREU-VOS**: premeu **Cancel·lar** i torneu a començar amb un pod nou. Si tot sembla **correcte**, traieu el paper blanc de l'adhesiu i enganxeu el pod al punt del cos que heu triat.
 
-   When finished, press **Next**.
+   Quan acabeu, premeu **Següent**.
 
    ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-7. A confirmation dialog appears: *When you press OK, the cannula will be inserted.* **Press OK ONLY if you are ready to insert the cannula!**
+7. Apareix un diàleg de confirmació: *Quan premeu OK, la cànula serà inserida.* **Premeu OK NOMÉS si esteu preparats per inserir la cànula!**
 
    ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-8. On the **Insert Cannula** step, **AAPS** sets your basal schedule and the pod inserts the cannula. This can take some time (1-2 minutes maximum). **Be patient!**
+8. Al pas **Inserir cànula**, **AAPS** estableix la vostra programació basal i el pod insereix la cànula. Pot trigar una mica (1–2 minuts com a màxim). **Tingueu paciència!**
 
-   ***NOTE:** It is good practice to pinch the skin near the cannula insertion point before the cannula is inserted. This helps the needle go in smoothly and lowers your chance of occlusions (blockages).*
+   ***NOTA:** És una bona pràctica pessigar la pell a prop del punt d'inserció abans que s'insereixi la cànula. This helps the needle go in smoothly and lowers your chance of occlusions (blockages).*
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-9. When the cannula has been inserted successfully, the **Next** button appears. Press **Next**.
+9. When the cannula has been inserted successfully, the **Next** button appears. Premeu **Següent**.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
@@ -280,7 +280,7 @@ The screenshot above is from an earlier **AAPS** version, which had a separate *
 
     Press **Finish**.
 
-    Congratulations! You have now started a new pod session.
+    Enhorabona! Ara heu iniciat una nova sessió de pod.
 
     ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
@@ -296,7 +296,7 @@ If an earlier activation stopped after the pod was primed, pressing **Activate P
 
 (omnipod-dash-deactivate-pod)=
 
-## Deactivate Pod
+## Desactivar pod
 
 Under normal circumstances, a pod lasts three days (72 hours), plus a grace period of 8 hours after the pod expiry warning: 80 hours in total.
 
@@ -316,10 +316,10 @@ To deactivate a pod (either because it expired or because it failed):
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the wizard shows its progress as a row of dots at the top instead of a progress bar.
+   La captura de pantalla de dalt és d'una versió anterior d'**AAPS**. In **AAPS** 4 the wizard shows its progress as a row of dots at the top instead of a progress bar.
    ```
 
-   When deactivation has finished successfully, the **Next** button appears. Press **Next**.
+   When deactivation has finished successfully, the **Next** button appears. Premeu **Següent**.
 
    ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
@@ -346,7 +346,7 @@ Only discard a pod when all communication with it keeps failing. If **AAPS** can
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-## Resuming Insulin Delivery
+## Reprendre el lliurament d'insulina
 
 **NOTE**: During **Profile Switches**, like when using the PDM, **AAPS** must suspend delivery on the pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, delivery can stay suspended. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
 
@@ -373,7 +373,7 @@ When insulin delivery is suspended, you need to tell the pod to resume insulin d
 
 (omnipod-dash-silencing-pod-alerts)=
 
-## Silencing Pod Alerts
+## Silenciar les alertes del pod
 
 This section explains how to stop the pod beeps when the pod approaches the end of its life. When these beeps start depends on the **Alerts** settings (see [Dash Settings](#omnipod-dash-settings)):
 
@@ -414,7 +414,7 @@ The low reservoir alert works the same way. When the insulin left in the pod dro
 
 (omnipod-dash-view-pod-history)=
 
-## View Pod History
+## Veure l'historial del pod
 
 This section explains how to look at the history of your active pod and filter it by type of action. The pod history shows the commands sent to your active pod and their results during its three-day (72 - 80 hours) life.
 
@@ -428,7 +428,7 @@ It is useful to check the boluses, TBRs and basal commands that were sent to the
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   La captura de pantalla de dalt és d'una versió anterior d'**AAPS**. In **AAPS** 4 **Pod History** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
    ```
 
 2. The **Pod History** screen opens with the **All** filter selected. It lists every command with its time and result, newest first, grouped by day. Use the filter buttons at the top (for example **Boluses** or **Basals**) to show only one type of command. Press the back arrow to return to the DASH pump screen.
@@ -451,7 +451,7 @@ It is useful to check the boluses, TBRs and basal commands that were sent to the
 
 (omnipod-dash-settings)=
 
-## Dash Settings
+## Configuració de Dash
 
 There are two ways to open the Dash driver settings:
 
@@ -478,7 +478,7 @@ Confirmation beeps from the pod for bolus, basal, SMB and TBR delivery and chang
 
 **TBR beeps enabled:**  The pod beeps when a TBR is set or canceled. Off by default.
 
-### Alerts
+### Alertes
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
@@ -503,7 +503,7 @@ Pod alerts for pod expiry, shutdown and low reservoir. When you change these set
 
 **Number of units:**    The number of units at which the low reservoir alert is triggered (5 to 50 units; default 20).
 
-### Notifications
+### Notificacions
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
@@ -521,7 +521,7 @@ Choose whether **AAPS** plays a sound with its notifications when it is uncertai
 
 (omnipod-dash-advanced-settings)=
 
-### Advanced Settings
+### Configuració avançada
 
 ![The Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
 
@@ -542,9 +542,9 @@ The [status row](#screens-sensor-level-battery) on the main screen shows the age
 The screenshot above is from an earlier **AAPS** version, where these ages were shown in the **Careportal** section of the **Actions** tab. In **AAPS** 4 they are shown in the status row on the main screen.
 ```
 
-### Level
+### Nivell
 
-**Insulin Level**
+**Nivell d'insulina**
 
 The insulin level shown is the amount reported by the pod. However, the pod only reports the actual reservoir level when it is below 50 units. Until then, *Over 50 U left* is shown. The amount reported is not exact: when the pod reports 'empty', in most cases the reservoir still has a few units of insulin left.
 
@@ -553,50 +553,50 @@ The DASH pump screen shows the level as follows:
   * **Over 50 U left** - The pod reports more than 50 units in the reservoir.
   * **Below 50 units** - The exact amount of insulin left in the reservoir, as reported by the pod.
 
-Additional note:
+Nota addicional:
   * **SMS** - Returns the value, or 50+U when over 50 units, in SMS responses.
   * **Nightscout** - Uploads a value of 50 when over 50 units to Nightscout (version 14.07 and older). Newer versions report a value of 50+ when over 50 units.
 
 (omnipod-dash-troubleshooting)=
 
-## Troubleshooting
+## Resolució de problemes
 
-This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+Aquesta secció tracta problemes coneguts habituals, i les seves solucions, quan es fa servir Omnipod DASH amb AAPS. A la documentació també hi ha la secció [Resolució de problemes](../GettingHelp/GeneralTroubleshooting.md), que val la pena revisar perquè també tracta temes rellevants per a alguns problemes del pod.
 
 ---
 
 (omnipod-dash-bluetooth-related-issues)=
 
-## Bluetooth related issues
+## Problemes relacionats amb el Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Per a problemes coneguts amb connexions Bluetooth, talls de connexió amb bombes o pods, o problemes d'activació i connexió, vegeu [Problemes relacionats amb el Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (omnipod-dash-delivery-suspended)=
 
-### Delivery suspended
+### Lliurament suspès
 
-  - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
-  - During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - **AAPS** will try to set the new basal profile every 15 minutes.
-     - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
+  - Ja no hi ha botó per suspendre. Si voleu «suspendre» el pod, podeu establir una **TBR** de zero durant x minuts.
+  - Durant els **canvis de perfil**, DASH ha de suspendre el lliurament abans d'establir el nou **perfil** basal. Si la comunicació falla entre les dues ordres, el lliurament pot quedar suspès. Quan passa això:
+     - No hi haurà lliurament d'insulina, això inclou la basal, els SMB, els bolus manuals, etc.
+     - Pot aparèixer un avís que una de les ordres no està confirmada: depèn de quan s'ha produït l'error.
+     - **AAPS** intentarà establir el nou perfil basal cada 15 minuts.
+     - **AAPS** mostrarà cada 15 minuts un avís que el lliurament està suspès, si el lliurament continua suspès (no s'ha pogut reprendre el lliurament).
      - The [**Resume Delivery**](#omnipod-dash-resuming-insulin-delivery) button is shown on the DASH pump screen if you want to resume delivery manually.
-     - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
+     - Si **AAPS** no aconsegueix reprendre el lliurament tot sol (passa si el pod no és accessible, el so està silenciat, etc.), el pod començarà a fer 4 bips cada minut durant 3 minuts, i després ho repetirà cada 15 minuts si el lliurament continua suspès més de 20 minuts.
   - For unconfirmed commands, press **Refresh** on the DASH pump screen to confirm or deny them.
 
-*****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
+*****NOTA:** Quan sentiu bips del pod, no doneu per fet que el lliurament continuarà sense comprovar el telèfon; el lliurament pot quedar suspès, ***per tant, cal que ho comproveu!******
 
 ---
 (omnipod-dash-pod-failures)=
 
-### Pod Failures
+### Errors del pod
 
-- Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
-- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
-- A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+- De vegades els pods fallen per diversos motius, també per problemes de maquinari del mateix pod.
+- És millor no obrir casos de suport o de substitució amb Insulet, perquè AAPS no és una manera aprovada de fer servir els pods.
+- Hi ha una llista de codis d'error [**aquí**](https://github.com/openaps/openomni/wiki/Fault-event-codes) que us ajuda a trobar la causa.
 
 When a pod fails, it stops delivering insulin and beeps continuously. **AAPS** shows a notification on the main screen with the fault code and name, and the *Ref:* code, for example *Pod Fault: 020 ALARM_OCCLUDED*. Press **Dismiss** to close the notification. This does not stop the pod beeping.
 
@@ -609,15 +609,15 @@ On the DASH pump screen, the **Pod Status** field shows **ALARM**, the **Errors*
 A failed pod cannot be used again. Check your blood glucose, then [deactivate the pod](#omnipod-dash-deactivate-pod) and activate a new one.
 
 ---
-### Preventing error 49 pod failures
+### Evitar errors 49 del pod
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. It can happen, for example, after application crashes, when running a development version or after a re-installation.
+Aquest error està relacionat amb un estat incorrecte del pod per a una ordre o amb un error durant una ordre de lliurament d'insulina. Passa quan el controlador i el pod no coincideixen sobre l'estat real. Llavors el pod (per una mesura de seguretat interna) reacciona amb un codi d'error irrecuperable 49 (0x31) i acaba en el que es coneix com a «screamer»: el bip llarg i molest que només es pot aturar fent un forat al lloc adequat de la part posterior del pod. L'origen exacte d'un «error 49 del pod» sovint és difícil de trobar. It can happen, for example, after application crashes, when running a development version or after a re-installation.
 
 ---
 
-### Pump Unreachable Alerts
+### Alertes de bomba no accessible
 
-When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by pressing the **Settings** (gear) icon on the top right of the main screen, then selecting **Local Alerts** ➜ **Pump unreachable threshold**. Recommended value is alerting after **120** minutes.
+Quan no es pot establir comunicació amb el pod durant un temps configurat, apareix una alerta «Bomba no accessible». Pump unreachable alerts can be configured by pressing the **Settings** (gear) icon on the top right of the main screen, then selecting **Local Alerts** ➜ **Pump unreachable threshold**. El valor recomanat és alertar després de **120** minuts.
 
 ---
 (omnipod-dash-export-import)=
@@ -633,88 +633,88 @@ On the phone that is already running the Pod, leave **Also replace pump settings
 If the imported settings contain a Pod that is no longer active, see the next section.
 
 ---
-### Importing settings that contain Pod state from an inactive Pod
+### Importar una configuració que conté l'estat d'un pod inactiu
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You cannot activate a new Pod in this situation.
+Quan importeu una configuració que conté dades d'un pod que ja no està actiu, AAPS intentarà connectar-s'hi, i és clar que fallarà. You cannot activate a new Pod in this situation.
 
-To remove the old pod session:
+Per eliminar la sessió del pod antic:
 1. On the DASH pump screen, press **Deactivate Pod**. The deactivation will most likely fail.
 2. When it fails, press **Discard Pod** and confirm (see [Discarding a pod](#omnipod-dash-discard-pod)).
 3. Once the old pod is removed, you can activate a new pod.
 
 ### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
-If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration.
+Si rebeu aquest error quan intenteu inicialitzar un pod nou, **AAPS** falla perquè encara té guardada a la configuració la informació d'un pod antic.
 
 ![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
 
-This can happen if you restore from a backup, or a pod deactivation fails.
+Pot passar si restaureu una còpia de seguretat o si falla la desactivació d'un pod.
 
 To resolve it, press **Cancel** to leave the activation. On the DASH pump screen, press **Discard Pod** if it is shown. Otherwise press **Deactivate Pod**, and when the deactivation fails, press **Discard Pod** (see [Discarding a pod](#omnipod-dash-discard-pod)).
 
-You should now be able to Activate a new pod.
+Ara ja hauríeu de poder activar un pod nou.
 
 ---
-### Reinstalling AAPS
+### Reinstal·lar AAPS
 
-When uninstalling **AAPS** you will lose all your settings, objectives and the current Pod session. **To restore them make sure you have a recent exported settings file available!**
+Quan desinstal·leu **AAPS**, perdreu tota la configuració, els objectius i la sessió actual del pod. **Per restaurar-los, assegureu-vos que teniu un fitxer de configuració exportat recent!**
 
 When on an active Pod, use an export made during the current Pod session (see [Export and import settings](#omnipod-dash-export-import)).
 
-1. Export your settings and store a copy in a safe place (e.g Google Drive).
-2. Uninstall **AAPS** and restart your phone.
-3. Install the new version of **AAPS**.
-4. Import your settings.
-5. Verify all preferences (optionally import settings again).
-6. Activate a new pod.
-7. When done: Export current settings.
+1. Exporteu la configuració i guardeu-ne una còpia en un lloc segur (per exemple, Google Drive).
+2. Desinstal·leu **AAPS** i reinicieu el telèfon.
+3. Instal·leu la nova versió d'**AAPS**.
+4. Importeu la vostra configuració.
+5. Comproveu tota la configuració (si voleu, torneu a importar la configuració).
+6. Activeu un pod nou.
+7. Quan acabeu: exporteu la configuració actual.
 
 ---
-### Updating AAPS to a newer version
+### Actualitzar AAPS a una versió més nova
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod session.
+En la majoria dels casos no cal desinstal·lar. Podeu fer una instal·lació «damunt» de l'actual: només cal iniciar la instal·lació de la nova versió. També és possible amb una sessió de pod activa.
 
-1. Export your settings.
-2. Install the new **AAPS** version.
-3. Verify the installation was successful
-4. RESUME the Pod or activate a new pod.
-5. When done: Export current settings.
+1. Exporteu la vostra configuració.
+2. Instal·leu la nova versió d'**AAPS**.
+3. Comproveu que la instal·lació s'ha fet correctament
+4. REPRENEU el lliurament del pod o activeu un pod nou.
+5. Quan acabeu: exporteu la configuració actual.
 
 ---
-### Omnipod driver alerts
+### Alertes del controlador Omnipod
 
 The Omnipod Dash driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.
 
-A summary of the main alerts that you may encounter is listed below:
+A continuació teniu un resum de les alertes principals que podeu trobar:
 
-- *Pod Fault: XXX NAME*, followed by *Ref: ...*: the pod has failed and stopped delivering insulin. Change the pod. See [Pod Failures](#omnipod-dash-pod-failures).
+- *Pod Fault: XXX NAME*, followed by *Ref: ...*: the pod has failed and stopped delivering insulin. Change the pod. Vegeu [Errors del pod](#omnipod-dash-pod-failures).
 - *No Active Pod*: no pod session was found. This notification keeps coming back until you activate a new pod. Once a pod is activated, it disappears automatically.
-- *Insulin delivery suspended*: the pod has suspended insulin delivery. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
-- *Setting basal profile might have failed. Delivery might be suspended! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
+- *Insulin delivery suspended*: the pod has suspended insulin delivery. Vegeu [Reprendre el lliurament d'insulina](#omnipod-dash-resuming-insulin-delivery).
+- *Setting basal profile might have failed. El lliurament podria estar suspès! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
 - *Unable to verify whether SMB (X U) succeeded. Refresh pod status to confirm or deny this command.* **AAPS** could not confirm that the **SMB** was delivered. Press **Refresh** on the DASH pump screen and check the **Last bolus** field.
 - *Bolus delivery status uncertain. Refresh pod status to confirm or deny.* The same for a normal bolus: press **Refresh** on the DASH pump screen.
 - *Timezone on pod is different from the timezone on phone. Basal rate is incorrect. Switch profile to fix* See the DST and timezone note in [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints).
 
 (omnipod-dash-where-to-get-help-for-dash)=
 
-## Where to get help
+## On trobar ajuda
 
-All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
+Tot el desenvolupament de DASH el fa la comunitat de manera **voluntària**; tingueu-ho en compte i seguiu aquestes indicacions abans de demanar ajuda:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw). There are also numerous Facebook and other groups you can ask in too (see [**Getting Help**](../GettingHelp/WhereCanIGetHelp.md))
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Nivell 0:** Llegiu la secció corresponent d'aquesta documentació per assegurar-vos que enteneu com ha de funcionar la funció que us dona problemes.
+-  **Nivell 1:** Si encara teniu problemes que no podeu resoldre amb aquest document, aneu al canal *#AAPS* de **Discord** amb [aquest enllaç d'invitació](https://discord.gg/4fQUWHZ4Mw). També hi ha molts grups de Facebook i d'altres on podeu preguntar (vegeu [**On puc trobar ajuda?**](../GettingHelp/WhereCanIGetHelp.md))
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. Si no, creeu una [incidència nova](https://github.com/nightscout/AndroidAPS/issues) i adjunteu-hi [els vostres fitxers de registre](../GettingHelp/AccessingLogFiles.md).
+-  **Tingueu paciència: la majoria dels membres de la nostra comunitat són voluntaris de bona fe, i resoldre problemes sovint demana temps i paciència tant als usuaris com als desenvolupadors.**
 
-When requesting help come prepared with the following information to help those in the community with your specific questions and problems:
-- Android phone make and model
-- Android OS version (e.g 15 or 16)
-  - Did you recently upgrade your Android OS version?
-- The version of **AAPS** you are running
-- Plain english description of the problem you are facing considering some of the following things
-   - Was it working before now?
-   - When did it work or not work?
-   - Did you make any changes to configuration or profile settings?
+Quan demaneu ajuda, prepareu la informació següent per ajudar la comunitat amb les vostres preguntes i problemes concrets:
+- Marca i model del telèfon Android
+- Versió d'Android (per exemple, 15 o 16)
+  - Heu actualitzat la versió d'Android fa poc?
+- La versió d'**AAPS** que feu servir
+- Una descripció senzilla del problema que teniu, pensant en alguns d'aquests punts
+   - Abans funcionava?
+   - Quan funcionava i quan no?
+   - Heu fet canvis a la configuració o al perfil?
    - Did you pair a new Bluetooth device?
-   - Did you upgrade or install a new app?
-   - How long was it working before it stopped working?
+   - Heu actualitzat o instal·lat alguna aplicació nova?
+   - Quant de temps va funcionar abans de deixar de funcionar?
