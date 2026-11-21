@@ -131,7 +131,7 @@ Cal una confirmació després de cada selecció.
 
 Heu de trobar per què rebeu glucèmies duplicades:
 
-* Teniu activat el pont de Dexcom (Dexcom bridge) al vostre lloc Nightscout? Desactiveu el pont al tauler d'administració de la vostra instància de Nightscout: editeu la variable "enable" i traieu-ne la part "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Teniu activat el pont de Dexcom (Dexcom bridge) al vostre lloc Nightscout? Desactiveu el pont al tauler d'administració de la vostra instància de Nightscout: editeu la variable "enable" i traieu-ne la part "bridge". (Per a Heroku, [trobareu els detalls aquí](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Hi ha diverses fonts que envien la vostra glucèmia a Nightscout? Si feu servir l'aplicació BYODA, activeu l'enviament a **AAPS**, però no l'activeu a xDrip, si el feu servir.
 * Teniu seguidors que reben la vostra glucèmia però que també la tornen a enviar al vostre lloc Nightscout?
 * Últim recurs: a la [configuració de NSClient](#Preferences-nsclient), obriu la configuració de sincronització i desactiveu l'opció «Rebre dades de CGM de NS».
@@ -247,7 +247,7 @@ Si se supera el llindar d'avís, els valors es mostren en groc.
 
 Si se supera el llindar crític, els valors es mostren en vermell.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+L'edat sempre es mostra en format curt, sigui quina sigui la mida de la pantalla: *4h* el primer dia, *3d4h* més endavant.
 
 Els llindars es poden canviar amb la petita icona **Configuració** que apareix quan la fila d'estat està **desplegada** (fletxa de la dreta); vegeu [Llums d'estat](#Preferences-status-lights).
 
@@ -308,11 +308,11 @@ Funciona igual als [gràfics addicionals](#aaps-screens-additional-graphs) sota 
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Canvis d'hora
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Quan el rellotge del telèfon ha fet un salt, en un canvi d'horari d'estiu o en un fus horari nou, una línia vertical discontínua marca aquest moment al gràfic de glucèmia, amb una petita icona de rellotge a la base. La mateixa línia discontínua travessa els [gràfics addicionals](#aaps-screens-additional-graphs) de sota.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![La marca de canvi d'hora: una línia discontínua amb una icona de rellotge, al costat de la línia d'ara](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -342,7 +342,7 @@ Quan **PRED** està activat, AAPS dibuixa les prediccions com a **línies de pun
 
 Quan dues prediccions donen els mateixos valors, els punts se superposen i només veieu un dels colors (per exemple, UAM sobre IOB quan la glucèmia és plana).
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* Línia **COB** (taronja): [carbohidrats a bord](CobCalculation.md) (a tot AAPS el taronja es fa servir per al COB i els carbohidrats)
     
     Aquesta línia de predicció mostra cap on anirà la vostra glucèmia (no el COB mateix!) segons la configuració actual del **perfil**, suposant que les desviacions per l'absorció de carbohidrats es mantenen constants. Aquesta línia només apareix si hi ha COB conegut.
 
@@ -364,7 +364,7 @@ Quan dues prediccions donen els mateixos valors, els punts se superposen i nomé
 
 * Línia **aCOB** (taronja pàl·lid i transparent): absorció accelerada de carbohidrats
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Obsolet i de poca utilitat.
+    Semblant al COB, però suposant una velocitat d'absorció de carbohidrats fixa de 10 mg/dl/5 min (0,555 mmol/l/5 min). Obsolet i de poca utilitat.
     
     *Aquesta línia només apareix quan es fa servir l'algoritme [AMA](#Config-Builder-aps), més antic.*
 
@@ -422,9 +422,9 @@ El gràfic nou s'afegeix sota els altres; aquí, un segon gràfic addicional amb
 
 La majoria d'usuaris troben adequada aquesta configuració de gràfics addicionals:
 
-* Graph 1 with IOB, BAS
-* Graph 2 with COB, Sensitivity change
-* Graph 3 with Deviations and BGI.
+* Gràfic 1 amb IOB, BAS
+* Gràfic 2 amb COB, Canvi de sensibilitat
+* Gràfic 3 amb Desviacions i BGI.
 
 #### Insulina absoluta (ABS)
 
@@ -470,7 +470,7 @@ Mostra la sensibilitat calculada per [DynamicISF](../DailyLifeWithAaps/DynamicIS
 
 Aquestes dades poden estar disponibles si feu servir un [rellotge intel·ligent Wear OS](../WearOS/WearOsSmartwatch.md). Activeu-les a l'aplicació **AAPS** Wear i doneu permís per a les dades de salut.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Els passos es dibuixen com a columnes, i la freqüència cardíaca com una línia corba que s'interromp on el rellotge no ha enviat dades.
 
 #### Desviacions (DEV)
 
@@ -486,7 +486,7 @@ Aquesta línia mostra quant «hauria» de pujar o baixar la glucèmia només per
 
 ![Desviacions i BGI](../images/main/graph_dev_bgi.png)
 
-És una bona combinació mostrar aquesta línia juntament amb les barres de desviació. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparar la línia BGI i les barres de desviació és una altra manera d'entendre com varia la **glucèmia**. Aquí, al moment marcat amb **1**, les barres de desviació estan molt per sobre de la línia BGI: la glucèmia puja més del que explica només l'activitat de la insulina (per exemple, després de menjar carbohidrats). Al moment marcat amb **2**, les barres de desviació estan per sota de zero (vermelles): la glucèmia és més baixa del que esperava l'algoritme.
+És una bona combinació mostrar aquesta línia juntament amb les barres de desviació. Comparteixen la mateixa escala, però és diferent de la de les altres dades opcionals, per això és bona idea mostrar-les en un gràfic separat, com es veu a dalt. Comparar la línia BGI i les barres de desviació és una altra manera d'entendre com varia la **glucèmia**. Aquí, al moment marcat amb **1**, les barres de desviació estan molt per sobre de la línia BGI: la glucèmia puja més del que explica només l'activitat de la insulina (per exemple, després de menjar carbohidrats). Al moment marcat amb **2**, les barres de desviació estan per sota de zero (vermelles): la glucèmia és més baixa del que esperava l'algoritme.
 
 ### Secció F - Barra d'accés ràpid
 
@@ -508,13 +508,13 @@ Per donar una quantitat d'insulina sense fer servir la [calculadora de bolus](#a
 
 Si activeu **Iniciar OT: Menjar aviat**, podeu iniciar automàticament el vostre [objectiu temporal Menjar aviat](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Una fila addicional **Hora**, posada a **Ara**, us permet registrar una injecció d'insulina feta en el passat: feu servir **-** / **+** per canviar-la, o toqueu la fletxa per escriure els minuts o triar una data i una hora.
+Si no voleu fer el bolus amb la bomba, sinó registrar una quantitat d'insulina (p. ex. insulina posada amb ploma), activeu «**El bolus només es registrarà (la bomba no el lliurarà)**». Una fila addicional **Hora**, posada a **Ara**, us permet registrar una injecció d'insulina feta en el passat: feu servir **-** / **+** per canviar-la, o toqueu la fletxa per escriure els minuts o triar una data i una hora.
 
 ![La fila Hora, plegada](../images/v4/Screens/insulin_dialog_record_only_time.png) ![La fila Hora, oberta amb la fletxa](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Podeu fer servir els botons **+0.5 / +1.0 / +2.0** per augmentar ràpidament la quantitat d'insulina. Els valors d'increment es poden canviar a la [configuració de la calculadora de bolus](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-El diàleg d'insulina també es pot fer servir quan la bomba està suspesa o desconnectada, per exemple per registrar insulina injectada amb ploma. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+El diàleg d'insulina també es pot fer servir quan la bomba està suspesa o desconnectada, per exemple per registrar insulina injectada amb ploma. En aquest cas, «**El bolus només es registrarà (la bomba no el lliurarà)**» està forçat a activat (es mostra en vermell) i apareixen camps addicionals per seleccionar el tipus d'insulina i un desplaçament d'**Hora** per a una injecció feta en el passat:
 
 ![Diàleg d'insulina amb la bomba desconnectada](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -528,7 +528,7 @@ Alguns [objectius temporals predefinits](#TempTargets-hypo-temp-target) (Hipo, M
 
 **Hora dels carbohidrats**: quan menjareu o heu menjat els carbohidrats.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Aquesta fila està plegada perquè no hi escriviu els grams per error: feu servir **-** / **+** per canviar-la, o toqueu la fletxa per obrir-la i escriure un valor.
+**Durada**: s'utilitza per als [«carbohidrats estesos»](ExtendedCarbs.md). Aquesta fila està plegada perquè no hi escriviu els grams per error: feu servir **-** / **+** per canviar-la, o toqueu la fletxa per obrir-la i escriure un valor.
 
 Podeu fer servir els botons **+5 / +10 / +20** per augmentar ràpidament la quantitat de carbohidrats.
 
@@ -591,7 +591,7 @@ La fila d'icones sota la capçalera mostra quines dades entren al càlcul (gluc�
 * Per seguretat, la dada IOB no es pot desactivar quan el COB està activat, perquè podríeu arriscar-vos a posar massa insulina, ja que **AAPS** no tindria en compte la que ja s'ha donat.
 * Si activeu COB i IOB, es tindran en compte els carbohidrats no absorbits que encara no estan coberts amb insulina + tota la insulina lliurada com a TBR o SMB.
 * Si activeu IOB sense COB, **AAPS** té en compte la insulina ja lliurada, però no la compensa amb els carbohidrats que encara s'han d'absorbir. Això provoca un avís de «carbohidrats que falten».
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Així només s'afegeixen els carbohidrats nous, perquè l'àpat principal no s'ha d'haver absorbit necessàriament, i l'IOB no coincidirà exactament amb el COB poc després d'un bolus d'àpat.
+* Si feu un bolus per a **menjar addicional** poc després d'un bolus d'àpat (p. ex. unes postres), pot ser útil **desactivar totes les dades**. Així només s'afegeixen els carbohidrats nous, perquè l'àpat principal no s'ha d'haver absorbit necessàriament, i l'IOB no coincidirà exactament amb el COB poc després d'un bolus d'àpat.
 * Per seguretat, un **objectiu temporal** només s'inclou al càlcul si activeu aquesta dada manualment.
 
 (AapsScreens-section-j)=
@@ -620,20 +620,20 @@ El camp **Hora dels carbohidrats** serveix per al prebolus: així podeu dir al s
 
 ![Establir alarma per a carbohidrats futurs](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+El recordatori comença quan s'ha lliurat el bolus. Mentre funciona, una barra **Hora de menjar** a la pantalla principal fa el compte enrere, amb **Aturar** i **+5 min**. **+5 min** mou el final de l'espera cinc minuts més tard, i la barra mostra l'espera total. Quan arriba l'hora, el recordatori sona amb el seu propi so, un temporitzador de cuina suau. A més de **Silenciar alarma** (la pantalla es queda oberta) i **Silenciar i tancar**, la pantalla de l'alarma ofereix **+5 min**, que comença una nova espera de cinc minuts. Un cop ha sonat, la barra diu *S'ha acabat el temps* amb **+5 min** i **Ignorar**; **Silenciar i tancar** també treu la barra. La barra i l'alarma també es mostren a **AAPSClient** i al [rellotge](#WearOsSmartwatch-wizard-carb-time). El recordatori no crea cap temporitzador a l'aplicació de rellotge del telèfon. Si Android no deixa que **AAPS** posi alarmes, la calculadora us demana que permeteu *Alarmes i recordatoris* per a **AAPS** a la configuració d'Android. La campana no s'ofereix per a una hora dels carbohidrats en el passat.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![La barra Hora de menjar a la pantalla principal, amb +5 min i Aturar](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![La pantalla de l'alarma Hora de menjar: +5 min, Silenciar alarma, Silenciar i tancar](../images/main/eat_reminder_alarm.png)
 
-El camp **Glucèmia** normalment ja té l'última lectura del CGM. Si no teniu un CGM que funcioni, estarà en blanc. Quan la lectura és recent, la fila **Glucèmia** es queda plegada. The field follows new readings while the wizard is open, until you change it yourself.
+El camp **Glucèmia** normalment ja té l'última lectura del CGM. Si no teniu un CGM que funcioni, estarà en blanc. Quan la lectura és recent, la fila **Glucèmia** es queda plegada. El camp segueix les lectures noves mentre la calculadora està oberta, fins que el canvieu vosaltres.
 
-El botó de resultat de la part de baix mostra el bolus proposat; si el premeu, demana confirmació abans de lliurar cap insulina. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+El botó de resultat de la part de baix mostra el bolus proposat; si el premeu, demana confirmació abans de lliurar cap insulina. Mentre la confirmació està esperant, el llaç no dona SMB, així el bolus que confirmeu continua sent correcte. Si s'està lliurant un SMB en aquell moment, **OK** espera fins que acabi.
 
 Bo de saber:
 
 * Si el bolus calculat és més alt que el vostre **[Bolus màxim](#Preferences-maximum-bolus)**, es redueix al bolus màxim, i la confirmació mostra l'avís «Restricció de bolus aplicada». En canvi, un [Assistent ràpid](../DailyLifeWithAaps/QuickWizards.md) es rebutja.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
+* Quan el bolus només es registra (per exemple, mentre la bomba està desconnectada), l'avís «**El bolus només es registrarà (la bomba no el lliurarà)**» es queda a la part de dalt del diàleg, també quan us desplaceu.
 * Un bolus que doneu a mà té prioritat sobre un [SMB](#Open-APS-features-super-micro-bolus-smb) que està esperant per lliurar-se: l'SMB es descarta i el llaç torna a calcular. Si s'està lliurant un SMB en aquest moment, el vostre bolus es rebutja amb el missatge «S'està lliurant un SMB en aquest moment. Torneu-ho a provar quan hagi acabat.» No es dona insulina, i els carbohidrats introduïts amb aquest bolus no es desen: espereu un moment i torneu-los a introduir.
 
 (AapsScreens-wrong-cob-detection)=
