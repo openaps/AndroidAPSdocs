@@ -32,9 +32,9 @@ Se o seu site estiver alojado no Azure, muitas pessoas notaram que os problemas 
 
 Uma solução alternativa para problemas de ligação no Azure é definir, em Application settings, HTTP protocol para 2.0 e Websockets para ON
 
-    {admonition} Remote control needs websockets
+    {admonition} O controlo remoto precisa de websockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    Os websockets são **obrigatórios** para o controlo remoto a partir do **AAPSClient**, nos dois telefones. Se a ligação websocket cair repetidamente, o controlo remoto não funciona. A sincronização dos dados continua a funcionar, mas mais devagar. O seu servidor (host) do Nightscout tem de suportar websockets.
 
 * Sem valores de glicose do Nightscout
 
@@ -42,6 +42,6 @@ Se o **AAPS** se liga corretamente ao Nightscout mas a glicose aparece como N/A:
 
 * Se continuar a ter um erro...
 
-Verifique o tamanho da sua base de dados no MongoDB (ou através do plugin de tamanho da base de dados no Nightscout). Se usa o plano gratuito do MongoDB, 496MB significa que está cheia e tem de ser limpa. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Verifique o tamanho da sua base de dados no MongoDB (ou através do plugin de tamanho da base de dados no Nightscout). Se usa o plano gratuito do MongoDB, 496MB significa que está cheia e tem de ser limpa. [Siga estas instruções do Nightscout para verificar o tamanho da sua base de dados e apagar dados](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Antes de apagar dados da sua base de dados, e se ainda não o fez, considere doar os seus dados do AAPS ao projeto Open Humans (para investigação). As instruções estão na [página de configuração do Open Humans](../SupportingAaps/OpenHumans.md).
