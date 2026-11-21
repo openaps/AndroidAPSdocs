@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 O **Objetivo 2** pede que execute várias «tarefas», como mostra a captura de ecrã abaixo. Cada tarefa mostra o seu estado (**1**): o texto laranja «**Não concluído ainda**» muda para «**Concluído, muito bem!**» logo que o **AAPS** regista a ação. Toque em **Dica** (**2**) por baixo de uma tarefa para abrir a documentação relacionada, caso ainda não conheça uma certa ação.
 
-![Captura de ecrã do Objetivo 2](../images/Objective2_V2_5.png)
+![Captura de ecrã do Objetivo 2](../images/objectives/Objective2_V2_5.png)
 
 As tarefas para concluir o **Objetivo 2** são:
 - Defina o seu **Perfil** a 90% durante 10 min.
@@ -96,7 +96,7 @@ Tempo mínimo para concluir este objetivo: **7 dias**. This is a mandatory wait 
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Além disso, pode alterar a percentagem mínima das alterações recomendadas da taxa basal com a definição «**Alteração mínima em modo aberto**» em **Definições → Loop**. The higher the value, the fewer change notifications you will receive.
 
-![Alteração mínima em modo aberto](../images/OpenLoop_MinimalRequestChange2.png)
+![Alteração mínima em modo aberto](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Isto significa que, no **Objetivo 6**, se os valores de glicose do sensor estive
 
 - Se a sua IA for negativa (veja a captura de ecrã abaixo), pode ser acionada uma taxa basal temporária (TBR) > 100% no **Objetivo 6**.
 
-![Exemplo de IA negativa](../images/Objective6_negIOB.png)
+![Exemplo de IA negativa](../images/objectives/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Ative o modo «Suspensão por glicose baixa»: toque no ícone do Loop no ecrã principal e escolha **Suspensão por glicose baixa** como modo de funcionamento.
@@ -245,6 +245,6 @@ Toque em «**Mais**» por baixo de um objetivo para ver outra vez as suas tarefa
 
 Se, por qualquer razão, quiser voltar atrás nos **Objetivos**, abra o **Objetivo** concluído com «**Mais**» e toque em «**Repor estado concluído**»:
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Go back in objectives](../images/objectives/Objective_ClearFinished.png)
 
 Da mesma forma, o **Objetivo** em que está a trabalhar pode ser reiniciado com «**Repor estado iniciado**».
