@@ -1,23 +1,23 @@
-# Change language and version
+# Canviar l'idioma i la versió
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+La documentació que esteu llegint està disponible en diversos idiomes i correspon a una versió concreta d'**AAPS**. Podeu canviar tant l'idioma com la versió des del menú de la part inferior dreta de la pantalla.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Feu clic a la barra de la part inferior dreta de la pantalla per obrir el menú de selecció d'idioma i versió.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Obrir el menú d'idioma](../images/documentation_language_menu.png)
 
-## Change language
+## Canviar l'idioma
 
-In the menu, select the language you want to read the documentation in.
+Al menú, seleccioneu l'idioma en què voleu llegir la documentació.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Us convidem a unir-vos als traductors i revisors de [Crowdin](https://crowdin.com/project/androidapsdocs) per ajudar a traduir la documentació al vostre idioma.
 
-## Change version
+## Canviar la versió
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+La versió actual es mostra a la part inferior dreta de la pantalla. Per canviar a una altra versió, feu clic a la versió actual i seleccioneu la versió que necessiteu.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Quan canvieu l'idioma o la versió (o tots dos), és possible que obtingueu un error 404 - Pàgina no trobada, si la pàgina no existeix en aquell idioma o versió. Això passa sovint quan canvieu de versió, però no hauria de passar quan canvieu d'idioma: si la pàgina encara no està traduïda, es mostrarà en anglès.
 ```
