@@ -10,7 +10,7 @@ Quan instal·leu **AAPS** per primera vegada, heu de completar cada objectiu aba
 
 Els **Objectius 1 a 8** us guien des de la configuració d'**AAPS** al telèfon fins al llaç tancat híbrid «bàsic». Això triga unes 6 setmanes. Podeu avançar fins a l'**Objectiu 5** amb una bomba virtual (i mentrestant fer servir un altre mètode per administrar la insulina). Els **Objectius 9 i 10** serveixen per provar funcions més avançades d'**AAPS** per controlar millor la diabetis. Poden trigar fins a 3 mesos a completar-se, potser més. Trobareu més detalls sobre una estimació del temps necessari aquí: [Quant de temps cal?](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
+A més d'avançar pels **Objectius**, si cal, també podeu esborrar el progrés i [tornar a un objectiu anterior](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Feu una còpia de seguretat de la configuració
 
@@ -39,7 +39,7 @@ L'**Objectiu 1** demana a l'usuari que faci la configuració tècnica bàsica a 
 - Si feu servir Tidepool:
   - Seguiu les instruccions de la pàgina [Tidepool](../SettingUpAaps/Tidepool.md) perquè **Tidepool** pugui rebre i mostrar les dades d'**AAPS**.
 
-Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Nota: *Potser haureu d'esperar la lectura següent de glucèmia del sensor abans que **AAPS** ho reconegui.*
 
 (objectives-objective2)=
 ## Objectiu 2: Aprendre a controlar AAPS
@@ -51,7 +51,7 @@ L'**Objectiu 2** demana fer diverses «tasques», com mostra la captura de sota.
 Les tasques per completar l'**Objectiu 2** són:
 - Poseu el vostre **perfil** al 90% durant 10 min.
   - _Pista_: premeu el nom del perfil a la pantalla principal per obrir la pantalla **Perfil**, després feu servir el botó **Activar** (▶) i poseu el percentatge i la durada. Més informació a [Canvi de perfil i percentatge del perfil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Nota_: **AAPS** no accepta taxes basals per sota de 0,05 U/h. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Després de completar aquesta tasca, torneu al vostre **perfil** normal.
+  - _Nota_: **AAPS** no accepta taxes basals per sota de 0,05 U/h. Si el vostre **perfil** té taxes de 0,05 U/h o menys, haureu de crear un **perfil** temporal amb taxes basals més altes abans de completar aquesta tasca. Després de completar aquesta tasca, torneu al vostre **perfil** normal.
 - Simuleu una «dutxa» [desconnectant la bomba](#AapsScreens-loop-status) a **AAPS** durant 1 h.
   - _Pista_: premeu la icona del llaç a la pantalla principal per obrir el diàleg del llaç, i després trieu una durada a **Desconnectar bomba**.
 - Acabeu la «dutxa» tornant a connectar la bomba.
@@ -94,7 +94,7 @@ Temps mínim per completar aquest objectiu: **7 dies**. És un temps d'espera ob
 - Feu servir [**objectius temporals**](../DailyLifeWithAaps/TempTargets.md) quan calgui. Després de tractar una hipo, feu servir l'objectiu temporal predefinit «Hipo» perquè el sistema no corregeixi massa quan la glucèmia torni a pujar.
 - Si en aquest moment encara feu servir el [Mode simple](#preferences-simple-mode), ara és probablement un bon moment per desactivar-lo.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). A més, podeu canviar el percentatge mínim dels canvis de basal recomanats amb el paràmetre «**Canvi mínim en mode obert**» a **Configuració → Llaç**. Com més alt sigui el valor, menys avisos de canvi rebreu.
+Per tenir menys canvis de taxa basal proposats en llaç obert, encara podeu fer servir els consells de l'[**Objectiu 3**](#objectives-objective3). A més, podeu canviar el percentatge mínim dels canvis de basal recomanats amb el paràmetre «**Canvi mínim en mode obert**» a **Configuració → Llaç**. Com més alt sigui el valor, menys avisos de canvi rebreu.
 
 ![Canvi mínim en mode obert](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
@@ -110,7 +110,7 @@ A l'**Objectiu 5** començareu a entendre d'on surten les recomanacions de basal
 
 Temps estimat per completar aquest objectiu: **7 dies**.
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Aquest valor es pot configurar a [Configuració → OpenAPS SMB](#Preferences-openaps-smb-settings). En [mode simple](#preferences-simple-mode), **AAPS** posa aquest valor automàticament i no cal que el canvieu. Si encara feu servir una bomba virtual, assegureu-vos que aquest paràmetre de seguretat està configurat tant a **AAPS** com a la vostra bomba d'insulina.
+En aquest **Objectiu** heu de determinar i configurar el valor de la «Taxa basal màxima» (max-basal), com es descriu a [Funcions d'OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Aquest valor es pot configurar a [Configuració → OpenAPS SMB](#Preferences-openaps-smb-settings). En [mode simple](#preferences-simple-mode), **AAPS** posa aquest valor automàticament i no cal que el canvieu. Si encara feu servir una bomba virtual, assegureu-vos que aquest paràmetre de seguretat està configurat tant a **AAPS** com a la vostra bomba d'insulina.
 
 Potser voldreu posar l'[objectiu de glucèmia del **perfil**](#profile-glucose-targets) més alt que de costum fins que us sentiu còmodes amb els càlculs i la configuració d'**AAPS**. Podeu provar d'ajustar l'**objectiu de glucèmia** del vostre **perfil** a un rang més estret (per exemple, d'1 mmol/l o menys [20 mg/dl o menys] d'amplada) i observar què passa.
 
@@ -119,7 +119,7 @@ Potser voldreu posar l'[objectiu de glucèmia del **perfil**](#profile-glucose-t
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Si feu llaç obert amb una bomba virtual, **atureu-vos aquí**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+Si feu llaç obert amb una bomba virtual, **atureu-vos aquí**. Premeu **Verificar** al final d'aquest **Objectiu** només quan ja feu servir una bomba «real» que lliura insulina.
 
 ```
 
@@ -167,14 +167,14 @@ Temps mínim per completar aquest objectiu: **1 dia**. És un temps d'espera obl
 
 - Seleccioneu **Llaç tancat** prement la [icona del llaç](#AapsScreens-loop-status) a la pantalla principal i triant **Llaç tancat** com a mode de funcionament. Quedeu-vos en **llaç tancat** durant 1 dia.
 
-- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Augmenteu a poc a poc la «IOB màxima per a SMB» (a OpenAPS es diu «max-iob») per sobre de 0, fins que trobeu la configuració que us funciona millor.
 
 La recomanació per defecte per a aquest paràmetre és «**bolus d'àpat mitjà + 3x basal diària màxima**», on «basal diària màxima» és el valor horari més alt de qualsevol franja del dia.
 
 ![basal diària màxima](../images/MaxDailyBasal2.png)
 
 Aquesta recomanació és només un punt de partida. Si feu servir aquesta regla però veieu que AAPS lliura massa insulina quan la glucèmia puja, potser haureu de:
-* lower the "Max IOB for SMB" value;
+* baixeu el valor d'«IOB màxima per a SMB»;
 * revisar la configuració del vostre **perfil**, fent només un canvi cada vegada.
 
 Si sou molt resistents a la insulina, també podeu augmentar el valor de **maxIOB** amb molta precaució.
@@ -202,7 +202,7 @@ A l'**Objectiu 9** aprendreu i fareu servir el **«Super Micro Bolus (SMB)»** c
 Temps mínim per completar aquest objectiu: **28 dies**. És un temps d'espera obligatori. No podeu passar a l'Objectiu següent abans que s'acabi aquest temps.
 
 - La [secció SMB d'aquesta documentació](#Open-APS-features-super-micro-bolus-smb) i la [part sobre oref1 de la documentació d'OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) són lectures obligatòries per entendre els **SMB** i el concepte de **zero-temping**.
-- Després podeu [augmentar la maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) perquè els **SMB** funcionin millor. Ara maxIOB inclou tota la **IOB**, no només la basal acumulada. Aquest llindar posa en pausa els **SMB** fins que la IOB baixa per sota d'aquest valor (_per exemple_, la **maxIOB** és de 7 U i es dona un bolus de 8 U per a un àpat: els SMB es posen en pausa i no es donen fins que la **IOB** baixa per sota de 7 U). Un bon començament és posar **maxIOB** = **bolus d'àpat mitjà + 3x basal diària màxima**, on «basal diària màxima» és el valor horari més alt de qualsevol franja del dia. See [objective 7](#objectives-objective7) as reference.
+- Després podeu [augmentar la maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) perquè els **SMB** funcionin millor. Ara maxIOB inclou tota la **IOB**, no només la basal acumulada. Aquest llindar posa en pausa els **SMB** fins que la IOB baixa per sota d'aquest valor (_per exemple_, la **maxIOB** és de 7 U i es dona un bolus de 8 U per a un àpat: els SMB es posen en pausa i no es donen fins que la **IOB** baixa per sota de 7 U). Un bon començament és posar **maxIOB** = **bolus d'àpat mitjà + 3x basal diària màxima**, on «basal diària màxima» és el valor horari més alt de qualsevol franja del dia. Vegeu l'[objectiu 7](#objectives-objective7) com a referència.
 - Avalueu la velocitat d'absorció dels carbohidrats i penseu a canviar el paràmetre «min_5m_carbimpact» a [Configuració → Configuració absorció → min_5m_carbimpact](#Preferences-min_5m_carbimpact) si us sembla massa lenta o massa ràpida.
 
 (objectives-objective10)=
