@@ -35,11 +35,11 @@ Aquesta secció ofereix una visió general breu de tots els **CGM/FGM** compatib
 
 | CGM                                                                                                                         | [Orígens de glucèmia](#Config-Builder-bg-source) disponibles                                                                                     |
 | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                                                                  | BYODA, [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) or [Notification Reader](#DexcomG7-notification-reader)    |
-| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                                                                | [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) or [Notification Reader](#DexcomG7-notification-reader)           |
-| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                                                                               | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG7-notification-reader)                                                      |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                                                                  | BYODA, [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader)                                               |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                                                                 | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader)                                                      |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                                                                  | BYODA, [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) o [Lector de notificacions](#DexcomG7-notification-reader) |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                                                                | [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) o [Lector de notificacions](#DexcomG7-notification-reader)        |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                                                                               | [xDrip](../CompatibleCgms/xDrip.md) o [Lector de notificacions](#DexcomG7-notification-reader)                                                   |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                                                                  | BYODA, [xDrip](../CompatibleCgms/xDrip.md) o [Lector de notificacions](#DexcomG6-notification-reader)                                            |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                                                                 | [xDrip](../CompatibleCgms/xDrip.md) o [Lector de notificacions](#DexcomG6-notification-reader)                                                   |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                                                                   | [Juggluco](../CompatibleCgms/Juggluco.md) (amb xDrip o sense)                                                                                    |
 | [Libre 2/2+](../CompatibleCgms/Libre2.md)                                                                                   | [xDrip](../CompatibleCgms/xDrip.md) (només UE) o [Juggluco](../CompatibleCgms/Juggluco.md) (amb xDrip o sense)                                   |
 | [Libre 1](../CompatibleCgms/Libre1.md)                                                                                      | [xDrip](../CompatibleCgms/xDrip.md) (Diabox envia les lectures a través de l'origen xDrip), Glimp o Tomato (MiaoMiao). Necessiten un transmissor |
@@ -66,28 +66,28 @@ Perquè **AAPS** els identifiqui correctament, l'aplicació que envia les lectur
 
 Les fonts de dades de confiança permeten el lliurament de **SMB** en tot moment.
 
-**AAPS** checks the sensor named in the latest **BG** reading it received, whichever **BG** source delivered it. After you change your **BG** source, the **SMB** "always" settings appear only once the first reading from the new source has arrived.
+**AAPS** comprova el sensor indicat a l'última lectura de **glucèmia** que ha rebut, sigui quin sigui l'origen de **glucèmia** que l'ha enviada. Després de canviar l'origen de **glucèmia**, les opcions «sempre» de l'**SMB** només apareixen quan ha arribat la primera lectura del nou origen.
 
-| Sensor          |                                                                              Aplicació CGM                                                                               |
-| --------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G6       |                             BYODA, xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader))                              |
-| Dexcom G7       | BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader)) |
-| Dexcom ONE+     |    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader))     |
-| Dexcom ONE      |                                 xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader))                                 |
-| Dexcom Stelo    |                                 xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader))                                 |
-| Libre 2/2+ (UE) |                                  xDrip (OOP2), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                                  |
-| Libre 2/2+/3/3+ |                                                Juggluco (**xDrip broadcast** sense xDrip, o **Patched Libre** amb xDrip)                                                 |
-| Syai, Ottai     |                      Syai or Ottai app (**Syai/Ottai** source or **Notification Reader**), <br/>Juggluco (**xDrip broadcast** without xDrip)                       |
+| Sensor          |                                                                                  Aplicació CGM                                                                                   |
+| --------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6       |                            BYODA, xDrip (**Direct, Native**), <br/>aplicació Dexcom ([Lector de notificacions](#DexcomG6-notification-reader))                             |
+| Dexcom G7       | BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** sense xDrip), <br/>aplicació Dexcom ([Lector de notificacions](#DexcomG7-notification-reader)) |
+| Dexcom ONE+     |    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** sense xDrip), <br/>aplicació Dexcom ([Lector de notificacions](#DexcomG7-notification-reader))     |
+| Dexcom ONE      |                                xDrip (**Direct, Native**), <br/>aplicació Dexcom ([Lector de notificacions](#DexcomG6-notification-reader))                                |
+| Dexcom Stelo    |                                xDrip (**Direct, Native**), <br/>aplicació Dexcom ([Lector de notificacions](#DexcomG7-notification-reader))                                |
+| Libre 2/2+ (UE) |                                        xDrip (OOP2), <br/>Juggluco (**xDrip broadcast** sense xDrip, o **Patched Libre** amb xDrip)                                        |
+| Libre 2/2+/3/3+ |                                                    Juggluco (**xDrip broadcast** sense xDrip, o **Patched Libre** amb xDrip)                                                     |
+| Syai, Ottai     |                       Aplicació Syai o Ottai (origen **Syai/Ottai** o **Lector de notificacions**), <br/>Juggluco (**xDrip broadcast** sense xDrip)                        |
 
-**Note: xDrip Companion apps, Medtronic, Eversense and all other sensors are not trusted data sources.**
+**Nota: les aplicacions xDrip Companion, Medtronic, Eversense i tots els altres sensors no són fonts de dades de confiança.**
 
 ```{admonition} Online BG sources are not recommended for closed looping
 :class: warning
-Some sources that need an internet connection can also be trusted:
-- xDrip **Dexcom Share follower** (any Dexcom sensor)
-- the **Nightscout** BG source (**AAPSClient**, or **AAPS** following your Nightscout site), when the uploader names one of the sensors above
+Algunes fonts que necessiten connexió a internet també poden ser de confiança:
+- **Dexcom Share follower** d'xDrip (qualsevol sensor Dexcom)
+- l'origen de glucèmia **Nightscout** (**AAPSClient**, o **AAPS** seguint el vostre lloc Nightscout), quan l'aplicació que envia les dades indica un dels sensors de més amunt
 
-These sources are **not recommended** for a closed loop. When your phone or the CGM uploader loses its connection, **AAPS** receives no **BG** readings and cannot loop. Readings also arrive late, after the delay of the cloud service. Use a CGM app that sends its readings to **AAPS** directly on the phone (as listed in the table above) whenever possible.
+Aquestes fonts **no es recomanen** per a un llaç tancat. Quan el vostre telèfon o l'aplicació que envia les dades del CGM perd la connexió, **AAPS** no rep cap lectura de **glucèmia** i no pot fer funcionar el llaç. Les lectures també arriben tard, amb el retard del servei al núvol. Sempre que pugueu, feu servir una aplicació CGM que enviï les lectures a **AAPS** directament al telèfon (com a la taula de més amunt).
 
-Other follower modes (xDrip Nightscout or Web follower, CareLink follower, Juggluco Nightscout) are never trusted.
+Els altres modes de seguidor (seguidor Nightscout o Web d'xDrip, seguidor CareLink, Juggluco Nightscout) no són mai de confiança.
 ```
