@@ -28,12 +28,12 @@ A **AAPS** v4 la configuració es troba a la pantalla **Configuració**. Hi ha t
 
 **Idioma**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- Per defecte **AAPS** segueix l'idioma del telèfon (recomanat).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Si voleu **AAPS** en un idioma diferent del del telèfon, trieu-lo aquí. A Android 13 i posteriors, **AAPS** el registra com a idioma propi de l'aplicació a Android, de manera que totes les seves pantalles, la pantalla principal, els widgets i la manera d'escriure els números el segueixen.
 
 - Quan canvieu l'idioma, els textos d'**AAPS** passen al nou idioma de seguida. Si alguns textos encara es mostren en l'idioma anterior, reinicieu **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- A Android 12 aquesta opció no es mostra: **AAPS** sempre fa servir l'idioma del telèfon.
 - Opció amagada en [mode simple](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Mode simple**
@@ -91,7 +91,7 @@ Trieu entre el tema clar, el tema fosc o seguir la configuració del sistema del
 
 És obligatòria per poder [exportar la configuració](../Maintenance/ExportImportSettings.md), ja que des de la versió 2.7 es xifra.
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+Si heu oblidat la clau mestra, vegeu [Com restablir la clau mestra?](#FAQ-reset-master-password)
 
 **És possible que la protecció biomètrica no funcioni en telèfons OnePlus. És un problema conegut d'OnePlus en alguns telèfons.**
 
@@ -138,7 +138,7 @@ Si l'aplicació està protegida, heu d'introduir la contrasenya o fer servir l'a
 
 - Els límits de seguretat es fixen segons l'edat que seleccioneu en aquesta opció.
 - Si comenceu a arribar sovint a aquests límits fixos (com el bolus màxim), és el moment de pujar un nivell.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
+- És mala idea seleccionar una edat més alta que la real, perquè pot portar a una sobredosi si s'introdueix un valor equivocat al diàleg d'insulina (per exemple, si us oblideu del separador decimal).
 - Si voleu conèixer els valors concrets d'aquests límits de seguretat fixos, aneu a la funció de l'algoritme que feu servir a [aquesta pàgina](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -277,7 +277,7 @@ Segons la vostra configuració a [Configurador > APS](../SettingUpAaps/ConfigBui
 - [Advanced Meal Assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama): l'estat de l'algoritme el 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb): l'algoritme més recent, recomanat per a principiants
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+Des de la [versió 3.3 d'**AAPS**](#version3300), la funció [ISF dinàmic (DynISF)](../DailyLifeWithAaps/DynamicISF.md) s'ha integrat a OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -366,15 +366,15 @@ El plugin NSClient (que es mostra com a **NSClientV3** al menú de configuració
 ```{admonition} Data uploaders
 :class: warning
 
-Quan feu servir NSClientV3, tots els programes que envien dades han de fer servir l'API v3 de Nightscout. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Quan feu servir NSClientV3, tots els programes que envien dades han de fer servir l'API v3 de Nightscout. Si un altre programa que envia dades (per exemple l'aplicació del CGM) no és compatible amb l'API v3, **deixeu que AAPS enviï totes les dades** (glucèmia, tractaments, ...) a Nightscout i desactiveu aquell programa.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- Definiu la vostra *URL de Nightscout* (p. ex. <https://yoursitename.yourplatform.dom>).
 - **Assegureu-vos que l'URL NO acaba amb /api/v1/.**
 - A Nightscout, creeu un *[token d'administrador](https://nightscout.github.io/nightscout/security/#create-a-token)* (cal [Nightscout 15](https://nightscout.github.io/update/update/) per fer servir l'API V3) i introduïu-lo a **Token d'accés de Nightscout** (no el vostre API Secret!). A l'**AAPSClient** podeu escanejar en canvi el codi QR del telèfon principal, que configura un token propi del client. Un client emparellat amb el PIN rep el seu propi token del telèfon principal després de l'emparellament. Vegeu [El token de Nightscout propi del client](#client-master-control-own-token).
 - Això permet llegir i escriure dades entre el lloc web de Nightscout i **AAPS**.
 - Si us heu quedat encallats a l'Objectiu 1, comproveu bé que no hi hagi errors d'escriptura aquí.
-- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Deixeu activat «Utilitzar websockets» (recomanat). Els websockets són **obligatoris** per al control remot des d'**AAPSClient**, als dos telèfons.
 
 (Preferences-nsclient-synchronization)=
 ### Sincronització
@@ -413,7 +413,7 @@ L'interruptor «**Permetre el control des dels clients**» ja no és en aquesta 
 - Per esborrar tots els SSID, escriviu un espai en blanc al camp.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Configuració avançada (NSClientV3)
 
 ![Configuració avançada de NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -472,21 +472,21 @@ Seleccioneu quin servei d'ubicació s'ha de fer servir:
 
 Aquestes opcions s'expliquen per si soles.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Ignorar el mode No molestis** (activat per defecte): les alarmes d'**AAPS** sonen encara que el telèfon estigui en silenci o en mode No molestis. Desactiveu-ho si **AAPS** ha de respectar aquests modes: llavors les alarmes no sonen, i en mode No molestis només vibren, al telèfon i al rellotge. Els suggeriments del llaç que arriben durant el mode No molestis es mostren sense so.
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Quan sona una alarma, la pantalla de l'alarma ofereix **Silenciar 5 minuts**, **Silenciar alarma** (la pantalla queda oberta i podeu llegir el missatge) i **Silenciar i tancar**. Si llisqueu la notificació de l'alarma per treure-la de la safata de notificacions, l'alarma se silencia. Quan obriu **AAPS** més tard, una alarma que no heu respost es torna a mostrar.
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### So, volum i vibració de les alarmes
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **So**: els sons de les alarmes d'**AAPS** estan integrats i no es poden canviar.
+- **Volum**: **AAPS** no té cap opció de volum pròpia. Amb **Ignorar el mode No molestis** activat, les alarmes segueixen el volum d'alarma del telèfon. Si està desactivat, segueixen el volum de les notificacions.
+- **Augmentar gradualment el volum de les notificacions** (activat per defecte): l'alarma comença fluixa i va pujant de volum. Desactiveu-ho perquè soni de seguida a tot volum.
+- **Vibració**: a la configuració del telèfon, aneu a **Aplicacions** > **AAPS** > **Notificacions**. La llista **Alarmes AAPS** hi apareix després de la primera alarma. Premeu una alarma per activar o desactivar la seva **Vibració**. Mantingueu aquestes alarmes activades.
 
-![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+![Alarmes AAPS a la configuració de notificacions del telèfon](../images/preferences/settings_alarm_channels.png) ![Configuració de vibració d'una alarma AAPS](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- Les alarmes de glucèmia (alta, baixa, sense dades) venen de l'aplicació del CGM o de Nightscout: configureu-ne el so i la vibració allà.
 
 (preferences-maintenance-settings)=
 ## Configuració de manteniment
@@ -503,7 +503,7 @@ When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence a
 
 Podeu ajudar a millorar **AAPS** enviant informes d'error als desenvolupadors.
 
-**Exportació automàtica de la configuració**<br/> Si activeu aquesta funció, permeteu que **AAPS** exporti la configuració sense intervenció de l'usuari. For this the master password is securely stored on your phone (only) at the next manual export. La contrasenya desada es farà servir durant un màxim de 4 setmanes. Després de 4 setmanes rebreu un avís que la contrasenya està a punt de caducar. Durant un període de gràcia d'1 setmana, podeu renovar la contrasenya exportant la configuració manualment des del menú de manteniment.
+**Exportació automàtica de la configuració**<br/> Si activeu aquesta funció, permeteu que **AAPS** exporti la configuració sense intervenció de l'usuari. Per a això, la clau mestra es desa de manera segura al vostre telèfon (només allà) a la propera exportació manual. La contrasenya desada es farà servir durant un màxim de 4 setmanes. Després de 4 setmanes rebreu un avís que la contrasenya està a punt de caducar. Durant un període de gràcia d'1 setmana, podeu renovar la contrasenya exportant la configuració manualment des del menú de manteniment.
 
 Quan ha passat el període de gràcia d'1 setmana, la contrasenya desada caduca i qualsevol exportació automàtica de la configuració s'aturarà i avisarà l'usuari, demanant-li que torni a introduir la contrasenya. [(**Exportacions automàtiques de la configuració**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) es registraran a les llistes «Portal de cures» i «Entrada d'usuari» d'**AAPS**, a Tractaments.
 
