@@ -4,11 +4,11 @@
 
 ## 1. Использовать трансмиттер Bluetooth и алгоритм OOP
 
-Bluetooth трансмиттеры могут быть использованы с датчиками Libre 2 (EU) и 2+ (EU) при использовании приложения с алгоритмом вне процесса (OOP). В этом случае Вы будете получать показания сахара крови каждые 5 минут, так же как с [Libre1](./Libre1.md).
+Bluetooth трансмиттеры могут быть использованы с датчиками Libre 2 (EU) и 2+ (EU) при использовании приложения с алгоритмом вне процесса (OOP). Вы можете получать значения ГК каждые 5 минут, как с [Libre 1](./Libre1.md).
 
 Check the bridge and app you want to use are compatible with your sensor and xDrip.
 
-Libre2 OOP (находится [здесь](#Libre2_OOP2)) создает те же значения ГК, что и оригинальный ридер или приложение. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. См. ниже [Сглаживание показаний & необоаботанные данные](#libre2-value-smoothing-raw-values). Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". If you try to loop with OOP please enable all smoothing settings in xDrip.
+Libre2 OOP (находится [здесь](#Libre2_OOP2)) создает те же значения ГК, что и оригинальный ридер или приложение. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. См. ниже [Сглаживание данных & необработанные данные](#libre2-value-smoothing-raw-values). Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". If you try to loop with OOP please enable all smoothing settings in xDrip.
 
 Есть несколько веских причин пользоваться передатчиком Bluetooth:
 
@@ -30,7 +30,7 @@ Libre2 OOP (находится [здесь](#Libre2_OOP2)) создает те �
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-На самом деле эта команда физически не запустит сенсор Libre2 и не начнет взаимодействие с ним. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Пропущенные данные, например из-за того, что вы были далеко от телефона, не будут восстановлены.
+На самом деле эта команда физически не запускает сенсор Libre2 и никак с ним не взаимодействует. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Пропущенные значения, например из-за того, что вы были далеко от телефона, не будут восстановлены.
 
 After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
@@ -65,7 +65,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 ![xDrip advanced settings Libre 2 & raw values](../images/libre3/xDrip_Libre3_Smooth.png)
 
-Это обязательно для цикла. Кривые выглядят гладкими, и результаты работы цикла великолепны. Необработаные значения, на которых основаны оповещения, имеют несколько больший разборос, но в конечном счете соответствуют показателям ридера. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Переключитесь на Менее распространенные Настройки\ > Расширенные настройки для Libre2 \>"показывать необработанные значения" и "показывать Информацию с сенсора". После этого "необработанные" значения будут дополнительно отображается в виде небольших белых точек, а в меню системы будет доступна дополнительная информация о сенсоре.
+Это обязательно для цикла. Кривые выглядят гладкими, и результаты работы цикла великолепны. Необработанные значения, на которых основаны оповещения, колеблются немного сильнее, но совпадают со значениями, которые показывает ридер. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Включите Less Common Settings (Менее распространенные настройки) \> Advanced Settings for Libre2 \> "show Raw values" и "show Sensors Infos". После этого необработанные значения будут дополнительно показаны маленькими белыми точками, а в системном меню будет доступна дополнительная информация о сенсоре.
 
 Необработанные данные очень полезны при быстрых изменениях ГК. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
 
@@ -77,7 +77,7 @@ Technically, the current blood sugar value is transmitted to xDrip every minute.
 
 #### Калибровка
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Угловой коэффициент не изменяется. Проверьте глюкометром после установки нового сенсора, имея в виду, что в первые 12 часов после установки данные могут быть неточны. Поскольку показатели ГК могут сильно отличаться, проверяйте каждые 24 часа и при необходимости калибруйте. Если через несколько дней показания сенсора совершенно не совпадают с глюкометром, сенсор следует заменить.
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Угловой коэффициент не изменяется. Проверьте ГК глюкометром после установки нового сенсора, учитывая, что в первые 12 часов после установки данные могут быть неточными. Поскольку показатели ГК могут сильно отличаться, проверяйте каждые 24 часа и при необходимости калибруйте. Если через несколько дней показания сенсора совсем неверные, его следует заменить.
 
 ## 3. Использовать Diabox
 
