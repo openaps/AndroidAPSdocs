@@ -1,147 +1,147 @@
-# A dedicated Google account for AAPS (optional)
+# En separat Google-konto til AAPS (valgfri)
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+Nogle **AAPS**-brugere vil hellere bruge deres egen e-mailkonto til **AAPS** også. Andre **AAPS**-brugere (eller deres omsorgspersoner) opretter en separat e-mailkonto til **AAPS**. Det er valgfrit. Nedenfor viser vi et eksempel på, hvordan du gør det.
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+Hvis du ikke vil oprette en separat Gmail-konto til **AAPS**, kan du gå direkte til næste afsnit, [Byg AAPS](../SettingUpAaps/BuildingAaps.md).
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
-- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
-- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
-- Gmail allows you to register up to 4 accounts under the same phone number.
+- Med separat plads på Google Drive risikerer du ikke at fylde din personlige Google Drive-grænse op med **Eksporter indstillinger**.
+- Hver version af **AAPS** (og hjælpeapps som xDrip, BYODA osv.) bliver gemt ét sted, som ikke afhænger af din computer. Hvis din pc eller telefon bliver stjålet, mistet eller går i stykker, har du stadig adgang.
+- Når alle har den samme opsætning med en lignende mappestruktur, er det lettere at give hjælp online.
+- Afhængigt af opsætningen (se nedenfor) får du en separat identitet som et alias, du kan bruge i fællesskabet. Det kan beskytte dit privatliv. 
+- Børn med type 1-diabetes kan beholde deres egen »daglige« e-mailkonto som mindreårige, mens de bruger **AAPS** og tilknyttede funktioner, som kræver en konto for en voksen.
+- Gmail lader dig registrere op til 4 konti med det samme telefonnummer.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## Sådan opretter du en separat Google-konto til AAPS
 
-(⌛About 10 minutes)
+(⌛Ca. 10 minutter)
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+Krav:
 
-* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
-* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
+* Du har en Windows-pc (Windows 10 eller nyere) og en Android-telefon (Android 12 eller nyere), som skal køre **AAPS**-appen. Begge har de nyeste sikkerhedsopdateringer, internetadgang og administratorrettigheder, fordi nogle trin kræver, at du downloader og installerer programmer.
+* Android-telefonen er allerede sat op med din personlige »daglige« e-mailadresse, f.eks. en Gmail-konto.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+- Af hensyn til privatlivet kan du bruge et andet navn end dit eget, som passer til kontoen (f.eks. t1dsuperstar). Så kan du bruge det i offentlige **AAPS**-fora og holde din egen identitet privat. Google kræver en e-mailadresse og et telefonnummer til gendannelse, så kontoen kan stadig spores.
+- Den nye **AAPS**-konto bruger det samme telefonnummer til bekræftelse som din »_daglige_« konto. Den bruger den »daglige« e-mailadresse til bekræftelse;
+- Vi opsætter videresendelse, så alle e-mails til den nye AAPS-konto bliver sendt videre til din primære konto (så du ikke skal tjekke to forskellige indbakker);
+- Brug forskellige adgangskoder til din _daglige_ Gmail-konto og din Gmail-konto til AAPS
+- Hvis du bruger Googles »totrinsbekræftelse« (multifaktorgodkendelse) på den ene Gmail-konto, kan du lige så godt bruge den på begge Gmail-konti.
+- Hvis du vil bruge Google »Adgangsnøgler« (Passkeys), skal du registrere flere enheder. Så låser du ikke dig selv ude. Gør det kun på enheder, som ingen andre har adgang til (_dvs._ ikke på en pc med en delt konto, som andre kan låse op).
 ```
 
 
 ```{admonition} Video Walkthrough!
 :class: note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+Klik [her](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for at se en video om, hvordan du opretter en separat Google-konto.
 ```
 
- These are the steps outlined in the video:
+ Det er de trin, der vises i videoen:
 
-In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+I dette eksempel: 
+- Din eksisterende »_daglige_« Google-konto er <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- Din nye »_AAPS_«-Gmail-konto bliver: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### Gå til <https://myaccount.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Hvis du allerede er logget ind på Google, kommer du til din »daglige« side **My Account** (Min konto). (1) Klik på dit profilbillede øverst til højre på siden (her et simpelt ![](../images/Building-the-App/building_0002.png)) (2) vælg »_add another account_« (tilføj en anden konto).
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Enter your NEW dedicated account details: 
+### Indtast oplysningerne for din NYE separate konto: 
 
-- Enter the new account: 
-- Create Account
-- for my personal use. 
+- Indtast den nye konto: 
+- Opret konto
+- til mit personlige brug. 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Indtast din persona:
+ - Indtast fornavn
+ - efternavn
+ - fødselsdato (skal være en voksens alder)
 
-### Choose your NEW email address & password
+### Vælg din NYE e-mailadresse og adgangskode
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+I dette eksempel bliver ».AAPS« tilføjet til Donald Mucks eksisterende adresse…\
+Vælg en adgangskode
 
-### Enter a phone number which can receive the SMS verification
+### Indtast et telefonnummer, som kan modtage SMS-bekræftelsen
 
-Gmail will now send you a unique code to enter for validation.
+Gmail sender dig nu en unik kode, som du skal indtaste for at bekræfte.
 
-### Enter the recovery email address
+### Indtast e-mailadressen til gendannelse
 
-In this case it will be your existing “_everyday_” email…
+Her er det din eksisterende »_daglige_« e-mail…
 
-### Finish setting up the account
+### Gør oprettelsen af kontoen færdig
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail viser kontonavnet. Du bliver bedt om at acceptere Gmails vilkår og betingelser og bekræfte dine indstillinger for tilpasning.
 
-### Customize the new profile display
+### Tilpas visningen af den nye profil
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Nu bør du være på Gmails side MyAccount, som viser din nye e-mailkonto til **AAPS**. Profilbilledet er som standard det første bogstav i dit navn. Skift det til noget unikt for at undgå forvirring… i dette eksempel har Donald.Muck.AAPS erstattet ![](../images/Building-the-App/building_0002.png) med ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Åbn Gmail-webstedet i begge vinduer for at konfigurere den nye konto
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+Så du ikke skal holde øje med en separat e-mailkonto, skal du videresende alle e-mails fra den nye **AAPS**-konto til din daglige konto\
+Denne del kan være lidt forvirrende, fordi du skal skifte frem og tilbage mellem de to konti. For at gøre det lettere skal du åbne 2 separate browservinduer over hinanden:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
-2. Right click on your Browser logo in your taskbar
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. Flyt din åbne browser til den øverste del af skærmen, og gør den mindre, så den kun fylder ca. den øverste halvdel af skærmen…
+2. Højreklik på browserens logo på proceslinjen
+3. Vælg »Nyt vindue« i menuen... og juster det, så det kun fylder den nederste halvdel af skærmen.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Åbn <https://gmail.com> i hvert browservindue. Sørg for, at din personlige konto er øverst og den nye **AAPS**-konto er nederst, og at du let kan kende den på profilbilledet i øverste højre hjørne. Hvis du har brug for det, kan du altid skifte konto ved at klikke på profilbilledet og vælge den rigtige.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Dine Gmail-startsider skal se sådan ud:\
 ![](../images/Building-the-App/building_0010.png)
 
- ### In the new Gmail account (bottom window), open Gmail settings…
+ ### I den nye Gmail-konto (nederste vindue) skal du åbne Gmail-indstillingerne…
 
-- Click on the gear on the left of the profile picture
-- then select “**See all Settings**”
+- Klik på tandhjulet til venstre for profilbilledet
+- og vælg derefter »**See all Settings**« (Se alle indstillinger)
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Opsæt videresendelse…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
-- Gmail will send a verification code to your “everyday” email address.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Klik på fanen »Forwarding and POP/IMAP« (Videresendelse og POP/IMAP)
+- Klik på »add a forwarding address« (Tilføj en videresendelsesadresse)
+- Tilføj din »daglige« e-mailadresse
+- Gmail sender en bekræftelseskode til din »daglige« e-mailadresse.
+- Skift tilbage til din daglige profil, og klik på linket for at bekræfte, at du accepterer videresendelsen (eller tag koden fra Gmails bekræftelsesmail i dit »daglige« Gmail-vindue, og klip og indsæt den i dit »nye AAPS« Gmail-vindue).
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Du skal skifte en del frem og tilbage mellem vinduerne. Men så ser du også de e-mails, der er videresendt fra din AAPS-konto, f.eks. Gmail-advarsler, når du tjekker e-mails på din »daglige« konto.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Bekræft den videresendte e-mailadresse
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Open it and “click the link to confirm the request”
+- I den »daglige« Gmail (øverste vindue) får du e-mailen »Gmail forwarding Confirmation« (bekræftelse af videresendelse).
+- Åbn den, og »klik på linket for at bekræfte anmodningen«
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Arkivér videresendte e-mails i den nye separate Gmail-konto (nederste vindue)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
-4. Scroll all the way to the bottom to save your changes\
+1. Opdater det nederste vindue
+2. Vælg »Videresend en kopi af indgående e-mails« (forward incoming email)
+3. Og arkivér Gmails kopi (så din nye separate indbakke forbliver ryddelig)
+4. Rul helt ned til bunden for at gemme dine ændringer\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Tillykke! Nu har du oprettet en separat Google-konto til AAPS. Næste trin er at [bygge AAPS-appen](../SettingUpAaps/BuildingAaps.md).
