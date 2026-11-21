@@ -1,41 +1,41 @@
-# General CGM recommendations
+# Recomanacions generals sobre CGM
 
-## CGM hygiene
+## Higiene del CGM
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Sigui quin sigui el sistema CGM que feu servir, si calibreu amb glucèmia en sang, hi ha unes regles molt clares que heu de seguir, tant si feu servir programari CGM DIY com les aplicacions oficials.
 
--   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
+-   Assegureu-vos que les mans i el material estan nets.
+-   Intenteu calibrar quan tingueu una sèrie de punts amb una fletxa plana (normalment n'hi ha prou amb 15–30 minuts)
+-   Eviteu calibrar quan la glucèmia puja o baixa.
+-   Feu prou calibracions: a les aplicacions oficials, se us demanarà una o dues comprovacions al dia. Als sistemes DIY potser no se us demanarà, i heu d'anar amb compte si continueu sense calibracions.
+-   Per als sensors que no necessiten o no permeten calibració, comproveu la glucèmia real en sang com a mínim un cop al dia. AAPS serà tan segur com fiables siguin les lectures del vostre sensor.
 -   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
-## Setting sensor (G6)
+## Col·locació del sensor (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+En col·locar el sensor, es recomana no prémer l'aplicador massa fort per evitar sagnat. Els contactes del sensor no han d'entrar en contacte amb sang.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Després de col·locar el sensor, el transmissor es pot encaixar al suport del sensor. Atenció! Primer encaixeu el costat quadrat i després premeu el costat rodó.
 
 (general-cgm-troubleshooting)=
-## Troubleshooting
+## Resolució de problemes
 
-### Connection problems
+### Problemes de connexió
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+La connexió Bluetooth pot ser alterada per altres dispositius Bluetooth propers, com glucòmetres, auriculars, tauletes o aparells de cuina com forns de microones o plaques vitroceràmiques. En aquest cas, xDrip no mostra cap valor de glucèmia. Quan la connexió Bluetooth es restableix, les dades que falten es recuperen (backfill).
 
-### Sensor Errors
+### Errors del sensor
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+Si hi ha errors del sensor sovint, proveu de col·locar el sensor en una altra part del cos. Els contactes del sensor no han d'entrar en contacte amb sang.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Sovint un «Sensor Error» es pot corregir bevent de seguida i fent un massatge al voltant del sensor!
 
-### Jumpy values
+### Valors que salten
 
-You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Podeu provar de canviar la configuració de bloqueig del soroll a xDrip (Settings - Inter-App Settings - Noise Blocking), per exemple «Block Very High noise and worse». Vegeu també [Suavitzat de les dades de glucèmia](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-### Negative Sensor Age
+### Edat del sensor negativa
 
-![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
+![Edat del sensor a la fila Sensor del panell d'estat desplegat](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+L'edat del sensor es mostra a la fila **Sensor** del panell d'estat de la pantalla principal (toqueu la fletxa per desplegar-lo). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Obriu **Historial de tractaments** (menú ☰), seleccioneu la pestanya **Portal de cures** i elimineu l'entrada incorrecta.
