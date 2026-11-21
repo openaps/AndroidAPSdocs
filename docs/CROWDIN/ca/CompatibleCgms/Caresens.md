@@ -10,14 +10,14 @@ Hi ha diverses maneres de fer servir les dades de CareSens amb **AAPS**:
 ## 1. xDrip
 
 1. Instal·leu i configureu l'aplicació oficial de CareSens.
-2. A l'aplicació CareSens, aneu a configuració -> Manage Data and Connections -> activeu l'interruptor xDrip. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+2. A l'aplicació CareSens, aneu a configuració -> Manage Data and Connections -> activeu l'interruptor xDrip. Si ho preferiu, desactiveu les connexions de dades a CareLevo, DIA:CONN, CloudLoop, etc. a «others».
 
 ![Connexions de dades de l'aplicació CareSens](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+2. Instal·leu xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. A xDrip, aneu a configuració -> hardware data source i seleccioneu `Companion App` com a font de dades.
+4. A **AAPS**, seleccioneu xDrip a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
@@ -26,4 +26,4 @@ Hi ha diverses maneres de fer servir les dades de CareSens amb **AAPS**:
 2. A Juggluco, obriu el menú de l'esquerra i seleccioneu `Photo`
 3. Escanegeu el codi QR de l'embalatge del sensor.
 4. Al menú de l'esquerra -> settings -> exchange data, assegureu-vos que xDrip broadcast està activat.
-5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+5. A **AAPS**, seleccioneu xDrip a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source).
