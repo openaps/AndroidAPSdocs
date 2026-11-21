@@ -122,7 +122,7 @@ Android вимагає для застосунків спеціальний до
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. На Android 12 натисніть `Battery`, на Android 13+ натисніть `App battery usage`.
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -172,7 +172,7 @@ Android вимагає для застосунків спеціальний до
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Будь ласка, **НЕ ВТРАЧАЙТЕ СВІЙ ГОЛОВНИЙ ПАРОЛЬ**. Запишіть його, _наприклад_, на Google Drive — це гарне місце, бо Google робить для вас резервну копію. Ваш смартфон або ПК може зламатися, і у вас може не бути актуальної копії. Якщо ви забудете головний пароль, пізніше може бути важко відновити налаштування профілю і прогрес у **Завданнях**. See [How to reset the master password?](#FAQ-reset-master-password)
+Будь ласка, **НЕ ВТРАЧАЙТЕ СВІЙ ГОЛОВНИЙ ПАРОЛЬ**. Запишіть його, _наприклад_, на Google Drive — це гарне місце, бо Google робить для вас резервну копію. Ваш смартфон або ПК може зламатися, і у вас може не бути актуальної копії. Якщо ви забудете головний пароль, пізніше може бути важко відновити налаштування профілю і прогрес у **Завданнях**. Див. [Як скинути головний пароль?](#FAQ-reset-master-password)
 ```
 
 Коли закінчите, натисніть «**ДАЛІ**», щоб перейти до наступного екрана.
@@ -243,7 +243,7 @@ Android вимагає для застосунків спеціальний до
 
 Натисніть «**Токен доступу Nightscout**» і введіть токен доступу для вашого сервера Nightscout. Без цього токена доступ не працюватиме. Якщо у вас його ще немає, перегляньте документацію про налаштування сервера звітів.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets **обов'язкові** для віддаленого керування з **AAPSClient** на обох телефонах.
 
 Інші розділи поки що можна залишити з типовими значеннями. Їх описано тут, щоб ви знали, де знайти їх пізніше:
 
@@ -505,7 +505,7 @@ OpenAPS AMA — найпростіший алгоритм, який не під�
 
 Тут ми починаємо Завдання 1, хоча зараз наше налаштування ще не повністю готове, щоб успішно виконати це завдання. Але це початок.
 
-Press the "**Start**" button of **Objective 1**:
+Натисніть кнопку «**Почати**» у **Завданні 1**:
 
 ![Список завдань](../images/setup-wizard/Wizard-Objectives-List.png)
 
