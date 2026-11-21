@@ -334,27 +334,86 @@ Bir istemci, komut sayacını geriye alan bir yedekten geri yüklenirse, ana bir
 
 ## Troubleshooting
 
-| Belirti                                                                                                                                 | Neyi kontrol etmeli                                                                                                                                                                                                                                                                                                                                                      |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| İstemci **ana birimin çevrimdışı** olduğunu söylüyor                                                                                    | Ana birim uyanık ve **AAPS** çalışıyor; her iki telefon da **NSClientV3** içinde bağlı; her ikisinde de **websocket**'ler etkin; aynı Nightscout sitesi.                                                                                                                                                                                                                 |
-| İstemci **eşleştirilmemiş** olduğunu söylüyor                                                                                           | **Yönet → Ana birimle eşleştir** yolundan yeniden eşleştirin. İstemcinin, ana birimin **Yetkili istemciler** listesinde **Etkin** olduğunu kontrol edin.                                                                                                                                                                                                                 |
-| Komut ana birim tarafından **reddedildi**                                                                                               | Ana birim komutu kendi güncel durumuna göre yeniden doğrular: örneğin seçilen profil artık yoktur veya pompa türü eşleşmez. Ana birimde tekrar kontrol edin.                                                                                                                                                                                                             |
-| Commands **fail** or the master is often **offline**                                                                                    | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                                                                |
-| Eşleştirme *"Eşleştirme sırrı kaydedilemedi"* mesajıyla iptal ediliyor                                                                  | Hiçbir şey değiştirilmedi. Eşleştirmeyi yeniden başlatın. Hata devam ederse **AAPSClient**'ı yeniden başlatın ve bir kez daha deneyin.                                                                                                                                                                                                                                   |
-| Eşleştirmeden sonra hiçbir şey olmuyor                                                                                                  | Ana birimde **İstemci kontrolüne izin ver** seçeneğinin AÇIK olduğundan ve ana birimin Nightscout'a bağlı olduğundan emin olun.                                                                                                                                                                                                                                          |
-| **Yeni istemci** penceresinde QR kodu seçenekleri seçilemiyor                                                                           | Pencere nedenini söyler. *Yönetici belirteci değil*: ana birime Nightscout'unuzun bir yönetici (admin) belirtecini verin veya istemciyi **PIN** ile ekleyin. *Bağlantı yok*: ana birim **NSClientV3** içinde *bağlı* durumunu gösterene kadar bekleyin.                                                                                                                  |
-| *"Nightscout'ta bu adda ve farklı yetkilere sahip bir belirteç var"*                                                                    | Kendi Nightscout belirteçlerinizden birinin adı `aaps-` ve bu addan oluşuyor. İstemci için başka bir ad seçin.                                                                                                                                                                                                                                                           |
-| *"Bu adda bir istemci zaten listede var"*                                                                                               | Başka bir ad seçin veya önce o istemciyi kaldırın.                                                                                                                                                                                                                                                                                                                       |
-| İstemci *"Bu kod başka bir AAPS sürümüne ait"* diyor                                                                                    | Ana birim ve istemci **AAPS**'in **aynı** sürümünü çalıştırmalıdır. Eski olanı güncelleyin.                                                                                                                                                                                                                                                                              |
-| İstemci *"Bu kodun süresi doldu"* diyor                                                                                                 | Eşleştirme yapan bir kod yaklaşık iki dakika geçerlidir. Yeni bir kod almak için istemciyi ana birimde tekrar ekleyin.                                                                                                                                                                                                                                                   |
-| İstemci *"Bu telefon zaten eşleştirilmiş"* diyor                                                                                        | Önce eşleşmeyi kaldırın (**Yönet → Ana birimle eşleştir → Eşleşmeyi Kaldır**), sonra tekrar taratın. **Yalnızca Nightscout** kodu eşleştirilmiş bir telefonda da çalışır.                                                                                                                                                                                                |
-| İstemci *"Ana birim bunu reddetti: bu telefon, Nightscout'a kendisine ait olandan farklı bir belirteçle (token) veri gönderiyor"* diyor | İstemci daha önce kendi Nightscout belirtecini kullanıyordu ve şimdi başka bir belirteçle yazıyor. Örneğin Nightscout ayarlarına bir belirteç yazıldıktan sonra bu olabilir. İstemciyi ana birimde kaldırın ve tekrar ekleyin (bkz. [İstemcinin kendi Nightscout belirteci](#client-master-control-own-token)).                                                          |
-| İstemcideki NSClient günlüğü *"✕ SETTINGS … refused"* gösteriyor ve istemcinin ayarları artık ana birimi izlemiyor                      | Ana birimin ayarlar belgesini başka biri yazdı veya ana birimin yeni bir anahtarı var (örneğin verileri silindikten sonra). Eşleştirilmiş bir istemci, Nightscout'a bir sonraki bağlanışında yeni anahtarı kendiliğinden alır. Yalnızca Nightscout okuyan bir telefonun ana birimin QR koduna tekrar ihtiyacı vardır (**Yalnızca Nightscout okuma → QR kodunu göster**). |
-| İstemcinin kartı kırmızı renkte *"… Nightscout belirtecini kullanıyor"* gösteriyor                                                      | İstemci hâlâ ihtiyacından fazla yetkisi olan bir belirteçle yazıyor. Ana birim eşleştirmeden sonra istemciye kendi belirtecini gönderir, ancak yalnızca ana birimde bir yönetici belirteci varsa. Ana birimin belirtecini kontrol edin veya istemciyi bir QR kodu ile yeniden kurun.                                                                                     |
-| Bir istemci artık Nightscout'u okuyamıyor                                                                                               | İstemcinin belirteci silindi, örneğin istemci ana birimde kaldırıldığı için. İstemciyi tekrar ekleyin.                                                                                                                                                                                                                                                                   |
-| Nightscout web sitesinde girilen tedaviler uygulanmıyor                                                                                 | [Güçlendirilmiş modda](#client-master-control-hardened-mode) bu beklenen durumdur: tedavileri bunun yerine eşleştirilmiş bir istemcide girin.                                                                                                                                                                                                                            |
-
 Nightscout / senkronizasyon sorunları için önce [NSClient'te Sorun Giderme](../GettingHelp/TroubleshootingNsClient.md) sayfasına bakın.
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *Yönetici belirteci değil*: ana birime Nightscout'unuzun bir yönetici (admin) belirtecini verin veya istemciyi **PIN** ile ekleyin.
+- *Bağlantı yok*: ana birim **NSClientV3** içinde *bağlı* durumunu gösterene kadar bekleyin.
+
+**"Nightscout'ta bu adda ve farklı yetkilere sahip bir belirteç var"**
+
+Kendi Nightscout belirteçlerinizden birinin adı `aaps-` ve bu addan oluşuyor. İstemci için başka bir ad seçin.
+
+**"Bu adda bir istemci zaten listede var"**
+
+Başka bir ad seçin veya önce o istemciyi kaldırın.
+
+**The client says "This code is from another AAPS version"**
+
+Ana birim ve istemci **AAPS**'in **aynı** sürümünü çalıştırmalıdır. Eski olanı güncelleyin.
+
+**The client says "This code has expired"**
+
+Eşleştirme yapan bir kod yaklaşık iki dakika geçerlidir. Yeni bir kod almak için istemciyi ana birimde tekrar ekleyin.
+
+**The client says "This phone is paired already"**
+
+Önce eşleşmeyi kaldırın (**Yönet → Ana birimle eşleştir → Eşleşmeyi Kaldır**), sonra tekrar taratın. **Yalnızca Nightscout** kodu eşleştirilmiş bir telefonda da çalışır.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+Hiçbir şey değiştirilmedi. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+
+**The client says it is not paired**
+
+**Yönet → Ana birimle eşleştir** yolundan yeniden eşleştirin. Check that the client is **Active** in the master's **Authorized clients** list.
+
+**Eşleştirmeden sonra hiçbir şey olmuyor**
+
+Ana birimde **İstemci kontrolüne izin ver** seçeneğinin AÇIK olduğundan ve ana birimin Nightscout'a bağlı olduğundan emin olun.
+
+### Komutlar
+
+**The client says the master is offline, or commands fail**
+
+Check that:
+
+- the master phone is awake and **AAPS** is running,
+- both phones are connected in **NSClientV3**, to the same Nightscout site,
+- **websockets** are enabled on both phones.
+
+Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**A command is rejected by the master**
+
+The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+
+**Nightscout web sitesinde girilen tedaviler uygulanmıyor**
+
+This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+
+### Nightscout tokens and settings
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+İstemci daha önce kendi Nightscout belirtecini kullanıyordu ve şimdi başka bir belirteçle yazıyor. Örneğin Nightscout ayarlarına bir belirteç yazıldıktan sonra bu olabilir. İstemciyi ana birimde kaldırın ve tekrar ekleyin (bkz. [İstemcinin kendi Nightscout belirteci](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+İstemci hâlâ ihtiyacından fazla yetkisi olan bir belirteçle yazıyor. The master sends the client its own token after pairing, but only if the master has an admin token. Ana birimin belirtecini kontrol edin veya istemciyi bir QR kodu ile yeniden kurun.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+Ana birimin ayarlar belgesini başka biri yazdı veya ana birimin yeni bir anahtarı var (örneğin verileri silindikten sonra). A paired client takes the new key by itself the next time it connects to Nightscout. Yalnızca Nightscout okuyan bir telefonun ana birimin QR koduna tekrar ihtiyacı vardır (**Yalnızca Nightscout okuma → QR kodunu göster**).
+
+**Bir istemci artık Nightscout'u okuyamıyor**
+
+İstemcinin belirteci silindi, örneğin istemci ana birimde kaldırıldığı için. İstemciyi tekrar ekleyin.
 
 ---
 
