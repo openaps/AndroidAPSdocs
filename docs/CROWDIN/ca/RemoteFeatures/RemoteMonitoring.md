@@ -8,7 +8,7 @@ __AAPS__ ofereix diverses funcions per al monitoratge remot de nens amb diabetis
 
 - La bomba del nen es controla des del telèfon del nen amb __AAPS__.
 - Els cuidadors poden seguir a distància i veure totes les dades importants, com ara els nivells de glucèmia, els carbohidrats a bord, la insulina a bord, etc., amb l'**apk AAPSClient** al seu telèfon Android (s'està desenvolupant una versió d'**AAPSClient** per a iPhone, vegeu [L'aplicació AAPSClient](AapsClient.md)). La configuració que canvieu a __AAPS__ es sincronitza amb __AAPSClient__ i a l'inrevés.
-- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
+- Els cuidadors poden rebre alarmes amb l'**aplicació xDrip en mode seguidor** al seu telèfon Android, si el mode companion de xDrip està configurat.
 - El control remot d'__AAPS__ amb [Ordres SMS](../RemoteFeatures/SMSCommands.md) està protegit amb autenticació de dos factors.
 - El control remot amb __AAPSClient__ fa servir el canal d'ordres signades que va arribar amb **AAPS** 4: primer cal **emparellar** el client amb el dispositiu principal (amb un codi QR o un PIN), i el dispositiu principal confirma i executa cada ordre. El telèfon de cada cuidador pot tenir el seu propi [rol](#client-master-control-roles), des de només lectura fins a control complet. Vegeu [Control principal ↔ client](#client-master-control).
 
