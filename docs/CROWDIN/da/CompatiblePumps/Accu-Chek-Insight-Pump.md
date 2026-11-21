@@ -1,197 +1,197 @@
 # Accu-Chek Insight
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Denne software er en del af en gør-det-selv kunstig bugspytkirtel. Den er ikke et produkt, men kræver, at DU læser, lærer og forstår systemet, også hvordan du bruger det. Den klarer ikke al din diabetesbehandling for dig, men den lader dig forbedre din diabetes og din livskvalitet, hvis du er villig til at bruge den tid, det kræver. Forhast dig ikke, men giv dig selv tid til at lære. Du alene er ansvarlig for, hvad du gør med den.**
 
-```{admonition} Accu-Chek Insight is being phased out :class: note
+```{admonition} Accu-Chek Insight udfases :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche trækker sig ud af markedet for insulinpumper for at fokusere sine diabetesprodukter på Accu-Chek SmartGuide CGM. Roche har meddelt, at salget af både Accu-Chek Combo- og Accu-Chek Insight-pumperne stopper; den sidste pumpe, mikropumpen Accu-Chek Solo, udfases også (sidste leveringer i Tyskland i slutningen af 2025). Ændringen indføres region for region. Den begynder i Tyskland, og andre europæiske markeder ventes at følge efter. Support til Insight er allerede angivet som ophørt (se [Pumper, der ikke længere sælges](./Future-possible-Pump-Drivers.md)). Hvis du er afhængig af denne pumpe, så planlæg i god tid et skift til en understøttet pumpe.
 
     <br />```{note}
-    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
+    Før **AAPS** havde sin egen Insight-driver, blev Insight styret gennem den separate app [SightRemote](https://github.com/TebbeUbben/SightRemote). SightRemote er ikke længere nødvendig og bliver ikke længere vedligeholdt: hvis du stadig har den installeret fra dengang, så afinstaller den, og brug en aktuel version af **AAPS** i stedet.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} Indholdsfortegnelse :depth: 1 :local: true
 
-    <br />## Pump capabilities with AAPS
+    <br />## Pumpens funktioner med AAPS
     
-    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-    * Automatic DST and timezone handling.
+    * Kommunikerer med **AAPS** via telefonens egen Bluetooth, uden en ekstra kommunikationsenhed.
+    * Automatisk håndtering af sommertid og tidszoner.
     
-    ## Hardware and software requirements
+    ## Krav til hardware og software
     
-    * A Roche Accu-Chek Insight pump (any firmware, they all work)
+    * En Roche Accu-Chek Insight-pumpe (alle firmwareversioner virker)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Bemærk: AAPS skriver altid data i **den første basalrateprofil i pumpen**.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * En Android-telefon med Android 12 eller nyere (se [Telefoner](../Getting-Started/Phones.md))
+    * AAPS-appen installeret på din telefon
     
-    ## Setup
+    ## Opsætning
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * Insight-pumpen må kun være forbundet med én enhed ad gangen. Hvis du tidligere har brugt Insight-fjernbetjeningen (blodsukkermåleren), skal du fjerne måleren fra listen over parrede enheder i din pumpe: **Menu** > **Settings** > **Communication** > **Remove device**.
     
        ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
     
-    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    * I [Konfiguration > Pumpe](#Config-Builder-pump) skal du vælge kortet **Accu-Chek Insight**. Der kan kun være én pumpe aktiv ad gangen.
     
        ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
     
-       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+       Når det er valgt, viser kortet **Accu-Chek Insight** to knapper, **Indstillinger** og **Åbn plugin**:
     
        ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
     
-       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+       **Indstillinger** åbner indstillingerne for Accu-Chek Insight-driveren (se [Indstillinger i AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       **Åbn plugin** (eller **Administrer → Pumpe**) åbner pumpeskærmen for Accu-Chek Insight. Før en pumpe er parret, ser den sådan ud:
     
        ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
     (accu-chek-insight-pairing)=
-    ### Pairing
+    ### Parring
     
-    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * Tryk på **Insight parring** på pumpeskærmen. Parringsguiden åbner og søger efter Bluetooth-enheder i nærheden (øverst på billedet nedenfor).
+    * På Insight-pumpen skal du gå til **Menu** > **Settings** > **Communication** > **Add Device**. Pumpen viser følgende skærm (nederst på billedet nedenfor) med pumpens serienummer.
     
        ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * Gå tilbage til din telefon, og tryk på pumpens serienummer i listen over Bluetooth-enheder. Hvis Android beder dig bekræfte parringen, så tryk på **Par**.
     
        ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * Pumpen og telefonen viser begge en kode. Tjek, at koderne er ens på begge enheder. Bekræft på pumpen, og tryk på **Ja** på telefonen. (Tryk på **Nej**, hvis koderne ikke er ens.)
     
        ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
     
-    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    * Telefonen viser **Parring fuldført**. Tryk på **Afslut** for at gå tilbage til pumpeskærmen.
     
        ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
     
-    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    * For at tjekke, at alt er i orden, så se på pumpeskærmen (**Administrer → Pumpe**). Når pumpen er parret, viser den information om pumpen, f.eks. **Serienummer**, **Produktionsdato**, **Softwareversion (release)** og **Bluetooth-adresse**.
     
        ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
     
-       ```{admonition} Older screenshot
+       ```{admonition} Ældre skærmbillede
        :class: note
-       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       Bortset fra toppen af det første billede er skærmbillederne af parringen ovenfor fra en tidligere version af **AAPS** og kan se anderledes ud i **AAPS** 4.
        ```
     
-    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    * For at fjerne parringen skal du trykke på **Ophæv parring** på pumpeskærmen og bekræfte **Nulstil parringsoplysninger?**. Knappen **Insight parring** vises så igen.
     
-    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    Bemærk: Der er ingen fast forbindelse mellem pumpen og telefonen. **AAPS** forbinder kun, når det er nødvendigt (f.eks. for at sætte en midlertidig basalrate, give en bolus eller læse pumpens historik). Ellers ville batterierne i telefonen og pumpen blive brugt op alt for hurtigt.
     
     (Accu-Chek-Insight-Pump-settings-in-aaps)=
-    ## Settings in AAPS
+    ## Indstillinger i AAPS
     
-    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    Åbn indstillingerne med **Indstillinger** på kortet **Accu-Chek Insight** i **Konfiguration** > **Pumpe**, eller med tandhjulsikonet øverst til højre på pumpeskærmen.
     
     ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    I Insight-indstillingerne i **AAPS** kan du aktivere følgende muligheder:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
+    * **Log skift af ampul**: registrerer automatisk et skift af insulinampul, når du skifter ampullen i pumpen.
     
-    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    * **Log skift af slange**: tilføjer et notat i **AAPS**-databasen, når du kører programmet »tube filling« (fyld slange) på pumpen.
     
-    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    * **Log skift af kanyle**: tilføjer et notat i **AAPS**-databasen, når du kører programmet »cannula filling« (fyld kanyle) på pumpen. **Bemærk: Et skift af infusionssæt nulstiller også Autosens.**
     
-    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    * **Log skift af batteri**: registrerer et batteriskift, når du sætter et nyt batteri i pumpen.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **Log ændring af driftstilstand**: tilføjer et notat i **AAPS**-databasen, hver gang du starter, stopper eller sætter pumpen på pause.
     
-    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    * **Log advarsler**: tilføjer et notat i **AAPS**-databasen, hver gang pumpen giver en advarsel (undtagen påmindelser, bolus og annullering af TBR, som ikke registreres).
     
-    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    * **Aktiver MBR emulering**: Insight-pumpen kan kun sætte midlertidige basalrater (TBR) op til 250%. For at komme uden om denne grænse får TBR-emulering pumpen til at give en forlænget bolus for den ekstra insulin, hvis der bedes om en TBR på mere end 250%.
     
-      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+      **Bemærk: Brug kun én forlænget bolus ad gangen. Flere forlængede boluser på samme tid kan give fejl.**
     
-    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    * **Deaktiver vibrationer ved manuel boluslevering**: stopper Insight-pumpen i at vibrere, når den giver en manuel bolus (eller forlænget bolus). Kun tilgængelig med Insight firmware 3.x.
     
-    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    * **Deaktiver vibrationer ved automatisk boluslevering**: stopper Insight-pumpen i at vibrere, når den giver en automatisk bolus (SMB eller midlertidig basal med TBR-emulering). Kun tilgængelig med Insight firmware 3.x.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
-        <br><br>no connection -> wait <b>5</b> sec.
-          <br>  retry -> no connection -> wait <b>6</b> sec.
-          <br>  retry -> no connection -> wait <b>7</b> sec.
-          <br>  retry -> no connection -> wait <b>8</b> sec.
+    * **Min. pause mellem forbindelsesforsøg [s]** og **Max. pause mellem forbindelsesforsøg [s]**: hvor længe **AAPS** venter, før den prøver igen efter et mislykket forsøg på at forbinde. Du kan vælge fra 0 til 20 sekunder. Hvis du har problemer med forbindelsen, så vælg en længere ventetid.
+        <br><br>Eksempel for min. pause mellem forbindelsesforsøg = 5 og maks. pause mellem forbindelsesforsøg = 20
+        <br><br>ingen forbindelse -> vent <b>5</b> sek.
+          <br>  prøv igen -> ingen forbindelse -> vent <b>6</b> sek.
+          <br>  prøv igen -> ingen forbindelse -> vent <b>7</b> sek.
+          <br>  prøv igen -> ingen forbindelse -> vent <b>8</b> sek.
           <br>...
-          <br>retry -> no connection -> wait <b>20</b> sec.
-          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>prøv igen -> ingen forbindelse -> vent <b>20</b> sek.
+          <br>prøv igen -> ingen forbindelse -> vent <b>20</b> sek.
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **Afvent manglende forbindelse [s]**: hvor længe (i sekunder) **AAPS** venter, før den afbryder forbindelsen til pumpen, når en handling er færdig. Du kan vælge fra 0 til 15 sekunder. Standardværdien er 5 sekunder.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    For perioder, hvor pumpen var stoppet, registrerer **AAPS** en midlertidig basalrate på 0%.
     
-    ### The pump screen
+    ### Pumpeskærmen
     
-    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    Pumpeskærmen for Accu-Chek Insight (**Administrer → Pumpe**) viser pumpens aktuelle status, f.eks. **Status**, **Seneste forbindelse**, **Driftstilstand**, **Batteri**, **Reservoirniveau**, dagens samlede daglige doser (**TDD bolus**, **TDD basal**), basalrater og den seneste bolus. Når pumpen er parret, har den disse knapper:
     
-    * **Refresh**: refreshes the pump status.
-    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
-    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    * **Opdater**: opdaterer pumpens status.
+    * **Aktiver notifikation af MBR afslutning (pumpeindstilling)** / **Deaktiver notifikation af MBR afslutning (pumpeindstilling)**: en almindelig Insight-pumpe giver en alarm, når en TBR slutter. Denne knap slår alarmen til eller fra, uden at du skal bruge konfigurationssoftware.
+    * **Ophæv parring**: fjerner parringen med pumpen (se [Parring](#accu-chek-insight-pairing)).
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
     
-    ```{admonition} Older screenshot
+    ```{admonition} Ældre skærmbillede
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    Skærmbilledet ovenfor er fra en tidligere version af **AAPS**. I **AAPS** 4 ser pumpeskærmen anderledes ud og har også en knap **Ophæv parring**.
     
 
-## Settings in the pump
+## Indstillinger i pumpen
 
-Configure alarms in the pump as follows:
+Indstil alarmerne i pumpen sådan:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
-* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (fjern alle streger)
 * Menu > Modes > Signal mode > Quiet
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Det gør alle alarmer fra pumpen lydløse, så AAPS kan afgøre, om en alarm er vigtig for dig. Hvis AAPS ikke kvitterer for en alarm, bliver den kraftigere (først bip, derefter vibration).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
 ### Vibration
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+Alt efter firmwareversionen på din pumpe vibrerer Insight kort, hver gang en bolus gives (f.eks. når AAPS giver en SMB, eller når TBR-emulering giver en forlænget bolus).
 
-* Firmware 1.x: No vibration by design.
-* Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AAPS delivers bolus silently.
+* Firmware 1.x: Ingen vibration (sådan er pumpen lavet).
+* Firmware 2.x: Vibration kan ikke slås fra.
+* Firmware 3.x: AAPS giver bolus uden lyd og vibration.
 
-Firmware version can be found in the menu.
+Firmwareversionen kan findes i menuen.
 
-## Battery replacement
+## Batteriskift
 
-Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. The user reporting this is using Energizer lithium batteries.
+Batteritiden for Insight ved loop er fra 10 til 14 dage, højst 20 dage. Brugeren, der har rapporteret dette, bruger Energizer lithium-batterier.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Insight-pumpen har et lille indbygget batteri, som holder vigtige funktioner som uret i gang, mens du skifter det udskiftelige batteri. Hvis batteriskiftet tager for lang tid, kan det indbyggede batteri løbe tør for strøm. Så nulstilles uret, og du bliver bedt om at indtaste et nyt klokkeslæt og en ny dato, når du har sat et nyt batteri i. Hvis det sker, bliver alle registreringer i AAPS fra før batteriskiftet ikke længere brugt i beregningerne, fordi det rigtige tidspunkt ikke kan bestemmes.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
-## Insight specific errors
+## Fejl, der er specielle for Insight
 
-### Extended bolus
+### Forlænget bolus
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Brug kun én forlænget bolus ad gangen, da flere forlængede boluser på samme tid kan give fejl.
 
-### Time out
+### Timeout
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+Nogle gange svarer Insight-pumpen ikke, mens **AAPS** opretter forbindelsen. **AAPS** viser så notifikationen »En timeout opstod i parringsprocessen - genstart Bluetooth«.
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Insight: nulstil Bluetooth](../images/Insight_ResetBT.png)
 
-If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
+Hvis det sker, så slå Bluetooth fra på pumpen OG på telefonen i ca. 10 sekunder, og slå det så til igen.
 
-## Crossing time zones with Insight pump
+## Rejse over tidszoner med Insight-pumpen
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+Information om rejser over tidszoner finder du i afsnittet [Rejse over tidszoner med pumper](#timezone-traveling-insight).
 
-## Where to get help
+## Hvor kan du få hjælp
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Udviklingen af Insight-driveren sker i fællesskabet som **frivilligt** arbejde. Før du beder om hjælp:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Læs** det relevante afsnit i denne dokumentation for at se, hvordan funktionen skal virke.
+2. **Spørg** i kanalen *#AAPS* på [Discord](https://discord.gg/4fQUWHZ4Mw) eller i en af de andre [kanaler i fællesskabet](../GettingHelp/WhereCanIGetHelp.md).
+3. **Rapporter en fejl** ved at søge i de [eksisterende issues](https://github.com/nightscout/AndroidAPS/issues); hvis din fejl ikke er der, så opret et [nyt issue](https://github.com/nightscout/AndroidAPS/issues), og vedhæft dine [logfiler](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Når du beder om hjælp, så angiv mærke og model på din telefon, Android-version, **AAPS**-version og en enkel og tydelig beskrivelse af problemet (hvad der er ændret, hvornår det sidst virkede).
