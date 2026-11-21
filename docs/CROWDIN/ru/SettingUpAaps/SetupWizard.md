@@ -5,25 +5,25 @@
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+Когда вы запускаете **AAPS** в первый раз, вас ведет «**Мастер установки**», чтобы быстро и за один раз настроить все основные параметры приложения. **Мастер установки** ведет вас по шагам, чтобы вы не забыли ничего важного. Например, **настройки разрешений** очень важны для правильной настройки **AAPS**.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. О них расскажем в следующем разделе. Итак, если пропустить некоторые этапы в мастере установки, их можно легко выполнить позже.
+Однако не обязательно настраивать всё полностью при первом запуске **Мастера установки**: вы можете легко выйти из мастера и вернуться к нему позже. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. О них расскажем в следующем разделе. Итак, если пропустить некоторые этапы в мастере установки, их можно легко выполнить позже.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+Во время работы с **Мастером установки** и сразу после нее вы можете не заметить в **AAPS** никаких заметных изменений. Чтобы включить цикл **AAPS**, нужно проходить **Цели** и включать функции одну за другой. В конце работы Мастера установки вы начнете **Цель 1**. Вы управляете **AAPS**, а не наоборот.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+Если вы хотите узнать, как устроены цели, прочитайте [Прохождение целей](../SettingUpAaps/CompletingTheObjectives.md), но затем вернитесь сюда и сначала пройдите Мастер установки.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+По опыту мы знаем, что новички часто торопятся настроить **AAPS** как можно быстрее. Это может привести к разочарованию, потому что учиться придется многому.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Поэтому не спешите с настройкой цикла: польза от хорошо работающего цикла **AAPS** огромна.
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Если вы нашли ошибку в документации или знаете, как объяснить что-то лучше, вы можете обратиться за помощью к сообществу, как описано в разделе [Где получить помощь?](../GettingHelp/WhereCanIGetHelp.md).
 ```
 ## Приветственное сообщение
 
@@ -41,30 +41,30 @@ Once you have granted the permissions, the panel closes and the welcome screen s
 
 ### Battery optimization
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Расход батареи на смартфонах важен, так как возможности батарей всё еще довольно ограничены. Поэтому операционная система Android на смартфоне ограничивает работу приложений и их использование процессора, а значит и заряда батареи.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be excluded from battery optimization.
+Однако **AAPS** должен работать регулярно, _например_, чтобы получать значения глюкозы каждые несколько минут, а затем применять алгоритм и решать, что делать с уровнем глюкозы на основе ваших настроек. Therefore it must be excluded from battery optimization.
 
 Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
 
-![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+![Разрешить работу в фоне](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
-### AAPS Directory
+### Папка AAPS
 
 **AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Постоянная память означает, что информация будет доступна даже после перезагрузки телефона. Остальная информация теряется, поскольку она не сохраняется в постоянной памяти.
 
 Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Рекомендуется выбрать папку AAPS по умолчанию.</br>
+**Не** выбирайте подпапку внутри AAPS.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+Папка по умолчанию — **AAPS**, но вы можете использовать любую отдельную папку на ваш выбор. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
 
-![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+![Выбор папки](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
 Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
 
@@ -98,17 +98,17 @@ The following is additional Android configuration done outside of the Setup Wiza
 
 Newer versions of Android have added battery optimization to the system Bluetooth application too.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Если этого не сделать, соединение с помпой может прерываться и возникнут проблемы.
 
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+***ПРИМЕЧАНИЕ: в документации xDrip описано, как это сделать: [документация xDrip](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
 Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. Откройте настройки Android, найдите **Приложения** и откройте настройки приложений.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. Вы увидите настройки приложений, но нужно развернуть список, чтобы увидеть все приложения: нажмите **Показать все приложения**.
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
@@ -116,9 +116,9 @@ Follow these steps on Android 16; other versions will vary slightly from the pro
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. Найдите приложение `Bluetooth` и нажмите на `Bluetooth` и/или `Legacy Bluetooth`; если есть оба, выполните эти шаги для обоих.
 
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   ***ПРИМЕЧАНИЕ: `Bluetooth MIDI Service` можно не трогать, AAPS его не использует***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
@@ -126,23 +126,23 @@ Follow these steps on Android 16; other versions will vary slightly from the pro
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+5. На Android 12+ выберите вариант `Без ограничений`, на Android 15+ нужно развернуть настройку `Разрешить работу в фоновом режиме` (Allow background usage): нажмите на раздел, выделенный красным, а затем выполните шаг 6.
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. On Android 16 Select `Unrestricted`
+6. На Android 16 выберите `Без ограничений`
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
 ## Лицензионное соглашение
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Внимательно изучите его.
+В лицензионном соглашении с конечным пользователем есть важная информация о правовых аспектах использования **AAPS**. Внимательно изучите его.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Если вы не понимаете лицензионное соглашение или не можете с ним согласиться, не используйте **AAPS** совсем!
 
 If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
 
-![EULA](../images/setup-wizard/Wizard-EULA.png)
+![Лицензионное соглашение](../images/setup-wizard/Wizard-EULA.png)
 
 A "**Next**" button appears once you have agreed. Press "**NEXT**".
 
@@ -172,7 +172,7 @@ Go back with the arrow in the top left corner. The Wizard now shows "**Password 
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Телефон или ПК могут выйти из строя, оставив нас без актуальной копии. Если вы забыли главный пароль, то будет трудно восстановить конфигурацию профиля и прохождение **Целей**. See [How to reset the master password?](#FAQ-reset-master-password)
+Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Телефон или ПК могут выйти из строя, и у вас может не оказаться актуальной копии. Если вы забыли главный пароль, то будет трудно восстановить конфигурацию профиля и прохождение **Целей**. See [How to reset the master password?](#FAQ-reset-master-password)
 ```
 
 When you are done, press "**NEXT**" to go to the next screen.
@@ -187,11 +187,11 @@ This screen is only shown when **AAPS** finds settings exported earlier in the *
 
 ![Выполните импорт настроек](../images/setup-wizard/Wizard-ImportSettings.png)
 
-## Units (mg/dL <-> mmol/L)
+## Единицы (мг/дл <-> ммоль/л)
 
 Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
 
-![Units](../images/setup-wizard/Wizard-Units.png)
+![Единицы](../images/setup-wizard/Wizard-Units.png)
 
 ## Display Settings
 
@@ -199,7 +199,7 @@ Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose displ
 
 Эти значения влияют только на графическое отображение ГК и больше ни на что.
 
-Your glucose target _e.g._ is configured separately in your profile.
+Ваша целевая глюкоза, _например_, настраивается отдельно в профиле.
 
 Величины для анализа TIR (времени в целевом диапазоне) конфигурируются отдельно при создании отчетов на сервере отчетов.
 
@@ -291,9 +291,9 @@ Press "**NEXT**" to go to the next screen.
 
 ## Patient type
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. Это важно по соображениям безопасности и как мера предосторожности.
+Здесь вы выбираете «Тип пациента». Это важно, потому что в программе **AAPS** разные ограничения в зависимости от возраста пациента. Это важно по соображениям безопасности и как мера предосторожности.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. То есть, самый большой болюс, который можно ввести на свои обычные блюда. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
+Здесь же вы настраиваете **максимально допустимый болюс** на прием пищи. То есть, самый большой болюс, который можно ввести на свои обычные блюда. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
 
 Второе ограничение аналогично по концепции, но относится к максимальному ожидаемому потреблению углеводов.
 
@@ -335,7 +335,7 @@ Press the save icon (top right), then press "**NEXT**" to go to the next screen.
 
 ## Источник ГК
 
-Here you select where **AAPS** gets its glucose data from. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Here you select where **AAPS** gets its glucose data from. Прочитайте документацию для вашего [источника ГК](../Getting-Started/CompatiblesCgms.md).
 
 Many sources are available — scroll through the list and select the one you use:
 
@@ -352,15 +352,15 @@ After making your selection, press "**NEXT**" to go to the next screen.
 
 Теперь мы переходим к очень важной части мастера установки.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+Прочитайте документацию о [профилях](../SettingUpAaps/YourAapsProfile.md), прежде чем вводить данные профиля на следующем экране.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+Для безопасной работы **AAPS** нужен точный профиль.
 
 It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. Если профиль слишком сильный, вы рискуете получить гипогликемию, а если слишком слабый, то гипергликемию. 
 ```
 
 Press the "**Profile**" button to open the profile editor:
@@ -379,7 +379,7 @@ The example profile here is only to show you how to enter data.
 
 It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
 
-Don't use it for actually looping!
+Не используйте его для реальной работы цикла!
 ```
 
 The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
@@ -400,9 +400,9 @@ Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
 
 Press "**TARG**" and enter your blood sugar target values.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+Для открытого цикла цель может быть более широким диапазоном, иначе **AAPS** будет постоянно уведомлять вас о необходимости изменить временную базальную скорость или другой параметр, а это утомляет.
 
-Позднее для замкнутого цикла у вас обычно будет одно значение для верхней и нижней границы. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Позднее для замкнутого цикла у вас обычно будет одно значение для верхней и нижней границы. Так **AAPS** легче попадать в цель, и в целом вы лучше контролируете диабет.
 
 ![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
 
@@ -434,13 +434,13 @@ A profile switch dialog appears. In this case let it stay as preset and confirm 
 You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
 ```
 
-![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
+![Переключить](../images/setup-wizard/Wizard-Profile-Switch.png)
 
 Your profile is now active. Press "**NEXT**" to go to the next screen.
 
 ## Инсулиновая помпа
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+Now you select your insulin pump. Прочитайте документацию для вашей [инсулиновой помпы](../Getting-Started/CompatiblePumps.md).
 
 Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
 
@@ -477,7 +477,7 @@ Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
 
 The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+Из-за ограничений, которые накладывают **Цели**, сейчас вы всё равно не можете использовать ни «замкнутый цикл», ни «функции SMB».
 
 Go back and press "**NEXT**" to go to the next screen:
 
@@ -519,7 +519,7 @@ Go back, then press "**FINISH**" to complete the Setup Wizard:
 
 After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+Если вы случайно вышли из Мастера установки, вы можете просто запустить мастер снова или изменить [конфигурацию цикла AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) вручную.
 
 (setup-wizard-bluetooth-permission)=
 ## Bluetooth permission
@@ -536,4 +536,4 @@ Select "**Allow**" so **AAPS** can find and connect to your pump:
 
 ![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+Если цикл **AAPS** теперь полностью настроен, переходите к следующему разделу [«Прохождение целей»](../SettingUpAaps/CompletingTheObjectives.md).
