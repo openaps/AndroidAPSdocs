@@ -9,7 +9,7 @@ There are four different methods to access the readings from Eversense:
 
 ## ESEL
 
-Скачайте и установите приложение [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), следуя этим [инструкциям](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Скачайте и установите [приложение ESEL](https://github.com/BernhardRo/Esel/tree/master/apk), следуя этим [инструкциям](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
 - In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
   - Включите "Транслировать в AAPS и xDrip"
@@ -33,9 +33,9 @@ There are four different methods to access the readings from Eversense:
 
 ### Модифицированное приложение Eversense
 
- Требует патч-версию приложения Eversense (работает полностью в автономном режиме, в том числе и для обратного заполнения данных режиме).
+ Требует модифицированную версию приложения Eversense (работает полностью без интернета, в том числе обратное заполнение данных).
 
-1. Удалите приложения Eversense (Предупреждение: локальные данные истории (старше 1 недели) будут потеряны!)
+1. Удалите приложение Eversense (Предупреждение: локальные данные истории (старше 1 недели) будут потеряны!)
 
 2. Установите [модифицированное приложение Eversense ](https://cr4ck3d3v3r53n53.club) и используйте его в соответствии с инструкцией поставщика
 
@@ -71,5 +71,5 @@ xDrip can read notifications from the vendor app, like ESEL does. При это�
 - Make sure the Eversense app shows the current glucose value in its notification.
 
 ```{warning}
-Частота чтения значений BG не всегда 5 минут, могут возникнуть дубликаты.
+Частота чтения значений ГК не всегда 5 минут, могут возникнуть дубликаты.
 ```
