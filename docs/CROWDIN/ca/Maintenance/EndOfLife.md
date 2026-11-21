@@ -1,40 +1,40 @@
-# End of life
+# Fi del suport
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Encara que el vostre sistema AAPS actual funcioni exactament com voleu, val la pena actualitzar. Les versions noves porten correccions de seguretat i d'errors que potser no notareu fins que siguin importants. També mantenen la compatibilitat amb les noves versions del sistema operatiu del telèfon, les aplicacions de CGM, el firmware de les bombes i els canvis de Nightscout. Afegeixen millores de l'algoritme i funcions que la comunitat ja ha provat. I us asseguren que feu servir una versió que encara té suport i amb la qual altres persones us poden ajudar a resoldre problemes. Algunes versions anteriors d'AAPS no tenen data de caducitat a propòsit, perquè puguin continuar funcionant en versions antigues d'Android. Per tant, que no aparegui cap avís de caducitat no vol dir que la vostra versió estigui al dia o que encara tingui suport.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Cada versió d'AAPS pot tenir una data de fi. Després d'aquesta data, AAPS pot [limitar el llaç](#version-enforcement). AAPS us avisa abans que una versió caduqui. Planifiqueu l'actualització abans de la data de fi i seguiu la [guia d'actualització](UpdateToNewVersion.md).
 
-## How to use this page
+## Com fer servir aquesta pàgina
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. In AAPS, open the **menu** (☰) at the top left and choose **About**. Hi veureu la vostra versió d'AAPS.
+2. Cerqueu la mateixa versió a la primera taula de sota. Llegiu la data de fi que hi ha al costat. Les dates s'escriuen com a **any-mes-dia**. Per exemple, `2026-10-30` vol dir el 30 d'octubre de 2026.
+3. Abans d'actualitzar, consulteu les [Notes de la versió](ReleaseNotes.md) i la [guia d'actualització](UpdateToNewVersion.md). La versió que podeu fer servir també depèn de la versió d'Android del vostre telèfon.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+La taula no mostra una data de fi per a totes les versions d'AAPS. Si la vostra versió no hi és, potser encara no se n'ha fixat la data de fi. Això no vol dir que tingui suport per sempre.
 
-## AAPS version end dates
+## Dates de fi de les versions d'AAPS
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">Carregant les dades de les versions d'AAPS…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Activeu JavaScript per veure les taules.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">Versió d'AAPS</th><th scope="col">Data de fi</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## Nivells d'API d'Android
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android assigna a cada versió del sistema un **nivell d'API**, un número que fan servir les aplicacions. Per exemple, el nivell d'API 30 és Android 11. La taula de sota fa servir els nivells d'API de les dades de versions d'AAPS. La versió d'AAPS de cada fila és el valor indicat per al nivell d'API que es mostra. Aquesta no és una llista completa de les versions que podeu instal·lar.
 
 To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Nivell d'API d'Android</th><th scope="col">Versió d'AAPS indicada</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Please try again later.';
+    status.textContent = 'Could not load AAPS version data. Torneu-ho a provar més tard.';
   }
 });
 </script>
