@@ -1,6 +1,6 @@
-# How to use Autotune plugin
+# Com utilitzar el plugin Autotune
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
+El plugin Autotune és una implementació dins d'AAPS de l'algoritme Autotune d'OpenAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 
 Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
@@ -23,95 +23,95 @@ Autotune can be run three ways: manually as a one-off from within the plugin (as
 
 *For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
-## Show the Autotune plugin
+## Mostrar el plugin Autotune
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+Creeu un fitxer buit anomenat `enable_autotune` a la subcarpeta `extra` de la [carpeta d'AAPS](#preferences-maintenance-settings) del vostre telèfon.
 
 ***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+![Activar Autotune](../images/Autotune/Autotune_0.png)
 
 Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
 
 ![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
 
-## Autotune user interface
+## Interfície d'usuari d'Autotune
 
 Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 ![Autotune screen with the profile, the number of days of data and a warning about the selected profile](../images/Autotune/Autotune_1b.png)
 
-- You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
+- Al menú desplegable de perfil podeu triar el perfil d'entrada que voleu ajustar (per defecte, està seleccionat el vostre perfil actiu actual)
   - Note: each time you select a new profile, previous results will be removed and the **Number of days of data** will be set to its default value
-- Then **Number of days of data** (called **Tune days** in older versions) is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
+- Then **Number of days of data** (called **Tune days** in older versions) is to select the number of days used in calculation to tune your profile. El valor mínim és 1 dia i el valor màxim és 30 dies. Aquest nombre no ha de ser massa petit per obtenir resultats iteratius i suaus correctes (més de 7 dies per a cada càlcul)
   - Note: each time you change the **Number of days of data**, previous results will be removed
-- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
+- Última execució és un enllaç que recupera el vostre últim càlcul vàlid. Si no heu iniciat Autotune el dia actual, o si els resultats anteriors s'han eliminat perquè heu modificat un paràmetre de càlcul de dalt, podeu recuperar els paràmetres i els resultats de l'última execució correcta.
+- L'avís us mostra, per exemple, informació sobre el perfil seleccionat (si teniu diversos valors d'IC o diversos valors d'ISF)
+  - Nota: el càlcul d'Autotune funciona només amb un sol valor d'IC i un sol valor d'ISF. De moment no hi ha cap algoritme d'Autotune per ajustar una IC circadiària o un ISF circadiari. Si el vostre perfil d'entrada té diversos valors, a la secció d'avís podeu veure el valor mitjà que es fa servir per ajustar el vostre perfil.
 - Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units and target will remain unchanged in output profile.
+  - Nota: Autotune només ajusta la vostra IC (un sol valor), l'ISF (un sol valor) i la basal (amb variació circadiària). Units and target will remain unchanged in output profile.
 
 - "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+  - Nota: el càlcul d'Autotune pot trigar molt. Un cop iniciat, podeu anar a una altra vista (inici, ...) i tornar més tard al plugin Autotune per veure els resultats
 
-  ![Autotune Run start](../images/Autotune/Autotune_2b.png)
+  ![Inici de l'execució d'Autotune](../images/Autotune/Autotune_2b.png)
 
-- Then during the run you will see intermediate results below
+- Després, durant l'execució, veureu els resultats intermedis a sota
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+  - Nota: durant l'execució, la configuració està bloquejada, de manera que ja no podeu canviar el perfil d'entrada seleccionat ni el nombre de dies. Si voleu iniciar una altra execució amb altres paràmetres, haureu d'esperar que acabi el càlcul actual.
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+  ![Autotune durant l'execució](../images/Autotune/Autotune_3b.png)
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+- Quan acabi el càlcul d'Autotune, veureu el resultat (perfil ajustat) i quatre botons a sota.
 
-  ![Autotune Result](../images/Autotune/Autotune_4b.png)
+  ![Resultat d'Autotune](../images/Autotune/Autotune_4b.png)
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- És important comparar sempre el perfil d'entrada (columna «Perfil»), el perfil de sortida (columna «Ajustat») i el percentatge de variació de cada valor (columna «%»).
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+- Per a les taxes basals, també teniu el nombre de «dies que falten». Falten dies quan Autotune no té prou dades classificades com a «Basal» per ajustar la taxa basal d'aquest període (per exemple, després de cada àpat, quan hi ha absorció de carbohidrats). Aquest nombre ha de ser tan baix com sigui possible, sobretot quan la basal és important (per exemple, durant la nit o al final de la tarda)
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- El botó «Comparar perfils» obre la vista per comparar perfils. El perfil d'entrada és en blau i el perfil de sortida (anomenat «Ajustat») és en vermell.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - Nota: a l'exemple de sota, el perfil d'entrada té variació circadiària per a la IC i l'ISF, però el perfil de sortida calculat té un sol valor. Si per a vosaltres és important obtenir un perfil de sortida circadiari, vegeu [Perfil d'IC o ISF circadiari](#autotune-circadian-ic-or-isf-profile) més avall.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Autotune: comparar perfils](../images/Autotune/Autotune_5.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Si confieu en els resultats (percentatge de variació baix entre el perfil d'entrada i el perfil de sortida), podeu fer clic al botó «Activar perfil» i després a OK per confirmar.
 
   - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+  ![Autotune: activar perfil](../images/Autotune/Autotune_6.png)
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- Si creieu que cal modificar el perfil ajustat (per exemple, si creieu que algunes variacions són massa grans), podeu fer clic al botó «Copiar a perfil local»
 
   - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
 
-  ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+  ![Autotune: copiar a perfil local](../images/Autotune/Autotune_7.png)
 
 - You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
 
   - the values in the profile will be rounded in the user interface to your pump capabilities
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  ![Autotune: actualització del perfil local](../images/Autotune/Autotune_8.png)
 
-- If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
+- Si voleu substituir el vostre perfil d'entrada pel resultat d'Autotune, feu clic al botó «Actualitzar perfil d'entrada» i confirmeu la finestra emergent amb OK
 
   - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
+  ![Autotune: actualitzar perfil d'entrada](../images/Autotune/Autotune_9.png)
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. You also have the possibility to recover your input profile without autotune result with this button
+- Si heu actualitzat el vostre perfil d'entrada, el botó «Actualitzar perfil d'entrada» se substitueix pel botó «Restaurar perfil d'entrada» (vegeu la captura de pantalla de sota). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. You also have the possibility to recover your input profile without autotune result with this button
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+  ![Autotune: actualitzar perfil d'entrada](../images/Autotune/Autotune_10.png)
 
 
 
-## Autotune settings
+## Configuració d'Autotune
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Configuració del plugin Autotune
 
   ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
 
@@ -120,117 +120,117 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 The **Auto switch profile** feature is only available in Dev/Engineering mode.
 ```
 
-- **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+- **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Si activeu aquesta opció, el perfil d'entrada s'actualitzarà automàticament amb el perfil ajustat, i aquest s'activarà.
+  - **Aneu amb compte: durant els dies següents heu de confiar i comprovar que, després d'actualitzar i activar el perfil ajustat sense modificar-lo, el vostre llaç millora**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
+- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Quan està desactivada, evita que l'UAM es classifiqui com a basal.
+  - Nota: si durant un dia es detecta com a mínim una hora d'absorció de carbohidrats, totes les dades classificades com a «UAM» es classificaran com a basal, sigui quina sigui aquesta opció (activada o desactivada)
 - **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
 - **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
 
 (autotune-other-settings)=
-### Other settings
+### Altres configuracions
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
+- Autotune també fa servir la ràtio màxima d'Autosens i la ràtio mínima d'Autosens per limitar la variació. You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
 
   ![Autosens max and Autosens min in the advanced absorption settings](../images/preferences/settings_absorption_advanced.png)
 
 
 
-## Advanced feature
+## Funció avançada
 
 (autotune-circadian-ic-or-isf-profile)=
 
-### Circadian IC or ISF profile
+### Perfil d'IC o ISF circadiari
 
 - If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can enable **Use circadian IC/ISF** (called "Apply average result in circadian IC/ISF" in older versions)
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Tingueu en compte que el càlcul d'Autotune sempre es fa amb un sol valor, i que Autotune no ajusta la variació circadiària. Aquesta opció només aplica als vostres valors circadiaris la variació mitjana calculada per a la IC i/o l'ISF
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- Vegeu a la captura de sota el perfil ajustat amb l'aplicació de la variació mitjana desactivada (a l'esquerra) i activada (a la dreta)
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Pantalla per defecte d'Autotune](../images/Autotune/Autotune_13.png)
 
 
 
-### Tune specific days of the week
+### Ajustar dies concrets de la setmana
 
-- If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
+- If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. Podeu indicar quins dies de la setmana s'inclouen al càlcul d'Autotune (a la captura de sota podeu veure un exemple de «dies laborables», amb el dissabte i el diumenge exclosos del càlcul d'Autotune)
   - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
   - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
 
-  ![Autotune default screen](../images/Autotune/Autotune_14b.png)
+  ![Pantalla per defecte d'Autotune](../images/Autotune/Autotune_14b.png)
 
 - During Autotune calculation, you can see the progress of the calculations ("Partial result day 1 / 4 tuned" in the example below, with Saturday and Sunday excluded)
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Pantalla per defecte d'Autotune](../images/Autotune/Autotune_15b.png)
 
 
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Executar Autotune amb una regla d'automatització
 
 ```{admonition} Only DEV
 :class: note
 The **Auto switch profile** feature is only available in Dev/Engineering mode.
 ```
 
-First step is to define correct trigger for an automation rule with Autotune:
+El primer pas és definir l'activador correcte per a una regla d'automatització amb Autotune:
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+Nota: per obtenir més informació sobre com configurar una regla d'automatització, vegeu [aquí](../DailyLifeWithAaps/Automations.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Heu de seleccionar l'activador de temps recurrent: executeu Autotune només una vegada al dia. Autotune està pensat per executar-se cada dia (a cada nova execució avanceu un dia, i ràpidament els canvis del perfil haurien de ser molt petits)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Pantalla per defecte d'Autotune](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- Al principi és millor executar Autotune durant el dia, per poder comprovar els resultats. Si voleu executar Autotune durant la nit, heu de seleccionar a l'activador les 4:00 o més tard, perquè el dia actual s'inclogui al següent càlcul d'Autotune.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Pantalla per defecte d'Autotune](../images/Autotune/Autotune_17.png)
 
 - Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Pantalla per defecte d'Autotune](../images/Autotune/Autotune_18.png)
 
 - You can then adjust the parameters of the action for your run. In a new action, **Select profile to tune** shows the first profile of your local profile list, the **Tune days** field is empty and all days are selected. Choose the profile to tune and enter the number of **Tune days** (1 to 30).
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Pantalla per defecte d'Autotune](../images/Autotune/Autotune_19b.png)
 
 - After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "**Auto switch profile**" to enabled to automatically update and activate profile tuned after calculation.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+Nota: si voleu ajustar automàticament perfils per a dies concrets de la setmana (per exemple, un perfil per als «dies de cap de setmana» i un altre per als «dies laborables»), creeu una regla per a cada perfil i seleccioneu els mateixos dies a l'activador i a l'acció d'Autotune. Els dies d'ajust han de ser prou alts perquè l'ajust es faci amb com a mínim 6 o 8 dies, i no oblideu seleccionar una hora després de les 4:00 a l'activador...
 
 - See below an example of rule that runs every working day (Monday to Friday) at 04:00 and tunes the profile "Normal" with 14 **Tune days**, working days only (so only 10 days are included in the Autotune calculation).
 
-  ![Autotune default screen](../images/Autotune/Autotune_20b.png)
+  ![Pantalla per defecte d'Autotune](../images/Autotune/Autotune_20b.png)
 
 
 
-## Tips and trick's
+## Consells i trucs
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results.
+Autotune funciona amb la informació que hi ha a la vostra base de dades. Per tant, si acabeu d'instal·lar AAPS en un telèfon nou, haureu d'esperar uns quants dies abans de poder iniciar Autotune amb prou dies per obtenir resultats útils.
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Autotune només és una ajuda. És important comprovar regularment si esteu d'acord amb el perfil calculat. Si teniu cap dubte, canvieu la configuració d'Autotune (per exemple, el nombre de dies) o copieu els resultats a un perfil local i ajusteu el perfil abans de fer-lo servir.
 
-Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
+Feu servir sempre Autotune manualment durant uns quants dies per comprovar els resultats abans d'aplicar-los. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Autotune pot funcionar molt bé per a alguns usuaris i no per a d'altres, així que **si no confieu en el resultat d'Autotune, no el feu servir**
 
 It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- pot haver-hi un augment o una disminució general de la força del vostre perfil (per exemple, un augment de la basal total juntament amb una disminució dels valors d'ISF i IC). pot estar relacionat amb diversos dies seguits amb una correcció d'Autosens per sobre del 100% (cal més agressivitat) o per sota del 100% (sou més sensibles)
+- De vegades Autotune proposa un equilibri diferent entre les taxes basals i la IC/ISF (per exemple, una basal més baixa i una IC/ISF més agressiva)
 
-We advise to not use Autotune in the following cases:
+Us recomanem no fer servir Autotune en els casos següents:
 
-- You don't enter all your carbs
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
-  - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
+- No introduïu tots els vostres carbohidrats
+  - Si no introduïu els carbohidrats de correcció d'una hipoglucèmia, Autotune veurà una pujada inesperada de la vostra glucèmia i augmentarà les vostres taxes basals 4 hores abans. Això pot ser el contrari del que necessiteu per evitar una hipo, sobretot si passa a mitjanit. Per això és important introduir tots els carbohidrats, sobretot els de correcció d'una hipo.
+- Teniu molts períodes amb UAM detectat durant el dia.
+  - Heu introduït tots els vostres carbohidrats i els heu estimat correctament?
+  - Tots els períodes d'UAM (excepte si no introduïu cap carbohidrat durant un dia i l'opció de classificar UAM com a basal està desactivada): tots els vostres períodes d'UAM es classificaran com a basal, i això pot augmentar molt la vostra basal (molt més del necessari)
 
-- Your carbs absorption is very slow: if most of your carbs absorption are calculated with min_5m_carbimpact parameter (you can see these periods with a little orange dot in the top of COB curve), the calculation of COB could be wrong and leads to wrong results.
-  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit too high.
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
-- If the percentage of modification is too important
-  - You can try to increase the number of days to get smoother results
+- La vostra absorció de carbohidrats és molt lenta: si la major part de la vostra absorció de carbohidrats es calcula amb el paràmetre min_5m_carbimpact (podeu veure aquests períodes amb un petit punt taronja a la part de dalt de la corba del COB), el càlcul del COB pot ser incorrecte i donar resultats incorrectes.
+  - Quan feu esport, normalment sou més sensibles i la vostra glucèmia no puja gaire, de manera que durant o després de l'exercici és normal veure alguns períodes amb carbohidrats lents. Però si molt sovint teniu una absorció de carbohidrats lenta inesperada, pot ser que calgui ajustar el perfil (un valor d'IC més alt) o que el min_5m_carbimpact sigui una mica massa alt.
+- Teniu «dies molt dolents», per exemple, unes quantes hores encallats en hiperglucèmia amb una quantitat enorme d'insulina per poder tornar a baixar dins del rang, o bé, després d'un canvi de sensor, llargs períodes amb valors de glucèmia incorrectes. Si les últimes setmanes només teniu un o 2 «dies dolents», podeu desactivar manualment aquests dies al càlcul d'Autotune per excloure'ls del càlcul, i de nou **comproveu amb atenció si podeu confiar en els resultats**
+- Si el percentatge de modificació és massa gran
+  - Podeu provar d'augmentar el nombre de dies per obtenir resultats més suaus
