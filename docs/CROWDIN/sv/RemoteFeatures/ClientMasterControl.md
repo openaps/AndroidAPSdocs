@@ -367,11 +367,11 @@ Ta först bort parkopplingen (**Hantera → Parkoppla med huvudenheten → Ta bo
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Inget har ändrats. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Inget har ändrats. Starta parkopplingen igen. Om det fortfarande misslyckas, starta om **AAPSClient** och försök en gång till.
 
-**The client says it is not paired**
+**Klienten säger att den inte är parkopplad**
 
-Parkoppla igen via **Hantera → Parkoppla med huvudenheten**. Check that the client is **Active** in the master's **Authorized clients** list.
+Parkoppla igen via **Hantera → Parkoppla med huvudenheten**. Kontrollera att klienten är **Aktiv** i huvudenhetens lista **Auktoriserade klienter**.
 
 **Inget händer efter parkopplingen**
 
@@ -379,25 +379,25 @@ Kontrollera att **Tillåt klientstyrning** är PÅ på huvudenheten och att huvu
 
 ### Kommandon
 
-**The client says the master is offline, or commands fail**
+**Klienten säger att huvudenheten är offline, eller kommandon misslyckas**
 
-Check that:
+Kontrollera att:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- huvudenhetens telefon är vaken och att **AAPS** körs,
+- båda telefonerna är anslutna i **NSClientV3**, till samma Nightscout-webbplats,
+- **websockets** är påslagna på båda telefonerna.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Websockets är **obligatoriska** för fjärrstyrning från **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Huvudenheten avvisar ett kommando**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Huvudenheten kontrollerar varje kommando igen mot sitt aktuella läge: till exempel finns den valda profilen inte längre, eller så stämmer inte pumptypen. Kontrollera på huvudenheten.
 
 **Behandlingar som anges på Nightscout-webbplatsen tillämpas inte**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Det är väntat i [härdat läge](#client-master-control-hardened-mode). Ange dem på en parkopplad klient i stället.
 
-### Nightscout tokens and settings
+### Nightscout-tokens och inställningar
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ Klienten använde sin egen Nightscout-token tidigare och skriver nu med en annan
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-Klienten skriver fortfarande med en token som har fler rättigheter än den behöver. The master sends the client its own token after pairing, but only if the master has an admin token. Kontrollera huvudenhetens token, eller ställ in klienten igen med en QR-kod.
+Klienten skriver fortfarande med en token som har fler rättigheter än den behöver. Huvudenheten skickar klientens egen token till klienten efter parkopplingen, men bara om huvudenheten har en administratörstoken. Kontrollera huvudenhetens token, eller ställ in klienten igen med en QR-kod.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Någon annan har skrivit huvudenhetens inställningsdokument, eller så har huvudenheten en ny nyckel (till exempel efter att dess data har rensats). A paired client takes the new key by itself the next time it connects to Nightscout. En telefon som bara läser Nightscout behöver huvudenhetens QR-kod igen (**Enbart läsning av Nightscout → Visa QR-kod**).
+Någon annan har skrivit huvudenhetens inställningsdokument, eller så har huvudenheten en ny nyckel (till exempel efter att dess data har rensats). En parkopplad klient hämtar den nya nyckeln själv nästa gång den ansluter till Nightscout. En telefon som bara läser Nightscout behöver huvudenhetens QR-kod igen (**Enbart läsning av Nightscout → Visa QR-kod**).
 
 **En klient kan inte längre läsa Nightscout**
 
