@@ -2,7 +2,7 @@
 
 **AAPS** is not just a (self-built) application; it is one of several modules of your closed loop system. Before deciding on components, it is a good idea to look at the component documentation.
 
-![Components overview](../images/modules.png)
+![Обзор компонентов](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
@@ -11,7 +11,7 @@
 
 Допустимо использовать только оригинальные, сертифицированные производителем расходные материалы, такие как инсулиновые картриджи, инфузионные наборы, пристреливатели к ним и т. п. Использование непроверенных или модифицированных материалов может вызвать неточность мониторинга и ошибки дозировки инсулина. Инсулин опасен при неверной дозировке - не рискуйте жизнью, пользуясь неумело переделанными компонентами.
 
-Наконец, что не менее важно, запрещается принимать SGLT-2 ингибиторы (глифлозины), поскольку они непредсказуемо снижают уровень СК. Сочетание с системой, которая снижает базальную скорость для повышения ГК является особенно опасным, поскольку из-за глифлозинов этот подъем ГК может не произойти и возникнет нехватка инсулина. [Подробнее](#PreparingForAaps-no-sglt-2-inhibitors).
+Наконец, что не менее важно, запрещается принимать SGLT-2 ингибиторы (глифлозины), поскольку они непредсказуемо снижают уровень ГК. Сочетание с системой, которая снижает базальную скорость для повышения ГК является особенно опасным, поскольку из-за глифлозинов этот подъем ГК может не произойти и возникнет нехватка инсулина. [Подробнее](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## Необходимые модули
@@ -49,7 +49,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 - Первоначальное сопряжение проходит проще с Dana-i/RS. Но обычно это делается только один раз, так что это свойство важно, если хотите проверить новую функцию на других помпах.
 - На данный момент Combo работает с экранным анализом (для обратного инжиниринга). В целом, это неплохо, но этот процесс идет медленно. Для цикла ИПЖ это не имеет значения, так как он работает в фоновом режиме. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
 - Combo вибрирует по завершении временных базалов TBR, Dana вибрирует (или пищит) на микроболюсах SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
+- С Dana-i/RS история вместе с углеводами читается за несколько секунд. Поэтому можно легко сменить телефон без интернета и продолжить работу цикла, как только поступят первые значения CGM.
 - All pumps **AAPS** can talk with are waterproof on delivery. Но только помпы Dana также "гарантированно водонепроницаемы" благодаря изолированным отсекам батареи и системы наполнения резервуара.
 
 ### Источник данных гликемии
@@ -70,7 +70,7 @@ Additional information on how to set up your reporting server can be found [here
 
 ## Дополнительные модули
 
-### Смарт часы
+### Смарт-часы
 
 You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
 
