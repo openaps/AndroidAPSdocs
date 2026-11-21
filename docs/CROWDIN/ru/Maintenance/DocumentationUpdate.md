@@ -33,66 +33,66 @@ tocdepth: 1
 
 ## March 2026
 
-- [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
-- Rename *Computer Build* to *Android Studio Build*. Preserve file names for URLs.
+- [Добавлен вариант сборки из командной строки](../SettingUpAaps/CLIBuild.md) @je-l
+- *Сборка на компьютере* переименована в *Сборку в Android Studio*. Имена файлов в адресах (URL) сохранены.
 
 ## January 2025
 
 - [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
-- CGM list update. Dexcom G5, Tomato, Glimp removed.
-- [Site rotation UI](#Aapsscreens-site-rotation)
+- Обновлен список CGM. Удалены Dexcom G5, Tomato, Glimp.
+- [Интерфейс смены места установки](#Aapsscreens-site-rotation)
 - [Режим работы](#AapsScreens-running-mode)
 - [Autotune](../AdvancedOptions/Autotune.md)
 
 ## December 2025
 
-- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
+- [Настройка профиля](../GettingHelp/ProfileTuning.md) от @robrub
 
 ## October 2025
 
-- DiaKEM: new installs don't work after servers upgrade @psonnera
-- Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
+- DiaKEM: новые установки не работают после обновления серверов @psonnera
+- Удалено пропатченное приложение Libre 2 (устарело): не работает с новыми сенсорами @psonnera
 - Reworked Omnipod DASH page @XiTatiON
 
 ## August 2025
 
-- Updated versions and Android Studio prerequisites
-- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
-- Added [Browser Build](#browser-build) @Angus
+- Обновлены версии и требования к Android Studio
+- Добавлен выпуск [3.3.2.1](#version3321), удалены упоминания Android 16 (исправлено)
+- Добавлена [Сборка через браузер](#browser-build) @Angus
 
 ## May 2025
 
-- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+- Добавлена [страница обновления до 3.2.0.4](#update-aaps-3204) @psonnera
 
 ## January 2025
 
-- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
-- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
+- Мастер быстрых настроек: [функция долгого нажатия](#Preferences-quick-wizard) @emilise
+- Страница [Динамический ISF](../DailyLifeWithAaps/DynamicISF.md) переписана @emilise
 
 ## December 2024
 
-- Documentation of [3.3 version](#version3300) @emilise
+- Документация [версии 3.3](#version3300) @emilise
 
-## November 2024
+## Ноябрь 2024
 
-- Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
+- Обновлена страница [Ваш профиль AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
 - Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
 ## October 2024
 
-- Update of several pages:
+- Обновлено несколько страниц:
   - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
-- [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
+  - [Подсчет активных углеводов COB](../DailyLifeWithAaps/CobCalculation.md), [Динамический ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [Инструкция по сборке для Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
 - Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
-Missing history from March 2022 to September 2024
+Нет истории изменений с марта 2022 по сентябрь 2024
 
-With 3.2 rework, some obsolete information was removed. You can find it in the previous documentation version:
+При переработке для версии 3.2 часть устаревшей информации была удалена. Ее можно найти в документации предыдущей версии:
 
-AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/3.1/index.html).
+Документация AAPS 3.1 доступна [здесь](https://androidaps.readthedocs.io/en/3.1/index.html).
 
 ***
 
