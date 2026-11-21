@@ -9,7 +9,7 @@ Sigui quin sigui el sistema CGM que feu servir, si calibreu amb glucèmia en san
 -   Eviteu calibrar quan la glucèmia puja o baixa.
 -   Feu prou calibracions: a les aplicacions oficials, se us demanarà una o dues comprovacions al dia. Als sistemes DIY potser no se us demanarà, i heu d'anar amb compte si continueu sense calibracions.
 -   Per als sensors que no necessiten o no permeten calibració, comproveu la glucèmia real en sang com a mínim un cop al dia. AAPS serà tan segur com fiables siguin les lectures del vostre sensor.
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   Si és possible, calibreu amb algunes lectures en un rang més baix (4–5 mmol/l o 72–90 mg/dl) i algunes en un nivell una mica més alt (7–9 mmol/l o 126–160 mg/dl), perquè així s'obté un rang millor per a la calibració de punt/pendent.
 
 ## Col·locació del sensor (G6)
 
@@ -38,4 +38,4 @@ Podeu provar de canviar la configuració de bloqueig del soroll a xDrip (Setting
 
 ![Edat del sensor a la fila Sensor del panell d'estat desplegat](../images/main/main_status_row_expanded.png)
 
-L'edat del sensor es mostra a la fila **Sensor** del panell d'estat de la pantalla principal (toqueu la fletxa per desplegar-lo). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Obriu **Historial de tractaments** (menú ☰), seleccioneu la pestanya **Portal de cures** i elimineu l'entrada incorrecta.
+L'edat del sensor es mostra a la fila **Sensor** del panell d'estat de la pantalla principal (toqueu la fletxa per desplegar-lo). L'edat negativa apareix si hi ha una entrada doble d'«Inserció del sensor» al [portal de cures](#aaps-screens-careportal) o una inserció del sensor amb una data incorrecta. Obriu **Historial de tractaments** (menú ☰), seleccioneu la pestanya **Portal de cures** i elimineu l'entrada incorrecta.
