@@ -1,42 +1,42 @@
-# Dexcom G7, ONE+ and Stelo
+# Dexcom G7, ONE+ i Stelo
 
 
-## Fundamental in advance
+## Coses fonamentals abans de començar
 
-Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Cal destacar que els sistemes G7, ONE+ i Stelo, a diferència del G6, no suavitzen els valors, ni a l'aplicació ni al receptor. Més detalls sobre això [aquí](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+Llegiu els suggeriments de [mètode de suavitzat](../CompatibleCgms/SmoothingBloodGlucoseData.md) per fer servir amb Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip (direct connection to G7, ONE+ or Stelo)
+## 1. xDrip (connexió directa amb G7, ONE+ o Stelo)
 
-- xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
-- Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- xDrip es connecta directament al sensor: desinstal·leu l'aplicació de Dexcom, perquè només una aplicació es pot connectar al sensor. Si voleu mantenir l'aplicació de Dexcom, feu servir l'[xDrip Companion App](#DexcomG7-xdrip-companion-app).
+- Seguiu les instruccions d'aquí: [xDrip G7, ONE+ i Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). Cal una versió recent de xDrip: vegeu la pàgina enllaçada per saber la versió mínima.
+- Seleccioneu xDrip a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source).
 
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- Ajusteu la configuració de xDrip segons les explicacions de la pàgina [Configuració de xDrip](../CompatibleCgms/xDrip.md).
 
-## 2. Build Your Own Dexcom App (G7 only)
+## 2. Build Your Own Dexcom App (només G7)
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated. Not available for ONE+ or Stelo.
+Dexcom BYODA ara és una versió molt antiga de l'aplicació i no es pot actualitzar. No està disponible per a ONE+ ni Stelo.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) admet l'enviament local (broadcast) a AAPS
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
--   Uninstall the original Dexcom app
--   Install the downloaded apk
--   Enter sensor code in patched app
+-   Aquesta aplicació us permet fer servir el Dexcom G7 amb qualsevol telèfon Android.
+-   Desinstal·leu l'aplicació original de Dexcom
+-   Instal·leu l'apk descarregat
+-   Introduïu el codi del sensor a l'aplicació modificada
 -   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
 
-## 3. xDrip Companion App (G7, ONE+ and Stelo)
+## 3. xDrip Companion App (G7, ONE+ i Stelo)
 
-The official Dexcom app stays connected to the sensor. xDrip reads the glucose values from the notifications of the Dexcom app and sends them to **AAPS**.
+L'aplicació oficial de Dexcom continua connectada al sensor. xDrip llegeix els valors de glucèmia de les notificacions de l'aplicació de Dexcom i els envia a **AAPS**.
 
 ```{admonition} Not a trusted data source
 :class: note
@@ -45,70 +45,70 @@ The official Dexcom app stays connected to the sensor. xDrip reads the glucose v
 To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG7-notification-reader).
 ```
 
-### Read the Dexcom app notifications
+### Llegir les notificacions de l'aplicació de Dexcom
 
-- Keep the Dexcom app installed and connected to the sensor. Its notifications must stay visible: do not silence or hide them.
-- Download and install [xDrip](https://github.com/NightscoutFoundation/xDrip). Use the same glucose units in xDrip as in the Dexcom app.
-- In xDrip, go to **Settings** > **Hardware Data Source** and select **Companion App**.
+- Mantingueu l'aplicació de Dexcom instal·lada i connectada al sensor. Les seves notificacions han de continuar visibles: no les silencieu ni les amagueu.
+- Descarregueu i instal·leu [xDrip](https://github.com/NightscoutFoundation/xDrip). Feu servir a xDrip les mateixes unitats de glucèmia que a l'aplicació de Dexcom.
+- A xDrip, aneu a **Settings** > **Hardware Data Source** i seleccioneu **Companion App**.
 
   ![xDrip Hardware Data Source: Companion App](../images/xDrip_Companion_DataSource.png)
 
-- xDrip asks for permission to read notifications. Tap **OK**, then select **xDrip** in the list and turn on **Allow notification access**.
+- xDrip demana permís per llegir les notificacions. Premeu **OK**, després seleccioneu **xDrip** a la llista i activeu **Permet l'accés a les notificacions**.
 
-  ![Notification access list](../images/xDrip_Companion_NotificationAccess1.png)
+  ![Llista d'accés a les notificacions](../images/xDrip_Companion_NotificationAccess1.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because xDrip was not installed from the Play Store:
+- Si **Permet l'accés a les notificacions** apareix en gris (*Controlat per una configuració restringida* (Controlled by Restricted Setting)), Android el bloqueja perquè xDrip no s'ha instal·lat des de Play Store:
 
-  ![Notification access controlled by restricted setting](../images/xDrip_Companion_Restricted.png)
+  ![Accés a les notificacions controlat per una configuració restringida](../images/xDrip_Companion_Restricted.png)
 
-  Open the xDrip app info (long press the xDrip icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Then go back to the notification access screen and allow it.
+  Obriu la informació de l'aplicació xDrip (manteniu premuda la icona de xDrip > **Informació de l'aplicació**), premeu el menú de tres punts a la part superior dreta i seleccioneu **Permet la configuració restringida**. Després torneu a la pantalla d'accés a les notificacions i permeteu-lo.
 
-  ![App info: Allow restricted settings](../images/xDrip_Companion_AllowRestricted.png)
+  ![Informació de l'aplicació: Permet la configuració restringida](../images/xDrip_Companion_AllowRestricted.png)
 
-  ![Notification access allowed for xDrip](../images/xDrip_Companion_NotificationAccess2.png)
+  ![Accés a les notificacions permès per a xDrip](../images/xDrip_Companion_NotificationAccess2.png)
 
-- Readings appear in xDrip when the Dexcom app shows a new value. If nothing appears, you may need to start a sensor in xDrip: this has no effect on the real sensor. Stelo gives a reading every 15 minutes in this mode.
+- Les lectures apareixen a xDrip quan l'aplicació de Dexcom mostra un valor nou. Si no apareix res, potser haureu d'iniciar un sensor a xDrip: això no afecta el sensor real. En aquest mode, Stelo dona una lectura cada 15 minuts.
 
 ### Companion Bluetooth (G7)
 
-When the Dexcom app is connected to a G7 sensor, xDrip can also listen to the readings the sensor sends to the Dexcom app over Bluetooth. xDrip does not pair with the sensor and you do not need to enter the sensor code: the Dexcom app stays in control.
+Quan l'aplicació de Dexcom està connectada a un sensor G7, xDrip també pot escoltar per Bluetooth les lectures que el sensor envia a l'aplicació de Dexcom. xDrip no s'emparella amb el sensor i no cal introduir el codi del sensor: l'aplicació de Dexcom continua tenint el control.
 
-With **Companion Bluetooth**, xDrip gets the exact time and trend of each reading from the sensor, instead of the time the notification appeared, and fills gaps when the phone was out of range (backfill).
+Amb **Companion Bluetooth**, xDrip obté del sensor l'hora exacta i la tendència de cada lectura, en lloc de l'hora en què va aparèixer la notificació, i omple els buits de quan el telèfon era fora d'abast (backfill).
 
-- In xDrip, go to **Settings** > **Less common settings** > **Bluetooth Settings** and enable **Companion Bluetooth**.
+- A xDrip, aneu a **Settings** > **Less common settings** > **Bluetooth Settings** i activeu **Companion Bluetooth**.
 
   ![xDrip Bluetooth Settings: Companion Bluetooth](../images/xDrip_Companion_Bluetooth.png)
 
-- This does not work on all phones and Android versions. Disable it if you see problems.
-- If an old Dexcom sensor is still in the phone's Bluetooth list, xDrip might listen to the wrong one: in Android **Settings** > **Connected devices**, forget sensors you no longer use.
-- Companion Bluetooth is made for the G7. With ONE+ and Stelo, rely on notifications.
+- Això no funciona a tots els telèfons ni a totes les versions d'Android. Desactiveu-ho si veieu problemes.
+- Si un sensor Dexcom antic encara és a la llista de Bluetooth del telèfon, xDrip podria escoltar el sensor equivocat: a **Configuració** > **Dispositius connectats** d'Android, oblideu els sensors que ja no feu servir.
+- Companion Bluetooth està fet per al G7. Amb ONE+ i Stelo, feu servir les notificacions.
 
-### Configuration in AAPS
+### Configuració a AAPS
 
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- Seleccioneu xDrip a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source).
+- Ajusteu la configuració de xDrip segons les explicacions de la pàgina [Configuració de xDrip](../CompatibleCgms/xDrip.md).
 
-## 4. Juggluco (G7 and ONE+)
+## 4. Juggluco (G7 i ONE+)
 
-Version 9.0+ required
+Cal la versió 9.0 o posterior
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- Desactiveu l'aplicació que estava connectada abans al sensor: desinstal·leu l'aplicació o feu servir «Força l'aturada». Desactiveu el permís «Dispositius propers» a la configuració de l'aplicació. Restringiu l'ús de la bateria de l'aplicació.
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Oblideu el sensor a la configuració del Bluetooth: a la configuració d'Android, cerqueu el sensor als dispositius vinculats i seleccioneu «Oblida». Els noms dels sensors Dexcom G7 comencen per DXCM.
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- Eviteu interferències d'altres sensors: mantingueu els sensors Dexcom antics fora de l'abast del Bluetooth.
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- Connecteu el sensor G7 a Juggluco: obriu Juggluco → menú esquerre → Photo. Escanegeu el codi data matrix de l'aplicador del sensor G7. Espereu fins a 5 minuts que Juggluco trobi el sensor.
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Requisits per a l'emparellament: accepteu emparellar el sensor amb Juggluco. Assegureu-vos que la pantalla no estigui bloquejada durant l'emparellament. Si l'emparellament falla, espereu 5 minuts abans de tornar-ho a provar.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Excepció: els rellotges Wear OS es poden vincular sense prémer cap botó d'acceptar.
 
 (DexcomG7-notification-reader)=
 
 ## 5. Notification Reader (G7, ONE+ and Stelo)
 
-The official Dexcom app stays connected to the sensor. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+L'aplicació oficial de Dexcom continua connectada al sensor. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
 
 ```{admonition} Trusted data source
 :class: note
@@ -124,11 +124,11 @@ Compared to the other methods on this page, the Notification Reader has limits:
 
 ### Set up the Dexcom app
 
-- Keep the Dexcom app installed and connected to the sensor.
-- Make sure the Dexcom app shows the current glucose value in its notification. Its notifications must stay visible: do not silence or hide them.
+- Mantingueu l'aplicació de Dexcom instal·lada i connectada al sensor.
+- Make sure the Dexcom app shows the current glucose value in its notification. Les seves notificacions han de continuar visibles: no les silencieu ni les amagueu.
 - Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
 
-### Configuration in AAPS
+### Configuració a AAPS
 
 - Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
 
@@ -146,7 +146,7 @@ Compared to the other methods on this page, the Notification Reader has limits:
 
   ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Then go back to the notification access screen and allow it.
+- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Després torneu a la pantalla d'accés a les notificacions i permeteu-lo.
 - Readings appear in **AAPS** when the Dexcom app shows a new value.
 
 ```{warning}
