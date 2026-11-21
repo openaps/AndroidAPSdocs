@@ -12,13 +12,13 @@ A fórmula usada pelo **AAPS** é:
 
 O efeito no **Perfil** do usuário será:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _aumentar_ o **IC** - aumenta os carboidratos absorvidos a cada 5 minutos e assim encurta o tempo total de absorção;
 
 - _aumentar_ o **ISF** - diminui os carboidratos absorvidos a cada 5 minutos e assim prolonga o tempo total de absorção; e
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- _mudar_ a **porcentagem do perfil** - aumenta/diminui os dois valores e assim não muda o tempo de absorção dos carboidratos.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. A cada 20 mg/dl que a **BG** do usuário sobe, o **AAPS** calcula 1 g de carboidratos como absorvido. Um **IOB** positivo também afeta o cálculo do **COB**. Então, se o **AAPS** prevê que a **BG** do usuário vai cair 20 mg/dl por causa do **IOB**, mas ela fica estável, o **AAPS** também calcula 1 g de carboidratos como absorvido.
+Por exemplo, se o **ISF** do **Perfil** do usuário é 100 e o **I:C** é 5, o fator de sensibilidade aos carboidratos do usuário será 20. A cada 20 mg/dl que a **BG** do usuário sobe, o **AAPS** calcula 1 g de carboidratos como absorvido. Um **IOB** positivo também afeta o cálculo do **COB**. Então, se o **AAPS** prevê que a **BG** do usuário vai cair 20 mg/dl por causa do **IOB**, mas ela fica estável, o **AAPS** também calcula 1 g de carboidratos como absorvido.
 
 Os carboidratos também são absorvidos pelos métodos descritos abaixo, conforme o algoritmo de sensibilidade selecionado no **AAPS** do usuário.
 
@@ -47,7 +47,7 @@ Se a absorção mínima de carboidratos (min_5m_carbimpact) for usada em vez do 
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Detecção de valores de COB errados
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. Nesse caso, ele mostra ao usuário uma dica adicional na tela de confirmação depois do uso do assistente de bólus.
+O **AAPS** vai avisar o usuário se ele estiver prestes a dar um bólus com **COB** de uma refeição anterior, caso o algoritmo detecte que o cálculo atual dos **COB** está incorreto. Nesse caso, ele mostra ao usuário uma dica adicional na tela de confirmação depois do uso do assistente de bólus.
 
 ### Como o AAPS detecta valores de COB errados?
 
@@ -62,7 +62,7 @@ Na captura de tela acima, em 66% do tempo a absorção de carboidratos foi calcu
 - Considere cancelar o tratamento - toque em ‘Cancelar’ em vez de OK.
 - Calcule sua próxima refeição de novo com o assistente de bólus, deixando o **COB** desmarcado.
 - Se você precisar de um bólus de correção, insira-o manualmente.
-- Be careful not to overdose or stack insulin!
+- Tenha cuidado para não dar insulina demais nem acumular insulina!
 
 
 ### Por que o algoritmo não detecta o COB corretamente?
