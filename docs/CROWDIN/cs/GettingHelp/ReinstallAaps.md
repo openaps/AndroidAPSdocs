@@ -11,7 +11,7 @@ Pokud se pokusíte nainstalovat apk podepsané jiným úložištěm klíčů ne�
 **AAPS** musíte odinstalovat a znovu nainstalovat, když je vaše nové apk podepsané jiným úložištěm klíčů, například:
 
 - Nemůžete najít své staré úložiště klíčů nebo jeho heslo.
-- Vytvořili jste nové úložiště klíčů, například pomocí [Možnosti 1 sestavení v prohlížeči](../SettingUpAaps/BrowserBuildKeystore.md) nebo **Create a new key** v [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
+- Vytvořili jste nové úložiště klíčů, například pomocí [Možnosti 1 sestavení v prohlížeči](../SettingUpAaps/BrowserBuildKeystore.md) nebo **Vytvořit nový klíč** v [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
 - Sestavujete na novém počítači a úložiště klíčů jste do něj nezkopírovali.
 
 Pokud své úložiště klíčů stále máte, tuto stránku nepotřebujete: použijte ho znovu a [aktualizujte **AAPS**](../Maintenance/UpdateToNewVersion.md) bez odinstalace.
