@@ -1,6 +1,6 @@
 # Making changes to your AAPS configuration
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+После того как вы прошли **[Мастер установки AAPS](../SettingUpAaps/SetupWizard.md)**, не нужно запускать весь мастер снова, если вы хотите изменить только часть конфигурации **AAPS**.
 
 There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
 
@@ -10,7 +10,7 @@ There are three routes to change **AAPS**' configuration. As to which route you 
 2. The **Settings** screen or
 3. A plugin's **Settings**, opened from its category in **Configuration**.
 
-Здесь мы объясним, какой вариант наиболее удобно для каждой ситуации:
+Здесь мы объясним, какой вариант удобнее всего в каждой ситуации:
 
 ## Configuration
 
@@ -28,7 +28,7 @@ Tap the **Settings** (gear) icon in the top-right corner of the main screen. Thi
 
 ![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Этот путь хорош, если вы не уверены, где искать нужную настройку, но он может быть немного утомительным, если вы точно знаете, что хотите изменить настройки только одного модуля.
 
 The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
 
