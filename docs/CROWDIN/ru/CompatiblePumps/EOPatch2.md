@@ -239,7 +239,7 @@ The different alarms are explained below.
 | Срок действия патча истек | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
 | Закупорка                 | The patch's insulin path seems to be blocked.                                                                                                                  |
 | Ошибка самотестирования   | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| Некорректная температура  | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
+| Неверная температура      | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
 | Ошибка ввода иглы         | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
 | Ошибка батареи патча      | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
 | Ошибка активации патча    | The patch was not fully activated within 60 minutes of booting.                                                                                                |
@@ -258,14 +258,14 @@ This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning a
 
 The different warnings are explained below.
 
-| Внимание                           | Описание                                                                                                                      |
-| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Конец приостановки подачи инсулина | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| Мало инсулина в резервуаре         | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| Срок действия патча истек          | The patch's usage period is over.                                                                                             |
-| Срок работы патча истекает         | The patch must be discarded in 1 hour.                                                                                        |
-| Неполная активация патча           | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| Низкий заряд батареи               | The patch's battery is low.                                                                                                   |
+| Внимание                               | Описание                                                                                                                      |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Приостановка подачи инсулина завершена | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
+| Мало инсулина в резервуаре             | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
+| Срок действия патча истек              | The patch's usage period is over.                                                                                             |
+| Срок работы патча истекает             | The patch must be discarded in 1 hour.                                                                                        |
+| Неполная активация патча               | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
+| Низкий заряд батареи                   | The patch's battery is low.                                                                                                   |
 
 ## Куда обращаться за помощью
 
