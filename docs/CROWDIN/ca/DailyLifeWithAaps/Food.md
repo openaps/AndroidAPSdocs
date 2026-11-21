@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Aliments (la vostra base de dades d'aliments)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+La base de dades d'**Aliments** és la vostra llista personal d'aliments desats. Cada entrada guarda els **carbohidrats** d'un aliment (i, si voleu, els greixos, les proteïnes, l'energia i una categoria). Així podeu tenir en un sol lloc el que mengeu sovint i iniciar un bolus des d'un aliment desat amb els carbohidrats ja omplerts.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Obrir la base de dades d'aliments
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Obriu la pantalla **Gestionar** (navegació inferior) i trieu **Aliments** (*«Gestionar les entrades de la base de dades d'aliments»*). A **AAPS** v4, Aliments **ja no és un plugin**: no cal activar res; és una pantalla independent que s'obre des del [full Gestionar](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## La llista d'aliments
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Els vostres aliments es mostren en una llista que es pot desplaçar. Cada fila mostra el **nom** de l'aliment, la **porció / unitat / categoria** i els **carbohidrats**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![La llista de la base de dades d'aliments, amb la cerca i el botó d'afegir](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Cercar** (a dalt): filtra la llista pel **nom** (sense distingir majúscules i minúscules).
+- **Filtre de categoria**: unes etiquetes (chips) us permeten limitar la llista a una **categoria**; quan trieu una categoria, apareixen les etiquetes de les **subcategories**. (Toqueu una altra vegada una etiqueta seleccionada per treure-la.)
+- **➕** (a baix a la dreta): afegir un aliment nou (vegeu més avall).
+- Toqueu una fila per **editar** aquest aliment.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Si la llista (o el filtre actual) no té cap entrada, la pantalla mostra **Sense dades**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Afegir i editar un aliment
+
+Toqueu **➕** per afegir-ne un, o toqueu una fila existent per editar-la. S'obre un editor en un full inferior (**Afegir aliment** / **Editar aliment**):
+
+![L'editor d'aliments: nom, categoria, porció, carbohidrats i macronutrients](../images/v4/Food/food_editor.png)
+
+Els camps són:
+
+- **Nom**: obligatori (no podeu desar sense nom).
+- **Categoria** i **Subcategoria**: opcionals, serveixen per agrupar i filtrar els aliments.
+- **Porció** i **Unitat**: la mida habitual d'una ració; la **Unitat** per defecte és **g**.
+- **Carbs (g)**: la quantitat de carbohidrats de l'aliment.
+- **Greixos (g)**, **Proteïnes (g)**, **Energia (kJ)**: valors nutricionals opcionals.
+
+Toqueu **Desar** per guardar-lo, o **Cancel·lar** per descartar-lo. Quan editeu un aliment existent, l'editor també té un botó **Eliminar**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Quan elimineu un aliment, es mostra un missatge **«Aliment eliminat»** amb l'acció **Desfer**, de manera que és fàcil desfer una eliminació per error.
 ```
 
 ---
 
-## Using a food for a bolus
+## Fer servir un aliment per a un bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Cada fila d'aliment té un botó de **calculadora**. Si el toqueu, s'obre la **Calculadora de bolus** amb els **carbohidrats** de l'aliment ja omplerts i el **nom** de l'aliment afegit com a nota del tractament. Així només cal confirmar i lliurar, sense tornar a escriure els carbohidrats.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+El número de **carbohidrats** desat de l'aliment passa directament a la calculadora: **AAPS** no el multiplica per la porció ni per la quantitat que heu menjat. Si la quantitat és diferent, ajusteu els carbohidrats a la calculadora abans de confirmar. (No hi ha cap selector d'aliments *dins* de la Calculadora de bolus ni del diàleg de carbohidrats; comenceu des de la fila de l'aliment, aquí.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## D'on vénen els aliments (sincronització amb Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+La base de dades d'aliments es comparteix a través de **Nightscout**, però **només en una direcció**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Descarregar:** **AAPS** **llegeix** els aliments de la **base de dades d'aliments** del vostre lloc Nightscout i manté la llista local sincronitzada amb ella. Això es fa com a part de la sincronització de NSClient, de manera que un **client / seguidor** connectat també acaba tenint els mateixos aliments.
+- **Enviar:** **AAPS** **no** envia aliments **a** Nightscout: NSClient no permet enviar entrades d'aliments. Per tant, els aliments que creeu o editeu **dins d'AAPS** es queden **en aquell dispositiu** i no passen a Nightscout ni als vostres altres dispositius.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Com que els aliments **només es descarreguen**, la manera de compartir una sola llista d'aliments entre el vostre telèfon, el vostre seguidor / [client](../RemoteFeatures/ClientMasterControl.md) i la resta de la vostra configuració és mantenir-la a **Nightscout** (amb el seu editor d'aliments integrat). **AAPS** descarregarà aquestes entrades. Un aliment afegit només a **AAPS** és local d'aquell dispositiu, i s'hi queda: una descàrrega relaciona les entrades de Nightscout pel seu ID de Nightscout, de manera que les afegeix i les actualitza, però mai no sobreescriu ni elimina un aliment que hàgiu creat localment (un aliment només s'elimina quan s'esborra la seva còpia a Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Tingueu en compte que la base de dades d'aliments tampoc **no** forma part del canal de control signat principal ↔ client: viatja només com a dades de Nightscout.
 ```
 
 ---
 
-## Not on the watch
+## No és al rellotge
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+La base de dades d'aliments és una funció del **telèfon**: no hi ha cap navegador d'aliments, mosaic ni menú en un **rellotge Wear OS**.
 
 ---
 
