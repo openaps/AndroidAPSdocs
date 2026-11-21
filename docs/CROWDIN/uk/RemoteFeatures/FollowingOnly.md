@@ -114,7 +114,7 @@ xDrip можна використовувати як послідовника.
 
 ![зображення](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift створили, перенісши оригінальний застосунок xDrip на iOS, і він розвинувся в «xDrip for iOS», що пишеться як **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 * Apple iPad (потрібна версія системи 13.0 або новіша)
 * Google Android (збережіть вебзастосунок на головний екран)
 
-Користувачі Sugarmate повідомляють, що у США його можна використовувати з Apple CarPlay, щоб бачити показники глюкози під час водіння. Поки невідомо, чи це можливо в інших країнах. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Користувачі Sugarmate повідомляють, що у США його можна використовувати з Apple CarPlay, щоб бачити показники глюкози під час водіння. Поки невідомо, чи це можливо в інших країнах. Якщо ви знаєте про це більше, додайте подробиці сюди в документацію через [pull request](../SupportingAaps/HowToEditTheDocs.md) — це швидко і просто.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
