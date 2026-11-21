@@ -1,6 +1,6 @@
 # Перенос и установка AAPS на смартфон
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+В предыдущем разделе, [Сборка **AAPS**](../SettingUpAaps/BuildingAaps.md), вы собрали приложение **AAPS** (это файл .apk) на компьютере.
 
 The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
 
@@ -13,7 +13,7 @@ This page also explains [Android developer verification](#android-developer-veri
 
 ## Installing AAPS by tapping the APK file
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Здесь мы объясняем два различных способа:
+Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. Есть несколько способов перенести APK-файл **AAPS** с компьютера на смартфон. Здесь мы объясняем два различных способа:
 
 * Способ 1 - при помощи Google диска (Gdrive)
 * Способ 2 - при помощи USB-кабеля
@@ -27,44 +27,44 @@ Google is rolling out [Android developer verification](#android-developer-verifi
 
 ### Вариант 1. Использовать диск Google для передачи файлов
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+Откройте [Google.com](https://www.google.com/) в браузере и войдите в свой аккаунт Google.
 
 В правой верхней части выберите приложение Drive в меню Google.
 
-![Start Drive App](../images/install/GoogleDriveInWebbrowser.png)
+![Запуск приложения Google Диск](../images/install/GoogleDriveInWebbrowser.png)
 
 Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
 
-![Upload apk file with Google Drive App](../images/install/GoogleDriveUploadFile.png)
+![Загрузка apk-файла в Google Диск](../images/install/GoogleDriveUploadFile.png)
 
 Файл apk будет загружен на Google Drive.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Запустите установку apk-файла через приложение Google Диск
 
 Перейдите в мобильный телефон и запустите приложение Google Drive. Это предварительно установленное приложение и находится где расположены другие приложения Google, а также может быть найдено утилитой поиска.
 
-![start the Google Drive app](../images/install/GoogleDriveMobileAPPLaunch.png)
+![запуск приложения Google Диск](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
 
-![launch the apk installation](../images/install/GoogleDriveMobileUploadedAPK.png)
+![запуск установки apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
 
-![Security Notice Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
+![Предупреждение безопасности Google Диска](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
+![Предупреждение безопасности Google Диска](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 After the installation finishes, you are done with this step.
 
 You should see the **AAPS** icon and be able to open the app.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ О БЕЗОПАСНОСТИ**
+Вы не забыли снова запретить установку из Google Диска?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Перейдите к [настройке цикла AAPS](../SettingUpAaps/SetupWizard.md).
 
 ### Вариант 2. Использовать кабель USB для передачи файлов
 
@@ -72,7 +72,7 @@ The second way to transfer the AAPS apk file is with a [USB cable](https://suppo
 
 Переместите файл с места расположения на компьютере в папку "Загрузки" на телефоне.
 
-На телефоне необходимо разрешить установку из неизвестных источников. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+На телефоне необходимо разрешить установку из неизвестных источников. Объяснения, как это сделать, можно найти в интернете (_например,_ [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)).
 
 Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
 
@@ -99,7 +99,7 @@ When the installation is finished, press "**Open**" to start **AAPS**, or "**Don
 Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Перейдите к [настройке цикла AAPS](../SettingUpAaps/SetupWizard.md).
 
 (transferring-installing-play-protect-warning)=
 ## Google Play Protect warning
