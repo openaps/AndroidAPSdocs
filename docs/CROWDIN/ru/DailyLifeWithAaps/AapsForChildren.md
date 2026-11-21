@@ -14,7 +14,7 @@ Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal ra
 
 ### Постоянное наличие телефона рядом
 
-Подумайте о том, каким образом вы обеспечите нахождение телефона ребенка в зоне доступа его помпы и **НМГ**. Это еще то испытание с маленькими детьми, которые пока не несут ответственность за свой телефон. An **AAPS** phone with a good Bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Есть множество решений этого вопроса, таких, как пояса для инсулиновых помп с кармашком для телефона или упряжки для носки по аналогии с рюкзаком.
+Подумайте о том, как вы будете держать телефон ребенка в зоне действия его помпы и **CGM**. Это еще то испытание с маленькими детьми, которые пока не несут ответственность за свой телефон. An **AAPS** phone with a good Bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Есть множество решений этого вопроса, например пояса для инсулиновых помп с кармашком для телефона или крепления, которые носят как рюкзак.
 
 ### Как защитить AAPS ребенка от неправильного использования?
 
@@ -22,7 +22,7 @@ There are several protection settings available in **AAPS** to prevent the child
 
 ## Удаленный мониторинг и управление
 
-Удаленный мониторинг - одна из важнейших функций при использовании **AAPS** для детей. См. раздел [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) для изучения возможных вариантов.
+Удаленный мониторинг - одна из важнейших функций при использовании **AAPS** для детей. См. отдельный раздел [Удаленный мониторинг](../RemoteFeatures/RemoteMonitoring.md), чтобы узнать о возможных вариантах.
 
 Удаленный мониторинг и управление могут быть довольно полезными для родителей детей с диабетом первого типа, особенно, когда ребенок посещает детский сад или начальную школу. But make sure the teachers and educators are aware of your kid's treatment plan.
 
