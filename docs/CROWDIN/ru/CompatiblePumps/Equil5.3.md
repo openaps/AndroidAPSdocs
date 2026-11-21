@@ -1,6 +1,6 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Эта инструкция описывает настройку инсулиновой помпы Equil.
 
 ```{contents} Table of contents
 :depth: 1
@@ -15,15 +15,15 @@ These instructions are for configuring the Equil insulin pump.
 * DST and timezone changes must be handled manually.
 
 ## Требования к аппаратному и программному обеспечению
-* **Compatible Equil hardware**
+* **Совместимое оборудование Equil**
 
   Currently Equil 5.3 and 5.4 are supported.
 
 * **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
 
-## Setup
+## Настройка
 
-### Select Equil pump
+### Выберите помпу Equil
 
 Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
 
