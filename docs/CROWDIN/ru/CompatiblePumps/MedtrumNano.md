@@ -17,29 +17,29 @@
 * **Совместимые помповые базы и патчи резервуаров**
     - В настоящее время поддерживается:
         - Medtrum TouchCare Nano 200U with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare Nano 300Uс помповой базой модели: **MD8301**.
+        - Medtrum TouchCare 300U с помповой базой модели: **MD8301**.
         - Если у вас есть неподдерживаемая модель и вы хотите пожертвовать аппаратное обеспечение или помощь в тестировании, пожалуйста, свяжитесь с нами через discord [здесь](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
-    - См. AAPS [Примечания к выпуску](../Maintenance/ReleaseNotes.md)
+    - См. [Примечания к изменениям в версиях](../Maintenance/ReleaseNotes.md) AAPS
 
 ## Подготовка к работе
 
 **БЕЗОПАСНОСТЬ на первом месте** Не пытайтесь выполнять этот процесс в среде, где нет возможности исправить ошибку (дополнительные патчи, инсулин, устройства управления помпой обязательны).
 
-**Пульт PDM и приложение Medtrum не будут работать с патчем, активированным при помощи AAPS** Прежде, возможно, вы уже пользовались этим устройством и приложением для отправки команд на помпу. В целях безопасности можно пользоваться только активированным патчем с устройством или приложением, которое использовалось для его активации.
+**Пульт PDM и приложение Medtrum не будут работать с патчем, активированным при помощи AAPS.** Прежде, возможно, вы уже пользовались пультом PDM или приложением Medtrum для отправки команд на помпу. В целях безопасности можно пользоваться только активированным патчем с устройством или приложением, которое использовалось для его активации.
 
 *Это НЕ означает, что следует выбросить ваш пульт PDM. Рекомендуется хранить его в надежном месте в качестве резервной копии в случае возникновения чрезвычайных ситуаций, например, если ваш телефон потеряется или AAPS работает неправильно.*
 
-**Помпа не перестанет доставлять инсулин, если она не подключена к AAPS** Скорости Базала запрограммированы на помпе, как указано в текущем активном профиле. Когда работает AAPS, он будет отправлять временные команды на изменение базала, каждая из которх устанавливает базал максимум на 120 минут. Если по каким-то причинам помпа не получаетновых команд (например, из-за потери связи с помпой из-за расстояния до телефона), то после окончания временной базальной скорости. помпа вернется к стандартному базалу, предустановленному на помпе.
+**Помпа не перестанет доставлять инсулин, если она не подключена к AAPS** Скорости Базала запрограммированы на помпе, как указано в текущем активном профиле. Когда работает AAPS, он будет отправлять команды временного базала, каждая из которых устанавливает базал максимум на 120 минут. Если по каким-то причинам помпа не получает новых команд (например, из-за потери связи с помпой из-за расстояния до телефона), то после окончания временной базальной скорости помпа вернется к стандартному базалу, предустановленному на помпе.
 
 **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. Например, если ваша базальная скорость 1,1 ед., начинается в 09:30, длится 2 часа и заканчивается в 11:30, такие настройки работать не будут. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Несмотря на то, что аппаратное обеспечение помпы Medtrum поддерживает профили с 30-минутными отрезками базальной скорости, AAPS в настоящее время не в состоянии учесть их с помощью своих алгоритмов.
 
-**Скорость базала 0 ед/ч НЕ поддерживается в AAPS** Помпа Medtrum не поддерживает нулевую базальную скорость; AAPS использует множество базальных профилей для автоматической терапии и поэтому не может функционировать с нулевой базовой скоростью. The minimum profile basal rate is 0.05 U/h.
+**Скорость базала 0 ед/ч в профиле НЕ поддерживается в AAPS** Помпа Medtrum поддерживает нулевую базальную скорость, но AAPS использует кратные значения базальной скорости профиля для автоматической терапии и поэтому не может работать с нулевой базальной скоростью. The minimum profile basal rate is 0.05 U/h.
 
 A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
 
-## Setup
+## Настройка
 
 ```{caution}
 When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app.
@@ -222,7 +222,7 @@ When the patch is detected and filled, the **Next** button appears. Tap it.
 
 This step only appears if you have more than one insulin set up in **AAPS**. Select the insulin you are filling the patch with. **AAPS** applies a profile switch with this insulin after activation.
 
-#### Первичное заполнение (прайм) катетера
+#### Заправка патча
 
 ![Полунажатие](../images/medtrum/activation/HalfPress.png)
 
@@ -341,7 +341,7 @@ This button refreshes the status of the patch. It is only available when a patch
 
 ### Change Patch
 
-This button starts the wizard to change the patch. См [Активировать патч](#medtrum-activate-patch) для получения дополнительной информации.
+This button starts the wizard to change the patch. См. [Активировать патч](#medtrum-activate-patch) для получения дополнительной информации.
 
 (medtrum-unpair)=
 ### Unpair
@@ -383,8 +383,8 @@ If you have connection timeouts or other connection problems:
 - In the Android app settings for **AAPS**, set the Location permission to "Allow all the time".
 - Try enabling **Scan on connection error** (Medtrum settings > **Advanced Settings**) and **BT Watchdog** (**Settings** > **Pump**), see [Step 2](#medtrum-step-2).
 
-### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+### Проблемы с Bluetooth
+Об известных проблемах с соединением Bluetooth, обрывах связи с помпой или Pod, а также о проблемах активации и соединения см. [Проблемы с Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ### Активация прервана
 
@@ -392,7 +392,7 @@ If the activation is interrupted, for example by an empty phone battery or a pho
 
 ### Предотвращение сбоев в работе патча
 
-Патч может совершить множество ошибок. Во избежание частых ошибок:
+Патч может выдавать разные ошибки. Во избежание частых ошибок:
 - Убедитесь, что помповая база правильно закреплена в патче и не видно никаких зазоров.
 - При заполнении патча не применяйте чрезмерную силу к плунжеру. Не пытайтесь заполнять патч сверх максимума, применимого к вашей модели.
 
@@ -403,4 +403,4 @@ If the activation is interrupted, for example by an empty phone battery or a pho
 -  **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
 -  **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые вы не можете решить, изучая документацию, перейдите в канал *#Medtrum* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. Если нет, создайте [новый вопрос](https://github.com/nightscout/AndroidAPS/issues) и приложите [свои лог-файлы](../GettingHelp/AccessingLogFiles.md).
--  **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**
+-  **Будьте терпеливы: большинство участников нашего сообщества — добровольцы, и решение проблем часто требует времени и терпения как от пользователей, так и от разработчиков.**
