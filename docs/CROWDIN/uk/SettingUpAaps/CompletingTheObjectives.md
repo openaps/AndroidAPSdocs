@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 **Завдання 2** вимагає виконати кілька «задач», як показано на знімку екрана нижче. Кожна задача показує свій стан (**1**): помаранчевий напис «**Ще не виконано**» змінюється на «**Виконано, відмінна робота!**», щойно **AAPS** зареєструє дію. Торкніться **Підказка** (**2**) під задачею, щоб відкрити відповідну документацію, якщо ви ще не знаєте, як виконати певну дію.
 
-![Знімок екрана: завдання 2](../images/Objective2_V2_5.png)
+![Знімок екрана: завдання 2](../images/objectives/Objective2_V2_5.png)
 
 Щоб виконати **Завдання 2**, потрібно:
 - Встановити **Профіль** на 90 % на 10 хв.
@@ -96,7 +96,7 @@ For each question, there may be more than one answer that is correct! If an inco
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Крім того, мінімальний відсоток для рекомендованих змін базалу можна змінити налаштуванням «**Мінімальна зміна в режимі відкритої петлі**» в **Налаштування → Петля**. The higher the value, the fewer change notifications you will receive.
 
-![Мінімальна зміна для запиту у відкритій петлі](../images/OpenLoop_MinimalRequestChange2.png)
+![Мінімальна зміна для запиту у відкритій петлі](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ To reduce the number of proposed basal rate changes while in Open Loop, you can 
 
 - Якщо ваш IOB від'ємний (див. знімок екрана нижче), у **Завданні 6** може бути запущено тимчасовий базал (TBR) > 100 %.
 
-![Приклад від'ємного IOB](../images/Objective6_negIOB.png)
+![Приклад від'ємного IOB](../images/objectives/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Увімкніть режим «Зупинка базалу при низькому ГК»: натисніть значок петлі на головному екрані й виберіть **Зупинка базалу при низькому ГК** як робочий режим.
@@ -245,6 +245,6 @@ This recommendation should be seen as a starting point. If you use this rule but
 
 Якщо з якоїсь причини ви хочете повернутися назад у **Завданнях**, відкрийте завершене **Завдання** через «**Більше**» і торкніться «**Скинути стан «завершено»**»:
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Go back in objectives](../images/objectives/Objective_ClearFinished.png)
 
 Так само **Завдання**, над яким ви зараз працюєте, можна почати знову через «**Скинути стан «розпочато»**».
