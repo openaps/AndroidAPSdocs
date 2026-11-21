@@ -122,7 +122,7 @@ Seguiu aquests passos a Android 16. En altres versions pot ser una mica diferent
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. A Android 12 feu clic a `Bateria`, a Android 13 o posterior feu clic a `Ús de la bateria de l'aplicació` (App battery usage).
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -172,7 +172,7 @@ Torneu enrere amb la fletxa de la cantonada superior esquerra. Ara l'assistent m
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NO PERDEU LA VOSTRA CLAU MESTRA**. Anoteu-la en algun lloc, _p. ex._ a Google Drive, que és un bon lloc perquè Google en fa còpies de seguretat per vosaltres. El vostre telèfon o ordinador es pot espatllar i és possible que no tingueu cap còpia actual. Si oblideu la clau mestra, més endavant pot ser difícil recuperar la configuració del perfil i el vostre progrés als **Objectius**. See [How to reset the master password?](#FAQ-reset-master-password)
+**NO PERDEU LA VOSTRA CLAU MESTRA**. Anoteu-la en algun lloc, _p. ex._ a Google Drive, que és un bon lloc perquè Google en fa còpies de seguretat per vosaltres. El vostre telèfon o ordinador es pot espatllar i és possible que no tingueu cap còpia actual. Si oblideu la clau mestra, més endavant pot ser difícil recuperar la configuració del perfil i el vostre progrés als **Objectius**. Vegeu [Com es restableix la clau mestra?](#FAQ-reset-master-password)
 ```
 
 Quan acabeu, premeu «**SEGÜENT**» per anar a la pantalla següent.
@@ -243,7 +243,7 @@ Premeu «**URL de Nightscout**» i escriviu l'adreça del vostre servidor Nights
 
 Premeu «**Token d'accés de Nightscout**» i escriviu el token d'accés del vostre servidor Nightscout. Sense aquest token, l'accés no funciona. Si encara no el teniu, consulteu la documentació sobre com configurar el servidor d'informes.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+Deixeu activat «**Utilitzar websockets**» per a la comunicació en temps real amb Nightscout. Els websockets són **obligatoris** per al control remot des d'**AAPSClient**, als dos telèfons.
 
 De moment podeu deixar les altres seccions amb els valors per defecte. Les expliquem aquí perquè sapigueu on trobar-les més tard:
 
@@ -454,7 +454,7 @@ Quan seleccioneu una bomba real, **AAPS** us demana una confirmació, perquè co
 
 ![Confirmació en seleccionar una bomba física](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Si la bomba que seleccioneu es comunica per Bluetooth, **AAPS** us demana permís per connectar-se a dispositius propers quan acabeu l'assistent (vegeu [Permís de Bluetooth](#setup-wizard-bluetooth-permission)).
 
 Si ja heu configurat el vostre perfil i sabeu com connectar la bomba, podeu connectar-la ara. Si no, de moment deixeu-ho en **Bomba virtual**. Ho podeu canviar en qualsevol moment, o sortir de l'assistent de configuració amb la fletxa de la cantonada superior esquerra i deixar que **AAPS** us mostri primer alguns valors de glucèmia.
 
@@ -505,7 +505,7 @@ Premeu «**Obrir Objectius**»:
 
 Aquí iniciem l'Objectiu 1, encara que ara mateix la nostra configuració no està del tot preparada per completar aquest objectiu. Però és el començament.
 
-Press the "**Start**" button of **Objective 1**:
+Premeu el botó «**Començar**» de l'**Objectiu 1**:
 
 ![Llista d'objectius](../images/setup-wizard/Wizard-Objectives-List.png)
 
