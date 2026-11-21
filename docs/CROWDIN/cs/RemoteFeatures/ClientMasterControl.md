@@ -365,13 +365,13 @@ Kód, který páruje, platí asi dvě minuty. Pro nový kód přidejte klienta n
 
 Nejdřív ho odpárujte (**Spravovat → Párovat s hlavním zařízením → Odpárovat**), pak znovu naskenujte. Kód **pouze Nightscout** funguje i na spárovaném telefonu.
 
-**Pairing is cancelled with "The pairing secret could not be stored"**
+**Párování je zrušeno se zprávou „Klíč párování se nepodařilo uložit“**
 
-Nic se nezměnilo. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Nic se nezměnilo. Spusťte párování znovu. Pokud se to stále nedaří, restartujte **AAPSClient** a zkuste to ještě jednou.
 
-**The client says it is not paired**
+**Klient hlásí, že není spárován**
 
-Spárujte ho znovu přes **Spravovat → Párovat s hlavním zařízením**. Check that the client is **Active** in the master's **Authorized clients** list.
+Spárujte ho znovu přes **Spravovat → Párovat s hlavním zařízením**. Zkontrolujte, že je klient v seznamu **Autorizovaní klienti** na hlavním zařízení ve stavu **Aktivní**.
 
 **Po spárování se nic neděje**
 
@@ -379,25 +379,25 @@ Ujistěte se, že je na hlavním zařízení ZAPNUTÉ **Povolit ovládání z kl
 
 ### Příkazy
 
-**The client says the master is offline, or commands fail**
+**Klient hlásí, že hlavní zařízení je offline, nebo příkazy selhávají**
 
-Check that:
+Zkontrolujte, že:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- telefon s hlavním zařízením je probuzený a **AAPS** běží,
+- oba telefony jsou v **NSClientV3** připojené ke stejnému webu Nightscout,
+- na obou telefonech jsou zapnuté **websockety**.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Websockety jsou pro vzdálené ovládání z **AAPSClient** **povinné**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Hlavní zařízení odmítne příkaz**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Hlavní zařízení znovu kontroluje každý příkaz podle svého aktuálního stavu: například zvolený profil už neexistuje nebo typ pumpy nesouhlasí. Zkontrolujte to na hlavním zařízení.
 
 **Ošetření zadaná na webu Nightscoutu se nepoužijí**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+V [zabezpečeném režimu](#client-master-control-hardened-mode) je to očekávané chování. Zadejte je místo toho na spárovaném klientovi.
 
-### Nightscout tokens and settings
+### Tokeny a nastavení Nightscoutu
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ Klient dřív používal svůj vlastní token Nightscoutu a nyní zapisuje jiný
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-Klient stále zapisuje tokenem, který má více práv, než potřebuje. The master sends the client its own token after pairing, but only if the master has an admin token. Zkontrolujte token hlavního zařízení, nebo klienta nastavte znovu pomocí QR kódu.
+Klient stále zapisuje tokenem, který má více práv, než potřebuje. Hlavní zařízení pošle klientovi po spárování jeho vlastní token, ale jen pokud má hlavní zařízení admin token. Zkontrolujte token hlavního zařízení, nebo klienta nastavte znovu pomocí QR kódu.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Dokument s nastavením hlavního zařízení zapsal někdo jiný, nebo má hlavní zařízení nový klíč (například po smazání jeho dat). A paired client takes the new key by itself the next time it connects to Nightscout. Telefon, který jen čte Nightscout, potřebuje znovu QR kód hlavního zařízení (**Pouze číst Nightscout → Zobrazit QR kód**).
+Dokument s nastavením hlavního zařízení zapsal někdo jiný, nebo má hlavní zařízení nový klíč (například po smazání jeho dat). Spárovaný klient si nový klíč převezme sám, až se příště připojí k Nightscoutu. Telefon, který jen čte Nightscout, potřebuje znovu QR kód hlavního zařízení (**Pouze číst Nightscout → Zobrazit QR kód**).
 
 **Klient už nemůže číst Nightscout**
 
