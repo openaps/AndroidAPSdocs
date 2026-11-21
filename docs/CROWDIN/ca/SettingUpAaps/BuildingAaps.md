@@ -12,7 +12,7 @@ Hi ha tres mètodes per compilar l'aplicació AAPS:
 
 ### Compilar amb un navegador (recomanat)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Podeu compilar l'aplicació en un navegador web amb GitHub Actions. Des d'un telèfon Android, la pàgina de configuració d'[AAPS Builder](#aaps-builder) us guia pas a pas, i vosaltres mateixos inicieu cada compilació. Des d'un ordinador o d'un iPhone, també podeu compilar amb un fork i desar l'aplicació al vostre Google Drive.
 
 **[Seguiu aquestes instruccions.](./BrowserBuild.md)**
 
@@ -35,16 +35,16 @@ Aquesta opció és per a qui prefereix compilar AAPS a la línia d'ordres local,
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Si la compilació falla
 
-Each build method has its own troubleshooting section:
+Cada mètode de compilació té la seva pròpia secció de resolució de problemes:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Resolució de problemes d'AAPS Builder](#aaps-builder-troubleshooting)
+* **Compilació al navegador** des d'un ordinador o d'un iPhone: [Compilació al navegador: resolució de problemes](#aaps-ci-troubleshooting)
+* **Android Studio**: [Resolució de problemes d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? Vegeu [Reinstal·lar AAPS amb un nou magatzem de claus](#reinstall-aaps).
+Heu perdut el vostre magatzem de claus o la seva contrasenya? Vegeu [Reinstal·lar AAPS amb un nou magatzem de claus](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Si l'aplicació s'ha compilat però no s'instal·la al vostre telèfon, vegeu [Transferir i instal·lar AAPS al vostre telèfon](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Si el vostre problema no és a la llista, vegeu [On puc trobar ajuda?](../GettingHelp/WhereCanIGetHelp.md).
