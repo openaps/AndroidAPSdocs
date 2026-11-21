@@ -4,13 +4,13 @@ Depois de concluir o **[Assistente de configuração do AAPS](../SettingUpAaps/S
 
 Há três caminhos para alterar a configuração do **AAPS**. Qual caminho você usa é apenas uma questão de praticidade ou de preferência pessoal, pois todos levam às mesmas configurações.
 
-These are as follows:
+São as seguintes:
 
 1. A tela **Configuração**,
 2. A tela **Configurações** ou
 3. As **Configurações** de um plugin, abertas a partir da categoria dele em **Configuração**.
 
-Here we explain which option is most convenient for each situation:
+Aqui explicamos qual opção é a mais prática em cada situação:
 
 ## Configuração
 
