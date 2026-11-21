@@ -19,7 +19,7 @@ Els usuaris han de tenir expectatives realistes sobre els resultats que es poden
 
 Un **objectiu temporal** pot necessitar uns 30 minuts o més per arribar a l'objectiu de **glucèmia** desitjat. **AAPS** no pot arribar a un objectiu de **glucèmia** amb efecte immediat, i els usuaris ho han de tenir en compte quan seleccionen un **objectiu temporal**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Els valors que es mostren són els valors per defecte; podeu [ajustar cada predefinit](#TempTargets-change-preset-defaults) a les vostres necessitats.
+Les seccions següents resumeixen les funcions de l'**objectiu temporal Activitat (esport)**, l'**objectiu temporal Menjar aviat** i l'**objectiu temporal Hipo**. Els valors que es mostren són els valors per defecte; podeu [ajustar cada predefinit](#TempTargets-change-preset-defaults) a les vostres necessitats.
 
 ### OT - Activitat (esport)
 
@@ -42,7 +42,7 @@ Els usuaris també poden considerar:
 
 - *seleccionar* aquest **OT** 1–2 hores abans de l'exercici planificat, per assegurar una IOB més baixa (el moment adequat per a aquest OT varia d'una persona a una altra); i
 - *seleccionar* un perfil temporal (reduït) durant l'activitat planificada, per assegurar una **IOB** més baixa;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *assegurar* que l'**OT** es *desactivi* poc abans de l'exercici, perquè la **IOB** ja està reduïda i alguns usuaris tenen una pujada ràpida de la **glucèmia** després de l'exercici.
 
 ### OT - Menjar aviat
 
@@ -96,11 +96,11 @@ Quan seleccioneu una targeta de predefinit, el seu **objectiu** i la seva **dura
 
     <br />### Activar un objectiu temporal
     
-    Feu lliscar fins al predefinit que vulgueu (els seus valors es carreguen a l'editor), si voleu ajusteu l'**objectiu**/la **durada** a l'editor, i després toqueu **▶ Activar**. A confirmation shows the exact target, duration and reason before anything starts:
+    Feu lliscar fins al predefinit que vulgueu (els seus valors es carreguen a l'editor), si voleu ajusteu l'**objectiu**/la **durada** a l'editor, i després toqueu **▶ Activar**. Una confirmació mostra l'objectiu, la durada i el motiu exactes abans que comenci res:
     
     ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    Quan confirmeu, l'objectiu temporal comença immediatament (o a l'hora d'**Activació** triada) i dura la **durada** establerta.
     
     ```{admonition} Canviar els números és només per a una vegada: no canvia el predefinit
     :class: important
@@ -193,9 +193,9 @@ De vegades, quan es mengen carbohidrats per tractar una hipo, la **glucèmia** d
 
 Alguns usuaris volen evitar que es donin **SMB** durant l'**objectiu temporal Hipo**. Per fer-ho, desactiveu *'Activar SMB amb objectiu temporal alt'* a **Configuració** → **OpenAPS SMB** (vegeu més avall):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Avançat, objectiu 9: l'usuari pot activar *«Un objectiu temporal alt puja la sensibilitat»* per a **objectius temporals** de 100 mg/dl (5,6 mmol/l) o més a OpenAPS SMB; aleshores **AAPS** serà més sensible.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Avançat, objectiu 9: l'usuari pot desactivar *«Activar SMB amb objectiu temporal alt»*, de manera que, encara que **AAPS** tingui COB > 0, «Activar SMB amb objectiu temporal baix» o «Activar SMB sempre» estigui activat i OpenAPS SMB estigui actiu, **AAPS** no donarà SMB mentre hi hagi objectius temporals alts actius.
 
 Nota: si obriu el **diàleg Carbs** quan la vostra glucèmia és inferior a 72 mg/dl o 4 mmol/l, **AAPS** preselecciona automàticament l'interruptor **Iniciar OT: Hipo**.
 
@@ -209,7 +209,7 @@ Per simplificar l'**objectiu temporal Activitat (esport)**, l'usuari pot configu
 
 Els usuaris nous d'**AAPS** potser hauran de fer proves i personalitzar els valors per defecte de l'**objectiu temporal Activitat (esport)** perquè aquesta funció els vagi el millor possible. Cada persona és diferent a l'hora d'aconseguir un control estable de la glucèmia durant l'exercici. Vegeu també la [secció d'esport de les preguntes freqüents](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Podeu iniciar tots dos en un sol pas: toqueu el nom del perfil a la pantalla principal, toqueu el botó rodó **▶**, establiu un **Percentatge** inferior al 100% i una **Durada**, i després activeu **Objectiu temporal / Activitat (esport)**. Vegeu [Canviar el percentatge del perfil](#ProfileSwitch-change-percentage).
+Alguns usuaris també prefereixen activar un **Canvi de perfil** (un perfil reduït < 100% perquè **AAPS** lliuri menys insulina) abans i durant l'**objectiu temporal Activitat (esport)**. Podeu iniciar tots dos en un sol pas: toqueu el nom del perfil a la pantalla principal, toqueu el botó rodó **▶**, establiu un **Percentatge** inferior al 100% i una **Durada**, i després activeu **Objectiu temporal / Activitat (esport)**. Vegeu [Canviar el percentatge del perfil](#ProfileSwitch-change-percentage).
 
 Avançat, objectiu 9: els usuaris poden activar *'Un objectiu temporal alt puja la sensibilitat'* per a **objectius temporals** de 100 mg/dl (5,6 mmol/l) o més a OpenAPS **SMB**. Un objectiu de 99 mg/dl (5,5 mmol/l) és un objectiu normal, ni alt ni baix. Aleshores **AAPS** és més sensible.
 
@@ -219,9 +219,9 @@ A més, si *'Activar SMB amb objectiu temporal alt'* està desactivat, **AAPS** 
 
 ## Objectiu temporal Menjar aviat
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+L'**objectiu temporal Menjar aviat** pot ajudar a fer baixar suaument la **glucèmia** i a assegurar que hi hagi prou **IOB** abans de menjar.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+Pot ser una eina important per als usuaris que no fan prebolus. Tot i així, l'eficàcia de l'**objectiu temporal Menjar aviat** depèn de diversos factors, com ara: la configuració de l'usuari, si segueix una dieta baixa en carbohidrats i si fa servir una insulina d'acció ràpida (com Fiasp o Lyumjev) per no haver de fer prebolus. Normalment, fins que no tinguin experiència amb **AAPS**, els usuaris han de comptar amb fer un prebolus quan facin servir l'**objectiu temporal Menjar aviat**, sobretot si segueixen una dieta rica en carbohidrats.
 
 Podeu llegir més sobre el «mode Menjar aviat» a l'article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (en anglès) o [aquí](https://diyps.org/tag/eating-soon-mode/).
 
