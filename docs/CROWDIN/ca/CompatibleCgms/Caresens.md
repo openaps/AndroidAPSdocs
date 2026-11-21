@@ -1,18 +1,18 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+Hi ha diverses maneres de fer servir les dades de CareSens amb **AAPS**:
 
 - xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Nota:** No necessiteu l'aplicació de seguiment Sens365 per connectar-vos a AAPS.
 
 ## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+1. Instal·leu i configureu l'aplicació oficial de CareSens.
+2. A l'aplicació CareSens, aneu a configuració -> Manage Data and Connections -> activeu l'interruptor xDrip. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![Connexions de dades de l'aplicació CareSens](../images/eversenseapp-dataconnections.png)
 
 
 2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
@@ -22,8 +22,8 @@ There are different ways to use CareSens data with **AAPS**:
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
+1. Instal·leu l'aplicació Juggluco.
+2. A Juggluco, obriu el menú de l'esquerra i seleccioneu `Photo`
+3. Escanegeu el codi QR de l'embalatge del sensor.
+4. Al menú de l'esquerra -> settings -> exchange data, assegureu-vos que xDrip broadcast està activat.
 5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
