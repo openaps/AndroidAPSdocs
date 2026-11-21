@@ -41,8 +41,8 @@ Podeu trobar una taula comparativa dels diferents dispositius compatibles amb Ri
 Cal configurar aquestes opcions a la bomba perquè AAPS hi pugui enviar ordres a distància. Per a cada opció, entre parèntesis es mostren els passos per fer el canvi en una Medtronic 715. Els passos exactes poden variar segons el tipus de bomba i/o la versió del firmware.
 
 - **Activeu el mode remot a la bomba** (a la bomba, premeu Act i aneu a Utilities -> Remote Options, seleccioneu On i a la pantalla següent feu Add ID i afegiu qualsevol identificador a l'atzar, per exemple 111111). Cal com a mínim un identificador a la llista Remote ID perquè la bomba accepti la comunicació remota.
-- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. El valor màxim que permet la bomba és de 34,9 unitats per hora.
-- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. El valor màxim que permet la bomba és 25.
+- **Configureu la basal màxima** (a la bomba, premeu Act i aneu a Basal i després seleccioneu Max Basal Rate). Per exemple, si poseu aquest valor a quatre vegades la vostra taxa basal estàndard màxima, permetreu una taxa basal temporal del 400%. El valor màxim que permet la bomba és de 34,9 unitats per hora.
+- **Configureu el bolus màxim** (a la bomba, premeu Act i aneu a Bolus i després seleccioneu Max Bolus). Aquest és el bolus més gran que la bomba acceptarà. El valor màxim que permet la bomba és 25.
 - **Poseu el perfil a Standard**. (A la bomba, premeu Act i aneu a Basal i després a Select Patterns.) La bomba només necessita un perfil, perquè AAPS gestiona els diferents perfils al vostre telèfon. No calen altres patrons.
 - **Configureu el tipus de taxa basal temporal** (a la bomba, premeu Act i aneu a Basal i després a Temp Basal Type). Seleccioneu Absolute (no Percent).
 
@@ -75,13 +75,13 @@ Quan configureu AAPS per funcionar amb la vostra bomba Medtronic, heu de configu
 
 - **Número de sèrie bomba**: es mostra a la part de darrere de la bomba i comença per SN. Només heu d'introduir els 6 números que es mostren, sense cap lletra (p. ex. 123456).
 - **Tipus bomba**: el model de bomba que feu servir (p. ex. 522). 
-- **Freqüència bomba**: hi ha dues opcions segons on es va distribuir originalment la vostra bomba. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
-    - for US & Canada, frequency used is 916 MHz
-    - for Worldwide, frequency used is 868 MHz
+- **Freqüència bomba**: hi ha dues opcions segons on es va distribuir originalment la vostra bomba. Consulteu les [Preguntes freqüents](#MedtronicPump-faq) si no esteu segurs de quina opció triar: 
+    - per a EUA i Canadà, la freqüència és de 916 MHz
+    - per a la resta del món, la freqüència és de 868 MHz
 - **Màx. basal a la bomba (U/h)**: ha de coincidir amb el valor configurat a la vostra bomba (vegeu Configuració de la bomba més amunt). També aquí cal triar aquest valor amb cura, perquè determina quanta insulina pot lliurar AAPS amb la vostra taxa basal. Això fixa, de fet, la taxa basal temporal màxima. Per exemple, si poseu aquest valor a quatre vegades la vostra taxa basal estàndard màxima, permetreu una taxa basal temporal del 400%. El valor màxim que permet la bomba és de 34,9 unitats per hora.
 - **Màx. bolus a la bomba (U)** (en una hora): ha de coincidir amb el valor configurat a la vostra bomba (vegeu Configuració de la bomba més amunt). Cal pensar bé aquest valor, perquè determina el bolus més gran que AAPS podrà programar mai.
 - **Retard fins que bolus comenci (s)**: el nombre de segons entre l'ordre de bolus i el moment en què l'ordre s'envia realment a la bomba. Aquest temps permet a l'usuari cancel·lar el bolus si s'ha enviat una ordre de bolus per error. No es pot cancel·lar un bolus que ha començat a través d'AAPS. L'única manera de cancel·lar un bolus que ja ha començat és suspendre la bomba manualment i després reprendre-la.
-- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). És millor seleccionar la codificació per maquinari (és a dir, feta pel dispositiu compatible amb RileyLink), perquè així s'envien menys dades. Seleccionar la codificació per programari (és a dir, feta per AAPS) pot ajudar si hi ha desconnexions freqüents. Aquesta opció no es té en compte si els dispositius RileyLink tenen la versió de firmware 0.x.
+- **Codificació Medtronic**: determina on es fa la codificació Medtronic (maquinari o programari). És millor seleccionar la codificació per maquinari (és a dir, feta pel dispositiu compatible amb RileyLink), perquè així s'envien menys dades. Seleccionar la codificació per programari (és a dir, feta per AAPS) pot ajudar si hi ha desconnexions freqüents. Aquesta opció no es té en compte si els dispositius RileyLink tenen la versió de firmware 0.x.
 - **Tipus de bateria (Vista d'energia)**: per calcular correctament la càrrega que queda a la pila, heu de seleccionar el tipus de pila AAA que feu servir. Si se selecciona un valor diferent de la vista simple, AAPS mostrarà el percentatge calculat de càrrega que queda a la pila i el voltatge. Hi ha aquestes opcions:
     
     - No seleccionat (Vista simple)
@@ -166,7 +166,7 @@ AAPS fa servir el número de sèrie per a la sincronització, i el número de s�
 
 ### Usuaris d'OpenAPS
 
-Els usuaris d'OpenAPS han de tenir en compte que AAPS amb Medtronic funciona de manera completament diferent d'OpenAPS. Amb AAPS, la manera principal d'interactuar amb la bomba és a través del telèfon. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. Això és molt diferent d'OpenAPS, on normalment almenys una part del bolus es lliura amb els botons de bolus ràpid. Si es fa servir la bomba per lliurar un bolus manualment, hi pot haver problemes si AAPS intenta lliurar-ne un al mateix temps. Hi ha controls per intentar evitar problemes en aquests casos, però tot i així cal evitar-ho sempre que sigui possible.
+Els usuaris d'OpenAPS han de tenir en compte que AAPS amb Medtronic funciona de manera completament diferent d'OpenAPS. Amb AAPS, la manera principal d'interactuar amb la bomba és a través del telèfon. En l'ús normal, probablement l'única vegada que caldrà fer servir el menú de la bomba serà per canviar el reservori. Això és molt diferent d'OpenAPS, on normalment almenys una part del bolus es lliura amb els botons de bolus ràpid. Si es fa servir la bomba per lliurar un bolus manualment, hi pot haver problemes si AAPS intenta lliurar-ne un al mateix temps. Hi ha controls per intentar evitar problemes en aquests casos, però tot i així cal evitar-ho sempre que sigui possible.
 
 ### Registre
 
@@ -200,7 +200,7 @@ El codi GNARL admet totes les funcions que fa servir el controlador de Medtronic
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### What to do if I lose connection to RileyLink and/or pump?
+### Què he de fer si perdo la connexió amb el RileyLink i/o la bomba?
 
 Hi ha diverses opcions per intentar resoldre els problemes de connexió.
 
@@ -220,7 +220,7 @@ A la part de darrere de la bomba trobareu una línia amb el número de model i u
 
 - NA - Amèrica del Nord (a la selecció de freqüència heu de seleccionar «EUA i Canadà (916 MHz)»)
 - CA - Canadà (a la selecció de freqüència heu de seleccionar «EUA i Canadà (916 MHz)»)
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
+- WW - Mundial (a la selecció de freqüència heu de seleccionar «Mundial (868 MHz)»)
 
 (MedtronicPump-pump-unreachable)=
 
@@ -229,7 +229,7 @@ A la part de darrere de la bomba trobareu una línia amb el número de model i u
 Algunes bombes Medtronic mostren l'error «Bomba no accessible» després d'una actualització d'**AAPS**. Per solucionar-ho, canvieu el tipus de codificació:
 
 1. Aneu a **Configurador** > **Bomba** i toqueu **Configuració** a la targeta **Medtronic**.
-2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
+2. Poseu **Codificació Medtronic** a **Codificació 4b6b per maquinari**.
 
 ## On trobar ajuda
 
