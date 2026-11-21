@@ -9,7 +9,7 @@
 Это означает, что:
 
 * Android must allow **AAPS** to show notifications and
-* Поскольку **AAPS** неофициальное приложени, то следует дать разрешение для "неизвестных источников" в Android Auto.
+* Поскольку **AAPS** — неофициальное приложение, разрешите в Android Auto использование «неизвестных источников».
 
 ![Данные AAPS CGM на Android Auto](../images/android_auto_01.png)
 
@@ -33,9 +33,9 @@ Please check now that you see the **AAPS** status notification on the phone befo
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## В Android Auto разрешите использоВание "неизВестных источникоВ".
+## В Android Auto разрешите использование «неизвестных источников».
 
-Так как AAPS не является официальным приложением Android Auto, в Android Auto. нужно активировать уведомления из "неизвестных источников". Это делается с помощью режима разработчика, который мы покажем здесь.
+Так как **AAPS** не является официальным приложением Android Auto, в Android Auto нужно включить уведомления из «неизвестных источников». Это делается с помощью режима разработчика, который мы покажем здесь.
 
 Go to your car and connect your mobile with the car's audio system.
 
