@@ -92,7 +92,7 @@ The **Treatments history** screen can be used to correct a faulty carb entry by 
 4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
 5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
 6. Do the same for **IOB** if there is just one line including carbs and insulin.
-7. Если углеводы не удалены должным образом, значение **COB** будет слишком высоким, что может привести к введению слишком большого количества инсулина.
+7. Если углеводы не удалить как нужно, а дополнительные углеводы добавить, как описано в этом разделе, значение **COB** будет слишком высоким, и **AAPS** может ввести слишком много инсулина.
 8. Enter the correct carbs amount through the **Carbs** dialog (**Treatments** → **Carbs**) and set the correct event time.
 9. If there was just one line including carbs and insulin the user should also re-add the amount of insulin. Make sure to set the correct event time and check **IOB** on the main screen after confirming the new entry.
 
