@@ -1,15 +1,15 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Accessing logfiles
+# Accés als fitxers de registre
 
-* Connect phone to a computer in file transfer mode
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note: log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Connecteu el telèfon a un ordinador en mode de transferència de fitxers
+* Busqueu els fitxers de registre al directori de dades d'AAPS, a `Android\data\info.nightscout.androidaps\files`.  
+    El nom de la carpeta arrel de l'emmagatzematge pot variar una mica segons el telèfon.
+* Per a l'[AAPSClient](#RemoteControl_aapsclient), la ubicació és `Android\data\info.nightscout.aapsclient\files`.
+* Note: log location has changed in **AAPS 3.3**. Si cal, consulteu la documentació de les versions anteriors.
 
-![logs](../images/aapslog.png)
+![registres](../images/aapslog.png)
 
 * The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any log viewer Android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Els fitxers de registre anteriors es comprimeixen en zip i es desen en carpetes per ordre de data i hora. 
+* Si compartiu el vostre fitxer de registre a [Discord](https://discord.gg/4fQUWHZ4Mw) per parlar d'un possible error, descomprimiu i pugeu el fitxer amb la data d'abans que passés l'error.
