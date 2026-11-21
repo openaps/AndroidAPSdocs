@@ -1,65 +1,65 @@
 # Compilar l'aplicació AAPS per a Wear OS
 
-The **AAPS** app for a Wear OS smartwatch (the **Wear apk**, `aaps-wear-….apk`) is a separate installation file from the **AAPS** phone app. You need both: the phone app runs the loop, the watch app shows its data and can send commands to it. The watch app is installed from the phone, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+L'aplicació **AAPS** per a un rellotge intel·ligent Wear OS (l'**apk de Wear**, `aaps-wear-….apk`) és un fitxer d'instal·lació separat de l'aplicació **AAPS** del telèfon. Necessiteu totes dues: l'aplicació del telèfon executa el llaç i l'aplicació del rellotge en mostra les dades i li pot enviar ordres. L'aplicació del rellotge s'instal·la des del telèfon, vegeu [Configurar AAPS al vostre rellotge Wear OS](WearOsSmartwatch.md).
 
-The two apps only work together when they match:
+Les dues aplicacions només funcionen juntes si coincideixen:
 
-- **Same AAPS version** on the phone and on the watch.
-- **Same keystore** used to sign both apps.
+- **La mateixa versió d'AAPS** al telèfon i al rellotge.
+- **El mateix magatzem de claus** per signar totes dues aplicacions.
 
-The simplest way to guarantee this is to build both apps **at the same time**, in the same build. The browser build does this for you: every build produces the phone apk and the Wear apk together. With Android Studio or the command line, you build the Wear apk as a second step right after the phone apk.
+La manera més senzilla de garantir-ho és compilar totes dues aplicacions **alhora**, en la mateixa compilació. La compilació al navegador ho fa per vosaltres: cada compilació genera l'apk del telèfon i l'apk de Wear junts. Amb Android Studio o la línia d'ordres, compileu l'apk de Wear com a segon pas just després de l'apk del telèfon.
 
 ```{note}
-Already using **AAPS** on your phone but no Wear apk from the same build? Build both apps again, with the same keystore, and reinstall the phone app too. A Wear apk built months later, or with a different Android Studio version, is unlikely to be compatible with the phone app.
+Ja feu servir **AAPS** al telèfon però no teniu cap apk de Wear de la mateixa compilació? Torneu a compilar totes dues aplicacions, amb el mateix magatzem de claus, i reinstal·leu també l'aplicació del telèfon. Un apk de Wear compilat mesos després, o amb una altra versió d'Android Studio, probablement no serà compatible amb l'aplicació del telèfon.
 ```
 
 ## Versions de Wear OS compatibles
 
-**AAPS** runs on watches with **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer** (Wear OS 4, 5 and 6). Watches with Wear OS 2 are not supported.
+**AAPS** funciona en rellotges amb **Wear OS 3.0, 3.2 o 3.5** (Android 11, nivell d'API 30) **o posterior** (Wear OS 4, 5 i 6). Els rellotges amb Wear OS 2 no són compatibles.
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 30 to 33 (Wear OS 3.0, 3.2, 3.5 and 4).<br>
-Newer Wear OS versions progressively break the AAPS watchfaces — see [Wear OS watch face changes](#wearos-watchface-changes) and the [Wear OS 5 limitations](#BuildingAapsWearOs-WearOS5).
+Els watchfaces d'AAPS estan disponibles per a rellotges intel·ligents Wear OS amb nivell d'API del 30 al 33 (Wear OS 3.0, 3.2, 3.5 i 4).<br>
+Les versions més noves de Wear OS fan que els watchfaces d'AAPS deixin de funcionar a poc a poc: vegeu [Canvis dels watchfaces a Wear OS](#wearos-watchface-changes) i les [limitacions de Wear OS 5](#BuildingAapsWearOs-WearOS5).
 ```
 
 (building-aaps-wear-os-method)=
 
-## Get the Wear apk with your build method
+## Obtenir l'apk de Wear segons el vostre mètode de compilació
 
-Follow the section for the method you use to [build AAPS](../SettingUpAaps/BuildingAaps.md).
+Seguiu la secció del mètode que feu servir per [compilar AAPS](../SettingUpAaps/BuildingAaps.md).
 
 (building-aaps-wear-os-browser)=
 
-### Browser build (recommended)
+### Compilació al navegador (recomanada)
 
-**Nothing extra to do.** Every browser build produces two files from the same source and the same keystore:
+**No cal fer res més.** Cada compilació al navegador genera dos fitxers a partir del mateix codi font i del mateix magatzem de claus:
 
-- `aaps-….apk`: the phone app.
-- `aaps-wear-….apk`: the watch app.
+- `aaps-….apk`: l'aplicació del telèfon.
+- `aaps-wear-….apk`: l'aplicació del rellotge.
 
-The Wear apk follows the [variant](#browserbuild-variant) you selected for the build: `fullRelease` gives the **AAPS Wear** app, `aapsclientRelease` the **AAPSClient Wear** app, `pumpcontrolRelease` the **PumpControl Wear** app. Each Wear app only talks to its matching phone app.
+L'apk de Wear segueix la [variant](#browserbuild-variant) que heu seleccionat per a la compilació: `fullRelease` dona l'aplicació **AAPS Wear**, `aapsclientRelease` l'aplicació **AAPSClient Wear** i `pumpcontrolRelease` l'aplicació **PumpControl Wear**. Cada aplicació de Wear només es comunica amb l'aplicació del telèfon que li correspon.
 
-Where to find the Wear apk:
+On trobar l'apk de Wear:
 
-- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Download it on the phone that runs **AAPS** if you install the watch app from the phone (Wear Installer 2 or Easy Fire Tools), or on your computer if you use ADB.
+- **AAPS Builder**: a la pàgina de compilació, desplaceu-vos cap avall fins a **Artifacts** i descarregueu `aaps-wear-….apk`, al costat de l'aplicació del telèfon, com es mostra a [Pas 5 – Instal·leu l'aplicació al telèfon](#aaps-builder-step5). Descarregueu-lo al telèfon on funciona **AAPS** si instal·leu l'aplicació del rellotge des del telèfon (Wear Installer 2 o Easy Fire Tools), o a l'ordinador si feu servir ADB.
 
   ![Artifacts amb les aplicacions del telèfon i del rellotge](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-- **Fork with Google Drive**: open your Google Drive, folder `AAPS`, then the folder of the version you built. It contains the phone apk and the Wear apk, see [Step 4 – Build the APK](#github-build-apk).
+- **Fork amb Google Drive**: obriu el vostre Google Drive, la carpeta `AAPS` i després la carpeta de la versió que heu compilat. Conté l'apk del telèfon i l'apk de Wear, vegeu [Pas 4: Compileu l'APK](#github-build-apk).
 
   ![Ubicació a Google Drive](../images/update/CI/GitHubActions5.png)
 
-Keep the Wear apk together with the phone apk in your backups. With **AAPS Builder**, the files stay on the build page for 14 days only.
+Deseu l'apk de Wear juntament amb l'apk del telèfon a les vostres còpies de seguretat. Amb **AAPS Builder**, els fitxers només es queden a la pàgina de compilació durant 14 dies.
 
-Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Següent pas: instal·leu l'apk de Wear al rellotge, vegeu [Configurar AAPS al vostre rellotge Wear OS](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-android-studio)=
 
 ### Android Studio
 
-The Wear apk is built like the phone apk, as a second signed build. Do it right after the phone apk, with the same Android Studio version and the same keystore.
+L'apk de Wear es compila com l'apk del telèfon, com una segona compilació signada. Feu-ho just després de l'apk del telèfon, amb la mateixa versió d'Android Studio i el mateix magatzem de claus.
 
-- Follow the instructions for [Android Studio Build](../SettingUpAaps/ComputerBuild.md).
+- Seguiu les instruccions de [Compilació amb Android Studio](../SettingUpAaps/ComputerBuild.md).
 - Quan arribeu a la [selecció del mòdul](#Building-APK-wearapk) a «Compilar l'apk signat d'AAPS», assegureu-vos de seleccionar **`AndroidAPS.wear`**.
 
 ![Mòdul Wear](../images/Building-the-App/wear_build1.png)
@@ -70,13 +70,13 @@ Seleccioneu «**fullRelease**» per generar el fitxer apk d'**AAPS** per a Wear.
 
 Si ho preferiu, podeu compilar **“pumpcontrolRelease”** des del menú desplegable. Així només podreu controlar la bomba a distància, però sense llaç.
 
-Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Següent pas: instal·leu l'apk de Wear al rellotge, vegeu [Configurar AAPS al vostre rellotge Wear OS](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-troubleshooting)=
 
-#### Troubleshooting the Android Studio build
+#### Resolució de problemes de la compilació amb Android Studio
 
-In the process of building the full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. Això causa després errors de [canvis no confirmats](#troubleshooting_androidstudio-uncommitted-changes) quan intenteu compilar la següent aplicació signada, com ara l'aplicació d'**AAPS** per a Wear. La manera més ràpida de resoldre-ho és anar a la carpeta on s'ha compilat l'aplicació AAPS completa. Probablement la vostra carpeta és semblant a:
+Quan es compila l'aplicació **AAPS** completa (i de fet qualsevol aplicació signada), Android Studio genera un fitxer .json a la mateixa carpeta. Això causa després errors de [canvis no confirmats](#troubleshooting_androidstudio-uncommitted-changes) quan intenteu compilar la següent aplicació signada, com ara l'aplicació d'**AAPS** per a Wear. La manera més ràpida de resoldre-ho és anar a la carpeta on s'ha compilat l'aplicació AAPS completa. Probablement la vostra carpeta és semblant a:
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
@@ -84,12 +84,12 @@ Elimineu el fitxer .json que no cal o moveu-lo fora de la carpeta. Després torn
 
 (building-aaps-wear-os-cli)=
 
-### Command line
+### Línia d'ordres
 
-Follow [Build instructions for the command-line](../SettingUpAaps/CLIBuild.md) and repeat the compile and sign steps for the `wear` module, with the same keystore:
+Seguiu les [Instruccions de compilació des de la línia d'ordres](../SettingUpAaps/CLIBuild.md) i repetiu els passos de compilar i signar per al mòdul `wear`, amb el mateix magatzem de claus:
 
 ```sh
 ./gradlew :wear:assembleFullRelease
 ```
 
-The unsigned Wear apk is written under `wear/build/outputs/apk/full/release/`. Sign it with `apksigner` exactly like the phone apk, then install it on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+L'apk de Wear sense signar es desa a `wear/build/outputs/apk/full/release/`. Signeu-lo amb `apksigner` exactament com l'apk del telèfon i després instal·leu-lo al rellotge, vegeu [Configurar AAPS al vostre rellotge Wear OS](WearOsSmartwatch.md).
