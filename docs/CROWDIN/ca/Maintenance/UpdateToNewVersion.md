@@ -1,40 +1,40 @@
-# Update to a new version or branch
+# Actualitzar a una nova versió o branca
 
-## Build yourself instead of download
+## Compileu-la vosaltres mateixos en lloc de descarregar-la
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** no es pot descarregar, per la normativa sobre dispositius mèdics. És legal compilar l'aplicació per al vostre ús propi, però no en podeu donar una còpia a altres persones! Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més detalls.
 
-## Important notes
+## Notes importants
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+- Actualitzeu a la nova versió d'**AAPS** com més aviat millor quan hi hagi una nova versió disponible.
+- Quan hi hagi una nova versió disponible, rebreu un bàner informatiu sobre la nova versió a la mateixa aplicació **AAPS**.
+- La nova versió també s'anunciarà a Facebook quan surti.
+- Quan surti la versió, llegiu amb atenció les [Notes de la versió](ReleaseNotes.md) i aclariu els dubtes amb la comunitat a Facebook o Discord abans de fer l'actualització.
 - Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
 - Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
 
-## Update AAPS with browser build
+## Actualitzar AAPS amb la compilació al navegador
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Ja vau compilar la vostra aplicació AAPS amb un navegador? Seguiu les instruccions del mètode que vau fer servir:
 
-- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
+- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). No hi ha cap fork per sincronitzar.
 - **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Actualitzar AAPS amb Android Studio
 
 Follow [these instructions](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## Actualitzar AAPS amb la línia d'ordres
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Feu servir les [mateixes instruccions](../SettingUpAaps/CLIBuild.md) que quan vau compilar AAPS abans, però descarregueu els canvis nous amb git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
 ## After the update
 
-These steps are the same for every build method. Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+These steps are the same for every build method. Comproveu a les [Notes de la versió](../Maintenance/ReleaseNotes.md) si hi ha instruccions específiques després de l'actualització.
 
-After you installed the new apk:
+Després d'instal·lar el nou apk:
 
 - you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
 - make sure you have imported your settings; and
