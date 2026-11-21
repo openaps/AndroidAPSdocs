@@ -160,29 +160,29 @@ Due to the influence of zero-temping explained above and the formula used for IO
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Deoarece rata bazală are o influență indirectă asupra scăderii IOB în AAPS, o rată bazală prea mare poate ascunde un DIA prea lung, și invers. De aceea, este bine să reglați mai întâi cu atenție ratele bazale, înainte de a modifica DIA și vârful. În plus, țineți cont că setările DIA și vârf se influențează reciproc: efectul DIA depinde de vârf, și invers.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Aceste grafice arată impactul exact al DIA și al vârfului asupra curbelor IOB, pe tot intervalul de valori permise.
 
-Adjusting DIA:
+Modificarea DIA:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Modificarea vârfului:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+În final, o comparație în care DIA și vârful sunt modificate în paralel. Logica este că ambele valori sunt modificate în aceeași proporție, astfel încât `49/35 ~ 7/5`. Sau, în mod similar, `120/93 ~ 9/7`. Intervalele vor fi constante indiferent de DIA sau vârful de pornire, atât timp cât modificarea relativă este aceeași pentru ambele.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Rețineți că atunci când DIA și vârful sunt modificate în acest fel, fiecare punct al curbei se deplasează cu aceeași proporție.
 
 ````
 
