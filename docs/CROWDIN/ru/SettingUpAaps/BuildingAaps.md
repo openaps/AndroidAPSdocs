@@ -2,15 +2,15 @@
 
 ## Постройте сами вместо скачивания
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается!**
+**Приложение AAPS (файл apk) недоступно для скачивания из-за правил, связанных с медицинскими устройствами. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Подробности смотрите на странице [Часто задаваемые вопросы по работе ИПЖ](../UsefulLinks/FAQ.md).
 
 ---
 
-Three methods are available to build the AAPS app:
+Есть три способа собрать приложение AAPS:
 
-### Build with a browser (recommended)
+### Сборка через браузер (рекомендуется)
 
 You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
 
@@ -18,17 +18,17 @@ You can build the app in a web browser using GitHub Actions. From an Android pho
 
 ----
 
-### Build with Android Studio
+### Сборка в Android Studio
 
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
+Вы можете собрать приложение на своем компьютере с помощью Android Studio. Раньше это был единственный способ сборки, сейчас Android Studio используют в основном разработчики, которые хотят менять код.
 
 **[Follow these instructions.](./ComputerBuild.md)**
 
 ----
 
-### Build using the command-line
+### Сборка из командной строки
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Этот способ для тех, кто хочет собрать AAPS в командной строке на своем компьютере, без установки Android Studio.
 
 **[Follow these instructions.](./CLIBuild.md)**
 
