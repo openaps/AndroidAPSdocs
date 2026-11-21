@@ -136,7 +136,7 @@ Os detalhes são publicados pelo Google nas páginas de [verificação de desenv
 
 ### Isso me afeta?
 
-- **Compilar o AAPS não é afetado de forma alguma.** A [compilação no navegador](#browser-build), a [compilação com o Android Studio](ComputerBuild.md) e a [compilação pela linha de comando (CLI)](CLIBuild.md) funcionam exatamente como antes, e a sua keystore não muda.
+- **Compilar o AAPS não é afetado de forma alguma.** A [compilação no navegador](#browser-build), a [compilação no Android Studio](ComputerBuild.md) e a [compilação pela linha de comando (CLI)](CLIBuild.md) funcionam exatamente como antes, e a sua keystore não muda.
 - **O seu AAPS atual continua funcionando.** A verificação só é feita ao instalar ou atualizar um app.
 - **Se você mora no Brasil, Indonésia, Singapura ou Tailândia:** a partir de 30 de setembro de 2026, a verificação é aplicada para apps instalados a partir do Google Play e de algumas outras lojas de apps. O Google afirma que a instalação direta de um arquivo APK não está incluída nesta primeira etapa, então o **AAPS** ainda deve ser instalado normalmente. Mesmo assim, prepare agora um dos [métodos gratuitos de instalação](#android-developer-verification-free-methods) abaixo, para não ser pego de surpresa se isso mudar.
 - **Se você mora em qualquer outro lugar:** nada muda para você antes de 2027, e não fazer nada por enquanto é uma escolha válida. Mas configure um dos [métodos gratuitos de instalação](#android-developer-verification-free-methods) abaixo enquanto nada está quebrado: descobrir o bloqueio no dia em que uma atualização é recusada, com a espera de 24 horas do [fluxo avançado](#android-developer-verification-advanced-flow) pela frente, é o momento errado.
