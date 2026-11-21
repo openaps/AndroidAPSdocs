@@ -160,29 +160,29 @@ Due to the influence of zero-temping explained above and the formula used for IO
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Poiché in AAPS la velocità basale influisce in modo indiretto sulla diminuzione dell'IOB, velocità basali troppo alte possono nascondere un DIA troppo alto, e viceversa. Conviene quindi regolare prima con attenzione le velocità basali, e solo dopo modificare il DIA e il picco. Considera anche che le impostazioni DIA e picco si influenzano a vicenda: l'effetto del DIA dipende dal picco, e viceversa.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Questi grafici mostrano l'effetto esatto del DIA e del picco sulle curve dell'IOB, su tutto l'intervallo di valori consentiti.
 
-Adjusting DIA:
+Modifica del DIA:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Modifica del picco:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Infine, un confronto in cui DIA e picco vengono modificati insieme. L'idea è che i due valori cambiano nella stessa proporzione, così che `49/35 ~ 7/5`. Allo stesso modo, `120/93 ~ 9/7`. Gli intervalli restano uguali qualunque siano il DIA o il picco di partenza, purché la variazione relativa sia la stessa per entrambi.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Quando DIA e picco vengono modificati in questo modo, ogni punto della curva si sposta nella stessa proporzione.
 
 ````
 
