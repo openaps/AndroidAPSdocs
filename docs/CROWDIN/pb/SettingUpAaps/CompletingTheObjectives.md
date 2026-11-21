@@ -39,7 +39,7 @@ O **Objetivo 1** pede que o usuário faça a configuração técnica básica no 
 - Se você usa o Tidepool:
   - Siga as instruções da página [Tidepool](../SettingUpAaps/Tidepool.md) para garantir que o **Tidepool** possa receber e mostrar os dados do **AAPS**.
 
-Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Observação: *Talvez você precise esperar a próxima leitura de glicose do sensor chegar antes que o **AAPS** a reconheça.*
 
 (objectives-objective2)=
 ## Objetivo 2: Aprenda como controlar o AAPS
@@ -51,7 +51,7 @@ O **Objetivo 2** pede que várias ‘tarefas’ sejam feitas, como mostra a capt
 As tarefas para concluir o **Objetivo 2** são:
 - Defina o seu **Perfil** como 90% por 10 min.
   - _Dica_: toque no nome do seu perfil na tela principal para abrir a tela **Perfil**, depois use o botão **Ativar** (▶) e defina a porcentagem e a duração. Mais informações em [Troca de perfil e porcentagem do perfil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Observação_: o **AAPS** não aceita taxas basais abaixo de 0,05 U/h. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Volte ao seu **Perfil** normal depois de concluir esta tarefa.
+  - _Observação_: o **AAPS** não aceita taxas basais abaixo de 0,05 U/h. Se o seu **Perfil** tem taxas de 0,05 U/h ou menos, você precisa criar um **Perfil** temporário com taxas basais mais altas antes de concluir esta tarefa. Volte ao seu **Perfil** normal depois de concluir esta tarefa.
 - Simule "tomar um banho" [desconectando a sua bomba](#AapsScreens-loop-status) no **AAPS** por 1 h.
   - _Dica_: toque no ícone do loop na tela principal para abrir o diálogo do Loop e escolha uma duração em **Desconectar bomba**.
 - Termine o "banho" reconectando a sua bomba.
@@ -119,7 +119,7 @@ Talvez você queira definir o [alvo de glicose do seu **Perfil**](#profile-gluco
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Se você está usando o loop aberto com uma bomba virtual, **pare aqui**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+Se você está usando o loop aberto com uma bomba virtual, **pare aqui**. Só toque em **Verificar** no final deste **Objetivo** depois de passar a usar uma bomba "real", que administra insulina.
 
 ```
 
@@ -167,14 +167,14 @@ Tempo mínimo para concluir este objetivo: **1 dia**. Este é um tempo de espera
 
 - Selecione **Loop Fechado** tocando no [ícone do Loop](#AapsScreens-loop-status) na tela principal e escolhendo **Loop Fechado** como modo de operação. Fique em **Loop Fechado** por um período de 1 dia.
 
-- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Aumente devagar o seu 'Max IOB para SMB' (no OpenAPS chamado 'max-iob') acima de 0, até encontrar as configurações que funcionam melhor para você.
 
 A recomendação padrão para esta configuração é “**bólus médio de refeição + 3x a basal diária máxima**”, em que “basal diária máxima” é o maior valor por hora em qualquer período do dia.
 
 ![basal diária máxima](../images/MaxDailyBasal2.png)
 
 Veja esta recomendação como um ponto de partida. Se você usar esta regra, mas o AAPS administrar insulina demais quando a glicose sobe, talvez você precise:
-* lower the "Max IOB for SMB" value;
+* reduzir o valor de "Max IOB para SMB";
 * revise as configurações do seu **Perfil**, fazendo apenas um ajuste de cada vez.
 
 Ou, se você for muito resistente à insulina, aumente o valor de **maxIOB** com muito cuidado.
