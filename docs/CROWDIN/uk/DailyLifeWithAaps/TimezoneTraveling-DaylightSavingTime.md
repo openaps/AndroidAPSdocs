@@ -76,7 +76,7 @@ Insight також записує в історію момент зміни ча
 
 Зміна часового поясу не пошкоджує історію, лише TDD може бути неточною. Ручна зміна часу на телефоні може спричинити проблеми з історією та **IOB**. Якщо ви змінюєте час вручну, двічі перевірте **IOB**.
 
-When the time zone or time changes running **TBRs** are stopped.
+Коли змінюється часовий пояс або час, активні **TBR** зупиняються.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ When the time zone or time changes running **TBRs** are stopped.
 
 ### Літній час для Omnipod Dash
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. УВАГА: ЦЕЙ ВАРІАНТ МОЖЕ СПРИЧИНИТИ ПЕРЕДЧАСНЕ ЗАВЕРШЕННЯ ТЕРМІНУ ДІЇ ВАШОГО ПОДА. ЯКЩО ВИ ВИБИРАЄТЕ ЦЮ ФУНКЦІЮ, МАЙТЕ ПРИ СОБІ ЗАПАСНІ МАТЕРІАЛИ.
+* Або дозвольте **AAPS** тимчасово перейти на фоновий базал після переходу на літній час, як описано вище.
+* Або, якщо ви не хочете, щоб **AAPS** вночі тимчасово переходив на фоновий базал, можна змінити часовий пояс за день до переходу на літній час, щоб уникнути збоїв уночі. УВАГА: ЦЕЙ ВАРІАНТ МОЖЕ СПРИЧИНИТИ ПЕРЕДЧАСНЕ ЗАВЕРШЕННЯ ТЕРМІНУ ДІЇ ВАШОГО ПОДА. ЯКЩО ВИ ВИБИРАЄТЕ ЦЮ ФУНКЦІЮ, МАЙТЕ ПРИ СОБІ ЗАПАСНІ МАТЕРІАЛИ.
 
 #### Що зробити перед переведенням годинника
 
@@ -129,6 +129,6 @@ When the time zone or time changes running **TBRs** are stopped.
 
 3. В **AAPS** оновіть стан помпи й перемкніться на потрібний **Профіль**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. Перевірте **IOB** і **COB** в **AAPS**, і якщо вони неточні, вимкніть **Петлю** щонайменше на один DIA або на максимальний час засвоєння вуглеводів (**Максимальний час засвоєння**), залежно від того, що довше.
 
 5. Що зробити після переведення годинника. Повертатися до місцевого часового поясу краще, коли **IOB** низький. Наприклад, за годину до їжі, як-от сніданку. В ідеалі ваші **COB** та **IOB** мають бути близькі до нуля.
