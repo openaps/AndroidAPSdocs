@@ -77,7 +77,7 @@
 ### Пароль по умолчанию
 
 * Для DanaRS с прошивкой v1 и v2 пароль по умолчанию 1234.
-* Для DanaRS с прошивкой v3 или Dana-i пароль по умолчанию зависит от даты изготовления и вычисляется как MMDD, где MM - это день месяца и DD, i)помпа изготовлена ( например '0124' - месяц 01 и день 24).
+* Для DanaRS с прошивкой v3 или Dana-i пароль по умолчанию зависит от даты изготовления и вычисляется как MMDD, где MM – месяц, а DD – день изготовления помпы (например, '0124' означает месяц 01 и день 24).
     
     * В разделе MAIN MENU выберите REVIEW, затем откройте SHIPPING INFORMATION из подменю
     * Number 3 is manufacturing date. 
@@ -96,13 +96,13 @@
     
     ![Меню настроек DanaRS](../images/DanaRSPW_02_OptionMenu.png)
 
-* При помощи кнопки со стрелкой переместитесь вниз до " 11. пароль "
+* При помощи кнопки со стрелкой переместитесь вниз до "11. пароль "
     
     ![DanaRS 11. Пароль](../images/DanaRSPW_03_11PW.png)
 
 * Нажмите OK, чтобы ввести старый пароль.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* Введите **старый пароль** (пароль по умолчанию см. [выше](#DanaRS-Insulin-Pump-default-password)) и нажмите OK
     
     ![Ввод старого пароля](../images/DanaRSPW_04_11PWenter.png)
 
@@ -118,7 +118,7 @@
     
     ![DanaRS сохранить новый пароль](../images/DanaRSPW_06_PWnewSave.png)
 
-* Переместитесь вниз до "14. EXIT " и нажмите кнопку OK.
+* Переместитесь вниз до "14. EXIT" и нажмите OK, чтобы выйти.
     
     ![Выход DanaRS](../images/DanaRSPW_07_Exit.png)
 
@@ -147,13 +147,13 @@
 ### DanaRS v1
 
 * **Вручную выполните сопряжение** Dana RS с новым телефоном
-* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Поэтому новый телефон и помпа должны сопрягатся вручную.
+* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Поэтому новый телефон и помпу нужно сопрячь вручную.
 * Установите AAPS на новом телефоне.
 * [Импортируйте настройки](../Maintenance/ExportImportSettings.md) на новом телефоне
 
 ### DanaRS v3, Dana-i, Dana-i2
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
+* Начните сопряжение, как описано [выше](#DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
 
 ## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
