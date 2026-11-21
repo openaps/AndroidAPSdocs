@@ -59,7 +59,7 @@ El llaç tancat només és possible si sou a l'**[Objectiu 7](#objectives-object
 - Un canvi de cànula o un canvi de perfil restableix la ràtio d'Autosens al 100% (un canvi de perfil percentual amb durada no restableix l'Autosens).
 - Autosens ajusta la vostra basal i l'ISF (és a dir, imita el que fa un desplaçament del perfil).
 - Si mengeu carbohidrats de manera contínua durant un període llarg, Autosens serà menys eficaç durant aquest període, perquè els carbohidrats s'exclouen del càlcul de la delta de **glucèmia**.
-- The deviations are converted into a **sensitivity ratio** (a percentage): a ratio below 100% means AAPS thinks you're more sensitive to insulin than your **Profile** assumes (so it lowers effective basal and raises the ISF value), while a ratio above 100% means you're more resistant (so it raises basal and lowers the ISF value).
+- Les desviacions es converteixen en una **ràtio de sensibilitat** (un percentatge): una ràtio per sota del 100% vol dir que AAPS creu que sou més sensibles a la insulina del que suposa el vostre **Perfil** (per això baixa la basal efectiva i puja el valor de l'ISF), i una ràtio per sobre del 100% vol dir que sou més resistents (per això puja la basal i baixa el valor de l'ISF).
 - Per defecte, aquesta ràtio es manté entre 0,7 (70%, més sensible) i 1,2 (120%, més resistent), de manera que una sèrie de dades poc habituals no pot allunyar massa la dosificació del vostre **Perfil**. Aquests límits es poden ajustar a la configuració avançada de la Detecció de sensibilitat.
 - Autosens i [Autotune](../AdvancedOptions/Autotune.md) tracten el mateix problema de fons en escales de temps diferents: Autosens ajusta la vostra dosificació *en directe* minut a minut a partir de les últimes 8–24 h, mentre que Autotune reescriu a poc a poc el vostre mateix *Perfil* a partir de setmanes d'historial. És normal i esperat fer servir tots dos: es complementen, no es dupliquen.
 
@@ -73,7 +73,7 @@ El llaç tancat només és possible si sou a l'**[Objectiu 7](#objectives-object
 
 Gràcies a l'SMB, per a àpats amb només carbohidrats «lents» pot ser suficient indicar al sistema la quantitat de carbohidrats prevista i deixar la resta a **AAPS**. Però això pot provocar pics postprandials (després dels àpats) més alts, perquè no és possible fer un prebolus. O podeu administrar, si cal amb un prebolus, un **bolus inicial** que cobreixi **només una part** dels carbohidrats (per exemple, 2/3 de la quantitat estimada) i deixar que l'**SMB** lliuri la resta de la insulina.
 
-![SMBs on the IOB graph](../images/SMBs.png)
+![SMB al gràfic d'IOB](../images/SMBs.png)
 
 Els SMB es mostren al [gràfic d'IOB](#aaps-screens-iob) amb triangles blaus. [Manteniu premut](#aaps-screens-graph-press-and-hold) el gràfic sobre un triangle per veure quanta insulina s'ha lliurat, o feu servir l'[historial de Tractaments](#aaps-screens-treatments).
 
@@ -103,7 +103,7 @@ A continuació es descriu la configuració d'OpenAPS SMB.
 
 (Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
-### Maximum basal rate
+### Taxa basal màxima
 
 Aquesta configuració de seguretat determina la taxa basal temporal màxima que pot lliurar la bomba d'insulina. També es coneix com a **max-basal**.
 
@@ -125,7 +125,7 @@ Per exemple, si la taxa basal més alta del vostre perfil fos 0,5 U/h, podríeu 
 
 (Open-APS-features-maximum-total-iob-openaps-cant-go-over)=
 
-### Max IOB for SMB
+### IOB màxima per a SMB
 
 Aquest valor determina la quantitat màxima d'**insulina a bord** (IOB de basal i de bolus) per sota de la qual es manté **AAPS** quan funciona en mode de llaç tancat. També es coneix com a **maxIOB**.
 
@@ -190,9 +190,9 @@ Quan s'activa, hi ha configuracions noves disponibles.
 
 Si aquesta configuració està activada, els **SMB** es continuen lliurant encara que l'usuari hagi seleccionat un **Objectiu temporal** alt (definit com a 100 mg/dl o 5,6 mmol/l o més, sigui quin sigui l'objectiu del **Perfil**). Aneu amb compte quan l'activeu: els **SMB** poden ser massa agressius si la vostra configuració no està ben ajustada o si el vostre **Perfil** canvia sovint (per exemple, en infants).
 
-When this setting is disabled, a high **Temp Target** turns **SMBs** off. Per exemple, si aquesta opció està desactivada, els **SMB** es poden desactivar posant un **Objectiu temporal** de 100 mg/dl o 5,6 mmol/l o més. Aquesta opció també desactiva els **SMB** encara que una altra condició intenti activar l'SMB, excepte amb un **Objectiu temporal** baix com **Menjar aviat** (o qualsevol **Objectiu temporal** de 98 mg/dl o 5,4 mmol/l o menys), que encara pot lliurar **SMB** per portar la **glucèmia** cap a l'objectiu.
+Quan aquesta configuració està desactivada, un **Objectiu temporal** alt desactiva els **SMB**. Per exemple, si aquesta opció està desactivada, els **SMB** es poden desactivar posant un **Objectiu temporal** de 100 mg/dl o 5,6 mmol/l o més. Aquesta opció també desactiva els **SMB** encara que una altra condició intenti activar l'SMB, excepte amb un **Objectiu temporal** baix com **Menjar aviat** (o qualsevol **Objectiu temporal** de 98 mg/dl o 5,4 mmol/l o menys), que encara pot lliurar **SMB** per portar la **glucèmia** cap a l'objectiu.
 
-This setting does not turn **SMB** on by itself. With a high temp target, **SMB** is only given if one of the other settings below (for example **Enable SMB always** or **Enable SMB with COB**) also allows it.
+Aquesta configuració no activa l'**SMB** per si sola. Amb un objectiu temporal alt, l'**SMB** només es dona si una de les altres configuracions de més avall (per exemple **Activar SMB sempre** o **Activar SMB amb COB**) també ho permet.
 
 (Open-APS-features-enable-smb-always)=
 
@@ -229,7 +229,7 @@ Aquesta configuració no es veu si «Activar SMB sempre» està activat.
 
 #### Interval d'SMB
 
-Aquesta funció limita la freqüència dels SMB. Aquest valor determina el temps mínim entre SMB. Tingueu en compte que el llaç s'executa cada vegada que arriba un valor de glucèmia (normalment cada 5 minuts). Subtract 2 minutes to give loop additional time to complete. Per exemple, si voleu que es doni un SMB a cada execució del llaç, poseu-hi 3 minuts.
+Aquesta funció limita la freqüència dels SMB. Aquest valor determina el temps mínim entre SMB. Tingueu en compte que el llaç s'executa cada vegada que arriba un valor de glucèmia (normalment cada 5 minuts). Resteu-hi 2 minuts perquè el llaç tingui temps addicional per acabar. Per exemple, si voleu que es doni un SMB a cada execució del llaç, poseu-hi 3 minuts.
 
 Valor per defecte: 3 min.
 
@@ -251,7 +251,7 @@ Aquesta configuració permet ajustar la força de l'SMB durant l'UAM, quan ja no
 
 Valor per defecte: el mateix que **Màxim de minuts de basal per limitar l'SMB**.
 
-This setting is only visible if "Enable SMB" and "Enable UAM" are switched on.
+Aquesta configuració només es veu si «Activar SMB» i «Activar UAM» estan activats.
 
 (enable-uam)=
 
@@ -277,7 +277,7 @@ En qualsevol cas, els carbohidrats necessaris es mostren a la secció COB de la 
 
 Per a la referència completa dels paràmetres (incloses configuracions que no es tracten aquí), vegeu la [documentació d'OpenAPS sobre preferències i configuració de seguretat](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Això ajuda **AAPS** a ser més estable amb fonts de dades sorolloses com xDrip i Libre.
+**Utilitzar sempre la delta mitjana curta** Si activeu aquesta funció, **AAPS** fa servir la delta mitjana curta de la glucèmia dels últims 15 minuts, que normalment és la mitjana dels tres últims valors. Això ajuda **AAPS** a ser més estable amb fonts de dades sorolloses com xDrip i Libre.
 
 **Multiplicador de seguretat diari màxim** Aquest és un límit de seguretat important. El valor per defecte (que difícilment caldrà canviar) és 3. Això vol dir que **AAPS** mai no podrà posar una taxa basal temporal superior a 3 vegades la taxa basal horària més alta programada a la bomba i/o al perfil de l'usuari. Exemple: si la vostra taxa basal més alta és 1,0 U/h i el multiplicador de seguretat diari màxim és 3, **AAPS** pot posar una taxa basal temporal màxima de 3,0 U/h (= 3 x 1,0 U/h).
 
@@ -308,7 +308,7 @@ Després de seleccionar-lo, la seva **Configuració** conté la configuració d'
   - mentre la glucèmia és **per sobre de l'objectiu**, l'ISF es fa més fort;
   - un pes **postprandial** i un pes de **durada** actuen després dels àpats i quan la glucèmia es manté alta durant molt de temps.
 - **Ràtio de lliurament d'SMB** (amb un mínim, un màxim i un rang de glucèmia): quina part de la insulina necessària es pot lliurar com a SMB.
-- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minutes by default) may be exceeded. El valor per defecte 1 no canvia res; es pot arribar fins a 5. Augmenteu aquest valor experimental a poc a poc i amb prudència.
+- **Extensió màxima del rang d'SMB**: per quin factor es pot superar el límit habitual de mida de l'SMB ([màxim de minuts de basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), 30 minuts per defecte). El valor per defecte 1 no canvia res; es pot arribar fins a 5. Augmenteu aquest valor experimental a poc a poc i amb prudència.
 - **Percentatge del llindar d'IOB**: el percentatge de l'IOB màxima per sobre del qual es desactiven els SMB.
 
     {admonition} Només per a usuaris experimentats
@@ -323,7 +323,7 @@ AMA, l'abreviatura d'«advanced meal assist» (assistència avançada als àpats
 
 Trobareu més informació a la [documentació d'OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Maximum basal rate (OpenAPS "max-basal")
+### Taxa basal màxima (OpenAPS «max-basal»)
 
 Aquesta configuració de seguretat evita que **AAPS** pugui donar mai una taxa basal perillosament alta i limita la taxa basal temporal a x U/h. Es recomana posar-hi un valor raonable. Una bona recomanació és agafar la taxa basal més alta del vostre perfil i multiplicar-la per 4, i com a mínim per 3. Per exemple, si la taxa basal més alta del vostre perfil és 1,0 U/h, podríeu multiplicar-la per 4 per obtenir un valor de 4 U/h i posar 4 com a paràmetre de seguretat.
 
@@ -339,11 +339,11 @@ Els paràmetres fixos a **AAPS** són:
 
 *Vegeu també la [visió general dels límits fixos](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Max IOB for AMA
+### IOB màxima per a AMA
 
-This parameter limits the maximum of basal IOB where **AAPS** still works. Si l'IOB és més alta, deixa de donar insulina basal addicional fins que l'IOB de basal torna a estar per sota del límit.
+Aquest paràmetre limita l'IOB de basal màxima amb la qual **AAPS** encara funciona. Si l'IOB és més alta, deixa de donar insulina basal addicional fins que l'IOB de basal torna a estar per sota del límit.
 
-The default value is 2, but you should raise this parameter slowly to see how much it affects you and which value fits best. It is different for everyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age. El «límit fix» de maxIOB és més baix amb AMA que amb SMB.
+El valor per defecte és 2, però hauríeu de pujar aquest paràmetre a poc a poc per veure com us afecta i quin valor us va millor. És diferent per a cada persona i també depèn de la dosi diària total (TDD) mitjana. Per seguretat, hi ha un límit, que depèn de l'edat del pacient. El «límit fix» de maxIOB és més baix amb AMA que amb SMB.
 
 - Infant: 3
 - Adolescent: 5
@@ -366,7 +366,7 @@ Si teniu aquesta opció activada, autosens també pot ajustar els objectius (a m
 - Normalment no cal canviar la configuració d'aquest diàleg!
 - Si igualment la voleu canviar, assegureu-vos que enteneu el que feu: vegeu la referència completa dels paràmetres a la [documentació d'OpenAPS sobre preferències i configuració de seguretat](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html).
 
-**Always use short average delta instead of simple delta** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. Això ajuda **AAPS** a funcionar de manera més estable amb fonts de dades sorolloses com xDrip i Libre.
+**Utilitzar sempre la delta mitjana curta** Si activeu aquesta funció, **AAPS** fa servir la delta mitjana curta de la glucèmia dels últims 15 minuts, que normalment és la mitjana dels tres últims valors. Això ajuda **AAPS** a funcionar de manera més estable amb fonts de dades sorolloses com xDrip i Libre.
 
 **Multiplicador de seguretat diari màxim** Aquest és un límit de seguretat important. El valor per defecte (que difícilment caldrà canviar) és 3. Això vol dir que **AAPS** mai no podrà posar una taxa basal temporal superior a 3 vegades la taxa basal horària més alta programada a la bomba de l'usuari. Exemple: si la vostra taxa basal més alta és 1,0 U/h i el multiplicador de seguretat diari màxim és 3, **AAPS** pot posar una taxa basal temporal màxima de 3,0 U/h (= 3 x 1,0 U/h).
 
