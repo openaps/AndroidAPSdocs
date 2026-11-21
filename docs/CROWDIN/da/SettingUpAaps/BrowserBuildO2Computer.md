@@ -1,19 +1,19 @@
 (aaps-ci-option2-computer)=
 
-# Option 2 · Computer – Upload your existing keystore
+# Mulighed 2 · Computer – Upload dit eksisterende keystore
 
 ```{note}
-[Option 2](BrowserBuildO2.md) (upload an existing keystore) on a **computer** (Windows / Mac / Linux).
+[Mulighed 2](BrowserBuildO2.md) (upload et eksisterende keystore) på en **computer** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Download forberedelsesfilen
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and upload the keystore
+## 2. Start en lokal server, og upload keystoret
 
-Use a computer (supports Windows/Mac/Linux)
+Brug en computer (Windows/Mac/Linux understøttes)
 
 <!--crowdin: exclude-->
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -28,23 +28,23 @@ Use a computer (supports Windows/Mac/Linux)
   </div>
 </div>
 
-Install Simple Web Server<br/><br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store. If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
+Installer Simple Web Server<br/><br/> Hvis du bruger Windows eller Mac, kan du installere den fra Microsoft Store eller Mac App Store. Hvis din browser spørger, om den skal åbne butiksappen, så tillad det.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/><br/>
 
-Example on Mac:
+Eksempel på Mac:
 
 - get → install → open<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
-- Click Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
+- Klik på Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- Click New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
+- Klik på New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
-- In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
+- Vælg i Folder Path den mappe, hvor aaps-ci-preparation.html ligger, og klik derefter på Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
-- Seeing this screen means the server has been started.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
+- Når du ser denne skærm, er serveren startet.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Do not close Simple Web Server. Please switch to your browser and open<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Luk ikke Simple Web Server. Skift til din browser, og åbn<br/><br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 2 minutes 18 seconds.<br/><br/>
+- Se videoen nedenfor fra 2 minutter og 18 sekunder for de næste trin.<br/><br/>
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -60,4 +60,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Næste: [Trin 3 – Giv adgang til Google Drive](BrowserBuildGoogleDrive.md) →**
