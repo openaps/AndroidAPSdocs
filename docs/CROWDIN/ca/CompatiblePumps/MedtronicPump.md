@@ -1,242 +1,242 @@
-# Medtronic Pumps
+# Bombes Medtronic
 
-The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
+El controlador no funciona amb cap model més nou, inclosos tots els models que acaben en G (530G, sèrie 600 [630G, 640G, 670G], sèrie 700 [770G, 780G], etc.).
 
-The following model and firmware combinations are compatible:
+Aquestes combinacions de model i firmware són compatibles:
 
-- 512/712 (any firmware version)
-- 515/715 (any firmware version)
-- 522/722 (any firmware version)
-- 523/723 (firmware 2.4A or lower)
-- 554/754 EU release (firmware 2.6A or lower)
-- 554/754 Canada release (firmware 2.7A or lower)
+- 512/712 (qualsevol versió de firmware)
+- 515/715 (qualsevol versió de firmware)
+- 522/722 (qualsevol versió de firmware)
+- 523/723 (firmware 2.4A o inferior)
+- 554/754 versió europea (firmware 2.6A o inferior)
+- 554/754 versió canadenca (firmware 2.7A o inferior)
 
-You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+Podeu veure com comprovar el firmware de les bombes a la [documentació d'OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) o a [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
-    {contents} Table of contents
+    {contents} Taula de continguts
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Capacitats de la bomba amb AAPS
 
-* Requires a RileyLink-compatible device to communicate with **AAPS**.
-* Automatic DST and timezone handling.
+* Cal un dispositiu compatible amb RileyLink per comunicar-se amb **AAPS**.
+* Gestió automàtica de l'horari d'estiu i del fus horari.
 
-## Hardware and software requirements
+## Requisits de maquinari i programari
 
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **Telèfon:** El controlador de Medtronic hauria de funcionar amb qualsevol telèfon Android que admeti connexions Bluetooth. **IMPORTANT: Cada fabricant de telèfons implementa el Bluetooth de manera diferent, per això cada model de telèfon es pot comportar de manera diferent. Per exemple, alguns telèfons gestionen d'una altra manera l'activació i la desactivació del Bluetooth. Això pot afectar l'experiència de l'usuari quan AAPS s'ha de tornar a connectar al vostre dispositiu de tipus RileyLink.**
+- **Dispositiu compatible amb RileyLink:** els telèfons Android no es poden comunicar amb les bombes Medtronic sense un dispositiu a part que gestioni la comunicació. Aquest dispositiu es connecta amb el vostre telèfon per Bluetooth i amb la vostra bomba per una connexió de ràdio compatible. El primer dispositiu d'aquest tipus es deia RileyLink, però ara hi ha altres opcions que poden oferir funcions addicionals.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - RileyLink disponible a [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - OrangeLink disponible a [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - EmaLink (diversos models) disponible a [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (cal una mica més de feina pròpia, DIY): detalls a [github.com](https://github.com/ecc1/gnarl)
 
-A comparison chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+Podeu trobar una taula comparativa dels diferents dispositius compatibles amb RileyLink a [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
-## Configuration of the pump
+## Configuració de la bomba
 
-The following settings should be configured on the pump in order for AAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
+Cal configurar aquestes opcions a la bomba perquè AAPS hi pugui enviar ordres a distància. Per a cada opció, entre parèntesis es mostren els passos per fer el canvi en una Medtronic 715. Els passos exactes poden variar segons el tipus de bomba i/o la versió del firmware.
 
-- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as 111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
-- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. The maximum value permitted by the pump is 25.
-- **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AAPS will manage different profiles on your phone. No other patterns are required.
-- **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Select Absolute (not Percent).
+- **Activeu el mode remot a la bomba** (a la bomba, premeu Act i aneu a Utilities -> Remote Options, seleccioneu On i a la pantalla següent feu Add ID i afegiu qualsevol identificador a l'atzar, per exemple 111111). Cal com a mínim un identificador a la llista Remote ID perquè la bomba accepti la comunicació remota.
+- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. El valor màxim que permet la bomba és de 34,9 unitats per hora.
+- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. El valor màxim que permet la bomba és 25.
+- **Poseu el perfil a Standard**. (A la bomba, premeu Act i aneu a Basal i després a Select Patterns.) La bomba només necessita un perfil, perquè AAPS gestiona els diferents perfils al vostre telèfon. No calen altres patrons.
+- **Configureu el tipus de taxa basal temporal** (a la bomba, premeu Act i aneu a Basal i després a Temp Basal Type). Seleccioneu Absolute (no Percent).
 
-## Medtronic Configuration of Phone/AAPS
+## Configuració del telèfon/AAPS per a Medtronic
 
-- **Do not pair RileyLink compatible device with the Bluetooth menu on your phone.** Pairing via the Bluetooth menu on your phone will stop AAPS from seeing your Rileylink Compatible device when you follow the instructions below.
-- Disable automatic screen rotation on your phone. On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
-- There are two ways to configure your Medtronic pump in AAPS:
+- **No emparelleu el dispositiu compatible amb RileyLink des del menú Bluetooth del telèfon.** Si l'emparelleu des del menú Bluetooth del telèfon, AAPS no podrà veure el vostre dispositiu compatible amb RileyLink quan seguiu les instruccions de més avall.
+- Desactiveu la rotació automàtica de la pantalla al vostre telèfon. En alguns dispositius, la rotació automàtica de la pantalla fa reiniciar les sessions Bluetooth, i això causaria problemes amb la vostra bomba Medtronic. 
+- Hi ha dues maneres de configurar la vostra bomba Medtronic a AAPS:
 
-1. Using the setup wizard as part of a fresh install
-2. In **Configuration** > **Pump**, by selecting **Medtronic**
+1. Fer servir l'assistent de configuració en una instal·lació nova
+2. A **Configurador** > **Bomba**, seleccionant **Medtronic**
     
-    ![Configuration > Pump with the Medtronic plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+    ![Configurador > Bomba amb el plugin Medtronic](../images/v4/Configuration/configuration_pump_list_3.png)
     
-    Once it is selected, the **Medtronic** card shows two buttons, **Settings** and **Open plugin**:
+    Quan està seleccionat, la targeta **Medtronic** mostra dos botons, **Configuració** i **Obrir plugin**:
     
-    ![The Medtronic plugin selected in Configuration > Pump](../images/v4/Pumps/medtronic_enabled.png)
+    ![El plugin Medtronic seleccionat a Configurador > Bomba](../images/v4/Pumps/medtronic_enabled.png)
     
-    **Settings** opens the settings of the Medtronic driver:
+    **Configuració** obre la configuració del controlador de Medtronic:
     
-    ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
+    ![Configuració del controlador de Medtronic](../images/v4/Pumps/medtronic_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+    **Obrir plugin** (o **Gestionar** > **Bomba**) obre la pantalla de la bomba Medtronic. Abans d'emparellar una bomba, es veu així:
     
-    ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
+    ![Pantalla de la bomba Medtronic abans d'emparellar](../images/v4/Pumps/medtronic_pump_screen.png)
 
-When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
+Quan configureu la vostra bomba Medtronic amb l'assistent de configuració, és possible que no pugueu acabar la configuració per problemes de Bluetooth (p. ex. no aconseguiu connectar amb la bomba). Si passa això, seleccioneu l'opció de bomba virtual per completar la configuració i poder buscar la solució després amb l'opció 2.
 
-While setting up AAPS to work with your medtronic pump you need to set the following items in **Settings** (see the settings picture above):
+Quan configureu AAPS per funcionar amb la vostra bomba Medtronic, heu de configurar aquestes opcions a **Configuració** (vegeu la imatge de la configuració més amunt):
 
-- **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
-- **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
+- **Número de sèrie bomba**: es mostra a la part de darrere de la bomba i comença per SN. Només heu d'introduir els 6 números que es mostren, sense cap lletra (p. ex. 123456).
+- **Tipus bomba**: el model de bomba que feu servir (p. ex. 522). 
+- **Freqüència bomba**: hi ha dues opcions segons on es va distribuir originalment la vostra bomba. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
     - for US & Canada, frequency used is 916 MHz
     - for Worldwide, frequency used is 868 MHz
-- **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
-- **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. This period of time allows the user to cancel the bolus in the event a bolus command is sent in error. It is not possible to cancel a bolus that has started via AAPS. The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
-- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). Selecting Hardware encoding (i.e. carried out by the Rileylink compatible device) is preferred as this results in less data being sent. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. This setting will be ignored if you have firmware version 0.x on Rileylink devices.
-- **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. When a value other than simple view is selected AAPS will display the remaining calculated battery percentage level and volts. The following options are available:
+- **Màx. basal a la bomba (U/h)**: ha de coincidir amb el valor configurat a la vostra bomba (vegeu Configuració de la bomba més amunt). També aquí cal triar aquest valor amb cura, perquè determina quanta insulina pot lliurar AAPS amb la vostra taxa basal. Això fixa, de fet, la taxa basal temporal màxima. Per exemple, si poseu aquest valor a quatre vegades la vostra taxa basal estàndard màxima, permetreu una taxa basal temporal del 400%. El valor màxim que permet la bomba és de 34,9 unitats per hora.
+- **Màx. bolus a la bomba (U)** (en una hora): ha de coincidir amb el valor configurat a la vostra bomba (vegeu Configuració de la bomba més amunt). Cal pensar bé aquest valor, perquè determina el bolus més gran que AAPS podrà programar mai.
+- **Retard fins que bolus comenci (s)**: el nombre de segons entre l'ordre de bolus i el moment en què l'ordre s'envia realment a la bomba. Aquest temps permet a l'usuari cancel·lar el bolus si s'ha enviat una ordre de bolus per error. No es pot cancel·lar un bolus que ha començat a través d'AAPS. L'única manera de cancel·lar un bolus que ja ha començat és suspendre la bomba manualment i després reprendre-la.
+- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). És millor seleccionar la codificació per maquinari (és a dir, feta pel dispositiu compatible amb RileyLink), perquè així s'envien menys dades. Seleccionar la codificació per programari (és a dir, feta per AAPS) pot ajudar si hi ha desconnexions freqüents. Aquesta opció no es té en compte si els dispositius RileyLink tenen la versió de firmware 0.x.
+- **Tipus de bateria (Vista d'energia)**: per calcular correctament la càrrega que queda a la pila, heu de seleccionar el tipus de pila AAA que feu servir. Si se selecciona un valor diferent de la vista simple, AAPS mostrarà el percentatge calculat de càrrega que queda a la pila i el voltatge. Hi ha aquestes opcions:
     
-    - Not selected (Simple view)
-    - Alkaline (Extended view)
-    - Lithium (Extended view)
-    - NiZn (Extended view)
-    - NiMH (Extended view)
-- **Use Scanning**: Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
+    - No seleccionat (Vista simple)
+    - Alcalina (Vista ampliada)
+    - Liti (Vista ampliada)
+    - NiZn (Vista ampliada)
+    - NiMH (Vista ampliada)
+- **Fer servir escaneig**: activa l'escaneig Bluetooth abans de connectar amb els vostres dispositius compatibles amb RileyLink. Això hauria de millorar la fiabilitat de la connexió amb el dispositiu.
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink**: This feature is only supported on newer link devices such as the EmaLink or OrangeLink. The value is shown as **RileyLink Battery** on the Medtronic pump screen.
-- **Set neutral temp basals**: By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
+- **Mostrar nivell de bateria reportat per OrangeLink/EmaLink/DiaLink**: aquesta funció només és compatible amb els dispositius link més nous, com EmaLink o OrangeLink. El valor es mostra com a **Bateria RileyLink** a la pantalla de la bomba Medtronic.
+- **Establir basals temporals neutres**: per defecte, les bombes Medtronic fan un bip a cada hora en punt quan hi ha una taxa basal temporal activa. Activar aquesta opció pot reduir el nombre de bips: interromp la basal temporal al canvi d'hora per evitar el bip.
 
 (pairing-your-rileylink-compatible-device)=
 
-### Pairing your RileyLink compatible device
+### Emparellar el vostre dispositiu compatible amb RileyLink
 
-Your RileyLink compatible device is paired from the Medtronic pump screen, not from the Bluetooth menu of your phone:
+El vostre dispositiu compatible amb RileyLink s'emparella des de la pantalla de la bomba Medtronic, no des del menú Bluetooth del telèfon:
 
-- Open the pump screen (**Manage** > **Pump**, or **Open plugin** on the Medtronic card in **Configuration** > **Pump**).
-- Tap **Pair RileyLink**. **AAPS** scans for nearby RileyLink compatible devices.
-- Tap your device in the list. When **RileyLink paired successfully** is shown, tap **OK**.
+- Obriu la pantalla de la bomba (**Gestionar** > **Bomba**, o **Obrir plugin** a la targeta Medtronic a **Configurador** > **Bomba**).
+- Toqueu **Emparellar RileyLink**. **AAPS** busca dispositius compatibles amb RileyLink a prop.
+- Toqueu el vostre dispositiu a la llista. Quan es mostri **RileyLink emparellat correctament**, toqueu **OK**.
 
-## Medtronic pump screen
+## Pantalla de la bomba Medtronic
 
-To open the Medtronic pump screen, go to **Manage** > **Pump**. The pump screen displays the current pump status information along with some Medtronic specific actions (see the pump screen picture above).
+Per obrir la pantalla de la bomba Medtronic, aneu a **Gestionar** > **Bomba**. La pantalla de la bomba mostra la informació de l'estat actual de la bomba i algunes accions específiques de Medtronic (vegeu la imatge de la pantalla de la bomba més amunt).
 
-- **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
-- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Only shown if **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled in the Medtronic settings.
-- **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
-- **Battery**: Shows battery status based on the value chosen for **Battery Type (Power View)** in the Medtronic settings.
-- **Last connection**: How long ago the last successful pump connection happened.
-- **Last Bolus**: How long ago the last successful bolus was delivered.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
-- **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **Estat RileyLink**: l'estat actual de la connexió entre el vostre telèfon i el dispositiu compatible amb RileyLink. Hauria de mostrar sempre Connectat. Qualsevol altre estat pot necessitar que l'usuari intervingui. 
+- **Bateria RileyLink**: el nivell actual de la bateria del vostre dispositiu EmaLink o OrangeLink. Només es mostra si **Mostrar nivell de bateria reportat per OrangeLink/EmaLink/DiaLink** està activat a la configuració de Medtronic.
+- **Estat bomba**: l'estat actual de la connexió amb la bomba. Com que la bomba no està connectada tota l'estona, normalment es mostrarà la icona de repòs. Hi ha altres estats possibles, com ara «Despertant» quan AAPS intenta enviar una ordre, o altres ordres de la bomba com «Obtenir hora», «Establir TBR», etc.
+- **Bateria**: mostra l'estat de la pila segons el valor triat a **Tipus de bateria (Vista d'energia)** a la configuració de Medtronic.
+- **Última connexió**: quant de temps fa de l'última connexió correcta amb la bomba.
+- **Darrer bolus**: quant de temps fa que es va lliurar correctament el darrer bolus.
+- **Basal base**: la taxa basal base que la bomba fa servir en aquesta hora segons el vostre perfil actiu.
+- **Basal temporal**: la basal temporal que s'està lliurant ara; pot ser de 0 unitats per hora.
+- **Reservori**: quanta insulina hi ha al reservori (s'actualitza com a mínim cada hora).
+- **Errors**: text de l'error si hi ha un problema (sobretot si hi ha un error a la configuració).
 
-At the bottom of the screen there are these buttons:
+A la part de baix de la pantalla hi ha aquests botons:
 
-- **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pair RileyLink**: Finds and pairs your RileyLink compatible device (see [above](#pairing-your-rileylink-compatible-device)).
-- **Pump history**: Shows pump history (see [below](#MedtronicPump-pump-history)).
-- **RL Stats**: Shows RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status)).
-- **Wake and Tune Up** and **Reset RileyLink**: See [Actions](#medtronic-actions) below.
-- **Clear Bolus Block**: Only shown for a short time after a bolus, while **AAPS** waits for the pump to finish delivering it. Tapping it ends this wait.
+- **Actualitzar** serveix per actualitzar l'estat actual de la bomba. Només s'hauria de fer servir si la connexió s'ha perdut durant molt de temps, perquè caldrà actualitzar totes les dades (llegir l'historial, llegir/configurar l'hora, llegir el perfil, llegir l'estat de la pila, etc.).
+- **Emparellar RileyLink**: busca i emparella el vostre dispositiu compatible amb RileyLink (vegeu [més amunt](#pairing-your-rileylink-compatible-device)).
+- **Historial de la bomba**: mostra l'historial de la bomba (vegeu [més avall](#MedtronicPump-pump-history)).
+- **Estadístiques RL**: mostra les estadístiques RL (vegeu [més avall](#MedtronicPump-rl-status-rileylink-status)).
+- **Engegar i ajustar** i **Restablir RileyLink**: vegeu [Accions](#medtronic-actions) més avall.
+- **Esborrar bloc de bolus**: només es mostra una estona curta després d'un bolus, mentre **AAPS** espera que la bomba acabi de lliurar-lo. Si el toqueu, s'acaba aquesta espera.
 
 (MedtronicPump-pump-history)=
 
-## Pump History
+## Historial de la bomba
 
-![Pump history screen with its filter buttons](../images/Medtronic03.png)
+![Pantalla de l'historial de la bomba amb els botons de filtre](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. This allows for a convenient way to see pump behavior should that be required. The only items stored are those relevant to AAPS and will not include a configuration function that has no relevance.
+L'historial de la bomba es llegeix cada 5 minuts i es desa al telèfon. Només es desa l'historial de les darreres 24 hores. Així podeu veure còmodament què ha fet la bomba, si cal. Només es desen les entrades rellevants per a AAPS; no s'hi inclouen les funcions de configuració que no tenen importància.
 
-Tap **Pump history** on the pump screen to open it. By default **All** is selected. Tap one of the filter buttons at the top (for example **Boluses**, **Basals** or **Alarms**) to show only one type of entry.
+Toqueu **Historial de la bomba** a la pantalla de la bomba per obrir-lo. Per defecte, està seleccionat **Tots**. Toqueu un dels botons de filtre de la part de dalt (per exemple **Bolus**, **Basals** o **Alarmes**) per mostrar només un tipus d'entrada.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
-## RL Status (RileyLink Status)
+## Estat RL (estat del RileyLink)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![Estat RileyLink - Configuració](../images/Medtronic04.png) ![Estat RileyLink - Historial](../images/Medtronic05.png)
 
-The RL Status dialog has two tabs:
+El diàleg d'estat RL té dues pestanyes:
 
-- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Configuració**: mostra la configuració del dispositiu compatible amb RileyLink: adreça configurada, dispositiu connectat, estat de la connexió, error de connexió i versions del firmware del RileyLink. El tipus de dispositiu és sempre Medtronic Pump, el model és el vostre model, el número de sèrie és el número de sèrie configurat, la freqüència de la bomba mostra quina freqüència feu servir i la darrera freqüència és la darrera freqüència utilitzada.
+- **Historial**: mostra l'historial de comunicació. Les entrades amb RileyLink mostren els canvis d'estat del RileyLink, i les entrades amb Medtronic mostren quines ordres s'han enviat a la bomba.
 
 (medtronic-actions)=
 
-## Actions
+## Accions
 
-When the Medtronic driver is used, two additional actions are available on the pump screen (**Manage** > **Pump**):
+Quan es fa servir el controlador de Medtronic, hi ha dues accions addicionals a la pantalla de la bomba (**Gestionar** > **Bomba**):
 
-- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default. While the tune-up runs, the RileyLink status on the pump screen shows it. If a tune-up fails (for example because the pump was out of range), **AAPS** tries again by itself about every 10 minutes.
-- **Reset RileyLink** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
+- **Engegar i ajustar** - Si AAPS fa molt de temps que no es connecta a la vostra bomba (s'hi hauria de connectar cada 5 minuts), podeu forçar un ajust. Això intentarà contactar amb la vostra bomba buscant per totes les freqüències de ràdio possibles que fa servir la bomba. Si la connexió funciona, la freqüència que ha funcionat es fixarà com a freqüència per defecte. Mentre es fa l'ajust, l'estat del RileyLink a la pantalla de la bomba ho mostra. Si un ajust falla (per exemple, perquè la bomba era fora d'abast), **AAPS** ho torna a provar sol cada 10 minuts aproximadament.
+- **Restablir RileyLink** - Si reinicieu el vostre dispositiu compatible amb RileyLink, potser haureu de fer servir aquesta acció perquè el dispositiu es torni a configurar (freqüència, tipus de freqüència i codificació).
 
-## Important notes
+## Notes importants
 
-### Special attention in NS configuration needed
+### Cal anar amb compte amb la configuració de NS
 
-AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/
+AAPS fa servir el número de sèrie per a la sincronització, i el número de sèrie es mostra a NS. Com que qui coneix el número de sèrie d'una bomba Medtronic antiga la pot controlar a distància, protegiu bé el vostre lloc de NS perquè no es filtri el número de sèrie (SN) de la vostra bomba. Vegeu https://nightscout.github.io/nightscout/security/
 
-### OpenAPS users
+### Usuaris d'OpenAPS
 
-OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS. Using AAPS the primary method of interacting with the pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+Els usuaris d'OpenAPS han de tenir en compte que AAPS amb Medtronic funciona de manera completament diferent d'OpenAPS. Amb AAPS, la manera principal d'interactuar amb la bomba és a través del telèfon. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. Això és molt diferent d'OpenAPS, on normalment almenys una part del bolus es lliura amb els botons de bolus ràpid. Si es fa servir la bomba per lliurar un bolus manualment, hi pot haver problemes si AAPS intenta lliurar-ne un al mateix temps. Hi ha controls per intentar evitar problemes en aquests casos, però tot i així cal evitar-ho sempre que sigui possible.
 
-### Logging
+### Registre
 
-In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintenance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
+Si heu de resoldre problemes amb la vostra bomba Medtronic, seleccioneu la icona del menú a la cantonada superior esquerra de la pantalla, seleccioneu Manteniment i Configuració de registres. Per resoldre qualsevol problema de Medtronic, cal activar Pump, PumpComm i PumpBTComm.
 
-### Medtronic CGM
+### CGM de Medtronic
 
-Medtronic CGM is currently NOT supported.
+Ara mateix, el CGM de Medtronic NO és compatible.
 
-### Manual use of pump
+### Ús manual de la bomba
 
-You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
+Eviteu fer bolus manuals o configurar TBR directament a la bomba. Totes aquestes ordres s'han d'enviar a través d'AAPS. Si feu servir ordres manuals, hi ha d'haver com a mínim 3 minuts entre una i l'altra per reduir el risc de problemes.
 
-### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AAPS
+### Canvis de fus horari i DST (horari d'estiu) o viatjar amb una bomba Medtronic i AAPS
 
-AAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
+AAPS detecta automàticament els canvis de fus horari i actualitza l'hora de la bomba quan el telèfon canvia a l'hora nova.
 
-Traveling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2), which will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Traveling west, however, can result in issues as you are effectively going back in time, which can result in incorrect IOB data.
+Viatjar cap a l'est vol dir que sumeu hores a l'hora actual (p. ex. de GMT+0 a GMT+2), i això no causa cap problema perquè no hi ha cap solapament (és a dir, no es pot tenir la mateixa hora dues vegades). En canvi, viatjar cap a l'oest pot causar problemes perquè, de fet, aneu enrere en el temps, i això pot donar dades d'IOB incorrectes.
 
-The issues seen when traveling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
+Els desenvolupadors coneixen els problemes que passen quan es viatja cap a l'oest i treballen en una possible solució. Vegeu https://github.com/andyrozman/RileyLinkAAPS/issues/145 per a més detalls. De moment, tingueu en compte que aquest problema pot passar i vigileu bé quan canvieu de fus horari.
 
-### Is a GNARL a fully compatible Rileylink compatible device?
+### Un GNARL és un dispositiu totalment compatible amb RileyLink?
 
-The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require additional work as you will have to source compatible hardware and then load the GNARL code on to the device.
+El codi GNARL admet totes les funcions que fa servir el controlador de Medtronic a AAPS, per tant és totalment compatible. Tingueu en compte que això demana feina addicional: heu d'aconseguir maquinari compatible i després carregar el codi GNARL al dispositiu.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Nota de l'autor:** Tingueu en compte que el programari GNARL encara és experimental i s'ha provat poc, i no s'ha de considerar tan segur com un RileyLink.
 
 (MedtronicPump-faq)=
 
-## FAQ
+## Preguntes freqüents
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
 ### What to do if I lose connection to RileyLink and/or pump?
 
-There are a number of options to try and resolve connectivity issues.
+Hi ha diverses opcions per intentar resoldre els problemes de connexió.
 
-- Tap **Wake and Tune Up** on the pump screen (**Manage** > **Pump**) as detailed above.
-- Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
-- Reset the Rileylink device. You must then tap **Reset RileyLink** on the pump screen (**Manage** > **Pump**).
-- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
-    1. Restart the phone
-    2. *While* the phone is restarting restart the Rileylink device
-    3. Open AAPS and allow the connection to restore
+- Toqueu **Engegar i ajustar** a la pantalla de la bomba (**Gestionar** > **Bomba**), com s'explica més amunt.
+- Desactiveu el Bluetooth al telèfon, espereu 10 segons i torneu-lo a activar. Així el dispositiu RileyLink s'haurà de tornar a connectar al telèfon.
+- Reinicieu el dispositiu RileyLink. Després heu de tocar **Restablir RileyLink** a la pantalla de la bomba (**Gestionar** > **Bomba**).
+- Altres usuaris han vist que aquests passos funcionen per recuperar la connexió quan els altres mètodes no han funcionat: 
+    1. Reinicieu el telèfon
+    2. *Mentre* el telèfon es reinicia, reinicieu el dispositiu RileyLink
+    3. Obriu AAPS i deixeu que es recuperi la connexió
 
-### How to determine what Frequency my pump uses
+### Com saber quina freqüència fa servir la meva bomba
 
-![Pump Model](../images/Medtronic06.png)
+![Model de bomba](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
+A la part de darrere de la bomba trobareu una línia amb el número de model i un codi especial de 3 lletres. Les dues primeres lletres indiquen el tipus de freqüència i la darrera indica el color. Aquests són els valors possibles de la freqüència:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
+- NA - Amèrica del Nord (a la selecció de freqüència heu de seleccionar «EUA i Canadà (916 MHz)»)
+- CA - Canadà (a la selecció de freqüència heu de seleccionar «EUA i Canadà (916 MHz)»)
 - WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
 
 (MedtronicPump-pump-unreachable)=
 
-### How to fix the "pump unreachable" error
+### Com solucionar l'error «Bomba no accessible»
 
-Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
+Algunes bombes Medtronic mostren l'error «Bomba no accessible» després d'una actualització d'**AAPS**. Per solucionar-ho, canvieu el tipus de codificació:
 
-1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
+1. Aneu a **Configurador** > **Bomba** i toqueu **Configuració** a la targeta **Medtronic**.
 2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
 
-## Where to get help
+## On trobar ajuda
 
-Development of the Medtronic driver is done by the community on a **volunteer** basis. Before requesting help, please:
+El controlador de Medtronic el desenvolupa la comunitat de manera **voluntària**. Abans de demanar ajuda:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Llegiu** la secció corresponent d'aquesta documentació per confirmar com ha de funcionar la funció.
+2. **Pregunteu** al canal *#AAPS* de [Discord](https://discord.gg/4fQUWHZ4Mw) o en un dels altres [canals de la comunitat](../GettingHelp/WhereCanIGetHelp.md).
+3. **Informeu d'un error** buscant entre les [incidències existents](https://github.com/nightscout/AndroidAPS/issues); si la vostra no hi és, obriu una [incidència nova](https://github.com/nightscout/AndroidAPS/issues) i adjunteu els vostres [fitxers de registre](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Quan demaneu ajuda, indiqueu la marca i el model del telèfon, la versió d'Android, la versió d'**AAPS** i una descripció senzilla del problema (què ha canviat, quan va funcionar per darrera vegada).
