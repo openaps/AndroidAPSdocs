@@ -1,52 +1,52 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Compilació amb Android Studio
 
-This is the traditional method to build your AAPS app.
+Aquest és el mètode tradicional per compilar la vostra aplicació AAPS.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+Podeu compilar l'aplicació sense ordinador amb el mètode de [Compilació al navegador](./BrowserBuild.md).
 
-## Build yourself instead of download
+## Compileu-la vosaltres mateixos en lloc de descarregar-la
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**L'aplicació AAPS (un fitxer apk) no es pot descarregar, per les normes sobre dispositius mèdics. És legal compilar l'aplicació per al vostre ús propi, però no en podeu donar una còpia a altres persones!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més detalls.
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Requisits de l'ordinador i del programari per compilar AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* Pot ser que calgui una versió concreta d'**[Android Studio](https://developer.android.com/studio/)** per compilar l'apk. Vegeu la taula següent:
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                  | Latest                                                 | 9.8    | 21  |
+| Versió d'AAPS           | Versió<br/>d'Android Studio<br/>preferida | Versió<br/>d'Android Studio<br/>alternativa | Gradle | JVM |
+| ----------------------- | ----------------------------------------------------- | ------------------------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                                 |                                                         | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                                 |                                                         | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                              | provat fins a Quail 4                                   | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                   | provat fins a Quail 4                                   | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                       | provat fins a Quail 4                                   | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                    | provat fins a Quail 4                                   | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                    | provat fins a Quail 4                                   | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                    | provat fins a Quail 4                                   | 9      | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                   | Latest                                                  | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+La «versió preferida» inclou la versió de JVM adequada. La versió preferida també és la versió mínima que podeu fer servir per compilar **AAPS**. **NO** podreu compilar amb una versió més antiga que la «preferida». Si feu servir una altra versió, pot ser que tingueu problemes amb la versió de JVM. Consulteu la pàgina [Resolució de problemes d'Android Studio](#troubleshooting_androidstudio-uncommitted-changes) per resoldre aquests problemes. Si la vostra versió actual d'Android Studio no és a la taula, primer l'heu d'actualitzar.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+La versió de Gradle va lligada al codi font: sempre tindreu la versió de Gradle correcta quan descarregueu o actualitzeu el codi font. Només s'indica aquí com a referència, no cal que hi feu res.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* Android Studio no admet els [sistemes Windows de 32 bits](#troubleshooting_androidstudio-unable-to-start-daemon-process). Tingueu en compte que **una CPU de 64 bits i un sistema operatiu de 64 bits són condicions obligatòries.** Si el vostre sistema NO compleix aquesta condició, haureu de canviar el maquinari o el programari afectat, o tot el sistema.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
+    <th class="tg-baqh">Sistema operatiu (només 64 bits)</th>
     <td class="tg-baqh">Windows 10 or higher</td>
     <td class="tg-baqh">macOS 12 or higher</td>
     <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
+    <th class="tg-baqh"><p align="center">CPU (només 64 bits)</th>
     <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
     <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
     <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
@@ -56,34 +56,34 @@ The Gradle version is linked to the source code, you will always get the correct
     <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Disc</th>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Es recomana un SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
+    <th class="tg-baqh"><p align="center">Resolució</th>
     <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Banda ampla</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Es recomana molt (no és obligatori) fer servir un SSD (disc d'estat sòlid) en lloc d'un HDD (disc dur), perquè la compilació del fitxer apk d'AAPS trigarà menys.**  També podeu fer servir un HDD per compilar el fitxer apk d'**AAPS**. En aquest cas, la compilació pot trigar molt, però un cop ha començat, la podeu deixar funcionant sola.
 
-## Help and support during the building process
+## Ajuda i suport durant la compilació
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+Si teniu dificultats durant la compilació de l'aplicació **AAPS**, hi ha una secció específica de [**Resolució de problemes d'Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md). Consulteu-la primer.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Si creieu que alguna cosa de les instruccions de compilació és incorrecta, hi falta o és confusa, o si encara teniu problemes, contacteu amb el grup d'usuaris d'**AAPS** a [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o a [Discord](https://discord.gg/4fQUWHZ4Mw). Si voleu canviar alguna cosa vosaltres mateixos (actualitzar captures de pantalla, _etc._), envieu una [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## Guia pas a pas per compilar l'aplicació AAPS
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+Si ja heu compilat AAPS abans, no cal que torneu a fer tots els passos següents.
+Aneu directament a la [guia d'actualització](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -91,68 +91,68 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+En aquesta guia trobareu captures de pantalla d'_exemple_ de la compilació del fitxer apk d'**AAPS**. **Android Studio**, el programari que fem servir per compilar l'apk d'**AAPS**, s'actualitza sovint. Per això, aquestes captures de pantalla poden no ser idèntiques a la vostra instal·lació, però les hauríeu de poder seguir igualment.
 
 Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Instal·lar Git
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git és un «_sistema de control de versions_» (VCS, de l'anglès *Versioning Control System*).\
+Git és un programa que permet seguir els canvis del codi i col·laborar amb altres persones. Fareu servir Git per fer una còpia del codi font d'**AAPS** del lloc web de GitHub al vostre ordinador. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Passos per instal·lar Git
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Comproveu que no tingueu ja **Git** instal·lat. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Qualsevol versió recent de Git hauria de funcionar. Seleccioneu la versió correcta per al vostre sistema: Mac, Windows o Linux.
 
-**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
+**Nota per als usuaris de Mac:** la pàgina web de Git també us guiarà per instal·lar un programa addicional anomenat «homebrew» que ajuda en la instal·lació. Si instal·leu Git amb homebrew, no cal canviar cap preferència.
 
 (Make_a_note_of_Git_path)=
 
-* During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* Durant la instal·lació, quan se us demani «select destination location», anoteu _on_ s'instal·la Git (el «**camí d'instal·lació**»). L'haureu de comprovar al pas següent. Serà semblant a «C:\Program Files\Git\cmd\git.exe»
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Durant els diversos passos de la instal·lació de Git, accepteu totes les opcions per defecte.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Després de la instal·lació, si us heu oblidat d'anotar on s'ha instal·lat Git, ho podeu trobar així: escriviu «git» a la barra de cerca del PC, feu clic amb el botó dret a «Git bash», seleccioneu «open file location» i passeu el ratolí per sobre de la icona «Git bash». Així veureu on està instal·lat.
 
-* Reboot your computer before the next step.
+* Reinicieu l'ordinador abans del pas següent.
 
 (Building-APK-install-android-studio)=
-### Install Android Studio
+### Instal·lar Android Studio
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- **Durant els passos següents heu d'estar connectats a internet tot el temps, perquè Android Studio descarrega diverses actualitzacions**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio és un programa que funciona al vostre ordinador. Permet descarregar codi font d'internet (amb Git) i compilar aplicacions per a telèfons intel·ligents (i rellotges intel·ligents). No podeu «trencar» la versió actual d'**AAPS** que funciona en llaç al vostre telèfon si compileu una aplicació nova o actualitzada al PC amb Android Studio. Són processos totalment separats. 
 ```
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+Una de les coses més importants quan instal·leu Android Studio és **tenir paciència!** Durant la instal·lació i la configuració, Android Studio descarrega moltes coses, i això porta temps.
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. Aquesta guia mostra els passos amb la *interfície nova*. Les captures de pantalla es van fer amb «Ladybug», així que les versions més noves poden ser una mica diferents. Si encara feu servir la interfície antiga, potser primer voldreu canviar Android Studio a la interfície nova seguint [aquestes instruccions](#computerbuild-NewUI).
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+La versió d'Android Studio és molt important. Vegeu les [instruccions anteriors](#Building-APK-recommended-specification-of-computer-for-building-apk-file) per triar la versió correcta d'Android Studio.
 
-Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
+Descarregueu la [versió actual d'Android Studio](https://developer.android.com/studio) o una versió més antiga dels [**arxius (Archives)**](https://developer.android.com/studio/archive) i accepteu els acords de descàrrega.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+Quan acabi la descàrrega, obriu l'aplicació descarregada per instal·lar-la a l'ordinador. És possible que hàgiu d'acceptar o confirmar alguns avisos de Windows sobre aplicacions descarregades!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
+Instal·leu Android Studio fent clic a «Next», com es mostra a les captures de pantalla següents. **No** cal que canvieu cap opció!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
@@ -162,11 +162,11 @@ If you want to save hard disk space, you can uncheck Android Virtual Device: it 
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Ara feu clic a «Install»:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Quan acabi, premeu «Next»
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
@@ -174,131 +174,131 @@ In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Se us preguntarà si voleu ajudar a millorar Android Studio. Trieu l'opció que vulgueu. No canvia res per als passos següents.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+La pantalla de benvinguda us dona la benvinguda a la instal·lació d'Android Studio. Premeu «Next».
 
 ![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Seleccioneu «Standard» com a tipus d'instal·lació.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Verifiqueu la configuració fent clic de nou a «Next».
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Ara heu d'acceptar els acords de llicència. A l'esquerra hi ha dues seccions (1 + 3). Seleccioneu-les una després de l'altra i, per a cadascuna, seleccioneu «Accept» (2 + 4) a la dreta.
 
-Then the "Finish" (5) button can be clicked.
+Després podeu fer clic al botó «Finish» (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Ara es descarregaran i s'instal·laran alguns paquets d'Android. Tingueu paciència i espereu.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Quan acabi, veureu la pantalla següent, on podeu tornar a seleccionar «Finish».
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Ara veureu la pantalla de benvinguda (Welcome) d'Android Studio.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### Descarregar el codi d'AAPS
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+La primera vegada que es descarrega **AAPS**, Android Studio es connecta per internet al lloc web de GitHub per descarregar el codi font d'**AAPS**. Això hauria de trigar aproximadament 1 minut. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+Després, Android Studio fa servir **Gradle** (una eina de desenvolupament per a aplicacions Android) per identificar altres components que calen per compilar-ho tot al vostre ordinador. 
 ```
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
+A la pantalla de benvinguda d'Android Studio, comproveu que «**Projects**» (1) estigui ressaltat a l'esquerra.
 
-Then click "**Clone Repository**" (2) on the right:
+Després feu clic a «**Clone Repository**» (2) a la dreta:
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Ara direm a Android Studio d'on ha d'obtenir el codi:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* «Repository URL» hauria d'estar seleccionat (per defecte) a l'esquerra (1).
+* «Git» hauria d'estar seleccionat (per defecte) com a control de versions (2).
+* Ara copieu aquest URL:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    i enganxeu-lo al quadre de text de l'URL (3).
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Comproveu que el directori (per defecte) on es desarà el codi clonat no existeixi ja al vostre ordinador (4). El podeu canviar per un altre directori, però recordeu on l'heu desat!
+* Ara feu clic al botó «Clone» (5).
 
 ```{admonition} INFORMATION
 :class: note
-Make a note of the directory. It is where your sourcecode is stored!
+Anoteu el directori. És on es desa el vostre codi font!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Ara veureu una pantalla que indica que s'està clonant el repositori:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+En algun moment, Android Studio es tancarà i es tornarà a obrir. És possible que se us pregunti si confieu en el projecte. Feu clic a «Trust project»:
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Només per als usuaris de Windows: si el tallafoc demana permís, concediu-li l'accés:
 
- ![Firewall permission java](../images/Building-the-App/AndroidStudio361_18.png)
+ ![Permís del tallafoc per a java](../images/Building-the-App/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+Quan el repositori s'hagi clonat correctament, Android Studio obrirà el projecte clonat.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
 :class: note
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+Android Studio ha canviat la seva interfície fa poc. Les instal·lacions noves d'Android Studio fan servir la interfície nova (New UI) per defecte!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Només si el vostre Android Studio es veu diferent, potser haureu de canviar a la interfície nova:
+Feu clic al menú hamburguesa de la part superior esquerra i seleccioneu **Settings** (o **Preferences** als ordinadors d'Apple).
+A **Appearance & Behavior**, aneu a **New UI** i marqueu **Enable new UI**. Després reinicieu Android Studio per començar a fer-lo servir.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+Si no trobeu l'opció **New UI**, no us preocupeu: ja la feu servir!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+Quan s'obri Android Studio, espereu amb paciència (pot trigar uns minuts) i, sobretot, **no** actualitzeu el projecte com suggereix la finestra emergent.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio iniciarà automàticament una «Gradle project sync» (sincronització del projecte Gradle), que trigarà un parell de minuts a acabar. Podeu veure que (encara) està en marxa:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio pot recomanar actualitzar el sistema gradle. **No actualitzeu mai gradle!** Això provocaria problemes.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Només en ordinadors Windows: és possible que rebeu un avís que Windows Defender està en marxa. Feu clic a **Automatically** i confirmeu-ho. Així la compilació serà més ràpida!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Podeu deixar la sincronització de gradle en marxa i seguir ja els passos següents.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Definir el camí de Git a les preferències d'Android Studio
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+Ara direm a Android Studio on trobar Git, que heu instal·lat [abans](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Només per als usuaris de Windows: assegureu-vos que heu reiniciat l'ordinador després d'[instal·lar Git](#install-git-if-you-dont-have-it). Si no ho heu fet, reinicieu-lo ara i torneu a obrir Android Studio
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
+A l'angle superior esquerre d'**Android Studio**, obriu el menú hamburguesa i aneu a **File** > **Settings** (a Windows) o **Android Studio** > **Preferences** (a Mac). S'obre la finestra següent. Feu clic per desplegar la llista anomenada **Version Control** (1) i seleccioneu **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
@@ -307,131 +307,131 @@ Check if **Android Studio** can automatically locate the correct **Path to Git e
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+Si la configuració automàtica funciona, la vostra versió actual de **Git** es mostrarà al costat del camí.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
+Si **git.exe** no es troba automàticament, o si en fer clic a «Test» surt un error, podeu:
+* introduir a mà el camí que heu anotat [abans](#BuildingAaps-steps-for-installing-git), o bé
 * click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+* Comproveu la configuració amb el botó **Test**!
 
-  ![Git not found](../images/Building-the-App/039_GitTestError.png)
+  ![Git no trobat](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Compilar l'APK «signat» d'AAPS
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android exigeix que cada aplicació estigui _signada_, per garantir que més endavant només es pugui actualitzar des de la mateixa font de confiança que va publicar l'aplicació original. Per a més informació sobre aquest tema, seguiu [aquest enllaç](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Per al nostre cas, això només vol dir que generem un fitxer de signatura o «keystore» (magatzem de claus) i el fem servir quan compilem l'aplicació **AAPS**.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**Important: assegureu-vos que la sincronització de gradle s'ha acabat correctament abans de continuar!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Feu clic al menú hamburguesa de la part superior esquerra per obrir la barra de menú. Seleccioneu **Build** (1) i després **Generate Signed App Bundle / APK** (2)
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![Compilar l'apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
+Seleccioneu «APK» (1) en lloc d'«Android App Bundle» i feu clic a «Next» (2):
 
-![APK instead of bundle](../images/Building-the-App/041_APK.png)
+![APK en lloc de bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
+A la pantalla següent, assegureu-vos que «Module» estigui definit com a «AndroidAPS.app» (1). La part abans de «.app» és el nom de la carpeta on heu clonat el codi.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: note
-If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
+Si voleu crear l'apk per al rellotge, ara heu de seleccionar AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Feu clic a «Create new...» (2) per començar a crear el vostre magatzem de claus.
 
 ```{admonition} INFORMATION!
 :class: note
-You will only need to create the keystore once.
+Només cal que creeu el magatzem de claus una vegada.
 If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Nota:_** el magatzem de claus (keystore) és un fitxer on es desa la informació per signar l'aplicació. Està xifrat, i la informació està protegida amb contrasenyes.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![Crear el magatzem de claus](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Feu clic al símbol de la «carpeta» (1) per seleccionar un camí a l'ordinador per al vostre magatzem de claus.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
+  **No** feu servir el directori on heu desat el codi font, sinó un directori que també passaríeu a un ordinador nou.
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
+Anoteu on es desa el vostre magatzem de claus. You will need it when you build the next AAPS update!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Ara trieu una contrasenya senzilla (i anoteu-la), escriviu-la al quadre de contrasenya (2) i confirmeu-la (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+  Les contrasenyes del magatzem de claus i de la clau no cal que siguin complicades. Si en el futur perdeu la contrasenya, vegeu [Reinstal·lar AAPS amb un nou magatzem de claus](#reinstall-aaps).
 
 ```{warning}
-**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+**Eviteu els caràcters especials a les contrasenyes.** Feu servir només lletres i xifres per a les contrasenyes del magatzem de claus i de la clau. En concret, no feu servir `$`, l'accent greu (backtick), `"` ni `\`. Si més endavant canvieu a la [Compilació al navegador](#aaps-ci-option2) i hi reutilitzeu aquest magatzem de claus, aquests caràcters poden fer fallar el pas de signatura. Vegeu [Compilació al navegador: resolució de problemes](#aaps-ci-password-special-characters).
 ```
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* L'àlies per defecte (3) de la vostra clau és «key0». Deixeu-lo sense canviar.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Ara necessiteu una contrasenya per a la clau. Per fer-ho senzill, si voleu, podeu fer servir la mateixa contrasenya que heu fet servir abans per al magatzem de claus. Introduïu una contrasenya (4) i confirmeu-la.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Anoteu aquestes contrasenyes! Les necessitareu quan compileu la propera actualització d'AAPS!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* La validesa és de 25 anys per defecte. Deixeu-la tal com està.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Introduïu el vostre nom i cognoms (5). No cal afegir cap altra informació, però ho podeu fer si voleu (6-7).
 
-* Click "OK" (8) to continue:
-
-
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
-
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+* Feu clic a «OK» (8) per continuar:
 
 
-On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
+A la pàgina **Generate signed App Bundle or APK** ara es mostrarà el camí del vostre magatzem de claus. Ara torneu a introduir la contrasenya del magatzem de claus (Key Store password) (1) i la contrasenya de la clau (Key password) (2), i marqueu la casella (3) per recordar les contrasenyes. Així no les haureu de tornar a introduir la propera vegada que compileu l'apk (és a dir, quan actualitzeu a una nova versió d'AAPS). Feu clic a «Next» (4):
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+![Recordar les contrasenyes](../images/Building-the-App/044_RememberPwd.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
 
-![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
+A la pantalla següent, seleccioneu la variant de compilació «fullRelease» (1) i feu clic a «Create» (3). Recordeu la carpeta de destinació que es mostra a (2), perquè més endavant hi trobareu el fitxer apk compilat!
 
-Now you can watch the building progress:
+   ![Seleccionar la variant de compilació](../images/Building-the-App/045_BuildPath.png)
+
+Ara Android Studio compilarà l'apk d'**AAPS**. Mostrarà «Gradle Build running» (2) a la part inferior dreta. El procés triga una estona, segons l'ordinador i la connexió a internet, així que **tingueu paciència!** Si voleu seguir el progrés de la compilació, feu clic al petit martell «build» (1) a la part inferior d'Android Studio:
+
+![Gradle en marxa](../images/Building-the-App/046_BuildRunning.png)
+
+Ara podeu seguir el progrés de la compilació:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
+Quan acabi la compilació, Android Studio mostrarà el missatge «BUILD SUCCESSFUL». És possible que vegeu un avís emergent on podeu fer clic per seleccionar «locate». Si no el veieu, feu clic a la icona de notificacions (1) per obrir les notificacions (Notifications) i després a **locate** (2):
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![Compilació acabada](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Si la compilació no ha funcionat, consulteu la secció [Resolució de problemes d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
-In the Notifications box, click on the blue link "locate":
+Al quadre de notificacions (Notifications), feu clic a l'enllaç blau «locate»:
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![Localitzar la compilació](../images/Building-the-App/048_BuildFinished.png) S'obrirà el gestor de fitxers i us mostrarà el fitxer apk que acabeu de compilar.
 
-   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
+   ![Ubicació del fitxer apk](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Enhorabona! Ara ja heu compilat el fitxer apk d'**AAPS**. A la secció següent de la documentació el passareu al vostre telèfon.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+Si penseu que en el futur potser voldreu fer servir un rellotge intel·ligent Android Wear, ara és el millor moment per compilar l'apk d'AAPS per a Wear, per assegurar-vos que estigui sincronitzat amb l'apk d'AAPS.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+Passeu a l'etapa següent: [Transferir i instal·lar **AAPS** al vostre telèfon](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 
