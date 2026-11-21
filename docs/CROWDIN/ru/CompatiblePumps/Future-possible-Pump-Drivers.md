@@ -22,9 +22,9 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Kaleido ([Домашняя страница](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Статус для цикла:** помпа – кандидат для замкнутого цикла, но протокол пока неизвестен. Производитель не заинтересован в открытом коде.
 
-**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, у нее есть Bluetooth.
 
 ### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
@@ -44,7 +44,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
 
-**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, у нее есть Bluetooth.
 
 ** Комментарии: ** Поскольку компания заинтересована в интеграции с AAPS, они могут сами предпринять необходимые действия.
 
@@ -66,7 +66,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Комментарии:** поддержка прекращена в марте 2025 года.
 
 ## Помпы, неспособные к работе в качестве компонента ИПЖ
 
@@ -80,13 +80,13 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Комментарии:** сообществу пока не удалось установить связь с помпой Solo.
 
 ## Требования к пригодности помп для ИПЖ
 
 **Предварительные условия**
 
-- Помпа должна поддерживать дистанционное управление. (блутус, радио и т. п.)
+- Помпа должна поддерживать дистанционное управление. (Bluetooth, радиосвязь и т. п.)
 - Протокол взломан/документирован/и т. д.
 
 **Минимальные требования**
@@ -115,4 +115,4 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Поддержка других помп
 
-Если у вас есть какие-либо другие помпы, для которых вы хотите увидеть статус, пожалуйста, свяжитесь со мной (@andyrozman на gitter).
+Если вы хотите узнать статус других помп, свяжитесь с нами в Discord.
