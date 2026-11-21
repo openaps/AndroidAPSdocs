@@ -7,7 +7,7 @@
 
 -   Inicieu el sensor
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Seleccioneu **Syai/Ottai** a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source).
 
 Activeu l'emissió (broadcast) a l'aplicació Ottai:
 
