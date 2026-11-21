@@ -1,102 +1,102 @@
-# **Freestyle Libre 3** and 3+
+# **Freestyle Libre 3** i 3+
 
-Freestyle Libre 3 (FSL3) requires a unique setup to receive BG values in to AAPS. There are two possible ways of getting Freestyle Libre 3 (FSL3) values to AAPS.
+El Freestyle Libre 3 (FSL3) necessita una configuració especial perquè AAPS rebi els valors de glucèmia. Hi ha dues maneres possibles de portar els valors del Freestyle Libre 3 (FSL3) a AAPS.
 
 ![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
-The below methods for achieving this are using the separate app Juggluco. It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip or AAPS. New sensors can be started either with the Libre 3 App or directly in Juggluco. The guide below indicates the process for starting a sensor with the Juggluco app. If the sensor has been started with a Libreview account logged in, it is also possible to switch between Juggluco and the Libre 3 app as receiver.
+Els mètodes següents fan servir l'aplicació separada Juggluco. Fa servir Juggluco per rebre les dades en brut del sensor, a intervals d'1 minut, que després es passen a xDrip o a AAPS. Els sensors nous es poden iniciar amb l'aplicació Libre 3 o directament a Juggluco. La guia següent explica com iniciar un sensor amb l'aplicació Juggluco. Si el sensor s'ha iniciat amb un compte de LibreView connectat, també és possible canviar de receptor entre Juggluco i l'aplicació Libre 3.
 
-Juggluco can also pass data to LibreView for sharing with health care providers when the sensor is started with the Libre 3 app.
+Juggluco també pot passar les dades a LibreView per compartir-les amb els professionals sanitaris si el sensor s'ha iniciat amb l'aplicació Libre 3.
 
-Within xDrip the sensor can be calibrated in the range of -40 mg/dL to +20 mg/dL (-2.2 mmol/L to +1.1 mmol/L) to compensate for differences between a manual meter reading and the sensor readings.
+A xDrip el sensor es pot calibrar en el rang de -40 mg/dl a +20 mg/dl (-2,2 mmol/l a +1,1 mmol/l) per compensar les diferències entre una mesura manual amb glucòmetre i les lectures del sensor.
 
-## Method 1: use 1-minute readings directly
-**AAPS** is tailored for 5-minute readings. Therefore processing 1-minute values has occasional limitations.
+## Mètode 1: fer servir directament les lectures d'1 minut
+**AAPS** està pensat per a lectures cada 5 minuts. Per això, processar valors d'1 minut té de vegades algunes limitacions.
 
-See [here](#juggluco-to-aaps).
-
-
-## Method 2: convert 1-minute readings into 5-minute values via xDrip
-This method uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip to be smoothed into 5-minute interval data to be passed to AAPS.
-
-### Step 1: Setup Juggluco
-Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html). Follow the instructions [here](https://www.juggluco.nl/Juggluco/libre3/)
-
-Make sure you send the glucose values to xDrip: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
-
-### Step 2: Setup xDrip
-
-The blood glucose values are received by the xDrip app on the smartphone.
-
-- If not already set up then download [xDrip](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
-- In xDrip select "Libre2 (patched app)" as data source.
-- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. This will log additional error messages for troubleshooting.
-
-![xDrip LibreLink logging](../images/Libre2_Tags.png)
-
-- Technically, the current blood sugar value is transmitted to xDrip every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
-
-  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
-
-  ![xDrip advanced settings Libre 2 & raw values](../images/libre3/xDrip_Libre3_Smooth.png)
+Vegeu [aquí](#juggluco-to-aaps).
 
 
+## Mètode 2: convertir les lectures d'1 minut en valors de 5 minuts amb xDrip
+Aquest mètode fa servir Juggluco per rebre les dades en brut del sensor, a intervals d'1 minut, que després es passen a xDrip per suavitzar-les en dades a intervals de 5 minuts que s'envien a AAPS.
 
-### Step 3: Start sensor within xDrip
+### Pas 1: Configurar Juggluco
+Descarregueu i instal·leu l'aplicació Juggluco des d'[aquí](https://www.juggluco.nl/Juggluco/download.html). Seguiu les instruccions d'[aquí](https://www.juggluco.nl/Juggluco/libre3/)
 
-In xDrip start the sensor with "Start Sensor" and "not today". It is not necessary to hold the mobile phone onto the sensor. In fact "Start Sensor" will not physically start any Libre 3 sensor or interact with them in any case. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Assegureu-vos d'enviar els valors de glucèmia a xDrip: a la configuració de Juggluco podeu fer que Juggluco enviï els seus valors de glucèmia a altres aplicacions. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
 
-Wait at least 15-20 minutes if there is still no data.
+### Pas 2: Configurar xDrip
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
+L'aplicació xDrip del telèfon rep els valors de glucèmia.
 
-### Step 4: Configure AAPS
+- Si encara no ho heu fet, descarregueu [xDrip](https://github.com/NightscoutFoundation/xDrip) i seguiu les instruccions de la [pàgina de configuració de xDrip](../CompatibleCgms/xDrip.md).
+- A xDrip seleccioneu "Libre2 (patched app)" com a font de dades.
+- Si cal, introduïu "BgReading:d,xdrip libre_receiver:v" a Less Common Settings → Extra Logging Settings → Extra tags for logging. Així es registren missatges d'error addicionals per a la resolució de problemes.
 
-- See [here](#juggluco-to-xdrip) and come back.
+![Registre LibreLink de xDrip](../images/Libre2_Tags.png)
 
-- If **AAPS** does not receive BG values when phone is in airplane mode, use "Identify receiver"
-- Turn off Smoothing (done in xDrip already)
+- Tècnicament, el valor actual de glucèmia s'envia a xDrip cada minut. Un filtre de mitjana ponderada calcula per defecte un valor suavitzat dels últims 25 minuts. Podeu canviar el període al menú NFC Scan features.
 
-## Subsequent sensor changes
+  → Menú hamburguesa → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-1. Open Juggluco and note the serial number of the existing sensor
+  ![Configuració avançada de xDrip per al Libre 2 i valors en brut](../images/libre3/xDrip_Libre3_Smooth.png)
 
-![Libre serial number](../images/libre3/step_13.jpg)
 
-2. Now simply scan your new sensor with your phone’s NFC reader. Juggluco will display a notice if the process had been started successfully.
-3. When you are ready to deactivate the old sensor, then open the Juggluco menu by clicking anywhere in the empty space in the upper left hand corner of the screen.
-4. Select the expired sensor and tap "Terminate"
 
-![Terminate sensor](../images/libre3/step_14.jpg)
+### Pas 3: Iniciar el sensor a xDrip
 
-Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. If you terminate the wrong sensor, you can reactivate it by simply scanning the sensor.
+A xDrip inicieu el sensor amb "Start Sensor" i "not today". No cal acostar el telèfon mòbil al sensor. De fet, "Start Sensor" no inicia físicament cap sensor Libre 3 ni interactua amb ells de cap manera. Això només serveix per indicar a xDrip que un sensor nou envia valors de glucèmia. If available, enter two blood-measured values for the initial calibration. Ara els valors de glucèmia s'haurien de mostrar a xDrip cada 5 minuts. Els valors perduts, per exemple perquè éreu massa lluny del telèfon, no es recuperaran.
 
-## Switch sensor between Libre 3 and Juggluco app
+Espereu com a mínim 15–20 minuts si encara no hi ha dades.
 
-If the sensor has been started with a Libreview account logged in, it is also possible to switch between Juggluco and the Libre 3 app as receiver. This requires the following steps:
+Després d'un canvi de sensor, xDrip detectarà automàticament el sensor nou i eliminarà totes les dades de calibració. You may check your blood glucose after activation and make a new initial calibration.
 
-1. Install the Libre 3 app from Google Playstore
-2. Set up the Libre 3 app with the Libreview account with which the sensor was activated.
-3. Force stop the Juggluco app in the Android settings.
-4. In the Libre 3 menu, click "Start Sensor", select "Yes", "Next" and scan your sensor.
-5. After some minutes, the BG-Values should be visible within Libre 3 App.
+### Pas 4: Configurar AAPS
 
-In order to switch from the Libre 3 app to Juggluco, you need to force-stop Libre 3 app via Android settings and proceed with Step 1 & 2.
+- Vegeu [aquí](#juggluco-to-xdrip) i torneu.
+
+- Si **AAPS** no rep valors de glucèmia quan el telèfon està en mode avió, feu servir "Identify receiver"
+- Desactiveu el suavitzat (xDrip ja el fa)
+
+## Canvis de sensor posteriors
+
+1. Obriu Juggluco i anoteu el número de sèrie del sensor actual
+
+![Número de sèrie del Libre](../images/libre3/step_13.jpg)
+
+2. Ara només cal escanejar el sensor nou amb el lector NFC del telèfon. Juggluco mostrarà un avís si el procés s'ha iniciat correctament.
+3. Quan estigueu a punt per desactivar el sensor antic, obriu el menú de Juggluco fent clic en qualsevol lloc de l'espai buit a la cantonada superior esquerra de la pantalla.
+4. Seleccioneu el sensor caducat i premeu "Terminate"
+
+![Finalitzar el sensor](../images/libre3/step_14.jpg)
+
+Nota: quan hi ha dos sensors actius, Juggluco enviarà a xDrip el valor més recent de qualsevol dels dos sensors. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Si finalitzeu el sensor equivocat, el podeu tornar a activar simplement escanejant-lo.
+
+## Canviar el sensor entre l'aplicació Libre 3 i Juggluco
+
+Si el sensor s'ha iniciat amb un compte de LibreView connectat, també és possible canviar de receptor entre Juggluco i l'aplicació Libre 3. Cal seguir aquests passos:
+
+1. Instal·leu l'aplicació Libre 3 des de Google Play Store
+2. Configureu l'aplicació Libre 3 amb el compte de LibreView amb què es va activar el sensor.
+3. Forceu l'aturada de l'aplicació Juggluco a la configuració d'Android.
+4. Al menú de Libre 3, feu clic a "Start Sensor", seleccioneu "Yes", "Next" i escanegeu el sensor.
+5. Al cap d'uns minuts, els valors de glucèmia s'haurien de veure a l'aplicació Libre 3.
+
+Per passar de l'aplicació Libre 3 a Juggluco, heu de forçar l'aturada de l'aplicació Libre 3 a la configuració d'Android i seguir els passos 1 i 2.
 
 (libre3-experiences-and-troubleshooting)=
-## Experiences and Troubleshooting
+## Experiències i resolució de problemes
 
-### Troubleshooting Libre3 -> Juggluco Connection
+### Resolució de problemes de la connexió Libre3 -> Juggluco
 
-- Make sure you are using a current version of the Juggluco app
-- Check your settings according to this guide
-- You may sometimes have to force stop the Libre 3 app and Juggluco and restart it.
-- Disable Bluetooth and enable it again
-- Wait some time or try to close Juggluco
-- Older versions of Juggluco (below 2.9.6) do not send subsequent data from the Libre3 sensor to connected devices (e.g. Juggluco on WearOS). You may need to click "Resend data" in the patched Libre3 app (Juggluco menu).
+- Assegureu-vos que feu servir una versió actual de l'aplicació Juggluco
+- Comproveu la configuració segons aquesta guia
+- De vegades potser haureu de forçar l'aturada de l'aplicació Libre 3 i de Juggluco i tornar-les a iniciar.
+- Desactiveu el Bluetooth i torneu-lo a activar
+- Espereu una estona o proveu de tancar Juggluco
+- Les versions antigues de Juggluco (anteriors a la 2.9.6) no envien les dades següents del sensor Libre3 als dispositius connectats (p. ex. Juggluco a WearOS). Potser haureu de fer clic a "Resend data" a l'aplicació Libre3 modificada (menú de Juggluco).
 
-### Further help
+### Més ajuda
 
-Original instructions: [jkaltes website](https://www.juggluco.nl/Juggluco/libre3/)
+Instruccions originals: [lloc web de jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
 Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)
