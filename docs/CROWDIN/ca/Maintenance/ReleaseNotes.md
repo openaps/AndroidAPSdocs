@@ -1,5 +1,5 @@
 
-# Release notes
+# Notes de la versió
 
 ```{toctree}
 :hidden:
@@ -9,47 +9,47 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. La secció de resolució de problemes de la pàgina del manual d'actualització també tracta les dificultats més habituals en actualitzar **AAPS**.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
-See [What changed in AAPS v4](V4Changes.md) for the notable behavioral changes — features that have moved, been renamed, or been removed.
+Vegeu [Què ha canviat a AAPS v4](V4Changes.md) per als canvis de comportament importants: funcions que s'han mogut, que tenen un nom nou o que s'han eliminat.
 ```
 
-You will receive a notification like this when a new update is available:
+Quan hi hagi una actualització nova disponible, rebreu una notificació com aquesta:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Informació d'actualització](../images/AAPS_LoopDisable90days.png)
 
-If you do not update until expiration date **AAPS** will switch to Open Loop.
+Si no actualitzeu abans de la data de caducitat, **AAPS** passarà a llaç obert.
 
-See [End of life](EndOfLife.md) for AAPS version end dates.
+Vegeu [Fi del suport](EndOfLife.md) per a les dates de fi de cada versió d'AAPS.
 
-**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+**No ignoreu la notificació.** Les versions noves d'**AAPS** porten correccions de seguretat importants. Per això, tots els usuaris d'**AAPS** han d'actualitzar a l'última versió tan aviat com sigui possible. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Gràcies per la vostra comprensió.
 
 (maintenance-android-version-aaps-version)=
 
-## Android version and AAPS version
+## Versió d'Android i versió d'AAPS
 
-If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
+Si el vostre telèfon té una versió d'Android anterior a Android 12, no podreu fer servir AAPS v3.4 o posterior, perquè necessita com a mínim Android 12.
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+Perquè els usuaris amb un Android més antic puguin fer servir una versió més antiga d'AAPS, s'han publicat versions noves que només canvien la comprovació de la versió. No inclouen cap altra millora.
 
-Find your Android version in the table below and use the matching **AAPS** version. The code is downloaded from <https://github.com/nightscout/AndroidAPS> using the branch shown.
+Busqueu la vostra versió d'Android a la taula de sota i feu servir la versió d'**AAPS** corresponent. El codi es descarrega de <https://github.com/nightscout/AndroidAPS> amb la branca indicada.
 
-| Your Android version | AAPS version to use | Branch to download                                               |
-| -------------------- | ------------------- | ---------------------------------------------------------------- |
-| Android 12 and up    | Latest version      | [master](https://github.com/nightscout/AndroidAPS) (default)     |
-| Android 11           | **3.3.2.1**         | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
-| Android 9, 10        | **3.2.0.4**         | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
-| Android 8            | **2.8.2.1**         | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
-| Android 7            | **2.6.2**           | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
+| La vostra versió d'Android | Versió d'AAPS que heu de fer servir | Branca que heu de descarregar                                    |
+| -------------------------- | ----------------------------------- | ---------------------------------------------------------------- |
+| Android 12 i posterior     | Última versió                       | [master](https://github.com/nightscout/AndroidAPS) (per defecte) |
+| Android 11                 | **3.3.2.1**                         | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
+| Android 9, 10              | **3.2.0.4**                         | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
+| Android 8                  | **2.8.2.1**                         | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
+| Android 7                  | **2.6.2**                           | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
 
-## WearOS version
+## Versió de WearOS
 
-- AAPS requires WearOS 3.0, 3.2 or 3.5 (Android 11, API level 30) or newer. WearOS 2 watches are not supported.
+- AAPS necessita WearOS 3.0, 3.2 o 3.5 (Android 11, nivell d'API 30) o posterior. Els rellotges amb WearOS 2 no són compatibles.
 
 ```{tip}
-WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+WearOS 5, nivell d'API 34 (Android 14) té [limitacions](#BuildingAapsWearOs-WearOS5).
 ```
 
 Versions with a heading are the latest release for each Android version (see the table above). The other releases follow in between, with their notes or a link to them on GitHub.
@@ -64,59 +64,59 @@ Release date: 31-10-2026
 
 **New features**
 
-- New user interface: phone app rebuilt in Jetpack Compose @MilosKozak
-- [Global search](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
-- Kotlin Multiplatform migration, client for Windows, Mac, Linux desktop and iOS @MilosKozak
-- [Scenes](../DailyLifeWithAaps/Scenes.md): save a set of actions and run them together @MilosKozak
-- [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md): send commands from a client phone to the master @MilosKozak
-  - [Client roles](#client-master-control-roles): Read-only, Meals, Caregiver or Admin for each client @MilosKozak
-  - [Hardened mode](#client-master-control-hardened-mode): with client control on, the master takes changes only from paired clients @MilosKozak
-  - Pairing with a QR code that also sets up Nightscout on the client, or with a PIN; the pairing secret is replaced right after pairing @MilosKozak
-  - [Own Nightscout token](#client-master-control-own-token) for each client, with only the rights a client needs @MilosKozak
-- [Insulin concentration](../AdvancedOptions/InsulinConcentration.md) support (U200, U500) across pumps, wizard and profiles @Philoul @MilosKozak
-- Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
-- Calibration plugin @MilosKozak
-- [Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
+- Nova interfície d'usuari: l'aplicació del telèfon s'ha refet amb Jetpack Compose @MilosKozak
+- [Cerca global](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
+- Migració a Kotlin Multiplatform, client per a escriptori Windows, Mac i Linux i per a iOS @MilosKozak
+- [Escenes](../DailyLifeWithAaps/Scenes.md): deseu un conjunt d'accions i executeu-les juntes @MilosKozak
+- [Control principal ↔ client](../RemoteFeatures/ClientMasterControl.md): envieu ordres d'un telèfon client al telèfon principal @MilosKozak
+  - [Rols del client](#client-master-control-roles): Només lectura, Àpats, Cuidador o Admin per a cada client @MilosKozak
+  - [Mode reforçat](#client-master-control-hardened-mode): amb el control des del client activat, el telèfon principal només accepta canvis dels clients emparellats @MilosKozak
+  - Emparellament amb un codi QR que també configura Nightscout al client, o amb un PIN; el secret d'emparellament se substitueix just després d'emparellar @MilosKozak
+  - [Token de Nightscout propi](#client-master-control-own-token) per a cada client, només amb els permisos que el client necessita @MilosKozak
+- Suport de [concentració d'insulina](../AdvancedOptions/InsulinConcentration.md) (U200, U500) a les bombes, a l'assistent i als perfils @Philoul @MilosKozak
+- Gestió de la insulina: catàleg d'insulines, noms curts, selecció al perfil i a l'assistent @Philoul
+- Plugin de calibració @MilosKozak
+- [Suavitzat](../CompatibleCgms/SmoothingBloodGlucoseData.md): filtre de Kalman Unscented (UKF) @piecycle
 - New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
-- [Site rotation](#Aapsscreens-site-rotation): track and rotate infusion sites @Philoul @MilosKozak
-- [Autotune](../AdvancedOptions/Autotune.md) rework @Philoul
-- New [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
-- Accessibility: the phone app works with a screen reader - named controls, spoken status, graph descriptions and headings to skim @MilosKozak
-- [Settings import](../Maintenance/ExportImportSettings.md): can keep the pump settings @MilosKozak
-- Persistent notification uses Android live updates, with Samsung Now bar support and the delta @premnirmal
-- BG graph: [press and hold](#aaps-screens-graph-press-and-hold) to see the values at a reading, on every graph of the overview @t1dude @olorinmaia
-- Performance improvements @MilosKozak
-- Automatic e-carbs in Bolus wizard @MilosKozak
+- [Rotació de punts d'inserció](#Aapsscreens-site-rotation): registreu i aneu canviant els punts d'infusió @Philoul @MilosKozak
+- [Autotune](../AdvancedOptions/Autotune.md) refet @Philoul
+- [Widgets](../DailyLifeWithAaps/Widgets.md) nous @MilosKozak @t1dude
+- Accessibilitat: l'aplicació del telèfon funciona amb un lector de pantalla: controls amb nom, estat llegit en veu alta, descripcions dels gràfics i encapçalaments per navegar ràpidament @MilosKozak
+- [Importació de la configuració](../Maintenance/ExportImportSettings.md): pot mantenir la configuració de la bomba @MilosKozak
+- La notificació permanent fa servir les actualitzacions en directe d'Android, amb suport per a la Now bar de Samsung i la delta @premnirmal
+- Gràfic de glucèmia: [mantingueu premut](#aaps-screens-graph-press-and-hold) per veure els valors d'una lectura, a tots els gràfics del resum @t1dude @olorinmaia
+- Millores de rendiment @MilosKozak
+- E-carbs automàtics a la calculadora de bolus @MilosKozak
 
 **New devices**
 
-- **CareLevo**: new [pump driver](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
-- **Dana-i2**: support @MilosKozak
-- **Instara**: new CGM source @leohunt
+- **CareLevo**: nou [controlador de bomba](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
+- **Dana-i2**: suport @MilosKozak
+- **Instara**: nova font de glucèmia (CGM) @leohunt
 
 **Pump Driver Improvements**
 
-- Pump overview screens rebuilt for Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn and Equil @MilosKozak
+- Pantalles de resum de la bomba refetes per a Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn i Equil @MilosKozak
 - **Omnipod DASH**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
-- **Omnipod**: hard-end date for Dash & Eros @mcnelson
-- **DanaR, RS**: pump emulator for testing @MilosKozak
-- **Equil**: pump emulator for testing @MilosKozak
-- Many pump and loop fixes @MilosKozak and others
+- **Omnipod**: data de fi fixa per a Dash i Eros @mcnelson
+- **DanaR, RS**: emulador de bomba per a proves @MilosKozak
+- **Equil**: emulador de bomba per a proves @MilosKozak
+- Moltes correccions de bombes i del llaç @MilosKozak i altres
 
 **Wear OS**
 
-- [Watch app](../WearOS/WearOsSmartwatch.md) rebuilt in Compose, new tiles and complications, automatic watch face install (Watch Face Push) on Wear OS 6+ @olorinmaia @Philoul
-- CustomWatchface available for WearOS 6.0 (GW7, GW8, GW9...) with a WFF dedicated watchface @Philoul @olorinmaia
-- CustomWatchface can now include 5 Complication slots you can customize (new feature only available for older watches) @Philoul
-- New [WFF watchface based on AAPS complications](#wearos-complications-watchface-setup) @olorinmaia
-- Corrections in Bolus wizard and Quick wizard result @olorinmaia
-- New BG graph and Running mode activity in main menu @olorinmaia
-- Bolus wizard: [meal type](#WearOsSmartwatch-wizard-meal-type) page that splits the carbs like the phone wizard, and [carb time](#WearOsSmartwatch-wizard-carb-time) with the *time to eat* reminder on the watch @olorinmaia
-- [Phone alarms on the watch](#WearOsSmartwatch-phone-alarms): the watch shows the alarm and offers Silence and Mute 5 min @olorinmaia
+- [Aplicació del rellotge](../WearOS/WearOsSmartwatch.md) refeta amb Compose, mosaics i complicacions nous, instal·lació automàtica de watchfaces (Watch Face Push) a Wear OS 6 o posterior @olorinmaia @Philoul
+- CustomWatchface disponible per a WearOS 6.0 (GW7, GW8, GW9...) amb un watchface WFF dedicat @Philoul @olorinmaia
+- CustomWatchface ara pot incloure 5 espais de complicació que podeu personalitzar (funció nova només disponible per a rellotges més antics) @Philoul
+- Nova [watchface WFF basada en les complicacions d'AAPS](#wearos-complications-watchface-setup) @olorinmaia
+- Correccions al resultat de la calculadora de bolus i de l'assistent ràpid @olorinmaia
+- Nou gràfic de glucèmia i activitat del mode de funcionament al menú principal @olorinmaia
+- Calculadora de bolus: pàgina de [tipus d'àpat](#WearOsSmartwatch-wizard-meal-type) que reparteix els carbohidrats com la calculadora del telèfon, i [hora dels carbohidrats](#WearOsSmartwatch-wizard-carb-time) amb el recordatori *hora de menjar* al rellotge @olorinmaia
+- [Alarmes del telèfon al rellotge](#WearOsSmartwatch-phone-alarms): el rellotge mostra l'alarma i ofereix Silenciar i Silenciar 5 min @olorinmaia
 
 **Build**
 
-- CI workflows for tag/branch builds, JDK version mapping @Angus-repo
+- Workflows de CI per a compilacions d'etiquetes i branques, correspondència de versions de JDK @Angus-repo
 
 **Contributors**
 
@@ -130,7 +130,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 ## Version 3.4.2.6
 
-- Equil: improve stability @MilosKozak
+- Equil: millora de l'estabilitat @MilosKozak
 
 ---
 
@@ -306,7 +306,7 @@ Release date: 31-12-2025
 
 * various improvements @MilosKozak @Philoul @olorinmaia
 
-**Automation**
+**Automatització**
 
 * New SMB control action - enable/disable SMB via automation @MilosKozak
 
@@ -323,45 +323,45 @@ Release date: 31-12-2025
 
 (version3321)=
 
-## Version 3.3.2.1
+## Versió 3.3.2.1
 
-Release date: 13-08-2025
+Data de publicació: 13-08-2025
 
-- Fixed Omnipod Bluetooth connection on Android 16
-- CI process (Browser build)
-- Fix mmol-mgdl conversion
-- Fix wrong time selection in dialogs in some timezones
-- Fix reading keys in simple mode
-- Fix missed predictions on wear
-- Improved ConfigBuilder
-- Improved NSCv3 full sync
+- S'ha corregit la connexió Bluetooth d'Omnipod a Android 16
+- Procés de CI (compilació al navegador)
+- Correcció de la conversió mmol-mgdl
+- Correcció de la selecció d'hora incorrecta als diàlegs en algunes zones horàries
+- Correcció de la lectura de claus en mode simple
+- Correcció de prediccions que faltaven al rellotge
+- Configurador millorat
+- Sincronització completa de NSCv3 millorada
 
 ---
 
 (version3300)=
 
-**Version 3.3.2.0**
+**Versió 3.3.2.0**
 
-Release date: 27-03-2025
+Data de publicació: 27-03-2025
 
-**How to upgrade**
+**Com actualitzar**
 
-* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* Per compilar aquesta versió cal la [versió d'Android Studio anomenada "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) o una de més nova. Si ja heu compilat una versió 3.3.x, heu de tornar a actualitzar Android Studio.
 
 (version-enforcement)=
 
 **Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
 
-*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
-*  After expiration LGS mode is enforced
-*  You'll receive warning/notifications less often:
-   - 28+ days remaining: every 7 days
-   - 27-14 days remaining: every 3 days
-   - then once a day
-   - Notification will be generated after noon to not bother you during nights
-* There are only 2 kinds of notification
-   - New version available (has no effect on AAPS)
-   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+*  No hi ha caducitat quan el dispositiu està fora de línia (sense connexió a internet). Això vol dir que ja no hi ha períodes de gràcia de 60 i 90 dies.
+*  Després de la caducitat, s'imposa el mode LGS
+*  Rebreu avisos i notificacions menys sovint:
+   - Queden 28 dies o més: cada 7 dies
+   - Queden 27-14 dies: cada 3 dies
+   - després, un cop al dia
+   - La notificació es genera després del migdia per no molestar-vos a la nit
+* Només hi ha 2 tipus de notificació
+   - Hi ha una versió nova disponible (no té cap efecte a AAPS)
+   - L'aplicació caducarà en una data futura (encara sense efecte a AAPS) / ha caducat (AAPS passarà al mode LGS)
 
 **News**
 
@@ -409,7 +409,7 @@ Release date: 21-01-2025
 
 Release date: 15-01-2025
 
-**How to upgrade**
+**Com actualitzar**
 
 * [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
@@ -469,7 +469,7 @@ Release date: 29-12-2024
 * New **Automation** triggers
 * Unattended settings exports
 
-**How to upgrade**
+**Com actualitzar**
 
 * Before upgrading:
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
@@ -526,7 +526,7 @@ Release date: 29-12-2024
 * Fixed bug in TDD calculation @MilosKozak
 * SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
 
-**Smartwatches**
+**Rellotges intel·ligents**
 
 * wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
 * Watch tiles from Automation actions @Philoul
@@ -551,18 +551,18 @@ Release date: 29-12-2024
 
 (version3204)=
 
-## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+## [Versió 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
 
-Release date: 27-02-2024
+Data de publicació: 27-02-2024
 
-This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+Aquesta versió és l'última que funciona amb Android 10. Si no podeu actualitzar a Android 11, [actualitzeu AAPS a 3.2.0.4](#update-aaps-3204).
 
-**Changes**
+**Canvis**
 
-- xDrip G7 support
-- Medtrum fixes
-- Automation icon fix
-- Passing objective 1 fix
+- Suport per a xDrip G7
+- Correccions de Medtrum
+- Correcció de la icona d'automatització
+- Correcció per superar l'objectiu 1
 
 ---
 
@@ -583,7 +583,7 @@ Release date: 23-10-2023
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
-**Changes**
+**Canvis**
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 pump driver (no need of Ruffy) @dv1
@@ -649,7 +649,7 @@ RECOMMENDED SETTING
 
 Release date: 19-07-2022
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0)
+[Notes de la versió](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0)
 
 ---
 
@@ -657,7 +657,7 @@ Release date: 19-07-2022
 
 Release date: 31-01-2022
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/3.0.0)
+[Notes de la versió](https://github.com/nightscout/AndroidAPS/releases/tag/3.0.0)
 
 ---
 
@@ -671,11 +671,11 @@ This version is the last one supporting Android 8. [Release notes](https://githu
 
 ---
 
-**Version 2.8.2**
+**Versió 2.8.2**
 
-Release date: 23-01-2021
+Data de publicació: 23-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2)
+[Notes de la versió](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2)
 
 ---
 
@@ -685,7 +685,7 @@ Release date: 23-01-2021
 
 Release date: 12-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.1.1)
+[Notes de la versió](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.1.1)
 
 ---
 
@@ -695,7 +695,7 @@ Release date: 12-01-2021
 
 Release date: 01-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
+[Notes de la versió](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ---
 
@@ -705,7 +705,7 @@ Release date: 01-01-2021
 
 Release date: 24-09-2020
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
+[Notes de la versió](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ---
 
@@ -715,7 +715,7 @@ Release date: 24-09-2020
 
 Release date: 04-05-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2614)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2614)
 
 ---
 
@@ -723,7 +723,7 @@ Release date: 04-05-2020
 
 Release date: 03-05-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2613)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2613)
 
 ---
 
@@ -731,7 +731,7 @@ Release date: 03-05-2020
 
 Release date: 19-04-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2612)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2612)
 
 ---
 
@@ -739,7 +739,7 @@ Release date: 19-04-2020
 
 Release date: 06-04-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2611)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2611)
 
 ---
 
@@ -747,7 +747,7 @@ Release date: 06-04-2020
 
 Release date: 21-03-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-261)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-261)
 
 ---
 
@@ -757,7 +757,7 @@ Release date: 21-03-2020
 
 Release date: 29-02-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)
 
 ---
 
@@ -765,7 +765,7 @@ Release date: 29-02-2020
 
 Release date: 31-10-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-251)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-251)
 
 ---
 
@@ -775,7 +775,7 @@ Release date: 31-10-2019
 
 Release date: 26-10-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)
 
 ---
 
@@ -783,7 +783,7 @@ Release date: 26-10-2019
 
 Release date: 25-04-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-23)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-23)
 
 ---
 
@@ -791,7 +791,7 @@ Release date: 25-04-2019
 
 Release date: 07-04-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-222)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-222)
 
 ---
 
@@ -799,7 +799,7 @@ Release date: 07-04-2019
 
 Release date: 29-03-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-22)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-22)
 
 ---
 
@@ -807,7 +807,7 @@ Release date: 29-03-2019
 
 Release date: 03-03-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-21)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-21)
 
 ---
 
@@ -815,18 +815,18 @@ Release date: 03-03-2019
 
 Release date: 03-11-2018
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-20)
+[Notes de la versió](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-20)
 
 ---
 
-**Version 1.0**
+**Versió 1.0**
 
 ```{admonition} First version of **AAPS**
 :class: note
 
-The first test version started in 2015 and the first release was in 2016.
+La primera versió de prova va començar el 2015 i la primera publicació va ser el 2016.
 
-The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+Ara mateix no tenim la cronologia exacta d'aquestes versions, però com que s'ha preguntat diverses vegades, la documentem aquí.
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
