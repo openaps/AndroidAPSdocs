@@ -5,7 +5,7 @@
 
 -   Установите приложение с <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   Запустите сенсор X1
 
 - Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
