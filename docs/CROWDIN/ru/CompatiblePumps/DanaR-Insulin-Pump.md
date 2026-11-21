@@ -7,7 +7,7 @@
 * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
 * Timezone and DST changes need no special action, as the pump does not use its own history.
 
-## Setup
+## Настройка
 
 * В помпе войдите в главное меню > параметры > пользовательские настройки
 * Включите «8. Пролонгированный болюс"
@@ -15,7 +15,7 @@
 ![Инсулиновая помпа DanaR](../images/danar1.png)
 
 * Перейдите в главное меню > параметры > обнаружение
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Если DanaR не отображается при сканировании, перезапустите телефон, выньте батарею DanaR, замените ее и повторите эти два шага.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Если DanaR не отображается при сканировании, перезапустите телефон, выньте батарею DanaR, вставьте ее обратно и повторите эти два шага.
 
 * In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
   
