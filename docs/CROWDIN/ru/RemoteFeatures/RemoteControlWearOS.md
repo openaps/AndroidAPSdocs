@@ -27,7 +27,7 @@ With **Open plugin** on the **Wear** card you open the Wear screen:
 
 The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
+* Resend all data. Это может помочь, если часы какое-то время не были подключены и вы хотите передать информацию на часы.
 * Open settings on your watch directly from your phone.
 * Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
 * Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
@@ -151,29 +151,29 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     ## Complications
     
-    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Операционная система Wear OS 2.0 позволяет употребить эту метафору для описания дополнительных функций, выводимых на экран вроде погоды, уведомлений, счетчиков фитнеса а также добавлять их в любые циферблаты, поддерживающие усложнения.
+    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 переносит эту идею на часы: дополнительные данные, например погоду, уведомления, счетчики фитнеса и многое другое, можно добавить в любые циферблаты, которые поддерживают дополнения.
     
     AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
     
-    Complications also serve as **shortcut** to AAPS functions. Нажав на них вы можете открывать меню и диалогоовые окна, связанные с AAPS (в зависимости от типа усложнения и конфигурации).
+    Complications also serve as **shortcut** to AAPS functions. Нажав на них, вы можете открывать меню и диалоговые окна AAPS (в зависимости от типа дополнения и настройки).
     
     ![The Complications watchface, every slot filled with an AAPS complication](../images/wearos/complications_on_watchface.png)
     
     ### Complication Types
     
-    AAPS Wear OS app provides only raw data, according to predefined formats. Решение о том, где и как отображать усложнения, включая их макет, границу, цвет и шрифт, зависит от авторов стороннего циферблата. From many Wear OS complication types available, AAPS uses:
+    AAPS Wear OS app provides only raw data, according to predefined formats. Где и как показывать дополнения, включая их расположение, рамку, цвет и шрифт, решает сторонний циферблат. From many Wear OS complication types available, AAPS uses:
     
-    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Обычно отображаетя внутри круга или небольшой таблетки - один под другим, или сбоку друг от друга. Это очень ограниченное размерами усложнение. AAPS пытается удалить ненужные символы чтобы уместить информацию: округляет значения, удаляет начальные и хвостовые нули из значений и т. д.
-    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Обычно выводится внутри прямоугольника или длинной таблетки-один ниже другого. Он используется для более детальной информации в виде текста.
+    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Обычно отображается внутри круга или небольшой «таблетки» - один под другим или рядом друг с другом. Это дополнение с очень малым местом. AAPS пытается удалить ненужные символы чтобы уместить информацию: округляет значения, удаляет начальные и хвостовые нули из значений и т. д.
+    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Обычно отображается внутри прямоугольника или длинной «таблетки» - один под другим. Он используется для более детальной информации в виде текста.
     * `RANGED VALUE` - Used for values from predefined range, like a percentage. Он содержит иконку, ярлык и обычно отображается в виде круга с достигнутыми значениями.
     * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
     * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
     
     ### Complication Setup
     
-    To add complication to watchface, configure it by long press and clicking the gear icon below. В зависимости от конфигурации нажмите на соответствующее место на экране или войдите в меню настройки циферблата для настройки усложнений. Усложнения AAPS сгруппированы в меню AAPS.
+    To add complication to watchface, configure it by long press and clicking the gear icon below. В зависимости от того, как это настроено в конкретном циферблате, нажмите на место для дополнения или откройте меню настройки дополнений циферблата. Дополнения AAPS собраны в пункте меню AAPS.
     
-    При настройке усложнений на циферблате, Wear OS показывает и фильтрует список усложнений, которые могут быть помещены в выбранное место на экране. Если в списке не удается найти конкретные усложнения, то, вероятно, это связано с отсутствием достаточного места.
+    При настройке дополнений на циферблате Wear OS показывает список только тех дополнений, которые подходят для выбранного места на циферблате. Если нужного дополнения нет в списке, то, вероятно, его тип нельзя использовать для этого места.
     
     ### Complications provided by AAPS
     
@@ -345,15 +345,15 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     This section and the next apply to the classic **AAPS** watchfaces on Wear OS 5 and older. On Wear OS 6 the **Complications watchface** has an always-on display of its own, see [the watchface AAPS installs](#wearos-aaps-v4-watchface).
     
-    Хороший заряд батареи смартфонов на Android Wear OS - это задача. Некоторые смартфоны выдерживают аж 30 часов до перезарядки. Дисплей должен быть выключен для оптимального энергосбережения, если он не используется. Большинство часов поддерживают дисплей «Всегда включен».
+    Долгая работа батареи смарт-часов на Android Wear OS - это непростая задача. Некоторые смарт-часы работают до 30 часов без подзарядки. Дисплей должен быть выключен для оптимального энергосбережения, если он не используется. Большинство часов поддерживают дисплей «Всегда включен».
     
-    Начиная с версии 3 AAPS мы можем использовать «Упростить интерфейс» в режиме постоянно включенного экрана. Этот интерфейс содержит только глюкозу крови, направление и время. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+    Начиная с версии 3 AAPS мы можем использовать «Упростить интерфейс» в режиме постоянно включенного экрана. Этот интерфейс содержит только глюкозу крови, направление и время. Этот интерфейс экономит энергию: он реже обновляется, показывает меньше информации и включает меньше пикселей, чтобы экономить заряд на OLED-дисплеях.
     
     The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
     
     ### Night-time mode
     
-    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. Однако, стандартные дисплеи слишком яркие и имеют слишком много информации, а детали трудно прочитать заспанными глазами. Поэтому мы добавили опцию настройки для упрощения интерфейса только во время зарядки.
+    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. Однако стандартные циферблаты слишком яркие и показывают слишком много информации, а детали трудно прочитать заспанными глазами. Поэтому мы добавили опцию настройки для упрощения интерфейса только во время зарядки.
     
     The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
     
@@ -398,7 +398,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     ## Performance and battery life tips
     
-    Wear OS watches are very power-constrained devices. Размер их корпуса ограничивает емкость встроенной батареи. Даже с последними достижениями в аппаратном и программном обеспечении часов Wear OS по-прежнему требуется ежедневная подзарядка.
+    Wear OS watches are very power-constrained devices. Размер корпуса часов ограничивает емкость встроенной батареи. Даже с последними достижениями в аппаратном и программном обеспечении часов Wear OS по-прежнему требуется ежедневная подзарядка.
     
     If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
     
@@ -413,13 +413,13 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
     * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
     * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-    * Start with simpler watchfaces. Добавляйте по одному усложнению и наблюдайте, как они влияют на работу батареи.
+    * Start with simpler watchfaces. Добавляйте по одному дополнению и наблюдайте, как они влияют на работу батареи.
     * Use a dark theme on the watchface. On OLED displays fewer lit pixels mean less power and less burn-in.
     * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
     * Observe over a few days, with different activity profiles. Большинство часов активируют дисплей при просмотре, движении или других активаторах, связанных с использованием.
     * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
     * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. В конечном итоге, решать, когда обновлять циферблат или усложнение, зависит от Wear OS. Даже если приложение AAPS запрашивает обновление, система может решить отложить или игнорировать обновления для экономии батареи. При сомнениях и низком заряде батареи на часах - всегда сверяйтесь с основным приложением AAPS на телефоне.
+    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. В конечном итоге, когда обновлять циферблат или дополнение, решает Wear OS. Даже если приложение AAPS запрашивает обновление, система может решить отложить или игнорировать обновления для экономии батареи. При сомнениях и низком заряде батареи на часах - всегда сверяйтесь с основным приложением AAPS на телефоне.
     
     (Watchfaces-troubleshooting-the-wear-app)=
     
@@ -435,7 +435,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. При слиянии запроса на изменение (pull request) команда документации извлечет файл CustomWatchface.png и добавит к его имени в начале имя Zip-файла.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
