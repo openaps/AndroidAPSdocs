@@ -5,17 +5,17 @@
 ````{admonition} Note
 :class: note
 
-1. Якщо ви відкрили цю сторінку всередині застосунку (через вбудований браузер, web view), HTML-файл може не завантажитися. Please copy the URL and open it in your browser instead:
+1. Якщо ви відкрили цю сторінку всередині застосунку (через вбудований браузер, web view), HTML-файл може не завантажитися. Натомість скопіюйте URL і відкрийте його у своєму браузері:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+Або відкрийте сторінку останнього випуску:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2. Backup copy hosted on this site:
- - If the external link is also unavailable, you can use this backup file to download.
+2. Резервна копія на цьому сайті:
+ - Якщо зовнішнє посилання теж недоступне, ви можете завантажити цей резервний файл.
 <!--crowdin:disable-->
 
 ```{eval-rst}
