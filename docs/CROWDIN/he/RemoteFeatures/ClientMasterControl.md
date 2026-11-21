@@ -367,11 +367,11 @@ The dialog says why:
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-שום דבר לא שונה. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+שום דבר לא שונה. יש להתחיל את הצימוד מחדש. אם זה ממשיך להיכשל, יש להפעיל מחדש את **AAPSClient** ולנסות שוב.
 
-**The client says it is not paired**
+**מכשיר הלקוח אומר שהוא לא מצומד**
 
-יש לצמד שוב דרך **ניהול ← צימוד למכשיר ראשי**. Check that the client is **Active** in the master's **Authorized clients** list.
+יש לצמד שוב דרך **ניהול ← צימוד למכשיר ראשי**. יש לבדוק שמכשיר הלקוח **פעיל** ברשימת **לקוחות מורשים** במכשיר הראשי.
 
 **שום דבר לא קורה אחרי הצימוד**
 
@@ -379,25 +379,25 @@ The dialog says why:
 
 ### Commands
 
-**The client says the master is offline, or commands fail**
+**מכשיר הלקוח אומר שהמכשיר הראשי לא מחובר, או שפקודות נכשלות**
 
-Check that:
+יש לבדוק ש:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- הטלפון הראשי ער ו-**AAPS** פועל בו,
+- שני הטלפונים מחוברים ב-**NSClientV3** לאותו אתר Nightscout,
+- **websockets** מופעלים בשני הטלפונים.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Websockets הם **חובה** לשליטה מרחוק מ-**AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**המכשיר הראשי דוחה פקודה**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+המכשיר הראשי בודק כל פקודה שוב מול המצב הנוכחי שלו: למשל, הפרופיל שנבחר כבר לא קיים, או שסוג המשאבה לא מתאים. יש לבדוק במכשיר הראשי.
 
 **טיפולים שהוזנו באתר Nightscout לא מוחלים**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+זה צפוי ב[מצב מוקשח](#client-master-control-hardened-mode). במקום זאת, יש להזין אותם במכשיר לקוח מצומד.
 
-### Nightscout tokens and settings
+### אסימונים והגדרות של Nightscout
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ This is expected in [hardened mode](#client-master-control-hardened-mode). Enter
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-מכשיר הלקוח עדיין כותב עם אסימון שיש לו יותר הרשאות ממה שהוא צריך. The master sends the client its own token after pairing, but only if the master has an admin token. יש לבדוק את האסימון של המכשיר הראשי, או להגדיר שוב את מכשיר הלקוח עם קוד QR.
+מכשיר הלקוח עדיין כותב עם אסימון שיש לו יותר הרשאות ממה שהוא צריך. המכשיר הראשי שולח למכשיר הלקוח את האסימון האישי שלו (של מכשיר הלקוח) אחרי הצימוד, אבל רק אם למכשיר הראשי יש אסימון מנהל (admin). יש לבדוק את האסימון של המכשיר הראשי, או להגדיר שוב את מכשיר הלקוח עם קוד QR.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-מישהו אחר כתב את מסמך ההגדרות של המכשיר הראשי, או שלמכשיר הראשי יש מפתח חדש (למשל אחרי שהנתונים שלו נמחקו). A paired client takes the new key by itself the next time it connects to Nightscout. טלפון שרק קורא את Nightscout צריך שוב את קוד ה-QR של המכשיר הראשי (**קריאת Nightscout בלבד ← הצגת קוד QR**).
+מישהו אחר כתב את מסמך ההגדרות של המכשיר הראשי, או שלמכשיר הראשי יש מפתח חדש (למשל אחרי שהנתונים שלו נמחקו). מכשיר לקוח מצומד מקבל את המפתח החדש בעצמו בפעם הבאה שהוא מתחבר ל-Nightscout. טלפון שרק קורא את Nightscout צריך שוב את קוד ה-QR של המכשיר הראשי (**קריאת Nightscout בלבד ← הצגת קוד QR**).
 
 **מכשיר לקוח כבר לא יכול לקרוא את Nightscout**
 
