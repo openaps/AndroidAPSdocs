@@ -29,7 +29,7 @@ No tingueu pressa, aneu a poc a poc!
 - **<u>DESACTIVEU</u> totes les [automatitzacions](../DailyLifeWithAaps/Automations.md)**
 - **<u>DESACTIVEU</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf) i [AutoSens](#Open-APS-features-autosens)** perquè no intentin adaptar el vostre perfil.
 - No feu accions manuals (bolus manual, objectius temporals, etc.) durant les proves: deixeu que el sistema faci servir només la configuració del **perfil**.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Quan demaneu consell, incloeu-los sempre a les vostres captures de pantalla.
+- Per als [gràfics addicionals](#AapsScreens-section-g-additional-graphs): al gràfic 1, feu servir Insulina a bord i Basal. Al gràfic 2, feu servir Carbohidrats a bord (i Canvi de sensibilitat). Al gràfic 3, feu servir Desviacions i Impacte en la glucèmia. Quan demaneu consell, incloeu-los sempre a les vostres captures de pantalla.
 - COB=0[*](#profiletuning-cob-zero)
 
 Altres coses que l'ideal és evitar, perquè influeixen en les dades i poden portar a conclusions errònies:
@@ -127,7 +127,7 @@ Si després d'uns quants dies observeu els patrons següents, penseu en fer aque
 
 1. Primer necessiteu la configuració basal correcta al vostre **perfil**.
 2. Comenceu a l'objectiu, millor sense IOB negatiu.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Mesureu amb molta precisió una porció coneguda de carbohidrats i apunteu l'hora d'inici i l'IOB inicial. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). No us oblideu de menjar els carbohidrats ;)
+3. Apunteu la insulina total lliurada a **Gestionar → Bomba** (o a l'historial de la bomba) i anomeneu-la insulina inicial. Mesureu amb molta precisió una porció coneguda de carbohidrats i apunteu l'hora d'inici i l'IOB inicial. Després introduïu els carbohidrats i el bolus a **AAPS** amb la calculadora (amb la ràtio I:C configurada ara). No us oblideu de menjar els carbohidrats ;)
 4. Després d'unes hores, quan COB=0[*](#profiletuning-cob-zero) i torneu a ser a l'objectiu, apunteu l'hora final i l'IOB final, comproveu la insulina total lliurada igual que abans i anomeneu-la insulina final. *NOTA: la durada NO és important, sempre que sigui més llarga que la vostra digestió*
 5. A la diferència entre la insulina inicial i la final, resteu/sumeu la diferència IOB final - IOB inicial. Després resteu la insulina basal calculada amb la configuració del vostre **perfil**.
 6. Si la __glucèmia__ és a l'objectiu, tindreu la insulina total que s'ha fet servir per «digerir» els carbohidrats. Calculeu la vostra **ràtio I:C**.
