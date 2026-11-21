@@ -116,7 +116,7 @@ This step creates your own private copy of AAPS Builder in your GitHub account, 
 
 1. Asegúrate de que has iniciado sesión en github.com en este navegador.
 
-2. En **Your GitHub username**, escribe tu nombre de usuario de GitHub, no tu correo electrónico. La página lo comprueba con GitHub: **✓ GitHub user found** significa que es correcto.
+2. En **Your GitHub username**, escribe tu nombre de usuario de GitHub, no tu correo electrónico. La página lo comprueba con GitHub: **✓ Usuario de GitHub encontrado** significa que es correcto.
 
 3. En **Name of your repository**, deja la sugerencia `my-aaps`. Si ya creaste tu repositorio con otro nombre, escribe exactamente ese nombre.
 
@@ -128,7 +128,7 @@ This step creates your own private copy of AAPS Builder in your GitHub account, 
 
    ![Paso 1 de la página de configuración, ya rellenado](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Comprueba la línea **Your repository:** muestra `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. Comprueba la línea **Tu repositorio:** muestra `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
 
 5. Toca **Create my private repository**.
 
@@ -181,7 +181,7 @@ La página comprueba la contraseña y el alias en tu dispositivo. **Keystore OK!
 
 2. Elige una contraseña y escríbela dos veces. Reglas: al menos 8 caracteres, solo las letras a–z y A–Z, los dígitos 0–9 y símbolos como `! ? #`. Sin espacios, sin letras con acento y sin el carácter `|`.
 
-3. Toca **Create key**. Pasan unos segundos hasta que aparece **Key created**.
+3. Toca **Create key**. Pasan unos segundos hasta que aparece **Clave creada**.
 
    ![Formulario de clave nueva con la contraseña escrita dos veces](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
