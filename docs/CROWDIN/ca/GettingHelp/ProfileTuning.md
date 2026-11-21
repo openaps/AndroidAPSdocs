@@ -1,142 +1,142 @@
-# Tweaking the AAPS' Profile
+# Ajustar el perfil d'AAPS
 
 ```{admonition} This is NOT a medical advice
 :class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+Treballeu amb el vostre equip mèdic per tenir suport i consell sobre el control de la vostra diabetis.</br>
+Feu servir aquesta guia només quan ja hàgiu [configurat correctament el vostre **perfil**](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), seguint tots els objectius d'**AAPS**.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values in **AAPS** may be adjusted when certain situations or patterns are observed. The suggestions about basal testing below may diverge from what your care team advises.
+Aquesta guia explica la lògica dels resultats de l'algoritme OpenAPS amb un __perfil__ donat, i diu quins valors d'**AAPS** es poden ajustar quan s'observen certes situacions o patrons. Els consells sobre les proves de basal que trobareu més avall poden ser diferents del que us aconselli el vostre equip mèdic.
 
-Using **closed loop** may make basal testing easier and may significantly reduce the hypo risk if your __Profile__ basal is too strong.
+Fer servir el **llaç tancat** pot fer més fàcils les proves de basal i pot reduir molt el risc d'hipoglucèmia si la basal del vostre __perfil__ és massa forta.
 
-## Changing profile's settings, how to proceed
+## Com fer canvis a la configuració del perfil
 
-1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice may make the adjusting process problematic and less likely to get a well tuned __Profile__
-2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
-3. Keep an eye out for patterns with **AAPS** that happen around the same time (almost) everyday.
-4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
-5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. E.g. increase your basal by 10% around 1PM.
-7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
-8. Repeat this pattern, observe, decide, tweak again if needed
+1. Assegureu-vos que heu llegit i entès la configuració i els consells recomanats per __AAPS__ que trobareu més avall. Si no seguiu aquests consells, el procés d'ajust pot ser difícil i és menys probable que obtingueu un __perfil__ ben ajustat
+2. Observeu i compareu amb atenció, **durant uns quants dies**, què passa amb la vostra __glucèmia__ i el vostre __IOB__.
+3. Fixeu-vos en els patrons d'**AAPS** que passen (gairebé) cada dia a la mateixa hora.
+4. És important fer-ho durant uns quants dies. Si decidiu els ajustos del __perfil__ amb dades d'un sol dia, normalment el resultat és dolent.
+5. Només quan hàgiu vist un patró que es repeteix, per exemple a les 13:00 veieu un pic de __glucèmia__ o un valor d'__IOB__ negatiu, comenceu a fer petits canvis al vostre __perfil__.
+6. És important fer només un canvi cada vegada. P. ex. augmenteu la basal un 10% cap a les 13:00.
+7. Després de cada canvi, és important vigilar l'efecte en la vostra __glucèmia__ i el vostre __IOB__ durant els dies següents.
+8. Repetiu aquest procés: observeu, decidiu i torneu a ajustar si cal
 
-Don't rush, go slow!
+No tingueu pressa, aneu a poc a poc!
 
-## Recommended settings and advice while tweaking basal
+## Configuració i consells recomanats mentre ajusteu la basal
 
-- Do all testing with [closed loop enabled](#AapsScreens-loop-status).
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
-- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
-- Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
+- Feu totes les proves amb el [llaç tancat activat](#AapsScreens-loop-status).
+- **<u>DESACTIVEU</u> totes les [automatitzacions](../DailyLifeWithAaps/Automations.md)**
+- **<u>DESACTIVEU</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf) i [AutoSens](#Open-APS-features-autosens)** perquè no intentin adaptar el vostre perfil.
+- No feu accions manuals (bolus manual, objectius temporals, etc.) durant les proves: deixeu que el sistema faci servir només la configuració del **perfil**.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Quan demaneu consell, incloeu-los sempre a les vostres captures de pantalla.
 - COB=0[*](#profiletuning-cob-zero)
 
-Other considerations that should ideally be avoided, as they influence the data and can lead to poor conclusions:
-- No physical activities.
-- No stress.
-- No illness.
-- No extreme weather like high or low temperatures.
-- No failed pump or CGM sessions.
-- No unannounced carbs.
+Altres coses que l'ideal és evitar, perquè influeixen en les dades i poden portar a conclusions errònies:
+- Sense activitat física.
+- Sense estrès.
+- Sense malaltia.
+- Sense temps extrem, com temperatures molt altes o molt baixes.
+- Sense sessions fallides de bomba ni de CGM.
+- Sense carbohidrats no anunciats.
 
-Also note:
-- If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your **ISF** (**ISF** is only used when you are higher than your **BG** target).
-- You need to check the actual **IOB** but also the **IOB** chart, to observe how the **IOB** evolved during the past few hours.
+Tingueu en compte també:
+- Si el vostre [perfil de taxa basal](#your-aaps-profile-basal-rates) és correcte, quan sou a l'objectiu amb COB=0[*](#profiletuning-cob-zero) i IOB=0, us mantindreu sempre a l'objectiu sigui quin sigui el vostre **ISF** (l'**ISF** només es fa servir quan sou per sobre del vostre objectiu de **glucèmia**).
+- Heu de comprovar l'**IOB** actual, però també el gràfic de l'**IOB**, per veure com ha canviat l'**IOB** durant les últimes hores.
 
 (profiletuning-cob-zero)=
 
 ***COB = 0**
 
-Meaning that the meal is digested, and there are no more carbs in your body.
+Vol dir que l'àpat ja s'ha digerit i que ja no queden carbohidrats al vostre cos.
 
-**AAPS** might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
+**AAPS** pot indicar [COB=0 quan encara teniu carbohidrats a bord](../DailyLifeWithAaps/CobCalculation.md).
 
-## [Profile](../SettingUpAaps/YourAapsProfile.md) definitions
+## Definicions del [perfil](../SettingUpAaps/YourAapsProfile.md)
 
-A too **strong Profile** indicates some combination of the following:
+Un **perfil massa fort** indica alguna combinació del següent:
 
-- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small.
-- The [basal](#your-aaps-profile-basal-rates) number is too big.
-- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small.
+- El número de l'[ISF](#your-aaps-profile-insulin-sensitivity-factor) és massa petit.
+- El número de la [basal](#your-aaps-profile-basal-rates) és massa gran.
+- El número de la [ràtio I:C](#your-aaps-profile-insulin-to-carbs-ratio) és massa petit.
 
-## IOB Observations
+## Observacions de l'IOB
 
-*Note: you can also use Loopalyzer IOB graph in Nightscout reports to view IOB on several days.*
+*Nota: també podeu fer servir el gràfic d'IOB de Loopalyzer als informes de Nightscout per veure l'IOB de diversos dies.*
 
-If you observe the following patterns after a few days, consider the following changes:
+Si després d'uns quants dies observeu els patrons següents, penseu en fer aquests canvis:
 
-### IOB positive
+### IOB positiu
 
-- **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
+- La basal del **perfil** pot no ser prou forta (també pot ser per coses com menjar no anunciat, malaltia, mala absorció al punt d'infusió, etc.)
 
-![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![IOB positiu](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### IOB negative
+### IOB negatiu
 
-- Default basal too strong.
-- May be the effect from past exercise/physical activity.
+- Basal massa forta.
+- Pot ser l'efecte d'esport o activitat física anterior.
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
+![IOB negatiu](../images/troubleshooting/profiletuning/NegativeInsulin.png)
 
-- Previous meal: too much bolus (which resulted in a very long zero temp basal)
+- Àpat anterior: massa bolus (cosa que ha portat a una basal temporal zero molt llarga)
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![IOB negatiu](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
-## BG Target Observations
+## Observacions de l'objectiu de glucèmia
 
-### Stuck High
+### Encallada alta
 
-- __ISF's__ number is high and not strong enough (calculated insulin is too weak)
+- El número de l'__ISF__ és alt i no prou fort (la insulina calculada és massa feble)
 
-![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
+![Encallada alta](../images/troubleshooting/profiletuning/StuckHigh.png)
 
-- __Profile__ basal might not be strong enough (**SMBs** do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the **APS** plugin screen (**Configuration → APS → Open plugin**); see [SMB](#Open-APS-features-super-micro-bolus-smb).
-- Technical issue: site absorption, infusion set, ...
+- La basal del __perfil__ pot no ser prou forta (els **SMB** no tenen prou «reserva de basal» per fer servir)
+- Potser s'ha activat una seguretat ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) que limita la insulina que s'injecta. Comproveu-ho a la pantalla del plugin **APS** (**Configurador → APS → Obrir plugin**); vegeu [SMB](#Open-APS-features-super-micro-bolus-smb).
+- Problema tècnic: absorció al punt d'infusió, set d'infusió, ...
 
-### Stuck Low
+### Encallada baixa
 
-- __ISF__ too strong and the number needs to be raised higher
-- __Profile__ basal too strong (if also negative IOB)
+- __ISF__ massa fort: cal augmentar el número
+- Basal del __perfil__ massa forta (si també hi ha IOB negatiu)
 
-### Rollercoaster (ups and downs)
+### Muntanya russa (pujades i baixades)
 
-- **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
+- **ISF** massa fort? Vegeu el vostre [perfil d'AAPS](#your-aaps-profile-insulin-sensitivity-factor)
 
-![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
+![Muntanya russa](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## BG After Meals Observations
+## Observacions de la glucèmia després dels àpats
 
-### Fast rise and BG going high
+### Pujada ràpida i glucèmia alta
 
-- Food contains fast carbs (like fruit juice).
-- Consider doing a pre-bolus or a slightly earlier pre-bolus.
-- Bolus (IC or injected %) not strong enough.
+- L'àpat conté carbohidrats ràpids (com suc de fruita).
+- Penseu en fer un prebolus o un prebolus una mica abans.
+- Bolus (IC o % injectat) no prou fort.
 
-![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
+![Pujada alta](../images/troubleshooting/profiletuning/FastRise.png)
 
-### Fast rise and then BG going low
+### Pujada ràpida i després glucèmia baixa
 
-- Consider doing a pre-bolus, your **Profile** might be too aggressive (over correction of the raise)
-- Bolus too strong.
+- Penseu en fer un prebolus; el vostre **perfil** pot ser massa agressiu (correcció excessiva de la pujada)
+- Bolus massa fort.
 
 
 
-## [How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)
+## [Com calcular la vostra ràtio I:C](#your-aaps-profile-insulin-to-carbs-ratio)
 
-1. First, you need the correct default basal settings in your **Profile**.
-2. Start on target, better without negative IOB.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Don't forget to eat the carbs ;)
-4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin. *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
-5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your **Profile's** settings.
-6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
+1. Primer necessiteu la configuració basal correcta al vostre **perfil**.
+2. Comenceu a l'objectiu, millor sense IOB negatiu.
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Mesureu amb molta precisió una porció coneguda de carbohidrats i apunteu l'hora d'inici i l'IOB inicial. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). No us oblideu de menjar els carbohidrats ;)
+4. Després d'unes hores, quan COB=0[*](#profiletuning-cob-zero) i torneu a ser a l'objectiu, apunteu l'hora final i l'IOB final, comproveu la insulina total lliurada igual que abans i anomeneu-la insulina final. *NOTA: la durada NO és important, sempre que sigui més llarga que la vostra digestió*
+5. A la diferència entre la insulina inicial i la final, resteu/sumeu la diferència IOB final - IOB inicial. Després resteu la insulina basal calculada amb la configuració del vostre **perfil**.
+6. Si la __glucèmia__ és a l'objectiu, tindreu la insulina total que s'ha fet servir per «digerir» els carbohidrats. Calculeu la vostra **ràtio I:C**.
 
-### Explanations for the I:C calculations
+### Explicació dels càlculs de la ràtio I:C
 
-- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
-- You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
-- If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
-- If the time frame is too long, nothing bad will happen. You'll use all your carbs and you'll get more basal. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
+- Amb un **perfil** que té la taxa basal correcta, en qualsevol període us hauríeu de mantenir a l'objectiu i tenir un IOB proper a 0. Només rebeu la basal del vostre **perfil**.
+- A això hi afegiu carbohidrats i un bolus. Espereu fins que el vostre cos hagi digerit tots els carbohidrats i torneu a ser a l'objectiu de **glucèmia**. La insulina que feu servir serà la suma de la basal més la insulina necessària per als carbohidrats. Calculeu la insulina feta servir per a la basal (amb el vostre **perfil**) i la resta serà la insulina feta servir per digerir els carbohidrats.
+- Si el període és massa curt, quedaran carbohidrats sense digerir i per tant la vostra «insulina necessària per als carbohidrats» serà incorrecta.
+- Si el període és massa llarg, no passarà res dolent. Fareu servir tots els carbohidrats i rebreu més basal. Al final, restareu la basal de la insulina total feta servir, i per això el període més llarg (amb més basal) no afectarà el resultat.
 
-Originally written up by @Robby (Discord) on tips and tricks to help tune your **AAPS Profile**, reviewed and edited by the community (thank you!).
+Escrit originalment per @Robby (Discord) amb consells i trucs per ajudar-vos a ajustar el vostre **perfil d'AAPS**, revisat i editat per la comunitat (gràcies!).
