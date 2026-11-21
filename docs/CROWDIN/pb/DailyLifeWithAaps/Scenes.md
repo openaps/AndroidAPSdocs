@@ -99,7 +99,7 @@ Ative um cenário na lista **Cenários** (o botão **▶**) ou no item **Cenári
 
 ![O painel Cenários da navegação inferior](../images/v4/Scenes/scenes_sheet.png)
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+Se a [Proteção do bólus](#Preferences-protection) estiver ativa, o **AAPS** pede essa proteção antes de um cenário começar ou terminar. Para alterar um cenário, é preciso passar pela [Proteção das configurações](#Preferences-settings-protection).
 
 Antes de qualquer coisa ser aplicada, você recebe uma **confirmação** que lista exatamente o que o cenário vai fazer, para que você possa conferir:
 
