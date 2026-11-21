@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Consulteu les [Notes de la versió](#latestrelease) per veure les novetats i seguiu les instruccions del [manual d'actualització](./Maintenance/UpdateToNewVersion.md) per actualitzar.
+31 d'octubre de 2026: ja ha sortit la versió 4.0.0. Consulteu les [Notes de la versió](#latestrelease) per veure les novetats i seguiu les instruccions del [manual d'actualització](./Maintenance/UpdateToNewVersion.md) per actualitzar.
 
 ```
 
@@ -17,7 +17,7 @@ Aquesta documentació explica com configurar i fer servir **AAPS**. Podeu navega
 
 A la secció **1) Primers passos**, la [Introducció a APS i AAPS](Getting-Started/Introduction.md) explica la idea general de què ha de fer un sistema de pàncrees artificial (APS). Explica la base del llaç en general, per què es va desenvolupar **AAPS**, compara **AAPS** amb altres sistemes i parla de la seguretat. Dona consells per parlar d'**AAPS** amb el vostre equip mèdic, explica per què heu de compilar vosaltres mateixos l'aplicació **AAPS** en lloc de només descarregar-la, i dona una visió general de les connexions típiques d'un sistema **AAPS**. També parla de l'accessibilitat i de qui pot treure profit d'**AAPS**.
 
-[Preparació per començar amb AAPS](./Getting-Started/PreparingForAaps.md) dona més detalls sobre la seguretat i sobre els telèfons, els CGM (monitors continus de glucosa) i les bombes d'insulina compatibles amb **AAPS**. Dona una visió general del procés que seguireu i un calendari aproximat per arribar a fer servir totes les funcions d'**AAPS**. Aquesta secció us prepara tècnicament per muntar el vostre sistema **AAPS** de la manera més ràpida i eficient possible. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Preparació per començar amb AAPS](./Getting-Started/PreparingForAaps.md) dona més detalls sobre la seguretat i sobre els telèfons, els CGM (monitors continus de glucosa) i les bombes d'insulina compatibles amb **AAPS**. Dona una visió general del procés que seguireu i un calendari aproximat per arribar a fer servir totes les funcions d'**AAPS**. Aquesta secció us prepara tècnicament per muntar el vostre sistema **AAPS** de la manera més ràpida i eficient possible. La subsecció [CGM compatibles](./Getting-Started/CompatiblesCgms.md) explica com optimitzar la configuració del vostre CGM i quines opcions de suavitzat són les millors.
 
 Ara que enteneu bé el procés, podeu començar a muntar el vostre llaç **AAPS**.
 
@@ -40,7 +40,7 @@ La secció **9) [Ajuda i resolució de problemes](GettingHelp/WhereCanIGetHelp.m
 
 La secció **10)** explica les **[Opcions avançades d'AAPS](./AdvancedOptions/FullClosedLoop.md)**, com ara passar de fer servir **AAPS** en llaç tancat híbrid (amb bolus per als àpats, _etc._) al llaç tancat complet (sense bolus), com [ajustar el vostre perfil](./GettingHelp/ProfileTuning.md) i fer servir Autotune, i dona detalls dels modes de desenvolupament i d'enginyeria. La majoria d'usuaris funcionen molt bé amb la versió principal («Master») d'**AAPS** sense mirar aquestes opcions. Aquesta secció és per als usuaris que ja tenen un bon control i volen millorar encara més el seu sistema.
 
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Podeu donar diners, material o coneixements. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
+A la secció **11) [Com donar suport a AAPS](SupportingAaps/HowCanIHelp.md)** donem informació perquè pugueu donar suport a aquest projecte. Podeu donar diners, material o coneixements. Podeu proposar o fer vosaltres mateixos canvis a la documentació, ajudar amb la [traducció de la documentació](SupportingAaps/Translations.md) i compartir les vostres dades amb el projecte Open Humans.
 
 La secció **12) Recursos** conté documentació arxivada o addicional, amb una subsecció per als [professionals sanitaris](UsefulLinks/ClinicianGuideToAaps.md) interessats en la tecnologia de pàncrees artificial de codi obert com **AAPS**, o per als pacients que volen compartir aquesta informació amb els seus metges. La introducció també parla d'aquest tema. Aquesta secció també conté més referències i recursos sobre la diabetis i el llaç. Inclou el [Glossari](./UsefulLinks/Glossary.md), una llista de les sigles (o noms curts) que es fan servir a **AAPS**. Aquí podeu trobar, per exemple, què volen dir els termes ISF o TT.
 
@@ -51,7 +51,7 @@ La secció **12) Recursos** conté documentació arxivada o addicional, amb una 
 :class: danger
 La seguretat d'**AAPS** depèn de les funcions de seguretat del vostre maquinari (telèfon, bomba, CGM). Feu servir només una bomba d'insulina i un CGM que funcionin perfectament i que estiguin aprovats per la FDA/CE. No feu servir bombes d'insulina ni receptors de CGM trencats, modificats o fets per vosaltres mateixos. Feu servir només consumibles originals (aplicadors, cànules i reservoris d'insulina) aprovats pel fabricant per a la vostra bomba i el vostre CGM. Fer servir consumibles no provats o modificats pot causar imprecisions i errors en la dosi d'insulina, i això és un risc important per a l'usuari. 
 
-No feu servir **AAPS** si preneu inhibidors de l'SGLT-2 (gliflozines), perquè fan baixar la glucèmia. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+No feu servir **AAPS** si preneu inhibidors de l'SGLT-2 (gliflozines), perquè fan baixar la glucèmia. Augmenta el risc de cetoacidosi diabètica (CAD) perquè es lliura menys insulina, i el risc d'hipoglucèmia perquè baixa la glucèmia. 
 ```
 
 ```{admonition} Disclaimer
@@ -70,12 +70,12 @@ No feu servir **AAPS** si preneu inhibidors de l'SGLT-2 (gliflozines), perquè f
 ## Índex de la documentació d'AAPS
 
 ```{toctree}
-:caption: Using this documentation
+:caption: Ús d'aquesta documentació
 :titlesonly:
 
-Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
-Search the documentation <./NavigateDoc/SearchDoc.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
+Canviar l'idioma i la versió <./NavigateDoc/ChangeLanguageVersion.md>
+Cercar a la documentació <./NavigateDoc/SearchDoc.md>
+Actualitzacions i canvis de la documentació <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Primers passos
@@ -107,14 +107,14 @@ Configurar el servidor d'informes <./SettingUpAaps/SettingUpTheReportingServer.m
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Configurar AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Assistent de configuració d'AAPS <./SettingUpAaps/SetupWizard.md>
+El vostre perfil d'AAPS <./SettingUpAaps/YourAapsProfile.md>
+Fer canvis a la configuració d'AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configurador (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Configuració <./SettingUpAaps/Preferences.md>
+Completar els objectius <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -166,15 +166,15 @@ Lloc d'intercanvi de watchfaces personalitzats <./ExchangeSiteCustomWatchfaces/i
 ```
 
 ```{toctree}
-:caption: 8) Maintenance of AAPS
+:caption: 8) Manteniment d'AAPS
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Crear i restaurar còpies de seguretat <./Maintenance/ExportImportSettings.md>
+Notes de la versió <./Maintenance/ReleaseNotes.md>
+Què ha canviat a AAPS v4 <./Maintenance/V4Changes.md>
+Actualitzar a una nova versió o branca <./Maintenance/UpdateToNewVersion.md>
+- Actualitzar amb el navegador (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Actualitzar amb Android Studio <./Maintenance/UpdateComputerBuild.md>
+Fi del suport <./Maintenance/EndOfLife.md>
 
 ```
 
