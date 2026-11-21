@@ -1,565 +1,565 @@
-# How to edit the docs
+# Sådan redigerer du dokumentationen
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Denne beskrivelse gælder kun for redigering af den engelske dokumentation. Al ny information skal først tilføjes på engelsk. Hvis du vil oversætte til andre sprog (tak!), så brug [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Se afsnittet [»Kodesyntaks«](#edit-the-docs-code-syntax) på denne side for at få tips til, hvordan du formaterer tekst (overskrift, fed ...) og laver links.
 
-## General
+## Generelt
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+Har du spørgsmål, feedback eller nye idéer, kan du kontakte dokumentationsteamet via [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+På et tidspunkt vil nogen foreslå, at du laver en pull request (PR). Det er sådan, dine ændringer i dokumentationen rent faktisk kommer ind på AAPS-websiderne, som er gemt i GitHub. Det er faktisk ikke så svært at lave en PR, og det er en rigtig god måde at bidrage på. Du læser denne dokumentation lige nu, fordi folk som dig har lavet PR'er. Vær ikke bange for at lave en fejl eller komme til at redigere de forkerte dokumenter. Dine ændringer bliver gennemgået, før de bliver flettet ind i det »officielle« repository med AAPS-dokumentationen. Du kan ikke ødelægge originalerne ved et uheld undervejs. Den generelle fremgangsmåde er:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Lav ændringer og forbedringer i koden eller dokumentationen ved at redigere det eksisterende indhold.
+- Kontroller en ekstra gang, at dine ændringer ser rigtige ud.
+- Skriv et par noter om, hvad der er ændret, så andre kan forstå ændringerne.
+- Opret en pull request, som beder administratorerne om at bruge dine ændringer.
+- De gennemgår den og vil så enten (1) flette dine ændringer ind (merge), (2) skrive en kommentar til dig om dine ændringer eller (3) starte et nyt dokument med dine ændringer.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(En sidebemærkning: Hvis du lærer bedst med billeder, er der en YouTube-video [her](https://youtu.be/4b6tsL0_kzg), som viser, hvordan man laver en PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+I vores eksempel laver vi en ændring i AndroidAPSdocs. Det kan gøres på enhver Windows-pc, Mac osv. (enhver computer med internetadgang).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Gå til <https://github.com/openaps/AndroidAPSdocs>, og tryk på Fork øverst til højre for at lave din egen kopi af repositoryet.
 
-![Fork repo](../images/docs_pr_fork_repository.png)
+![Fork repository](../images/docs_pr_fork_repository.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Gå til en vilkårlig side, og naviger til den side, du vil redigere. Du kan klikke på linket »Edit in GitHub« øverst til højre. Det kan kun lade sig gøre på engelske sider. 
 
-![edit doc](../images/docs_pr_edit_on_github.png)
+![Rediger dokument](../images/docs_pr_edit_on_github.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Eller klik på blyantikonet, der vises i den øverste bjælke på siden med det indhold, der skal redigeres. Du skal allerede være logget ind på din GitHub-konto for at gøre dette (hvis du ikke har en, er den nem at oprette).
 
 ![RTD io](../images/docs_pr_pencil_icon.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Den ene eller den anden af mulighederne i trin 2 opretter en ny gren i DIT repository, hvor dine ændringer bliver gemt. Lav dine ændringer i filen.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Vi bruger Markdown til siderne i dokumentationen. Filerne har endelsen ».md«. Markdown-specifikationen er ikke fast, og vi bruger i øjeblikket myst_parser til vores Markdown-filer. Sørg for at bruge den rigtige syntaks som [beskrevet nedenfor](#edit-the-docs-code-syntax).
 
-![Edit branch](../images/docs_pr_edit_file.png)
+![Rediger gren](../images/docs_pr_edit_file.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Du har arbejdet i fanen »<>Edit file«. Vælg fanen »Preview changes« for at se på det med friske øjne og sikre dig, at alt, hvad du har ændret, ser ud, som du ville have det (kontroller for stavefejl). Hvis du ser noget, der bør forbedres, så gå tilbage til fanen til redigering og lav flere forbedringer. 
 
-![preview mode](../images/docs_pr_preview_changes.png)
+![Forhåndsvisning](../images/docs_pr_preview_changes.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Når du er færdig med dine ændringer, så rul ned til bunden af siden. I boksen nederst skriver du dine kommentarer i tekstfeltet, hvor der står »Add an optional extended description...«. Standardtitlen indeholder filnavnet. Prøv at skrive en sætning, der forklarer **grunden** til ændringen. Når du skriver grunden, hjælper det dem, der gennemgår din PR, med at forstå, hvad du prøver at gøre.
 
-![commit comments](../images/docs_pr_commit_description.png)
+![Commit-kommentarer](../images/docs_pr_commit_description.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Klik på den grønne knap »Propose file changes« eller »Commit changes«. På den side, der vises, klikker du på »Create Pull Request«, og på den næste side klikker du igen på »Create Pull Request«.
 
-![create pull request](../images/docs_pr_create_pull_request.png)
+![Opret pull request](../images/docs_pr_create_pull_request.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. Så er din pull request (PR) oprettet. GitHub giver din PR et nummer, som står efter titlen og et #-tegn. Kom tilbage til denne side for at se, om der er feedback (eller, hvis du får GitHub-notifikationer på e-mail, får du e-mails om al aktivitet på din PR). Ændringen vil nu stå på en liste over PR'er, som teamet gennemgår og måske giver feedback på, før den bliver føjet til den officielle dokumentation for AAPS! Hvis du vil følge med i, hvordan det går med din PR, kan du klikke på klokken øverst til højre i din GitHub-konto og se alle dine PR'er.
 
-![PR tracking](../images/docs_pr_tracking.png)
+![Følg din PR](../images/docs_pr_tracking.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: Din fork og din gren ligger stadig på din egen personlige GitHub-konto. Når du får en notifikation om, at din PR er blevet flettet ind (merged), kan du slette din gren, hvis du er færdig med den (notifikationsområdet fra trin 7 giver et link til at slette grenen, når den er lukket eller flettet ind). Hvis du følger denne fremgangsmåde ved fremtidige ændringer, starter ændringerne altid fra en opdateret version af AndroidAPSdocs-repositories. Hvis du vælger en anden måde at starte en PR på (f.eks. at redigere med master-grenen i dit forkede repository som udgangspunkt), skal du sikre dig, at dit repository er opdateret. Lav først en »compare« (sammenligning), og flet alle opdateringer ind, der er kommet, siden du sidst opdaterede din fork. Da mange glemmer at opdatere deres repositories, anbefaler vi at bruge den PR-fremgangsmåde, der er beskrevet ovenfor, indtil du er vant til at lave »compares« (sammenligninger).
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Kodesyntaks
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Vi bruger Markdown til siderne i dokumentationen. Filerne har endelsen ».md«.
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown er et meget enkelt sprog til tekstformatering, som adskiller tekstens indhold fra tekstens formatering.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Forfatteren markerer kun f.eks. en overskrift som overskrift på niveau 1, og Markdown-processoren laver den nødvendige HTML-kode under behandlingen, så overskriften vises i HTML.
 
-The idea behind this is that
+Tanken bag dette er, at
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
-- you can generate several output formats from one markdown file.
+- forfatteren først skal tænke på teksten og ikke på formateringen,
+- markdown-teksten kan bruges i forskellige Markdown-værktøjer i stedet for f.eks. lukkede værktøjer som Microsoft Word, og
+- man kan lave flere outputformater ud fra én Markdown-fil.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown er ikke en 100% fast standard, og vi prøver at holde os så tæt som muligt på standarden for at
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- vi kan forblive fleksible og skifte Markdown-værktøjer, når det er nødvendigt eller bliver tvunget af den videre udvikling af Markdown-værktøjer og Markdown-SaaS-tjenester, og
+- kunne bruge oversættelsestjenester til at oversætte det engelske sprog til et målsprog som fransk eller tysk. De kan arbejde med Markdown, men ikke med komplekse formateringskoder, fordi de ikke kan adskille indhold fra layout, hvilket kan være fatalt.
 
-### Headlines
+### Overskrifter
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Overskrift 1: `# headline`
+- Overskrift 2: `## headline`
+- Overskrift 3: `### headline`
+- Overskrift 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Vi prøver at undgå flere niveauer af overskrifter.
 
-### Text format
+### Tekstformat
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **fed**: `**text**`
+- *kursiv*: `*text*`
+- ***fed kursiv***: `***text***`
 
-### Ordered list
+### Nummereret liste
 
-    1. first
-    1. second
-    1. third
+    1. første
+    1. anden
+    1. tredje
     
 
-1. first
-2. second
-3. third
+1. første
+2. anden
+3. tredje
 
-### Unordered list
+### Liste uden numre
 
-    - one element
-    - another element
-    - and another element
+    - et element
+    - et andet element
+    - og endnu et element
     
 
-- one element
-- another element
-- and another element
+- et element
+- et andet element
+- og endnu et element
 
-### Multi level list
+### Liste med flere niveauer
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Du kan lave lister i lister ved at rykke det næste niveau 4 mellemrum længere ind end det forrige.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. første
+    1. anden
+    1. tredje
+      1. et element
+      1. et andet element
+      1. og endnu et element
+    1. fire
+    1. fem
+    1. seks
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. første
+2. anden
+3. tredje 
+    1. et element
+    2. et andet element
+    3. og endnu et element
+4. fire
+5. fem
+6. seks
 
-### Images
+### Billeder
 
-To include images you use this markdown syntax.
+Du indsætter billeder med denne Markdown-syntaks.
 
-- images: `![alt text](../images/file.png)`
+- billeder: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Billedet skal være af typen PNG eller JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Navne på billeder skal følge en af disse regler for navngivning. I eksemplet bruger jeg png som endelse. Hvis du bruger JPEG, så brug i stedet jpeg som endelse.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, hvor xx er et unikt tocifret tal for billederne i denne fil.
+- `filename-image-xx.png`, hvor xx er et sigende navn, som forfatteren af md-filen har valgt.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Billederne ligger i mappen images for det engelske sprog og bliver automatisk overført til de andre sprog af Crowdin. Det behøver du ikke gøre noget for!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Vi oversætter ikke billeder i øjeblikket: Billeder bør have **så lidt tekst som muligt**, så de også er tilgængelige for læsere, der ikke kan engelsk.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Brug en fornuftig størrelse til billederne. De skal kunne læses på pc, tablet og mobil.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Skærmbilleder af websider skal være højst **1050 pixels brede**.
+- Diagrammer over procesforløb skal være højst **1050 pixels brede**.
+- Skærmbilleder fra appen skal være højst **500 pixels brede**. Sæt dem ikke ved siden af hinanden, hvis det ikke er nødvendigt.
+- Skærmbilleder fra uret (**Wear OS**) skal være højst **360 pixels brede**. Forstør aldrig et skærmbillede, der er mindre.
 
 ### Links
 
-#### External links
+#### Eksterne links
 
-External links are links to external web sites.
+Eksterne links er links til eksterne websteder.
 
-- external link: `[alt text](www.url.tld)`
+- eksternt link: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Interne links til starten af en md-fil
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Interne links til sider er links til starten af en md-fil, der ligger på vores egen server.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- internt link til en .md-side: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Interne links til navngivne referencer i teksten
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Interne links til navngivne referencer i teksten er links til et vilkårligt sted i en md-fil, der ligger på vores egen server, og hvor der er sat en reference, man kan linke til.
 
-Add a named reference at the location in the target md file you want to jump to.
+Tilføj en navngiven reference på det sted i md-målfilen, som du vil springe til.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Den navngivne reference skal være unik i alle AndroidAPSDocs-md-filerne og ikke kun i den md-fil, hvor den står!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Derfor er det en god idé at starte med filnavnet og derefter det referencenavn, du vælger.
 
-Use only lowercase letters and hyphenate words.
+Brug kun små bogstaver, og sæt bindestreg mellem ordene.
 
-Then link this reference in the text you are writing with the following kind of link.
+Link derefter til denne reference i den tekst, du skriver, med denne slags link.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Interne links til navngivne referencer i teksten: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Noter, advarsler, sammenfoldelige noter
 
-You can add notes and warning boxes to documentation.
+Du kan tilføje bokse med noter og advarsler til dokumentationen.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Desuden kan du tilføje sammenfoldelige noter med detaljeret information, så brugere, der ikke er interesserede i detaljerne, ikke bliver skræmt væk fra at læse teksten. Brug dem med omtanke, da dokumentationen skal være så let at læse som muligt.
 
-#### Notes
+#### Noter
 
-    ```{admonition} Note headline
+    ```{admonition} Overskrift på note
     :class: note
-    This is a note.
+    Dette er en note.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Overskrift på note :class: note Dette er en note.
 
-    <br />#### Warnings
+    <br />#### Advarsler
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Advarsel
     :class: warning
-    This is a warning.
+    Dette er en advarsel.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Overskrift på advarsel
     :class: warning
-    This is a warning.
+    Dette er en advarsel.
     ```
     
-    #### Collapsing Notes
+    #### Sammenfoldelige noter
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} flere detaljer for interesserede læsere
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Denne boks er foldet sammen,
+    det betyder, at du kan skrive længere indhold her,
+    uden at det fylder for meget på siden.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} flere detaljer for interesserede læsere :class: dropdown Denne boks er foldet sammen, det betyder, at du kan skrive længere indhold her, uden at det fylder for meget på siden.
 
 ```
 
-## Tables
+## Tabeller
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Undgå tabeller med lange tekster, da indholdet er svært at sætte op i Markdown, de passer som regel ikke til bredden på en mobilskærm, og de vises sandsynligvis ikke på samme måde efter oversættelse.
 
-## Style Guide
+## Stilguide
 
-### Contents
+### Indhold
 
-1. English language writing tips
+1. Tips til at skrive på engelsk
 
-2. AAPS-specific writing notes
+2. Noter om skrivning, der er specifikke for AAPS
 
-3. Useful references
+3. Nyttige referencer
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Billede](../images/styleguide01.png) 1\. Tips til at skrive på engelsk
 
-#### Use language that is appropriate for the reader
+#### Brug et sprog, der passer til læseren
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Brug enkelt engelsk, hvor det er muligt. Det hjælper læsere, der ikke har engelsk som modersmål, og gør det også nemmere at oversætte AAPS-dokumenterne til andre sprog. Skriv, som om du taler med brugeren. Forestil dig, at du sidder over for den person, du skriver til, ved et skrivebord. Husk: De fleste AAPS-brugere har ingen baggrund i programmering. Diabetes har også i sig selv mange fagudtryk og forkortelser. Husk, at nogle måske lige har fået diagnosen, måske ikke har så meget erfaring med diabetes som dig, eller måske har fået en anden diabetesundervisning. Hvis du bruger en kort form eller en forkortelse, så skriv den helt ud første gang, du bruger den, med forkortelsen lige efter i parentes, f.eks. »super micro bolus (SMB)«. Link også til ordlisten. Tekniske udtryk, som læseren måske ikke kender, kan også tilføjes i parentes.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+I stedet for: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Brug: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
-##### Use plain words that everyone can understand
+##### Brug enkle ord, som alle kan forstå
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Her finder du en A-Z-liste med alternative ord, der gør din tekst lettere at forstå:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Hensyn til privatliv og licenser:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Især hvis du optager video eller tager skærmbilleder, skal du sørge for ikke at vise dine private oplysninger (API-nøgle, adgangskoder). Sørg for, at YouTube-indhold ikke er offentligt listet, så man skal bruge et link fra dokumentationen for at se det. Undgå at henlede opmærksomheden på materiale, der krænker ophavsret (BYODA osv.).
 
-#### Keep sentences short, get to the point
+#### Skriv korte sætninger, og kom til sagen
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Klar tekst bør have en gennemsnitlig sætningslængde på 15 til 20 ord.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Det betyder ikke, at alle sætninger skal være lige lange. Vær skarp. Skab variation ved at blande korte sætninger (som den forrige) med længere sætninger (som denne).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Hold dig til én hovedidé i en sætning, plus måske ét andet punkt, der hører til.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Du vil stadig af og til skrive en lang sætning, især når du prøver at forklare noget kompliceret. Men de fleste lange sætninger kan deles op på en eller anden måde.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Fjern svage ord: »you can«, »there is/are/were«, »in order to«.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Sæt nøgleord tæt på starten af titler, sætninger og afsnit.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Vær visuel! Brug et kort diagram, et skærmbillede eller en video, hvor det er muligt.
 
-#### Don't be afraid to give instructions
+#### Vær ikke bange for at give instruktioner
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Kommandoer er den hurtigste måde at give instruktioner på, men forfattere er nogle gange bange for at give kommandoer og skriver »you should do this« i stedet for bare »do this«. Måske er folk bekymrede for, at kommandoer lyder for hårde. Det kan du tit løse ved at sætte ordet »please« foran. Men hvis noget skal gøres, er det bedst ikke at skrive »please«, da det giver læseren mulighed for at sige nej.
 
-Instead of: *“You should just think of it as a complete statement.”*
+I stedet for: *“You should just think of it as a complete statement.”*
 
-Use: *“Think of it as a complete statement.”*
+Brug: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Brug for det meste aktive verber i stedet for passive verber
 
-Example of an **active verb**:
+Eksempel på et **aktivt verbum**:
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *“The pump (subject) delivers (verb) the insulin (object).” (Pumpen (subjekt) leverer (verbum) insulinen (objekt).)*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+»delivers« er et aktivt verbum her. Sætningen siger, hvad der leverer, før den siger, hvad der bliver leveret.
 
-Example of a **passive verb**:
+Eksempel på et **passivt verbum**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).” (Insulinen (subjekt) bliver leveret (verbum) af pumpen (objekt).)*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* er et passivt verbum her. Subjekt og objekt har byttet plads i forhold til sætningen med det aktive verbum. Vi har gjort sætningen længere ved at tilføje »is« og »by the«. Overvej også at starte med det aktive verbum.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+I stedet for: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Brug: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Passive verber kan give problemer:
 
-- They can be confusing.
+- De kan være forvirrende.
 
-- They often make writing more long-winded.
+- De gør ofte teksten mere langtrukken.
 
-- They make writing less lively.
+- De gør teksten mindre levende.
 
-##### Good uses of passives
+##### Gode anvendelser af passiv
 
-There are times when it might be appropriate to use a passive.
+Der er tilfælde, hvor det kan være passende at bruge passiv.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- For at gøre noget mindre fjendtligt – »denne regning er ikke blevet betalt« (passiv) er blødere end »du har ikke betalt denne regning« (aktiv).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- For at undgå at give nogen skylden – »der blev begået en fejl« (passiv) i stedet for »Du begik en fejl« (aktiv).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Når du ikke ved, hvem eller hvad der udfører handlingen – »det engelske hold er blevet udtaget«.
 
-- If it simply sounds better.
+- Hvis det simpelthen lyder bedre.
 
-#### Avoid nominalisations
+#### Undgå nominaliseringer
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+En nominalisering er navnet på noget, der ikke er en fysisk ting, f.eks. en proces, en teknik eller en følelse. Nominaliseringer dannes ud fra verber.
 
-For example:
+For eksempel:
 
-| Verb      | Nominalization |
+| Verbum    | Nominalisering |
 | --------- | -------------- |
 | complete  | completion     |
 | introduce | introduction   |
 | provide   | provision      |
 | fail      | failure        |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+De bruges ofte **i stedet** for de verber, de kommer fra, men de kan lyde, som om der ikke rigtig sker noget. For mange af dem kan gøre teksten meget kedelig og tung at læse.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+I stedet for: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Brug: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Brug lister, hvor det passer
 
-Lists are excellent for splitting information up. There are two main types of list:
+Lister er rigtig gode til at dele information op. Der er to hovedtyper af lister:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- En sammenhængende sætning med flere punkter, der er fremhævet i starten, midten eller slutningen.
 
-- Separate bullet points with an introductory statement.
+- Separate punkttegn med en indledende sætning.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+I punktlisten ovenfor er hvert punkt en hel sætning, så de starter alle med stort bogstav og slutter med punktum. Brug punkttegn i stedet for tal eller bogstaver, da de henleder opmærksomheden på hvert punkt uden at give dig ekstra information, du skal tage stilling til.
 
-#### Mythbusting
+#### Myter, der ikke holder
 
-- You can start a sentence with **and, but, because, so or however**.
+- Du kan starte en sætning med **and, but, because, so eller however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Du kan dele en infinitiv op (split infinitive). Så du kan godt skrive **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Du kan slutte en sætning med en præposition. Faktisk er det noget, vi bør stå op for (**we should stand up for**).
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- Og **du** kan bruge det samme **ord** to gange i en sætning, hvis **du** ikke kan finde et bedre **ord**.
 
-#### Optimizing writing style by purpose
+#### Tilpas skrivestilen efter formålet
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+For at holde dokumentationen klar og kort skriver vi forskellige afsnit af dokumentationen i forskellige stilarter.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+En »forklarende« stil bruges til introduktion, baggrund og afsnit, der opbygger viden.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+En »vejledende« stil (»How-to-guide«, med så lidt forklaring som muligt) bruges til at bygge og konfigurere AAPS og til nogle af afsnittene om fejlfinding.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+En tutorial hjælper eleven med at få grundlæggende færdigheder. Brugeren vil **lære ved at gøre det**.
 
-![Image](../images/styleguide02.png)
+![Billede](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Billede](../images/styleguide03.png) Tutorials (f.eks. at lære et barn at piske æggehvider)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- fortælleren taler direkte til læseren: I denne tutorial vil **du** (vi) kan i sjældne tilfælde bruges til at give følelsen af, at »vi er i det her sammen«
 
-- Future Tense -> to show the final target
+- Fremtid -> for at vise det endelige mål
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Bydeform -> for at udføre opgaverne -> Konkrete trin – undgå abstrakte begreber
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Datid -> for at vise udførte opgaver -> Hurtige resultater, der kan ses med det samme
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Minimum af forklaringer -> kun det strengt nødvendige for at gennemføre opgaven – **hvad og hvorfor**
 
-- Ignore options/alternatives/…. No ambiguity
+- Ignorer muligheder/alternativer/…. Ingen tvetydighed
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Overgange mellem trin: Afslut et trin med en sætning, der fører videre til næste trin som et logisk forløb. Eksempel: *Du har nu installeret Let’s Encrypt-klienten, men før du henter certifikater, skal du sikre dig, at alle nødvendige porte er åbne. For at gøre det opdaterer du dine firewallindstillinger i det næste trin.*
 
-- **Tutorial** Title (Level 1 heading)
+- **Tutorial** Titel (overskrift på niveau 1)
 
-- Introduction (no heading)
+- Introduktion (ingen overskrift)
 
-- Prerequisites (Level 2 heading)
+- Forudsætninger (overskrift på niveau 2)
 
-- Steps:
+- Trin:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Trin 1 – Gør det første (overskrift på niveau 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Trin 2 – Gør det næste (overskrift på niveau 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Trin n – Gør det sidste (overskrift på niveau 2)
 
-- Conclusion (Level 2 heading)
+- Konklusion (overskrift på niveau 2)
     
-    - **The Language of Tutorials**
+    - **Sproget i tutorials**
         
-        *In this tutorial, you will…*
+        *I denne tutorial vil du …*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Beskriv, hvad eleven vil opnå (bemærk – ikke: »du vil lære …«).
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *Gør først x. Gør nu y. Nu hvor du har gjort y, så gør z.*
         
-        No room for ambiguity or doubt.
+        Ingen plads til tvetydighed eller tvivl.
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *Vi skal altid gøre x, før vi gør y, fordi … (se Forklaring for flere detaljer).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Forklar handlingerne kort med det mest enkle sprog, der er muligt. Link til en mere detaljeret forklaring.
         
-        *The output should look something like this…*
+        *Resultatet bør se nogenlunde sådan ud …*
         
-        Give your learner clear expectations.
+        Giv din elev klare forventninger.
         
-        *Notice that… Remember that…*
+        *Bemærk, at … Husk, at …*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Giv din elev masser af tegn, der hjælper med at bekræfte, at de er på rette vej, og med at finde rundt.
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *Du har bygget en sikker hylomorf stasemaskine med tre lag …*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Beskriv (og beundr, på en mild måde) hvad din elev har opnået (bemærk – ikke: »du har lært …«)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Billede](../images/styleguide05.png) Vejledninger (How-to, f.eks. en opskrift)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+Formålet med en vejledning er at hjælpe en bruger, der allerede har færdighederne, med at udføre en bestemt opgave korrekt.
 
-- HOW-to
+- HVORDAN
 
-- narrator directly talks to the reader: In this guide **you** will
+- fortælleren taler direkte til læseren: I denne vejledning vil **du**
 
-- Future Tense -> to show the final target
+- Fremtid -> for at vise det endelige mål
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Betinget bydeform -> for at få X skal du gøre y -> Konkrete trin – undgå abstrakte begreber
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Minimum af forklaringer -> kun det strengt nødvendige for at gennemføre opgaven -> **hvad og hvorfor**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- Ignorer muligheder/alternativer/…. Ingen tvetydighed, men du kan linke til referenceafsnittet eller det forklarende afsnit
 
-- **How-to**: Title (Level 1 heading)
+- **How-to**: Titel (overskrift på niveau 1)
 
-- Introduction paragraph
+- Introduktionsafsnit
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Valgfrie forudsætninger (afsnit eller overskrift på niveau 2, hvis der er mere end 1)
 
-- Steps:
+- Trin:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Trin 1 – Gør det første (overskrift på niveau 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Trin 2 – Gør det næste (overskrift på niveau 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Trin n – Gør det sidste (overskrift på niveau 2)
 
-- Conclusion paragraph
+- Konklusionsafsnit
     
-    - **The Language of How-To Guides**
+    - **Sproget i vejledninger**
         
-        *This guide shows you how to…*
+        *Denne vejledning viser dig, hvordan du …*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Beskriv tydeligt det problem eller den opgave, som vejledningen viser brugeren, hvordan man løser.
         
-        *If you want x, do y. To achieve w, do z.*
+        *Hvis du vil have x, så gør y. For at opnå w skal du gøre z.*
         
-        Use conditional imperatives.
+        Brug betinget bydeform.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Se referencevejledningen til x for en komplet liste over muligheder.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Fyld ikke din praktiske vejledning med alt, hvad brugeren måske kunne gøre i forbindelse med x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Billede](../images/styleguide07.png) Forklaring (f.eks. videnskaben bag, hvorfor æggehvider bliver stive, når du pisker dem)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+En forklaring gør læserens forståelse af et emne klarere, dybere og bredere.
 
-- WHY
+- HVORFOR
 
-- Start with **About**
+- Start med **Om**
 
-- Provide context, link ALL relevant references
+- Giv sammenhæng, og link til ALLE relevante referencer
 
-- Discuss options/alternatives
+- Diskuter muligheder/alternativer
 
-- Don’t instruct or provide reference (link to them)
+- Giv ikke instruktioner eller referencer (link til dem)
 
-- State the unknown/moving targets etc…
+- Nævn det ukendte, mål der flytter sig osv.…
 
-- **About** Title (Level 1 heading)
+- **Om** Titel (overskrift på niveau 1)
 
-- Introduction (no heading)
+- Introduktion (ingen overskrift)
 
-- Optional Prerequisites (Level 2 heading)
+- Valgfrie forudsætninger (overskrift på niveau 2)
 
-- Subtopic 1 (level 2 heading)
+- Underemne 1 (overskrift på niveau 2)
 
-- Conclusion (Level 2 heading)
+- Konklusion (overskrift på niveau 2)
     
-    - **The Language of Explanation**
+    - **Sproget i forklaringer**
     
-    *The reason for x is because historically, y…*
+    *Grunden til x er, at y historisk set …*
     
-    Explain.
+    Forklar.
     
-    *W is better than z, because…*
+    *W er bedre end z, fordi …*
     
-    Offer judgements and even opinions where appropriate.
+    Giv vurderinger og endda meninger, hvor det passer.
     
-    *An x in system y is analogous to a w in system z. However…*
+    *Et x i system y svarer til et w i system z. Men …*
     
-    Provide context that helps the reader.
+    Giv sammenhæng, der hjælper læseren.
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *Nogle brugere foretrækker w (fordi z). Det kan være en god fremgangsmåde, men …*
     
-    Weigh up alternatives.
+    Vej alternativerne op mod hinanden.
     
-    *An x interacts with a y as follows:…*
+    *Et x virker sammen med et y på denne måde: …*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Afslør maskinens indre hemmeligheder for at hjælpe med at forstå, hvorfor noget gør, som det gør.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Noter om skrivning/opdatering, der er specifikke for AAPS
 
-#### Author & Editor
+#### Forfatter og redaktør
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Når du skriver eller opdaterer AAPS-dokumentationen, så tænk på processen som to trin. De kan udføres af den samme person på forskellige tidspunkter eller af flere personer.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+En **forfatter (f.eks. dig!)** skriver/redigerer et afsnit af dokumentationen i en kort tone, som om man taler sammen, og giver det så videre til redaktøren.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+**Redaktøren (f.eks. en anden AAPS-bruger eller den person, der modtager pull requesten)** kontrollerer, at stilguiden er fulgt, og redigerer afsnittet, så det bliver klart og tilgængeligt, og fjerner så mange ord som muligt (især i afsnit med tutorials/vejledninger). Det kan hjælpe at læse teksten højt.
 
-#### General AAPS points
+#### Generelle punkter om AAPS
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- For glukoseværdier skal du angive både mg/dl og mmol/l hver gang (overvej det også for skærmbilleder, hvis det er muligt).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- For at være konsekvent skal du skrive »AAPS« i stedet for »Android APS«.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Skriv tydeligt, hvilken version af Android Studio/AAPS du skriver om, eller som skærmbillederne er taget fra.
 
-### 3\. Useful References
+### 3\. Nyttige referencer
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 
