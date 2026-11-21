@@ -12,7 +12,7 @@ Us recomanem fer servir Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout és una aplicació web que pot registrar i mostrar les vostres dades del CGM i les dades d'**AAPS**, i també crea informes. És una plataforma potent que fa molts anys que està integrada a **AAPS**. Permet als usuaris i als cuidadors seguir les dades de diabetis del pacient gairebé en temps real (només poden passar uns quants segons entre la recepció i la publicació de les dades, si hi ha una connexió a Internet suficient entre tots els components). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout és una aplicació web que pot registrar i mostrar les vostres dades del CGM i les dades d'**AAPS**, i també crea informes. És una plataforma potent que fa molts anys que està integrada a **AAPS**. Permet als usuaris i als cuidadors seguir les dades de diabetis del pacient gairebé en temps real (només poden passar uns quants segons entre la recepció i la publicació de les dades, si hi ha una connexió a Internet suficient entre tots els components). També transporta les ordres remotes que els cuidadors envien a **AAPS** des d'**AAPSClient** (vegeu [Control principal ↔ client](#client-master-control)).
 
 Nightscout és programari de codi obert. Qualsevol persona pot crear i gestionar un servidor Nightscout, amb serveis gratuïts o de pagament.
 
@@ -44,7 +44,7 @@ Tidepool està disponible a **AAPS** des de la versió 3.2, publicada a finals d
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+Com que hi ha un retard de tres hores entre l'arribada de les dades i el seu informe quan es fa servir **AAPS**, Tidepool no és adequat per compartir informació en temps real amb els cuidadors.  
 D'altra banda, Tidepool pot ser una molt bona solució per compartir informes amb l'endocrinòleg del pacient si Nightscout no és una solució acceptada.  
 ```
 
