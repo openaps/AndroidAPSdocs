@@ -1,427 +1,427 @@
-# FAQ for loopers
+# Ofte stillede spørgsmål for loopere
 
-How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+Sådan tilføjer du spørgsmål til de ofte stillede spørgsmål: Følg denne [vejledning](../SupportingAaps/HowToEditTheDocs.md)
 
-## General
+## Generelt
 
-### Can I just download the AAPS installation file?
+### Kan jeg ikke bare downloade installationsfilen til AAPS?
 
-No. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Here's the reason why:
+Nej. Der findes ingen apk-fil af AAPS til download. Du skal selv [bygge](../SettingUpAaps/BuildingAaps.md) den. Her er grunden:
 
-AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AAPS bruges til at styre din pumpe og give insulin. Efter de nuværende regler i Europa er alle systemer i klasse IIa eller IIb medicinsk udstyr, der kræver myndighedsgodkendelse (en CE-mærkning), som igen kræver forskellige undersøgelser og godkendelser. Det er ulovligt at distribuere et ikke-godkendt medicinsk udstyr. Der findes lignende regler i andre dele af verden.
 
-This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
+Reglerne gælder ikke kun for salg (i betydningen at få penge for noget), men for enhver form for distribution (også hvis det gives væk gratis). At bygge et medicinsk udstyr til dig selv er den eneste måde at bruge appen på inden for disse regler.
 
-That’s why apks aren’t available.
+Derfor er der ingen apk-filer til download.
 
 (FAQ-how-to-begin)=
 
-### How to begin?
+### Hvordan starter jeg?
 
-Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md): it walks you through everything below in more detail.
+Start med [Forberedelse til at starte med AAPS](../Getting-Started/PreparingForAaps.md): den gennemgår alt nedenfor mere detaljeret.
 
-First of all, you have to **get loopable hardware components**:
+Først skal du **skaffe hardware, der kan bruges til loop**:
 
-* A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-* an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-* a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+* En [understøttet insulinpumpe](../Getting-Started/CompatiblePumps.md), 
+* en [Android-smartphone](../Getting-Started/Phones.md) (Apple iOS understøttes ikke af AAPS - du kan se på [iOS Loop](https://loopkit.github.io/loopdocs/)) og
+* et [system til kontinuerlig glukosemåling (CGM)](../Getting-Started/CompatiblesCgms.md). 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Dernæst skal du **sætte dine softwarekomponenter op**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM-kilde](../Getting-Started/CompatiblesCgms.md) og en [rapporteringsserver](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+For det tredje skal du lære og **forstå OpenAPS reference design for at kontrollere dine behandlingsfaktorer**. Grundprincippet for lukket loop er, at din [basalrate og dit kulhydratforhold](../SettingUpAaps/YourAapsProfile.md) er korrekte. Alle anbefalinger går ud fra, at dit basalbehov er dækket, og at de toppe eller dale, du ser, skyldes andre faktorer, som derfor kræver enkelte, midlertidige justeringer (motion, stress osv.). De justeringer, som det lukkede loop kan foretage af sikkerhedshensyn, er begrænsede (se maksimal tilladt midlertidig basalrate i [OpenAPS Reference Design](https://openaps.org/reference-design/)). Det betyder, at du ikke vil bruge den tilladte dosering på at rette en forkert grundlæggende basal. Hvis du for eksempel ofte får en lav midlertidig basal op til et måltid, skal din basal sandsynligvis justeres. Du kan bruge [Autotune](#autotune-how-autotune-calculates-adjustments) til at se på en stor mængde data og få forslag til, om og hvordan basaler og/eller ISF skal justeres, og også om kulhydratforholdet skal ændres. Eller du kan teste og indstille din basal på den [gammeldags måde](https://integrateddiabetes.com/basal-testing/).
 
-### What practicalities of looping do I have?
+### Hvilke praktiske sider af at loope skal jeg tænke på?
 
-#### Password protection
+#### Beskyttelse med adgangskode
 
-If you don't want your settings to be easily changed, you can protect them with a password, a PIN or your phone's biometric authentication (fingerprint, face). Open **Settings** > **Protection** > **Settings protection** and choose the type of protection. You can also protect the whole app or only boluses in the same place. See [Settings protection](#Preferences-settings-protection) for details.
+Hvis du ikke vil have, at dine indstillinger let kan ændres, kan du beskytte dem med en adgangskode, en PIN eller telefonens biometriske godkendelse (fingeraftryk, ansigt). Åbn **Indstillinger** > **Beskyttelse** > **Beskyttelse af indstillinger**, og vælg typen af beskyttelse. Samme sted kan du også beskytte hele appen eller kun boluser. Se [Beskyttelse af indstillinger](#Preferences-settings-protection) for detaljer.
 
-#### Android Wear Smartwatches
+#### Android Wear-smarture
 
-If you use the AAPS watch app to bolus or change settings, every request has to be confirmed on the watch: after you send it, the watch shows a summary with a **CONFIRM** button. See [Remote control from a Wear OS watch](../RemoteFeatures/RemoteControlWearOS.md).
+Hvis du bruger AAPS-appen på uret til at give bolus eller ændre indstillinger, skal hver anmodning bekræftes på uret: når du har sendt den, viser uret en oversigt med knappen **BEKRÆFT**. Se [Betjening af AAPS med dit Wear OS-smartur](../RemoteFeatures/RemoteControlWearOS.md).
 
 (FAQ-disconnect-pump)=
 
-#### Disconnect pump
+#### Afbryd pumpe
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
+Hvis du tager pumpen af, når du går i bad, svømmer, dyrker sport eller andre aktiviteter, skal du fortælle AAPS, at der ikke gives insulin, så IOB forbliver korrekt.
 
-The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the AAPS main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, press the icon again and pick a new duration: you don't need to reconnect first. See [Disconnecting the pump for showering or activity](#pumps-cannulas-disconnecting) for how to avoid a lack of insulin during long disconnections.
+Pumpen kan afbrydes med [loop-ikonet](#AapsScreens-loop-status) på AAPS-hovedskærmen: tryk på det, og vælg **Afbryd pumpe** med den varighed, du har brug for. Hvis aktiviteten varer længere end planlagt, så tryk på ikonet igen, og vælg en ny varighed: du behøver ikke at genforbinde først. Se [Afbrydelse af pumpen ved bad eller aktivitet](#pumps-cannulas-disconnecting) for at se, hvordan du undgår mangel på insulin ved lange afbrydelser.
 
-#### Recommendations not only based on one single CGM reading
+#### Anbefalinger bygger ikke kun på én enkelt CGM-måling
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
+Af sikkerhedshensyn bygger anbefalingerne ikke på én enkelt CGM-måling, men på den gennemsnitlige delta. Hvis du mangler nogle målinger, kan det derfor tage et stykke tid, efter data er tilbage, før AAPS begynder at loope igen.
 
-#### Further readings
+#### Mere at læse
 
-There are several blogs with good tips to help you understand the practicalities of looping. Some of them are no longer online: the links below marked "archived copy" open a saved copy on the Internet Archive.
+Der findes flere blogs med gode tips, som hjælper dig med at forstå de praktiske sider af at loope. Nogle af dem er ikke længere online: linkene nedenfor, der er markeret med »arkiveret kopi«, åbner en gemt kopi på Internet Archive.
 
-    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archived copy)
-    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archived copy)
-    * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archived copy)
+    * [Finjustering af indstillinger](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (arkiveret kopi)
+    * [Hvorfor DIA er vigtig](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (arkiveret kopi)
+    * [Begræns stigninger efter måltider](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+    * [Hormoner og autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (arkiveret kopi)
     
 
 (what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
 
-### What emergency equipment is recommended to take with me?
+### Hvilket nødudstyr anbefales det at have med?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
+Du skal have det samme nødudstyr med dig som alle andre med type 1-diabetes i insulinpumpebehandling. Når du looper med AAPS, anbefales det stærkt at have følgende ekstra udstyr med dig eller tæt på dig:
 
-* Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-* Pump batteries
-* Access to your backups, both on the phone and in the cloud (e.g. Google Drive, Dropbox), so that you can set up AAPS again on another phone (see [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md)): 
-  * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
-  * your keystore file (from building the apk) and its password,
-  * your latest settings export files from AAPS and your other apps,
-  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
+* Batteripakke og kabler til at oplade din smartphone, dit ur og (om nødvendigt) BT-læser eller Link-enhed
+* Pumpebatterier
+* Adgang til dine sikkerhedskopier, både på telefonen og i skyen (f.eks. Google Drive, Dropbox), så du kan sætte AAPS op igen på en anden telefon (se [Oprettelse og gendannelse af sikkerhedskopier](../Maintenance/ExportImportSettings.md)): 
+  * den aktuelle [apk](../SettingUpAaps/BuildingAaps.md) af AAPS og af andre apps, du bruger (f.eks. xDrip, Juggluco, BYODA).
+  * din keystore-fil (fra da du byggede apk'en) og dens adgangskode,
+  * dine nyeste eksportfiler med indstillinger fra AAPS og dine andre apps,
+  * din **AAPS**-hovedadgangskode: du kan ikke importere indstillingsfilen uden den. Hvis du har glemt den, så se [Hvordan nulstiller jeg hovedadgangskoden?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
-#### How to organize my backups?
+#### Hvordan organiserer jeg mine sikkerhedskopier?
 
-Export settings very regularly: after each pod or reservoir change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+Eksporter indstillinger meget ofte: efter hvert skift af pod eller reservoir, når du har ændret din profil, når du har godkendt et læringsmål, hvis du skifter pumpe… Selv hvis intet ændrer sig, så eksporter én gang om måneden. Gem flere gamle eksportfiler.
 
-**AAPS** can do this for you: it can export your settings automatically (for example with an [Automation](#ExportImportSettings-Automating-Settings-Export) after each pod change) and save the export directly to a cloud folder (Google Drive). See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+**AAPS** kan gøre det for dig: den kan eksportere dine indstillinger automatisk (f.eks. med en [automatisering](#ExportImportSettings-Automating-Settings-Export) efter hvert podskift) og gemme eksporten direkte i en mappe i skyen (Google Drive). Se [Oprettelse og gendannelse af sikkerhedskopier](../Maintenance/ExportImportSettings.md).
 
-### How can I safely and securely attach the CGM/FGM?
+### Hvordan kan jeg sætte CGM/FGM sikkert fast?
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Du kan tape den. Der findes flere færdigt perforerede »overpatches« til almindelige CGM-systemer (søg på Google, eBay eller Amazon). Nogle loopere bruger den billigere almindelige kinesiologitape eller rocktape.
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+Du kan fastgøre den. Du kan også købe overarmsbånd, der holder CGM/FGM fast med et bånd (søg på Google, eBay eller Amazon).
 
-## APS algorithm
+## APS-algoritme
 
-### Why does OpenAPS AMA show "dia: 3" even though I have a different DIA in my profile?
+### Hvorfor viser OpenAPS AMA "dia: 3", selvom jeg har en anden DIA i min profil?
 
-With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** shows the data sent to the algorithm. In its **Profile** section, `dia` is always 3.0 or less:
+Når **OpenAPS AMA** er valgt i **Konfiguration** > **APS**, viser **Åbn plugin** de data, der sendes til algoritmen. I afsnittet **Profil** er `dia` altid 3,0 eller mindre:
 
-![OpenAPS AMA plugin screen with dia 3.0 in the profile data](../images/screens/openaps_ama_plugin.png)
+![Skærmen for pluginet OpenAPS AMA med dia 3.0 i profildata](../images/screens/openaps_ama_plugin.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
+I AMA betyder DIA faktisk ikke »varighed af insulinvirkning«. Det er en parameter, som tidligere var knyttet til DIA. Nu betyder den »inden for hvilken tid korrektionen skal være færdig«. Den har intet at gøre med beregningen af IOB. I OpenAPS SMB er der ikke længere brug for denne parameter.
 
-## Other settings
+## Andre indstillinger
 
-### Nightscout settings
+### Nightscout-indstillinger
 
 (FAQ-nsclient-blocked)=
 
-#### AAPSClient (or AAPS) does not upload data: "Blocked by…". What can I do?
+#### AAPSClient (eller AAPS) uploader ikke data: "Blokeret af…". Hvad kan jeg gøre?
 
-The NSClient status shows why no data is sent:
+NSClient-status viser, hvorfor der ikke sendes data:
 
-* **Blocked by connectivity options**: the connection settings do not allow the current connection. For example, you are on cellular data but only Wi-Fi is allowed, or you are not on one of the allowed Wi-Fi networks (SSIDs).
-* **Blocked by charging options**: the connection settings only allow syncing while the phone is charging (or only on battery), and this is not the case right now.
-* **No connectivity**: the phone has no internet connection.
+* **Blokeret af forbindelsesmuligheder**: forbindelsesindstillingerne tillader ikke den aktuelle forbindelse. For eksempel bruger du mobildata, men kun Wi-Fi er tilladt, eller du er ikke på et af de tilladte Wi-Fi-netværk (SSID'er).
+* **Blokeret af opladningsmuligheder**: forbindelsesindstillingerne tillader kun synkronisering, mens telefonen oplader (eller kun på batteri), og det er ikke tilfældet lige nu.
+* **Ingen forbindelse**: telefonen har ingen internetforbindelse.
 
-Check the [NSClient connection settings](#Preferences-nsclient): **Use cellular data**, **Use roaming**, **Use WiFi**, **WiFi SSID**, **Sync on battery** and **Sync while charging**.
+Kontroller [NSClient-forbindelsesindstillingerne](#Preferences-nsclient): **Brug mobildata**, **Brug roaming**, **Brug WiFi**, **WiFi SSID**, **Synkroniser på batteri** og **Synkroniser under opladning**.
 
-### CGM settings
+### CGM-indstillinger
 
 (FAQ-advanced-filtering)=
 
-#### Why does AAPS say 'SMB always and after carbs disabled because active BG source doesn't support advanced filtering'?
+#### Hvorfor siger AAPS »SMB altid og efter kulhydrater deaktiveret, fordi den aktive BS kilde ikke understøtter avanceret filtrering«?
 
-**Enable SMB always** and **Enable SMB after carbs** can only be used with a [trusted BG data source](#GettingStarted-TrustedBGSource): a sensor and CGM app that can tell **AAPS** which sensor the readings come from. With any other BG source, **AAPS** switches these two options off and shows this message. Check the list of trusted sources and, if your sensor is listed, make sure you use one of the CGM apps shown for it. See also [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Aktiver SMB altid** og **Aktiver SMB efter kulhydrater** kan kun bruges med en [pålidelig BS-datakilde](#GettingStarted-TrustedBGSource): en sensor og CGM-app, der kan fortælle **AAPS**, hvilken sensor målingerne kommer fra. Med alle andre BS-kilder slår **AAPS** disse to muligheder fra og viser denne besked. Se listen over pålidelige kilder, og hvis din sensor står på listen, så sørg for, at du bruger en af de CGM-apps, der er vist for den. Se også [Udjævning af blodsukkerdata](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-### Pump
+### Pumpe
 
-#### Batteries
+#### Batterier
 
-Looping can reduce the pump battery faster than normal use because the system interacts through Bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+Loop kan bruge pumpens batteri hurtigere end normal brug, fordi systemet kommunikerer meget mere via Bluetooth, end en bruger gør manuelt. Det er bedst at skifte batteri ved 25%, fordi kommunikationen derefter bliver svær. Du kan indstille advarselsalarmer for pumpens batteri med variablen PUMP_WARN_BATT_P på din Nightscout-side. Tricks til at forlænge batteriets levetid:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-* AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, enable **Log app start event** in the NSClient **Advanced settings**: Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, turn off battery optimization for AAPS so that the phone stops closing it down: see [battery savings](#FAQ-battery-savings) below.
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
-* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+* gør tiden kortere, hvor LCD-skærmen er tændt (i pumpens indstillingsmenu)
+* gør tiden kortere, hvor baggrundslyset er tændt (i pumpens indstillingsmenu)
+* vælg bip i stedet for vibration i notifikationsindstillingerne (i pumpens indstillingsmenu)
+* tryk kun på knapperne på pumpen for at genindlæse, brug AAPS til at se al historik, batteriniveau og reservoirvolumen.
+* AAPS-appen bliver på nogle telefoner ofte lukket for at spare strøm eller frigøre RAM. Når AAPS starter igen, opretter den en Bluetooth-forbindelse til pumpen og læser den aktuelle basalrate og bolushistorik igen. Det bruger batteri. For at se, om det sker, skal du aktivere **Registrer start af appen** i NSClient under **Avancerede indstillinger**: Nightscout modtager så en hændelse ved hver genstart af AAPS, hvilket gør det let at følge problemet. For at mindske det skal du slå batterioptimering fra for AAPS, så telefonen ikke lukker appen: se [batteribesparelse](#FAQ-battery-savings) nedenfor.
+* rens batteripolerne med en spritserviet, så der ikke er voks eller fedt fra produktionen tilbage.
+* for [Dana R/RS-pumper](../CompatiblePumps/DanaRS-Insulin-Pump.md) trækker opstarten en høj strøm fra batteriet for bevidst at bryde passiveringslaget (som forhindrer tab af energi under opbevaring), men det lykkes ikke altid at bryde det 100%. Tag enten batteriet ud og sæt det i igen 2-3 gange, indtil det viser 100% på skærmen, eller brug batterinøglen til kortvarigt at kortslutte batteriet, før du sætter det i: hold den mod begge poler i et splitsekund.
+* se også flere tips om [bestemte batterityper](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
-#### Changing reservoirs and cannulas
+#### Skift af reservoir og kanyle
 
-The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Follow the step-by-step [guide for changing the pump reservoir and cannula](#pumps-cannulas-changing-reservoir-and-cannula).
+Reservoiret skal skiftes direkte på pumpen, og derefter registreres skiftet i **AAPS**. Følg [vejledningen trin for trin til skift af pumpens reservoir og kanyle](#pumps-cannulas-changing-reservoir-and-cannula).
 
-### Wallpaper
+### Baggrundsbillede
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+Du kan finde AAPS-baggrundsbilledet til din telefon på siden [Telefoner](#Phones-phone-wallpaper).
 
-### Daily usage
+### Daglig brug
 
-Many of the situations below can be prepared once as a [scene](#scenes): a preset that switches profile, temp target and other settings with one tap. **AAPS** offers ready-made templates, for example *Exercise*, *Sleep*, *Alcohol* or *Bathing*.
+Mange af situationerne nedenfor kan forberedes én gang som en [scene](#scenes): en forudindstilling, der skifter profil, midlertidigt mål og andre indstillinger med ét tryk. **AAPS** har færdige skabeloner, f.eks. *Motion*, *Søvn*, *Alkohol* eller *Badning*.
 
-#### Hygiene
+#### Hygiejne
 
 (what-to-do-when-taking-a-shower-or-bath)=
 
-##### What to do when taking a shower or bath?
+##### Hvad gør jeg, når jeg går i bad?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
+Du kan tage pumpen af, når du går i bad. I denne korte tid har du måske ikke brug for den, men du skal fortælle AAPS, at du har afbrudt pumpen, så IOB-beregningerne er korrekte. Se [beskrivelsen ovenfor](#FAQ-disconnect-pump). [Sceneskabelonen](#scenes) *Badning* gør dette for dig.
 
-#### Work
+#### Arbejde
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need, or save your workday settings as a [scene](#scenes).
+Afhængigt af dit arbejde kan du vælge at bruge andre behandlingsfaktorer på arbejdsdage. Som looper bør du overveje et [profilskift](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) til din typiske arbejdsdag. For eksempel kan du skifte til en profil over 100%, hvis du har et mindre krævende arbejde (f.eks. sidder ved et skrivebord), eller under 100%, hvis du er aktiv og på benene hele dagen. Du kan også overveje et højt eller lavt midlertidigt mål eller en [tidsforskydning af din profil](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile), når du arbejder meget tidligere eller senere end normalt, eller hvis du har skiftende vagter. Du kan også oprette en ekstra profil (f.eks. »hjemme« og »arbejdsdag«) og lave et dagligt profilskift til den profil, du faktisk har brug for, eller gemme dine indstillinger til arbejdsdage som en [scene](#scenes).
 
-### Leisure activities
+### Fritidsaktiviteter
 
 (FAQ-sports)=
 
-#### Sports
+#### Sport
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Du skal ændre dine gamle sportsvaner fra tiden før loop. Hvis du bare spiser en eller flere sportskulhydrater som før, vil det lukkede loop-system opdage dem og korrigere for dem.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Så du ville have flere kulhydrater om bord, men samtidig ville loopet modvirke det og give insulin.
 
-When looping you should try these steps:
+Når du looper, kan du prøve disse trin:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
-* Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+* Lav et [profilskift](#ProfileSwitch-change-percentage) under 100%: tryk på profilnavnet på hovedskærmen, tryk på den runde knap **▶**, og indstil derefter **Procent** og **Varighed**.
+* Sæt et [midlertidigt mål for aktivitet](#TempTargets-activity-temp-target) over dit normale mål. Med en procent under 100 % og en varighed har den samme **Aktiver**-skærm en **Midlertidigt mål / Aktivitet**-kontakt, der starter begge på én gang.
+* Hvis du bruger SMB, så sørg for, at [»Aktiver SMB ved højt midlertidigt mål«](#Open-APS-features-enable-smb-with-high-temp-targets) og [»Aktiver SMB altid«](#Open-APS-features-enable-smb-always) er deaktiveret.
 
-Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+Det er vigtigt at forberede og efterbehandle disse indstillinger. Lav ændringerne i god tid før sport, og tænk på effekten af, at musklerne fyldes op.
 
-The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these settings, so you can start them with one tap. If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) to start the profile switch and TT, or the scene. Location based automation might also be an idea but makes preprocessing more difficult.
+[Sceneskabelonerne](#scenes) *Motion* og *Nat efter motion* samler disse indstillinger, så du kan starte dem med ét tryk. Hvis du dyrker sport fast på samme tidspunkt (f.eks. et hold i dit fitnesscenter), kan du overveje at bruge [automatisering](../DailyLifeWithAaps/Automations.md) til at starte profilskiftet og det midlertidige mål eller scenen. Automatisering baseret på placering kan også være en idé, men gør forberedelsen sværere.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Procentdelen i profilskiftet, værdien for dit midlertidige mål ved aktivitet og det bedste tidspunkt for ændringerne er individuelle. Start på den sikre side, når du leder efter den rigtige værdi for dig (start med lavere procent og højere midlertidigt mål).
 
 #### Sex
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+Du kan tage pumpen af for at være »fri«, men du skal fortælle AAPS det, så IOB-beregningerne er korrekte. Se [beskrivelsen ovenfor](#FAQ-disconnect-pump).
 
-#### Drinking alcohol
+#### At drikke alkohol
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
+Det er risikabelt at drikke alkohol i lukket loop, fordi algoritmen ikke kan forudsige det blodsukker, som alkoholen påvirker, korrekt. Du skal selv finde din metode til at håndtere dette med følgende funktioner i AAPS:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
-* do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
+* At deaktivere lukket loop og behandle diabetes manuelt eller
+* indstille høje midlertidige mål og deaktivere UAM, så loopet ikke øger IOB på grund af et uanmeldt måltid, eller
+* lav et [profilskift](#ProfileSwitch-change-percentage) til tydeligt under 100% 
 
-The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
+[Sceneskabelonen](#scenes) *Alkohol* er et udgangspunkt, som du kan tilpasse til din egen metode.
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Når du drikker alkohol, skal du altid holde øje med din CGM og selv undgå hypoglykæmi ved at spise kulhydrater.
 
-#### Sleeping
+#### Søvn
 
-##### How can I loop during the night without mobile and Wi-Fi radiation?
+##### Hvordan kan jeg loope om natten uden stråling fra mobilnet og Wi-Fi?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work if your CGM app runs on the same phone as AAPS, such as xDrip, Juggluco or BYODA; it will NOT work if you get the BG-readings via Nightscout):
+Mange brugere sætter telefonen i flytilstand om natten. Hvis du vil have, at loopet hjælper dig, mens du sover, så gør sådan (det virker kun, hvis din CGM-app kører på den samme telefon som AAPS, f.eks. xDrip, Juggluco eller BYODA; det virker IKKE, hvis du får BS-målingerne via Nightscout):
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. Slå flytilstand til på din telefon.
+2. Vent, til flytilstand er aktiv.
+3. Slå Bluetooth til.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Du modtager nu ikke opkald, og du er heller ikke forbundet til internettet. Men loopet kører stadig.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. In xDrip, go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Nogle har oplevet problemer med lokal udsendelse (AAPS modtager ikke BS-værdier fra xDrip), når telefonen er i flytilstand. I xDrip skal du gå til Settings > Inter-app settings > Identify receiver og indtaste `info.nightscout.androidaps`.
 
 ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-If you want different settings at night (for example a higher target), the *Sleep* [scene](#scenes) template is a good starting point.
+Hvis du vil have andre indstillinger om natten (f.eks. et højere mål), er [sceneskabelonen](#scenes) *Søvn* et godt udgangspunkt.
 
-#### Traveling
+#### Rejser
 
-##### How to deal with time zone changes?
+##### Hvordan håndterer jeg skift af tidszone?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+Med Dana R og Dana R Korean skal du ikke gøre noget. For andre pumper, se siden [Skift af tidszone og sommertid](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) for flere detaljer.
 
-### Medical topics
+### Medicinske emner
 
-#### Hospitalization
+#### Indlæggelse på hospital
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+Hvis du vil dele information om AAPS og gør-det-selv-loop med dit sundhedspersonale, kan du printe [vejledningen om AAPS til sundhedspersonale](../UsefulLinks/ClinicianGuideToAaps.md).
 
-#### Medical appointment with your endocrinologist
+#### Besøg hos din diabeteslæge
 
-##### Reporting
+##### Rapporter
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Du kan enten vise dine Nightscout-rapporter (https://YOUR-NS-SITE.com/report) eller bruge [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
-## Frequent questions on Discord and their answers...
+## Ofte stillede spørgsmål på Discord og svarene på dem...
 
-### My problem is not listed here.
+### Mit problem står ikke her.
 
-See [where to get help](../GettingHelp/WhereCanIGetHelp.md). If you found the solution yourself, **remind us to add it to this list!**
+Se [Hvor kan jeg få hjælp?](../GettingHelp/WhereCanIGetHelp.md). Hvis du selv har fundet løsningen, så **mind os om at tilføje den til denne liste!**
 
-### Building and installing
+### Bygning og installation
 
 (FAQ-build-errors)=
 
-#### I have problems, errors building the app.
+#### Jeg har problemer eller fejl, når jeg bygger appen.
 
-Please check the troubleshooting page for the way you build **AAPS** (see [Building AAPS](../SettingUpAaps/BuildingAaps.md)):
+Se fejlfindingssiden for den måde, du bygger **AAPS** på (se [Byg AAPS](../SettingUpAaps/BuildingAaps.md)):
 
-* building with a browser: [Browser build: troubleshooting](#aaps-ci-troubleshooting),
-* building with Android Studio: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+* build med en browser: [Build i browseren: fejlfinding](#aaps-ci-troubleshooting),
+* build med Android Studio: [Fejlfinding i Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 (FAQ-build-error-file-name-too-long)=
 
-#### Build error: file name too long
+#### Build-fejl: filnavnet er for langt
 
-This error can happen when building with Android Studio: the build stops with an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
+Denne fejl kan ske, når du bygger med Android Studio: buildet stopper med en fejl om, at filnavnet er for langt. Mulige løsninger: Flyt dine kildefiler til en mappe tættere på roden af dit drev (f.eks. "C:\src\AndroidAPS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+I Android Studio: Sørg for, at »Gradle« er færdig med at synkronisere og indeksere, efter du har åbnet projektet og hentet fra GitHub. Kør en Build->Clean Project, før du laver en Rebuild Project. Kør File->Invalidate Caches and Restart i Android Studio.
 
 (FAQ-running-dev-version)=
 
-#### Alert: Running dev version. Closed loop is disabled
+#### Advarsel: Kører dev version. Lukket loop er deaktiveret
 
-**AAPS** shows this message when you run a development (dev) version without engineering mode: in a dev version, closed loop only works in engineering mode.
+**AAPS** viser denne besked, når du kører en udviklingsversion (dev) uden engineering mode: i en dev-version virker lukket loop kun i engineering mode.
 
-The dev version is meant for testing, not for actual looping: read [Development branch](../AdvancedOptions/DevBranch.md) before going further.
+Dev-versionen er beregnet til test, ikke til rigtig loop: læs [Udviklingsgren](../AdvancedOptions/DevBranch.md), før du går videre.
 
-To turn on engineering mode:
+Sådan slår du engineering mode til:
 
-1. Place a file named `engineering_mode` in the `extra` subfolder of your AAPS directory (the folder you chose in the setup wizard, usually `AAPS/extra`). Any file will do as long as it is properly named.
-2. Restart **AAPS** so that it finds the file.
+1. Læg en fil med navnet `engineering_mode` i undermappen `extra` i din AAPS-mappe (den mappe, du valgte i opsætningsguiden, som regel `AAPS/extra`). Enhver fil kan bruges, så længe den har det rigtige navn.
+2. Genstart **AAPS**, så den finder filen.
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+Tip: Lav en kopi af en eksisterende logfil, og omdøb den til "engineering_mode" (bemærk: ingen filtypenavn!).
 
-### Objectives
+### Mål
 
-#### I'm stuck on an objective and need help.
+#### Jeg sidder fast i et læringsmål og har brug for hjælp.
 
-First read [Completing the Objectives](../SettingUpAaps/CompletingTheObjectives.md). If you are still stuck, screen capture the question and answers and post them on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Læs først [Gennemførelse af læringsmålene](../SettingUpAaps/CompletingTheObjectives.md). Hvis du stadig sidder fast, så tag et skærmbillede af spørgsmålet og svarene, og læg dem på AAPS-kanalen på Discord. Husk at fortælle, hvilke muligheder du vælger (eller ikke vælger), og hvorfor. Du får tips og hjælp, men du skal selv finde svarene.
 
-### Settings, passwords and backups
+### Indstillinger, adgangskoder og sikkerhedskopier
 
 (FAQ-reset-master-password)=
 
-#### How to reset the master password?
+#### Hvordan nulstiller jeg hovedadgangskoden?
 
-If you forgot your master password, you can reset it to your pump's serial number:
+Hvis du har glemt din hovedadgangskode, kan du nulstille den til din pumpes serienummer:
 
-1. Create an empty file named `PasswordReset` (no file extension) in the `extra` subfolder of your AAPS directory (usually `AAPS/extra`).
-2. Restart **AAPS**. Your pump must be connected: **AAPS** shows "Waiting for pump…" and needs to read the pump serial number within 30 seconds.
+1. Opret en tom fil med navnet `PasswordReset` (uden filtypenavn) i undermappen `extra` i din AAPS-mappe (som regel `AAPS/extra`).
+2. Genstart **AAPS**. Din pumpe skal være forbundet: **AAPS** viser "Venter på pumpe…" og skal læse pumpens serienummer inden for 30 sekunder.
   
-  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+  For at genstarte skal du lukke **AAPS** med **menu** (☰) > **Afslut** og derefter åbne den igen. **AAPS** leder kun efter filen, når den starter helt forfra. Det er ikke nok at lukke skærmen eller stryge appen væk, fordi **AAPS** bliver ved med at køre i baggrunden. Hvis "Venter på pumpe…" ikke vises, så brug **Tving til at standse** i Androids **Appinfo** for **AAPS**, eller genstart din telefon. Det virker også at installere din aktuelle **AAPS**-apk igen oven på den installerede app: den beholder dine indstillinger.
 
-3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. The `PasswordReset` file is deleted automatically.
+3. **AAPS** viser "Adgangskode angivet!": din hovedadgangskode er nu din **pumpes serienummer**. Filen `PasswordReset` slettes automatisk.
 
-4. Open **Settings** > **Protection** > **Master password** and set a new password.
+4. Åbn **Indstillinger** > **Beskyttelse** > **Hovedadgangskode**, og indstil en ny adgangskode.
 
-If the pump is not reached in time, nothing changes: check the pump connection and try again.
+Hvis pumpen ikke nås i tide, ændres intet: kontroller forbindelsen til pumpen, og prøv igen.
 
-This only resets the master password. A settings, application or bolus password or PIN is not reset, but you can always use the master password instead of them.
+Dette nulstiller kun hovedadgangskoden. En adgangskode eller PIN til indstillinger, appen eller bolus nulstilles ikke, men du kan altid bruge hovedadgangskoden i stedet.
 
-    {admonition} Old settings files
+    {admonition} Gamle indstillingsfiler
     :class: warning
-    Settings files exported with the old master password can only be imported with that old password.
+    Indstillingsfiler, der er eksporteret med den gamle hovedadgangskode, kan kun importeres med den gamle adgangskode.
 
 (FAQ-where-are-settings-files)=
 
-#### Where can I find settings files?
+#### Hvor finder jeg indstillingsfilerne?
 
-Settings files are stored in the `preferences` subfolder of the AAPS directory you chose in the [setup wizard](#SetupWizard-StoragePermission) (for example `/internal storage/AAPS/preferences`). If you set up a cloud folder (Google Drive), your exports can also be saved there. See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+Indstillingsfiler gemmes i undermappen `preferences` i den AAPS-mappe, du valgte i [opsætningsguiden](#SetupWizard-StoragePermission) (f.eks. `/internal storage/AAPS/preferences`). Hvis du har sat en mappe i skyen op (Google Drive), kan dine eksporter også gemmes der. Se [Oprettelse og gendannelse af sikkerhedskopier](../Maintenance/ExportImportSettings.md).
 
-WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+ADVARSEL: Pas på ikke at miste din adgangskode, for uden den kan du ikke importere en krypteret indstillingsfil!
 
 (FAQ-import-settings-earlier-versions)=
 
-#### How do I import settings from earlier versions of AAPS into AAPS v3 or v4 ?
+#### Hvordan importerer jeg indstillinger fra ældre versioner af AAPS til AAPS v3 eller v4?
 
-You can only import settings (in AAPS v3 or v4) that were exported using AAPS v2.8x or later. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install the current AAPS version and import v2.8 settings in it.
+Du kan kun importere indstillinger (i AAPS v3 eller v4), som er eksporteret med AAPS v2.8x eller nyere. Hvis du brugte en version af AAPS ældre end v2.8x, eller hvis du skal bruge eksporterede indstillinger, der er ældre end v2.8x, skal du først installere AAPS v2.8. Importer de ældre indstillinger fra v2.x i v2.8. Når du har kontrolleret, at alt er i orden, kan du eksportere indstillingerne fra v2.8. Installer den aktuelle AAPS-version, og importer indstillingerne fra v2.8 i den.
 
-If you use the same key to build the old and the new version, you won't even have to import settings. You can install the new version over the old one.
+Hvis du bruger den samme nøgle til at bygge den gamle og den nye version, behøver du ikke engang at importere indstillinger. Du kan installere den nye version oven på den gamle.
 
-There were some new objectives added. You'll need to validate them.
+Der er tilføjet nogle nye læringsmål. Du skal godkende dem.
 
 (FAQ-delete-treatments)=
 
-#### Where can I delete treatments?
+#### Hvor kan jeg slette behandlinger?
 
-Open the **menu** (☰) and select **Treatments history**. Long press an entry to select it, tap more entries if needed, then tap the **trash can** icon and confirm. See [Treatments history](#aaps-screens-treatments).
+Åbn **menuen** (☰), og vælg **Behandlingshistorik**. Tryk længe på en post for at vælge den, tryk på flere poster om nødvendigt, tryk derefter på ikonet **skraldespand**, og bekræft. Se [Behandlingshistorik](#aaps-screens-treatments).
 
-### Phone and connection problems
+### Problemer med telefon og forbindelse
 
 (FAQ-aaps-stops)=
 
-#### AAPS stops everyday around the same time.
+#### AAPS stopper hver dag omkring samme tidspunkt.
 
-* Google Play Protect may shut down **AAPS** every morning on some phones. If this happens, go to the Google Play options and disable **Google Play Protect**.
-* Check for "cleaning" apps (ie CCleaner etc) and uninstall them.
-* Turn off all battery optimizations for **AAPS** (see [battery savings](#FAQ-battery-savings) below).
+* På nogle telefoner kan Google Play Protect lukke **AAPS** hver morgen. Hvis det sker, så gå til indstillingerne for Google Play, og deaktiver **Google Play Protect**.
+* Se efter »rengørings«-apps (f.eks. CCleaner) og afinstaller dem.
+* Slå al batterioptimering fra for **AAPS** (se [batteribesparelse](#FAQ-battery-savings) nedenfor).
 
 (FAQ-battery-savings)=
 
-#### How to configure battery savings?
+#### Hvordan indstiller jeg batteribesparelse?
 
-Your phone may suspend **AAPS** and related apps (CGM app, Bluetooth) when you are not using it. **AAPS** then cannot do its work, and Bluetooth connections to the sensor and pump (or RileyLink) may be shut down, causing "pump unreachable" alerts and communication errors.
+Din telefon kan sætte **AAPS** og tilhørende apps (CGM-app, Bluetooth) på pause, når du ikke bruger den. Så kan **AAPS** ikke gøre sit arbejde, og Bluetooth-forbindelserne til sensor og pumpe (eller RileyLink) kan blive lukket. Det giver advarsler om »pumpe utilgængelig« og kommunikationsfejl.
 
-Turn off battery optimization for **AAPS**, your CGM app (e.g. xDrip) and the Bluetooth system app. The way to do this depends on the phone's brand, model and Android version:
+Slå batterioptimering fra for **AAPS**, din CGM-app (f.eks. xDrip) og systemappen Bluetooth. Hvordan du gør det, afhænger af telefonens mærke, model og Android-version:
 
-* see [Battery optimization](#generaltroubleshooting-android-related-issues) for Pixel, Samsung and Huawei phones,
-* in **AAPS**, open the **menu** (☰) > **About** and tap **Don't kill my app?**, or visit [Don't kill my app](https://dontkillmyapp.com/) for other brands.
+* se [Batterioptimering](#generaltroubleshooting-android-related-issues) for Pixel-, Samsung- og Huawei-telefoner,
+* i **AAPS** skal du åbne **menuen** (☰) > **Om** og trykke på **Dræb ikke min app?**, eller besøg [Don't kill my app](https://dontkillmyapp.com/) for andre mærker.
 
-If you are not sure that battery savings cause your problem, you can temporarily turn off all battery savings on the phone: your battery will drain faster, but you will quickly see if the problem goes away.
+Hvis du ikke er sikker på, at batteribesparelse er årsagen til dit problem, kan du midlertidigt slå al batteribesparelse fra på telefonen: dit batteri aflades hurtigere, men du ser hurtigt, om problemet forsvinder.
 
 (FAQ-pump-unreachable-alerts)=
 
-#### Pump unreachable alerts several times a day or at night.
+#### Advarsler om, at pumpen er utilgængelig, flere gange om dagen eller om natten.
 
-Your phone may be suspending **AAPS** or even Bluetooth, causing it to lose the connection to the pump or RileyLink (see [battery savings](#FAQ-battery-savings) above).
+Din telefon sætter måske **AAPS** eller endda Bluetooth på pause, så forbindelsen til pumpen eller RileyLink mistes (se [batteribesparelse](#FAQ-battery-savings) ovenfor).
 
-You can also change when the alert is raised: press the **Settings** (gear) icon on the top right of the main screen, then select **Local alerts** > **Pump unreachable threshold** (30 to 300 minutes). Check your pump's page: some recommend a value, e.g. 120 minutes for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
+Du kan også ændre, hvornår advarslen kommer: tryk på ikonet **Indstillinger** (tandhjul) øverst til højre på hovedskærmen, og vælg derefter **Lokale alarmer** > **Grænse for utilgængelig pumpe** (30 til 300 minutter). Se siden for din pumpe: nogle anbefaler en værdi, f.eks. 120 minutter for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
 
 (FAQ-link-unresponsive)=
 
-#### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+#### Min link/pumpe/pod svarer ikke (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+Med nogle telefoner afbrydes Bluetooth-forbindelsen til Link-enhederne (RL/OL/EmaLink).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
+Nogle har også Link-enheder, der ikke svarer (AAPS siger, at de er forbundet, men Link-enhederne kan ikke nå eller styre pumpen).
 
-First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
+Prøv først knappen **Nulstil RileyLink** på pumpeskærmen (se siden for din pumpe: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Hvis det ikke hjælper, er den letteste måde at få alle delene til at virke sammen:
 
-1. Power off the Link.
-2. Quit **AAPS** (**menu** (☰) > **Exit**).
-3. Long press the **AAPS** icon, open the Android **App info**, tap **Force stop**, then **Storage** > **Clear cache** (do NOT clear storage/data!).
-4. Rarely some phones may need a reboot here. You can try without reboot.
-5. Power on the Link.
+1. Sluk for Link-enheden.
+2. Luk **AAPS** (**menu** (☰) > **Afslut**).
+3. Tryk længe på ikonet for **AAPS**, åbn Androids **Appinfo**, tryk på **Tving til at standse** og derefter **Lagerplads** > **Ryd cache** (ryd IKKE lagerplads/data!).
+4. Nogle få telefoner skal måske genstartes her. Du kan prøve uden genstart.
+5. Tænd for Link-enheden.
 6. Start **AAPS**.
-7. On the pump screen, tap **Pair RileyLink** and select your Link again.
+7. Tryk på **Par RileyLink** på pumpeskærmen, og vælg din Link-enhed igen.
 
-### Remote control
+### Fjernstyring
 
 (FAQ-aapsclient)=
 
-#### Configuring and Using the AAPSClient remote app
+#### Opsætning og brug af AAPSClient-appen til fjernstyring
 
-**AAPSClient** is a separate app that lets a caregiver follow and control **AAPS** remotely. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
+**AAPSClient** er en separat app, som lader en omsorgsperson følge og styre **AAPS** på afstand. Siden **AAPS** v4 kræver styring af **AAPS** fra AAPSClient, at de to apps parres én gang. Se:
 
-* [The AAPSClient app](#aapsclient-app): installing, first start and pairing,
-* [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
-* [AAPSClient on a smartwatch](#remotecontrol-smartwatches).
+* [AAPSClient-appen](#aapsclient-app): installation, første start og parring,
+* [Styring mellem hovedenhed ↔ klient](#client-master-control): hvad der kan styres, og hvordan parring virker,
+* [AAPSClient på et smartur](#remotecontrol-smartwatches).
 
 (FAQ-hardened-mode)=
 
-#### Treatments I enter on the Nightscout website are not applied
+#### Behandlinger, som jeg indtaster på Nightscout-hjemmesiden, bliver ikke brugt
 
-That is [hardened mode](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
+Det skyldes [hærdet tilstand](#client-master-control-hardened-mode). Mens klientstyring er slået til — altid i Simpel tilstand — tager **AAPS** kun imod ændringer fra parrede klienter, ikke fra Nightscout-hjemmesiden eller andre apps. Indtast dem i stedet på en parret **AAPSClient**.
 
-### Alerts and warnings
+### Alarmer og advarsler
 
-#### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle
+#### Jeg har et rødt advarselsmærke (rød trekant) / AAPS vil ikke aktivere lukket loop / Loop bliver i LGS / Jeg havde en gul trekant
 
-The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
+Det røde advarselsmærke på genvejen til BS-kilden er en sikkerhedsfunktion i AAPS. Se [BS-advarselstegn](#aaps-screens-bg-warning-sign) for den fulde forklaring.
 
-A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also lose stats, IOB, COB, selected profile.
+Et rødt advarselsmærke på genvejen til BS-kilden i den nederste bjælke (den røde trekant i ældre versioner) betyder, at du har dobbelte BS-værdier, og at AAPS ikke kan beregne delta præcist. Et lukket loop skiftes til tilstanden **Stop ved lavt BS**: det sænker eller stopper stadig din basal for at beskytte dig mod lavt blodsukker, men det giver ingen korrektionsinsulin. Du skal slette én BS-værdi af hver dobbelt værdi for at fjerne advarslen. Tryk på genvejen for at åbne din [BS-kilde-skærm](#aaps-screens-bg-source): den dobbelte værdi er markeret med rødt. Tryk længe på en linje, du vil slette, marker én af hver dobbelt linje, og tryk på ikonet skraldespand. Du skal måske nulstille AAPS-databaserne, hvis der er for mange dobbelte BS-værdier. I så fald mister du også statistik, IOB, COB og valgt profil.
 
-Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
+Når advarslen er væk, går AAPS ikke selv tilbage til **Lukket loop**. Tryk på loop-ikonet på hovedskærmen, og vælg **Lukket loop** igen.
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+Mulig årsag til problemet: xDrip og/eller NS udfylder manglende BS-værdier bagudrettet (backfilling).
 
-The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 no longer shows it: it recalculates the values in the background and the loop works correctly.
+Den gule trekant i ældre versioner betød ustabil tid mellem hver BS-måling (BS-værdier kommer ikke regelmæssigt hvert 5. min, eller BS-værdier mangler). Det sker ofte med Libre eller efter skift af sender på G6. **AAPS** 4 viser den ikke længere: den genberegner værdierne i baggrunden, og loopet virker korrekt.
 
 ### Omnipod DASH
 
 (FAQ-move-dash-pod)=
 
-#### Can I move an active DASH Pod to another phone?
+#### Kan jeg flytte en aktiv DASH-pod til en anden telefon?
 
-The Pod state is included in the exported settings, so an active Pod can be moved to another phone by exporting the settings right before the move and importing them on the other phone. This is not officially supported and there is a risk of losing the Pod: if possible, try it when your Pod is about to expire.
+Podens tilstand er med i de eksporterede indstillinger, så en aktiv pod kan flyttes til en anden telefon ved at eksportere indstillingerne lige før flytningen og importere dem på den anden telefon. Det er ikke officielt understøttet, og der er risiko for at miste poden: prøv det om muligt, når din pod snart udløber.
 
-Read these sections first:
+Læs først disse afsnit:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
-* [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
+* [Eksporter og importer indstillinger](#omnipod-dash-export-import) på siden om Omnipod DASH og [Slangeløse pumper](#ExportImportSettings-tubeless-pumps): sæt på den nye telefon flueben i **Erstat også pumpeindstillinger**, og brug en fil, der er eksporteret, mens du har din nuværende pod på,
+* [Kassering af en pod](#omnipod-dash-discard-pod), så du bagefter kan fjerne poden fra den gamle telefon. Hold den gamle telefon i flytilstand, indtil poden er kasseret, så de to telefoner aldrig taler med poden på samme tid.
