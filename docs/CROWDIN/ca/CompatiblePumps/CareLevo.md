@@ -14,14 +14,14 @@ The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the *
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Capacitats de la bomba amb AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* Es comunica amb **AAPS** amb el Bluetooth propi del telèfon, sense cap dispositiu de comunicació addicional.
 * Bolus in steps of 0.05 U.
 * Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
 * Temporary basal rates set as an absolute rate, up to 12 hours.
 * Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Els canvis d'horari d'estiu i de fus horari s'han de fer a mà. The patch notifies you when the time zone changes.
 
 ## Pump Setup
 
@@ -31,7 +31,7 @@ The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the *
 
 ![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
 
-## Settings
+## Configuració
 
 Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
 
@@ -138,7 +138,7 @@ Insulin delivery has stopped. Act now:
 * **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
 * **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
 
-### Alerts
+### Alertes
 
 Insulin delivery continues, but something needs your attention:
 
@@ -157,6 +157,6 @@ For information only: **Low Insulin**, **Patch Usage Time Notification** (the ti
 
 The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
 
-## Where to get help
+## On trobar ajuda
 
 Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
