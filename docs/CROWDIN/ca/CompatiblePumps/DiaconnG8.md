@@ -5,12 +5,12 @@
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Capacitats de la bomba amb AAPS
 
 * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
 * DST and timezone changes must be handled manually.
 
-## Insulin Pump Bluetooth Pairing
+## Emparellament Bluetooth de la bomba d'insulina
 
 - Tap the **menu** (☰) in the top-left corner.
 
@@ -26,11 +26,11 @@ Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and
 
 **Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
 
-**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Abans d'emparellar una bomba, es veu així:
 
 ![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![imatge](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -42,26 +42,26 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing 
 
 ![Diaconn Pump Pairing screen scanning for pumps](../images/DiaconnG8/DiaconnG8_05.png)
 
-- There are two options to check your model number:
+- Hi ha dues maneres de comprovar el número de model:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+1. Els 5 últims dígits del número de sèrie (SN) a la part de darrere de la bomba.
+2. Premeu el botó O > Information > BLE > els 5 últims dígits.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![imatge](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Once you select your pump, a window appears asking for a PIN code. Enter the PIN number displayed on your pump to complete the connection.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![imatge](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 - When **Pairing successful!** is shown, tap **OK** to go back to the pump screen.
 
-## Pump status check and log synchronization
+## Comprovació de l'estat de la bomba i sincronització del registre
 
 - Once your pump is connected, open the pump screen (**Manage** > **Pump**). It shows the pump status (battery, reservoir, last connection, last bolus, basal rate and more).
 - Tap **Refresh** to connect to the pump, update the status and synchronize the logs.
 - Tap **Pump history** to see the history read from the pump.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![imatge](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -70,9 +70,9 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 (diaconn-g8-bluetooth-troubleshooting)=
 
-## Bluetooth Troubleshooting
+## Resolució de problemes de Bluetooth
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Què fer si la connexió Bluetooth amb la bomba és inestable.**
 
 ### Method 1) Restart AAPS, then check the pump again
 
@@ -85,26 +85,26 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 ### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+- Manteniu premut el botó Bluetooth de la part de dalt durant uns 3 segons.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![imatge](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Premeu el botó Setting de la bomba d'insulina Diaconn G8 emparellada.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![imatge](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Unpair.
+- Desemparelleu-la (Unpair).
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![imatge](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - In **AAPS**, open the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**.
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Repetiu el procés d'emparellament Bluetooth de la bomba (vegeu més amunt).
 
-## Further Information
+## Més informació
 
 (diaconn-g8-insulin-pump-option-setting)=
 
-### Diaconn G8 Insulin pump option setting
+### Configuració de les opcions de la bomba d'insulina Diaconn G8
 
 - **Configuration** > **Pump** > **Diaconn G8** > **Settings**
 - Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
@@ -115,24 +115,24 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 - If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.
 - If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a "Site Change" event occurs.
 - If the **Log tube change** option is activated, the relevant details are automatically added as a note when a "Tube Change" event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Nota: per canviar la pila, atureu primer totes les funcions d'injecció en curs.)
 - **Diaconn Cloud Sync** sends the pump logs to the Diaconn Cloud.
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+![Menú d'accions de la Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ```{admonition} Older screenshot
 :class: note
 The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a battery change is recorded with **Manage** > **Pump Battery Change**; there is no **Actions** tab.
 ```
 
-### Extended Bolus function
+### Funció de bolus estès
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Si feu servir el bolus estès, es desactivarà el llaç tancat.
+- Vegeu [aquesta pàgina](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) per saber per què el bolus estès no funciona en un entorn de llaç tancat.
 
-## Where to get help
+## On trobar ajuda
 
-Development of the Diaconn G8 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Development of the Diaconn G8 driver is done by the community on a **volunteer** basis. Abans de demanar ajuda:
 
 1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
 2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
