@@ -7,8 +7,8 @@ Si no voleu crear un compte de Gmail dedicat per a **AAPS**, podeu anar directam
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. Si perdeu l'ordinador o el telèfon, o us el roben o es trenca, encara hi tindreu accés.
+- Amb un espai de Google Drive dedicat, no hi ha risc d'omplir el límit del vostre Google Drive personal amb **Exportar configuració**.
+- Cada versió d'**AAPS** (i de les aplicacions de suport com xDrip, BYODA, etc.) es desarà en un sol lloc, independent del maquinari de l'ordinador. Si perdeu l'ordinador o el telèfon, o us el roben o es trenca, encara hi tindreu accés.
 - Si tothom fa servir la mateixa configuració, amb una estructura de carpetes semblant, l'ajuda en línia és més senzilla.
 - Segons la configuració (vegeu més avall), tindreu una identitat separada, com un àlies, per comunicar-vos amb la comunitat. Això pot protegir la vostra privacitat. 
 - Els nens amb DT1 poden conservar el seu propi compte de correu «de cada dia» com a menors, i alhora fer servir **AAPS** i les funcions relacionades que necessiten un compte d'adult.
@@ -23,7 +23,7 @@ Si no voleu crear un compte de Gmail dedicat per a **AAPS**, podeu anar directam
 
 Requisits:
 
-* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. Tots dos tenen les últimes actualitzacions de seguretat, accés a internet i permisos d'administrador, perquè alguns passos demanen descarregar i instal·lar programes.
+* Teniu un ordinador amb Windows (Windows 10 o més nou) i un telèfon Android (Android 12 o més nou) on hi haurà l'aplicació **AAPS**. Tots dos tenen les últimes actualitzacions de seguretat, accés a internet i permisos d'administrador, perquè alguns passos demanen descarregar i instal·lar programes.
 * El telèfon Android ja està configurat amb la vostra adreça de correu personal «de cada dia», per exemple un compte de Gmail.
 
 ```{admonition} Things to consider when setting up your new account
@@ -39,19 +39,19 @@ Requisits:
 
 ```{admonition} Video Walkthrough!
 :class: note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+Feu clic [aquí](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) per veure un vídeo que mostra com crear un compte de Google dedicat.
 ```
 
  Aquests són els passos que es mostren al vídeo:
 
 En aquest exemple: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- El vostre compte de Google «_de cada dia_» és <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - El vostre nou compte de Gmail «_AAPS_» serà: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### Aneu a <https://myaccount.google.com> 
 
- Si ja heu iniciat la sessió a Google, aquí anireu a la pàgina **My Account** del vostre compte «de cada dia». (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Si ja heu iniciat la sessió a Google, aquí anireu a la pàgina **My Account** del vostre compte «de cada dia». (1) Feu clic a la foto del perfil, a dalt a la dreta de la pàgina (en aquest cas, una simple ![](../images/Building-the-App/building_0002.png)) (2) seleccioneu «_add another account_» (afegir un altre compte).
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail mostrarà el nom del compte. Us demanarà que accepteu les condicions de G
 
 ### Personalitzeu la imatge del nou perfil
 
-Ara hauríeu de ser a la pàgina MyAccount de Gmail, amb el vostre nou compte de correu dedicat a **AAPS**. Per defecte, la foto del perfil és la primera lletra del vostre nom. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Ara hauríeu de ser a la pàgina MyAccount de Gmail, amb el vostre nou compte de correu dedicat a **AAPS**. Per defecte, la foto del perfil és la primera lletra del vostre nom. Canvieu-la per alguna cosa única per evitar confusions… en aquest exemple, Donald.Muck.AAPS ha canviat ![](../images/Building-the-App/building_0002.png) per ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Aquesta part pot ser una mica confusa, perquè haureu de canviar diverses vegade
 2. Feu clic amb el botó dret sobre la icona del navegador a la barra de tasques
 3. Al menú, seleccioneu «New Window» (finestra nova)... i ajusteu-la perquè només ocupi la meitat de baix de la pantalla.
 
-Obriu <https://gmail.com> a cada finestra del navegador. Assegureu-vos que el compte personal és a dalt i el nou compte dedicat a **AAPS** és a baix, i que es reconeix fàcilment per la foto del perfil a la cantonada de dalt a la dreta. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Obriu <https://gmail.com> a cada finestra del navegador. Assegureu-vos que el compte personal és a dalt i el nou compte dedicat a **AAPS** és a baix, i que es reconeix fàcilment per la foto del perfil a la cantonada de dalt a la dreta. Si cal, sempre podeu canviar de compte fent clic a la foto del perfil i seleccionant el compte correcte.
 
 ![](../images/Building-the-App/building_0009.png)
 
