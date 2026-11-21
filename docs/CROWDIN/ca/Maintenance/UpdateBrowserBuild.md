@@ -1,23 +1,23 @@
-# Update with a browser (fork)
+# Actualitzar amb el navegador (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Heu compilat AAPS amb **AAPS Builder**? No necessiteu aquesta pàgina: vegeu [Actualitzar AAPS amb AAPS Builder](#aaps-builder-updates).
 ```
 
-## Build yourself instead of download
+## Compileu-la vosaltres mateixos en lloc de descarregar-la
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** no es pot descarregar a causa de les normes sobre dispositius mèdics. És legal compilar l'aplicació per al vostre ús propi, però no en podeu donar una còpia a altres persones! Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més detalls.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Llavors seguiu el [procediment de compilació d'**AAPS** al navegador](../SettingUpAaps/BrowserBuild.md) en lloc d'aquesta guia. En lloc de crear un nou magatzem de claus, heu de seleccionar el que heu copiat del vostre ordinador.
+Aquest pas només és obligatori la primera vegada; per a les actualitzacions següents podreu seguir aquesta guia.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Voleu passar a AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) és la compilació al navegador més senzilla: no cal sincronitzar cap fork i descarregueu l'aplicació directament des de GitHub. No cal que canvieu: aquesta guia continua funcionant. Si canvieu, primer obteniu una còpia del vostre magatzem de claus des del vostre fork, com s'explica a [Si veniu de la compilació al navegador anterior](#aaps-builder-from-fork). Si no ho feu, la nova compilació no podrà actualitzar l'AAPS del vostre telèfon.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Resum de com actualitzar a una nova versió d'AAPS amb un navegador
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
@@ -26,50 +26,50 @@ This operation will be mandatory only the first time, then for successive upgrad
 
 In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
 
-### Export your settings
+### Exporteu la vostra configuració
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exporteu la configuració des de la versió d'**AAPS** que teniu ara al telèfon. Potser no la necessitareu, però és millor prevenir que curar.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Si no recordeu com fer-ho, vegeu la pàgina [Crear i restaurar còpies de seguretat](ExportImportSettings.md).
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Actualitzeu el vostre repositori de GitHub
 
-[Log into GitHub](https://github.com/login).
+[Inicieu sessió a GitHub](https://github.com/login).
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+1. Seleccioneu Repositories.
+2. Desplaceu-vos cap avall i seleccioneu el vostre propi repositori AndroidAPS.
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
+![Seleccionar el repositori AndroidAPS](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Comproveu que feu servir la vostra pròpia còpia d'AndroidAPS (Forked from nightscout/AndroidAPS)
+4. Premeu Sync Fork per actualitzar-la (el nombre de commits endarrerits pot ser diferent del de la imatge)
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Sincronitzar el repositori AndroidAPS](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Premeu Update Branch
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Actualitzar el repositori AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Nota: si heu modificat la vostra còpia d'AndroidAPS per error, veureu aquesta pantalla. Descarteu tots els canvis (commits) per tornar a la versió publicada.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Descartar els canvis no desitjats](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+You have now synchronized (updated) your own copy with the latest release of **AAPS**. Molt bé.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Repositori sincronitzat](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Executeu el workflow per compilar l'APK signat
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. A la vostra còpia d'AndroidAPS a GitHub, seleccioneu Actions.
+2. Obriu All Workflows.
+3. Seleccioneu AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Desplaceu-vos cap avall i premeu Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
@@ -83,33 +83,33 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Veureu el missatge Workflow run was successfully requested. Actualitzeu la pàgina del navegador i podreu seguir el progrés de la compilació. Quan l'acció acabi, l'acció AAPS CI mostrarà una marca verda. You have successfully built the updated version of **AAPS**. Això vol dir que l'apk principal i l'apk de Wear es desen directament al vostre Google Drive (com es mostra a continuació). L'apk d'AAPSClient es pot descarregar des de Github > nightscout > AndroidAPS [aquí](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Seguir el workflow](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Instal·leu l'APK d'AAPS
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Obriu el vostre Google Drive
+2. Entreu a la carpeta AAPS, seleccioneu la carpeta de la nova versió i hi trobareu la versió per al telèfon i la versió per a Android Wear.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Ubicació a Google Drive](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+A partir de setembre de 2026, la [verificació de desenvolupadors d'Android](#android-developer-verification) de Google pot impedir instal·lar l'APK tocant el fitxer, segons el vostre país. En aquella pàgina s'expliquen solucions gratuïtes.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Continueu [aquí](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
-## Troubleshooting
+## Resolució de problemes
 
-If anything goes wrong, don't panic.
+Si alguna cosa va malament, no us espanteu.
 
-Take a breath!
+Respireu a fons!
 
 Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Si necessiteu més ajuda, contacteu amb altres usuaris d'**AAPS** a [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o a [Discord](https://discord.gg/4fQUWHZ4Mw).
