@@ -53,7 +53,7 @@ Se for usada a absorção mínima de hidratos de carbono (min_5m_carbimpact) em 
 
 Normalmente, o __AAPS__ deteta a absorção dos hidratos de carbono através dos desvios da **glicose**. Se o utilizador introduziu hidratos de carbono mas o **AAPS** não consegue detetar a sua absorção estimada através dos desvios da **glicose**, usa o método [min_5m_carbimpact](#Preferences-min_5m_carbimpact) para calcular a absorção (o chamado «fallback»). Como este método calcula apenas a absorção mínima de hidratos de carbono, sem ter em conta os desvios da **glicose**, pode levar a valores de HCA incorretos.
 
-![Dica sobre um valor de HCA errado](../images/Calculator_SlowCarbAbsorption.png)
+![Dica sobre um valor de HCA errado](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Na captura de ecrã acima, em 66 % do tempo a absorção dos hidratos de carbono foi calculada pelo min_5m_carbimpact em vez do valor detetado a partir dos desvios. Isto indica que o utilizador pode ter tido menos **HCA** do que o calculado pelo algoritmo.
 
