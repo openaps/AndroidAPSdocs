@@ -1,6 +1,6 @@
 # Сумісні помпи
 
-AAPS works with a number of insulin pumps. У списку нижче наведено пристрої, які зараз підтримуються. У дужках вказано, чи AAPS зв'язується з помпою через вбудований Bluetooth вашого телефону, чи для цього потрібен пристрій, сумісний з RileyLink.
+AAPS працює з низкою інсулінових помп. У списку нижче наведено пристрої, які зараз підтримуються. У дужках вказано, чи AAPS зв'язується з помпою через вбудований Bluetooth вашого телефону, чи для цього потрібен пристрій, сумісний з RileyLink.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -38,12 +38,12 @@ AAPS works with a number of insulin pumps. У списку нижче навед
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (потрібен [додатковий пристрій зв'язку](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## Моєї помпи немає в списку
 
 Стан інших помп, які потенційно можуть працювати з AAPS, описано на сторінці [Майбутні (можливі) драйвери помп](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Додатковий пристрій зв’язку
 
 Якщо додатковий пристрій зв'язку не вказано, зв'язок між інсуліновою помпою та **AAPS** працює через вбудований стек Bluetooth в Android. Додатковий пристрій для перекладу протоколу зв'язку не потрібен.
 
