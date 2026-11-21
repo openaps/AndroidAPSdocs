@@ -3,7 +3,7 @@
 Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
 
 ```{important}
-This data source will not work when you are offline, when you experience network issues or when your Nightscout site is down. Use with caution.
+Aquesta font de dades no funcionarà si esteu fora de línia, si teniu problemes de xarxa o si el vostre lloc de Nightscout no funciona. Feu-la servir amb precaució.
 ```
 
 -   Set up **NSClientV3** (**Configuration → Communication**) with your Nightscout site information.
