@@ -1,457 +1,457 @@
-# Operation of AAPS via your Wear OS smartwatch
+# Betjening af AAPS med dit Wear OS-smartur
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## AAPS-urskiver
 
 ```{warning}
-The classic **AAPS** watchfaces run on Wear OS 5 and older only, and Wear OS 5 already limits them. On **Wear OS 6 and newer** the watch app installs one watchface in Google's Watch Face Format instead: your custom watchface as a picture, or the **Complications watchface**. See [Wear OS watch face changes](#wearos-watchface-changes) for what breaks on each Wear OS version, and [the watchface AAPS installs](#wearos-aaps-v4-watchface) for Wear OS 6.
+De klassiske **AAPS**-urskiver virker kun på Wear OS 5 og ældre, og Wear OS 5 begrænser dem allerede. På **Wear OS 6 og nyere** installerer ur-appen i stedet én urskive i Googles Watch Face Format: din brugerdefinerede urskive som et billede eller **Urskive med komplikationer**. Se [Ændringer i urskiver på Wear OS](#wearos-watchface-changes) for, hvad der holder op med at virke på hver Wear OS-version, og [urskiven, som AAPS installerer](#wearos-aaps-v4-watchface) for Wear OS 6.
 ```
 
-On Wear OS 5 and older, several classic watchfaces are built into the **AAPS** watch app. They show the glucose value with delta, IOB, the active basal rate and a graph of the readings. Two taps work on them:
+På Wear OS 5 og ældre er flere klassiske urskiver bygget ind i **AAPS**-ur-appen. De viser glukoseværdien med delta, IOB, den aktive basalrate og en graf over målingerne. To tryk virker på dem:
 
-* Double-tap the glucose value to open the **AAPS** main menu
-* Double-tap the graph to change its time range
+* Dobbelttryk på glukoseværdien for at åbne **AAPS**' hovedmenu
+* Dobbelttryk på grafen for at ændre dens tidsinterval
 
-On every Wear OS version, the [complications](#Watchfaces-complications) and the [tiles](#WearOsSmartwatch-wear-os-tiles) described on this page work with any watchface that has room for them.
+På alle Wear OS-versioner virker de [komplikationer](#Watchfaces-complications) og [felter](#WearOsSmartwatch-wear-os-tiles), der er beskrevet på denne side, med enhver urskive, der har plads til dem.
 
-## Configuration
+## Konfiguration
 
-Enable **Wear** in [**Configuration** > **Communication**](#Config-Builder-wear).
+Aktiver **Ur** i [**Konfiguration** > **Kommunikation**](#Config-Builder-wear).
 
-To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear). While **Wear control** is off, the phone refuses every treatment or mode change sent from the watch, and the watch shows *"Wear control is turned off in the Wear settings on the phone."*
+For at give bolus eller udføre andre handlinger fra uret skal du slå **Styring fra ur** til. Indstillingerne for bolusberegneren på uret findes samme sted: se [Indstillinger > Ur](#preferences-wear). Mens **Styring fra ur** er slået fra, afviser telefonen alle behandlinger og ændringer af tilstand, der sendes fra uret, og uret viser *»Styring fra uret er slået fra i Ur-indstillingerne på telefonen.«*
 
-With **Open plugin** on the **Wear** card you open the Wear screen:
+Med **Åbn plugin** på kortet **Ur** åbner du skærmen Ur:
 
-![Wear plugin screen](../images/screens/wear_plugin.png)
+![Skærmen for pluginet Ur](../images/screens/wear_plugin.png)
 
-The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
+Øverste linje viser navnet på det forbundne ur eller **(Intet ur forbundet)**. Fra denne skærm kan du
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
-* Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
-* Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
+* Send alle data igen. Kan være nyttigt, hvis uret ikke har været forbundet i et stykke tid, og du vil sende informationen til uret.
+* Åbn indstillingerne på dit ur direkte fra din telefon.
+* Vælge, hvilken urskive **AAPS** installerer på uret (**Urskive installeret på uret**: din brugerdefinerede urskive eller urskiven med komplikationer). Dette kort vises kun, mens et ur med **Wear OS 6** eller nyere er forbundet. Se [urskiven, som AAPS installerer](#wearos-aaps-v4-watchface).
+* Administrere **Brugerdefineret urskive** (kortet vises, mens et ur er forbundet): **Indlæs urskive** sender en brugerdefineret urskive til uret, **Info om urskive** viser detaljerne om den indlæste urskive og de felter, den indeholder, **Flere urskiver** åbner [udvekslingssiden](../ExchangeSiteCustomWatchfaces/index.md) i din browser, og **Eksporter skabelon** gemmer en skabelon, som du kan redigere. En forhåndsvisning af den indlæste urskive vises under knapperne. Se [Skift til en AAPS-urskive](#WearOS_changing-to-AAPS-watchface).
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+Sørg for, at notifikationer fra AAPS ikke er blokeret på uret. Bekræftelse af en handling (f.eks. bolus, midlertidigt mål) kommer som en notifikation, som du skal stryge og sætte flueben i.
 
-## Accessing main menu of AAPS
+## Adgang til AAPS' hovedmenu
 
-![AAPS main menu on the watch](../images/wearos/main_menu.png)
+![AAPS' hovedmenu på uret](../images/wearos/main_menu.png)
 
-To open the main menu of **AAPS**, use one of these:
+For at åbne **AAPS**' hovedmenu skal du bruge en af disse:
 
-* open **AAPS** from the watch's app list
-* tap an **AAPS** complication that opens the menu, see [Complication related settings](#WearOsSmartwatch-complication-settings)
-* tap the **BG Graph** tile with its **Tap action** set to **Main Menu**, see [Tile settings](#WearOsSmartwatch-wear-os-tiles)
-* on a classic **AAPS** watchface, double-tap the glucose value
+* åbn **AAPS** fra urets liste over apps
+* tryk på en **AAPS**-komplikation, der åbner menuen, se [Indstillinger for komplikationer](#WearOsSmartwatch-complication-settings)
+* tryk på feltet **BS-graf**, når dets **Handling ved tryk** er sat til **Hovedmenu**, se [Indstillinger for felter](#WearOsSmartwatch-wear-os-tiles)
+* på en klassisk **AAPS**-urskive: dobbelttryk på glukoseværdien
 
 (WearOsSmartwatch-loop-status)=
 
-## Loop Status screen
+## Skærmen Loop-status
 
-The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication. The **Status** menu also has a **Pump** page and a **TDD** page with the total daily doses.
+Skærmen **Loop-status** giver et overblik over, hvad loopet gør, uden at du skal tage telefonen frem. Åbn den fra AAPS' hovedmenu (**Loop-status** eller **Status → Loop**) eller ved at trykke på komplikationen **Blodsukker**. Menuen **Status** har også en side **Pumpe** og en side **TDD** med de samlede daglige doser.
 
-![Status menu: Pump, Loop and TDD](../images/wearos/status_menu.png)
+![Menuen Status: Pumpe, Loop og TDD](../images/wearos/status_menu.png)
 
-![Loop Status screen](../images/wearos/loop_status.png)
+![Skærmen Loop-status](../images/wearos/loop_status.png)
 
-The screen is a list of cards. Scroll down to see them all:
+Skærmen er en liste af kort. Rul ned for at se dem alle:
 
-* **Running mode** — the current mode (closed loop, open loop, LGS, suspended, disconnected…) and, for a temporary mode, how long it still runs.
-* **Loop result** — when the loop last ran, and the temporary basal or SMB it requested.
-* **Scene** — only while a [scene](#scenes-from-watch) is active: its name, the time left (or **Until ended** for a scene without end time) and the **Follow-up** scene that starts when it ends.
-* **Targets** — your target, and the temporary target if one is running.
-* **Profile** — the name of the active profile, with its **Percentage** and **Timeshift** when they are not the default values. A temporary profile switch is highlighted and shows how long it still runs and the profile it **Returns to** when it ends.
-* **Sensitivity** — the same lines as the sensitivity chip on the phone's main screen: the autosens value and the profile, variable and effective ISF.
+* **Loop-tilstand** — den aktuelle tilstand (lukket loop, åbent loop, LGS, suspenderet, forbindelse afbrudt…) og, for en midlertidig tilstand, hvor længe den stadig kører.
+* **Loop-resultat** — hvornår loopet sidst kørte, og den midlertidige basal eller SMB, det bad om.
+* **Scene** — kun mens en [scene](#scenes-from-watch) er aktiv: dens navn, den resterende tid (eller **Indtil den afsluttes** for en scene uden sluttid) og den scene under **Derefter**, der starter, når den slutter.
+* **Mål** — din målværdi og det midlertidige mål, hvis et kører.
+* **Profil** — navnet på den aktive profil med dens **Procent** og **Tidsforskydning**, når de ikke har standardværdierne. Et midlertidigt profilskift er fremhævet og viser, hvor længe det stadig kører, og hvilken profil det **Vender tilbage til**, når det slutter.
+* **Følsomhed** — de samme linjer som følsomhedsfeltet på telefonens hovedskærm: autosens-værdien og profilens, den variable og den effektive ISF.
 
-A small scene icon next to a running mode, a temporary target or a profile switch means it was **set by the active scene**. The same icon is shown in the **Running mode** picker.
+Et lille sceneikon ved siden af en loop-tilstand, et midlertidigt mål eller et profilskift betyder, at det blev **Sat af den aktive scene**. Det samme ikon vises i vælgeren for **Loop-tilstand**.
 
-![Profile card with a temporary profile switch set by a scene](../images/wearos/loop_status_profile_scene.png)
+![Kortet Profil med et midlertidigt profilskift, der er sat af en scene](../images/wearos/loop_status_profile_scene.png)
 
 (WearOsSmartwatch-bolus-calculator)=
 
-## The bolus calculator on the watch
+## Bolusberegneren på uret
 
-Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
+Åbn **Beregner** fra **AAPS**' hovedmenu, fra [feltet Handlinger](#WearOsSmartwatch-wear-os-tiles) eller fra en komplikation, der er sat til at åbne beregneren. Den går gennem nogle få sider; stryg fra højre mod venstre for at gå videre:
 
-| Carbs                                                           | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
+| Kulhydrater                                                            | Anmod                                                              | Resultat                                                             | Beregning                                                                             | Bekræft                                                              |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| ![Siden Kulhydrater](../images/wearos/calculator/calculator_carbs.png) | ![Siden Anmod](../images/wearos/calculator/calculator_request.png) | ![Siden Resultat](../images/wearos/calculator/calculator_result.png) | ![Detaljer om beregningen](../images/wearos/calculator/calculator_result_details.png) | ![Siden Bekræft](../images/wearos/calculator/calculator_confirm.png) |
 
-1. **Carbs**: enter the carbs with the **+10**, **+5**, **−** and **+** buttons.
-2. **Request**: the last page before the phone takes over. It shows what you entered: the carbs, and the meal type, carb time and percentage when you use them, see [Optional pages](#WearOsSmartwatch-calculator-optional-pages). Tap the check mark to send it to the phone, which runs the calculation.
-3. **Result**: the bolus **AAPS** proposes, with the carbs under it: the carbs now and the eCarbs later, the carb time and the bell of the eat reminder. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
-4. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+1. **Kulhydrater**: indtast kulhydraterne med knapperne **+10**, **+5**, **−** og **+**.
+2. **Anmod**: den sidste side, før telefonen tager over. Den viser, hvad du har indtastet: kulhydraterne og måltidstype, kulhydrattid og procent, når du bruger dem, se [Valgfrie sider](#WearOsSmartwatch-calculator-optional-pages). Tryk på fluebenet for at sende det til telefonen, som laver beregningen.
+3. **Resultat**: den bolus, som **AAPS** foreslår, med kulhydraterne under den: kulhydraterne nu og e-kulhydraterne senere, kulhydrattiden og klokken for påmindelsen om at spise. Juster dosis med **−** og **+**, se nedenfor. Rul ned til kortet **Beregning**: tryk på det for at se hver linje i beregningen, det samme som på telefonen.
+4. **Bekræft**: stryg til den anden side, og tryk på fluebenet. Telefonen giver bolussen og registrerer kulhydraterne.
 
 (WearOsSmartwatch-calculator-optional-pages)=
 
-### Optional pages
+### Valgfrie sider
 
-Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
+Tre indstillinger på uret tilføjer hver en side efter **Kulhydrater**. De er slået fra som standard. Åbn **AAPS**' hovedmenu, derefter **Indstillinger** > **Interface**, og slå dem til, du vil bruge; når mere end én er slået til, kommer siderne i rækkefølgen **Måltidstype**, **Kulhydrattid**, **Procent**. Prikkerne nederst i beregneren viser, hvor mange sider den har.
 
-| Settings                                                                                 | Meal type                                                               | Carb time                                                               | Percentage                                                                |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
+| Indstillinger                                                                                | Måltidstype                                                                | Kulhydrattid                                                                | Procent                                                                 |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| ![Indstillinger for beregneren på uret](../images/wearos/calculator/calculator_settings.png) | ![Siden Måltidstype](../images/wearos/calculator/calculator_meal_type.png) | ![Siden Kulhydrattid](../images/wearos/calculator/calculator_carb_time.png) | ![Siden Procent](../images/wearos/calculator/calculator_percentage.png) |
 
-* **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
-* **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
-* **Calculator Percentage**: a percentage of the calculated bolus, for example 70 % when you want a smaller dose. It starts at the **Bolus percentage** of the phone's [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result), 100 % unless you changed it. See also the note under [Adjusting the bolus on the result page](#WearOsSmartwatch-wizard-result).
+* **Måltidstype i beregner**: **Brød**, **Kage** eller **Pizza**, som deler kulhydraterne i et langsomt måltid op i kulhydrater nu og e-kulhydrater senere, se [Valg af måltidstype](#WearOsSmartwatch-wizard-meal-type).
+* **Kulhydrattid i beregner**: minutterne, til du spiser, med en klokke **Indstil alarm** til påmindelsen om at spise, se [Kulhydrattid og påmindelsen om at spise](#WearOsSmartwatch-wizard-carb-time).
+* **Beregnerprocent**: en procentdel af den beregnede bolus, for eksempel 70%, når du vil have en mindre dosis. Den starter ved **Bolusprocent** fra telefonens [indstillinger for bolusberegner](#Preferences-deliver-this-part-of-bolus-wizard-result), 100%, medmindre du har ændret den. Se også bemærkningen under [Justering af bolus på resultatsiden](#WearOsSmartwatch-wizard-result).
 
 (WearOsSmartwatch-wizard-result)=
 
-### Adjusting the bolus on the result page
+### Justering af bolus på resultatsiden
 
-The result page shows the bolus **AAPS** proposes, together with a **−** and a **+** button. Use them to adjust the dose before you confirm it, without going back to the phone.
+Resultatsiden viser den bolus, som **AAPS** foreslår, sammen med en knap **−** og en knap **+**. Brug dem til at justere dosis, før du bekræfter den, uden at gå tilbage til telefonen.
 
-| Proposed                                                                          | More                                                                                | Less                                                                                   |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| ![The proposed bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![The bolus raised by 0.20 U](../images/wearos/calculator/calculator_result_up.png) | ![The bolus lowered by 0.10 U](../images/wearos/calculator/calculator_result_down.png) |
+| Foreslået                                                                           | Mere                                                                                | Mindre                                                                                 |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| ![Den foreslåede bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![Bolussen hævet med 0,20 IE](../images/wearos/calculator/calculator_result_up.png) | ![Bolussen sænket med 0,10 IE](../images/wearos/calculator/calculator_result_down.png) |
 
-* Each press changes the bolus by **one step of your pump**, so the amounts offered always match what your pump can actually deliver.
-* **Press and hold** a button to keep changing the value. The longer you hold, the faster it goes.
-* You cannot go below **0 U**, nor above your **max bolus** setting.
+* Hvert tryk ændrer bolussen med **ét trin på din pumpe**, så de tilbudte mængder altid passer til det, din pumpe faktisk kan give.
+* **Tryk og hold** en knap nede for at blive ved med at ændre værdien. Jo længere du holder, jo hurtigere går det.
+* Du kan ikke gå under **0 IE** og heller ikke over din indstilling for **maks. bolus**.
 
-The running total is shown on the result page, so you always see the amount you are about to confirm. The change is shown after the carbs, for example *(+0.20 U)*, and the button you used turns green for more or red for less.
+Den samlede mængde vises på resultatsiden, så du altid kan se den mængde, du er ved at bekræfte. Ændringen vises efter kulhydraterne, for eksempel *(+0,20 IE)*, og den knap, du brugte, bliver grøn for mere eller rød for mindre.
 
-If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
+Hvis **AAPS** har måttet begrænse dosis, for eksempel fordi den beregnede bolus er over din indstilling for **maks. bolus**, står der en ravgul advarselslinje under totalen (for eksempel *»Bolus-begrænsning anvendt«*). Det samme gælder for en begrænset mængde kulhydrater.
 
-```{admonition} This is not the same as Calculator Percentage :class: note The **Calculator Percentage** setting lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+```{admonition} Dette er ikke det samme som Beregnerprocent :class: note Indstillingen **Beregnerprocent** lader dig indtaste en *procentdel* af den beregnede bolus, **før** resultatsiden vises. Knapperne **−** og **+** justerer den *endelige mængde* **på** resultatsiden. Du kan bruge begge.
 
     <br />(WearOsSmartwatch-wizard-meal-type)=
     
-    ### Choosing the meal type
+    ### Valg af måltidstype
     
-    The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch's **Settings** > **Interface**. The setting is off by default, and then the **Meal type** page is skipped.
+    Beregneren på uret kan dele kulhydraterne i et langsomt måltid op i kulhydrater nu og e-kulhydrater senere, ligesom [kulhydrattypen](#AapsScreens-carbs-type) i telefonens beregner. Slå **Måltidstype i beregner** til under urets **Indstillinger** > **Interface**. Indstillingen er slået fra som standard, og så springes siden **Måltidstype** over.
     
-    * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
-    * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
-    * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
+    * Når du har indtastet kulhydraterne, viser siden **Måltidstype** tre ikoner: **Brød**, **Kage** og **Pizza**. Tryk på et ikon: dets navn og de kulhydrater, det giver, vises under ikonerne, for eksempel *65 g* for brød eller *52+22 g* for pizza (52 g nu og 22 g e-kulhydrater senere). **Brød** er standard og beholder alle kulhydraterne nu.
+    * Siderne Anmod og Bekræft viser kulhydraterne på samme måde (*52+22 g*). Resultatsiden viser også, hvornår e-kulhydraterne starter, og hvor længe de varer.
+    * Bolussen beregnes kun for de kulhydrater, der spises nu. Opdelingen bruger de samme tal som telefonens beregner.
     
     (WearOsSmartwatch-wizard-carb-time)=
     
-    ### Carb time and the eat reminder
+    ### Kulhydrattid og påmindelsen om at spise
     
-    With **Calculator Carb Time** turned on in the watch's **Settings** > **Interface**, a **Carb time** page follows the carbs: the minutes until you eat, like the [carb time](#aaps-screens-bolus-wizard) of the phone wizard. **Now** is the default. **−** and **+** move it in steps of 5 minutes, up to an hour before or after now. A time in the past is for carbs you have eaten already.
+    Når **Kulhydrattid i beregner** er slået til under urets **Indstillinger** > **Interface**, kommer siden **Kulhydrattid** efter kulhydraterne: minutterne, til du spiser, ligesom [kulhydrattiden](#aaps-screens-bolus-wizard) i telefonens beregner. **Nu** er standard. **−** og **+** flytter den i trin på 5 minutter, op til en time før eller efter nu. Et tidspunkt i fortiden er til kulhydrater, som du allerede har spist.
     
-    With a time in the future, a **Set alarm** bell appears under the value. It is on by default, tap it to turn it off. The request and result pages show the carb time, for example *+30 min*, and the bell. The phone records the carbs at that time, moves the eCarbs of the meal type with it, and starts its **time to eat** reminder.
+    Med et tidspunkt i fremtiden vises en klokke **Indstil alarm** under værdien. Den er slået til som standard; tryk på den for at slå den fra. Siderne Anmod og Resultat viser kulhydrattiden, for eksempel *+30 min*, og klokken. Telefonen registrerer kulhydraterne på det tidspunkt, flytter måltidstypens e-kulhydrater med og starter sin påmindelse **Tid til at spise**.
     
-    | Result | BG graph | Running | Time to eat |
+    | Resultat | BS-graf | Kører | Tid til at spise |
     | --- | --- | --- | --- |
-    | ![Result page with a carb time](../images/wearos/calculator/calculator_result_carb_time.png) | ![The reminder in the BG graph](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![The running reminder](../images/wearos/eat_reminder/eat_reminder_running.png) | ![The reminder rings](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
+    | ![Resultatside med en kulhydrattid](../images/wearos/calculator/calculator_result_carb_time.png) | ![Påmindelsen i BS-grafen](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![Påmindelsen kører](../images/wearos/eat_reminder/eat_reminder_running.png) | ![Påmindelsen ringer](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
     
-    The reminder also lives on the watch, so it rings when the phone is out of reach too:
+    Påmindelsen findes også på uret, så den ringer, også når telefonen er uden for rækkevidde:
     
-    * The **BG Graph** screen, the **BG Graph** tile and the graph of the **Complications watchface** draw a dashed orange line where the reminder rings, with the minutes left next to it.
-    * While it runs, a silent **Time to eat** notification with **Stop** and **+5 min** sits in the notification stream. It comes back when you swipe it away, until the reminder is over.
-    * When the time has come, the watch vibrates, and again every half minute for five minutes until you answer. The notification offers **Silence** and **+5 min**, and swiping it away silences it too.
+    * Skærmen **BS-graf**, feltet **BS-graf** og grafen på **Urskive med komplikationer** tegner en stiplet orange linje, hvor påmindelsen ringer, med de resterende minutter ved siden af.
+    * Mens den kører, ligger en lydløs notifikation **Tid til at spise** med **Stop** og **+5 min** i notifikationslisten. Den kommer tilbage, når du stryger den væk, indtil påmindelsen er slut.
+    * Når tiden er kommet, vibrerer uret, og igen hvert halve minut i fem minutter, indtil du svarer. Notifikationen tilbyder **Lydløs** og **+5 min**, og når du stryger den væk, bliver den også lydløs.
     
-    **Stop**, **Silence** and **+5 min** do the same on the watch, on the phone and on an **AAPSClient**, and all of them show the same reminder.
+    **Stop**, **Lydløs** og **+5 min** gør det samme på uret, på telefonen og på en **AAPSClient**, og de viser alle den samme påmindelse.
     
     (Watchfaces-complications)=
     
-    ## Complications
+    ## Komplikationer
     
-    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+    _Komplikation_ er et udtryk fra traditionel urmagerkunst, hvor det betyder en tilføjelse til hovedurskiven – som et ekstra lille vindue eller en lille urskive (med dato, ugedag, månefase osv.). Wear OS 2.0 bruger denne idé til at lade brugerdefinerede datakilder, som vejr, notifikationer, skridttællere og mere, blive tilføjet til alle urskiver, der understøtter komplikationer.
     
-    AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+    AAPS' Wear OS-app understøtter komplikationer siden build `2.6`, og den gør det muligt at konfigurere enhver tredjeparts-urskive, der understøtter komplikationer, til at vise AAPS-data (BS med tendens, IOB, COB osv.).
     
-    Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+    Komplikationer fungerer også som **genvej** til AAPS-funktioner. Når du trykker på dem, kan du åbne AAPS-menuer og -dialoger (afhængigt af komplikationstype og konfiguration).
     
-    ![The Complications watchface, every slot filled with an AAPS complication](../images/wearos/complications_on_watchface.png)
+    ![Urskive med komplikationer, hver plads udfyldt med en AAPS-komplikation](../images/wearos/complications_on_watchface.png)
     
-    ### Complication Types
+    ### Typer af komplikationer
     
-    AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+    AAPS' Wear OS-app leverer kun rå data i foruddefinerede formater. Det er tredjeparts-urskiven, der bestemmer, hvor og hvordan komplikationer vises, inklusive layout, kant, farve og skrifttype. Af de mange typer komplikationer i Wear OS bruger AAPS:
     
-    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-    * `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-    * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
-    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
+    * `SHORT TEXT` – Indeholder to linjer tekst på hver 7 tegn, nogle gange kaldet værdi og etiket. Vises normalt i en cirkel eller en lille aflang boks – den ene under den anden eller side om side. Det er en komplikation med meget lidt plads. AAPS prøver at fjerne unødvendige tegn, så teksten kan være der: ved at afrunde værdier, fjerne nuller foran og bagved i værdier osv.
+    * `LONG TEXT` – Indeholder to linjer tekst på hver ca. 20 tegn. Vises normalt i et rektangel eller en lang aflang boks – den ene under den anden. Den bruges til flere detaljer og status som tekst.
+    * `RANGED VALUE` – Bruges til værdier fra et foruddefineret område, som en procent. Den indeholder et ikon og en etiket og vises normalt som en rund fremskridtsskive.
+    * `LARGE IMAGE` – Brugerdefineret baggrundsbillede, der kan bruges som baggrund (når urskiven understøtter det).
+    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` – Et lille ikon. På en `SMALL IMAGE`-plads tegner AAPS det i sin egen farve; på en `MONOCHROMATIC IMAGE`-plads farver urskiven det.
     
-    ### Complication Setup
+    ### Opsætning af komplikationer
     
-    To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+    For at tilføje en komplikation til urskiven skal du konfigurere den ved at trykke længe og trykke på tandhjulsikonet nedenunder. Afhængigt af hvordan den enkelte urskive konfigurerer dem: tryk enten på pladsholderne, eller åbn urskivens opsætningsmenu for komplikationer. AAPS-komplikationer er samlet under menupunktet AAPS.
     
-    When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+    Når du konfigurerer komplikationer på urskiven, viser og filtrerer Wear OS listen over komplikationer, der passer til den valgte plads på urskiven. Hvis en bestemt komplikation ikke kan findes på listen, skyldes det sandsynligvis, at dens type ikke kan bruges på den valgte plads.
     
-    ### Complications provided by AAPS
+    ### Komplikationer fra AAPS
     
-    AAPS provides the complications below. "Opens" is what a tap does with **Complication Tap Action** left at **Default**, see [Complication related settings](#WearOsSmartwatch-complication-settings).
+    AAPS leverer komplikationerne nedenfor. »Åbner« er det, et tryk gør, når **Komplikation: handling ved tryk** står på **Standard**, se [Indstillinger for komplikationer](#WearOsSmartwatch-complication-settings).
     
-    **Glucose**
+    **Glukose**
     
-    * **Blood Glucose** (`SHORT TEXT`, opens _Loop Status_): the glucose value with the trend arrow on the first line, the age of the reading and the delta on the second.
-    * **Blood Glucose (large)** (`SHORT TEXT`, opens _BG Graph_): the glucose value alone on the first line, so the watchface can draw it big. The age and the trend arrow are on the second line.
-    * **BG Graph** (`SMALL IMAGE` / `LARGE IMAGE`, opens _BG Graph_): the BG graph as a picture, for watchfaces with an image slot. This is the graph on the **Complications watchface**.
-    * **Full Status** (`LONG TEXT`, opens _Menu_): most of the data in one line: the glucose value with the trend arrow, the delta and the age of the reading, then carbs on board, insulin on board and the basal rate.
-    * **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): the same, with the two lines swapped, for watchfaces that show only one of the two lines of a `LONG TEXT` slot.
+    * **Blodsukker** (`SHORT TEXT`, åbner _Loop-status_): glukoseværdien med tendenspilen på første linje, målingens alder og delta på anden linje.
+    * **Blodsukker (stor)** (`SHORT TEXT`, åbner _BS-graf_): glukoseværdien alene på første linje, så urskiven kan vise den stort. Alderen og tendenspilen står på anden linje.
+    * **BS-graf** (`SMALL IMAGE` / `LARGE IMAGE`, åbner _BS-graf_): BS-grafen som et billede, til urskiver med en billedplads. Det er grafen på **Urskive med komplikationer**.
+    * **Fuld status** (`LONG TEXT`, åbner _Menu_): de fleste data på én linje: glukoseværdien med tendenspilen, delta og målingens alder, derefter kulhydrater om bord, insulin om bord og basalraten.
+    * **Fuld status (vendt)** (`LONG TEXT`, åbner _Menu_): det samme, med de to linjer byttet om, til urskiver, der kun viser én af de to linjer på en `LONG TEXT`-plads.
     
-    **Insulin and carbs**
+    **Insulin og kulhydrater**
     
-    * **IoB Icon** (`SHORT TEXT`, opens _Bolus_): insulin on board with a syringe icon.
-    * **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): total insulin on board on the first line, the bolus and basal parts on the second.
-    * **CoB Icon** (`SHORT TEXT`, opens _Wizard_): carbs on board with a carbs icon.
-    * **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): the carbs on board now on the first line, the carbs still to come (eCarbs) on the second.
-    * **CoB & IoB** (`SHORT TEXT`, opens _Wizard_): insulin on board on the first line, carbs on board on the second.
+    * **IoB-ikon** (`SHORT TEXT`, åbner _Bolus_): insulin om bord med et sprøjteikon.
+    * **IoB detaljeret** (`SHORT TEXT`, åbner _Bolus_): samlet insulin om bord på første linje, bolus- og basaldelen på anden linje.
+    * **CoB-ikon** (`SHORT TEXT`, åbner _Beregner_): kulhydrater om bord med et kulhydratikon.
+    * **CoB detaljeret** (`SHORT TEXT`, åbner _Beregner_): kulhydraterne om bord nu på første linje, de kulhydrater, der stadig kommer (e-kulhydrater), på anden linje.
+    * **CoB & IoB** (`SHORT TEXT`, åbner _Beregner_): insulin om bord på første linje, kulhydrater om bord på anden linje.
     
-    **Basal and target**
+    **Basal og målværdi**
     
-    * **Basal rate** (`SHORT TEXT`, opens _Menu_): the current basal rate.
-    * **BR & IoB** (`SHORT TEXT`, opens _Menu_): insulin on board on the first line, the basal rate on the second.
-    * **BR & Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line, with the time left when a temporary target runs, and the basal rate on the second.
-    * **Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line and, while a temporary target runs, its time left on the second.
-    * **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): the basal rate on the first line, carbs on board and insulin on board on the second.
+    * **Basalrate** (`SHORT TEXT`, åbner _Menu_): den aktuelle basalrate.
+    * **BR & IoB** (`SHORT TEXT`, åbner _Menu_): insulin om bord på første linje, basalraten på anden linje.
+    * **BR & mål** (`SHORT TEXT`, åbner _Midlertidigt mål_): målværdien på første linje, med den resterende tid, når et midlertidigt mål kører, og basalraten på anden linje.
+    * **Målværdi** (`SHORT TEXT`, åbner _Midlertidigt mål_): målværdien på første linje og, mens et midlertidigt mål kører, dets resterende tid på anden linje.
+    * **BR, CoB & IoB** (`SHORT TEXT`, åbner _Menu_): basalraten på første linje, kulhydrater om bord og insulin om bord på anden linje.
     
-    **Loop and phone**
+    **Loop og telefon**
     
-    * **Running mode** (`SMALL IMAGE` / `ICON`, opens _Running mode picker_): the current loop mode as an icon: closed loop, open loop, low glucose suspend, suspended, disconnected or disabled. A tap opens a picker with the mode changes allowed right now, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is in the **AAPS** main menu under **Running mode**.
-    * **Uploader/Phone Battery** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, opens _Status_): the battery of the **AAPS** phone, as a gauge with a battery icon, as a number, or as the icon alone. It updates together with the other **AAPS** data, usually every 5 minutes with a new reading.
+    * **Loop-tilstand** (`SMALL IMAGE` / `ICON`, åbner _vælgeren for loop-tilstand_): den aktuelle loop-tilstand som et ikon: lukket loop, åbent loop, stop ved lavt BS, suspenderet, forbindelse afbrudt eller deaktiveret. Et tryk åbner en vælger med de ændringer af tilstand, der er tilladt lige nu, for eksempel **Suspender loop**, **Afbryd pumpe**, **Genoptag loop** eller **Genforbind pumpe**. Den samme vælger findes i **AAPS**' hovedmenu under **Loop-tilstand**.
+    * **Uploader-/telefonbatteri** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, åbner _Status_): batteriet i **AAPS**-telefonen som en måler med et batteriikon, som et tal eller kun som ikonet. Den opdateres sammen med de andre **AAPS**-data, normalt hvert 5. minut med en ny måling.
     
-    The **Running mode** picker, as opened from the complication, the main menu or the Running mode tile:
+    Vælgeren **Loop-tilstand**, som den åbnes fra komplikationen, hovedmenuen eller feltet Loop-tilstand:
     
-    ![Running mode picker with the modes you can switch to](../images/wearos/running_mode_picker.png)
+    ![Vælgeren for loop-tilstand med de tilstande, du kan skifte til](../images/wearos/running_mode_picker.png)
     
     (WearOsSmartwatch-complication-settings)=
     
-    ### Complication related settings
+    ### Indstillinger for komplikationer
     
-    In the **AAPS** main menu on the watch, open **Settings** > **Complication**:
+    I **AAPS**' hovedmenu på uret skal du åbne **Indstillinger** > **Komplikation**:
     
-    ![Settings > Complication on the watch](../images/wearos/settings_complication.png)
+    ![Indstillinger > Komplikation på uret](../images/wearos/settings_complication.png)
     
-    * **Complication Tap Action** (default `Default`): what a tap on an **AAPS** complication opens, for all complications at once:
-      * _Default_: what the complication itself opens, see the list above
-      * _Menu_: the **AAPS** main menu
-      * _Calculator_: the bolus calculator
-      * _Treatment_: the treatment dialog, insulin and carbs
-      * _eCarbs_: the eCarbs dialog
-      * _Status_: the status menu
-      * _Running mode_: the running mode picker. Needs **Wear control** turned on in the phone's Wear settings, otherwise the main menu opens instead.
-      * _None_: a tap does nothing
-    * **BG graph time range** (default `3 hours`): how many hours the **BG Graph** complication shows, 1, 3 or 6. The BG Graph tile has its own setting.
-    * **Unicode in Complications** (default `On`): the complications use Unicode symbols like `Δ` for the delta, `⁞` as separator and `⎍` for the basal rate. How they look depends on the font of the watchface. Turn this `Off` when a watchface draws them as boxes or blanks.
+    * **Komplikation: handling ved tryk** (standard `Standard`): hvad et tryk på en **AAPS**-komplikation åbner, for alle komplikationer på én gang:
+      * _Standard_: det, som komplikationen selv åbner, se listen ovenfor
+      * _Menu_: **AAPS**' hovedmenu
+      * _Beregner_: bolusberegneren
+      * _Behandling_: dialogen for behandling, insulin og kulhydrater
+      * _Forlængede kulhydrater_: dialogen for e-kulhydrater
+      * _Status_: menuen Status
+      * _Loop-tilstand_: vælgeren for loop-tilstand. Kræver, at **Styring fra ur** er slået til i telefonens Ur-indstillinger, ellers åbnes hovedmenuen i stedet.
+      * _Ingen_: et tryk gør ingenting
+    * **Tidsinterval for BS-graf** (standard `3 timer`): hvor mange timer komplikationen **BS-graf** viser, 1, 3 eller 6. Feltet BS-graf har sin egen indstilling.
+    * **Unicode i komplikationer** (standard `Til`): komplikationerne bruger Unicode-symboler som `Δ` for delta, `⁞` som skilletegn og `⎍` for basalraten. Hvordan de ser ud, afhænger af urskivens skrifttype. Slå dette `Fra`, når en urskive viser dem som firkanter eller tomme felter.
     
     (WearOsSmartwatch-wear-os-tiles)=
     
-    ## Wear OS Tiles
+    ## Wear OS-felter
     
-    Tiles are the pages you reach by swiping from the watchface. **AAPS** brings seven of them, each a set of up to four buttons. A tap on a button opens the matching dialog on the watch, or asks you to confirm, and the phone then does the work. A tile is a shortcut, not a status display: it does not hold the state of the phone app.
+    Felter er de sider, du kommer til ved at stryge fra urskiven. **AAPS** har syv af dem, hver med op til fire knapper. Et tryk på en knap åbner den tilhørende dialog på uret eller beder dig bekræfte, og så udfører telefonen arbejdet. Et felt er en genvej, ikke en statusvisning: det kender ikke telefonappens tilstand.
     
-    Before using the tiles, turn on **Wear control** in [Settings > Wear](#preferences-wear).
+    Før du bruger felterne, skal du slå **Styring fra ur** til i [Indstillinger > Ur](#preferences-wear).
     
-    ### Adding a tile
+    ### Tilføj et felt
     
-    There are two ways, depending on your watch and phone:
+    Der er to måder, afhængigt af dit ur og din telefon:
     
-    1. On the watch: swipe from the watchface past the last tile to **Add tile** and pick an **AAPS** tile. On most watches a long-press on a tile also opens the add and remove view.
-    2. On the phone, in the companion app for your watch (**Galaxy Wearable** for Samsung, **Wear OS** for other brands): open **Tiles**, tap **Add** and pick the **AAPS** tiles you want. The order of the tiles can be changed by dragging.
+    1. På uret: stryg fra urskiven forbi det sidste felt til **Tilføj felt** (Add tile), og vælg et **AAPS**-felt. På de fleste ure åbner et langt tryk på et felt også visningen til at tilføje og fjerne felter.
+    2. På telefonen, i ledsagerappen til dit ur (**Galaxy Wearable** for Samsung, **Wear OS** for andre mærker): åbn **Felter** (Tiles), tryk på **Tilføj** (Add), og vælg de **AAPS**-felter, du vil have. Felternes rækkefølge kan ændres ved at trække dem.
     
-    ![The seven AAPS tiles in the companion app](../images/wearos/tiles/tiles_list_companion_app.png)
+    ![De syv AAPS-felter i ledsagerappen](../images/wearos/tiles/tiles_list_companion_app.png)
     
-    ### Tile settings
+    ### Indstillinger for felter
     
-    The **Actions**, **Temp Target**, **BG Graph** and **Scene** tiles have settings on the watch. Open the **AAPS** main menu, then **Settings** > **Tiles**, and pick the tile. A long-press on the tile also opens its settings, except on Pixel watches. The other three tiles are filled from the phone and have nothing to set on the watch.
+    Felterne **Handlinger**, **Midlertidigt mål**, **BS-graf** og **Scene** har indstillinger på uret. Åbn **AAPS**' hovedmenu, derefter **Indstillinger** > **Felter**, og vælg feltet. Et langt tryk på feltet åbner også dets indstillinger, undtagen på Pixel-ure. De tre andre felter udfyldes fra telefonen og har intet at indstille på uret.
     
-    | Main menu | Settings | Tiles |
+    | Hovedmenu | Indstillinger | Felter |
     | --- | --- | --- |
-    | ![AAPS main menu, Settings](../images/wearos/tiles/tile_settings_menu.png) | ![Settings, Tiles](../images/wearos/tiles/tile_settings_settings.png) | ![Tiles, pick the tile](../images/wearos/tiles/tile_settings_tiles.png) |
+    | ![AAPS' hovedmenu, Indstillinger](../images/wearos/tiles/tile_settings_menu.png) | ![Indstillinger, Felter](../images/wearos/tiles/tile_settings_settings.png) | ![Felter, vælg feltet](../images/wearos/tiles/tile_settings_tiles.png) |
     
-    The settings of a tile are a list of its four places. Tap a place to pick what it shows, or **None** to leave it empty.
+    Et felts indstillinger er en liste over dets fire pladser. Tryk på en plads for at vælge, hvad den viser, eller **Ingen** for at lade den være tom.
     
-    | Long-press on the tile | Settings of the Temp Target tile |
+    | Langt tryk på feltet | Indstillinger for feltet Midlertidigt mål |
     | --- | --- |
-    | ![Long-press on a tile, tap the pencil](../images/wearos/tiles/tile_settings_long_press.png) | ![Temp Target tile settings, one entry per place](../images/wearos/tiles/tile_settings_temp_target.png) |
+    | ![Langt tryk på et felt, tryk på blyanten](../images/wearos/tiles/tile_settings_long_press.png) | ![Indstillinger for feltet Midlertidigt mål, én post pr. plads](../images/wearos/tiles/tile_settings_temp_target.png) |
     
-    Every tile has four places. A tile with more entries than that shows the first four.
+    Hvert felt har fire pladser. Et felt med flere poster end det viser de første fire.
     
-    ### Actions tile
+    ### Feltet Handlinger
     
-    ![Actions tile](../images/wearos/tiles/tile_actions.png)
+    ![Feltet Handlinger](../images/wearos/tiles/tile_actions.png)
     
-    Shortcuts to the dialogs of the **AAPS** watch app. Pick up to four of these in the tile settings:
+    Genveje til dialogerne i **AAPS**-ur-appen. Vælg op til fire af disse i feltets indstillinger:
     
-    * **Calc**: the bolus calculator, with a carbs input, an optional percentage [1] and an optional meal type [2]
-    * **Treat**: insulin and carbs in one go
-    * **Insulin**: a bolus, entered in units
-    * **Carbs**: carbs, also extended carbs. A **negative** amount is accepted, down to your current COB, to correct carbs you entered earlier. Carb removals are shown on the watch's BG graph.
-    * **eCarbs**: extended carbs
-    * **TempT**: a temporary target with a custom target and duration
-    * **Profile switch**: a profile switch with percentage, time shift and duration
+    * **Beregn**: bolusberegneren med indtastning af kulhydrater, en valgfri procent [1] og en valgfri måltidstype [2]
+    * **Behandl**: insulin og kulhydrater på én gang
+    * **Insulin**: en bolus, indtastet i enheder
+    * **Kulhydrater**: kulhydrater, også forlængede kulhydrater. En **negativ** mængde accepteres, ned til dine aktuelle COB, for at rette kulhydrater, du har indtastet tidligere. Fjernede kulhydrater vises på urets BS-graf.
+    * **Forlængede kulhydrater**: forlængede kulhydrater
+    * **Midl. mål**: et midlertidigt mål med selvvalgt målværdi og varighed
+    * **Profilskift**: et profilskift med procent, tidsforskydning og varighed
     
-    ![Actions tile settings: one entry per place](../images/wearos/tiles/tile_settings_actions.png)
+    ![Indstillinger for feltet Handlinger: én post pr. plads](../images/wearos/tiles/tile_settings_actions.png)
     
-    The dialogs the buttons open. Swipe from right to left to reach the next page of a dialog, and tap the check mark on the last page to send the request to the phone:
+    Dialogerne, som knapperne åbner. Stryg fra højre mod venstre for at komme til næste side i en dialog, og tryk på fluebenet på sidste side for at sende anmodningen til telefonen:
     
-    | Treat | Insulin | Carbs | eCarbs | TempT | Profile switch |
+    | Behandl | Insulin | Kulhydrater | Forlængede kulhydrater | Midl. mål | Profilskift |
     | --- | --- | --- | --- | --- | --- |
-    | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
+    | ![Dialogen Behandling, siden insulin](../images/wearos/dialogs/dialog_treatment.png) | ![Dialogen Insulin](../images/wearos/dialogs/dialog_insulin.png) | ![Dialogen Kulhydrater](../images/wearos/dialogs/dialog_carbs.png) | ![Dialogen Forlængede kulhydrater](../images/wearos/dialogs/dialog_ecarbs.png) | ![Dialogen Midlertidigt mål, siden varighed](../images/wearos/dialogs/dialog_temp_target.png) | ![Dialogen Profilskift](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
+    [1] Under urets **Indstillinger** > **Interface** skal du slå **Beregnerprocent** til for at vise indtastningen af procent i bolusberegneren. Standardprocenten kommer fra telefonens [»Bolusprocent«](#Preferences-deliver-this-part-of-bolus-wizard-result). De andre indstillinger for beregneren er telefonens under **Indstillinger** > **Indstillinger for bolusberegner**.
     
-    [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+    [2] Under urets **Indstillinger** > **Interface** skal du slå **Måltidstype i beregner** til for at vise siden **Måltidstype**, hvor du vælger **Brød**, **Kage** eller **Pizza** for at dele kulhydraterne i et langsomt måltid op i kulhydrater nu og e-kulhydrater senere. Se [Valg af måltidstype](#WearOsSmartwatch-wizard-meal-type).
     
-    ### Temp Target tile
+    ### Feltet Midlertidigt mål
     
-    ![Temp Target tile](../images/wearos/tiles/tile_temp_target.png)
+    ![Feltet Midlertidigt mål](../images/wearos/tiles/tile_temp_target.png)
     
-    Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Settings** > [Default temp targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
+    Midlertidige mål fra telefonens forvalg. Indstil varighed og målværdi for hvert forvalg på telefonen under **Indstillinger** > [Standard midlertidige mål](#Preferences-default-temp-targets). Vælg op til fire af disse i feltets indstillinger:
     
-    * **Activity**: for sport
-    * **Eating**: eating soon, a lower target so there is more insulin on board at the meal
-    * **Hypo**: a higher target during a hypo treatment
-    * **Manual**: a custom target and duration
-    * **Cancel**: stops the running temporary target. The button is shown only while a temporary target is running.
+    * **Aktivitet**: til sport
+    * **Spiser**: spiser snart, en lavere målværdi, så der er mere insulin om bord ved måltidet
+    * **Hypo**: en højere målværdi under behandling af en hypo
+    * **Manuel**: en selvvalgt målværdi og varighed
+    * **Annuller**: stopper det midlertidige mål, der kører. Knappen vises kun, mens et midlertidigt mål kører.
     
-    ### Quick Wizard tile
+    ### Feltet Hurtigbolus
     
-    ![Quick Wizard tile](../images/wearos/tiles/tile_quick_wizard.png)
+    ![Feltet Hurtigbolus](../images/wearos/tiles/tile_quick_wizard.png)
     
-    The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
+    Telefonens [Hurtigbolus](#quickwizards)-poster, der har **Vis på ur** slået til, inden for deres gyldige tidsrum. En post med kulhydrater viser sine kulhydrater i g, en post med insulin sin faste dosis i IE. Et tryk udfører posten efter en bekræftelse på uret. Der er intet at indstille på uret: rediger posterne på telefonen, og slå **Vis på ur** til under **Valg af enhed** for hver post, du vil have på feltet. Uden for det gyldige tidsrum for alle dine poster viser feltet **Ingen konfiguration tilgængelig**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
+    ![En Hurtigbolus-post med Vis på ur slået til, og feltet, den vises på](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Feltet Scene
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![Feltet Scene](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Each of the four places is set to **Automatic**, **None** or one scene in the tile settings. An **Automatic** place takes the next scene from the phone's list that no other place has claimed. A place set to a scene that no longer exists on the phone shows **Unavailable**.
+    Telefonens [scener](#scenes-from-watch). Hver af de fire pladser sættes til **Automatisk**, **Ingen** eller én scene i feltets indstillinger. En plads med **Automatisk** tager den næste scene fra telefonens liste, som ingen anden plads har taget. En plads, der er sat til en scene, som ikke længere findes på telefonen, viser **Ikke tilgængelig**.
     
-    ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
+    ![Indstillinger for feltet Scene, fire pladser sat til Automatisk](../images/wearos/tiles/tile_settings_scene.png)
     
-    ### Running mode tile
+    ### Feltet Loop-tilstand
     
-    ![Running mode tile](../images/wearos/tiles/tile_running_mode.png)
+    ![Feltet Loop-tilstand](../images/wearos/tiles/tile_running_mode.png)
     
-    The [running modes](#aaps-screens-running-mode) you can switch to from the current one, with the same icons as on the phone: closed loop, low glucose suspend, open loop, disable loop, suspend loop and disconnect pump, or resume and reconnect while one of those runs. **Suspend loop** and **Disconnect pump** ask for a duration first. The phone decides which modes are offered, the watch shows the first four and leaves out **Disable loop** when **Suspend loop** is on the list.
+    De [loop-tilstande](#aaps-screens-running-mode), du kan skifte til fra den aktuelle, med de samme ikoner som på telefonen: lukket loop, stop ved lavt BS, åbent loop, deaktiver loop, suspender loop og afbryd pumpe, eller genoptag og genforbind, mens en af dem kører. **Suspender loop** og **Afbryd pumpe** spørger først om en varighed. Telefonen bestemmer, hvilke tilstande der tilbydes; uret viser de første fire og udelader **Deaktiver loop**, når **Suspender loop** er på listen.
     
-    ### User Action tile
+    ### Feltet Brugerhandling
     
-    ![User Action tile](../images/wearos/tiles/tile_user_action.png)
+    ![Feltet Brugerhandling](../images/wearos/tiles/tile_user_action.png)
     
-    One button for each [automation](#automations-automation-triggers) on the phone whose trigger is **User action**. A tap asks you to confirm, then the phone runs the automation's actions. The buttons are named after the automations, so give them short names. There is nothing to set on the watch.
+    Én knap for hver [automatisering](#automations-automation-triggers) på telefonen, hvis udløser er **Brugerhandling**. Et tryk beder dig bekræfte, og så udfører telefonen automatiseringens handlinger. Knapperne har automatiseringernes navne, så giv dem korte navne. Der er intet at indstille på uret.
     
-    ### BG Graph tile
+    ### Feltet BS-graf
     
-    ![BG Graph tile](../images/wearos/tiles/tile_bg_graph.png)
+    ![Feltet BS-graf](../images/wearos/tiles/tile_bg_graph.png)
     
-    The glucose value with arrow, delta and age, below it IOB, COB, basal rate and target, and the BG graph with predictions, boluses, carbs and SMBs. Two settings on the watch: **Time range** (1, 3 or 6 hours) and **Tap action**, which opens the full **BG Graph**, the **Main Menu** or the **Loop Status** screen.
+    Glukoseværdien med pil, delta og alder, under den IOB, COB, basalrate og målværdi, og BS-grafen med forudsigelser, boluser, kulhydrater og SMB'er. To indstillinger på uret: **Tidsinterval** (1, 3 eller 6 timer) og **Handling ved tryk**, som åbner den fulde **BS-graf**, **Hovedmenu** eller skærmen **Loop-status**.
     
-    ![The BG Graph screen](../images/wearos/bg_graph.png)
+    ![Skærmen BS-graf](../images/wearos/bg_graph.png)
     
-    ![BG Graph tile settings: Time range and Tap action](../images/wearos/tiles/tile_settings_bg_graph.png)
+    ![Indstillinger for feltet BS-graf: Tidsinterval og Handling ved tryk](../images/wearos/tiles/tile_settings_bg_graph.png)
     
-    ## Always on
+    ## Altid tændt
     
-    This section and the next apply to the classic **AAPS** watchfaces on Wear OS 5 and older. On Wear OS 6 the **Complications watchface** has an always-on display of its own, see [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+    Dette afsnit og det næste gælder de klassiske **AAPS**-urskiver på Wear OS 5 og ældre. På Wear OS 6 har **Urskive med komplikationer** sin egen altid tændt-visning, se [urskiven, som AAPS installerer](#wearos-aaps-v4-watchface).
     
-    Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+    Lang batteritid er en udfordring for Android Wear OS-smarture. Nogle smarture kan holde op til 30 timer, før de skal oplades. For at spare mest strøm bør skærmen være slukket, når den ikke er i brug. De fleste ure understøtter skærmen »Altid tændt«.
     
-    Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+    Siden AAPS version 3 kan vi bruge en »Forenklet brugerflade« i altid tændt-tilstand. Denne brugerflade viser kun blodsukker, retning og klokkeslæt. Denne brugerflade er strømoptimeret med sjældnere opdateringer. Den viser mindre information og tænder færre pixels for at spare strøm på OLED-skærme.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
+    Den forenklede brugerflade findes til urskiverne Digital Style og Brugerdefineret. Den forenklede brugerflade er valgfri og konfigureres i urskivens indstillinger (tryk længe på urskiven, og tryk på »rediger« eller tandhjulsikonet). Vælg konfigurationen »Forenklet brugerflade«, og sæt den til »Altid tændt-tilstand« eller »Altid tændt og under opladning«.
     
-    ### Night-time mode
+    ### Nattilstand
     
-    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+    Under opladning ville det være nyttigt, hvis skærmen kunne være »altid tændt« og vise dit blodsukker om natten. Standardurskiverne er dog for lyse og viser for meget information, og detaljerne er svære at læse med søvnige øjne. Derfor har vi tilføjet en mulighed for, at urskiven kun viser den forenklede brugerflade under opladning, når det er valgt i konfigurationen.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
+    Den forenklede brugerflade findes til urskiverne Digital Style og Brugerdefineret. Den forenklede brugerflade er valgfri og konfigureres i urskivens indstillinger (tryk længe på urskiven, og tryk på »rediger« eller tandhjulsikonet). Vælg konfigurationen »Forenklet brugerflade«, og sæt den til »Under opladning« eller »Altid tændt og under opladning«.
     
-    The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
+    Med Androids udviklerindstillinger kan dit ur holde sig vågent under opladning. For at gøre udviklerindstillingerne tilgængelige, se den [officielle dokumentation](https://developer.android.com/training/wearables/get-started/debugging). Sæt »Hold skærmen vågen under opladning« (Stay awake when charging) til »til« i udviklerindstillingerne.
     
-    Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+    Bemærk: ikke alle skærme kan klare altid tændt særlig godt. Det kan give indbrænding på skærmen, især på ældre OLED-skærme. Urene dæmper normalt skærmen for at undgå indbrænding; se din brugervejledning, spørg producenten, eller søg råd på internettet.
     
-    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
+    ![Urskive til natbordet](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
+    ![Forenklet brugerflade](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Telefonalarmer på uret
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![En telefonalarm på uret](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. The watch vibrates, and again every half minute for five minutes until you answer. A notification shows the title and the text of the alarm, with the same answers as the [time to eat](#WearOsSmartwatch-wizard-carb-time) reminder:
+    Uret viser telefonens alarmer, så du kan se, hvorfor telefonen giver lyd, og kan svare fra håndleddet. Uret vibrerer, og igen hvert halve minut i fem minutter, indtil du svarer. En notifikation viser alarmens titel og tekst med de samme svar som påmindelsen [Tid til at spise](#WearOsSmartwatch-wizard-carb-time):
     
-    * **Silence**, or a swipe: the alarm stops, and the alarm screen on the phone closes.
-    * **Mute 5 min**: the alarm stops and rings again after five minutes, on the phone and on the watch.
+    * **Slå lyd fra** eller et stryg: alarmen stopper, og alarmskærmen på telefonen lukkes.
+    * **Lydløs 5 min**: alarmen stopper og ringer igen efter fem minutter, på telefonen og på uret.
     
-    Two kinds of alarm reach the watch:
+    To slags alarmer når frem til uret:
     
-    * The alarm screen of the phone (pump errors, automation alarms, BG alarms): **Silence** and **Mute 5 min**.
-    * Urgent notifications with a sound, like *Pump unreachable* or a Nightscout alarm: **Silence** only. The phone has only **Dismiss** for those, and they come back by themselves while their cause lasts.
+    * Telefonens alarmskærm (pumpefejl, alarmer fra automatisering, BS-alarmer): **Slå lyd fra** og **Lydløs 5 min**.
+    * Akutte notifikationer med lyd, som *Pumpe utilgængelig* eller en Nightscout-alarm: kun **Slå lyd fra**. Telefonen har kun **Afvis** for dem, og de kommer selv tilbage, så længe årsagen varer.
     
-    The *time to eat* reminder is not sent this way: the watch rings that one by itself.
+    Påmindelsen *Tid til at spise* sendes ikke på denne måde: uret ringer selv for den.
     
-    ## Snooze Alert shortcut
+    ## Genvej til at udsætte alarm (snooze)
     
-    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+    Uret [viser selv alarmen](#WearOsSmartwatch-phone-alarms); genvejen er en ekstra måde at gøre den lydløs på, med ét tryk. Det er muligt at oprette en genvej til at udsætte (snooze) advarsler/alarmer fra AAPS. Det er praktisk og hurtigere at slå lyden fra via uret, uden at du skal finde din telefon frem. Bemærk: du skal stadig tjekke alarmbeskeden på din telefon og handle på den, men du kan tjekke det senere. Når dit ur har to knapper, kan du tildele en knap til programmet `AAPS Snooze Alert`.
     
-    To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+    For at tildele knappen på Samsung Watch 4 skal du gå til `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
-    On a watchface with complications, an **App shortcut** complication set to **AAPS Snooze Alert** does the same with a tap. The [alternative setup of the Complications watchface](#wearos-complications-watchface-setup) uses its top-right slot for it.
+    På en urskive med komplikationer gør en komplikation **App shortcut** (app-genvej), der er sat til **AAPS Snooze Alarm**, det samme med et tryk. Den [alternative opsætning af urskiven med komplikationer](#wearos-complications-watchface-setup) bruger pladsen øverst til højre til den.
     
-    ### Snooze xDrip
+    ### Udsæt xDrip (snooze)
     
-    When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm. 
+    Når du bruger xDrip og har xDrip installeret på uret, vil genvejen »AAPS Snooze Alarm« også udsætte alle xDrip-alarmer. 
     
     
-    ## Performance and battery life tips
+    ## Tips om ydelse og batteritid
     
-    Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+    Wear OS-ure er enheder med meget begrænset strøm. Urkassens størrelse begrænser kapaciteten på det indbyggede batteri. Selv med de seneste fremskridt i både hardware og software skal Wear OS-ure stadig oplades hver dag.
     
-    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    Hvis batteriet holder kortere end en dag (fra morgen til aften), er her nogle tips til fejlfinding.
     
-    Main battery-demanding areas are:
+    De vigtigste områder, der bruger meget batteri, er:
     
-    * Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-    * Rendering on screen
-    * Radio communication over Bluetooth
+    * Aktiv skærm med baggrundslys tændt (for LED) eller i fuld styrke (for OLED)
+    * Visning på skærmen
+    * Radiokommunikation via Bluetooth
     
-    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in _display time_ area:
+    Da vi ikke kan gå på kompromis med kommunikationen (vi har brug for opdaterede data) og vil have de nyeste data vist, kan de fleste optimeringer laves i området _skærmtid_:
     
-    * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-    * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-    * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-    * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-    * Use a dark theme on the watchface. On OLED displays fewer lit pixels mean less power and less burn-in.
-    * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-    * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-    * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-    * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+    * Urets egne urskiver er normalt bedre optimeret end brugerdefinerede urskiver hentet fra butikken.
+    * Det er bedre at bruge urskiver, der begrænser mængden af viste data i inaktiv/dæmpet tilstand.
+    * Vær opmærksom, når du blander andre komplikationer, som tredjeparts vejr-widgets eller andre, der bruger data fra eksterne kilder.
+    * Start med enklere urskiver. Tilføj én komplikation ad gangen, og se, hvordan de påvirker batteritiden.
+    * Brug et mørkt tema på urskiven. På OLED-skærme betyder færre tændte pixels mindre strømforbrug og mindre indbrænding.
+    * Tjek, hvad der virker bedst på dit ur: AAPS' egne urskiver eller andre urskiver med AAPS-komplikationer.
+    * Observer over nogle dage med forskellige aktivitetsprofiler. De fleste ure tænder skærmen, når du kigger på uret, ved bevægelse og ved andre former for brug.
+    * Tjek dine generelle systemindstillinger, der påvirker ydelsen: notifikationer, timeout for baggrundslys/aktiv skærm, hvornår GPS er aktiveret.
+    * Se [listen over testede telefoner og ure](#Phones-list-of-tested-phones), og [spørg fællesskabet](../GettingHelp/WhereCanIGetHelp.md) om andre brugeres erfaringer og batteritid.
+    * **Vi kan ikke garantere, at data vist på urskive eller komplikation er opdaterede**. I sidste ende er det Wear OS, der bestemmer, hvornår en urskive eller en komplikation opdateres. Selv når AAPS-appen beder om en opdatering, kan systemet vælge at udsætte eller ignorere opdateringer for at spare batteri. Hvis du er i tvivl, og uret har lavt batteri: tjek altid i AAPS-appen på telefonen.
     
     (Watchfaces-troubleshooting-the-wear-app)=
     
-    ## Troubleshooting the wear app
+    ## Fejlfinding af ur-appen
     
-    If the watch shows no data or old data, first check the connection between the watch and the phone, see [Troubleshooting the AAPS watch - AAPS phone communication](#wear-os-watch-phone-communication). For a watch on Wear OS 5, see also the [general troubleshooting recommendations for Wear OS 5](#wear-os-5-troubleshooting). A complication that does not update has the same causes as a tile or watchface that does not update, so check those first.
+    Hvis uret ikke viser data eller viser gamle data, så tjek først forbindelsen mellem uret og telefonen, se [Fejlfinding af kommunikationen mellem AAPS-uret og AAPS-telefonen](#wear-os-watch-phone-communication). For et ur med Wear OS 5, se også de [generelle anbefalinger til fejlfinding for Wear OS 5](#wear-os-5-troubleshooting). En komplikation, der ikke opdateres, har de samme årsager som et felt eller en urskive, der ikke opdateres, så tjek dem først.
     
-    ## Additional AAPS custom watchfaces are also available
+    ## Der findes også flere brugerdefinerede AAPS-urskiver
     
-    [Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+    [Her](../ExchangeSiteCustomWatchfaces/index.md) kan du hente Zip-filer med brugerdefinerede urskiver lavet af andre brugere.
     
-    ## Build your own watchface
+    ## Lav din egen urskive
     
-    If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+    Hvis du vil lave din egen urskive, så følg [vejledningen her](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+    Når du har lavet en brugerdefineret urskive, kan du dele din egen brugerdefinerede **AAPS**-urskive med andre: Zip-filen kan uploades til mappen "ExchangeSiteCustomWatchfaces" via en Pull Request på GitHub. Når pull requesten bliver merget, vil dokumentationsteamet tage filen CustomWatchface.png ud og sætte Zip-filens filnavn foran.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
-    ## Make your own version of the Complications watchface
+    ## Lav din egen version af urskiven med komplikationer
     
-    The **Complications watchface** that **AAPS** installs on Wear OS 6 (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)) is made with Samsung's **Watch Face Studio**. Its project file is free to download, so you can change it to your taste, or use it on a watch with Wear OS 5 or older where **AAPS** does not install it:
+    **Urskive med komplikationer**, som **AAPS** installerer på Wear OS 6 (se [urskiven, som AAPS installerer](#wearos-aaps-v4-watchface)), er lavet med Samsungs **Watch Face Studio**. Dens projektfil kan hentes gratis, så du kan ændre den efter din smag eller bruge den på et ur med Wear OS 5 eller ældre, hvor **AAPS** ikke installerer den:
     
-    [Complications watchface (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
+    [Urskive med komplikationer (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
     
-    The zip holds four files:
+    Zip-filen indeholder fire filer:
     
-    * `AAPS V4_0_2.wfs`: the project. Open it in [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), change what you like, and install it on the watch from there.
-    * `com.watchfacestudio.aapsv4.apk`: the watchface as it is, ready to install with [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` with the watch connected over ADB debugging.
-    * `README.txt`: the two recommended complication setups, the same as on the [Wear OS page](#wearos-complications-watchface-setup).
-    * `AAPS V4.png`: a preview.
+    * `AAPS V4_0_2.wfs`: projektet. Åbn det i [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), ændr det, du vil, og installer det på uret derfra.
+    * `com.watchfacestudio.aapsv4.apk`: urskiven, som den er, klar til at installere med [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk`, mens uret er forbundet med ADB-fejlfinding.
+    * `README.txt`: de to anbefalede opsætninger af komplikationer, de samme som på [Wear OS-siden](#wearos-complications-watchface-setup).
+    * `AAPS V4.png`: en forhåndsvisning.
     
-    ```{admonition} This is not a custom watchface
+    ```{admonition} Dette er ikke en brugerdefineret urskive
     :class: note
-    The zip is not a custom watchface for **Load Watchface** in the **Wear** plugin, and the phone cannot install it. It must be unzipped and installed on the watch with Watch Face Studio or adb, as above.
+    Zip-filen er ikke en brugerdefineret urskive til **Indlæs urskive** i pluginet **Ur**, og telefonen kan ikke installere den. Den skal pakkes ud og installeres på uret med Watch Face Studio eller adb, som beskrevet ovenfor.
