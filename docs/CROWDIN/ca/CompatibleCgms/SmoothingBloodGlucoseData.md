@@ -1,12 +1,12 @@
 # Suavitzat de les dades de glucèmia
 
-Si les dades de **glucèmia** salten o són sorolloses, **AAPS** pot dosificar la insulina malament i provocar hiperglucèmies o hipoglucèmies. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Segons el vostre CGM, aquests problemes poden venir de la configuració del CGM a **AAPS** (com s'explica més avall) o d'un problema al punt del sensor del CGM (que pot obligar a canviar el sensor).
+Si les dades de **glucèmia** salten o són sorolloses, **AAPS** pot dosificar la insulina malament i provocar hiperglucèmies o hipoglucèmies. Si veieu errors o dades que salten al vostre CGM, és important desactivar el llaç fins que el problema estigui resolt. Segons el vostre CGM, aquests problemes poden venir de la configuració del CGM a **AAPS** (com s'explica més avall) o d'un problema al punt del sensor del CGM (que pot obligar a canviar el sensor).
 
 ## Suavitzat de les dades a AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** ofereix l'opció de suavitzar les dades dins d'**AAPS** en lloc de fer-ho a l'aplicació del CGM. Obriu el **menú** (☰), seleccioneu [**Configurador**](../SettingUpAaps/ConfigBuilder.md) i després **Suavitzat**. Hi ha quatre opcions, i només una pot estar activa alhora: **Sense suavitzat**, **Suavitzat exponencial**, **Suavitzat per mitjana** i **Filtre de Kalman Unscented**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Configurador > Suavitzat](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Suavitzat exponencial
 
@@ -20,25 +20,25 @@ Aquesta opció funciona de manera semblant al suavitzat cap enrere («back smoot
 
 Feu servir aquesta opció només si la vostra aplicació col·lectora ja suavitza bé les dades del CGM abans d'enviar-les a **AAPS**.
 
-### Unscented Kalman Filter (UKF)
+### Filtre de Kalman Unscented (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Aquesta opció fa servir un model estadístic per estimar contínuament el vostre valor real de glucèmia i la seva velocitat de canvi a partir de les lectures que arriben (que poden ser sorolloses), i s'adapta automàticament al soroll actual del vostre sensor. També detecta i rebutja les lectures anòmales sobtades. És una alternativa més avançada al suavitzat exponencial i per mitjana, útil si voleu que el suavitzat s'adapti sol al nivell de soroll canviant del vostre sensor en lloc de fer servir un mètode fix.
 
 (smoothing-xdrip-dexcom-g6)=
 
 ## Recomanacions per fer servir el suavitzat
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+També podeu canviar el mètode de suavitzat automàticament, per exemple segons l'edat del sensor, amb l'[acció d'automatització](#automations-automation-action) **Canviar el suavitzat**.
 
 |               |   Exponencial   |  Per mitjana  | Sense suavitzat |
 | ------------- |:---------------:|:-------------:|:---------------:|
 | G5/G6/ONE     | Si hi ha soroll |               |    Recomanat    |
 | G7/ONE+/Stelo | Si hi ha soroll | Si és estable |                 |
 
-Els sensors Libre són sorollosos i poden necessitar suavitzat. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Els sensors Libre són sorollosos i poden necessitar suavitzat. Quan feu servir la connexió directa de xDrip, o l'origen de dades de l'aplicació modificada (que rep les dades d'una altra aplicació, Juggluco inclosa), [el suavitzat ja es fa dins de l'aplicació](#libre2-value-smoothing-raw-values).
 
-| Sensor / Origen de les dades |  Juggluco   | xDrip direct | xDrip bridge | xDrip patched app |
-| ---------------------------- |:-----------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 dies/Pro          |     N/D     |     N/D      | Per mitjana  |        N/D        |
-| Libre 2/2+ (UE)              | Per mitjana |     Cap      | Per mitjana  |        Cap        |
-| Libre 2/2+/3/3+              | Per mitjana |     N/D      |     N/D      |        Cap        |
+| Sensor / Origen de les dades |  Juggluco   | xDrip directe | Pont xDrip (bridge) | Aplicació modificada xDrip |
+| ---------------------------- |:-----------:|:-------------:|:-------------------:|:--------------------------:|
+| Libre 1/14 dies/Pro          |     N/D     |      N/D      |     Per mitjana     |            N/D             |
+| Libre 2/2+ (UE)              | Per mitjana |      Cap      |     Per mitjana     |            Cap             |
+| Libre 2/2+/3/3+              | Per mitjana |      N/D      |         N/D         |            Cap             |
