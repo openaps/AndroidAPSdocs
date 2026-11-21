@@ -4,9 +4,9 @@ If not already set up, download and install the latest xDrip release from the [x
 
 Disable battery optimization and allow background activity for the xDrip app.
 
-## Basic settings for all CGM & FGM systems
+## Configuració bàsica per a tots els sistemes CGM i FGM
 
-### Disable Nightscout upload
+### Desactivar l'enviament a Nightscout
 
 You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
 
@@ -14,7 +14,7 @@ You shouldn't let any other app upload data (blood glucose and treatments) to Ni
 
 ![xDrip Basic Settings 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Desactivar la calibració automàtica i els tractaments
 
 Make sure `Automatic Calibration` (7) is deactivated. If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
 
@@ -54,26 +54,26 @@ Remember to disable Import Sounds to avoid xDrip making a ringtone every time AA
 
 (xdrip-identify-receiver)=
 
-#### Identify receiver
+#### Identify receiver (identificar el receptor)
 
 - If you discover problems with local broadcast (AAPS not receiving BG values from xDrip) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip.
+- Atenció: la correcció automàtica de vegades canvia la i per una majúscula. **Heu de fer servir només lletres minúscules** quan escriviu `info.nightscout.androidaps` (o `info.nightscout.aapspumpcontrol` per a PumpControl). Capital I would prevent the App from receiving BG values from xDrip.
     
     ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ## Use AAPS to calibrate in xDrip
 
 - If you want to be able to use AAPS to calibrate then in xDrip go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- També podeu revisar les opcions a Settings → Less Common Settings → Advanced Calibration Settings.
 
 ## Dexcom sensors
 
 Everything related to the Dexcom sensor and transmitter themselves (starting, stopping, replacing, calibrating, troubleshooting) is documented and kept up to date in the [xDrip Dexcom documentation](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Follow those instructions for the sensor; the settings connecting xDrip to **AAPS** (described above on this page) are the only AAPS-specific part.
 
-### Dexcom G6 and ONE
+### Dexcom G6 i ONE
 
 - Set up xDrip following the [recommended settings](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
-- The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
+- Els transmissors Dexcom G6 i ONE es poden connectar alhora al receptor Dexcom (o bé a la bomba t:slim) i a una aplicació del telèfon.
 - When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and the Dexcom app with the transmitter at the same time!**
 - If you need Clarity and want to profit from xDrip features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip, or use xDrip as a Companion app receiving notifications from the official Dexcom app (with possible delays in BG readings).
 
@@ -103,7 +103,7 @@ Follow the instructions:
 - Keep the old transmitter out of Bluetooth range to prevent reconnection.
 - Then follow [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
-### Dexcom G7, ONE+ and Stelo
+### Dexcom G7, ONE+ i Stelo
 
 - Follow the [G7, ONE+ and Stelo instructions](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (a recent xDrip release is required — see the linked page).
 - See also the [Dexcom G7, ONE+ and Stelo page](../CompatibleCgms/DexcomG7.md) for the available setups with **AAPS**.
@@ -121,48 +121,48 @@ Follow the instructions:
 
 - Setup your NFC to Bluetooth bridge in xDrip
     
-    → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
+    → Menú hamburguesa (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- A Bluetooth Settings, marqueu les caselles exactament com a les captures de pantalla de sota (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - Desactiveu els watchdogs, perquè reinicien el Bluetooth del telèfon i interrompen la connexió amb la bomba.
     
     ![xDrip Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- Podeu provar d'activar aquestes opcions (7)
     
-    - Use scanning
+    - Fer servir l'escaneig
     - Trust Auto-Connect
     - Use Background Scans
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- Si perdeu fàcilment la connexió amb el pont o us costa recuperar-la, **DESACTIVEU-LES** (8).
     
     ![xDrip Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- Deixeu desactivades totes les altres opcions, tret que sapigueu per què les voleu activar.
     
     ![xDrip Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
 
-### Libre smart reader battery level
+### Nivell de bateria del lector intel·ligent Libre
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- El nivell de bateria de ponts com MiaoMiao i Bubble es pot mostrar a AAPS (no el de Blucon).
+- Trobareu els detalls a la [pàgina de captures de pantalla](#screens-sensor-level-battery).
 
-### Connect Libre Transmitter & start sensor
+### Connectar el transmissor Libre i iniciar el sensor
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
+- Si el vostre sensor ho necessita (Libre 2 EU i Libre 1 US), instal·leu l'últim algoritme «out of process».
 
 - Your sensor must be already started using the vendor app or the reader (xDrip cannot start or stop Libre sensors).
 
-- Set the data source to Libre Bluetooth.
+- Poseu com a font de dades Libre Bluetooth.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → Menú hamburguesa (1) → Settings (2) → Seleccioneu Libre Bluetooth a Hardware Data source (3)
     
     ![xDrip Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- Escanegeu el Bluetooth i connecteu el pont.
     
-    → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
+    → Menú hamburguesa (1) → Scan Bluetooth (2) → Scan (3)
     
     - If xDrip can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
     
@@ -170,24 +170,24 @@ Follow the instructions:
 
 - Start the sensor in xDrip.
     
-        {admonition} Safety warning
+        {admonition} Avís de seguretat
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        No feu servir les dades del sensor abans que acabi l'hora d'escalfament: els valors poden ser molt alts i fer que AAPS prengui decisions errònies.
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → Menú hamburguesa (1) → Start sensor (2) → Start sensor (3) → Poseu l'hora exacta en què el vau iniciar amb el lector o amb l'aplicació del fabricant. Si no el vau iniciar avui, responeu «Not Today» (4).
 
-![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip: iniciar el transmissor Libre i el sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
 (xdrip-libre2-patched-app)=
 
-## Libre 2 patched app
+## Aplicació Libre 2 modificada (patched)
 
-- Set the data source to Libre patched app.
+- Poseu com a font de dades l'aplicació Libre modificada.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → Menú hamburguesa (1) → Settings (2) → Seleccioneu Libre (patched App) a Hardware Data source (3)
     
     ![xDrip Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+- Podeu afegir `BgReading:d,xdrip libre_receiver:v` a Less Common Settings->Extra Logging Settings->Extra tags for logging. Així es registren més missatges d'error per resoldre problemes.
 
-![xDrip LibreLink logging](../images/Libre2_Tags.png)
+![Registre LibreLink de xDrip](../images/Libre2_Tags.png)
