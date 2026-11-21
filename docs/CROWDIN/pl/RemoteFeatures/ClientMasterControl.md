@@ -367,11 +367,11 @@ Najpierw go odłącz (**Zarządzaj → Sparuj z telefonem pacjenta → Odłącz*
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Nic nie zostało zmienione. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Nic nie zostało zmienione. Rozpocznij parowanie ponownie. Jeśli to nadal nie działa, uruchom ponownie **AAPSClient** i spróbuj jeszcze raz.
 
-**The client says it is not paired**
+**Urządzenie opiekuna pokazuje, że nie jest sparowane**
 
-Sparuj ponownie w **Zarządzaj → Sparuj z telefonem pacjenta**. Check that the client is **Active** in the master's **Authorized clients** list.
+Sparuj ponownie w **Zarządzaj → Sparuj z telefonem pacjenta**. Sprawdź, czy urządzenie opiekuna ma stan **Aktywny** na liście **Autoryzowani opiekunowie** urządzenia pacjenta.
 
 **Po sparowaniu nic się nie dzieje**
 
@@ -379,25 +379,25 @@ Upewnij się, że **Zezwalaj na sterowanie z urządzenia opiekuna** jest WŁĄCZ
 
 ### Polecenia
 
-**The client says the master is offline, or commands fail**
+**Urządzenie opiekuna pokazuje, że urządzenie pacjenta jest offline, albo polecenia nie działają**
 
-Check that:
+Sprawdź, czy:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- telefon pacjenta nie jest uśpiony, a **AAPS** działa,
+- oba telefony są połączone w **NSClientV3** z tą samą stroną Nightscout,
+- **websockety** są włączone na obu telefonach.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Websockety są **obowiązkowe** dla zdalnego sterowania z **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Urządzenie pacjenta odrzuca polecenie**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Urządzenie pacjenta jeszcze raz sprawdza każde polecenie względem swojego aktualnego stanu: na przykład wybrany profil już nie istnieje albo typ pompy się nie zgadza. Sprawdź to na urządzeniu pacjenta.
 
 **Leczenie wpisane na stronie Nightscout nie jest stosowane**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+W [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode) jest to oczekiwane. Zamiast tego wprowadź je na sparowanym urządzeniu opiekuna.
 
-### Nightscout tokens and settings
+### Tokeny i ustawienia Nightscout
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ Urządzenie opiekuna używało wcześniej własnego tokenu Nightscout, a teraz z
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-Urządzenie opiekuna nadal zapisuje tokenem, który ma więcej uprawnień, niż potrzebuje. The master sends the client its own token after pairing, but only if the master has an admin token. Sprawdź token urządzenia pacjenta albo skonfiguruj urządzenie opiekuna ponownie kodem QR.
+Urządzenie opiekuna nadal zapisuje tokenem, który ma więcej uprawnień, niż potrzebuje. Po sparowaniu urządzenie pacjenta wysyła urządzeniu opiekuna jego własny token, ale tylko wtedy, gdy urządzenie pacjenta ma token administratora. Sprawdź token urządzenia pacjenta albo skonfiguruj urządzenie opiekuna ponownie kodem QR.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Ktoś inny zapisał dokument ustawień urządzenia pacjenta albo urządzenie pacjenta ma nowy klucz (na przykład po wyczyszczeniu jego danych). A paired client takes the new key by itself the next time it connects to Nightscout. Telefon, który tylko odczytuje Nightscout, potrzebuje ponownie kodu QR urządzenia pacjenta (**Tylko odczyt Nightscout → Pokaż kod QR**).
+Ktoś inny zapisał dokument ustawień urządzenia pacjenta albo urządzenie pacjenta ma nowy klucz (na przykład po wyczyszczeniu jego danych). Sparowane urządzenie opiekuna samo pobierze nowy klucz przy następnym połączeniu z Nightscout. Telefon, który tylko odczytuje Nightscout, potrzebuje ponownie kodu QR urządzenia pacjenta (**Tylko odczyt Nightscout → Pokaż kod QR**).
 
 **Urządzenie opiekuna nie może już odczytywać Nightscout**
 
