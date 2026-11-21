@@ -29,7 +29,7 @@ Não se apresse, vá devagar!
 - **<u>DESLIGUE</u> todas as [automatizações](../DailyLifeWithAaps/Automations.md)**
 - **<u>DESLIGUE</u> o [DynISF](#Open-APS-features-DynamicISF), o [AutoISF](#Open-APS-features-auto-isf) e o [AutoSens](#Open-APS-features-autosens)** para que não tentem adaptar o seu perfil.
 - Não faça ações manuais (bólus manual, alvos temporários, etc.) durante os testes: deixe o sistema usar apenas as definições do **Perfil**.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Quando pedir conselhos, inclua sempre estes gráficos nas suas capturas de ecrã.
+- Nos [gráficos adicionais](#AapsScreens-section-g-additional-graphs): no gráfico 1, use Insulina ativa e Basal. No gráfico 2, use Hidratos de carbono ativos (e Alteração da sensibilidade). On graph 3, use Deviations and Blood Glucose Impact. Quando pedir conselhos, inclua sempre estes gráficos nas suas capturas de ecrã.
 - HCA=0[*](#profiletuning-cob-zero)
 
 Outras situações que, idealmente, deve evitar, porque influenciam os dados e podem levar a más conclusões:
