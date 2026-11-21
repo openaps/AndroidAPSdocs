@@ -367,11 +367,11 @@ The dialog says why:
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Нищо не е променено. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Нищо не е променено. Започнете свързването отново. Ако продължава да не успява, рестартирайте **AAPSClient** и опитайте още веднъж.
 
-**The client says it is not paired**
+**Клиентът казва, че не е свързан**
 
-Свържете се отново от **Управление → Свържи се с главния телефон**. Check that the client is **Active** in the master's **Authorized clients** list.
+Свържете се отново от **Управление → Свържи се с главния телефон**. Проверете дали клиентът е **Активен** в списъка **Оторизирани клиенти** на главния телефон.
 
 **Нищо не се случва след свързването**
 
@@ -379,25 +379,25 @@ The dialog says why:
 
 ### Команди
 
-**The client says the master is offline, or commands fail**
+**Клиентът казва, че главният телефон е офлайн, или командите не успяват**
 
-Check that:
+Проверете дали:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- главният телефон е буден и **AAPS** работи,
+- двата телефона са свързани в **NSClientV3** към един и същ Nightscout сайт,
+- **websockets** са включени на двата телефона.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Websockets са **задължителни** за отдалечен контрол от **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Главният телефон отказва команда**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Главният телефон проверява всяка команда отново спрямо текущото си състояние: например избраният профил вече не съществува или типът на помпата не съвпада. Проверете на главния телефон.
 
 **Лечения, въведени в уебсайта на Nightscout, не се прилагат**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Това е очаквано в [режим на засилена защита](#client-master-control-hardened-mode). Вместо това ги въведете на свързан клиент.
 
-### Nightscout tokens and settings
+### Токени и настройки за Nightscout
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ This is expected in [hardened mode](#client-master-control-hardened-mode). Enter
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-Клиентът все още записва с токен, който има повече права, отколкото са му нужни. The master sends the client its own token after pairing, but only if the master has an admin token. Проверете токена на главния телефон или настройте клиента отново с QR код.
+Клиентът все още записва с токен, който има повече права, отколкото са му нужни. Главният телефон изпраща на клиента собствения му токен след свързването, но само ако главният телефон има админ токен. Проверете токена на главния телефон или настройте клиента отново с QR код.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Някой друг е записал документа с настройките на главния телефон или главният телефон има нов ключ (например след като данните му са изчистени). A paired client takes the new key by itself the next time it connects to Nightscout. Телефон, който само чете Nightscout, се нуждае отново от QR кода на главния телефон (**Само четене от Nightscout → Покажи QR код**).
+Някой друг е записал документа с настройките на главния телефон или главният телефон има нов ключ (например след като данните му са изчистени). Свързаният клиент сам получава новия ключ следващия път, когато се свърже с Nightscout. Телефон, който само чете Nightscout, се нуждае отново от QR кода на главния телефон (**Само четене от Nightscout → Покажи QR код**).
 
 **Клиентът вече не може да чете Nightscout**
 
