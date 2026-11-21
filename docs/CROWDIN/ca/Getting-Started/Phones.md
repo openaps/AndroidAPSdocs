@@ -30,7 +30,7 @@ El document és només de lectura. Amb CTRL-F podeu cercar dins del text del ful
 
 Per registrar la vostra prova d'una configuració de maquinari, empleneu aquest [formulari](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Després d'emplenar el formulari, el full s'actualitza automàticament cada 5 minuts.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Si teniu cap problema amb el full de càlcul, contacteu amb la persona que el manté, *@theodoor5137*, a Discord, o vegeu la pàgina sobre [com obtenir ajuda](../GettingHelp/WhereCanIGetHelp.md).
 
 ## No he trobat el meu telèfon
 
