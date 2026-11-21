@@ -367,11 +367,11 @@ The dialog says why:
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Δεν άλλαξε τίποτα. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Δεν άλλαξε τίποτα. Ξεκινήστε ξανά τη σύζευξη. Αν συνεχίζει να αποτυγχάνει, επανεκκινήστε το **AAPSClient** και δοκιμάστε άλλη μία φορά.
 
-**The client says it is not paired**
+**Ο πελάτης λέει ότι δεν έχει σύζευξη**
 
-Κάντε ξανά σύζευξη από **Διαχείριση → Σύζευξη με κύρια συσκευή**. Check that the client is **Active** in the master's **Authorized clients** list.
+Κάντε ξανά σύζευξη από **Διαχείριση → Σύζευξη με κύρια συσκευή**. Ελέγξτε ότι ο πελάτης είναι **Ενεργός** στη λίστα **Εξουσιοδοτημένοι πελάτες** της κύριας συσκευής.
 
 **Δεν συμβαίνει τίποτα μετά τη σύζευξη**
 
@@ -379,25 +379,25 @@ The dialog says why:
 
 ### Εντολές
 
-**The client says the master is offline, or commands fail**
+**Ο πελάτης λέει ότι η κύρια συσκευή είναι εκτός σύνδεσης, ή οι εντολές αποτυγχάνουν**
 
-Check that:
+Ελέγξτε ότι:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- το κύριο τηλέφωνο είναι ενεργό (όχι σε αδράνεια) και το **AAPS** τρέχει,
+- και τα δύο τηλέφωνα είναι συνδεδεμένα στο **NSClientV3**, στον ίδιο ιστότοπο Nightscout,
+- τα **websockets** είναι ενεργοποιημένα και στα δύο τηλέφωνα.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Τα websockets είναι **υποχρεωτικά** για τον απομακρυσμένο έλεγχο από το **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Η κύρια συσκευή απορρίπτει μια εντολή**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Η κύρια συσκευή ελέγχει ξανά κάθε εντολή με βάση την τρέχουσα κατάστασή της: για παράδειγμα, το επιλεγμένο προφίλ δεν υπάρχει πια ή ο τύπος της αντλίας δεν ταιριάζει. Ελέγξτε στην κύρια συσκευή.
 
 **Οι θεραπείες που καταχωρούνται στον ιστότοπο του Nightscout δεν εφαρμόζονται**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Αυτό είναι αναμενόμενο στην [ενισχυμένη λειτουργία](#client-master-control-hardened-mode). Καταχωρήστε τες αντί γι' αυτό σε έναν πελάτη με σύζευξη.
 
-### Nightscout tokens and settings
+### Διακριτικά Nightscout και ρυθμίσεις
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ This is expected in [hardened mode](#client-master-control-hardened-mode). Enter
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-Ο πελάτης γράφει ακόμα με ένα διακριτικό που έχει περισσότερα δικαιώματα από όσα χρειάζεται. The master sends the client its own token after pairing, but only if the master has an admin token. Ελέγξτε το διακριτικό της κύριας συσκευής, ή ρυθμίστε ξανά τον πελάτη με κωδικό QR.
+Ο πελάτης γράφει ακόμα με ένα διακριτικό που έχει περισσότερα δικαιώματα από όσα χρειάζεται. Η κύρια συσκευή στέλνει στον πελάτη το δικό του διακριτικό μετά τη σύζευξη, αλλά μόνο αν η κύρια συσκευή έχει διακριτικό διαχειριστή. Ελέγξτε το διακριτικό της κύριας συσκευής, ή ρυθμίστε ξανά τον πελάτη με κωδικό QR.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Κάποιος άλλος έγραψε το έγγραφο ρυθμίσεων της κύριας συσκευής, ή η κύρια συσκευή έχει νέο κλειδί (για παράδειγμα αφού διαγράφηκαν τα δεδομένα της). A paired client takes the new key by itself the next time it connects to Nightscout. Ένα τηλέφωνο που μόνο διαβάζει το Nightscout χρειάζεται ξανά τον κωδικό QR της κύριας συσκευής (**Μόνο ανάγνωση Nightscout → Εμφάνιση κωδικού QR**).
+Κάποιος άλλος έγραψε το έγγραφο ρυθμίσεων της κύριας συσκευής, ή η κύρια συσκευή έχει νέο κλειδί (για παράδειγμα αφού διαγράφηκαν τα δεδομένα της). Ένας πελάτης με σύζευξη παίρνει μόνος του το νέο κλειδί την επόμενη φορά που συνδέεται στο Nightscout. Ένα τηλέφωνο που μόνο διαβάζει το Nightscout χρειάζεται ξανά τον κωδικό QR της κύριας συσκευής (**Μόνο ανάγνωση Nightscout → Εμφάνιση κωδικού QR**).
 
 **Ένας πελάτης δεν μπορεί πια να διαβάσει το Nightscout**
 
