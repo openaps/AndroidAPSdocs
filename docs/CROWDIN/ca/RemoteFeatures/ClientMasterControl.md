@@ -293,7 +293,7 @@ The first time you activate a profile on a newly installed client, the client ma
 
 On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
 
-### Preferences
+### Configuració
 
 A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
 
@@ -332,7 +332,7 @@ If a client is restored from a backup that rolls its command counter backwards, 
 
 (client-master-control-troubleshooting)=
 
-## Troubleshooting
+## Resolució de problemes
 
 For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
@@ -377,7 +377,7 @@ Pair again from **Manage → Pair with master**. Check that the client is **Acti
 
 Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.
 
-### Commands
+### Ordres
 
 **The client says the master is offline, or commands fail**
 
