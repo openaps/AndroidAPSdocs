@@ -6,7 +6,7 @@ Cada versió d'AAPS pot tenir una data de fi. Després d'aquesta data, AAPS pot 
 
 ## Com fer servir aquesta pàgina
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. Hi veureu la vostra versió d'AAPS.
+1. A AAPS, obriu el **menú** (☰) a la part superior esquerra i trieu **Quant a**. Hi veureu la vostra versió d'AAPS.
 2. Cerqueu la mateixa versió a la primera taula de sota. Llegiu la data de fi que hi ha al costat. Les dates s'escriuen com a **any-mes-dia**. Per exemple, `2026-10-30` vol dir el 30 d'octubre de 2026.
 3. Abans d'actualitzar, consulteu les [Notes de la versió](ReleaseNotes.md) i la [guia d'actualització](UpdateToNewVersion.md). La versió que podeu fer servir també depèn de la versió d'Android del vostre telèfon.
 
@@ -30,7 +30,7 @@ La taula no mostra una data de fi per a totes les versions d'AAPS. Si la vostra 
 
 Android assigna a cada versió del sistema un **nivell d'API**, un número que fan servir les aplicacions. Per exemple, el nivell d'API 30 és Android 11. La taula de sota fa servir els nivells d'API de les dades de versions d'AAPS. La versió d'AAPS de cada fila és el valor indicat per al nivell d'API que es mostra. Aquesta no és una llista completa de les versions que podeu instal·lar.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Per triar una versió d'AAPS per al vostre telèfon, feu servir les [indicacions sobre la versió d'Android a les Notes de la versió](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     const label = list => list.length === 1 ? list[0]
-      : list.length === 2 ? `${list[0]} and ${list[1]}`
-      : `${list[0]} to ${list[list.length - 1]}`;
+      : list.length === 2 ? `${list[0]} i ${list[1]}`
+      : `${list[0]} a ${list[list.length - 1]}`;
     showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Torneu-ho a provar més tard.';
+    status.textContent = 'No es poden carregar les dades de les versions AAPS. Torneu-ho a provar més tard.';
   }
 });
 </script>
