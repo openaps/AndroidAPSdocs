@@ -8,7 +8,7 @@ Be careful the percentage of proofreading is always lower than or equal to the p
 ```
 
 ```{admonition} needed time for final publication
-Примечание После перевода на Crowdin синхронизация с Github происходит ежедневно по графику в виде запроса на внесение изменений Pull Request (PR)
+После перевода на Crowdin каждый день по расписанию выполняется синхронизация с Github: переводы передаются в Github в виде запроса на внесение изменений (pull request, PR).
 
 The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
@@ -21,6 +21,6 @@ The acceptance of the PR is a manual task which will be done as fast as possible
 
 ## Состояние перевода документации
 
-Состояние перевода **документация** по языкам (код страны, процент переведённого, процент откорректированного).
+Состояние перевода **документации** по языкам (код страны, процент переведённого, процент откорректированного).
 
 ![Состояние перевода документации](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
