@@ -9,7 +9,7 @@ The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your 
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Capacitats de la bomba amb AAPS
 
 * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
 * DST and timezone changes must be handled manually.
@@ -26,7 +26,7 @@ Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and *
 
 ![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
 
-## Settings
+## Configuració
 
 Open the EOPatch2 settings in one of two ways:
 
@@ -37,11 +37,11 @@ There are three settings:
 
 ![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
 
-### Low reservoir Alerts
+### Alertes de reservori baix
 
 A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
 
-### Patch expiration Reminder
+### Recordatori d'expiració del patch
 
 Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
 
@@ -140,9 +140,9 @@ For safe use, do not turn the needle action lever until the safety check is comp
 The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
 ```
 
-### Inserting the needle
+### Inserció de l'agulla
 
-Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Press **Next**.
+Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Premeu **Següent**.
 
 ```{caution}
 If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
@@ -152,7 +152,7 @@ If you go to the next step without hearing the beep, a **Needle insertion Error*
 
 The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
 
-## Discarding the patch
+## Descartar el patch
 
 Replace the patch when it is low on insulin, when it expires, or if it is faulty. We recommend using each patch for no more than 84 hours after it boots.
 
@@ -183,7 +183,7 @@ The **Discard Patch** page also has a **Force Reset** button. It only clears the
 
 Suspending insulin delivery also cancels any extended bolus and temporary basal. When you resume, these are **not** restarted. While insulin delivery is suspended, the patch beeps every 15 minutes.
 
-### Suspending insulin delivery
+### Suspendre el lliurament d'insulina
 
 1. Open the pump screen (**Manage** → **Pump**) and press **Suspend pump**.
 1. A dialog explains what will be suspended. Press **Confirm**.
@@ -198,7 +198,7 @@ Insulin delivery is suspended for the time you chose.
 The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Suspend pump**.
 ```
 
-### Resuming insulin delivery
+### Reprendre el lliurament d'insulina
 
 1. Open the pump screen (**Manage** → **Pump**) and press **Resume pump**.
 1. In the **Resume insulin delivery** dialog, press **Confirm**.
@@ -218,7 +218,7 @@ When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning
 
 ## Alarms and warnings
 
-### Alarms
+### Alarmes
 
 Alarms are for urgent, top-priority situations and need your action straight away. **AAPS** sounds an alarm that keeps going until you acknowledge it, and shows the message as a notification on the **Overview** screen. An alarm means there is a problem with the patch in use. In many cases the patch has to be discarded and replaced with a new one.
 
@@ -233,19 +233,19 @@ The alarm screenshots are from an earlier **AAPS** version and may look differen
 
 The different alarms are explained below.
 
-| Alarm                      | Explanation                                                                                                                                                    |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | The patch has run out of insulin.                                                                                                                              |
-| Patch expired              | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
-| Occlusion                  | The patch's insulin path seems to be blocked.                                                                                                                  |
-| Power on self-test failure | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| Inappropriate temperature  | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
-| Needle insertion Error     | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
-| Patch battery Error        | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
-| Patch activation Error     | The patch was not fully activated within 60 minutes of booting.                                                                                                |
-| Patch Error                | The patch found an unexpected error while being activated or used.                                                                                             |
+| Alarma                         | Explicació                                                                                                                                                     |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reservori buit                 | The patch has run out of insulin.                                                                                                                              |
+| Patch caducat                  | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
+| Oclusió                        | The patch's insulin path seems to be blocked.                                                                                                                  |
+| Error en l'autotest d'engegada | The patch found an unexpected error during its self-test after booting.                                                                                        |
+| Temperatura inadequada         | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
+| Error d'inserció de l'agulla   | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
+| Error de la pila del patch     | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
+| Error d'activació del patch    | The patch was not fully activated within 60 minutes of booting.                                                                                                |
+| Error del patch                | The patch found an unexpected error while being activated or used.                                                                                             |
 
-### Warnings
+### Avisos
 
 Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
 
@@ -258,18 +258,18 @@ This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning a
 
 The different warnings are explained below.
 
-| Warning                      | Explanation                                                                                                                   |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| Low reservoir                | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| Patch operating life expired | The patch's usage period is over.                                                                                             |
-| Patch will expire soon       | The patch must be discarded in 1 hour.                                                                                        |
-| Incomplete Patch activation  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| Patch battery low            | The patch's battery is low.                                                                                                   |
+| Avís                           | Explicació                                                                                                                    |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| Fi de la suspensió d'insulina  | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
+| Reservori baix                 | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
+| Vida útil del patch acabada    | The patch's usage period is over.                                                                                             |
+| El patch caducarà aviat        | The patch must be discarded in 1 hour.                                                                                        |
+| Activació del patch incompleta | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
+| Pila del patch baixa           | The patch's battery is low.                                                                                                   |
 
-## Where to get help
+## On trobar ajuda
 
-Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Abans de demanar ajuda:
 
 1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
 2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
