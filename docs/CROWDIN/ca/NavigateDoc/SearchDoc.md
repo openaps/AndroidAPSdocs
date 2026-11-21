@@ -1,25 +1,25 @@
-# Search the documentation
+# Cercar a la documentació
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+La documentació conté molta informació. Si busqueu un tema, un terme o un paràmetre concret, sovint la cerca és més ràpida que navegar pel menú.
 
-## How to search
+## Com cercar
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+El quadre de cerca és a la part de dalt del tauler de navegació, a l'esquerra de la pantalla.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+En pantalles petites (per exemple, un telèfon) el tauler de navegació està amagat. Toqueu la icona del menú (☰) a la cantonada superior esquerra per obrir-lo i veure el quadre de cerca.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Escriviu una o més paraules clau al quadre de cerca.
+2. Premeu `Enter` o toqueu la icona de cerca.
+3. S'obre una pàgina de resultats amb totes les pàgines on apareixen les vostres paraules clau. Feu clic en un resultat per anar a la pàgina corresponent.
 
-## Tips for better results
+## Consells per obtenir millors resultats
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Feu servir termes concrets (per exemple `temp target` o `autosens`) en lloc de frases senceres.
+- Si cerqueu amb diverses paraules clau, obtindreu les pàgines que contenen aquestes paraules. Comenceu amb una cerca àmplia i afegiu paraules clau per reduir els resultats.
+- La cerca només inclou l'idioma i la versió de la documentació que esteu llegint. Si no trobeu alguna cosa, proveu de canviar a la versió anglesa, que és la més completa (vegeu [Canviar l'idioma i la versió](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+L'índex de cerca es crea automàticament. El contingut afegit molt recentment pot trigar una estona a aparèixer a la cerca.
 ```
