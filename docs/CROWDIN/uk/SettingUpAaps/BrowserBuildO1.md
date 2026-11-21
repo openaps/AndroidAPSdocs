@@ -3,7 +3,7 @@
 # Варіант 1 – Створіть новий keystore
 
 ```{note}
-Це частина [Кроку 2 – Створіть свій keystore для підпису](BrowserBuildKeystore.md) [Збірки в браузері](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Це частина [Кроку 2 – Створіть свій keystore для підпису](BrowserBuildKeystore.md) [Збірки в браузері](BrowserBuild.md). Переконайтеся, що ви прочитали [вибір між варіантом 1 і варіантом 2](#aaps-ci-preparation).
 ```
 
 Варіант 1 створює для вас зовсім новий keystore для підпису. Він підходить для тих, хто збирає AAPS уперше, не має JKS або забув пароль чи псевдонім (alias).
