@@ -42,7 +42,7 @@ També s'han llançat diversos sistemes comercials de llaç tancat híbrid. Són
 
 **Figura 1**. Esquema bàsic d'Android APS (sistema de pàncrees artificial), AAPS.
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Calcula les dosis d'insulina amb els algoritmes consolidats d'[OpenAPS](https://openaps.org/) (un conjunt de regles), desenvolupats per la comunitat DT1 #WeAreNotWaiting.
+Android APS (**AAPS**) és un sistema de llaç tancat híbrid, o sistema de pàncrees artificial (APS). Calcula les dosis d'insulina amb els algoritmes consolidats d'[OpenAPS](https://openaps.org/) (un conjunt de regles), desenvolupats per la comunitat DT1 #WeAreNotWaiting.
 
 Com que OpenAPS només és compatible amb algunes bombes d'insulina antigues, **AAPS** (que es pot fer servir amb més tipus de bombes d'insulina) es va desenvolupar per primera vegada el 2016 per a un familiar amb diabetis tipus 1. Des d'aquells primers temps, un equip de desenvolupadors voluntaris i altres entusiastes relacionats amb el món de la diabetis tipus 1 ha continuat desenvolupant i millorant **AAPS**. Avui, molts milers de persones de tot el món fan servir **AAPS**. És un sistema molt personalitzable i versàtil i, com que és de codi obert, també és fàcilment compatible amb molts altres programes i plataformes de codi obert per a la diabetis. Els components fonamentals del sistema **AAPS** actual es mostren a la **Figura 1** de més amunt.
 
@@ -54,7 +54,7 @@ El «cervell» d'AAPS és una **aplicació** que compileu vosaltres mateixos. Hi
 
 Al **telèfon intel·ligent Android** també caldrà instal·lar una altra aplicació, a més d'**AAPS**. Aquesta [aplicació addicional](../Getting-Started/CompatiblesCgms.md) rep les dades de glucèmia d'un sensor (**2**) per Bluetooth i després les envia internament, dins del telèfon, a l'**aplicació AAPS**.
 
-L'**aplicació AAPS** fa servir un procés de presa de decisions (**algoritme**) d'OpenAPS. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Quin algoritme feu servir (oref0 o oref1) depèn de quin s'adapta millor a la vostra situació.  En tots dos casos, l'algoritme té en compte molts factors i fa càlculs ràpids cada vegada que arriba una nova lectura del sensor. Després, l'algoritme envia per Bluetooth instruccions a la bomba d'insulina (**3**) sobre quanta insulina ha de lliurar. Tota la informació es pot enviar a internet (**4**) per dades mòbils o Wi-Fi. Si voleu, aquestes dades també es poden compartir amb seguidors i/o recollir per analitzar-les. Opcionalment, també podeu emparellar un [rellotge intel·ligent](../Getting-Started/Watches.md) (**5**) amb el telèfon per veure les vostres dades d'un cop d'ull i, amb alguns rellotges, enviar ordres bàsiques a **AAPS**.
+L'**aplicació AAPS** fa servir un procés de presa de decisions (**algoritme**) d'OpenAPS. Els principiants comencen amb l'algoritme bàsic **oref0**, però és possible passar a l'algoritme més nou **oref1** a mesura que avanceu amb AAPS. Quin algoritme feu servir (oref0 o oref1) depèn de quin s'adapta millor a la vostra situació.  En tots dos casos, l'algoritme té en compte molts factors i fa càlculs ràpids cada vegada que arriba una nova lectura del sensor. Després, l'algoritme envia per Bluetooth instruccions a la bomba d'insulina (**3**) sobre quanta insulina ha de lliurar. Tota la informació es pot enviar a internet (**4**) per dades mòbils o Wi-Fi. Si voleu, aquestes dades també es poden compartir amb seguidors i/o recollir per analitzar-les. Opcionalment, també podeu emparellar un [rellotge intel·ligent](../Getting-Started/Watches.md) (**5**) amb el telèfon per veure les vostres dades d'un cop d'ull i, amb alguns rellotges, enviar ordres bàsiques a **AAPS**.
 
 ## Quins avantatges té el sistema AAPS?
 
@@ -98,13 +98,13 @@ Els usuaris poden afegir o treure mòduls o funcions fàcilment, i **AAPS** es p
 
  a) La possibilitat de definir un objectiu de **glucèmia** més baix 30 min abans de menjar; podeu posar l'objectiu fins a 72 mg/dl (4,0 mmol/l).
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). L'automatització durarà segons l'horari que hàgiu definit. Aquesta automatització es pot configurar perquè només estigui activa certs dies de la setmana, a certes hores del dia i fins i tot en certs llocs.
+ b) Si teniu resistència a la insulina i això us provoca glucèmies altes, **AAPS** us permet definir una regla d'**automatització** que s'activi quan la glucèmia pugi per sobre de 8 mmol/l (144 mg/dl) i que canviï (per exemple) a un perfil del 120% (cosa que augmenta un 20% la basal i també reforça altres factors, en comparació amb la configuració normal del vostre **perfil**). L'automatització durarà segons l'horari que hàgiu definit. Aquesta automatització es pot configurar perquè només estigui activa certs dies de la setmana, a certes hores del dia i fins i tot en certs llocs.
 
- c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
+ c) Si el vostre fill salta al trampolí sense avisar, **AAPS** permet suspendre la insulina durant un temps determinat, directament des del telèfon.
 
- d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. La insulina que no calgui es pot evitar simplement «cancel·lant» la basal que no s'ha lliurat.
+ d) Després de tornar a connectar una bomba amb tub que s'ha desconnectat per nedar, **AAPS** calcularà la insulina basal que no s'ha lliurat mentre estava desconnectada i la lliurarà amb cura, segons la vostra glucèmia actual. La insulina que no calgui es pot evitar simplement «cancel·lant» la basal que no s'ha lliurat.
 
- e) **AAPS** us permet definir perfils diferents per a situacions diferents i canviar fàcilment d'un a l'altre. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
+ e) **AAPS** us permet definir perfils diferents per a situacions diferents i canviar fàcilment d'un a l'altre. Per exemple, les funcions que fan que l'algoritme baixi més de pressa una glucèmia elevada (com els super micro bolus («**SMB**») i els àpats no anunciats («**UAM**»)) es poden configurar perquè només funcionin durant el dia, si us preocupen les hipoglucèmies nocturnes.
 
 Tot això són exemples; el conjunt complet de funcions dona una gran flexibilitat per a la vida diària, incloent-hi l'esport, la malaltia, els cicles hormonals, _etc_. Al final, és l'usuari qui decideix com fer servir aquesta flexibilitat, i no hi ha cap automatització que serveixi per a tothom.
 
@@ -252,7 +252,7 @@ Si sentiu que el vostre equip no us dona suport per fer servir el llaç amb **AA
 
 a) El sistema **AAPS** l'han dissenyat ELS PACIENTS i els seus cuidadors. S'ha dissenyat sobretot pensant en la seguretat, però també a partir de l'experiència profunda dels pacients. Hi ha molts milers d'usuaris d'**AAPS** a tot el món. Per tant, és probable que hi hagi altres pacients de la vostra clínica que fan servir llaços OS-AID (tant si la clínica ho sap com si no).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
+b) Una guia recent, revisada per experts i publicada a la revista mèdica internacional de referència [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_), ha confirmat que els llaços OS-AID són **segurs** i **eficaços per millorar el control de la diabetis**, inclòs el temps en rang. Revistes de referència com [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) publiquen regularment articles que destaquen el progrés de la comunitat de llaços OS-AID.
 
 c) Començar amb **AAPS** implica un pas _gradual_ des de la bomba en llaç «obert», passant per la suspensió per glucèmia baixa, fins al llaç «tancat» híbrid, completant una sèrie d'objectius. Per tant, hi ha un programa estructurat: l'usuari ha de demostrar un nivell de competència a cada etapa i ajustar bé la seva configuració bàsica (basal, ISF i ràtio I:C) abans de poder tancar el llaç.
 
@@ -264,7 +264,7 @@ f) Si el vostre equip encara s'hi oposa fermament, doneu al vostre metge còpies
 
 #### Suport d'altres metges als llaços OS-AID
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+L'article publicat a [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (codirigit pel King's i el Guy's and St Thomas' NHS Foundation Trust, i pel Dr. Sufyan Hussain, diabetòleg consultor i professor sènior honorari del King's de Londres) ofereix:
 
 a) **Garantia** per als professionals que els sistemes de pàncrees artificial OS-AID / de codi obert són una opció de «tractament segur i eficaç» per a la diabetis tipus 1, i orientació sobre recomanacions, converses, suport i documentació;
 
@@ -295,11 +295,11 @@ Als metges (almenys al Regne Unit) no se'ls prohibeix receptar medicaments sense
 3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Declaració de posició del Berlin Institute of Health, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (posició i guia de Diabetes Canada) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Països Baixos (EN/NL) - per a metges - [com ajudar les persones que fan servir sistemes de codi obert de lliurament automàtic d'insulina](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
 8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
-10. Outcomes of the OPEN project, an EU-funded project into the Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology (https://www.open-diabetes.eu/publications)
+10. Resultats del projecte OPEN, un projecte finançat per la UE sobre els Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology (https://www.open-diabetes.eu/publications)
 
 
 
@@ -379,7 +379,7 @@ o bé:
 
 2) Premeu la tecla Windows, escriviu «Control Panel» (Tauler de control) al camp de cerca i obriu-lo amb Retorn. S'obre: «All Control Panel Items» (Tots els elements del Tauler de control).
 
-Press the letter E to get to “Ease of Access Centre”, open with Enter.
+Premeu la lletra E per anar a «Ease of Access Centre» (Centre d'accessibilitat) i obriu-lo amb Retorn.
 
 Després obriu «Use computer without a display» (Utilitzar l'ordinador sense pantalla) amb Retorn.
 
