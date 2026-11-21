@@ -160,29 +160,29 @@ In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin con
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+מכיוון שלקצב הבזאלי יש השפעה עקיפה על ירידת ה-IOB ב-AAPS, קצב בזאלי גבוה מדי יכול להסתיר DIA גבוה מדי, וגם להפך. הגיוני לכוונן קודם בזהירות את הקצבים הבזאליים, ורק אחר כך לשנות את ה-DIA ואת השיא. בנוסף, חשוב לזכור שהגדרות ה-DIA והשיא משפיעות זו על זו: ההשפעה של ה-DIA תלויה בשיא, וגם להפך.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+התרשימים האלה מראים את ההשפעה המדויקת של ה-DIA והשיא על עקומות ה-IOB, בכל טווח הערכים המותרים.
 
-Adjusting DIA:
+שינוי ה-DIA:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+שינוי השיא:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+לבסוף, השוואה שבה ה-DIA והשיא משתנים במקביל. ההיגיון כאן הוא ששני הערכים משתנים באותו יחס, כך ש-`49/35 ~ 7/5`. או באופן דומה, `120/93 ~ 9/7`. המרווחים יהיו עקביים בלי קשר ל-DIA או לשיא ההתחלתיים, כל עוד השינוי היחסי זהה בשניהם.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+שימו לב שכאשר ה-DIA והשיא משתנים בצורה הזו, כל נקודה בעקומה זזה באותו יחס.
 
 ````
 
