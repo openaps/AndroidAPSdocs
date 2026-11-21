@@ -6,7 +6,7 @@
 Esta é a **Etapa 1** da [Compilação no navegador](BrowserBuild.md).
 ```
 
-You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
+Você vai precisar guardar a sua chave Java do Android e as informações do Google Drive como secrets no GitHub (mais adiante no processo, explicamos como).
 
 Como isso não pode ser feito dentro do repositório público do AndroidAPS, você precisa fazer a sua cópia pessoal do código-fonte (chamada fork).
 
@@ -29,7 +29,7 @@ Role a próxima tela para baixo e toque em **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
+*Observação: você pode **desmarcar** "Copy the master branch only" se quiser compilar versões de desenvolvimento ou personalizações.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
