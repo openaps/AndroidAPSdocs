@@ -1,22 +1,22 @@
 # Controladors de bomba futurs (possibles)
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Aquesta és una llista d'algunes bombes del mercat, de l'estat del seu suport en altres sistemes de llaç i del seu estat a AAPS. Al final hi ha informació sobre què necessita una bomba per poder «funcionar en llaç».
 
     {contents} Taula de continguts
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Bombes en fase d'integració a AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Aviat disponibles:** els controladors d'aquestes bombes estan en desenvolupament i ja funcionen en compilacions de prova.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([Pàgina web](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Controlador d'Omnipod 5 en desenvolupament](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([Pàgina web](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Controlador de Tandem t:Mobi en desenvolupament](../images/future-pumps/tandem-mobi-driver.png)
 
 ## Bombes que es poden fer servir en llaç
 
@@ -26,35 +26,35 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Requisit de maquinari per a AAPS:** Cap. Sembla que té Bluetooth.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([Pàgina web](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Estat del llaç:** Possible candidata per al llaç en el futur. L'esperança és que la t:slim X3 permeti el control complet des d'un telèfon, cosa que faria possible el suport a AAPS, però encara no se'n coneixen les dates ni les funcions.
 
-**Requisit de maquinari per a AAPS:** Cap. It is expected to be Bluetooth enabled.
+**Requisit de maquinari per a AAPS:** Cap. S'espera que tingui Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Comentaris:** Encara no ha sortit al mercat. Sembla que Tandem endarrereix una vegada i una altra la t:slim X3 en els seus plans, per donar prioritat a la t:Mobi (també una versió sense tub) i a la Sigi (la seva bomba patch).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([Pàgina web](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Estat del llaç:** Candidata per al llaç.
 
-**Requisit de maquinari per a AAPS:** Cap. It is Bluetooth enabled.
+**Requisit de maquinari per a AAPS:** Cap. Té Bluetooth.
 
 ### Bomba d'insulina Willcare ([Pàgina web](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Estat del llaç:** De moment no és candidata per al llaç, però el seu personal ens ha contactat i està interessat a fer que la bomba es pugui fer servir en llaç (sembla que només li falten les ordres d'obtenir/establir el perfil).
 
 **Requisit de maquinari per a AAPS:** Cap. Sembla que té Bluetooth.
 
 **Comentaris:** Com que l'empresa està interessada en la integració amb AAPS, potser ella mateixa farà la implementació.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([Pàgina web](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Estat del llaç:** Candidata per al llaç. La comunitat ha desxifrat el protocol Bluetooth de la bomba (enginyeria inversa), per tant en principi és possible comunicar-s'hi.
 
-**Requisit de maquinari per a AAPS:** Cap. It is Bluetooth enabled.
+**Requisit de maquinari per a AAPS:** Cap. Té Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Comentaris:** La Ypsopump protegeix la seva comunicació Bluetooth amb un xifratge fort d'un tercer. Treballar-hi és tècnicament difícil, i això fa que sigui difícil crear i mantenir un controlador fiable. Encara no hi ha cap controlador d'AAPS a punt per a l'ús real.
 
 ## Bombes que ja no es venen (empreses que ja no funcionen)
 
@@ -76,7 +76,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Tandem: t:slim X2 ([Pàgina web](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Comentaris:** El protocol Bluetooth de Tandem s'ha desxifrat (enginyeria inversa), però a la t:slim X2 només es poden lliurar bolus — no es pot controlar el lliurament de la basal —, per tant no es pot fer servir de manera segura en llaç. És poc probable que això canviï si Tandem no permet el control complet de la X2 des d'un telèfon; és més probable que aquest control arribi amb la t:slim X3.
 
 ### Accu-Chek Solo
 
