@@ -315,7 +315,7 @@ When you select another pump, **AAPS** asks you to confirm the change:
 - [Carelevo](../CompatiblePumps/CareLevo.md)
 - Virtual pump: open loop - **AAPS** suggestions only
   - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  - for pump which doesn't have any driver yet
+  - для помпы, у которой еще нет драйвера
 
 (config-builder-wrong-pump-data)=
 ### Message: "Data is coming from different pump"
@@ -346,10 +346,10 @@ If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The va
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm with **Open plugin**.
 - OpenAPS AMA
-  - Advanced Meal Assist: older algorithm not recommended anymore.
-  - In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+  - Advanced Meal Assist (AMA): старый алгоритм, больше не рекомендуется.
+  - Проще говоря, польза в том, что после болюса на еду система может быстрее повысить временный базал, ЕСЛИ вы правильно вводите углеводы.
 - [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb)
-  - Super Micro Bolus: most recent algorithm recommended for all users.
+  - Super Micro Bolus (SMB): самый новый алгоритм, рекомендуется для всех пользователей.
   - In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
   - Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
 - [Auto ISF](#Open-APS-features-auto-isf)
@@ -418,7 +418,7 @@ In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch
 
 ### Garmin
 
-Connection to Garmin device (Fenix, Edge...)
+Связь с устройством Garmin (Fenix, Edge...)
 ## Терапия
 Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
 
