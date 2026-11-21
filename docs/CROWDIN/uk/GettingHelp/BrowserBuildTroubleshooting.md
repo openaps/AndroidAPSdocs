@@ -10,26 +10,26 @@ This page collects troubleshooting tips for the [Browser build](../SettingUpAaps
 
 ## AAPS Builder
 
-### Step 1: the repository
+### Крок 1: репозиторій
 
 (aaps-builder-ts-repo-exists)=
 
 #### "my-aaps already exists in this account"
 
-![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+![Репозиторій уже існує](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
 
-You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+Цей репозиторій у вас уже є, наприклад з попередньої спроби. Закрийте вкладку GitHub, залиште цю назву в кроці 1 сторінки налаштування і продовжуйте. Якщо ви вже виконали для нього кроки 2 і 3, ваш ключ уже в ньому: продовжуйте з [кроку 4](#aaps-builder-step4). Якщо його створено попередньою версією сторінки налаштування, один раз оновіть його робочий процес, як описано в розділі [Оновлення AAPS](#aaps-builder-updates). Хочете почати з нуля? Введіть іншу назву, наприклад `my-aaps-2`, і використайте той самий keystore у кроці 2.
 
 (aaps-builder-ts-user-not-found)=
 
-#### "No GitHub user with this name"
+#### «Користувача GitHub з таким ім’ям немає» ("No GitHub user with this name")
 
-![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+![Користувача GitHub немає](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
 
 - **"No GitHub user with this name"** на кроці 1: введіть своє ім’я користувача GitHub, як воно показано у вашому профілі GitHub, а не адресу електронної пошти.
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
+- **Немає кнопки «Build AAPS» або «Run workflow», або репозиторій порожній**: репозиторій створено не з шаблону. Видаліть його (**Settings** → унизу сторінки → **Delete this repository**) і знову виконайте [крок 1](#aaps-builder-step1) за допомогою кнопки **Створити мій приватний репозиторій**.
 
-### Step 3: the secret
+### Крок 3: секрет
 
 (aaps-builder-ts-404)=
 
@@ -39,62 +39,62 @@ You already have this repository, for example from an earlier attempt. Close the
 
 - **"Page not found" (404), коли сторінка налаштування відкриває GitHub**: увійдіть на github.com у тому самому браузері (GitHub показує 404 для приватних репозиторіїв, коли ви не увійшли). Якщо ви увійшли, то ім’я користувача або назва репозиторію на кроці 1 сторінки налаштування не збігаються з вашим репозиторієм. Введіть точні назви.
 
-### Step 4: the build
+### Крок 4: збірка
 
 (aaps-builder-ts-workflow-not-found)=
 
 #### "This workflow does not exist"
 
-![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
+![Робочого процесу не існує (This workflow does not exist)](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
 
-Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+Одразу після створення репозиторію GitHub може ще не прочитати його файл робочого процесу: **Build AAPS** немає на вкладці **Actions**, і немає кнопки **Run workflow**. Будь-яка невелика зміна у файлі змушує GitHub його прочитати:
 
-1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
-2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+1. У своєму репозиторії відкрийте **Code**, потім папку `.github`, потім `workflows`, потім файл `build.yml`.
+2. Натисніть меню **⋯** угорі праворуч від файлу, потім **Edit file… In place** (на комп’ютері натисніть олівець).
 
-   ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+   ![Меню файлу](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
 
-3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+3. Натисніть у самому кінці тексту і додайте порожній рядок (Enter). Натисніть **Commit changes…** угорі.
 
-   ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
+   ![Редактор](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
 
-4. Tap **Commit changes** again.
+4. Знову натисніть **Commit changes**.
 
    ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
 
-5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+5. Знову відкрийте вкладку **Actions**: **Build AAPS** тепер є у списку робочих процесів (на телефоні список відкривається значком ліворуч від **All workflows**). Натисніть його, потім **Run workflow**.
 
-   ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+   ![Список робочих процесів](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
 
 (aaps-builder-ts-build-failed)=
 
-#### The build failed (red cross)
+#### Збірка не вдалася (червоний хрестик)
 
-1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+1. На сторінці налаштування натисніть **Відкрити мої збірки** і натисніть збірку з червоним хрестиком.
 
-   ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+   ![Невдала збірка](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
 
-2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+2. Сторінка збірки показує **Failure** (невдача) і яка частина не вдалася: **AAPS / Check** (репозиторій, секрет, версія або варіант: нічого не зібрано) або **AAPS / Build AAPS**.
 
-   ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+   ![Сторінка збірки: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
 
-3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+3. Прокрутіть униз до **Annotations**, тримаючи палець на тексті, а не на схемі. Червоні рядки пояснюють проблему: натисніть **Show more**, щоб прочитати все повідомлення, а потім знайдіть його нижче.
 
    ![Annotations](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
 
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
+- **"Secret KEYSTORE_SET is missing"**: виконайте крок 3 сторінки налаштування.
 - **Збірка зупиняється з повідомленням "This repository is PUBLIC"**: у своєму репозиторії відкрийте **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, потім зберіть знову.
-- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"The secret is too short"**, **"The secret is not a valid code"** або **"The secret does not contain a keystore"**: у секрет вставлено неправильний текст, часто саме слово `KEYSTORE_SET` або лише частину коду. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
-- **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
-- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Ніколи не діліться вмістом своїх секретів.
+- **"Version … does not exist"**: зібрати можна лише випущені версії **AAPS**, тобто ті, що є на [сторінці тегів](https://github.com/nightscout/AndroidAPS/tags) nightscout/AndroidAPS, наприклад `3.3.2.0`. Назва гілки, наприклад `dev`, не підходить. Використайте `latest` або введіть тег точно так, як він указаний у списку.
+- **"Variant … is not supported"**: ваш файл робочого процесу застарілої версії. Замініть його, як описано в розділі [Оновлення AAPS](#aaps-builder-updates).
+- **"The secret is too short"**, **"The secret is not a valid code"** або **"The secret does not contain a keystore"**: у секрет вставлено неправильний текст, часто саме слово `KEYSTORE_SET` або лише частину коду. У своєму репозиторії відкрийте **Settings** → **Secrets and variables** → **Actions**, відредагуйте `KEYSTORE_SET` і знову вставте довгий код, отриманий кнопкою **Копіювати секрет** (якщо ви закрили сторінку налаштування, спочатку повторіть на ній крок 2).
+- **"Keystore, password or alias is wrong"**: перевірте пароль і псевдонім (alias) свого keystore, потім повторіть кроки 2 і 3 сторінки налаштування.
+- **"Google Drive access has expired or was revoked"**: повторіть [крок 6](#aaps-builder-google-drive) і оновіть секрет `GDRIVE_OAUTH2`.
+- **"Process completed with exit code 1" і червоний рядок лише з посиланням на `services.gradle.org`** менш ніж за хвилину: збірка не змогла завантажити Gradle – інструмент, потрібний для збірки застосунку. Сайт Gradle не відповідав. З вашим репозиторієм і налаштуваннями все гаразд. Зачекайте пів години, потім [запустіть збірку знову](#aaps-ci-rerun).
+- **Інша помилка**: [прочитайте журнал збірки](#aaps-ci-read-the-logs), потім [запустіть збірку знову](#aaps-ci-rerun). Якщо вона знову не вдасться так само, попросіть допомоги, вказавши назву кроку, який не вдався, і рядки з помилкою. Ніколи не діліться вмістом своїх секретів.
 
-### Step 5: the app
+### Крок 5: застосунок
 
-- **Немає посилання Download, або відкрився застосунок GitHub**: застосунок GitHub не може завантажувати збірки. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). Щоб посилання GitHub не відкривалися в застосунку: Android **Settings** (Налаштування) → **Apps** (Застосунки) → **GitHub** → **Open by default** (Відкривати за умовчанням) → вимкніть **Open supported links** (Відкривати підтримувані посилання).
+- **Немає посилання Download, або відкрився застосунок GitHub**: застосунок GitHub не може завантажувати збірки. Відкрийте збірку в Chrome, як описано в [кроці 5](#aaps-builder-step5). Щоб посилання GitHub не відкривалися в застосунку: Android **Settings** (Налаштування) → **Apps** (Застосунки) → **GitHub** → **Open by default** (Відкривати за умовчанням) → вимкніть **Open supported links** (Відкривати підтримувані посилання).
 
 ## Усунення проблем AAPS-CI
 
@@ -195,8 +195,8 @@ Right after the repository is created, GitHub may not have read its workflow fil
   - [Оновіть секрет `GDRIVE_OAUTH2`](#aaps-ci-update-secret) у своєму репозиторії GitHub новим токеном, а потім [запустіть збірку знову](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAuth Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
+### Вимкніть програми, які можуть заважати перевірці OAuth
+  - Перш ніж отримувати ключ OAuth, вимкніть на телефоні будь-який VPN або застосунок безпеки (брандмауер, антивірус тощо).
 
 (aaps-ci-actions-permission)=
 ### Перевірте налаштування дозволів GitHub Actions
