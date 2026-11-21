@@ -334,27 +334,86 @@ Se um cliente for restaurado de um backup que faz o seu contador de comandos vol
 
 ## Resolução de problemas
 
-| Sintoma                                                                                                                      | O que verificar                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| O cliente diz que o **dispositivo principal está offline**                                                                   | Telefone principal ligado e com o **AAPS** rodando; os dois telefones conectados no **NSClientV3**; **websockets** ativados nos dois; o mesmo site Nightscout.                                                                                                                                                                                                                                                                  |
-| O cliente diz que **não está pareado**                                                                                       | Pareie novamente em **Gerenciar → Parear com o dispositivo principal**. Confirme que o cliente está **Ativo** na lista **Clientes autorizados** do dispositivo principal.                                                                                                                                                                                                                                                       |
-| Comando **rejeitado** pelo dispositivo principal                                                                             | O dispositivo principal valida de novo com base no seu estado atual — por exemplo, o perfil escolhido não existe mais ou o tipo de bomba não corresponde. Verifique de novo no dispositivo principal.                                                                                                                                                                                                                           |
-| Commands **fail** or the master is often **offline**                                                                         | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                                                                                                                       |
-| O pareamento é cancelado com *"Não foi possível salvar o segredo de pareamento"*                                             | Nada foi alterado. Inicie o pareamento de novo; se continuar falhando, reinicie o **AAPSClient** e tente mais uma vez.                                                                                                                                                                                                                                                                                                          |
-| Nada acontece depois do pareamento                                                                                           | Verifique se **Permitir controle pelo cliente** está ATIVADO no dispositivo principal e se o dispositivo principal está conectado ao Nightscout.                                                                                                                                                                                                                                                                                |
-| As opções de código QR não podem ser escolhidas na janela **Novo cliente**                                                   | A janela explica o motivo. *Não é um token de administrador*: dê ao dispositivo principal um token de administrador do seu Nightscout ou adicione o cliente com o **PIN**. *Não conectado*: espere até o dispositivo principal mostrar *Conectado* no **NSClientV3**.                                                                                                                                                           |
-| *"O Nightscout tem um token com este nome e outras permissões"*                                                              | Um dos seus próprios tokens do Nightscout se chama `aaps-` mais este nome. Escolha outro nome para o cliente.                                                                                                                                                                                                                                                                                                                   |
-| *"Já existe um cliente com este nome na lista"*                                                                              | Escolha outro nome ou remova esse cliente primeiro.                                                                                                                                                                                                                                                                                                                                                                             |
-| O cliente diz *"Este código é de outra versão do AAPS"*                                                                      | O dispositivo principal e o cliente precisam usar a **mesma** versão do **AAPS**. Atualize o mais antigo.                                                                                                                                                                                                                                                                                                                       |
-| O cliente diz *"Este código expirou"*                                                                                        | Um código que pareia vale por cerca de dois minutos. Adicione o cliente novamente no dispositivo principal para receber um novo código.                                                                                                                                                                                                                                                                                         |
-| O cliente diz *"Este telefone já está pareado"*                                                                              | Primeiro desfaça o pareamento (**Gerenciar → Parear com o dispositivo principal → Desfazer pareamento**) e depois escaneie novamente. Um código **somente Nightscout** também funciona em um telefone pareado.                                                                                                                                                                                                                  |
-| O cliente diz *"O dispositivo principal recusou: este telefone grava no Nightscout com um token diferente do seu"*           | O cliente usava antes o seu próprio token do Nightscout e agora grava com outro, por exemplo depois que um token foi digitado nas configurações do Nightscout dele. Remova o cliente no dispositivo principal e adicione-o novamente (veja [O token próprio do Nightscout do cliente](#client-master-control-own-token)).                                                                                                       |
-| O log do NSClient no cliente mostra *"✕ SETTINGS … refused"* e as configurações dele não seguem mais o dispositivo principal | Outra pessoa gravou o documento de configurações do dispositivo principal, ou o dispositivo principal tem uma nova chave (por exemplo, depois que os dados dele foram apagados). Um cliente pareado recebe a nova chave sozinho na próxima vez que se conectar ao Nightscout. Um telefone que só lê o Nightscout precisa do código QR do dispositivo principal de novo (**Somente leitura do Nightscout → Mostrar código QR**). |
-| O cartão do cliente mostra *"Usa o token do Nightscout …"* em vermelho                                                       | O cliente ainda grava com um token que tem mais direitos do que precisa. O dispositivo principal envia a ele o seu próprio token depois do pareamento, mas só se o dispositivo principal tiver um token de administrador. Verifique o token do dispositivo principal ou configure o cliente de novo com um código QR.                                                                                                           |
-| Um cliente não consegue mais ler o Nightscout                                                                                | O token dele foi excluído, por exemplo porque o cliente foi removido no dispositivo principal. Adicione-o novamente.                                                                                                                                                                                                                                                                                                            |
-| Tratamentos inseridos no site do Nightscout não são aplicados                                                                | É o esperado no [modo reforçado](#client-master-control-hardened-mode): insira-os em um cliente pareado.                                                                                                                                                                                                                                                                                                                        |
-
 Para problemas com o Nightscout / a sincronização, veja primeiro [Resolução de problemas do NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *Não é um token de administrador*: dê ao dispositivo principal um token de administrador do seu Nightscout ou adicione o cliente com o **PIN**.
+- *Não conectado*: espere até o dispositivo principal mostrar *Conectado* no **NSClientV3**.
+
+**"O Nightscout tem um token com este nome e outras permissões"**
+
+Um dos seus próprios tokens do Nightscout se chama `aaps-` mais este nome. Escolha outro nome para o cliente.
+
+**"Já existe um cliente com este nome na lista"**
+
+Escolha outro nome ou remova esse cliente primeiro.
+
+**The client says "This code is from another AAPS version"**
+
+O dispositivo principal e o cliente precisam usar a **mesma** versão do **AAPS**. Atualize o mais antigo.
+
+**The client says "This code has expired"**
+
+Um código que pareia vale por cerca de dois minutos. Adicione o cliente novamente no dispositivo principal para receber um novo código.
+
+**The client says "This phone is paired already"**
+
+Primeiro desfaça o pareamento (**Gerenciar → Parear com o dispositivo principal → Desfazer pareamento**) e depois escaneie novamente. Um código **somente Nightscout** também funciona em um telefone pareado.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+Nada foi alterado. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+
+**The client says it is not paired**
+
+Pareie novamente em **Gerenciar → Parear com o dispositivo principal**. Check that the client is **Active** in the master's **Authorized clients** list.
+
+**Nada acontece depois do pareamento**
+
+Verifique se **Permitir controle pelo cliente** está ATIVADO no dispositivo principal e se o dispositivo principal está conectado ao Nightscout.
+
+### Comandos
+
+**The client says the master is offline, or commands fail**
+
+Check that:
+
+- the master phone is awake and **AAPS** is running,
+- both phones are connected in **NSClientV3**, to the same Nightscout site,
+- **websockets** are enabled on both phones.
+
+Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**A command is rejected by the master**
+
+The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+
+**Tratamentos inseridos no site do Nightscout não são aplicados**
+
+This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+
+### Nightscout tokens and settings
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+O cliente usava antes o seu próprio token do Nightscout e agora grava com outro, por exemplo depois que um token foi digitado nas configurações do Nightscout dele. Remova o cliente no dispositivo principal e adicione-o novamente (veja [O token próprio do Nightscout do cliente](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+O cliente ainda grava com um token que tem mais direitos do que precisa. The master sends the client its own token after pairing, but only if the master has an admin token. Verifique o token do dispositivo principal ou configure o cliente de novo com um código QR.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+Outra pessoa gravou o documento de configurações do dispositivo principal, ou o dispositivo principal tem uma nova chave (por exemplo, depois que os dados dele foram apagados). A paired client takes the new key by itself the next time it connects to Nightscout. Um telefone que só lê o Nightscout precisa do código QR do dispositivo principal de novo (**Somente leitura do Nightscout → Mostrar código QR**).
+
+**Um cliente não consegue mais ler o Nightscout**
+
+O token dele foi excluído, por exemplo porque o cliente foi removido no dispositivo principal. Adicione-o novamente.
 
 ---
 
