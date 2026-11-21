@@ -1,6 +1,6 @@
-# Compatible Pumps
+# Bombes compatibles
 
-AAPS works with a number of insulin pumps. The following list shows the currently supported devices. It indicates, in brackets, whether AAPS communicates with the pump using your phone's native Bluetooth function or whether it requires a RileyLink compatible device.
+AAPS funciona amb diverses bombes d'insulina. La llista següent mostra els dispositius compatibles ara mateix. Indica, entre parèntesis, si AAPS es comunica amb la bomba amb la funció Bluetooth del vostre telèfon o si cal un dispositiu compatible amb RileyLink.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -22,7 +22,7 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Tips for basic usage](#combov2-tips-for-basic-usage))
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; vegeu també [Consells per a l'ús bàsic](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
@@ -32,30 +32,30 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 - [Diaconn G8](../CompatiblePumps/DiaconnG8.md) (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
-- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- Algunes bombes [Medtronic](../CompatiblePumps/MedtronicPump.md) antigues (cal un [dispositiu de comunicació addicional](#CompatiblePumps-additional-communication-device))
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (cal un [dispositiu de comunicació addicional](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## La meva bomba no és a la llista
 
-Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md) page.
+Trobareu detalls sobre l'estat d'altres bombes que podrien funcionar amb AAPS a la pàgina [Controladors de bomba futurs (possibles)](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Dispositiu de comunicació addicional
 
-If no additional communication device is mentioned, the communication between the insulin pump and **AAPS** is based on the integrated Bluetooth stack of Android, without the need for an additional communication device to translate the communication protocol.
+Si no s'esmenta cap dispositiu de comunicació addicional, la comunicació entre la bomba d'insulina i **AAPS** es basa en el Bluetooth integrat d'Android, sense necessitat d'un dispositiu de comunicació addicional que tradueixi el protocol de comunicació.
 
-For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from the pump to Bluetooth. The device must use the same radio frequency as your pump:
+Per a les bombes Medtronic antigues i l'Omnipod Eros, cal un dispositiu de comunicació addicional (a més del vostre telèfon) per «traduir» el senyal de ràdio de la bomba a Bluetooth. El dispositiu ha de fer servir la mateixa radiofreqüència que la vostra bomba:
 
 - **Omnipod Eros**: 433 MHz.
-- **Medtronic**: 916 MHz for pumps sold in the US and Canada, 868 MHz for pumps sold elsewhere. See [How to determine what frequency my pump uses](#MedtronicPump-faq).
+- **Medtronic**: 916 MHz per a les bombes venudes als EUA i al Canadà, 868 MHz per a les bombes venudes a la resta del món. Vegeu [Com saber quina freqüència fa servir la meva bomba](#MedtronicPump-faq).
 
-Available communication devices:
+Dispositius de comunicació disponibles:
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-- ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [Web d'OrangeLink](https://getrileylink.org/product/orangelink)
+- ![RileyLink](../images/omnipod/RileyLink.png) [RileyLink de 433 MHz](https://getrileylink.org/product/rileylink433)
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Web d'EmaLink](https://github.com/sks01/EmaLink) - [Contacte](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contacte](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [Web de LoopLink](https://www.getlooplink.org/) - [Contacte](https://jameswedding.substack.com/) - No provat
