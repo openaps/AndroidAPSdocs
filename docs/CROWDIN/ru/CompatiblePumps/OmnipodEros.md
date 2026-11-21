@@ -858,11 +858,11 @@ The **insulin** and **cannula** ages in the [status row](#screens-sensor-level-b
 
 ### Pod Failures
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. В Insulet с этим лучше не обращаться в, поскольку приложение AAPS пока не получила официального одобрения. Список ошибок можно найти [здесь](https://github.com/openaps/openomni/wiki/Fault-event-codes) для помощи в определении причины.
+Pod иногда выходят из строя по разным причинам, в том числе из-за аппаратных проблем самого Pod. В Insulet с этим лучше не обращаться в, поскольку приложение AAPS пока не получила официального одобрения. Список ошибок можно найти [здесь](https://github.com/openaps/openomni/wiki/Fault-event-codes) для помощи в определении причины.
 
-### Preventing error 49 pod failures
+### Предотвращение сбоев Pod с ошибкой 49
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend that you set Nightscout synchronization to *upload only*: keep all the "Receive ... from NS" options disabled in the synchronization settings of the Nightscout client (see [Nightscout](../SettingUpAaps/Nightscout.md)) to prevent possible failures.
+Этот сбой связан с неверным состоянием Pod для команды или с ошибкой во время команды подачи инсулина. We recommend that you set Nightscout synchronization to *upload only*: keep all the "Receive ... from NS" options disabled in the synchronization settings of the Nightscout client (see [Nightscout](../SettingUpAaps/Nightscout.md)) to prevent possible failures.
 
 ### Pump Unreachable Alerts
 
@@ -941,4 +941,4 @@ Alert that the SMB bolus success could not be verified. Check the **Last Bolus**
 - **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
 - **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые не можете решить, изучая документацию, перейдите в канал *#Aaps* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
 - **Уровень 2:** в существующих проблемах найдите аналогичный вопрос, если нет, задайте новый [ вопрос<](https://github.com/nightscout/AndroidAPS/issues) и приложите свои [лог-файлы](../GettingHelp/AccessingLogFiles.md).
-- **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**
+- **Будьте терпеливы: большинство участников нашего сообщества — добровольцы, и решение проблем часто требует времени и терпения как от пользователей, так и от разработчиков.**
