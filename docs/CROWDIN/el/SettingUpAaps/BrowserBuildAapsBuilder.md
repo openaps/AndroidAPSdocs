@@ -61,10 +61,10 @@ The build workflow is maintained by the AAPS developers in the [nightscout/aaps-
 
 Παραλείψτε αυτή την ενότητα αν δεν έχετε δημιουργήσει ποτέ το AAPS με την προηγούμενη μέθοδο μέσω browser (το δικό σας αντίγραφο, ή fork, του AndroidAPS στο GitHub, με το αρχείο προετοιμασίας και το Google Drive).
 
-Το keystore σας είναι αποθηκευμένο ως secrets στο fork σας. Το GitHub δεν δείχνει ποτέ ξανά ένα secret, οπότε δεν μπορείτε να το αντιγράψετε στο νέο σας αποθετήριο. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Το keystore σας είναι αποθηκευμένο ως secrets στο fork σας. Το GitHub δεν δείχνει ποτέ ξανά ένα secret, οπότε δεν μπορείτε να το αντιγράψετε στο νέο σας αποθετήριο. Πάρτε πρώτα ένα αντίγραφο του keystore σας και μετά χρησιμοποιήστε το στο [βήμα 2](#aaps-builder-step2) με το **I already have a keystore** (έχω ήδη keystore).
 
 ```{warning}
-Μην επιλέξετε **Create a new key**. Ένα AAPS δημιουργημένο με νέο κλειδί δεν μπορεί να ενημερώσει το AAPS στο τηλέφωνό σας.
+Μην επιλέξετε **Create a new key** (δημιουργία νέου κλειδιού). Ένα AAPS δημιουργημένο με νέο κλειδί δεν μπορεί να ενημερώσει το AAPS στο τηλέφωνό σας.
 ```
 
 Ποια είναι η δική σας περίπτωση;
@@ -84,7 +84,7 @@ The build workflow is maintained by the AAPS developers in the [nightscout/aaps-
 
 In [step 2](#aaps-builder-step2) of the setup page:
 
-1. Πατήστε **I already have a keystore**.
+1. Πατήστε **I already have a keystore** (έχω ήδη keystore).
 2. Στο **Keystore file**, επιλέξτε `keystore.jks`.
 3. Στο **Keystore password**, πληκτρολογήστε το `KEYSTORE_PASSWORD` από το `keyStoreInfo.txt`.
 4. Στο **Key alias**, επιλέξτε ή πληκτρολογήστε το `ALIAS` από το `keyStoreInfo.txt`.
@@ -118,7 +118,7 @@ This step creates your own private copy of AAPS Builder in your GitHub account, 
 
 2. Στο **Your GitHub username** (το όνομα χρήστη σας στο GitHub), πληκτρολογήστε το όνομα χρήστη σας στο GitHub, όχι το e-mail σας. Η σελίδα το ελέγχει με το GitHub: το **✓ GitHub user found** (βρέθηκε ο χρήστης GitHub) σημαίνει ότι είναι σωστό.
 
-3. Στο **Name of your repository** (όνομα του αποθετηρίου σας), αφήστε την πρόταση `my-aaps`. Αν έχετε ήδη δημιουργήσει το αποθετήριό σας με άλλο όνομα, πληκτρολογήστε ακριβώς αυτό το όνομα.
+3. Στο **Name of your repository** (το όνομα του αποθετηρίου σας), αφήστε την πρόταση `my-aaps`. Αν έχετε ήδη δημιουργήσει το αποθετήριό σας με άλλο όνομα, πληκτρολογήστε ακριβώς αυτό το όνομα.
 
    ```{note}
    **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
@@ -166,7 +166,7 @@ GitHub says **my-aaps already exists in this account**? You already have your re
 
 ### I already have a keystore (έχω ήδη keystore)
 
-1. Πατήστε **I already have a keystore**.
+1. Πατήστε **I already have a keystore** (έχω ήδη keystore).
 2. Στο **Keystore file** (αρχείο keystore), επιλέξτε το αρχείο `.jks` σας (ή `.keystore`, `.p12`, `.pfx`). Σε τηλέφωνο, αντιγράψτε πρώτα το αρχείο στο τηλέφωνό σας ή στο Google Drive.
 3. Στο **Keystore password** (κωδικός keystore), πληκτρολογήστε τον κωδικό του keystore.
 4. Στο **Key alias** (alias κλειδιού), επιλέξτε το alias σας από τη λίστα ή πληκτρολογήστε το αν δεν υπάρχει λίστα. Για keystore που δημιουργήθηκαν με το Android Studio είναι συνήθως `key0`.
@@ -177,7 +177,7 @@ GitHub says **my-aaps already exists in this account**? You already have your re
 
 ### Create a new key (δημιουργία νέου κλειδιού)
 
-1. Πατήστε **Create a new key**.
+1. Πατήστε **Create a new key** (δημιουργία νέου κλειδιού).
 
 2. Επιλέξτε έναν κωδικό και πληκτρολογήστε τον δύο φορές. Κανόνες: τουλάχιστον 8 χαρακτήρες, μόνο τα γράμματα a–z και A–Z, τα ψηφία 0–9 και σύμβολα όπως `! ? #`. Χωρίς κενά, χωρίς γράμματα με τόνους και χωρίς τον χαρακτήρα `|`.
 
@@ -333,7 +333,7 @@ Step 3 unlocks when step 2 is done. Το κλειδί σας, οι κωδικο�
 
    ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
-4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
+4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Επικολλήστε τη διεύθυνση στο **Paste the copied address here** (επικολλήστε εδώ τη διεύθυνση που αντιγράψατε) και πατήστε **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
 
    ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
