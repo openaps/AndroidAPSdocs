@@ -2,7 +2,7 @@
 
 **Aquesta descripció només serveix per editar la documentació en anglès. Tota la informació nova s'ha d'afegir primer en anglès. Si voleu traduir a altres idiomes (gràcies), feu servir [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Per veure com donar format al text (títols, negreta...) i posar enllaços, vegeu la secció ["Sintaxi del codi"](#edit-the-docs-code-syntax) d'aquesta pàgina.
 
 ## General
 
@@ -34,11 +34,11 @@ O feu clic a la icona del llapis que apareix a la barra superior del contingut d
 
 3. Qualsevol de les dues opcions del pas 2 crearà una branca nova al VOSTRE repositori, on es desaran els vostres canvis. Feu els vostres canvis al fitxer.
 
-Fem servir markdown per a les pàgines de la documentació. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Fem servir markdown per a les pàgines de la documentació. Els fitxers tenen l'extensió ".md". L'especificació de Markdown no és fixa, i ara mateix fem servir myst_parser per als nostres fitxers markdown. Feu servir la sintaxi correcta, tal com es [descriu més avall](#edit-the-docs-code-syntax).
 
 ![Editar la branca](../images/docs_pr_edit_file.png)
 
-4. Heu estat treballant a la pestanya "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Si veieu que cal alguna millora, torneu a la pestanya d'edició per fer més millores. 
+4. Heu estat treballant a la pestanya "<>Edit file". Seleccioneu la pestanya "Preview changes" per tornar-ho a mirar i assegurar-vos que tot el que heu canviat es veu com volíeu (comproveu que no hi ha errors d'escriptura). Si veieu que cal alguna millora, torneu a la pestanya d'edició per fer més millores. 
 
 ![mode de previsualització](../images/docs_pr_preview_changes.png)
 
@@ -54,7 +54,7 @@ Fem servir markdown per a les pàgines de la documentació. The files have the s
 
 ![Seguiment de la PR](../images/docs_pr_tracking.png)
 
-PD: El vostre fork i la vostra branca es quedaran al vostre compte personal de GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Per a canvis futurs, si seguiu aquest procediment, els canvis sempre començaran amb una versió actualitzada dels repositoris d'AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Com que la gent sovint s'oblida d'actualitzar els seus repositoris, us recomanem que feu servir el procés de PR descrit més amunt fins que estigueu familiaritzats amb les comparacions ("compares").
+PD: El vostre fork i la vostra branca es quedaran al vostre compte personal de GitHub. Quan rebeu un avís que la vostra PR s'ha fusionat, podeu eliminar la vostra branca si ja no la necessiteu (la zona d'avisos del pas 7 us donarà un enllaç per eliminar la branca quan s'hagi tancat o fusionat). Per a canvis futurs, si seguiu aquest procediment, els canvis sempre començaran amb una versió actualitzada dels repositoris d'AndroidAPSdocs. Si feu servir un altre mètode per començar una PR (per exemple, editant a partir de la branca master del vostre repositori fork), primer us haureu d'assegurar que el vostre repositori està actualitzat fent un "compare" i fusionant tots els canvis que hi ha hagut des de l'última vegada que vau actualitzar el fork. Com que la gent sovint s'oblida d'actualitzar els seus repositoris, us recomanem que feu servir el procés de PR descrit més amunt fins que estigueu familiaritzats amb les comparacions ("compares").
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Qui escriu només marca, per exemple, un títol com a títol de nivell 1, i el p
 La idea és que
 
 - qui escriu ha de pensar primer en el text i no en el format,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- el text markdown es pot fer servir en diferents eines de markdown, en lloc d'eines propietàries com Microsoft Word, i
 - es poden generar diversos formats de sortida a partir d'un sol fitxer markdown.
 
 Markdown no és un estàndard 100% fix, i intentem mantenir-nos tan a prop de l'estàndard com sigui possible per
@@ -147,10 +147,10 @@ Per incloure imatges, feu servir aquesta sintaxi de markdown.
 
 El tipus d'imatge ha de ser PNG o JPEG.
 
-Image names should conform to one of the following naming rules. A l'exemple faig servir png com a extensió. Si feu servir JPEG, feu servir jpeg com a extensió.
+Els noms de les imatges han de seguir una d'aquestes regles. A l'exemple faig servir png com a extensió. Si feu servir JPEG, feu servir jpeg com a extensió.
 
 - `filename-image-xx.png` on xx és un número únic de dues xifres per a les imatges d'aquest fitxer.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png` on xx és un nom amb sentit que tria l'autor del fitxer md.
 
 Les imatges són a la carpeta images per a l'anglès, i Crowdin les copia automàticament als altres idiomes. No cal que feu res per a això!
 
@@ -161,7 +161,7 @@ Ara mateix no traduïm les imatges: les imatges han de tenir el **mínim text po
 - Les captures de pantalla de pàgines web han de tenir com a màxim **1050 píxels d'amplada**.
 - Els diagrames de processos han de tenir com a màxim **1050 píxels d'amplada**.
 - Les captures de pantalla de l'aplicació han de tenir com a màxim **500 píxels d'amplada**. No les poseu una al costat de l'altra si no cal.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Les captures de pantalla del rellotge (**Wear OS**) han de tenir com a màxim **360 píxels d'amplada**. No amplieu mai una captura de pantalla més petita.
 
 ### Enllaços
 
@@ -199,7 +199,7 @@ Després, enllaceu aquesta referència al text que escriviu amb un enllaç d'aqu
 
 Podeu afegir quadres de nota i d'avís a la documentació.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Feu-los servir amb compte, perquè la documentació ha de ser tan fàcil de llegir com sigui possible.
+A més, podeu afegir notes plegables per a informació detallada, perquè els usuaris que no volen els detalls no deixin de llegir el text. Feu-los servir amb compte, perquè la documentació ha de ser tan fàcil de llegir com sigui possible.
 
 #### Notes
 
@@ -221,7 +221,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
     ```{admonition} Warning headline
     :class: warning
-    This is a warning.
+    Això és un avís.
     ```
     
     #### Notes plegables
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Taules
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Eviteu les taules amb textos llargs, perquè el contingut és difícil de posar en Markdown, normalment no caben a l'amplada de la pantalla d'un mòbil i probablement no es veuran igual després de traduir-les.
 
 ## Guia d'estil
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 Feu servir un anglès senzill sempre que pugueu. Això ajuda els lectors que no tenen l'anglès com a llengua materna i també facilita la traducció dels documents d'AAPS a altres idiomes. Escriviu com si parléssiu amb l'usuari: imagineu que esteu asseguts a l'altre costat de la taula de la persona per a qui escriviu. Recordeu que la majoria d'usuaris d'AAPS no tenen formació en programació. La diabetis també té moltes paraules tècniques i abreviatures. Tingueu en compte que algunes persones poden tenir un diagnòstic recent, poden tenir menys experiència que vosaltres amb la diabetis o poden haver rebut una formació diferent sobre la diabetis. Si feu servir una forma curta o una abreviatura, escriviu-la sencera la primera vegada que la feu servir i poseu l'abreviatura just després entre parèntesis, per exemple «super micro bolus (SMB)». També enllaceu-la al glossari. També podeu afegir entre parèntesis els termes tècnics que el lector potser no coneix.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+En lloc de: *“Què causa pics postprandials alts de glucèmia en llaç tancat?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Feu servir: *“Què causa un pic alt de glucèmia **després de dinar** (postprandial) en llaç tancat?”*
 
 ##### Feu servir paraules senzilles que tothom pugui entendre
 
@@ -296,7 +296,7 @@ Sobretot si graveu vídeos o feu captures de pantalla, assegureu-vos de no mostr
 
 Les ordres són la manera més ràpida de donar instruccions, però de vegades qui escriu té por de donar ordres i escriu “hauríeu de fer això” en lloc de simplement “feu això”. Potser hi ha qui pensa que les ordres sonen massa dures. Sovint ho podeu resoldre posant davant la paraula «si us plau». Però si una cosa s'ha de fer sí o sí, és millor no dir «si us plau», perquè dona al lector l'opció de dir que no.
 
-Instead of: *“You should just think of it as a complete statement.”*
+En lloc de: *“Hauríeu de pensar-hi simplement com en una frase completa.”*
 
 Feu servir: *“Penseu-hi com en una frase completa.”*
 
@@ -310,9 +310,9 @@ Aquí, “lliura” és un verb en veu activa. La frase diu primer qui fa el lli
 
 Exemple de **verb en veu passiva**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *“La insulina (subjecte) és lliurada (verb) per la bomba (objecte).”*
 
-*“delivered”* is a passive verb here. El subjecte i l'objecte han canviat de lloc, comparat amb la frase en veu activa. Hem hagut de fer la frase més llarga afegint “és” i “per la”. També penseu a començar amb el verb en veu activa.
+Aquí, *“és lliurada”* és un verb en veu passiva. El subjecte i l'objecte han canviat de lloc, comparat amb la frase en veu activa. Hem hagut de fer la frase més llarga afegint “és” i “per la”. També penseu a començar amb el verb en veu activa.
 
 En lloc de: *“Podeu connectar la vostra bomba amb el telèfon des del menú de la bomba d'AAPS, i hi ha diverses bombes disponibles que podeu connectar.”*
 
@@ -453,7 +453,7 @@ L'objectiu d'una guia pràctica és ajudar un usuari que ja té coneixements a f
 
 - COM FER-HO
 
-- narrator directly talks to the reader: In this guide **you** will
+- el narrador parla directament al lector: En aquesta guia **aprendreu** a
 
 - Futur -> per mostrar l'objectiu final
 
@@ -527,7 +527,7 @@ Una explicació aclareix, aprofundeix i amplia el que el lector entén d'un tema
     
     *W és millor que z, perquè…*
     
-    Offer judgements and even opinions where appropriate.
+    Doneu valoracions i fins i tot opinions quan convingui.
     
     *Una x al sistema y és com una w al sistema z. Tanmateix…*
     
@@ -553,7 +553,7 @@ L'**editor (per exemple, un altre usuari d'AAPS, o la persona que rep la pull re
 
 #### Punts generals d'AAPS
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Per als valors de glucèmia, indiqueu sempre mg/dl i mmol/l cada vegada (si és possible, també a les captures de pantalla).
 
 - Per ser coherents, feu servir “AAPS” i no “Android APS”.
 
