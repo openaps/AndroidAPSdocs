@@ -25,37 +25,37 @@
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">ОС (лише 64-бітна)</th>
+    <td class="tg-baqh">Windows 8 або новіша</td>
+    <td class="tg-baqh">Mac OS 10.14 або новіша</td>
+    <td class="tg-baqh">Будь-який Linux, що підтримує Gnome, KDE або Unity DE;&nbsp;&nbsp;GNU C Library 2.31 або новіша</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">Процесор (лише 64-бітний)</th>
+    <td class="tg-baqh">Архітектура процесора x86_64; Intel Core 2-го покоління або новіший, або процесор AMD з підтримкою <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Чипи на базі ARM або Intel Core 2-го покоління чи новіший з підтримкою <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Архітектура процесора x86_64; Intel Core 2-го покоління або новіший, або процесор AMD з підтримкою AMD Virtualization (AMD-V) і SSSE3</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <th class="tg-baqh"><p align="center">Оперативна пам'ять</th>
+    <td class="tg-baqh" colspan="3"><p align="center">8 ГБ або більше</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Диск</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Щонайменше 30 ГБ вільного місця. Рекомендовано SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
+    <th class="tg-baqh"><p align="center">Роздільна здатність</th>
     <td class="tg-baqh" colspan="3"><p align="center">Мінімум 1280 x 800<br></td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <th class="tg-baqh"><p align="center">Інтернет</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Широкосмуговий</td>
   </tr>
 </tbody>
 </table>
 
-**Наполегливо рекомендуємо (але це не обов’язково) використовувати SSD (твердотільний накопичувач) замість HDD (жорсткого диска), бо так збірка файлу apk AAPS займе менше часу.**  Ви все одно можете використовувати HDD для збірки файлу apk **AAPS**. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Наполегливо рекомендуємо (але це не обов’язково) використовувати SSD (твердотільний накопичувач) замість HDD (жорсткого диска), бо так збірка файлу apk AAPS займе менше часу.**  Ви все одно можете використовувати HDD для збірки файлу apk **AAPS**. У такому разі збірка може тривати довго, але коли вона почалася, її можна залишити працювати без нагляду.
 
 ## Допомога і підтримка під час збірки 3.2.0.4
 
