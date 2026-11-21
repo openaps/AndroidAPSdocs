@@ -1,6 +1,6 @@
-# Compatible CGMs
+# Совместимые CGM
 
-В этом разделе представлена краткая информация о всех поддерживаемых **AAPS** **системах НМГ** (непрерывного мониторинга глюкозы) **и ФМГ** (флеш-мониторинга глюкозы).
+В этом разделе представлен краткий обзор всех **CGM/FGM**, совместимых с **AAPS**.
 
 *Tip*: If you can display your glucose data in xDrip app, you can choose xDrip as **BG** source in **AAPS**.
 
@@ -31,7 +31,7 @@
 * [Общие рекомендации](../CompatibleCgms/GeneralCGMRecommendation.md)
 * [Сглаживание данных](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 * [xDrip Settings](../CompatibleCgms/xDrip.md)
-* [Nightscout как источник СК](../CompatibleCgms/CgmNightscoutUpload.md): Хотя использовать Nightscout в качестве источника СК для замкнутого цикла возможно, **этот метод использовать не рекомендуется** из-за того, что он полагается на стабильность мобильного интернета или Wi-Fi. Это означает, что данные с вашего **НМГ** будут приниматься **AAPS** только лишь при наличии соединения с вашим сайтом Nightscout. For a more reliable setup, using a CGM with local broadcast from the receiver (as listed below) to **AAPS** is a much better option.
+* [Nightscout как источник ГК](../CompatibleCgms/CgmNightscoutUpload.md): Хотя использовать Nightscout в качестве источника ГК для замкнутого цикла возможно, **этот метод использовать не рекомендуется** из-за того, что он полагается на стабильность мобильного интернета или Wi-Fi. Это означает, что данные с вашего **НМГ** будут приниматься **AAPS** только лишь при наличии соединения с вашим сайтом Nightscout. For a more reliable setup, using a CGM with local broadcast from the receiver (as listed below) to **AAPS** is a much better option.
 
 | CGM /  НМГ                                                                                             | Available [BG Sources](#Config-Builder-bg-source)                                                                                             |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,12 +42,12 @@
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                                            | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader)                                                   |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                                              | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip)                                                                             |
 | [Libre 2/2+](../CompatibleCgms/Libre2.md)                                                              | [xDrip](../CompatibleCgms/xDrip.md) (EU only) or [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip)                            |
-| [Libre 1](../CompatibleCgms/Libre1.md)                                                                 | [xDrip](../CompatibleCgms/xDrip.md) (Diabox sends its readings through the xDrip source), Glimp or Tomato (MiaoMiao). Need a transmitter      |
+| [Libre 1](../CompatibleCgms/Libre1.md)                                                                 | [xDrip](../CompatibleCgms/xDrip.md) (Diabox sends its readings through the xDrip source), Glimp or Tomato (MiaoMiao). Нужен трансмиттер       |
 | [Eversense](../CompatibleCgms/Eversense.md)                                                            | [xDrip](../CompatibleCgms/xDrip.md), ESEL/Eversense patched App or Notification Reader                                                        |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)                                                  | [xDrip](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                                                  |
-| [Poctech](../CompatibleCgms/PocTech.md)                                                                | PocTech app                                                                                                                                   |
-| Glunovo                                                                                                | Glunovo App                                                                                                                                   |
-| Intelligo                                                                                              | Intelligo App                                                                                                                                 |
+| [Poctech](../CompatibleCgms/PocTech.md)                                                                | Приложение PocTech                                                                                                                            |
+| Glunovo                                                                                                | Приложение Glunovo                                                                                                                            |
+| Intelligo                                                                                              | Приложение Intelligo                                                                                                                          |
 | [Ottai](../CompatibleCgms/OttaiM8.md), [Syai](../CompatibleCgms/SyaiTagX1.md)                          | Syai/Ottai (with the Ottai or Syai Tag app)                                                                                                   |
 | Sibionics CGM                                                                                          | [Juggluco](../CompatibleCgms/Juggluco.md) or SI App (with the patched SI App or the Sibionics App)                                            |
 | Sinocare                                                                                               | Sino App (with the patched Sino App)                                                                                                          |
@@ -58,17 +58,17 @@
 
 (GettingStarted-TrustedBGSource)=
 
-## Trusted BG data sources
+## Надежные источники данных ГК
 
-Regulatory approved **CGM**s for commercial hybrid closed loop systems are considered trusted **BG** data sources.
+**CGM**, одобренные регулирующими органами для коммерческих гибридных систем замкнутого цикла, считаются надежными источниками данных **ГК**.
 
-In order for **AAPS** to correctly identify them, the app sending **BG** readings must be able to provide sensor information.
+Чтобы **AAPS** мог правильно их распознать, приложение, которое отправляет значения **ГК**, должно передавать информацию о сенсоре.
 
-Trusted data sources allow **SMB** delivery, all the time.
+Надежные источники данных позволяют подавать **SMB** всегда.
 
 **AAPS** checks the sensor named in the latest **BG** reading it received, whichever **BG** source delivered it. After you change your **BG** source, the **SMB** "always" settings appear only once the first reading from the new source has arrived.
 
-| Sensor          |                                                                                 CGM app                                                                                  |
+| Сенсор          |                                                                              Приложение CGM                                                                              |
 | --------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | Dexcom G6       |                             BYODA, xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader))                              |
 | Dexcom G7       | BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader)) |
