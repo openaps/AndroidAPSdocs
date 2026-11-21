@@ -2,7 +2,7 @@
 
 Les instruccions següents s'apliquen a l'apk **AAPS Wear** que heu de compilar. Si encara no l'heu compilat, vegeu la guia enllaçada [aquí](../WearOS/BuildingAapsWearOS.md). Quan compileu, assegureu-vos d'utilitzar el mateix fitxer de magatzem de claus (keystore) que heu fet servir per a l'apk **AAPS** del telèfon.
 
-També podeu fer servir part d'aquesta informació per a l'apk **Wear** d'**AAPSClient** i de **PumpControl**. Each **Wear** app will communicate with its matching phone app. Per exemple: l'aplicació **AAPSClient Wear** es pot utilitzar per mostrar dades d'**AAPSClient** i no dades d'**AAPS**. Quan hi ha diverses variants de client (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) instal·lades alhora, els mosaics de cadascuna tenen una petita capçalera amb el color d'accent d'aquesta variant, perquè les pugueu distingir mentre llisqueu.
+També podeu fer servir part d'aquesta informació per a l'apk **Wear** d'**AAPSClient** i de **PumpControl**. Cada aplicació **Wear** es comunica amb l'aplicació del telèfon que li correspon. Per exemple: l'aplicació **AAPSClient Wear** es pot utilitzar per mostrar dades d'**AAPSClient** i no dades d'**AAPS**. Quan hi ha diverses variants de client (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) instal·lades alhora, els mosaics de cadascuna tenen una petita capçalera amb el color d'accent d'aquesta variant, perquè les pugueu distingir mentre llisqueu.
 
 ## Versions de Wear OS i compatibilitat
 
@@ -91,7 +91,7 @@ Instal·leu l'apk **AAPS Wear** amb [Wear Installer 2](https://youtu.be/abgN4jQq
 
 ```{admonition} Wear OS 5
 :class: warning
-A Wear OS 5, el watchface d'AAPS s'ha de seleccionar amb Wear Installer 2 just després d'instal·lar l'aplicació Wear: l'instal·lador ofereix el watchface **AAPS(Personalitzat)** al final de la instal·lació. Si canvieu sense voler a un altre watchface, repetiu la instal·lació. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+A Wear OS 5, el watchface d'AAPS s'ha de seleccionar amb Wear Installer 2 just després d'instal·lar l'aplicació Wear: l'instal·lador ofereix el watchface **AAPS(Personalitzat)** al final de la instal·lació. Si canvieu sense voler a un altre watchface, repetiu la instal·lació. És possible que no es puguin canviar les opcions del watchface (Fosc, Divisor invisible, etc.).
 
 Si el watchface clàssic us funciona ara, **desactiveu les actualitzacions automàtiques del rellotge**: és probable que la propera actualització del firmware el faci deixar de funcionar. Si tot i així actualitzeu a Wear OS 6, llegiu la secció de dalt: llavors **AAPS** instal·la el seu propi watchface en el nou format.
 ```
@@ -104,7 +104,7 @@ Exemple: Galaxy Watch 4 i posteriors amb One UI 8 Watch, Pixel Watch després de
 
 Instal·leu l'apk **AAPS Wear** amb [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Els watchfaces clàssics no estan disponibles; **AAPS** instal·la automàticament el watchface seleccionat al telèfon, vegeu [el watchface que instal·la AAPS](#wearos-aaps-v4-watchface). Cap limitació en el funcionament d'**AAPS Wear**.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Com configurar un rellotge intel·ligent Samsung Galaxy Watch 4 amb **AAPS**
 
 Aquesta secció suposa que sou completament nous en rellotges intel·ligents. Us dona una orientació bàsica sobre un rellotge popular, el **Galaxy Watch 4**, i després una guia pas a pas per configurar **AAPS** al rellotge.
 
@@ -114,17 +114,17 @@ Aquí teniu guies bàsiques de configuració per al [Galaxy Watch 5](https://www
 
 ## Familiarització bàsica amb el rellotge intel·ligent
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Després de la configuració bàsica del rellotge segons el vídeo de dalt, aneu a la Play Store al telèfon i descarregueu les aplicacions següents: «Galaxy Wearable», «Samsung» i «Easy Fire tools» o bé «Wear Installer 2».
 
 Hi ha molts vídeos de YouTube de tercers que us ajudaran a familiaritzar-vos amb el vostre nou rellotge intel·ligent, per exemple:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-L'aplicació «Galaxy Wearable» també té una secció amb un manual d'instruccions. Obriu Galaxy Wearable al telèfon, cerqueu el rellotge i intenteu emparellar el rellotge amb el telèfon. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Instal·leu-la al telèfon i després torneu a intentar emparellar el rellotge i el telèfon a l'aplicació Wearable. Passeu per una sèrie de menús i marqueu diverses preferències.
+L'aplicació «Galaxy Wearable» també té una secció amb un manual d'instruccions. Obriu Galaxy Wearable al telèfon, cerqueu el rellotge i intenteu emparellar el rellotge amb el telèfon. Segons la vostra versió, potser se us demanarà instal·lar una altra aplicació, «galaxy watch 4 plugin», de la Play Store (triga una estona a descarregar-se). Instal·leu-la al telèfon i després torneu a intentar emparellar el rellotge i el telèfon a l'aplicació Wearable. Passeu per una sèrie de menús i marqueu diverses preferències.
 
 ## Configurar un compte de Samsung
 
-Assegureu-vos que el compte de correu que feu servir per configurar el compte de Samsung té una data de naixement amb la qual l'usuari té 13 anys o més. Si no, és molt difícil aprovar els permisos de Samsung. Si heu donat al vostre fill menor de 13 anys un compte de Gmail i feu servir aquesta adreça de correu, no la podeu canviar simplement a un compte d'adult. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. L'endemà, el compte es convertirà en un compte d'adult i podreu continuar amb la configuració del compte de Samsung.
+Assegureu-vos que el compte de correu que feu servir per configurar el compte de Samsung té una data de naixement amb la qual l'usuari té 13 anys o més. Si no, és molt difícil aprovar els permisos de Samsung. Si heu donat al vostre fill menor de 13 anys un compte de Gmail i feu servir aquesta adreça de correu, no la podeu canviar simplement a un compte d'adult. Una solució és canviar la data de naixement actual perquè l'edat sigui de 12 anys i 364 dies. L'endemà, el compte es convertirà en un compte d'adult i podreu continuar amb la configuració del compte de Samsung.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -218,7 +218,7 @@ Veureu que apareixen un codi d'emparellament Wi-Fi, l'adreça IP i el port:
 - Veureu una resposta:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - Al terminal escriviu: <br>`adb devices`.<br> Hauríeu de veure alguna cosa com:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
+- Ara aneu a la carpeta de l'ordinador on hi ha l'apk Wear i escriviu<br> `adb install wear-full.apk` <br>i substituïu wear-full.apk pel nom del vostre fitxer apk.
 - Veureu:<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -235,7 +235,7 @@ Veureu que apareixen un codi d'emparellament Wi-Fi, l'adreça IP i el port:
 **Emparellament:**
 
 - Rellotge: Wireless Debugging (depuració sense fil): anoteu l'adreça IP.
-- Wear Installer: Enter the IP in the Wear Installer app.
+- Wear Installer: introduïu la IP a l'aplicació Wear Installer.
 - Seleccioneu Pair new i anoteu el codi d'emparellament i el número de port que es mostren.
 - Wear Installer: introduïu el codi d'emparellament + espai + número de port.
 - Wear Installer hauria d'indicar que l'emparellament ha funcionat. Si no és així, sortiu de Wear Installer i torneu-ho a provar.
@@ -260,7 +260,7 @@ L'últim pas és configurar **AAPS** al telèfon perquè interactuï amb el **We
 
 Per fer un bolus o altres accions des del rellotge, activeu també **Control des de Wear** a [Configuració > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Després llisqueu cap a la dreta fins que arribeu a tots els watchfaces d'**AAPS**.
+Per canviar a un altre watchface d'**AAPS**, feu una pulsació llarga sobre el watchface a la pantalla d'inici del rellotge i toqueu **Customize**. Després llisqueu cap a la dreta fins que arribeu a tots els watchfaces d'**AAPS**.
 
 Si el Wear.apk d'**AAPS** s'ha instal·lat correctament al rellotge, es veurà així:
 
@@ -334,7 +334,7 @@ F - bateria del telèfon
 
 G - taxa basal (en U/h amb la taxa estàndard i en % durant una TBR)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (impacte en la glucèmia) -> quant «hauria» de pujar o baixar la glucèmia només per l'activitat de la insulina.
 
 I - carbohidrats (carbohidrats a bord | e-carbs en el futur)
 
