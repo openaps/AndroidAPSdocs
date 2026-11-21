@@ -47,7 +47,7 @@ Na stránke GitHubu, ktorá sa otvorí, je už všetko vyplnené: šablóna `nig
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-Nebol vytvorený zo šablóny. Vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a potom znova ťuknite na **Create my private repository**.
+Nebol vytvorený zo šablóny. Vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a potom znova ťuknite na **Vytvoriť môj súkromný repozitár**.
 ```
 
 ```{admonition} GitHub says "my-aaps already exists in this account"?
@@ -61,12 +61,12 @@ You already have your repository: close the GitHub tab and go on with this page.
 
 Kroky zostavenia sa aktualizujú za vás: pri každom zostavení váš repozitár spustí verziu, ktorú vydali vývojári AAPS v nightscout/aaps-builder, a vo vašom repozitári sa nič nezmení. Svoj súbor workflow nahradíte iba vtedy, keď to oznámi stránka [Aktualizácie a zmeny dokumentácie](../Maintenance/DocumentationUpdate.md) (napríklad kvôli novému variantu zostavenia), alebo raz, ak bol váš repozitár vytvorený staršou verziou tejto stránky alebo zo starej šablóny. Váš secret `KEYSTORE_SET` zostáva bez zmeny.
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Otvoriť najnovší workflow</a>
 
    Na počítači kliknite na **ikonu kopírovania** („Copy raw file“) vpravo hore pri súbore. V telefóne namiesto toho otvorte <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">verziu ako čistý text</a>, stlačte a podržte text → **Vybrať všetko** → **Kopírovať**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Otvoriť môj súbor workflow</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+   Otvorí `.github/workflows/build.yml` v <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Nahraďte celý text skopírovaným workflow (v telefóne: stlačte a podržte → **Vybrať všetko** → **Prilepiť**) a potom dvakrát kliknite na **Commit changes…**. Prvý riadok súboru ukazuje jeho verziu.
 ```
 
@@ -198,23 +198,23 @@ Nová verzia AAPS? Zálohujte si nastavenia a potom ju zostavte podľa [kroku 4]
 
 Chcete, aby sa APK objavil na vašom Disku Google (uložený navždy)? Pridajte ešte jeden secret, GDRIVE_OAUTH2. Táto stránka ho pre vás získa od Googlu. AAPS potom na vašom Disku Google uvidí a môže meniť iba súbory, ktoré samo vytvorí, nič iné.
 
-1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
+1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Pripojiť Disk Google</a>
 
    Google sa otvorí na novej karte. Zvoľte svoj účet Google a povoľte AAPS zobrazovať a meniť jeho vlastné súbory. Ak Google hlási, že aplikácia nie je overená, ťuknite na „Rozšírené“ („Advanced“) a potom na „Prejsť na …“ („Go to …“).
 2. Potom nová karta zobrazí chybu, napríklad **„Táto stránka nie je dostupná“** („This site can't be reached“) alebo **„127.0.0.1 refused to connect“**. **Tak to má byť.** Odpoveď Googlu je v adrese tejto karty.
 
    Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). Začína sa na `http://127.0.0.1:47913/`. Do niekoľkých minút sa vráťte na túto stránku: odpoveď platí iba krátky čas.
-3. <label class="aapsb-label" for="aapsb-googleUrl">Sem vložte skopírovanú adresu</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+3. <label class="aapsb-label" for="aapsb-googleUrl">Sem vložte skopírovanú adresu</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Získať GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
-4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Otvoriť stránku secretov</a>
 
    Otvorí: <code class="aapsb-repoUrl"></code>
 
    Zobrazuje sa „Page not found“ (404)? Najprv skontrolujte, či ste v tomto prehliadači prihlásení na github.com: GitHub ukazuje 404 pri súkromných repozitároch, keď nie ste prihlásení. Inak sa vaše používateľské meno alebo názov repozitára v kroku 1 nezhoduje s vaším repozitárom: skontrolujte ich na github.com a zadajte ich v kroku 1.
-5. Ťuknite na „Copy name“ a vložte ho do malého poľa „Name“: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Ťuknite na „Copy secret“ a vložte kód do veľkého poľa „Secret“: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+5. Ťuknite na „Kopírovať názov“ a vložte ho do malého poľa „Name“: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Kopírovať názov</button>
+6. Ťuknite na „Kopírovať secret“ a vložte kód do veľkého poľa „Secret“: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Kopírovať secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
 7. Ťuknite na „Add secret“.
 
 </div>
@@ -257,11 +257,11 @@ Všetko na tejto stránke beží vo vašom prehliadači. Váš kľúč a heslá 
 - <span data-aapsb-msg="okNew">Kľúč je vytvorený. Stiahnite si zálohu nižšie a potom pokračujte krokom 3.</span>
 - <span data-aapsb-msg="gNoUrl">Najprv vložte celú adresu karty Google.</span>
 - <span data-aapsb-msg="gNoCode">V tejto adrese nie je odpoveď od Googlu. Skopírujte celú adresu karty, ktorá zobrazuje chybu. Začína sa na http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Prístup ku Googlu nebol povolený. Ťuknite znova na „Connect Google Drive“ a povoľte prístup.</span>
-- <span data-aapsb-msg="gOldUrl">Táto adresa patrí k staršiemu pokusu. Ťuknite znova na „Connect Google Drive“ a použite novú adresu.</span>
+- <span data-aapsb-msg="gDenied">Prístup ku Googlu nebol povolený. Ťuknite znova na „Pripojiť Disk Google“ a povoľte prístup.</span>
+- <span data-aapsb-msg="gOldUrl">Táto adresa patrí k staršiemu pokusu. Ťuknite znova na „Pripojiť Disk Google“ a použite novú adresu.</span>
 - <span data-aapsb-msg="gWorking">Pýtam sa Googlu…</span>
-- <span data-aapsb-msg="gFailed">Google odpoveď neprijal ({error}). Odpoveď platí iba niekoľko minút a iba raz: ťuknite znova na „Connect Google Drive“.</span>
-- <span data-aapsb-msg="gNoRefresh">Google neposlal dlhodobý prístup. Ťuknite znova na „Connect Google Drive“.</span>
+- <span data-aapsb-msg="gFailed">Google odpoveď neprijal ({error}). Odpoveď platí iba niekoľko minút a iba raz: ťuknite znova na „Pripojiť Disk Google“.</span>
+- <span data-aapsb-msg="gNoRefresh">Google neposlal dlhodobý prístup. Ťuknite znova na „Pripojiť Disk Google“.</span>
 - <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 je pripravený. Pridajte ho nižšie ako secret.</span>
 - <span data-aapsb-msg="gCopied">Kód je skopírovaný: vložte ho do veľkého poľa „Secret“ a potom ťuknite na „Add secret“.</span>
 
