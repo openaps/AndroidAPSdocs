@@ -1,21 +1,21 @@
 # DanaR
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*Aquestes instruccions serveixen per configurar l'aplicació i la bomba si teniu una DanaR. Si en lloc d'això teniu la DanaRS, que va sortir el 2017, vegeu [DanaRS, Dana-i i Dana-i2](./DanaRS-Insulin-Pump.md).*
 
-## Pump capabilities with AAPS
+## Capacitats de la bomba amb AAPS
 
 * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
 * Timezone and DST changes need no special action, as the pump does not use its own history.
 
-## Setup
+## Configuració
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. Extended Bolus"
+* A la bomba, aneu a Main Menu > Setting > User Option
+* Activeu "8. Extended Bolus"
 
-![DanaR pump](../images/danar1.png)
+![Bomba DanaR](../images/danar1.png)
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+* Aneu a Main Menu > Setting > Discovery
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Si la DanaR no apareix a la cerca, reinicieu el telèfon, traieu la pila de la DanaR, torneu-la a posar i repetiu aquests dos passos.
 
 * In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
   
@@ -30,17 +30,17 @@
 * To change the driver settings, tap **Settings** on the DanaR card in **Configuration** > **Pump**: 
   * **Bolus speed** (DanaR and DanaRv2): change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
   * **Use extended boluses for >200%** (DanaR and DanaR Korean): enable this if you want **AAPS** to allow a basal rate above 200%. Note this means you cannot loop with high TBRs while using extended boluses for food.
-* Set basal step on pump to 0.01 U/h
+* Configureu el pas de la basal a la bomba a 0,01 U/h
 * Set bolus step on pump to 0.1 U. **AAPS** reads the bolus step from the pump and uses it for every bolus.
-* Enable extended boluses on pump
+* Activar els bolus estesos a la bomba
 
-## Timezone traveling with Dana R pump
+## Canvi de fus horari amb la bomba Dana R
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Per a informació sobre viatjar entre fusos horaris, vegeu la secció [Canvi de fus horari amb bombes](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## On trobar ajuda
 
-Development of the DanaR driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Development of the DanaR driver is done by the community on a **volunteer** basis. Abans de demanar ajuda:
 
 1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
 2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
