@@ -31,7 +31,7 @@ Os quatro últimos parâmetros (alvos de glicose, taxas basais, fatores de sensi
 
 Abaixo estão capturas de tela do **AAPS** com um perfil de _exemplo_. Observe que o exemplo de perfil abaixo mostra um grande número de horários. Quando você começa com o **AAPS**, o seu perfil provavelmente será bem mais simples.
 
-![Exemplo de perfil ativo](../images/Profile-Example-Active.png)
+![Exemplo de perfil ativo](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Glucose targets
@@ -55,7 +55,7 @@ Se o alvo no seu **Perfil** for muito largo (por exemplo, 3 mmol/l ou mais [50 m
 
 A **figura abaixo** mostra um exemplo de como o alvo pode ser configurado em um perfil do **AAPS**.
 
-![Alvo](../images/Profile_Target.png)
+![Alvo](../images/v4/Profiles/Profile_Target.png)
 
 Os alvos de **glicose** são definidos de acordo com as suas preferências e necessidades pessoais. Por exemplo, se você se preocupa com hipoglicemias à noite, pode definir o seu alvo um pouco mais alto, em 117 mg/dl (6,5 mmol/l), das 21h às 7h. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
@@ -89,7 +89,7 @@ Ao contrário, uma taxa basal baixa demais pode causar glicose alta e impedir qu
 
 A **figura abaixo** mostra um exemplo de como as taxas basais podem ser configuradas em um perfil do **AAPS**.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Basal rates](../images/v4/Profiles/Profile_BasalRates.png)
 
 Acertar as suas taxas basais é feito por tentativa e erro, e deve ser feito junto com a sua equipe de diabetes.
 
@@ -147,7 +147,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 Um **ISF** baixo demais (e por isso mais agressivo, o que não é raro) pode causar ‘correções exageradas’, porque o **AAPS** calcula que o usuário precisa de mais insulina para corrigir uma **glicose** alta do que realmente precisa. Isso pode causar níveis de glicose em ‘montanha-russa’ (principalmente em jejum), como mostra a imagem abaixo. Nesse caso, o valor do **ISF** deve ser aumentado para deixar o **AAPS** menos agressivo. Assim o **AAPS** vai dar doses de correção menores e evitar corrigir demais uma **glicose** alta, o que causaria uma **glicose** baixa.
 
-![ISF baixo demais](../images/isf.jpg)
+![ISF baixo demais](../images/v4/Profiles/isf.jpg)
 
 Ao contrário, um **ISF** alto demais pode causar correções insuficientes, ou seja, a sua **glicose** fica acima do alvo – o que se nota principalmente durante a noite.
 
@@ -155,7 +155,7 @@ Ao contrário, um **ISF** alto demais pode causar correções insuficientes, ou 
 
 Veja a **figura abaixo** para um exemplo de como os valores de ISF podem ser configurados em um perfil do **AAPS**.
 
-![ISF do perfil](../images/Profile_ISF.png)
+![ISF do perfil](../images/v4/Profiles/Profile_ISF.png)
 
 A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. Mais detalhes estão no capítulo 7 de [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe), de Gary Scheiner.
 
@@ -213,7 +213,7 @@ Um **ICR maior / mais fraco** = mais comida por unidade, ou seja, você recebe m
 
 A **figura abaixo** mostra um exemplo do **ICR** de um usuário e de como ele pode ser configurado em um **Perfil do AAPS**. Ao inserir esses valores, inserimos a parte final da razão, então uma razão insulina-carboidrato de 1:3,5 é inserida simplesmente como “3,5”.
 
-![ICR do perfil](../images/Profile_ICR.png)
+![ICR do perfil](../images/v4/Profiles/Profile_ICR.png)
 
 Se, depois que uma refeição foi digerida e a **IOB** voltou a zero, a sua **glicose** continuar mais alta do que antes da refeição, provavelmente o seu **ICR** está fraco demais (_ou seja_, o número está alto demais e deve ser reduzido aos poucos). Ao contrário, se a sua **glicose** estiver mais baixa do que antes da refeição, o **ICR** está forte demais (_ou seja_, o número está baixo demais e deve ser aumentado aos poucos).
 
@@ -292,7 +292,7 @@ O [Assistente de perfil](#aaps-screens-profile-helper) (menu ☰ → **Assistent
 
 O Assistente de perfil oferece conjuntos de dados de dois hospitais diferentes para encontrar o perfil inicial para a sua criança, até 18 anos.
 
-![Assistente de perfil para crianças 1](../images/ProfileHelperKids1.png)
+![Assistente de perfil para crianças 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. Verifique se você está na aba **Perfil 1**.
 2. Em **Tipo de perfil**, verifique se "Perfil padrão" está selecionado.
@@ -303,7 +303,7 @@ O Assistente de perfil oferece conjuntos de dados de dois hospitais diferentes p
 7. Open the **Comparison** tab. A comparação dos dois perfis ajustados será mostrada (veja a captura de tela abaixo).
 8. Se você quiser começar a ajustar o seu perfil com base em uma dessas sugestões, use o botão **Clonar** na parte de baixo da comparação.
 
-![Assistente de perfil para crianças 2](../images/ProfileHelperKids2.png)
+![Assistente de perfil para crianças 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Trocar perfil
 
@@ -312,7 +312,7 @@ Veja [Troca de perfil e porcentagem do perfil](../DailyLifeWithAaps/ProfileSwitc
 (your-aaps-profile-clone-profile-switch)=
 ### Clonar uma troca de perfil para um novo perfil
 
-![Troca de Perfil](../images/TreatmentsView4.png)
+![Troca de Perfil](../images/Maintenance/TreatmentsView4.png)
 
 O [Histórico de tratamentos](#aaps-screens-treatments) mostra todas as **Trocas de Perfil** anteriores. Na aba **Troca de Perfil**, você pode usar uma **Troca de Perfil** anterior como base para criar um novo **Perfil**. Nesse caso, o deslocamento de tempo e a porcentagem serão aplicados ao novo perfil local. Use o botão **Clonar** mostrado na linha **2**.
 
@@ -335,14 +335,14 @@ Isso pode ser útil antes de fazer grandes mudanças em um **Perfil** mais exten
 
 Para isso, porém, é importante clonar todo o **registro do banco de dados**, que contém vários perfis, no editor do Nightscout (seta azul na captura de tela abaixo). Os novos registros do banco de dados recebem então a data atual. Depois de salvar, o **Perfil** alterado/novo pode ser ativado no **AAPS** com uma [troca de perfil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) normal.
 
-![Clonar registros de banco de dados](../images/Nightscout_Profile_Editor.PNG)
+![Clonar registros de banco de dados](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Comparar dois perfis
 
 Você também pode usar o [Assistente de perfil](#aaps-screens-profile-helper) (menu ☰ → **Assistente de perfil**) para comparar dois perfis ou trocas de perfil diferentes (porcentagem de um dos seus perfis usada antes em uma [troca de perfil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
-![Assistente de perfil 1](../images/ProfileHelper1.png)
+![Assistente de perfil 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. Verifique se você está na aba **Perfil 1**.
 2. Em **Tipo de perfil**, selecione "Perfil disponível" para escolher entre todos os **Perfis** guardados.
@@ -352,4 +352,4 @@ Você também pode usar o [Assistente de perfil](#aaps-screens-profile-helper) (
 6. Escolha a **Troca de Perfil** com a qual você quer comparar.
 7. Open the **Comparison** tab. A comparação dos dois perfis será mostrada (veja a captura de tela abaixo).
 
-![Assistente de perfil 2](../images/ProfileHelper2.png)
+![Assistente de perfil 2](../images/v4/Profiles/ProfileHelper2.png)
