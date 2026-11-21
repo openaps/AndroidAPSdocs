@@ -773,7 +773,7 @@ Mostra estatísticas sobre sua dose diária total, o tempo no intervalo, seu per
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Assistente de perfil
 
 Abra o **menu** (☰) e escolha **Assistente de perfil**.
 
