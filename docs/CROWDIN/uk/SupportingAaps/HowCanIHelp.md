@@ -8,13 +8,13 @@
 
 (donate-to-aaps)=
 
-### How can I donate?
+### Як я можу пожертвувати кошти?
 
-You can support **AAPS** in several ways:
+Ви можете підтримати **AAPS** кількома способами:
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation:** зробіть пожертву на [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** допоможіть фінансувати роботу над сертифікацією AAPS як медичного виробу на [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** надішліть на цю адресу **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
 ## Я вмію писати код! Як мені долучитися?
 
