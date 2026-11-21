@@ -1,24 +1,24 @@
-# Development branch
+# Branca de desenvolupament
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+La branca dev és només per al desenvolupament d'AAPS. S'ha de fer servir en un telèfon separat per fer proves, <font color="#FF0000">**no per fer llaç de veritat!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+La versió més estable d'AAPS és la de la [branca Master](https://github.com/nightscout/AndroidAPS/tree/master). Es recomana quedar-se a la branca Master per fer llaç de veritat.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Enabling the engineering mode might break the loop entirely.
+La versió dev d'AAPS és només per a desenvolupadors i provadors que se senten còmodes amb stacktraces, que revisen fitxers de registre i que potser fan servir el depurador per preparar informes d'errors útils per als desenvolupadors (en resum: persones que saben què fan sense ajuda!). Per això moltes funcions no acabades estan desactivades. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Activar el mode enginyeria pot fer que el llaç deixi de funcionar del tot.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Tot i així, la branca dev és un bon lloc per veure quines funcions s'estan provant, per ajudar a corregir errors i per donar opinions sobre com funcionen les funcions noves a la pràctica. Sovint la gent prova la branca dev en un telèfon i una bomba antics fins que està segura que és estable. Qualsevol ús és sota la vostra responsabilitat. Quan proveu funcions noves, recordeu que heu decidit provar una funció que encara està en desenvolupament. Feu-ho sota la vostra responsabilitat i amb la cura necessària per mantenir-vos segurs.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Si trobeu un error o creieu que alguna cosa ha anat malament amb la branca dev, mireu la [pestanya d'issues](https://github.com/nightscout/AndroidAPS/issues) per comprovar si algú més ja l'ha trobat; si no, afegiu-lo vosaltres. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). També podeu parlar de les funcions noves a [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Una versió dev té una data de caducitat. Això sembla incòmode quan funciona bé, però té una finalitat. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. Els desenvolupadors no volen trobar-se amb tres versions dev en circulació, amb errors corregits en unes i no en altres, i amb gent que continua informant d'errors ja corregits.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Provar una branca concreta (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Per compilar una branca de prova, seleccioneu branch-ci, que permet triar una branca concreta per crear l'APK. Podeu fer servir aquest mètode quan necessiteu provar la branca dev.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Provar canvis d'una pull request (desplegament amb GitHub CI actions)
 
-Available from 3.3.2.1.dev
+Disponible a partir de la versió 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Adequat per a provadors o per a qui ajuda a fer proves.
 
 ```{eval-rst}
 .. raw:: html
@@ -53,20 +53,20 @@ Available from 3.3.2.1.dev
 
 - Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
 
-- PR number: Please enter the PR number that you want to test.
+- PR number: Introduïu el número de la PR que voleu provar.
 
-- PR reference types: PR reference types include two options:
+- PR reference types: els tipus de referència de la PR tenen dues opcions:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Agafa el contingut real de la branca de l'autor de la PR (és a dir, l'historial de commits original, sense cap operació de merge).
+    - Equival a l'estat original de la branca de la PR, com si s'agafés directament d'un fork o d'una branca de funcionalitat.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Agafa el resultat del merge que GitHub simula per avançat entre la PR i la branca de destinació (p. ex. dev).
+    - És un commit de merge virtual que GitHub crea automàticament.
+    - Aquest commit només existeix quan la PR no té conflictes i es pot fusionar.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Vegeu [variant](#browserbuild-variant)
