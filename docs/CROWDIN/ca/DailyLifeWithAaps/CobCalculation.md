@@ -2,7 +2,7 @@
 
 ## Com calcula AAPS el valor del COB?
 
-Quan l'usuari introdueix carbohidrats com a part d'un àpat o d'una correcció de carbohidrats, **AAPS** els suma als carbohidrats a bord actuals (**COB**). Després **AAPS** calcula l'absorció dels carbohidrats de l'usuari a partir de les desviacions observades en els valors de **glucèmia** de l'usuari. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). No és un paràmetre del **perfil** de l'usuari, sinó que **AAPS** el calcula a partir de la configuració de l'**ISF/I:C**, i indica quants mg/dl fa pujar 1 g de carbohidrats la **glucèmia** de l'usuari.
+Quan l'usuari introdueix carbohidrats com a part d'un àpat o d'una correcció de carbohidrats, **AAPS** els suma als carbohidrats a bord actuals (**COB**). Després **AAPS** calcula l'absorció dels carbohidrats de l'usuari a partir de les desviacions observades en els valors de **glucèmia** de l'usuari. La velocitat d'absorció depèn del factor de sensibilitat als carbohidrats (**CSF**). No és un paràmetre del **perfil** de l'usuari, sinó que **AAPS** el calcula a partir de la configuració de l'**ISF/I:C**, i indica quants mg/dl fa pujar 1 g de carbohidrats la **glucèmia** de l'usuari.
 
 ## Factor de sensibilitat als carbohidrats
 
@@ -12,13 +12,13 @@ La fórmula que fa servir **AAPS** és:
 
 L'efecte sobre el **perfil** de l'usuari serà:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _augmentar_ la **ràtio I:C**: augmenta els carbohidrats absorbits cada 5 minuts i així escurça el temps total d'absorció;
 
 - _augmentar_ l'**ISF**: disminueix els carbohidrats absorbits cada 5 minuts i així allarga el temps total d'absorció; i
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- _canviar_ el **percentatge del perfil**: augmenta o disminueix tots dos valors, i per tant no afecta el temps d'absorció dels carbohidrats.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. Per cada 20 mg/dl que puja la **glucèmia** de l'usuari, **AAPS** calcula 1 g de carbohidrats absorbit. Un **IOB** positiu també afecta el càlcul del **COB**. Per tant, si **AAPS** preveu que la **glucèmia** de l'usuari baixarà 20 mg/dl a causa de l'**IOB** i en canvi es queda estable, **AAPS** també calcularà 1 g de carbohidrats absorbit.
+Per exemple, si l'**ISF** del **perfil** de l'usuari és 100 i la **ràtio I:C** és 5, el factor de sensibilitat als carbohidrats de l'usuari seria 20. Per cada 20 mg/dl que puja la **glucèmia** de l'usuari, **AAPS** calcula 1 g de carbohidrats absorbit. Un **IOB** positiu també afecta el càlcul del **COB**. Per tant, si **AAPS** preveu que la **glucèmia** de l'usuari baixarà 20 mg/dl a causa de l'**IOB** i en canvi es queda estable, **AAPS** també calcularà 1 g de carbohidrats absorbit.
 
 Els carbohidrats també s'absorbeixen segons els mètodes descrits a continuació, depenent de l'algoritme de sensibilitat que l'usuari hagi triat a **AAPS**.
 
@@ -47,7 +47,7 @@ Si es fa servir l'absorció mínima de carbohidrats (min_5m_carbimpact) en lloc 
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Detecció de valors de COB incorrectes
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. En aquest cas, l'usuari veurà un avís addicional a la pantalla de confirmació després de fer servir la calculadora de bolus.
+**AAPS** avisarà l'usuari si està a punt de fer un bolus amb **COB** d'un àpat anterior quan l'algoritme detecti que el càlcul actual del **COB** és incorrecte. En aquest cas, l'usuari veurà un avís addicional a la pantalla de confirmació després de fer servir la calculadora de bolus.
 
 ### Com detecta AAPS els valors de COB incorrectes?
 
@@ -62,7 +62,7 @@ A la captura de pantalla de dalt, el 66% del temps l'absorció de carbohidrats e
 - Penseu a cancel·lar el tractament: premeu «Cancel·lar» en lloc d'OK.
 - Torneu a calcular el proper àpat amb la calculadora de bolus sense marcar el **COB**.
 - Si necessiteu un bolus de correcció, introduïu-lo manualment.
-- Be careful not to overdose or stack insulin!
+- Aneu amb compte de no fer una sobredosi ni acumular insulina!
 
 
 ### Per què l'algoritme no detecta bé el COB?
@@ -87,7 +87,7 @@ La pantalla **Historial de tractaments** permet corregir una entrada de carbohid
 ![Eliminar una entrada de carbohidrats de l'historial de tractaments](../images/treatments_history_delete_carbs.png)
 
 1. Comproveu i recordeu el **COB** i l'**IOB** actuals a la pantalla principal d'**AAPS**.
-2. Obriu **Historial de tractaments** (menú lateral → *Historial de tractaments*), pestanya **Carbohidrats i bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
+2. Obriu **Historial de tractaments** (menú lateral → *Historial de tractaments*), pestanya **Carbohidrats i bolus**. Segons la bomba, els carbohidrats poden aparèixer junt amb la insulina en una sola línia o com a entrada separada (p. ex. amb la Dana RS).
 3. **Mantingueu premuda** l'entrada de carbohidrats errònia: la llista passa al **mode de selecció** amb una casella a cada línia, i l'entrada queda marcada (marca **1** de dalt). Marqueu també qualsevol altra entrada que vulgueu eliminar.
 4. Premeu la icona **🗑 Eliminar** a la barra superior (marca **2**) i confirmeu: el diàleg de confirmació mostra exactament què s'eliminarà.
 5. Comproveu que els carbohidrats s'han eliminat bé mirant de nou el **COB** a la pantalla principal d'**AAPS**.
