@@ -128,7 +128,7 @@ W tym kroku na twoim koncie GitHub powstaje twoja własna prywatna kopia AAPS Bu
 
    ![Wypełniony krok 1 na stronie konfiguracji](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Sprawdź wiersz **Your repository:** pokazuje `github.com/<your username>/my-aaps`. Strona konfiguracji zapamiętuje nazwę z twojej ostatniej wizyty: sprawdź ją za każdym razem, zanim użyjesz jej przycisków.
+4. Sprawdź wiersz **Twoje repozytorium:** pokazuje `github.com/<your username>/my-aaps`. Strona konfiguracji zapamiętuje nazwę z twojej ostatniej wizyty: sprawdź ją za każdym razem, zanim użyjesz jej przycisków.
 
 5. Dotknij **Create my private repository**.
 
@@ -173,7 +173,7 @@ Aplikacja musi być podpisana twoim własnym kluczem. Wybierz jedną z dwóch ka
 5. Jeśli hasło klucza jest inne niż hasło magazynu kluczy, odznacz **Key password is the same as the keystore password** i wpisz hasło klucza.
 6. Dotknij **Check and continue**.
 
-Strona sprawdza hasło i alias na twoim urządzeniu. **Keystore OK! Continue with step 3.** oznacza, że wszystko jest w porządku. Jeśli strona pisze, że hasło zostanie sprawdzone podczas budowania, i tak przejdź dalej: budowanie pokaże Ci, jeśli coś jest nie tak.
+Strona sprawdza hasło i alias na twoim urządzeniu. **Magazyn kluczy OK! Continue with step 3.** oznacza, że wszystko jest w porządku. Jeśli strona pisze, że hasło zostanie sprawdzone podczas budowania, i tak przejdź dalej: budowanie pokaże Ci, jeśli coś jest nie tak.
 
 ### Utwórz nowy klucz (Create a new key)
 
@@ -181,7 +181,7 @@ Strona sprawdza hasło i alias na twoim urządzeniu. **Keystore OK! Continue wit
 
 2. Wybierz hasło i wpisz je dwa razy. Zasady: co najmniej 8 znaków, tylko litery a–z i A–Z, cyfry 0–9 oraz symbole takie jak `! ? #`. Bez spacji, bez liter ze znakami diakrytycznymi (np. ą, ę, ł) i bez znaku `|`.
 
-3. Dotknij **Create key**. Po kilku sekundach pojawi się **Key created**.
+3. Dotknij **Create key**. Po kilku sekundach pojawi się **Klucz utworzony**.
 
    ![Formularz nowego klucza z hasłem wpisanym dwa razy](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
