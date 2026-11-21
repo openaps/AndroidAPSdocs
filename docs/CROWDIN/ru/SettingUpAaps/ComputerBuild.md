@@ -257,7 +257,7 @@ At some point, Android Studio will close and start again. You may be asked wheth
 
 Только для пользователей Windows: Если ваш брандмауэр запрашивает разрешение, предоставьте доступ:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Firewall permission java](../images/Building-the-App/AndroidStudio361_18.png)
 
 После успешного клонирования репозитория, Android Studio откроет клонированный проект.
 
