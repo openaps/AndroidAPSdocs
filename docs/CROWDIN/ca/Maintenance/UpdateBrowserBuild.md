@@ -9,7 +9,7 @@ Heu compilat AAPS amb **AAPS Builder**? No necessiteu aquesta pàgina: vegeu [Ac
 **AAPS** no es pot descarregar a causa de les normes sobre dispositius mèdics. És legal compilar l'aplicació per al vostre ús propi, però no en podeu donar una còpia a altres persones! Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més detalls.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Llavors seguiu el [procediment de compilació d'**AAPS** al navegador](../SettingUpAaps/BrowserBuild.md) en lloc d'aquesta guia. En lloc de crear un nou magatzem de claus, heu de seleccionar el que heu copiat del vostre ordinador.
+Si voleu actualitzar **AAPS** amb un navegador per primera vegada: copieu el fitxer de còpia de seguretat del vostre magatzem de claus al vostre Google Drive. Llavors seguiu el [procediment de compilació d'**AAPS** al navegador](../SettingUpAaps/BrowserBuild.md) en lloc d'aquesta guia. En lloc de crear un nou magatzem de claus, heu de seleccionar el que heu copiat del vostre ordinador.
 Aquest pas només és obligatori la primera vegada; per a les actualitzacions següents podreu seguir aquesta guia.
 ```
 
@@ -24,7 +24,7 @@ Aquest pas només és obligatori la primera vegada; per a les actualitzacions se
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Si teniu problemes, vegeu la pàgina separada [Compilació al navegador: resolució de problemes](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Exporteu la vostra configuració
 
@@ -57,7 +57,7 @@ Nota: si heu modificat la vostra còpia d'AndroidAPS per error, veureu aquesta p
 
 ![Descartar els canvis no desitjats](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Molt bé.
+Ara heu sincronitzat (actualitzat) la vostra pròpia còpia amb l'última versió d'**AAPS**. Molt bé.
 
 ![Repositori sincronitzat](../images/update/CI/GitHubUpdate5.png)
 
@@ -73,17 +73,17 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Deixeu la branca a master. A **Select AAPS Version**, comproveu que està seleccionada la **4.0.0**, la versió més nova, a dalt de la llista. Si el vostre fork no està actualitzat, la versió preseleccionada és una de més antiga: si executeu el workflow amb el formulari tal com s'obre, compileu de nou aquesta versió antiga i la vostra aplicació no s'actualitza. Trieu la [variant](#browserbuild-variant) (fullRelease) i després premeu Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   La llista de versions forma part del workflow del vostre fork. Si falta la **4.0.0**, el vostre fork encara no està sincronitzat: torneu a [Actualitzeu el vostre repositori de GitHub](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Veureu el missatge Workflow run was successfully requested. Actualitzeu la pàgina del navegador i podreu seguir el progrés de la compilació. Quan l'acció acabi, l'acció AAPS CI mostrarà una marca verda. You have successfully built the updated version of **AAPS**. Això vol dir que l'apk principal i l'apk de Wear es desen directament al vostre Google Drive (com es mostra a continuació). L'apk d'AAPSClient es pot descarregar des de Github > nightscout > AndroidAPS [aquí](https://github.com/nightscout/AndroidAPS/releases)
+6. Veureu el missatge Workflow run was successfully requested. Actualitzeu la pàgina del navegador i podreu seguir el progrés de la compilació. Quan l'acció acabi, l'acció AAPS CI mostrarà una marca verda. Heu compilat correctament la versió actualitzada d'**AAPS**. Això vol dir que l'apk principal i l'apk de Wear es desen directament al vostre Google Drive (com es mostra a continuació). L'apk d'AAPSClient es pot descarregar des de Github > nightscout > AndroidAPS [aquí](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Seguir el workflow](../images/update/CI/GitHubActions4.png)
@@ -110,6 +110,6 @@ Si alguna cosa va malament, no us espanteu.
 
 Respireu a fons!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Després comproveu si el vostre problema ja està documentat: vegeu [Resolució de problemes d'AAPS Builder](#aaps-builder-troubleshooting) si compileu amb **AAPS Builder**, o [Compilació al navegador: resolució de problemes](#aaps-ci-troubleshooting) en cas contrari.
 
 Si necessiteu més ajuda, contacteu amb altres usuaris d'**AAPS** a [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o a [Discord](https://discord.gg/4fQUWHZ4Mw).
