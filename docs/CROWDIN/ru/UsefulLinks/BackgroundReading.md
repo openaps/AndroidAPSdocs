@@ -6,7 +6,7 @@
 
 [Проект OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[Документация OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Документация Loop - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
@@ -28,9 +28,9 @@
 
 [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe), автор Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+[«Pumping insulin»](https://amzn.eu/d/iaCsFa2), авторы John Walsh и Ruth Roberts
 
 ## Фоновое чтение и статьи о замкнутом цикле DIY
 
