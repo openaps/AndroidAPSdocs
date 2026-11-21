@@ -29,7 +29,7 @@
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | перевірено до Quail 4                                   | 8.11.1 | 21  |
 | [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | перевірено до Quail 4                                   | 8.13   | 21  |
 | [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                      | перевірено до Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                     | Latest                                                  | 9.8    | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                     | Найновіша                                               | 9.8    | 21  |
 
 «Рекомендована версія» постачається з відповідною версією JVM. Рекомендована версія — це також мінімальна версія, якою можна зібрати **AAPS**. Ви **НЕ** зможете зібрати застосунок у версії, старішій за «рекомендовану». Якщо ви використовуєте іншу версію, можуть виникнути проблеми, пов’язані з версією JVM. Щоб розв'язати ці проблеми, див. сторінку [Усунення проблем з Android Studio](#troubleshooting_androidstudio-uncommitted-changes). Якщо вашої поточної версії Android Studio немає в таблиці, спочатку оновіть її.
 
@@ -41,27 +41,27 @@
 <tbody>
   <tr>
     <th class="tg-baqh">ОС (лише 64-бітна)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <td class="tg-baqh">Windows 10 або новіша</td>
+    <td class="tg-baqh">macOS 12 або новіша</td>
+    <td class="tg-baqh">Будь-який дистрибутив Linux, що підтримує Gnome, KDE або Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 або новіша</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Процесор (лише 64-бітний)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">Процесор x86_64 2017 року або новіший (Intel Core i5 8-го покоління, AMD Ryzen або новіший) з увімкненою в BIOS <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">підтримкою віртуалізації</a> (Intel VT-x або AMD-V)</td>
+    <td class="tg-baqh">Apple Silicon (M1 або новіший) або Intel Core 6-го покоління чи новіший (підтримку комп’ютерів Mac з Intel поступово припиняють)</td>
+    <td class="tg-baqh">Процесор x86_64 2017 року або новіший (Intel Core i5 8-го покоління, AMD Ryzen або новіший) з увімкненою в BIOS підтримкою віртуалізації (Intel VT-x або AMD-V)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Оперативна пам'ять</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 ГБ або більше (8 ГБ – це абсолютний мінімум лише для Android Studio, рекомендовано 32 ГБ)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Диск</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Рекомендовано SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Щонайменше 32 ГБ вільного місця. Рекомендовано SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Роздільна здатність</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">Мінімум 1280 x 800 (рекомендовано 1920 x 1080)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Інтернет</th>
@@ -113,7 +113,7 @@ Git — це програма, яка дозволяє відстежувати 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Підійде будь-яка нова версія Git. Виберіть правильну версію для вашої системи: Mac, Windows або Linux.
+2. Якщо Git у вас не встановлено, завантажте та встановіть найновішу версію для вашої системи з розділу "Download" [**тут**](https://git-scm.com/downloads). Підійде будь-яка нова версія Git. Виберіть правильну версію для вашої системи: Mac, Windows або Linux.
 
 **Примітка для користувачів Mac:** сайт Git також підкаже вам установити додаткову програму "homebrew", яка допомагає з установленням. Якщо ви встановлюєте Git через homebrew, жодних налаштувань змінювати не потрібно.
 
@@ -170,7 +170,7 @@ Android Studio — це програма, яка працює на вашому 
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+На останньому кроці натисніть "Finish", щоб уперше запустити Android Studio.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ Android Studio може запропонувати оновити систему
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+Перевірте, чи **Android Studio** може автоматично знайти правильний **Path to Git executable** (шлях до виконуваного файлу Git), натиснувши кнопку "Test" (1):
 
 ![Виконуваний файл Git](../images/Building-the-App/039_GitTest.png)
 
@@ -369,7 +369,7 @@ Keystore потрібно створити лише один раз.
 
 ```{admonition} WARNING!
 :class: warning
-Обов'язково запишіть собі, де зберігається ваш keystore. You will need it when you build the next AAPS update!
+Обов'язково запишіть собі, де зберігається ваш keystore. Він знадобиться вам, коли ви збиратимете наступне оновлення AAPS!
 ```
 
 * Тепер виберіть простий пароль (і запишіть його), введіть його в поле пароля (2) і підтвердьте (2).
