@@ -9,7 +9,7 @@ Però la necessitat de tractar aquests àpats continua existint. Per això AAPS 
 
 Els e-carbs són carbohidrats repartits al llarg de diverses hores. Per a àpats normals amb més carbohidrats que greix/proteïna, introduir els carbohidrats al principi (i reduir el bolus inicial si cal) normalment és suficient per evitar un lliurament d'insulina massa d'hora.  Però per a àpats d'absorció més lenta, on introduir tots els carbohidrats al principi dona massa IOB per SMB, es poden fer servir els e-carbs per simular amb més exactitud com s'absorbeixen els carbohidrats (i els equivalents de carbohidrats que introduïu per altres macronutrients) i com influeixen en la glucèmia. Amb aquesta informació, el llaç pot donar SMB de manera més gradual per tractar aquests carbohidrats. Això es pot veure com un bolus estès dinàmic (també hauria de funcionar sense SMB, però probablement és menys eficaç).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Nota:** els e-carbs no són només per a àpats rics en greix o proteïna: també es poden fer servir en qualsevol situació en què hi hagi influències que fan pujar la glucèmia, p. ex. altres medicaments com els corticoides.
 
 ## Com es fan servir els e-carbs
 
@@ -26,7 +26,7 @@ Els e-carbs a la pantalla principal: el número entre parèntesis al camp **COB*
 
 A la [Calculadora de bolus](#aaps-screens-bolus-wizard), tres botons sota el camp **Carbs** us permeten triar com de ràpid s'absorbeix el vostre àpat. Trieu-ne un abans de confirmar. Segons el tipus, **AAPS** pren una part dels carbohidrats que heu escrit com a carbohidrats normals i afegeix [carbohidrats estesos («e-carbs»)](#Extended-Carbs-extended-carbs-ecarbs) més tard per a àpats lents i rics. Premeu la icona **(i)** al costat dels botons per veure els aliments típics del tipus seleccionat i què fa amb els vostres carbohidrats.
 
-| Tipus                | Typical foods (examples from the app)                                                                                                | Carbohidrats ara, fets servir per al bolus | E-carbs afegits                                         |
+| Tipus                | Aliments típics (exemples de l'aplicació)                                                                                            | Carbohidrats ara, fets servir per al bolus | E-carbs afegits                                         |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------- |
 | **Pa** (per defecte) | Pa, pastes salades, iogurt, fruita, patates, arròs, flocs de civada, verdures                                                        | 100%                                       | Cap                                                     |
 | **Pastís**           | Boles de massa (dumplings), pasta, cuina asiàtica rica en carbohidrats i greixos, pastes dolces i de llevat, cereals, mel, melmelada | 90%                                        | 20%, començant 60 minuts més tard, repartits en 2 hores |
@@ -60,9 +60,9 @@ Per començar més ràpid, la *Calculadora de bolus* pot afegir e-carbs per vosa
 **Notes importants:** Per descomptat, haureu de provar quins valors concrets us funcionen. També podeu ajustar amb cura l'opció *Màxim de minuts de basal per limitar l'SMB* perquè l'algoritme sigui més o menys agressiu. Amb àpats baixos en carbohidrats i rics en greix/proteïna, pot ser suficient fer servir només e-carbs sense bolus manuals (vegeu l'article del blog de dalt). Quan es creen e-carbs, també es crea una nota al Portal de cures que documenta totes les dades introduïdes. Així és més fàcil provar i millorar els valors.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended boluses and why they don't work in a closed-loop environment
+## Els bolus estesos i per què no funcionen en un llaç tancat
 
-Com s'ha dit abans, els bolus estesos o multiona no funcionen bé en un llaç tancat. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Com s'ha dit abans, els bolus estesos o multiona no funcionen bé en un llaç tancat. [Vegeu més avall](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) per a més detalls
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Bolus estès i canvi a llaç obert - només bombes Dana i Insight
