@@ -14,11 +14,11 @@
 - The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
 
 (reviewing-statistics)=
-## AAPS Statistics
+## Статистика AAPS
 
-**AAPS** provides basic monitoring statistics.
+**AAPS** показывает основную статистику для мониторинга.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+Большинство значений основаны на [рекомендациях](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes) ADA 2023.
 
 To open them, open the **menu** (☰) and select **Statistics**.
 
@@ -48,21 +48,21 @@ Like most rules of thumb, this is of limited real validity. Your diabetes may va
 
 Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+Данные **TIR** доступны за 7 и 30 дней, в зависимости от того, сколько данных есть в базе данных **AAPS**.
 
 Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
 
-**Discuss targets with your endo**
+**Обсудите целевые значения с вашим эндокринологом**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+Ваш диабет может отличаться. Любые предложенные целевые значения нужно обсудить с вашим эндокринологом или медицинской командой. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
 
 ![Статистика](../images/Maintenance/statistics3.png)
 
 Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: стандартное отклонение, [показатель](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) вариабельности ГК (чем выше, тем хуже).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: оценка гликированного гемоглобина, рассчитанная по среднему значению измерений CGM. Это ориентировочное значение, оно может не совпадать с результатами анализа крови на HbA1c.
 
 ![Статистика](../images/Maintenance/statistics4.png)
 
@@ -159,7 +159,7 @@ The history of temporary targets can be seen here.
 
 ### Смена профиля
 
-![Cмена профиля](../images/Maintenance/TreatmentsView4.png)
+![Переключение профиля](../images/Maintenance/TreatmentsView4.png)
 
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
 
@@ -188,8 +188,8 @@ This tab lists the actions made in **AAPS** by the user or by an **Automation** 
 
 ------
 
-## What is the difference between Nightscout vs Tidepool?
+## В чем разница между Nightscout и Tidepool?
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+Nightscout помогает пользователю хранить данные **AAPS** и предлагает много [инструментов для отчетов](https://nightscout.github.io/nightscout/reports/).
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Tidepool же позволяет пользователю [просматривать свои данные](https://www.tidepool.org/viewing-your-data) и дает [простой доступ к ним для вашей медицинской команды](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
