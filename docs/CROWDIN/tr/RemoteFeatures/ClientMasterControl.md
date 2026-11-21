@@ -57,7 +57,7 @@ Bir istemciden başlatılabilecek eylemler: **bolus**, **karbonhidrat / yKarb**,
 - **Ana birim**, normal `full` **AAPS** sürümünü çalıştırır ve pompanıza bağlıdır.
 - **Ana birim**, Nightscout'unuzla **NSClientV3** kullanır ve *bağlı* durumunu gösterir. Ana birime Nightscout'unuzun bir **yönetici (admin) belirtecini** verin: bununla ana birim her istemci için ayrı bir belirteç oluşturabilir ve bunu istemciye QR kodu olarak gösterebilir.
 - **İstemci**, **[AAPSClient](AapsClient.md)** çalıştırır (veya başka hastalar için **AAPSClient2** / **AAPSClient3**. Bkz. [AAPSClient, AAPSClient2 ve AAPSClient3 hakkında](#remotecontrol-aapsclient-versions)). **Aynı** Nightscout'u kullanmalıdır. İstemciyi ana birimin QR kodu ile kurarsanız, istemci Nightscout adresini ve belirtecini ana birimden alır. Aksi halde önce istemcide **NSClientV3**'ü kendiniz kurun.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. İstemci kontrolü açıkken **AAPS**, ana birimde ve eşleştirilmiş istemcilerde websocket'leri açık tutar. Your Nightscout host must support websockets.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Bir komut yalnızca birkaç saniye geçerlidir: websocket'ler olmadan geç ulaşmak yerine başarısız olur. İstemci kontrolü açıkken **AAPS**, ana birimde ve eşleştirilmiş istemcilerde websocket'leri açık tutar. Your Nightscout host must support websockets.
 ```
 
 Eşleştirme ve senkronizasyon iki farklı şeydir:
@@ -336,7 +336,7 @@ Bir istemci, komut sayacını geriye alan bir yedekten geri yüklenirse, ana bir
 
 Nightscout / senkronizasyon sorunları için önce [NSClient'te Sorun Giderme](../GettingHelp/TroubleshootingNsClient.md) sayfasına bakın.
 
-### Pairing
+### Eşleştirme
 
 **The QR code options cannot be chosen in the New client dialog**
 
@@ -367,11 +367,11 @@ Eşleştirme yapan bir kod yaklaşık iki dakika geçerlidir. Yeni bir kod almak
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Hiçbir şey değiştirilmedi. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Hiçbir şey değiştirilmedi. Eşleştirmeyi yeniden başlatın. Hata devam ederse **AAPSClient** uygulamasını yeniden başlatın ve bir kez daha deneyin.
 
-**The client says it is not paired**
+**İstemci eşleştirilmediğini söylüyor**
 
-**Yönet → Ana birimle eşleştir** yolundan yeniden eşleştirin. Check that the client is **Active** in the master's **Authorized clients** list.
+**Yönet → Ana birimle eşleştir** yolundan yeniden eşleştirin. İstemcinin, ana birimin **Yetkili istemciler** listesinde **Etkin** olduğunu kontrol edin.
 
 **Eşleştirmeden sonra hiçbir şey olmuyor**
 
@@ -379,25 +379,25 @@ Ana birimde **İstemci kontrolüne izin ver** seçeneğinin AÇIK olduğundan ve
 
 ### Komutlar
 
-**The client says the master is offline, or commands fail**
+**İstemci ana birimin çevrimdışı olduğunu söylüyor veya komutlar başarısız oluyor**
 
-Check that:
+Şunları kontrol edin:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- ana birim telefonu uyanık ve **AAPS** çalışıyor,
+- iki telefon da **NSClientV3** içinde aynı Nightscout sitesine bağlı,
+- iki telefonda da **websocket**'ler açık.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+**AAPSClient** ile uzaktan kumanda için websocket'ler **zorunludur**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Ana birim bir komutu reddediyor**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Ana birim her komutu kendi güncel durumuna göre yeniden kontrol eder: örneğin seçilen profil artık yoktur veya pompa tipi uyuşmuyordur. Ana birimde kontrol edin.
 
 **Nightscout web sitesinde girilen tedaviler uygulanmıyor**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Bu, [güçlendirilmiş mod](#client-master-control-hardened-mode) açıkken beklenen bir durumdur. Tedavileri bunun yerine eşleştirilmiş bir istemcide girin.
 
-### Nightscout tokens and settings
+### Nightscout belirteçleri ve ayarları
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ This is expected in [hardened mode](#client-master-control-hardened-mode). Enter
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-İstemci hâlâ ihtiyacından fazla yetkisi olan bir belirteçle yazıyor. The master sends the client its own token after pairing, but only if the master has an admin token. Ana birimin belirtecini kontrol edin veya istemciyi bir QR kodu ile yeniden kurun.
+İstemci hâlâ ihtiyacından fazla yetkisi olan bir belirteçle yazıyor. Ana birim, eşleştirmeden sonra istemciye kendi belirtecini gönderir, ancak yalnızca ana birimin bir yönetici (admin) belirteci varsa. Ana birimin belirtecini kontrol edin veya istemciyi bir QR kodu ile yeniden kurun.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Ana birimin ayarlar belgesini başka biri yazdı veya ana birimin yeni bir anahtarı var (örneğin verileri silindikten sonra). A paired client takes the new key by itself the next time it connects to Nightscout. Yalnızca Nightscout okuyan bir telefonun ana birimin QR koduna tekrar ihtiyacı vardır (**Yalnızca Nightscout okuma → QR kodunu göster**).
+Ana birimin ayarlar belgesini başka biri yazdı veya ana birimin yeni bir anahtarı var (örneğin verileri silindikten sonra). Eşleştirilmiş bir istemci, Nightscout'a bir sonraki bağlanışında yeni anahtarı kendiliğinden alır. Yalnızca Nightscout okuyan bir telefonun ana birimin QR koduna tekrar ihtiyacı vardır (**Yalnızca Nightscout okuma → QR kodunu göster**).
 
 **Bir istemci artık Nightscout'u okuyamıyor**
 
