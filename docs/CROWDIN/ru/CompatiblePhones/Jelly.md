@@ -2,7 +2,7 @@
 
 ## Jelly Star Mini
 
-**Features**
+**Функции**
 
 * Android 13
 * 8 ГБ ОЗУ
@@ -39,7 +39,7 @@ To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be di
 
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Не забудьте отключить Google Play Protect.
 
 ### Remote Connection for Wear apk
 
