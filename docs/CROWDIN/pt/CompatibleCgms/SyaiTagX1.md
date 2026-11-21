@@ -1,13 +1,13 @@
 # Syai X1
 
 
-## Using X1 And Syai Tag app
+## Usar o X1 com a app Syai Tag
 
 -   Instale o apk a partir de <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   Iniciar o sensor X1
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Selecione **Syai/Ottai** em [**Configuração → Fonte da Glicose**](#Config-Builder-bg-source).
 
 Ative a difusão (broadcast) na app Syai:
 
