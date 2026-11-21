@@ -52,7 +52,7 @@ Encontre a sua versão do Android na tabela abaixo e use a versão do **AAPS** c
 O WearOS 5, nível de API 34 (Android 14), tem [limitações](#BuildingAapsWearOs-WearOS5).
 ```
 
-Versions with a heading are the latest release for each Android version (see the table above). The other releases follow in between, with their notes or a link to them on GitHub.
+As versões com título são a última versão para cada versão do Android (veja a tabela acima). As outras versões aparecem entre elas, com as suas notas ou com um link para elas no GitHub.
 
 (latestrelease)=
 
@@ -77,7 +77,7 @@ Release date: 31-10-2026
 - Gestão das insulinas: catálogo de insulinas, nomes curtos, seleção no perfil e no assistente @Philoul
 - Plugin de calibração @MilosKozak
 - [Suavização](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
-- New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
+- Novas [ações de automatização](#automations-automation-action): **Alterar suavização** @olorinmaia, e **Executar**, **Ativar** ou **Desativar cena** @MilosKozak
 - [Rotação dos locais](#Aapsscreens-site-rotation): registar e rodar os locais de infusão @Philoul @MilosKozak
 - Revisão do [Autoajuste](../AdvancedOptions/Autotune.md) @Philoul
 - Novos [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
@@ -97,7 +97,7 @@ Release date: 31-10-2026
 **Pump Driver Improvements**
 
 - Ecrãs de visão geral das bombas reconstruídos para Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn e Equil @MilosKozak
-- **Omnipod DASH**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
+- **Omnipod DASH**: códigos Ref como no PDM e descrições de falhas fáceis de ler, compensação do desvio sempre ligada, melhor informação sobre o tipo de bólus @nl-ruud
 - **Omnipod**: data de fim fixa para Dash e Eros @mcnelson
 - **DanaR, RS**: emulador da bomba para testes @MilosKozak
 - **Equil**: emulador da bomba para testes @MilosKozak
@@ -212,8 +212,8 @@ Release date: 08-03-2026
 
 **Pump Driver Improvements**
 
-- **Omnipod DASH**: refactor BLE driver code to omnipod/common module @jwoglom
-- **Omnipod DASH**: try to fix connection state @MilosKozak
+- **Omnipod DASH**: código do driver BLE reorganizado e movido para o módulo omnipod/common @jwoglom
+- **Omnipod DASH**: tentativa de corrigir o estado da ligação @MilosKozak
 - **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
 - **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
 - **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
@@ -350,7 +350,7 @@ Data de lançamento: 27-03-2025
 
 (version-enforcement)=
 
-**Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
+**A partir desta versão, as notificações e a imposição da versão foram simplificadas e suavizadas, e funcionam assim:**
 
 *  Sem expiração quando o dispositivo está offline (sem ligação à internet). Isto significa que já não há períodos de tolerância de 60 e 90 dias.
 *  Após a expiração, o modo SGB é imposto
@@ -502,7 +502,7 @@ Release date: 29-12-2024
 
 * [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
 * New [QuickWizard](#Preferences-quick-wizard) options @radicalb
-  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard to pre-bolus.
+  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. Agora pode usar o campo «Hora dos hidratos» no Assistente Rápido para fazer um pré-bólus.
 * New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
 * [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
   * Sections are now collapsed by default. Use arrow to expand.
@@ -614,11 +614,11 @@ Release date: 23-10-2023
 - tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
-(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Important comments on using v3 versus v1 API for Nightscout with AAPS**
+(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Notas importantes sobre o uso da API v3 em vez da v1 do Nightscout com o AAPS**
 
 v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
 - v1 sends only 2 days of data
-- v1 sends all 2 days of data on every reconnection
+- a v1 envia todos os 2 dias de dados em cada nova ligação
 - using websockets is mandatory = permanent connection, more battery consumption
 - during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
 
@@ -639,7 +639,7 @@ RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
 - v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
-- it is HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+- é ALTAMENTE recomendado deixar o AAPS reunir todos os dados e depois enviá-los para o NS como único uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
 ---
 
@@ -667,7 +667,7 @@ Release date: 31-01-2022
 
 Release date: 05-10-2021
 
-This version is the last one supporting Android 8. [Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
+This version is the last one supporting Android 8. [Notas da versão](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
 
 ---
 
