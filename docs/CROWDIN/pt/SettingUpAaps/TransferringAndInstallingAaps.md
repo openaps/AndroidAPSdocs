@@ -13,23 +13,23 @@ Esta página também explica a [verificação de programadores Android](#android
 
 ## Instalar o AAPS tocando no ficheiro APK
 
-Hoje, o **AAPS** instala-se transferindo o ficheiro APK para o telefone e abrindo-o (tocando nele). Há várias formas de transferir o ficheiro APK do **AAPS** do seu computador para o smartphone. Here we explain two different ways:
+Hoje, o **AAPS** instala-se transferindo o ficheiro APK para o telefone e abrindo-o (tocando nele). Há várias formas de transferir o ficheiro APK do **AAPS** do seu computador para o smartphone. Aqui explicamos duas formas diferentes:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Opção 1 -  Usar o seu Google Drive (Gdrive)
+* Opção 2 -  Usar um cabo USB
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Atenção: a transferência por email pode causar dificuldades e não é recomendada.
 
 ```{admonition} Android developer verification
 :class: warning
 A Google está a introduzir a [verificação de programadores Android](#android-developer-verification) a partir de setembro de 2026 (primeiro no Brasil, na Indonésia, em Singapura e na Tailândia; no resto do mundo em 2027). Onde for aplicada, a instalação de um APK tocando no ficheiro — como descrito nas duas opções abaixo — fica bloqueada. Nesse caso, use um dos [métodos de instalação gratuitos](#android-developer-verification-free-methods) mais abaixo nesta página.
 ```
 
-### Option 1. Use Google drive to transfer files
+### Opção 1. Usar o Google Drive para transferir ficheiros
 
 Abra [Google.com](https://www.google.com/) no seu navegador e inicie sessão na sua conta Google.
 
-On the right upper side select the Drive app in the Google menu.
+No canto superior direito, selecione a app Drive no menu Google.
 
 ![Iniciar a app Drive](../images/install/GoogleDriveInWebbrowser.png)
 
@@ -37,11 +37,11 @@ Clique em **New** (Novo) no canto superior esquerdo (ou clique com o botão dire
 
 ![Enviar o ficheiro apk com a app Google Drive](../images/install/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+O ficheiro apk deve estar agora carregado no Google Drive.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Usar a app Google Drive para abrir o ficheiro apk e fazer a instalação
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Passe para o telemóvel e inicie a app Google Drive. É uma app pré-instalada e encontra-se junto das outras apps Google, ou pesquisando o nome da app.
 
 ![iniciar a app Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
@@ -66,13 +66,13 @@ Lembrou-se de voltar a bloquear a instalação a partir do Google Drive?
 
 Continue com a [configuração do loop do AAPS](../SettingUpAaps/SetupWizard.md).
 
-### Option 2. Use a USB cable to transfer files
+### Opção 2. Usar um cabo USB para transferir ficheiros
 
 A segunda forma de transferir o ficheiro apk do AAPS é com um [cabo USB](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Transfira o ficheiro do sítio onde está no computador para a pasta «downloads» (transferências) do telefone.
 
-On your phone, you will have to allow installation from unknown sources. Pode encontrar explicações sobre como fazer isto na internet (_por exemplo_ [aqui](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [aqui](https://www.androidcentral.com/unknown-sources)).
+No telefone, tem de permitir a instalação a partir de fontes desconhecidas. Pode encontrar explicações sobre como fazer isto na internet (_por exemplo_ [aqui](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [aqui](https://www.androidcentral.com/unknown-sources)).
 
 Depois de transferir o ficheiro arrastando-o, abra a pasta "Downloads" (Transferências) no telefone e toque no ficheiro apk do AAPS:
 
