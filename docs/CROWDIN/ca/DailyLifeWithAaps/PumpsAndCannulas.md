@@ -17,7 +17,7 @@ El canvi físic del cartutx o reservori no es pot fer amb **AAPS**: s'ha de fer 
 
 3. Encebeu/ompliu el tub i la cànula: es pot fer directament a la bomba. Assegureu-vos d'eliminar totes les bombolles del tub.
 
-4. Col·loqueu la nova cànula al cos. Un cop inserida la cànula i retirada l'agulla, la cànula té un petit espai d'aire que també s'ha d'encebar. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Ara premeu la quantitat d'encebament de cànula predeterminada (normalment és d'unes 0,3 U, però comproveu que aquest valor sigui correcte per a la vostra cànula) i seleccioneu **OK**. Llegiu el missatge de resum i confirmeu l'encebament prement **OK**.
+4. Col·loqueu la nova cànula al cos. Un cop inserida la cànula i retirada l'agulla, la cànula té un petit espai d'aire que també s'ha d'encebar. Per anotar-ho a **AAPS** i encebar el punt: obriu **Encebar** (al tauler d'estat desplegat de la pantalla principal, al full **Gestionar** o com a botó d'[Accés ràpid](QuickLaunch.md)) i marqueu **Anotar canvi de cànula** i/o **Anotar canvi reservori d'insulina** segons el cas, per registrar el canvi. Ara premeu la quantitat d'encebament de cànula predeterminada (normalment és d'unes 0,3 U, però comproveu que aquest valor sigui correcte per a la vostra cànula) i seleccioneu **OK**. Llegiu el missatge de resum i confirmeu l'encebament prement **OK**.
 
    ![Encebar al full Gestionar amb una bomba amb tub](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -57,7 +57,7 @@ Com que no rebeu insulina mentre la bomba està desconnectada, us hauríeu de re
 (pumps-cannulas-announce-insulin)=
 ## Anotar insulina lliurada sense fer el bolus
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Aleshores una fila **Hora** (posada a **Ara**) us permet anotar l'hora real de la injecció. La podeu ignorar si la injecció és recent. Si el bolus es va fer fa una estona, feu servir **-** per endarrerir l'hora (_p. ex._ -30 min), o obriu la fila amb la fletxa per triar la data i l'hora exactes. Aleshores **AAPS** tindrà en compte la durada de l'acció de la insulina i calcularà la insulina que encara queda al cos.
+Per anotar insulina lliurada des de la bomba mentre **AAPS** estava desconnectat, o injeccions amb ploma: obriu el [diàleg Insulina](#aaps-screens-buttons-insulin) (**Tractaments** a la barra de navegació inferior, o un botó d'accés ràpid), introduïu la quantitat en unitats i activeu **El bolus només es registrarà (la bomba no el lliurarà)**. Aleshores una fila **Hora** (posada a **Ara**) us permet anotar l'hora real de la injecció. La podeu ignorar si la injecció és recent. Si el bolus es va fer fa una estona, feu servir **-** per endarrerir l'hora (_p. ex._ -30 min), o obriu la fila amb la fletxa per triar la data i l'hora exactes. Aleshores **AAPS** tindrà en compte la durada de l'acció de la insulina i calcularà la insulina que encara queda al cos.
 
 Si feu servir **AAPS** com a cuidador, podeu desconnectar (i reconnectar) la bomba a distància molt fàcilment amb una [ordre SMS](../RemoteFeatures/SMSCommands.md), per exemple "pump disconnect 120" i "pump connect 120". La durada de la desconnexió remota va d'1 a 120 min (en aquest exemple és de 120 minuts). Això és molt útil si no podeu accedir fàcilment al telèfon amb **AAPS**: per exemple, si va dins d'un cinturó portabomba d'un nen que corre cap a la piscina, o si un adolescent el vigila de prop (o el fa servir).
 
@@ -80,7 +80,7 @@ L'estratègia preferida és molt personal, i el millor és trobar-la provant.
 **Gestionar → Rotació de punts d'inserció** obre el diàleg de rotació de punts en mode de visualització:
 
 - Amb els dos botons de dalt (icona de cànula i icona de sensor) podeu mostrar només els punts de cànula, només els punts de sensor, o tots dos
-- All Cannula change and Sensor change events from the past 45 days are available.
+- Hi ha disponibles tots els esdeveniments de canvi de cànula i canvi de sensor dels últims 45 dies.
 - Feu clic en una zona o en una entrada de la llista de sota per filtrar la llista i veure només les entrades de la zona seleccionada. La zona seleccionada es marca en verd clar.
 - Premeu la icona del **llapis** al costat d'una entrada per obrir la vista d'edició i canviar-ne la ubicació, la fletxa o la nota
 
@@ -92,7 +92,7 @@ L'estratègia preferida és molt personal, i el millor és trobar-la provant.
 
 ![Diàleg del perfil d'usuari per a la rotació de punts](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Nota: aquesta opció decideix si el diàleg de rotació de punts (mode d'edició) s'obre automàticament quan es crea una nova entrada amb el botó «Encebar» o el botó «Inserció del sensor».*
 
 - Si el canvi de cànula s'ha fet directament a la bomba, heu d'obrir el mode de visualització i editar la nova entrada per triar la ubicació i la fletxa
 
@@ -100,7 +100,7 @@ El mode d'edició us permet triar la ubicació, la fletxa i la nota de l'entrada
 
 - L'entrada que s'edita es mostra sota les imatges del cos, amb la icona del seu tipus (cànula o sensor)
 - Les vistes de davant i de darrere es mostren una al costat de l'altra: premeu la zona on l'heu col·locat
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Un cop seleccionat un punt (marcat en verd), la llista de sota mostra totes les entrades fetes en aquest punt els últims 45 dies.
 
 ![Mode d'edició](../images/SiteRotation/EditMode.png)
 
