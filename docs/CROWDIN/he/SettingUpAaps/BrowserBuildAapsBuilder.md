@@ -173,7 +173,7 @@ GitHub says **my-aaps already exists in this account**? You already have your re
 5. אם סיסמת המפתח שונה מסיסמת ה-keystore, יש לבטל את הסימון של **Key password is the same as the keystore password** (סיסמת המפתח זהה לסיסמת ה-keystore) ולהקליד את סיסמת המפתח.
 6. יש להקיש על **Check and continue** (בדיקה והמשך).
 
-הדף בודק את הסיסמה ואת ה-alias במכשיר שלכם. **Keystore OK! Continue with step 3.** (ה-keystore תקין! אפשר להמשיך לשלב 3.) אומר שהכול תקין. אם כתוב שהסיסמה תיבדק בזמן הבנייה, אפשר להמשיך בכל זאת: הבנייה תודיע לכם אם משהו לא תקין.
+הדף בודק את הסיסמה ואת ה-alias במכשיר שלכם. **ה-keystore תקין! Continue with step 3.** (ה-keystore תקין! אפשר להמשיך לשלב 3.) אומר שהכול תקין. אם כתוב שהסיסמה תיבדק בזמן הבנייה, אפשר להמשיך בכל זאת: הבנייה תודיע לכם אם משהו לא תקין.
 
 ### Create a new key
 
