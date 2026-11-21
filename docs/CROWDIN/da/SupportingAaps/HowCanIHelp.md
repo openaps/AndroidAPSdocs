@@ -1,45 +1,45 @@
-# How to help with AAPS
+# Sådan kan du hjælpe AAPS
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS bygger helt på frivilligt arbejde og har ingen betalte medarbejdere.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Udviklerne er forældre, omsorgspersoner, pårørende og mennesker med diabetes, som arbejder sammen om at udvikle og forbedre en løsning på et meget almindeligt behov. Udviklerne giver deres fritid gratis, men det er lidt urimeligt at forvente, at de også selv skal betale ekstra udgifter for at gøre noget så fantastisk til open source og gratis for alle.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*For at teste en ny opsætning helt skal udviklerne have en ekstra telefon og en ekstra pumpe, da den ikke kan bruges på et menneske, før den er stabil. Nyere modeller skal testes, når de kommer på markedet. En del af de donerede penge bruges også til at sende disse ting mellem landene til udviklerne. Nogle gange er det også rart at bidrage til udviklernes udgifter, så de kan komme ud af deres mørke rum og mødes til konferencer og arrangementer, hvor de kan udveksle kreative og analytiske idéer.*
 
 (donate-to-aaps)=
 
-### How can I donate?
+### Hvordan kan jeg donere?
 
-You can support **AAPS** in several ways:
+Du kan støtte **AAPS** på flere måder:
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation:** donér på [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** hjælp med at finansiere arbejdet med at få AAPS certificeret som medicinsk udstyr på [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** send til denne adresse **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
-## I can write code! How do I participate?
+## Jeg kan skrive kode! Hvordan deltager jeg?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Hurra! Se på issues, spørg på Discord-kanalen – der er altid meget at lave! Vælg en lille opgave til at starte med, og lav din første pull request! :)
 
-## I know the system and can write documentation!
+## Jeg kender systemet og kan skrive dokumentation!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+Fint! Det bliver meget værdsat, og det er en god måde at give noget videre på!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* Discord-kanalen om wikien finder du her: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* En vejledning i, hvordan du laver commits til den engelske wiki, finder du her: [Sådan redigerer du dokumentationen](../SupportingAaps/HowToEditTheDocs.md). Andre sprog bliver kun oversat fra engelsk og kan ikke redigeres direkte, så alle sprog forbliver ens.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## Jeg taler flere sprog og vil gerne oversætte appen eller dokumentationen
 
-If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+Hvis du oversætter noget for første gang, så start med at oversætte teksterne i appen. Det er lettere, og du får hurtigere resultater.
 
-You are welcome to start as a translator for the documentation in parallel or later.
+Du er velkommen til også at begynde at oversætte dokumentationen samtidig eller senere.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+Du kan se status for oversættelsen af appen og dokumentationen til de forskellige sprog [her](StateOfTranslations.md).
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Hvis du vil oversætte **appen** til andre sprog (tak!), så brug [Crowdin](https://crowdin.com/project/androidaps).
+* Hvis du vil oversætte **dokumentationen** til andre sprog (tak!), så brug [Crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Opret bare en konto på Crowdin, klik på dit sprog, vent på godkendelse fra en administrator, og gå i gang!
 
-## Are there other ways to help?
+## Er der andre måder at hjælpe på?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Der er brug for evner inden for grafisk design, UX-design, oversættelse og redigering af wikien – eller du kan simpelthen give noget videre ved at svare på de enkle spørgsmål på Discord og Facebook, så udviklerne får tid og ro til at koncentrere sig om de sværere ting.
