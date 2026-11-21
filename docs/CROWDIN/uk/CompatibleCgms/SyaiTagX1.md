@@ -1,11 +1,11 @@
 # Syai X1
 
 
-## Using X1 And Syai Tag app
+## Використання X1 із застосунком Syai Tag
 
 -   Встановіть apk з <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   Запуск сенсора X1
 
 - Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
