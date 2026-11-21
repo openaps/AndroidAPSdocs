@@ -61,10 +61,10 @@ Bundan sonra hep aynı anahtarı kullanmaya devam edin. Yeni bir anahtar oluştu
 
 AAPS'i hiç önceki tarayıcı ile oluşturma yöntemiyle oluşturmadıysanız (GitHub'da AndroidAPS'in kendi kopyanız, yani fork'unuz, hazırlık dosyası ve Google Drive ile) bu bölümü atlayın.
 
-Anahtar deponuz fork'unuzda secret olarak saklanır. GitHub bir secret'ı bir daha hiç göstermez, bu yüzden onu yeni deponuza kopyalayamazsınız. Önce anahtar deponuzun bir kopyasını alın, ardından onu [2. adımda](#aaps-builder-step2) **I already have a keystore** ile kullanın.
+Anahtar deponuz fork'unuzda secret olarak saklanır. GitHub bir secret'ı bir daha hiç göstermez, bu yüzden onu yeni deponuza kopyalayamazsınız. Önce anahtar deponuzun bir kopyasını alın, ardından onu [2. adımda](#aaps-builder-step2) **I already have a keystore** (zaten bir anahtar deposum var) ile kullanın.
 
 ```{warning}
-**Create a new key** seçeneğini seçmeyin. Yeni bir anahtarla oluşturulan AAPS, telefonunuzdaki AAPS'i güncelleyemez.
+**Create a new key** (yeni bir anahtar oluştur) seçeneğini seçmeyin. Yeni bir anahtarla oluşturulan AAPS, telefonunuzdaki AAPS'i güncelleyemez.
 ```
 
 Sizin durumunuz hangisi?
@@ -85,10 +85,10 @@ Anahtar deponuzu fork'unuzdan dışa aktarmak için:
 Kurulum sayfasının [2. adımında](#aaps-builder-step2):
 
 1. **I already have a keystore** (zaten bir anahtar deposum var) sekmesine dokunun.
-2. **Keystore file** alanında `keystore.jks` dosyasını seçin.
-3. **Keystore password** alanına `keyStoreInfo.txt` içindeki `KEYSTORE_PASSWORD` değerini yazın.
-4. **Key alias** (anahtar takma adı) alanında `keyStoreInfo.txt` içindeki `ALIAS` değerini seçin veya yazın.
-5. `KEY_PASSWORD`, `KEYSTORE_PASSWORD` değerinden farklıysa **Key password is the same as the keystore password** işaretini kaldırın ve `KEY_PASSWORD` değerini yazın.
+2. **Keystore file** (anahtar deposu dosyası) alanında `keystore.jks` dosyasını seçin.
+3. **Keystore password** (anahtar deposu parolası) alanına `keyStoreInfo.txt` içindeki `KEYSTORE_PASSWORD` değerini yazın.
+4. **Key alias** (anahtarın takma adı) alanında `keyStoreInfo.txt` içindeki `ALIAS` değerini seçin veya yazın.
+5. `KEY_PASSWORD`, `KEYSTORE_PASSWORD` değerinden farklıysa **Key password is the same as the keystore password** (anahtar parolası, anahtar deposu parolasıyla aynı) işaretini kaldırın ve `KEY_PASSWORD` değerini yazın.
 
 `keystore.zip` dosyasını ve `ZIP_PASSWORD` parolasını telefonunuzun dışında güvenli bir yerde saklayın: bu, anahtarınızın yedeğidir.
 
@@ -121,7 +121,7 @@ Bu adım, GitHub hesabınızda oluşturma iş akışı zaten içinde olan, AAPS 
 3. **Name of your repository** (deponuzun adı) alanında önerilen `my-aaps` adını bırakın. Deponuzu daha önce başka bir adla oluşturduysanız tam olarak o adı yazın.
 
    ```{note}
-   **Zaten bir AAPS Builder deponuz mu var** (kurulum sayfasının daha eski bir sürümüyle yapılmış)? Yeni bir tane oluşturmayın: tam adını yazın, **Create my private repository** adımını atlayın ve iş akışını [AAPS'i güncelleme](#aaps-builder-updates) bölümünde açıklandığı gibi bir kez güncelleyin. Secret'larınız olduğu gibi kalır. Yine de yeni bir depo istiyorsanız henüz sahip olmadığınız bir ad seçin, örneğin `my-aaps-2`, ve 2. adımda aynı anahtar deposunu kullanın.
+   **Zaten bir AAPS Builder deponuz mu var** (kurulum sayfasının daha eski bir sürümüyle yapılmış)? Yeni bir tane oluşturmayın: tam adını yazın, **Create my private repository** (özel depomu oluştur) adımını atlayın ve iş akışını [AAPS'i güncelleme](#aaps-builder-updates) bölümünde açıklandığı gibi bir kez güncelleyin. Secret'larınız olduğu gibi kalır. Yine de yeni bir depo istiyorsanız henüz sahip olmadığınız bir ad seçin, örneğin `my-aaps-2`, ve 2. adımda aynı anahtar deposunu kullanın.
 
    AndroidAPS fork'unuzun adını yazmayın: bir fork herkese açıktır ve zaten kendi **AAPS CI** iş akışıyla oluşturma yapar.
    ```
@@ -132,7 +132,7 @@ Bu adım, GitHub hesabınızda oluşturma iş akışı zaten içinde olan, AAPS 
 
 5. **Create my private repository** (özel depomu oluştur) düğmesine dokunun.
 
-   ![Depo satırı ve Create my private repository düğmesi](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Depo satırı ve Create my private repository (Özel depomu oluştur) düğmesi](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
 6. GitHub yeni bir sekmede **Create a new repository** (yeni depo oluştur) sayfasını açar. Her şey zaten doldurulmuştur: **Start with a template** (bir şablonla başla) altında **Include all branches** (tüm dalları dahil et) kapalı olarak `nightscout/aaps-builder` şablonu, **General** (genel) altında **Owner** (sahip) olarak hesabınız ve seçtiğiniz ad.
 
@@ -149,7 +149,7 @@ Bu adım, GitHub hesabınızda oluşturma iş akışı zaten içinde olan, AAPS 
    ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
 
 ```{warning}
-**Yeni deponuz boş mu**, hiç dosya yok mu? Şablondan oluşturulmamıştır ve oluşturma yapamaz. Onu silin (**Settings** → sayfanın en altı → **Delete this repository** (bu depoyu sil)), ardından kurulum sayfasında yeniden **Create my private repository** düğmesine dokunun.
+**Yeni deponuz boş mu**, hiç dosya yok mu? Şablondan oluşturulmamıştır ve oluşturma yapamaz. Onu silin (**Settings** → sayfanın en altı → **Delete this repository** (bu depoyu sil)), ardından kurulum sayfasında yeniden **Create my private repository** (özel depomu oluştur) düğmesine dokunun.
 ```
 
 ```{tip}
@@ -164,18 +164,18 @@ Uygulama kendi anahtarınızla imzalanmalıdır. İki sekmeden birini seçin. Ö
 
 ![Kurulum sayfası 2. adım: iki anahtar seçeneği](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
-### I already have a keystore
+### I already have a keystore (Zaten bir anahtar deposum var)
 
 1. **I already have a keystore** (zaten bir anahtar deposum var) sekmesine dokunun.
 2. **Keystore file** (anahtar deposu dosyası) alanında `.jks` dosyanızı (veya `.keystore`, `.p12`, `.pfx`) seçin. Telefonda önce dosyayı telefonunuza veya Google Drive'a kopyalayın.
 3. **Keystore password** (anahtar deposu parolası) alanına anahtar deposu parolasını yazın.
-4. **Key alias** alanında listeden takma adınızı seçin veya liste yoksa yazın. Android Studio ile yapılan anahtar depolarında bu genellikle `key0`'dır.
+4. **Key alias** (anahtarın takma adı) alanında listeden takma adınızı seçin veya liste yoksa yazın. Android Studio ile yapılan anahtar depolarında bu genellikle `key0`'dır.
 5. Anahtar parolanız anahtar deposu parolasından farklıysa **Key password is the same as the keystore password** (anahtar parolası, anahtar deposu parolasıyla aynı) işaretini kaldırın ve anahtar parolasını yazın.
 6. **Check and continue** (kontrol et ve devam et) düğmesine dokunun.
 
 Sayfa parolayı ve takma adı cihazınızda kontrol eder. **Keystore OK! Continue with step 3.** (anahtar deposu tamam, 3. adımla devam edin) her şeyin doğru olduğu anlamına gelir. Parolanın oluşturma sırasında kontrol edileceğini söylerse yine de devam edin: bir sorun varsa oluşturma bunu size bildirir.
 
-### Create a new key
+### Create a new key (Yeni bir anahtar oluştur)
 
 1. **Create a new key** (yeni bir anahtar oluştur) sekmesine dokunun.
 
@@ -333,13 +333,13 @@ Bunun için bir secret daha gerekir: `GDRIVE_OAUTH2`. Kurulum sayfasının 6. ad
 
    ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
-4. Birkaç dakika içinde kurulum sayfası sekmesine geri dönün: Google'ın yanıtı yalnızca kısa bir süre ve yalnızca bir kez geçerlidir. Adresi **Paste the copied address here** (kopyalanan adresi buraya yapıştırın) alanına yapıştırın ve **Get GDRIVE_OAUTH2** (GDRIVE_OAUTH2 al) düğmesine dokunun. Sayfa **GDRIVE_OAUTH2 is ready** (GDRIVE_OAUTH2 hazır) gösterir.
+4. Birkaç dakika içinde kurulum sayfası sekmesine geri dönün: Google'ın yanıtı yalnızca kısa bir süre ve yalnızca bir kez geçerlidir. Adresi **Paste the copied address here** (kopyalanan adresi buraya yapıştırın) alanına yapıştırın ve **Get GDRIVE_OAUTH2** (GDRIVE_OAUTH2'yi al) düğmesine dokunun. Sayfa **GDRIVE_OAUTH2 is ready** (GDRIVE_OAUTH2 hazır) gösterir.
 
    ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
    ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
-5. **Open the secrets page** (secrets sayfasını aç) düğmesine dokunun. **Copy name** düğmesine dokunun, ardından küçük **Name** alanına yapıştırın (ad `GDRIVE_OAUTH2`'dir). **Copy secret** düğmesine dokunun, büyük **Secret** kutusuna yapıştırın ve **Add secret** düğmesine dokunun.
+5. **Open the secrets page** (secrets sayfasını aç) düğmesine dokunun. **Copy name** (adı kopyala) düğmesine dokunun, ardından küçük **Name** alanına yapıştırın (ad `GDRIVE_OAUTH2`'dir). **Copy secret** (secret'ı kopyala) düğmesine dokunun, büyük **Secret** kutusuna yapıştırın ve **Add secret** düğmesine dokunun.
 
    ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
