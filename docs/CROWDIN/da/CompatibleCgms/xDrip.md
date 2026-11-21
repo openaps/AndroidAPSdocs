@@ -1,193 +1,193 @@
-# xDrip settings
+# xDrip-indstillinger
 
-If not already set up, download and install the latest xDrip release from the [xDrip releases page](https://github.com/NightscoutFoundation/xDrip/releases).
+Hvis det ikke allerede er sat op, så download og installer den nyeste xDrip-udgivelse fra [siden med xDrip-udgivelser](https://github.com/NightscoutFoundation/xDrip/releases).
 
-Disable battery optimization and allow background activity for the xDrip app.
+Deaktiver batterioptimering, og tillad baggrundsaktivitet for xDrip-appen.
 
-## Basic settings for all CGM & FGM systems
+## Grundindstillinger for alle CGM- & FGM-systemer
 
-### Disable Nightscout upload
+### Deaktiver upload til Nightscout
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Du bør ikke lade nogen anden app uploade data (blodsukker og behandlinger) til Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Hamburgermenu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Slå `Enabled` **FRA** (5)
 
-![xDrip Basic Settings 1](../images/xDrip_Basic1.png)
+![xDrip grundindstillinger 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Deaktiver automatisk kalibrering og behandlinger
 
-Make sure `Automatic Calibration` (7) is deactivated. If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+Sørg for, at `Automatic Calibration` (7) er deaktiveret. Hvis der er flueben ved `Automatic Calibration`, så aktiver `Download treatments` (6) én gang, fjern derefter fluebenet ved `Automatic Calibration`, og deaktiver `Download treatments` igen.
 
-![xDrip Basic Settings 2](../images/xDrip_Basic2.png)
+![xDrip grundindstillinger 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+Tryk på `Extra Options`(8)
 
-    {admonition} Safety warning
+    {admonition} Sikkerhedsadvarsel
     :class: warning
-    You must deactivate "Upload treatments" from xDrip, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    Du skal deaktivere »Upload treatments« i xDrip, ellers kan behandlinger blive dobbelte i AAPS, og det giver forkert COB og IOB.
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Deaktiver `Upload treatments`(9), og sørg for, at du **IKKE** bruger `Back-fill data` (11).
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+Muligheden `Alert on failures` skal også være deaktiveret (10). Ellers får du en alarm hvert 5. minut ved problemer med Wi-Fi/mobilnetværk, eller hvis serveren ikke er tilgængelig.
 
-![xDrip Basic Settings 3](../images/xDrip_Basic3.png)
+![xDrip grundindstillinger 3](../images/xDrip_Basic3.png)
 
 ### **Inter-app Settings** (Broadcast)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+Hvis du bruger AAPS, skal du aktivere broadcast i xDrips Inter-App settings, så dataene sendes videre til AAPS.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Hamburgermenu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip, you should activate `Send the displayed glucose value` (5).
+For at værdierne i AAPS skal være de samme som i xDrip, skal du aktivere `Send the displayed glucose value` (5).
 
-Enable Compatible Broadcast (6).
+Aktiver Compatible Broadcast (6).
 
-![xDrip Basic Settings 4](../images/xDrip_Basic4.png)
+![xDrip grundindstillinger 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip and `Enable broadcasts to xDrip` in AAPS xDrip plugin, then xDrip will receive insulin, carbs and basal rate information from AAPS.
+Hvis du også har aktiveret `Accept treatments` i xDrip og `Aktiver udsendelser til xDrip+` i AAPS' xDrip-plugin, så modtager xDrip information om insulin, kulhydrater og basalrate fra AAPS.
 
-If you enable `Accept Calibrations`, xDrip will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+Hvis du aktiverer `Accept Calibrations`, bruger xDrip kalibreringerne fra AAPS. Vær forsigtig, når du bruger denne funktion med Dexcom-sensorer: læs [dette](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) først.
 
-Remember to disable Import Sounds to avoid xDrip making a ringtone every time AAPS sends a basal/profile change.
+Husk at deaktivere Import Sounds, så xDrip ikke laver en ringetone, hver gang AAPS sender en ændring af basal/profil.
 
-![xDrip Basic Settings 5](../images/xDrip_Basic5.png)
+![xDrip grundindstillinger 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
-#### Identify receiver
+#### Identify receiver (identificer modtager)
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip.
+- Hvis du opdager problemer med lokal broadcast (AAPS modtager ikke BS-værdier fra xDrip), så gå til → Hamburgermenu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7), og indtast `info.nightscout.androidaps` for AAPS-build (hvis du bruger PumpControl-build, så indtast i stedet `info.nightscout.aapspumpcontrol`!!).
+- Vær opmærksom på: Autokorrektur ændrer nogle gange i til stort bogstav. Du **må kun bruge små bogstaver**, når du skriver `info.nightscout.androidaps` (eller `info.nightscout.aapspumpcontrol` til PumpControl). Et stort I vil forhindre appen i at modtage BS-værdier fra xDrip.
     
     ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip
+## Brug AAPS til at kalibrere i xDrip
 
-- If you want to be able to use AAPS to calibrate then in xDrip go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- Hvis du vil kunne bruge AAPS til at kalibrere, så gå i xDrip til Settings → Interapp Compatibility → Accept Calibrations, og vælg ON. 
+- Du kan også se på mulighederne i Settings → Less Common Settings → Advanced Calibration Settings.
 
-## Dexcom sensors
+## Dexcom-sensorer
 
-Everything related to the Dexcom sensor and transmitter themselves (starting, stopping, replacing, calibrating, troubleshooting) is documented and kept up to date in the [xDrip Dexcom documentation](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Follow those instructions for the sensor; the settings connecting xDrip to **AAPS** (described above on this page) are the only AAPS-specific part.
+Alt om selve Dexcom-sensoren og -senderen (start, stop, udskiftning, kalibrering, fejlfinding) er beskrevet og holdes opdateret i [xDrips Dexcom-dokumentation](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Følg den vejledning for sensoren; indstillingerne, der forbinder xDrip med **AAPS** (beskrevet ovenfor på denne side), er den eneste del, der er specifik for AAPS.
 
-### Dexcom G6 and ONE
+### Dexcom G6 og ONE
 
-- Set up xDrip following the [recommended settings](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
-- The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and the Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip, or use xDrip as a Companion app receiving notifications from the official Dexcom app (with possible delays in BG readings).
+- Sæt xDrip op efter de [anbefalede indstillinger](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
+- Senderne til Dexcom G6 og ONE kan være forbundet til Dexcom-modtageren (eller i stedet t:slim-pumpen) og én app på din telefon på samme tid.
+- Når du bruger xDrip som modtager, skal du først afinstallere Dexcom-appen. **Du kan ikke forbinde både xDrip og Dexcom-appen med senderen på samme tid!**
+- Hvis du har brug for Clarity og vil have glæde af xDrips funktioner, så brug [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) med lokal broadcast til xDrip, eller brug xDrip som »Companion app«, der modtager notifikationer fra den officielle Dexcom-app (BS-værdierne kan blive forsinket).
 
-#### Sensor restarts
+#### Genstart af sensor
 
-- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it.
-- [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days. Recent (Firefly) transmitters ignore them.
-- Restarting a sensor on a Firefly transmitter requires [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) and readings can be significantly in error after the restart, which is dangerous when looping: read [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) in full and [calibrate carefully](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
+- xDrip bruger altid senderens [native algoritme](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) med nuværende sendere; der er ingen grund til at slå den fra.
+- [Forebyggende genstart](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) virker kun på gamle sendere (firmware 1.6.5.25 eller ældre), hvor de er nødvendige for at sensoren ikke stopper efter 10 dage. Nyere sendere (Firefly) ignorerer dem.
+- Genstart af en sensor på en Firefly-sender kræver, at du [fjerner senderen](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), og målingerne kan være meget forkerte efter genstarten, hvilket er farligt, når du looper: læs hele [Genstart en sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html), og [kalibrer omhyggeligt](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-#### Start, stop and replace sensors
+#### Start, stop og udskift sensorer
 
-Follow the instructions:
+Følg vejledningen:
 
-- [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html)
-- [Stop and start a G6 or ONE sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
-- [Remove the transmitter from a sensor](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
-- [Transmitter lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) can only be extended ([hard reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)) on rebatteried or modified transmitters, not on Firefly.
+- [Start en G6- eller ONE-sender](https://navid200.github.io/xDrip/docs/Starting-G6.html)
+- [Stop og start en G6- eller ONE-sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
+- [Fjern senderen fra en sensor](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
+- [Senderens levetid](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) kan kun forlænges ([hard reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)) på sendere med nyt batteri eller ændrede sendere, ikke på Firefly.
 
 (xdrip-replace-transmitter)=
 
-#### Replace a transmitter
+#### Udskift en sender
 
-- Turn the original Dexcom receiver off (if used) and do not turn it back on before xDrip shows readings.
-- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
-- Keep the old transmitter out of Bluetooth range to prevent reconnection.
-- Then follow [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- Sluk den originale Dexcom-modtager (hvis du bruger den), og tænd den ikke igen, før xDrip viser målinger.
+- Glem enheden i xDrip (System Status → Forget Device) OG i smartphonens Bluetooth-indstillinger (vist som DexcomXX, hvor XX er de sidste to cifre i senderens serienummer).
+- Hold den gamle sender uden for Bluetooth-rækkevidde, så den ikke forbinder igen.
+- Følg derefter [Start en G6- eller ONE-sender](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
-### Dexcom G7, ONE+ and Stelo
+### Dexcom G7, ONE+ og Stelo
 
-- Follow the [G7, ONE+ and Stelo instructions](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (a recent xDrip release is required — see the linked page).
-- See also the [Dexcom G7, ONE+ and Stelo page](../CompatibleCgms/DexcomG7.md) for the available setups with **AAPS**.
+- Følg [vejledningen til G7, ONE+ og Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (der kræves en nyere xDrip-udgivelse – se den linkede side).
+- Se også siden [Dexcom G7, ONE+ og Stelo](../CompatibleCgms/DexcomG7.md) for de mulige opsætninger med **AAPS**.
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-### Troubleshooting Dexcom and xDrip
+### Fejlfinding af Dexcom og xDrip
 
-- [G6/ONE connectivity troubleshooting](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
-- [G7/ONE+/Stelo troubleshooting](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
-- [Problem when starting a new sensor](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
-- Full list: see **Troubleshooting** on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- [Fejlfinding af forbindelsen til G6/ONE](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
+- [Fejlfinding af G7/ONE+/Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
+- [Problem ved start af en ny sensor](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
+- Fuld liste: se **Troubleshooting** på [xDrips Dexcom-side](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip
+- Sæt din NFC-til-Bluetooth-bro op i xDrip
     
-    → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
+    → Hamburgermenu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- I Bluetooth Settings sætter du flueben præcis som på skærmbillederne nedenfor (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - Deaktiver watchdogs, da de nulstiller telefonens Bluetooth og afbryder forbindelsen til din pumpe.
     
-    ![xDrip Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+    ![xDrip Libre Bluetooth-indstillinger 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- Du kan prøve at aktivere følgende indstillinger (7)
     
-    - Use scanning
+    - Brug scanning
     - Trust Auto-Connect
     - Use Background Scans
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- Hvis du let mister forbindelsen til broen eller har svært ved at få forbindelsen tilbage, så **DEAKTIVER DEM** (8).
     
-    ![xDrip Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+    ![xDrip Libre Bluetooth-indstillinger 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- Lad alle andre muligheder være deaktiveret, medmindre du ved, hvorfor du vil aktivere dem.
     
-    ![xDrip Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
+    ![xDrip Libre Bluetooth-indstillinger 3](../images/xDrip_Libre_BTSettings3.png)
 
-### Libre smart reader battery level
+### Batteriniveau for Libre smart reader
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- Batteriniveauet for broer som MiaoMiao og Bubble kan vises i AAPS (ikke Blucon).
+- Detaljer findes på [siden med skærmbilleder](#screens-sensor-level-battery).
 
-### Connect Libre Transmitter & start sensor
+### Forbind Libre-sender & start sensor
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
+- Hvis din sensor kræver det (Libre 2 EU og Libre 1 US), så installer den nyeste »out of process«-algoritme.
 
-- Your sensor must be already started using the vendor app or the reader (xDrip cannot start or stop Libre sensors).
+- Din sensor skal allerede være startet med producentens app eller readeren (xDrip kan ikke starte eller stoppe Libre-sensorer).
 
-- Set the data source to Libre Bluetooth.
+- Sæt datakilden til Libre Bluetooth.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → Hamburgermenu (1) → Settings (2) → Vælg Libre Bluetooth i Hardware Data source (3)
     
-    ![xDrip Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+    ![xDrip start Libre-sender & sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- Scan efter Bluetooth, og forbind broen.
     
-    → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
+    → Hamburgermenu (1) → Scan Bluetooth (2) → Scan (3)
     
-    - If xDrip can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - Hvis xDrip ikke kan finde broen, så sørg for, at den ikke er forbundet til producentens app. Sæt den til opladning, og nulstil den.
     
-    ![xDrip Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+    ![xDrip start Libre-sender & sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip.
+- Start sensoren i xDrip.
     
-        {admonition} Safety warning
+        {admonition} Sikkerhedsadvarsel
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        Brug ikke sensordata, før opvarmningen på en time er slut: værdierne kan være ekstremt høje og give forkerte beslutninger i AAPS.
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → Hamburgermenu (1) → Start sensor (2) → Start sensor (3) → Indstil det præcise tidspunkt, hvor du startede den med readeren eller producentens app. Hvis du ikke startede den i dag, så svar »Not Today« (4).
 
-![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip Start Libre Transmitter og sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
 (xdrip-libre2-patched-app)=
 
-## Libre 2 patched app
+## Lappet Libre 2-app
 
-- Set the data source to Libre patched app.
+- Sæt datakilden til Libre patched app.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → Hamburgermenu (1) → Settings (2) → Vælg Libre (patched App) i Hardware Data source (3)
     
-    ![xDrip Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+    ![xDrip lappet Libre-app 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+- Du kan tilføje `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. Det logger ekstra fejlmeddelelser til fejlfinding.
 
-![xDrip LibreLink logging](../images/Libre2_Tags.png)
+![xDrip LibreLink-logning](../images/Libre2_Tags.png)
