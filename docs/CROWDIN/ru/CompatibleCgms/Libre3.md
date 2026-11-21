@@ -30,7 +30,7 @@ The blood glucose values are received by the xDrip app on the smartphone.
 
 - If not already set up then download [xDrip](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 - In xDrip select "Libre2 (patched app)" as data source.
-- При необходимости введите "BgReading:d, xdrip libr_receiver:v" в разделе Менее распространенные настройки -Дополнительные настройки журналирования- Дополнительные теги для добавления в журнал. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
+- При необходимости введите "BgReading:d,xdrip libre_receiver:v" в разделе Менее распространенные настройки → Дополнительные настройки журналирования → Дополнительные теги для добавления в журнал. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
 
 ![xDrip LibreLink logging](../images/Libre2_Tags.png)
 
@@ -91,7 +91,7 @@ Note: When two sensors are active Juggluco will send the most recent value from 
 - Убедитесь, что используете текущую версию приложения Juggluco
 - Проверьте настройки в соответствии с этой инструкцией
 - Иногда вам придется принудительно остановить приложение Libre 3 и/или Juggluco и перезапустить его/их.
-- Отключите Bluetooth, подождите 10 секунд и снова включите его
+- Отключите Bluetooth и снова включите его
 - Подождите некоторое время или попробуйте закрыть Juggluco
 - Более старые версии Juggluco (ниже 2.9.6) не посылают последующие данные с сенсора Libre3 на подключенные устройства (например, Juggluco на WearOS). Может потребоваться нажать кнопку «Повторно отправить данные» в модифицированном приложении Libre3 (из меню Juggluco).
 
