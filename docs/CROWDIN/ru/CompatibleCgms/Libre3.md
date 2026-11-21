@@ -2,7 +2,7 @@
 
 Libre 3 Freestyle (FSL3) требует уникальной настройки для получения ГК в AAPS. Есть два возможных способа получения ГК с Freestyle Libre 3 (FSL3) в AAPS.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Ниже приведены способы достижения этой цели с при помощи приложения Juggluco. It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip or AAPS. Новые сенсоры можно запустить с помощью приложения Libre 3 или непосредственно в Juggluco. В инструкции ниже показан процесс запуска сенсора в приложении Juggluco. Если сенсор был запущен в системе с учетной записи Libreview, то также можно переключаться между приложениями Juggluco и Libre 3 в качестве приемника.
 
@@ -38,7 +38,7 @@ The blood glucose values are received by the xDrip app on the smartphone.
 
   → Сэндвич-меню → Настройки →Функция сканирования NFC→ Сглаживать данные libre 3 при использовании метода xxx
 
-  ![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip advanced settings Libre 2 & raw values](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
