@@ -11,7 +11,7 @@ Her **AAPS** apk dosyası bir **anahtar deposu (keystore)** ile imzalanır. Bir 
 Yeni apk dosyanız farklı bir anahtar deposuyla imzalandığında **AAPS**'i kaldırıp yeniden yüklemeniz gerekir, örneğin:
 
 - Eski anahtar deponuzu veya parolasını bulamıyorsunuz.
-- [Tarayıcı ile oluşturmanın 1. seçeneği](../SettingUpAaps/BrowserBuildKeystore.md) ile veya [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) içinde **Create a new key** (yeni anahtar oluştur) ile yeni bir anahtar deposu oluşturdunuz.
+- [Tarayıcı ile oluşturmanın 1. seçeneği](../SettingUpAaps/BrowserBuildKeystore.md) ile veya [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) içinde **Create a new key** (yeni bir anahtar oluştur) ile yeni bir anahtar deposu oluşturdunuz.
 - Yeni bir bilgisayarda oluşturuyorsunuz ve anahtar deponuzu oraya kopyalamadınız.
 
 Anahtar deponuz hâlâ duruyorsa bu sayfaya ihtiyacınız yok: onu yeniden kullanın ve [**AAPS**'i yerinde güncelleyin](../Maintenance/UpdateToNewVersion.md).
