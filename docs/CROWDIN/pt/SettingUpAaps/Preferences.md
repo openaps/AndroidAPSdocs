@@ -1,6 +1,6 @@
 # Definições
 
-No **AAPS** v4, as preferências estão no ecrã **Definições**. Há três caminhos para lá chegar — veja [Fazer alterações à configuração do AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) para mais detalhes:
+No **AAPS** v4, as preferências estão no ecrã **Definições**. Há três caminhos para lá chegar — veja [Alterar a configuração do AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) para mais detalhes:
 
 1. Toque no ícone **Definições** (engrenagem) no canto superior direito do ecrã principal: todas as definições, agrupadas em secções que se expandem.
 2. Em **Configuração**, toque em "**Definições**" por baixo de um plugin ativo: só as definições desse plugin.
@@ -28,12 +28,12 @@ No **AAPS** v4, as preferências estão no ecrã **Definições**. Há três cam
 
 **Idioma**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- Por predefinição, o **AAPS** segue o idioma do telefone (recomendado).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Se quiser o **AAPS** num idioma diferente do telefone, escolha-o aqui. No Android 13 e mais recente, o **AAPS** regista-o no Android como o idioma da própria app, por isso todos os seus ecrãs, o ecrã principal, os widgets e a forma de escrever os números seguem esse idioma.
 
 - Quando muda o idioma, os textos do **AAPS** passam logo para o novo idioma. Se alguns textos ainda aparecerem no idioma antigo, reinicie o **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- No Android 12 esta definição não aparece: o **AAPS** usa sempre o idioma do telefone.
 - Definição oculta no [modo simples](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Modo simples**
@@ -91,7 +91,7 @@ Escolha entre o tema claro, o tema escuro ou seguir a definição de sistema do 
 
 Obrigatória para poder [exportar as definições](../Maintenance/ExportImportSettings.md), porque são encriptadas a partir da versão 2.7.
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+Se se esqueceu da sua senha mestre, veja [Como repor a senha mestre?](#FAQ-reset-master-password)
 
 **A proteção biométrica pode não funcionar em telefones OnePlus. É um problema conhecido da OnePlus em alguns telefones.**
 
@@ -138,7 +138,7 @@ O **Tempo limite da proteção** define durante quanto tempo (em segundos) as de
 
 - Os limites de segurança são definidos com base na idade que escolher nesta definição.
 - Se começar a atingir estes limites rígidos (como o bólus máximo), está na altura de subir um nível.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
+- É má ideia escolher uma idade superior à real, porque pode levar a uma sobredosagem se introduzir um valor errado na janela de insulina (por exemplo, ao esquecer o separador decimal).
 - Se quiser saber os números reais destes limites de segurança fixos, procure a função do algoritmo que usa [nesta página](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -277,7 +277,7 @@ Conforme as suas definições em [Configuração > APS](../SettingUpAaps/ConfigB
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - o estado do algoritmo em 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - o algoritmo mais recente, recomendado para principiantes
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+Desde a [versão 3.3 do **AAPS**](#version3300), a função [FSI Dinâmico (DynISF)](../DailyLifeWithAaps/DynamicISF.md) passou para o OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -374,7 +374,7 @@ Quando usa o NSClientV3, todos os programas de envio (uploaders) têm de usar a 
 - No Nightscout, crie um *[token Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (precisa do [Nightscout 15](https://nightscout.github.io/update/update/) para usar a API V3) e introduza-o em **Token de acesso do Nightscout** (não o seu API Secret!). No **AAPSClient**, pode em vez disso ler o código QR do telefone principal, o que configura um token próprio do cliente. Um cliente emparelhado com o PIN recebe o seu próprio token do telefone principal depois do emparelhamento. Veja [O token próprio do cliente no Nightscout](#client-master-control-own-token).
 - Isto permite ler e escrever dados entre o site do Nightscout e o **AAPS**.
 - Se estiver bloqueado no Objetivo 1, verifique bem se há erros de escrita aqui.
-- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Leave "Use websockets" enabled (recommended). Os websockets são **obrigatórios** para o controlo remoto a partir do **AAPSClient**, nos dois telefones.
 
 (Preferences-nsclient-synchronization)=
 ### Sincronização
@@ -413,7 +413,7 @@ O interruptor "**Permitir controlo pelos clientes**" já não está nestas defin
 - Para apagar todos os SSID, introduza um espaço em branco no campo.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Definições avançadas (NSClientV3)
 
 ![Definições avançadas do NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -472,21 +472,21 @@ Escolha que serviço de localização deve ser usado:
 
 As definições devem ser fáceis de entender.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Ignorar o modo Não incomodar** (ativo por predefinição): os alarmes do **AAPS** tocam mesmo com o telefone em silêncio ou em Não incomodar. Desative-o se o **AAPS** tiver de respeitar esses modos: os alarmes deixam de tocar e, em Não incomodar, só vibram, no telefone e no relógio. As sugestões do loop que chegam durante o modo Não incomodar aparecem sem som.
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Quando um alarme toca, o ecrã do alarme oferece **Silenciar por 5 minutos**, **Silenciar alarme** (o ecrã fica aberto, para poder ler a mensagem) e **Silenciar e fechar**. Deslizar a notificação do alarme para fora da área de notificações silencia o alarme. Quando abrir o **AAPS** mais tarde, um alarme a que não respondeu aparece de novo.
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### Som, volume e vibração do alarme
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **Som**: os sons de alarme do **AAPS** estão incluídos na app e não podem ser alterados.
+- **Volume**: o **AAPS** não tem uma definição de volume própria. Com **Ignorar o modo Não incomodar** ativo, os alarmes seguem o volume de alarme do telefone. Com esta opção desativada, seguem o volume das notificações.
+- **Aumentar gradualmente o volume da notificação** (ativo por predefinição): o alarme começa baixo e vai ficando mais alto. Desative-o para tocar logo com o volume máximo.
+- **Vibração**: nas definições do telefone, vá a **Apps** > **AAPS** > **Notificações**. A lista **Alarmes AAPS** aparece aí depois do primeiro alarme. Toque num alarme para ativar ou desativar a sua **Vibração**. Mantenha estes alarmes ativos.
 
-![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+![Alarmes AAPS nas definições de notificações do telefone](../images/preferences/settings_alarm_channels.png) ![Definição de vibração de um alarme AAPS](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- Os alarmes de glicose (alta, baixa, sem dados) vêm da sua app de CGM ou do Nightscout: defina aí o som e a vibração.
 
 (preferences-maintenance-settings)=
 ## Definições de manutenção
@@ -503,7 +503,7 @@ When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence a
 
 Pode ajudar a desenvolver o **AAPS** enviando relatórios de falhas aos programadores.
 
-**Exportação de definições sem intervenção**<br/> Ao ativar esta função, permite que o **AAPS** exporte as definições sem intervenção do utilizador. For this the master password is securely stored on your phone (only) at the next manual export. A senha guardada é usada durante até 4 semanas. Após 4 semanas, recebe uma notificação de que a senha está quase a expirar. Durante um período de tolerância de 1 semana, pode então renovar a senha exportando manualmente as definições a partir do menu de manutenção.
+**Exportação de definições sem intervenção**<br/> Ao ativar esta função, permite que o **AAPS** exporte as definições sem intervenção do utilizador. Para isso, a senha mestre é guardada em segurança no seu telefone (só nele) na próxima exportação manual. A senha guardada é usada durante até 4 semanas. Após 4 semanas, recebe uma notificação de que a senha está quase a expirar. Durante um período de tolerância de 1 semana, pode então renovar a senha exportando manualmente as definições a partir do menu de manutenção.
 
 Depois de passar o período de tolerância de 1 semana, a senha guardada expira e qualquer exportação automática das definições é cancelada com uma notificação ao utilizador, que pede para introduzir novamente a senha. [(**Exportações automáticas das definições**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) ficam registadas nas listas 'Careportal' e 'Entrada de Utilizador' do **AAPS**, em Tratamentos.
 
