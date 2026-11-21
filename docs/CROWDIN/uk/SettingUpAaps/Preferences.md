@@ -28,12 +28,12 @@
 
 **Мова**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- За замовчуванням **AAPS** використовує мову телефону (рекомендовано).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Якщо ви хочете, щоб **AAPS** був іншою мовою, ніж телефон, виберіть її тут. На Android 13 і новіших **AAPS** реєструє її в Android як власну мову застосунку, тому всі його екрани, головний екран, віджети і спосіб запису чисел відповідають їй.
 
 - Коли ви змінюєте мову, тексти **AAPS** одразу переходять на нову мову. Якщо деякі тексти ще показуються старою мовою, перезапустіть **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- На Android 12 це налаштування не показується: **AAPS** завжди використовує мову телефону.
 - Це налаштування приховано в [простому режимі](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Простий режим**
@@ -91,7 +91,7 @@
 
 Обов'язковий, щоб можна було [експортувати налаштування](../Maintenance/ExportImportSettings.md), бо з версії 2.7 вони шифруються.
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+Якщо ви забули головний пароль, див. [Як скинути головний пароль?](#FAQ-reset-master-password)
 
 **Біометричний захист може не працювати на телефонах OnePlus. Це відома проблема OnePlus на деяких телефонах.**
 
@@ -138,7 +138,7 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 - Обмеження безпеки задаються залежно від віку, який ви виберете в цьому налаштуванні.
 - Якщо ви почали впиратися в ці жорсткі обмеження (наприклад, максимальний болюс), час перейти на крок вище.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
+- Погана ідея вибирати вік, більший за справжній, бо це може призвести до передозування через неправильне значення в діалозі інсуліну (наприклад, якщо пропустити десяткову кому).
 - Якщо ви хочете знати точні значення цих жорстко заданих обмежень безпеки, перейдіть до функції алгоритму, яку ви використовуєте, на [цій сторінці](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -277,7 +277,7 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – стан алгоритму у 2017 році
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – найновіший алгоритм, рекомендований для початківців
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+Починаючи з [**AAPS** версії 3.3](#version3300), функцію [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) перенесено в OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -374,7 +374,7 @@ min_5m_carbimpact задає типовий вплив засвоєння вуг
 - У Nightscout створіть *[токен адміністратора (Admin token)](https://nightscout.github.io/nightscout/security/#create-a-token)* (для API V3 потрібен [Nightscout 15](https://nightscout.github.io/update/update/)) і введіть його в **Токен доступу Nightscout** (не ваш API Secret!). В **AAPSClient** замість цього можна відсканувати QR-код основного телефону. Так клієнт отримає власний токен. Клієнт, спарений за допомогою PIN, отримує власний токен від основного телефону після спарювання. Див. [Власний токен Nightscout клієнта](#client-master-control-own-token).
 - Це дозволяє читати й записувати дані між вебсайтом Nightscout і **AAPS**.
 - Якщо ви застрягли на Завданні 1, ще раз перевірте, чи немає тут помилок.
-- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Leave "Use websockets" enabled (recommended). Websockets **обов'язкові** для віддаленого керування з **AAPSClient** на обох телефонах.
 
 (Preferences-nsclient-synchronization)=
 ### Синхронізація
@@ -413,7 +413,7 @@ min_5m_carbimpact задає типовий вплив засвоєння вуг
 - Щоб видалити всі SSID, введіть у поле пробіл.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Додаткові налаштування (NSClientV3)
 
 ![Додаткові налаштування NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -472,21 +472,21 @@ min_5m_carbimpact задає типовий вплив засвоєння вуг
 
 Налаштування зрозумілі без пояснень.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Ігнорувати режим «Не турбувати»** (за замовчуванням увімкнено): тривоги **AAPS** звучать, навіть коли телефон у беззвучному режимі або в режимі «Не турбувати». Вимкніть його, якщо **AAPS** має враховувати ці режими: тоді тривоги не звучать, а в режимі «Не турбувати» лише вібрують, на телефоні та на годиннику. Пропозиції петлі, які надходять у режимі «Не турбувати», показуються без звуку.
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Коли звучить тривога, на екрані тривоги є кнопки **Приглушити на 5 хвилин**, **Вимкнути звук** (екран залишається відкритим, щоб ви могли прочитати повідомлення) і **Вимкнути звук і закрити**. Якщо змахнути сповіщення про тривогу в панелі сповіщень, звук тривоги вимкнеться. Коли ви пізніше відкриєте **AAPS**, тривогу, на яку ви не відповіли, буде показано знову.
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### Звук, гучність і вібрація тривог
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **Звук**: звуки тривог **AAPS** вбудовані, і їх не можна змінити.
+- **Гучність**: **AAPS** не має власного налаштування гучності. Якщо **Ігнорувати режим «Не турбувати»** увімкнено, тривоги використовують гучність будильника телефону. Якщо вимкнено, вони використовують гучність сповіщень.
+- **Поступово збільшувати гучність сповіщень** (за замовчуванням увімкнено): тривога починається тихо і стає гучнішою. Вимкніть його, щоб тривога одразу звучала на повну гучність.
+- **Вібрація**: у налаштуваннях телефону перейдіть до **Додатки** > **AAPS** > **Сповіщення**. Список **Тривоги AAPS** з'являється там після першої тривоги. Натисніть на тривогу, щоб увімкнути або вимкнути її **Вібрацію**. Залиште ці тривоги увімкненими.
 
-![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+![Тривоги AAPS у налаштуваннях сповіщень телефону](../images/preferences/settings_alarm_channels.png) ![Налаштування вібрації однієї тривоги AAPS](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- Тривоги глюкози (висока, низька, немає даних) надходять від вашого застосунку CGM або Nightscout: налаштуйте їхній звук і вібрацію там.
 
 (preferences-maintenance-settings)=
 ## Налаштування обслуговування
@@ -503,7 +503,7 @@ When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence a
 
 Ви можете допомогти розвивати **AAPS**, надсилаючи розробникам звіти про збої.
 
-**Фоновий експорт налаштувань**<br/> Якщо ввімкнути цю функцію, **AAPS** зможе експортувати налаштування без участі користувача. For this the master password is securely stored on your phone (only) at the next manual export. Збережений пароль використовуватиметься до 4 тижнів. Через 4 тижні ви отримаєте сповіщення, що термін дії пароля скоро закінчиться. Протягом пільгового періоду в 1 тиждень пароль можна оновити, вручну експортувавши налаштування з меню обслуговування.
+**Фоновий експорт налаштувань**<br/> Якщо ввімкнути цю функцію, **AAPS** зможе експортувати налаштування без участі користувача. Для цього головний пароль безпечно зберігається на вашому телефоні (лише там) під час наступного ручного експорту. Збережений пароль використовуватиметься до 4 тижнів. Через 4 тижні ви отримаєте сповіщення, що термін дії пароля скоро закінчиться. Протягом пільгового періоду в 1 тиждень пароль можна оновити, вручну експортувавши налаштування з меню обслуговування.
 
 Після закінчення пільгового періоду в 1 тиждень збережений пароль стає недійсним, і будь-який автоматичний експорт налаштувань переривається, а користувач отримує сповіщення з проханням знову ввести пароль. [(**Автоматичний експорт налаштувань**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) буде записано у списки **AAPS** 'Careportal' і 'Введення користувача' в розділі Терапія.
 
