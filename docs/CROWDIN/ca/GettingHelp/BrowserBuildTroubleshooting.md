@@ -1,6 +1,6 @@
 (aaps-ci-troubleshooting)=
 
-# Browser build: troubleshooting
+# Compilació al navegador: resolució de problemes
 
 ```{note}
 This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
@@ -96,7 +96,7 @@ Right after the repository is created, GitHub may not have read its workflow fil
 
 - **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
 
-## AAPS-CI Troubleshooting
+## Resolució de problemes d'AAPS-CI
 
 (aaps-ci-read-the-logs)=
 ### First: find out what went wrong
@@ -150,32 +150,32 @@ Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usu
 ![Re-run dialog](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
 
 (aaps-ci-preparation-web)=
-### aaps-ci-preparation web page
+### Pàgina web aaps-ci-preparation
   - The preparation page is displayed by a temporary local server (for example Simple Web Server on a computer), which also receives the Google refresh token.
   - If you see the screen below, the local server has stopped or is not reachable.
-  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
+  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. Això cal sobretot quan creeu la primera connexió amb Google durant la configuració.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
-### Google Refresh Token Expired
-  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
+### El token d'actualització de Google ha caducat
+  - Els tokens d'actualització d'OAuth2 de Google caduquen si no es fan servir durant 6 mesos, i també poden deixar de ser vàlids en altres casos (per exemple, si heu canviat la contrasenya del compte de Google o si n'heu revocat l'accés manualment). Per a més detalls, vegeu la [documentació d'OAuth2 de Google](https://developers.google.com/identity/protocols/oauth2).
   - In the [build log](#aaps-ci-read-the-logs), the step **Retrieving Google Drive access token** fails with `invalid_grant` and `Token has been expired or revoked.`:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.png)
 
   - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token, [update the secret](#aaps-ci-update-secret) in your GitHub repository, then [re-run the build](#aaps-ci-rerun).
-  - If the authorization fails again, or Google does not ask for your consent anymore, remove the existing AAPS access from your Google Account first, see [below](#aaps-ci-google-remove-access).
+  - Si l'autorització torna a fallar, o Google ja no us demana el consentiment, primer elimineu l'accés d'AAPS del vostre compte de Google, vegeu [més avall](#aaps-ci-google-remove-access).
 
 (aaps-ci-google-remove-access)=
-### Remove AAPS Access From Your Google Account And Restart The Authorization
-  - If the Google Drive authorization keeps failing, or you want to start again from a clean state, first remove the access you previously gave to AAPS, then redo the authorization.
-  - On your phone, open [https://myaccount.google.com](https://myaccount.google.com), tap **Security**, scroll down to **Your connections to third-party apps & services** and open the list of linked apps. You can also go directly to [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
-  - Tap **AAPS** in the list.
+### Elimineu l'accés d'AAPS del vostre compte de Google i torneu a començar l'autorització
+  - Si l'autorització de Google Drive continua fallant, o voleu tornar a començar des de zero, primer elimineu l'accés que havíeu donat a AAPS i després torneu a fer l'autorització.
+  - Al telèfon, obriu [https://myaccount.google.com](https://myaccount.google.com), toqueu **Security**, baixeu fins a **Your connections to third-party apps & services** i obriu la llista d'aplicacions connectades. També podeu anar directament a [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
+  - Toqueu **AAPS** a la llista.
 
   ![aaps_ci_google_access_1](../images/Building-the-App/CI/aaps_ci_google_access_1.png)
 
-  - The page shows the access you gave to AAPS (the Google Drive files used with the app). Tap **Delete all** to remove the connection, or tap **See details** to review it first.
+  - La pàgina mostra l'accés que heu donat a AAPS (els fitxers de Google Drive que fa servir l'aplicació). Toqueu **Delete all** per eliminar la connexió, o toqueu **See details** per revisar-la abans.
 
   ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
 
@@ -187,11 +187,11 @@ Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usu
 
   ![aaps_ci_google_access_4](../images/Building-the-App/CI/aaps_ci_google_access_4_confirm.png)
 
-  - Google confirms that AAPS no longer has access. AAPS no longer appears in the list of linked apps.
+  - Google confirms that AAPS no longer has access. AAPS ja no apareix a la llista d'aplicacions connectades.
 
   ![aaps_ci_google_access_5](../images/Building-the-App/CI/aaps_ci_google_access_5_removed.png)
 
-  - Now restart the authorization cleanly: close **both** the preparation page and the file manager app, reopen aaps-ci-preparation.html from the file manager and redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps. Google will ask you to grant access again and the page will provide a new `GDRIVE_OAUTH2` token.
+  - Ara torneu a començar l'autorització des de zero: tanqueu **tant** la pàgina de preparació com l'aplicació de gestió de fitxers, torneu a obrir aaps-ci-preparation.html des del gestor de fitxers i repetiu els passos d'[autorització de Google Drive](#aaps-ci-google-drive-auth). Google us tornarà a demanar que doneu accés i la pàgina us donarà un token `GDRIVE_OAUTH2` nou.
   - [Update the `GDRIVE_OAUTH2` secret](#aaps-ci-update-secret) in your GitHub repository with the new token, then [re-run the build](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
@@ -199,16 +199,16 @@ Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usu
   - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
 
 (aaps-ci-actions-permission)=
-### Check GitHub Actions Permission Settings
-  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General). If you change it, press **Save** below the options.
+### Comproveu la configuració de permisos de GitHub Actions
+  - Assegureu-vos que les polítiques de GitHub Actions estan configurades com a «Allow all actions and reusable workflows» (Settings → Actions → General). If you change it, press **Save** below the options.
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
 `actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
 
 (aaps-ci-workflow-permissions)=
-### Check GitHub Workflow Permissions Settings
-  - If the build fails immediately with an "Invalid workflow file" error similar to the one below, the default workflow permissions of your repository are too restrictive:
+### Comproveu la configuració de permisos dels workflows de GitHub
+  - Si la compilació falla de seguida amb un error «Invalid workflow file» semblant al de sota, els permisos per defecte dels workflows del vostre repositori són massa restrictius:
 
 ```
 Invalid workflow file
@@ -217,7 +217,7 @@ Error calling workflow 'xxxxx/AndroidAPS/.github/workflows/cleanup-workflow-runs
 The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'actions: none'.
 ```
 
-  - Make sure Workflow permissions are set to “Read and write permissions” (Settings → Actions → General → Workflow permissions), then save and re-run the build workflow.
+  - Assegureu-vos que Workflow permissions està configurat com a «Read and write permissions» (Settings → Actions → General → Workflow permissions); després deseu i torneu a executar el workflow de compilació.
 
   ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
 
@@ -232,4 +232,4 @@ The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'ac
   ![Password entered with an added backslash](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
 
   - If the build still fails when signing the APK although your password is correct, and the password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is older than September 2026 and still parses these characters. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev, then re-run the build workflow.
-  - The vertical bar `|` is a special case. The preparation page of [Option 1](#aaps-ci-option1) combines the keystore, passwords and alias into one `KEYSTORE_SET` secret separated by `|`, and the workflow splits it on that character. The password generated by the preparation page contains only letters and digits, so this cannot happen with Option 1. It can only happen if you assembled a `KEYSTORE_SET` secret yourself from a password containing `|`. In that case, delete `KEYSTORE_SET` and enter the separate secrets of [Option 2](#aaps-ci-option2) instead.
+  - La barra vertical `|` és un cas especial. La pàgina de preparació de l'[opció 1](#aaps-ci-option1) ajunta el magatzem de claus, les contrasenyes i l'àlies en un sol secret `KEYSTORE_SET`, separats per `|`, i el workflow el divideix per aquest caràcter. La contrasenya que genera la pàgina de preparació només conté lletres i xifres, així que això no pot passar amb l'opció 1. Només pot passar si heu muntat vosaltres mateixos un secret `KEYSTORE_SET` amb una contrasenya que conté `|`. En aquest cas, elimineu `KEYSTORE_SET` i introduïu els secrets separats de l'[opció 2](#aaps-ci-option2).
