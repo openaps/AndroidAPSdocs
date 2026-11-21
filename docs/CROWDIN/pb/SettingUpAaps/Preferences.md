@@ -28,12 +28,12 @@ No **AAPS** v4, as preferências ficam na tela **Configurações**. Há três ca
 
 **Idioma**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- Por padrão, o **AAPS** usa o idioma do telefone (recomendado).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Se você quiser o **AAPS** em um idioma diferente do telefone, escolha-o aqui. No Android 13 e mais recentes, o **AAPS** registra esse idioma como o idioma próprio do app no Android, por isso todas as telas, a tela principal, os widgets e a forma de escrever os números seguem esse idioma.
 
 - Quando você muda o idioma, os textos do **AAPS** passam para o novo idioma na hora. Se alguns textos ainda aparecerem no idioma antigo, reinicie o **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- No Android 12 esta configuração não aparece: o **AAPS** sempre usa o idioma do telefone.
 - Configuração oculta no [Modo simples](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Modo simples**
@@ -91,7 +91,7 @@ Escolha entre o tema claro, o tema escuro ou seguir a configuração do sistema 
 
 Obrigatória para poder [exportar configurações](../Maintenance/ExportImportSettings.md), porque elas são criptografadas desde a versão 2.7.
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+Se você esqueceu a sua senha mestra, veja [Como redefinir a senha mestra?](#FAQ-reset-master-password)
 
 **A proteção biométrica pode não funcionar em telefones OnePlus. Este é um problema conhecido da OnePlus em alguns telefones.**
 
@@ -138,7 +138,7 @@ O **Tempo limite de proteção** define por quanto tempo (em segundos) as config
 
 - Os limites de segurança são definidos com base na idade que você seleciona nesta configuração.
 - Se você começar a atingir esses limites rígidos (como o bólus máximo), é hora de subir um nível.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
+- Não é uma boa ideia selecionar uma idade maior do que a real, porque isso pode levar a uma overdose ao digitar um valor errado no diálogo de insulina (por exemplo, esquecendo o separador decimal).
 - Se você quiser saber os números reais desses limites de segurança fixos no código, role até o recurso do algoritmo que você usa [nesta página](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -277,7 +277,7 @@ Dependendo das suas configurações em [Configuração > APS](../SettingUpAaps/C
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - o estado do algoritmo em 2017
 - [Super Micro Bólus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - o algoritmo mais recente, recomendado para iniciantes
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+A partir da [versão 3.3 do **AAPS**](#version3300), a função [ISF dinâmico](../DailyLifeWithAaps/DynamicISF.md) foi movida para o OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -374,7 +374,7 @@ Ao usar o NSClientV3, todos os uploaders precisam usar a API v3 do Nightscout. S
 - No Nightscout, crie um *[token de administrador](https://nightscout.github.io/nightscout/security/#create-a-token)* (é preciso o [Nightscout 15](https://nightscout.github.io/update/update/) para usar a API V3) e digite-o em **Token de acesso do Nightscout** (não o seu API Secret!). No **AAPSClient**, você pode escanear o código QR do telefone principal, o que configura um token próprio do cliente. Um cliente pareado com o PIN recebe o seu próprio token do telefone principal depois do pareamento. Veja [O token próprio do Nightscout do cliente](#client-master-control-own-token).
 - Isso permite que os dados sejam lidos e gravados entre o site do Nightscout e o **AAPS**.
 - Se você estiver travado no Objetivo 1, confira aqui se há erros de digitação.
-- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Leave "Use websockets" enabled (recommended). Os websockets são **obrigatórios** para o controle remoto pelo **AAPSClient**, nos dois telefones.
 
 (Preferences-nsclient-synchronization)=
 ### Sincronização
@@ -413,7 +413,7 @@ A chave "**Permitir controle pelo cliente**" não fica mais nestas configuraçõ
 - Para apagar todos os SSIDs, digite um espaço em branco no campo.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Configurações avançadas (NSClientV3)
 
 ![Configurações avançadas do NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -472,21 +472,21 @@ Selecione qual serviço de localização deve ser usado:
 
 As configurações devem ser fáceis de entender.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Ignorar o modo Não perturbe** (ativado por padrão): os alarmes do **AAPS** tocam mesmo quando o telefone está no silencioso ou no modo Não perturbe. Desative se o **AAPS** deve respeitar esses modos: os alarmes então não tocam e, no modo Não perturbe, só vibram, no telefone e no relógio. As sugestões do loop que chegam durante o modo Não perturbe aparecem sem som.
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Quando um alarme toca, a tela do alarme oferece **Silenciar por 5 minutos**, **Silenciar alarme** (a tela continua aberta, para que você possa ler a mensagem) e **Silenciar e fechar**. Deslizar a notificação do alarme para fora da área de notificações silencia o alarme. Quando você abrir o **AAPS** depois, um alarme que você não respondeu aparece de novo.
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### Som, volume e vibração dos alarmes
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **Som**: os sons de alarme do **AAPS** são fixos no app e não podem ser alterados.
+- **Volume**: o **AAPS** não tem uma configuração de volume própria. Com **Ignorar o modo Não perturbe** ativado, os alarmes seguem o volume de alarme do telefone. Com ele desativado, seguem o volume das notificações.
+- **Aumentar gradualmente o volume das notificações** (ativado por padrão): o alarme começa baixo e fica mais alto. Desative para tocar no volume máximo desde o início.
+- **Vibração**: nas configurações do telefone, vá em **Apps** > **AAPS** > **Notificações**. A lista **Alarmes do AAPS** aparece ali depois do primeiro alarme. Toque em um alarme para ativar ou desativar a **Vibração** dele. Mantenha esses alarmes ativados.
 
-![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+![Alarmes do AAPS nas configurações de notificação do telefone](../images/preferences/settings_alarm_channels.png) ![Configuração de vibração de um alarme do AAPS](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- Os alarmes de glicose (alta, baixa, sem dados) vêm do seu app de CGM ou do Nightscout: defina o som e a vibração deles lá.
 
 (preferences-maintenance-settings)=
 ## Configurações de manutenção
@@ -503,7 +503,7 @@ When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence a
 
 Você pode ajudar a desenvolver o **AAPS** enviando relatórios de falhas para os desenvolvedores.
 
-**Exportação automática de configurações**<br/> Ao ativar este recurso, você permite que o **AAPS** faça exportações de configurações sem a intervenção do usuário. For this the master password is securely stored on your phone (only) at the next manual export. A senha guardada será usada por até 4 semanas. Depois de 4 semanas, você será avisado de que a senha está para expirar. Durante um período de tolerância de 1 semana, a senha pode ser renovada exportando as configurações manualmente pelo menu de manutenção.
+**Exportação automática de configurações**<br/> Ao ativar este recurso, você permite que o **AAPS** faça exportações de configurações sem a intervenção do usuário. Para isso, a senha mestra é guardada com segurança (só) no seu telefone na próxima exportação manual. A senha guardada será usada por até 4 semanas. Depois de 4 semanas, você será avisado de que a senha está para expirar. Durante um período de tolerância de 1 semana, a senha pode ser renovada exportando as configurações manualmente pelo menu de manutenção.
 
 Depois que o período de tolerância de 1 semana passar, a senha guardada expira e qualquer exportação automática de configurações é cancelada, com uma notificação ao usuário pedindo para digitar a senha de novo. [(**Exportações automáticas de configurações**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) serão registradas nas listas 'CarePortal' e 'Entrada do usuário' do **AAPS**, em Tratamentos.
 
