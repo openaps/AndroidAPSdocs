@@ -114,7 +114,7 @@ No fim de cada linha, pequenos ícones mostram de onde vêm os dados ou para ond
 (screens-bolus-carbs)=
 ### Hidratos e bólus
 
-![Hidratos e bólus](../images/TreatmentsView1.png)
+![Hidratos e bólus](../images/Maintenance/TreatmentsView1.png)
 
 Neste separador pode ver o registo de bólus e de hidratos de carbono. Cada bólus (linha **1**) mostra a IA associada que ainda resta ao lado da quantidade de insulina. A origem do bólus pode ser:
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ O Histórico de tratamentos pode ser usado para corrigir registos de hidratos de
 
 ### Basal temporária
 
-![Basal temporária](../images/TreatmentsView2.png)
+![Basal temporária](../images/Maintenance/TreatmentsView2.png)
 
 As **basais temporárias** aplicadas pelo loop aparecem aqui. Quando um registo ainda tem impacto na IA, essa informação aparece ao lado da taxa (linha **1**). Pode ser:
 * IA positiva, se a basal temporária foi mais alta do que a definida no Perfil
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Alvo Temporário
 
-![Alvo Temporário](../images/TreatmentsView3.png)
+![Alvo Temporário](../images/Maintenance/TreatmentsView3.png)
 
 O histórico dos alvos temporários pode ser visto aqui.
 
 ### Troca de Perfil
 
-![Troca de Perfil](../images/TreatmentsView4.png)
+![Troca de Perfil](../images/Maintenance/TreatmentsView4.png)
 
 O histórico das trocas de perfil pode ser visto aqui. Pode ver vários registos de cada vez que troca de perfil: a linha **1**, guardada no NS e no histórico da bomba, corresponde à troca real. A linha **2**, guardada no Nightscout mas não no histórico da bomba, corresponde ao pedido de troca de perfil feito pelo utilizador.
 
@@ -169,14 +169,14 @@ Pode usar o botão **Clonar** na linha **2** para fazer uma cópia de uma **Troc
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Este separador mostra todas as notas e registos do careportal gravados no Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Modo de funcionamento
 
-![Modo de funcionamento](../images/TreatmentsView6.png)
+![Modo de funcionamento](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 

@@ -334,27 +334,86 @@ A computer without camera: use the PIN there.
 
 ## Troubleshooting
 
-| 증상                                                                       | 확인할 것                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 클라이언트에 **마스터가 오프라인**이라고 표시됨                                              | 마스터 휴대폰이 깨어 있고 **AAPS**가 실행 중인지; 두 휴대폰 모두 **NSClientV3**에서 연결되어 있는지; 두 휴대폰 모두 **웹소켓**이 활성화되어 있는지; 같은 Nightscout 사이트인지 확인하십시오.                                                                                                             |
-| 클라이언트에 **페어링되지 않음**이라고 표시됨                                               | **관리 → 마스터와 페어링**에서 다시 페어링하십시오. 마스터의 **허가된 클라이언트** 목록에서 클라이언트가 **활성**인지 확인하십시오.                                                                                                                                                           |
-| 마스터가 명령을 **거부**함                                                         | 마스터는 현재 상태로 다시 검증합니다. 예: 선택한 프로파일이 더 이상 없거나, 펌프 종류가 맞지 않습니다. 마스터에서 다시 확인하십시오.                                                                                                                                                             |
-| Commands **fail** or the master is often **offline**                     | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md). |
-| *"페어링 비밀 키를 저장할 수 없어서 페어링이 취소되었습니다"*로 페어링이 취소됨                           | 아무것도 바뀌지 않았습니다. 페어링을 다시 시작하십시오. 계속 실패하면 **AAPSClient**를 다시 시작하고 한 번 더 시도하십시오.                                                                                                                                                             |
-| 페어링 후 아무 일도 일어나지 않음                                                      | 마스터에서 **클라이언트 제어 허용**이 켜져 있는지, 마스터가 Nightscout에 연결되어 있는지 확인하십시오.                                                                                                                                                                          |
-| **새 클라이언트** 대화 상자에서 QR 코드 옵션을 선택할 수 없음                                   | 대화 상자에 그 이유가 표시됩니다. *관리자 토큰이 아님*: 마스터에 Nightscout의 관리자 토큰을 주거나, **PIN**으로 클라이언트를 추가하십시오. *연결되지 않음*: 마스터의 **NSClientV3**에 *연결됨*이 표시될 때까지 기다리십시오.                                                                                           |
-| *"Nightscout에 이 이름의 토큰이 이미 있으며 권한이 다릅니다"*                                | 사용자의 Nightscout 토큰 중 하나가 `aaps-`와 이 이름으로 되어 있습니다. 클라이언트에 다른 이름을 선택하십시오.                                                                                                                                                                   |
-| *"이 이름의 클라이언트가 이미 목록에 있습니다"*                                             | 다른 이름을 선택하거나 먼저 그 클라이언트를 삭제하십시오.                                                                                                                                                                                                          |
-| 클라이언트에 *"이 코드는 다른 AAPS 버전에서 만들어졌습니다"*라고 표시됨                              | 마스터와 클라이언트는 **같은** 버전의 **AAPS**를 실행해야 합니다. 오래된 쪽을 업데이트하십시오.                                                                                                                                                                               |
-| 클라이언트에 *"이 코드는 만료되었습니다"*라고 표시됨                                           | 페어링하는 코드는 약 2분 동안 유효합니다. 새 코드를 받으려면 마스터에서 클라이언트를 다시 추가하십시오.                                                                                                                                                                               |
-| 클라이언트에 *"이 휴대폰은 이미 페어링되어 있습니다"*라고 표시됨                                    | 먼저 페어링을 해제한 다음(**관리 → 마스터와 페어링 → 페어링 해제**) 다시 스캔하십시오. **Nightscout만** 코드는 페어링된 휴대폰에서도 작동합니다.                                                                                                                                              |
-| 클라이언트에 *"마스터가 거부했습니다: 이 휴대폰은 자기 토큰이 아닌 다른 토큰으로 Nightscout에 기록합니다"*라고 표시됨 | 클라이언트가 전에는 자기 Nightscout 토큰을 사용했지만 지금은 다른 토큰으로 기록합니다. 예를 들어 Nightscout 설정에 토큰을 입력한 뒤에 이렇게 됩니다. 마스터에서 클라이언트를 삭제하고 다시 추가하십시오([클라이언트의 자기 Nightscout 토큰](#client-master-control-own-token) 참조).                                               |
-| 클라이언트의 NSClient 로그에 *"✕ SETTINGS … refused"*가 표시되고, 설정이 더 이상 마스터를 따르지 않음 | 다른 누군가가 마스터의 설정 문서를 기록했거나, 마스터에 새 키가 생겼습니다(예: 데이터를 지운 뒤). 페어링된 클라이언트는 다음에 Nightscout에 연결할 때 새 키를 스스로 받습니다. Nightscout를 읽기만 하는 휴대폰은 마스터의 QR 코드가 다시 필요합니다(**Nightscout 읽기만 → QR 코드 표시**).                                                   |
-| 클라이언트 카드에 *"Nightscout 토큰 …을(를) 사용합니다"*가 빨간색으로 표시됨                       | 클라이언트가 아직 필요보다 많은 권한을 가진 토큰으로 기록합니다. 마스터는 페어링 후 클라이언트에 자기 토큰을 보내지만, 마스터에 관리자 토큰이 있을 때만 그렇습니다. 마스터의 토큰을 확인하거나, QR 코드로 클라이언트를 다시 설정하십시오.                                                                                                    |
-| 클라이언트가 더 이상 Nightscout를 읽을 수 없음                                          | 토큰이 삭제되었습니다. 예를 들어 마스터에서 클라이언트를 삭제했기 때문입니다. 클라이언트를 다시 추가하십시오.                                                                                                                                                                             |
-| Nightscout 웹사이트에서 입력한 처치가 적용되지 않음                                        | [강화 모드](#client-master-control-hardened-mode)에서는 정상입니다. 대신 페어링된 클라이언트에서 입력하십시오.                                                                                                                                                           |
-
 Nightscout / 동기화 문제는 먼저 [NSClient 문제 해결](../GettingHelp/TroubleshootingNsClient.md)을 참조하십시오.
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *관리자 토큰이 아님*: 마스터에 Nightscout의 관리자 토큰을 주거나, **PIN**으로 클라이언트를 추가하십시오.
+- *연결되지 않음*: 마스터의 **NSClientV3**에 *연결됨*이 표시될 때까지 기다리십시오.
+
+**"Nightscout에 이 이름의 토큰이 이미 있으며 권한이 다릅니다"**
+
+사용자의 Nightscout 토큰 중 하나가 `aaps-`와 이 이름으로 되어 있습니다. 클라이언트에 다른 이름을 선택하십시오.
+
+**"이 이름의 클라이언트가 이미 목록에 있습니다"**
+
+다른 이름을 선택하거나 먼저 그 클라이언트를 삭제하십시오.
+
+**The client says "This code is from another AAPS version"**
+
+마스터와 클라이언트는 **같은** 버전의 **AAPS**를 실행해야 합니다. 오래된 쪽을 업데이트하십시오.
+
+**The client says "This code has expired"**
+
+페어링하는 코드는 약 2분 동안 유효합니다. 새 코드를 받으려면 마스터에서 클라이언트를 다시 추가하십시오.
+
+**The client says "This phone is paired already"**
+
+먼저 페어링을 해제한 다음(**관리 → 마스터와 페어링 → 페어링 해제**) 다시 스캔하십시오. **Nightscout만** 코드는 페어링된 휴대폰에서도 작동합니다.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+아무것도 바뀌지 않았습니다. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+
+**The client says it is not paired**
+
+**관리 → 마스터와 페어링**에서 다시 페어링하십시오. Check that the client is **Active** in the master's **Authorized clients** list.
+
+**페어링 후 아무 일도 일어나지 않음**
+
+마스터에서 **클라이언트 제어 허용**이 켜져 있는지, 마스터가 Nightscout에 연결되어 있는지 확인하십시오.
+
+### 명령
+
+**The client says the master is offline, or commands fail**
+
+Check that:
+
+- the master phone is awake and **AAPS** is running,
+- both phones are connected in **NSClientV3**, to the same Nightscout site,
+- **websockets** are enabled on both phones.
+
+Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**A command is rejected by the master**
+
+The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+
+**Nightscout 웹사이트에서 입력한 처치가 적용되지 않음**
+
+This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+
+### Nightscout tokens and settings
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+클라이언트가 전에는 자기 Nightscout 토큰을 사용했지만 지금은 다른 토큰으로 기록합니다. 예를 들어 Nightscout 설정에 토큰을 입력한 뒤에 이렇게 됩니다. 마스터에서 클라이언트를 삭제하고 다시 추가하십시오([클라이언트의 자기 Nightscout 토큰](#client-master-control-own-token) 참조).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+클라이언트가 아직 필요보다 많은 권한을 가진 토큰으로 기록합니다. The master sends the client its own token after pairing, but only if the master has an admin token. 마스터의 토큰을 확인하거나, QR 코드로 클라이언트를 다시 설정하십시오.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+다른 누군가가 마스터의 설정 문서를 기록했거나, 마스터에 새 키가 생겼습니다(예: 데이터를 지운 뒤). A paired client takes the new key by itself the next time it connects to Nightscout. Nightscout를 읽기만 하는 휴대폰은 마스터의 QR 코드가 다시 필요합니다(**Nightscout 읽기만 → QR 코드 표시**).
+
+**클라이언트가 더 이상 Nightscout를 읽을 수 없음**
+
+토큰이 삭제되었습니다. 예를 들어 마스터에서 클라이언트를 삭제했기 때문입니다. 클라이언트를 다시 추가하십시오.
 
 ---
 

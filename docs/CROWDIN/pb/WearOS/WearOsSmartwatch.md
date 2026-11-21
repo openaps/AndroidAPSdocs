@@ -318,7 +318,7 @@ Esses espaços só funcionam em relógios com **Wear OS 5 ou mais antigo**, onde
 
 ## Mostrador AAPSv2 - Legenda
 
-![Legenda do mostrador AAPSv2](../images/Watchface_Legend.png)
+![Legenda do mostrador AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - tempo desde a última execução do loop
 

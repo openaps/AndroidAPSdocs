@@ -20,7 +20,7 @@
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) і [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![зображення](../images/following_dexcom_follow.png)
+![зображення](../images/remote_control_and_following/following_dexcom_follow.png)
 
 * Dexcom Follow працює на багатьох телефонах (і Android, і iPhone). Dexcom Follow можна використовувати, навіть якщо ви не отримуєте дані сенсора через офіційний застосунок Dexcom.
 
@@ -47,7 +47,7 @@
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![зображення](../images/following_nightguard.png)
+![зображення](../images/remote_control_and_following/following_nightguard.png)
 
 Переваги (за словами користувачів):
 
@@ -73,7 +73,7 @@
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![зображення](../images/following_nightwatch.png)
+![зображення](../images/remote_control_and_following/following_nightwatch.png)
 
 
 * Nightwatch позиціонує себе як клієнт Nightscout і показує рівень глюкози користувача з Nightscout на телефоні або планшеті Android.
@@ -132,7 +132,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 
 
-![зображення](../images/following_xdrip4ios.png)
+![зображення](../images/remote_control_and_following/following_xdrip4ios.png)
 
 «Що таке **Shuggah**?» Група українських розробників скопіювала код проєкту xDrip4iOS (який відкрито опубліковано на GitHub) і випустила його в App Store під комерційним обліковим записом. Розробники xDrip4iOS ніяк не керують випуском Shuggah.
 
@@ -140,9 +140,9 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![зображення](../images/following_sugarmate.png)
+![зображення](../images/remote_control_and_following/following_sugarmate.png)
 
-![зображення](../images/following_sugarmate_graph.png)
+![зображення](../images/remote_control_and_following/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/) можна завантажити на iPhone з App Store. Sugarmate працює з:
@@ -155,7 +155,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![зображення](../images/following_spike.png)
+![зображення](../images/remote_control_and_following/following_spike.png)
 
 Spike можна використовувати як основний приймач або як застосунок-послідовник. Він показує ГК, сигнали, IOB і більше.
 
@@ -175,7 +175,7 @@ Spike можна використовувати як основний прийм
 
 ### M5Stack
 
-![зображення](../images/following_m5stack.png)
+![зображення](../images/remote_control_and_following/following_m5stack.png)
 
 M5Stack — це маленька коробка, яку можна запрограмувати для багатьох задач. Проєкт Мартіна [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) показує значення глюкози сенсора і тренди, IOB і COB. Це пластикова коробка з кольоровим дисплеєм, слотом для карти micro SD, 3 кнопками, динаміком і вбудованим акумулятором. Це чудовий монітор цукру в крові, і його відносно легко налаштувати, якщо у вас є обліковий запис Nightscout. Зазвичай його використовують через домашній Wi-Fi, але деякі користувачі показують на ньому дані під час їзди на мотоциклі, підключивши його до точки доступу Wi-Fi телефону.
 
@@ -183,9 +183,9 @@ M5Stack — це маленька коробка, яку можна запрог
 
 SugarPixel — це пристрій для додаткового показу глюкози і сповіщень при безперервному моніторингу глюкози. Він підключається до застосунку Dexcom або Nightscout на смартфоні користувача. Пристрій показує рівень цукру в крові в реальному часі. Цей апаратний монітор CGM має звукові сигнали з випадковими тонами (дуже гучні), вібросигнали для людей з порушенням слуху, налаштовуваний вигляд і вбудоване стеження для кількох користувачів.
 
-![зображення](../images/following_sugarpixel.png)
+![зображення](../images/remote_control_and_following/following_sugarpixel.png)
 
-![зображення](../images/following_sugarpixel_led_display.png)
+![зображення](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
 * SugarPixel має кілька варіантів показу в мг/дл і ммоль/л під потреби користувача, зі значеннями глюкози різного кольору.
 * Стандартний циферблат показує ГК, стрілку тренду і дельту. Дельта — це зміна (+ або -) від останнього показника.
@@ -197,7 +197,7 @@ SugarPixel — це пристрій для додаткового показу 
 
 **Nightscout Clock** — це програма з відкритим кодом, яка працює на пристрої **Ulanzi TC001**. Вона підключається до серверів Dexcom або Nightscout і показує рівень цукру в крові в реальному часі.
 
-![Стеження за допомогою Nightscout Clock](../images/FollowingNightscoutClock.png)
+![Стеження за допомогою Nightscout Clock](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * Годинник підтримує одиниці ммоль/л і мг/дл і має звукові сигнали.
 * Доступно кілька циферблатів, огляд див. на [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).

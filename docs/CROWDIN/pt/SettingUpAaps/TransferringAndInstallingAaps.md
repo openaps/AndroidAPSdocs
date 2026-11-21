@@ -31,11 +31,11 @@ Abra [Google.com](https://www.google.com/) no seu navegador e inicie sessão na 
 
 On the right upper side select the Drive app in the Google menu.
 
-![Iniciar a app Drive](../images/GoogleDriveInWebbrowser.png)
+![Iniciar a app Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Clique em **New** (Novo) no canto superior esquerdo (ou clique com o botão direito numa área vazia por baixo dos seus ficheiros e pastas) e selecione **File upload** (Carregar ficheiro).
 
-![Enviar o ficheiro apk com a app Google Drive](../images/GoogleDriveUploadFile.png)
+![Enviar o ficheiro apk com a app Google Drive](../images/install/GoogleDriveUploadFile.png)
 
 The apk file should now be uploaded on Google Drive.
 
@@ -43,17 +43,17 @@ The apk file should now be uploaded on Google Drive.
 
 Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
 
-![iniciar a app Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![iniciar a app Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Inicie a instalação do apk tocando no nome do ficheiro na app Google Drive no telemóvel.
 
-![iniciar a instalação do apk](../images/GoogleDriveMobileUploadedAPK.png)
+![iniciar a instalação do apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Se receber um aviso de segurança a dizer que, de momento, não pode instalar apps a partir do Google Drive, toque em "Settings" (Definições) e permita-o durante esse curto momento; depois volte a bloqueá-lo, porque deixá-lo sempre ativado é um risco de segurança.
 
-![Aviso de segurança do Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Aviso de segurança do Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Aviso de segurança do Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Aviso de segurança do Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Quando a instalação terminar, este passo está concluído.
 

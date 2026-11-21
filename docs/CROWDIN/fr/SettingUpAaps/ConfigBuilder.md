@@ -160,29 +160,29 @@ Dans cet exemple, le pic est réglé sur 55 minutes, la DAI est de 8 heures et l
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Comme le débit basal a une influence indirecte sur la diminution de l'IA dans AAPS, des débits basals trop élevés peuvent masquer une DAI trop longue, et inversement. Il est donc logique de bien régler d'abord les débits basals avant d'ajuster la DAI et le pic. De plus, les réglages de DAI et de pic interagissent : l'effet de la DAI dépend du pic, et inversement.
+Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
 
-Ces graphiques montrent l'effet exact de la DAI et du pic sur les courbes d'IA, sur toute la plage des valeurs autorisées.
+These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
 
-Ajustement de la DAI :
+Adjusting DIA:
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Ajustement du pic :
+Adjusting peak:
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Enfin, une comparaison où la DAI et le pic sont ajustés en même temps. L'idée est que les deux valeurs sont ajustées dans les mêmes proportions, de sorte que `49/35 ~ 7/5`. Ou de la même façon, `120/93 ~ 9/7`. Les intervalles restent les mêmes quelle que soit la DAI ou le pic de départ, tant que le changement relatif est le même pour les deux.
+Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Notez que quand la DAI et le pic sont ajustés de cette façon, chaque point de la courbe se décale de la même proportion.
+Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
 
 ````
 

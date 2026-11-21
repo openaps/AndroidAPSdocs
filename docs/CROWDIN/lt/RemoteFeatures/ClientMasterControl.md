@@ -334,27 +334,86 @@ Jei klientas atkuriamas iš atsarginės kopijos, kuri jo komandų skaitiklį gr�
 
 ## Troubleshooting
 
-| Požymis                                                                                                                                     | Ką patikrinti                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Klientas rodo, kad **pagrindinis įrenginys nepasiekiamas**                                                                                  | Pagrindinis telefonas nemiega ir jame veikia **AAPS**; abu telefonai prisijungę **NSClientV3**; abiejuose įjungti **websockets**; ta pati Nightscout svetainė.                                                                                                                                                                                                                 |
-| Klientas rodo, kad jis **nesusietas**                                                                                                       | Susiekite iš naujo per **Valdymas → Susieti su pagrindiniu įrenginiu**. Patikrinkite, ar klientas pagrindinio įrenginio sąraše **Autorizuoti klientai** yra **Aktyvus**.                                                                                                                                                                                                       |
-| Pagrindinis įrenginys komandą **atmetė**                                                                                                    | Pagrindinis įrenginys iš naujo tikrina komandą pagal savo dabartinę būseną – pvz., pasirinkto profilio nebėra arba nesutampa pompos tipas. Patikrinkite pagrindiniame įrenginyje.                                                                                                                                                                                              |
-| Commands **fail** or the master is often **offline**                                                                                        | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                                                                      |
-| Susiejimas atšaukiamas su pranešimu *„Nepavyko išsaugoti susiejimo rakto“*                                                                  | Niekas nepakeista. Pradėkite susiejimą iš naujo; jei vis tiek nepavyksta, paleiskite **AAPSClient** iš naujo ir pabandykite dar kartą.                                                                                                                                                                                                                                         |
-| Po susiejimo nieko nevyksta                                                                                                                 | Patikrinkite, ar pagrindiniame įrenginyje ĮJUNGTA **Leisti valdyti iš kliento** ir ar pagrindinis įrenginys prijungtas prie Nightscout.                                                                                                                                                                                                                                        |
-| Lange **Naujas klientas** negalima pasirinkti QR kodo parinkčių                                                                             | Lange paaiškinama kodėl. *Prieigos raktas nėra administratoriaus prieigos raktas*: suteikite pagrindiniam įrenginiui savo Nightscout admin prieigos raktą arba pridėkite klientą naudodami **PIN**. *Neprijungtas prie Nightscout*: palaukite, kol pagrindinis įrenginys **NSClientV3** parodys *Prisijungta*.                                                                 |
-| *„Nightscout jau turi tokio pavadinimo prieigos raktą su kitomis teisėmis“*                                                                 | Vienas iš jūsų Nightscout prieigos raktų vadinasi `aaps-` ir šiuo pavadinimu. Pasirinkite kitą kliento pavadinimą.                                                                                                                                                                                                                                                             |
-| *„Tokio pavadinimo klientas jau yra sąraše“*                                                                                                | Pasirinkite kitą pavadinimą arba pirmiausia pašalinkite tą klientą.                                                                                                                                                                                                                                                                                                            |
-| Klientas rodo *„Šis kodas iš kitos AAPS versijos“*                                                                                          | Pagrindiniame įrenginyje ir kliente turi veikti **ta pati** **AAPS** versija. Atnaujinkite senesnę.                                                                                                                                                                                                                                                                            |
-| Klientas rodo *„Šio kodo galiojimas baigėsi“*                                                                                               | Kodas, kuris susieja, galioja apie dvi minutes. Norėdami gauti naują kodą, pagrindiniame įrenginyje vėl pridėkite klientą.                                                                                                                                                                                                                                                     |
-| Klientas rodo *„Šis telefonas jau susietas“*                                                                                                | Pirmiausia jį atsiekite (**Valdymas → Susieti su pagrindiniu įrenginiu → Atsieti**), tada nuskaitykite iš naujo. Kodas **tik Nightscout** veikia ir susietame telefone.                                                                                                                                                                                                        |
-| Klientas rodo *„Pagrindinis telefonas atmetė komandą: šis telefonas į Nightscout siunčia duomenis naudodamas ne jam skirtą prieigos raktą“* | Klientas anksčiau naudojo savo Nightscout prieigos raktą, o dabar rašo kitu, pavyzdžiui, po to, kai prieigos raktas buvo įvestas jo Nightscout nustatymuose. Pagrindiniame įrenginyje pašalinkite klientą ir pridėkite jį iš naujo (žr. [Kliento nuosavas Nightscout prieigos raktas](#client-master-control-own-token)).                                                      |
-| Kliento NSClient žurnale rodoma *„✕ SETTINGS … refused“*, ir jo nustatymai nebeatitinka pagrindinio įrenginio                               | Kažkas kitas įrašė pagrindinio įrenginio nustatymų dokumentą, arba pagrindinis įrenginys turi naują raktą (pavyzdžiui, ištrynus jo duomenis). Susietas klientas naują raktą perima pats, kai kitą kartą prisijungia prie Nightscout. Telefonui, kuris tik skaito Nightscout, vėl reikia pagrindinio įrenginio QR kodo (**Tik Nightscout duomenų skaitymas → Rodyti QR kodą**). |
-| Kliento kortelėje raudonai rodoma *„Naudoja Nightscout prieigos raktą …“*                                                                   | Klientas vis dar rašo prieigos raktu, kuris turi daugiau teisių, nei jam reikia. Pagrindinis įrenginys po susiejimo siunčia jam nuosavą prieigos raktą, bet tik jei pagrindinis įrenginys turi admin prieigos raktą. Patikrinkite pagrindinio įrenginio prieigos raktą arba iš naujo nustatykite klientą QR kodu.                                                              |
-| Klientas nebegali skaityti Nightscout                                                                                                       | Jo prieigos raktas ištrintas, pavyzdžiui, todėl, kad klientas buvo pašalintas pagrindiniame įrenginyje. Pridėkite jį iš naujo.                                                                                                                                                                                                                                                 |
-| Nightscout svetainėje įvesta terapija netaikoma                                                                                             | Taip turi būti [Sustiprintos apsaugos režimu](#client-master-control-hardened-mode): įveskite ją susietame kliente.                                                                                                                                                                                                                                                            |
-
 Nightscout / sinchronizacijos problemoms pirmiausia žr. [NSClient trikčių šalinimas](../GettingHelp/TroubleshootingNsClient.md).
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *Prieigos raktas nėra administratoriaus prieigos raktas*: suteikite pagrindiniam įrenginiui savo Nightscout admin prieigos raktą arba pridėkite klientą naudodami **PIN**.
+- *Neprijungtas prie Nightscout*: palaukite, kol pagrindinis įrenginys **NSClientV3** parodys *Prisijungta*.
+
+**„Nightscout jau turi tokio pavadinimo prieigos raktą su kitomis teisėmis“**
+
+Vienas iš jūsų Nightscout prieigos raktų vadinasi `aaps-` ir šiuo pavadinimu. Pasirinkite kitą kliento pavadinimą.
+
+**„Tokio pavadinimo klientas jau yra sąraše“**
+
+Pasirinkite kitą pavadinimą arba pirmiausia pašalinkite tą klientą.
+
+**The client says "This code is from another AAPS version"**
+
+Pagrindiniame įrenginyje ir kliente turi veikti **ta pati** **AAPS** versija. Atnaujinkite senesnę.
+
+**The client says "This code has expired"**
+
+Kodas, kuris susieja, galioja apie dvi minutes. Norėdami gauti naują kodą, pagrindiniame įrenginyje vėl pridėkite klientą.
+
+**The client says "This phone is paired already"**
+
+Pirmiausia jį atsiekite (**Valdymas → Susieti su pagrindiniu įrenginiu → Atsieti**), tada nuskaitykite iš naujo. Kodas **tik Nightscout** veikia ir susietame telefone.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+Niekas nepakeista. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+
+**The client says it is not paired**
+
+Susiekite iš naujo per **Valdymas → Susieti su pagrindiniu įrenginiu**. Check that the client is **Active** in the master's **Authorized clients** list.
+
+**Po susiejimo nieko nevyksta**
+
+Patikrinkite, ar pagrindiniame įrenginyje ĮJUNGTA **Leisti valdyti iš kliento** ir ar pagrindinis įrenginys prijungtas prie Nightscout.
+
+### Commands
+
+**The client says the master is offline, or commands fail**
+
+Check that:
+
+- the master phone is awake and **AAPS** is running,
+- both phones are connected in **NSClientV3**, to the same Nightscout site,
+- **websockets** are enabled on both phones.
+
+Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**A command is rejected by the master**
+
+The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+
+**Nightscout svetainėje įvesta terapija netaikoma**
+
+This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+
+### Nightscout tokens and settings
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+Klientas anksčiau naudojo savo Nightscout prieigos raktą, o dabar rašo kitu, pavyzdžiui, po to, kai prieigos raktas buvo įvestas jo Nightscout nustatymuose. Pagrindiniame įrenginyje pašalinkite klientą ir pridėkite jį iš naujo (žr. [Kliento nuosavas Nightscout prieigos raktas](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+Klientas vis dar rašo prieigos raktu, kuris turi daugiau teisių, nei jam reikia. The master sends the client its own token after pairing, but only if the master has an admin token. Patikrinkite pagrindinio įrenginio prieigos raktą arba iš naujo nustatykite klientą QR kodu.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+Kažkas kitas įrašė pagrindinio įrenginio nustatymų dokumentą, arba pagrindinis įrenginys turi naują raktą (pavyzdžiui, ištrynus jo duomenis). A paired client takes the new key by itself the next time it connects to Nightscout. Telefonui, kuris tik skaito Nightscout, vėl reikia pagrindinio įrenginio QR kodo (**Tik Nightscout duomenų skaitymas → Rodyti QR kodą**).
+
+**Klientas nebegali skaityti Nightscout**
+
+Jo prieigos raktas ištrintas, pavyzdžiui, todėl, kad klientas buvo pašalintas pagrindiniame įrenginyje. Pridėkite jį iš naujo.
 
 ---
 

@@ -334,27 +334,86 @@ A computer without camera: use the PIN there.
 
 ## פתרון תקלות
 
-| תסמין                                                                                                        | מה לבדוק                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| מכשיר הלקוח אומר ש**המכשיר הראשי לא מקוון**                                                                  | הטלפון הראשי ער ומריץ את **AAPS**; שני הטלפונים מחוברים ב-**NSClientV3**; **websockets** מופעלים בשניהם; אותו אתר Nightscout.                                                                                                                                                                    |
-| מכשיר הלקוח אומר שהוא **לא מצומד**                                                                           | יש לצמד שוב דרך **ניהול ← צימוד למכשיר ראשי**. יש לוודא שמכשיר הלקוח מופיע כ**פעיל** ברשימת **לקוחות מורשים** של המכשיר הראשי.                                                                                                                                                                   |
-| הפקודה **נדחתה** על ידי המכשיר הראשי                                                                         | המכשיר הראשי בודק את הפקודה מחדש לפי המצב הנוכחי שלו — למשל, הפרופיל שנבחר כבר לא קיים, או שסוג המשאבה לא תואם. יש לבדוק שוב במכשיר הראשי.                                                                                                                                                       |
-| Commands **fail** or the master is often **offline**                                                         | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                        |
-| הצימוד מבוטל עם ההודעה *"לא ניתן היה לשמור את הסוד לצימוד"*                                                  | שום דבר לא שונה. יש להתחיל את הצימוד שוב; אם זה ממשיך להיכשל, יש להפעיל מחדש את **AAPSClient** ולנסות פעם נוספת.                                                                                                                                                                                 |
-| שום דבר לא קורה אחרי הצימוד                                                                                  | יש לוודא ש**מתן אפשרות לשליטה ממכשיר לקוח** מופעל במכשיר הראשי, ושהמכשיר הראשי מחובר ל-Nightscout.                                                                                                                                                                                               |
-| אי אפשר לבחור את האפשרויות של קוד QR בחלון **מכשיר לקוח חדש**                                                | החלון מסביר למה. *האסימון אינו אסימון מנהל (admin)*: יש לתת למכשיר הראשי אסימון מנהל של ה-Nightscout שלכם, או להוסיף את מכשיר הלקוח עם **PIN**. *לא מחובר*: יש לחכות עד שהמכשיר הראשי מציג *מחובר* ב-**NSClientV3**.                                                                             |
-| *"ב-Nightscout יש אסימון בשם הזה עם הרשאות אחרות"*                                                           | לאחד מאסימוני ה-Nightscout שלכם קוראים `aaps-` ואחריו השם הזה. יש לבחור שם אחר למכשיר הלקוח.                                                                                                                                                                                                     |
-| *"מכשיר לקוח בשם הזה כבר נמצא ברשימה"*                                                                       | יש לבחור שם אחר, או להסיר קודם את מכשיר הלקוח ההוא.                                                                                                                                                                                                                                              |
-| מכשיר הלקוח אומר *"הקוד הזה הוא מגרסה אחרת של AAPS"*                                                         | במכשיר הראשי ובמכשיר הלקוח חייבת לפעול **אותה** גרסה של **AAPS**. יש לעדכן את המכשיר עם הגרסה הישנה יותר.                                                                                                                                                                                        |
-| מכשיר הלקוח אומר *"תוקף הקוד הזה פג"*                                                                        | קוד שמצמד עובד בערך שתי דקות. יש להוסיף שוב את מכשיר הלקוח במכשיר הראשי כדי לקבל קוד חדש.                                                                                                                                                                                                        |
-| מכשיר הלקוח אומר *"טלפון זה כבר מצומד"*                                                                      | יש לבטל קודם את הצימוד (**ניהול ← צימוד למכשיר ראשי ← ביטול צימוד**), ואז לסרוק שוב. קוד **רק Nightscout** עובד גם בטלפון מצומד.                                                                                                                                                                 |
-| מכשיר הלקוח אומר *"המכשיר הראשי דחה את הפקודה: טלפון זה כותב ל-Nightscout עם אסימון אחר ולא עם האסימון שלו"* | מכשיר הלקוח השתמש קודם באסימון ה-Nightscout הנפרד שלו ועכשיו כותב עם אסימון אחר, למשל אחרי שהוקלד אסימון בהגדרות ה-Nightscout שלו. יש להסיר את מכשיר הלקוח במכשיר הראשי ולהוסיף אותו שוב (ראו [אסימון ה-Nightscout הנפרד של מכשיר הלקוח](#client-master-control-own-token)).                     |
-| יומן NSClient במכשיר הלקוח מציג *"✕ SETTINGS … refused"* וההגדרות שלו כבר לא עוקבות אחרי המכשיר הראשי        | מישהו אחר כתב את מסמך ההגדרות של המכשיר הראשי, או שלמכשיר הראשי יש מפתח חדש (למשל אחרי שהנתונים שלו נמחקו). מכשיר לקוח מצומד מקבל מפתח חדש בעצמו בפעם הבאה שהוא מתחבר ל-Nightscout. טלפון שרק קורא את Nightscout צריך שוב את קוד ה-QR של המכשיר הראשי (**קריאת Nightscout בלבד ← הצגת קוד QR**). |
-| הכרטיס של מכשיר הלקוח מציג *"משתמש באסימון ה-Nightscout …"* באדום                                            | מכשיר הלקוח עדיין כותב עם אסימון שיש לו יותר הרשאות ממה שהוא צריך. המכשיר הראשי שולח לו אסימון משלו אחרי הצימוד, אבל רק אם למכשיר הראשי יש אסימון מנהל. יש לבדוק את האסימון של המכשיר הראשי, או להגדיר שוב את מכשיר הלקוח עם קוד QR.                                                             |
-| מכשיר לקוח כבר לא יכול לקרוא את Nightscout                                                                   | האסימון שלו נמחק, למשל כי מכשיר הלקוח הוסר במכשיר הראשי. יש להוסיף אותו שוב.                                                                                                                                                                                                                     |
-| טיפולים שהוזנו באתר Nightscout לא מוחלים                                                                     | זה צפוי ב[מצב מוקשח](#client-master-control-hardened-mode): יש להזין אותם במכשיר לקוח מצומד במקום זאת.                                                                                                                                                                                           |
-
 לבעיות Nightscout / סנכרון יש לעיין קודם ב[פתרון תקלות ב-NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *האסימון אינו אסימון מנהל (admin)*: יש לתת למכשיר הראשי אסימון מנהל של ה-Nightscout שלכם, או להוסיף את מכשיר הלקוח עם **PIN**.
+- *לא מחובר*: יש לחכות עד שהמכשיר הראשי מציג *מחובר* ב-**NSClientV3**.
+
+**"ב-Nightscout יש אסימון בשם הזה עם הרשאות אחרות"**
+
+לאחד מאסימוני ה-Nightscout שלכם קוראים `aaps-` ואחריו השם הזה. יש לבחור שם אחר למכשיר הלקוח.
+
+**"מכשיר לקוח בשם הזה כבר נמצא ברשימה"**
+
+יש לבחור שם אחר, או להסיר קודם את מכשיר הלקוח ההוא.
+
+**The client says "This code is from another AAPS version"**
+
+במכשיר הראשי ובמכשיר הלקוח חייבת לפעול **אותה** גרסה של **AAPS**. יש לעדכן את המכשיר עם הגרסה הישנה יותר.
+
+**The client says "This code has expired"**
+
+קוד שמצמד עובד בערך שתי דקות. יש להוסיף שוב את מכשיר הלקוח במכשיר הראשי כדי לקבל קוד חדש.
+
+**The client says "This phone is paired already"**
+
+יש לבטל קודם את הצימוד (**ניהול ← צימוד למכשיר ראשי ← ביטול צימוד**), ואז לסרוק שוב. קוד **רק Nightscout** עובד גם בטלפון מצומד.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+שום דבר לא שונה. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+
+**The client says it is not paired**
+
+יש לצמד שוב דרך **ניהול ← צימוד למכשיר ראשי**. Check that the client is **Active** in the master's **Authorized clients** list.
+
+**שום דבר לא קורה אחרי הצימוד**
+
+יש לוודא ש**מתן אפשרות לשליטה ממכשיר לקוח** מופעל במכשיר הראשי, ושהמכשיר הראשי מחובר ל-Nightscout.
+
+### Commands
+
+**The client says the master is offline, or commands fail**
+
+Check that:
+
+- the master phone is awake and **AAPS** is running,
+- both phones are connected in **NSClientV3**, to the same Nightscout site,
+- **websockets** are enabled on both phones.
+
+Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**A command is rejected by the master**
+
+The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+
+**טיפולים שהוזנו באתר Nightscout לא מוחלים**
+
+This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+
+### Nightscout tokens and settings
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+מכשיר הלקוח השתמש קודם באסימון ה-Nightscout הנפרד שלו ועכשיו כותב עם אסימון אחר, למשל אחרי שהוקלד אסימון בהגדרות ה-Nightscout שלו. יש להסיר את מכשיר הלקוח במכשיר הראשי ולהוסיף אותו שוב (ראו [אסימון ה-Nightscout הנפרד של מכשיר הלקוח](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+מכשיר הלקוח עדיין כותב עם אסימון שיש לו יותר הרשאות ממה שהוא צריך. The master sends the client its own token after pairing, but only if the master has an admin token. יש לבדוק את האסימון של המכשיר הראשי, או להגדיר שוב את מכשיר הלקוח עם קוד QR.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+מישהו אחר כתב את מסמך ההגדרות של המכשיר הראשי, או שלמכשיר הראשי יש מפתח חדש (למשל אחרי שהנתונים שלו נמחקו). A paired client takes the new key by itself the next time it connects to Nightscout. טלפון שרק קורא את Nightscout צריך שוב את קוד ה-QR של המכשיר הראשי (**קריאת Nightscout בלבד ← הצגת קוד QR**).
+
+**מכשיר לקוח כבר לא יכול לקרוא את Nightscout**
+
+האסימון שלו נמחק, למשל כי מכשיר הלקוח הוסר במכשיר הראשי. יש להוסיף אותו שוב.
 
 ---
 

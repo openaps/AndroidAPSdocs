@@ -134,21 +134,21 @@ Nightscout — це сервер «у хмарі», але є також окр�
 
 Після встановлення застосунку **Nightscout** на iPhone відкрийте його і виконайте кроки налаштування: введіть адресу вашого Nightscout (див. нижче, ліворуч). Вигляд адреси може бути різним, залежно від того, де розміщено ваш Nightscout. (_наприклад,_ http://youraddresshere.herokuapp.com). Потім введіть ваш API secret Nightscout (див. нижче, праворуч). Якщо застосунок не запитав пароль API, введіть його, натиснувши на замок угорі застосунку:
 
-![зображення](../images/remote-control-24.png)
+![зображення](../images/remote_control_and_following/remote-control-24.png)
 
 Більше інформації про налаштування є прямо на сайті [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 Під час першого входу ви побачите дуже простий екран. Налаштуйте, що показувати: виберіть меню-«гамбургер» угорі праворуч і прогорніть вниз:
 
-![зображення](../images/remote-control-25.png)
+![зображення](../images/remote_control_and_following/remote-control-25.png)
 
 Прогорніть вниз до «Settings» (Налаштування). Можливо, ви захочете змінити «scale» (шкала) на «linear» (лінійна), бо за замовчуванням ГК показано в логарифмічній шкалі, а в «render basal» (показ базалу) вибрати «default» (за замовчуванням), щоб було видно базал помпи.
 
-![зображення](../images/remote-control-25b.png)
+![зображення](../images/remote_control_and_following/remote-control-25b.png)
 
 Виберіть потрібні параметри. Зніміть позначку з сигналів, якщо для сигналів ви використовуєте інший застосунок.
 
-![зображення](../images/remote-control-26.png)
+![зображення](../images/remote_control_and_following/remote-control-26.png)
 
 Гортайте далі вниз до «show plugins» (показати плагіни).
 
@@ -156,7 +156,7 @@ Nightscout — це сервер «у хмарі», але є також окр�
 
 Важливо: тепер натисніть «save» (зберегти) внизу, щоб зміни почали діяти.
 
-![зображення](../images/remote-control-27.png)
+![зображення](../images/remote_control_and_following/remote-control-27.png)
 
 Після натискання «save» застосунок повернеться до головного екрана Nightscout, який виглядатиме приблизно так:
 
@@ -170,7 +170,7 @@ Nightscout — це сервер «у хмарі», але є також окр�
 8. Профіль базального інсуліну
 9. Зелена лінія = історія глюкози Сині лінії = прогноз глюкози
 
-![зображення](../images/remote-control-28.png)
+![зображення](../images/remote_control_and_following/remote-control-28.png)
 
 Докладніше про меню вгорі ліворуч у застосунку Nightscout:
 
@@ -179,7 +179,7 @@ Nightscout — це сервер «у хмарі», але є також окр�
 3. Гамбургер — для налаштувань
 4. Careportal — запис терапії (див. [нижче](#RemoteControl_nightscout-treatments), коли **AAPS** застосовує ці записи)
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote_control_and_following/remote-control-29.png)
 
 На цьому екрані в сірих вкладках є дуже багато інформації про стан системи **AAPS** (а якщо торкнутися вкладки, з'явиться ще більше):
 
@@ -195,9 +195,9 @@ Nightscout — це сервер «у хмарі», але є також окр�
 10. Стан батареї телефону з AAPS
 11. Розмір вашої бази даних. Якщо вона надто заповнена (лише для власного Nightscout — для платних хостингів це неважливо), можуть початися проблеми зі зв'язком. Щоб зменшити це число, можна видалити дані в меню Admin tools (через гамбургер).
 
-![зображення](../images/remote-control-30.png)
+![зображення](../images/remote_control_and_following/remote-control-30.png)
 
-![зображення](../images/remote-control-31.png)
+![зображення](../images/remote_control_and_following/remote-control-31.png)
 
 Натисніть «refresh» внизу сторінки, щоб закрити спливне вікно.
 
@@ -233,7 +233,7 @@ In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSC
 
 ### Варіант 1) Керування AAPS з годинника Wear OS
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Коли ви [налаштуєте **AAPS** на годиннику](../WearOS/BuildingAapsWearOS.md), докладний опис циферблатів і їхніх функцій див. на сторінці [Налаштування AAPS на годиннику з Wear OS](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ b)  користувач не хоче вводити код автентифі�
 
 ### Варіант 3) AAPSClient на годиннику для віддаленого керування **AAPS** на телефоні
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Щоб завантажити програму, натисніть на застосунок для годинника, який відповідає клієнтському застосунку на телефоні: **wear-aapsclient-release_**_версія_ — для **AAPSClient**, **wear-aapsclient2-release_**_версія_ — для **AAPSClient2** (див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![зображення](../images/github_release_wear_aapsclient_apk.png)
+![зображення](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Потім виберіть «save as» (зберегти як) і збережіть файл у зручне місце на комп'ютері:
 
 
-![зображення](../images/save_as_wear_aapsclient_apk.png)
+![зображення](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 

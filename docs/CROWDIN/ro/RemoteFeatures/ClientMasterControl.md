@@ -334,27 +334,86 @@ If a client is restored from a backup that rolls its command counter backwards, 
 
 ## Depanare
 
-| Simptom                                                                                                    | Ce trebuie verificat                                                                                                                                                                                                                                                                                                         |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Clientul spune că **nu este asociat**                                                                      | Asociați din nou din **Gestionați → Asociați cu dispozitivul principal**. Verificați că clientul este **Activ** în lista **Clienți autorizați** a dispozitivului principal.                                                                                                                                                  |
-| Comandă **respinsă** de dispozitivul principal                                                             | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Verificați din nou pe dispozitivul principal.                                                                                                                                                 |
-| Commands **fail** or the master is often **offline**                                                       | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                    |
-| Asocierea este anulată cu *„Secretul de asociere nu a putut fi salvat”*                                    | Nu s-a schimbat nimic. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                               |
-| Nu se întâmplă nimic după asociere                                                                         | Verificați că **Permiteți controlul clientului** este ACTIVAT pe dispozitivul principal și că dispozitivul principal este conectat la Nightscout.                                                                                                                                                                            |
-| Opțiunile cu cod QR nu pot fi alese în dialogul **Client nou**                                             | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *„Nightscout are deja un cod de acces cu acest nume și cu alte drepturi”*                                  | One of your own Nightscout tokens is called `aaps-` and this name. Alegeți alt nume pentru client.                                                                                                                                                                                                                           |
-| *„Un client cu acest nume este deja în listă”*                                                             | Alegeți alt nume sau eliminați mai întâi acel client.                                                                                                                                                                                                                                                                        |
-| Clientul spune *„Acest cod este de la o altă versiune AAPS”*                                               | Dispozitivul principal și clientul trebuie să ruleze **aceeași** versiune de **AAPS**. Update the older one.                                                                                                                                                                                                                 |
-| Clientul spune *„Acest cod a expirat”*                                                                     | A code that pairs works for about two minutes. Adăugați din nou clientul pe dispozitivul principal pentru a obține un cod nou.                                                                                                                                                                                               |
-| Clientul spune *„Acest telefon este deja asociat”*                                                         | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. Un cod **doar Nightscout** funcționează și pe un telefon asociat.                                                                                                                                                                                 |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Eliminați clientul de pe dispozitivul principal și adăugați-l din nou (vedeți [Codul de acces Nightscout propriu al clientului](#client-master-control-own-token)).       |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Verificați codul de acces al dispozitivului principal sau configurați din nou clientul cu un cod QR.                                                    |
-| Un client nu mai poate citi Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Adăugați-l din nou.                                                                                                                                                                                                                         |
-| Tratamentele introduse pe site-ul Nightscout nu sunt aplicate                                              | Este normal în [modul securizat](#client-master-control-hardened-mode): introduceți-le în schimb pe un client asociat.                                                                                                                                                                                                       |
-
 Pentru probleme cu Nightscout / sincronizarea, vedeți mai întâi [Depanare NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**.
+- *Not connected*: wait until the master shows *connected* in **NSClientV3**.
+
+**„Nightscout are deja un cod de acces cu acest nume și cu alte drepturi”**
+
+One of your own Nightscout tokens is called `aaps-` and this name. Alegeți alt nume pentru client.
+
+**„Un client cu acest nume este deja în listă”**
+
+Alegeți alt nume sau eliminați mai întâi acel client.
+
+**The client says "This code is from another AAPS version"**
+
+Dispozitivul principal și clientul trebuie să ruleze **aceeași** versiune de **AAPS**. Update the older one.
+
+**The client says "This code has expired"**
+
+A code that pairs works for about two minutes. Adăugați din nou clientul pe dispozitivul principal pentru a obține un cod nou.
+
+**The client says "This phone is paired already"**
+
+Unpair it first (**Manage → Pair with master → Unpair**), then scan again. Un cod **doar Nightscout** funcționează și pe un telefon asociat.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+Nu s-a schimbat nimic. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+
+**The client says it is not paired**
+
+Asociați din nou din **Gestionați → Asociați cu dispozitivul principal**. Check that the client is **Active** in the master's **Authorized clients** list.
+
+**Nu se întâmplă nimic după asociere**
+
+Verificați că **Permiteți controlul clientului** este ACTIVAT pe dispozitivul principal și că dispozitivul principal este conectat la Nightscout.
+
+### Comenzi
+
+**The client says the master is offline, or commands fail**
+
+Check that:
+
+- the master phone is awake and **AAPS** is running,
+- both phones are connected in **NSClientV3**, to the same Nightscout site,
+- **websockets** are enabled on both phones.
+
+Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**A command is rejected by the master**
+
+The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+
+**Tratamentele introduse pe site-ul Nightscout nu sunt aplicate**
+
+This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+
+### Nightscout tokens and settings
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Eliminați clientul de pe dispozitivul principal și adăugați-l din nou (vedeți [Codul de acces Nightscout propriu al clientului](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+The client still writes with a token that has more rights than it needs. The master sends the client its own token after pairing, but only if the master has an admin token. Verificați codul de acces al dispozitivului principal sau configurați din nou clientul cu un cod QR.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes the new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**).
+
+**Un client nu mai poate citi Nightscout**
+
+Its token was deleted, for example because the client was removed on the master. Adăugați-l din nou.
 
 ---
 

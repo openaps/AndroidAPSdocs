@@ -318,7 +318,7 @@ Estas posições só funcionam em relógios com **Wear OS 5 ou mais antigo**, on
 
 ## Watchface AAPSv2 - Legenda
 
-![Legenda da watchface AAPSv2](../images/Watchface_Legend.png)
+![Legenda da watchface AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - tempo desde a última execução do loop
 

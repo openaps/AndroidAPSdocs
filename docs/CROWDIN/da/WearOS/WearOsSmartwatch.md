@@ -318,7 +318,7 @@ These slots only work on watches running **Wear OS 5 or older**, where the custo
 
 ## AAPSv2 watchface - Legend
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 watchface](../images/wearos/Watchface_Legend.png)
 
 A - time since last loop run
 

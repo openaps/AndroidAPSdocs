@@ -63,7 +63,7 @@ Tecnicamente, o valor atual da glicose é enviado para o xDrip a cada minuto. Um
 
 → Menu hambúrguer → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![Definições avançadas do xDrip para o Libre 2 e valores brutos](../images/xDrip_Libre3_Smooth.png)
+![Definições avançadas do xDrip para o Libre 2 e valores brutos](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Isto é obrigatório para usar o loop. As curvas ficam suaves e os resultados do loop são ótimos. Os valores brutos em que os alarmes se baseiam oscilam um pouco mais, mas correspondem aos valores que o leitor também mostra. Além disso, os valores brutos podem ser mostrados no gráfico do xDrip, para poder reagir a tempo a mudanças rápidas. Ative Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" e "show Sensors Infos". Depois, os valores brutos são também mostrados como pequenos pontos brancos e há mais informação do sensor no menu do sistema.
 

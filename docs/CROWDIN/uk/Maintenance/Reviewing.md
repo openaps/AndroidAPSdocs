@@ -114,7 +114,7 @@ HbA1c: оцінка глікованого гемоглобіну, розрах�
 (screens-bolus-carbs)=
 ### Вуглеводи і болюс
 
-![Вуглеводи і болюс](../images/TreatmentsView1.png)
+![Вуглеводи і болюс](../images/Maintenance/TreatmentsView1.png)
 
 На цій вкладці можна переглянути журнал болюсів і вуглеводів. Кожен болюс (рядок **1**) показує поруч із кількістю інсуліну залишок пов'язаного IOB. Походження болюса може бути таким:
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ HbA1c: оцінка глікованого гемоглобіну, розрах�
 
 ### Тимчасовий базал
 
-![Тимчасовий базал](../images/TreatmentsView2.png)
+![Тимчасовий базал](../images/Maintenance/TreatmentsView2.png)
 
 Тут показано **тимчасові базали**, застосовані петлею. Якщо запис ще впливає на IOB, ця інформація показана поруч зі швидкістю (рядок **1**). Це може бути:
 * Позитивний IOB, якщо тимчасовий базал був вищим за заданий у профілі
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Тимчасова ціль
 
-![Тимчасова ціль](../images/TreatmentsView3.png)
+![Тимчасова ціль](../images/Maintenance/TreatmentsView3.png)
 
 Тут можна переглянути історію тимчасових цілей.
 
 ### Перемикання профілю
 
-![Перемикання профілю](../images/TreatmentsView4.png)
+![Перемикання профілю](../images/Maintenance/TreatmentsView4.png)
 
 Тут можна переглянути історію перемикань профілю. Кожного разу, коли ви перемикаєте профіль, може з'являтися кілька записів: рядок **1**, збережений і в NS, і в історії помпи, відповідає фактичному перемиканню. Рядок **2**, збережений у Nightscout, але не в історії помпи, відповідає запиту користувача на перемикання профілю.
 
@@ -169,14 +169,14 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Ця вкладка показує всі нотатки і записи Careportal, записані в Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Робочий режим
 
-![Робочий режим](../images/TreatmentsView6.png)
+![Робочий режим](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 

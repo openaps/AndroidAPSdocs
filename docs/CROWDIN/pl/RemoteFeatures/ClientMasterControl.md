@@ -334,27 +334,86 @@ Jeśli urządzenie opiekuna zostanie przywrócone z kopii zapasowej, która cofa
 
 ## Rozwiązywanie problemów
 
-| Objaw                                                                                                                                | Co sprawdzić                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Urządzenie opiekuna pokazuje, że **urządzenie pacjenta jest offline**                                                                | Telefon pacjenta nie jest uśpiony i działa na nim **AAPS**; oba telefony są połączone w **NSClientV3**; **websockety** są włączone na obu; ta sama strona Nightscout.                                                                                                                                                                                                                     |
-| Urządzenie opiekuna pokazuje, że **nie jest sparowane**                                                                              | Sparuj ponownie w **Zarządzaj → Sparuj z telefonem pacjenta**. Sprawdź, czy urządzenie opiekuna ma stan **Aktywny** na liście **Autoryzowani opiekunowie** urządzenia pacjenta.                                                                                                                                                                                                           |
-| Polecenie **odrzucone** przez urządzenie pacjenta                                                                                    | Urządzenie pacjenta sprawdza polecenie ponownie według swojego aktualnego stanu — np. wybrany profil już nie istnieje albo typ pompy się nie zgadza. Sprawdź to ponownie na urządzeniu pacjenta.                                                                                                                                                                                          |
-| Commands **fail** or the master is often **offline**                                                                                 | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                                                                                 |
-| Parowanie jest anulowane z komunikatem *„Nie udało się zapisać klucza parowania na tym telefonie”*                                   | Nic nie zostało zmienione. Rozpocznij parowanie ponownie; jeśli nadal się nie udaje, uruchom ponownie **AAPSClient** i spróbuj jeszcze raz.                                                                                                                                                                                                                                               |
-| Po sparowaniu nic się nie dzieje                                                                                                     | Upewnij się, że **Zezwalaj na sterowanie z urządzenia opiekuna** jest WŁĄCZONE na urządzeniu pacjenta i że urządzenie pacjenta jest połączone z Nightscout.                                                                                                                                                                                                                               |
-| Nie można wybrać opcji kodu QR w oknie **Nowe urządzenie opiekuna**                                                                  | Okno wyjaśnia dlaczego. *To nie jest token administratora*: daj urządzeniu pacjenta token administratora Twojego Nightscout albo dodaj urządzenie opiekuna za pomocą **PIN**. *Nie połączono*: poczekaj, aż urządzenie pacjenta pokaże *połączono* w **NSClientV3**.                                                                                                                      |
-| *„Nightscout ma już token o takiej samej nazwie, ale innych uprawnieniach”*                                                          | Jeden z Twoich tokenów Nightscout nazywa się `aaps-` i ta nazwa. Wybierz inną nazwę dla urządzenia opiekuna.                                                                                                                                                                                                                                                                              |
-| *„Klient o tej nazwie znajduje się już na liście”*                                                                                   | Wybierz inną nazwę albo najpierw usuń to urządzenie opiekuna.                                                                                                                                                                                                                                                                                                                             |
-| Urządzenie opiekuna pokazuje *„Ten kod pochodzi z innej wersji AAPS”*                                                                | Urządzenie pacjenta i urządzenie opiekuna muszą mieć **tę samą** wersję **AAPS**. Zaktualizuj starsze z nich.                                                                                                                                                                                                                                                                             |
-| Urządzenie opiekuna pokazuje *„Ten kod wygasł”*                                                                                      | Kod, który paruje, działa przez około dwie minuty. Dodaj urządzenie opiekuna ponownie na urządzeniu pacjenta, aby dostać nowy kod.                                                                                                                                                                                                                                                        |
-| Urządzenie opiekuna pokazuje *„Ten telefon jest już sparowany”*                                                                      | Najpierw go odłącz (**Zarządzaj → Sparuj z telefonem pacjenta → Odłącz**), potem zeskanuj ponownie. Kod **tylko Nightscout** działa też na sparowanym telefonie.                                                                                                                                                                                                                          |
-| Urządzenie opiekuna pokazuje *„Telefon pacjenta odrzucił żądanie: ten telefon zapisuje dane do Nightscout innym tokenem niż własny”* | Urządzenie opiekuna używało wcześniej własnego tokenu Nightscout, a teraz zapisuje innym, na przykład po wpisaniu tokenu w jego ustawieniach Nightscout. Usuń urządzenie opiekuna na urządzeniu pacjenta i dodaj je ponownie (zobacz [Własny token Nightscout urządzenia opiekuna](#client-master-control-own-token)).                                                                    |
-| Log NSClient na urządzeniu opiekuna pokazuje *„✕ SETTINGS … refused”*, a jego ustawienia już nie podążają za urządzeniem pacjenta    | Ktoś inny zapisał dokument ustawień urządzenia pacjenta albo urządzenie pacjenta ma nowy klucz (na przykład po wyczyszczeniu jego danych). Sparowane urządzenie opiekuna samo przyjmie nowy klucz, gdy następnym razem połączy się z Nightscout. Telefon, który tylko odczytuje Nightscout, potrzebuje ponownie kodu QR urządzenia pacjenta (**Tylko odczyt Nightscout → Pokaż kod QR**). |
-| Karta urządzenia opiekuna pokazuje na czerwono *„Używa tokena Nightscout …”*                                                         | Urządzenie opiekuna nadal zapisuje tokenem, który ma więcej uprawnień, niż potrzebuje. Urządzenie pacjenta wysyła mu własny token po sparowaniu, ale tylko wtedy, gdy samo ma token administratora. Sprawdź token urządzenia pacjenta albo skonfiguruj urządzenie opiekuna ponownie kodem QR.                                                                                             |
-| Urządzenie opiekuna nie może już odczytywać Nightscout                                                                               | Jego token został usunięty, na przykład dlatego, że urządzenie opiekuna usunięto na urządzeniu pacjenta. Dodaj je ponownie.                                                                                                                                                                                                                                                               |
-| Leczenie wpisane na stronie Nightscout nie jest stosowane                                                                            | Tak ma być w [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode): wpisuj je na sparowanym urządzeniu opiekuna.                                                                                                                                                                                                                                                       |
-
 Przy problemach z Nightscout / synchronizacją najpierw zobacz [Wskazówki dotyczące rozwiązywania problemów z NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *To nie jest token administratora*: daj urządzeniu pacjenta token administratora Twojego Nightscout albo dodaj urządzenie opiekuna za pomocą **PIN**.
+- *Nie połączono*: poczekaj, aż urządzenie pacjenta pokaże *połączono* w **NSClientV3**.
+
+**„Nightscout ma już token o takiej samej nazwie, ale innych uprawnieniach”**
+
+Jeden z Twoich tokenów Nightscout nazywa się `aaps-` i ta nazwa. Wybierz inną nazwę dla urządzenia opiekuna.
+
+**„Klient o tej nazwie znajduje się już na liście”**
+
+Wybierz inną nazwę albo najpierw usuń to urządzenie opiekuna.
+
+**The client says "This code is from another AAPS version"**
+
+Urządzenie pacjenta i urządzenie opiekuna muszą mieć **tę samą** wersję **AAPS**. Zaktualizuj starsze z nich.
+
+**The client says "This code has expired"**
+
+Kod, który paruje, działa przez około dwie minuty. Dodaj urządzenie opiekuna ponownie na urządzeniu pacjenta, aby dostać nowy kod.
+
+**The client says "This phone is paired already"**
+
+Najpierw go odłącz (**Zarządzaj → Sparuj z telefonem pacjenta → Odłącz**), potem zeskanuj ponownie. Kod **tylko Nightscout** działa też na sparowanym telefonie.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+Nic nie zostało zmienione. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+
+**The client says it is not paired**
+
+Sparuj ponownie w **Zarządzaj → Sparuj z telefonem pacjenta**. Check that the client is **Active** in the master's **Authorized clients** list.
+
+**Po sparowaniu nic się nie dzieje**
+
+Upewnij się, że **Zezwalaj na sterowanie z urządzenia opiekuna** jest WŁĄCZONE na urządzeniu pacjenta i że urządzenie pacjenta jest połączone z Nightscout.
+
+### Polecenia
+
+**The client says the master is offline, or commands fail**
+
+Check that:
+
+- the master phone is awake and **AAPS** is running,
+- both phones are connected in **NSClientV3**, to the same Nightscout site,
+- **websockets** are enabled on both phones.
+
+Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**A command is rejected by the master**
+
+The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+
+**Leczenie wpisane na stronie Nightscout nie jest stosowane**
+
+This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+
+### Nightscout tokens and settings
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+Urządzenie opiekuna używało wcześniej własnego tokenu Nightscout, a teraz zapisuje innym, na przykład po wpisaniu tokenu w jego ustawieniach Nightscout. Usuń urządzenie opiekuna na urządzeniu pacjenta i dodaj je ponownie (zobacz [Własny token Nightscout urządzenia opiekuna](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+Urządzenie opiekuna nadal zapisuje tokenem, który ma więcej uprawnień, niż potrzebuje. The master sends the client its own token after pairing, but only if the master has an admin token. Sprawdź token urządzenia pacjenta albo skonfiguruj urządzenie opiekuna ponownie kodem QR.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+Ktoś inny zapisał dokument ustawień urządzenia pacjenta albo urządzenie pacjenta ma nowy klucz (na przykład po wyczyszczeniu jego danych). A paired client takes the new key by itself the next time it connects to Nightscout. Telefon, który tylko odczytuje Nightscout, potrzebuje ponownie kodu QR urządzenia pacjenta (**Tylko odczyt Nightscout → Pokaż kod QR**).
+
+**Urządzenie opiekuna nie może już odczytywać Nightscout**
+
+Jego token został usunięty, na przykład dlatego, że urządzenie opiekuna usunięto na urządzeniu pacjenta. Dodaj je ponownie.
 
 ---
 
