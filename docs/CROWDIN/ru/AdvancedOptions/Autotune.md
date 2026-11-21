@@ -1,6 +1,6 @@
-# How to use Autotune plugin
+# Как пользоваться модулем Autotune
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
+Модуль Autotune – это реализация алгоритма OpenAPS autotune в AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 
 Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
@@ -23,13 +23,13 @@ Autotune can be run three ways: manually as a one-off from within the plugin (as
 
 *For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
-## Show the Autotune plugin
+## Показать модуль Autotune
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+Создайте пустой файл с именем `enable_autotune` в подпапке `extra` [каталога AAPS](#preferences-maintenance-settings) на вашем телефоне.
 
 ***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+![Включить Autotune](../images/Autotune/Autotune_0.png)
 
 Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
 
@@ -47,12 +47,12 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
   - Note: each time you change the **Number of days of data**, previous results will be removed
 - Последнее выполнение - это ссылка, восстанавливающая предыдущий корректный расчёт. Если вы не запускали Autotune в текущий день, или если предыдущие результаты были удалены с модификацией, то можно восстановить параметры и результаты последнего успешного запуска.
 - Предупреждение показывает некоторую информацию о выбранном профиле (если у вас есть несколько значений IC или несколько значений ISF)
-  - Примечание: Расчет Autotune работает только с одним углеводным коэффициентом и одним значением ISF. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. Если профиль имеет несколько значений, вы увидите предупреждение о среднем значении, принятом для настройки профиля.
+  - Примечание: Расчет Autotune работает только с одним углеводным коэффициентом и одним значением ISF. Сейчас нет алгоритма Autotune, который настраивает циркадный IC или циркадный ISF. Если профиль имеет несколько значений, вы увидите предупреждение о среднем значении, принятом для настройки профиля.
 - Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, IC, ISF, basal and target)
   - Примечание: Autotune подстроит только углеводный коэффициент IC (единичное значение), ISF (единичное значение) и базальный профиль (с вариацией в пределах суток). Units and target will remain unchanged in output profile.
 
 - "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
-  - Примечание: Расчет Autotune может занять длительное время. После запуска autotune можно переключиться на другое окно (главый экран и. п., ...) и вернуться позже в Autotune, чтобы увидеть результаты
+  - Примечание: Расчет Autotune может занять длительное время. После запуска можно перейти на другой экран (главный экран и т. п.) и вернуться позже в модуль Autotune, чтобы увидеть результаты
 
   ![Запуск Autotune](../images/Autotune/Autotune_2b.png)
 
@@ -68,11 +68,11 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - Важно всегда сравнивать входной профиль (столбец "Профиль"), выходной профиль (столбец "Настроено") и процент изменений каждого значения (столбец "%").
 
-- Для базальной скорости имеется "количество недостающих дней". Недостающие дни появляются когда Autotune не хватает данных в категории «Basal» для настройки базовой скорости за этот период (например, после каждой еды, когда идет поглощение углеводов). Это число должно быть как можно более низким, особенно если базал важен (например, в ночь или в конце второй половине дня)
+- Для базальной скорости имеется "количество недостающих дней". Недостающие дни появляются, когда у Autotune недостаточно данных в категории «Basal», чтобы настроить базальную скорость за этот период (например, после каждой еды, когда идет усвоение углеводов). Это число должно быть как можно меньше, особенно когда базал важен (например, ночью или в конце второй половины дня)
 
 - Кнопка "Сравнить профили" открывает окно сравнения профилей. Профиль на входе синий, а на выходе ("Настроенный") - красный.
 
-  - Примечание: в примере ниже профиль на входе имеет циклические суточные отклонения для IC и ISF, но профиль на выходе имеет одно значение. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - Примечание: в примере ниже профиль на входе имеет циклические суточные отклонения для IC и ISF, но профиль на выходе имеет одно значение. Если вам важно получить циркадный выходной профиль, см. [Циркадный профиль IC или ISF](#autotune-circadian-ic-or-isf-profile) ниже.
 
   ![Autotune - Сравнение профилей](../images/Autotune/Autotune_5.png)
 
@@ -81,9 +81,9 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
   - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
   - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
-  ![Автоматически активировать профиль](../images/Autotune/Autotune_6.png)
+  ![Autotune – Активировать профиль](../images/Autotune/Autotune_6.png)
 
-- Если вы считаете, что профиль Tuned должен быть скорректирован (например, если некоторые вариации слишком важны), вы можете нажать на кнопку "Копировать в локальный профиль"
+- Если вы считаете, что настроенный профиль нужно скорректировать (например, если некоторые изменения слишком велики), нажмите на кнопку "Копировать в локальный профиль"
 
   - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
 
@@ -121,10 +121,10 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 ```
 
 - **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Если изменить эту настройку на Включить, профиль ввода будет автоматически обновлен профилем Tuned и активирован.
-  - **Будьте внимательны, в течение нескольких следующих дней следите, чтобы после обновления и активации настроенного профиля система заработала лучше по сравнен с профилем без изменений**
+  - **Будьте осторожны: в течение нескольких следующих дней нужно проверять и убедиться, что после обновления и активации настроенного профиля без изменений ваш цикл работает лучше**
 
 - **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Это помешает (когда Выключено) классифицировать UAM как базал.
-  - Примечание: если в течение одного дня обнаружен по крайней мере один час абсорбции углеводов, тогда все данные, классифицированные как UAM, будут классифицированы как basal, вне зависимости от того, включен параметр или выключен
+  - Примечание: если в течение одного дня обнаружен хотя бы один час усвоения углеводов, то все данные в категории UAM будут отнесены к базалу, независимо от этой настройки (включена или выключена)
 - **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
 - **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
 
@@ -180,7 +180,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 Примечание: подробнее о создании правил для автоматизации см [здесь](../DailyLifeWithAaps/Automations.md).
 
-- Следует выбрать время повторения запускать Autotune только один раз в сутки, ежедневно (после каждого нового выполнения Autotune смещать график на день вперед и делать небольшие быстрые модификации профиля)
+- Выберите триггер «Время повторения»: запускайте Autotune только один раз в сутки; Autotune создан для ежедневного запуска (при каждом новом запуске период сдвигается на один день, и изменения профиля быстро должны стать очень маленькими)
 
   ![Экран Autotune по умолчанию](../images/Autotune/Autotune_16.png)
 
@@ -208,9 +208,9 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 ## Советы и подсказки
 
-Автототал работает с информацией из вашей базы данных, так что если вы только что установили AAPS на новый телефон, вам придется подождать несколько дней, прежде чем запускать Autotune чтобы получить адекватные результаты.
+Autotune работает с информацией из вашей базы данных, поэтому если вы только что установили AAPS на новый телефон, придется подождать несколько дней, прежде чем запускать Autotune с достаточным количеством дней для получения адекватных результатов.
 
-Autotune - всего лишь помощник, важно регулярно проверять, согласны ли вы с расчетным профилем. В случае сомнений, измените параметров Autotune (например, количество дней) или скопируйте результаты в локальный профиль и подкорректируйте перед использованием.
+Autotune - всего лишь помощник, важно регулярно проверять, согласны ли вы с расчетным профилем. Если у вас есть сомнения, измените настройки Autotune (например, количество дней) или скопируйте результаты в локальный профиль и скорректируйте профиль перед использованием.
 
 Всегда используйте Autotune несколько дней вручную для проверки результатов перед их применением. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
 
@@ -218,19 +218,19 @@ Autotune - всего лишь помощник, важно регулярно �
 
 It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
 
-- вы можете получить полное увеличение или уменьшение силы профиля (например, увеличение общего базала, связанное со снижением значений ISF и IC). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- вы можете получить полное увеличение или уменьшение силы профиля (например, увеличение общего базала, связанное со снижением значений ISF и IC). это может быть связано с несколькими последующими днями с коррекцией autosens выше 100% (нужна большая агрессивность) или ниже 100% (вы более чувствительны)
+- Иногда Autotune предлагает другой баланс между базальными скоростями и IC/ISF (например, меньше базала и более агрессивные IC/ISF)
 
 Мы рекомендуем не применять Autotune в следующих случаях:
 
-- Вы не всгда вводите все углеводы
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
+- Вы вводите не все углеводы
+  - Если вы не вводите углеводы для коррекции гипогликемии, Autotune увидит неожиданный рост ГК и повысит базальные скорости на 4 часа раньше; это может быть противоположно тому, что вам нужно, чтобы избежать гипо, особенно посреди ночи. Поэтому важно вводить все углеводы, особенно для коррекции гипо.
+- У вас много периодов с UAM в течение дня.
+  - Вы ввели все углеводы и правильно оценили их количество?
   - Все периоды непредвиденных приемов пищи (за исключением случаев, когда вы не вводите углеводы в течение дня и отключена настройка классифицировать UAM как базалы), все периоды UAM будут классифицированы как базалы, а это может значительно увеличить базал (намного больше, чем необходимо)
 
 - У вас медленное усвоение углеводов: если бóльшая часть абсорбции углеводов рассчитывается с помощью параметра min_5m_carbimpact (эти периоды можно увидеть как маленькую оранжевую точку в верхней части кривой COB), подсчет активных углеводов COB может быть неправильным и привести к неправильным результатам.
-  - При занятиях спортом, чувствительность, как правило, повышается, и уровень сахара в крови повышается не сильно, поэтому во время или после тренировки обычно наблюдаются периоды медленного усвоения углеводов. Но если у вас слишком часто происходит неожиданное медленное усвоение углеводов, то может потребоваться корректировка профиля (более высокое значение IC) или значение min_5m_carbimpact слишком высокое.
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
-- Если очень важен процент изменений
+  - При занятиях спортом чувствительность обычно выше, и ГК растет не сильно, поэтому во время или после тренировки часто бывают периоды медленного усвоения углеводов. Но если у вас слишком часто происходит неожиданное медленное усвоение углеводов, то может потребоваться корректировка профиля (более высокое значение IC) или значение min_5m_carbimpact слишком высокое.
+- У вас есть «очень плохие дни», например, когда вы много часов застряли в гипергликемии и нужно огромное количество инсулина, чтобы вернуться в целевой диапазон, или после замены сенсора долгое время были неверные значения ГК. Если за последние недели у вас был только один или 2 «плохих дня», можно вручную отключить эти дни в расчете Autotune, чтобы исключить их из расчета, и снова **внимательно проверить, можно ли доверять результатам**
+- Если процент изменений слишком большой
   - Можно увеличить количество дней, чтобы получить более плавные результаты
