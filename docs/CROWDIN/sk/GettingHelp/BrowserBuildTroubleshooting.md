@@ -27,7 +27,7 @@ You already have this repository, for example from an earlier attempt. Close the
 ![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
 
 - **„No GitHub user with this name“** v kroku 1: zadajte svoje používateľské meno na GitHube tak, ako je uvedené vo vašom profile GitHub, nie e-mail.
-- **Chýba tlačidlo „Build AAPS“ alebo „Run workflow“, alebo je repozitár prázdny**: repozitár nevznikol zo šablóny. Vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a urobte [krok 1](#aaps-builder-step1) znova pomocou tlačidla **Create my private repository**.
+- **Chýba tlačidlo „Build AAPS“ alebo „Run workflow“, alebo je repozitár prázdny**: repozitár nevznikol zo šablóny. Vymažte ho (**Settings** → spodná časť stránky → **Delete this repository**) a urobte [krok 1](#aaps-builder-step1) znova pomocou tlačidla **Vytvoriť môj súkromný repozitár**.
 
 ### Step 3: the secret
 
@@ -70,7 +70,7 @@ Right after the repository is created, GitHub may not have read its workflow fil
 
 #### The build failed (red cross)
 
-1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+1. Na stránke nastavenia ťuknite na **Otvoriť moje zostavenia** a potom na zostavenie s červeným krížikom.
 
    ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
 
@@ -86,7 +86,7 @@ Right after the repository is created, GitHub may not have read its workflow fil
 - **Zostavenie sa zastaví s hlásením „This repository is PUBLIC“**: vo svojom repozitári otvorte **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** a potom zostavte znova.
 - **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
 - **„Variant … is not supported“**: váš súbor workflow je staršia verzia. Nahraďte ho podľa postupu v časti [Aktualizácia AAPS](#aaps-builder-updates).
-- **„The secret is too short“**, **„The secret is not a valid code“** alebo **„The secret does not contain a keystore“**: do secretu sa vložil nesprávny text, často samotné slovo `KEYSTORE_SET` alebo iba časť kódu. Vo svojom repozitári otvorte **Settings** → **Secrets and variables** → **Actions**, upravte `KEYSTORE_SET` a znova vložte dlhý kód z **Copy secret** (ak ste stránku nastavenia zavreli, najprv zopakujte jej krok 2).
+- **„The secret is too short“**, **„The secret is not a valid code“** alebo **„The secret does not contain a keystore“**: do secretu sa vložil nesprávny text, často samotné slovo `KEYSTORE_SET` alebo iba časť kódu. Vo svojom repozitári otvorte **Settings** → **Secrets and variables** → **Actions**, upravte `KEYSTORE_SET` a znova vložte dlhý kód z tlačidla **Kopírovať secret** (ak ste stránku nastavenia zavreli, najprv zopakujte jej krok 2).
 - **„Keystore, password or alias is wrong“**: skontrolujte heslo a alias svojho úložiska kľúčov a potom zopakujte kroky 2 a 3 stránky nastavenia.
 - **„Google Drive access has expired or was revoked“**: zopakujte [krok 6](#aaps-builder-google-drive) a aktualizujte secret `GDRIVE_OAUTH2`.
 - **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
