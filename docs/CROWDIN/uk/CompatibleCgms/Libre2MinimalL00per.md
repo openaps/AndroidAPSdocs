@@ -82,7 +82,7 @@
 
 (minimallooper-started-sensor)=
 
-### Що робити, якщо мій сенсор уже запущений? Can I still get readings in xDrip? ТАК!
+### Що робити, якщо мій сенсор уже запущений? Чи можу я далі отримувати значення в xDrip? ТАК!
 
 Багато людей питали, чи можна використовувати цей метод з уже активним сенсором, і я можу впевнено сказати **ТАК**: ви можете підключити сенсор, який уже працює.
 
@@ -94,7 +94,7 @@
 
 ## Як запустити сенсор FSL2 у режимі прямого Bluetooth за допомогою LL і xDrip
 
-*ПРИМІТКА: якщо на знімках екрана є налаштування, які не виділені РАМКОЮ і ВИМКНЕНІ (тобто не позначені), то, БУДЬ ЛАСКА, ЗАЛИШТЕ ЇХ ВИМКНЕНИМИ. Знімки екрана показують робочу конфігурацію для ВСІХ показаних налаштувань. If you want to experiment turning other features on/off after you have a working sensor, you are free to do so at your own risk.*
+*ПРИМІТКА: якщо на знімках екрана є налаштування, які не виділені РАМКОЮ і ВИМКНЕНІ (тобто не позначені), то, БУДЬ ЛАСКА, ЗАЛИШТЕ ЇХ ВИМКНЕНИМИ. Знімки екрана показують робочу конфігурацію для ВСІХ показаних налаштувань. Якщо, коли сенсор уже працює, ви хочете поекспериментувати й вмикати/вимикати інші функції, можете це робити на власний ризик.*
 
 (minimallooper-step1)=
 
@@ -253,7 +253,7 @@
 
 ### Крок 7: зачекайте 60 секунд і знову відскануйте сенсор через NFC
 
-A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device that xDrip will use to retrieve the readings. Коли все завершиться, ви побачите сповіщення **NEW SENSOR STARTED**.
+Потрібне друге NFC-сканування, щоб **ДОДАТИ** сенсор як пристрій Bluetooth, з якого xDrip отримуватиме значення. Коли все завершиться, ви побачите сповіщення **NEW SENSOR STARTED**.
 
 ![Сканування в xDrip](../images/minimal00per/xdripscan2.png)
 
@@ -288,7 +288,7 @@ A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth devi
 
 ### Крок 9: перевірте, що сенсор підключений і надсилає дані
 
-Натисніть меню (☰) у верхньому лівому куті екрана xDrip Overview і виберіть **System Status**. На екрані System Status у полі **Bluetooth Device:** показано назву Bluetooth сенсора FSL2 у форматі **ABB___XXXXXXXXXXX**, де XXX – серійний номер сенсора. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displays the time the sensor was started.
+Натисніть меню (☰) у верхньому лівому куті екрана xDrip Overview і виберіть **System Status**. На екрані System Status у полі **Bluetooth Device:** показано назву Bluetooth сенсора FSL2 у форматі **ABB___XXXXXXXXXXX**, де XXX – серійний номер сенсора. У полі **Connection Status** (стан підключення) показано **Connected** (підключено), а в полі **Sensor Start:** (запуск сенсора) — час, коли сенсор було запущено.
 
 ![Сканування в xDrip](../images/minimal00per/xdripSSlog.png)
 
@@ -301,8 +301,8 @@ A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth devi
 - **Phone Service State:** коли телефон востаннє підключався до сенсора через BT (має бути менше 5 хвилин тому)
 - **Bluetooth Device:** показує поточний стан підключення (**Connected** або **Disconnected**)
 - **Device Mac Address**: апаратний ідентифікатор сенсора
-- **Bluetooth Pairing**: This should be **<u>Disabled, tap to enable</u>**. Будьте обережні і НЕ торкайтеся цього поля. Якщо ви випадково торкнулися його, торкайтеся ще, поки воно не повернеться в стан disabled.
-- **Slowest wake up**: це можна не враховувати. xDrip doesn't spend its time waiting for readings: it will start expecting them after a certain time (traditionally 5 minutes). Якщо в цей час дані не надходять, ви побачите "Woke up early": xDrip очікував, що дані будуть готові, але їх немає. Slowest wake up – це найбільша затримка перед звичайним отриманням даних.
+- **Bluetooth Pairing** (спарювання Bluetooth): тут має бути **<u>Disabled, tap to enable</u>** (вимкнено, натисніть, щоб увімкнути). Будьте обережні і НЕ торкайтеся цього поля. Якщо ви випадково торкнулися його, торкайтеся ще, поки воно не повернеться в стан disabled.
+- **Slowest wake up**: це можна не враховувати. xDrip не чекає значень постійно: він починає очікувати їх через певний час (зазвичай через 5 хвилин). Якщо в цей час дані не надходять, ви побачите "Woke up early": xDrip очікував, що дані будуть готові, але їх немає. Slowest wake up – це найбільша затримка перед звичайним отриманням даних.
 - **Next Wake up**: має показувати 5 хвилин
 
 ![Сканування в xDrip](../images/minimal00per/xdripSStat.png)
@@ -399,7 +399,7 @@ A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth devi
 - **FSL** - FreeStyle Libre
   - **Libre 1 (FSL1)** - лише NFC. Перша версія сенсора
 
-  - **Libre 2 (FSL2)** - Bluetooth and NFC. Друга версія сенсора.
+  - **Libre 2 (FSL2)** - Bluetooth і NFC. Друга версія сенсора.
 
   - **Libre 3 (FSL3)** - Bluetooth і NFC. Третя, менша версія сенсора. Не підтримується OOP2 (див. Juggluco).
 
@@ -413,7 +413,7 @@ A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth devi
 
 - **OOP1** - Out of Process Algorithm версії 1, сторонній застосунок, який отримує сирі значення (які сенсор передає в xDrip через Bluetooth або сканування NFC), обробляє їх алгоритмом (дуже схожим на апаратний алгоритм у чипі сенсора) і повертає в xDrip відкаліброване (алгоритмом OOP1, а не власним калібруванням xDrip) значення цукру крові. xDrip показує його або за потреби додатково обробляє своїм калібруванням (за значенням крові з пальця).
 
-- **OOP2** - Out of Process Algorithm version 2, the 3rd party app that receives encrypted data delivered from the FSL 2 sensor (by Bluetooth or NFC scan) and then decrypts the encrypted data. Після розшифрування дані надсилаються в xDrip.
+- **OOP2** - Out of Process Algorithm версії 2, сторонній застосунок, який отримує зашифровані дані від сенсора FSL 2 (через Bluetooth або NFC-сканування) і потім розшифровує їх. Після розшифрування дані надсилаються в xDrip.
 
  
 
@@ -432,7 +432,7 @@ A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth devi
 
 #### Зависання на зборі початкових значень
 
-*Примітка: FSL 2 не вважається надійним джерелом даних, якщо його калібрують вручну.*
+*Примітка: FSL 2 не вважається довіреним джерелом даних, якщо його калібрують вручну.*
 
 Встановіть стратегію [калібрування OOP2](#minimallooper-OOPsettings) на "No calibration", поки все не запрацює.
 
@@ -474,4 +474,4 @@ A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth devi
 2. Меню xDrip -> System status -> Forget device
 3. Відскануйте сенсор через NFC у xDrip. Зачекайте щонайменше одну хвилину
 4. Меню xDrip -> Start sensor. Зачекайте щонайменше одну хвилину
-5. Scan the sensor with xDrip NFC, a few times, always waiting at least one minute between two scans.
+5. Відскануйте сенсор через NFC у xDrip кілька разів, щоразу чекаючи щонайменше одну хвилину між двома скануваннями.
