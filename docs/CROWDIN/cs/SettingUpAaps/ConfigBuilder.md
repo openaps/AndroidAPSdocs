@@ -160,29 +160,29 @@ Kvůli vlivu nulového dočasného bazálu popsanému výše a vzorci, který AA
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Protože bazální dávka v AAPS nepřímo ovlivňuje pokles IOB, příliš vysoké bazální dávky mohou zakrýt příliš vysokou DIA, a naopak. Je proto rozumné nejprve pečlivě vyladit bazální dávky a teprve potom upravovat DIA a vrchol. Počítejte také s tím, že nastavení DIA a vrcholu se navzájem ovlivňují: účinek DIA závisí na vrcholu, a naopak.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Tyto grafy ukazují přesný vliv DIA a vrcholu na křivky IOB v celém rozsahu povolených hodnot.
 
-Adjusting DIA:
+Úprava DIA:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Úprava vrcholu:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Nakonec srovnání, kdy se DIA a vrchol upravují současně. Obě hodnoty se mění ve stejném poměru, takže `49/35 ~ 7/5`. Nebo podobně `120/93 ~ 9/7`. Intervaly budou stejné bez ohledu na výchozí DIA nebo vrchol, pokud je poměrná změna u obou stejná.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Když se DIA a vrchol upravují tímto způsobem, posune se každý bod křivky o stejnou poměrnou hodnotu.
 
 ````
 
