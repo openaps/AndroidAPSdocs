@@ -10,7 +10,7 @@
 
 - нічна або змінна робота – для людей зі змінним графіком можна налаштувати зсув часу в **профілі**: кількість годин у **профілі** змінюють на стільки, на скільки пізніше або раніше людина ляже спати чи прокинеться.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Так **AAPS** розраховує збалансоване введення інсуліну для користувача. Зменшення лише базалу в **профілі** у **AAPS** дає мало користі, якщо алгоритм і далі використовує ті самі коефіцієнти ISF та I:C.
+Чому варто використовувати **відсоток профілю**, а не тимчасову зміну базалу? Щоб діяти ефективніше, **відсоток профілю** пропорційно зменшує або збільшує одразу базал, ISF та I:C. Так **AAPS** розраховує збалансоване введення інсуліну для користувача. Зменшення лише базалу в **профілі** у **AAPS** дає мало користі, якщо алгоритм і далі використовує ті самі коефіцієнти ISF та I:C.
 
 (ProfileSwitch-change-percentage)=
 
@@ -54,9 +54,9 @@ Why use a **Profile Percentage** rather than a temporary basal adjustment? To be
 
 У **AAPS** v4 профілями керують і активують їх на екрані **Керувати** (нижня навігація) → **Профіль** (*«Керувати профілями й активувати їх»*).
 
-Екран профілю показує ваші профілі як **карусель карток, які можна гортати**. Картка поточного профілю позначена **АКТИВНИЙ** і показує його добовий базал (напр. *∑ 30,15 Од*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+Екран профілю показує ваші профілі як **карусель карток, які можна гортати**. Картка поточного профілю позначена **АКТИВНИЙ** і показує його добовий базал (напр. *∑ 30,15 Од*). Під вибраною карткою видно подробиці цього профілю: тип **Інсулін**, а також розклади **IC**, **ISF**, **базалу** і **цілі** з графіками.
 
-When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
+Коли працює тимчасове перемикання, картка **АКТИВНИЙ** показує його відсоток і зсув часу разом із часом, що залишився, наприклад *110% +2 год · 2 год 40 хв*, над індикатором виконання. Обидва значення оновлюються кожні 30 секунд. Тоді подробиці нижче мають дві колонки: значення профілю синім кольором і значення, які зараз використовуються з урахуванням відсотка, червоним.
 
 ![Екран профілю – карусель профілів, деталі та панель дій](../images/v4/Profiles/profile_manage.png)
 
@@ -127,8 +127,8 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 | Перемикання профілю  
 Відсоток |      Дія       |    I:C  
-г/Од     | Example  
-15 g |        ISF  
+г/Од     | Приклад  
+15 г |        ISF  
 ммоль/л/Од  
 мг/дл/Од         | Од для зниження на  
 2 ммоль/л  
@@ -155,7 +155,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 Функція «зсув часу» у **профілі** переміщує налаштування **профілю** по добовому (циркадному) годиннику на задану кількість годин. Це може бути корисно для:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
+- **працівники нічних змін або змінного графіка**: для нічних змін змініть кількість годин на те, наскільки пізніше/раніше відносно **профілю** користувач лягає спати або прокидається; 
 - **людей, які під час подорожей змінюють часовий пояс**; або
 - **дітей з діабетом 1 типу**, у яких є сталий режим сну, а інсулінорезистентність уже врахована в **профілі**. Якщо з якоїсь причини дитина ляже спати пізніше, доглядач може застосувати «зсув часу» до **профілю** дитини. Тоді **AAPS** реагуватиме на інсулінорезистентність у потрібний час, заданий користувачем.
 
@@ -171,7 +171,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 ![Напрямки зсуву часу при перемиканні профілю](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Такий механізм знімків **профілю** дозволяє набагато точніше розраховувати минуле і відстежувати зміни **профілю**.
 
 (ProfileSwitch-keep-for-later)=
 
