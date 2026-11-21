@@ -14,13 +14,13 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 :::{tab-item} Wiki
 ### Run the Workflow to Build the Signed APK
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
+1. A la vostra còpia d'AndroidAPS a GitHub, seleccioneu Actions.
+2. Obriu All Workflows.
 3. Select AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Desplaceu-vos cap avall i premeu Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
@@ -30,14 +30,14 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
+6. Veureu el missatge Workflow run was successfully requested. Actualitzeu la pàgina del navegador i podreu seguir el progrés de la compilació. Quan l'acció acabi, l'acció AAPS CI mostrarà una marca verda. You have successfully built the updated version of Android APS.
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
 ### Install the AAPS APK
 
 1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+2. Entreu a la carpeta AAPS, seleccioneu la carpeta de la nova versió i hi trobareu la versió per al telèfon i la versió per a Android Wear.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 :::  
@@ -88,7 +88,7 @@ Variants ending with “Debug” indicate that the APK will be built in debug mo
 Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+A partir de setembre de 2026, la [verificació de desenvolupadors d'Android](#android-developer-verification) de Google pot impedir instal·lar l'APK tocant el fitxer, segons el vostre país. En aquella pàgina s'expliquen solucions gratuïtes.
 ```
 
 If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
