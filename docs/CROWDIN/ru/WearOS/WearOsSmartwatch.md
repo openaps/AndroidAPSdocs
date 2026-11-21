@@ -1,10 +1,10 @@
 # Set up AAPS on your Wear OS watch
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Инструкции ниже относятся к apk **AAPS Wear**, который вам нужно собрать. Если вы его еще не собрали, см. руководство по ссылке [здесь](../WearOS/BuildingAapsWearOS.md). При сборке обязательно используйте тот же файл хранилища ключей, что и для apk **AAPS** на телефоне.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+Часть информации подходит также для apk **Wear** для **AAPSClient** и **PumpControl**. Each **Wear** app will communicate with its matching phone app. Например, приложение **AAPSClient Wear** можно использовать, чтобы показывать данные **AAPSClient**, а не данные **AAPS**. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
 
-## Wear OS Versions and compatibility
+## Версии Wear OS и совместимость
 
 (wearos-watchface-changes)=
 
@@ -78,8 +78,8 @@ If a **Lock type** is set under **Settings** > **Security and privacy**, the wat
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+Установите apk **AAPS Wear** с помощью [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (описано ниже) или ADB.  
+Работа **AAPS Wear** без ограничений.
 
 (BuildingAapsWearOs-WearOS5)=
 
@@ -110,7 +110,7 @@ This section assumes you are totally new to Smartwatches, and gives you basic or
 
 _This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+Вот базовые руководства по настройке [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) и [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
 ## Basic smartwatch familiarity
 
@@ -124,41 +124,41 @@ The app “Galaxy Wearable” also has an instruction manual section in it. Open
 
 ## Setting up a Samsung account
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Убедитесь, что в учетной записи электронной почты, с которой вы создаете учетную запись Samsung, указана дата рождения, по которой пользователю 13 лет или больше. Иначе разрешения Samsung очень трудно подтвердить. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## Перенос приложения **AAPS** Wear на телефон с **AAPS**
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Перенести Wear.apk из Android Studio на телефон можно одним из способов:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a) с помощью USB-кабеля скопировать apk-файл **AAPS** Wear на телефон, а затем установить его на часы вручную (sideload). Transfer Wear.apk to the phone via USB into the downloads folder; or
 
 b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+Чтобы вручную установить (sideload) AAPS на часы, можно использовать: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Мы рекомендуем Wear Installer 2, потому что инструкции и процесс в видео очень понятны и хорошо объяснены. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Ручная установка (sideload) **AAPS** Wear с телефона на часы с помощью Wear Installer 2
 
  ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Wear Installer 2, разработанный [Malcolm Bryant](https://www.youtube.com/@Freepoc), можно скачать из Google Play на телефон и использовать для ручной установки (sideload) приложения AAPS Wear на часы. В приложении есть удобное [видео](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) о том, как выполнить ручную установку (sideload).
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+Для часов с Wear OS 5 следуйте инструкциям из [этого видео](https://www.youtube.com/watch?v=yef_qGvcCnk).
+Советы по устранению неполадок см. [ниже](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
 This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Как сказано в видео, после завершения выключите отладку ADB на часах, чтобы не разряжать батарею смарт-часов.
 
-Alternatively, but not for Wear OS 5, you can:
+Или вы можете (но не для Wear OS 5):
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### Ручная установка **AAPS** Wear на часы с помощью Easy Fire tools
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1) Скачайте _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ из Play Маркета на телефон
 
 ![изображение](../images/wearos/easyfire01.png)
 
@@ -178,16 +178,16 @@ In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, 
 
 ![изображение](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+ШАГ 3) Введите IP-адрес, _например_ **192.168.1.214**, в Easy Fire tools на телефоне (откройте меню слева, настройки и введите IP-адрес).
 
 ![изображение](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Then click the plug socket icon on the top right. При подключении он станет зеленым.
 
 ![изображение](../images/wearos/easyfire06.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+ШАГ 4) Следуйте инструкциям [здесь](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true), чтобы вручную установить (т. е. перенести) aaps-wear.apk на смарт-часы с помощью Easy Fire tools
 
 
 ![изображение](../images/wearos/easyfire07.png)
@@ -195,62 +195,62 @@ STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/0
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Через терминал
+Подключите смарт-часы и компьютер к одной сети Wi-Fi.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- Чтобы установить ADB, скачайте его отсюда: https://developer.android.com/tools/releases/platform-tools
+- Откройте терминал.
+- В Windows создайте новую папку с именем `adb` на диске `C:`. Откройте скачанный ранее файл `platform-tools-latest-windows.zip`. Скопируйте все файлы из `platform-tools` в `C:\adb` и откройте эту папку в командной строке (правый клик и «Открыть в терминале»). Введите команду ниже, чтобы добавить в путь папку, где находится ADB: `setx PATH "%PATH%;C:\adb"`
+- На Mac вместо ручной установки можно использовать homebrew: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+На часах:
+- Откройте Настройки → Сведения о часах → **Сведения о ПО**
+- Нажмите на «Версия ПО» 7 раз, пока не увидите, что режим разработчика включен.
+- Откройте Настройки → Параметры разработчика. Включите **Отладку ADB**
+- Откройте Настройки → Параметры разработчика → Отладка по Wi-Fi (Wireless debugging) → **Подключить новое устройство** (Pair new device)
 
 You will see a Wi-Fi pairing code and IP address and port appearing:
 
 ![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/watch_wifi_pairing_code.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+- В терминале: `adb pair ipaddress:port` Например: `adb pair 10.10.1.125:36299`
+- Вас попросят ввести код сопряжения. Введите его.
+- Вы увидите ответ:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- В терминале введите: <br>`adb devices`.<br> Вы должны увидеть примерно следующее:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
 - Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Вы увидите:<br> `Performing Streamed Install`<br> `Success`
 
 
 (wear-os-5-troubleshooting)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Общие рекомендации по устранению неполадок для Wear OS 5
 
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- Не используйте раздачу Wi-Fi (точку доступа на телефоне). Это не сработает.
+- Отладку ADB на телефоне включать не нужно (только на часах). Выключите отладку ADB на телефоне.
+- Подключайтесь к своей локальной сети, в которой телефон и часы видят друг друга (не подключайтесь к гостевой сети Wi-Fi).
+- Убедитесь, что часы и телефон находятся в одной сети и подключены к одному устройству Wi-Fi. Особенно проблемы могут создавать повторители Wi-Fi или точки доступа.
+- Находитесь рядом с основным роутером, затем перезапустите телефон и часы.
 
 **Pairing :**
 
-- Watch: Wireless Debugging: note the IP address.
+- Часы: Отладка по Wi-Fi (Wireless debugging): запишите IP-адрес.
 - Wear Installer: Enter the IP in the Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
+- Выберите «Подключить новое устройство» (Pair new), запишите показанный код сопряжения и номер порта.
 - Wear Installer: enter the pairing code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- Wear Installer должен сообщить, что сопряжение выполнено успешно. Если этого не произошло, закройте Wear Installer и попробуйте снова.
 
-Once paired you should be able to install the AAPS wear apk:
+После сопряжения вы сможете установить apk AAPS Wear:
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- Закройте и снова запустите Wear Installer.
+- В разделе отладки по Wi-Fi запишите IP-адрес и номер порта и проверьте или введите IP-адрес и номер порта в Wear Installer.
+- Примечание: этот номер порта отличается от того, который использовался для сопряжения!
 
 ## Setting up the connection between the watch and the phone from **AAPS**
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
+Последний шаг — настроить **AAPS** на телефоне для работы с **Wear.apk** на часах. To do this, enable the Wear plugin:
 
-* Go to the **AAPS** app on the phone
+* Откройте приложение **AAPS** на телефоне
 
 * Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
 
@@ -274,7 +274,7 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 
 (wear-os-watch-phone-communication)=
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### Устранение неполадок связи между часами **AAPS** и телефоном **AAPS**
 
 1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
 2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
@@ -283,7 +283,7 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
 6.  Check that your router is not isolating the devices from one another.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Больше советов по устранению неполадок можно найти [здесь](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
@@ -291,7 +291,7 @@ More troubleshooting tips can be found [here](https://freepoc.org/wear-installer
 
 There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. На часах (с WearOS) нажмите и удерживайте текущий циферблат, чтобы открыть экран выбора циферблатов, прокрутите до конца вправо, пока не увидите кнопку «Добавить циферблат», и нажмите ее
 
 ![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
 
@@ -307,7 +307,7 @@ There are a number of watchfaces available in the standard build of the AAPS Wea
 
 ![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Проверьте часы: циферблат "AAPS (Custom)" теперь должен показывать выбранный вами вид. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. Теперь вы можете настроить дополнения и т. д.: нажмите и удерживайте циферблат, а затем нажмите кнопку «Настроить» на изображении циферблата.
 
 ```{admonition} Complications on a custom watchface
 :class: note
@@ -318,7 +318,7 @@ These slots only work on watches running **Wear OS 5 or older**, where the custo
 
 ## AAPSv2 watchface - Legend
 
-![Legend AAPSv2 watchface](../images/wearos/Watchface_Legend.png)
+![Условные обозначения циферблата AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - time since last loop run
 
