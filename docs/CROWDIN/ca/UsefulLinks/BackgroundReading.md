@@ -20,13 +20,13 @@ Abans de muntar el vostre sistema, haureu de llegir molt per entendre com funcio
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[Per què sovint ens equivoquem amb la durada de l'acció de la insulina (DIA) que fem servir, i per què és important](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[Quines conclusions podem treure quan estudiem la sensibilitat a la insulina amb la funció Autosens d'#OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/), d'Adam Brown
 
 [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe), de Gary Scheiner
 
