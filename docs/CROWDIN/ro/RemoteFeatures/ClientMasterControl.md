@@ -367,11 +367,11 @@ Unpair it first (**Manage → Pair with master → Unpair**), then scan again. U
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Nu s-a schimbat nimic. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Nu s-a schimbat nimic. Porniți din nou asocierea. Dacă nu reușește în continuare, reporniți **AAPSClient** și încercați încă o dată.
 
-**The client says it is not paired**
+**Clientul spune că nu este asociat**
 
-Asociați din nou din **Gestionați → Asociați cu dispozitivul principal**. Check that the client is **Active** in the master's **Authorized clients** list.
+Asociați din nou din **Gestionați → Asociați cu dispozitivul principal**. Verificați dacă clientul este **Activ** în lista **Clienți autorizați** a dispozitivului principal.
 
 **Nu se întâmplă nimic după asociere**
 
@@ -379,25 +379,25 @@ Verificați că **Permiteți controlul clientului** este ACTIVAT pe dispozitivul
 
 ### Comenzi
 
-**The client says the master is offline, or commands fail**
+**Clientul spune că dispozitivul principal este offline sau comenzile nu reușesc**
 
-Check that:
+Verificați dacă:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- telefonul principal nu este în repaus și **AAPS** rulează,
+- ambele telefoane sunt conectate în **NSClientV3** la același site Nightscout,
+- **websockets** sunt pornite pe ambele telefoane.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Websockets sunt **obligatorii** pentru controlul de la distanță din **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Dispozitivul principal refuză o comandă**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Dispozitivul principal verifică din nou fiecare comandă față de starea sa actuală: de exemplu, profilul ales nu mai există sau tipul pompei nu se potrivește. Verificați pe dispozitivul principal.
 
 **Tratamentele introduse pe site-ul Nightscout nu sunt aplicate**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Acest lucru este normal în [modul securizat](#client-master-control-hardened-mode). Introduceți-le în schimb pe un client asociat.
 
-### Nightscout tokens and settings
+### Coduri de acces și setări Nightscout
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ The client used its own Nightscout token before and now writes with another one,
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-The client still writes with a token that has more rights than it needs. The master sends the client its own token after pairing, but only if the master has an admin token. Verificați codul de acces al dispozitivului principal sau configurați din nou clientul cu un cod QR.
+The client still writes with a token that has more rights than it needs. Dispozitivul principal îi trimite clientului, după asociere, codul de acces propriu al clientului, dar numai dacă dispozitivul principal are un cod de acces de administrator. Verificați codul de acces al dispozitivului principal sau configurați din nou clientul cu un cod QR.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes the new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**).
+Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). Un client asociat preia singur noua cheie data viitoare când se conectează la Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**).
 
 **Un client nu mai poate citi Nightscout**
 
