@@ -8,7 +8,7 @@ Seguiu les [instruccions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) p
 
 ### Desactivar l'enviament a Nightscout
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+No deixeu que cap altra aplicació enviï dades (glucèmia i tractaments) a Nightscout.
 
 Desactiveu a Juggluco qualsevol enviament actiu a Nightscout.
 
@@ -22,7 +22,7 @@ Juggluco pot enviar la glucèmia directament a AAPS. Si feu servir un [sensor de
 
 Amb un sensor Libre 2/2+/3/3+, les lectures de cada minut s'envien a AAPS, però AAPS no fa un càlcul cada minut.
 
-Activeu xDrip broadcast a Juggluco (no activeu Patched Libre), confirmeu i deseu la informació del paquet d'AAPS. Select the xDrip BG data source in AAPS.
+Activeu xDrip broadcast a Juggluco (no activeu Patched Libre), confirmeu i deseu la informació del paquet d'AAPS. Seleccioneu l'origen de glucèmia xDrip a AAPS.
 
 Apliqueu un [suavitzat](./SmoothingBloodGlucoseData.md) suficient a AAPS.
 
@@ -30,12 +30,12 @@ Apliqueu un [suavitzat](./SmoothingBloodGlucoseData.md) suficient a AAPS.
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip
+## De Juggluco a xDrip
 
-Juggluco can send blood glucose to xDrip which will then send them to AAPS.
+Juggluco pot enviar la glucèmia a xDrip, i xDrip l'envia després a AAPS.
 
-Activeu Patched Libre a Juggluco (no activeu xDrip broadcast), confirmeu i deseu la informació del paquet de dexdrip. Select the xDrip BG data source in AAPS.
+Activeu Patched Libre a Juggluco (no activeu xDrip broadcast), confirmeu i deseu la informació del paquet de dexdrip. Seleccioneu l'origen de glucèmia xDrip a AAPS.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
+Si cal, apliqueu un [suavitzat](./SmoothingBloodGlucoseData.md) suficient a AAPS. Amb un sensor Libre 2/2+/3/3+, xDrip fa la mitjana de les lectures de cada minut per obtenir lectures de 5 minuts i [també les suavitza](#libre2-value-smoothing-raw-values).
 
-![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
+![De Juggluco a xDrip](../images/juggluco/Juggluco-xDrip+.png)
