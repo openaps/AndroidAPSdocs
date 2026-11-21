@@ -1,43 +1,43 @@
-# Update to a new version or branch
+# Opdatering til en ny version eller gren
 
-## Build yourself instead of download
+## Byg selv i stedet for at downloade
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** kan ikke downloades på grund af regler om medicinsk udstyr. Det er lovligt at bygge appen til eget brug, men du må ikke give en kopi til andre! Se [Ofte stillede spørgsmål for loopere](../UsefulLinks/FAQ.md) for detaljer.
 
-## Important notes
+## Vigtige bemærkninger
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
-- Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
+- Opdater til den nye version af **AAPS** så hurtigt som muligt, når en ny udgivelse er tilgængelig.
+- Når en ny udgivelse er tilgængelig, får du et informationsbanner om den nye version i selve **AAPS**-appen.
+- Den nye version bliver også annonceret på Facebook, når den udkommer.
+- Læs grundigt [Udgivelsesnoter](ReleaseNotes.md) efter udgivelsen, og afklar eventuelle spørgsmål med fællesskabet på Facebook eller Discord, før du går videre med opdateringen.
+- Opdaterer du fra **AAPS** 3.x? Læs først [Hvad er ændret i AAPS v4](V4Changes.md): den viser de funktioner, der er flyttet, har fået nyt navn eller er fjernet.
+- Glem ikke at [eksportere dine indstillinger](ExportImportSettings.md). Når du importerer dem igen efter opdateringen, vælger du, om pumpeindstillingerne også skal erstattes.
 
-## Update AAPS with browser build
+## Opdater AAPS med build i browseren
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Har du allerede bygget din AAPS-app med en browser? Følg vejledningen for den metode, du brugte:
 
-- **AAPS Builder**: you build from the **Build AAPS** page of your private repository (usually named `my-aaps`) and download the app from GitHub. Follow [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file**: you run the **AAPS-CI** workflow in your own copy (fork) of AndroidAPS, a repository named `AndroidAPS` in your GitHub account, and the app lands in your Google Drive. Follow [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**: du bygger fra siden **Build AAPS** i dit private repository (som regel kaldet `my-aaps`) og downloader appen fra GitHub. Følg [Opdatering af AAPS med AAPS Builder](#aaps-builder-updates). Der er ingen fork at synkronisere.
+- **Fork og forberedelsesfil**: du kører workflowet **AAPS-CI** i din egen kopi (fork) af AndroidAPS, et repository med navnet `AndroidAPS` på din GitHub-konto, og appen havner i dit Google Drive. Følg [Opdatering med en browser (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Opdater AAPS med Android Studio
 
-Follow [these instructions](./UpdateComputerBuild.md).
+Følg [denne vejledning](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## Opdater AAPS med kommandolinjen
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Brug [den samme vejledning](../SettingUpAaps/CLIBuild.md) som da du byggede AAPS før, men hent de nye ændringer med git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## After the update
+## Efter opdateringen
 
-These steps are the same for every build method. Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Disse trin er de samme for alle build-metoder. Se i [Udgivelsesnoter](../Maintenance/ReleaseNotes.md), om der er særlige instruktioner efter opdateringen.
 
-After you installed the new apk:
+Når du har installeret den nye apk:
 
-- you can check the **AAPS** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The current **AAPS** version can be viewed;
-- make sure you have imported your settings; and
-- please check your **AAPS** settings under **Settings** and ensure these remain accurate.
+- kan du se **AAPS**-versionen på din telefon ved at åbne **menuen** (☰) øverst til venstre og derefter **Om** (som på skærmbilledet nedenfor). Den aktuelle **AAPS**-version kan ses;
+- sørg for, at du har importeret dine indstillinger; og
+- kontroller dine **AAPS**-indstillinger under **Indstillinger**, og sørg for, at de stadig er korrekte.
 
-![About dialog with the AAPS version installed](../images/update/about_dialog_version.png)
+![Dialogen Om med den installerede AAPS-version](../images/update/about_dialog_version.png)
