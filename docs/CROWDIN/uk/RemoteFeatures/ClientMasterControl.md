@@ -57,7 +57,7 @@
 - На **основному телефоні** працює звичайна збірка `full` **AAPS**, і він підключений до вашої помпи.
 - **Основний телефон** використовує **NSClientV3** з вашим Nightscout і показує *підключено*. Дайте йому **токен адміністратора** вашого Nightscout: з ним основний телефон може створити окремий токен для кожного клієнта і показати його клієнту як QR-код.
 - На **клієнті** працює **[AAPSClient](AapsClient.md)** (або **AAPSClient2** / **AAPSClient3** для інших пацієнтів — див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions)). Він має використовувати **той самий** Nightscout. Якщо ви налаштовуєте клієнт за QR-кодом основного телефону, клієнт отримує адресу Nightscout і токен від основного телефону; інакше спочатку самі налаштуйте на ньому **NSClientV3**.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. Поки керування з клієнтів увімкнене, **AAPS** тримає websockets увімкненими на основному телефоні та на спарених клієнтах. Your Nightscout host must support websockets.
+- Для віддаленого керування з **AAPSClient** websockets **обов’язкові** на обох телефонах. Команда дійсна лише кілька секунд: без websockets вона не виконується, а не надходить із запізненням. Поки керування з клієнтів увімкнене, **AAPS** тримає websockets увімкненими на основному телефоні та на спарених клієнтах. Ваш хостинг Nightscout має підтримувати websockets.
 ```
 
 Спарювання і синхронізація — це дві різні речі:
@@ -107,7 +107,7 @@
 
 #### За допомогою PIN
 
-Натисніть **OK**: основний телефон показує 8-значний **PIN спарювання** у двох групах по чотири цифри (наприклад, `1234 5678`). Цей PIN **одноразовий** і **діє приблизно дві хвилини**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Натисніть **OK**: основний телефон показує 8-значний **PIN спарювання** у двох групах по чотири цифри (наприклад, `1234 5678`). Цей PIN **одноразовий** і **діє приблизно дві хвилини**. Як і з QR-кодом, основний телефон відхиляє ім'я клієнта, яке вже є в його списку: кожен клієнт отримує власний токен Nightscout під своїм ім'ям.
 
 ![Екран спарювання на основному телефоні з одноразовим PIN (показаний тут PIN уже недійсний)](../images/v4/ClientMaster/pairing_pin_master.png)
 
@@ -134,7 +134,7 @@ QR-код основного телефону можна відскануват�
 
 ```{admonition} Scanning is available on Android
 :class: note
-A computer without camera: use the PIN there.
+На комп'ютері без камери використайте там PIN.
 ```
 
 #### Введення PIN
@@ -367,11 +367,11 @@ The dialog says why:
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Нічого не змінено. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Нічого не змінено. Почніть спарювання знову. Якщо це не допомагає, перезапустіть **AAPSClient** і спробуйте ще раз.
 
-**The client says it is not paired**
+**Клієнт повідомляє, що він не спарений**
 
-Спаруйте знову через **Керувати → Спарувати з основним пристроєм**. Check that the client is **Active** in the master's **Authorized clients** list.
+Спаруйте знову через **Керувати → Спарувати з основним пристроєм**. Перевірте, що клієнт має статус **Активний** у списку **Авторизовані клієнти** основного телефону.
 
 **Після спарювання нічого не відбувається**
 
@@ -379,25 +379,25 @@ The dialog says why:
 
 ### Команди
 
-**The client says the master is offline, or commands fail**
+**Клієнт повідомляє, що основний телефон не в мережі, або команди не виконуються**
 
-Check that:
+Перевірте, що:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- основний телефон не в режимі сну і **AAPS** працює,
+- обидва телефони підключені в **NSClientV3** до того самого сайту Nightscout,
+- **websockets** увімкнені на обох телефонах.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Websockets **обов'язкові** для віддаленого керування з **AAPSClient**. Якщо з'єднання websocket постійно розривається, віддалене керування не працює. Див. [Усунення проблем з NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Основний телефон відхиляє команду**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Основний телефон знову перевіряє кожну команду відповідно до свого поточного стану: наприклад, вибраного профілю вже немає або тип помпи не збігається. Перевірте це на основному телефоні.
 
 **Записи терапії, введені на сайті Nightscout, не застосовуються**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+Це очікувано в [захищеному режимі](#client-master-control-hardened-mode). Натомість вводьте їх на спареному клієнті.
 
-### Nightscout tokens and settings
+### Токени та налаштування Nightscout
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
@@ -405,11 +405,11 @@ This is expected in [hardened mode](#client-master-control-hardened-mode). Enter
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-Клієнт досі записує з токеном, який має більше прав, ніж йому потрібно. The master sends the client its own token after pairing, but only if the master has an admin token. Перевірте токен основного телефону або налаштуйте клієнта знову за QR-кодом.
+Клієнт досі записує з токеном, який має більше прав, ніж йому потрібно. Основний телефон надсилає клієнту його власний токен після спарювання, але лише якщо основний телефон має токен адміністратора. Перевірте токен основного телефону або налаштуйте клієнта знову за QR-кодом.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Хтось інший записав документ налаштувань основного телефону, або основний телефон має новий ключ (наприклад, після очищення його даних). A paired client takes the new key by itself the next time it connects to Nightscout. Телефону, який лише читає Nightscout, знову потрібен QR-код основного телефону (**Лише читання Nightscout → Показати QR-код**).
+Хтось інший записав документ налаштувань основного телефону, або основний телефон має новий ключ (наприклад, після очищення його даних). Спарений клієнт сам отримує новий ключ, коли наступного разу підключається до Nightscout. Телефону, який лише читає Nightscout, знову потрібен QR-код основного телефону (**Лише читання Nightscout → Показати QR-код**).
 
 **Клієнт більше не може читати Nightscout**
 
