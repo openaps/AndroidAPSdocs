@@ -9,28 +9,28 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. Раздел устранения неполадок на странице руководства по обновлению также описывает самые частые трудности при обновлении **AAPS**.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
 See [What changed in AAPS v4](V4Changes.md) for the notable behavioral changes — features that have moved, been renamed, or been removed.
 ```
 
-You will receive a notification like this when a new update is available:
+Когда доступно новое обновление, вы получите такое уведомление:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-If you do not update until expiration date **AAPS** will switch to Open Loop.
+Если вы не обновитесь до даты окончания срока действия, **AAPS** перейдет в режим открытого цикла.
 
-See [End of life](EndOfLife.md) for AAPS version end dates.
+Даты окончания поддержки версий AAPS см. на странице [Окончание поддержки](EndOfLife.md).
 
-**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+**Не игнорируйте это уведомление.** Новые версии **AAPS** содержат важные исправления безопасности. Поэтому каждый пользователь **AAPS** должен как можно скорее обновиться до последней версии. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Спасибо за понимание.
 
 (maintenance-android-version-aaps-version)=
 
 ## Версия Android и версия AAPS
 
-If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
+Если на вашем смартфоне версия Android старше Android 12, вы не сможете использовать AAPS v3.4 и новее, так как нужен как минимум Android 12.
 
 Чтобы пользователи более старой версии Android могли применять старые версии AAPS для них была изменена только проверка версий. Никаких других улучшений не включено.
 
@@ -49,7 +49,7 @@ Find your Android version in the table below and use the matching **AAPS** versi
 - AAPS requires WearOS 3.0, 3.2 or 3.5 (Android 11, API level 30) or newer. WearOS 2 watches are not supported.
 
 ```{tip}
-WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+WearOS 5, API level 34 (Android 14) имеет [ограничения](#BuildingAapsWearOs-WearOS5).
 ```
 
 Versions with a heading are the latest release for each Android version (see the table above). The other releases follow in between, with their notes or a link to them on GitHub.
@@ -130,7 +130,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 ## Version 3.4.2.6
 
-- Equil: improve stability @MilosKozak
+- Equil: улучшена стабильность @MilosKozak
 
 ---
 
@@ -327,14 +327,14 @@ Release date: 31-12-2025
 
 Release date: 13-08-2025
 
-- Fixed Omnipod Bluetooth connection on Android 16
-- CI process (Browser build)
-- Fix mmol-mgdl conversion
-- Fix wrong time selection in dialogs in some timezones
-- Fix reading keys in simple mode
-- Fix missed predictions on wear
-- Improved ConfigBuilder
-- Improved NSCv3 full sync
+- Исправлено соединение Omnipod по Bluetooth на Android 16
+- Процесс CI (сборка через браузер)
+- Исправлен пересчет ммоль/л – мг/дл
+- Исправлен неверный выбор времени в диалогах в некоторых часовых поясах
+- Исправлено чтение ключей в простом режиме
+- Исправлены пропущенные прогнозы на часах
+- Улучшен Конфигуратор
+- Улучшена полная синхронизация NSCv3
 
 ---
 
@@ -344,24 +344,24 @@ Release date: 13-08-2025
 
 Release date: 27-03-2025
 
-**How to upgrade**
+**Как обновиться**
 
-* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* Для сборки этой версии нужна [версия Android Studio «Meerkat»](#Building-APK-recommended-specification-of-computer-for-building-apk-file) или новее. Если вы уже собирали версию 3.3.x, вам нужно снова обновить Android Studio.
 
 (version-enforcement)=
 
 **Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
 
-*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
-*  After expiration LGS mode is enforced
-*  You'll receive warning/notifications less often:
-   - 28+ days remaining: every 7 days
-   - 27-14 days remaining: every 3 days
-   - then once a day
-   - Notification will be generated after noon to not bother you during nights
-* There are only 2 kinds of notification
-   - New version available (has no effect on AAPS)
-   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+*  Срок действия не истекает, если устройство офлайн (нет подключения к интернету). Это значит, что льготных периодов 60 и 90 дней больше нет.
+*  После окончания срока действия включается режим LGS (приостановка на низкой ГК)
+*  Предупреждения и уведомления будут приходить реже:
+   - Осталось 28 дней и больше: каждые 7 дней
+   - Осталось 27–14 дней: каждые 3 дня
+   - затем раз в день
+   - Уведомление появляется после полудня, чтобы не беспокоить вас ночью
+* Есть только 2 вида уведомлений
+   - Доступна новая версия (не влияет на работу AAPS)
+   - Срок действия приложения истекает в определенный день в будущем (еще не влияет на работу AAPS) / истек (AAPS переходит в режим LGS)
 
 **News**
 
@@ -409,7 +409,7 @@ Release date: 21-01-2025
 
 Release date: 15-01-2025
 
-**How to upgrade**
+**Как обновиться**
 
 * [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
@@ -469,7 +469,7 @@ Release date: 29-12-2024
 * New **Automation** triggers
 * Unattended settings exports
 
-**How to upgrade**
+**Как обновиться**
 
 * Before upgrading:
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
@@ -555,14 +555,14 @@ Release date: 29-12-2024
 
 Release date: 27-02-2024
 
-This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+Это последняя версия с поддержкой Android 10. Если вы не можете обновиться до Android 11, [обновите AAPS до 3.2.0.4](#update-aaps-3204).
 
 **Изменения**
 
-- xDrip G7 support
-- Medtrum fixes
-- Automation icon fix
-- Passing objective 1 fix
+- Поддержка G7 через xDrip
+- Исправления Medtrum
+- Исправлен значок автоматизации
+- Исправлено прохождение цели 1
 
 ---
 
@@ -824,9 +824,9 @@ Release date: 03-11-2018
 ```{admonition} First version of **AAPS**
 :class: note
 
-The first test version started in 2015 and the first release was in 2016.
+Первая тестовая версия появилась в 2015 году, первый выпуск — в 2016 году.
 
-The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+Точной хронологии этих выпусков сейчас нет, но этот вопрос задавали несколько раз, поэтому мы записываем его здесь.
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
