@@ -21,15 +21,15 @@ Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, 
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated. Not available for ONE+ or Stelo.
+Dexcom BYODA — это уже очень старая версия приложения, и ее нельзя обновить. Not available for ONE+ or Stelo.
 ```
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
+-   Это приложение позволяет использовать Dexcom G7 с любым смартфоном Android.
 -   Uninstall the original Dexcom app
 -   Установите загруженное приложение
--   Enter sensor code in patched app
+-   Введите код сенсора в измененном приложении
 -   After a short time BYODA should pick up the sensor signal.
 
 (DexcomG7-xdrip-companion-app)=
@@ -92,9 +92,9 @@ With **Companion Bluetooth**, xDrip gets the exact time and trend of each readin
 
 Требуется версия 9.0 и выше
 
-- Отключите приложение, ранее подключенное к датчику: удалите приложение или выполните «Остановить принудительно» Отключите разрешение для"Устройств поблизости" в настройках приложения. Ограничьте использование батареи в приложении.
+- Отключите приложение, ранее подключенное к датчику: удалите приложение или выполните «Остановить принудительно» Отключите разрешение «Устройства поблизости» в настройках приложения. Ограничьте использование батареи в приложении.
 
-- Забудьте датчик в настройках Bluetooth: в настройках Android найдите датчик в прикрепленных устройствах и выберите "Forget." Названия датчиков Dexcom G7 начинаются с DXCM.
+- Забудьте сенсор в настройках Bluetooth: в настройках Android найдите сенсор среди сопряженных устройств и выберите «Удалить» (Forget). Названия датчиков Dexcom G7 начинаются с DXCM.
 
 - Избегайте вмешательства других датчиков: Держите старые сенсоры Dexcom вне диапазона Bluetooth.
 
