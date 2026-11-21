@@ -99,7 +99,7 @@ Ative uma cena a partir da lista **Cenas** (o botão **▶**) ou a partir da ent
 
 ![O painel Cenas da navegação inferior](../images/v4/Scenes/scenes_sheet.png)
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+Se a [proteção do bólus](#Preferences-protection) estiver ativa, o **AAPS** pede-a antes de uma cena começar ou terminar. Para alterar uma cena, é necessária a [proteção das definições](#Preferences-settings-protection).
 
 Antes de qualquer coisa ser aplicada, recebe uma **confirmação** que lista exatamente o que a cena vai fazer, para que a possa rever:
 
