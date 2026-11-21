@@ -1,8 +1,8 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# Bluetooth related issues
+# Проблемы, связанные с Bluetooth
 
-Некоторые пользователи сталкиваются с проблемами при активации Omnipod DASH, запуском Medtrum Nano и другими ошибками патч-помп, которые связаны с работой Bluetooth. Большинство этих проблем связаны с причинами, описанными ниже.
+Некоторые пользователи сталкиваются с проблемами при активации Omnipod DASH, проблемами подключения Medtrum Nano и другими ошибками патч-помп, которые связаны с работой Bluetooth. Большинство этих проблем связаны с причинами, описанными ниже.
 
 Некоторые из этих проблем, вероятно, могут возникнуть и у других помп, использующих Bluetooth. Например, и у Medtrum Nano и у Omnipod DASH наблюдается проблема, связанная с разрешениями для устройств поблизости.
 
@@ -19,7 +19,7 @@
 
 ## Оптимизация энергопотребления Bluetooth-устройств
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Известно, что это может вызывать проблемы с Bluetooth помпами и НМГ.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Известно, что это может вызывать проблемы с помпами и CGM, которые работают через Bluetooth.
 
 If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
@@ -46,13 +46,13 @@ Android allows you to control what each app is able to do or access on your phon
 Обратитесь к @XiTatiON на канале #omnipod-dash в Discord, чтобы обсудить добавление новых приложений в этот список.
 ```
 
-- **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+- **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. Приложение MyBMW запрашивает разрешение «Поиск устройств поблизости» только один раз; если вы его не дадите, приложение все равно работает без проблем
 
 - **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
 
 - **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. После этого работа приложения, судя по всему, не мешала работе Dash (на Pixel 8 Pro с Android 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
@@ -66,7 +66,7 @@ Follow this procedure to revoke the "Nearby device" permission for all apps exce
 Скриншоты и инструкции в этом руководстве даны для ванильного Android 16 на смартфоне Google Pixel 8 Pro. Перевод на русский сделан в соответствии с локалью Samsung S25. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
 ```
 
-1. Откройте настройки Android на телефоне, прокрутите вниз и выберите раздела **Безопасность и конфиденциальность (1)**.
+1. Откройте настройки Android на телефоне, прокрутите вниз и выберите раздел **Безопасность и конфиденциальность (1)**.
 
     ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)
 
@@ -105,19 +105,19 @@ Follow this procedure to revoke the "Nearby device" permission for all apps exce
 
 1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
 
-2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.
+2. Посмотрите список приложений и выберите приложение, которому хотите дать разрешение **Устройства поблизости**.
 
-   In this guide **Android Auto (1)** is the app we will allow the permission on.
+   В этой инструкции мы даем разрешение приложению **Android Auto (1)**.
 
-   You will notice that **Android Auto (1)** is missing in the app list after the permission is revoked. This is because the **Android Auto** app is a **System app** and by default system apps are hidden.
+   Вы заметите, что после отзыва разрешения приложения **Android Auto (1)** нет в списке. Это потому, что **Android Auto** — **системное приложение**, а системные приложения по умолчанию скрыты.
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. You should now be able to see the hidden system app in the list **Android Auto (3)**.
+3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. Теперь вы должны увидеть в списке скрытое системное приложение **Android Auto (3)**.
 
 ```{admonition} Find your app
 :class: tip
-If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.
+Если разрешение у приложения отозвано, прокрутите вниз, пока не увидите ниже в списке приложения с отозванным разрешением.
 ```
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
@@ -130,7 +130,7 @@ If an app is revoked you will need to scroll down until you see the list of revo
 
 ## Android 15 Frequent Bluetooth connection problems
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. Проблема временно исчезает после перезагрузки телефона. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
 
 ```{admonition} Android 16
 :class: warning
