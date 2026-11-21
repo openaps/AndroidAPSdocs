@@ -30,7 +30,7 @@
 
 Щоб записати перевірену вами комбінацію пристроїв, заповніть цю [форму](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Після того як ви заповните форму, таблиця оновлюється автоматично кожні 5 хвилин.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Якщо з таблицею є проблеми, зверніться до людини, яка її веде, *@theodoor5137*, у Discord або див. сторінку [Де отримати допомогу](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Мого телефону немає в списку
 
