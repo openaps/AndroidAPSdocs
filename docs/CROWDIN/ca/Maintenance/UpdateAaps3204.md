@@ -16,7 +16,7 @@ Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més det
 | ----------------------- | ----------------------------------------------------- | ------------------------------------------------------- | ------ |:--- |
 | [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                   | fins a Meerkat                                          | 8.2    | 17  |
 
-La «versió preferida» inclou la versió de JVM adequada. La versió preferida també és la versió mínima que podeu fer servir per compilar **AAPS**. **NO** podreu compilar amb una versió més antiga que la «preferida». Si feu servir una altra versió, pot ser que tingueu problemes amb la versió de JVM. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. Si la vostra versió actual d'Android Studio no és a la taula, primer l'heu d'actualitzar.
+La «versió preferida» inclou la versió de JVM adequada. La versió preferida també és la versió mínima que podeu fer servir per compilar **AAPS**. **NO** podreu compilar amb una versió més antiga que la «preferida». Si feu servir una altra versió, pot ser que tingueu problemes amb la versió de JVM. Vegeu la pàgina [Resolució de problemes d'Android Studio](#incompatible-gradle-jvm) per resoldre aquests problemes. Si la vostra versió actual d'Android Studio no és a la taula, primer l'heu d'actualitzar.
 
 La versió de Gradle va lligada al codi font: sempre tindreu la versió de Gradle correcta quan descarregueu o actualitzeu el codi font. Només s'indica aquí com a referència, no cal que hi feu res.
 
@@ -125,7 +125,7 @@ Si no recordeu com fer-ho, vegeu la pàgina [Crear i restaurar còpies de segure
 * Espereu mentre es fa la descàrrega; ho veureu com a informació a la barra de baix. Quan acabi, veureu un missatge d'èxit.
 
   ```{note}
-  Els fitxers actualitzats poden ser diferents! This is not an indication of a problem.
+  Els fitxers actualitzats poden ser diferents! Això no indica cap problema.
   ```
 
 
@@ -153,7 +153,7 @@ Si no recordeu com fer-ho, vegeu la pàgina [Crear i restaurar còpies de segure
 
 ![Obrir Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
+- Al camp **Gradle JDK** (1), comproveu que està seleccionada la versió adequada: **jbr-17**. Si no ho està, feu clic al camp i mireu si ja és a la llista. Si no és a la llista (la captura de pantalla de sota mostra un ordinador on només hi ha **jbr-21**), seleccioneu **Download JDK...** (2).
 
 ![Seleccionar Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
