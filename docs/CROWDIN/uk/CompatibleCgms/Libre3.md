@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) потребує особливого налаштування, щоб AAPS отримував значення ГК. Є два способи передати значення Freestyle Libre 3 (FSL3) в AAPS.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Обидва описані нижче способи використовують окремий застосунок Juggluco. Цей спосіб використовує Juggluco, щоб отримувати від сенсора необроблені дані з інтервалом 1 хвилина, які потім передаються в xDrip або AAPS. Нові сенсори можна запускати або в застосунку Libre 3, або безпосередньо в Juggluco. Нижче описано, як запустити сенсор у застосунку Juggluco. Якщо сенсор було запущено з виконаним входом в обліковий запис LibreView, можна також перемикати приймач між Juggluco і застосунком Libre 3.
 
@@ -38,7 +38,7 @@ Freestyle Libre 3 (FSL3) потребує особливого налаштув�
 
   → меню (☰) → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![Розширені налаштування xDrip для Libre 2 і сирі значення](../images/xDrip_Libre3_Smooth.png)
+  ![Розширені налаштування xDrip для Libre 2 і сирі значення](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
