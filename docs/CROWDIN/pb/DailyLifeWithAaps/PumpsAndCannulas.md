@@ -1,69 +1,69 @@
 # Bombas e cânulas
 
-## Changing infusion sets: insulin reservoirs and cannulas
+## Troca do conjunto de infusão: reservatórios de insulina e cânulas
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. Este procedimento às vezes é chamado de "troca de conjunto": uma troca "completa" inclui o reservatório de insulina e a cânula, e uma troca "parcial" é só a troca da cânula.
+O procedimento descrito abaixo é apenas para bombas com tubo e não vale para bombas patch como Omnipod, Medtrum Nano, Accu-Chek Solo etc. Este procedimento às vezes é chamado de "troca de conjunto": uma troca "completa" inclui o reservatório de insulina e a cânula, e uma troca "parcial" é só a troca da cânula.
 
 Bombas de patch preenchem e purgam a si mesmas no seu próprio assistente de ativação, e a cânula delas já está no corpo. O **AAPS** não oferece purga para elas: **Purgar/Preencher** não aparece no painel **Gerenciar** nem no acesso rápido. Veja a página da sua bomba em [Bombas compatíveis](../Getting-Started/CompatiblePumps.md).
 
 A troca física do cartucho/reservatório não pode ser feita pelo **AAPS**, ela deve ser feita diretamente na bomba. Depois de feita, a troca deve ser registrada manualmente no **AAPS**.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
-### Guide for changing both the pump reservoir and cannula
+### Guia para trocar o reservatório da bomba e a cânula
 
 1. No **AAPS**, desconecte a bomba: toque no [ícone do loop](#AapsScreens-loop-status) na tela principal e selecione **Desconectar bomba** por 1 hora. O ícone muda para um plugue cinza, que mostra que a bomba está desconectada.
 
 2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
 
-3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3. Prime/fill the tubing and cannula: this can be done directly on the pump. Elimine todas as bolhas do tubo.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. Para registrar isso no **AAPS** e purgar o local: abra **Purgar/Preencher** (no painel de status expandido da tela principal, no painel **Gerenciar** ou como botão do [acesso rápido](QuickLaunch.md)) e marque **Registrar troca de local da bomba** e/ou **Registrar troca de cartucho de insulina**, conforme o caso, para registrar a troca. Agora toque na quantidade padrão de preenchimento da cânula (normalmente cerca de 0,3 U, mas confira se este valor está correto para a sua cânula) e selecione **OK**. Leia a mensagem de resumo e confirme a purga tocando em **OK**.
+4. Attach the new cannula to the body. Depois que a cânula é inserida e a agulha é retirada, a cânula fica com um pequeno espaço de ar, que também precisa ser purgado. Para registrar isso no **AAPS** e purgar o local: abra **Purgar/Preencher** (no painel de status expandido da tela principal, no painel **Gerenciar** ou como botão do [acesso rápido](QuickLaunch.md)) e marque **Registrar troca de local da bomba** e/ou **Registrar troca de cartucho de insulina**, conforme o caso, para registrar a troca. Agora toque na quantidade padrão de preenchimento da cânula (normalmente cerca de 0,3 U, mas confira se este valor está correto para a sua cânula) e selecione **OK**. Leia a mensagem de resumo e confirme a purga tocando em **OK**.
 
    ![Purgar/Preencher no painel Gerenciar com uma bomba com tubo](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
 5. Reconecte a bomba no **AAPS**: toque no ícone de plugue cinza e selecione **Reconectar bomba** para continuar o loop.
 
-### Useful information concerning insulin/cannula changes
+### Informações úteis sobre a troca de insulina/cânula
 
 * Registrar uma troca do local da bomba redefine o Autosens para 100%. Também zera as luzes de status e as idades da cânula/insulina na tela principal do **AAPS**.
 
-* Você pode definir/ajustar as quantidades padrão de preenchimento nas configurações de **Purgar/Preencher**: digite "prime" na barra de pesquisa da tela principal para abri-las (veja [Preferências](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+* Você pode definir/ajustar as quantidades padrão de preenchimento nas configurações de **Purgar/Preencher**: digite "prime" na barra de pesquisa da tela principal para abri-las (veja [Preferências](../SettingUpAaps/Preferences.md)). Veja no folheto de instruções da caixa da cânula quantas unidades (conforme o comprimento da agulha e do tubo) devem ser purgadas para a sua cânula.
 
 * A insulina administrada com a função de purga não é considerada pelo **AAPS** no cálculo da insulina ativa (IOB) e é marcada no [Histórico de tratamentos](#aaps-screens-treatments) como "Purgar".
 
 * A insulina dada em bólus pela bomba enquanto ela está desconectada também não é considerada pelo **AAPS**. Se você der um bólus direto na bomba enquanto o **AAPS** está desconectado, depois de reconectar a bomba você pode informar essa insulina (sem administrá-la) no diálogo **Insulina** (veja [Informar insulina já administrada sem dar o bólus](#pumps-cannulas-announce-insulin) abaixo).
 
-### Cannula, infusion site, tubing and/or pump issues
+### Problemas com a cânula, o local de infusão, o tubo e/ou a bomba
 
 Se você tem certeza de que não recebeu insulina por um tempo, embora o **AAPS** tenha registrado que sim, e sabe exatamente quando o problema começou (_por exemplo,_ você remove a cânula e vê que ela dobrou durante a inserção), você pode corrigir isso no **AAPS**. Mas lembre-se de que a insulina pode ter sido administrada e estar agindo devagar por algum motivo.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+Só apague administrações de insulina do **AAPS** com EXTREMO cuidado, caso a insulina _tenha_ sido administrada de fato, e acompanhe a glicose de perto nas próximas 24 h.
 ```
 
 Para remover bólus e SMBs que você sabe que não foram administrados, abra o **menu** (☰), selecione [Histórico de tratamentos](#aaps-screens-treatments) e, na aba **Carboidratos e bólus**, exclua com cuidado os bólus registrados a partir do momento em que o problema aconteceu. Isso corrige o valor de "insulina ativa" (IOB), que é essencial para os cálculos do **AAPS**; se você voltar agora à tela principal, verá que o IOB diminuiu. Atenção: você não pode excluir a insulina basal que o **AAPS** calcula como administrada, então ela continua sendo considerada pelo **AAPS**.
 
-Em casos menos claros de problemas na administração de insulina, _por exemplo_ vazamentos, oclusões ou "tunelamento", quando você não sabe quando o problema começou ou acha que parte da insulina foi administrada, é preciso ter cuidado. Você pode notar esses problemas pelo "cheiro" da insulina, pelo adesivo molhado, por valores de glicose altos ou por um alarme. Como você nunca vai saber quanta insulina entrou na pele (e que pode começar a agir depois de um tempo), é difícil saber a quantidade correta de insulina que deve ser descontada do valor atual de "insulina ativa" (IOB). One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+Em casos menos claros de problemas na administração de insulina, _por exemplo_ vazamentos, oclusões ou "tunelamento", quando você não sabe quando o problema começou ou acha que parte da insulina foi administrada, é preciso ter cuidado. Você pode notar esses problemas pelo "cheiro" da insulina, pelo adesivo molhado, por valores de glicose altos ou por um alarme. Como você nunca vai saber quanta insulina entrou na pele (e que pode começar a agir depois de um tempo), é difícil saber a quantidade correta de insulina que deve ser descontada do valor atual de "insulina ativa" (IOB). Uma estratégia é pausar o loop por 5 horas (ou pela sua duração de ação da insulina) depois de resolver o problema de administração de insulina, e retomar o loop depois disso. Assim, o IOB estará correto quando você reiniciar o loop.
 
 (pumps-cannulas-disconnecting)=
-## Disconnecting the pump for showering or activity
+## Desconectar a bomba para tomar banho ou fazer atividades
 
 Se você tirar a bomba para tomar banho, nadar, praticar esportes de contato ou fazer outras atividades, você deve informar ao **AAPS** que nenhuma insulina está sendo administrada, para manter o IOB correto. A bomba pode ser desconectada pelo [ícone do loop](#AapsScreens-loop-status) na tela principal: toque nele e selecione **Desconectar bomba** com a duração que você precisa. Se a atividade durar mais do que o planejado, abra o mesmo diálogo de novo e escolha uma nova duração em **Desconectar bomba**: a desconexão é prolongada e a nova duração começa agora. Você não precisa reconectar antes.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. Você pode fazer isso conectando a bomba e dando em bólus as quantidades de basal que faltaram (_por exemplo,_ das últimas duas horas) antes de desconectar de novo. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). Se for difícil reconectar a bomba durante a atividade (o local da cânula está coberto por uma roupa de mergulho _etc._), considere uma injeção com caneta. Esta injeção manual pode ser registrada no **AAPS** e não precisa ser registrada na hora da injeção (basta anotar a hora da injeção), porque você pode informar a insulina com a hora real em que foi dada quando reconectar a bomba.
+Como você não recebe insulina enquanto a bomba está desconectada, você deve reconectá-la a cada duas horas para repor a basal que faltou. Você pode fazer isso conectando a bomba e dando em bólus as quantidades de basal que faltaram (_por exemplo,_ das últimas duas horas) antes de desconectar de novo. Isso ajuda a evitar uma falta grave de insulina, que pode causar cetoacidose diabética (CAD). Se for difícil reconectar a bomba durante a atividade (o local da cânula está coberto por uma roupa de mergulho _etc._), considere uma injeção com caneta. Esta injeção manual pode ser registrada no **AAPS** e não precisa ser registrada na hora da injeção (basta anotar a hora da injeção), porque você pode informar a insulina com a hora real em que foi dada quando reconectar a bomba.
 
 (pumps-cannulas-announce-insulin)=
-## To announce delivered insulin without actually bolusing
+## Informar insulina já administrada sem dar o bólus
 
 To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Uma linha **Hora** (definida como **Agora**) permite então registrar a hora real da injeção: você pode ignorá-la se a injeção foi dada há pouco tempo. Se o bólus foi dado há algum tempo, use **-** para voltar a hora (_por exemplo,_ -30 min), ou abra a linha com a seta para escolher a data e a hora exatas. O **AAPS** então considera a duração da ação da insulina e calcula a insulina que ainda resta no corpo.
 
-Se você usa o **AAPS** como cuidador, pode desconectar (e reconectar) a bomba à distância muito facilmente por [comando SMS](../RemoteFeatures/SMSCommands.md), com comandos como "pump disconnect 120" e "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). Isso é muito útil quando é difícil acessar o telefone com o **AAPS**: guardado na cintura de uma criança que está correndo para a piscina, ou bem guardado (ou em uso) por um adolescente.
+Se você usa o **AAPS** como cuidador, pode desconectar (e reconectar) a bomba à distância muito facilmente por [comando SMS](../RemoteFeatures/SMSCommands.md), com comandos como "pump disconnect 120" e "pump connect 120". A duração da desconexão remota pode ser de 1 a 120 min (neste exemplo, são 120 minutos). Isso é muito útil quando é difícil acessar o telefone com o **AAPS**: guardado na cintura de uma criança que está correndo para a piscina, ou bem guardado (ou em uso) por um adolescente.
 
-## Reconnecting the pump after activity
+## Reconectar a bomba depois da atividade
 
-Depois de uma desconexão longa (1–2 horas), é bastante comum o **AAPS** calcular que agora você tem IOB negativo. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+Depois de uma desconexão longa (1–2 horas), é bastante comum o **AAPS** calcular que agora você tem IOB negativo. Quando você reconecta a bomba, conforme a sua preferência, a glicose atual, a comida planejada ou a próxima atividade, você pode:
 
 a) Simplesmente reconecte a bomba no **AAPS** (de cinza para verde, no loop fechado) e deixe o **AAPS** voltar a administrar insulina
 
@@ -71,7 +71,7 @@ _ou_
 
 b) Se você quer ser mais agressivo (por exemplo, a glicose está indo para hiperglicemia), pode abrir o [Assistente de Bólus](#aaps-screens-bolus-wizard) e dar um bólus para zero carboidratos, para administrar imediatamente a insulina que falta calculada como bólus.
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.
+A melhor estratégia é muito pessoal, e é melhor descobri-la por tentativa e erro.
 
 
 (Aapsscreens-site-rotation)=
