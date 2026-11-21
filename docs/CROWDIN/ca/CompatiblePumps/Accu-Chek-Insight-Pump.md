@@ -86,9 +86,9 @@ Roche surt del mercat de les bombes d'insulina per centrar la seva oferta de dia
     
     ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    A la configuració de la Insight a **AAPS** podeu activar les opcions següents:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
+    * **Enregistrar canvis de reservori**: registra automàticament un canvi de cartutx d'insulina quan canvieu el cartutx a la bomba.
     
     * **Enregistrar canvis de tub**: afegeix una nota a la base de dades d'**AAPS** quan feu servir el programa «omplir el tub» (tube filling) a la bomba.
     
@@ -162,7 +162,7 @@ La versió del firmware es troba al menú.
 
 ## Canvi de pila
 
-Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. L'usuari que ho va informar fa servir piles de liti Energizer.
+La durada de la pila de la Insight fent llaç és de 10 a 14 dies, com a màxim 20 dies. L'usuari que ho va informar fa servir piles de liti Energizer.
 
 La bomba Insight té una petita bateria interna que manté les funcions bàsiques, com el rellotge, mentre canvieu la pila extraïble. Si el canvi de pila tarda massa, aquesta bateria interna es pot esgotar. Llavors el rellotge es reinicia i, després de posar la pila nova, la bomba us demana una nova hora i data. Si passa això, cap entrada d'AAPS d'abans del canvi de pila es farà servir en els càlculs, perquè no se'n pot saber l'hora correcta.
 
