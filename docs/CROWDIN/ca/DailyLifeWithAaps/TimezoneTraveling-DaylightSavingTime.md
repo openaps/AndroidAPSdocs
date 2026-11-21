@@ -42,7 +42,7 @@ Per evitar-ho hi ha dues possibilitats:
 
 * Desactiveu «Data i hora automàtiques» a la configuració del telèfon (canvi manual del fus horari)
 
-When you get off the plane:
+Quan baixeu de l'avió:
 
 * apagueu la bomba
 * canvieu el fus horari al telèfon
@@ -62,7 +62,7 @@ La Insight també registra a l'historial el moment en què es va canviar l'hora 
 
 Pot causar imprecisions en les **TDD**. Però no hauria de ser un problema.
 
-Per tant, l'usuari de la Insight no s'ha de preocupar pels canvis de fus horari ni pels canvis d'hora. Hi ha una excepció a aquesta regla: la bomba Insight té una petita bateria interna per mantenir l'hora, etc. mentre canvieu la pila «real». If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. En aquest cas, AAPS no té en compte en els càlculs cap entrada anterior al canvi de pila, perquè no pot saber bé l'hora correcta.
+Per tant, l'usuari de la Insight no s'ha de preocupar pels canvis de fus horari ni pels canvis d'hora. Hi ha una excepció a aquesta regla: la bomba Insight té una petita bateria interna per mantenir l'hora, etc. mentre canvieu la pila «real». Si el canvi de pila tarda massa, aquesta bateria interna s'esgota, el rellotge es reinicia i, després de posar una pila nova, se us demana que introduïu l'hora i la data. En aquest cas, AAPS no té en compte en els càlculs cap entrada anterior al canvi de pila, perquè no pot saber bé l'hora correcta.
 
 ## Canvi de fus horari amb Accu-Chek Combo
 
@@ -76,7 +76,7 @@ El controlador ajusta automàticament l'hora de la bomba a l'hora del telèfon.
 
 Els canvis de fus horari mantenen l'historial intacte; només la TDD es pot veure afectada. Canviar l'hora del telèfon manualment pot causar problemes amb l'historial i amb l'**IOB**. Si canvieu l'hora manualment, comproveu bé l'**IOB**.
 
-When the time zone or time changes running **TBRs** are stopped.
+Quan canvia el fus horari o l'hora, s'aturen les **TBR** en curs.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Si feu un bolus amb la calculadora d'**AAPS**, no feu servir les dades de **COB*
 
 ### Horari d'estiu amb Omnipod Dash
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. ATENCIÓ: AQUESTA OPCIÓ POT FER QUE EL POD CADUQUI ABANS D'HORA. SI TRIEU LA FUNCIÓ DE SOTA, PORTEU MATERIAL DE RECANVI.
+* O bé deixeu que **AAPS** faci servir temporalment la basal de fons després del canvi d'hora, com s'explica més amunt.
+* O bé, si no voleu que **AAPS** faci servir temporalment la basal de fons durant la nit, podeu canviar el fus horari el dia abans del canvi d'hora per evitar problemes durant la nit. ATENCIÓ: AQUESTA OPCIÓ POT FER QUE EL POD CADUQUI ABANS D'HORA. SI TRIEU LA FUNCIÓ DE SOTA, PORTEU MATERIAL DE RECANVI.
 
 #### Accions abans del canvi d'hora
 
@@ -129,6 +129,6 @@ Si feu un bolus amb la calculadora d'**AAPS**, no feu servir les dades de **COB*
 
 3. A **AAPS**, actualitzeu la bomba i canvieu al **perfil** que vulgueu.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. Comproveu l'**IOB** i el **COB** d'**AAPS** i, si no són correctes, desactiveu el **llaç** com a mínim durant una DIA o durant el temps màxim d'absorció de carbohidrats (**Temps màxim d'absorció**), el que sigui més llarg.
 
 5. Accions després del canvi d'hora. Un bon moment per tornar al fus horari local és quan l'**IOB** és baix. Per exemple, una hora abans d'un àpat com l'esmorzar. L'ideal és que el **COB** i l'**IOB** siguin tots dos propers a zero.
