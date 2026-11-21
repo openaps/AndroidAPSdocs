@@ -3,168 +3,168 @@
 # Compilació al navegador: resolució de problemes
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+Aquesta pàgina recull consells per resoldre problemes de la [Compilació al navegador](../SettingUpAaps/BrowserBuild.md).
 ```
 
 (aaps-builder-troubleshooting)=
 
 ## AAPS Builder
 
-### Step 1: the repository
+### Pas 1: el repositori
 
 (aaps-builder-ts-repo-exists)=
 
-#### "my-aaps already exists in this account"
+#### «my-aaps already exists in this account»
 
-![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+![El repositori ja existeix](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
 
-You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+Ja teniu aquest repositori, per exemple d'un intent anterior. Tanqueu la pestanya de GitHub, conserveu aquest nom al pas 1 de la pàgina de configuració i continueu. Si ja heu fet els passos 2 i 3 per a aquest repositori, la vostra clau encara hi és: continueu amb el [pas 4](#aaps-builder-step4). Si es va crear amb una versió anterior de la pàgina de configuració, actualitzeu-ne el workflow una vegada com s'explica a [Actualitzar AAPS](#aaps-builder-updates). Preferiu començar de nou? Escriviu un altre nom, per exemple `my-aaps-2`, i feu servir el mateix magatzem de claus al pas 2.
 
 (aaps-builder-ts-user-not-found)=
 
-#### "No GitHub user with this name"
+#### «No hi ha cap usuari de GitHub amb aquest nom»
 
-![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+![Cap usuari de GitHub](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
 
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
+- **«No hi ha cap usuari de GitHub amb aquest nom»** al pas 1: escriviu el vostre nom d'usuari de GitHub, tal com apareix al vostre perfil de GitHub, no el vostre correu electrònic.
+- **No hi ha cap botó "Build AAPS" ni "Run workflow", o el repositori és buit**: el repositori no s'ha creat a partir de la plantilla. Elimineu-lo (**Settings** → part de baix de la pàgina → **Delete this repository**) i torneu a fer el [pas 1](#aaps-builder-step1) amb el botó **Crear el meu repositori privat**.
 
-### Step 3: the secret
+### Pas 3: el secret
 
 (aaps-builder-ts-404)=
 
-#### "Page not found" (404)
+#### «Page not found» (404)
 
 ![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
 
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
+- **«Page not found» (404) quan la pàgina de configuració obre GitHub**: inicieu la sessió a github.com al mateix navegador (GitHub mostra 404 per als repositoris privats quan no heu iniciat la sessió). Si heu iniciat la sessió, el nom d'usuari o el nom del repositori del pas 1 de la pàgina de configuració no coincideix amb el vostre repositori. Escriviu els noms exactes.
 
-### Step 4: the build
+### Pas 4: la compilació
 
 (aaps-builder-ts-workflow-not-found)=
 
-#### "This workflow does not exist"
+#### «This workflow does not exist»
 
 ![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
 
-Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+Just després de crear el repositori, és possible que GitHub encara no n'hagi llegit el fitxer de workflow: **Build AAPS** no apareix a la pestanya **Actions** i no hi ha cap botó **Run workflow**. Qualsevol canvi petit al fitxer fa que GitHub el llegeixi:
 
-1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
-2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+1. Al vostre repositori, obriu **Code**, després la carpeta `.github`, després `workflows` i després el fitxer `build.yml`.
+2. Toqueu el menú **⋯** de dalt a la dreta del fitxer i després **Edit file… In place** (en un ordinador, feu clic al llapis).
 
-   ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+   ![Menú del fitxer](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
 
-3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+3. Toqueu just al final del text i afegiu-hi una línia buida (Retorn). Toqueu **Commit changes…** a dalt.
 
    ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
 
-4. Tap **Commit changes** again.
+4. Toqueu **Commit changes** una altra vegada.
 
    ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
 
-5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+5. Torneu a obrir la pestanya **Actions**: ara **Build AAPS** és a la llista de workflows (en un telèfon, la llista s'obre amb la icona que hi ha a l'esquerra d'**All workflows**). Toqueu-lo i després toqueu **Run workflow**.
 
-   ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+   ![Llista de workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
 
 (aaps-builder-ts-build-failed)=
 
-#### The build failed (red cross)
+#### La compilació ha fallat (creu vermella)
 
-1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+1. A la pàgina de configuració, toqueu **Obrir les meves compilacions** i toqueu la compilació amb la creu vermella.
 
-   ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+   ![Compilació fallida](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
 
-2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+2. La pàgina de la compilació mostra **Failure** i quina part ha fallat: **AAPS / Check** (el repositori, el secret, la versió o la variant: no s'ha compilat res) o **AAPS / Build AAPS**.
 
-   ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+   ![Pàgina de la compilació: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
 
-3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+3. Baixeu fins a **Annotations**, amb el dit sobre el text, no sobre el diagrama. Les línies vermelles expliquen el problema: toqueu **Show more** per llegir tot el missatge i després busqueu-lo aquí sota.
 
    ![Annotations](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
 
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
-- **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
-- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Never share the content of your secrets.
+- **«Secret KEYSTORE_SET is missing»**: feu el pas 3 de la pàgina de configuració.
+- **La compilació s'atura amb «This repository is PUBLIC»**: al vostre repositori, obriu **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** i després torneu a compilar.
+- **«Version … does not exist»**: només es poden compilar versions publicades d'**AAPS**, les de la [pàgina d'etiquetes (tags)](https://github.com/nightscout/AndroidAPS/tags) de nightscout/AndroidAPS, com ara `3.3.2.0`. Un nom de branca com `dev` no funciona. Feu servir `latest`, o escriviu una etiqueta exactament com apareix a la llista.
+- **«Variant … is not supported»**: el vostre fitxer de workflow és una versió antiga. Substituïu-lo com s'explica a [Actualitzar AAPS](#aaps-builder-updates).
+- **«The secret is too short»**, **«The secret is not a valid code»** o **«The secret does not contain a keystore»**: s'ha enganxat un text incorrecte al secret, sovint la paraula `KEYSTORE_SET` mateixa, o només una part del codi. Al vostre repositori, obriu **Settings** → **Secrets and variables** → **Actions**, editeu `KEYSTORE_SET` i torneu a enganxar el codi llarg de **Copiar secret** (si heu tancat la pàgina de configuració, primer torneu a fer el pas 2).
+- **«Keystore, password or alias is wrong»**: comproveu la contrasenya i l'àlies del vostre magatzem de claus i després torneu a fer els passos 2 i 3 de la pàgina de configuració.
+- **«Google Drive access has expired or was revoked»**: torneu a fer el [pas 6](#aaps-builder-google-drive) i actualitzeu el secret `GDRIVE_OAUTH2`.
+- **«Process completed with exit code 1» i una línia vermella només amb un enllaç a `services.gradle.org`**, en menys d'un minut: la compilació no ha pogut descarregar Gradle, una eina que necessita per compilar l'aplicació. El lloc web de Gradle no responia. El vostre repositori i la vostra configuració estan bé. Espereu mitja hora i després [torneu a executar la compilació](#aaps-ci-rerun).
+- **Un altre error**: [llegiu el registre de la compilació](#aaps-ci-read-the-logs) i després [torneu a executar la compilació](#aaps-ci-rerun). Si torna a fallar de la mateixa manera, demaneu ajuda amb el nom del pas que ha fallat i les línies de l'error. No compartiu mai el contingut dels vostres secrets.
 
-### Step 5: the app
+### Pas 5: l'aplicació
 
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+- **No hi ha cap enllaç Download, o s'ha obert l'aplicació GitHub**: l'aplicació GitHub no pot descarregar compilacions. Obriu la compilació a Chrome com s'explica al [pas 5](#aaps-builder-step5). Perquè els enllaços de GitHub no s'obrin a l'aplicació: **Configuració** d'Android → **Aplicacions** → **GitHub** → **Obre de manera predeterminada** → desactiveu **Obre els enllaços compatibles**.
 
 ## Resolució de problemes d'AAPS-CI
 
 (aaps-ci-read-the-logs)=
-### First: find out what went wrong
+### Primer: esbrineu què ha fallat
 
-When a build fails, GitHub keeps a log of every step. The log tells you which step failed and why. Read it before you try anything else: the error message is what you look for on this page, and what helpers will ask for.
+Quan una compilació falla, GitHub guarda un registre de cada pas. El registre us diu quin pas ha fallat i per què. Llegiu-lo abans de provar res més: el missatge d'error és el que heu de buscar en aquesta pàgina, i el que us demanaran les persones que us ajudin.
 
-1. In your GitHub copy of AndroidAPS, open **Actions**. A failed build has a red cross. Tap its name.
+1. A la vostra còpia d'AndroidAPS a GitHub, obriu **Actions**. Una compilació fallida té una creu vermella. Toqueu-ne el nom.
 
-   ![Failed run in the Actions list](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
+   ![Execució fallida a la llista d'Actions](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
 
-2. The run summary shows **Failure** and, below, the job that failed (**Build AAPS**, with a red cross).
+2. El resum de l'execució mostra **Failure** i, a sota, la feina que ha fallat (**Build AAPS**, amb una creu vermella).
 
-   ![Run summary](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
+   ![Resum de l'execució](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
 
-3. Scroll down to **Annotations** and tap the red **Build AAPS** line.
+3. Baixeu fins a **Annotations** i toqueu la línia vermella **Build AAPS**.
 
    ![Annotations](../images/Building-the-App/CI/aaps_ci_logs_3_annotations.png)
 
-4. The job opens. Steps with a grey tick worked. The step with the red cross is the one that failed: GitHub opens it for you. The steps after it were skipped (grey circle).
+4. S'obre la feina. Els passos amb una marca grisa han funcionat. El pas amb la creu vermella és el que ha fallat: GitHub us l'obre. Els passos de després s'han saltat (cercle gris).
 
-   ![Job steps](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
+   ![Passos de la feina](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
 
-5. Read the lines just above `Error: Process completed with exit code 1.`: they explain the problem. In this example, the step **Retrieving Google Drive access token** failed with `invalid_grant` and `Token has been expired or revoked.`, see [Google Refresh Token Expired](#aaps-ci-google-token-expired).
+5. Llegiu les línies just a sobre de `Error: Process completed with exit code 1.`: expliquen el problema. En aquest exemple, el pas **Retrieving Google Drive access token** ha fallat amb `invalid_grant` i `Token has been expired or revoked.`, vegeu [El token d'actualització de Google ha caducat](#aaps-ci-google-token-expired).
 
-   ![Error in the log](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
+   ![Error al registre](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
 
 ```{tip}
-Asking for help? Share the name of the failed step and the error lines (a screenshot like the one above is fine). Never share the content of your secrets.
+Demaneu ajuda? Compartiu el nom del pas que ha fallat i les línies de l'error (n'hi ha prou amb una captura de pantalla com la de dalt). No compartiu mai el contingut dels vostres secrets.
 ```
 
 (aaps-ci-update-secret)=
-#### Update a secret
+#### Actualitzar un secret
 
-Many fixes mean replacing the value of a secret. In your GitHub copy of AndroidAPS, go to **Settings** → **Secrets and variables** → **Actions** and tap the pencil next to the secret.
+Moltes solucions consisteixen a substituir el valor d'un secret. A la vostra còpia d'AndroidAPS a GitHub, aneu a **Settings** → **Secrets and variables** → **Actions** i toqueu el llapis que hi ha al costat del secret.
 
-![Secrets list](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
+![Llista de secrets](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
 
-Enter or paste the new value and tap **Update secret**. GitHub never shows the old value: the field is always empty.
+Introduïu o enganxeu el valor nou i toqueu **Update secret**. GitHub no mostra mai el valor antic: el camp sempre està buit.
 
 ![Update secret](../images/Building-the-App/CI/aaps_ci_secret_update_2.png)
 
 (aaps-ci-rerun)=
-#### Run the build again after a fix
+#### Tornar a executar la compilació després d'una solució
 
-Once you have fixed the cause, you do not need to start from scratch: open the failed run, tap **...** (top right), then **Re-run failed jobs**.
+Quan hàgiu resolt la causa, no cal començar de zero: obriu l'execució fallida, toqueu **...** (a dalt a la dreta) i després **Re-run failed jobs**.
 
-![Re-run menu](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
+![Menú Re-run](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
 
-Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usual.
+Toqueu **Re-run jobs**. També podeu iniciar una compilació nova amb **Run workflow**, com sempre.
 
-![Re-run dialog](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
+![Diàleg Re-run](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
 
 (aaps-ci-preparation-web)=
 ### Pàgina web aaps-ci-preparation
-  - The preparation page is displayed by a temporary local server (for example Simple Web Server on a computer), which also receives the Google refresh token.
-  - If you see the screen below, the local server has stopped or is not reachable.
-  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. Això cal sobretot quan creeu la primera connexió amb Google durant la configuració.
+  - La pàgina de preparació la mostra un servidor local temporal (per exemple Simple Web Server en un ordinador), que també rep el token d'actualització de Google.
+  - Si veieu la pantalla de sota, el servidor local s'ha aturat o no és accessible.
+  - Tanqueu la pàgina de preparació, comproveu que el servidor local funciona i després torneu a obrir aaps-ci-preparation.html de la mateixa manera que al pas 2 i completeu els passos que queden. Això cal sobretot quan creeu la primera connexió amb Google durant la configuració.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
 ### El token d'actualització de Google ha caducat
   - Els tokens d'actualització d'OAuth2 de Google caduquen si no es fan servir durant 6 mesos, i també poden deixar de ser vàlids en altres casos (per exemple, si heu canviat la contrasenya del compte de Google o si n'heu revocat l'accés manualment). Per a més detalls, vegeu la [documentació d'OAuth2 de Google](https://developers.google.com/identity/protocols/oauth2).
-  - In the [build log](#aaps-ci-read-the-logs), the step **Retrieving Google Drive access token** fails with `invalid_grant` and `Token has been expired or revoked.`:
+  - Al [registre de la compilació](#aaps-ci-read-the-logs), el pas **Retrieving Google Drive access token** falla amb `invalid_grant` i `Token has been expired or revoked.`:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.png)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token, [update the secret](#aaps-ci-update-secret) in your GitHub repository, then [re-run the build](#aaps-ci-rerun).
+  - Si la compilació falla perquè el token d'actualització de Google ha caducat o s'ha revocat, haureu de repetir els passos d'[autorització de Google Drive](#aaps-ci-google-drive-auth) per obtenir un token `GDRIVE_OAUTH2` nou, [actualitzar el secret](#aaps-ci-update-secret) al vostre repositori de GitHub i després [tornar a executar la compilació](#aaps-ci-rerun).
   - Si l'autorització torna a fallar, o Google ja no us demana el consentiment, primer elimineu l'accés d'AAPS del vostre compte de Google, vegeu [més avall](#aaps-ci-google-remove-access).
 
 (aaps-ci-google-remove-access)=
@@ -179,28 +179,28 @@ Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usu
 
   ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
 
-  - On the details page, tap **Remove all access**.
+  - A la pàgina de detalls, toqueu **Remove all access**.
 
   ![aaps_ci_google_access_3](../images/Building-the-App/CI/aaps_ci_google_access_3.png)
 
-  - Tap **Confirm**.
+  - Toqueu **Confirm**.
 
   ![aaps_ci_google_access_4](../images/Building-the-App/CI/aaps_ci_google_access_4_confirm.png)
 
-  - Google confirms that AAPS no longer has access. AAPS ja no apareix a la llista d'aplicacions connectades.
+  - Google confirma que AAPS ja no té accés. AAPS ja no apareix a la llista d'aplicacions connectades.
 
   ![aaps_ci_google_access_5](../images/Building-the-App/CI/aaps_ci_google_access_5_removed.png)
 
   - Ara torneu a començar l'autorització des de zero: tanqueu **tant** la pàgina de preparació com l'aplicació de gestió de fitxers, torneu a obrir aaps-ci-preparation.html des del gestor de fitxers i repetiu els passos d'[autorització de Google Drive](#aaps-ci-google-drive-auth). Google us tornarà a demanar que doneu accés i la pàgina us donarà un token `GDRIVE_OAUTH2` nou.
-  - [Update the `GDRIVE_OAUTH2` secret](#aaps-ci-update-secret) in your GitHub repository with the new token, then [re-run the build](#aaps-ci-rerun).
+  - [Actualitzeu el secret `GDRIVE_OAUTH2`](#aaps-ci-update-secret) al vostre repositori de GitHub amb el token nou i després [torneu a executar la compilació](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAuth Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
+### Desactiveu el programari que pot interferir amb la verificació OAuth
+  - Desactiveu qualsevol VPN o aplicació de seguretat (tallafoc, antimalware...) del telèfon abans d'intentar obtenir la clau OAuth.
 
 (aaps-ci-actions-permission)=
 ### Comproveu la configuració de permisos de GitHub Actions
-  - Assegureu-vos que les polítiques de GitHub Actions estan configurades com a «Allow all actions and reusable workflows» (Settings → Actions → General). If you change it, press **Save** below the options.
+  - Assegureu-vos que les polítiques de GitHub Actions estan configurades com a «Allow all actions and reusable workflows» (Settings → Actions → General). Si el canvieu, premeu **Save** a sota de les opcions.
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
@@ -222,14 +222,14 @@ The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'ac
   ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
 
 (aaps-ci-password-special-characters)=
-### Build Fails Checking The Keystore Password
-  - In the [build log](#aaps-ci-read-the-logs), the step **Validating keystore, alias and password** fails with `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, followed by `Keystore was tampered with, or password was incorrect`. The build stops there: the keystore and passwords are checked before AAPS is built.
+### La compilació falla en comprovar la contrasenya del magatzem de claus
+  - Al [registre de la compilació](#aaps-ci-read-the-logs), el pas **Validating keystore, alias and password** falla amb `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, seguit de `Keystore was tampered with, or password was incorrect`. La compilació s'atura aquí: el magatzem de claus i les contrasenyes es comproven abans de compilar AAPS.
 
-  ![Wrong keystore password in the build log](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
+  ![Contrasenya del magatzem de claus incorrecta al registre de la compilació](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
 
-  - The build workflow keeps every character of your passwords intact. Enter `KEYSTORE_PASSWORD` and `KEY_PASSWORD` exactly as they are, without adding a backslash or any other escape character. If you added backslashes, [update the secrets](#aaps-ci-update-secret) with the password exactly as it is. The example below is wrong: the password is `Example2026`, the backslash was added.
+  - El workflow de compilació conserva intactes tots els caràcters de les vostres contrasenyes. Introduïu `KEYSTORE_PASSWORD` i `KEY_PASSWORD` exactament com són, sense afegir cap barra inversa ni cap altre caràcter d'escapament. Si hi heu afegit barres inverses, [actualitzeu els secrets](#aaps-ci-update-secret) amb la contrasenya exactament com és. L'exemple de sota és incorrecte: la contrasenya és `Example2026` i s'hi ha afegit la barra inversa.
 
-  ![Password entered with an added backslash](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
+  ![Contrasenya introduïda amb una barra inversa afegida](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
 
-  - If the build still fails when signing the APK although your password is correct, and the password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is older than September 2026 and still parses these characters. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev, then re-run the build workflow.
+  - Si la compilació continua fallant en signar l'APK encara que la contrasenya és correcta, i la contrasenya conté `$`, un accent greu (backtick), `"` o `\`, el fitxer de workflow del vostre fork és anterior a setembre de 2026 i encara interpreta aquests caràcters. [Sincronitzeu el vostre fork](#Update-to-new-version-update-your-repo) amb la darrera versió de dev i després torneu a executar el workflow de compilació.
   - La barra vertical `|` és un cas especial. La pàgina de preparació de l'[opció 1](#aaps-ci-option1) ajunta el magatzem de claus, les contrasenyes i l'àlies en un sol secret `KEYSTORE_SET`, separats per `|`, i el workflow el divideix per aquest caràcter. La contrasenya que genera la pàgina de preparació només conté lletres i xifres, així que això no pot passar amb l'opció 1. Només pot passar si heu muntat vosaltres mateixos un secret `KEYSTORE_SET` amb una contrasenya que conté `|`. En aquest cas, elimineu `KEYSTORE_SET` i introduïu els secrets separats de l'[opció 2](#aaps-ci-option2).
