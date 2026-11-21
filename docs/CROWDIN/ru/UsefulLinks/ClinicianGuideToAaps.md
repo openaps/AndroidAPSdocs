@@ -1,4 +1,4 @@
-# Для медицинских работников – Общие сведения и руководство по AndroidAPS
+# Для врачей – общее введение и руководство по AAPS
 
 ```{note}
 This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
@@ -12,8 +12,8 @@ This page is a high-level introduction for clinicians. It was last reviewed in J
 
 Для начала работы с AAPS необходимо выполнить следующие действия:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
+* Найти [совместимую помпу](../Getting-Started/CompatiblePumps.md), [совместимое устройство Android](../Getting-Started/Phones.md) и [совместимый источник CGM](../Getting-Started/CompatiblesCgms.md).
+* [Скачать исходный код AAPS и собрать приложение](../SettingUpAaps/BuildingAaps.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
 ## Как работает замкнутый цикл
@@ -47,7 +47,7 @@ AAPS предназначен для прозрачного отслеживан
 
 ## Примеры принятия решений алгоритмом AAPS:
 
-AAPS основывается на том же алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
+AAPS основывается на том же алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. AAPS показывает эти [линии прогноза](#aaps-screens-prediction-lines) разными цветами. В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
 
 ### Ниже приведены примеры фиолетовых линий прогнозирования, а также то, как они могут различаться:
 
@@ -87,7 +87,7 @@ AAPS основывается на том же алгоритме и набор�
 
 Самое важное для пациентов-это делать одно изменение за раз, и наблюдать за результатом в течение 2-3 дней, прежде чем решать, изменять ли другой параметр (если только такое изменение явно не идет во вред, - в этом случае следует немедленно вернуться к предыдущему параметру). Человек склонен сразу крутить все настройки и менять все сразу; но если кто-то делает это, то такое поведение приведет к суб-оптимальным настройками и его трудно будет вернуть в известное хорошее состояние.
 
-Один из самых мощных инструментов для изменения настроек-это автоматизированный инструмент вычислений базальной скорости, чувствительности ISF и соотношения инсулин-углеводы CR. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. Среди пользователей принято запускать (или просматривать) отчеты Autotune, прежде чем пытаться вручную внести изменения в параметры. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Один из самых мощных инструментов для изменения настроек-это автоматизированный инструмент вычислений базальной скорости, чувствительности ISF и соотношения инсулин-углеводы CR. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. Среди пользователей принято запускать (или просматривать) отчеты Autotune, прежде чем пытаться вручную внести изменения в параметры. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. Эти параметры нужны и для обычной подачи инсулина помпой, и для подачи инсулина в замкнутом цикле. Поэтому обсуждение результатов Autotune и изменение этих параметров – естественная точка соприкосновения с врачом.
 
 Кроме того, поведение человека (основанное на ручном режиме компенсации диабета) часто влияет на результаты даже и в замкнутом цикле. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). Однако во многих случаях кто-то может взять для корректировки гораздо больше углеводов (например, придерживаясь правила 15), что приведет к более быстрому скачку как из-за дополнительной глюкозы, так и из-за того, что подача инсулина была снижена в период, ведущий к низкому.
 
@@ -101,7 +101,7 @@ AAPS основывается на том же алгоритме и набор�
 
 Дополнительное рекомендуемое чтение:
 
-* The [full AAPS documentation](../index.md)
+* [Полная документация AAPS](../index.md)
 * Справочник [ Эталонный дизайн Open](https://OpenAPS.org/reference-design/), в котором объясняются принципы работы и безопасности OpenAPS: https://openaps.org/reference-design/
 * [Полная документация OpenAPS](https://openaps.readthedocs.io/en/latest/index.html) 
   * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
