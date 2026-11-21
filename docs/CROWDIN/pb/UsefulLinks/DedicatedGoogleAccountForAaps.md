@@ -15,15 +15,15 @@ Se você não quiser criar uma conta Gmail dedicada ao **AAPS**, pode ir direto 
 - O Gmail permite registrar até 4 contas com o mesmo número de telefone.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## Como configurar uma conta Google dedicada ao AAPS
 
-(⌛About 10 minutes)
+(⌛Cerca de 10 minutos)
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+Requisitos:
 
-* Você tem um PC com Windows (Windows 10 ou mais recente) e um telefone Android (Android 12 ou mais recente) onde o app **AAPS** será instalado. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* Você tem um PC com Windows (Windows 10 ou mais recente) e um telefone Android (Android 12 ou mais recente) onde o app **AAPS** será instalado. Os dois têm todas as atualizações de segurança mais recentes, acesso à internet e permissões de administrador, porque algumas etapas exigem baixar e instalar programas.
 * O telefone Android já está configurado com o seu endereço de e-mail pessoal do ”dia a dia”, como uma conta Gmail.
 
 ```{admonition} Things to consider when setting up your new account
@@ -42,7 +42,7 @@ Requirements:
 Clique [aqui](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) para ver um vídeo que mostra passo a passo como criar uma conta Google dedicada.
 ```
 
- These are the steps outlined in the video:
+ Estas são as etapas mostradas no vídeo:
 
 Neste exemplo: 
 - Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
@@ -59,14 +59,14 @@ Neste exemplo: 
 ### Digite os dados da sua NOVA conta dedicada: 
 
 - Digite os dados da nova conta: 
-- Create Account
+- Criar conta
 - for my personal use (para uso pessoal). 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Digite os seus dados:
+ - Digite o nome
+ - sobrenome
+ - data de nascimento (precisa ser de um adulto)
 
 ### Escolha o seu NOVO endereço de e-mail e a senha
 
@@ -75,27 +75,27 @@ Defina uma senha
 
 ### Digite um número de telefone que possa receber o SMS de verificação
 
-Gmail will now send you a unique code to enter for validation.
+O Gmail vai enviar um código único para você digitar na verificação.
 
 ### Digite o endereço de e-mail de recuperação
 
 Neste caso, será o seu e-mail atual do “_dia a dia_”…
 
-### Finish setting up the account
+### Termine a configuração da conta
 
-Gmail will display the account name. Ele vai pedir que você aceite os termos e condições do Gmail e confirme as suas configurações de personalização.
+O Gmail vai mostrar o nome da conta. Ele vai pedir que você aceite os termos e condições do Gmail e confirme as suas configurações de personalização.
 
-### Customize the new profile display
+### Personalize a exibição do novo perfil
 
-Agora você deve estar na página MyAccount do Gmail, que mostra a sua nova conta de e-mail dedicada ao **AAPS**. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Agora você deve estar na página MyAccount do Gmail, que mostra a sua nova conta de e-mail dedicada ao **AAPS**. Por padrão, a foto do perfil será a primeira letra do seu nome. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Abra o site do Gmail nas duas janelas para configurar a nova conta
 
 Para não precisar acompanhar uma conta de e-mail separada, encaminhe todos os e-mails da nova conta dedicada ao **AAPS** para a sua conta do dia a dia\
-Esta parte pode ser um pouco confusa, porque você vai precisar alternar entre as duas contas várias vezes. To make it easier, open 2 separate browser windows on top of each other:
+Esta parte pode ser um pouco confusa, porque você vai precisar alternar entre as duas contas várias vezes. Para facilitar, abra 2 janelas do navegador separadas, uma em cima da outra:
 
 1. Mova o navegador já aberto para a parte de cima da tela e redimensione-o para que ocupe só a metade de cima da tela…
 2. Clique com o botão direito no ícone do navegador na barra de tarefas
@@ -115,33 +115,33 @@ As telas iniciais do Gmail devem ficar assim:\
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Configure o encaminhamento…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
+- Clique na aba de configuração “Forwarding and POP/IMAP” (Encaminhamento e POP/IMAP)
+- Clique em “add a forwarding address” (adicionar um endereço de encaminhamento)
+- Adicione o seu endereço de e-mail do “dia a dia”
 - O Gmail enviará um código de verificação para o seu endereço de e-mail do “dia a dia”.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Você vai voltar ao seu perfil do dia a dia e clicar no link para confirmar que aceita o encaminhamento (ou pegar o código no e-mail de verificação do Gmail na janela do Gmail do “dia a dia” e recortar e colar na janela do Gmail da “nova conta dedicada ao AAPS”).
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Você vai alternar bastante entre as janelas, mas assim, quando você ler os e-mails da conta do “dia a dia”, também vai ver os e-mails encaminhados da sua conta dedicada ao AAPS, como os alertas do Gmail.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Confirme o endereço de e-mail de encaminhamento
 
 - No Gmail do “dia a dia” (janela de cima), você vai receber o e-mail “Gmail forwarding Confirmation” (confirmação de encaminhamento do Gmail).
-- Open it and “click the link to confirm the request”
+- Abra-o e clique no link para confirmar a solicitação (“click the link to confirm the request”)
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Arquive os e-mails encaminhados na nova conta Gmail dedicada (janela de baixo)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
+1. Atualize a janela de baixo
+2. Marque “forward incoming email” (encaminhar e-mails recebidos)
+3. E arquive a cópia do Gmail (para manter limpa a sua nova caixa de e-mail dedicada)
 4. Role até o final da página para salvar as alterações\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Parabéns! Now you have created an AAPS-dedicated Google account. O próximo passo é [compilar o app AAPS](../SettingUpAaps/BuildingAaps.md).
+Parabéns! Agora você criou uma conta Google dedicada ao AAPS. O próximo passo é [compilar o app AAPS](../SettingUpAaps/BuildingAaps.md).
