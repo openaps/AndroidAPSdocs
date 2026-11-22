@@ -1,52 +1,52 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Izrada s Android Studiom
 
-This is the traditional method to build your AAPS app.
+Ovo je tradicionalni način izrade vaše aplikacije AAPS.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+Aplikaciju možete izraditi i bez računala, metodom [Izrada u pregledniku](./BrowserBuild.md).
 
-## Build yourself instead of download
+## Izradite sami umjesto preuzimanja
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplikacija AAPS (APK datoteka) nije dostupna za preuzimanje zbog propisa o medicinskim uređajima. Zakonito je izraditi aplikaciju za vlastitu upotrebu, ali kopiju ne smijete dati drugima!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Pojedinosti pogledajte na stranici [Česta pitanja korisnika petlje](../UsefulLinks/FAQ.md).
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Specifikacije računala i softvera za izradu AAPS-a
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* Za izradu apk-a možda će biti potrebna određena verzija **[Android Studija](https://developer.android.com/studio/)**. Pogledajte tablicu u nastavku:
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                  | Latest                                                 | 9.8    | 21  |
+| Verzija AAPS-a          | Preporučena<br/>verzija<br/>Android Studija | Alternativna<br/>verzija<br/>Android Studija | Gradle | JVM |
+| ----------------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
+| 2.6.2                   | 3.6.1                                                   |                                                          | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                                   |                                                          | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                                | testirano do Quail 4                                     | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | testirano do Quail 4                                     | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | testirano do Quail 4                                     | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | testirano do Quail 4                                     | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | testirano do Quail 4                                     | 8.13   | 21  |
+| [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                      | testirano do Quail 4                                     | 9      | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                     | Latest                                                   | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+„Preporučena verzija“ dolazi s odgovarajućom verzijom JVM-a. Preporučena verzija je ujedno i najniža verzija koju možete koristiti za izradu **AAPS-a**. Na verziji starijoj od „preporučene“ **NEĆETE** moći izraditi aplikaciju. Ako koristite drugu verziju, mogu se pojaviti problemi povezani s verzijom JVM-a. Za rješavanje ovih problema pogledajte stranicu [Rješavanje problema s Android Studiom](#troubleshooting_androidstudio-uncommitted-changes). Ako vaša trenutna verzija Android Studija nije navedena u tablici, najprije je morate ažurirati.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Verzija Gradlea vezana je uz izvorni kôd, pa ćete pri preuzimanju / ažuriranju izvornog kôda uvijek dobiti ispravnu verziju Gradlea. Ovdje je navedena samo radi informacije, ne morate ništa poduzimati.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* Android Studio ne podržava [32-bitne sustave Windows](#troubleshooting_androidstudio-unable-to-start-daemon-process). Imajte na umu da su i **64-bitni procesor i 64-bitni operacijski sustav obavezan uvjet.** Ako vaš sustav NE ispunjava taj uvjet, morate promijeniti dotični hardver ili softver ili cijeli sustav.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
+    <th class="tg-baqh">Operacijski sustav (samo 64-bitni)</th>
     <td class="tg-baqh">Windows 10 or higher</td>
     <td class="tg-baqh">macOS 12 or higher</td>
     <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
+    <th class="tg-baqh"><p align="center">Procesor (samo 64-bitni)</th>
     <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
     <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
     <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
@@ -57,33 +57,33 @@ The Gradle version is linked to the source code, you will always get the correct
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. SSD is recommended.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Preporučuje se SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
+    <th class="tg-baqh"><p align="center">Razlučivost</th>
     <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Širokopojasni</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Snažno se preporučuje (nije obavezno) koristiti SSD (Solid State Disk) umjesto HDD-a (Hard Disk Drive), jer će izrada apk datoteke AAPS-a trajati kraće.**  HDD i dalje možete koristiti za izradu apk datoteke **AAPS-a**. Ako to učinite, izrada može dugo trajati, ali kada jednom započne, možete je ostaviti da radi bez nadzora.
 
-## Help and support during the building process
+## Pomoć i podrška tijekom izrade
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+Ako tijekom izrade aplikacije **AAPS** naiđete na poteškoće, postoji poseban odjeljak [**Rješavanje problema s Android Studiom**](../GettingHelp/TroubleshootingAndroidStudio.md); prvo pogledajte njega.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Ako mislite da je nešto u uputama za izradu pogrešno, nedostaje ili je nejasno, ili i dalje imate poteškoća, obratite se grupi drugih korisnika **AAPS-a** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) ili [Discordu](https://discord.gg/4fQUWHZ4Mw). Ako želite sami nešto promijeniti (ažurirati snimke zaslona _itd._), pošaljite [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## Vodič korak po korak za izradu aplikacije AAPS
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+Ako ste AAPS već prije izradili, ne morate ponovno proći sve sljedeće korake.
+Idite izravno na [vodič za ažuriranje](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -91,68 +91,68 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+U ovom vodiču naći ćete _primjere_ snimaka zaslona izrade apk datoteke **AAPS-a**. Budući da se **Android Studio** – softver koji koristimo za izradu apk datoteke **AAPS-a** – redovito ažurira, ove snimke zaslona možda neće biti iste kao vaša instalacija, ali bi ih ipak trebalo biti moguće pratiti.
 
 Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
-### Install Git
+### Instalirajte Git
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git je poznat kao „_sustav za upravljanje verzijama_“ (VCS).\
+Git je program koji vam omogućuje praćenje promjena u kodu i suradnju s drugima. Git ćete koristiti da napravite kopiju izvornog koda **AAPS-a** s web-mjesta GitHub na svoje lokalno računalo. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Koraci za instalaciju Gita
 
-1.  Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Provjerite da **Git** već nije instaliran. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Trebala bi raditi bilo koja novija verzija Gita; odaberite ispravnu verziju za svoj sustav: Mac, Windows ili Linux.
 
-**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
+**Napomena za korisnike Maca:** web-stranica Gita uputit će vas i na instalaciju dodatnog programa „homebrew“ koji pomaže pri instalaciji. Ako Git instalirate putem homebrewa, ne trebate mijenjati nikakve postavke.
 
 (Make_a_note_of_Git_path)=
 
-* During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* Tijekom instalacije, kad vas pita „select destination location“ (odaberite odredišnu lokaciju), zapišite _gdje_ se Git instalira („**putanja instalacije**“) jer ćete je trebati provjeriti u sljedećem koraku. Bit će slična ovoj: "C:\Program Files\Git\cmd\git.exe"
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Dok prolazite kroz korake instalacije Gita, samo prihvatite sve zadane opcije.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Ako ste nakon instalacije zaboravili zapisati gdje je Git instaliran, možete to pronaći ovako: upišite „git“ u traku za pretraživanje na računalu, desnom tipkom kliknite „Git bash“, odaberite „open file location“ (otvori lokaciju datoteke) i mišem prijeđite preko ikone „Git bash“, što će prikazati gdje je instaliran.
 
-* Reboot your computer before the next step.
+* Prije sljedećeg koraka ponovno pokrenite računalo.
 
 (Building-APK-install-android-studio)=
-### Install Android Studio
+### Instalirajte Android Studio
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- **Tijekom sljedećih koraka cijelo vrijeme morate biti spojeni na internet jer Android Studio preuzima nekoliko ažuriranja**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+Android Studio je program koji radi na vašem računalu. Omogućuje vam preuzimanje izvornog koda s interneta (pomoću Gita) i izradu aplikacija za pametni telefon (i pametni sat). Izradom nove ili ažurirane aplikacije na računalu u Android Studiju ne možete „pokvariti“ trenutnu verziju **AAPS-a** s petljom koja možda radi na vašem pametnom telefonu; to su potpuno odvojeni postupci. 
 ```
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+Jedna od najvažnijih stvari pri instalaciji Android Studija je **budite strpljivi!** Tijekom instalacije i postavljanja Android Studio preuzima mnogo toga, što će potrajati.
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. Ovaj vodič prikazuje korake s *novim sučeljem*. Snimke zaslona napravljene su s verzijom „Ladybug“, pa novije verzije mogu izgledati malo drugačije. Ako još koristite starije sučelje, možda ćete prvo htjeti prebaciti Android Studio na novo sučelje prema [ovim uputama](#computerbuild-NewUI).
 ```
 
-The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
+Verzija Android Studija vrlo je važna. Za odabir odgovarajuće verzije Android Studija pogledajte [gornje upute](#Building-APK-recommended-specification-of-computer-for-building-apk-file).
 
-Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
+Preuzmite [trenutnu verziju Android Studija](https://developer.android.com/studio) ili stariju verziju iz [**Archives**](https://developer.android.com/studio/archive) (arhiva) i prihvatite ugovore za preuzimanje.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+Kad preuzimanje završi, pokrenite preuzetu aplikaciju da je instalirate na računalo. Možda ćete morati prihvatiti/potvrditi neka upozorenja Windowsa o preuzetim aplikacijama!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
+Instalirajte Android Studio klikom na „Next“, kao što je prikazano na sljedećim snimkama zaslona. **Ne** trebate mijenjati nikakve postavke!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
@@ -162,11 +162,11 @@ If you want to save hard disk space, you can uncheck Android Virtual Device: it 
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Sada kliknite „Install“:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Kad završi, pritisnite „Next“
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
@@ -174,131 +174,131 @@ In the last step, click on "Finish" to start Android Studio for the first time.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Bit ćete upitani želite li pomoći u poboljšanju Android Studija. Odaberite opciju po želji; to neće utjecati na sljedeće korake.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Početni zaslon pozdravlja vas u instalaciji Android Studija. Pritisnite „Next“.
 
 ![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Kao vrstu instalacije odaberite „Standard“.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Ponovno potvrdite postavke klikom na „Next“.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Sada morate prihvatiti licencne ugovore. Na lijevoj strani imate dva odjeljka (1 + 3) koje morate odabrati jedan za drugim i za svaki na desnoj strani odabrati „Accept“ (2 + 4).
 
-Then the "Finish" (5) button can be clicked.
+Zatim možete kliknuti gumb „Finish“ (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Sada će se preuzeti i instalirati neki Android paketi. Budite strpljivi i pričekajte.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Kad završi, vidjet ćete sljedeći zaslon na kojem ponovno možete odabrati „Finish“.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Sada ćete vidjeti početni zaslon Android Studija.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### Preuzmite kod AAPS-a
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
+Kad se **AAPS** preuzima prvi put, Android Studio će se putem interneta spojiti na web-mjesto Github i preuzeti izvorni kod za **AAPS**. To bi trebalo trajati oko 1 minutu. 
 
-Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
+Android Studio će zatim pomoću alata **Gradle** (razvojni alat za Android aplikacije) utvrditi koje su još komponente potrebne za izradu na vašem računalu. 
 ```
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left.
+Na početnom zaslonu Android Studija provjerite je li lijevo istaknuto „**Projects**“ (1).
 
-Then click "**Clone Repository**" (2) on the right:
+Zatim desno kliknite „**Clone Repository**“ (2):
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Sada ćemo Android Studiju reći odakle da preuzme kod:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* Lijevo (1) bi trebalo biti odabrano (zadano) „Repository URL“.
+* Kao sustav za upravljanje verzijama (2) trebao bi biti odabran (zadano) „Git“.
+* Sada kopirajte ovaj URL:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    i zalijepite ga u tekstni okvir URL (3).
 
-* Check the (default) directory for saving the cloned code does not already exist on your computer (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Provjerite da (zadana) mapa za spremanje kloniranog koda već ne postoji na vašem računalu (4). Možete je promijeniti u neku drugu mapu, ali zapamtite gdje ste ga spremili!
+* Sada kliknite gumb „Clone“ (5).
 
 ```{admonition} INFORMATION
 :class: note
-Make a note of the directory. It is where your sourcecode is stored!
+Zapišite mapu. Tu je spremljen vaš izvorni kod!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Sada ćete vidjeti zaslon koji vam govori da se repozitorij klonira:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+U nekom trenutku Android Studio će se zatvoriti i ponovno pokrenuti. Možda ćete biti upitani vjerujete li projektu. Kliknite „Trust project“:
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Samo za korisnike Windowsa: ako vatrozid traži dopuštenje, odobrite pristup:
 
- ![Firewall permission java](../images/Building-the-App/AndroidStudio361_18.png)
+ ![Dopuštenje vatrozida za Javu](../images/Building-the-App/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+Nakon uspješnog kloniranja repozitorija Android Studio će otvoriti klonirani projekt.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
 :class: note
-Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
+Android Studio je nedavno promijenio svoje sučelje. Nove instalacije Android Studija prema zadanim postavkama koriste novo sučelje!
 
-Only if your Android Studio looks different, you might need to switch to the new UI:
-Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+Samo ako vaš Android Studio izgleda drugačije, možda ćete se morati prebaciti na novo sučelje:
+Kliknite izbornik s tri crtice u gornjem lijevom kutu, zatim odaberite **Settings** (ili **Preferences** na Apple računalima).
+U **Appearance & Behavior** idite na **New UI** i označite **Enable new UI**. Zatim ponovno pokrenite Android Studio da ga počnete koristiti.
 
-If you don't find the option **New UI** don't worry: you are already using it!
+Ako ne pronađete opciju **New UI**, ne brinite: već je koristite!
 ```
 
 
-When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+Kad se Android Studio otvori, strpljivo pričekajte (to može potrajati nekoliko minuta) i posebno **nemojte** ažurirati projekt kako predlaže skočni prozor.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio će automatski pokrenuti „Gradle project sync“ (sinkronizaciju projekta Gradle), što će trajati nekoliko minuta. Možete vidjeti da (još) radi:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio bi mogao preporučiti ažuriranje sustava gradle. **Nikad ne ažurirajte gradle!** To će dovesti do problema.
 ```
 
-Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Samo na Windows računalima: možda ćete dobiti obavijest da radi Windows Defender. Kliknite **Automatically** i potvrdite, to će ubrzati izradu!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Možete pustiti da sinkronizacija gradlea radi i već nastaviti sa sljedećim koracima.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Postavite putanju do Gita u postavkama Android Studija
 
-Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
+Sada ćemo Android Studiju reći gdje da pronađe Git koji ste instalirali [ranije](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Samo za korisnike Windowsa: provjerite jeste li ponovno pokrenuli računalo nakon [instalacije Gita](#install-git-if-you-dont-have-it). Ako niste, ponovno ga pokrenite sada i ponovno otvorite Android Studio
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
+U gornjem lijevom kutu **Android Studija** otvorite izbornik s tri crtice i idite na **File** > **Settings** (na Windowsima) ili **Android Studio** > **Preferences** (na Macu). Otvorit će se sljedeći prozor; kliknite da proširite padajući izbornik **Version Control** (1) i odaberite **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
@@ -307,131 +307,131 @@ Check if **Android Studio** can automatically locate the correct **Path to Git e
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
 
-If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+Ako je automatska postavka uspješna, vaša trenutna verzija **Gita** prikazat će se pokraj putanje.
 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
-* manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
+Ako **git.exe** nije automatski pronađen ili klik na „Test“ javlja pogrešku, možete
+* ručno unijeti putanju koju ste zapisali [ranije](#BuildingAaps-steps-for-installing-git) ili
 * click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
-* Verify your settings with the **Test** button!
+* Provjerite svoje postavke gumbom **Test**!
 
-  ![Git not found](../images/Building-the-App/039_GitTestError.png)
+  ![Git nije pronađen](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Izradite „potpisani“ APK AAPS-a
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+Android zahtijeva da svaka aplikacija bude _potpisana_, kako bi se kasnije mogla ažurirati samo iz istog pouzdanog izvora koji je objavio izvornu aplikaciju. Za više informacija o ovoj temi otvorite [ovu poveznicu](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
 
-For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Za naše potrebe to samo znači da izradimo datoteku za potpisivanje, tj. „spremište ključeva“ (keystore), i koristimo je pri izradi aplikacije **AAPS**.
 ```
 
 
-**Important: Make sure the gradle sync is finished successfully before proceeding!**
+**Važno: prije nastavka provjerite je li sinkronizacija gradlea uspješno završila!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Kliknite izbornik s tri crtice u gornjem lijevom kutu da otvorite traku izbornika. Odaberite **Build** (1), zatim odaberite **Generate Signed App Bundle / APK** (2)
 
-![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
+![Izrada apk datoteke](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
+Odaberite „APK“ (1) umjesto „Android App Bundle“ i kliknite „Next“ (2):
 
-![APK instead of bundle](../images/Building-the-App/041_APK.png)
+![APK umjesto paketa (bundle)](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
+Na sljedećem zaslonu provjerite je li „Module“ postavljen na „AndroidAPS.app“ (1). Dio prije „.app“ naziv je mape u koju ste klonirali kod.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: note
-If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
+Ako želite izraditi apk za svoj sat, sada morate odabrati AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Kliknite „Create new...“ (2) da započnete izradu spremišta ključeva.
 
 ```{admonition} INFORMATION!
 :class: note
-You will only need to create the keystore once.
+Spremište ključeva trebate izraditi samo jednom.
 If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Napomena:_** Spremište ključeva je datoteka u kojoj su spremljeni podaci za potpisivanje aplikacije. Šifrirano je, a podaci su zaštićeni lozinkama.
 
-![Create key store](../images/Building-the-App/043_Keystore.png)
+![Izrada spremišta ključeva](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Kliknite simbol „mape“ (1) da odaberete putanju na računalu za svoje spremište ključeva.
 
-  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
+  **Nemojte** koristiti mapu u kojoj ste spremili izvorni kod, nego neku mapu koju biste prenijeli i na novo računalo.
 
 ```{admonition} WARNING!
 :class: warning
-Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AAPS update!
+Obavezno zapišite gdje je spremljeno vaše spremište ključeva. You will need it when you build the next AAPS update!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Sada odaberite jednostavnu lozinku (i zapišite je), unesite je u polje za lozinku (2) i potvrdite je (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+  Lozinke za spremište ključeva i za ključ ne moraju biti složene. Ako u budućnosti izgubite lozinku, pogledajte [Ponovna instalacija AAPS-a s novim spremištem ključeva](#reinstall-aaps).
 
 ```{warning}
-**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+**Izbjegavajte posebne znakove u lozinkama.** Za lozinke spremišta ključeva i ključa koristite samo slova i brojke. Posebno nemojte koristiti `$`, obrnuti apostrof (backtick), `"` ni `\`. Ako kasnije prijeđete na [Izrada u pregledniku](#aaps-ci-option2) i ponovno koristite ovo spremište ključeva, ti znakovi mogu uzrokovati neuspjeh koraka potpisivanja, pogledajte [Izrada u pregledniku: rješavanje problema](#aaps-ci-password-special-characters).
 ```
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* Zadani alias (3) vašeg ključa je „key0“, ostavite ga nepromijenjenog.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Sada vam treba lozinka za ključ. Radi jednostavnosti, ako želite, možete koristiti istu lozinku koju ste gore koristili za spremište ključeva. Unesite lozinku (4) i potvrdite je.
 
 ```{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Zapišite ove lozinke! Trebat će vam kad budete izrađivali sljedeće ažuriranje AAPS-a!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Valjanost je prema zadanim postavkama 25 godina, ostavite je takvom.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Unesite svoje ime i prezime (5). Nije potrebno dodavati druge podatke, ali to slobodno možete učiniti (6–7).
 
-* Click "OK" (8) to continue:
-
-
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
-
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+* Kliknite „OK“ (8) za nastavak:
 
 
-On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
+Na stranici **Generate signed App Bundle or APK** sada će se prikazati putanja do vašeg spremišta ključeva. Sada ponovno unesite lozinku spremišta ključeva – Key Store password (1) i lozinku ključa – Key password (2) te označite okvir (3) za pamćenje lozinki, da ih ne morate ponovno unositi kad sljedeći put budete izrađivali apk (tj. pri ažuriranju na novu verziju AAPS-a). Kliknite „Next“ (4):
 
-   ![Select build variant](../images/Building-the-App/045_BuildPath.png)
+![Zapamti lozinke](../images/Building-the-App/044_RememberPwd.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
 
-![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
+Na sljedećem zaslonu odaberite varijantu izrade „fullRelease“ (1) i kliknite „Create“ (3). Zapamtite odredišnu mapu prikazanu kod (2), jer ćete tamo kasnije naći izrađenu apk datoteku!
 
-Now you can watch the building progress:
+   ![Odabir varijante izrade](../images/Building-the-App/045_BuildPath.png)
+
+Android Studio će sada izraditi apk datoteku **AAPS-a**. Dolje desno će prikazati „Gradle Build running“ (2). Postupak traje neko vrijeme, ovisno o vašem računalu i internetskoj vezi, zato **budite strpljivi!** Ako želite pratiti napredak izrade, kliknite mali čekić „build“ (1) na dnu Android Studija:
+
+![Gradle radi](../images/Building-the-App/046_BuildRunning.png)
+
+Sada možete pratiti napredak izrade:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
+Android Studio će nakon završetka izrade prikazati poruku „BUILD SUCCESSFUL“. Možda ćete vidjeti skočnu obavijest koju možete kliknuti i odabrati „locate“. Ako ovo propustite, kliknite ikonu obavijesti (1) da otvorite Notifications, a zatim **locate** (2):
 
-![Build finished](../images/Building-the-App/049_ReopenNotification.png)
+![Izrada završena](../images/Building-the-App/049_ReopenNotification.png)
 
-**_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio.md)._**
+**_Ako izrada nije bila uspješna, pogledajte odjeljak [Rješavanje problema s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
-In the Notifications box, click on the blue link "locate":
+U okviru Notifications kliknite plavu poveznicu „locate“:
 
-![Locate build](../images/Building-the-App/048_BuildFinished.png) Your file manager will open and show you the build apk file that you have just built.
+![Pronalaženje izrade](../images/Building-the-App/048_BuildFinished.png) Otvorit će se upravitelj datoteka i prikazati apk datoteku koju ste upravo izradili.
 
-   ![File location apk](../images/Building-the-App/050_LocateAPK.png)
+   ![Lokacija apk datoteke](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Čestitamo! Sada kad ste izradili apk datoteku **AAPS-a**, u sljedećem odjeljku dokumentacije prenijet ćete tu datoteku na svoj pametni telefon.
 
 ```{tip}
-If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.
+Ako mislite da biste u budućnosti mogli koristiti pametni sat s Android Wear, ovo je najbolje vrijeme za izradu apk datoteke AAPS Wear, kako biste bili sigurni da će biti usklađena s vašom apk datotekom AAPS-a.
 ```
 
-Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+Prijeđite na sljedeću fazu: [Prijenos i instalacija **AAPS-a** na vaš pametni telefon](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 
