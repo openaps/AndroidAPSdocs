@@ -402,5 +402,5 @@ Sav razvoj upravljačkog programa za Medtrum radi zajednica **dobrovoljno**. Mol
 
 -  **Razina 0:** Pročitajte odgovarajući dio ove dokumentacije kako biste razumjeli kako bi trebala raditi funkcija s kojom imate poteškoća.
 -  **Razina 1:** Ako i dalje imate probleme koje ne možete riješiti uz ovaj dokument, otvorite kanal *#Medtrum* na **Discordu** preko [ove pozivnice](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. Ako nije, otvorite [novi issue](https://github.com/nightscout/AndroidAPS/issues) i priložite [svoje datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
+-  **Razina 2:** Pretražite postojeće probleme (issues) da vidite je li vaš problem već prijavljen na [Issues](https://github.com/nightscout/AAPS/issues). Ako postoji, potvrdite ga, komentirajte ili dodajte informacije o svom problemu. Ako nije, otvorite [novi issue](https://github.com/nightscout/AndroidAPS/issues) i priložite [svoje datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
 -  **Budite strpljivi – većina članova naše zajednice su dobronamjerni volonteri, a rješavanje problema često traži vrijeme i strpljenje i od korisnika i od programera.**
