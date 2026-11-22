@@ -10,7 +10,7 @@ Postoje različiti načini korištenja podataka CareSensa s **AAPS-om**:
 ## 1. xDrip
 
 1. Instalirajte i postavite službenu aplikaciju CareSens.
-2. U aplikaciji CareSens idite na settings -> Manage Data and Connections -> uključite prekidač xDrip. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+2. U aplikaciji CareSens idite na settings -> Manage Data and Connections -> uključite prekidač xDrip. Ako želite, isključite podatkovne veze prema CareLevo, DIA:CONN, CloudLoop itd. u "others".
 
 ![Podatkovne veze u aplikaciji CareSens](../images/eversenseapp-dataconnections.png)
 
