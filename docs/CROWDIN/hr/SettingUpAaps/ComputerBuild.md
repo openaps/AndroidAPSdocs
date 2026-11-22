@@ -29,7 +29,7 @@ Pojedinosti pogledajte na stranici [Česta pitanja korisnika petlje](../UsefulLi
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | testirano do Quail 4                                     | 8.11.1 | 21  |
 | [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | testirano do Quail 4                                     | 8.13   | 21  |
 | [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                                      | testirano do Quail 4                                     | 9      | 21  |
-| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                     | Latest                                                   | 9.8    | 21  |
+| [4.0.0](#version400)    | Rabbit 2 (2026.2.2)                                     | Najnovija                                                | 9.8    | 21  |
 
 „Preporučena verzija“ dolazi s odgovarajućom verzijom JVM-a. Preporučena verzija je ujedno i najniža verzija koju možete koristiti za izradu **AAPS-a**. Na verziji starijoj od „preporučene“ **NEĆETE** moći izraditi aplikaciju. Ako koristite drugu verziju, mogu se pojaviti problemi povezani s verzijom JVM-a. Za rješavanje ovih problema pogledajte stranicu [Rješavanje problema s Android Studiom](#troubleshooting_androidstudio-uncommitted-changes). Ako vaša trenutna verzija Android Studija nije navedena u tablici, najprije je morate ažurirati.
 
@@ -41,27 +41,27 @@ Verzija Gradlea vezana je uz izvorni kôd, pa ćete pri preuzimanju / ažuriranj
 <tbody>
   <tr>
     <th class="tg-baqh">Operacijski sustav (samo 64-bitni)</th>
-    <td class="tg-baqh">Windows 10 or higher</td>
-    <td class="tg-baqh">macOS 12 or higher</td>
-    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
+    <td class="tg-baqh">Windows 10 ili noviji</td>
+    <td class="tg-baqh">macOS 12 ili noviji</td>
+    <td class="tg-baqh">Bilo koja distribucija Linuxa koja podržava Gnome, KDE ili Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 ili novija</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Procesor (samo 64-bitni)</th>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
-    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
-    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">x86_64 procesor iz 2017. ili noviji (Intel Core i5 8. generacije, AMD Ryzen ili noviji) s <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">podrškom za virtualizaciju</a> (Intel VT-x ili AMD-V) omogućenom u BIOS-u</td>
+    <td class="tg-baqh">Apple Silicon (M1 ili noviji) ili Intel Core 6. generacije ili noviji (podrška za Intel Mac računala postupno se ukida)</td>
+    <td class="tg-baqh">x86_64 procesor iz 2017. ili noviji (Intel Core i5 8. generacije, AMD Ryzen ili noviji) s podrškom za virtualizaciju (Intel VT-x ili AMD-V) omogućenom u BIOS-u</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16 GB ili više (8 GB je apsolutni minimum samo za Android Studio, preporučuje se 32 GB)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. Preporučuje se SSD.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Najmanje 32 GB slobodnog prostora. Preporučuje se SSD.</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Razlučivost</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">Najmanje 1280 x 800 (preporučuje se 1920 x 1080)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -93,7 +93,7 @@ Idite izravno na [vodič za ažuriranje](../Maintenance/UpdateToNewVersion.md)!
 
 U ovom vodiču naći ćete _primjere_ snimaka zaslona izrade apk datoteke **AAPS-a**. Budući da se **Android Studio** – softver koji koristimo za izradu apk datoteke **AAPS-a** – redovito ažurira, ove snimke zaslona možda neće biti iste kao vaša instalacija, ali bi ih ipak trebalo biti moguće pratiti.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+Budući da **Android Studio** radi na platformama Windows, Mac OS X i Linux, mogu postojati i manje razlike u koracima na različitim platformama.
 
 (install-git-if-you-dont-have-it)=
 ### Instalirajte Git
@@ -102,18 +102,18 @@ Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there mi
 :class: dropdown
 
 Git je poznat kao „_sustav za upravljanje verzijama_“ (VCS).\
-Git je program koji vam omogućuje praćenje promjena u kodu i suradnju s drugima. Git ćete koristiti da napravite kopiju izvornog koda **AAPS-a** s web-mjesta GitHub na svoje lokalno računalo. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git je program koji vam omogućuje praćenje promjena u kodu i suradnju s drugima. Git ćete koristiti da napravite kopiju izvornog koda **AAPS-a** s web-mjesta GitHub na svoje lokalno računalo. Zatim ćete na računalu u Android Studiju izraditi aplikaciju **AAPS** (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
 #### Koraci za instalaciju Gita
 
-1.  Provjerite da **Git** već nije instaliran. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#Building-APK-install-android-studio):
+1.  Provjerite da **Git** već nije instaliran. To možete provjeriti upisivanjem „git“ u traku za pretraživanje u Windowsima – ako vidite **„Git bash“** ili neki drugi oblik Gita, već je instaliran i možete odmah prijeći na [instalaciju Android Studija](#Building-APK-install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section [**here**](https://git-scm.com/downloads). Trebala bi raditi bilo koja novija verzija Gita; odaberite ispravnu verziju za svoj sustav: Mac, Windows ili Linux.
+2. Ako Git nije instaliran, preuzmite i instalirajte najnoviju verziju za svoj sustav iz odjeljka „Download“ [**ovdje**](https://git-scm.com/downloads). Trebala bi raditi bilo koja novija verzija Gita; odaberite ispravnu verziju za svoj sustav: Mac, Windows ili Linux.
 
 **Napomena za korisnike Maca:** web-stranica Gita uputit će vas i na instalaciju dodatnog programa „homebrew“ koji pomaže pri instalaciji. Ako Git instalirate putem homebrewa, ne trebate mijenjati nikakve postavke.
 
@@ -141,7 +141,7 @@ Jedna od najvažnijih stvari pri instalaciji Android Studija je **budite strplji
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. Ovaj vodič prikazuje korake s *novim sučeljem*. Snimke zaslona napravljene su s verzijom „Ladybug“, pa novije verzije mogu izgledati malo drugačije. Ako još koristite starije sučelje, možda ćete prvo htjeti prebaciti Android Studio na novo sučelje prema [ovim uputama](#computerbuild-NewUI).
+Važna napomena: Android Studio je u posljednjim izdanjima promijenio svoje sučelje. Ovaj vodič prikazuje korake s *novim sučeljem*. Snimke zaslona napravljene su s verzijom „Ladybug“, pa novije verzije mogu izgledati malo drugačije. Ako još koristite starije sučelje, možda ćete prvo htjeti prebaciti Android Studio na novo sučelje prema [ovim uputama](#computerbuild-NewUI).
 ```
 
 Verzija Android Studija vrlo je važna. Za odabir odgovarajuće verzije Android Studija pogledajte [gornje upute](#Building-APK-recommended-specification-of-computer-for-building-apk-file).
@@ -156,7 +156,7 @@ Instalirajte Android Studio klikom na „Next“, kao što je prikazano na sljed
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Ako želite uštedjeti prostor na disku, možete odznačiti Android Virtual Device: ne koristi se za izradu **AAPS-a**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -170,7 +170,7 @@ Kad završi, pritisnite „Next“
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finish" to start Android Studio for the first time.
+U posljednjem koraku kliknite „Finish“ da prvi put pokrenete Android Studio.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
@@ -302,7 +302,7 @@ U gornjem lijevom kutu **Android Studija** otvorite izbornik s tri crtice i idit
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
-Check if **Android Studio** can automatically locate the correct **Path to Git executable** by clicking the button "Test" (1):
+Provjerite može li **Android Studio** automatski pronaći ispravnu putanju **Path to Git executable** klikom na gumb „Test“ (1):
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
@@ -314,7 +314,7 @@ Ako je automatska postavka uspješna, vaša trenutna verzija **Gita** prikazat �
 
 Ako **git.exe** nije automatski pronađen ili klik na „Test“ javlja pogrešku, možete
 * ručno unijeti putanju koju ste zapisali [ranije](#BuildingAaps-steps-for-installing-git) ili
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* kliknuti ikonu mape (1) i ručno otići u mapu u kojoj je **git.exe** instaliran [ranije](#BuildingAaps-steps-for-installing-git)
 * Provjerite svoje postavke gumbom **Test**!
 
   ![Git nije pronađen](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Kliknite „Create new...“ (2) da započnete izradu spremišta ključeva.
 ```{admonition} INFORMATION!
 :class: note
 Spremište ključeva trebate izraditi samo jednom.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Ako ste AAPS već prije izradili, NEMOJTE izrađivati novo spremište ključeva, nego odaberite postojeće i unesite njegove lozinke!
 ```
 
 **_Napomena:_** Spremište ključeva je datoteka u kojoj su spremljeni podaci za potpisivanje aplikacije. Šifrirano je, a podaci su zaštićeni lozinkama.
@@ -369,7 +369,7 @@ If you have built AAPS before, do NOT create a new keystore but select your exis
 
 ```{admonition} WARNING!
 :class: warning
-Obavezno zapišite gdje je spremljeno vaše spremište ključeva. You will need it when you build the next AAPS update!
+Obavezno zapišite gdje je spremljeno vaše spremište ključeva. Trebat će vam kad budete izrađivali sljedeće ažuriranje AAPS-a!
 ```
 
 * Sada odaberite jednostavnu lozinku (i zapišite je), unesite je u polje za lozinku (2) i potvrdite je (2).
