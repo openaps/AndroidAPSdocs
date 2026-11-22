@@ -12,7 +12,7 @@
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout – это веб-приложение, которое может записывать и показывать данные вашего CGM и **AAPS**, а также создает отчеты. Это мощная платформа, которая уже много лет интегрирована в **AAPS**. С ней пользователи и опекуны могут следить за данными пациента о диабете почти в реальном времени (между получением данных и их показом может пройти всего несколько секунд, если у всех участвующих компонентов достаточно хорошее подключение к интернету). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout – это веб-приложение, которое может записывать и показывать данные вашего CGM и **AAPS**, а также создает отчеты. Это мощная платформа, которая уже много лет интегрирована в **AAPS**. С ней пользователи и опекуны могут следить за данными пациента о диабете почти в реальном времени (между получением данных и их показом может пройти всего несколько секунд, если у всех участвующих компонентов достаточно хорошее подключение к интернету). Через него также идут удаленные команды, которые опекуны отправляют в **AAPS** из **AAPSClient** (см. [Управление «основной телефон ↔ клиент»](#client-master-control)).
 
 Nightscout существует как программное обеспечение с открытым исходным кодом. Любой человек может создать и управлять сервером Nightscout используя либо бесплатные, либо платные сервисы.
 
@@ -44,7 +44,7 @@ Tidepool доступен в **AAPS** начиная с версии 3.2, кот
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+Так как при использовании **AAPS** между поступлением данных и их показом в отчетах проходит три часа, Tidepool не подходит для передачи информации опекунам в реальном времени.  
 On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
 ```
 
@@ -59,4 +59,4 @@ Tidepool – это проект с [открытым исходным кодо�
 
 ## Следующий шаг
 
-Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
+Когда сервер отчетности будет настроен, вы можете настроить **AAPS** на телефоне с помощью [Мастера установки](./SetupWizard.md), который также свяжет **AAPS** с вашим сервером отчетности.
