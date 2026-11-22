@@ -60,7 +60,7 @@ Quan hi ha en ús un canvi temporal, la targeta **ACTIU** mostra el seu percenta
 
 ![La pantalla Perfil: carrusel de perfils, detalls i barra d'accions](../images/v4/Profiles/profile_manage.png)
 
-Els botons de la part de baix actuen sobre el perfil **seleccionat**: **➕ Afegir**, **✏️ Editar**, **⧉ Duplicar** i **🗑️ Eliminar**, i el botó rodó **▶ Activar** a la dreta. Per saber com omplir els quatre horaris a l'editor (IC / ISF / BAS / TARG), vegeu [Crear i editar perfils](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Per saber com omplir els quatre horaris a l'editor (IC / ISF / BAS / TARG), vegeu [Crear i editar perfils](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Duplicar** fa servir la icona de dos quadrats que sovint vol dir *copiar*, però no hi ha res per enganxar: fa el duplicat en un sol pas. Confirmeu *Duplicar el perfil "Normal"?* i s'afegeix un perfil nou anomenat *Còpia de Normal* al final del carrusel. Queda seleccionat i a punt per a **✏️ Editar** (on també el podeu canviar de nom). No és el mateix que duplicar un **Canvi de perfil** antic des de l'historial de tractaments, que crea un perfil nou *amb el percentatge i el desplaçament horari aplicats*. Vegeu [Guardar un canvi de perfil per fer-lo servir més tard](#ProfileSwitch-keep-for-later).
 
