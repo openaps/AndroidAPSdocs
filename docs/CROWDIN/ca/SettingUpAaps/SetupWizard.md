@@ -182,7 +182,7 @@ Quan acabeu, premeu «**SEGÜENT**» per anar a la pantalla següent.
 
 Aquesta pantalla només es mostra quan **AAPS** troba una configuració exportada abans al directori d'**AAPS** («Trobada configuració emmagatzemada»), per exemple quan reinstal·leu l'aplicació o canvieu a un telèfon nou.
 
-- Per restaurar la configuració anterior, premeu «**Importar configuració**». Vegeu [Crear i restaurar còpies de seguretat](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Per començar amb una configuració nova, premeu «**SEGÜENT**» i continueu amb l'assistent.
 
 ![Importar configuració](../images/setup-wizard/Wizard-ImportSettings.png)
