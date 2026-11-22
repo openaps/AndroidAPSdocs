@@ -37,11 +37,11 @@ Są trzy ustawienia:
 
 ![Ustawienia EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Alarmy niskiego poziomu zbiornika
+### Low Reservoir Alerts
 
 Ostrzeżenie pojawia się, gdy ilość insuliny w patchu spadnie do tej wartości lub niżej. Możesz ustawić od 10 do 50 U, w krokach co 5 U. Domyślnie jest 10 U.
 
-### Przypomnienie o wygaśnięciu Patcha
+### Patch Expiration Reminder
 
 Przypomina, ile czasu zostało do wygaśnięcia obecnego patcha. Możesz ustawić od 1 do 24 godzin, w krokach co 1 godzinę. Domyślnie są to 4 godziny.
 
@@ -261,7 +261,7 @@ Poszczególne ostrzeżenia są opisane poniżej.
 | Ostrzeżenie                        | Wyjaśnienie                                                                                                            |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Koniec zawieszenia podaży insuliny | Wybrany czas wstrzymania minął. Naciśnij **Wznów pompę** w powiadomieniu, aby wznowić podawanie insuliny.              |
-| Niski poziom zbiornika             | Ilość insuliny w patchu jest mniejsza niż wartość ustawiona w **Alarmy niskiego poziomu zbiornika**.                   |
+| Niski poziom zbiornika             | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                     |
 | Okres użytkowania Patcha minął     | Okres użytkowania patcha minął.                                                                                        |
 | Patch wkrótce wygaśnie             | Patch trzeba odrzucić w ciągu 1 godziny.                                                                               |
 | Niekompletna aktywacja Patcha      | Aktywacja patcha została przerwana na dłużej niż 3 minuty po parowaniu. Otwórz ekran pompy i dokończ aktywację patcha. |
