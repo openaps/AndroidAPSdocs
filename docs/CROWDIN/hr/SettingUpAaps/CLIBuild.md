@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# Upute za izradu iz naredbenog retka
 
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+Najjednostavniji način izrade AAPS-a je [Izrada u pregledniku](./BrowserBuild.md).
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Testirano na Fedori i Debian Linuxu. Drugi sustavi trebali bi raditi uz male prilagodbe.
 
-## Requirements
+## Preduvjeti
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+Najmanju potrebnu verziju Jave potražite u [ovoj tablici](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Instalirajte odgovarajući paket OpenJDK pomoću upravitelja paketa vašeg sustava. Na primjer, u Debianu se paketi zovu `openjdk-21-jdk`. Paket treba sadržavati programe `javac` i `keytool`.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+Preuzmite paket *Android Command line tools* sa [stranice Android Studija](https://developer.android.com/studio#command-line-tools-only). Sam Android Studio nije potreban. Više informacija o instalaciji ovog paketa naći ćete u [dokumentaciji za sdkmanager](https://developer.android.com/tools/sdkmanager). Nakon instalacije paketa morate ručno postaviti dvije [varijable okruženja](https://developer.android.com/tools/variables): `ANDROID_HOME` i `PATH`. Na kraju pokrenite `sdkmanager --licenses` da završite instalaciju.
 
-## Building AAPS with Gradle wrapper
+## Izrada AAPS-a pomoću Gradle wrappera
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. Izradite datoteku spremišta ključeva (Java keystore) za potpisivanje AAPS-a
 
-If you already have a keystore file for signing AAPS, reuse that.
+Ako već imate datoteku spremišta ključeva za potpisivanje AAPS-a, upotrijebite nju.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+Datoteka spremišta ključeva i lozinka trebat će vam pri svakom ažuriranju AAPS-a.
 
-### 2. Compile the AAPS APK file
+### 2. Prevedite (kompajlirajte) APK datoteku AAPS-a
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+Klonirajte [git repozitorij](https://github.com/nightscout/AndroidAPS) ako to već niste učinili. AAPS koristi granu master za najnoviju stabilnu verziju. Provjerite da ste na grani ili oznaci (tag) koju želite izraditi.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+U repozitoriju pokrenite `./gradlew :app:assembleFullRelease`. Naredba sama preuzme Gradle i potrebne biblioteke, a zatim prevede kod. Kada izrada uspije, imat ćete nepotpisanu APK datoteku u `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Trebao je biti instaliran i program `apksigner` u `$ANDROID_HOME`. Ponovno ažurirajte varijablu `PATH`.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. Izradite potpisanu APK datoteku iz nepotpisane
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+Prijeđite u svoju početnu (home) mapu i izradite potpisanu APK datoteku:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+Sada je `app-full-release-signed.apk` spreman za instalaciju ili nadogradnju.
