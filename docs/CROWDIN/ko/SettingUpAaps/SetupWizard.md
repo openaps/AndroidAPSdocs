@@ -182,7 +182,7 @@ Android 16에서는 다음 단계를 따르십시오. 다른 버전에서는 제
 
 이 화면은 **AAPS**가 **AAPS** 디렉터리에서 이전에 내보낸 설정을 찾았을 때만 표시됩니다("저장된 설정이 있습니다."). 예를 들어 앱을 다시 설치하거나 새 휴대폰으로 옮길 때입니다.
 
-- 이전 구성을 복원하려면 "**설정 가져오기**"를 누르십시오. [백업 만들기와 복원하기](../Maintenance/ExportImportSettings.md)를 참조하십시오.
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - 새 구성으로 시작하려면 "**다음**"을 누르고 마법사를 계속하십시오.
 
 ![설정 가져오기](../images/setup-wizard/Wizard-ImportSettings.png)
