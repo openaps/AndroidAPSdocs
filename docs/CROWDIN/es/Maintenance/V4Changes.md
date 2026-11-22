@@ -111,6 +111,8 @@ En **AAPS** v4, la insulina marcada como **ACTIVO** en **Administrar → Configu
 
 Al actualizar, **AAPS** conserva la insulina y la DIA que ya guardaron tus cambios de perfil de v3. Si encuentra registros antiguos con una insulina conocida pero sin DIA, usa una DIA predeterminada para ellos y muestra un mensaje una sola vez, por ejemplo *Los registros antiguos no tenían duración de la insulina, por lo que se utilizaron 9,0 horas para Lyumjev. Comprueba tus ajustes de insulina: los registros ya migrados no se actualizan a posteriori* Cuando lo veas, revisa tus ajustes de insulina.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 Para cambiar la DIA o el pico, añade una nueva insulina con **+**, ajústala, guárdala y pulsa **▶ Activar**. Consulta [Cambiar la insulina en uso](#Config-Builder-insulin-change-active).
