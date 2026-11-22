@@ -1,6 +1,6 @@
 # Обзор компонентов
 
-**AAPS** is not just a (self-built) application; it is one of several modules of your closed loop system. Before deciding on components, it is a good idea to look at the component documentation.
+**AAPS** — это не просто (самостоятельно собранное) приложение; это один из нескольких модулей вашей системы замкнутого цикла. Прежде чем выбирать компоненты, полезно посмотреть их документацию.
 
 ![Обзор компонентов](../images/modules.png)
 
@@ -18,7 +18,7 @@
 
 ### Хорошо подобранные дозы и коэффициенты для компенсации
 
-Even though this is not something to create or buy, it is probably the most underestimated 'module' — but it is essential. When you let an algorithm help manage your diabetes, it needs to know the right settings so it does not make severe mistakes. Даже если у вас все еще нет других модулей, можно проверить и отредактировать свой **профиль** вместе с эндокринологом.
+Этот «модуль» нельзя создать или купить, и его, наверное, недооценивают больше всего — но он обязателен. Если вы доверяете алгоритму помогать управлять диабетом, ему нужны правильные настройки, чтобы он не совершал серьезных ошибок. Даже если у вас все еще нет других модулей, можно проверить и отредактировать свой **профиль** вместе с эндокринологом.
 
 **Профиль** включает в себя:
 
@@ -28,7 +28,7 @@ Even though this is not something to create or buy, it is probably the most unde
 
 Большинство пользователей систем ИПЖ используют циклические суточные величины скорости базала (BR), гормональную чувствительность к инсулину ISF и углеводный коэффициент CR.
 
-Alongside your **Profile**, you also need to configure your **insulin** in **Manage → Insulin settings**, including its DIA (duration of insulin action) — see [Insulin settings](#Config-Builder-insulin-dia).
+Кроме **профиля** нужно также настроить **инсулин** в **Управление → Настройки инсулина**, включая его DIA (время действия инсулина) — см. [Настройки инсулина](#Config-Builder-insulin-dia).
 
 More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
 
@@ -42,7 +42,7 @@ See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md)
 
 **Advantages and disadvantages of some pump models**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. И батарея у нее стандартная: ее можно купить на любой заправке или в круглосуточном магазине, а если она очень нужна, можно «одолжить» ее из пульта в гостиничном номере ;-).
 
 The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
 
@@ -54,7 +54,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 
 ### Источник данных гликемии
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+См. отдельную страницу [Совместимые CGM](../Getting-Started/CompatiblesCgms.md).
 
 ### **AAPS**-.apk file
 
@@ -62,28 +62,28 @@ The main component of the system. In order to install the app, you have to build
 
 ### Reporting server
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+Сервер отчетов показывает ваши данные о глюкозе и терапии и создает отчеты для подробного анализа. Сейчас с AAPS можно использовать два сервера отчетов: [Nightscout](#SettingUpTheReportingServer-nightscout) и [Tidepool](#SettingUpTheReportingServer-tidepool). Оба позволяют наглядно видеть данные о диабете за период времени и дают статистику по **времени в диапазоне** (TIR) и другим показателям.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set one up, as it is required to fulfill [**Objective 1**](#objectives-objective1).
+Сервер отчетов не зависит от других модулей. Если вы не хотите пользоваться сервером отчетов, знайте, что для долгосрочной работы **AAPS** он не обязателен. Но настроить его все равно нужно, так как он требуется для выполнения [**Цели 1**](#objectives-objective1).
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+Подробнее о настройке сервера отчетов можно прочитать [здесь](../SettingUpAaps/SettingUpTheReportingServer.md).
 
 ## Дополнительные модули
 
 ### Смарт-часы
 
-You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
+Можно выбрать любые смарт-часы с **Wear OS 3** или новее. Подробнее см. [Смарт-часы и AAPS](../Getting-Started/Watches.md).
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+Пользователи составляют [список проверенных телефонов и часов](#Phones-list-of-tested-phones). Для **AAPS** есть разные циферблаты, их можно найти [здесь](../WearOS/WearOsSmartwatch.md).
 
 ### xDrip
 
-Even if you don't need the xDrip app as your **BG Source**, you can still use it, for example for alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when an alarm should be active, choose whether it can override silent mode, etc. Some xDrip information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentation for this app is not always up to date, as it changes quickly.
+Даже если приложение xDrip вам не нужно как **Источник ГК**, им все равно можно пользоваться, например для сигналов тревоги или другого показа уровня глюкозы. Сигналов тревоги может быть сколько угодно: можно задать время, когда сигнал активен, выбрать, может ли он звучать в беззвучном режиме, и т. д. Немного информации о xDrip можно найти [здесь](../CompatibleCgms/xDrip.md). Учтите, что документация этого приложения не всегда актуальна, так как оно быстро меняется.
 
 ## Что делать во время ожидания модулей
 
-It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+Иногда получение всех модулей для замыкания цикла занимает какое-то время. But no worries, there are a lot of things you can do while waiting. **Необходимо** проверить и (при необходимости) скорректировать базальные скорости (BR), углеводный коэффициент (IC), факторы чувствительности к инсулину (ISF) и т. д. Кроме того, открытый цикл может быть хорошим способом проверить систему и познакомиться с **AAPS**. В этом режиме **AAPS** дает рекомендации по терапии, которые вы выполняете вручную.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Можно продолжать читать документацию, общаться с другими пользователями ИПЖ онлайн или вживую, [читать](../UsefulLinks/BackgroundReading.md) документацию или то, что пишут другие пользователи (но будьте осторожны: не все верно или подходит для повторения).
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective, and set up your hardware.
+**Готово?** Если у вас собраны все компоненты **AAPS** (поздравляем!) или хотя бы достаточно для начала работы в режиме открытого цикла, сначала прочитайте [описание Целей](../SettingUpAaps/CompletingTheObjectives.md) перед каждой новой Целью и настройте свое оборудование.
