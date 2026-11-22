@@ -31,6 +31,7 @@ A **AAPS** v4 la configuració es troba a la pantalla **Configuració**. Hi ha t
 - Per defecte **AAPS** segueix l'idioma del telèfon (recomanat).
 
 - Si voleu **AAPS** en un idioma diferent del del telèfon, trieu-lo aquí. A Android 13 i posteriors, **AAPS** el registra com a idioma propi de l'aplicació a Android, de manera que totes les seves pantalles, la pantalla principal, els widgets i la manera d'escriure els números el segueixen.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Quan canvieu l'idioma, els textos d'**AAPS** passen al nou idioma de seguida. Si alguns textos encara es mostren en l'idioma anterior, reinicieu **AAPS**.
 - A Android 12 aquesta opció no es mostra: **AAPS** sempre fa servir l'idioma del telèfon.
@@ -86,6 +87,10 @@ Trieu entre el tema clar, el tema fosc o seguir la configuració del sistema del
 
 ![Configuració > Protecció](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Clau mestra
 
@@ -110,9 +115,9 @@ Si heu oblidat la clau mestra, vegeu [Com restablir la clau mestra?](#FAQ-reset-
 
 ### Protecció de l'aplicació
 
-Si l'aplicació està protegida, heu d'introduir la contrasenya o fer servir l'autenticació biomètrica del telèfon per obrir **AAPS**, i també quan hi torneu després del [temps d'espera de la protecció](#Preferences-password-and-pin-retention).
+Si l'aplicació està protegida, heu d'introduir la contrasenya o fer servir l'autenticació biomètrica del telèfon per obrir **AAPS**, i també quan hi torneu després del [temps d'espera de la protecció](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** es tancarà immediatament si s'introdueix una contrasenya incorrecta, però continuarà funcionant en segon pla si abans s'havia obert correctament.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Protecció del bolus
 
