@@ -3,98 +3,98 @@
 # Izrada u pregledniku: rješavanje problema
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+Ova stranica skuplja savjete za rješavanje problema za [Izrada u pregledniku](../SettingUpAaps/BrowserBuild.md).
 ```
 
 (aaps-builder-troubleshooting)=
 
 ## AAPS Builder
 
-### Step 1: the repository
+### Korak 1: repozitorij
 
 (aaps-builder-ts-repo-exists)=
 
-#### "my-aaps already exists in this account"
+#### „my-aaps already exists in this account“
 
-![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+![Repozitorij već postoji](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
 
-You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+Ovaj repozitorij već imate, na primjer iz ranijeg pokušaja. Zatvorite karticu GitHuba, zadržite taj naziv u koraku 1 stranice postavki i nastavite. Ako ste za njega već napravili korake 2 i 3, vaš ključ je još u njemu: nastavite s [korakom 4](#aaps-builder-step4). Ako je izrađen ranijom verzijom stranice postavki, jednom ažurirajte njegov workflow kako je objašnjeno u [Ažuriranje AAPS-a](#aaps-builder-updates). Želite li početi ispočetka? Upišite drugi naziv, na primjer `my-aaps-2`, i u koraku 2 koristite isto spremište ključeva.
 
 (aaps-builder-ts-user-not-found)=
 
-#### "No GitHub user with this name"
+#### „No GitHub user with this name“
 
-![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+![Nema GitHub korisnika](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
 
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
+- **„No GitHub user with this name“** u koraku 1: upišite svoje GitHub korisničko ime kako je prikazano u vašem GitHub profilu, a ne svoju e-poštu.
+- **Nema gumba „Build AAPS“ ili „Run workflow“ ili je repozitorij prazan**: repozitorij nije izrađen iz predloška. Izbrišite ga (**Settings** → dno stranice → **Delete this repository**) i ponovite [korak 1](#aaps-builder-step1) gumbom **Izradi moj privatni repozitorij**.
 
-### Step 3: the secret
+### Korak 3: tajna
 
 (aaps-builder-ts-404)=
 
-#### "Page not found" (404)
+#### „Page not found“ (404)
 
 ![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
 
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
+- **„Page not found“ (404) kada stranica postavki otvori GitHub**: prijavite se na github.com u istom pregledniku (GitHub prikazuje 404 za privatne repozitorije kada niste prijavljeni). Ako ste prijavljeni, korisničko ime ili naziv repozitorija u koraku 1 stranice postavki ne odgovara vašem repozitoriju. Upišite točne nazive.
 
-### Step 4: the build
+### Korak 4: izrada
 
 (aaps-builder-ts-workflow-not-found)=
 
-#### "This workflow does not exist"
+#### „This workflow does not exist“
 
 ![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
 
-Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+Odmah nakon izrade repozitorija GitHub možda još nije pročitao njegovu datoteku workflowa: **Build AAPS** nedostaje na kartici **Actions** i nema gumba **Run workflow**. Svaka mala promjena datoteke natjera GitHub da je pročita:
 
-1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
-2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+1. U svom repozitoriju otvorite **Code**, zatim mapu `.github`, zatim `workflows`, zatim datoteku `build.yml`.
+2. Dodirnite izbornik **⋯** u gornjem desnom kutu datoteke, a zatim **Edit file… In place** (na računalu kliknite olovku).
 
-   ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+   ![Izbornik datoteke](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
 
-3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+3. Dodirnite sam kraj teksta i dodajte prazan redak (Enter). Dodirnite **Commit changes…** na vrhu.
 
-   ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
+   ![Uređivač](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
 
-4. Tap **Commit changes** again.
+4. Ponovno dodirnite **Commit changes**.
 
    ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
 
-5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+5. Ponovno otvorite karticu **Actions**: **Build AAPS** je sada na popisu workflowa (na telefonu se popis otvara ikonom lijevo od **All workflows**). Dodirnite ga, a zatim **Run workflow**.
 
-   ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+   ![Popis workflowa](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
 
 (aaps-builder-ts-build-failed)=
 
-#### The build failed (red cross)
+#### Izrada nije uspjela (crveni križić)
 
-1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+1. Na stranici postavki dodirnite **Otvori moje izrade** i dodirnite izradu s crvenim križićem.
 
-   ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+   ![Neuspjela izrada](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
 
-2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+2. Stranica izrade prikazuje **Failure** i koji dio nije uspio: **AAPS / Check** (repozitorij, tajna, verzija ili varijanta: ništa nije izrađeno) ili **AAPS / Build AAPS**.
 
-   ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+   ![Stranica izrade: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
 
-3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+3. Pomaknite se do **Annotations** prstom na tekstu, a ne na dijagramu. Crveni reci objašnjavaju problem: dodirnite **Show more** da pročitate cijelu poruku, a zatim je pronađite ispod.
 
    ![Annotations](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
 
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
-- **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
-- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Nikada ne dijelite sadržaj svojih tajni.
+- **„Secret KEYSTORE_SET is missing“**: napravite korak 3 na stranici postavki.
+- **Izrada staje s porukom „This repository is PUBLIC“**: u svom repozitoriju otvorite **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, a zatim ponovno pokrenite izradu.
+- **„Version … does not exist“**: mogu se izraditi samo objavljene verzije **AAPS-a**, one na [stranici s oznakama (tags)](https://github.com/nightscout/AndroidAPS/tags) repozitorija nightscout/AndroidAPS, na primjer `3.3.2.0`. Naziv grane kao što je `dev` ne radi. Koristite `latest` ili upišite oznaku (tag) točno kako je navedena.
+- **„Variant … is not supported“**: vaša datoteka workflowa je starija verzija. Zamijenite je kako je objašnjeno u [Ažuriranje AAPS-a](#aaps-builder-updates).
+- **„The secret is too short“**, **„The secret is not a valid code“** ili **„The secret does not contain a keystore“**: u tajnu je zalijepljen pogrešan tekst, često sama riječ `KEYSTORE_SET` ili samo dio koda. U svom repozitoriju otvorite **Settings** → **Secrets and variables** → **Actions**, uredite `KEYSTORE_SET` i ponovno zalijepite dugi kod iz **Kopiraj tajnu** (ako ste zatvorili stranicu postavki, najprije ponovite korak 2).
+- **„Keystore, password or alias is wrong“**: provjerite lozinku i alias svog spremišta ključeva, a zatim ponovite korake 2 i 3 na stranici postavki.
+- **„Google Drive access has expired or was revoked“**: ponovite [korak 6](#aaps-builder-google-drive) i ažurirajte tajnu `GDRIVE_OAUTH2`.
+- **„Process completed with exit code 1“ i crveni redak sa samo poveznicom na `services.gradle.org`**, nakon manje od minute: izrada nije mogla preuzeti Gradle, alat koji joj treba za izradu aplikacije. Web stranica Gradlea nije odgovarala. Vaš repozitorij i vaše postavke su u redu. Pričekajte pola sata, a zatim [ponovno pokrenite izradu](#aaps-ci-rerun).
+- **Druga pogreška**: [pročitajte dnevnik izrade](#aaps-ci-read-the-logs), a zatim [ponovno pokrenite izradu](#aaps-ci-rerun). Ako opet ne uspije na isti način, zatražite pomoć i navedite naziv koraka koji nije uspio i retke s pogreškom. Nikada ne dijelite sadržaj svojih tajni.
 
-### Step 5: the app
+### Korak 5: aplikacija
 
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+- **Nema poveznice Download ili se otvorila aplikacija GitHub**: aplikacija GitHub ne može preuzimati izrade. Otvorite izradu u Chromeu kako je objašnjeno u [koraku 5](#aaps-builder-step5). Da se poveznice na GitHub više ne otvaraju u aplikaciji: Android **Postavke** → **Aplikacije** → **GitHub** → **Otvori prema zadanim postavkama** (Open by default) → isključite **Otvaraj podržane veze** (Open supported links).
 
 ## Rješavanje problema s AAPS-CI
 
@@ -195,8 +195,8 @@ Dodirnite **Re-run jobs**. Novu izradu možete pokrenuti i preko **Run workflow*
   - [Ažurirajte tajnu `GDRIVE_OAUTH2`](#aaps-ci-update-secret) u svom GitHub repozitoriju novim tokenom, a zatim [ponovno pokrenite izradu](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAuth Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
+### Isključite softver koji može ometati OAuth provjeru
+  - Prije nego što pokušate dobiti OAuth ključ, isključite na telefonu svaki VPN ili sigurnosnu aplikaciju (vatrozid, antimalware...).
 
 (aaps-ci-actions-permission)=
 ### Provjerite postavke dopuštenja za GitHub Actions
