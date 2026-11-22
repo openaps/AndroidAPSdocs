@@ -43,7 +43,7 @@ Ouvrez les paramètres Equil avec **Paramètres** sur la carte **Equil**, ou ave
 ![Paramètres du pilote Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Alarme batterie faible** : vous avertit quand la pile de la pompe est faible.
-* **Alerte réservoir bas** : vous avertit quand il reste peu d'insuline dans le réservoir.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Son d'alerte** : comment la pompe vous alerte : **Muet**, **Vibreur uniquement**, **Son uniquement** ou **Son et vibreur**.
 * **Vitesse du bolus** : la vitesse à laquelle un bolus est délivré : **1,5 U/min (standard)**, **3 U/min**, **6 U/min** ou **12 U/min**. Un bolus plus rapide peut donner plus d'alarmes d'occlusion.
 
