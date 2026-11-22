@@ -111,6 +111,8 @@
 
 업그레이드할 때 **AAPS**는 v3 프로파일 전환에 이미 저장된 인슐린과 DIA를 그대로 유지합니다. 인슐린은 알지만 DIA를 모르는 이전 기록을 발견하면, 그 기록에는 기본 DIA를 사용하고 메시지를 한 번 표시합니다. 예: *이전 기록에는 인슐린 작용 시간이 없어서 Lyumjev에 9.0시간을 사용했습니다. 인슐린 설정을 확인하십시오. 이미 이전된 기록은 나중에 수정되지 않습니다.* 이 메시지가 보이면 인슐린 설정을 확인하십시오.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 DIA나 피크를 바꾸려면 **+**로 새 인슐린을 추가하고, 값을 조정하여 저장한 다음 **▶ 활성화**하십시오. [사용 중인 인슐린 변경](#Config-Builder-insulin-change-active)을 참조하십시오.
