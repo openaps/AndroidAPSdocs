@@ -2,53 +2,53 @@
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+**Config Builder** se sada zove **Konfiguracija** i nalazi se u **izborniku** (☰). Pogledajte [Što se promijenilo u AAPS-u v4](#v4-changes).
 ```
 
-**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. [Vodič korak po korak](#configuration-v4) nalazi se u nastavku; ostatak ove stranice detaljno opisuje svaki odjeljak.
+U **Konfiguraciji** birate koji su dodaci aktivni (CGM, pumpa, APS algoritam, osjetljivost, sinkronizacija, …) i otvarate svaki dodatak i njegove postavke. [Vodič korak po korak](#configuration-v4) nalazi se u nastavku; ostatak ove stranice detaljno opisuje svaki odjeljak.
 
 (configuration-v4)=
-## Configuration in AAPS v4
+## Konfiguracija u AAPS-u v4
 
-In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (_“Set up your configuration (CGM, pump, …) and enable features”_).
+U **AAPS-u** v4 dodirnite **izbornik** (☰) u **gornjem lijevom** kutu glavnog zaslona i odaberite **Konfiguracija** (_„Postavite konfiguraciju (CGM, pumpa, …) i omogućite značajke“_).
 
-![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![Gornji lijevi izbornik sa stavkom Konfiguracija](../images/v4/Configuration/configuration_menu.png)
 
-Plugins are grouped by **category** — for example _Smoothing_, _Calibration_, _Sensitivity detection_, _APS_, _Communication_ and _General_. Svaki redak prikazuje naziv kategorije i **trenutno aktivni** dodatak (npr. _APS → OpenAPS SMB_). Dodirnite redak da otvorite kategoriju.
+Dodaci su grupirani po **kategorijama** – na primjer _Zaglađivanje_, _Kalibracija_, _Detekcija osjetljivosti_, _APS_, _Komunikacija_ i _Općenito_. Svaki redak prikazuje naziv kategorije i **trenutno aktivni** dodatak (npr. _APS → OpenAPS SMB_). Dodirnite redak da otvorite kategoriju.
 
-![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+![Zaslon Konfiguracija s popisom kategorija dodataka](../images/v4/Configuration/configuration_plugins.png)
 
-Inside a category you see the plugins available for it. U kategorijama s jednim izborom odabirete aktivni dodatak; neke kategorije dopuštaju višestruki izbor (_„Odaberite sve koji odgovaraju“_). Each plugin offers two actions:
+Unutar kategorije vidite dodatke koji su za nju dostupni. U kategorijama s jednim izborom odabirete aktivni dodatak; neke kategorije dopuštaju višestruki izbor (_„Odaberite sve koji odgovaraju“_). Svaki dodatak nudi dvije radnje:
 
-- **Open plugin** — opens the plugin's own screen.
-- **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+- **Otvori dodatak** – otvara vlastiti zaslon dodatka.
+- **Postavke** – otvara postavke dodatka (postavke mogu biti grupirane u odjeljke koji se mogu proširiti).
 
-![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+![Kategorija s dodacima, svaki s „Otvori dodatak“ i „Postavke“](../images/v4/Configuration/configuration_open_plugin.png)
 
 (configuration_sync_icon)=
-### The mobile icon — “synced from the master”
+### Ikona mobitela – „sinkronizirano s glavnog uređaja“
 
-A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+Mala **ikona mobitela (telefona)** pored kategorije ili postavke znači da je ta stavka **sinkronizirana s glavnog uređaja** – njezina vrijednost/odabir dolazi na ovaj uređaj preko kanala NSClientV3 (Nightscout).
 
-Na **klijentu** (**AAPSClient**) ove su stavke **usklađene s glavnim uređajem**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on _Smoothing_, _Calibration_, _Sensitivity detection_ and _APS_. Kako se točno glavni uređaj i klijenti usklađuju — i koje postavke možete mijenjati s koje strane — opisano je u odjeljku [Upravljanje glavni uređaj ↔ klijent](#client-master-config-prefs).
+Na **klijentu** (**AAPSClient**) ove su stavke **usklađene s glavnim uređajem**. Ikona se prikazuje samo na klijentu, pa se ne vidi na snimci zaslona iznad, koja je napravljena u glavnoj aplikaciji **AAPS**. Na klijentu se obično pojavljuje kod _Zaglađivanje_, _Kalibracija_, _Detekcija osjetljivosti_ i _APS_. Kako se točno glavni uređaj i klijenti usklađuju — i koje postavke možete mijenjati s koje strane — opisano je u odjeljku [Upravljanje glavni uređaj ↔ klijent](#client-master-config-prefs).
 
-Ista se ikona pojavljuje i **unutar postavki**, pokraj pojedinih postavki koje se sinkroniziraju. In the example below _Absorption cutoff_ carries the icon; settings without the icon are configured per device:
+Ista se ikona pojavljuje i **unutar postavki**, pokraj pojedinih postavki koje se sinkroniziraju. U primjeru ispod ikonu ima _Granično vrijeme apsorpcije_; postavke bez ikone postavljaju se na svakom uređaju zasebno:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![Postavke dodatka – ikona mobitela označava sinkronizirane postavke](../images/v4/ClientMaster/preferences_synced_icon.png)
 
-Items **without** the icon are configured **per device**. Najvažniji primjer je sama veza **NSClientV3 (Komunikacija)** — **Nightscout URL**, **pristupni token** i **WebSockets** postavljaju se na svakom telefonu zasebno, pa **nemaju** ikonu mobitela.
+Stavke **bez** ikone postavljaju se **na svakom uređaju zasebno**. Najvažniji primjer je sama veza **NSClientV3 (Komunikacija)** — **Nightscout URL**, **pristupni token** i **WebSockets** postavljaju se na svakom telefonu zasebno, pa **nemaju** ikonu mobitela.
 
 ---
 
 (Config-Builder-tab-or-hamburger-menu)=
-## Opening a plugin screen
+## Otvaranje zaslona dodatka
 
-Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+Svaki zaslon dodatka otvara se na jedan od ovih načina (kartice i potvrdni okvir s okom iz **AAPS-a** v3 više ne postoje, pogledajte [Što se promijenilo u AAPS-u v4](#v4-changes)):
 
-- **Configuration** → the plugin's category → **Open plugin**,
-- the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
-- a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
-- the **search bar** on the main screen.
+- **Konfiguracija** → kategorija dodatka → **Otvori dodatak**,
+- izbornik **Upravljanje** u donjoj navigaciji, za zaslone koje najčešće koristite (Profil, Postavke inzulina, Pumpa, Automatizacija, Hrana...),
+- gumb [Brzog pokretanja](../DailyLifeWithAaps/QuickLaunch.md) koji sami dodate,
+- **traka za pretraživanje** na glavnom zaslonu.
 
 ```{contents}
 :backlinks: entry
@@ -59,245 +59,245 @@ Each plugin screen is opened in one of these ways (the tabs and the eye checkbox
 
 ## Profil
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Ovaj modul nije moguće onemogućiti jer je osnovni dio **AAPS-a**.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+Osnovno objašnjenje što sve sadrži vaš **profil** pročitajte u [Vaš AAPS profil](../SettingUpAaps/YourAapsProfile.md).
 
 (insulin)=
 (Config-Builder-insulin)=
 ## Inzulin
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![Postavke inzulina](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+U **AAPS-u** 4 inzulin više nije dodatak koji se odabire u **Konfiguraciji**. Otvorite **Upravljanje → Postavke inzulina** i postavite inzulin koji koristite.
 
 Uređivač inzulina omogućuje vam:
 
-- give the insulin an **Insulin nickname** so it is easy to recognise,
-- set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
-- tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+- dajte inzulinu **Nadimak inzulina** da ga lako prepoznate,
+- postavite **Vrh djelovanja** (vrijeme do najveće aktivnosti inzulina, u minutama) i **DIA** (trajanje djelovanja inzulina, u satima), upisivanjem vrijednosti ili gumbima **–** / **+**,
+- dodirnite gumb predloška **Učitaj vrh djelovanja iz** – **Novorapid** (75 min), **Fiasp** (55 min) ili **Lyumjev** (45 min) – da biste u jednom koraku upisali standardno vrijeme vrha djelovanja za taj inzulin.
 
 Dopušteni rasponi jednaki su za svaki inzulin:
 
-- **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
-- **Peak**: 35 to 120 minutes.
+- **DIA**: od 5 do 9 sati (od 5 do 10 sati ako je vrsta pacijenta postavljena na **Trudnoća**). Kako odabrati vrijednost, pročitajte u [Trajanje djelovanja inzulina (DIA) i vrh djelovanja](#Config-Builder-insulin-dia).
+- **Vrh djelovanja**: od 35 do 120 minuta.
 
-The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
+Krivulje **aktivnog inzulina** (IOB) i **aktivnosti** prikazane na dnu uređivača mijenjaju se dok mijenjate vrijednosti, pa odmah vidite kako vaše postavke oblikuju djelovanje inzulina.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+Više informacija o inzulinskom profilu kako ga prikazuje **AAPS** pročitajte [ovdje](#AapsScreens-insulin-profile).
 
 (Config-Builder-insulin-change-active)=
 ### Promjena inzulina koji se koristi (DIA ili vrh djelovanja)
 
-The insulin marked **ACTIVE** is the one your running profile uses. Njegova su polja zasivljena: ne možete ga urediti ni izbrisati. Tako naziv inzulina prikazan u vašem aktivnom profilu uvijek odgovara postavkama koje se stvarno koriste.
+Inzulin označen s **AKTIVAN** je onaj koji koristi vaš aktivni profil. Njegova su polja zasivljena: ne možete ga urediti ni izbrisati. Tako naziv inzulina prikazan u vašem aktivnom profilu uvijek odgovara postavkama koje se stvarno koriste.
 
 Da promijenite DIA ili vrh djelovanja koji koristite:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
-2. Tap **+** (_Add new insulin_). **AAPS** creates a copy of the insulin shown on screen.
-3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
-4. Tap **▶** (_Activate insulin_) and confirm. The new insulin becomes **ACTIVE**.
+1. Otvorite **Upravljanje → Postavke inzulina**. Ako se zaslon otvori samo za čitanje (**✏️ olovka** na gornjoj traci), dodirnite olovku i otključajte postavke.
+2. Dodirnite **+** (_Dodaj novi inzulin_). **AAPS** izrađuje kopiju inzulina prikazanog na zaslonu.
+3. Postavite novi **Vrh djelovanja** i/ili **DIA**, a zatim dodirnite ikonu za spremanje (gore desno).
+4. Dodirnite **▶** (_Aktiviraj inzulin_) i potvrdite. Novi inzulin postaje **AKTIVAN**.
 
 ```{admonition} The name includes peak and DIA
 :class: note
-**AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example _Fiasp 55m 8h U100_), so you can tell your configurations apart at a glance.
+**AAPS** nazivu inzulina automatski dodaje vrh djelovanja, DIA i koncentraciju (na primjer _Fiasp 55m 8h U100_), pa svoje konfiguracije razlikujete na prvi pogled.
 ```
 
 Stari inzulin možete izbrisati kada više nije aktivan.
 
-### The "Load peak from" presets
+### Predlošci „Učitaj vrh djelovanja iz“
 
-In **AAPS** 4 there is no list of insulin types to choose from. Svaki inzulin koristi istu eksponencijalnu krivulju djelovanja; razlikuju se samo **Vrh djelovanja** i **DIA**. Predlošci **Učitaj vrh djelovanja iz** u uređivaču inzulina jednim dodirom upisuju preporučeni vrh djelovanja za najčešće inzuline (mala ⓘ pokraj **Učitaj vrh djelovanja iz** prikazuje ih s njihovim vrijednostima vrha djelovanja). **Vrh djelovanja** i **DIA** i dalje možete naknadno prilagoditi.
+U **AAPS-u** 4 ne postoji popis vrsta inzulina za odabir. Svaki inzulin koristi istu eksponencijalnu krivulju djelovanja; razlikuju se samo **Vrh djelovanja** i **DIA**. Predlošci **Učitaj vrh djelovanja iz** u uređivaču inzulina jednim dodirom upisuju preporučeni vrh djelovanja za najčešće inzuline (mala ⓘ pokraj **Učitaj vrh djelovanja iz** prikazuje ih s njihovim vrijednostima vrha djelovanja). **Vrh djelovanja** i **DIA** i dalje možete naknadno prilagoditi.
 
 Vrh djelovanja mijenjajte od preporučene vrijednosti samo ako razumijete učinak te promjene. [Graf krivulje inzulina](#AapsScreens-insulin-profile) pomaže vam razumjeti krivulje.
 
 #### Novorapid
 
-![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+![Krivulja inzulina s vrhom djelovanja za Novorapid](../images/Profile/ConfBuild_Insulin_RAO.png)
 
-- recommended for Humalog, Novolog and Novorapid (called _Rapid-Acting Oref_ in **AAPS** v3)
-- Peak = 75 minutes after injection
+- preporučeno za Humalog, Novolog i Novorapid (u **AAPS-u** v3 zvao se _Rapid-Acting Oref_)
+- Vrh djelovanja = 75 minuta nakon injekcije
 
 #### Fiasp
 
-![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+![Krivulja inzulina s vrhom djelovanja za Fiasp](../images/Profile/ConfBuild_Insulin_URO.png)
 
-- recommended for Fiasp (called _Ultra-Rapid Oref_ in **AAPS** v3)
-- Peak = 55 minutes after injection
+- preporučeno za Fiasp (u **AAPS-u** v3 zvao se _Ultra-Rapid Oref_)
+- Vrh djelovanja = 55 minuta nakon injekcije
 
 (Config-Builder-lyumjev)=
 #### Lyumjev
 
-![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+![Krivulja inzulina s vrhom djelovanja za Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
 
-- recommended for Lyumjev
-- Peak = 45 minutes after injection
+- preporučeno za Lyumjev
+- Vrh djelovanja = 45 minuta nakon injekcije
 
-#### Custom peak
+#### Vlastiti vrh djelovanja
 
-- There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
-- A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+- U **AAPS-u** 4 ne postoji zasebna vrsta inzulina „Free-Peak Oref“: unesite bilo koji **Vrh djelovanja** (od 35 do 120 minuta) izravno u [uređivaču inzulina](#Config-Builder-insulin), bez predloška.
+- Vlastiti vrh djelovanja koristan je ako koristite inzulin koji nije na popisu ili mješavinu različitih inzulina.
 
 (Config-Builder-insulin-dia)=
-### Duration of insulin action (DIA) and peak
+### Trajanje djelovanja inzulina (DIA) i vrh djelovanja
 
 ```{warning}
-In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+Kod korištenja petlje smanjenje DIA ili vrha djelovanja uvijek povećava isporučeni inzulin. DIA u AAPS-u djeluje drukčije nego u komercijalnim AID sustavima, a nepažljive promjene ovih postavki mogu promijeniti doziranje inzulina mnogo više ili manje nego što očekujete.
 ```
 
-AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA je teoretsko trajanje do trenutka kada aktivni inzulin (IOB) padne na nulu, a vrh djelovanja je trenutak kada je učinak inzulina najjači. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+AAPS opisuje tijek djelovanja inzulina matematičkom formulom, koja se postavlja s pomoću **DIA** i usko povezane postavke **vrha djelovanja**. DIA je teoretsko trajanje do trenutka kada aktivni inzulin (IOB) padne na nulu, a vrh djelovanja je trenutak kada je učinak inzulina najjači. Iz toga nastaju krivulja aktivnog inzulina (IOB) i krivulja aktivnosti, koja je jednostavno **brzina** opadanja aktivnog inzulina.
 
-Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). Ovaj nedostajući bazalni inzulin u potpunosti se oduzima od aktivnog inzulina (IOB), što objašnjava zašto IOB u praksi padne na nulu mnogo sati ranije od postavljenog DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
+Imajte na umu da je kod korištenja petlje u AAPS-u normalno da postoje razdoblja [nultog privremenog bazala](#Open-APS-features-super-micro-bolus-smb). Ovaj nedostajući bazalni inzulin u potpunosti se oduzima od aktivnog inzulina (IOB), što objašnjava zašto IOB u praksi padne na nulu mnogo sati ranije od postavljenog DIA. [Bolusni aktivni inzulin i bazalni aktivni inzulin](#aaps-screens-iob-cob-basal-sens) možete zasebno pogledati na glavnom zaslonu.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS ovako prikazuje aktivnu konfiguraciju inzulina:
+Za postavljanje DIA i vrha djelovanja dodirnite **Upravljanje** na glavnom zaslonu, a zatim **Postavke inzulina**. AAPS ovako prikazuje aktivnu konfiguraciju inzulina:
 
-![Sample insulin configuration](../images/manage/insulin_profile.png)
+![Primjer konfiguracije inzulina](../images/manage/insulin_profile.png)
 
-In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+U ovom primjeru vrh djelovanja je 55 minuta, DIA je 8 sati, a [koncentracija inzulina](#Insulin-Concentration) je standardnih 100 IU/mL.
 
-Zbog utjecaja nultog privremenog bazala, objašnjenog gore, i formule koju AAPS koristi za opadanje aktivnog inzulina (IOB), većina korisnika postavlja znatno veći DIA nego u komercijalnim sustavima. In general, many people find that a **DIA** of 9h works well for them. Kada steknete više iskustva s AAPS-om i imate dobro podešen profil, možete pokušati pronaći osobne postavke DIA i vrha djelovanja uz pomoć informacija u nastavku.
+Zbog utjecaja nultog privremenog bazala, objašnjenog gore, i formule koju AAPS koristi za opadanje aktivnog inzulina (IOB), većina korisnika postavlja znatno veći DIA nego u komercijalnim sustavima. Općenito, mnogi ljudi smatraju da im **DIA** od 9 h dobro odgovara. Kada steknete više iskustva s AAPS-om i imate dobro podešen profil, možete pokušati pronaći osobne postavke DIA i vrha djelovanja uz pomoć informacija u nastavku.
 
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Budući da bazalna stopa u AAPS-u neizravno utječe na opadanje aktivnog inzulina (IOB), previsoke bazalne stope mogu prikriti previsok DIA, i obrnuto. Zato je smisleno najprije pažljivo podesiti bazalne stope, a tek onda prilagođavati DIA i vrh djelovanja. Osim toga, imajte na umu da postavke DIA i vrha djelovanja djeluju jedna na drugu: učinak DIA ovisi o vrhu djelovanja, i obrnuto.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Ovi grafikoni pokazuju točan utjecaj DIA i vrha djelovanja na krivulje aktivnog inzulina (IOB), u cijelom rasponu dopuštenih vrijednosti.
 
-Adjusting DIA:
+Prilagodba DIA:
 
 ```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Prilagodba vrha djelovanja:
 
 ```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Na kraju, usporedba kada se DIA i vrh djelovanja prilagođavaju zajedno. Logika je da se obje vrijednosti mijenjaju u istom omjeru, tako da je `49/35 ~ 7/5`. Ili slično, `120/93 ~ 9/7`. Razmaci su isti bez obzira na početni DIA ili vrh djelovanja, sve dok je relativna promjena ista za obje vrijednosti.
 
 ```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Imajte na umu da se kod ovakve prilagodbe DIA i vrha djelovanja svaka točka krivulje pomiče za isti relativni iznos.
 
 ````
 
-#### Further reading on DIA and peak configuration
+#### Dodatno čitanje o postavljanju DIA i vrha djelovanja
 
-- [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
-- [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-- [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-- [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+- [Tehnički detalji i povijesna pozadina iz OpenAPS-a, prethodnika AAPS-a](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+- [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) (zašto često griješimo u trajanju djelovanja inzulina) na Diabettechu.
+- [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) (eksponencijalne krivulje inzulina i Fiasp) na See My CGM (arhiva).
+- [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) (revidirani model Humaloga u zatvorenoj petlji) i drugi članci na Bionic Wookieju, koji preporučuju DIA od 9 h za Lyumjev, Fiasp, NovoRapid i Humalog.
 
 (Config-Builder-bg-source)=
 ## Izvor GUK-a
-Select the blood glucose source you are using. Više informacija o postavljanju potražite na stranici [Kompatibilni CGM-ovi](../Getting-Started/CompatiblesCgms.md).
+Odaberite izvor glukoze u krvi koji koristite. Više informacija o postavljanju potražite na stranici [Kompatibilni CGM-ovi](../Getting-Started/CompatiblesCgms.md).
 
-![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+![Konfiguracija > Izvor GUK-a](../images/v4/Configuration/configuration_bg_source.png)
 
-Scroll down to see the other sources:
+Pomaknite se prema dolje da biste vidjeli ostale izvore:
 
-![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+![Konfiguracija > Izvor GUK-a, nastavak](../images/v4/Configuration/configuration_bg_source_2.png)
 
-![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+![Konfiguracija > Izvor GUK-a, kraj popisa](../images/v4/Configuration/configuration_bg_source_3.png)
 
-- [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
-- [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+- [xDrip+ BG](../CompatibleCgms/xDrip.md) – i za kompatibilne aplikacije kao što je [Juggluco](../CompatibleCgms/Juggluco.md)
+- [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) – samo ako znate što radite, pogledajte [Izvor GUK-a](../Getting-Started/CompatiblesCgms.md).
 - [MM640g](../CompatibleCgms/MM640g.md)
-- Glimp - only version 4.15.57 and newer are supported
+- Glimp – podržana je samo verzija 4.15.57 i novije
 - [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-- MicroTech CGM App - for the Aidex / LinX CGM
+- MicroTech CGM App – za CGM Aidex / LinX
 - [Poctech](../CompatibleCgms/PocTech.md)
-- Tomato (MiaoMiao) - Tomato App for MiaoMiao device
-- [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
-- Intelligo - Intelligo App
-- Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
-- SI App - patched SI App or Sibionics App for Sibionics CGM
-- Sino App - patched app for Sinocare CGM
-- Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
-- Instara - Instara App
-- Random BG - generates random BG data for testing. Može se omogućiti samo u inženjerskoj (razvojnoj) verziji s **Virtualnom pumpom**, pa se u normalnoj instalaciji **AAPS-a** ne može koristiti.
+- Tomato (MiaoMiao) – aplikacija Tomato za uređaj MiaoMiao
+- [Glunovo](https://infinovo.com/) – aplikacija Glunovo za CGM sustav Glunovo
+- Intelligo – aplikacija Intelligo
+- Syai/Ottai – za aplikacije Syai i Ottai (pogledajte [Syai Tag](../CompatibleCgms/SyaiTagX1.md) i [Ottai](../CompatibleCgms/OttaiM8.md))
+- SI App – prilagođena aplikacija SI App ili aplikacija Sibionics za CGM Sibionics
+- Sino App – prilagođena aplikacija za CGM Sinocare
+- Čitač obavijesti – čita vrijednosti glukoze iz obavijesti koje prikazuju službene CGM aplikacije (Dexcom, Medtronic, Eversense itd.)
+- Instara – aplikacija Instara
+- Slučajni GUK – stvara nasumične podatke GUK-a za testiranje. Može se omogućiti samo u inženjerskoj (razvojnoj) verziji s **Virtualnom pumpom**, pa se u normalnoj instalaciji **AAPS-a** ne može koristiti.
 
 ## Smoothing
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Konfiguracija > Zaglađivanje](../images/v4/Configuration/configuration_smoothing.png)
 
-See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Pogledajte [Zaglađivanje podataka GUK-a](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ## Kalibracija
 
-Choose how **AAPS** treats the values it receives from your sensor:
+Odaberite kako **AAPS** obrađuje vrijednosti koje prima s vašeg senzora:
 
-- **No calibration**: the sensor values are used as they are. Koristite ovo kada je senzor već tvornički kalibriran i točan. Ovo je zadana postavka.
-- **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+- **Bez kalibracije**: vrijednosti senzora koriste se kakve jesu. Koristite ovo kada je senzor već tvornički kalibriran i točan. Ovo je zadana postavka.
+- **Linearna kalibracija**: **AAPS** ispravlja vrijednosti senzora nagibom i pomakom koje izračunava iz vaših mjerenja iz prsta.
 
-How to use **Linear calibration**:
+Kako koristiti **Linearnu kalibraciju**:
 
-1. Select **Linear calibration** in the **Calibration** category.
-2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+1. Odaberite **Linearna kalibracija** u kategoriji **Kalibracija**.
+2. Kada umetnete novi senzor, zabilježite promjenu senzora: koristite **Zabilježi promjenu senzora** na zaslonu kalibracije ili u Careportalu unesite umetanje CGM senzora. Tako **AAPS** zna kada je sesija senzora počela. Ako **AAPS** primijeti prazninu u očitanjima dulju od 30 minuta, može vas zamoliti da označite promjenu senzora; ovaj se upit pojavljuje samo na glavnom uređaju, ne na klijentu.
+3. Otvorite dodatak i dodirnite **Dodaj kalibraciju**. Unesite vrijednost izmjerenu iz prsta. **AAPS** je spaja u par s vrijednošću senzora iz zadnjih 10 minuta.
 
-A calibration is accepted only when:
+Kalibracija se prihvaća samo kada:
 
-- a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-- your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-- there is a CGM reading from the last 10 minutes,
-- it is for the current moment. You cannot enter older fingerstick values.
+- je zabilježena promjena senzora i od tada su prošla barem **2 sata** (zagrijavanje),
+- je vaša glukoza stabilna. Ako se mijenja prebrzo, dijaloški okvir vam to javlja i prikazuje granicu,
+- postoji očitanje CGM-a iz zadnjih 10 minuta,
+- se odnosi na sadašnji trenutak. Ne možete unijeti starija mjerenja iz prsta.
 
-How the correction works:
+Kako radi korekcija:
 
-- **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-- Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-- At least **2 pairs** are needed.
-- If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-- The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-- Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+- **AAPS** povlači pravac kroz parove trenutačnog senzora: `corrected value = slope × sensor value + offset` (ispravljena vrijednost = nagib × vrijednost senzora + pomak).
+- Noviji parovi vrijede više od starijih: par star 2 dana vrijedi oko 37 %, par star 4 dana oko 14 %. Zato linija prati vaš senzor i kada njegova očitanja s vremenom odstupaju.
+- Potrebna su barem **2 para**.
+- Ako su parovi blizu jedan drugome (razlika manja od 54 mg/dL / 3 mmol/L), vrijednosti se samo pomiču (pomak, bez nagiba).
+- Nagib se drži između 0,55 i 1,6. Nagib izvan ovog raspona ograničava se na najbližu vrijednost.
+- Sigurnosna granica: ako bi korekcija kod 100 mg/dL (5,5 mmol/L) bila veća od ±30 mg/dL (1,7 mmol/L), korekcija se ne primjenjuje. To vas štiti od pogrešnog unosa.
 
-What it changes:
+Što mijenja:
 
-- The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-- A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-- On the graph, a calibration is shown as a marker at the fingerstick value.
-- Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+- Ispravljena vrijednost koristi se svugdje: GUK na glavnom zaslonu, graf i petlja. Sama očitanja senzora ne mijenjaju se. Korekcija se primjenjuje dodatno, i na ranija očitanja trenutnog senzora.
+- Nova promjena senzora počinje od nule. Parovi iz ranijih senzora više se ne računaju.
+- Na grafu je kalibracija prikazana kao oznaka na vrijednosti mjerenja iz prsta.
+- Kalibracije se sinkroniziraju preko Nightscouta, pa vaši klijenti prikazuju iste ispravljene vrijednosti.
 
-Check and remove entries:
+Provjera i uklanjanje unosa:
 
-- **Open plugin** shows the status (for example _Slope 0.85, mid-range correction -0.4_), a chart of your pairs with the line, and the list of entries.
-- If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+- **Otvori dodatak** prikazuje status (na primjer _Nagib 0,85, korekcija u sredini raspona -0,4_), grafikon vaših parova s pravcem i popis unosa.
+- Ako je unos pogrešan (na primjer, imali ste šećera na prstu), dodirnite ikonu koša pored njega. Linija se odmah ponovno izračunava.
 
 ```{admonition} Using xDrip+ as BG source?
 :class: note
-xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+xDrip+ ima vlastitu kalibraciju. Kalibrirajte samo na jednom mjestu, kako se vrijednosti senzora ne bi ispravljale dvaput.
 ```
 
 ```{admonition} Calibrate with care
 :class: warning
-A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+Pogrešna vrijednost mjerenja iz prsta dovodi do pogrešnih vrijednosti glukoze, a time i do pogrešnog doziranja inzulina. Operite ruke prije mjerenja i ne kalibrirajte dok se vaša glukoza brzo mijenja.
 ```
 
-![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
+![Konfiguracija > Kalibracija](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 ## Pumpa
-Odaberite pumpu koju koristite. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Odaberite pumpu koju koristite. Više informacija o postavljanju pročitajte na stranici [Kompatibilne pumpe](../Getting-Started/CompatiblePumps.md).
 
-![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+![Konfiguracija > Pumpa](../images/v4/Configuration/configuration_pump_list_1.png)
 
 Pomaknite se prema dolje da vidite sve upravljačke programe pumpi:
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+![Konfiguracija > Pumpa, nastavak](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+![Konfiguracija > Pumpa, nastavak](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+![Konfiguracija > Pumpa, kraj popisa](../images/v4/Configuration/configuration_pump_list_4.png)
 
-When you select another pump, **AAPS** asks you to confirm the change:
+Kada odaberete drugu pumpu, **AAPS** traži da potvrdite promjenu:
 
-![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
+![Potvrda zamjene dodatka](../images/v4/Pumps/switch_plugin_dialog.png)
 
 - [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - Dana R Korean (za domaću, korejsku pumpu DanaR)
@@ -305,166 +305,166 @@ When you select another pump, **AAPS** asks you to confirm the change:
 - [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 - [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 - [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
-- Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-- Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+- Omnipod za [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+- Dash za [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 - [Medtronic](../CompatiblePumps/MedtronicPump.md)
 - [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md)
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
-- Virtual pump: open loop - **AAPS** suggestions only
-  - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
+- Virtualna pumpa: otvorena petlja – samo prijedlozi **AAPS-a**
+  - dok radite prve korake s **AAPS-om**, tijekom prvih [ciljeva](../SettingUpAaps/CompletingTheObjectives.md)
   - za pumpu koja još nema upravljački program
 
 (config-builder-wrong-pump-data)=
 ### Poruka: „Podaci dolaze s druge pumpe“
 
-**AAPS** remembers the pump it is connected to (pump type and serial number). Ako primi podatke s druge pumpe, na primjer nakon što je vaša pumpa zamijenjena novom istog modela, prikazuje ovu poruku i zanemaruje podatke s te pumpe:
+**AAPS** pamti pumpu s kojom je povezan (vrstu pumpe i serijski broj). Ako primi podatke s druge pumpe, na primjer nakon što je vaša pumpa zamijenjena novom istog modela, prikazuje ovu poruku i zanemaruje podatke s te pumpe:
 
-![Data is coming from different pump](../images/Screen_DifferentPump.png)
+![Podaci dolaze s druge pumpe](../images/Screen_DifferentPump.png)
 
-To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
+Da biste koristili novu pumpu, promijenite upravljački program pumpe: odaberite **Virtualna pumpa**, potvrdite, a zatim ponovno odaberite svoju pumpu. **AAPS** tada bilježi pumpu s kojom je sada povezan.
 
 (Config-Builder-sensitivity-detection)=
 
 ## Detekcija osjetljivosti
 
-![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Konfiguracija > Detekcija osjetljivosti](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Odaberite vrstu detekcije osjetljivosti. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Ovo tijekom rada analizira povijesne podatke i radi prilagodbe ako prepozna da ste osjetljiviji na inzulin (ili, obrnuto, otporniji) nego obično. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+Odaberite vrstu detekcije osjetljivosti. Više detalja o različitim načinima [pročitajte ovdje](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Ovo tijekom rada analizira povijesne podatke i radi prilagodbe ako prepozna da ste osjetljiviji na inzulin (ili, obrnuto, otporniji) nego obično. Više detalja o tome kako se izračunava sam omjer osjetljivosti pročitajte u [Glavne značajke AAPS-a > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Prije nego dosegnete taj cilj, postotak Autosensa / linija na grafu prikazuju se samo informativno.
+Svoju osjetljivost možete vidjeti na glavnom zaslonu u [dodatnom grafu](#AapsScreens-section-g-additional-graphs) ako odaberete SENS% i pratite bijelu liniju. Napomena: morate biti na [Cilju 8](#objectives-objective8) da bi detekcija osjetljivosti/[Autosens](#Open-APS-features-autosens) mogla automatski prilagođavati količinu isporučenog inzulina. Prije nego dosegnete taj cilj, postotak Autosensa / linija na grafu prikazuju se samo informativno.
 
 ### Postavke apsorpcije
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. U osnovi, to je sigurnosna zaštita.
+Ako koristite Oref1 sa **SMB-om**, morate promijeniti **min_5m_carbimpact** na 8. Vrijednost se koristi samo tijekom praznina u očitanjima **CGM-a** ili kada tjelesna aktivnost „potroši“ sav porast glukoze u krvi koji bi inače naveo **AAPS** da smanjuje aktivne ugljikohidrate (COB). Kada se [apsorpcija ugljikohidrata](../DailyLifeWithAaps/CobCalculation.md) ne može dinamički izračunati na temelju reakcija vaše glukoze, primjenjuje se zadano opadanje vaših ugljikohidrata. U osnovi, to je sigurnosna zaštita.
 
 (Config-Builder-aps)=
 ## APS
 
-![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+![Konfiguracija > APS](../images/v4/Configuration/configuration_aps.png)
 
-Odaberite željeni APS algoritam za prilagodbu terapije. You can view the active detail of the chosen algorithm with **Open plugin**.
+Odaberite željeni APS algoritam za prilagodbu terapije. Aktivne detalje odabranog algoritma možete pogledati s **Otvori dodatak**.
 - OpenAPS AMA
   - Advanced Meal Assist (napredna pomoć za obroke): stariji algoritam, više se ne preporučuje.
   - Jednostavno rečeno, prednost je u tome što nakon bolusa za obrok sustav može brže postaviti visoki privremeni bazal AKO pouzdano unosite ugljikohidrate.
 - [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb)
   - Super Micro Bolus: najnoviji algoritam, preporučen za sve korisnike.
-  - In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  - Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+  - Za razliku od AMA, SMB ne koristi privremene bazalne stope za upravljanje razinom glukoze, nego uglavnom male **Super Micro Boluse** (SMB).
+  - Napomena: preporučuje se koristiti ovaj algoritam od početka, iako SMB-ove zapravo nećete dobivati do [Cilja 9](#objectives-objective9).
 - [Auto ISF](#Open-APS-features-auto-isf)
   - Eksperimentalni algoritam za napredne korisnike. Prikazuje se tek kada su ciljevi ispunjeni.
 
-If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
+Ako prelazite s algoritma AMA na SMB, _min_5m_carbimpact_ morate ručno promijeniti na **8** (zadana vrijednost za SMB) u [Postavke → Postavke apsorpcije](#Preferences-min_5m_carbimpact).
 
 ## Petlja
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Ovaj modul nije moguće onemogućiti jer je osnovni dio **AAPS-a**.
 
-![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+![Konfiguracija > Petlja](../images/v4/Configuration/configuration_loop.png)
 
 ## Ograničenja
 
-![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+![Konfiguracija > Ograničenja](../images/v4/Configuration/configuration_constraints.png)
 
 ### Ciljevi
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. Ovo bi vas trebalo sigurno voditi kroz postavljanje sustava zatvorene petlje.
+**AAPS** ima program učenja (niz ciljeva) koji morate ispuniti korak po korak. Ovo bi vas trebalo sigurno voditi kroz postavljanje sustava zatvorene petlje.
 
-See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
+Više informacija pročitajte na stranici [Ispunjavanje ciljeva](../SettingUpAaps/CompletingTheObjectives.md).
 
 ## Komunikacija
 
-In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
+U ovoj kategoriji (u **AAPS-u** v3 zvala se **Sinkronizacija**) birate želite li i kamo da **AAPS** šalje vaše podatke.
 
-![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+![Konfiguracija > Komunikacija](../images/v4/Configuration/configuration_communication.png)
 
 Pomaknite se prema dolje da vidite ostatak popisa:
 
-![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+![Konfiguracija > Komunikacija, nastavak](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+Može se koristiti kao [poslužitelj za izvješća](../SettingUpAaps/SettingUpTheReportingServer.md) i/ili za [daljinski nadzor](../RemoteFeatures/RemoteMonitoring.md) i [daljinsko upravljanje](../RemoteFeatures/RemoteControl.md).
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
+Kako postaviti sinkronizaciju NSClientV3, pročitajte u [Sinkronizacija s poslužiteljem za izvješća](#SetupWizard-synchronization-with-the-reporting-server-and-more).
 
 ### Tidepool
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Može se koristiti kao [poslužitelj za izvješća](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-See [Tidepool](../SettingUpAaps/Tidepool.md).
+Pogledajte [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
+Koristi se za **slanje** podataka kao što su vrijednosti glukoze i tretmani u xDrip+ na istom telefonu. Njegove postavke sadrže i **Šalji status u xDrip+**, statusni redak s aktivnim inzulinom (IOB) i aktivnim ugljikohidratima (COB) koji prikazuju xDrip+ i neke prateće aplikacije za satove.
 
 ### Open Humans
 
-See [Open Humans](../SupportingAaps/OpenHumans.md).
+Pogledajte [Open Humans](../SupportingAaps/OpenHumans.md).
 
 (Config-Builder-wear)=
 ### Wear
-Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+Nadzirite **AAPS** i upravljajte njime sa sata s Wear OS-om. Postavljanje sata objašnjeno je na stranici [Postavljanje AAPS-a na vaš Wear OS sat](../WearOS/WearOsSmartwatch.md). Nakon što omogućite dodatak, odaberite njegove opcije u [Postavke > Wear](#preferences-wear). Korištenje sata objašnjeno je na stranici [Upravljanje AAPS-om putem pametnog sata s Wear OS-om](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
 ### Vanjske prateće aplikacije
 
-Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. Emitirani podaci uključuju glukozu i trend, aktivni inzulin (IOB), aktivne ugljikohidrate (COB), bazal i privremeni bazal, naziv profila, status petlje, bateriju telefona i pumpe, razinu u spremniku i napredak bolusa. Omogućite ovo samo ako to traži prateća aplikacija koju koristite.
+Šalje podatke o statusu **AAPS-a** na telefonu, tako da ih druge aplikacije instalirane na njemu mogu prikazati – na primjer prateće aplikacije za satove ili widgete. Emitirani podaci uključuju glukozu i trend, aktivni inzulin (IOB), aktivne ugljikohidrate (COB), bazal i privremeni bazal, naziv profila, status petlje, bateriju telefona i pumpe, razinu u spremniku i napredak bolusa. Omogućite ovo samo ako to traži prateća aplikacija koju koristite.
 
-Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+Aplikacije za koje se zna da čitaju ove podatke su [WatchDrip+](https://bigdigital.home.blog/) (satovi Xiaomi i Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (komplikacije i widgeti za Wear OS te Android Auto putem GlucoDataAuto) i aplikacija G-Watch. Njihovo postavljanje opisano je na stranici [Pametni satovi i AAPS](#watches-external-companion-apps). Neke od njih koriste i **Šalji status u xDrip+** iz dodatka **xDrip** iznad za statusni redak s aktivnim inzulinom (IOB) i aktivnim ugljikohidratima (COB).
 
-In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
+U ranijim verzijama ovaj se dodatak zvao **Samsung Tizen**, prema [aplikaciji G-Watch za satove Samsung Tizen](#Watchfaces-tizen) za koju je prvotno napravljen.
 
 ### Garmin
 
 Veza s Garmin uređajem (Fenix, Edge...)
 ## Tretmani
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
+Otvorite **izbornik** (☰) i odaberite [Povijest tretmana](#aaps-screens-treatments) da biste vidjeli zabilježene tretmane. Ako želite urediti ili izbrisati unos (npr. pojeli ste manje ugljikohidrata nego što ste očekivali), odaberite „Ukloni“ i unesite novu vrijednost (po potrebi promijenite vrijeme) putem **Tretmani → UH** u donjoj navigaciji (pogledajte [Ugljikohidrati](#screens-bolus-carbs)).
 
 ## Općenito
 
-In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. Ostale značajke opisane u nastavku uvijek su dostupne i više ih ne treba ovdje omogućiti; svaki odlomak navodi gdje ih pronaći.
+U **AAPS-u** 4 kategorija **Općenito** u **Konfiguraciji** sadrži samo **Autotune**. Ostale značajke opisane u nastavku uvijek su dostupne i više ih ne treba ovdje omogućiti; svaki odlomak navodi gdje ih pronaći.
 
-![Configuration > General](../images/v4/Configuration/configuration_general.png)
+![Konfiguracija > Općenito](../images/v4/Configuration/configuration_general.png)
 
 ### Pregled
 
-The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
+[Glavni zaslon](#AapsScreens-the-homescreen) **AAPS-a** više nije dodatak i nema vlastite postavke u **Konfiguraciji**. Opcije koje su prije bile ovdje sada su u **Postavkama** (ikona zupčanika): [Prikaži bilješke u dijaloškim okvirima](#Preferences-show-notes-field-in-treatments-dialogs), [Statusna svjetla](#Preferences-status-lights) i [Postotak bolusa](#Preferences-deliver-this-part-of-bolus-wizard-result) koji koristi bolus kalkulator. Opcija superbolusa iz **AAPS-a** 3.x [nije dostupna kao postavka](#Preferences-advanced-settings-overview) u **AAPS-u** 4.
 
 (Config-Builder-actions)=
 ### Radnje
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+Kartica Radnje iz **AAPS-a** 3.x više ne postoji. Njezini gumbi sada su u izborniku **Upravljanje** – pogledajte [Kamo je nestala kartica Radnje?](#screens-action-tab).
 
 ### Automatizacija
 
-**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+**Upravljanje → Automatizacija** omogućuje vam upravljanje [automatizacijama](../DailyLifeWithAaps/Automations.md), počevši od [Cilja 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 ### SMS Communicator
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Omogućuje njegovateljima na daljinu da putem SMS-a upravljaju nekim značajkama **AAPS-a**, više informacija o postavljanju pročitajte u [SMS naredbe](../RemoteFeatures/SMSCommands.md).
 
 ### Hrana
-**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+**Upravljanje → Hrana** prikazuje predloške hrane definirane u bazi podataka o hrani u Nightscoutu, više informacija o postavljanju pročitajte u [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the **AAPS** calculator. (Samo pregled)
+Napomena: unosi se ne mogu koristiti u kalkulatoru **AAPS-a**. (Samo pregled)
 
 (Config-Builder-autotune)=
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Autotune možete omogućiti, pogledajte [ovdje](../AdvancedOptions/Autotune.md).
 
 ### Održavanje
 
-Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+Otvorite **izbornik** (☰) i odaberite **Održavanje** da biste izvezli / uvezli postavke i upravljali datotekama dnevnika.
 
-![Maintenance screen, log files](../images/screens/maintenance.png)
+![Zaslon Održavanje, datoteke dnevnika](../images/screens/maintenance.png)
 
-![Maintenance screen, file management](../images/screens/maintenance_2.png)
+![Zaslon Održavanje, upravljanje datotekama](../images/screens/maintenance_2.png)
 
-![Maintenance screen, database management](../images/screens/maintenance_3.png)
+![Zaslon Održavanje, upravljanje bazom podataka](../images/screens/maintenance_3.png)
 
 ### Konfiguracija (Config Builder)
 
-Now called **Configuration**: this current page.
+Sada se zove **Konfiguracija**: to je ova stranica.
