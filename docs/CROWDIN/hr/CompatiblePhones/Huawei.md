@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Kako postaviti Huawei telefon
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**Za koje telefone vrijedi ova stranica:** Huawei telefoni s **EMUI 12 do EMUI 15**. Svi se temelje na Androidu 12, što je minimum za trenutnu verziju **AAPS-a**. Na telefonu sa starijom verzijom EMUI-ja možete koristiti samo [stariju verziju AAPS-a](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} Telefoni s HarmonyOS NEXT / HarmonyOS 5 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+Noviji Huawei telefoni koji se prodaju u Kini rade na HarmonyOS NEXT (HarmonyOS 5 i noviji). Taj sustav više nije Android i na njemu ne može raditi **AAPS**. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Huawei telefoni vrlo agresivno zatvaraju aplikacije koje rade u pozadini. Primijenite sve postavke u nastavku na **AAPS** i na svoju CGM aplikaciju (na primjer xDrip+ ili Juggluco), inače se petlja i očitanja glukoze mogu zaustaviti kad je zaslon isključen.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+Nazivi izbornika mogu se malo razlikovati između modela. Ako ne možete pronaći neku postavku, upišite njezin naziv u traku za pretraživanje na vrhu **Postavki**.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+Snimke zaslona u nastavku potječu iz starije verzije EMUI-ja. Postavke su iste na EMUI 12 do 15.
 
-## Ignore battery optimization
+## Zanemari optimizaciju baterije
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. Otvorite **Postavke > Aplikacije > Aplikacije**.
+2. Dodirnite izbornik **⋮** u gornjem desnom kutu i odaberite **Poseban pristup > Optimizacija baterije**.
+3. Dodirnite strelicu na vrhu popisa i odaberite **Sve aplikacije**.
+4. Odaberite **AAPS** i zatim **Ne dopusti**. Huawei više neće optimizirati aplikacije s ovog popisa.
+5. Ponovite isto za svoju CGM aplikaciju.
 
-![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+![Huawei – zanemari optimizaciju baterije](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## Pokretanje aplikacija: dopustite rad u pozadini
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. Otvorite **Postavke > Baterija > Pokretanje aplikacija** (ili **Postavke > Aplikacije > Aplikacije >** odaberite aplikaciju **> Baterija > Pokretanje aplikacija**).
+2. Pronađite **AAPS** i isključite **Upravljaj automatski**.
+3. U prozoru **Upravljaj ručno** uključite sve tri opcije: 
+    - **Automatsko pokretanje**
+    - **Sekundarno pokretanje** (mogu je pokrenuti druge aplikacije)
+    - **Pokretanje u pozadini**
+4. Ponovite isto za svoju CGM aplikaciju.
 
-![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+![Huawei – opcije baterije](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## Zaključajte AAPS među nedavnim aplikacijama
 
-Locked apps are not closed when you clear the recent apps list.
+Zaključane aplikacije ne zatvaraju se kad očistite popis nedavnih aplikacija.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. Otvorite popis nedavnih aplikacija.
+2. Povucite prema dolje karticu **AAPS**. Na kartici se pojavi simbol lokota.
+3. Učinite isto za svoju CGM aplikaciju.
 
-![Huawei - lock app](../images/Huawei_LockApp.png)
+![Huawei – zaključaj aplikaciju](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Način uštede energije
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+Neka **Način uštede energije** i **Ultra ušteda energije** ostanu isključeni (**Postavke > Baterija**). Oni zatvaraju aplikacije u pozadini bez obzira na gornje postavke.
 
-## If AAPS still stops in the background
+## Ako se AAPS i dalje zaustavlja u pozadini
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Za više rješenja posebno za Huawei pogledajte [Don't kill my app](https://dontkillmyapp.com/huawei).
 
-## Honor phones
+## Honor telefoni
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor je sada zasebna marka i njegovi telefoni rade na MagicOS-u umjesto EMUI-ja. Postavke za rad u pozadini vrlo su slične: u postavkama baterije aplikacije potražite **Pokretanje aplikacija**, isključite **Upravljaj automatski** i dopustite sve tri opcije, zatim uklonite aplikaciju iz optimizacije baterije.
