@@ -313,6 +313,7 @@ Select the pump you are using. Больше информации о настро
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Виртуальная помпа: открытый цикл - только предложения **AAPS**
   - когда вы делаете первые шаги с **AAPS**, во время первых [целей](../SettingUpAaps/CompletingTheObjectives.md)
   - для помпы, у которой еще нет драйвера
