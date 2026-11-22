@@ -13,9 +13,9 @@ Neki mostovi još se mogu kupiti:
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) od europskih prodavača ([BubbleShop](https://bubbleshop.eu/)) ili za korisnike u Rusiji [ovdje](https://vk.com/saharmonitor/). Dostupno i na AliExpressu.
 -   Atom za korisnike u Rusiji.
 
-## 1. Using xDrip
+## 1. Korištenje xDripa
 
--   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   xDrip podržava Miaomiao, Bubble, Blucon, Atom i LibreAlarm.
 -   Možete bez brige preuzeti [najnoviji APK (stabilni)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), osim ako trebate najnovije značajke; tada koristite najnoviji [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Slijedite upute za postavljanje na stranici [Postavke xDripa](../CompatibleCgms/xDrip.md).
 -    Za Libre 1 US (i Libre 2 EU) trebate i OOP2.
