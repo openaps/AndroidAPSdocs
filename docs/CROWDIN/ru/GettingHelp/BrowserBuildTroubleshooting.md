@@ -1,35 +1,35 @@
 (aaps-ci-troubleshooting)=
 
-# Browser build: troubleshooting
+# Сборка через браузер: устранение неполадок
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+На этой странице собраны советы по устранению неполадок для раздела [Сборка через браузер](../SettingUpAaps/BrowserBuild.md).
 ```
 
 (aaps-builder-troubleshooting)=
 
 ## AAPS Builder
 
-### Step 1: the repository
+### Шаг 1: репозиторий
 
 (aaps-builder-ts-repo-exists)=
 
 #### "my-aaps already exists in this account"
 
-![Repository already exists](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
+![Репозиторий уже существует](../images/Building-the-App/CI/AapsBuilder70_RepoExists.png)
 
-You already have this repository, for example from an earlier attempt. Close the GitHub tab, keep that name in step 1 of the setup page and go on. If you already did steps 2 and 3 for it, your key is still in it: continue with [step 4](#aaps-builder-step4). If it was made with an earlier version of the setup page, update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). You prefer a fresh start? Type another name, for example `my-aaps-2`, and use the same keystore in step 2.
+У вас уже есть этот репозиторий, например после прошлой попытки. Закройте вкладку GitHub, оставьте это имя в шаге 1 страницы настройки и продолжайте. Если вы уже выполнили для него шаги 2 и 3, ваш ключ все еще в нем: переходите к [шагу 4](#aaps-builder-step4). Если он был создан более ранней версией страницы настройки, один раз обновите его workflow, как описано в разделе [Обновление AAPS](#aaps-builder-updates). Хотите начать с нуля? Введите другое имя, например `my-aaps-2`, и используйте то же хранилище ключей в шаге 2.
 
 (aaps-builder-ts-user-not-found)=
 
-#### "No GitHub user with this name"
+#### «Пользователь GitHub с таким именем не найден»
 
-![No GitHub user](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
+![Пользователь GitHub не найден](../images/Building-the-App/CI/AapsBuilder80_UserNotFound.png)
 
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No "Build AAPS" or "Run workflow" button, or the repository is empty**: the repository was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the **Create my private repository** button.
+- **«Пользователь GitHub с таким именем не найден»** в шаге 1: введите свое имя пользователя GitHub, как оно показано в вашем профиле GitHub, а не адрес электронной почты.
+- **Нет кнопки «Build AAPS» или «Run workflow», или репозиторий пуст**: репозиторий был создан не из шаблона. Удалите его (**Settings** → внизу страницы → **Delete this repository**) и снова выполните [шаг 1](#aaps-builder-step1) с помощью кнопки **Создать мой приватный репозиторий**.
 
-### Step 3: the secret
+### Шаг 3: секрет
 
 (aaps-builder-ts-404)=
 
@@ -37,178 +37,178 @@ You already have this repository, for example from an earlier attempt. Close the
 
 ![GitHub 404](../images/Building-the-App/CI/AapsBuilder79_404.png)
 
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
+- **«Page not found» (404), когда страница настройки открывает GitHub**: войдите на github.com в этом же браузере (если вы не вошли, GitHub показывает 404 для приватных репозиториев). Если вы вошли, значит, имя пользователя или название репозитория в шаге 1 страницы настройки не совпадает с вашим репозиторием. Введите точные имена.
 
-### Step 4: the build
+### Шаг 4: сборка
 
 (aaps-builder-ts-workflow-not-found)=
 
 #### "This workflow does not exist"
 
-![This workflow does not exist](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
+![This workflow does not exist (такого workflow нет)](../images/Building-the-App/CI/AapsBuilder71_WorkflowNotFound.png)
 
-Right after the repository is created, GitHub may not have read its workflow file yet: **Build AAPS** is missing from the **Actions** tab, and there is no **Run workflow** button. Any small change to the file makes GitHub read it:
+Сразу после создания репозитория GitHub может еще не прочитать его файл workflow: на вкладке **Actions** нет **Build AAPS** и нет кнопки **Run workflow**. Любое небольшое изменение файла заставляет GitHub прочитать его:
 
-1. In your repository, open **Code**, then the folder `.github`, then `workflows`, then the file `build.yml`.
-2. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+1. В вашем репозитории откройте **Code**, затем папку `.github`, затем `workflows`, затем файл `build.yml`.
+2. Нажмите меню **⋯** вверху справа от файла, затем **Edit file… In place** (на компьютере нажмите на карандаш).
 
-   ![File menu](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
+   ![Меню файла](../images/Building-the-App/CI/AapsBuilder72_FileMenu.png)
 
-3. Tap at the very end of the text and add an empty line (Enter). Tap **Commit changes…** at the top.
+3. Нажмите в самом конце текста и добавьте пустую строку (Enter). Нажмите **Commit changes…** вверху.
 
-   ![Editor](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
+   ![Редактор](../images/Building-the-App/CI/AapsBuilder73_Editor.png)
 
-4. Tap **Commit changes** again.
+4. Снова нажмите **Commit changes**.
 
-   ![Commit changes](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
+   ![Commit changes (сохранить изменения)](../images/Building-the-App/CI/AapsBuilder74_CommitDialog.png)
 
-5. Open the **Actions** tab again: **Build AAPS** is now in the list of workflows (on a phone, the list opens with the icon at the left of **All workflows**). Tap it, then **Run workflow**.
+5. Снова откройте вкладку **Actions**: теперь **Build AAPS** есть в списке workflow (на телефоне список открывается значком слева от **All workflows**). Нажмите на него, затем на **Run workflow**.
 
-   ![List of workflows](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
+   ![Список workflow](../images/Building-the-App/CI/AapsBuilder75_WorkflowsSidebar.png)
 
 (aaps-builder-ts-build-failed)=
 
-#### The build failed (red cross)
+#### Сборка не удалась (красный крестик)
 
-1. On the setup page, tap **Open my builds** and tap the build with the red cross.
+1. На странице настройки нажмите **Открыть мои сборки** и нажмите на сборку с красным крестиком.
 
-   ![Failed build](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
+   ![Неудачная сборка](../images/Building-the-App/CI/AapsBuilder76_RunsList.png)
 
-2. The page of the build shows **Failure**, and which part failed: **AAPS / Check** (the repository, the secret, the version or the variant: nothing was built) or **AAPS / Build AAPS**.
+2. На странице сборки показано **Failure** (ошибка) и какая часть не удалась: **AAPS / Check** (репозиторий, секрет, версия или вариант: ничего не было собрано) или **AAPS / Build AAPS**.
 
-   ![Build page: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
+   ![Страница сборки: Failure](../images/Building-the-App/CI/AapsBuilder77_RunFailed.png)
 
-3. Scroll down to **Annotations**, with your finger on the text, not on the diagram. The red lines explain the problem: tap **Show more** to read the whole message, then find it below.
+3. Прокрутите вниз до **Annotations**, держа палец на тексте, а не на схеме. Красные строки объясняют проблему: нажмите **Show more**, чтобы прочитать сообщение целиком, затем найдите его ниже.
 
-   ![Annotations](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
+   ![Annotations (примечания)](../images/Building-the-App/CI/AapsBuilder78_Annotations.png)
 
-- **"Secret KEYSTORE_SET is missing"**: do step 3 of the setup page.
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Version … does not exist"**: only released versions of **AAPS** can be built, the ones on the [tags page](https://github.com/nightscout/AndroidAPS/tags) of nightscout/AndroidAPS, such as `3.3.2.0`. A branch name such as `dev` doesn't work. Use `latest`, or type a tag exactly as listed.
-- **"Variant … is not supported"**: your workflow file is an older version. Replace it as explained in [Updating AAPS](#aaps-builder-updates).
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 2 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 2 and 3 of the setup page.
-- **"Google Drive access has expired or was revoked"**: redo [step 6](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
-- **"Process completed with exit code 1" and a red line with only a link to `services.gradle.org`**, after less than a minute: the build could not download Gradle, a tool it needs to build the app. The Gradle website was not responding. Your repository and your settings are fine. Wait half an hour, then [run the build again](#aaps-ci-rerun).
-- **Another error**: [read the build log](#aaps-ci-read-the-logs), then [run the build again](#aaps-ci-rerun). If it fails again the same way, ask for help with the name of the failed step and the error lines. Never share the content of your secrets.
+- **"Secret KEYSTORE_SET is missing"**: выполните шаг 3 страницы настройки.
+- **Сборка останавливается с сообщением "This repository is PUBLIC"**: в вашем репозитории откройте **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, затем соберите снова.
+- **"Version … does not exist"**: собрать можно только выпущенные версии **AAPS** – те, что есть на [странице тегов](https://github.com/nightscout/AndroidAPS/tags) nightscout/AndroidAPS, например `3.3.2.0`. Имя ветки, например `dev`, не подходит. Используйте `latest` или введите тег точно так, как он указан в списке.
+- **"Variant … is not supported"**: у вас старая версия файла workflow. Замените его, как описано в разделе [Обновление AAPS](#aaps-builder-updates).
+- **"The secret is too short"**, **"The secret is not a valid code"** или **"The secret does not contain a keystore"**: в секрет вставлен не тот текст, часто само слово `KEYSTORE_SET` или только часть кода. В вашем репозитории откройте **Settings** → **Secrets and variables** → **Actions**, измените `KEYSTORE_SET` и снова вставьте длинный код из **Копировать секрет** (если вы закрыли страницу настройки, сначала повторите шаг 2).
+- **"Keystore, password or alias is wrong"**: проверьте пароль и псевдоним вашего хранилища ключей, затем повторите шаги 2 и 3 страницы настройки.
+- **"Google Drive access has expired or was revoked"**: повторите [шаг 6](#aaps-builder-google-drive) и обновите секрет `GDRIVE_OAUTH2`.
+- **«Process completed with exit code 1» и красная строка только со ссылкой на `services.gradle.org`** меньше чем через минуту: сборка не смогла скачать Gradle – инструмент, который нужен для сборки приложения. Сайт Gradle не отвечал. С вашим репозиторием и настройками все в порядке. Подождите полчаса, затем [запустите сборку снова](#aaps-ci-rerun).
+- **Другая ошибка**: [прочитайте журнал сборки](#aaps-ci-read-the-logs), затем [запустите сборку снова](#aaps-ci-rerun). Если она снова не удается так же, попросите помощи и укажите название шага, который не удался, и строки с ошибкой. Никогда не сообщайте содержимое ваших секретов.
 
-### Step 5: the app
+### Шаг 5: приложение
 
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 5](#aaps-builder-step5). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+- **Нет ссылки Download, или открылось приложение GitHub**: приложение GitHub не может скачивать сборки. Откройте сборку в Chrome, как описано в [шаге 5](#aaps-builder-step5). Чтобы ссылки GitHub не открывались в приложении: **Настройки** Android → **Приложения** → **GitHub** → **Открывать по умолчанию** → выключите **Открывать поддерживаемые ссылки**.
 
-## AAPS-CI Troubleshooting
+## Устранение неполадок AAPS-CI
 
 (aaps-ci-read-the-logs)=
-### First: find out what went wrong
+### Сначала: выясните, что пошло не так
 
-When a build fails, GitHub keeps a log of every step. The log tells you which step failed and why. Read it before you try anything else: the error message is what you look for on this page, and what helpers will ask for.
+Если сборка не удалась, GitHub сохраняет журнал каждого шага. Журнал показывает, какой шаг не удался и почему. Прочитайте его, прежде чем пробовать что-то еще: сообщение об ошибке – это то, что вы ищете на этой странице, и то, что попросят у вас помощники.
 
-1. In your GitHub copy of AndroidAPS, open **Actions**. A failed build has a red cross. Tap its name.
+1. В вашей копии AndroidAPS на GitHub откройте **Actions**. Неудачная сборка отмечена красным крестиком. Нажмите на ее название.
 
-   ![Failed run in the Actions list](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
+   ![Неудачный запуск в списке Actions](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
 
-2. The run summary shows **Failure** and, below, the job that failed (**Build AAPS**, with a red cross).
+2. В сводке запуска показано **Failure** (ошибка), а ниже – задание, которое не удалось (**Build AAPS**, с красным крестиком).
 
-   ![Run summary](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
+   ![Сводка запуска](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
 
-3. Scroll down to **Annotations** and tap the red **Build AAPS** line.
+3. Прокрутите вниз до **Annotations** и нажмите на красную строку **Build AAPS**.
 
-   ![Annotations](../images/Building-the-App/CI/aaps_ci_logs_3_annotations.png)
+   ![Annotations (примечания)](../images/Building-the-App/CI/aaps_ci_logs_3_annotations.png)
 
-4. The job opens. Steps with a grey tick worked. The step with the red cross is the one that failed: GitHub opens it for you. The steps after it were skipped (grey circle).
+4. Откроется задание. Шаги с серой галочкой выполнены успешно. Шаг с красным крестиком – тот, который не удался: GitHub открывает его для вас. Шаги после него были пропущены (серый кружок).
 
-   ![Job steps](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
+   ![Шаги задания](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
 
-5. Read the lines just above `Error: Process completed with exit code 1.`: they explain the problem. In this example, the step **Retrieving Google Drive access token** failed with `invalid_grant` and `Token has been expired or revoked.`, see [Google Refresh Token Expired](#aaps-ci-google-token-expired).
+5. Прочитайте строки прямо над `Error: Process completed with exit code 1.`: они объясняют проблему. В этом примере шаг **Retrieving Google Drive access token** не удался с `invalid_grant` и `Token has been expired or revoked.`, см. [Срок действия токена обновления Google истек](#aaps-ci-google-token-expired).
 
-   ![Error in the log](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
+   ![Ошибка в журнале](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
 
 ```{tip}
-Asking for help? Share the name of the failed step and the error lines (a screenshot like the one above is fine). Never share the content of your secrets.
+Просите помощи? Сообщите название шага, который не удался, и строки с ошибкой (подойдет снимок экрана, как выше). Никогда не сообщайте содержимое ваших секретов.
 ```
 
 (aaps-ci-update-secret)=
-#### Update a secret
+#### Обновите секрет
 
-Many fixes mean replacing the value of a secret. In your GitHub copy of AndroidAPS, go to **Settings** → **Secrets and variables** → **Actions** and tap the pencil next to the secret.
+Многие исправления сводятся к замене значения секрета. В вашей копии AndroidAPS на GitHub перейдите в **Settings** → **Secrets and variables** → **Actions** и нажмите на карандаш рядом с секретом.
 
-![Secrets list](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
+![Список секретов](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
 
-Enter or paste the new value and tap **Update secret**. GitHub never shows the old value: the field is always empty.
+Введите или вставьте новое значение и нажмите **Update secret**. GitHub никогда не показывает старое значение: поле всегда пустое.
 
-![Update secret](../images/Building-the-App/CI/aaps_ci_secret_update_2.png)
+![Update secret (обновить секрет)](../images/Building-the-App/CI/aaps_ci_secret_update_2.png)
 
 (aaps-ci-rerun)=
-#### Run the build again after a fix
+#### Запустите сборку снова после исправления
 
-Once you have fixed the cause, you do not need to start from scratch: open the failed run, tap **...** (top right), then **Re-run failed jobs**.
+Когда вы устранили причину, не нужно начинать все сначала: откройте неудачный запуск, нажмите **...** (вверху справа), затем **Re-run failed jobs**.
 
-![Re-run menu](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
+![Меню Re-run](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
 
-Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usual.
+Нажмите **Re-run jobs**. Новую сборку можно также запустить через **Run workflow**, как обычно.
 
-![Re-run dialog](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
+![Окно Re-run](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
 
 (aaps-ci-preparation-web)=
-### aaps-ci-preparation web page
-  - The preparation page is displayed by a temporary local server (for example Simple Web Server on a computer), which also receives the Google refresh token.
-  - If you see the screen below, the local server has stopped or is not reachable.
-  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
+### Веб-страница aaps-ci-preparation
+  - Страницу подготовки показывает временный локальный сервер (например, Simple Web Server на компьютере), который также получает токен обновления Google.
+  - Если вы видите экран ниже, локальный сервер остановлен или недоступен.
+  - Закройте страницу подготовки, проверьте, что локальный сервер работает, затем снова откройте aaps-ci-preparation.html так же, как в шаге 2, и выполните оставшиеся шаги. Это особенно нужно, когда при настройке вы впервые создаете подключение к Google.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
-### Google Refresh Token Expired
-  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
-  - In the [build log](#aaps-ci-read-the-logs), the step **Retrieving Google Drive access token** fails with `invalid_grant` and `Token has been expired or revoked.`:
+### Срок действия токена обновления Google истек
+  - Токены обновления Google OAuth2 перестают действовать, если ими не пользоваться 6 месяцев. Они также могут стать недействительными и в других случаях (например, если вы сменили пароль учетной записи Google или сами отозвали доступ). Подробнее см. [документацию Google OAuth2](https://developers.google.com/identity/protocols/oauth2).
+  - В [журнале сборки](#aaps-ci-read-the-logs) шаг **Retrieving Google Drive access token** завершается ошибкой `invalid_grant` и `Token has been expired or revoked.`:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.png)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token, [update the secret](#aaps-ci-update-secret) in your GitHub repository, then [re-run the build](#aaps-ci-rerun).
-  - If the authorization fails again, or Google does not ask for your consent anymore, remove the existing AAPS access from your Google Account first, see [below](#aaps-ci-google-remove-access).
+  - Если сборка не удалась из-за истекшего или отозванного токена обновления Google, нужно повторить шаги [авторизации Google Диска](#aaps-ci-google-drive-auth), чтобы получить новый токен `GDRIVE_OAUTH2`, [обновить секрет](#aaps-ci-update-secret) в вашем репозитории GitHub, а затем [запустить сборку снова](#aaps-ci-rerun).
+  - Если авторизация снова не удалась или Google больше не спрашивает вашего согласия, сначала удалите существующий доступ AAPS из вашей учетной записи Google, см. [ниже](#aaps-ci-google-remove-access).
 
 (aaps-ci-google-remove-access)=
-### Remove AAPS Access From Your Google Account And Restart The Authorization
-  - If the Google Drive authorization keeps failing, or you want to start again from a clean state, first remove the access you previously gave to AAPS, then redo the authorization.
-  - On your phone, open [https://myaccount.google.com](https://myaccount.google.com), tap **Security**, scroll down to **Your connections to third-party apps & services** and open the list of linked apps. You can also go directly to [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
-  - Tap **AAPS** in the list.
+### Удалите доступ AAPS из учетной записи Google и начните авторизацию заново
+  - Если авторизация Google Диска постоянно не удается или вы хотите начать заново с чистого листа, сначала удалите доступ, который вы раньше дали AAPS, а затем повторите авторизацию.
+  - На телефоне откройте [https://myaccount.google.com](https://myaccount.google.com), нажмите **Security** (Безопасность), прокрутите вниз до **Your connections to third-party apps & services** (ваши подключения к сторонним приложениям и сервисам) и откройте список связанных приложений. Можно также сразу перейти на [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
+  - Нажмите **AAPS** в списке.
 
   ![aaps_ci_google_access_1](../images/Building-the-App/CI/aaps_ci_google_access_1.png)
 
-  - The page shows the access you gave to AAPS (the Google Drive files used with the app). Tap **Delete all** to remove the connection, or tap **See details** to review it first.
+  - На странице показан доступ, который вы дали AAPS (файлы Google Диска, которые использует приложение). Нажмите **Delete all** (удалить все), чтобы удалить подключение, или **See details** (подробнее), чтобы сначала его проверить.
 
   ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
 
-  - On the details page, tap **Remove all access**.
+  - На странице с подробностями нажмите **Remove all access** (удалить весь доступ).
 
   ![aaps_ci_google_access_3](../images/Building-the-App/CI/aaps_ci_google_access_3.png)
 
-  - Tap **Confirm**.
+  - Нажмите **Confirm** (подтвердить).
 
   ![aaps_ci_google_access_4](../images/Building-the-App/CI/aaps_ci_google_access_4_confirm.png)
 
-  - Google confirms that AAPS no longer has access. AAPS no longer appears in the list of linked apps.
+  - Google подтверждает, что у AAPS больше нет доступа. AAPS больше нет в списке связанных приложений.
 
   ![aaps_ci_google_access_5](../images/Building-the-App/CI/aaps_ci_google_access_5_removed.png)
 
-  - Now restart the authorization cleanly: close **both** the preparation page and the file manager app, reopen aaps-ci-preparation.html from the file manager and redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps. Google will ask you to grant access again and the page will provide a new `GDRIVE_OAUTH2` token.
-  - [Update the `GDRIVE_OAUTH2` secret](#aaps-ci-update-secret) in your GitHub repository with the new token, then [re-run the build](#aaps-ci-rerun).
+  - Теперь начните авторизацию заново: закройте **и** страницу подготовки, и приложение файлового менеджера, снова откройте aaps-ci-preparation.html из файлового менеджера и повторите шаги [авторизации Google Диска](#aaps-ci-google-drive-auth). Google снова попросит вас дать доступ, и страница выдаст новый токен `GDRIVE_OAUTH2`.
+  - [Обновите секрет `GDRIVE_OAUTH2`](#aaps-ci-update-secret) в вашем репозитории GitHub, указав новый токен, затем [запустите сборку снова](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAuth Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAuth key.
+### Отключите программы, которые могут мешать проверке OAuth
+  - Перед получением ключа OAuth отключите на телефоне любой VPN и любые приложения безопасности (брандмауэр, антивирус и т. п.).
 
 (aaps-ci-actions-permission)=
-### Check GitHub Actions Permission Settings
-  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General). If you change it, press **Save** below the options.
+### Проверьте настройки разрешений GitHub Actions
+  - Убедитесь, что для политик GitHub Actions выбрано «Allow all actions and reusable workflows» (Settings → Actions → General). Если вы что-то изменили, нажмите **Save** под параметрами.
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
 `actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
 
 (aaps-ci-workflow-permissions)=
-### Check GitHub Workflow Permissions Settings
-  - If the build fails immediately with an "Invalid workflow file" error similar to the one below, the default workflow permissions of your repository are too restrictive:
+### Проверьте настройки разрешений workflow в GitHub
+  - Если сборка сразу завершается ошибкой «Invalid workflow file», похожей на пример ниже, значит, разрешения workflow по умолчанию в вашем репозитории слишком строгие:
 
 ```
 Invalid workflow file
@@ -217,19 +217,19 @@ Error calling workflow 'xxxxx/AndroidAPS/.github/workflows/cleanup-workflow-runs
 The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'actions: none'.
 ```
 
-  - Make sure Workflow permissions are set to “Read and write permissions” (Settings → Actions → General → Workflow permissions), then save and re-run the build workflow.
+  - Убедитесь, что для Workflow permissions выбрано «Read and write permissions» (Settings → Actions → General → Workflow permissions), затем сохраните и снова запустите workflow сборки.
 
   ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
 
 (aaps-ci-password-special-characters)=
-### Build Fails Checking The Keystore Password
-  - In the [build log](#aaps-ci-read-the-logs), the step **Validating keystore, alias and password** fails with `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, followed by `Keystore was tampered with, or password was incorrect`. The build stops there: the keystore and passwords are checked before AAPS is built.
+### Сборка не проходит проверку пароля хранилища ключей
+  - В [журнале сборки](#aaps-ci-read-the-logs) шаг **Validating keystore, alias and password** завершается ошибкой `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, а за ней следует `Keystore was tampered with, or password was incorrect`. На этом сборка останавливается: хранилище ключей и пароли проверяются до сборки AAPS.
 
-  ![Wrong keystore password in the build log](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
+  ![Неверный пароль хранилища ключей в журнале сборки](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
 
-  - The build workflow keeps every character of your passwords intact. Enter `KEYSTORE_PASSWORD` and `KEY_PASSWORD` exactly as they are, without adding a backslash or any other escape character. If you added backslashes, [update the secrets](#aaps-ci-update-secret) with the password exactly as it is. The example below is wrong: the password is `Example2026`, the backslash was added.
+  - Workflow сборки сохраняет каждый символ ваших паролей без изменений. Вводите `KEYSTORE_PASSWORD` и `KEY_PASSWORD` точно такими, какие они есть, без обратной косой черты и других экранирующих символов. Если вы добавили обратные косые черты, [обновите секреты](#aaps-ci-update-secret), указав пароль точно таким, какой он есть. Пример ниже неверный: пароль – `Example2026`, обратная косая черта была добавлена.
 
-  ![Password entered with an added backslash](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
+  ![Пароль, введенный с добавленной обратной косой чертой](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
 
-  - If the build still fails when signing the APK although your password is correct, and the password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is older than September 2026 and still parses these characters. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev, then re-run the build workflow.
-  - The vertical bar `|` is a special case. The preparation page of [Option 1](#aaps-ci-option1) combines the keystore, passwords and alias into one `KEYSTORE_SET` secret separated by `|`, and the workflow splits it on that character. The password generated by the preparation page contains only letters and digits, so this cannot happen with Option 1. It can only happen if you assembled a `KEYSTORE_SET` secret yourself from a password containing `|`. In that case, delete `KEYSTORE_SET` and enter the separate secrets of [Option 2](#aaps-ci-option2) instead.
+  - Если сборка все равно не удается при подписи APK, хотя пароль верный, и в пароле есть `$`, обратный апостроф, `"` или `\`, значит, файл workflow в вашем fork старше сентября 2026 года и все еще обрабатывает эти символы. [Синхронизируйте свой fork](#Update-to-new-version-update-your-repo) с последней версией dev, затем снова запустите workflow сборки.
+  - Вертикальная черта `|` – особый случай. Страница подготовки [Варианта 1](#aaps-ci-option1) объединяет хранилище ключей, пароли и псевдоним в один секрет `KEYSTORE_SET`, разделяя их символом `|`, а workflow разбивает его по этому символу. Пароль, который создает страница подготовки, содержит только буквы и цифры, поэтому с Вариантом 1 такого не бывает. Это возможно, только если вы сами собрали секрет `KEYSTORE_SET` с паролем, в котором есть `|`. В этом случае удалите `KEYSTORE_SET` и вместо него введите отдельные секреты [Варианта 2](#aaps-ci-option2).
