@@ -60,7 +60,7 @@ Når et midlertidig bytte kjører, viser kortet **AKTIV** prosenten og tidsforsk
 
 ![Profilskjermen — profilkarusell, detaljer og handlingslinje](../images/v4/Profiles/profile_manage.png)
 
-Knappene nederst virker på den **valgte** profilen: **➕ Legg til**, **✏️ Rediger**, **⧉ Dupliser** og **‘️ Slett**, og den runde **▶ Aktiver**-knappen til høyre. Hvordan du fyller ut de fire tidsplanene i redigeringsvinduet (IK / ISF / BAS / MÅL), se [Opprette og redigere profiler](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Hvordan du fyller ut de fire tidsplanene i redigeringsvinduet (IK / ISF / BAS / MÅL), se [Opprette og redigere profiler](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Dupliser** bruker ikonet med to firkanter som ofte brukes for *kopier*, men det er ikke noe å lime inn: den lager kopien i ett steg. Bekreft *Dupliser profil «Normal»?*, så legges en ny profil med navnet *Normal kopi* til sist i karusellen og velges, klar for **✏️ Rediger** (der du også kan gi den nytt navn). Dette er ikke det samme som å duplisere et tidligere **profilbytte** fra behandlingshistorikken, som lager en ny profil *der prosenten og tidsforskyvingen er lagt inn*. Se [Ta vare på et profilbytte til senere bruk](#ProfileSwitch-keep-for-later).
 
