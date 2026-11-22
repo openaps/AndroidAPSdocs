@@ -4,32 +4,32 @@
 
 ## Preduvjeti
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** koristi značajku Android Auta koja omogućuje da se poruke aplikacija s mobitela prikazuju na zaslonu audiosustava automobila.
 
 To znači da:
 
-* Android must allow **AAPS** to show notifications and
+* Android mora dopustiti **AAPS-u** da prikazuje obavijesti i
 * Budući da **AAPS** nije službena aplikacija, dopustite korištenje „nepoznatih izvora“ u Android Autu.
 
 ![Podaci CGM-a iz AAPS-a u Android Autu](../images/android_auto_01.png)
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## Provjerite može li AAPS prikazivati obavijesti
 
-**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
+**AAPS** uvijek prikazuje obavijest o statusu s vašom trenutnom glukozom, aktivnim inzulinom (IOB) i aktivnim ugljikohidratima (COB). To je obavijest koju Android Auto prikazuje u automobilu. U **AAPS-u** ne trebate ništa uključiti, ali Android mora dopustiti **AAPS-u** da prikazuje obavijesti.
 
-On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
+Na telefonu otvorite **Postavke** > **Aplikacije** > **AAPS** > **Obavijesti** i provjerite je li uključeno **Sve obavijesti aplikacije AAPS**.
 
-![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
+![Uključene sve obavijesti AAPS-a](../images/android_auto_notifications_all.png)
 
-Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
+Pomaknite se prema dolje i provjerite je li uključen **Trenutačni status**: to je kanal obavijesti o statusu.
 
-![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
+![Uključen kanal obavijesti Trenutačni status](../images/android_auto_ongoing_channel.png)
 
-Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+Prije nego što krenete do automobila, provjerite sada vidite li na telefonu obavijest o statusu **AAPS-a**!
 
-![AAPS notification on the phone](../images/android_auto_04.png)
+![Obavijest AAPS-a na telefonu](../images/android_auto_04.png)
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
@@ -37,7 +37,7 @@ Please check now that you see the **AAPS** status notification on the phone befo
 
 Budući da **AAPS** nije službena aplikacija za Android Auto, obavijesti se u Android Autu moraju uključiti za „nepoznate izvore“. To se radi pomoću načina za razvojne programere, koji ćemo vam ovdje pokazati.
 
-Go to your car and connect your mobile with the car's audio system.
+Idite do automobila i povežite mobitel s audiosustavom automobila.
 
 Sada biste trebali vidjeti zaslon sličan ovome.
 
@@ -83,4 +83,4 @@ Vaši podaci CGM-a prikazat će se ovako:
 
 ## Rješavanje problema:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Ako ne vidite obavijest, provjerite jeste li u Androidu [dopustili AAPS-u da prikazuje obavijesti](#androidauto-check-that-aaps-can-show-notifications) i ima li [Android Auto pravo pristupa obavijestima](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
