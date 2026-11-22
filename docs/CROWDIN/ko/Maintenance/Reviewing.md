@@ -73,7 +73,7 @@ HbA1c: CGM 측정값의 평균을 바탕으로 추정한 당화혈색소 값입�
 
 - **차트**: 자정부터 자정까지의 하루입니다. 선은 **중앙값**입니다(그 시간의 측정값 중 절반은 이보다 낮았고 절반은 높았습니다). 그 주위에 있는 띠 하나는 측정값의 가운데 절반(**25–75%**)을 나타내고, 더 넓은 띠는 대부분의 측정값(**10–90%**)을 나타냅니다. 띠가 좁으면 그 시간의 혈당이 날마다 비슷하다는 뜻입니다. 점선은 **저혈당 선**, 140 mg/dL(7.8 mmol/L), **고혈당 선**을 표시합니다.
 - **혈당 개요**: 내 범위 안, 좁은 범위(70–140 mg/dL 또는 3.9–7.8 mmol/L) 안, 범위 위, 범위 아래에 있었던 시간과, 그다음 **평균** 및 **중앙값** 혈당입니다. 내 범위는 [차트 표시 범위](#Preferences-range-for-visualization)에서 설정한 **저혈당 선**과 **고혈당 선**입니다.
-- **eA1c** 및 **GMI**: CGM 측정값으로 계산한 HbA1c 추정값 두 가지입니다. 위의 HbA1c와 마찬가지로 혈액 HbA1c 검사 결과와 다를 수 있습니다.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. 위의 HbA1c와 마찬가지로 혈액 HbA1c 검사 결과와 다를 수 있습니다.
 - **SD**(표준편차) 및 **CV**(변동계수): 혈당이 얼마나 변하는지 나타냅니다. 값이 낮을수록 혈당이 더 안정적이라는 뜻입니다.
 - **일수**: 사용된 CGM 데이터의 일수입니다.
 
@@ -114,7 +114,7 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 (screens-bolus-carbs)=
 ### 탄수화물과 볼러스
 
-![탄수화물 & 볼러스](../images/TreatmentsView1.png)
+![탄수화물 & 볼러스](../images/Maintenance/TreatmentsView1.png)
 
 이 탭에서는 볼러스와 탄수화물 기록을 볼 수 있습니다. 각 볼러스(**1**번 줄)는 인슐린 양 옆에 남아 있는 관련 IOB를 보여 줍니다. 볼러스의 출처는 다음 중 하나입니다:
 * 식사(인슐린, 빠른 마법사 또는 볼러스 마법사 버튼으로 직접 입력)
@@ -141,7 +141,7 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 
 ### 임시 기저
 
-![임시 기저](../images/TreatmentsView2.png)
+![임시 기저](../images/Maintenance/TreatmentsView2.png)
 
 루프가 적용한 **임시 기저**가 여기에 표시됩니다. 항목이 아직 IOB에 영향을 주고 있으면 그 정보가 주입량 옆에 표시됩니다(**1**번 줄). 다음 중 하나일 수 있습니다:
 * 임시 기저가 프로파일에 설정된 기저보다 높았으면 양수 IOB
@@ -153,13 +153,13 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 
 ### Temporary target
 
-![Temporary target](../images/TreatmentsView3.png)
+![Temporary target](../images/Maintenance/TreatmentsView3.png)
 
 임시 목표 이력은 여기에서 볼 수 있습니다.
 
 ### 프로파일 전환
 
-![프로파일 전환](../images/TreatmentsView4.png)
+![프로파일 전환](../images/Maintenance/TreatmentsView4.png)
 
 프로파일 전환 이력은 여기에서 볼 수 있습니다. 프로파일을 전환할 때마다 여러 항목이 보일 수 있습니다: NS와 펌프 이력 양쪽에 저장된 **1**번 줄은 실제 전환에 해당합니다. Nightscout에는 저장되었지만 펌프 이력에는 없는 **2**번 줄은 사용자가 요청한 프로파일 전환에 해당합니다.
 
@@ -169,14 +169,14 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 
 ### 케어포털
 
-![케어포털](../images/TreatmentsView5.png)
+![케어포털](../images/Maintenance/TreatmentsView5.png)
 
 이 탭은 Nightscout에 기록된 모든 메모와 케어포털 항목을 보여 줍니다.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### 실행 모드
 
-![실행 모드](../images/TreatmentsView6.png)
+![실행 모드](../images/Maintenance/TreatmentsView6.png)
 
 이 탭은 [루프 상태](#AapsScreens-loop-status) 변경 이력을 보여 줍니다: 개방, 폐쇄, LGS, 일시 중지, 연결 해제.
 
