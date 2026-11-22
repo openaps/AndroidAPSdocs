@@ -281,7 +281,7 @@ Da biste deaktivirali Pod (zbog isteka ili zbog kvara Pod-a):
 
 Postupak u nastavku pokazuje kako obustaviti i nastaviti isporuku inzulina.
 
-*NAPOMENA - ako ne vidite gumb **Obustavi***, on je prema zadanim postavkama skriven. Omogućite **Prikaži gumb za obustavu isporuke na kartici Omnipod** u [postavkama Omnipoda](#OmnipodEros-omnipod-settings) pod **Ostalo**.
+*NAPOMENA - ako ne vidite gumb **Obustavi***, on je prema zadanim postavkama skriven. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Obustava isporuke inzulina
 
@@ -591,7 +591,7 @@ Gumbi na dnu zaslona pumpe mijenjaju se ovisno o situaciji. Gumbi koji se trenut
   Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovo je tekstni gumb **Postavi vrijeme** na zaslonu pumpe Omnipod.
   ```
 
-- **Obustavi:** obustavlja isporuku inzulina na aktivnom Pod-u. Prikazuje se samo ako je omogućeno u postavkama (**Prikaži gumb za obustavu isporuke na kartici Omnipod**).
+- **Obustavi:** obustavlja isporuku inzulina na aktivnom Pod-u. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Daje obavijesti u AAPS-u i zvučna upozorenja na telefonu kada nije sigurno jesu
 
 Daje napredne postavke koje pomažu u otklanjanju pogrešaka.
 
-- **Prikaži gumb za obustavu isporuke na kartici Omnipod:** skriva ili prikazuje gumb **Obustavi** na kartici Omnipod.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Prikaži gumb „Pulse zapis“ u izborniku Upravljanje Pod-om:** ova je postavka još uvijek na popisu, ali trenutačna verzija zaslona pumpe nema gumb **Pulse zapis**.
 
 - **Prikaži gumb „RileyLink statistika“ u izborniku Upravljanje Pod-om:** skriva ili prikazuje gumb **RileyLink statistika** na zaslonu pumpe Omnipod.
