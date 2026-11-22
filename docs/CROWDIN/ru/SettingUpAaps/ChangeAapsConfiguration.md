@@ -1,43 +1,43 @@
-# Making changes to your AAPS configuration
+# Изменение конфигурации AAPS
 
 После того как вы прошли **[Мастер установки AAPS](../SettingUpAaps/SetupWizard.md)**, не нужно запускать весь мастер снова, если вы хотите изменить только часть конфигурации **AAPS**.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+Изменить конфигурацию **AAPS** можно тремя путями. Какой путь выбрать – это просто вопрос удобства или личных предпочтений, так как все пути ведут к одним и тем же настройкам.
 
 Вот они:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. Экран **Конфигурация**,
+2. Экран **Настройки** или
+3. **Настройки** модуля, открытые из его категории в **Конфигурация**.
 
 Здесь мы объясним, какой вариант удобнее всего в каждой ситуации:
 
 ## Configuration
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Откройте **меню** (☰) в левом верхнем углу главного экрана и выберите **Конфигурация**:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![Открыть «Конфигурация» из меню слева вверху](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+**Конфигурация** нужна, чтобы **выбрать, какие модули активны**: ваш CGM, помпа, алгоритм APS, определение чувствительности, синхронизация и другое, сгруппированные по категориям. Это тот же экран, который настроил для вас Мастер установки.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+Документация по экрану «Конфигурация» находится [здесь](../SettingUpAaps/ConfigBuilder.md).
 
 ## Настройки
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+Нажмите значок **Настройки** (шестеренка) в правом верхнем углу главного экрана. Откроются настройки **всех включенных модулей в одном месте**, сгруппированные в раскрывающиеся разделы:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Экран «Настройки» с раскрывающимися разделами](../images/v4/Configuration/settings_overview.png)
 
 Этот путь хорош, если вы не уверены, где искать нужную настройку, но он может быть немного утомительным, если вы точно знаете, что хотите изменить настройки только одного модуля.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+Документация по настройкам находится [здесь](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## Настройки модуля
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+В **Конфигурация** откройте категорию и нажмите «**Настройки**» под активным модулем. Вы сразу попадете в настройки **только этого модуля**:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![«Настройки» и «Открыть модуль» под активным модулем](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+Например, этот путь удобен, если вы знаете, что хотите изменить настройки помпы: откройте **Конфигурация → Помпа**, затем нажмите «**Настройки**» под выбранной помпой.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+Это «короткий путь» к тем же настройкам, которые показаны на общем экране **Настройки**.
