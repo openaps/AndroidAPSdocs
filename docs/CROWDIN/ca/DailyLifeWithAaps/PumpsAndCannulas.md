@@ -4,7 +4,7 @@
 
 El procediment que es descriu a continuació és només per a bombes amb tub. No s'aplica a bombes patch com Omnipod, Medtrum Nano, Accu-Chek Solo, etc. De vegades aquest procediment s'anomena «canvi de set»: un canvi de set «complet» inclou el reservori d'insulina i la cànula, i un canvi de set «parcial» és només el canvi de cànula.
 
-Les bombes patch s'omplen i s'enceben soles amb el seu propi assistent d'activació, i la cànula ja és dins del cos. **AAPS** no ofereix l'encebament per a aquestes bombes: **Encebar** no es mostra al full **Gestionar** ni a l'accés ràpid. Consulteu la pàgina de la vostra bomba a [Bombes compatibles](../Getting-Started/CompatiblePumps.md).
+Les bombes patch s'omplen i s'enceben soles amb el seu propi assistent d'activació, i la cànula ja és dins del cos. **AAPS** no ofereix l'encebament per a aquestes bombes: **Encebar** no es mostra al full **Gestionar** ni a l'accés ràpid. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Consulteu la pàgina de la vostra bomba a [Bombes compatibles](../Getting-Started/CompatiblePumps.md).
 
 El canvi físic del cartutx o reservori no es pot fer amb **AAPS**: s'ha de fer directament a la bomba. Un cop fet, cal anotar-lo manualment a **AAPS**.
 
@@ -31,6 +31,7 @@ El canvi físic del cartutx o reservori no es pot fer amb **AAPS**: s'ha de fer 
 * Podeu establir o ajustar les quantitats d'encebament predeterminades a la configuració d'**Encebar**: escriviu «prime» a la barra de cerca de la pantalla principal per obrir-la (vegeu [Configuració](../SettingUpAaps/Preferences.md)). Consulteu el full d'instruccions de la caixa de cànules per saber quantes unitats (segons la llargada de l'agulla i del tub) cal encebar per a la vostra cànula.
 
 * **AAPS** no té en compte la insulina lliurada amb la funció d'encebament quan calcula la insulina a bord (IOB), i a l'[Historial de tractaments](#aaps-screens-treatments) apareix marcada com a «Encebament».
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * **AAPS** tampoc no té en compte cap bolus fet des de la bomba mentre la bomba està desconnectada. Si feu un bolus directament des de la bomba mentre **AAPS** està desconnectat, quan reconnecteu la bomba podeu anotar aquesta insulina (sense fer el bolus) al diàleg **Insulina** (vegeu [Anotar insulina lliurada sense fer el bolus](#pumps-cannulas-announce-insulin) més avall).
 
