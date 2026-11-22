@@ -18,7 +18,7 @@ Pogledajte [Zasloni AAPS-a > Glavni zaslon > Status petlje](#AapsScreens-loop-st
 
 Prijedlozi se neće izvršiti automatski (kao u zatvorenoj petlji). Korisnik mora prijedloge ručno unijeti u pumpu (ako koristi virtualnu pumpu) ili ih izvršiti gumbom ako je **AAPS** povezan sa stvarnom pumpom.
 
-Kada **AAPS** ima prijedlog, u donjoj navigaciji glavnog zaslona pojavljuje se stavka **Petlja** s oznakom. Pritisnite je da pročitate prijedlog („Prihvati novi privremeni bazal“) s njegovom stopom, trajanjem i razlogom, a zatim pritisnite **Izvrši** da ga provedete:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Pritisnite je da pročitate prijedlog („Prihvati novi privremeni bazal“) s njegovom stopom, trajanjem i razlogom, a zatim pritisnite **Izvrši** da ga provedete:
 
 ![Prijedlog otvorene petlje s gumbom Izvrši](../images/screens/loop_tab.png)
 
