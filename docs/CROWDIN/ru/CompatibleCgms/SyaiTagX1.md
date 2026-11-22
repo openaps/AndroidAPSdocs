@@ -7,7 +7,7 @@
 
 -   Запустите сенсор X1
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Выберите **Syai/Ottai** в [**Конфигурация → Источник ГК**](#Config-Builder-bg-source).
 
 Включить передачу данных в приложении Syai:
 
