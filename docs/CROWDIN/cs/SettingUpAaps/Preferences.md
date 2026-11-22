@@ -31,6 +31,7 @@ V **AAPS** v4 najdete předvolby na obrazovce **Nastavení**. Dostanete se k nim
 - Ve výchozím stavu **AAPS** používá jazyk telefonu (doporučeno).
 
 - Pokud chcete mít **AAPS** v jiném jazyce než telefon, vyberte ho zde. V Androidu 13 a novějším **AAPS** zaregistruje tento jazyk v Androidu jako vlastní jazyk aplikace, takže se jím řídí všechny jeho obrazovky, hlavní obrazovka, widgety i způsob zápisu čísel.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Když změníte jazyk, texty **AAPS** se ihned přepnou do nového jazyka. Pokud se některé texty stále zobrazují ve starém jazyce, restartujte **AAPS**.
 - V Androidu 12 se toto nastavení nezobrazuje: **AAPS** vždy používá jazyk telefonu.
@@ -86,6 +87,10 @@ Vyberte světlý motiv, tmavý motiv, nebo nastavení podle systému telefonu.
 
 ![Nastavení > Ochrana](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Hlavní heslo
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### Ochrana aplikace
 
-Pokud je aplikace chráněná, musíte pro otevření **AAPS** zadat heslo nebo použít biometrické ověření telefonu, a to znovu, když se k aplikaci vrátíte po uplynutí [časového limitu ochrany](#Preferences-password-and-pin-retention).
+Pokud je aplikace chráněná, musíte pro otevření **AAPS** zadat heslo nebo použít biometrické ověření telefonu, a to znovu, když se k aplikaci vrátíte po uplynutí [časového limitu ochrany](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-Pokud zadáte špatné heslo, **AAPS** se okamžitě ukončí – ale dál poběží na pozadí, pokud byla aplikace předtím úspěšně otevřena.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Ochrana bolusu
 
