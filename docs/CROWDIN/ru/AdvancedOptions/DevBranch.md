@@ -6,13 +6,13 @@
 
 Самая стабильная версия AAPS находится в [ветке Master](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
 
-Версия dev AAPS предназначена только для разработчиков и тестировщиков, которые умеют разбираться с трассировкой стека (stacktrace), просматривать файлы журналов и, возможно, запускать отладчик, чтобы составить полезные для разработчиков отчеты об ошибках (короче говоря: для людей, которые знают, что делают, и не нуждаются в помощи!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Включение режима отладки может полностью нарушить работу цикла.
+Версия dev AAPS предназначена только для разработчиков и тестировщиков, которые умеют разбираться с трассировкой стека (stacktrace), просматривать файлы журналов и, возможно, запускать отладчик, чтобы составить полезные для разработчиков отчеты об ошибках (короче говоря: для людей, которые знают, что делают, и не нуждаются в помощи!). Therefore many unfinished features are disabled. Чтобы включить эти функции, войдите в **Режим отладки**: создайте файл с именем `engineering_mode` в папке /AAPS/extra. Включение режима отладки может полностью нарушить работу цикла.
 
 Тем не менее ветка dev — хорошее место, чтобы увидеть, какие функции сейчас тестируются, помочь исправить ошибки и рассказать, как новые функции работают на практике. Часто люди тестируют ветку dev на старом телефоне и старой помпе, пока не убедятся, что она стабильна. Любое ее использование — на ваш собственный риск. When testing any new features, remember that you are choosing to test a still-in-development feature. Делайте это на свой страх и риск и с должной осторожностью, чтобы обеспечить свою безопасность.
 
 Если вы нашли ошибку или думаете, что при работе с веткой dev что-то пошло не так, откройте [вкладку issues](https://github.com/nightscout/AndroidAPS/issues) и проверьте, не нашел ли ее уже кто-то другой. Если нет, добавьте ее сами. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). Новые функции также можно обсудить в [discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. Разработчики не хотят оказаться в ситуации, когда в обращении три версии dev, в одних ошибки исправлены, а в других нет, и люди продолжают сообщать об уже исправленных ошибках.
+A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. Когда в обращении только одна версия dev, легче отслеживать ошибки, о которых сообщают люди. Разработчики не хотят оказаться в ситуации, когда в обращении три версии dev, в одних ошибки исправлены, а в других нет, и люди продолжают сообщать об уже исправленных ошибках.
 
 (branch-ci-test)=
 
@@ -51,7 +51,7 @@ A dev version has an expiration date. This seems inconvenient when using it sati
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
+- Target repository: репозиторий, который содержит PR, в формате owner/repo. Оставьте значение по умолчанию **nightscout/AndroidAPS**, если вам не сказали использовать другой репозиторий (это нужно только разработчикам).
 
 - PR number: введите номер PR, который вы хотите протестировать.
 
