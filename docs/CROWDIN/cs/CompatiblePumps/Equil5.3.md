@@ -43,7 +43,7 @@ Nastavení Equil otevřete tlačítkem **Nastavení** na kartě **Equil** nebo i
 ![Nastavení ovladače Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Upozornění na nízký stav baterie**: upozorní vás, když je baterie pumpy slabá.
-* **Výstraha nízké hladiny inzulínu**: upozorní vás, když je v zásobníku málo inzulínu.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Typ výstrahy**: jak vás pumpa upozorňuje: **Ztlumit**, **Pouze vibrovat**, **Pouze zvuky** nebo **Vibrace a zvuky**.
 * **Rychlost bolusu**: jak rychle se bolus podá: **1,5 U/min (standardní)**, **3 U/min**, **6 U/min** nebo **12 U/min**. Rychlejší bolus může způsobit více alarmů okluze.
 

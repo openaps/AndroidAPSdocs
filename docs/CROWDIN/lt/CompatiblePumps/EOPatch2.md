@@ -37,11 +37,11 @@ Yra trys nustatymai:
 
 ![EOPatch2 nustatymai](../images/v4/Pumps/eopatch_settings.png)
 
-### Low reservoir Alerts
+### Low Reservoir Alerts
 
 Įspėjimas rodomas, kai pompoje likęs insulino kiekis sumažėja iki šio kiekio ar mažiau. Galite nustatyti nuo 10 iki 50 V, 5 V žingsniais. Numatyta reikšmė yra 10 V.
 
-### Priminimas apie pompos galiojimą
+### Patch Expiration Reminder
 
 Primena, kiek laiko liko, kol baigsis dabartinės pompos galiojimas. Galite nustatyti nuo 1 iki 24 valandų, 1 valandos žingsniais. Numatyta reikšmė yra 4 valandos.
 
@@ -261,7 +261,7 @@ Toliau paaiškinti įvairūs įspėjimai.
 | Įspėjimas                                | Paaiškinimas                                                                                                                          |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Insulino tiekimo sustabdymo pabaiga      | Jūsų pasirinktas sustabdymo laikas baigėsi. Pranešime spauskite **Atnaujinti pompos veikimą**, kad vėl paleistumėte insulino tiekimą. |
-| Mažai insulino                           | Pompoje likęs insulino kiekis yra mažesnis nei nustatytas parinktyje **Senkančio rezervuaro perspėjimai**.                            |
+| Mažai insulino                           | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                    |
 | Pompos naudojimo laikas baigėsi          | Pompos naudojimo laikotarpis baigėsi.                                                                                                 |
 | Pompos naudojimo laikas netrukus baigsis | Pompą reikia pašalinti per 1 valandą.                                                                                                 |
 | Pompa nepilnai aktyvuota                 | Pompos aktyvavimas po susiejimo buvo nutrauktas ilgiau nei 3 minutėms. Atidarykite pompos ekraną ir užbaikite pompos aktyvavimą.      |

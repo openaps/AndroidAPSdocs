@@ -18,7 +18,7 @@ Se [AAPS-skærme > Hovedskærmen > Loop-status](#AapsScreens-loop-status) for at
 
 Forslagene udføres ikke automatisk (som i lukket loop). Forslagene skal udføres manuelt af brugeren på pumpen (hvis du bruger en virtuel pumpe) eller med en knap, hvis **AAPS** er forbundet til en rigtig pumpe.
 
-Når **AAPS** har et forslag, vises et punkt **Loop** med et mærke i navigationen nederst på hovedskærmen. Tryk på det for at læse forslaget (»Accepter ny midlertidig basal«) med rate, varighed og årsag, og tryk derefter på **Udfør** for at udføre det:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Tryk på det for at læse forslaget (»Accepter ny midlertidig basal«) med rate, varighed og årsag, og tryk derefter på **Udfør** for at udføre det:
 
 ![Forslag i åbent loop med knappen Udfør](../images/screens/loop_tab.png)
 

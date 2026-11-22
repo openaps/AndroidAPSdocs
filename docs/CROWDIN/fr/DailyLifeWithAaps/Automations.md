@@ -129,9 +129,9 @@ Soyez prudent quand vous choisissez une « valeur négative » dans une « Co
 
 ![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
-**Exemple 1 :** créer une condition **« est inférieur à »** « -0,1 mmol/l » (ou « -2 mg/dl ») va :
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Déclenche une **Automatisation** pour tout nombre **strictement inférieur** à -0,1 (-2). Cela comprend des nombres comme -0,2, -0,3, -0,4 (-4, -6, -8), etc. Attention : -0,1 (-2) lui-même **n'est pas** compris dans cette condition. (La condition « est inférieur ou égal à -0,1 mmol/l (-2 mg/dl) » _comprendrait_ -0,1 mmol/l ou -2 mg/dl.)
+Déclenche une **Automatisation** pour tout nombre **strictement inférieur** à -0,1 (-2). Cela comprend des nombres comme -0,2, -0,3, -0,4 (-4, -6, -8), etc. Attention : -0,1 (-2) lui-même **n'est pas** compris dans cette condition. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Exemple 2 :** créer une condition « est supérieur à » -0,1 mmol/l (-2 mg/dl) va :
 
@@ -306,7 +306,7 @@ Voici des exemples d'**Automatisations**. Further discussion on **Automations** 
 (automations-low-glucose-temp-target)=
 ### Cible temp. Glycémie basse
 
-Cette **Automatisation** déclenche automatiquement une **Cible Temp** quand la **glycémie** passe sous un certain seuil. Ici, quand la glycémie est inférieure à 70 mg/dl, une cible de 110 mg/dl est démarrée pendant 30 minutes :
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 

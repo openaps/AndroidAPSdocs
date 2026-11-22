@@ -36,7 +36,7 @@ Podľa hodnoty **glykémie** **AAPS** „zníži“ podávanie inzulínu, aby do
 V režime uzavretého okruhu **SMB**:
 
 - *môžu byť* vypnuté (viac nižšie); a/alebo
-- bazál sa môže zapnúť, ak má **AAPS** záporný **IOB**, alebo <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Môžete zvážiť aj:
 
@@ -74,7 +74,7 @@ AAPS sa bude snažiť dosiahnuť 160 mg/dl alebo 8,9 mmol/l počas 1 hodiny
 V režime uzavretého okruhu **SMB**:
 
 - *môžu byť* vypnuté (viac nižšie); a/alebo
-- bazál sa môže zapnúť, ak má **AAPS** záporný **IOB**, alebo <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Obrazovka má tri časti:
 
 1. **Karusel predvolieb** (hore) – potiahnutím prstom prechádzate predvoľbami DC. Každá karta zobrazuje **názov**, **cieľ** a **trvanie** predvoľby; práve bežiaci DC je zvýraznený.
 2. **Editor** (v strede) – **Dočasný cieľ** a **Trvanie**, ktoré sa naozaj použijú, a dátum/čas **Aktivácie**.
-3. **Panel akcií** (dole) – tlačidlá **➕ pridať**, **‘️ vymazať** a **▶ aktivovať**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Keď vyberiete kartu predvoľby, jej **cieľ** a **trvanie** sa načítajú do editora.
 
@@ -123,7 +123,7 @@ Ak chcete vstavanú predvoľbu vrátiť do pôvodného stavu, vyberte ju a ťukn
 ### Pridanie a odstránenie predvolieb
 
 - **➕ Pridať** – vytvorí **novú vlastnú predvoľbu** z aktuálnych hodnôt v editore. Nová karta sa zobrazí v karuseli.
-- **‘️ Vymazať** – odstráni vybranú **vlastnú** predvoľbu. Vstavané predvoľby (*Pred jedlom*, *Aktivita*, *Hypoglykémia*) sa nedajú vymazať.
+- **Delete** — remove the selected **custom** preset. Vstavané predvoľby (*Pred jedlom*, *Aktivita*, *Hypoglykémia*) sa nedajú vymazať.
 
 Keď máte aspoň dve **vlastné** predvoľby, môžete zmeniť aj ich poradie v karuseli: ťuknite na ikonu **Usporiadať** (⇅) v hornom paneli, posúvajte kartu v strede pomocou **tlačidiel ◀ / ▶** a potom potvrďte pomocou **✓**. Vstavané predvoľby zostávajú na svojom mieste – presúvať sa dajú len vlastné predvoľby. (Ovládanie vyzerá rovnako ako pri [zmene poradia profilov](ProfileSwitch-ProfilePercentage.md).)
 

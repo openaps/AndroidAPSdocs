@@ -36,7 +36,7 @@ Conforme o nível de **glicose**, o **AAPS** vai «diminuir» a insulina adminis
 No modo de loop fechado, o **SMB**:
 
 - *pode ser* desativado (ver mais abaixo); e/ou
-- a basal pode ser ativada se o **AAPS** estiver com **IA** negativa ou <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Os utilizadores também podem considerar:
 
@@ -74,7 +74,7 @@ O AAPS vai tentar atingir 160 mg/dl ou 8,9 mmol/l durante 1 hora
 No modo de loop fechado, o **SMB**:
 
 - *pode ser* desativado (ver mais abaixo); e/ou
-- a basal pode ser ativada se o **AAPS** estiver com **IA** negativa ou <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ O ecrã tem três partes:
 
 1. **Carrossel de predefinições** (em cima) — deslize pelas suas predefinições de AT. Cada cartão mostra o **nome**, o **alvo** e a **duração** da predefinição; o AT em curso aparece destacado.
 2. **Editor** (ao meio) — o **Alvo Temporário** e a **Duração** que vão ser realmente aplicados, mais uma data/hora de **Ativação**.
-3. **Barra de ações** (em baixo) — **➕ adicionar**, **‘️ eliminar** e o botão **▶ ativar**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Selecionar um cartão de predefinição carrega o seu **alvo** e a sua **duração** no editor.
 
@@ -123,7 +123,7 @@ Para repor uma predefinição incorporada tal como veio de origem, selecione-a e
 ### Adicionar e remover predefinições
 
 - **➕ Adicionar** — cria uma **nova predefinição personalizada** a partir dos valores atuais do editor. O novo cartão aparece no carrossel.
-- **‘️ Eliminar** — remove a predefinição **personalizada** selecionada. As predefinições incorporadas (*Comer Brevemente*, *Atividade*, *Hipo*) não podem ser eliminadas.
+- **Delete** — remove the selected **custom** preset. As predefinições incorporadas (*Comer Brevemente*, *Atividade*, *Hipo*) não podem ser eliminadas.
 
 Quando tiver pelo menos duas predefinições **personalizadas**, também pode mudar a sua ordem no carrossel: toque no ícone **Reordenar** (⇅) na barra superior, mova o cartão central com os **botões de mover ◀ / ▶** e depois confirme com **✓**. As predefinições incorporadas mantêm o seu lugar — só as predefinições personalizadas podem ser movidas. (Os controlos são iguais aos de [reordenar perfis](ProfileSwitch-ProfilePercentage.md).)
 

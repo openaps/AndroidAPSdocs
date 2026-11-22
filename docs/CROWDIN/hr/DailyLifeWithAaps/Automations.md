@@ -129,9 +129,9 @@ Budite oprezni kada u „Uvjetu“ **automatizacije** odabirete „negativnu vri
 
 ![Operatori usporedbe](../images/Automations/automation_comparison_operators.png)
 
-**Primjer 1:** uvjet **„je manje od“** „-0,1 mmol/L“ (ili „-2 mg/dL“) će:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Pokrenite **automatizaciju** za svaki broj koji je **strogo manji od** -0,1 (-2). To uključuje brojeve kao što su -0,2, -0,3, -0,4 (-4, -6, -8) i tako dalje. Imajte na umu da sam broj -0,1 (-2) **nije** uključen u ovaj uvjet. (Uvjet „je jednako ili manje od -0,1 mmol/L (-2 mg/dL)“ _uključio bi_ -0,1 mmol/L ili -2 mg/dL).
+Pokrenite **automatizaciju** za svaki broj koji je **strogo manji od** -0,1 (-2). To uključuje brojeve kao što su -0,2, -0,3, -0,4 (-4, -6, -8) i tako dalje. Imajte na umu da sam broj -0,1 (-2) **nije** uključen u ovaj uvjet. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Primjer 2:** uvjet „je veće od“ -0,1 mmol/L (-2 mg/dL) će:
 
@@ -306,7 +306,7 @@ U nastavku su primjeri **automatizacije**. Više rasprava o **automatizaciji** i
 (automations-low-glucose-temp-target)=
 ### Privremeni cilj kod niske glukoze
 
-Ova **automatizacija** automatski pokreće **privremeni cilj** kada **GUK** padne ispod određenog praga — ovdje, kada je glukoza manja od 70 mg/dL, pokreće se cilj od 110 mg/dL na 30 minuta:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Primjer: pravilo za nisku glukozu](../images/Automations/automation_example_low_glucose_rule.png)
 

@@ -37,11 +37,11 @@ Der er tre indstillinger:
 
 ![Indstillinger for EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Alarmer for lavt reservoir
+### Low Reservoir Alerts
 
 Der vises en advarsel, når den insulin, der er tilbage i patchen, falder til denne mængde eller mindre. Du kan sætte den fra 10 til 50 IE, i trin på 5 IE. Standard er 10 IE.
 
-### Påmindelse om Patch-udløb
+### Patch Expiration Reminder
 
 Minder dig om, hvor lang tid der er tilbage, før den nuværende patch udløber. Du kan sætte den fra 1 til 24 timer, i trin på 1 time. Standard er 4 timer.
 
@@ -261,7 +261,7 @@ De forskellige advarsler er forklaret nedenfor.
 | Advarsel                          | Forklaring                                                                                                                           |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Afslutning af insulinsuspensionen | Den pausetid, du valgte, er slut. Tryk på **Genoptag pumpe** på notifikationen for at starte insulintilførslen igen.                 |
-| Lavt reservoir                    | Den insulin, der er tilbage i patchen, er under den mængde, der er sat i **Alarmer for lavt reservoir**.                             |
+| Lavt reservoir                    | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                   |
 | Patch driftslevetid udløbet       | Patchens brugsperiode er slut.                                                                                                       |
 | Patch udløber snart               | Patchen skal kasseres inden for 1 time.                                                                                              |
 | Ufuldstændig Patch-aktivering     | Aktiveringen af patchen blev afbrudt i mere end 3 minutter efter parringen. Åbn pumpeskærmen, og gør aktiveringen af patchen færdig. |

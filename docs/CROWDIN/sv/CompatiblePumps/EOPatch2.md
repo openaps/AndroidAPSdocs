@@ -37,11 +37,11 @@ Det finns tre inställningar:
 
 ![Inställningar för EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Varningar för låg reservoar
+### Low Reservoir Alerts
 
 En varning visas när insulinet som är kvar i podden sjunker till den här mängden eller lägre. Du kan ställa in 10 till 50 U, i steg om 5 U. Standardvärdet är 10 U.
 
-### Påminnelse om att byta pod
+### Patch Expiration Reminder
 
 Påminner dig om hur lång tid det är kvar innan den aktuella podden går ut. Du kan ställa in 1 till 24 timmar, i steg om 1 timme. Standardvärdet är 4 timmar.
 
@@ -261,7 +261,7 @@ De olika varningarna förklaras nedan.
 | Varning                       | Förklaring                                                                                                            |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Insulinpausen är slut         | Paustiden som du valde är slut. Tryck på **Återuppta pump** i aviseringen för att starta insulinleveransen igen.      |
-| Låg reservoar                 | Insulinet som är kvar i podden är under den mängd som är inställd i **Varningar för låg reservoar**.                  |
+| Låg reservoar                 | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                    |
 | Poddens livslängd har löpt ut | Poddens användningsperiod är slut.                                                                                    |
 | Podden löper ut snart         | Podden måste kasseras inom 1 timme.                                                                                   |
 | Ofullständig pod-aktivering   | Aktiveringen av podden avbröts i mer än 3 minuter efter parkopplingen. Öppna pumpskärmen och aktivera podden färdigt. |

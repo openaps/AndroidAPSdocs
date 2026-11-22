@@ -18,7 +18,7 @@ Kaip pasirinkti ciklo režimą ir ką reiškia kitos paveikslėlio piktogramos (
 
 Rekomendacijos nevykdomos automatiškai (kaip uždaro ciklo režimu). Rekomendacijas naudotojas turi įvesti į pompą rankiniu būdu (jei naudojama virtuali pompa) arba patvirtinti mygtuku, jei **AAPS** prijungta prie tikros pompos.
 
-Kai **AAPS** turi rekomendaciją, pagrindinio ekrano apatinėje naršymo juostoje atsiranda įrašas **Ciklas** su ženkliuku. Paspauskite jį, perskaitykite rekomendaciją („Priimti naują laikiną bazę“) su jos dydžiu, trukme ir priežastimi, tada paspauskite **Vykdyti**, kad ją įvykdytumėte:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Paspauskite jį, perskaitykite rekomendaciją („Priimti naują laikiną bazę“) su jos dydžiu, trukme ir priežastimi, tada paspauskite **Vykdyti**, kad ją įvykdytumėte:
 
 ![Atviro ciklo rekomendacija su mygtuku Vykdyti](../images/screens/loop_tab.png)
 

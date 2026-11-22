@@ -129,9 +129,9 @@ Pri výbere „zápornej hodnoty“ v „Podmienke“, napríklad „menšia ako
 
 ![Operátory porovnania](../images/Automations/automation_comparison_operators.png)
 
-**Príklad 1:** Vytvorenie podmienky **„je menšia ako“** „-0,1 mmol/l“ (alebo „-2 mg/dl“):
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Spustí **Automatizáciu** pri každom čísle, ktoré je **ostro menšie ako** -0,1 (-2). To zahŕňa čísla ako -0,2, -0,3, -0,4 (-4, -6, -8) atď. Pamätajte, že samotná hodnota -0,1 (-2) v tejto podmienke **nie je** zahrnutá. (Podmienka „je rovnaká alebo menšia ako -0,1 mmol/l (-2 mg/dl)“ _by_ hodnotu -0,1 mmol/l alebo -2 mg/dl zahŕňala.)
+Spustí **Automatizáciu** pri každom čísle, ktoré je **ostro menšie ako** -0,1 (-2). To zahŕňa čísla ako -0,2, -0,3, -0,4 (-4, -6, -8) atď. Pamätajte, že samotná hodnota -0,1 (-2) v tejto podmienke **nie je** zahrnutá. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Príklad 2:** Vytvorenie podmienky „je väčšia ako“ -0,1 mmol/l (-2 mg/dl):
 
@@ -306,7 +306,7 @@ Nižšie sú príklady **Automatizácií**. Ďalšie diskusie o **Automatizáci�
 (automations-low-glucose-temp-target)=
 ### Dočasný cieľ pri nízkej glykémii
 
-Táto **Automatizácia** automaticky spustí **Dočasný cieľ**, keď **glykémia** klesne pod určitú hranicu – tu sa pri glykémii nižšej ako 70 mg/dl spustí cieľ 110 mg/dl na 30 minút:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Príklad: pravidlo pre nízku glykémiu](../images/Automations/automation_example_low_glucose_rule.png)
 

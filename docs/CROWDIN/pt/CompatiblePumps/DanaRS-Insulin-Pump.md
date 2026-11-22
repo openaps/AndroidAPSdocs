@@ -38,7 +38,7 @@
 
 * No ecrã da bomba, toque em **Emparelhamento**. O **AAPS** procura bombas próximas.
 
-* Toque na entrada da sua bomba na lista.
+* Tap the entry for your pump in the list. If your phone still has an old Bluetooth pairing with this pump (for example after the pump was unpaired on the pump itself, or paired with another phone), **AAPS** removes it first and starts a new pairing. You do not need to remove the pump in the Android Bluetooth settings.
     
     ![O ecrã de emparelhamento com uma bomba Dana encontrada na pesquisa](../images/DanaRS_i_Pairing.png)
 

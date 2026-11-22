@@ -60,7 +60,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 ![Het Profiel-scherm — profielcarrousel, details en actiebalk](../images/v4/Profiles/profile_manage.png)
 
-De knoppen onderaan werken op het **geselecteerde** profiel: **➕ Toevoegen**, **✏️ Bewerk**, **⧉ Dupliceren** en **‘️ Verwijderen**, en de ronde knop **▶ Activeer** rechts. Hoe je de vier schema's in de editor invult (KH-ratio / ISF / BAS / DOEL), lees je in [Profielen maken en bewerken](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Hoe je de vier schema's in de editor invult (KH-ratio / ISF / BAS / DOEL), lees je in [Profielen maken en bewerken](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Dupliceren** gebruikt het pictogram met twee vierkantjes dat vaak voor *kopiëren* wordt gebruikt, maar er is niets om te plakken: het maakt de kopie in één stap. Bevestig *Profiel "Normal" kopiëren?* en een nieuw profiel met de naam *Normal kopie* wordt aan het einde van de carrousel toegevoegd en geselecteerd, klaar voor **✏️ Bewerk** (waar je het ook een andere naam kunt geven). Dit is niet hetzelfde als het klonen van een eerdere **Profiel wissel** uit de Behandelingen geschiedenis. Dat maakt een nieuw profiel *met het percentage en de tijdverschuiving al toegepast*. Zie [Een profiel wissel bewaren voor later](#ProfileSwitch-keep-for-later).
 

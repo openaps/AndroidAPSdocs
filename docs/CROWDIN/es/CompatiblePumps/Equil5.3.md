@@ -43,7 +43,7 @@ Abre los ajustes de Equil con **Ajustes** en la tarjeta **Equil**, o con el icon
 ![Ajustes del driver de Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Alarma de batería baja**: te avisa cuando la batería de la bomba está baja.
-* **Alarma de reservorio bajo**: te avisa cuando queda poca insulina en el reservorio.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Tono de alerta**: cómo te avisa la bomba: **Silenciar**, **Sólo vibrar**, **Sólo sonido** o **Vibración y sonido**.
 * **Velocidad del bolo**: la velocidad a la que se da un bolo: **1,5 U/min (estándar)**, **3 U/min**, **6 U/min** o **12 U/min**. Un bolo más rápido puede dar más alarmas de oclusión.
 

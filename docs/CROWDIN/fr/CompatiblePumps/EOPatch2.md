@@ -37,11 +37,11 @@ Il y a trois paramètres :
 
 ![Paramètres EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Alertes réservoir bas
+### Low Reservoir Alerts
 
 Un avertissement s'affiche quand l'insuline restante dans le patch descend à cette quantité ou moins. Vous pouvez le régler de 10 à 50 U, par pas de 5 U. La valeur par défaut est 10 U.
 
-### Rappel d'expiration du Patch
+### Patch Expiration Reminder
 
 Vous rappelle combien de temps il reste avant l'expiration du patch actuel. Vous pouvez le régler de 1 à 24 heures, par pas de 1 heure. La valeur par défaut est 4 heures.
 
@@ -261,7 +261,7 @@ Les différents avertissements sont expliqués ci-dessous.
 | Attention                       | Explication                                                                                                                                                |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fin de la suspension d'insuline | La durée de suspension que vous avez choisie est terminée. Appuyez sur **Reprendre la pompe** dans la notification pour redémarrer l'injection d'insuline. |
-| Réservoir bas                   | L'insuline restante dans le patch est inférieure à la quantité réglée dans **Alertes réservoir bas**.                                                      |
+| Réservoir bas                   | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                                         |
 | Le Patch a expiré               | La période d'utilisation du patch est terminée.                                                                                                            |
 | Le Patch va bientôt expirer     | Le patch doit être retiré dans 1 heure.                                                                                                                    |
 | Activation du Patch incomplète  | L'activation du patch a été interrompue pendant plus de 3 minutes après l'appairage. Ouvrez l'écran de la pompe et terminez l'activation du patch.         |

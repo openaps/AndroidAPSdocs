@@ -36,7 +36,7 @@ W zależności od poziomu **BG** **AAPS** „zmniejszy” ilość podawanej insu
 W trybie zamkniętej pętli **SMB**:
 
 - *może być* wyłączony (więcej o tym poniżej); i/lub
-- baza może zostać włączona, jeśli **AAPS** ma ujemne **IOB**, lub <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Możesz też rozważyć:
 
@@ -74,7 +74,7 @@ AAPS będzie dążyć do 160 mg/dl lub 8,9 mmol/l przez 1 godzinę
 W trybie zamkniętej pętli **SMB**:
 
 - *może być* wyłączony (więcej o tym poniżej); i/lub
-- baza może zostać włączona, jeśli **AAPS** ma ujemne **IOB**, lub <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Ekran ma trzy części:
 
 1. **Karuzela presetów** (na górze) — przewijaj palcem swoje presety TT. Każda karta pokazuje **nazwę**, **cel** i **czas trwania** presetu; aktualnie działający TT jest wyróżniony.
 2. **Edytor** (w środku) — **Cel tymczasowy** i **Czas trwania**, które zostaną naprawdę użyte, oraz data/godzina **Aktywacji**.
-3. **Pasek akcji** (na dole) — przyciski **➕ dodaj**, **‘️ usuń** i **▶ aktywuj**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Wybranie karty presetu wczytuje jej **cel** i **czas trwania** do edytora.
 
@@ -123,7 +123,7 @@ Aby przywrócić wbudowany preset do ustawień fabrycznych, wybierz go i dotknij
 ### Dodawanie i usuwanie presetów
 
 - **➕ Dodaj** — tworzy **nowy własny preset** z aktualnych wartości w edytorze. Nowa karta pojawia się w karuzeli.
-- **‘️ Usuń** — usuwa wybrany preset **własny**. Presetów wbudowanych (*Wkrótce posiłek*, *Aktywność*, *Hipo*) nie można usunąć.
+- **Delete** — remove the selected **custom** preset. Presetów wbudowanych (*Wkrótce posiłek*, *Aktywność*, *Hipo*) nie można usunąć.
 
 Gdy masz co najmniej dwa presety **własne**, możesz też zmienić ich kolejność w karuzeli: dotknij ikony **Zmień kolejność** (⇅) na górnym pasku, przesuwaj kartę ze środka **przyciskami ◀ / ▶**, a potem potwierdź **✓**. Presety wbudowane zostają na swoich miejscach — przesuwać można tylko presety własne. (Przyciski wyglądają tak samo jak przy [zmianie kolejności profili](ProfileSwitch-ProfilePercentage.md)).
 

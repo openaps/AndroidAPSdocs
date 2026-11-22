@@ -60,7 +60,7 @@ Når et midlertidigt skift kører, viser kortet **AKTIV** dets procent og tidsfo
 
 ![Profilskærmen — profilkarrusel, detaljer og handlingslinje](../images/v4/Profiles/profile_manage.png)
 
-Knapperne nederst virker på den **valgte** profil: **➕ Tilføj**, **✏️ Rediger**, **⧉ Klon** og **‘️ Slet**, og den runde knap **▶ Aktiver** til højre. Se [Opret og rediger profiler](#your-aaps-profile-create-and-edit-profiles) for, hvordan du udfylder de fire skemaer i editoren (IC / ISF / BAS / TARG).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Se [Opret og rediger profiler](#your-aaps-profile-create-and-edit-profiles) for, hvordan du udfylder de fire skemaer i editoren (IC / ISF / BAS / TARG).
 
 **⧉ Klon** bruger ikonet med to firkanter, som ofte bruges til *kopier*, men der er intet at indsætte: Den laver kopien i ét trin. Bekræft *Klon profilen "Normal"?*, og en ny profil med navnet *Normal kopi* tilføjes sidst i karrusellen og vælges, klar til **✏️ Rediger** (hvor du også kan omdøbe den). Det er ikke det samme som at klone et tidligere **profilskift** fra behandlingshistorikken, hvilket opretter en ny profil *med procent og tidsforskydning lagt ind*. Se [Gem et profilskift til senere brug](#ProfileSwitch-keep-for-later).
 

@@ -129,9 +129,9 @@ Būkite atsargūs, kai **automatizacijos** sąlygoje pasirenkate neigiamą reik�
 
 ![Palyginimo operatoriai](../images/Automations/automation_comparison_operators.png)
 
-**1 pavyzdys:** sukūrus sąlygą **„mažiau nei“** „-0,1 mmol/l“ (arba „-2 mg/dL“):
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-**Automatizacija** suveikia esant bet kuriam skaičiui, kuris yra **griežtai mažesnis nei** -0,1 (-2). Tai apima skaičius, pvz., -0,2, -0,3, -0,4 (-4, -6, -8) ir t. t. Atminkite, kad pats skaičius -0,1 (-2) į šią sąlygą **neįeina**. (Sąlyga „lygu arba mažiau nei -0,1 mmol/l (-2 mg/dL)“ _apimtų_ ir -0,1 mmol/l arba -2 mg/dL).
+**Automatizacija** suveikia esant bet kuriam skaičiui, kuris yra **griežtai mažesnis nei** -0,1 (-2). Tai apima skaičius, pvz., -0,2, -0,3, -0,4 (-4, -6, -8) ir t. t. Atminkite, kad pats skaičius -0,1 (-2) į šią sąlygą **neįeina**. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **2 pavyzdys:** sukūrus sąlygą „daugiau nei“ -0,1 mmol/l (-2 mg/dL):
 
@@ -306,7 +306,7 @@ Toliau pateikiami **automatizacijų** pavyzdžiai. Daugiau diskusijų apie **aut
 (automations-low-glucose-temp-target)=
 ### Žemos glikemijos laikinas tikslas
 
-Ši **automatizacija** automatiškai įjungia **laikiną tikslą**, kai **KG** nukrenta žemiau tam tikros ribos. Šiame pavyzdyje, kai gliukozė mažesnė nei 70 mg/dL, 30 minučių įjungiamas 110 mg/dL tikslas:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Pavyzdys: žemos gliukozės taisyklė](../images/Automations/automation_example_low_glucose_rule.png)
 

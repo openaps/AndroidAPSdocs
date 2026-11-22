@@ -60,7 +60,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 ![L'écran Profil — carrousel de profils, détails et barre d'actions](../images/v4/Profiles/profile_manage.png)
 
-Les boutons du bas agissent sur le profil **sélectionné** : **➕ Ajouter**, **✏️ Éditer**, **⧉ Dupliquer** et **‘️ Supprimer**, ainsi que le bouton rond **▶ Activer** à droite. Pour remplir les quatre programmes dans l'éditeur (G/I / SI / BAS / CIBLE), voir [Créer et modifier des profils](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Pour remplir les quatre programmes dans l'éditeur (G/I / SI / BAS / CIBLE), voir [Créer et modifier des profils](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Dupliquer** utilise l'icône à deux carrés, souvent utilisée pour *copier*, mais il n'y a rien à coller : le double est créé en une seule étape. Confirmez *Cloner le profil "Normal" ?* et un nouveau profil nommé *Normal copy* est ajouté à la fin du carrousel et sélectionné, prêt pour **✏️ Éditer** (où vous pouvez aussi le renommer). Ce n'est pas la même chose que dupliquer un ancien **Changement de profil** depuis l'historique des traitements, qui crée un nouveau profil *avec le pourcentage et le décalage horaire appliqués*. Voir [Garder un changement de profil pour plus tard](#ProfileSwitch-keep-for-later).
 

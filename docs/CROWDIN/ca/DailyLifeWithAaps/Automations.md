@@ -129,9 +129,9 @@ Aneu amb compte quan trieu un «valor negatiu» dins d'una «Condició» com «�
 
 ![Operadors de comparació](../images/Automations/automation_comparison_operators.png)
 
-**Exemple 1:** Crear una condició **«és més petit que»** «-0,1 mmol/l» (o «-2 mg/dl») farà:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Activar una **Automatització** per a qualsevol número que sigui **estrictament més petit que** -0,1 (-2). Això inclou números com -0,2, -0,3, -0,4 (-4, -6, -8), etc. Recordeu que el mateix -0,1 (-2) **no** s'inclou en aquesta condició. (La condició «és igual o més petit que -0,1 mmol/l (-2 mg/dl)» _sí que_ inclouria -0,1 mmol/l o -2 mg/dl).
+Activar una **Automatització** per a qualsevol número que sigui **estrictament més petit que** -0,1 (-2). Això inclou números com -0,2, -0,3, -0,4 (-4, -6, -8), etc. Recordeu que el mateix -0,1 (-2) **no** s'inclou en aquesta condició. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Exemple 2:** Crear una condició «és més gran que» -0,1 mmol/l (-2 mg/dl) farà:
 
@@ -306,7 +306,7 @@ A continuació hi ha exemples d'**automatitzacions**. Trobareu més debats sobre
 (automations-low-glucose-temp-target)=
 ### Objectiu temporal per glucèmia baixa
 
-Aquesta **Automatització** activa un **objectiu temporal** automàtic quan la **glucèmia** baixa d'un cert llindar: aquí, quan la glucèmia és més petita que 70 mg/dl, s'inicia un objectiu de 110 mg/dl durant 30 minuts:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Exemple: tasca de glucèmia baixa](../images/Automations/automation_example_low_glucose_rule.png)
 

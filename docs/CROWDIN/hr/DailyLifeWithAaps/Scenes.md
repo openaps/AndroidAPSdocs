@@ -124,7 +124,7 @@ Scena bez sljedeće scene samo traži potvrdu:
 
 ![Dijaloški okvir Završi scenu](../images/v4/Scenes/scene_end_dialog.png)
 
-Završetak scene **poništava** promjene koje je napravila (na primjer zamjenu profila i privremeni cilj koje je pokrenula). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Završetak scene **poništava** promjene koje je napravila (na primjer zamjenu profila i privremeni cilj koje je pokrenula). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Dok je scena aktivna, profil i cilj na glavnom zaslonu imaju malu ikonu scene ako ih je postavila scena. Ploča **Scene** u donjoj navigacijskoj traci ostaje dostupna za pokretanje druge scene:
 

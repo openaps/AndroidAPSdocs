@@ -36,7 +36,7 @@ Avhengig av **BS**-nivået vil **AAPS** «redusere» insulinbruken for å nå **
 I lukket loop vil **SMB**:
 
 - *kanskje* bli deaktivert (mer om dette nedenfor), og/eller
-- basal kan bli aktivert hvis **AAPS** har negativ **IOB**, eller <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Du kan også vurdere:
 
@@ -74,7 +74,7 @@ AAPS vil prøve å nå 160 mg/dL eller 8,9 mmol/L i 1 time
 I lukket loop vil **SMB**:
 
 - *kanskje* bli deaktivert (mer om dette nedenfor), og/eller
-- basal kan bli aktivert hvis **AAPS** har negativ **IOB**, eller <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Skjermen har tre deler:
 
 1. **Karusell med forhåndsinnstillinger** (øverst) — sveip gjennom forhåndsinnstillingene dine for midlertidige mål. Hvert kort viser forhåndsinnstillingens **navn**, **mål** og **varighet**; det midlertidige målet som kjører nå, er uthevet.
 2. **Redigeringsfelt** (midten) — **Midlertidig mål** og **Varighet** som faktisk vil bli brukt, pluss dato/klokkeslett for **Aktivering**.
-3. **Handlingslinje** (nederst) — **➕ legg til**, **‘️ slett** og knappen **▶ aktiver**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Når du velger et kort, lastes **målet** og **varigheten** inn i redigeringsfeltet.
 
@@ -123,7 +123,7 @@ For å sette en innebygd forhåndsinnstilling tilbake slik den var levert, velge
 ### Legge til og fjerne forhåndsinnstillinger
 
 - **➕ Legg til** — lag en **ny egendefinert forhåndsinnstilling** av verdiene som står i redigeringsfeltet nå. Det nye kortet vises i karusellen.
-- **‘️ Slett** — fjern den valgte **egendefinerte** forhåndsinnstillingen. Innebygde forhåndsinnstillinger (*Spise snart*, *Aktivitet*, *Hypo*) kan ikke slettes.
+- **Delete** — remove the selected **custom** preset. Innebygde forhåndsinnstillinger (*Spise snart*, *Aktivitet*, *Hypo*) kan ikke slettes.
 
 Når du har minst to **egendefinerte** forhåndsinnstillinger, kan du også endre rekkefølgen deres i karusellen: trykk på ikonet **Endre rekkefølge** (⇅) i linjen øverst, flytt kortet i midten med **flytteknappene ◀ / ▶**, og bekreft så med **✓**. De innebygde forhåndsinnstillingene beholder plassene sine — bare egendefinerte forhåndsinnstillinger kan flyttes. (Kontrollene ser like ut som når du [endrer rekkefølgen på profiler](ProfileSwitch-ProfilePercentage.md).)
 

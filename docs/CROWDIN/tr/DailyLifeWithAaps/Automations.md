@@ -129,9 +129,9 @@ Lütfen **Otomasyonda** negatif bir değer seçerken dikkatli olun
 
 ![Karşılaştırma işleçleri](../images/Automations/automation_comparison_operators.png)
 
-**Örnek 1:** **"küçükse"** "-0,1mmol/L" (veya "-2mg/dL") Koşulu oluşturmak şunu yapar:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-**-0,1 (-2)'den kesinlikle küçük** olan her sayı için bir **Otomasyon** tetikler. Buna -0,2, -0,3, -0,4 (-4, -6, -8) gibi sayılar dahildir. -0,1 (-2) değerinin kendisinin bu koşula **dahil olmadığını** unutmayın. ("-0,1mmol/L (-2 mg/dL) ile eşit veya küçükse" koşulu, -0,1 mmol/L veya -2 mg/dL değerini _dahil ederdi_).
+**-0,1 (-2)'den kesinlikle küçük** olan her sayı için bir **Otomasyon** tetikler. Buna -0,2, -0,3, -0,4 (-4, -6, -8) gibi sayılar dahildir. -0,1 (-2) değerinin kendisinin bu koşula **dahil olmadığını** unutmayın. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Örnek 2:** "büyükse" -0,1mmol/L (-2mg/dL) Koşulu oluşturmak şunu yapar:
 
@@ -306,7 +306,7 @@ Aşağıda **Otomasyon** örnekleri verilmiştir. **Otomasyonlar** ve kullanıc�
 (automations-low-glucose-temp-target)=
 ### Düşük Glikoz Geçici Hedefi
 
-Bu **Otomasyon**, **KŞ** belirli bir eşiğin altına düştüğünde otomatik bir **Geçici Hedef** başlatır. Burada glikoz 70 mg/dL'den küçük olduğunda 30 dakika için 110 mg/dL hedef başlatılır:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Örnek: düşük glikoz kuralı](../images/Automations/automation_example_low_glucose_rule.png)
 

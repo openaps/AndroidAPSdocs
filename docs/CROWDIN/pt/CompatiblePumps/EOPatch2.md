@@ -37,11 +37,11 @@ Há três definições:
 
 ![Definições do EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Alertas de reservatório baixo
+### Low Reservoir Alerts
 
 Aparece um aviso quando a insulina que resta no patch desce para esta quantidade ou menos. Pode definir de 10 a 50 U, em passos de 5 U. O valor predefinido é 10 U.
 
-### Lembrete de expiração do Patch
+### Patch Expiration Reminder
 
 Lembra-o de quanto tempo falta até o patch atual expirar. Pode definir de 1 a 24 horas, em passos de 1 hora. O valor predefinido é 4 horas.
 
@@ -261,7 +261,7 @@ Os diferentes avisos são explicados abaixo.
 | Aviso                         | Explicação                                                                                                                                |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Fim da suspensão da insulina  | O tempo de suspensão que escolheu terminou. Prima **Retomar bomba** na notificação para reiniciar a administração de insulina.            |
-| Reservatório baixo            | A insulina que resta no patch está abaixo da quantidade definida em **Alertas de reservatório baixo**.                                    |
+| Reservatório baixo            | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                        |
 | A vida útil do Patch terminou | O período de utilização do patch terminou.                                                                                                |
 | O Patch vai expirar em breve  | O patch tem de ser descartado dentro de 1 hora.                                                                                           |
 | Ativação do Patch incompleta  | A ativação do patch foi interrompida durante mais de 3 minutos após o emparelhamento. Abra o ecrã da bomba e conclua a ativação do patch. |

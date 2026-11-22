@@ -36,7 +36,7 @@ AAPS va încerca să atingă 140 mg/dL sau 7,8 mmol/L timp de 1 h 30 min
 În modul buclă închisă, **SMB**:
 
 - *may be* deactivated (discussed further below); and/or
-- bazala poate fi activată dacă **AAPS** are **IOB** negativ sau <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Users may also wish to consider:
 
@@ -74,7 +74,7 @@ AAPS va încerca să atingă 160 mg/dL sau 8,9 mmol/L timp de 1 oră
 În modul buclă închisă, **SMB**:
 
 - *may be* deactivated (discussed further below); and/or
-- bazala poate fi activată dacă **AAPS** are **IOB** negativ sau <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Ecranul are trei părți:
 
 1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
 2. **Editorul** (la mijloc) — **Ținta temporară** și **Durata** care vor fi aplicate efectiv, plus data/ora de **Activare**.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Selecting a preset card loads its **target** and **duration** into the editor.
 
@@ -123,7 +123,7 @@ To put a built-in preset back the way it shipped, select it and tap the **↺ Re
 ### Adding and removing presets
 
 - **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Presetările integrate (*Mănânc în curând*, *Exercițiu fizic*, *Hipoglicemie*) nu pot fi șterse.
+- **Delete** — remove the selected **custom** preset. Presetările integrate (*Mănânc în curând*, *Exercițiu fizic*, *Hipoglicemie*) nu pot fi șterse.
 
 Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (Comenzile arată la fel ca la [reordonarea profilurilor](ProfileSwitch-ProfilePercentage.md).)
 

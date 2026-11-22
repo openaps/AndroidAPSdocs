@@ -60,7 +60,7 @@
 
 ![프로파일 화면 — 프로파일 캐러셀, 세부 정보, 동작 바](../images/v4/Profiles/profile_manage.png)
 
-아래쪽 버튼은 **선택한** 프로파일에 적용됩니다: **➕ 추가**, **✏️ 편집**, **⧉ 복사**, **‘️ 삭제**, 그리고 오른쪽의 둥근 **▶ 활성화** 버튼입니다. 편집기에서 네 가지 일정(IC / ISF / BAS / TARG)을 입력하는 방법은 [프로파일 만들기와 편집](#your-aaps-profile-create-and-edit-profiles)을 참조하십시오.
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. 편집기에서 네 가지 일정(IC / ISF / BAS / TARG)을 입력하는 방법은 [프로파일 만들기와 편집](#your-aaps-profile-create-and-edit-profiles)을 참조하십시오.
 
 **⧉ 복사**는 흔히 *복사하기*(클립보드)에 쓰이는 두 사각형 아이콘을 사용하지만, 붙여 넣을 것은 없습니다: 한 단계로 사본을 만듭니다. *프로파일 "Normal"을(를) 복사하시겠습니까?*를 확인하면 *Normal 복사본*이라는 새 프로파일이 캐러셀 끝에 추가되고 선택됩니다. 바로 **✏️ 편집**할 수 있습니다(여기서 이름도 바꿀 수 있습니다). 이것은 처치 이력에서 과거의 **프로파일 전환**을 복사하는 것과 다릅니다. 그 경우에는 *퍼센트와 시간 이동이 적용된* 새 프로파일이 만들어집니다. [나중에 사용하기 위해 프로파일 전환 보관하기](#ProfileSwitch-keep-for-later)를 참조하십시오.
 

@@ -37,11 +37,11 @@ EOPatch2 ayarlarını iki yoldan biriyle açın:
 
 ![EOPatch2 ayarları](../images/v4/Pumps/eopatch_settings.png)
 
-### Düşük rezervuar Uyarısı
+### Low Reservoir Alerts
 
 Patch'te kalan insülin bu miktara veya altına düştüğünde bir uyarı görünür. Bunu 10 ile 50 Ü arasında, 5 Ü'lik adımlarla ayarlayabilirsiniz. Varsayılan değer 10 Ü'dir.
 
-### Patch Süre Sonu Hatırlatıcısı
+### Patch Expiration Reminder
 
 Mevcut Patch'in süresi dolmadan önce ne kadar zaman kaldığını size hatırlatır. Bunu 1 ile 24 saat arasında, 1 saatlik adımlarla ayarlayabilirsiniz. Varsayılan değer 4 saattir.
 
@@ -261,7 +261,7 @@ Farklı uyarılar aşağıda açıklanmıştır.
 | Uyarı                     | Açıklama                                                                                                                                      |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | İnsülin askıya alma sonu  | Seçtiğiniz askıya alma süresi bitti. İnsülin iletimini yeniden başlatmak için bildirimdeki **Pompayı devam ettir** düğmesine basın.           |
-| Düşük rezervuar           | Patch'te kalan insülin, **Düşük rezervuar Uyarısı** ayarındaki miktarın altında.                                                              |
+| Düşük rezervuar           | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                            |
 | Patch çalışma ömrü doldu  | Patch'in kullanım süresi doldu.                                                                                                               |
 | Patch yakında sona erecek | Patch 1 saat içinde çıkarılmalıdır.                                                                                                           |
 | Eksik Patch Etkinleştirme | Patch etkinleştirmesi, eşleştirmeden sonra 3 dakikadan uzun süre yarıda kaldı. Pompa ekranını açın ve Patch'i etkinleştirme işlemini bitirin. |

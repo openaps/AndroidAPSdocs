@@ -43,7 +43,7 @@ Equil ayarlarını **Equil** kartındaki **Ayarlar** düğmesiyle veya pompa ekr
 ![Equil sürücü ayarları](../images/v4/Pumps/equil_settings.png)
 
 * **Düşük pil uyarısı**: pompa pili zayıf olduğunda sizi uyarır.
-* **Düşük rezervuar uyarısı**: rezervuardaki insülin azaldığında sizi uyarır.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Uyarı tonu**: pompanın sizi nasıl uyaracağı: **Sessiz**, **Sadece titreşim**, **Sadece ses** veya **Titreşim ve ses**.
 * **Bolus hızı**: bolusun ne kadar hızlı verileceği: **1,5 Ü/dk (standart)**, **3 Ü/dk**, **6 Ü/dk** veya **12 Ü/dk**. Hızlı bolus iletimi, daha fazla tıkanıklık alarmına yol açabilir.
 

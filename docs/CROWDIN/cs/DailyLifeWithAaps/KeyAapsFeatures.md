@@ -18,7 +18,7 @@ Informace o tom, jak zvolit režim smyčky, a o dalších ikonách na obrázku (
 
 Návrhy se neprovedou automaticky (jako v uzavřené smyčce). Návrhy musí uživatel zadat do pumpy ručně (pokud používá virtuální pumpu), nebo je potvrdit tlačítkem, pokud je **AAPS** připojen ke skutečné pumpě.
 
-Když má **AAPS** návrh, objeví se ve spodní navigaci hlavní obrazovky položka **Smyčka** s odznakem. Klepněte na ni, přečtěte si návrh („Přijmout nový dočasný bazál“) s dávkou, dobou trvání a důvodem a pak klepněte na **Provést**:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Klepněte na ni, přečtěte si návrh („Přijmout nový dočasný bazál“) s dávkou, dobou trvání a důvodem a pak klepněte na **Provést**:
 
 ![Návrh otevřené smyčky s tlačítkem Provést](../images/screens/loop_tab.png)
 

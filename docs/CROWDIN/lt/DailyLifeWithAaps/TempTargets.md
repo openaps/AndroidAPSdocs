@@ -36,7 +36,7 @@ Priklausomai nuo **KG** lygio, **AAPS** „sumažins“ insulino tiekimą, kad p
 Uždaro ciklo režimu **SMB**:
 
 - *gali būti* išjungti (plačiau aptariama toliau); ir (arba)
-- valandinė bazė gali būti įjungta, jei **AAPS** rodo neigiamą **AIO**, arba <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Naudotojai taip pat gali apsvarstyti:
 
@@ -74,7 +74,7 @@ AAPS 1 valandą sieks 160 mg/dL arba 8,9 mmol/l tikslo
 Uždaro ciklo režimu **SMB**:
 
 - *gali būti* išjungti (plačiau aptariama toliau); ir (arba)
-- valandinė bazė gali būti įjungta, jei **AAPS** rodo neigiamą **AIO**, arba <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ The screen has three parts:
 
 1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
 2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Selecting a preset card loads its **target** and **duration** into the editor.
 
@@ -123,7 +123,7 @@ To put a built-in preset back the way it shipped, select it and tap the **↺ Re
 ### Adding and removing presets
 
 - **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
 
 Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
 

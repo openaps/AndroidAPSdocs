@@ -18,7 +18,7 @@ Mira [Pantallas de AAPS > La pantalla principal > Estado del lazo](#AapsScreens-
 
 Las sugerencias no se ejecutan de forma automática (como en lazo cerrado). El usuario tiene que aplicar las sugerencias a mano en la bomba (si usa la bomba virtual) o con un botón si **AAPS** está conectado a una bomba real.
 
-Cuando **AAPS** tiene una sugerencia, aparece una entrada **Lazo** con un distintivo en la navegación inferior de la pantalla principal. Púlsala para leer la sugerencia («Aceptar nueva basal temporal») con su tasa, duración y motivo, y luego pulsa **Realizar** para aplicarla:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Púlsala para leer la sugerencia («Aceptar nueva basal temporal») con su tasa, duración y motivo, y luego pulsa **Realizar** para aplicarla:
 
 ![Sugerencia del lazo abierto con el botón Realizar](../images/screens/loop_tab.png)
 

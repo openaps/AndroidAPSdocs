@@ -129,9 +129,9 @@
 
 ![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
-**Παράδειγμα 1:** Αν δημιουργήσετε μια Συνθήκη **«είναι λιγότερο από»** «-0,1 mmol/l» (ή «-2 mg/dl»), αυτή:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Ενεργοποιεί έναν **Αυτοματισμό** για κάθε αριθμό που είναι **αυστηρά μικρότερος από** -0,1 (-2). Αυτό περιλαμβάνει αριθμούς όπως -0,2, -0,3, -0,4 (-4, -6, -8) κ.λπ. Θυμηθείτε ότι το ίδιο το -0,1 (-2) **δεν** περιλαμβάνεται σε αυτή τη συνθήκη. (Η συνθήκη «είναι ίσο ή μικρότερο από -0,1 mmol/l (-2 mg/dl)» _θα_ περιλάμβανε το -0,1 mmol/l ή το -2 mg/dl).
+Ενεργοποιεί έναν **Αυτοματισμό** για κάθε αριθμό που είναι **αυστηρά μικρότερος από** -0,1 (-2). Αυτό περιλαμβάνει αριθμούς όπως -0,2, -0,3, -0,4 (-4, -6, -8) κ.λπ. Θυμηθείτε ότι το ίδιο το -0,1 (-2) **δεν** περιλαμβάνεται σε αυτή τη συνθήκη. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Παράδειγμα 2:** Αν δημιουργήσετε μια Συνθήκη «είναι μεγαλύτερο από» -0,1 mmol/l (-2 mg/dl), αυτή:
 
@@ -306,7 +306,7 @@
 (automations-low-glucose-temp-target)=
 ### Προσωρινός Στόχος Χαμηλής Γλυκόζης
 
-Αυτός ο **Αυτοματισμός** ενεργοποιεί αυτόματα έναν **Προσωρινό στόχο** όταν η **BG** πέσει κάτω από ένα όριο — εδώ, όταν η γλυκόζη είναι λιγότερο από 70 mg/dl, ξεκινά ένας στόχος 110 mg/dl για 30 λεπτά:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 

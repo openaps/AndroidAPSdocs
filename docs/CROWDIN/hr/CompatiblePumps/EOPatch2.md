@@ -37,11 +37,11 @@ Postoje tri postavke:
 
 ![Postavke EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Upozorenja o niskoj razini spremnika
+### Low Reservoir Alerts
 
 Upozorenje se pojavi kad količina inzulina preostala u Patch-u padne na ovu vrijednost ili manje. Možete je postaviti od 10 do 50 J, u koracima od 5 J. Zadana vrijednost je 10 J.
 
-### Podsjetnik o isteku Patch-a
+### Patch Expiration Reminder
 
 Podsjeća vas koliko je vremena ostalo do isteka trenutnog Patch-a. Možete ga postaviti od 1 do 24 sata, u koracima od 1 sata. Zadana vrijednost je 4 sata.
 
@@ -261,7 +261,7 @@ Različita upozorenja objašnjena su u nastavku.
 | Upozorenje                     | Objašnjenje                                                                                                                           |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Kraj obustave inzulina         | Vrijeme obustave koje ste odabrali je isteklo. Pritisnite **Nastavi rad pumpe** na obavijesti da ponovno pokrenete isporuku inzulina. |
-| Niska razina u spremniku       | Preostali inzulin u Patch-u manji je od količine postavljene u **Upozorenja o niskoj razini spremnika**.                              |
+| Niska razina u spremniku       | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                    |
 | Radni vijek Patch-a je istekao | Razdoblje upotrebe Patch-a je isteklo.                                                                                                |
 | Patch uskoro istječe           | Patch se mora odbaciti za 1 sat.                                                                                                      |
 | Nedovršena aktivacija Patch-a  | Aktivacija Patch-a prekinuta je na više od 3 minute nakon uparivanja. Otvorite zaslon pumpe i dovršite aktivaciju Patch-a.            |

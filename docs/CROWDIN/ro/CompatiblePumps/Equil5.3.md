@@ -43,7 +43,7 @@ Open the Equil settings with **Settings** on the **Equil** card, or with the gea
 ![Setările driverului Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Alarmă baterie descărcată**: vă avertizează când bateria pompei este descărcată.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
 * **Viteză bolus**: cât de repede este administrat un bolus: **1,5 U/min (standard)**, **3 U/min**, **6 U/min** sau **12 U/min**. Un bolus mai rapid poate provoca mai multe alarme de ocluzie.
 

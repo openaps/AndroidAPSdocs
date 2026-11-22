@@ -36,7 +36,7 @@ Ovisno o razini **GUK-a**, **AAPS** će „smanjiti“ isporuku inzulina kako bi
 U načinu zatvorene petlje **SMB**:
 
 - *može biti* isključen (objašnjeno niže); i/ili
-- bazal se može uključiti ako **AAPS** ima negativan **aktivni inzulin** ili <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Korisnici mogu razmotriti i:
 
@@ -74,7 +74,7 @@ AAPS će nastojati postići 160 mg/dL ili 8,9 mmol/L tijekom 1 sata
 U načinu zatvorene petlje **SMB**:
 
 - *može biti* isključen (objašnjeno niže); i/ili
-- bazal se može uključiti ako **AAPS** ima negativan **aktivni inzulin** ili <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Zaslon ima tri dijela:
 
 1. **Vrtuljak predložaka** (gore) – prelistajte svoje predloške TT-a prelaskom prsta. Svaka kartica prikazuje **naziv**, **cilj** i **trajanje** predloška; TT koji je trenutačno aktivan je istaknut.
 2. **Uređivač** (sredina) – **Privremeni cilj** i **Trajanje** koji će se stvarno primijeniti, te datum/vrijeme **Aktivacija**.
-3. **Traka radnji** (dolje) – gumbi **➕ dodaj**, **‘️ izbriši** i **▶ aktiviraj**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Odabirom kartice predloška njezin se **cilj** i **trajanje** učitavaju u uređivač.
 
@@ -123,7 +123,7 @@ Kako biste ugrađeni predložak vratili na tvorničke vrijednosti, odaberite ga 
 ### Dodavanje i uklanjanje predložaka
 
 - **➕ Dodaj** – izradite **novi prilagođeni predložak** iz trenutačnih vrijednosti u uređivaču. Nova kartica pojavi se u vrtuljku.
-- **‘️ Izbriši** – uklonite odabrani **prilagođeni** predložak. Ugrađeni predlošci (*Prije obroka*, *Aktivnost*, *Hipo*) ne mogu se izbrisati.
+- **Delete** — remove the selected **custom** preset. Ugrađeni predlošci (*Prije obroka*, *Aktivnost*, *Hipo*) ne mogu se izbrisati.
 
 Kada imate barem dva **prilagođena** predloška, možete promijeniti i njihov redoslijed u vrtuljku: dodirnite ikonu **Promijeni redoslijed** (⇅) na gornjoj traci, pomičite središnju karticu **gumbima za pomicanje ◀ / ▶**, a zatim potvrdite s **✓**. Ugrađeni predlošci ostaju na svojim mjestima – pomicati se mogu samo prilagođeni predlošci. (Kontrole izgledaju isto kao kod [promjene redoslijeda profila](ProfileSwitch-ProfilePercentage.md).)
 

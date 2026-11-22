@@ -18,7 +18,7 @@ Informacje o tym, jak wybrać tryb pętli, oraz o innych ikonach na obrazku (4 d
 
 Sugestie nie są wykonywane automatycznie (jak w zamkniętej pętli). Musisz je wykonać ręcznie na pompie (jeśli używasz wirtualnej pompy) albo przyciskiem, jeśli **AAPS** jest połączony z prawdziwą pompą.
 
-Gdy **AAPS** ma sugestię, w dolnej nawigacji ekranu głównego pojawia się pozycja **Pętla** z plakietką. Naciśnij ją, aby przeczytać sugestię („Zaakceptuj nową bazę tymczasową”) z dawką, czasem trwania i powodem, a potem naciśnij **Wykonaj**, aby ją wykonać:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Naciśnij ją, aby przeczytać sugestię („Zaakceptuj nową bazę tymczasową”) z dawką, czasem trwania i powodem, a potem naciśnij **Wykonaj**, aby ją wykonać:
 
 ![Sugestia otwartej pętli z przyciskiem Wykonaj](../images/screens/loop_tab.png)
 

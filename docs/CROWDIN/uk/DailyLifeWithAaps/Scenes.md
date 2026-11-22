@@ -124,7 +124,7 @@
 
 ![Діалог «Завершити сцену»](../images/v4/Scenes/scene_end_dialog.png)
 
-Завершення сцени **скасовує** зміни, які вона зробила (наприклад, перемикання профілю та тимчасову ціль, які вона запустила). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Завершення сцени **скасовує** зміни, які вона зробила (наприклад, перемикання профілю та тимчасову ціль, які вона запустила). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Поки сцена активна, профіль і ціль на головному екрані мають маленький значок сцени, якщо їх задала сцена. Панель **Сцени** нижньої навігації залишається доступною, щоб запустити іншу сцену:
 

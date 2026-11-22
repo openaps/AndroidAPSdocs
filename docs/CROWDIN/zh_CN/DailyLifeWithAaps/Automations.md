@@ -127,9 +127,9 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 
 ![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-当任何**严格小于**-0.1（-2）的数字时触发**自动操作**。这包括-0.2、-0.3、-0.4（-4、-6、-8）等数字。请记住，-0.1（-2）本身**不**包括在此条件中。 (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+当任何**严格小于**-0.1（-2）的数字时触发**自动操作**。这包括-0.2、-0.3、-0.4（-4、-6、-8）等数字。请记住，-0.1（-2）本身**不**包括在此条件中。 (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
 
@@ -304,7 +304,7 @@ To reprioritize the **Automation** rules, touch and hold the **=** handle on the
 (automations-low-glucose-temp-target)=
 ### 低血糖临时目标
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 

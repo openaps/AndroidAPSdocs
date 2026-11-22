@@ -43,7 +43,7 @@ Open the Equil settings with **Settings** on the **Equil** card, or with the gea
 ![Impostazioni del driver Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
 * **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
 

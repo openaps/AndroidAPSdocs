@@ -36,7 +36,7 @@ Podle hodnoty **glykémie** **AAPS** „sníží“ dávkování inzulínu, aby 
 V režimu uzavřené smyčky **SMB**:
 
 - *mohou být* vypnuty (více níže); a/nebo
-- bazál může být zapnut, pokud je **AAPS** v záporném **IOB**, nebo <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Uživatelé mohou také zvážit:
 
@@ -74,7 +74,7 @@ AAPS se bude snažit dosáhnout 160 mg/dl nebo 8,9 mmol/l po dobu 1 hodiny
 V režimu uzavřené smyčky **SMB**:
 
 - *mohou být* vypnuty (více níže); a/nebo
-- bazál může být zapnut, pokud je **AAPS** v záporném **IOB**, nebo <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Obrazovka má tři části:
 
 1. **Karusel předvoleb** (nahoře) – přejížděním procházíte své předvolby DC. Každá karta ukazuje **název**, **cíl** a **trvání** předvolby; právě běžící DC je zvýrazněný.
 2. **Editor** (uprostřed) – **Dočasný cíl** a **Trvání**, které se opravdu použijí, a navíc datum/čas **Aktivace**.
-3. **Panel akcí** (dole) – tlačítka **➕ přidat**, **‘️ smazat** a **▶ aktivovat**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Výběrem karty předvolby se její **cíl** a **trvání** načtou do editoru.
 
@@ -123,7 +123,7 @@ Chcete-li vrátit vestavěnou předvolbu do původního stavu, vyberte ji a klep
 ### Přidání a odebrání předvoleb
 
 - **➕ Přidat** – vytvoří **novou vlastní předvolbu** z aktuálních hodnot v editoru. Nová karta se objeví v karuselu.
-- **‘️ Smazat** – odstraní vybranou **vlastní** předvolbu. Vestavěné předvolby (*Před jídlem*, *Aktivita*, *Hypoglykémie*) nelze smazat.
+- **Delete** — remove the selected **custom** preset. Vestavěné předvolby (*Před jídlem*, *Aktivita*, *Hypoglykémie*) nelze smazat.
 
 Jakmile máte alespoň dvě **vlastní** předvolby, můžete také změnit jejich pořadí v karuselu: klepněte na ikonu **Přeřadit** (⇅) na horní liště, posouvejte kartu uprostřed **tlačítky pro posun ◀ / ▶** a pak potvrďte tlačítkem **✓**. Vestavěné předvolby zůstávají na svých místech – posouvat lze jen vlastní předvolby. (Ovládání vypadá stejně jako při [přeřazení profilů](ProfileSwitch-ProfilePercentage.md).)
 

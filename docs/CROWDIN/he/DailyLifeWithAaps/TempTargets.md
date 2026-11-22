@@ -36,7 +36,7 @@ AAPS ינסה להגיע ל-140 mg/dL או 7.8 mmol/L למשך שעה ו-30 דק
 In closed loop mode, **SMB**:
 
 - *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Users may also wish to consider:
 
@@ -74,7 +74,7 @@ AAPS ינסה להגיע ל-160 mg/dL או 8.9 mmol/L למשך שעה אחת
 In closed loop mode, **SMB**:
 
 - *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ In closed loop mode, **SMB**:
 
 1. **קרוסלת ההגדרות המוכנות** (למעלה): החלקה בין ההגדרות המוכנות של TT. כל כרטיס מציג את **השם**, **היעד** ו**משך הזמן** של ההגדרה המוכנה; ה-TT שפועל כרגע מודגש.
 2. **העורך** (באמצע): **יעד זמני** ו**משך** שיופעלו בפועל, וגם תאריך/שעת **הפעלה**.
-3. **סרגל הפעולות** (למטה): **➕ הוספה**, **‘️ מחיקה** והלחצן **▶ הפעלה**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 בחירה בכרטיס של הגדרה מוכנה טוענת לעורך את **היעד** ואת **משך הזמן** שלה.
 
@@ -123,7 +123,7 @@ In closed loop mode, **SMB**:
 ### הוספה והסרה של הגדרות מוכנות
 
 - **➕ הוספה**: יצירת **הגדרה מוכנה מותאמת אישית חדשה** מהערכים הנוכחיים בעורך. הכרטיס החדש מופיע בקרוסלה.
-- **‘️ מחיקה**: הסרת ההגדרה המוכנה **המותאמת אישית** שנבחרה. אי אפשר למחוק הגדרות מוכנות מובנות (*אכילה בקרוב*, *פעילות*, *היפוגליקמיה*).
+- **Delete** — remove the selected **custom** preset. אי אפשר למחוק הגדרות מוכנות מובנות (*אכילה בקרוב*, *פעילות*, *היפוגליקמיה*).
 
 כאשר יש לפחות שתי הגדרות מוכנות **מותאמות אישית**, אפשר גם לשנות את הסדר שלהן בקרוסלה: יש ללחוץ על הסמל **שינוי סדר** (⇅) בסרגל העליון, להזיז את הכרטיס שבמרכז בעזרת **לחצני ההזזה ◀ / ▶**, ואז לאשר עם **✓**. ההגדרות המוכנות המובנות נשארות במקומן: אפשר להזיז רק הגדרות מותאמות אישית. (הפקדים נראים כמו ב[שינוי סדר הפרופילים](ProfileSwitch-ProfilePercentage.md).)
 

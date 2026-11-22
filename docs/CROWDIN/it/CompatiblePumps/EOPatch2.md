@@ -37,11 +37,11 @@ Ci sono tre impostazioni:
 
 ![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
 
-### Avvisi livello serbatoio basso
+### Low Reservoir Alerts
 
 A warning appears when the insulin left in the patch drops to this amount or less. Puoi impostarla da 10 a 50 U, a passi di 5 U. Il valore predefinito è 10 U.
 
-### Promemoria scadenza patch
+### Patch Expiration Reminder
 
 Reminds you how much time is left before the current patch expires. Puoi impostarlo da 1 a 24 ore, a passi di 1 ora. Il valore predefinito è 4 ore.
 
@@ -261,7 +261,7 @@ The different warnings are explained below.
 | Warning                              | Spiegazione                                                                                                                         |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
 | End of insulin suspend               | Il tempo di sospensione che hai scelto è finito. Premi **Riprendi micro** sulla notifica per riavviare l'erogazione di insulina.    |
-| Low reservoir                        | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                                  |
+| Low reservoir                        | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                  |
 | Durata operativa della patch scaduta | Il periodo di utilizzo della patch è finito.                                                                                        |
 | La patch scadrà presto               | La patch deve essere scartata entro 1 ora.                                                                                          |
 | Attivazione patch incompleta         | Patch activation was interrupted for more than 3 minutes after pairing. Apri la schermata del micro e finisci di attivare la patch. |

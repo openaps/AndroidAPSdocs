@@ -124,7 +124,7 @@
 
 ![장면 종료 대화 상자](../images/v4/Scenes/scene_end_dialog.png)
 
-장면을 끝내면 장면이 만든 변경 사항이 **되돌려집니다**(예: 장면이 시작한 프로파일 전환과 임시 목표). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+장면을 끝내면 장면이 만든 변경 사항이 **되돌려집니다**(예: 장면이 시작한 프로파일 전환과 임시 목표). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 장면이 활성인 동안, 장면이 설정한 프로파일과 목표에는 메인 화면에서 작은 장면 아이콘이 붙습니다. 하단 내비게이션의 **장면** 시트는 다른 장면을 시작할 수 있도록 계속 사용할 수 있습니다:
 

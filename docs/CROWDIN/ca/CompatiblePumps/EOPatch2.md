@@ -37,11 +37,11 @@ Hi ha tres opcions de configuració:
 
 ![Configuració d'EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Alertes de reservori baix
+### Low Reservoir Alerts
 
 Apareix un avís quan la insulina que queda al patch baixa fins a aquesta quantitat o menys. El podeu definir entre 10 i 50 U, en passos de 5 U. El valor per defecte és 10 U.
 
-### Recordatori d'expiració del patch
+### Patch Expiration Reminder
 
 Us recorda quant temps queda abans que caduqui el patch actual. El podeu definir entre 1 i 24 hores, en passos d'1 hora. El valor per defecte és 4 hores.
 
@@ -261,7 +261,7 @@ A continuació s'expliquen els diferents avisos.
 | Avís                           | Explicació                                                                                                                                           |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fi de la suspensió d'insulina  | El temps de suspensió que heu triat s'ha acabat. Premeu **Reprendre bomba** a l'avís per reprendre el lliurament d'insulina.                         |
-| Reservori baix                 | La insulina que queda al patch és inferior a la quantitat definida a **Alertes de reservori baix**.                                                  |
+| Reservori baix                 | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                                   |
 | Vida útil del patch acabada    | El període d'ús del patch s'ha acabat.                                                                                                               |
 | El patch caducarà aviat        | Cal descartar el patch d'aquí a 1 hora.                                                                                                              |
 | Activació del patch incompleta | L'activació del patch s'ha interromput durant més de 3 minuts després de l'emparellament. Obriu la pantalla de la bomba i acabeu d'activar el patch. |

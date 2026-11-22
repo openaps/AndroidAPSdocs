@@ -60,7 +60,7 @@ Gdy działa tymczasowa zmiana, karta **AKTYWNY** pokazuje jej procent i przesuni
 
 ![Ekran Profil — karuzela profili, szczegóły i pasek akcji](../images/v4/Profiles/profile_manage.png)
 
-Przyciski na dole działają na **wybrany** profil: **➕ Dodaj**, **✏️ Edytuj**, **⧉ Sklonuj** i **‘️ Usuń**, a po prawej okrągły przycisk **▶ Aktywuj**. Jak wypełnić cztery harmonogramy w edytorze (IC / ISF / BAS / CEL), opisuje część [Tworzenie i edycja profili](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Jak wypełnić cztery harmonogramy w edytorze (IC / ISF / BAS / CEL), opisuje część [Tworzenie i edycja profili](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Sklonuj** ma ikonę dwóch kwadratów, często używaną do *kopiowania*, ale niczego nie trzeba wklejać: duplikat powstaje w jednym kroku. Potwierdź *Sklonować profil „Normal”?*, a nowy profil o nazwie *Normal copy* zostanie dodany na końcu karuzeli i wybrany. Możesz go od razu zmienić przez **✏️ Edytuj** (tam możesz też zmienić jego nazwę). To nie to samo co klonowanie dawnej **zmiany profilu** z Historii leczenia. Tamto tworzy nowy profil *z już uwzględnionym procentem i przesunięciem czasu*. Zobacz [Zachowaj zmianę profilu na później](#ProfileSwitch-keep-for-later).
 

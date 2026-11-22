@@ -36,7 +36,7 @@ Selon la **glycémie**, **AAPS** va « diminuer » l'insuline donnée pour att
 En mode boucle fermée, les **SMB** :
 
 - *peuvent être* désactivés (voir plus bas) ; et/ou
-- le débit basal peut être activé si **AAPS** a une **IA** négative ou <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Les utilisateurs peuvent aussi envisager de :
 
@@ -74,7 +74,7 @@ AAPS cherchera à atteindre 160 mg/dl ou 8,9 mmol/l pendant 1 heure
 En mode boucle fermée, les **SMB** :
 
 - *peuvent être* désactivés (voir plus bas) ; et/ou
-- le débit basal peut être activé si **AAPS** a une **IA** négative ou <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ L'écran a trois parties :
 
 1. **Carrousel de préréglages** (en haut) — faites glisser pour parcourir vos préréglages de CT. Chaque carte affiche le **nom**, la **cible** et la **durée** du préréglage ; la CT en cours est mise en évidence.
 2. **Éditeur** (au milieu) — la **Cible Temp** et la **Durée** qui seront vraiment appliquées, plus une date/heure d'**Activation**.
-3. **Barre d'actions** (en bas) — **➕ ajouter**, **🗑️ supprimer** et le bouton **▶ activer**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Quand vous sélectionnez une carte de préréglage, sa **cible** et sa **durée** sont chargées dans l'éditeur.
 
@@ -123,7 +123,7 @@ Pour remettre un préréglage intégré comme à l'installation, sélectionnez-l
 ### Ajouter et supprimer des préréglages
 
 - **➕ Ajouter** — crée un **nouveau préréglage personnalisé** à partir des valeurs actuelles de l'éditeur. La nouvelle carte apparaît dans le carrousel.
-- **🗑️ Supprimer** — supprime le préréglage **personnalisé** sélectionné. Les préréglages intégrés (*Repas imminent*, *Activité*, *Hypo*) ne peuvent pas être supprimés.
+- **Delete** — remove the selected **custom** preset. Les préréglages intégrés (*Repas imminent*, *Activité*, *Hypo*) ne peuvent pas être supprimés.
 
 Quand vous avez au moins deux préréglages **personnalisés**, vous pouvez aussi changer leur ordre dans le carrousel : appuyez sur l'icône **Réordonner** (⇅) dans la barre du haut, déplacez la carte du centre avec les **boutons de déplacement ◀ / ▶**, puis confirmez avec **✓**. Les préréglages intégrés gardent leur place — seuls les préréglages personnalisés peuvent être déplacés. (Les commandes sont les mêmes que pour [réordonner les profils](ProfileSwitch-ProfilePercentage.md).)
 

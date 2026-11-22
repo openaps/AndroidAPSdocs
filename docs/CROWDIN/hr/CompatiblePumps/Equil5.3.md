@@ -43,7 +43,7 @@ Postavke pumpe Equil otvorite gumbom **Postavke** na kartici **Equil** ili ikono
 ![Postavke upravljačkog programa Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Alarm za nisku razinu baterije**: upozorava vas kada je baterija pumpe pri kraju.
-* **Alarm za nisku razinu inzulina u spremniku**: upozorava vas kada u spremniku ima malo inzulina.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Zvuk upozorenja**: kako vas pumpa upozorava: **Bez zvuka**, **Samo vibracija**, **Samo zvuk** ili **Vibracija i zvuk**.
 * **Brzina bolusa**: koliko brzo se daje bolus: **1,5 J/min (standardno)**, **3 J/min**, **6 J/min** ili **12 J/min**. Brži bolus može izazvati više alarma okluzije.
 

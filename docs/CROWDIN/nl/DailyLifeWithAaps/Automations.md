@@ -129,9 +129,9 @@ Wees voorzichtig als je een ‘negatieve waarde’ kiest in een ‘Voorwaarde’
 
 ![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
-**Voorbeeld 1:** Een Voorwaarde **"is minder dan"** "-0,1 mmol/l" (of "-2 mg/dl") zal:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Start een **Automatisering** voor elk getal dat **echt kleiner is dan** -0,1 (-2). Dit zijn getallen zoals -0,2, -0,3, -0,4 (-4, -6, -8) enzovoort. Let op: -0,1 (-2) zelf **valt niet** onder deze voorwaarde. (De voorwaarde "is gelijk aan of minder dan -0,1 mmol/l (-2 mg/dl)" valt _wel_ samen met -0,1 mmol/l of -2 mg/dl).
+Start een **Automatisering** voor elk getal dat **echt kleiner is dan** -0,1 (-2). Dit zijn getallen zoals -0,2, -0,3, -0,4 (-4, -6, -8) enzovoort. Let op: -0,1 (-2) zelf **valt niet** onder deze voorwaarde. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Voorbeeld 2:** Een Voorwaarde "is groter dan" -0,1 mmol/l (-2 mg/dl) zal:
 
@@ -306,7 +306,7 @@ Hieronder staan voorbeelden van **automatiseringen**. Further discussion on **Au
 (automations-low-glucose-temp-target)=
 ### Lage glucose tijdelijk streefdoel
 
-Deze **Automatisering** start automatisch een **Tijdelijk streefdoel** als de **BG** onder een bepaalde grens komt — hier wordt, als de glucose lager is dan 70 mg/dl, een streefdoel van 110 mg/dl gestart voor 30 minuten:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 

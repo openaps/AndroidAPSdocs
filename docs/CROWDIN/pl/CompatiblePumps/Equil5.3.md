@@ -43,7 +43,7 @@ Ustawienia Equil otworzysz przyciskiem **Ustawienia** na karcie **Equil** albo i
 ![Ustawienia sterownika Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Alarm słabej baterii**: ostrzega, gdy bateria pompy jest słaba.
-* **Alarm o niskim poziomie zbiornika insuliny**: ostrzega, gdy w zbiorniku jest mało insuliny.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Sygnał dźwiękowy**: jak pompa Cię ostrzega: **Wycisz**, **Tylko wibracje**, **Tylko dźwięk** lub **Wibracje i dźwięk**.
 * **Prędkość podawania bolusa**: jak szybko podawany jest bolus: **1.5 U/min (standardowa)**, **3 U/min**, **6 U/min** lub **12 U/min**. Szybszy bolus może powodować więcej alarmów zatkania.
 

@@ -124,7 +124,7 @@ Scenarijus be tolesnio scenarijaus tik paprašo patvirtinti:
 
 ![Dialogas Baigti scenarijų](../images/v4/Scenes/scene_end_dialog.png)
 
-Baigiant scenarijų, jo atlikti pakeitimai **atšaukiami** (pavyzdžiui, jo pradėtas profilio keitimas ir laikinas tikslas). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Baigiant scenarijų, jo atlikti pakeitimai **atšaukiami** (pavyzdžiui, jo pradėtas profilio keitimas ir laikinas tikslas). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Kol scenarijus aktyvus, prie profilio ir tikslo pagrindiniame ekrane rodoma maža scenarijaus piktograma, jei juos nustatė scenarijus. Apatinės navigacijos langas **Scenarijai** lieka pasiekiamas, kad galėtumėte paleisti kitą scenarijų:
 

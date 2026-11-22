@@ -60,7 +60,7 @@ Geçici bir değişim çalışırken **AKTİF** kart, bir ilerleme çubuğunun �
 
 ![Profil ekranı — profil karuseli, ayrıntılar ve eylem çubuğu](../images/v4/Profiles/profile_manage.png)
 
-Alttaki düğmeler **seçili** profil üzerinde çalışır: **➕ Ekle**, **✏️ Düzenle**, **⧉ Klon** ve **‘️ Sil**, sağda ise yuvarlak **▶ Etkinleştir** düğmesi. Düzenleyicide dört programın (IC / İDF / BAZAL / HDF) nasıl doldurulacağı için [Profil oluşturma ve düzenleme](#your-aaps-profile-create-and-edit-profiles) bölümüne bakın.
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Düzenleyicide dört programın (IC / İDF / BAZAL / HDF) nasıl doldurulacağı için [Profil oluşturma ve düzenleme](#your-aaps-profile-create-and-edit-profiles) bölümüne bakın.
 
 **⧉ Klon**, genellikle *kopyalama* için kullanılan iki kare simgesini kullanır, ancak yapıştırılacak bir şey yoktur: kopyayı tek adımda oluşturur. *"Normal" profili kopyalansın mı?* sorusunu onaylayın. *Normal kopya* adlı yeni bir profil karuselin sonuna eklenir ve seçilir; **✏️ Düzenle** ile düzenlemeye hazırdır (burada adını da değiştirebilirsiniz). Bu, Tedavi geçmişinden geçmiş bir **Profil değişimi**'ni kopyalamakla aynı şey değildir. O işlem *yüzde ve zaman kaydırma uygulanmış* yeni bir profil oluşturur. Bkz. [Bir profil değişimini daha sonra kullanmak üzere saklama](#ProfileSwitch-keep-for-later).
 

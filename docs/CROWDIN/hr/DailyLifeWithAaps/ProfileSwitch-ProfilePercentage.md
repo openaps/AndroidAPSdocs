@@ -60,7 +60,7 @@ Dok traje privremena zamjena, kartica **AKTIVAN** prikazuje njezin postotak i vr
 
 ![Zaslon profila – kartice profila, detalji i traka s gumbima](../images/v4/Profiles/profile_manage.png)
 
-Gumbi na dnu djeluju na **odabrani** profil: **➕ Dodaj**, **✏️ Uredi**, **⧉ Kloniraj** i **‘️ Izbriši**, a desno je okrugli gumb **▶ Aktiviraj**. Kako ispuniti četiri rasporeda u uređivaču (IC / ISF / BAS / TARG), pročitajte u [Izrada i uređivanje profila](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Kako ispuniti četiri rasporeda u uređivaču (IC / ISF / BAS / TARG), pročitajte u [Izrada i uređivanje profila](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Kloniraj** koristi ikonu s dva kvadrata koja često znači *kopiraj*, ali nema što zalijepiti: kopiju izrađuje u jednom koraku. Potvrdite *Klonirati profil „Normal“?* i novi profil s nazivom *Normal kopija* dodaje se na kraj niza kartica i odabire, spreman za **✏️ Uredi** (gdje ga možete i preimenovati). To nije isto kao kloniranje prošle **zamjene profila** iz povijesti tretmana, koje izrađuje novi profil *s primijenjenim postotkom i vremenskim pomakom*. Pogledajte [Spremite zamjenu profila za kasnije](#ProfileSwitch-keep-for-later).
 

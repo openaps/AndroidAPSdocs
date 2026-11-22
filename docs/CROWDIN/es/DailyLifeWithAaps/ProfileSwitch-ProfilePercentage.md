@@ -60,7 +60,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 ![La pantalla de Perfil: carrusel de perfiles, detalles y barra de acciones](../images/v4/Profiles/profile_manage.png)
 
-Los botones de abajo actúan sobre el perfil **seleccionado**: **➕ Añadir**, **✏️ Editar**, **⧉ Duplicar** y **‘️ Borrar**, y el botón redondo **▶ Activar** a la derecha. Para saber cómo rellenar los cuatro horarios en el editor (IC / ISF / BAS / OBJ), consulta [Crear y editar perfiles](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Para saber cómo rellenar los cuatro horarios en el editor (IC / ISF / BAS / OBJ), consulta [Crear y editar perfiles](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Duplicar** usa el icono de dos cuadrados que se usa a menudo para *copiar*, pero no hay nada que pegar: crea la copia en un solo paso. Confirma *¿Duplicar el perfil "Normal"?* y se añade un nuevo perfil llamado *Normal copy* al final del carrusel. Queda seleccionado y listo para **✏️ Editar** (donde también puedes cambiarle el nombre). No es lo mismo que duplicar un **Cambio de perfil** pasado desde el Historial de tratamientos, que crea un nuevo perfil *con el porcentaje y el desplazamiento de hora aplicados*. Consulta [Guardar un cambio de perfil para usarlo más tarde](#ProfileSwitch-keep-for-later).
 
