@@ -31,6 +31,7 @@ U **AAPS**-u v4 postavke se nalaze na zaslonu **Postavke**. Do njih vode tri put
 - **AAPS** zadano koristi jezik telefona (preporučeno).
 
 - Ako želite **AAPS** na drugom jeziku od jezika telefona, odaberite ga ovdje. Na Androidu 13 i novijim **AAPS** ga u Androidu registrira kao vlastiti jezik aplikacije, pa ga slijede svi njegovi zasloni, glavni zaslon, widgeti i način pisanja brojeva.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Kada promijenite jezik, tekstovi **AAPS**-a odmah se prebace na novi jezik. Ako su neki tekstovi i dalje na starom jeziku, ponovno pokrenite **AAPS**.
 - Na Androidu 12 ova se postavka ne prikazuje: **AAPS** uvijek koristi jezik telefona.
@@ -86,6 +87,10 @@ Odaberite svijetlu temu, tamnu temu ili praćenje postavke sustava telefona.
 
 ![Postavke > Zaštita](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Glavna lozinka
 
@@ -110,9 +115,9 @@ Ako ste zaboravili glavnu lozinku, pogledajte [Kako resetirati glavnu lozinku?](
 
 ### Zaštita aplikacije
 
-Ako je aplikacija zaštićena, morate unijeti lozinku ili koristiti biometrijsku provjeru autentičnosti telefona da otvorite **AAPS**, i ponovno kada se vratite u aplikaciju nakon [vremena isteka zaštite](#Preferences-password-and-pin-retention).
+Ako je aplikacija zaštićena, morate unijeti lozinku ili koristiti biometrijsku provjeru autentičnosti telefona da otvorite **AAPS**, i ponovno kada se vratite u aplikaciju nakon [vremena isteka zaštite](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** će se odmah zatvoriti ako se unese pogrešna lozinka – ali će i dalje raditi u pozadini ako je prije bio uspješno otvoren.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Zaštita bolusa
 
