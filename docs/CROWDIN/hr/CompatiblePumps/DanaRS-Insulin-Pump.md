@@ -80,7 +80,7 @@
 * Za DanaRS s firmwareom v3 ili Dana-i zadana lozinka izvodi se iz datuma proizvodnje i računa se kao MMDD, gdje je MM mjesec, a DD dan proizvodnje pumpe (npr. '0124' znači mjesec 01 i dan 24).
     
     * U glavnom izborniku (MAIN MENU) odaberite REVIEW, a zatim u podizborniku otvorite SHIPPING INFORMATION
-    * Number 3 is manufacturing date. 
+    * Broj 3 je datum proizvodnje. 
     * Kod v3/i ova se lozinka koristi samo za zaključavanje izbornika na pumpi. Ne koristi se za komunikaciju i nije ju potrebno unositi u AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
