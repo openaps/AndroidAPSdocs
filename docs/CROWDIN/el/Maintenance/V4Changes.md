@@ -111,6 +111,8 @@
 
 Όταν κάνετε την αναβάθμιση, το **AAPS** κρατά την ινσουλίνη και τη DIA που είχαν ήδη αποθηκεύσει οι αλλαγές προφίλ σας στη v3. Αν βρει παλαιότερα αρχεία όπου η ινσουλίνη είναι γνωστή αλλά η DIA όχι, χρησιμοποιεί μια προεπιλεγμένη DIA για αυτά και δείχνει ένα μήνυμα μία φορά, για παράδειγμα *Τα παλαιότερα αρχεία δεν είχαν διάρκεια δράσης ινσουλίνης, επομένως χρησιμοποιήθηκαν 9,0 ώρες για το Lyumjev. Ελέγξτε τις ρυθμίσεις ινσουλίνης σας — τα αρχεία που έχουν ήδη μετεγκατασταθεί δεν ενημερώνονται αργότερα.* Ελέγξτε τις ρυθμίσεις ινσουλίνης σας όταν το δείτε.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 Για να αλλάξετε τη DIA ή την κορύφωση (peak), προσθέστε μια νέα ινσουλίνη με το **+**, προσαρμόστε την, αποθηκεύστε την και πατήστε **▶ Ενεργοποίηση**. Δείτε [Αλλαγή της ινσουλίνης που χρησιμοποιείται](#Config-Builder-insulin-change-active).

@@ -45,7 +45,7 @@ Novú scénu vytvoríte ťuknutím na tlačidlo **+**.
 
 ### Začať od šablóny
 
-Ak chcete scénu **vytvoriť**, ťuknite na obrazovke Scény na tlačidlo **+**. Prvý krok je **Začať od šablóny**: vyberte si hotovú scénu pre bežnú situáciu – *Cvičenie*, *Choroba*, *Choroba – vracanie*, *Spánok*, *Noc po cvičení*, *Pred jedlom*, *Alkohol*, *Šoférovanie*, *Kúpanie*, *Luteálna fáza*, *Horúce počasie*, *Lekársky zákrok* – alebo začnite s *Prázdnou* scénou. Každá šablóna **predvyplní odporúčané akcie** a všetko môžete upraviť v ďalších krokoch.
+Ak chcete scénu **vytvoriť**, ťuknite na obrazovke Scény na tlačidlo **+**. Prvý krok je **Začať od šablóny**: vyberte si hotovú scénu pre bežnú situáciu – *Cvičenie*, *Choroba*, *Choroba – vracanie*, *Spánok*, *Noc po cvičení*, *Pred jedlom*, *Alkohol*, *Šoférovanie*, *Kúpanie*, *Luteálna fáza*, *Horúce počasie*, *Lekársky zákrok* – alebo začnite s *Prázdnou* scénou. Každá šablóna **predvyplní odporúčané akcie** a všetko môžete upraviť v ďalších krokoch. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![„Začať od šablóny“ – výber východiskového bodu](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Scéna bez nadväzujúcej scény sa iba spýta na potvrdenie:
 
 ![Dialógové okno Ukončiť scénu](../images/v4/Scenes/scene_end_dialog.png)
 
-Ukončenie scény **vráti späť** zmeny, ktoré urobila (napríklad prepnutie profilu a dočasný cieľ, ktoré spustila).
+Ukončenie scény **vráti späť** zmeny, ktoré urobila (napríklad prepnutie profilu a dočasný cieľ, ktoré spustila). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Kým je scéna aktívna, profil a cieľ na hlavnej obrazovke majú malú ikonu scény, ak ich nastavila scéna. Panel **Scény** na spodnej navigačnej lište zostáva dostupný na spustenie inej scény:
 

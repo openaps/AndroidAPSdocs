@@ -182,7 +182,7 @@ If you don't understand, or can't agree to the end user license agreement please
 
 המסך הזה מוצג רק כאשר **AAPS** מוצא בתיקיית **AAPS** הגדרות שיוצאו קודם ("נמצאו הגדרות שמורות"), למשל כאשר מתקינים מחדש את האפליקציה או עוברים לטלפון חדש.
 
-- כדי לשחזר את התצורה הקודמת, יש ללחוץ על "**ייבוא הגדרות**" — ראו [ייצוא וייבוא הגדרות](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - כדי להתחיל עם תצורה חדשה, יש ללחוץ על "**הבא**" ולהמשיך באשף.
 
 ![ייבוא הגדרות](../images/setup-wizard/Wizard-ImportSettings.png)

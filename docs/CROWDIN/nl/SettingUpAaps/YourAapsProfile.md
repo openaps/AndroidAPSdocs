@@ -31,7 +31,7 @@ De laatste vier parameters (glucosestreefwaarden, basaalstanden, insulinegevoeli
 
 Hieronder zie je screenshots uit **AAPS** van een _voorbeeld_profiel. Let op: het voorbeeldprofiel hieronder heeft veel tijdstippen. Als je net met **AAPS** begint, is je profiel waarschijnlijk veel eenvoudiger.
 
-![Voorbeeld van een actief profiel](../images/Profile-Example-Active.png)
+![Voorbeeld van een actief profiel](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Glucosestreefwaarden
@@ -55,7 +55,7 @@ Als de streefwaarde in je **Profiel** heel breed is (bijvoorbeeld 3 mmol/l of me
 
 De **afbeelding hieronder** toont een voorbeeld van hoe de streefwaarde in een **AAPS**-profiel kan worden ingesteld.
 
-![Streefdoel](../images/Profile_Target.png)
+![Streefdoel](../images/v4/Profiles/Profile_Target.png)
 
 De **BG**-streefwaarden stel je in naar je eigen voorkeuren en behoeften. Als je bijvoorbeeld bang bent voor hypo's in de nacht, kun je van 21:00 tot 07:00 uur je streefwaarde iets hoger zetten, op 117 mg/dl (6,5 mmol/l). Wil je zeker weten dat je 's ochtends genoeg insuline aan boord (IOB) hebt voordat je voor het ontbijt bolust, dan kun je van 7:00 tot 8:00 uur een lagere streefwaarde van 81 mg/dl (4,5 mmol/l) instellen.
 
@@ -89,7 +89,7 @@ Omgekeerd kan een te lage basaalstand leiden tot hoge BG-waarden, en lukt het da
 
 De **afbeelding hieronder** toont een voorbeeld van hoe de basaalstanden in een **AAPS**-profiel kunnen worden ingesteld.
 
-![Basaalstanden](../images/Profile_BasalRates.png)
+![Basaalstanden](../images/v4/Profiles/Profile_BasalRates.png)
 
 Je basaalstanden goed instellen gaat met vallen en opstaan, en doe je in overleg met je diabetesteam.
 
@@ -147,7 +147,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 Een **ISF** die te laag is (en dus agressiever, dit komt vaak voor) kan leiden tot ‘overcorrecties’, omdat **AAPS** berekent dat je meer insuline nodig hebt om een hoge **BG** te corrigeren dan echt nodig is. Dit kan leiden tot ‘achtbaan’-BG-waarden (vooral bij vasten), zoals te zien is op de afbeelding hieronder. In dat geval moet de **ISF**-waarde omhoog, zodat **AAPS** minder agressief wordt. Zo geeft **AAPS** kleinere correctiedoses en voorkom je dat een hoge **BG** te veel wordt gecorrigeerd en dan een lage **BG** geeft.
 
-![ISF te laag](../images/isf.jpg)
+![ISF te laag](../images/v4/Profiles/isf.jpg)
 
 Omgekeerd kan een te hoog ingestelde **ISF** leiden tot ondercorrecties. Je **BG** blijft dan boven de streefwaarde – vooral 's nachts goed te zien.
 
@@ -155,7 +155,7 @@ Omgekeerd kan een te hoog ingestelde **ISF** leiden tot ondercorrecties. Je **BG
 
 Zie de **afbeelding hieronder** voor een voorbeeld van hoe ISF-waarden in een **AAPS**-profiel kunnen worden ingesteld.
 
-![Profiel ISF](../images/Profile_ISF.png)
+![Profiel ISF](../images/v4/Profiles/Profile_ISF.png)
 
 Een eenvoudig startpunt voor je ISF overdag is om die te baseren op je totale dagelijkse dosis (TDD) met de 1700-regel (94-regel voor mmol/l). Meer details staan in hoofdstuk 7 van [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) van Gary Scheiner.
 
@@ -213,7 +213,7 @@ Een **hogere / zwakkere ICR** = meer eten per eenheid, dus je krijgt minder insu
 
 De **afbeelding hieronder** toont een voorbeeld van de **ICR** van een gebruiker en hoe die in een **AAPS-profiel** kan worden ingesteld. Bij het invullen van deze waarden vul je het laatste deel van de verhouding in. Een insuline-koolhydraatratio van 1:3,5 vul je dus gewoon in als “3,5”.
 
-![Profiel ICR](../images/Profile_ICR.png)
+![Profiel ICR](../images/v4/Profiles/Profile_ICR.png)
 
 Als je **BG** hoger blijft dan voor het eten, nadat een maaltijd is verteerd en de **IOB** weer nul is, is je **ICR** waarschijnlijk te zwak (_d.w.z._ het getal is te hoog en moet stap voor stap omlaag). Omgekeerd: als je **BG** lager is dan voor het eten, is de **ICR** te sterk (_d.w.z._ het getal is te klein en moet stap voor stap omhoog).
 
@@ -292,7 +292,7 @@ De [Profielhulp](#aaps-screens-profile-helper) (menu ☰ → **Profielhulp**) ka
 
 Profielhulp biedt gegevens van twee verschillende ziekenhuizen voor kinderen om een eerste profiel te vinden voor je kind tot 18 jaar.
 
-![Profielhulp kinderen 1](../images/ProfileHelperKids1.png)
+![Profielhulp kinderen 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. Zorg dat je op het tabblad **Profiel 1** bent.
 2. Zorg dat bij **Profieltype** "Basis profiel" is gekozen.
@@ -303,7 +303,7 @@ Profielhulp biedt gegevens van twee verschillende ziekenhuizen voor kinderen om 
 7. Open the **Comparison** tab. Er wordt een vergelijking van de twee aangepaste profielen getoond (zie screenshot hieronder).
 8. Als je je profiel wilt gaan bijstellen op basis van een van deze voorstellen, gebruik dan de knop **Dupliceren** onderaan de vergelijking.
 
-![Profielhulp kinderen 2](../images/ProfileHelperKids2.png)
+![Profielhulp kinderen 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Profiel wisselen
 
@@ -312,7 +312,7 @@ Zie [Profiel wissel & Profiel percentage](../DailyLifeWithAaps/ProfileSwitch-Pro
 (your-aaps-profile-clone-profile-switch)=
 ### Een profiel wissel klonen naar een nieuw profiel
 
-![Profiel wissel](../images/TreatmentsView4.png)
+![Profiel wissel](../images/Maintenance/TreatmentsView4.png)
 
 De [Behandelingen geschiedenis](#aaps-screens-treatments) toont alle eerdere **Profiel wisselingen**. Op het tabblad **Profiel wissel** kun je een eerdere **Profiel wissel** gebruiken als basis voor een nieuw **Profiel**. In dat geval worden de tijdverschuiving en het percentage toegepast op het nieuwe lokale profiel. Gebruik de knop **Dupliceren** op regel **2**.
 
@@ -335,14 +335,14 @@ Dit kan handig zijn als je grote wijzigingen gaat maken in een uitgebreider **Pr
 
 Hiervoor is het wel belangrijk om in de Nightscout-editor het hele **databaserecord** met meerdere profielen te klonen (blauwe pijl op de screenshot hieronder). De nieuwe databaserecords krijgen dan de huidige datum. Na het opslaan kun je het gewijzigde/nieuwe **Profiel** in **AAPS** activeren met een gewone [Profiel wissel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Databaserecords klonen](../images/Nightscout_Profile_Editor.PNG)
+![Databaserecords klonen](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Twee profielen vergelijken
 
 Je kunt ook de [Profielhulp](#aaps-screens-profile-helper) (menu ☰ → **Profielhulp**) gebruiken om twee verschillende profielen of profiel wissels te vergelijken (een percentage van een van je profielen dat eerder in een [profiel wissel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) is gebruikt).
 
-![Profielhulp 1](../images/ProfileHelper1.png)
+![Profielhulp 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. Zorg dat je op het tabblad **Profiel 1** bent.
 2. Kies bij **Profieltype** "Beschikbare profielen" om te kiezen uit alle opgeslagen **Profielen**.
@@ -352,4 +352,4 @@ Je kunt ook de [Profielhulp](#aaps-screens-profile-helper) (menu ☰ → **Profi
 6. Kies de **Profiel wissel** waarmee je wilt vergelijken.
 7. Open the **Comparison** tab. Er wordt een vergelijking van de twee profielen getoond (zie screenshot hieronder).
 
-![Profielhulp 2](../images/ProfileHelper2.png)
+![Profielhulp 2](../images/v4/Profiles/ProfileHelper2.png)

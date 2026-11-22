@@ -56,19 +56,20 @@ Det skapades inte från mallen. Radera det (**Settings** → längst ned på sid
 You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-Byggstegen uppdateras åt dig: vid varje bygge kör ditt repo den version som AAPS-utvecklarna har släppt i nightscout/aaps-builder, och ingenting i ditt repo ändras. Du byter bara ut din arbetsflödesfil när [Uppdateringar och ändringar i dokumentationen](../Maintenance/DocumentationUpdate.md) säger det (till exempel för en ny byggvariant), eller en gång om ditt repo skapades med en tidigare version av den här sidan eller från den gamla mallen. Din hemlighet `KEYSTORE_SET` förblir som den är.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Din hemlighet `KEYSTORE_SET` förblir som den är.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   På en dator klickar du på **kopieringsikonen** ("Copy raw file") uppe till höger i filen. På en telefon öppnar du i stället <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">versionen med ren text</a> och håller fingret på texten → **Markera alla** → **Kopiera**.
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
    Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Ersätt hela texten med det kopierade arbetsflödet (på en telefon: håll fingret på texten → **Markera alla** → **Klistra in**) och klicka sedan på **Commit changes…** två gånger. Filens första rad visar dess version.
-```
+
+</div>
 
 (aaps-builder-setup-step2)=
 

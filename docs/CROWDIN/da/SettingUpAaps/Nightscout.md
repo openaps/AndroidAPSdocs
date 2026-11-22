@@ -2,72 +2,72 @@
 
 (Nightscout-security-considerations)=
 
-## Security considerations
+## Sikkerhedsovervejelser
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Nightscout er rapporterings- og overvågningsserveren for **AAPS**: **AAPS** uploader dine data til den, og du eller dine omsorgspersoner ser dem på Nightscout-hjemmesiden eller i følger-apps. Den indeholder dine medicinske data, profiler og behandlinger, så det er en god idé at tænke over, hvordan du beskytter din Nightscout-hjemmeside.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+I **AAPS** 4 går fjernstyring ikke gennem Nightscout-hjemmesiden. Mens klientstyring er slået til ([hærdet tilstand](#client-master-control-hardened-mode)), bliver behandlinger eller mål, der indtastes direkte i Nightscout, **ikke udført** af **AAPS**. Fjernkommandoer kommer i stedet fra en parret **AAPSClient** - se [Styring mellem hovedenhed ↔ klient](#client-master-control).
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Vær meget forsigtig, hvis du bruger Nightscout som BS-kilde i AAPS.
 
-### Nightscout settings
+### Nightscout-indstillinger
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+Du kan forhindre offentlig adgang til din Nightscout-side ved at bruge [godkendelsesroller](https://nightscout.github.io/nightscout/security): sørg for kun at dele din URL med en `readable`-token, aldrig med en `admin`-token.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Nightscout `API_SECRET` er hovedadgangskoden til din side: del den ikke offentligt.
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### AAPS-indstillinger
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+At modtage data fra Nightscout (profilændringer, behandlinger, ...) er valgfrit og slået fra som standard. Kontakterne, der er beskrevet nedenfor, er skjult, mens klientstyring er slået til (hærdet tilstand), og i [simpel tilstand](#preferences-simple-mode).
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* Du åbner indstillingerne for **Synkronisering** i NSClientV3-pluginet enten via 1) **Indstillinger** (tandhjulsikonet på hovedskærmen) -> **NSClientV3** -> **Synkronisering**, eller 2) **Konfiguration** (menuen ☰) -> **Kommunikation** -> »**Indstillinger**« under NSClientV3.
+* Aktiver »Upload data til NS«.
+* »Upload BS-data til NS« findes i indstillingerne for din BS-kilde (**Konfiguration → BS-kilde → Indstillinger**). Aktiver den, medmindre din BS-kilde i AAPS er Nightscout: i så fald må du **ikke** aktivere den.
+* Aktiver ikke »Modtag CGM-data fra NS«, medmindre Nightscout er din BS-kilde.
 
-#### Do not sync from Nightscout
+#### Synkroniser ikke fra Nightscout
 
-Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Når alle mulighederne »Modtag … fra NS« er deaktiveret, er du sikker på, at AAPS ikke bruger nogen ændringer fra Nightscout:
 
-![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
+![Kun upload til Nightscout](../images/preferences/settings_nsclient_sync.png)
 
-#### Accept changes from Nightscout
+#### Accepter ændringer fra Nightscout
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Når du aktiverer disse muligheder, kan du ændre indstillinger i AAPS gennem Nightscout, f.eks. ændre og skifte profiler, indstille midlertidige mål og tilføje kulhydrater, som AAPS så tager med i beregningen. De vises kun, når klientstyring og simpel tilstand er slået fra.  
+Bemærk, at insulinbehandlinger kun bruges til beregninger ligesom »Giv ikke bolus, registrer kun«.
 
-![Nightscout receive options enabled](../images/NSsafety3.png)
+![Nightscout-muligheder for modtagelse er aktiveret](../images/NSsafety3.png)
 
-### Further security settings
+### Flere sikkerhedsindstillinger
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+Hold din telefon opdateret som beskrevet under [sikkerhed først](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
-## Manual Nightscout setup
+## Manuel opsætning af Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Det forudsættes, at du allerede har en Nightscout-side. Hvis ikke, så besøg siden [Nightscout](http://nightscout.github.io/nightscout/new_user/) for en komplet vejledning i opsætningen. Vejledningen nedenfor beskriver de indstillinger, du også skal tilføje på din Nightscout-side. Din Nightscout-side skal mindst have version 15, så tjek, at du kører den [nyeste version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), ellers får du en fejlmeddelelse i AAPS-appen.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Rediger dine variabler](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
-* Add or edit the variables as follows:
+* Tilføj eller rediger variablerne sådan:
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Der kan indstilles forskellige alarmer til [overvågning af pumpen](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), især batteri i % anbefales: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Gem ændringerne. Din Nightscout-side burde nu kunne vise »pillerne«. Du kan tvinge dem til at blive vist som standard ved at tilføje dem i `SHOW_PLUGINS`.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
-  ![Nightscout Pills](../images/nightscout1.png)
+  ![Nightscout-piller](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Nightscout som betalt SaaS (Software as a Service)
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Brug udbyderens webbrugerflade til at indstille variablerne. Kontakt udbyderens support, hvis det er nødvendigt.

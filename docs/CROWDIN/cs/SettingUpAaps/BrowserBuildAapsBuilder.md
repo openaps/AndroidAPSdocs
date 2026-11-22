@@ -49,8 +49,8 @@ Soukromý repozitář dostává každý měsíc 2000 minut GitHub Actions zdarma
 ```{warning}
 **Nový klíč, nebo stávající klíč: na tom závisí, zda budete moci AAPS aktualizovat.**
 
-- **AAPS už v telefonu máte a máte i úložiště klíčů, se kterým byl sestaven**: na stránce nastavení zvolte **I already have a keystore** a nahrajte ho. Vaše příští sestavení pak AAPS aktualizuje bez přeinstalace. Sestavovali jste AAPS dřívějším způsobem sestavení v prohlížeči (vlastní fork)? Vaše úložiště klíčů je ve vašem forku: [nejprve si z něj získejte kopii](#aaps-builder-from-fork).
-- **Sestavujete AAPS poprvé, nebo jste ztratili úložiště klíčů či jeho heslo**: zvolte **Create a new key**. Aplikace podepsaná novým klíčem **nemůže aktualizovat** AAPS podepsané jiným klíčem. Musíte exportovat nastavení, zkopírovat soubor mimo telefon, odinstalovat staré AAPS, nainstalovat nové a potom nastavení importovat: viz [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
+- **AAPS už v telefonu máte a máte i úložiště klíčů, se kterým byl sestaven**: na stránce nastavení zvolte **Už mám úložiště klíčů** a nahrajte ho. Vaše příští sestavení pak AAPS aktualizuje bez přeinstalace. Sestavovali jste AAPS dřívějším způsobem sestavení v prohlížeči (vlastní fork)? Vaše úložiště klíčů je ve vašem forku: [nejprve si z něj získejte kopii](#aaps-builder-from-fork).
+- **Sestavujete AAPS poprvé, nebo jste ztratili úložiště klíčů či jeho heslo**: zvolte **Vytvořit nový klíč**. Aplikace podepsaná novým klíčem **nemůže aktualizovat** AAPS podepsané jiným klíčem. Musíte exportovat nastavení, zkopírovat soubor mimo telefon, odinstalovat staré AAPS, nainstalovat nové a potom nastavení importovat: viz [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
 
 Potom vždy používejte stále stejný klíč. Když vytváříte nový klíč, stáhněte zálohu, kterou stránka nabízí, a uložte ji spolu s heslem a aliasem (`key0`) na bezpečné místo mimo telefon.
 ```
@@ -61,10 +61,10 @@ Potom vždy používejte stále stejný klíč. Když vytváříte nový klíč,
 
 Tuto část přeskočte, pokud jste nikdy nesestavovali AAPS dřívějším způsobem sestavení v prohlížeči (vlastní kopie neboli fork AndroidAPS na GitHubu, s přípravným souborem a Diskem Google).
 
-Vaše úložiště klíčů je uložené jako secrety ve vašem forku. GitHub už secret nikdy znovu neukáže, takže ho nemůžete zkopírovat do nového repozitáře. Nejprve si opatřete kopii svého úložiště klíčů a potom ji použijte v [kroku 2](#aaps-builder-step2) s volbou **I already have a keystore**.
+Vaše úložiště klíčů je uložené jako secrety ve vašem forku. GitHub už secret nikdy znovu neukáže, takže ho nemůžete zkopírovat do nového repozitáře. Nejprve si opatřete kopii svého úložiště klíčů a potom ji použijte v [kroku 2](#aaps-builder-step2) s volbou **Už mám úložiště klíčů**.
 
 ```{warning}
-Nevolte **Create a new key**. AAPS sestavené s novým klíčem nemůže aktualizovat AAPS ve vašem telefonu.
+Nevolte **Vytvořit nový klíč**. AAPS sestavené s novým klíčem nemůže aktualizovat AAPS ve vašem telefonu.
 ```
 
 Která situace je ta vaše?
@@ -84,11 +84,11 @@ Export úložiště klíčů z vašeho forku:
 
 V [kroku 2](#aaps-builder-step2) stránky nastavení:
 
-1. Klepněte na **I already have a keystore**.
-2. V poli **Keystore file** vyberte `keystore.jks`.
-3. Do pole **Keystore password** zadejte `KEYSTORE_PASSWORD` ze souboru `keyStoreInfo.txt`.
-4. V poli **Key alias** vyberte nebo zadejte `ALIAS` ze souboru `keyStoreInfo.txt`.
-5. Pokud se `KEY_PASSWORD` liší od `KEYSTORE_PASSWORD`, zrušte zaškrtnutí **Key password is the same as the keystore password** a zadejte `KEY_PASSWORD`.
+1. Klepněte na **Už mám úložiště klíčů**.
+2. V poli **Soubor úložiště klíčů** vyberte `keystore.jks`.
+3. Do pole **Heslo úložiště klíčů** zadejte `KEYSTORE_PASSWORD` ze souboru `keyStoreInfo.txt`.
+4. V poli **Alias klíče** vyberte nebo zadejte `ALIAS` ze souboru `keyStoreInfo.txt`.
+5. Pokud se `KEY_PASSWORD` liší od `KEYSTORE_PASSWORD`, zrušte zaškrtnutí **Heslo klíče je stejné jako heslo úložiště klíčů** a zadejte `KEY_PASSWORD`.
 
 Soubor `keystore.zip` a jeho `ZIP_PASSWORD` uchovávejte na bezpečném místě mimo telefon: je to záloha vašeho klíče.
 
@@ -116,23 +116,23 @@ Tento krok vytvoří ve vašem účtu GitHub vlastní soukromou kopii AAPS Build
 
 1. Ujistěte se, že jste v tomto prohlížeči přihlášeni na github.com.
 
-2. Do pole **Your GitHub username** zadejte své uživatelské jméno na GitHubu, ne e-mail. Stránka ho ověří u GitHubu: **✓ GitHub user found** znamená, že je správné.
+2. Do pole **Vaše uživatelské jméno na GitHubu** zadejte své uživatelské jméno na GitHubu, ne e-mail. Stránka ho ověří u GitHubu: **✓ GitHub user found** znamená, že je správné.
 
-3. V poli **Name of your repository** ponechte navržený název `my-aaps`. Pokud jste už repozitář vytvořili s jiným názvem, zadejte přesně tento název.
+3. V poli **Název vašeho repozitáře** ponechte navržený název `my-aaps`. Pokud jste už repozitář vytvořili s jiným názvem, zadejte přesně tento název.
 
    ```{note}
-   **Už máte repozitář AAPS Builder** (vytvořený starší verzí stránky nastavení)? Nevytvářejte nový: zadejte jeho přesný název, přeskočte **Create my private repository** a jednou aktualizujte jeho workflow podle části [Aktualizace AAPS](#aaps-builder-updates). Vaše secrety zůstanou, jak jsou. Pokud přesto chcete nový repozitář, zvolte název, který ještě nemáte, například `my-aaps-2`, a v kroku 2 použijte stejné úložiště klíčů.
+   **Už máte repozitář AAPS Builder** (vytvořený starší verzí stránky nastavení)? Nevytvářejte nový: zadejte jeho přesný název, přeskočte **Vytvořit můj soukromý repozitář** a jednou aktualizujte jeho workflow podle části [Aktualizace AAPS](#aaps-builder-updates). Vaše secrety zůstanou, jak jsou. Pokud přesto chcete nový repozitář, zvolte název, který ještě nemáte, například `my-aaps-2`, a v kroku 2 použijte stejné úložiště klíčů.
 
    Nezadávejte název svého forku AndroidAPS: fork je veřejný a už sestavuje vlastním workflow **AAPS CI**.
    ```
 
    ![Vyplněný krok 1 stránky nastavení](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Zkontrolujte řádek **Your repository:** – ukazuje `github.com/<your username>/my-aaps`. Stránka nastavení si pamatuje název z vaší poslední návštěvy: pokaždé ho zkontrolujte, než použijete její tlačítka.
+4. Zkontrolujte řádek **Váš repozitář:** – ukazuje `github.com/<your username>/my-aaps`. Stránka nastavení si pamatuje název z vaší poslední návštěvy: pokaždé ho zkontrolujte, než použijete její tlačítka.
 
-5. Klepněte na **Create my private repository**.
+5. Klepněte na **Vytvořit můj soukromý repozitář**.
 
-   ![Řádek s repozitářem a tlačítko Create my private repository](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Řádek s repozitářem a tlačítko Vytvořit můj soukromý repozitář](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
 6. GitHub otevře na nové kartě stránku **Create a new repository**. Vše je už vyplněné: v části **Start with a template** šablona `nightscout/aaps-builder` s vypnutou volbou **Include all branches** a v části **General** váš účet jako **Owner** a zvolený název.
 
@@ -149,7 +149,7 @@ Tento krok vytvoří ve vašem účtu GitHub vlastní soukromou kopii AAPS Build
    ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
 
 ```{warning}
-**Váš nový repozitář je prázdný**, bez souborů? Nebyl vytvořen ze šablony a nemůže sestavovat. Smažte ho (**Settings** → konec stránky → **Delete this repository**) a potom na stránce nastavení znovu klepněte na **Create my private repository**.
+**Váš nový repozitář je prázdný**, bez souborů? Nebyl vytvořen ze šablony a nemůže sestavovat. Smažte ho (**Settings** → konec stránky → **Delete this repository**) a potom na stránce nastavení znovu klepněte na **Vytvořit můj soukromý repozitář**.
 ```
 
 ```{tip}
@@ -164,28 +164,28 @@ Aplikace musí být podepsaná vaším vlastním klíčem. Zvolte jednu ze dvou 
 
 ![Krok 2 stránky nastavení: dvě možnosti klíče](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
-### I already have a keystore
+### Už mám úložiště klíčů
 
-1. Klepněte na **I already have a keystore**.
-2. V poli **Keystore file** vyberte svůj soubor `.jks` (nebo `.keystore`, `.p12`, `.pfx`). Pokud jste v telefonu, nejprve si soubor zkopírujte do telefonu nebo na Disk Google.
-3. Do pole **Keystore password** zadejte heslo úložiště klíčů.
-4. V poli **Key alias** vyberte svůj alias ze seznamu, nebo ho zadejte, pokud seznam není. U úložišť klíčů vytvořených v Android Studiu je to obvykle `key0`.
-5. Pokud se heslo klíče liší od hesla úložiště klíčů, zrušte zaškrtnutí **Key password is the same as the keystore password** a zadejte heslo klíče.
-6. Klepněte na **Check and continue**.
+1. Klepněte na **Už mám úložiště klíčů**.
+2. V poli **Soubor úložiště klíčů** vyberte svůj soubor `.jks` (nebo `.keystore`, `.p12`, `.pfx`). Pokud jste v telefonu, nejprve si soubor zkopírujte do telefonu nebo na Disk Google.
+3. Do pole **Heslo úložiště klíčů** zadejte heslo úložiště klíčů.
+4. V poli **Alias klíče** vyberte svůj alias ze seznamu, nebo ho zadejte, pokud seznam není. U úložišť klíčů vytvořených v Android Studiu je to obvykle `key0`.
+5. Pokud se heslo klíče liší od hesla úložiště klíčů, zrušte zaškrtnutí **Heslo klíče je stejné jako heslo úložiště klíčů** a zadejte heslo klíče.
+6. Klepněte na **Zkontrolovat a pokračovat**.
 
-Stránka zkontroluje heslo a alias přímo ve vašem zařízení. **Keystore OK! Continue with step 3.** znamená, že je vše v pořádku. Pokud stránka napíše, že heslo bude zkontrolováno až při sestavení, přesto pokračujte: sestavení vám řekne, pokud je něco špatně.
+Stránka zkontroluje heslo a alias přímo ve vašem zařízení. **Úložiště klíčů je v pořádku! Continue with step 3.** znamená, že je vše v pořádku. Pokud stránka napíše, že heslo bude zkontrolováno až při sestavení, přesto pokračujte: sestavení vám řekne, pokud je něco špatně.
 
-### Create a new key
+### Vytvořit nový klíč
 
-1. Klepněte na **Create a new key**.
+1. Klepněte na **Vytvořit nový klíč**.
 
 2. Zvolte heslo a zadejte ho dvakrát. Pravidla: alespoň 8 znaků, jen písmena a–z a A–Z, číslice 0–9 a symboly jako `! ? #`. Žádné mezery, žádná písmena s diakritikou a žádný znak `|`.
 
-3. Klepněte na **Create key**. Než se objeví **Key created**, trvá to několik sekund.
+3. Klepněte na **Vytvořit klíč**. Než se objeví **Klíč vytvořen**, trvá to několik sekund.
 
    ![Formulář nového klíče s heslem zadaným dvakrát](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Klepněte na **Download backup (aaps-keystore.jks)**. Pokud se Chrome zeptá **Stáhnout soubor znovu?**, je už v telefonu starší záloha se stejným názvem: klepněte na **Stáhnout znovu**. Chrome pak uloží nový klíč jako `aaps-keystore (1).jks`: to je soubor, který patří k tomuto klíči. Uchovejte ho a nepleťte si ho se starším souborem.
+4. Klepněte na **Stáhnout zálohu (aaps-keystore.jks)**. Pokud se Chrome zeptá **Stáhnout soubor znovu?**, je už v telefonu starší záloha se stejným názvem: klepněte na **Stáhnout znovu**. Chrome pak uloží nový klíč jako `aaps-keystore (1).jks`: to je soubor, který patří k tomuto klíči. Uchovejte ho a nepleťte si ho se starším souborem.
 
    Tyto tři věci uchovávejte pohromadě na bezpečném místě mimo telefon (například ve vlastním cloudovém úložišti):
 
@@ -203,7 +203,7 @@ Stránka zkontroluje heslo a alias přímo ve vašem zařízení. **Keystore OK!
 
 Krok 3 se odemkne, když je hotový krok 2. Váš klíč, jeho hesla a alias se zabalí do jedné hodnoty, secretu `KEYSTORE_SET`.
 
-1. Klepněte na **Open the secrets page**.
+1. Klepněte na **Otevřít stránku secretů**.
 
 ![Krok 3 stránky nastavení](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
@@ -211,9 +211,9 @@ Krok 3 se odemkne, když je hotový krok 2. Váš klíč, jeho hesla a alias se 
 
 ![Formulář GitHubu New secret](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Přepněte na kartu se stránkou nastavení a klepněte na **Copy name**. Přepněte zpět na kartu GitHubu a vložte ho do malého pole **Name**. Název je `KEYSTORE_SET`.
+3. Přepněte na kartu se stránkou nastavení a klepněte na **Kopírovat název**. Přepněte zpět na kartu GitHubu a vložte ho do malého pole **Name**. Název je `KEYSTORE_SET`.
 
-4. Přepněte na kartu se stránkou nastavení a klepněte na **Copy secret**. Přepněte zpět na kartu GitHubu a vložte ho do velkého pole **Secret** (v telefonu dlouhým stiskem). Secret je velmi dlouhý kód o tisících znaků: stránka nastavení ukazuje jeho první znaky vedle tlačítka. Nevkládejte tam slovo `KEYSTORE_SET`.
+4. Přepněte na kartu se stránkou nastavení a klepněte na **Kopírovat secret**. Přepněte zpět na kartu GitHubu a vložte ho do velkého pole **Secret** (v telefonu dlouhým stiskem). Secret je velmi dlouhý kód o tisících znaků: stránka nastavení ukazuje jeho první znaky vedle tlačítka. Nevkládejte tam slovo `KEYSTORE_SET`.
 
 5. Klepněte na **Add secret**. `KEYSTORE_SET` se nyní zobrazí v části **Repository secrets**.
 
@@ -229,7 +229,7 @@ GitHub ukazuje **Page not found** (404)? Nejprve zkontrolujte, že jste v tomto 
 
 ## Krok 4 – Sestavte aplikaci
 
-1. Na stránce nastavení klepněte na **Open the build page**. GitHub otevře stránku **Build AAPS** vašeho repozitáře.
+1. Na stránce nastavení klepněte na **Otevřít stránku sestavení**. GitHub otevře stránku **Build AAPS** vašeho repozitáře.
 
    ![Stránka GitHubu Build AAPS s tlačítkem Run workflow](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
@@ -273,7 +273,7 @@ Pokud tam není tlačítko **Build AAPS** ani **Run workflow**:
 ```
 
 1. V telefonu otevřete stránku nastavení v **Chromu**. Pokud budete vyzváni, přihlaste se na github.com.
-2. Klepněte na **Open my builds** a potom na nejnovější sestavení se zelenou fajfkou.
+2. Klepněte na **Otevřít moje sestavení** a potom na nejnovější sestavení se zelenou fajfkou.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
@@ -319,7 +319,7 @@ Každé sestavení si můžete nechat ukládat také na svůj Disk Google, do sl
 
 Potřebujete k tomu ještě jeden secret, `GDRIVE_OAUTH2`. Krok 6 stránky nastavení ho pro vás získá od Googlu, v telefonu i na počítači. **AAPS** pak na vašem Disku Google vidí a mění jen soubory, které samo vytvoří, nic jiného.
 
-1. Na stránce nastavení klepněte na **Connect Google Drive**. Google se otevře na nové kartě.
+1. Na stránce nastavení klepněte na **Připojit Disk Google**. Google se otevře na nové kartě.
 
 2. Zvolte svůj účet Google a povolte přístup. Pokud Google napíše, že aplikace není ověřená, klepněte na **Rozšířená nastavení** (Advanced) a potom na **Přejít na …** (Go to …).
 
@@ -333,13 +333,13 @@ Potřebujete k tomu ještě jeden secret, `GDRIVE_OAUTH2`. Krok 6 stránky nasta
 
    ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
-4. Do několika minut se vraťte na kartu se stránkou nastavení: odpověď Googlu platí jen krátce a jen jednou. Vložte adresu do pole **Paste the copied address here** a klepněte na **Get GDRIVE_OAUTH2**. Stránka ukáže **GDRIVE_OAUTH2 is ready**.
+4. Do několika minut se vraťte na kartu se stránkou nastavení: odpověď Googlu platí jen krátce a jen jednou. Vložte adresu do pole **Sem vložte zkopírovanou adresu** a klepněte na **Získat GDRIVE_OAUTH2**. Stránka ukáže **GDRIVE_OAUTH2 is ready**.
 
    ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
    ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
-5. Klepněte na **Open the secrets page**. Klepněte na **Copy name** a vložte ho do malého pole **Name** (název je `GDRIVE_OAUTH2`). Klepněte na **Copy secret**, vložte ho do velkého pole **Secret** a klepněte na **Add secret**.
+5. Klepněte na **Otevřít stránku secretů**. Klepněte na **Kopírovat název** a vložte ho do malého pole **Name** (název je `GDRIVE_OAUTH2`). Klepněte na **Kopírovat secret**, vložte ho do velkého pole **Secret** a klepněte na **Add secret**.
 
    ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
@@ -363,8 +363,8 @@ Váš repozitář nikdy nic nesestaví sám: vy rozhodujete, kdy sestavit, jakou
 
 **Aktualizace vašeho souboru workflow** jsou vzácné: jen když se změní formulář **Run workflow**, například kvůli nové variantě sestavení, nebo jednou, pokud byl váš repozitář vytvořen starší verzí stránky nastavení (prázdný repozitář s krátkým souborem workflow) nebo ze staré šablony. Uvede to stránka [Aktualizace a změny dokumentace](../Maintenance/DocumentationUpdate.md). Váš secret `KEYSTORE_SET` zůstává beze změny. Na stránce nastavení otevřete na konci kroku 1 část **Updating your copy**:
 
-1. Klepněte na **Open the newest workflow**. Na počítači klikněte vpravo nahoře u souboru na **ikonu kopírování** („Copy raw file“). V telefonu místo toho otevřete **verzi v prostém textu**, dlouze stiskněte text a zvolte **Vybrat vše** a **Kopírovat**.
-2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
+1. Klepněte na **Otevřít nejnovější workflow**. Na počítači klikněte vpravo nahoře u souboru na **ikonu kopírování** („Copy raw file“). V telefonu místo toho otevřete **verzi v prostém textu**, dlouze stiskněte text a zvolte **Vybrat vše** a **Kopírovat**.
+2. Klepněte na **Otevřít můj soubor workflow**, potom na nabídku **⋯** vpravo nahoře u souboru a na **Edit file… In place** (on a computer, click the pencil).
 3. Nahraďte celý text zkopírovaným workflow (v telefonu dlouhým stiskem: **Vybrat vše** a potom **Vložit**).
 4. Klepněte na **Commit changes…** a potom na **Commit changes**.
 

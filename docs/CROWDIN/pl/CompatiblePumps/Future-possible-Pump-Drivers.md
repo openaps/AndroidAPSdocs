@@ -14,6 +14,8 @@ Omnipod 5 ([Strona domowa](https://www.omnipod.com/))
 
 ![Sterownik Omnipod 5 w trakcie tworzenia](../images/future-pumps/omnipod5-driver.png)
 
+See [Omnipod 5](../CompatiblePumps/Omnipod5.md) for how the driver in development works.
+
 Tandem: t:Mobi ([Strona domowa](https://www.tandemdiabetes.com/))
 
 ![Sterownik Tandem t:Mobi w trakcie tworzenia](../images/future-pumps/tandem-mobi-driver.png)

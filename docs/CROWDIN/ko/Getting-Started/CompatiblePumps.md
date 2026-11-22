@@ -9,6 +9,7 @@ AAPS는 여러 인슐린 펌프와 함께 작동합니다. 아래 목록은 현�
 
 ../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
 ../CompatiblePumps/Accu-Chek-Insight-Pump.md
+../CompatiblePumps/AP550-Insulin-Pump.md
 ../CompatiblePumps/CareLevo.md
 ../CompatiblePumps/DanaR-Insulin-Pump.md
 ../CompatiblePumps/DanaRS-Insulin-Pump.md
@@ -18,12 +19,14 @@ AAPS는 여러 인슐린 펌프와 함께 작동합니다. 아래 목록은 현�
 ../CompatiblePumps/MedtronicPump.md
 ../CompatiblePumps/MedtrumNano.md
 ../CompatiblePumps/OmnipodDASH.md
+../CompatiblePumps/Omnipod5.md
 ../CompatiblePumps/OmnipodEros.md
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
 
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (블루투스; [기본 사용 팁](#combov2-tips-for-basic-usage)도 참조하십시오)
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (블루투스)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md) (Bluetooth)
 - [CareLevo](../CompatiblePumps/CareLevo.md) (블루투스)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (블루투스)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (블루투스)
@@ -36,6 +39,7 @@ AAPS는 여러 인슐린 펌프와 함께 작동합니다. 아래 목록은 현�
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (블루투스)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (블루투스)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (블루투스)
+- [Omnipod 5](../CompatiblePumps/Omnipod5.md) (Bluetooth; driver in development, test builds only)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([추가 통신 장치](#CompatiblePumps-additional-communication-device) 필요)
 
 ## 내 펌프가 목록에 없습니다

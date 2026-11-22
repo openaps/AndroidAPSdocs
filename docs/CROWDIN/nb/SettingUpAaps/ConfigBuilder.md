@@ -313,6 +313,7 @@ Når du velger en annen pumpe, ber **AAPS** deg bekrefte byttet:
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Virtuell pumpe: åpen loop – bare forslag fra **AAPS**
   - når du tar dine første steg med **AAPS**, under de første [opplæringsmålene](../SettingUpAaps/CompletingTheObjectives.md)
   - for pumper som ikke har noen driver ennå

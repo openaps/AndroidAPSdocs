@@ -31,7 +31,7 @@ Posledné štyri parametre (cieľové glykémie, bazálne dávky, faktory citliv
 
 Nižšie sú snímky obrazovky _vzorového_ profilu z **AAPS**. Upozorňujeme, že tento vzorový profil nižšie zobrazuje veľké množstvo časových bodov. Keď začnete s **AAPS**, váš profil bude pravdepodobne oveľa jednoduchší.
 
-![Príklad aktívneho profilu](../images/Profile-Example-Active.png)
+![Príklad aktívneho profilu](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Cieľové hodnoty glykémie
@@ -55,7 +55,7 @@ Ak je cieľ vo vašom **profile** veľmi široký (napríklad 3 mmol/l [50 mg/dl
 
 **Obrázok nižšie** ukazuje príklad, ako možno nastaviť cieľ v profile **AAPS**.
 
-![Cieľ](../images/Profile_Target.png)
+![Cieľ](../images/v4/Profiles/Profile_Target.png)
 
 Ciele **glykémie** si nastavujete podľa svojich osobných preferencií a potrieb. Ak sa napríklad obávate nočných hypoglykémií, môžete si od 21:00 do 7:00 nastaviť cieľ o niečo vyšší, na 117 mg/dl (6,5 mmol/l). Ak chcete mať ráno pred bolusom na raňajky dostatok aktívneho inzulínu (IOB), môžete od 7:00 do 8:00 nastaviť nižší cieľ 81 mg/dl (4,5 mmol/l).
 
@@ -89,7 +89,7 @@ Naopak, príliš nízka bazálna dávka môže viesť k vysokým glykémiám a k
 
 **Obrázok nižšie** ukazuje príklad, ako možno nastaviť bazálne dávky v profile **AAPS**.
 
-![Bazálne dávky](../images/Profile_BasalRates.png)
+![Bazálne dávky](../images/v4/Profiles/Profile_BasalRates.png)
 
 Správne bazálne dávky sa nastavujú metódou pokusu a omylu a malo by sa to robiť po dohode s vaším diabetologickým tímom.
 
@@ -147,7 +147,7 @@ Z týchto príkladov vidíte, že čím _menšia_ je hodnota **ISF**, tým menej
 
 Príliš nízky **ISF** (a teda agresívnejší, čo nie je nezvyčajné) môže viesť k „nadmerným korekciám“, pretože **AAPS** vypočíta, že na korekciu vysokej **glykémie** potrebujete viac inzulínu, než je naozaj potrebné. To môže viesť ku glykémii ako na „horskej dráhe“ (najmä pri hladovaní), ako vidíte na obrázku nižšie. V takom prípade treba hodnotu **ISF** zvýšiť, aby bol **AAPS** menej agresívny. Tak **AAPS** podá menšie korekčné dávky a nebude nadmerne korigovať vysokú **glykémiu**, čo by viedlo k nízkej **glykémii**.
 
-![Príliš nízky ISF](../images/isf.jpg)
+![Príliš nízky ISF](../images/v4/Profiles/isf.jpg)
 
 Naopak, príliš vysoký **ISF** môže viesť k nedostatočným korekciám, takže vaša **glykémia** zostane nad cieľom – čo je viditeľné najmä v noci.
 
@@ -155,7 +155,7 @@ Naopak, príliš vysoký **ISF** môže viesť k nedostatočným korekciám, tak
 
 Na **obrázku nižšie** je príklad, ako možno nastaviť hodnoty ISF v profile **AAPS**.
 
-![Profil ISF](../images/Profile_ISF.png)
+![Profil ISF](../images/v4/Profiles/Profile_ISF.png)
 
 Základným východiskovým bodom na určenie denného ISF je odvodiť ho z celkovej dennej dávky (CDD) pomocou pravidla 1700 (94). Viac podrobností nájdete v 7. kapitole knihy [„Think like a Pancreas“](https://amzn.eu/d/iVU0RGe) od Garyho Scheinera.
 
@@ -213,7 +213,7 @@ Je bežné mať v rôznych častiach dňa rôzny **ICR**, a to v dôsledku hlad�
 
 **Obrázok nižšie** ukazuje príklad **ICR** používateľa a ako ho možno nastaviť v **profile AAPS**. Pri zadávaní týchto hodnôt sa zadáva len posledná časť pomeru, takže inzulínovo-sacharidový pomer 1:3,5 zadáte jednoducho ako „3,5“.
 
-![Profil ICR](../images/Profile_ICR.png)
+![Profil ICR](../images/v4/Profiles/Profile_ICR.png)
 
 Ak po strávení jedla a návrate **IOB** na nulu zostáva vaša **glykémia** vyššia ako pred jedlom, váš **ICR** je pravdepodobne príliš slabý (_t. j._ číslo je príliš vysoké a treba ho postupne znižovať). Naopak, ak je vaša **glykémia** nižšia ako pred jedlom, **ICR** je príliš silný (_t. j._ číslo je príliš malé a treba ho postupne zvyšovať).
 
@@ -292,7 +292,7 @@ Ak meníte svoj **profil**, uistite sa, že upravujete správny **profil**: kart
 
 Pomocník s profilom ponúka súbory údajov pre deti z dvoch rôznych nemocníc, aby ste našli počiatočný profil pre vaše dieťa do 18 rokov.
 
-![Pomocník s profilom pre deti 1](../images/ProfileHelperKids1.png)
+![Pomocník s profilom pre deti 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. Uistite sa, že ste na karte **Profil 1**.
 2. V poli **Typ profilu** sa uistite, že je vybraté „Predvolený profil“.
@@ -303,7 +303,7 @@ Pomocník s profilom ponúka súbory údajov pre deti z dvoch rôznych nemocníc
 7. Otvorte kartu **Porovnanie**. Zobrazí sa porovnanie oboch upravených profilov (pozrite snímku obrazovky nižšie).
 8. Ak chcete začať ladiť svoj profil podľa jedného z týchto návrhov, použite tlačidlo **Klonovať** pod porovnaním.
 
-![Pomocník s profilom pre deti 2](../images/ProfileHelperKids2.png)
+![Pomocník s profilom pre deti 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Prepnutie profilu
 
@@ -312,7 +312,7 @@ Pozrite si [Prepnutie profilu a percento profilu](../DailyLifeWithAaps/ProfileSw
 (your-aaps-profile-clone-profile-switch)=
 ### Klonovanie prepnutia profilu do nového profilu
 
-![Prepnutie profilu](../images/TreatmentsView4.png)
+![Prepnutie profilu](../images/Maintenance/TreatmentsView4.png)
 
 [História ošetrení](#aaps-screens-treatments) zobrazuje všetky minulé **prepnutia profilu**. Na karte **Prepnutie profilu** môžete minulé **prepnutie profilu** použiť ako základ na vytvorenie nového **profilu**. V tomto prípade sa na nový lokálny profil aplikuje časový posun a percento profilu. Použite tlačidlo **Klonovať** v riadku **2**.
 
@@ -335,14 +335,14 @@ To môže pomôcť, keď sa chystáte urobiť veľké zmeny v rozsiahlejšom **p
 
 Na to je však dôležité klonovať celý **záznam databázy**, ktorý obsahuje viac profilov, v editore Nightscoutu (modrá šípka na snímke obrazovky nižšie). Nové záznamy databázy potom majú aktuálny dátum. Po uložení môžete zmenený/nový **profil** aktivovať v **AAPS** bežným [prepnutím profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Klonovanie záznamov databázy](../images/Nightscout_Profile_Editor.PNG)
+![Klonovanie záznamov databázy](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Porovnanie dvoch profilov
 
 Na porovnanie dvoch rôznych profilov alebo prepnutí profilu (percento jedného z vašich profilov, ktoré ste predtým použili v [prepnutí profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)) môžete použiť aj [Pomocníka s profilom](#aaps-screens-profile-helper) (menu ☰ → **Pomocník s profilom**).
 
-![Pomocník s profilom 1](../images/ProfileHelper1.png)
+![Pomocník s profilom 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. Uistite sa, že ste na karte **Profil 1**.
 2. V poli **Typ profilu** vyberte „Dostupný profil“, aby ste mohli vyberať zo všetkých uložených **profilov**.
@@ -352,4 +352,4 @@ Na porovnanie dvoch rôznych profilov alebo prepnutí profilu (percento jedného
 6. Vyberte **prepnutie profilu**, s ktorým ho chcete porovnať.
 7. Otvorte kartu **Porovnanie**. Zobrazí sa porovnanie oboch profilov (pozrite snímku obrazovky nižšie).
 
-![Pomocník s profilom 2](../images/ProfileHelper2.png)
+![Pomocník s profilom 2](../images/v4/Profiles/ProfileHelper2.png)

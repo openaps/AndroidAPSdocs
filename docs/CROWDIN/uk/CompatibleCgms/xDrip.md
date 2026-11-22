@@ -10,7 +10,7 @@
 
 Не дозволяйте жодному іншому застосунку вивантажувати дані (глюкозу крові та терапію) в Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ меню-гамбургер (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → вимкніть (**OFF**) `Enabled` (5)
 
 ![Базові налаштування xDrip 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@
 
 ### **Inter-app Settings** (Broadcast, трансляція)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+Якщо ви використовуєте AAPS, увімкніть трансляцію (broadcasting) в налаштуваннях Inter-app settings xDrip, щоб дані передавалися в AAPS.
 
 → меню-гамбургер (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
@@ -66,7 +66,7 @@ If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so
 - Якщо ви хочете калібрувати через AAPS, в xDrip перейдіть у Settings → Interapp Compatibility → Accept Calibrations і виберіть ON. 
 - Також варто переглянути параметри в Settings → Less Common Settings → Advanced Calibration Settings.
 
-## Dexcom sensors
+## Сенсори Dexcom
 
 Усе, що стосується самого сенсора і трансмітера Dexcom (запуск, зупинка, заміна, калібрування, усунення несправностей), описано та підтримується в актуальному стані в [документації xDrip для Dexcom](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Для сенсора виконуйте ці інструкції; налаштування, що з'єднують xDrip з **AAPS** (описані вище на цій сторінці), — це єдина частина, специфічна для AAPS.
 

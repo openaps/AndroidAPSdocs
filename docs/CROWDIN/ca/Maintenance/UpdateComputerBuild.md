@@ -1,100 +1,100 @@
-# Update with Android Studio
+# Actualitzar amb Android Studio
 
-## Build yourself instead of download
+## Compileu-la vosaltres mateixos en lloc de descarregar-la
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** no es pot descarregar a causa de les normes sobre dispositius mèdics. És legal compilar l'aplicació per al vostre ús propi, però no en podeu donar una còpia a altres persones! Vegeu la [pàgina de preguntes freqüents](../UsefulLinks/FAQ.md) per a més detalls.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Si voleu compilar **AAPS** en un ordinador nou: copieu el fitxer de còpia de seguretat del vostre magatzem de claus a l'ordinador nou. Després seguiu el [procediment de compilació inicial d'**AAPS**](../SettingUpAaps/BuildingAaps.md) en lloc d'aquesta guia. L'única diferència és que, en lloc de crear un magatzem de claus nou, podeu seleccionar el que heu copiat a l'ordinador nou.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Visió general de l'actualització a una nova versió d'AAPS amb Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Si teniu problemes, consulteu la pàgina separada [Resolució de problemes d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### Export your settings
+### Exporteu la vostra configuració
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exporteu la configuració des de la versió d'**AAPS** que teniu ara al telèfon. Potser no la necessitareu, però és millor prevenir que curar.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Si no recordeu com fer-ho, vegeu la pàgina [Crear i restaurar còpies de seguretat](ExportImportSettings.md).
 
-### Check your Android Studio version
+### Comproveu la vostra versió d'Android Studio
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+La versió mínima necessària es descriu a les [instruccions de compilació](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Si la vostra versió és més antiga, [actualitzeu primer Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Actualitzeu la vostra còpia local
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Obriu el vostre projecte AAPS existent amb Android Studio. Potser haureu de seleccionar el vostre projecte. Feu (doble) clic al projecte AAPS.
 
   ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* A la barra de menús d'Android Studio, seleccioneu Git -> Fetch
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Menú d'Android Studio - Git - Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* A la cantonada de baix a la dreta veureu un missatge que diu que el Fetch s'ha fet correctament.
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+   ![Menú d'Android Studio - Git - Fetch correcte](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Ara, a la barra de menús, seleccioneu Git -> Pull
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+   ![Menú d'Android Studio - Git - Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Deixeu totes les opcions com estan (origin/master) i seleccioneu Pull
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+   ![Android Studio - Git - diàleg Pull](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Espereu mentre es fa la descàrrega; ho veureu com a informació a la barra de baix. Quan acabi, veureu un missatge d'èxit.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  Els fitxers actualitzats poden ser diferents! Això no indica cap problema.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull correcte](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Es farà una sincronització de Gradle (Gradle Sync) per descarregar algunes dependències. Espereu que acabi.
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Comproveu la versió de JVM
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Aquesta comprovació és especialment recomanable si ja heu compilat una versió anterior d'**AAPS** al mateix ordinador.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Consulteu a les [instruccions de compilació](#Building-APK-recommended-specification-of-computer-for-building-apk-file) la versió de JVM necessària per a la versió d'**AAPS** que compileu ara. Després seguiu els passos descrits a [JVM de Gradle incompatible](#incompatible-gradle-jvm) per assegurar-vos que feu servir la versió correcta.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### Compileu l'APK signat
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+El vostre codi font ara és la versió publicada actual, i ja s'han comprovat tots els requisits previs. Ara és el moment de compilar l'apk signat tal com es descriu a la [secció de compilació de l'apk signat](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Transferiu i instal·leu l'APK
+Heu de transferir l'apk al telèfon per poder-lo instal·lar.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Si heu compilat a Android Studio amb el mateix magatzem de claus que ja teníeu, no cal que elimineu l'aplicació que hi ha al telèfon. Quan instal·leu l'apk, seguiu les indicacions per instal·lar les actualitzacions.
+En altres casos, per exemple si heu creat un nou magatzem de claus a Android Studio per a l'apk signat, haureu d'eliminar l'aplicació antiga abans d'instal·lar l'apk. **Assegureu-vos d'exportar la configuració!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Consulteu les instruccions a [Transferir i instal·lar AAPS al vostre telèfon](../SettingUpAaps/TransferringAndInstallingAaps.md). Allà on s'aplica la [verificació de desenvolupadors d'Android](#android-developer-verification) de Google (a partir de setembre de 2026, segons el vostre país), instal·leu amb [ADB](#android-developer-verification-adb) en lloc de tocar el fitxer APK.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Continueu [aquí](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
-## Troubleshooting
+## Resolució de problemes
 
-If anything goes wrong, don't panic.
+Si alguna cosa va malament, no us espanteu.
 
-Take a breath!
+Respireu a fons!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Després comproveu si el vostre problema ja està documentat a la pàgina separada [Resolució de problemes d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Si necessiteu més ajuda, contacteu amb altres usuaris d'**AAPS** a [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) o a [Discord](https://discord.gg/4fQUWHZ4Mw).

@@ -27,7 +27,7 @@
 - Введіть **URL Nightscout** і **токен доступу** (NSClientV3 використовує токен доступу, *а не* старий API secret — див. [створення токена](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Ваш сайт Nightscout має підтримувати **API v3** (Nightscout 15 або новіший).
 - Якщо ви використовуєте **websockets**, вмикайте або вимикайте їх на **обох** пристроях, на основному і на послідовнику, — ніколи лише на одному.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Для віддаленого керування з **AAPSClient** websockets **обов’язкові** на обох телефонах.
 ```
 
 Це впливає лише на те, як застосунок обмінюється даними з Nightscout; ваші дані в Nightscout не змінюються.
@@ -110,6 +110,8 @@
 В **AAPS** v4 інсулін, позначений **АКТИВНИЙ** у **Керувати → Налаштування інсуліну**, сірий: ви не можете його редагувати або видалити.
 
 Під час оновлення **AAPS** зберігає інсулін і DIA, які вже записані у ваших перемиканнях профілю з v3. Якщо він знаходить старіші записи, для яких відомий інсулін, але невідома DIA, він використовує для них DIA за замовчуванням і один раз показує повідомлення, наприклад *Старі записи не мали тривалості дії інсуліну, тому для Lyumjev використано 9,0 год. Перевірте налаштування інсуліну — вже перенесені записи потім не оновлюються.* Коли ви побачите це повідомлення, перевірте налаштування інсуліну.
+
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
 
 ```{admonition} What you need to do
 :class: important

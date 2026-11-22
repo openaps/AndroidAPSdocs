@@ -31,6 +31,7 @@
 - כברירת מחדל **AAPS** משתמש בשפת הטלפון (מומלץ).
 
 - אם רוצים את **AAPS** בשפה אחרת משפת הטלפון, יש לבחור אותה כאן. ב-Android 13 ומעלה, **AAPS** רושם אותה ב-Android כשפת האפליקציה שלו, כך שכל המסכים שלו, המסך הראשי, הווידג'טים ואופן כתיבת המספרים פועלים לפיה.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - כאשר משנים את השפה, הטקסטים של **AAPS** עוברים לשפה החדשה מיד. אם חלק מהטקסטים עדיין מוצגים בשפה הישנה, הפעילו מחדש את **AAPS**.
 - ב-Android 12 ההגדרה הזו לא מוצגת: **AAPS** משתמש תמיד בשפת הטלפון.
@@ -86,6 +87,10 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![הגדרות > הגנה בסיסמאות](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Master password
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### הגנה על האפליקציה
 
-אם האפליקציה מוגנת, יש להזין את הסיסמה או להשתמש באימות הביומטרי של הטלפון כדי לפתוח את **AAPS**, ושוב כאשר חוזרים לאפליקציה אחרי [זמן תפוגת ההגנה](#Preferences-password-and-pin-retention).
+אם האפליקציה מוגנת, יש להזין את הסיסמה או להשתמש באימות הביומטרי של הטלפון כדי לפתוח את **AAPS**, ושוב כאשר חוזרים לאפליקציה אחרי [זמן תפוגת ההגנה](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Bolus protection
 

@@ -38,7 +38,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 ![Гілка редагування](../images/docs_pr_edit_file.png)
 
-4. Ви працювали на вкладці "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Якщо ви бачите, що ще щось треба покращити, поверніться на вкладку редагування і внесіть ще зміни. 
+4. Ви працювали на вкладці "<>Edit file". Відкрийте вкладку «Preview changes» (попередній перегляд змін) і ще раз перегляньте все, щоб переконатися, що всі зміни виглядають так, як ви хотіли (перевірте, чи немає помилок). Якщо ви бачите, що ще щось треба покращити, поверніться на вкладку редагування і внесіть ще зміни. 
 
 ![Режим попереднього перегляду](../images/docs_pr_preview_changes.png)
 
@@ -54,7 +54,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 ![Відстеження PR](../images/docs_pr_tracking.png)
 
-P.S. Ваш fork і гілка залишаться у вашому особистому обліковому записі GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Якщо для наступних змін ви будете робити так само, ви завжди почнете з актуальної версії репозиторію AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Люди часто забувають оновлювати свої репозиторії, тому ми радимо робити PR так, як описано вище, доки ви не навчитеся робити "compare".
+P.S. Ваш fork і гілка залишаться у вашому особистому обліковому записі GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Якщо для наступних змін ви будете робити так само, ви завжди почнете з актуальної версії репозиторію AndroidAPSdocs. Якщо ви починаєте PR іншим способом (наприклад, редагуєте, починаючи з гілки master свого fork), спочатку переконайтеся, що ваш репозиторій актуальний: виконайте «compare» (порівняння) і перенесіть усі зміни, які з'явилися після останнього оновлення вашого fork. Люди часто забувають оновлювати свої репозиторії, тому ми радимо робити PR так, як описано вище, доки ви не навчитеся робити "compare".
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Markdown — дуже проста мова форматування текст�
 Ідея в тому, що
 
 - автор має спочатку думати про текст, а не про форматування,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- текст markdown можна вільно використовувати в різних інструментах markdown, на відміну від, наприклад, закритих програм, як-от Microsoft Word, і
 - з одного markdown-файлу можна створити кілька вихідних форматів.
 
 Markdown не є на 100 % фіксованим стандартом, і ми намагаємося бути якомога ближче до стандарту, щоб
@@ -219,9 +219,9 @@ Markdown не є на 100 % фіксованим стандартом, і ми �
     Це попередження.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Заголовок попередження
     :class: warning
-    This is a warning.
+    Це попередження.
     ```
     
     #### Згорнуті примітки
@@ -244,7 +244,7 @@ Markdown не є на 100 % фіксованим стандартом, і ми �
 
 ## Таблиці
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Не використовуйте таблиці з довгими текстами: такий вміст важко оформити в Markdown, таблиці зазвичай не вміщаються в ширину екрана телефона і, ймовірно, після перекладу виглядатимуть інакше.
 
 ## Посібник зі стилю
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 Пишіть простою англійською, де тільки можливо. Це допомагає читачам, для яких англійська не рідна, а також полегшує переклад документів AAPS іншими мовами. Пишіть так, наче розмовляєте з користувачем: уявіть, що ви сидите за столом навпроти людини, для якої пишете. Пам'ятайте: більшість користувачів AAPS не програмісти. У діабеті також багато професійних слів і скорочень. Пам'ятайте, що декому діагноз поставили нещодавно, хтось може мати менше досвіду з діабетом, ніж ви, або проходив інше навчання щодо діабету. Якщо ви використовуєте скорочення, першого разу напишіть його повністю, а скорочення дайте одразу після нього в дужках, наприклад «super micro bolus (SMB)». Також додайте посилання на глосарій. Технічні терміни, які можуть бути незнайомі читачеві, теж можна пояснити в дужках.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Замість: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Пишіть: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Використовуйте прості слова, які всі зрозуміють
 
@@ -296,7 +296,7 @@ Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loo
 
 Команди — найшвидший спосіб дати вказівки, але автори іноді бояться наказувати і пишуть “you should do this” (вам слід зробити це) замість простого “do this” (зробіть це). Можливо, люди бояться, що команди звучать занадто різко. Часто це можна вирішити, якщо поставити перед командою слово 'please' (будь ласка). Але якщо щось обов'язково треба зробити, краще не писати ‘please’, бо це дає читачеві можливість відмовитися.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Замість: *“You should just think of it as a complete statement.”*
 
 Пишіть: *“Think of it as a complete statement.”*
 
@@ -453,7 +453,7 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 - ЯК зробити
 
-- narrator directly talks to the reader: In this guide **you** will
+- оповідач звертається прямо до читача: In this guide **you** will (У цьому посібнику ви…)
 
 - Майбутній час -> щоб показати кінцеву мету
 

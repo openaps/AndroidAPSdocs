@@ -3,7 +3,7 @@
 # Варіант 2 – Вивантажте свій наявний keystore
 
 ```{note}
-Це частина [Кроку 2 – Створіть свій keystore для підпису](BrowserBuildKeystore.md) [Збірки в браузері](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Це частина [Кроку 2 – Створіть свій keystore для підпису](BrowserBuildKeystore.md) [Збірки в браузері](BrowserBuild.md). Переконайтеся, що ви прочитали [вибір між варіантом 1 і варіантом 2](#aaps-ci-preparation).
 ```
 
 Варіант 2 використовує JKS, який ви вже створили раніше, коли збирали AAPS на комп'ютері в Android Studio. Він підходить для тих, хто вже має JKS і знає його пароль і псевдонім (alias).

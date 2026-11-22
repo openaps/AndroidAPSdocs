@@ -4,7 +4,7 @@
 
 The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. לפעולה הזו קוראים לפעמים "החלפת סט" (set change): החלפת סט "מלאה" כוללת את מכל האינסולין ואת הצינורית, והחלפת סט "חלקית" היא החלפה של הצינורית בלבד.
 
-משאבות פאץ' ממלאות ומתחלות את עצמן באשף ההפעלה שלהן, והצינורית שלהן כבר נמצאת בגוף. **AAPS** לא מציע עבורן תיחול: **תיחול/מילוי** לא מוצג בחלון **ניהול** ולא בהפעלה המהירה (QuickLaunch). את הדף של המשאבה שלכם אפשר למצוא ב-[משאבות תואמות](../Getting-Started/CompatiblePumps.md).
+משאבות פאץ' ממלאות ומתחלות את עצמן באשף ההפעלה שלהן, והצינורית שלהן כבר נמצאת בגוף. **AAPS** לא מציע עבורן תיחול: **תיחול/מילוי** לא מוצג בחלון **ניהול** ולא בהפעלה המהירה (QuickLaunch). The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. את הדף של המשאבה שלכם אפשר למצוא ב-[משאבות תואמות](../Getting-Started/CompatiblePumps.md).
 
 Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
 
@@ -31,6 +31,7 @@ Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be 
 * ניתן להגדיר/לשנות את כמויות התיחול שמוגדרות כברירת מחדל בהגדרות **תיחול/מילוי** — יש להקליד "prime" בשורת החיפוש במסך הראשי כדי לפתוח אותן (ראו [הגדרות](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
 
 * **AAPS** לא מתחשב באינסולין שניתן בפונקציית התיחול כשהוא מחשב את האינסולין הפעיל בגוף (IOB), והאינסולין הזה מסומן ב[היסטוריית טיפולים](#aaps-screens-treatments) כ"תיחול" (Prime).
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * גם אינסולין שניתן כבולוס ישירות מהמשאבה בזמן שהמשאבה מנותקת לא נלקח בחשבון על ידי **AAPS**. אם נתתם בולוס ישירות מהמשאבה בזמן ש-**AAPS** היה מנותק, אחרי חיבור המשאבה מחדש אפשר לרשום את האינסולין הזה (בלי לתת אותו שוב) בחלון **אינסולין** (ראו [רישום אינסולין שכבר ניתן, בלי לתת בולוס בפועל](#pumps-cannulas-announce-insulin) בהמשך).
 

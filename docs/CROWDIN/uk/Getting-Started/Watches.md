@@ -17,7 +17,7 @@
 
 ## Окремі переваги для батьків/доглядачів, які використовують **AAPS**
 
-For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. Це корисно, наприклад, коли телефон з **AAPS** схований у поясі для помпи.
+Для дитини: якщо її телефон з **AAPS** поруч, доглядач може за допомогою розумного годинника стежити за даними або вносити зміни, не користуючись телефоном з **AAPS**. Це корисно, наприклад, коли телефон з **AAPS** схований у поясі для помпи.
 
 Розумний годинник можна використовувати _разом_ із варіантами на основі ТЕЛЕФОНУ для віддаленого керування або [лише стеження](../RemoteFeatures/FollowingOnly.md), або _замість_ них.
 
@@ -49,19 +49,19 @@ For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwat
 
 ## Повноцінний Android
 
-Звучить привабливо, правда? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Розумних годинників із зручним інтерфейсом, які також добре працюють з автономним **AAPS** і вашим застосунком CGM, небагато. Популярні моделі: LEMFO LEM 15 Pro і 16. На годинник потрібно встановити apk **AAPS** «full» (той, що зазвичай встановлюють на смартфон), а не apk **AAPS** «wear».
+Звучить привабливо, правда? Однак зараз лише кілька ентузіастів експериментують з **AAPS** на автономному годиннику. Розумних годинників із зручним інтерфейсом, які також добре працюють з автономним **AAPS** і вашим застосунком CGM, небагато. Популярні моделі: LEMFO LEM 15 Pro і 16. На годинник потрібно встановити apk **AAPS** «full» (той, що зазвичай встановлюють на смартфон), а не apk **AAPS** «wear».
 
 Немає чіткої специфікації, яка показала б, чи добре годинник працюватиме з автономним **AAPS**, але допоможуть такі параметри:
 
 1)  Android 12 або новіший. 2)  Можливість вимкнути «квадратний» режим циферблата, щоб текст був більшим і легше читався. 3)  Дуже добрий час роботи від батареї. 4)  Добрий радіус дії Bluetooth.
 
-Більшість незручностей автономних годинників з **AAPS** пов'язані з крихітним екраном і з тим, що поточний інтерфейс повного застосунку AAPS не створено для годинника. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Більшість незручностей автономних годинників з **AAPS** пов'язані з крихітним екраном і з тим, що поточний інтерфейс повного застосунку AAPS не створено для годинника. Через малий розмір екрана вам може бути зручніше змінювати налаштування **AAPS** на годиннику стилусом, а деякі кнопки AAPS можуть бути не видні на екрані годинника.
 
 Інші труднощі: важко отримати достатній час роботи від батареї, а годинники з достатньою батареєю часто великі й товсті. Користувачі повідомляють про боротьбу з налаштуваннями ОС та енергозбереження, труднощі із запуском сенсорів на годиннику, малий радіус дії Bluetooth (для підтримки з'єднання і з сенсором, і з помпою) та сумнівну водостійкість. Приклади показано на фото нижче.
 
-![зображення](../images/watch_standalone_aaps_and_xdrip.png)
+![зображення](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Якщо ви хочете налаштувати автономний годинник, прочитайте дописи й коментарі в групі **AAPS** у Facebook (добрі слова для пошуку: «standalone» і «Lemfo») і в Discord.
 
 ## Wear OS
 
@@ -88,7 +88,7 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 Після [встановлення **AAPS** на годинник](../WearOS/WearOsSmartwatch.md) ви відразу зможете вибрати бажаний циферблат з цих циферблатів **AAPS**. На більшості годинників достатньо довго натиснути на головний екран, доки він не зменшиться, і провести вправо, щоб вибрати інший екран:
 
-![зображення](../images/watchfaces_aaps_selection.png)
+![зображення](../images/watches/watchfaces_aaps_selection.png)
 
 Це базові екрани, вбудовані в **AAPS**. Є [інші циферблати](#WearOS_changing-to-AAPS-watchface), а також можна використовувати [віджети](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 ![Конфігурація > Звʼязок: картка Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) працює безпосередньо з **AAPS**. Він показує дані стану петлі (активний інсулін, тимчасовий базал) на додачу до значень глюкози і надсилає дані пульсу в **AAPS**. Він доступний у магазині ConnectIQ. Увімкніть плагін **Garmin** у **Конфігурація → Звʼязок**. ![Циферблат AAPS Glucose Watch з пронумерованими полями](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) працює безпосередньо з **AAPS**. Він показує дані стану петлі (активний інсулін, тимчасовий базал) на додачу до значень глюкози і надсилає дані пульсу в **AAPS**. Він доступний у магазині ConnectIQ. Увімкніть плагін **Garmin** у **Конфігурація → Звʼязок**. ![Циферблат AAPS Glucose Watch з пронумерованими полями](../images/watches/Garmin_WF-annotated.png)
 
 1. Найвище та найнижче значення глюкози на графіку
 2. Зміна глюкози за хвилину
@@ -155,7 +155,7 @@ Google переносить Fitbit у Google Health і видаляє сторо
 
 **WatchDrip+** – супутній застосунок, створений спільнотою. Він показує дані глюкози та петлі на різних моделях розумних годинників, переважно марок Xiaomi (_наприклад_, Mi Band) та Amazfit:
 
-![зображення](../images/watch_watchdrip_plus.png)
+![зображення](../images/watches/watch_watchdrip_plus.png)
 
 Починаючи з версії 0.5, **WatchDrip+** отримує дані безпосередньо з **AAPS**, без xDrip+ як посередника. На телефоні з **AAPS**:
 
@@ -170,12 +170,12 @@ Google переносить Fitbit у Google Health і видаляє сторо
 
 ### Годинник Pebble
 
-![зображення](../images/watch_pebble.png)
+![зображення](../images/watches/watch_pebble.png)
 
-![зображення](../images/watch_pebble_watchface.png)
+![зображення](../images/watches/watch_pebble_watchface.png)
 
 
-Годинники Pebble ([зараз знято з виробництва](https://en.wikipedia.org/wiki/Pebble_(watch))) продавали з 2013 до 2016 року, їх ще можна знайти вживаними. Активи Pebble перейшли до Fitbit. Користувачі Pebble можуть переглядати дані Nightscout за допомогою циферблата Urchin. Серед даних, які можна показати: IOB, поточна швидкість тимчасового базалу та прогнози. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
+Годинники Pebble ([зараз знято з виробництва](https://en.wikipedia.org/wiki/Pebble_(watch))) продавали з 2013 до 2016 року, їх ще можна знайти вживаними. Активи Pebble перейшли до Fitbit. Користувачі Pebble можуть переглядати дані Nightscout за допомогою циферблата Urchin. Серед даних, які можна показати: IOB, поточна швидкість тимчасового базалу та прогнози. Якщо ви використовуєте відкриту петлю, можна створити в IFTTT аплет, який надсилає SMS або сповіщення pushover, коли отримано сповіщення від **AAPS**.
 
 ### [Годинники Bluejay](https://bluejay.website/)
 

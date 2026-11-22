@@ -45,7 +45,7 @@ Yeni bir senaryo oluşturmak için **+** düğmesine dokunun.
 
 ### Bir şablondan başlama
 
-Bir senaryo **oluşturmak** için Senaryolar ekranındaki **+** düğmesine dokunun. İlk adım **Bir şablondan başla** adımıdır: sık görülen bir durum için hazır bir senaryo seçin — *Egzersiz*, *Hastalık Günü*, *Hastalık Günü — Kusma*, *Uyku*, *Egzersiz Sonrası Gece*, *Yemek öncesi*, *Alkol*, *Araç kullanmak*, *Banyo yapma*, *Luteal Evre*, *Sıcak Hava*, *Tıbbi Prosedür* — veya *Boş* bir senaryodan başlayın. Her şablon **önerilen eylemleri önceden doldurur** ve sonraki adımlarda her şeyi değiştirebilirsiniz.
+Bir senaryo **oluşturmak** için Senaryolar ekranındaki **+** düğmesine dokunun. İlk adım **Bir şablondan başla** adımıdır: sık görülen bir durum için hazır bir senaryo seçin — *Egzersiz*, *Hastalık Günü*, *Hastalık Günü — Kusma*, *Uyku*, *Egzersiz Sonrası Gece*, *Yemek öncesi*, *Alkol*, *Araç kullanmak*, *Banyo yapma*, *Luteal Evre*, *Sıcak Hava*, *Tıbbi Prosedür* — veya *Boş* bir senaryodan başlayın. Her şablon **önerilen eylemleri önceden doldurur** ve sonraki adımlarda her şeyi değiştirebilirsiniz. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![“Bir şablondan başla” — bir başlangıç noktası seçin](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Devam senaryosu olmayan bir senaryo yalnızca onay ister:
 
 ![Senaryoyu sonlandır iletişim kutusu](../images/v4/Scenes/scene_end_dialog.png)
 
-Bir senaryoyu sonlandırmak, senaryonun yaptığı değişiklikleri **geri alır** (örneğin başlattığı profil değişimini ve geçici hedefi).
+Bir senaryoyu sonlandırmak, senaryonun yaptığı değişiklikleri **geri alır** (örneğin başlattığı profil değişimini ve geçici hedefi). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Bir senaryo etkinken, ana ekrandaki profil ve hedef, onları senaryo ayarladıysa küçük bir senaryo simgesi taşır. Alt gezinme çubuğunun **Senaryolar** paneli, başka bir senaryo başlatmak için kullanılabilir kalır:
 

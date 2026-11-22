@@ -1,17 +1,17 @@
 (aapsclient-app)=
-# The AAPSClient app
+# L'aplicació AAPSClient
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** és l'aplicació complementària d'**AAPS**: una aplicació per a un segon telèfon (normalment el d'un cuidador) que **segueix** la persona que fa servir **AAPS**. A partir de la versió 4 d'**AAPS**, el cuidador també pot **controlar** el llaç a distància amb ordres signades. Els dos telèfons es comuniquen a través del vostre lloc de **Nightscout**; no cal cap connexió directa entre els telèfons.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+- **Client** = un telèfon amb **AAPSClient**.
+- **Principal** = el telèfon principal amb **AAPS**, que controla la bomba i executa el llaç.
 ```
 
 ```{admonition} Which devices can run AAPSClient?
 :class: note
-From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on Wear OS watches and on computers (Windows, Mac and Linux). On an iPhone there is no ready-made download: you build the app yourself. See the [table of downloads by device](#aapsclient-platforms).
+A partir de la versió 4 d'**AAPS**, **AAPSClient** funciona en telèfons i tauletes Android, en rellotges Wear OS i en ordinadors (Windows, Mac i Linux). A l'iPhone no hi ha cap fitxer preparat per descarregar: heu de compilar l'aplicació vosaltres mateixos. Vegeu la [taula de descàrregues per dispositiu](#aapsclient-platforms).
 ```
 
 ```{contents} Table of contents
@@ -19,132 +19,132 @@ From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on W
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Què és AAPSClient (i què no és)
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+**AAPSClient** s'assembla a **AAPS** i funciona de manera semblant, però **no té llaç propi**:
 
-- It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
-- The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
+- No conté **cap algoritme APS**, ni **Objectius**, ni **controladors de bomba**: mai no administra insulina pel seu compte.
+- Tampoc no inclou els plugins que només fa servir l'aplicació principal (**Comunicador SMS**, **Tidepool**, **Open Humans**).
+- El que *sí* conté: la sincronització **NSClientV3**, els plugins d'origen de glucèmia, l'enviament de dades a **xDrip+** i els connectors de **Wear OS** / **Garmin**: tot el que cal per seguir i per transmetre ordres. Un rellotge **Garmin** connectat a un client pot mostrar les dades, però els carbohidrats que envia no s'introdueixen i no pot connectar ni desconnectar la bomba: el client mostra un missatge, i els heu d'introduir a **AAPS**.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
+Tot el que inicieu des d'**AAPSClient** ho comprova, ho limita, ho confirma i **ho executa el dispositiu principal** (el telèfon amb la bomba). La pàgina [Control principal ↔ client (control remot signat)](ClientMasterControl.md) explica com funciona: com emparellar els dos telèfons, com el dispositiu principal escriu el text de confirmació que veieu, com es lliura un bolus iniciat al client i què passa quan el dispositiu principal està fora de línia.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Versions: AAPSClient, AAPSClient2 i AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+Es poden instal·lar fins a tres aplicacions client una al costat de l'altra al mateix telèfon seguidor, i cadascuna segueix una persona **diferent**: **AAPSClient** (icona de mussol groc), **AAPSClient2** (mussol blau) i, nova a la versió 4 d'**AAPS**, **AAPSClient3** (mussol verd). Funcionen exactament igual. Només canvien el nom i el color (icona de l'aplicació, fons del widget i la secció d'estat de la pantalla d'inici), perquè les pugueu distingir. Cada aplicació s'emparella amb el seu propi dispositiu principal. Vegeu [Sobre AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions) per a més detalls.
 
 (aapsclient-platforms)=
-## Getting the app
+## Obtenir l'aplicació
 
-All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
+Tots els fitxers preparats són a la llista *Assets* de la darrera versió publicada a [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (feu clic a *Assets* a la part inferior de la versió per desplegar-la). A la taula, *x.y.z* és el número de versió. Trieu el fitxer que correspon al vostre dispositiu:
 
-| Device                  | File to download                    | Notes                                                                                                                                                                                        |
-| ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
-| Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
-| Windows computer        | `AAPSClient-x.y.z.msi`              | Open the file to install.                                                                                                                                                                    |
-| Mac                     | `AAPSClient-x.y.z.dmg`              | See the note on macOS below the table.                                                                                                                                                       |
-| Linux (Debian, Ubuntu)  | `aapsclient_x.y.z_amd64.deb`        | Install it with your package manager.                                                                                                                                                        |
-| iPhone                  | none                                | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
+| Device                    | Fitxer per descarregar              | Notes                                                                                                                                                                                                                     |
+| ------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Telèfon o tauleta Android | `app-aapsclient-release_x.y.z.apk`  | Instal·leu-lo com l'aplicació principal: vegeu [Descàrrega i instal·lació d'AAPSClient](#RemoteControl_aapsclient) i [Transferir i instal·lar AAPS al vostre telèfon](../SettingUpAaps/TransferringAndInstallingAaps.md). |
+| Rellotge Wear OS          | `wear-aapsclient-release_x.y.z.apk` | Va amb l'aplicació AAPSClient del telèfon. Vegeu [Configurar AAPS al vostre rellotge Wear OS](../WearOS/WearOsSmartwatch.md).                                                                                             |
+| Ordinador Windows         | `AAPSClient-x.y.z.msi`              | Obriu el fitxer per instal·lar-lo.                                                                                                                                                                                        |
+| Mac                       | `AAPSClient-x.y.z.dmg`              | Vegeu la nota sobre macOS sota la taula.                                                                                                                                                                                  |
+| Linux (Debian, Ubuntu)    | `aapsclient_x.y.z_amd64.deb`        | Instal·leu-lo amb el vostre gestor de paquets.                                                                                                                                                                            |
+| iPhone                    | cap                                 | No hi ha cap versió a l'App Store ni cap descàrrega. Heu de compilar l'aplicació vosaltres mateixos, vegeu [AAPSClient a l'iPhone](#aapsclient-iphone).                                                                   |
 
-**Following two people?** Each file above also exists as *aapsclient2* / *AAPSClient2*. It is a second client app that installs next to the first one, so one device can follow two people (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** is not in the release assets: build it yourself ([build variants](#browserbuild-variant)).
+**Seguiu dues persones?** Cada fitxer de dalt també existeix com a *aapsclient2* / *AAPSClient2*. És una segona aplicació client que s'instal·la al costat de la primera, perquè un dispositiu pugui seguir dues persones (vegeu [Sobre AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** no és als fitxers de la versió publicada: compileu-la vosaltres mateixos ([variants de compilació](#browserbuild-variant)).
 
-**Files to ignore:** the *pumpcontrol* files (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) are not a client. Leave them out.
+**Fitxers que cal ignorar:** els fitxers *pumpcontrol* (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) no són un client. No els feu servir.
 
-**Mac: the first start.** The app is not notarized by Apple, so macOS blocks it the first time you open it. Click *Done*, then open *System Settings → Privacy & Security*, scroll down and click *Open Anyway*.
+**Mac: el primer inici.** L'aplicació no està notaritzada per Apple, per això macOS la bloqueja la primera vegada que l'obriu. Feu clic a *Done*, després obriu *System Settings → Privacy & Security*, desplaceu-vos cap avall i feu clic a *Open Anyway* (en català: Fet, Configuració del sistema → Privacitat i seguretat, Obrir igualment).
 
-**Computer: how to connect.** A computer has no camera, so the QR code cannot be scanned. Set up **Nightscout** in the client, then on the master add the client with a **PIN** and type the 8-digit PIN in the client (**Pair with master**). See [Pairing with the master](#aapsclient-pairing-with-the-master).
+**Ordinador: com connectar.** Un ordinador no té càmera, per tant no es pot escanejar el codi QR. Configureu **Nightscout** al client, després al dispositiu principal afegiu el client amb un **PIN** i escriviu el PIN de 8 xifres al client (**Emparellar amb el dispositiu principal**). Vegeu [Emparellament amb el dispositiu principal](#aapsclient-pairing-with-the-master).
 
-**Same version everywhere.** The master and all its clients must run the same **AAPS** version. When you update the master, update the clients too.
+**La mateixa versió a tot arreu.** El dispositiu principal i tots els seus clients han de tenir la mateixa versió d'**AAPS**. Quan actualitzeu el dispositiu principal, actualitzeu també els clients.
 
 (aapsclient-iphone)=
-### AAPSClient on an iPhone
+### AAPSClient a l'iPhone
 
-There is no **AAPSClient** in the App Store and no ready-made file to download, so you build the app yourself:
+No hi ha **AAPSClient** a l'App Store ni cap fitxer preparat per descarregar, per tant heu de compilar l'aplicació vosaltres mateixos:
 
-- You need a Mac with **Xcode** and an Apple developer account.
-- The project is the `ios` folder of the [AndroidAPS repository on GitHub](https://github.com/nightscout/AndroidAPS/tree/master/ios).
-- A build for a real iPhone is signed with your own Apple developer team. A build for the iPhone simulator does not need one.
-- There is no step-by-step guide yet. This page will be updated when there is one.
+- Necessiteu un Mac amb **Xcode** i un compte de desenvolupador d'Apple.
+- El projecte és la carpeta `ios` del [repositori d'AndroidAPS a GitHub](https://github.com/nightscout/AndroidAPS/tree/master/ios).
+- Una compilació per a un iPhone real es signa amb el vostre propi equip de desenvolupador d'Apple. Una compilació per al simulador d'iPhone no en necessita.
+- Encara no hi ha cap guia pas a pas. Aquesta pàgina s'actualitzarà quan n'hi hagi una.
 
-The iPhone version pairs with the master like the others. Unlike the computer versions, the iPhone can scan the master's QR code with its camera.
+La versió per a iPhone s'emparella amb el dispositiu principal com les altres. A diferència de les versions per a ordinador, l'iPhone pot escanejar el codi QR del dispositiu principal amb la càmera.
 
-## First start: a shorter Setup Wizard
+## Primer inici: un assistent de configuració més curt
 
-On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
+En el primer inici, **AAPSClient** executa el mateix **Assistent de configuració** que ja coneixeu d'**AAPS**, però amb molts menys passos: en un seguidor no es configura el perfil, la insulina, la bomba, l'APS ni els objectius:
 
-1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
+1. **Benvinguts**, **acord de llicència**, **permisos** i **clau mestra**: igual que a l'aplicació principal, vegeu l'[Assistent de configuració d'AAPS](../SettingUpAaps/SetupWizard.md).
+2. El client **no** demana les **unitats** ni els **límits baix/alt**: els agafa del telèfon principal tan aviat com està connectat a Nightscout. Els podeu veure més tard a **Configuració**, on una petita **icona de telèfon** indica que estan [sincronitzats amb el telèfon principal](#client-master-config-prefs). Només es poden editar mentre el dispositiu principal és accessible.
+3. **Configurar des del dispositiu principal**: al dispositiu principal, obriu **Gestionar → Clients autoritzats**, afegiu aquest telèfon amb un **codi QR** i toqueu **Escanejar el codi QR** aquí. Un sol escaneig configura Nightscout amb un token propi d'aquest telèfon i, amb un codi d'emparellament, també emparella el telèfon. El telèfon també agafa com a nom d'instància el nom amb què es va afegir al dispositiu principal (les lletres amb accent es converteixen en lletres simples: «Miloš» es converteix en «Milos»). **Després de l'escaneig, la configuració s'ha acabat**: l'assistent es tanca, perquè els passos següents només mostrarien el que el codi ja ha fet. Sense codi QR, ometeu aquest pas. (No en un ordinador: no té càmera, vegeu [Obtenir l'aplicació](#aapsclient-platforms).)
 
-   ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![El pas Configurar des del dispositiu principal amb el botó Escanejar el codi QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+4. **Comunicació**: la llista de plugins només ofereix el que necessita un seguidor (NSClientV3, xDrip+, Wear, Apps complementàries externes, Garmin). Si no heu escanejat cap codi QR, activeu **NSClientV3** i introduïu la **mateixa URL de Nightscout** que al telèfon principal i un token d'accés, amb els **websockets** activats, exactament com es descriu a [Sincronització](#RemoteControl_aapsclient). Els websockets són **obligatoris** per al control remot des d'**AAPSClient**, als dos telèfons.
 
-   ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+   ![El pas Comunicació al client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Emparellar amb el dispositiu principal**: aquest pas existeix **només** al client. Connecta aquest dispositiu amb el dispositiu principal pel canal segur d'ordres, amb el PIN, i agafa el nom amb què es va afegir el telèfon al dispositiu principal, igual que el codi QR. **Després de l'emparellament, la configuració s'ha acabat.** També podeu ometre aquest pas i emparellar més tard en qualsevol moment des de **Gestionar → Emparellar amb el dispositiu principal**.
 
-   ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+   ![El pas Emparellar amb el dispositiu principal a l'assistent del client](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Qui fa servir aquest telèfon?**: només si no heu emparellat a l'assistent; el nom de la persona que fa servir aquest telèfon. Serveix per distingir aquesta instància als informes i a la sincronització.
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Emparellament amb el dispositiu principal
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+Al **dispositiu principal**, obriu **Gestionar → Clients autoritzats** i afegiu un client. Hi ha dues maneres d'emparellar:
 
-- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
-- **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
+- **Amb un codi QR** (la més ràpida, si el telèfon té càmera): escanegeu el codi al pas de l'assistent «**Configurar des del dispositiu principal**» o des de **Gestionar → Emparellar amb el dispositiu principal → Escanejar codi QR**, i confirmeu amb «**Utilitzar**». També configura Nightscout.
+- **Amb el PIN**: al **client**, obriu el pas de l'assistent d'abans (o **Gestionar → Emparellar amb el dispositiu principal**), escriviu el PIN d'un sol ús que es mostra al dispositiu principal i premeu «**Emparellar**». Després el client mostra en qui confiarà; confirmeu amb «**Emparellar**»:
 
-![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
+![Confirmació al client abans de completar l'emparellament](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Des de l'assistent, un emparellament correcte acaba la configuració i obre la pantalla d'inici. Al dispositiu principal, el client apareix com a **Actiu** a la llista [Clients autoritzats](#client_master_master_setup). Després, **Gestionar → Emparellar amb el dispositiu principal** mostra «*Ja emparellat*», el rol del telèfon i si el mode reforçat està activat:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Gestionar → Emparellar amb el dispositiu principal en un client emparellat: Ja emparellat, Rol: Cuidador, Mode reforçat activat](../images/v4/ClientMaster/pair_with_master_client.png) El procediment complet d'emparellament, els detalls de seguretat i la resolució de problemes són a [Control principal ↔ client (control remot signat)](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
+Després de l'emparellament, el client rep del dispositiu principal un token de Nightscout propi (si el dispositiu principal té un token d'administrador), només amb els drets que necessita un client, i deixa de fer servir el token que potser heu introduït. **AAPSClient** mai no escriu tractaments ni glucèmies a Nightscout directament: tot el que fa s'envia al dispositiu principal, que ho escriu. Vegeu [El token de Nightscout propi del client](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+El dispositiu principal decideix què pot fer aquest telèfon amb el seu **[rol](#client-master-control-roles)** (Només lectura, Àpats, Cuidador o Admin). **Gestionar → Emparellar amb el dispositiu principal** mostra el rol del telèfon.
 
-## The home screen
+## La pantalla d'inici
 
-The client's home screen mirrors the followed loop:
+La pantalla d'inici del client mostra el llaç que seguiu:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Pantalla d'inici d'AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
-- **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
-- The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- **La glucèmia, els gràfics, l'IOB/COB i el perfil** vénen de Nightscout, tal com els ha enviat el dispositiu principal.
+- L'**estat del llaç** que es mostra és el **del dispositiu principal** (un client no té llaç propi). Fins que el client no rep de Nightscout el mode de funcionament del dispositiu principal, l'etiqueta del mode de funcionament mostra un **signe d'interrogació** (desconegut).
+- La **targeta d'estat** mostra el reservori i la pila **de la bomba seguida** i la bateria del telèfon que envia les dades, agafats de l'estat del dispositiu a Nightscout. Un client no té bomba, per tant no hi ha estat de bomba local ni gestió de la bomba enlloc de l'aplicació.
+- La barra inferior ofereix **Tractaments**, **Escenes** i **Gestionar** quan el client està emparellat (abans d'emparellar, només **Gestionar**). No hi ha pestanyes de bomba ni d'objectius.
 
-## Treatments and actions
+## Tractaments i accions
 
-Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
+Tot el que hi ha a **Gestionar** funciona com a l'aplicació principal, amb una diferència important: en un client, les accions que canviarien la teràpia (bolus, carbohidrats, objectius temporals, escenes…) **estan amagades fins que el dispositiu s'emparella**, i un cop emparellat **s'envien al dispositiu principal** perquè les confirmi i les executi. Vegeu [Fer servir el control remot](#client-master-control).
 
-The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
+L'entrada **Perfil** és l'excepció: es mostra fins i tot en un client **no emparellat**, però s'obre **només per consultar**. El client mostra els perfils que rep a través de Nightscout (els necessita per als seus propis càlculs), sense botons per editar o activar. Quan el client està **emparellat**, la llista de perfils se sincronitza amb el dispositiu principal i podeu editar i activar perfils des del client com qualsevol altra acció remota.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+En un client **no emparellat**, **Gestionar** només ofereix **Perfil** i **Emparellar amb el dispositiu principal**:
 
-![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
+![La pantalla Gestionar en un client no emparellat: només Perfil i Emparellar amb el dispositiu principal](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+El bàner vermell «*Dispositiu principal inaccessible. L'edició està desactivada fins que es restableixi la connexió.*» també apareix en un client no emparellat. És normal: encara no hi ha cap dispositiu principal per connectar-s'hi. El bàner desapareix quan el client està emparellat i el dispositiu principal està en línia.
 
-Once the client is paired, the therapy actions appear:
+Quan el client està emparellat, apareixen les accions de teràpia:
 
-![The Manage screen on a paired client, including the Pair with master entry](../images/v4/AapsClient/aapsclient_manage.png)
+![La pantalla Gestionar en un client emparellat, amb l'entrada Emparellar amb el dispositiu principal](../images/v4/AapsClient/aapsclient_manage.png)
 
-There is **no Pump entry** — a client has no pump.
+**No hi ha cap entrada Bomba**: un client no té bomba.
 
-If the master is not reachable, the same banner appears on a paired client: the therapy actions are greyed out, and anything you try is blocked before it is sent. The client notices that the master is offline when you try an action, and re-enables the actions once the master is back online.
+Si el dispositiu principal no és accessible, el mateix bàner apareix en un client emparellat: les accions de teràpia es mostren en gris, i tot el que proveu es bloqueja abans d'enviar-se. El client detecta que el dispositiu principal està fora de línia quan proveu una acció, i torna a activar les accions quan el dispositiu principal torna a estar en línia.
 
-![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
+![La pantalla Gestionar en un client emparellat mentre el dispositiu principal està fora de línia: accions en gris sota el bàner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Configuració sincronitzada amb el dispositiu principal
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+La **configuració** dels plugins actius i moltes **preferències** es mantenen sincronitzades entre el dispositiu principal i els seus clients emparellats. Els elements sincronitzats es marquen amb una petita **icona de telèfon** i estan desactivats (amb un bàner «*Dispositiu principal inaccessible*») mentre no es pot accedir al dispositiu principal. Això es descriu a [Canviar la configuració i les preferències](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## AAPSClient en un rellotge intel·ligent
 
-A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
+Un rellotge Wear OS es pot emparellar amb el telèfon **client**; les seves accions passen pel client fins al dispositiu principal. Vegeu [Wear OS](../WearOS/WearOsSmartwatch.md) i les [opcions de rellotge intel·ligent a Control remot](#RemoteControl_smartwatches).

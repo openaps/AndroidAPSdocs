@@ -111,6 +111,8 @@ Ayarlarınızı korumanız gerekmiyorsa, Ayar korumasını **Ayarlar → Koruma*
 
 Yükseltme yaptığınızda **AAPS**, v3 profil değişimlerinizin zaten kaydettiği insülini ve İES'i korur. İnsülini bilinen ama İES'i bilinmeyen eski kayıtlar bulursa, bunlar için varsayılan bir İES kullanır ve bir kez bir mesaj gösterir, örneğin *Eski kayıtlarda insülin süresi bilgisi bulunmadığından, Lyumjev için 9,0 saat değeri kullanılmıştır. İnsülin ayarlarınızı kontrol edin; halihazırda taşınmış olan kayıtlar sonradan güncellenmez.* Bu mesajı gördüğünüzde insülin ayarlarınızı kontrol edin.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 İES'i veya tepe zamanını değiştirmek için **+** ile yeni bir insülin ekleyin, ayarlayın, kaydedin ve **▶ Etkinleştir** ile etkinleştirin. Bkz. [Kullanımdaki insülini değiştirme](#Config-Builder-insulin-change-active).

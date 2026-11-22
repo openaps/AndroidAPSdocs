@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Перегляньте [Примітки до випуску](#latestrelease), щоб дізнатися, що нового, і для оновлення виконайте вказівки з [посібника з оновлення](./Maintenance/UpdateToNewVersion.md).
+31 жовтня 2026 року: вийшла версія 4.0.0. Перегляньте [Примітки до випуску](#latestrelease), щоб дізнатися, що нового, і для оновлення виконайте вказівки з [посібника з оновлення](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -17,7 +17,7 @@ Android APS (**AAPS**) — це застосунок з відкритим ко�
 
 У розділі **1) Початок роботи** сторінка [Вступ до APS і AAPS](Getting-Started/Introduction.md) пояснює загальну ідею: для чого призначена система штучної підшлункової залози (APS). Він описує загальні основи роботи петлі, пояснює, чому створили **AAPS**, порівнює **AAPS** з іншими системами та розглядає питання безпеки. Він дає поради, як говорити про **AAPS** з вашою медичною командою, пояснює, чому застосунок **AAPS** потрібно зібрати самостійно, а не просто завантажити, і дає огляд типових з'єднань у системі **AAPS**. Він також розглядає доступність і те, кому **AAPS** найімовірніше допоможе.
 
-[Підготовка до початку роботи з AAPS](./Getting-Started/PreparingForAaps.md) докладніше описує питання безпеки, а також телефони, CGM (системи безперервного моніторингу глюкози) та інсулінові помпи, сумісні з **AAPS**. Він дає огляд процесу, який ви пройдете, і приблизні терміни, за які ви зможете користуватися всіма функціями **AAPS**. Цей розділ технічно готує вас до того, щоб зібрати свою систему **AAPS** якомога швидше та ефективніше. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Підготовка до початку роботи з AAPS](./Getting-Started/PreparingForAaps.md) докладніше описує питання безпеки, а також телефони, CGM (системи безперервного моніторингу глюкози) та інсулінові помпи, сумісні з **AAPS**. Він дає огляд процесу, який ви пройдете, і приблизні терміни, за які ви зможете користуватися всіма функціями **AAPS**. Цей розділ технічно готує вас до того, щоб зібрати свою систему **AAPS** якомога швидше та ефективніше. Підрозділ [Сумісні CGM](./Getting-Started/CompatiblesCgms.md) пояснює, як оптимізувати налаштування CGM і які параметри згладжування найкращі.
 
 Тепер, коли ви добре розумієте процес, можна починати збирати свою петлю **AAPS**.
 
@@ -107,21 +107,21 @@ Documentation updates <./Maintenance/DocumentationUpdate.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Налаштування AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Майстер налаштування AAPS <./SettingUpAaps/SetupWizard.md>
+Ваш профіль AAPS <./SettingUpAaps/YourAapsProfile.md>
+Зміна конфігурації AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Конфігурація <./SettingUpAaps/ConfigBuilder.md>
+- Налаштування <./SettingUpAaps/Preferences.md>
+Виконання завдань <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
 :caption: 5) Щоденне життя з AAPS
 
 Екрани AAPS <./DailyLifeWithAaps/AapsScreens.md>
-Основні функції AAPS <./DailyLifeWithAaps/KeyAapsFeatures.md>
+Ключові функції AAPS <./DailyLifeWithAaps/KeyAapsFeatures.md>
 Розрахунок COB <./DailyLifeWithAaps/CobCalculation.md>
 Визначення чутливості <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
 Dynamic ISF (DynISF) <./DailyLifeWithAaps/DynamicISF.md>
@@ -158,7 +158,7 @@ SMS-команди <./RemoteFeatures/SMSCommands.md>
 :caption: 7) Розумні годинники з Wear OS
 
 Збірка застосунку AAPS Wear <./WearOS/BuildingAapsWearOS.md>
-Налаштування AAPS на годиннику з Wear OS <./WearOS/WearOsSmartwatch.md>
+Розумний годинник Wear OS <./WearOS/WearOsSmartwatch.md>
 Керування AAPS за допомогою розумного годинника з Wear OS <./RemoteFeatures/RemoteControlWearOS.md>
 Довідник власних циферблатів <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
 Сайт обміну власними циферблатами <./ExchangeSiteCustomWatchfaces/index.md>
@@ -166,24 +166,24 @@ SMS-команди <./RemoteFeatures/SMSCommands.md>
 ```
 
 ```{toctree}
-:caption: 8) Maintenance of AAPS
+:caption: 8) Обслуговування AAPS
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Створення та відновлення резервних копій <./Maintenance/ExportImportSettings.md>
+Примітки до випуску <./Maintenance/ReleaseNotes.md>
+Що змінилося в AAPS v4 <./Maintenance/V4Changes.md>
+Оновлення до нової версії або гілки <./Maintenance/UpdateToNewVersion.md>
+- Оновлення в браузері (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Оновлення з Android Studio <./Maintenance/UpdateComputerBuild.md>
+Кінець підтримки <./Maintenance/EndOfLife.md>
 
 ```
 
 ```{toctree}
 :caption: 9) Допомога та усунення несправностей
 
-Де отримати допомогу? <./GettingHelp/WhereCanIGetHelp.md>
-Усунення несправностей <./GettingHelp/GeneralTroubleshooting.md>
-- Проблеми, пов’язані з Bluetooth <./GettingHelp/BluetoothTroubleshooting.md>
+Де отримати допомогу <./GettingHelp/WhereCanIGetHelp.md>
+Загальне усунення несправностей <./GettingHelp/GeneralTroubleshooting.md>
+- Усунення проблем з Bluetooth <./GettingHelp/BluetoothTroubleshooting.md>
 - Усунення проблем з NSClient <./GettingHelp/TroubleshootingNsClient.md>
 - Усунення проблем з Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 - Збірка в браузері: усунення проблем <./GettingHelp/BrowserBuildTroubleshooting.md>

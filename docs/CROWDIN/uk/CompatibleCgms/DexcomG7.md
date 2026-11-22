@@ -30,7 +30,7 @@ Dexcom BYODA — це вже дуже стара версія застосунк
 -   Видаліть оригінальний застосунок Dexcom
 -   Установіть завантажений apk
 -   Введіть код сенсора в зміненому (patched) застосунку
--   After a short time BYODA should pick up the sensor signal.
+-   Через короткий час BYODA має отримати сигнал сенсора.
 
 (DexcomG7-xdrip-companion-app)=
 
@@ -40,9 +40,9 @@ Dexcom BYODA — це вже дуже стара версія застосунк
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
+**AAPS** не вважає xDrip у режимі Companion App [довіреним джерелом даних ГК](#GettingStarted-TrustedBGSource): SMB дозволені не весь час.
 
-To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG7-notification-reader).
+Щоб зчитувати сповіщення застосунку Dexcom без xDrip, як довірене джерело даних, використовуйте [Читач сповіщень](#DexcomG7-notification-reader).
 ```
 
 ### Зчитування сповіщень застосунку Dexcom
@@ -106,49 +106,49 @@ To read the Dexcom app notifications without xDrip, as a trusted data source, us
 
 (DexcomG7-notification-reader)=
 
-## 5. Notification Reader (G7, ONE+ and Stelo)
+## 5. Читач сповіщень (G7, ONE+ і Stelo)
 
-Офіційний застосунок Dexcom залишається підключеним до сенсора. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+Офіційний застосунок Dexcom залишається підключеним до сенсора. **AAPS** зчитує значення глюкози безпосередньо зі сповіщення застосунку Dexcom, без жодного іншого застосунку між ними.
 
 ```{admonition} Trusted data source
 :class: note
-Readings from the Dexcom G7, ONE+ and Stelo apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+Значення із застосунків Dexcom G7, ONE+ і Stelo є [довіреним джерелом даних ГК](#GettingStarted-TrustedBGSource): SMB можна дозволити весь час.
 ```
 
-Compared to the other methods on this page, the Notification Reader has limits:
+Порівняно з іншими методами на цій сторінці, Читач сповіщень має обмеження:
 
-- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
-- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
-- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
-- Stelo gives a reading every 15 minutes.
+- **Немає стрілки тренду** і **немає заповнення пропусків (backfill)**: значення, пропущені, поки телефон був вимкнений або поза зоною досяжності, втрачаються.
+- Кожне значення отримує час появи сповіщення, а не точний час вимірювання сенсором.
+- Зчитуються лише значення від 40 до 405 мг/дл (від 2,2 до 22,5 ммоль/л). «LOW» і «HIGH» не зчитуються.
+- Stelo дає значення кожні 15 хвилин.
 
-### Set up the Dexcom app
+### Налаштуйте застосунок Dexcom
 
 - Залиште застосунок Dexcom встановленим і підключеним до сенсора.
-- Make sure the Dexcom app shows the current glucose value in its notification. Його сповіщення мають залишатися видимими: не вимикайте їх звук і не приховуйте їх.
-- Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+- Переконайтеся, що застосунок Dexcom показує поточне значення глюкози у своєму сповіщенні. Його сповіщення мають залишатися видимими: не вимикайте їх звук і не приховуйте їх.
+- Використовуйте в застосунку Dexcom ті самі одиниці глюкози (мг/дл або ммоль/л), що й в **AAPS**. Інакше **AAPS** не зможе зчитати значення.
 
 ### Налаштування в AAPS
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+- Виберіть **Читач сповіщень** у [**Конфігурація → Джерело ГК**](#Config-Builder-bg-source) і підтвердьте перемикання.
 
-  ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+  ![Джерело ГК: вибрано Читач сповіщень](../images/NotificationReader_BgSource.png)
 
-- Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+- Коли ви повернетеся на головний екран, **AAPS** покаже **Потрібні дозволи**. Поруч із **Доступ до сповіщень** натисніть **Надати**.
 
-  ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+  ![Потрібні дозволи: Доступ до сповіщень](../images/NotificationReader_Permissions.png)
 
-- Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+- Android відкриє свій список доступу до сповіщень (його назва залежить від версії Android, наприклад *Notification read, reply & control*). Виберіть **AAPS**, увімкніть **Allow notification access** (дозволити доступ до сповіщень) і підтвердьте кнопкою **Allow** (дозволити).
 
-  ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+  ![Android просить дозволити доступ до сповіщень для AAPS](../images/NotificationReader_AllowDialog.png)
 
-  Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+  Android попереджає, що **AAPS** зможе читати всі ваші сповіщення. **AAPS** читає лише сповіщення підтримуваних застосунків CGM і ігнорує всі інші.
 
-  ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+  ![Доступ до сповіщень для AAPS дозволено](../images/NotificationReader_AccessOn.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Потім поверніться на екран доступу до сповіщень і дозвольте його.
-- Readings appear in **AAPS** when the Dexcom app shows a new value.
+- Якщо **Allow notification access** неактивний (*Controlled by Restricted Setting*), Android блокує його, бо **AAPS** встановлено не з Play Store. Відкрийте інформацію про застосунок **AAPS** (довго натисніть на значок **AAPS** > **App info**), натисніть меню з трьома крапками вгорі праворуч і виберіть **Allow restricted settings** (дозволити налаштування з обмеженнями). Потім поверніться на екран доступу до сповіщень і дозвольте його.
+- Значення з'являються в **AAPS**, коли застосунок Dexcom показує нове значення.
 
 ```{warning}
-If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+Якщо сповіщення застосунку Dexcom показує більше одного числа глюкози або жодного, **AAPS** пропускає це сповіщення.
 ```

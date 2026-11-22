@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Widgets de la pantalla d'inici
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** ofereix widgets que podeu afegir a la pantalla d'inici del vostre telèfon. Un widget mostra les vostres dades actuals sense obrir l'aplicació. Toqueu un widget per obrir **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Widgets disponibles
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Hi ha cinc widgets disponibles. Apareixen sota **AAPS** al selector de widgets d'Android:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![Widgets d'AAPS al selector de widgets d'Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| Widget                                   | Mida per defecte | Què mostra                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Widget AAPS**                          | 5 × 2            | El bloc d'estat de la pantalla principal: glucèmia amb tendència i delta, el mode del llaç com a icona al costat del nom del perfil, objectiu, sensibilitat (com a la pantalla principal), IOB i COB. Els textos es fan més petits per cabre a la mida que doneu al widget, en lloc de quedar tallats. |
+| **Cercle de glucèmia AAPS**              | 2 × 2            | El cercle de glucèmia de la pantalla principal: un anell del color de la glucèmia, l'arc de tendència, la delta, el valor de glucèmia i el temps des de l'última lectura.                                                                                                                              |
+| **AAPS petit**                           | 2 × 2            | Nom del perfil, glucèmia amb fletxa de tendència, temps des de l'última lectura, delta, IOB i COB.                                                                                                                                                                                                     |
+| **AAPS glucèmia + IOB + COB (compacte)** | 4 × 1            | Una línia amb la glucèmia i la fletxa de tendència, IOB i COB.                                                                                                                                                                                                                                         |
+| **Gràfic de glucèmia AAPS**              | 3 × 1            | El valor de glucèmia amb un petit gràfic de les lectures recents.                                                                                                                                                                                                                                      |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+El **Widget AAPS**, el **Cercle de glucèmia** i el widget **AAPS petit** en una pantalla d'inici:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![Widget AAPS, cercle de glucèmia i widget AAPS petit a la pantalla d'inici](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+El widget **compacte** i el widget **Gràfic de glucèmia**:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Widget compacte i widget de gràfic de glucèmia a la pantalla d'inici](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+Els valors de glucèmia fan servir els mateixos colors que a **AAPS**: verd dins del rang, groc per sobre del rang, vermell per sota del rang.
 
 ---
 
-## Widget configuration
+## Afegir un widget
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Els passos exactes depenen del vostre telèfon i del seu launcher. A la majoria de telèfons:
 
-The **Widget configuration** dialog has two settings:
+1. Mantingueu premuda una zona buida de la pantalla d'inici i seleccioneu **Widgets**.
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![El selector de widgets](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Obriu **AAPS** a la llista i toqueu el widget que vulgueu.
+3. Premeu **Afegeix** (o arrossegueu el widget al lloc que vulgueu).
 
-Each widget has its own configuration.
+   ![El botó Afegeix sota el widget seleccionat](../images/widgets/widget_picker_add_button.png)
+
+El widget es col·loca a la pantalla d'inici. Just després d'afegir-lo, es mostra amb unes nanses: arrossegueu una nansa per **canviar la mida** del widget, o arrossegueu el widget per moure'l. El cercle de glucèmia es pot ajustar a qualsevol mida.
+
+![Un widget acabat d'afegir, amb les nanses per canviar la mida i el botó de configuració](../images/widgets/widget_glucose_circle_added.png)
+
+Si la pàgina de la pantalla d'inici és plena, el telèfon posa el widget en una pàgina nova.
 
 ---
 
-## Good to know
+## Configuració del widget
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Toqueu el botó del **llapis** que es mostra al widget just després d'afegir-lo. Més endavant, mantingueu premut el widget per tornar a veure les nanses i el llapis.
+
+El diàleg **Configuració del widget** té dues opcions:
+
+- **Configurar opacitat** — com d'opac és el fons del widget. Un valor baix deixa veure el fons de pantalla.
+- **Utilitzar color negre** — fer servir un fons negre en lloc del fons per defecte.
+
+![Configuració del widget](../images/widgets/widget_configuration.png)
+
+Cada widget té la seva pròpia configuració.
+
+---
+
+## Bo de saber
+
+- Un widget només **mostra** dades. No podeu fer un bolus ni canviar res des d'un widget.
+- **AAPS** és qui actualitza el widget. Si **AAPS** no s'està executant, o si Android el restringeix en segon pla, el widget pot mostrar dades antigues. Comproveu el temps des de l'última lectura i assegureu-vos que **AAPS** està exclòs de l'[optimització de la bateria](#SetupWizard-StoragePermission).
+- Amb **AAPSClient**, **AAPSClient2** i **AAPSClient3**, el fons del widget és groc, blau o verd, perquè pugueu distingir les aplicacions. Augmenteu l'opacitat a la configuració del widget si el color es veu malament. Vegeu [Sobre AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions).

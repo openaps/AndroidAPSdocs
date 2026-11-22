@@ -131,7 +131,7 @@ Bomba desconectada — o tempo restante aparece ao lado do ícone. Os botões de
 
 Você precisa descobrir por que recebe glicemias duplicadas:
 
-* A ponte Dexcom (bridge) está ativada no seu site do Nightscout? Desative a ponte no painel de administração da sua instância do Nightscout: edite a variável "enable" e remova dela a parte "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* A ponte Dexcom (bridge) está ativada no seu site do Nightscout? Desative a ponte no painel de administração da sua instância do Nightscout: edite a variável "enable" e remova dela a parte "bridge". (Para o Heroku, [os detalhes estão aqui](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Várias fontes enviam sua glicose ao Nightscout? Se você usa o app BYODA, ative o envio no **AAPS**, mas não ative no xDrip, se você o usar.
 * Você tem seguidores que recebem sua glicose, mas também a enviam de novo ao seu site do Nightscout?
 * Último recurso: nas [configurações do NSClient](#Preferences-nsclient), abra as configurações de Sincronização e desative a opção "Receber dados de CGM do NS".
@@ -247,7 +247,7 @@ Se o limite de aviso for ultrapassado, os valores serão mostrados em amarelo.
 
 Se o limite crítico for ultrapassado, os valores serão mostrados em vermelho.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+A idade é sempre mostrada na forma curta, qualquer que seja o tamanho da tela: *4h* no primeiro dia, *3d4h* depois.
 
 Os limites podem ser alterados pelo pequeno ícone **Configurações** que aparece quando a linha de status está **expandida** (seta à direita) — veja [Luzes de status](#Preferences-status-lights).
 
@@ -308,11 +308,11 @@ Isso funciona da mesma forma nos [gráficos adicionais](#aaps-screens-additional
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Mudanças de horário
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Quando o relógio do telefone deu um salto, numa mudança de horário de verão ou num novo fuso horário, uma linha vertical tracejada marca esse momento no gráfico de glicemia, com um pequeno ícone de relógio na parte de baixo. A mesma linha tracejada passa pelos [gráficos adicionais](#aaps-screens-additional-graphs) abaixo.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![O marcador de mudança de horário: uma linha tracejada com um ícone de relógio, ao lado da linha do momento atual](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -364,7 +364,7 @@ Quando duas previsões dão os mesmos valores, os pontos se sobrepõem e você s
 
 * Linha **aCOB** (laranja-claro, transparente): absorção acelerada de carboidratos
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Obsoleto e de utilidade limitada.
+    Parecido com COB, mas assume uma taxa fixa de absorção de carboidratos de 10 mg/dl/5m (0,555 mmol/l/5m). Obsoleto e de utilidade limitada.
     
     *Esta linha só aparece quando o algoritmo mais antigo [AMA](#Config-Builder-aps) é usado.*
 
@@ -422,8 +422,8 @@ O novo gráfico é adicionado abaixo dos outros — aqui um segundo gráfico adi
 
 A maioria dos usuários acha adequada a seguinte configuração de gráficos adicionais:
 
-* Graph 1 with IOB, BAS
-* Graph 2 with COB, Sensitivity change
+* Gráfico 1 com IOB, BAS
+* Gráfico 2 com COB, mudança de sensibilidade
 * Graph 3 with Deviations and BGI.
 
 #### Insulina absoluta (ABS)
@@ -470,7 +470,7 @@ Mostra a sensibilidade calculada pelo [ISF dinâmico](../DailyLifeWithAaps/Dynam
 
 Estes dados podem estar disponíveis quando você usa um [smartwatch Wear](../WearOS/WearOsSmartwatch.md). Ative-os no app Wear do **AAPS** e dê permissão para os dados de saúde.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Os passos são desenhados como colunas, e a frequência cardíaca como uma linha curva que é interrompida onde o relógio não enviou dados.
 
 #### Desvios (DEV)
 
@@ -486,7 +486,7 @@ Esta linha mostra quanto a glicose "deveria" subir ou cair só com base na ativi
 
 ![Desvios e BGI](../images/main/graph_dev_bgi.png)
 
-É uma boa combinação mostrar esta linha junto com as barras de Desvios. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparar a linha de BGI com as barras de Desvios é outra forma de entender como a **glicose** varia. Aqui, no momento marcado com **1**, as barras de Desvios estão bem acima da linha de BGI: a glicose sobe mais do que a atividade da insulina sozinha explica (por exemplo, depois de carboidratos). No momento marcado com **2**, as barras de Desvios estão abaixo de zero (vermelhas): a glicose está mais baixa do que o algoritmo esperava.
+É uma boa combinação mostrar esta linha junto com as barras de Desvios. Eles usam a mesma escala, mas ela é diferente da escala dos outros dados opcionais, por isso é uma boa ideia mostrá-los num gráfico separado, como mostrado acima. Comparar a linha de BGI com as barras de Desvios é outra forma de entender como a **glicose** varia. Aqui, no momento marcado com **1**, as barras de Desvios estão bem acima da linha de BGI: a glicose sobe mais do que a atividade da insulina sozinha explica (por exemplo, depois de carboidratos). No momento marcado com **2**, as barras de Desvios estão abaixo de zero (vermelhas): a glicose está mais baixa do que o algoritmo esperava.
 
 ### Seção F - Barra de acesso rápido
 
@@ -508,13 +508,13 @@ Para dar uma certa quantidade de insulina sem usar a [calculadora de bólus](#aa
 
 Ao ativar **Iniciar Comer em breve TT**, você pode iniciar automaticamente seu [alvo temporário Comer em breve](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Uma linha adicional **Hora**, definida como **Agora**, permite registrar uma injeção de insulina feita no passado: use **-** / **+** para mudá-la, ou toque na seta para digitar os minutos ou escolher uma data e hora.
+Se você não quer dar o bólus pela bomba, mas quer registrar uma quantidade de insulina (por exemplo, insulina aplicada com caneta), ative "**Bólus será apenas registrado (não administrado pela bomba)**". Uma linha adicional **Hora**, definida como **Agora**, permite registrar uma injeção de insulina feita no passado: use **-** / **+** para mudá-la, ou toque na seta para digitar os minutos ou escolher uma data e hora.
 
 ![A linha Hora, recolhida](../images/v4/Screens/insulin_dialog_record_only_time.png) ![A linha Hora, aberta com a seta](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Você pode usar os botões **+0,5 / +1,0 / +2,0** para aumentar rapidamente a quantidade de insulina. Os valores dos incrementos podem ser alterados nas [configurações do Assistente de Bólus](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-O diálogo de insulina também pode ser usado quando a bomba está suspensa ou desconectada, por exemplo para registrar insulina injetada com caneta. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+O diálogo de insulina também pode ser usado quando a bomba está suspensa ou desconectada, por exemplo para registrar insulina injetada com caneta. Neste caso, "**Bólus será apenas registrado (não administrado pela bomba)**" fica ligado à força (mostrado em vermelho) e aparecem campos extras para escolher o tipo de insulina e um ajuste de **Hora** para uma injeção feita no passado:
 
 ![Diálogo Insulina com a bomba desconectada](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -620,20 +620,20 @@ O campo **Tempo dos carboidratos** serve para o pré-bólus: assim você informa
 
 ![Definir alarme para carboidratos futuros](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+O lembrete começa quando o bólus foi administrado. Enquanto ele está ativo, uma barra **Hora de comer** na tela principal faz a contagem regressiva, com **Parar** e **+5 min**. **+5 min** adia o fim da espera em cinco minutos, e a barra mostra o tempo total de espera. Quando chega a hora, o lembrete toca com seu próprio som, um suave timer de cozinha. Além de **Silenciar alarme** (a tela fica aberta) e **Silenciar e fechar**, a tela do alarme oferece **+5 min**, que inicia uma nova espera de cinco minutos. Depois que ele tocou, a barra mostra *O tempo acabou* com **+5 min** e **Dispensar**; **Silenciar e fechar** também remove a barra. A barra e o alarme também são mostrados no **AAPSClient** e no [relógio](#WearOsSmartwatch-wizard-carb-time). O lembrete não cria um timer no app de relógio do seu telefone. Se o Android não permitir que o **AAPS** defina alarmes, o assistente pede que você permita *Alarmes e lembretes* para o **AAPS** nas configurações do Android. O sino não é oferecido para um horário dos carboidratos no passado.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![A barra Hora de comer na tela principal, com +5 min e Parar](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![A tela do alarme Hora de comer: +5 min, Silenciar alarme, Silenciar e fechar](../images/main/eat_reminder_alarm.png)
 
-O campo **Glicose** normalmente já vem preenchido com a última leitura do seu CGM. Se você não tiver um CGM funcionando, ele ficará em branco. Quando a leitura é recente, a linha **Glicose** fica recolhida. The field follows new readings while the wizard is open, until you change it yourself.
+O campo **Glicose** normalmente já vem preenchido com a última leitura do seu CGM. Se você não tiver um CGM funcionando, ele ficará em branco. Quando a leitura é recente, a linha **Glicose** fica recolhida. O campo acompanha as novas leituras enquanto o assistente está aberto, até que você mesmo o altere.
 
-O botão de resultado na parte de baixo mostra o bólus proposto; ao tocar nele, é pedida uma confirmação antes de qualquer insulina ser administrada. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+O botão de resultado na parte de baixo mostra o bólus proposto; ao tocar nele, é pedida uma confirmação antes de qualquer insulina ser administrada. Enquanto a confirmação está aguardando, o loop não dá nenhum SMB, para que o bólus que você confirmar continue correto. Se um SMB estiver sendo administrado nesse momento, **OK** espera até ele terminar.
 
 Bom saber:
 
 * Se o bólus calculado for maior que o seu **[Bólus máximo](#Preferences-maximum-bolus)**, ele é reduzido ao bólus máximo, e a confirmação mostra o aviso "Restrição de bólus aplicada". Já um [Assistente rápido](../DailyLifeWithAaps/QuickWizards.md) é recusado.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
+* Quando o bólus é apenas registrado (por exemplo, enquanto a bomba está desconectada), o aviso "**Bólus será apenas registrado (não administrado pela bomba)**" fica no topo do diálogo, também quando você rola a tela.
 * Um bólus que você dá manualmente tem prioridade sobre um [SMB](#Open-APS-features-super-micro-bolus-smb) que está esperando para ser administrado: o SMB é descartado e o loop calcula de novo. Se um SMB estiver sendo administrado neste momento, seu bólus é recusado com a mensagem "Um SMB está sendo administrado agora. Tente novamente quando ele terminar." Nenhuma insulina é administrada, e os carboidratos registrados com esse bólus não são salvos: espere um momento e registre-os de novo.
 
 (AapsScreens-wrong-cob-detection)=
@@ -773,7 +773,7 @@ Mostra estatísticas sobre sua dose diária total, o tempo no intervalo, seu per
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Assistente de perfil
 
 Abra o **menu** (☰) e escolha **Assistente de perfil**.
 

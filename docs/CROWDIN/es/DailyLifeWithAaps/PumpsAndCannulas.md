@@ -4,7 +4,7 @@
 
 El procedimiento de abajo es solo para bombas con tubo y no sirve para bombas parche como Omnipod, Medtrum Nano, Accu-Chek Solo, etc. A veces este proceso se llama «cambio de set»: un cambio «completo» incluye el reservorio de insulina y la cánula, y un cambio «parcial» es solo el cambio de cánula.
 
-Las bombas parche se llenan y se ceban solas en su propio asistente de activación, y su cánula ya está en el cuerpo. **AAPS** no ofrece cebado para ellas: **Cebar/Llenar** no aparece en el panel **Administrar** ni en Lanzamiento rápido. Consulta la página de tu bomba en [Bombas compatibles](../Getting-Started/CompatiblePumps.md).
+Las bombas parche se llenan y se ceban solas en su propio asistente de activación, y su cánula ya está en el cuerpo. **AAPS** no ofrece cebado para ellas: **Cebar/Llenar** no aparece en el panel **Administrar** ni en Lanzamiento rápido. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Consulta la página de tu bomba en [Bombas compatibles](../Getting-Started/CompatiblePumps.md).
 
 Los cambios físicos de cartucho/reservorio no se pueden hacer con **AAPS**: hay que hacerlos directamente en la bomba. Después, hay que registrarlos a mano en **AAPS**.
 
@@ -31,6 +31,7 @@ Los cambios físicos de cartucho/reservorio no se pueden hacer con **AAPS**: hay
 * Puedes fijar o ajustar las cantidades de cebado por defecto en los ajustes de **Cebar/Llenar**: escribe «prime» en la barra de búsqueda de la pantalla principal para abrirlos (consulta [Preferencias](../SettingUpAaps/Preferences.md)). Mira en el folleto de instrucciones de la caja de cánulas cuántas unidades hay que usar para cebar tu cánula (depende de la longitud de la aguja y del tubo).
 
 * **AAPS** no tiene en cuenta la insulina administrada con la función de cebado al calcular la insulina activa (IOB), y en el [Historial de tratamientos](#aaps-screens-treatments) aparece marcada como «Prime».
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * **AAPS** tampoco tiene en cuenta la insulina que se pone como bolo desde la bomba mientras la bomba está desconectada. Si pones un bolo directamente desde la bomba mientras **AAPS** está desconectado, al reconectar la bomba puedes registrar esta insulina (sin administrarla) en el diálogo **Insulina** (consulta [Registrar insulina administrada sin poner un bolo](#pumps-cannulas-announce-insulin) más abajo).
 

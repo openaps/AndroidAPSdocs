@@ -45,7 +45,7 @@
 
 ### Почніть із шаблону
 
-Щоб **створити** сцену, натисніть кнопку **+** на екрані «Сцени». Перший крок — **Почати з шаблону**: виберіть готову сцену для частої ситуації — *Тренування*, *День хвороби*, *День хвороби — блювання*, *Сон*, *Ніч після тренування*, *Перед їжею*, *Алкоголь*, *Водіння*, *Купання*, *Лютеїнова фаза*, *Спека*, *Медична процедура* — або почніть із *Порожньої* сцени. Кожен шаблон **заздалегідь заповнює рекомендовані дії**, і ви можете змінити все на наступних кроках.
+Щоб **створити** сцену, натисніть кнопку **+** на екрані «Сцени». Перший крок — **Почати з шаблону**: виберіть готову сцену для частої ситуації — *Тренування*, *День хвороби*, *День хвороби — блювання*, *Сон*, *Ніч після тренування*, *Перед їжею*, *Алкоголь*, *Водіння*, *Купання*, *Лютеїнова фаза*, *Спека*, *Медична процедура* — або почніть із *Порожньої* сцени. Кожен шаблон **заздалегідь заповнює рекомендовані дії**, і ви можете змінити все на наступних кроках. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![«Почати з шаблону» — виберіть основу](../images/v4/Scenes/templates_picker.png)
 
@@ -99,7 +99,7 @@
 
 ![Панель «Сцени» нижньої навігації](../images/v4/Scenes/scenes_sheet.png)
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+Якщо ввімкнено [Захист болюсу](#Preferences-protection), **AAPS** запитує його перед тим, як сцена почнеться або закінчиться. Щоб змінити сцену, натомість потрібен [Захист налаштувань](#Preferences-settings-protection).
 
 Перш ніж щось буде застосовано, ви отримаєте **підтвердження** з точним списком того, що зробить сцена, щоб ви могли це перевірити:
 
@@ -124,7 +124,7 @@ If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it befor
 
 ![Діалог «Завершити сцену»](../images/v4/Scenes/scene_end_dialog.png)
 
-Завершення сцени **скасовує** зміни, які вона зробила (наприклад, перемикання профілю та тимчасову ціль, які вона запустила).
+Завершення сцени **скасовує** зміни, які вона зробила (наприклад, перемикання профілю та тимчасову ціль, які вона запустила). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Поки сцена активна, профіль і ціль на головному екрані мають маленький значок сцени, якщо їх задала сцена. Панель **Сцени** нижньої навігації залишається доступною, щоб запустити іншу сцену:
 

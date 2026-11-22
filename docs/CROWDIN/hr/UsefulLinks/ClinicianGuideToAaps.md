@@ -1,107 +1,107 @@
-# For Clinicians – A General Introduction and Guide to AAPS
+# Za zdravstvene djelatnike – Opći uvod i vodič za AAPS
 
 ```{note}
-This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+Ova je stranica opći uvod za zdravstvene djelatnike. Zadnji put je pregledana u lipnju 2026. AAPS se stalno razvija, zato za najtočnije i najnovije pojedinosti uvijek pogledajte [glavnu dokumentaciju AAPS-a](../index.md).
 ```
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
+Ova je stranica namijenjena zdravstvenim djelatnicima koji su pokazali zanimanje za tehnologiju umjetne gušterače otvorenog koda, kao što je AAPS, ili pacijentima koji takve informacije žele podijeliti sa svojim liječnicima.
 
-This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+Ovaj vodič sadrži opće informacije o DIY zatvorenoj petlji, a posebno o tome kako radi AAPS. Za više pojedinosti o svim tim temama pogledajte [cjelovitu dokumentaciju AAPS-a na internetu](../index.md). Ako imate pitanja, zamolite pacijenta za više pojedinosti ili se slobodno obratite zajednici sa svojim pitanjem. (Ako niste na društvenim mrežama (npr. [Twitter](https://twitter.com/kozakmilos) ili Facebook), slobodno pošaljite e-poruku na developers@aaps.app). [Ovdje možete pronaći i neke od najnovijih studija i podataka o rezultatima](https://openaps.org/outcomes/).
 
-## The steps for building a DIY Closed Loop:
+## Koraci za izradu DIY zatvorene petlje:
 
-To start using AAPS, the following steps should be taken:
+Za početak korištenja AAPS-a potrebno je napraviti sljedeće korake:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
+* Nabavite [kompatibilnu pumpu](../Getting-Started/CompatiblePumps.md), [kompatibilan Android uređaj](../Getting-Started/Phones.md) i [kompatibilan izvor CGM-a](../Getting-Started/CompatiblesCgms.md).
+* [Preuzmite izvorni kod AAPS-a i izradite softver](../SettingUpAaps/BuildingAaps.md).
+* [Konfigurirajte softver tako da komunicira s uređajima za dijabetes te odredite postavke i sigurnosne opcije](../SettingUpAaps/SetupWizard.md).
 
-## How A DIY Closed Loop Works
+## Kako radi DIY zatvorena petlja
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Bez sustava zatvorene petlje osoba s dijabetesom prikuplja podatke s pumpe i CGM-a, odlučuje što učiniti i poduzima radnju.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+Kod automatske isporuke inzulina sustav radi isto: prikuplja podatke s pumpe, CGM-a i sa svih drugih mjesta gdje se bilježe podaci (npr. Nightscout), koristi te podatke za izračun i odlučuje koliko je inzulina potrebno više ili manje (iznad ili ispod osnovne bazalne stope) te koristi privremene bazalne stope za potrebne prilagodbe kako bi GUK zadržao u ciljnom rasponu ili ga u njega na kraju vratio.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
+Ako se uređaj na kojem radi AAPS pokvari ili izađe iz dometa pumpe, nakon što završi zadnja privremena bazalna stopa pumpa se vraća u rad kao standardna pumpa s unaprijed programiranim bazalnim stopama.
 
-## How data is gathered:
+## Kako se prikupljaju podaci:
 
-With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+Kod AAPS-a Android uređaj pokreće posebnu aplikaciju koja radi izračune, a uređaj putem Bluetootha komunicira s podržanom pumpom. AAPS može komunicirati s drugim uređajima i s oblakom putem Wi-Fi-ja ili mobilnih podataka kako bi prikupio dodatne informacije i izvijestio pacijenta, njegovatelje i bližnje o tome što radi i zašto.
 
-The Android device needs to:
+Android uređaj mora:
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* komunicirati s pumpom i čitati povijest – koliko je inzulina isporučeno
+* komunicirati s CGM-om (izravno ili preko oblaka) – da vidi kako se GUK kreće i kako se kretao
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+Kada uređaj prikupi te podatke, pokreće se algoritam i donosi odluke na temelju postavki (ISF, omjer ugljikohidrata, DIA, cilj itd.). Ako je potrebno, zatim šalje naredbe pumpi da promijeni brzinu isporuke inzulina.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Također prikuplja sve podatke o bolusima, unosu ugljikohidrata i privremenim ciljevima s pumpe ili iz Nightscouta te ih koristi za izračun brzine isporuke inzulina.
 
-## How does it know what to do?
+## Kako zna što treba učiniti?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+Softver otvorenog koda dizajniran je tako da uređaj lako obavlja posao koji su ljudi prije radili sami (u ručnom načinu) kako bi izračunali kako treba prilagoditi isporuku inzulina. Najprije prikuplja podatke sa svih pratećih uređaja i iz oblaka, priprema podatke i radi izračune, predviđa kako će se razina GUK-a kretati u sljedećim satima u različitim scenarijima te izračunava potrebne prilagodbe kako bi GUK zadržao u ciljnom rasponu ili ga u njega vratio. Zatim šalje pumpi sve potrebne prilagodbe. Potom ponovno čita podatke i to radi iznova i iznova.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+Budući da je najvažniji ulazni parametar razina glukoze u krvi s CGM-a, važno je imati kvalitetne podatke CGM-a.
 
-AAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AAPS je dizajniran tako da transparentno bilježi sve ulazne podatke koje prikuplja, preporuku koja iz njih proizlazi i svaku poduzetu radnju. Zato je uvijek lako odgovoriti na pitanje „zašto radi X?“ pregledom dnevnika.
 
-## Examples of AAPS algorithm decision making:
+## Primjeri odlučivanja algoritma AAPS-a:
 
-AAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AAPS koristi isti osnovni algoritam i iste značajke kao OpenAPS. Algoritam izrađuje više predviđanja (na temelju postavki i situacije) koja predstavljaju različite scenarije onoga što bi se moglo dogoditi u budućnosti. U Nightscoutu se prikazuju kao „ljubičaste linije“. AAPS koristi različite boje da razlikuje te [linije predviđanja](#aaps-screens-prediction-lines). U dnevnicima se opisuje koje od tih predviđanja i koji vremenski okvir određuju potrebne radnje.
 
-### Here are examples of the purple prediction lines, and how they might differ:
+### Evo primjera ljubičastih linija predviđanja i kako se mogu razlikovati:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Primjeri ljubičastih linija predviđanja](../images/Prediction_lines.jpg)
 
 (clinicianguide-dosing-scenarios)=
 
-### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+### Evo primjera različitih vremenskih okvira koji utječu na potrebne prilagodbe isporuke inzulina:
 
-### Scenario 1 - Zero Temp for safety
+### Scenarij 1 – Nulti privremeni bazal radi sigurnosti
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+U ovom primjeru GUK raste u kratkoročnom vremenskom okviru, ali se predviđa da će u duljem vremenskom okviru biti nizak. Zapravo se predviđa da će pasti ispod cilja *i* ispod sigurnosnog praga. Radi sigurnosti, da spriječi nisku vrijednost, AAPS će postaviti nulti privremeni bazal (privremenu bazalnu stopu od 0 %) sve dok konačni GUK (u bilo kojem vremenskom okviru) ne bude iznad praga.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Scenarij doziranja 1](../images/Dosing_scenario_1.jpg)
 
-### Scenario 2 - Zero temp for safety
+### Scenarij 2 – Nulti privremeni bazal radi sigurnosti
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+U ovom primjeru predviđa se da će GUK kratkoročno pasti nisko, ali da će na kraju biti iznad cilja. Međutim, budući da je kratkoročna niska vrijednost zapravo ispod sigurnosnog praga, AAPS će postaviti nulti privremeni bazal sve dok nijedna točka linije predviđanja više ne bude ispod praga.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Scenarij doziranja 2](../images/Dosing_scenario_2.jpg)
 
-### Scenario 3 - More insulin needed
+### Scenarij 3 – Potrebno je više inzulina
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
+U ovom primjeru kratkoročno predviđanje pokazuje kratak pad ispod cilja. Međutim, ne predviđa se da će pasti ispod sigurnosnog praga. Konačni GUK je iznad cilja. Zato AAPS neće dodati inzulin koji bi pridonio kratkoročnoj niskoj vrijednosti (dodavanjem inzulina zbog kojeg bi predviđanje palo ispod praga). Zatim će procijeniti dodavanje inzulina kako bi najnižu razinu konačnog predviđenog GUK-a spustio na cilj, čim to bude sigurno. *(Ovisno o postavkama te količini i vremenu potrebnog inzulina, taj se inzulin može isporučiti putem privremenih bazala ili SMB-ova (super mikro bolusa)).*
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Scenarij doziranja 3](../images/Dosing_scenario_3.jpg)
 
-### Scenario 4 - Low temping for safety
+### Scenarij 4 – Niski privremeni bazal radi sigurnosti
 
-In this example, AAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+U ovom primjeru AAPS vidi da GUK naglo raste daleko iznad cilja. Međutim, zbog vremena djelovanja inzulina u tijelu već ima dovoljno inzulina da GUK na kraju dovede u raspon. Zapravo se predviđa da će GUK na kraju biti ispod cilja. Zato AAPS neće dati dodatni inzulin, kako ne bi pridonio niskoj vrijednosti u duljem vremenskom okviru. Iako je GUK visok ili raste, ovdje je vjerojatan niski privremeni bazal.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Scenarij doziranja 4](../images/Dosing_scenario_4.jpg)
 
-## Optimizing settings and making changes
+## Optimizacija postavki i promjene
 
-As a clinician who may not have experience with AAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+Kao zdravstvenom djelatniku koji možda nema iskustva s AAPS-om ili DIY zatvorenim petljama, može vam biti teško pomoći pacijentu da optimizira postavke ili napravi promjene za bolje rezultate. U zajednici imamo više alata i [vodiča](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) koji pacijentima pomažu da naprave male, provjerene prilagodbe i poboljšaju svoje postavke.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+Najvažnije je da pacijenti mijenjaju jednu stvar odjednom i promatraju učinak 2–3 dana prije nego što promijene ili prilagode drugu postavku (osim ako je promjena očito loša i pogoršava stanje; tada se trebaju odmah vratiti na prethodnu postavku). Ljudi su skloni okretati sve gumbe i mijenjati sve odjednom; ali tko to učini, može u budućnosti završiti s još lošijim postavkama i teško se vratiti na poznato dobro stanje.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Jedan od najmoćnijih alata za promjenu postavki je alat za automatski izračun bazalnih stopa, ISF-a i omjera ugljikohidrata. To se zove „[Autotune](#autotune-how-autotune-calculates-adjustments)“. Dizajniran je tako da vas ili vašeg pacijenta podaci vode pri postupnim promjenama postavki. U zajednici je dobra praksa najprije pokrenuti (ili pregledati) izvješća Autotunea, prije nego što se postavke pokušaju ručno prilagoditi. Autotune je ugrađen u AAPS kao dodatak (**Konfiguracija** → **Općenito** → **Autotune**); pogledajte [Kako koristiti dodatak Autotune](../AdvancedOptions/Autotune.md). Može se pokrenuti na zahtjev ili automatski. Budući da su ti parametri preduvjet i za standardnu isporuku inzulina pumpom i za isporuku inzulina u zatvorenoj petlji, razgovor o rezultatima Autotunea i prilagodba tih parametara prirodna su poveznica sa zdravstvenim djelatnikom.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Osim toga, ljudsko ponašanje (naučeno u ručnom liječenju dijabetesa) često utječe na rezultate, čak i kod DIY zatvorene petlje. Na primjer, ako se predviđa da će GUK pasti nisko, a AAPS na putu prema dolje smanji inzulin, možda je potrebna samo mala količina ugljikohidrata (npr. 3–4 g) da se GUK podigne sa 70 mg/dL (3,9 mmol/L). Međutim, u mnogim slučajevima osoba može hipoglikemiju liječiti s puno više ugljikohidrata (npr. držeći se pravila 15), što uzrokuje brži skok, i zbog dodatne glukoze i zato što je inzulin bio smanjen u razdoblju prije niske vrijednosti.
 
 ## OpenAPS
 
-**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
+**Ovaj je vodič prilagođen prema [vodiču za zdravstvene djelatnike za OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) (The clinician's guide to OpenAPS).** OpenAPS je sustav razvijen za rad na malom prijenosnom računalu (koje se obično naziva „rig“). AAPS koristi mnoge tehnike iz OpenAPS-a i dijeli velik dio logike i algoritama, zato je ovaj vodič vrlo sličan izvornom vodiču. Velik dio informacija o OpenAPS-u lako se može primijeniti na AAPS; glavna je razlika hardverska platforma na kojoj se pojedini softver pokreće.
 
-## Summary
+## Sažetak
 
-This is meant to be a high-level overview of how AAPS works. For more details, ask your patient, reach out to the community, or read the full AAPS documentation available online.
+Ovo je zamišljeno kao opći pregled načina rada AAPS-a. Za više pojedinosti pitajte pacijenta, obratite se zajednici ili pročitajte cjelovitu dokumentaciju AAPS-a dostupnu na internetu.
 
-Additional recommended reading:
+Dodatno preporučeno čitanje:
 
-* The [full AAPS documentation](../index.md)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
+* [Cjelovita dokumentacija AAPS-a](../index.md)
+* [Referentni dizajn OpenAPS-a](https://OpenAPS.org/reference-design/), koji objašnjava kako je OpenAPS dizajniran za sigurnost: https://openaps.org/reference-design/
+* [Cjelovita dokumentacija OpenAPS-a](https://openaps.readthedocs.io/en/latest/index.html) 
+  * Pogledajte [kako AAPS pretvara predviđanja u odluku o doziranju](#aaps-screens-how-predictions-become-a-dosing-decision) u ovoj dokumentaciji ili [dokumentaciju OpenAPS-a o determine-basal](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) za temeljni algoritam sa svim tehničkim pojedinostima

@@ -121,6 +121,8 @@ Appuyez sur **Jeter le patch** sur l'écran de la pompe et confirmez. L'injectio
 
 Quand une alarme critique a arrêté le patch, l'alarme propose à la place **Désactiver le Patch**. Ce bouton retire le patch de la même façon.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarmes et notifications

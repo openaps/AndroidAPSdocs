@@ -1,75 +1,77 @@
 # Eversense
 
-There are four different methods to access the readings from Eversense:
+Postoje četiri različita načina za pristup očitanjima Eversensea:
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip companion app
-- Notification Reader (built into **AAPS**)
+- ESEL u načinu companion
+- ESEL u zakrpanom načinu (patched)
+- xDrip kao pomoćna aplikacija (companion)
+- Čitač obavijesti (ugrađen u **AAPS**)
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Nabavite i instalirajte [aplikaciju ESEL](https://github.com/BernhardRo/Esel/tree/master/apk) prema ovim [uputama](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
-  - Enable "Send to AAPS and xDrip"
-  - **Disable** "Send to Nightscout"
-  - As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- U ESEL-u otvorite izbornik s tri točke (⋮) gore desno i odaberite **Settings** (dostupno i iz izbornika ☰). U postavkama:
+  - Omogućite „Send to AAPS and xDrip“
+  - **Onemogućite** „Send to Nightscout“
+  - Budući da podaci GUK-a iz Eversensea mogu imati šum, preporučuje se u ESEL-u omogućiti „Smooth Data“.
 
 ![ESEL Broadcast](../images/ESEL.png)
 
-### Companion Mode
+### Način companion (Companion Mode)
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+Čita podatke iz obavijesti aplikacije Eversense (radi sa standardnom aplikacijom Eversense, dostupno od verzije ESEL-a 3.0.1).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+1. Koristite službenu aplikaciju Eversense iz trgovine Google Play
+   - Neobavezno, ali potrebno za nadopunu podataka koji nedostaju: prijavite se na svoj Eversense račun
+   - U Sync omogućite Auto synchronization
+2. Konfiguracija ESEL-a:
+   - Onemogućite postavku „Get data from patched Eversense App“
+   - Za nadopunu podataka koji nedostaju: omogućite „Fill missing data from eversensedms.com“
+   - Kao adresu e-pošte i lozinku unesite svoje podatke za prijavu na Eversense
+3. Postavite „MM640g“ kao izvor GUK-a u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
-### Patched Eversense App
+### Zakrpana aplikacija Eversense
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ Treba zakrpanu verziju aplikacije Eversense (radi potpuno bez interneta, uključujući nadopunu podataka koji nedostaju).
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. Deinstalirajte aplikaciju Eversense (Upozorenje: vaši lokalni povijesni podaci (stariji od 1 tjedna) bit će izgubljeni!)
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. Instalirajte [zakrpanu aplikaciju Eversense](https://cr4ck3d3v3r53n53.club) i koristite je kako opisuje dobavljač
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - Pokrenite aplikaciju Eversense, prijavite se, povežite se sa svojim odašiljačem i koristite je kao običnu aplikaciju.
 
-3. Configuration of ESEL:
+3. Konfiguracija ESEL-a:
 
-   - Enable the setting "Get data from patched Eversense App"
+   - Omogućite postavku „Get data from patched Eversense App“
 
 
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+Ako ESEL pokrećete s novom instalacijom Eversensea prvi put, može proći do 15 min dok se prve vrijednosti ne pojave u xDripu!
 
-4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+4. Postavite „MM640g“ kao izvor GUK-a u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
 ## xDrip
 
-xDrip can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip može čitati obavijesti aplikacije proizvođača, kao i ESEL. Nadopuna podataka koji nedostaju nije dostupna.
 
-- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip “Companion App” must be selected.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- Preuzmite i instalirajte xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Kao izvor podataka u xDripu mora biti odabrano „Companion App“.
+- Odaberite xDrip u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
+- Prilagodite postavke xDripa prema objašnjenjima na stranici [Postavke xDripa](../CompatibleCgms/xDrip.md).
+- Omogućite [eksponencijalno zaglađivanje](../CompatibleCgms/SmoothingBloodGlucoseData.md) u AAPS-u.
 
-## Notification Reader
+## Čitač obavijesti
 
-**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. No backfilling available.
+**AAPS** može čitati vrijednosti glukoze izravno iz obavijesti službene aplikacije Eversense, bez ikakve druge aplikacije između. Nadopuna podataka koji nedostaju nije dostupna.
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
-- Make sure the Eversense app shows the current glucose value in its notification.
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
+- Odaberite **Čitač obavijesti** u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source) i dopustite **AAPS-u** pristup obavijestima kad se to zatraži.
+- Provjerite prikazuje li aplikacija Eversense trenutačnu vrijednost glukoze u svojoj obavijesti.
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+Očitanja GUK-a ne stižu uvijek svakih 5 minuta i mogu se pojaviti duplikati.
 ```

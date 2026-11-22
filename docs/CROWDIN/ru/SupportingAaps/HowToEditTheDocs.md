@@ -1,565 +1,565 @@
-# How to edit the docs
+# Как редактировать документацию
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Это описание только для редактирования английской документации. Вся новая информация сначала должна быть добавлена на английском языке. Если вы хотите переводить на другие языки (спасибо!), используйте [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Подсказки, как форматировать текст (заголовок, жирный...) и ставить ссылки, см. в разделе [«Синтаксис кода»](#edit-the-docs-code-syntax) на этой странице.
 
 ## General
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+С любыми вопросами, отзывами или новыми идеями вы можете связаться с командой документации в [discord](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+В какой-то момент вам предложат сделать pull request (PR) — так ваши изменения в документации на самом деле попадают на веб-страницы AAPS, которые хранятся на GitHub. Сделать PR на самом деле не так сложно, и это отличный способ помочь проекту. Вы читаете эту документацию прямо сейчас, потому что такие же люди, как вы, делали PR. Не бойтесь ошибиться или случайно отредактировать не тот документ. Ваши изменения проверяются, прежде чем их внесут в «официальный» репозиторий документации AAPS. Вы не сможете случайно испортить оригиналы во время этого процесса. Общий порядок действий:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Вносите правки и улучшения в код или документацию, редактируя существующее содержимое.
+- Еще раз проверьте, что ваши правки выглядят так, как вы хотите.
+- Кратко запишите, что изменилось, чтобы другие люди поняли ваши правки.
+- Создайте pull request (запрос на слияние), который просит администраторов принять ваши изменения.
+- Они проверят его и либо (1) примут ваши изменения, (2) напишут вам комментарий к вашим изменениям, либо (3) начнут новый документ с вашими изменениями.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Примечание: если вам удобнее учиться по видео, [здесь](https://youtu.be/4b6tsL0_kzg) есть видео на YouTube о процессе PR.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+В нашем примере мы внесем правку в AndroidAPSdocs. Это можно сделать на любом ПК с Windows, Mac и т. д. (на любом компьютере с доступом в интернет).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Перейдите на <https://github.com/openaps/AndroidAPSdocs> и нажмите Fork в правом верхнем углу, чтобы создать свою копию репозитория.
 
-![Fork repo](../images/docs_pr_fork_repository.png)
+![Fork репозитория](../images/docs_pr_fork_repository.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Откройте любую страницу и перейдите на страницу, которую хотите редактировать. Можно нажать на ссылку "Edit in GitHub" в правом верхнем углу. Это возможно только для английских страниц. 
 
-![edit doc](../images/docs_pr_edit_on_github.png)
+![редактирование документа](../images/docs_pr_edit_on_github.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Или нажмите на значок карандаша, который появляется в верхней панели содержимого редактируемой страницы. Для этого вы должны уже войти в свою учетную запись Github (если ее нет, создать ее несложно).
 
 ![RTD io](../images/docs_pr_pencil_icon.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Любой из вариантов в шаге 2 создаст новую ветку в ВАШЕМ репозитории, где будут сохранены ваши правки. Внесите правки в файл.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Для страниц документации мы используем Markdown. Файлы имеют расширение ".md". Спецификация Markdown не зафиксирована, и сейчас для наших файлов Markdown мы используем myst_parser. Следите за правильным синтаксисом, как [описано ниже](#edit-the-docs-code-syntax).
 
-![Edit branch](../images/docs_pr_edit_file.png)
+![Ветка для правок](../images/docs_pr_edit_file.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Вы работали на вкладке "<>Edit file". Выберите вкладку "Preview changes", чтобы свежим взглядом убедиться, что все изменения выглядят так, как вы задумали (проверьте опечатки). Если вы видите, что нужно что-то улучшить, вернитесь на вкладку редактирования и внесите еще правки. 
 
-![preview mode](../images/docs_pr_preview_changes.png)
+![режим предварительного просмотра](../images/docs_pr_preview_changes.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Когда вы закончите правки, прокрутите страницу вниз. В поле внизу напишите свои комментарии в текстовом поле с надписью "Add an optional extended description...". Заголовок по умолчанию содержит имя файла. Постарайтесь добавить предложение, которое объясняет **причину** изменения. Если вы назовете причину, проверяющим будет легче понять, чего вы хотите добиться этим PR.
 
-![commit comments](../images/docs_pr_commit_description.png)
+![комментарии к коммиту](../images/docs_pr_commit_description.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Нажмите зеленую кнопку "Propose file changes" или "Commit changes". На открывшейся странице нажмите "Create Pull Request" и на следующей странице снова нажмите "Create Pull Request".
 
-![create pull request](../images/docs_pr_create_pull_request.png)
+![создание pull request](../images/docs_pr_create_pull_request.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. На этом открытие pull request (PR) завершено. GitHub присваивает PR номер, который стоит после заголовка и знака решетки. Возвращайтесь на эту страницу, чтобы проверить отзывы (или, если уведомления GitHub приходят вам по электронной почте, вы будете получать письма о любых действиях в PR). Теперь правка будет в списке PR, которые команда проверит и, возможно, прокомментирует, прежде чем внести ее в основную документацию AAPS! Если вы хотите следить за ходом PR, нажмите на значок колокольчика в правом верхнем углу вашей учетной записи GitHub, и вы увидите все ваши PR.
 
-![PR tracking](../images/docs_pr_tracking.png)
+![Отслеживание PR](../images/docs_pr_tracking.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+P.S.: ваш fork и ветка останутся в вашей личной учетной записи GitHub. Когда вы получите уведомление, что ваш PR принят, можете удалить свою ветку, если она вам больше не нужна (в области уведомлений из шага 7 будет ссылка для удаления ветки, когда PR закрыт или принят). Если вы будете следовать этой процедуре и для будущих правок, они всегда будут начинаться с актуальной версии репозиториев AndroidAPSdocs. Если вы начинаете PR другим способом (например, редактируете, начиная с ветки master вашего fork), сначала нужно обновить ваш репозиторий: выполните "compare" (сравнение) и примите все изменения, сделанные с момента последнего обновления вашего fork. Люди часто забывают обновлять свои репозитории, поэтому мы советуем использовать описанный выше процесс PR, пока вы не научитесь выполнять "compare" (сравнение).
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Синтаксис кода
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Для страниц документации мы используем Markdown. Файлы имеют расширение ".md".
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown — очень простой язык форматирования текста, который отделяет содержимое текста от его оформления.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Автор, например, только отмечает заголовок как заголовок 1-го уровня, а обработчик Markdown при обработке создает нужный HTML-код, чтобы показать этот заголовок в HTML.
 
-The idea behind this is that
+Идея в том, чтобы
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
-- you can generate several output formats from one markdown file.
+- автор должен сначала думать о тексте, а не о форматировании,
+- текст Markdown можно было переносить между разными инструментами Markdown, а не использовать, например, закрытые инструменты, такие как Microsoft Word, и
+- можно было создавать несколько выходных форматов из одного файла Markdown.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown — это не на 100% фиксированный стандарт, и мы стараемся держаться как можно ближе к стандарту, чтобы
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- оставаться гибкими и менять инструменты Markdown, когда нужно или когда к этому вынудит дальнейшее развитие инструментов Markdown и SaaS-сервисов Markdown, и
+- можно было использовать сервисы перевода для перевода с английского на другой язык, например на французский или немецкий. Они умеют работать с Markdown, но не со сложными кодами форматирования, потому что не могут отделить содержимое от оформления, а это может быть фатальным.
 
-### Headlines
+### Заголовки
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Заголовок 1: `# headline`
+- Заголовок 2: `## headline`
+- Заголовок 3: `### headline`
+- Заголовок 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Мы стараемся не использовать больше уровней заголовков.
 
-### Text format
+### Формат текста
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **жирный**: `**text**`
+- *курсив*: `*text*`
+- ***жирный курсив***: `***text***`
 
-### Ordered list
+### Нумерованный список
 
-    1. first
-    1. second
-    1. third
+    1. первый
+    1. второй
+    1. третий
     
 
-1. first
-2. second
-3. third
+1. первый
+2. второй
+3. третий
 
-### Unordered list
+### Маркированный список
 
-    - one element
-    - another element
-    - and another element
+    - один элемент
+    - другой элемент
+    - и еще один элемент
     
 
-- one element
-- another element
-- and another element
+- один элемент
+- другой элемент
+- и еще один элемент
 
-### Multi level list
+### Многоуровневый список
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Можно вставлять списки в списки: сдвиньте следующий уровень вправо на 4 пробела больше, чем предыдущий.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. первый
+    1. второй
+    1. третий
+      1. один элемент
+      1. другой элемент
+      1. и еще один элемент
+    1. четвертый
+    1. пятый
+    1. шестой
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. первый
+2. второй
+3. третий 
+    1. один элемент
+    2. другой элемент
+    3. и еще один элемент
+4. четвертый
+5. пятый
+6. шестой
 
-### Images
+### Изображения
 
-To include images you use this markdown syntax.
+Чтобы вставить изображение, используйте такой синтаксис Markdown.
 
-- images: `![alt text](../images/file.png)`
+- изображения: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Изображение должно быть в формате PNG или JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Названия изображений должны соответствовать одному из следующих правил. В примере я использую расширение png. Если вы используете JPEG, используйте расширение jpeg.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, где xx — уникальное двузначное число для изображений в этом файле.
+- `filename-image-xx.png`, где xx — понятное имя, которое выбрал автор md-файла.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Изображения лежат в папке images для английского языка и автоматически переносятся в другие языки через Crowdin. Вам для этого ничего делать не нужно!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Сейчас мы не переводим изображения: на изображениях должно быть **как можно меньше текста**, чтобы они были понятны читателям, не знающим английского.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Используйте разумный размер изображений: они должны быть читаемы на ПК, планшете и телефоне.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Снимки экрана с веб-страниц должны быть шириной до **1050 пикселей**.
+- Схемы процессов должны быть шириной до **1050 пикселей**.
+- Снимки экрана приложения должны быть шириной до **500 пикселей**. Не размещайте их рядом друг с другом, если в этом нет необходимости.
+- Снимки экрана со смарт-часов (**Wear OS**) должны быть шириной до **360 пикселей**. Никогда не увеличивайте снимок экрана, который меньше.
 
-### Links
+### Ссылки
 
-#### External links
+#### Внешние ссылки
 
-External links are links to external web sites.
+Внешние ссылки — это ссылки на внешние веб-сайты.
 
-- external link: `[alt text](www.url.tld)`
+- внешняя ссылка: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Внутренние ссылки на начало md-файла
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Внутренние ссылки на страницы — это ссылки на начало md-файла, который размещен на нашем собственном сервере.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- внутренняя ссылка на страницу .md: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Внутренние ссылки на именованные метки в тексте
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Внутренние ссылки на именованные метки — это ссылки на любое место md-файла, который размещен на нашем собственном сервере, где задана метка для ссылки.
 
-Add a named reference at the location in the target md file you want to jump to.
+Добавьте именованную ссылку (метку) в том месте целевого md-файла, куда нужно перейти.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Именованная метка должна быть уникальной во всех md-файлах AndroidAPSDocs, а не только в своем md-файле!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Поэтому лучше начинать ее с имени файла, а затем писать выбранное имя метки.
 
-Use only lowercase letters and hyphenate words.
+Используйте только строчные буквы и соединяйте слова дефисом.
 
-Then link this reference in the text you are writing with the following kind of link.
+Затем сошлитесь на эту метку в своем тексте с помощью ссылки такого вида.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Внутренние ссылки на именованные метки: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Примечания, предупреждения, сворачиваемые примечания
 
-You can add notes and warning boxes to documentation.
+В документацию можно добавлять блоки примечаний и предупреждений.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Кроме того, можно добавлять сворачиваемые примечания с подробной информацией, чтобы пользователей, которым не интересны детали, они не отпугивали от чтения текста. Используйте их осторожно, потому что документация должна читаться как можно легче.
 
-#### Notes
+#### Примечания
 
-    ```{admonition} Note headline
+    ```{admonition} Заголовок примечания
     :class: note
-    This is a note.
+    Это примечание.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Заголовок примечания :class: note Это примечание.
 
-    <br />#### Warnings
+    <br />#### Предупреждения
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Предупреждение
     :class: warning
-    This is a warning.
+    Это предупреждение.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Заголовок предупреждения
     :class: warning
-    This is a warning.
+    Это предупреждение.
     ```
     
-    #### Collapsing Notes
+    #### Сворачиваемые примечания
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} подробная информация для интересующихся читателей
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Это примечание свернуто,
+    поэтому сюда можно добавить более длинный текст,
+    и он не займет много места на странице.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} подробная информация для интересующихся читателей :class: dropdown Это примечание свернуто, поэтому сюда можно добавить более длинный текст, и он не займет много места на странице.
 
 ```
 
-## Tables
+## Таблицы
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Избегайте таблиц с длинными текстами: их содержимое трудно оформить в Markdown, обычно они не помещаются по ширине экрана телефона и, скорее всего, будут выглядеть иначе после перевода.
 
-## Style Guide
+## Руководство по стилю
 
 ### Contents
 
-1. English language writing tips
+1. Советы по письму на английском языке
 
-2. AAPS-specific writing notes
+2. Заметки по написанию текстов для AAPS
 
-3. Useful references
+3. Полезные ссылки
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Изображение](../images/styleguide01.png) 1\. Советы по письму на английском языке
 
-#### Use language that is appropriate for the reader
+#### Пишите языком, который подходит читателю
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+По возможности используйте простой английский язык. Это помогает читателям, для которых английский не родной, и облегчает перевод документов AAPS на другие языки. Пишите так, как будто разговариваете с пользователем: представьте, что человек, для которого вы пишете, сидит напротив вас за столом. Помните: у большинства пользователей AAPS нет опыта программирования. В самой теме диабета тоже много жаргона и сокращений. Помните, что у некоторых людей диабет мог быть выявлен недавно, у них может быть меньше опыта с диабетом, чем у вас, или их могли обучать по-другому. Если вы используете сокращение, при первом упоминании напишите его полностью, а сокращение укажите сразу после него в скобках, например “super micro bolus (SMB)”. Также дайте ссылку на глоссарий. Технические термины, которые могут быть незнакомы читателю, тоже можно пояснить в скобках.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Вместо: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Пишите: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
-##### Use plain words that everyone can understand
+##### Используйте простые слова, понятные всем
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Список альтернативных слов от A до Z, которые сделают ваш текст понятнее, вы найдете здесь:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Конфиденциальность и лицензии:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Особенно если вы записываете видео или делаете снимки экрана, не раскрывайте свои личные данные (ключ API, пароли). Убедитесь, что видео на YouTube не находится в открытом доступе и его можно посмотреть только по ссылке из документации. Не привлекайте внимание к материалам, нарушающим авторские права (BYODA и т. д.).
 
-#### Keep sentences short, get to the point
+#### Пишите короткие предложения, говорите по существу
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- В ясном тексте средняя длина предложения — от 15 до 20 слов.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- Это не значит, что все предложения должны быть одной длины. Пишите емко. Чередуйте короткие предложения (как предыдущее) с более длинными (как это).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Держитесь одной главной мысли в предложении, плюс, возможно, еще одного связанного пункта.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Иногда у вас все же получится длинное предложение, особенно когда вы объясняете что-то сложное. Но большинство длинных предложений можно как-то разбить.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Убирайте слабые слова: “you can”, “there is/are/were”, “in order to”.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Ставьте ключевые слова ближе к началу заголовков, предложений и абзацев.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Используйте наглядность! По возможности добавляйте короткую схему, снимок экрана или видео.
 
-#### Don't be afraid to give instructions
+#### Не бойтесь давать указания
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Повелительная форма — самый быстрый способ дать указание, но авторы иногда боятся приказывать и пишут “you should do this” («вам следует сделать это») вместо простого “do this” («сделайте это»). Возможно, люди боятся, что повелительная форма звучит слишком резко. Часто это можно решить, добавив в начале слово 'please' («пожалуйста»). Но если что-то обязательно нужно сделать, лучше не писать ‘please’, потому что это оставляет читателю возможность отказаться.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Вместо: *“You should just think of it as a complete statement.”*
 
-Use: *“Think of it as a complete statement.”*
+Пишите: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Чаще используйте действительный залог, а не страдательный
 
-Example of an **active verb**:
+Пример **действительного залога**:
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *“The pump (subject) delivers (verb) the insulin (object).” («Помпа (подлежащее) подает (глагол) инсулин (дополнение).»)*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+Здесь “delivers” — глагол в действительном залоге. Предложение сначала говорит, что подает, а потом — что подается.
 
-Example of a **passive verb**:
+Пример **страдательного залога**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).” («Инсулин (подлежащее) подается (глагол) помпой (дополнение).»)*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+Здесь *“delivered”* — глагол в страдательном залоге. Подлежащее и дополнение поменялись местами по сравнению с предложением в действительном залоге. Нам пришлось сделать предложение длиннее, добавив “is” и “by the”. Также подумайте о том, чтобы начать с глагола в действительном залоге.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+Вместо: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Пишите: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Страдательный залог может создавать проблемы:
 
-- They can be confusing.
+- Он может запутать.
 
-- They often make writing more long-winded.
+- Он часто делает текст более многословным.
 
-- They make writing less lively.
+- Он делает текст менее живым.
 
-##### Good uses of passives
+##### Когда страдательный залог уместен
 
-There are times when it might be appropriate to use a passive.
+Иногда страдательный залог может быть уместен.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Чтобы смягчить высказывание: 'this bill has not been paid' («этот счет не оплачен», страдательный залог) звучит мягче, чем 'you have not paid this bill' («вы не оплатили этот счет», действительный залог).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Чтобы не перекладывать вину: 'a mistake was made' («была допущена ошибка», страдательный залог) вместо 'You made a mistake' («вы допустили ошибку», действительный залог).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Когда вы не знаете, кто или что выполняет действие: 'the England team has been picked' («сборная Англии выбрана»).
 
-- If it simply sounds better.
+- Если так просто звучит лучше.
 
-#### Avoid nominalisations
+#### Избегайте отглагольных существительных
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Отглагольное существительное — это название чего-то, что не является физическим предметом, например процесса, метода или чувства. Отглагольные существительные образуются от глаголов.
 
 Например:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Глагол                 | Отглагольное существительное |
+| ---------------------- | ---------------------------- |
+| complete (завершить)   | completion (завершение)      |
+| introduce (ввести)     | introduction (введение)      |
+| provide (предоставить) | provision (предоставление)   |
+| fail (не удаться)      | failure (неудача)            |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Их часто используют **вместо** глаголов, от которых они образованы, но из-за них может казаться, что ничего на самом деле не происходит. Если их слишком много, текст становится очень скучным и тяжелым для чтения.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+Вместо: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Пишите: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Используйте списки, где это уместно
 
-Lists are excellent for splitting information up. There are two main types of list:
+Списки отлично подходят для разделения информации. Есть два основных вида списков:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Сплошное предложение, в котором несколько пунктов выделены в начале, в середине или в конце.
 
-- Separate bullet points with an introductory statement.
+- Отдельные пункты списка с вводной фразой.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+В маркированном списке выше каждый пункт — законченное предложение, поэтому каждый начинается с заглавной буквы и заканчивается точкой. Используйте маркеры, а не цифры или буквы: они привлекают внимание к каждому пункту и не дают читателю лишней информации.
 
-#### Mythbusting
+#### Развенчание мифов
 
-- You can start a sentence with **and, but, because, so or however**.
+- Предложение можно начинать с **and, but, because, so или however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Можно разделять инфинитив. Поэтому можно сказать **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Предложение можно заканчивать предлогом. На самом деле это то, **we should stand up for** (что нам стоит отстаивать).
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- И **вы** можете использовать одно и то же **слово** дважды в предложении, если **вы** не можете найти лучшее **слово**.
 
-#### Optimizing writing style by purpose
+#### Выбор стиля текста в зависимости от цели
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Чтобы документация была ясной и короткой, мы пишем разные разделы документации в разных стилях.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Стиль «объяснение» используется для введения, справочной информации и разделов, которые развивают знания.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+Стиль «практическое руководство» (с минимумом объяснений) используется для сборки и настройки AAPS и для некоторых разделов по устранению неполадок.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Учебник помогает ученику получить базовые навыки. Пользователь будет **учиться на практике**.
 
-![Image](../images/styleguide02.png)
+![Изображение](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Изображение](../images/styleguide03.png) Учебники (например, учим ребенка взбивать яичные белки)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- рассказчик обращается прямо к читателю: «В этом учебнике **вы**...» (мы) в редких случаях можно использовать, чтобы передать ощущение «мы делаем это вместе»
 
-- Future Tense -> to show the final target
+- Будущее время -> чтобы показать конечную цель
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Повелительное наклонение -> чтобы выполнять задачи -> Конкретные шаги - избегайте абстрактных понятий
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Прошедшее время -> чтобы показать выполненные задачи -> Быстрые и сразу видимые результаты
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Минимум объяснений -> только то, что нужно для выполнения задачи - **что и зачем**
 
-- Ignore options/alternatives/…. No ambiguity
+- Не упоминайте варианты/альтернативы/…. Никакой двусмысленности
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Переходы между шагами: заканчивайте шаг предложением, которое логично ведет к следующему шагу. Пример: *Вы установили клиент Let’s Encrypt, но перед получением сертификатов нужно убедиться, что все нужные порты открыты. Для этого на следующем шаге вы обновите настройки брандмауэра.*
 
-- **Tutorial** Title (Level 1 heading)
+- Заголовок **учебника** (заголовок 1-го уровня)
 
-- Introduction (no heading)
+- Введение (без заголовка)
 
-- Prerequisites (Level 2 heading)
-
-- Steps:
-
-- Step 1 — Doing the First Thing (Level 2 heading)
-
-- Step 2 — Doing the Next Thing (Level 2 heading)
-
-- Step n — Doing the Last Thing (Level 2 heading)
-
-- Conclusion (Level 2 heading)
-    
-    - **The Language of Tutorials**
-        
-        *In this tutorial, you will…*
-        
-        Describe what the learner will accomplish (note - not: “you will learn…”).
-        
-        *First, do x. Now, do y. Now that you have done y, do z.*
-        
-        No room for ambiguity or doubt.
-        
-        *We must always do x before we do y because… (see Explanation for more details).*
-        
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
-        
-        *The output should look something like this…*
-        
-        Give your learner clear expectations.
-        
-        *Notice that… Remember that…*
-        
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
-        
-        *You have built a secure, three-layer hylomorphic stasis engine…*
-        
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
-
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
-
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
-
-- HOW-to
-
-- narrator directly talks to the reader: In this guide **you** will
-
-- Future Tense -> to show the final target
-
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
-
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
-
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
-
-- **How-to**: Title (Level 1 heading)
-
-- Introduction paragraph
-
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Предварительные требования (заголовок 2-го уровня)
 
 - Steps:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Шаг 1 — Делаем первое (заголовок 2-го уровня)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Шаг 2 — Делаем следующее (заголовок 2-го уровня)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Шаг n — Делаем последнее (заголовок 2-го уровня)
 
-- Conclusion paragraph
+- Заключение (заголовок 2-го уровня)
     
-    - **The Language of How-To Guides**
+    - **Язык учебников**
         
-        *This guide shows you how to…*
+        *В этом учебнике вы…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Опишите, чего добьется ученик (обратите внимание: не «вы узнаете…»).
         
-        *If you want x, do y. To achieve w, do z.*
+        *Сначала сделайте x. Теперь сделайте y. Теперь, когда вы сделали y, сделайте z.*
         
-        Use conditional imperatives.
+        Никаких двусмысленностей и сомнений.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Мы всегда должны сделать x перед y, потому что… (подробнее см. в объяснении).*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Объясняйте действия минимально и самым простым языком. Дайте ссылку на более подробное объяснение.
+        
+        *Результат должен выглядеть примерно так…*
+        
+        Дайте ученику ясные ожидания.
+        
+        *Обратите внимание, что… Помните, что…*
+        
+        Давайте ученику много подсказок, чтобы он мог убедиться, что идет правильным путем, и сориентироваться.
+        
+        *Вы собрали надежный трехслойный гиломорфный стазис-двигатель…*
+        
+        Опишите (и сдержанно похвалите) то, чего добился ученик (обратите внимание: не «вы научились…»)
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Изображение](../images/styleguide05.png) Практические руководства (например, рецепт)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Цель практического руководства — помочь уже опытному пользователю правильно выполнить определенную задачу.
 
-- WHY
+- КАК сделать
 
-- Start with **About**
+- рассказчик обращается прямо к читателю: «В этом руководстве **вы**...»
 
-- Provide context, link ALL relevant references
+- Будущее время -> чтобы показать конечную цель
 
-- Discuss options/alternatives
+- Условное повелительное наклонение -> чтобы получить X, сделайте y -> Конкретные шаги - избегайте абстрактных понятий
 
-- Don’t instruct or provide reference (link to them)
+- Минимум объяснений -> только то, что нужно для выполнения задачи -> **что и зачем**
 
-- State the unknown/moving targets etc…
+- Не упоминайте варианты/альтернативы/…. Никакой двусмысленности, но можно дать ссылку на справочный или объясняющий раздел
 
-- **About** Title (Level 1 heading)
+- **Как сделать**: заголовок (заголовок 1-го уровня)
 
-- Introduction (no heading)
+- Вводный абзац
 
-- Optional Prerequisites (Level 2 heading)
+- Необязательные предварительные требования (абзац или заголовок 2-го уровня, если их больше одного)
 
-- Subtopic 1 (level 2 heading)
+- Steps:
 
-- Conclusion (Level 2 heading)
+- Шаг 1 — Делаем первое (заголовок 2-го уровня)
+
+- Шаг 2 — Делаем следующее (заголовок 2-го уровня)
+
+- Шаг n — Делаем последнее (заголовок 2-го уровня)
+
+- Заключительный абзац
     
-    - **The Language of Explanation**
-    
-    *The reason for x is because historically, y…*
-    
-    Explain.
-    
-    *W is better than z, because…*
-    
-    Offer judgements and even opinions where appropriate.
-    
-    *An x in system y is analogous to a w in system z. However…*
-    
-    Provide context that helps the reader.
-    
-    *Some users prefer w (because z). This can be a good approach, but…*
-    
-    Weigh up alternatives.
-    
-    *An x interacts with a y as follows:…*
-    
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    - **Язык практических руководств**
+        
+        *Это руководство показывает, как…*
+        
+        Ясно опишите проблему или задачу, которую руководство помогает пользователю решить.
+        
+        *Если хотите x, сделайте y. Чтобы добиться w, сделайте z.*
+        
+        Используйте условное повелительное наклонение.
+        
+        *Полный список вариантов см. в справочнике по x.*
+        
+        Не загромождайте практическое руководство всем, что пользователь может сделать в связи с x.
 
-### 2\. AAPS-specific writing/updating notes
+##### ![Изображение](../images/styleguide07.png) Объяснение (например, наука о том, почему яичные белки густеют при взбивании)
 
-#### Author & Editor
+Объяснение проясняет, углубляет и расширяет понимание читателем темы.
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+- ПОЧЕМУ
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+- Начинайте с **About** («О...»)
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+- Дайте контекст, дайте ссылки на ВСЕ нужные источники
 
-#### General AAPS points
+- Обсудите варианты/альтернативы
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Не давайте указаний и справочных данных (дайте на них ссылку)
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Укажите неизвестное, то, что еще меняется, и т. д.…
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Заголовок **About** (заголовок 1-го уровня)
 
-### 3\. Useful References
+- Введение (без заголовка)
+
+- Необязательные предварительные требования (заголовок 2-го уровня)
+
+- Подтема 1 (заголовок 2-го уровня)
+
+- Заключение (заголовок 2-го уровня)
+    
+    - **Язык объяснений**
+    
+    *Причина x в том, что исторически y…*
+    
+    Объясняйте.
+    
+    *W лучше, чем z, потому что…*
+    
+    Где уместно, высказывайте суждения и даже мнения.
+    
+    *x в системе y аналогичен w в системе z. Однако…*
+    
+    Дайте контекст, который поможет читателю.
+    
+    *Некоторые пользователи предпочитают w (потому что z). Это может быть хорошим подходом, но…*
+    
+    Взвесьте альтернативы.
+    
+    *x взаимодействует с y следующим образом:…*
+    
+    Раскройте внутреннее устройство механизма, чтобы помочь понять, почему что-то работает именно так.
+
+### 2\. Заметки по написанию и обновлению текстов для AAPS
+
+#### Автор и редактор
+
+Написание и обновление документации AAPS можно разделить на два этапа. Их может выполнять один и тот же человек в разное время или несколько человек.
+
+**Автор (например, вы!)** пишет или редактирует раздел документации кратко и в разговорном тоне, а затем передает его редактору.
+
+**Редактор (например, другой пользователь AAPS или человек, который получил pull request)** проверяет соответствие руководству по стилю, правит раздел, чтобы он был ясным и доступным, и убирает как можно больше слов (особенно в разделах-учебниках и практических руководствах). Может помочь чтение текста вслух.
+
+#### Общие правила для AAPS
+
+- Для значений глюкозы указывайте и мг/дл, и ммоль/л каждый раз (по возможности учитывайте это и для снимков экрана).
+
+- Для единообразия пишите “AAPS”, а не “Android APS”.
+
+- Четко укажите версию Android Studio/AAPS, для которой вы пишете или с которой сделаны снимки экрана.
+
+### 3\. Полезные ссылки
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 

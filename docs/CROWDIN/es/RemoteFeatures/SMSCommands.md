@@ -55,14 +55,14 @@ Estas apps de autenticación generan una contraseña de un solo uso de 6 dígito
 
 En tu teléfono, ve a **Aplicaciones > AAPS > Permisos**. Asegúrate de que **SMS** y **Teléfono** estén permitidos.
 
-![imagen](../images/remote-control-08.png)
+![imagen](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android puede bloquear el permiso de **SMS** para apps que no se instalaron desde una tienda de apps, como **AAPS**. Si ves este mensaje al conceder el permiso de **SMS**, abre en el teléfono **Ajustes > Aplicaciones > AAPS**, toca el menú **⋮** (arriba a la derecha) y selecciona **Permitir ajustes restringidos**. Después concede de nuevo el permiso de **SMS**.
 ```
 
-![Se ha denegado a la app el acceso a los SMS](../images/sms_permission_restricted.png)
+![Se ha denegado a la app el acceso a los SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Sincronización de fecha y hora
 
@@ -82,7 +82,7 @@ Abre los ajustes del **Comunicador por SMS**.
 
 Activa **Permitir comandos remotos vía SMS**. Las opciones **PIN obligatorio adicional al finalizar el token** y **Configurar el Authenticator** solo aparecen cuando esto está activado:
 
-![Ajustes del Comunicador por SMS](../images/sms_communicator_settings.png)
+![Ajustes del Comunicador por SMS](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Números de teléfono permitidos
@@ -97,7 +97,7 @@ Ten en cuenta que el «+» delante del número puede ser necesario o no, según 
 
 Si tienes que añadir más de un número de teléfono, sepáralos con punto y coma, **SIN espacios entre los números** (¡esto es muy importante!). Selecciona **OK**:
 
-![Números de teléfono permitidos](../images/sms_allowed_numbers.png)
+![Números de teléfono permitidos](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Distancia mínima para bolo remoto
 
@@ -115,7 +115,7 @@ Requisitos del PIN:
 
 Para un PIN más seguro, no repitas el mismo dígito muchas veces (_p. ej.,_ 111111) ni uses una secuencia (_p. ej.,_ 123456).
 
-![PIN obligatorio adicional al finalizar el token](../images/sms_pin.png)
+![PIN obligatorio adicional al finalizar el token](../images/remote_control_and_following/sms_pin.png)
 
 #### Configurar el Authenticator
 
@@ -123,7 +123,7 @@ Para un PIN más seguro, no repitas el mismo dígito muchas veces (_p. ej.,_ 111
 * Abre la app de autenticación instalada en el _teléfono del cuidador_, configura una nueva conexión y
 * Usa el teléfono del cuidador para escanear el código QR que aparece en **Escanea el código para configurar los códigos OTP de AAPS**.
 
-![Configurar el Authenticator con código QR](../images/sms_authenticator_setup.png)
+![Configurar el Authenticator con código QR](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * En **Probar la contraseña de un solo uso (OTP)**, introduce en **Código para comprobar** la contraseña de un solo uso de la app de autenticación del teléfono del cuidador, seguida de tu PIN:
 
@@ -134,7 +134,7 @@ Ejemplo:
 
 Si lo introducido es correcto, el texto rojo «PIN INCORRECTO» cambiará solo a un «OK» verde. **¡No hay ningún botón que pulsar!** El proceso ya ha terminado; no hay un botón «OK» que pulsar después de introducir el código:
 
-![Probar la contraseña de un solo uso y Restablecer autenticadores](../images/sms_authenticator_test.png)
+![Probar la contraseña de un solo uso y Restablecer autenticadores](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Ya deberías tener configurados los comandos SMS.
 
@@ -146,7 +146,7 @@ Usa el botón **Restablecer autenticadores** al final de la pantalla **Configura
 
 1)  Para comprobar que todo está bien configurado, prueba la conexión escribiendo «bg» en un SMS desde el teléfono del cuidador al teléfono con **AAPS**. Deberías recibir una respuesta parecida a la que se muestra aquí:
 
-![imagen](../images/remote-control-06.png)
+![imagen](../images/remote_control_and_following/remote-control-06.png)
 
 Si no recibes ninguna respuesta, consulta la sección [Solución de problemas](#SMSCommands-troubleshooting) más abajo.
 
@@ -154,7 +154,7 @@ Si no recibes ninguna respuesta, consulta la sección [Solución de problemas](#
 
 La primera vez que envíes un comando SMS, hazlo junto al teléfono con **AAPS**, para ver cómo funciona:
 
-![imagen](../images/remote-control-16.png)
+![imagen](../images/remote_control_and_following/remote-control-16.png)
 
 El teléfono del cuidador recibirá un SMS de respuesta de **AAPS** que confirma si el comando SMS remoto se ha ejecutado bien.
 
@@ -182,7 +182,7 @@ Para evitar hipoglucemias, es buena idea empezar con prudencia, poniendo un bolo
 
 Los comandos se deben enviar en inglés; la respuesta llegará en tu idioma si el texto de la respuesta ya está [traducido](#translations-translate-strings-for-AAPS-app). Los comandos no distinguen entre mayúsculas y minúsculas; puedes usar unas u otras.
 
-![Ejemplo de comandos SMS](../images/SMSCommands.png)
+![Ejemplo de comandos SMS](../images/remote_control_and_following/SMSCommands.png)
 
 Las **tablas de comandos SMS** de abajo muestran todos los comandos SMS posibles. Se dan _valores de ejemplo_ para ayudar a entenderlos. Los comandos tienen el mismo rango de valores posibles (objetivos, porcentaje del perfil, etc.) que se permite en la propia app **AAPS**.
 
@@ -191,11 +191,11 @@ Las **tablas de comandos SMS** de abajo muestran todos los comandos SMS posibles
 
 Algunos comandos SMS dan una respuesta inmediata, y otros necesitan una **autenticación** fuerte con la app de autenticación. Una consulta sencilla como «**BG**» (que pide la glucosa actual) es rápida de escribir, no necesita autenticación y devuelve la información de estado de **AAPS** que se muestra abajo:
 
-![imagen](../images/remote-control-06.png)
+![imagen](../images/remote_control_and_following/remote-control-06.png)
 
 Los comandos que necesitan más seguridad piden introducir un código, por ejemplo:
 
-![SMS autenticado](../images/remote-control-07.png)
+![SMS autenticado](../images/remote_control_and_following/remote-control-07.png)
 
 La columna *Aut.* de las tablas de abajo indica si cada comando necesita esta autenticación fuerte.
 
@@ -311,12 +311,12 @@ Puede deberse a una de estas razones:
 ### No hay ninguna respuesta a los comandos SMS
 
 En el teléfono del cuidador y/o en el teléfono con **AAPS**, prueba a desactivar estas opciones:
-* **Enviar como mensaje de chat** ![Desactivar SMS como mensaje de chat](../images/SMSdisableChat.png)
+* **Enviar como mensaje de chat** ![Desactivar SMS como mensaje de chat](../images/remote_control_and_following/SMSdisableChat.png)
 * Si usas la app Mensajes de Android o Google Mensajes, desactiva los mensajes RCS:
   - Abre la conversación SMS específica en la aplicación Mensajes
   - Selecciona el menú de opciones (tres puntos) en la esquina superior derecha
   - Selecciona 'Detalles'
-  - Activa «Enviar solo mensajes SMS y MMS» ![Desactiva RCS como mensaje de chat](../images/SMSdisableRCS.png)
+  - Activa «Enviar solo mensajes SMS y MMS» ![Desactiva RCS como mensaje de chat](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Errores al ejecutar comandos
 
@@ -331,7 +331,7 @@ Hay varias razones posibles por las que el comando puede no ejecutarse:
 
 Los errores frecuentes se muestran en los ejemplos de abajo:
 
-![imagen](../images/remote-control-17.png)
+![imagen](../images/remote_control_and_following/remote-control-17.png)
 
 ### ¿Cómo puedo parar un comando una vez autenticado?
 

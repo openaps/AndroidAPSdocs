@@ -1,86 +1,86 @@
-# DanaRS, Dana-i and Dana-i2
+# DanaRS, Dana-i и Dana-i2
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Если у вас оригинальная помпа DanaR, перейдите на страницу [DanaR](./DanaR-Insulin-Pump.md).*
+*Эти инструкции нужны для настройки приложения и помпы, если у вас DanaRS выпуска 2017 года или новее, Dana-i или Dana-i2. Если у вас оригинальная помпа DanaR, перейдите на страницу [DanaR](./DanaR-Insulin-Pump.md).*
 
-**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+**Dana-i2 можно использовать начиная с версии AAPS 4.0.** Она использует тот же драйвер **Dana-i/RS**, что и Dana-i.
 
-* In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
+* В помпе DanaRS/i/i2 приложение использует «BASAL A». Имеющиеся данные будут перезаписаны.
 
-    {contents} Table of contents
+    {contents} Содержание
     :depth: 1
     :local: true
 
 ## Возможности работы с AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually (see [Timezone traveling](#timezone-traveling-danarv2-danars)).
+* Связывается с **AAPS** через встроенный Bluetooth телефона, без дополнительного устройства связи.
+* Переход на летнее/зимнее время и смену часового пояса нужно выполнять вручную (см. [Смена часового пояса](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
 ## Сопряжение с помпой
 
-* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* Tap **Pump** and select **Dana-i/RS**.
+* Откройте **меню** (☰) в левом верхнем углу главного экрана **AAPS** и выберите **Конфигурация**.
+* Нажмите **Помпа** и выберите **Dana-i/RS**.
     
-    ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+    ![Конфигурация > Помпа с модулем Dana-i/RS](../images/v4/Configuration/configuration_pump_list_2.png)
     
-    Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
+    После выбора на карточке **Dana-i/RS** есть две кнопки: **Настройки** и **Открыть модуль**:
     
-    ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+    ![Модуль Dana-i/RS выбран в разделе Конфигурация > Помпа](../images/v4/Pumps/dana_i_rs_enabled.png)
     
-    **Settings** opens the settings of the Dana-i/RS driver:
+    **Настройки** открывает настройки драйвера Dana-i/RS:
     
-    ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+    ![Настройки драйвера Dana-i/RS](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+    **Открыть модуль** (или **Управление** > **Помпа**) открывает экран помпы Dana-i/RS. Пока помпа не сопряжена, он выглядит так:
     
-    ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+    ![Экран помпы Dana-i/RS до сопряжения](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* На экране помпы нажмите **Сопряжение**. **AAPS** ищет помпы поблизости.
 
-* Tap the entry for your pump in the list.
+* Нажмите на свою помпу в списке.
     
-    ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
+    ![Экран сопряжения со списком найденных помп Dana](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
+* **Сопряжение нужно подтвердить на помпе!** Это работает так же, как другие сопряжения по Bluetooth, которые вы, возможно, знаете (например, смартфон и аудиосистема автомобиля).
     
     ![Подтверждение сопряжения с Dana RS](../images/DanaRS_Pairing.png)
 
 * Следуйте процессу сопряжения на основе типа и прошивки вашей помпы:
     
-    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
-    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+    * Для DanaRS v1 **AAPS** запрашивает **Пароль для помпы (только v1)**. Введите пароль помпы (см. [Пароль по умолчанию](#DanaRS-Insulin-Pump-default-password)).
+    * Для DanaRS v3 **AAPS** просит нажать OK на помпе и ввести 2 последовательности цифр и букв, которые показаны на помпе. Чтобы дисплей помпы не погас, нажимайте кнопку минус, пока не закончите. Затем нажмите **Готово**.
+    * Для Dana-i и Dana-i2 появляется стандартный диалог сопряжения Android. Введите 6-значное число, показанное на помпе.
 
-* When **Pairing successful!** is shown, tap **Done**.
+* Когда появится **Сопряжение успешно!**, нажмите **Готово**.
     
     ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
-    You are back on the pump screen, which now shows your pump's status.
+    Вы снова на экране помпы, где теперь показано состояние вашей помпы.
     
-    ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
+    ![Экран помпы Dana-i/RS после сопряжения](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+* В **Настройках** выберите **Скорость болюса**, чтобы изменить скорость болюса по умолчанию (12 с/ед, 30 с/ед или 60 с/ед).
 
 * Установите шаг базала на помпе в 0.01 ед./ч с помощью меню Doctors (см. руководство пользователя помпы).
-* Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
+* Установите шаг болюса на помпе 0,05 ед с помощью меню Doctors (см. руководство пользователя помпы). **AAPS** читает шаг базала и шаг болюса из помпы и использует их для каждого болюса, поэтому болюс всегда соответствует шагу, установленному на помпе. Экран помпы показывает их в строке **Шаг Базала/болюса**.
 * Активируйте пролонгированные болюсы на помпе
 
-### Options shown only for some models
+### Параметры, которые есть только у некоторых моделей
 
-* **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
-* **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
-* If a Dana-i2 refuses a bolus, **AAPS** shows the reason, for example *Pump is not primed*, *Not enough insulin in the reservoir* or *Easy sleep mode is on in the pump*.
+* **Автоблокировка**: на Dana-i2 на экране **Параметры пользователя** (на экране помпы, **Управление** > **Помпа**) есть переключатель **Автоблокировка** для настройки автоблокировки помпы. После изменения нажмите **Сохранить параметры в помпе**.
+* **Упрощенный режим**: на моделях помп с упрощенным меню экран помпы показывает строку **Упрощенный режим** со значением **Вкл.** или **Выкл.**
+* Если Dana-i2 отказывается вводить болюс, **AAPS** показывает причину, например *Помпа не заполнена*, *В резервуаре недостаточно инсулина* или *В помпе включен режим Easy sleep*.
 
 (DanaRS-Insulin-Pump-default-password)=
 
 ### Пароль по умолчанию
 
 * Для DanaRS с прошивкой v1 и v2 пароль по умолчанию 1234.
-* Для DanaRS с прошивкой v3 или Dana-i пароль по умолчанию зависит от даты изготовления и вычисляется как MMDD, где MM - это день месяца и DD, i)помпа изготовлена ( например '0124' - месяц 01 и день 24).
+* Для DanaRS с прошивкой v3 или Dana-i пароль по умолчанию зависит от даты изготовления и вычисляется как MMDD, где MM – месяц, а DD – день изготовления помпы (например, '0124' означает месяц 01 и день 24).
     
     * В разделе MAIN MENU выберите REVIEW, затем откройте SHIPPING INFORMATION из подменю
-    * Number 3 is manufacturing date. 
+    * Цифра 3 – это дата изготовления. 
     * Для v3/i этот пароль используется только для блокировки меню на помпе. Он не используется для коммуникации и нет необходимости вводить его в AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
@@ -96,13 +96,13 @@
     
     ![Меню настроек DanaRS](../images/DanaRSPW_02_OptionMenu.png)
 
-* При помощи кнопки со стрелкой переместитесь вниз до " 11. пароль "
+* При помощи кнопки со стрелкой переместитесь вниз до "11. пароль "
     
     ![DanaRS 11. Пароль](../images/DanaRSPW_03_11PW.png)
 
 * Нажмите OK, чтобы ввести старый пароль.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* Введите **старый пароль** (пароль по умолчанию см. [выше](#DanaRS-Insulin-Pump-default-password)) и нажмите OK
     
     ![Ввод старого пароля](../images/DanaRSPW_04_11PWenter.png)
 
@@ -118,7 +118,7 @@
     
     ![DanaRS сохранить новый пароль](../images/DanaRSPW_06_PWnewSave.png)
 
-* Переместитесь вниз до "14. EXIT " и нажмите кнопку OK.
+* Переместитесь вниз до "14. EXIT" и нажмите OK, чтобы выйти.
     
     ![Выход DanaRS](../images/DanaRSPW_07_Exit.png)
 
@@ -133,9 +133,9 @@
 ![Оповещение - подача инсулина](../images/DanaRS_Error_bolus.png)
 
 * В большинстве случаев это просто проблема связи и нужное количество инсулина все равно подается.
-* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
-* Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
-* The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
+* Проверьте в журнале помпы, что был введен правильный болюс. Это можно сделать на самой помпе или в **AAPS** на экране помпы (**Управление** > **Помпа**) > **Журнал помпы** > **Болюсы**.
+* Если хотите, удалите запись об ошибке в [терапии](#screens-bolus-carbs).
+* Реальное количество считывается и записывается при следующем подключении. Чтобы сделать это сразу, нажмите **Обновить** на экране помпы или просто дождитесь следующего подключения.
 
 ## Отдельное замечание при смене телефона
 
@@ -147,25 +147,25 @@
 ### DanaRS v1
 
 * **Вручную выполните сопряжение** Dana RS с новым телефоном
-* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Поэтому новый телефон и помпа должны сопрягатся вручную.
+* Если при импорте отметить **Также заменить настройки помпы**, настройки подключения к помпе тоже импортируются, и AAPS на новом телефоне уже будет «знать» помпу и поэтому не начнет поиск по Bluetooth. Поэтому новый телефон и помпу нужно сопрячь вручную.
 * Установите AAPS на новом телефоне.
 * [Импортируйте настройки](../Maintenance/ExportImportSettings.md) на новом телефоне
 
 ### DanaRS v3, Dana-i, Dana-i2
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
+* Начните сопряжение, как описано [выше](#DanaRS-Insulin-Pump-pairing-pump).
+* Иногда сначала нужно удалить информацию о сопряжении в **AAPS**. На экране помпы (**Управление** > **Помпа**) нажмите **Разорвать сопряжение** и подтвердите **Сбросить информацию о сопряжении?**. Затем снова нажмите **Сопряжение**.
 
-## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
+## Смена часового пояса с помпами DanaRS, Dana-i и Dana-i2
 
 Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](#timezone-traveling-danarv2-danars).
 
 ## Куда обращаться за помощью
 
-Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Драйвер DanaRS/Dana-i/Dana-i2 разрабатывает сообщество на **добровольной** основе. Прежде чем просить о помощи:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Прочитайте** нужный раздел этой документации, чтобы убедиться, как должна работать функция.
+2. **Спросите** в канале *#AAPS* на [Discord](https://discord.gg/4fQUWHZ4Mw) или в одном из других [каналов сообщества](../GettingHelp/WhereCanIGetHelp.md).
+3. **Сообщите об ошибке**: сначала поищите среди [существующих issues](https://github.com/nightscout/AndroidAPS/issues); если вашей проблемы там нет, откройте [новый issue](https://github.com/nightscout/AndroidAPS/issues) и приложите [файлы журналов](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Когда просите о помощи, укажите марку и модель телефона, версию Android, версию **AAPS** и простое понятное описание проблемы (что изменилось, когда всё работало в последний раз).

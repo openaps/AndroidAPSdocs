@@ -1,104 +1,104 @@
-# How to translate strings for the AAPS app or the documentation
+# Sådan oversætter du tekster til AAPS-appen eller dokumentationen
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Til teksterne i appen skal du gå til <https://crowdin.com/project/androidaps> og logge ind med din GitHub-konto
+* Til dokumentationen skal du gå til <https://crowdin.com/project/androidapsdocs> og logge ind med din GitHub-konto
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Send en anmodning om at blive medlem til dokumentationsholdet. Det gør du ved at klikke på flaget for det ønskede sprog og derefter på knappen »Join« i øverste højre hjørne på den næste side. Angiv sprog, fortæl lidt om dig selv og din erfaring med AAPS, og om du vil være oversætter eller korrekturlæser (kun for personer med erfaring i oversættelse + erfarne AAPS-brugere).
 
-```{admonition} Time for Approval :class: note
+```{admonition} Tid til godkendelse :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Godkendelsen er et manuelt trin. Som en nonprofitorganisation giver vi ingen servicegaranti (SLA), men normalt sker godkendelsen på under 1 dag. Hvis ikke, så kontakt dokumentationsholdet via Facebook eller Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Når vi har godkendt dig, så klik på flaget
+       ![Når vi har godkendt dig, så klik på flaget](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Oversættelse af appen
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Oversæt tekster til AAPS-appen
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Hvis du ikke har nogen præference for, hvilke tekster du oversætter, så vælg bare knappen »Translate All« for at starte. Den viser dig de tekster, der skal oversættes.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Klik på Translate All](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Hvis du vil oversætte en bestemt fil, så søg efter filen via søgefeltet eller træstrukturen, og klik på filnavnet for at begynde at oversætte teksterne i den fil.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Klik på strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Oversæt sætningerne i venstre side ved at tilføje ny oversat tekst, eller brug og rediger et forslag
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![Oversættelse af appen](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### Korrekturlæs tekster til AAPS-appen
     
-       ![approve text](../images/translations-proofreading.png)
+    * Korrekturlæsere starter med at vælge »Proofread« på sprogets startskærm.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Korrekturtilstand for appen](../images/translations-proofreading-mode.png)
+    
+    
+      og godkend oversatte tekster
+    
+       ![godkend tekst](../images/translations-proofreading.png)
+    
+    Når en korrekturlæser godkender en oversættelse, kommer den med i den næste version af AAPS.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Oversættelse af dokumentationen
     
-    * Click the name of the docs page you want to translate
+    * Klik på navnet på den side i dokumentationen, du vil oversætte
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Klik på siden i dokumentationen](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Oversæt sætning for sætning
     
-        1. The yellow text is the text you are working at the moment.
+        1. Den gule tekst er den tekst, du arbejder på lige nu.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Den grønne tekst er allerede oversat. Den behøver du ikke at oversætte igen.
     
-        1. The red text is the remaining text which have to be translated.
+        1. Den røde tekst er den resterende tekst, der skal oversættes.
     
-        1. This is the source text you are working on at the moment
+        1. Dette er kildeteksten, du arbejder på lige nu
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. Dette er den oversættelse, du er ved at lave. Du kan kopiere teksten ovenfra eller vælge et af forslagene nedenfor.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
+        1. Dette er forslagene til en oversættelse. Her kan du især se, hvor godt Crowdin vurderer, at forslaget passer, eller om teksten allerede er oversat tidligere og kun er kommet tilbage, fordi den er flyttet, ikke ændret.
+        1. Tryk på knappen »save« for at gemme et forslag til oversættelsen. Derefter går den videre til en korrekturlæser til den endelige kontrol.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Oversættelse af dokumentationen](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * En oversat side bliver ikke offentliggjort i dokumentationen, før
     
-        1. the translation is proofread
+        1. oversættelsen er korrekturlæst
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. synkroniseringen mellem Crowdin og GitHub er færdig (én gang i timen), og den opretter en PR til GitHub.
     
-        1. the PR in Github was approved.
+        1. PR'en på GitHub er godkendt.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    Normalt tager det 1–3 dage, men i ferier kan det tage lidt længere tid.
     
-    ### Translating links
+    ### Oversættelse af links
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Links bliver ikke længere oversat
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Links bliver ikke længere oversat. Tidligere havde vi et emne her, men det er væk, fordi vi med overgangen til Markdown og myst_parser opretter labels direkte i den engelske tekst og automatisk overfører disse labels til sprogene.
     
     
 
-You are translating the text which represents the link. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Du oversætter den tekst, der står for linket. Pas på **ikke** at fjerne linket, som er vist med et par `<0></0>`-tags (eller andre tal, hvis der er flere links i et afsnit).
 
-It's the proofreaders job to have a special look on this!
+Det er korrekturlæsernes opgave at holde særligt øje med dette!
 
-### Proofreading
+### Korrekturlæsning
 
-* Proofreaders have to switch to Proofreading mode
+* Korrekturlæsere skal skifte til korrekturtilstand (Proofreading)
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![Korrekturtilstand for dokumentationen](../images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    og godkende oversatte tekster
     
-    ![approve text](../images/translations-proofreading.png)
+    ![godkend tekst](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.
+* Når en korrekturlæser godkender en oversættelse, kommer den med i den næste build af dokumentationen. Det sker uden fast tidsplan efter behov, men cirka én gang om ugen undtagen i ferier. For at gøre processen hurtigere kan du give dokumentationsholdet besked om nye oversættelser.

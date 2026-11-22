@@ -45,7 +45,7 @@ Trykk på **+**-knappen for å lage en ny scene.
 
 ### Start fra en mal
 
-For å **lage** en scene, trykk på **+**-knappen på skjermen Scener. Det første steget er **Start fra mal**: velg en ferdig scene for en vanlig situasjon — *Trening*, *Sykedag*, *Sykedag — Oppkast*, *Søvn*, *Natt etter trening*, *Før måltid*, *Alkohol*, *Bilkjøring*, *Bading*, *Lutealfase*, *Varmt vær*, *Medisinsk prosedyre* — eller start fra en *Tom* scene. Hver mal **fyller inn de anbefalte handlingene på forhånd**, og du kan justere alt i de neste stegene.
+For å **lage** en scene, trykk på **+**-knappen på skjermen Scener. Det første steget er **Start fra mal**: velg en ferdig scene for en vanlig situasjon — *Trening*, *Sykedag*, *Sykedag — Oppkast*, *Søvn*, *Natt etter trening*, *Før måltid*, *Alkohol*, *Bilkjøring*, *Bading*, *Lutealfase*, *Varmt vær*, *Medisinsk prosedyre* — eller start fra en *Tom* scene. Hver mal **fyller inn de anbefalte handlingene på forhånd**, og du kan justere alt i de neste stegene. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![«Start fra mal» — velg et utgangspunkt](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ En scene uten oppfølgingsscene ber deg bare om å bekrefte:
 
 ![Dialogen Avslutt scene](../images/v4/Scenes/scene_end_dialog.png)
 
-Når en scene avsluttes, **tilbakestilles** endringene den gjorde (for eksempel profilbyttet og det midlertidige målet den startet).
+Når en scene avsluttes, **tilbakestilles** endringene den gjorde (for eksempel profilbyttet og det midlertidige målet den startet). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Mens en scene er aktiv, har profilen og målet på hovedskjermen et lite sceneikon når det var scenen som satte dem. Arket **Scener** i navigasjonslinjen nederst er fortsatt tilgjengelig for å starte en annen scene:
 

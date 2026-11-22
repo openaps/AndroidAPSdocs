@@ -31,7 +31,7 @@
 
 來自**AAPS**的設定檔範例截圖如下。請注意，下面這個範例設定檔顯示了大量的時間點。當你開始使用**AAPS**時，你的個人設定可能會簡單許多。
 
-![作用中的設定檔範例](../images/Profile-Example-Active.png)
+![作用中的設定檔範例](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## 血糖目標
@@ -55,7 +55,7 @@
 
 下面的**圖示**顯示了如何在**AAPS** 口令設置中設定目標範圍的範例。
 
-![目標](../images/Profile_Target.png)
+![目標](../images/v4/Profiles/Profile_Target.png)
 
 **血糖**目標根據你的個人偏好和需求進行設置。例如，如果你擔心夜間低血糖，可以將目標稍微提高到晚上 9 點到早上 7 點的 117 mg/dL (6.5 mmol/L)。如果你希望在早餐前有充足的胰島素儲備，你可以將早上 7 點到 8 點的目標設定為較低的 81 mg/dL（4.5 mmol/L）。
 
@@ -89,7 +89,7 @@
 
 下面的**圖示**顯示了如何在**AAPS** 設定檔中設定基礎率的範例。
 
-![基礎率](../images/Profile_BasalRates.png)
+![基礎率](../images/v4/Profiles/Profile_BasalRates.png)
 
 基礎率需要透過反覆嘗試來調整，並應與您的糖尿病照護團隊討論後進行。
 
@@ -147,7 +147,7 @@
 
 一個過低的**ISF**（因此更積極，這不常見）可能導致「過度修正」，因為**AAPS**計算出使用者比實際所需的胰島素還需要更多來修正高的**血糖**。這可能導致血糖像「雲霄飛車」般的波動（特別是在未進食時），如下圖所示。在這種情況下，應該提高**ISF**值，以減少**AAPS**的積極程度。這將確保**AAPS**提供較小的修正劑量，避免對高**血糖**進行過度修正，導致血糖過低。
 
-![ISF 過低](../images/isf.jpg)
+![ISF 過低](../images/v4/Profiles/isf.jpg)
 
 相反，設置過高的**ISF**可能導致修正不足，意味著你的**血糖**仍然維持在目標之上——這在夜間特別明顯。
 
@@ -155,7 +155,7 @@
 
 請參見**下圖**，了解如何在**AAPS**設定檔中設置ISF值的示例。
 
-![設定檔 ISF](../images/Profile_ISF.png)
+![設定檔 ISF](../images/v4/Profiles/Profile_ISF.png)
 
 確定你白天 ISF 的基本起點是基於你的每日總劑量（TDD），使用 1,700（94）規則。更多詳細內容見於 Gary Scheiner 所著的[“像胰臟一樣思考”](https://amzn.eu/d/iVU0RGe)第 7 章。
 
@@ -213,7 +213,7 @@
 
 下面的**圖示**顯示了一名使用者的**ICR**範例，以及如何在**AAPS Profile**中設置。輸入這些數值時，只需輸入比例的最後一個數字，因此胰島素與碳水化合物比例 1:3.5，只要輸入「3.5」即可。
 
-![設定檔 ICR](../images/Profile_ICR.png)
+![設定檔 ICR](../images/v4/Profiles/Profile_ICR.png)
 
 如果在用餐後消化完成且**IOB**返回為零時，你的**血糖**仍然高於用餐前的水平，那麼你的**ICR**可能過弱（_即數字過高，應該逐漸降低_）。相反地，如果你的**血糖**低於用餐前的水平，則表示**ICR**過強（_即數字過小，應該逐漸提高_）。
 
@@ -292,7 +292,7 @@
 
 設定檔助手提供來自兩家不同醫院的資料集，幫助你為 18 歲以下的孩子找到初始設定檔。
 
-![設定檔助手兒童 1](../images/ProfileHelperKids1.png)
+![設定檔助手兒童 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. 請確認您位於**設定檔 1**分頁。
 2. 在 **設定檔類型** 中，請確保選擇「預設設定檔」。
@@ -303,7 +303,7 @@
 7. 開啟**比較**分頁。將顯示兩個調整後的設定檔的比較（請參見下方截圖）。
 8. 如果您想根據其中一項建議開始調整設定檔，請使用比較畫面底部的**複製**按鈕。
 
-![設定檔助手兒童 2](../images/ProfileHelperKids2.png)
+![設定檔助手兒童 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### 切換設定檔
 
@@ -312,7 +312,7 @@
 (your-aaps-profile-clone-profile-switch)=
 ### 將設定檔切換複製到新的設定檔
 
-![設定檔切換](../images/TreatmentsView4.png)
+![設定檔切換](../images/Maintenance/TreatmentsView4.png)
 
 [治療紀錄](#aaps-screens-treatments)會顯示所有過去的**設定檔切換**。前往**設定檔切換**分頁時，您可以使用過去的**設定檔切換**作為基礎，建立新的**設定檔**。在這種情況下，時差和百分比將應用於新的本地設定檔。使用第 **2** 列顯示的**複製**按鈕。
 
@@ -335,14 +335,14 @@
 
 不過，為此重要的是在 Nightscout 編輯器中複製整個 **數據庫記錄**，其中包含多個設定檔（見下方截圖中的藍色箭頭）。新的資料庫記錄將標示當前日期。保存後，更改/新增的 **設定檔** 可以通過常規的 [設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 在 **AAPS** 中啟用。
 
-![複製資料庫紀錄](../images/Nightscout_Profile_Editor.PNG)
+![複製資料庫紀錄](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### 比較兩個設定檔
 
 您也可以使用[設定檔輔助工具](#aaps-screens-profile-helper)（選單 ☰ → **設定檔輔助工具**），比較兩個不同的設定檔，或比較設定檔切換（先前[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)中所使用的設定檔百分比）。
 
-![設定檔助手 1](../images/ProfileHelper1.png)
+![設定檔助手 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. 請確認您位於**設定檔 1**分頁。
 2. 在 **設定檔類型** 中，選擇「可用設定檔」，以在所有儲存的 **設定檔** 之間進行選擇。
@@ -352,4 +352,4 @@
 6. 選擇你希望比較的 **設定檔切換**。
 7. 開啟**比較**分頁。畫面會顯示兩個設定檔的比較結果（請參閱下方的螢幕截圖）。
 
-![設定檔助手 2](../images/ProfileHelper2.png)
+![設定檔助手 2](../images/v4/Profiles/ProfileHelper2.png)

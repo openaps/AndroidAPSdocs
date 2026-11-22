@@ -1,89 +1,89 @@
-# Component Overview
+# Visió general dels components
 
-**AAPS** is not just a (self-built) application; it is one of several modules of your closed loop system. Before deciding on components, it is a good idea to look at the component documentation.
+**AAPS** no és només una aplicació (que compileu vosaltres); és un dels diversos mòduls del vostre sistema de llaç tancat. Abans de triar els components, és bona idea llegir la documentació de cada component.
 
-![Components overview](../images/modules.png)
+![Visió general dels components](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+La base de les funcions de seguretat d'**AAPS** que es descriuen en aquesta documentació són les funcions de seguretat del maquinari que feu servir per construir el vostre sistema. Per tancar un llaç de dosificació automàtica d'insulina, és molt important que feu servir només una bomba d'insulina i un CGM provats, que funcionin del tot i que estiguin aprovats per les autoritats oficials del vostre país. Les modificacions de maquinari o de programari d'aquests components poden causar dosis d'insulina inesperades i un risc greu per a l'usuari. Si trobeu o us ofereixen bombes d'insulina o receptors de CGM trencats, modificats o fets a casa, **no els feu servir** per crear un sistema **AAPS**.
 
-Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+A més, és igual d'important fer servir només material original, com aplicadors, cànules i reservoris d'insulina aprovats pel fabricant per a la vostra bomba o el vostre CGM. Fer servir material no provat o modificat pot causar errors de lectura del CGM i errors en la dosi d'insulina. La insulina és molt perillosa si la dosi és incorrecta: no jugueu amb la vostra vida manipulant el vostre material.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+I, per acabar, no heu de prendre inhibidors de l'SGLT-2 (gliflozines), perquè fan baixar la glucèmia d'una manera que no es pot calcular. La combinació amb un sistema que redueix la taxa basal per fer pujar la glucèmia és especialment perillosa: a causa de la gliflozina, aquesta pujada de glucèmia pot no passar i es pot arribar a un estat perillós de falta d'insulina. [Més informació aquí](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
-## Necessary Modules
+## Mòduls necessaris
 
-### Good individual dosage algorithm for your diabetes therapy
+### Una bona dosificació individual per a la vostra teràpia de la diabetis
 
-Even though this is not something to create or buy, it is probably the most underestimated 'module' — but it is essential. When you let an algorithm help manage your diabetes, it needs to know the right settings so it does not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+Tot i que no és una cosa que es crea o es compra, probablement és el «mòdul» més infravalorat, però és imprescindible. Quan deixeu que un algoritme us ajudi a gestionar la diabetis, ha de conèixer la configuració correcta per no cometre errors greus. Encara que us faltin altres mòduls, ja podeu comprovar i ajustar el vostre **perfil** amb el vostre equip de diabetis.
 
-The **Profile** includes:
+El **perfil** inclou:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin.
+- BR (taxes basals): dona la insulina de fons;
+- ISF (factor de sensibilitat a la insulina): quant baixarà la vostra glucèmia amb 1 unitat d'insulina;
+- CR (ràtio de carbohidrats): quants grams de carbohidrats cobreix una unitat d'insulina.
 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+La majoria d'usuaris del llaç fan servir BR, ISF i CR circadians, que s'adapten a la sensibilitat hormonal a la insulina durant el dia.
 
-Alongside your **Profile**, you also need to configure your **insulin** in **Manage → Insulin settings**, including its DIA (duration of insulin action) — see [Insulin settings](#Config-Builder-insulin-dia).
+A més del vostre **perfil**, també heu de configurar la vostra **insulina** a **Gestionar → Configuració d'insulina**, inclosa la seva DIA (durada de l'acció de la insulina); vegeu [Configuració d'insulina](#Config-Builder-insulin-dia).
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Més informació sobre el vostre **perfil** [a la seva pàgina](../SettingUpAaps/YourAapsProfile.md).
 
-### Phone
+### Telèfon
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+Vegeu la pàgina [Telèfons](../Getting-Started/Phones.md).
 
-### Insulin pump
+### Bomba d'insulina
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+Vegeu la pàgina [Bombes compatibles](../Getting-Started/CompatiblePumps.md).
 
-**Advantages and disadvantages of some pump models**
+**Avantatges i inconvenients d'alguns models de bomba**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+La Combo, la Insight i les Medtronic antigues són bombes sòlides i es poden fer servir amb el llaç. La Combo té l'avantatge que podeu triar entre molts més tipus de sets d'infusió, perquè té una connexió Luer-Lock estàndard. I la pila és una de normal que podeu comprar a qualsevol benzinera o botiga de 24 hores, i si de debò en necessiteu una, la podeu agafar del comandament de la tele de l'habitació de l'hotel ;-).
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+Però els avantatges de la DanaR/RS i la Dana-i davant la Combo com a bomba preferida són:
 
-- Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
-- All pumps **AAPS** can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+- L'emparellament inicial és més senzill amb la Dana-i/RS. Però normalment només ho feu una vegada, així que només importa si voleu provar una funció nova amb diferents bombes.
+- Fins ara la Combo funciona llegint la pantalla. En general funciona molt bé, però és lent. Per al llaç això no importa gaire, perquè tot funciona en segon pla. Tot i així, cal estar connectat molt més temps, i per tant hi ha més temps en què la connexió BT es pot tallar, cosa que no és fàcil si us allunyeu del telèfon mentre feu un bolus i cuineu.
+- La Combo vibra al final de les TBR; la DanaR vibra (o fa un bip) amb els SMB. A la nit, probablement fareu servir més TBR que SMB.  La Dana-i/RS es pot configurar perquè no faci bips ni vibri.
+- Llegir l'historial de la Dana-i/RS, amb els carbohidrats, en pocs segons permet canviar de telèfon fàcilment sense connexió a internet i continuar amb el llaç tan aviat com arriben alguns valors del CGM.
+- Totes les bombes amb què **AAPS** es pot comunicar són impermeables quan es lliuren. Només les bombes Dana són també «impermeables per garantia», gràcies al compartiment de la pila segellat i al sistema d'omplir el reservori.
 
-### BG Source
+### Origen glucèmia
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+Vegeu la pàgina [CGM compatibles](../Getting-Started/CompatiblesCgms.md).
 
-### **AAPS**-.apk file
+### Fitxer .apk d'**AAPS**
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+El component principal del sistema. Per instal·lar l'aplicació, primer heu de compilar vosaltres mateixos el fitxer apk. Les instruccions són [aquí](../SettingUpAaps/BuildingAaps.md).
 
-### Reporting server
+### Servidor d'informes
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+Un servidor d'informes mostra les vostres dades de glucèmia i de tractaments, i crea informes per a una anàlisi detallada. Ara mateix hi ha dos servidors d'informes que podeu fer servir amb AAPS: [Nightscout](#SettingUpTheReportingServer-nightscout) i [Tidepool](#SettingUpTheReportingServer-tidepool). Tots dos permeten veure les vostres dades de diabetis al llarg del temps i donen estadístiques sobre el **temps en rang** (TIR) i altres mesures.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set one up, as it is required to fulfill [**Objective 1**](#objectives-objective1).
+El servidor d'informes és independent dels altres mòduls. Si no voleu fer servir un servidor d'informes, heu de saber que no és obligatori per fer funcionar **AAPS** a llarg termini. Però igualment n'heu de configurar un, perquè cal per completar l'[**Objectiu 1**](#objectives-objective1).
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+Trobareu més informació sobre com configurar el vostre servidor d'informes [aquí](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-## Optional Modules
+## Mòduls opcionals
 
-### Smartwatch
+### Rellotge intel·ligent
 
-You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
+Podeu triar qualsevol rellotge intel·ligent amb **Wear OS 3** o més nou. Vegeu [Rellotges intel·ligents i AAPS](../Getting-Started/Watches.md) per a més detalls.
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+Els usuaris fan una [llista de telèfons i rellotges provats](#Phones-list-of-tested-phones). Hi ha diverses watchfaces per fer servir amb **AAPS**, que podeu trobar [aquí](../WearOS/WearOsSmartwatch.md).
 
 ### xDrip
 
-Even if you don't need the xDrip app as your **BG Source**, you can still use it, for example for alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when an alarm should be active, choose whether it can override silent mode, etc. Some xDrip information can be found [here](../CompatibleCgms/xDrip.md). Please be aware that the documentation for this app is not always up to date, as it changes quickly.
+Encara que no necessiteu l'aplicació xDrip com a **Origen glucèmia**, la podeu fer servir igualment, per exemple per a alarmes o per veure la glucèmia d'una altra manera. Podeu tenir tantes alarmes com vulgueu, indicar a quina hora ha d'estar activa una alarma, triar si pot sonar en mode silenciós, etc. Trobareu informació sobre xDrip [aquí](../CompatibleCgms/xDrip.md). Tingueu en compte que la documentació d'aquesta aplicació no sempre està actualitzada, perquè canvia ràpidament.
 
-## What to do while waiting for modules
+## Què podeu fer mentre espereu els mòduls
 
-It sometimes takes a while to get all the modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+De vegades es tarda una mica a tenir tots els mòduls per tancar el llaç. Però no us preocupeu, hi ha moltes coses que podeu fer mentre espereu. Cal **obligatòriament** comprovar i (si cal) ajustar les taxes basals (BR), la ràtio insulina:carbohidrats (IC), els factors de sensibilitat a la insulina (ISF), etc. I potser el llaç obert és una bona manera de provar el sistema i familiaritzar-vos amb **AAPS**. En aquest mode, **AAPS** dona recomanacions de tractament que podeu fer manualment.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Podeu continuar llegint aquesta documentació, contactar amb altres usuaris del llaç en línia o en persona, [llegir](../UsefulLinks/BackgroundReading.md) documentació o el que escriuen altres usuaris del llaç (tot i que heu d'anar amb compte: no tot és correcte ni adequat per a vosaltres).
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective, and set up your hardware.
+**Fet?** Si ja teniu tots els components d'**AAPS** (felicitats!) o com a mínim prou per començar en mode de llaç obert, primer heu de llegir la [descripció dels objectius](../SettingUpAaps/CompletingTheObjectives.md) abans de cada objectiu nou, i configurar el vostre maquinari.

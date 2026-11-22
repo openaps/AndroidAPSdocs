@@ -73,7 +73,7 @@ The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually move
 
 - **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
 - **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Like the HbA1c above, they might not match your blood HbA1c tests.
 - **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
 - **Days**: how many days of CGM data were used.
 
@@ -114,7 +114,7 @@ At the end of each line, small icons show where the data comes from or has been 
 (screens-bolus-carbs)=
 ### Carbs and bolus
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Carbs & bolus](../images/Maintenance/TreatmentsView1.png)
 
 On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ The Treatments history can be used to correct faulty carb entries (_i.e._ you ov
 
 ### Temp basal
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Temp Basal](../images/Maintenance/TreatmentsView2.png)
 
 The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
 * Positive IOB if the temp basal was higher than the one set in the Profile
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### 临时目标
 
-![临时目标](../images/TreatmentsView3.png)
+![临时目标](../images/Maintenance/TreatmentsView3.png)
 
 The history of temporary targets can be seen here.
 
 ### 配置文件切换
 
-![配置文件切换](../images/TreatmentsView4.png)
+![配置文件切换](../images/Maintenance/TreatmentsView4.png)
 
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
 
@@ -169,14 +169,14 @@ You can use the **Clone** button shown on line **2** to make a copy of a **Profi
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Care portal](../images/Maintenance/TreatmentsView5.png)
 
 This tab shows all notes and careportal entries recorded in Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Running mode
 
-![Running mode](../images/TreatmentsView6.png)
+![Running mode](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 

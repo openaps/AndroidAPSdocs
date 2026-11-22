@@ -1,116 +1,117 @@
-# Pumps and cannulas
+# Помпы и катетеры
 
-## Changing infusion sets: insulin reservoirs and cannulas
+## Замена инфузионных наборов: резервуары для инсулина и катетеры
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+Описанная ниже процедура подходит только для помп с трубкой и не относится к патч-помпам, таким как Omnipod, Medtrum Nano, Accu-Chek Solo и т. д. Эту процедуру иногда называют «заменой набора»: «полная» замена набора включает резервуар для инсулина и катетер, а «частичная» — только замену катетера.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+Патч-помпы заполняются и подготавливаются сами в своем мастере активации, а их катетер уже находится в теле. **AAPS** не предлагает для них заполнение: **Прайм/заполнение** не показано ни в панели **Управление**, ни в быстром запуске. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Смотрите страницу своей помпы в разделе [Совместимые помпы](../Getting-Started/CompatiblePumps.md).
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+Физическую замену картриджа/резервуара нельзя выполнить через **AAPS**, ее нужно делать прямо на помпе. После замены ее нужно вручную записать в **AAPS**.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
-### Guide for changing both the pump reservoir and cannula
+### Как заменить резервуар помпы и катетер
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. В **AAPS** отключите помпу: нажмите на [значок цикла](#AapsScreens-loop-status) на главном экране и выберите **Отключить помпу** на 1 час. Значок меняется на серую вилку: это значит, что помпа отключена.
 
-2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+2. Физически замените резервуар с инсулином: отсоедините помпу от тела и замените резервуар/картридж и катетер по инструкции производителя.
 
-3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3. Заполните трубку и катетер: это можно сделать прямо на помпе. Обязательно удалите все пузырьки воздуха из трубки.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. Установите новый катетер на тело. После того как катетер введен и игла удалена, в подсоединенном катетере остается небольшой воздушный зазор, который тоже нужно заполнить. Чтобы записать это в **AAPS** и заполнить место: откройте **Прайм/заполнение** (в развернутой панели состояния на главном экране, в панели **Управление** или кнопкой [Быстрого запуска](QuickLaunch.md)) и отметьте **Внести запись о смене места установки помпы** и/или **Внести запись о замене резервуара**, чтобы записать замену. Теперь нажмите на количество по умолчанию для заполнения катетера (обычно около 0,3 ед, но проверьте, что это значение подходит для вашего катетера) и выберите **OK**. Прочитайте сообщение со сводкой и подтвердите заполнение, нажав **OK**.
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![Прайм/заполнение в панели «Управление» для помпы с трубкой](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. Подключите помпу снова в **AAPS**: нажмите на значок серой вилки и выберите **Возобновить соединение с помпой**, чтобы цикл продолжил работу.
 
-### Useful information concerning insulin/cannula changes
+### Полезная информация о замене инсулина/катетера
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* Запись смены места катетера сбрасывает Autosens на 100%. Она также сбрасывает соответствующие индикаторы состояния и возраст катетера/инсулина на главном экране **AAPS**.
 
-* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+* Количества для заполнения по умолчанию можно задать/изменить в настройках **Прайм/заполнение** — введите «prime» в строке поиска на главном экране, чтобы открыть их (см. [Настройки](../SettingUpAaps/Preferences.md)). Сколько единиц нужно для заполнения вашего катетера (зависит от длины иглы и длины трубки), смотрите в инструкции в коробке с катетерами.
 
-* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* Инсулин, поданный функцией заполнения, **AAPS** не учитывает при расчете активного инсулина (IOB), и в [Истории терапии](#aaps-screens-treatments) он отмечен как «Заполнение».
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* Инсулин, введенный болюсом с самой помпы во время ее отключения, **AAPS** тоже не учитывает. Если вы ввели болюс прямо с помпы, пока **AAPS** был отключен, то после подключения помпы вы можете записать этот инсулин (без подачи болюса) в окне **Инсулин** (см. ниже [Как записать введенный инсулин без подачи болюса](#pumps-cannulas-announce-insulin)).
 
-### Cannula, infusion site, tubing and/or pump issues
+### Проблемы с катетером, местом инфузии, трубкой и/или помпой
 
-If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+Если вы уверены, что какое-то время не получали инсулин, хотя **AAPS** записал его подачу, и точно знаете, когда началась проблема (_например,_ вы сняли катетер и увидели, что он перегнулся при установке), вы можете исправить это в **AAPS**. Но помните, что инсулин на самом деле мог быть подан и просто по какой-то причине действует медленно.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+Удаляйте подачу инсулина из **AAPS** ТОЛЬКО с ОСОБОЙ осторожностью, на случай если инсулин _все же_ был подан, и внимательно следите за ГК в следующие 24 ч.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+Чтобы удалить болюсы и SMB, которые точно не были поданы, откройте **меню** (☰), выберите [История терапии](#aaps-screens-treatments) и на вкладке **Углеводы и болюсы** осторожно удалите записанные болюсы, начиная с момента проблемы. Это исправит значение активного инсулина (IOB), которое очень важно для расчетов **AAPS**; если теперь вернуться на главный экран, вы увидите, что IOB уменьшился. Учтите, что нельзя удалить базальный инсулин, который по расчету **AAPS** был подан, поэтому **AAPS** все равно будет его учитывать.
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+В менее очевидных случаях проблем с подачей инсулина, _например,_ при протечках, окклюзиях или туннелировании, когда вы не знаете, когда началась проблема, или думаете, что часть инсулина была подана, нужно быть осторожным. Такие проблемы можно заметить по запаху инсулина, мокрому пластырю, высоким значениям глюкозы или по сигналу тревоги. Так как вы никогда не узнаете, сколько инсулина попало под кожу (он может начать действовать через некоторое время), будет трудно определить, сколько инсулина нужно вычесть из текущего значения активного инсулина (IOB). Один из вариантов — приостановить цикл на 5 часов (или на ваше время действия инсулина) после того, как вы устранили проблему с подачей инсулина, а затем возобновить цикл. Так IOB будет правильным, когда вы снова запустите цикл.
 
 (pumps-cannulas-disconnecting)=
-## Disconnecting the pump for showering or activity
+## Отключение помпы для душа или физической активности
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+Если вы снимаете помпу, чтобы принять душ, ванну, поплавать, заняться контактным спортом или другой активностью, вы должны сообщить **AAPS**, что инсулин не подается, чтобы IOB оставался правильным. Помпу можно отключить с помощью [значка цикла](#AapsScreens-loop-status) на главном экране: нажмите на него и выберите **Отключить помпу** с нужной длительностью. Если активность длится дольше, чем планировалось, снова откройте то же окно и выберите новую длительность в **Отключить помпу**: отключение продлится, а новая длительность начнется с текущего момента. Сначала подключать помпу не нужно.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+Пока помпа отключена, вы не получаете инсулин, поэтому подключайте ее каждые два часа, чтобы восполнить пропущенный базал. Для этого подключите помпу, введите болюсом пропущенное количество базала (_например,_ за последние два часа) и затем снова отключите ее. Это поможет избежать сильного недостатка инсулина, который может привести к диабетическому кетоацидозу (ДКА). Если подключать помпу во время активности неудобно (место катетера закрыто гидрокостюмом _и т. д._), подумайте об уколе шприц-ручкой. Этот укол можно записать в **AAPS**, и делать это сразу в момент укола не обязательно (просто запомните время укола): когда вы снова подключите помпу, вы сможете записать инсулин и указать задним числом время, когда он был введен.
 
 (pumps-cannulas-announce-insulin)=
-## To announce delivered insulin without actually bolusing
+## Как записать введенный инсулин без подачи болюса
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+Чтобы записать инсулин, введенный с помпы, пока **AAPS** был отключен, или уколами шприц-ручкой: откройте [окно «Инсулин»](#aaps-screens-buttons-insulin) (**Терапия** в нижней навигации или кнопка быстрого запуска), введите количество в единицах и включите **Болюс будет только записан (без подачи помпой)**. Затем строка **Время** (со значением **Сейчас**) позволяет записать фактическое время укола: если укол был недавно, ее можно не трогать. Если болюс был введен некоторое время назад, сдвиньте время назад кнопкой **-** (_например,_ -30 мин) или раскройте строку стрелкой, чтобы выбрать точную дату и время. Затем **AAPS** учтет время действия инсулина и рассчитает, сколько инсулина еще осталось в организме.
 
-If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+Если вы пользуетесь **AAPS** как опекун, вы можете очень легко удаленно отключить (и снова подключить) помпу [SMS командой](../RemoteFeatures/SMSCommands.md), например "pump disconnect 120" и "pump connect 120". Длительность удаленного отключения — от 1 до 120 мин (в этом примере 120 минут). Это очень удобно, если телефон с **AAPS** трудно достать: например, он спрятан в поясе для помпы у ребенка, который бежит к бассейну, или его бдительно охраняет (или использует) подросток.
 
-## Reconnecting the pump after activity
+## Подключение помпы после активности
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+После долгого отключения (1–2 часа) **AAPS** довольно часто рассчитывает, что у вас теперь отрицательный IOB. Когда вы снова подключаете помпу, в зависимости от ваших предпочтений, текущего уровня глюкозы, планируемой еды или следующей активности вы можете:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+a) Просто подключить помпу снова в **AAPS** (серый значок становится зеленым при замкнутом цикле) и оставить **AAPS** снова начать подачу инсулина
 
 _or_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+б) Если вы хотите действовать активнее (например, ГК идет к гипергликемии), откройте [Мастер болюса](#aaps-screens-bolus-wizard) и введите болюс на ноль углеводов, чтобы сразу подать рассчитанный недостающий инсулин болюсом.
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.
+Какой вариант лучше, очень индивидуально, и лучше всего это определить методом проб и ошибок.
 
 
 (Aapsscreens-site-rotation)=
 ## Смена мест установки
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**Управление → Места установки** открывает окно «Места установки» в режиме просмотра:
 
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+- Двумя кнопками вверху (значок катетера и значок сенсора) можно показать только места катетера, только места сенсора или и те и другие
+- Доступны все события замены катетера и замены сенсора за последние 45 дней.
+- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. Выбранная зона будет подсвечена светло-зеленым цветом.
+- Нажмите на значок **карандаша** рядом с записью, чтобы открыть режим редактирования и изменить место, направление или примечание
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![Режим просмотра](../images/SiteRotation/ViewMode.png)
 
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+- Значок **шестеренки** (справа вверху) открывает настройки: **Профиль пользователя** открывает окно, где вы выбираете **Мужчина**, **Женщина** или **Ребенок**, а переключатели **Места установки помпы** и **Места установки датчика** выбирают, какими местами вы управляете.
 
 ![Настройки](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![Окно «Профиль пользователя» для мест установки](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Примечание: эта настройка решает, будет ли окно «Места установки» (режим редактирования) открываться автоматически, когда новая запись создается кнопкой «Прайм/заполнение» или «Установка сенсора».*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- Если место катетера меняли прямо на помпе, откройте режим просмотра и отредактируйте новую запись, чтобы выбрать место и направление
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+Режим редактирования позволяет выбрать место, направление и примечание для выбранной записи:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Редактируемая запись показана под изображениями тела, со значком своего типа (катетер или сенсор)
+- Вид спереди и вид сзади показаны рядом: нажмите на то место, куда вы установили катетер или сенсор
+- Когда место выбрано (подсвечено зеленым), в списке ниже показаны все записи для этого места за последние 45 дней.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![Режим редактирования](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- Можно добавить направление (необязательно): нажмите на значок стрелки справа от записи. Окно **Укажите направление** позволяет указать более точное место или ориентацию Pod
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![Положение](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- Также можно добавить **Примечание** о выбранном месте
+- Нажмите на значок **сохранения** (справа вверху), чтобы записать место
 
 Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![Фильтрация](../images/SiteRotation/Filtering.png)

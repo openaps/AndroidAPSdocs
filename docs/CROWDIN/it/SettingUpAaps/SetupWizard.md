@@ -182,7 +182,7 @@ When you are done, press "**NEXT**" to go to the next screen.
 
 Questa schermata compare solo quando **AAPS** trova nella directory **AAPS** impostazioni esportate in precedenza ("Trovate impostazioni memorizzate"), per esempio quando reinstalli l'app o passi a un nuovo telefono.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Per iniziare con una nuova configurazione, premi "**AVANTI**" e continua con la Configurazione guidata.
 
 ![Import settings](../images/setup-wizard/Wizard-ImportSettings.png)

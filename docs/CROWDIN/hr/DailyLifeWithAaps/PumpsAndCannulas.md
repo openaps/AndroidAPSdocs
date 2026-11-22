@@ -1,116 +1,117 @@
-# Pumps and cannulas
+# Pumpe i kanile
 
-## Changing infusion sets: insulin reservoirs and cannulas
+## Promjena infuzijskih setova: spremnici inzulina i kanile
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+Postupak opisan u nastavku vrijedi samo za pumpe s cijevi. Ne vrijedi za pumpe bez katetera kao što su Omnipod, Medtrum Nano, Accu-Chek Solo itd. Ovaj postupak se ponekad naziva „promjena seta“. „Potpuna“ promjena seta uključuje spremnik inzulina i kanilu, a „djelomična“ promjena seta znači promjenu samo kanile.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
+Pumpe bez katetera same se pune u svom čarobnjaku za aktivaciju, a njihova kanila je već u tijelu. **AAPS** za njih ne nudi punjenje: **Punjenje** se ne prikazuje na ploči **Upravljanje** ni u brzom pokretanju. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Pogledajte stranicu svoje pumpe u [Kompatibilne pumpe](../Getting-Started/CompatiblePumps.md).
 
-Physical cartridge/reservoir changes cannot be done via **AAPS** and have to be carried out via the pump directly. These need to be logged in **AAPS** manually, once completed.
+Fizička zamjena uloška/spremnika ne može se obaviti putem **AAPS**-a, nego se mora obaviti izravno na pumpi. Nakon toga te promjene morate ručno zabilježiti u **AAPS**-u.
 
 (pumps-cannulas-changing-reservoir-and-cannula)=
-### Guide for changing both the pump reservoir and cannula
+### Upute za zamjenu spremnika pumpe i kanile
 
-1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
+1. U **AAPS**-u odspojite pumpu: pritisnite [ikonu petlje](#AapsScreens-loop-status) na glavnom zaslonu i odaberite **Odspoji pumpu** na 1 sat. Ikona se mijenja u sivi utikač, što znači da je pumpa odspojena.
 
-2. Physically change the insulin reservoir: physically disconnect your pump from the body, and change the reservoir/cartridge and cannula as per manufacturer's instructions.
+2. Fizički zamijenite spremnik inzulina: fizički odspojite pumpu od tijela i zamijenite spremnik/uložak i kanilu prema uputama proizvođača.
 
-3. Prime/fill the tubing and cannula: this can be done directly on the pump. Be sure to eliminate any bubbles in the tubing.
+3. Napunite cijev i kanilu: to možete učiniti izravno na pumpi. Svakako uklonite sve mjehuriće zraka iz cijevi.
 
-4. Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. Pričvrstite novu kanilu na tijelo. Kada umetnete kanilu i izvadite iglu, u spojenoj kanili ostaje mali zračni prostor koji također treba napuniti. Da biste to zabilježili u **AAPS**-u i napunili mjesto: otvorite **Punjenje** (u proširenoj statusnoj ploči na glavnom zaslonu, na ploči **Upravljanje** ili kao gumb [Brzo pokretanje](QuickLaunch.md)) i označite **Zabilježi promjenu mjesta primjene** i/ili **Zabilježi zamjenu spremnika inzulina**, ovisno o tome što ste promijenili. Sada pritisnite zadanu količinu za punjenje kanile (obično oko 0,3 J, ali provjerite je li ta vrijednost točna za vašu kanilu) i odaberite **U redu**. Pročitajte sažetak i potvrdite punjenje dodirom na **U redu**.
 
-   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+   ![Punjenje na ploči Upravljanje kod pumpe s cijevi](../images/v4/Screens/manage_sheet_tube_pump.png)
 
 
-5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
+5. Ponovno spojite pumpu u **AAPS**-u: pritisnite ikonu sivog utikača i odaberite **Ponovno spoji pumpu** kako biste nastavili s petljom.
 
-### Useful information concerning insulin/cannula changes
+### Korisne informacije o promjeni inzulina/kanile
 
-* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
+* Bilježenje promjene mjesta primjene pumpe vraća Autosens na 100 %. Također vraća na početak odgovarajuće statusne oznake i starost kanile/inzulina na glavnom zaslonu **AAPS**-a.
 
-* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+* Zadane količine za punjenje možete postaviti/prilagoditi u postavkama **Punjenje** — upišite „prime“ u traku za pretraživanje na glavnom zaslonu da ih otvorite (pogledajte [Postavke](../SettingUpAaps/Preferences.md)). U uputama u kutiji s kanilama pogledajte koliko jedinica (ovisno o duljini igle i duljini cijevi) treba upotrijebiti za punjenje vaše kanile.
 
-* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* Inzulin isporučen funkcijom punjenja **AAPS** ne uzima u obzir pri izračunu aktivnog inzulina (IOB), a u [Povijesti tretmana](#aaps-screens-treatments) označen je kao „Punjenje katetera“.
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
-* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
+* **AAPS** također ne uzima u obzir inzulin koji je dan bolusom iz pumpe dok je pumpa bila odspojena. Ako date bolus izravno iz pumpe dok je **AAPS** odspojen, nakon ponovnog spajanja pumpe možete taj inzulin zabilježiti (bez davanja bolusa) u dijalogu **Inzulin** (pogledajte [Kako zabilježiti isporučeni inzulin bez stvarnog davanja bolusa](#pumps-cannulas-announce-insulin) u nastavku).
 
-### Cannula, infusion site, tubing and/or pump issues
+### Problemi s kanilom, mjestom infuzije, cijevi i/ili pumpom
 
-If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
+Ako ste sigurni da neko vrijeme niste dobili inzulin, iako **AAPS** bilježi da jeste, i točno znate kada je problem počeo (_npr._ izvadite kanilu i vidite da se savila pri umetanju), to možete ispraviti u **AAPS**-u. Imajte na umu da je inzulin možda ipak isporučen, ali iz nekog razloga djeluje sporo.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+Isporuku inzulina iz **AAPS**-a brišite samo uz KRAJNJI oprez, jer je inzulin _možda_ ipak isporučen, i pažljivo pratite GUK sljedeća 24 h.
 ```
 
-To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
+Da biste uklonili boluse i SMB-ove za koje znate da nisu isporučeni, otvorite **izbornik** (☰), odaberite [Povijest tretmana](#aaps-screens-treatments) i na kartici **Ugljikohidrati i bolus** oprezno izbrišite zabilježene boluse od trenutka kada se problem dogodio. Time ćete ispraviti vrijednost aktivnog inzulina (IOB), koja je ključna za izračune **AAPS**-a; ako se sada vratite na glavni zaslon, vidjet ćete da se aktivni inzulin (IOB) smanjio. Imajte na umu da ne možete izbrisati bazalni inzulin za koji **AAPS** izračuna da je isporučen, pa će ga **AAPS** i dalje uzimati u obzir.
 
-In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+Kod manje očitih problema s isporukom inzulina, _npr._ curenja, začepljenja ili tuneliranja, kada niste sigurni kada je problem počeo ili mislite da je dio inzulina ipak isporučen, morate biti oprezni. Takve probleme možete otkriti po „mirisu“ inzulina, po mokrom flasteru, po visokim vrijednostima glukoze ili po alarmu. Budući da nikada nećete znati koliko je inzulina ušlo u kožu (a mogao bi početi djelovati nakon nekog vremena), bit će teško odrediti točnu količinu inzulina koju treba oduzeti od trenutne vrijednosti aktivnog inzulina (IOB). Jedna strategija je pauzirati petlju na 5 sati (ili koliko traje vaše trajanje djelovanja inzulina) nakon što riješite problem s isporukom inzulina, a zatim ponovno nastaviti s petljom. Tako će aktivni inzulin (IOB) biti točan kada ponovno pokrenete petlju.
 
 (pumps-cannulas-disconnecting)=
-## Disconnecting the pump for showering or activity
+## Odspajanje pumpe za tuširanje ili aktivnost
 
-If you take your pump off for showering, bathing, swimming, contact sports or other activities you must let **AAPS** know that no insulin is being delivered, to keep the IOB correct. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
+Ako skidate pumpu za tuširanje, kupanje, plivanje, kontaktne sportove ili druge aktivnosti, morate javiti **AAPS**-u da se inzulin ne isporučuje, kako bi aktivni inzulin (IOB) ostao točan. Pumpu možete odspojiti pomoću [ikone petlje](#AapsScreens-loop-status) na glavnom zaslonu: pritisnite je i odaberite **Odspoji pumpu** s trajanjem koje vam treba. Ako aktivnost traje dulje nego što ste planirali, ponovno otvorite isti dijalog i odaberite novo trajanje pod **Odspoji pumpu**: odspajanje se produljuje, a novo trajanje počinje od sada. Ne morate se prvo ponovno spojiti.
 
-As you are not getting any insulin while the pump is disconnected, you should reconnect every two hours to catch up for the missing basal. You can do this by connecting, bolusing the missing basal amounts (_e.g._ of the last two hours) before disconnecting again. This should help to avoid a severe lack of insulin which could result in diabetic ketoacidosis (DKA). If it is inconvenient to reconnect the pump during activity (cannula site is covered by wearing a wetsuit _etc._), consider a pen injection instead. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
+Dok je pumpa odspojena, ne dobivate inzulin, pa biste se trebali ponovno spojiti svaka dva sata i nadoknaditi propušteni bazal. To možete učiniti tako da se spojite i date bolus u iznosu propuštenog bazala (_npr._ za zadnja dva sata), a zatim se ponovno odspojite. To bi trebalo pomoći da izbjegnete ozbiljan nedostatak inzulina koji može dovesti do dijabetičke ketoacidoze (DKA). Ako je ponovno spajanje pumpe tijekom aktivnosti nepraktično (mjesto kanile je pokriveno ronilačkim odijelom _itd._), razmislite o injekciji penom. Ovu ručnu injekciju možete zabilježiti u **AAPS**-u i ne morate je zabilježiti u trenutku injekcije (samo zapišite vrijeme injekcije), jer pri ponovnom spajanju pumpe možete zabilježiti inzulin i postaviti stvarno vrijeme kada je dan.
 
 (pumps-cannulas-announce-insulin)=
-## To announce delivered insulin without actually bolusing
+## Kako zabilježiti isporučeni inzulin bez stvarnog davanja bolusa
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** will then take into account the duration of insulin action and calculate the remaining insulin still in the system accordingly.
+Da biste zabilježili inzulin isporučen iz pumpe dok je **AAPS** bio odspojen ili inzulin iz injekcija penom: otvorite [dijalog Inzulin](#aaps-screens-buttons-insulin) (**Tretmani** u donjoj navigaciji ili gumb za brzo pokretanje), upišite količinu u jedinicama i uključite **Bolus će biti samo zabilježen (neće biti isporučen putem pumpe)**. Redak **Vrijeme** (postavljen na **Sada**) zatim vam omogućuje da upišete stvarno vrijeme injekcije: možete ga zanemariti ako je injekcija dana nedavno. Ako je bolus dan prije nekog vremena, pomoću **-** pomaknite vrijeme unatrag (_npr._ -30 min) ili otvorite redak strelicom i odaberite točan datum i vrijeme. **AAPS** će tada uzeti u obzir trajanje djelovanja inzulina i prema tome izračunati preostali inzulin koji je još u tijelu.
 
-If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". The range of duration for remote disconnect is from 1 - 120 min, (in this example it is 120 minutes). This is very useful if the **AAPS** handset is inconvenient for you to access, buried in a pump belt on a kid who is running off towards the swimming complex, or being closely guarded (or in use) by a teenager.
+Ako **AAPS** koristite kao njegovatelj, pumpu možete vrlo lako daljinski odspojiti (i ponovno spojiti) putem [SMS naredbe](../RemoteFeatures/SMSCommands.md), s naredbama kao što su „pump disconnect 120“ i „pump connect 120“. Trajanje daljinskog odspajanja može biti od 1 do 120 min (u ovom primjeru je 120 minuta). To je vrlo korisno ako vam telefon s **AAPS**-om nije lako dostupan, npr. kada je zakopan u pojasu za pumpu na djetetu koje trči prema bazenu, ili ga tinejdžer pažljivo čuva (ili koristi).
 
-## Reconnecting the pump after activity
+## Ponovno spajanje pumpe nakon aktivnosti
 
-After a long disconnection (1 - 2 hours) it is fairly common for **AAPS** to calculate that you now have negative IOB. When you reconnect the pump, depending on preference/current glucose level/planned food or subsequent activity, you can either:
+Nakon duljeg odspajanja (1–2 sata) prilično je često da **AAPS** izračuna da sada imate negativan aktivni inzulin (IOB). Kada ponovno spojite pumpu, ovisno o vašim željama, trenutnoj razini glukoze, planiranom obroku ili sljedećoj aktivnosti, možete:
 
-a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leave it up to **AAPS** to start to deliver insulin again
+a) Samo ponovno spojiti pumpu u **AAPS**-u (iz sive u zelenu, za zatvorenu petlju) i prepustiti **AAPS**-u da ponovno počne isporučivati inzulin
 
-_or_
+_ili_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) Ako želite biti agresivniji (na primjer, idete prema hiperglikemiji), možete otvoriti [Bolus kalkulator](#aaps-screens-bolus-wizard) i dati bolus za nula ugljikohidrata, kako bi se izračunati nedostajući inzulin odmah isporučio kao bolus.
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.
+Koja vam strategija više odgovara vrlo je osobno, a najbolje ćete to otkriti isprobavanjem.
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## Rotacija mjesta primjene
 
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+**Upravljanje → Rotacija mjesta primjene** otvara dijalog Rotacija mjesta primjene u načinu prikaza:
 
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change events from the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+- S dva gumba na vrhu (ikona kanile i ikona senzora) možete prikazati samo mjesta kanile, samo mjesta senzora ili oboje
+- Dostupni su svi događaji promjene kanile i promjene senzora iz zadnjih 45 dana.
+- Kliknite na područje mjesta ili na jedan unos u popisu ispod kako biste filtrirali popis samo na unose u odabranom području. Odabrano područje bit će istaknuto svijetlozelenom bojom.
+- Dodirnite ikonu **olovke** pokraj unosa da otvorite prikaz za uređivanje i promijenite mjesto primjene, strelicu ili bilješku
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![Način prikaza](../images/SiteRotation/ViewMode.png)
 
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+- Ikona **zupčanika** (gore desno) otvara postavke: **Korisnički profil za rotaciju mjesta** otvara dijalog u kojem birate **Muškarac**, **Žena** ili **Dijete**, a prekidači **Upravljaj rotacijom mjesta pumpe** i **Upravljaj rotacijom mjesta CGM-a** određuju kojim mjestima upravljate.
 
-![Settings](../images/SiteRotation/Settings.png)
+![Postavke](../images/SiteRotation/Settings.png)
 
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+![Dijalog Korisnički profil za rotaciju mjesta](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Napomena: ova postavka određuje otvara li se dijalog Rotacija mjesta primjene (način uređivanja) automatski kada se napravi novi unos gumbom „Punjenje“ ili gumbom „Umetanje senzora“.*
 
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+- Za promjenu mjesta primjene obavljenu izravno na pumpi morate otvoriti način prikaza i urediti novi unos kako biste odabrali lokaciju i strelicu
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+Način uređivanja omogućuje vam da odaberete lokaciju, strelicu i bilješku za odabrani unos:
 
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Unos koji uređujete prikazan je ispod slika tijela, s ikonom svoje vrste (kanila ili senzor)
+- Prednji i stražnji prikaz prikazani su jedan pokraj drugog: dodirnite područje na koje ste ga postavili
+- Kada odaberete mjesto (istaknuto zelenom bojom), popis ispod prikazuje sve unose na tom mjestu u zadnjih 45 dana.
 
-![Edit Mode](../images/SiteRotation/EditMode.png)
+![Način uređivanja](../images/SiteRotation/EditMode.png)
 
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+- Možete dodati i strelicu (nije obavezno) dodirom na ikonu strelice desno od unosa: dijalog **Odaberi strelicu** omogućuje vam da odredite točnije mjesto ili smjer Pod-a
 
-![Position](../images/SiteRotation/EditModeSub.png)
+![Položaj](../images/SiteRotation/EditModeSub.png)
 
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
+- Možete dodati i **Bilješku** o odabranom mjestu
+- Dodirnite ikonu **spremanja** (gore desno) da zabilježite mjesto
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+Filtrirati možete grafički na slici ili klikom na događaj terapije u popisu Za uklanjanje filtra samo kliknite na sliku izvan svih mjesta
 
-![Filtering](../images/SiteRotation/Filtering.png)
+![Filtriranje](../images/SiteRotation/Filtering.png)

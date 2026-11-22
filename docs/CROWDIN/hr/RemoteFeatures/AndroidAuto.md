@@ -1,86 +1,86 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+**AAPS** vam može slati podatke o vašem trenutnom stanju kao poruku, izravno u Android Auto u vašem automobilu.
 
-## Requirements
+## Preduvjeti
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of the car audio system.
+**AAPS** koristi značajku Android Auta koja omogućuje da se poruke aplikacija s mobitela prikazuju na zaslonu audiosustava automobila.
 
-That means that:
+To znači da:
 
-* Android must allow **AAPS** to show notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+* Android mora dopustiti **AAPS-u** da prikazuje obavijesti i
+* Budući da **AAPS** nije službena aplikacija, dopustite korištenje „nepoznatih izvora“ u Android Autu.
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![Podaci CGM-a iz AAPS-a u Android Autu](../images/android_auto_01.png)
 
 (androidauto-check-that-aaps-can-show-notifications)=
 
-## Check that AAPS can show notifications
+## Provjerite može li AAPS prikazivati obavijesti
 
-**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
+**AAPS** uvijek prikazuje obavijest o statusu s vašom trenutnom glukozom, aktivnim inzulinom (IOB) i aktivnim ugljikohidratima (COB). To je obavijest koju Android Auto prikazuje u automobilu. U **AAPS-u** ne trebate ništa uključiti, ali Android mora dopustiti **AAPS-u** da prikazuje obavijesti.
 
-On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
+Na telefonu otvorite **Postavke** > **Aplikacije** > **AAPS** > **Obavijesti** i provjerite je li uključeno **Sve obavijesti aplikacije AAPS**.
 
-![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
+![Uključene sve obavijesti AAPS-a](../images/android_auto_notifications_all.png)
 
-Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
+Pomaknite se prema dolje i provjerite je li uključen **Trenutačni status**: to je kanal obavijesti o statusu.
 
-![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
+![Uključen kanal obavijesti Trenutačni status](../images/android_auto_ongoing_channel.png)
 
-Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+Prije nego što krenete do automobila, provjerite sada vidite li na telefonu obavijest o statusu **AAPS-a**!
 
-![AAPS notification on the phone](../images/android_auto_04.png)
+![Obavijest AAPS-a na telefonu](../images/android_auto_04.png)
 
 (androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## Dopustite korištenje „nepoznatih izvora“ u Android Autu.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+Budući da **AAPS** nije službena aplikacija za Android Auto, obavijesti se u Android Autu moraju uključiti za „nepoznate izvore“. To se radi pomoću načina za razvojne programere, koji ćemo vam ovdje pokazati.
 
-Go to your car and connect your mobile with the car's audio system.
+Idite do automobila i povežite mobitel s audiosustavom automobila.
 
-You should now see a screen similar to this screen.
+Sada biste trebali vidjeti zaslon sličan ovome.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Omogućite način za razvojne programere](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Pritisnite ikonu **postavki** da biste pokrenuli konfiguraciju.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Pomaknite se do kraja stranice i odaberite **više na telefonu** (see more in the phone).
 
-![Enable developer mode](../images/android_auto_06.png)
+![Omogućite način za razvojne programere](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Sada ćemo na mobitelu uključiti način za razvojne programere.
 
-The first screen looks like this. Scroll down to the end of the page.
+Prvi zaslon izgleda ovako. Pomaknite se do kraja stranice.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Omogućite način za razvojne programere](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Tamo je navedena verzija Android Auta. Dodirnite 10 puta (slovima: deset) verziju Android Auta. Ovom skrivenom kombinacijom sada ste omogućili način za razvojne programere.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Omogućite način za razvojne programere](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+U dijaloškom okviru „Dopustiti postavke za razvojne programere?“ (Allow development settings?) potvrdite da želite omogućiti način za razvojne programere.
 
-![Enable developer mode](../images/android_auto_09.png)
+![Omogućite način za razvojne programere](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+U **postavkama za razvojne programere** omogućite „Nepoznati izvori“ (Unknown sources).
 
-![Enable developer mode](../images/android_auto_10.png)
+![Omogućite način za razvojne programere](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Sada možete izaći iz načina za razvojne programere ako želite. Za to dodirnite izbornik s tri točke gore desno.
 
-## Show notifications in car
+## Prikaz obavijesti u automobilu
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Dodirnite **ikonu s brojem** dolje desno u Android Autu u svom automobilu.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![ikona s brojem – Android Auto u automobilu](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Vaši podaci CGM-a prikazat će se ovako:
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![Podaci CGM-a iz AAPS-a u Android Autu](../images/android_auto_01.png)
 
 (android-auto-troubleshooting)=
 
-## Troubleshooting:
+## Rješavanje problema:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
+* Ako ne vidite obavijest, provjerite jeste li u Androidu [dopustili AAPS-u da prikazuje obavijesti](#androidauto-check-that-aaps-can-show-notifications) i ima li [Android Auto pravo pristupa obavijestima](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).

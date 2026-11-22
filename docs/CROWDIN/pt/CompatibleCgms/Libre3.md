@@ -2,7 +2,7 @@
 
 O Freestyle Libre 3 (FSL3) precisa de uma configuração própria para enviar os valores de glicose para o AAPS. Há duas formas de enviar os valores do Freestyle Libre 3 (FSL3) para o AAPS.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Os métodos abaixo usam a app separada Juggluco. Usa o Juggluco para receber do sensor os dados em bruto, em intervalos de 1 minuto, que depois são enviados para o xDrip ou para o AAPS. Os sensores novos podem ser iniciados com a app Libre 3 ou diretamente no Juggluco. O guia abaixo mostra como iniciar um sensor com a app Juggluco. Se o sensor foi iniciado com uma conta LibreView com sessão iniciada, também é possível alternar entre o Juggluco e a app Libre 3 como recetor.
 
@@ -22,7 +22,7 @@ Este método usa o Juggluco para receber do sensor os dados em bruto, em interva
 ### Passo 1: Configurar o Juggluco
 Transfira e instale a app Juggluco a partir [daqui](https://www.juggluco.nl/Juggluco/download.html). Siga as instruções [aqui](https://www.juggluco.nl/Juggluco/libre3/)
 
-Confirme que envia os valores de glicose para o xDrip: nas definições do Juggluco pode configurar o envio dos valores de glicose para outras apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip.
+Confirme que envia os valores de glicose para o xDrip: nas definições do Juggluco pode configurar o envio dos valores de glicose para outras apps. O Juggluco pode enviar três tipos destas difusões: a **Patched Libre broadcast** era usada inicialmente pela app Librelink modificada e pode ser usada para enviar os valores de glicose para o xDrip.
 
 ### Passo 2: Configurar o xDrip
 
@@ -38,7 +38,7 @@ Os valores de glicose são recebidos pela app xDrip no telemóvel.
 
   → Menu hambúrguer → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![Definições avançadas do xDrip para o Libre 2 e valores brutos](../images/xDrip_Libre3_Smooth.png)
+  ![Definições avançadas do xDrip para o Libre 2 e valores brutos](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
@@ -69,7 +69,7 @@ Após uma mudança de sensor, o xDrip deteta automaticamente o sensor novo e apa
 
 ![Terminar o sensor](../images/libre3/step_14.jpg)
 
-Nota: quando há dois sensores ativos, o Juggluco envia para o xDrip o valor mais recente de qualquer um dos sensores. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Se terminar o sensor errado, pode reativá-lo simplesmente lendo o sensor de novo.
+Nota: quando há dois sensores ativos, o Juggluco envia para o xDrip o valor mais recente de qualquer um dos sensores. Se os sensores não estiverem calibrados para ler a glicose de forma semelhante, o xDrip pode receber valores de glicose com saltos. Se terminar o sensor errado, pode reativá-lo simplesmente lendo o sensor de novo.
 
 ## Alternar o sensor entre a app Libre 3 e a app Juggluco
 
@@ -99,4 +99,4 @@ Para mudar da app Libre 3 para o Juggluco, tem de forçar a paragem da app Libre
 
 Instruções originais: [site do jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Repositório GitHub adicional: [link do GitHub](https://github.com/maheini/FreeStyle-Libre-3-patch)

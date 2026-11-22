@@ -39,7 +39,7 @@ Se nenhum dos links resolver o seu problema, veja [Onde posso obter ajuda?](Wher
 * [Perfil: "A taxa basal não é compatível com a bomba atual"](#your-aaps-profile-basal-not-compatible)
 * [Bomba: "Os dados estão vindo de uma bomba diferente"](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **"Não é possível ler as configurações do AAPS"** ao iniciar: as configurações são criptografadas com uma chave que o Android guarda para o **AAPS**, e essa chave não consegue mais abri-las, por exemplo depois que o armazenamento de chaves (key store) do telefone foi redefinido. Enquanto esta tela é mostrada, o **AAPS** não está em execução e não controla a bomba. Toque em **Tentar novamente**: isso fecha e reinicia o **AAPS**. Se isso não ajudar, reinicie o telefone. Use **Começar do zero** somente quando nada mais ajudar: isso deixa de lado o arquivo de configurações ilegível (ele é renomeado e guardado) e inicia o **AAPS** com configurações vazias. Depois importe a sua última [exportação de configurações](../Maintenance/ExportImportSettings.md).
 
 ### Uso
 

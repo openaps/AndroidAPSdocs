@@ -10,7 +10,8 @@ Bu talimatlar Equil insülin pompasının yapılandırılması içindir.
 ## AAPS ile pompa özellikleri
 
 * Telefonunuzun yerleşik Bluetooth'u üzerinden, ek bir iletişim cihazı olmadan **AAPS** ile iletişim kuran hortumsuz Patch pompa.
-* **AAPS**, Equil'i 200 Ü rezervuarlı bir Patch pompa olarak ele alır: ana ekran Patch pompa durum ışıklarını gösterir ve **Hazırla/doldur** ile **Pompa Pil Değişimi** sunulmaz. Doldurma, hazırlama (prime) ve pil değiştirme pompa sihirbazlarında yapılır.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Pompa askıya alınmışken veya durmuşken **AAPS** 0 Ü/sa'lik bir geçici bazal kaydeder; böylece AİNS'te hiç bazal insülin sayılmaz.
 * Yaz saati (DST) ve saat dilimi değişiklikleri elle yapılmalıdır.
 

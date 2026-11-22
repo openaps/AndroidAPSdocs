@@ -1,16 +1,16 @@
-# Useful resources to read before you start
+# Nyttige ressourcer at læse, før du starter
 
-Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+Før du bygger dit system, skal du læse en hel del for at forstå, hvordan alt virker, og for at få mest muligt ud af det. Vi har samlet en liste over steder, hvor du kan komme i gang og forhåbentlig få svar på mange af dine spørgsmål.
 
-## Further reading
+## Mere at læse
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS-dokumentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Finjustering af dine indstillinger - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
@@ -20,19 +20,19 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[Hvorfor vi tit bruger en forkert varighed af insulinvirkning (DIA), og hvorfor det har betydning](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[Hvilke konklusioner kan vi drage, når vi undersøger insulinfølsomhed med Autosens-funktionen i #OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[»Bright Spots and Landmines«](https://diatribe.org/bright-spots-and-landmines/) af Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[»Think like a Pancreas«](https://amzn.eu/d/iVU0RGe) af Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+[»Pumping insulin«](https://amzn.eu/d/iaCsFa2) af John Walsh og Ruth Roberts
 
-## Background reading and articles about DIY closed looping
+## Baggrundslæsning og artikler om gør-det-selv lukket loop
 
 <https://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
 
@@ -40,8 +40,8 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
-## Stuff on YouTube
+## Videoer på YouTube
 
 [Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[Live-interview med Dana Lewis, som skabte Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)

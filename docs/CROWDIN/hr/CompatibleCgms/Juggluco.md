@@ -1,41 +1,41 @@
-# Juggluco settings
+# Postavke Juggluca
 
-If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
+Ako ga još niste postavili, preuzmite [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
 
-Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) to connect your sensor.
+Slijedite [upute](https://www.juggluco.nl/Jugglucohelp/introhelp.html) za spajanje senzora.
 
-## Basic settings for all CGM systems
+## Osnovne postavke za sve CGM sustave
 
-### Disable Nightscout uploader
+### Isključite slanje u Nightscout
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Ne smijete dopustiti nijednoj drugoj aplikaciji da šalje podatke (GUK i tretmane) u Nightscout.
 
-Disable any active uploader to Nightscout in Juggluco.
+U Jugglucu isključite svako aktivno slanje podataka u Nightscout.
 
-![Disable Nightscout Upload](../images/juggluco/DisableNightscoutUpload.png)
+![Isključite slanje u Nightscout](../images/juggluco/DisableNightscoutUpload.png)
 
 (juggluco-to-aaps)=
 
-## Juggluco to AAPS
+## Juggluco prema AAPS-u
 
-Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you are using a [trusted sensor](#GettingStarted-TrustedBGSource).
+Juggluco može slati vrijednosti GUK-a izravno u AAPS. Tada je uvijek moguć SMB ako koristite [pouzdan senzor](#GettingStarted-TrustedBGSource).
 
-When using a Libre 2/2+/3/3+ sensor, minute-by-minute readings will be sent to AAPS but will not trigger minute-by-minute calculations in AAPS.
+Sa senzorom Libre 2/2+/3/3+ AAPS prima očitanja svake minute, ali AAPS zbog njih ne računa svake minute.
 
-Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. Select the xDrip BG data source in AAPS.
+U Jugglucu uključite xDrip broadcast (ne uključujte Patched Libre), potvrdite i spremite podatke o paketu AAPS-a. U AAPS-u odaberite xDrip kao izvor GUK-a.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
+U AAPS-u primijenite dovoljno [zaglađivanja](./SmoothingBloodGlucoseData.md).
 
-![Juggluco to AAPS](../images/juggluco/Juggluco-AAPS.png)
+![Juggluco prema AAPS-u](../images/juggluco/Juggluco-AAPS.png)
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip
+## Juggluco prema xDripu
 
-Juggluco can send blood glucose to xDrip which will then send them to AAPS.
+Juggluco može slati vrijednosti GUK-a u xDrip, a xDrip ih zatim šalje u AAPS.
 
-Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip BG data source in AAPS.
+U Jugglucu uključite Patched Libre (ne uključujte xDrip broadcast), potvrdite i spremite podatke o paketu dexdrip. U AAPS-u odaberite xDrip kao izvor GUK-a.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
+Ako je potrebno, u AAPS-u primijenite dovoljno [zaglađivanja](./SmoothingBloodGlucoseData.md). Sa senzorom Libre 2/2+/3/3+ xDrip od očitanja svake minute izračuna prosjek za očitanja svakih 5 minuta i [također ih zagladi](#libre2-value-smoothing-raw-values).
 
-![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco prema xDripu](../images/juggluco/Juggluco-xDrip+.png)

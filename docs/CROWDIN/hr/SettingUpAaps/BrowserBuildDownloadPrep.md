@@ -1,21 +1,21 @@
-Both keystore options (Option 1 and Option 2) use the same preparation file. Download it:
+Obje opcije spremišta ključeva (Opcija 1 i Opcija 2) koriste istu pripremnu datoteku. Preuzmite je:
 
 - [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. Ako ovu stranicu otvorite unutar aplikacije (putem web-prikaza), HTML datoteka se možda neće preuzeti. Umjesto toga kopirajte URL i otvorite ga u svojem pregledniku:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+Ili posjetite stranicu najnovijeg izdanja:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2. Backup copy hosted on this site:
- - If the external link is also unavailable, you can use this backup file to download.
+2. Sigurnosna kopija na ovoj stranici:
+ - Ako ni vanjska poveznica nije dostupna, datoteku možete preuzeti iz ove sigurnosne kopije.
 <!--crowdin:disable-->
 
 ```{eval-rst}

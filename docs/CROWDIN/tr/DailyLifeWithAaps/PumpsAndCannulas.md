@@ -4,7 +4,7 @@
 
 Aşağıda anlatılan işlem yalnızca hortumlu pompalar içindir; Omnipod, Medtrum Nano, Accu-Chek Solo gibi patch pompalar için geçerli değildir. Bu işlem bazen "set değişimi" olarak adlandırılır: "tam" set değişimi insülin rezervuarını ve kanülü kapsar, "kısmi" set değişimi ise yalnızca kanülün değiştirilmesidir.
 
-Patch pompalar kendi etkinleştirme sihirbazlarında kendilerini doldurur ve hazırlar; kanülleri zaten vücuttadır. **AAPS** bu pompalar için doldurma sunmaz: **Hazırla/doldur**, **Yönet** panelinde veya Hızlı Başlatma'da gösterilmez. [Uyumlu pompalar](../Getting-Started/CompatiblePumps.md) içinde pompanızın sayfasına bakın.
+Patch pompalar kendi etkinleştirme sihirbazlarında kendilerini doldurur ve hazırlar; kanülleri zaten vücuttadır. **AAPS** bu pompalar için doldurma sunmaz: **Hazırla/doldur**, **Yönet** panelinde veya Hızlı Başlatma'da gösterilmez. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. [Uyumlu pompalar](../Getting-Started/CompatiblePumps.md) içinde pompanızın sayfasına bakın.
 
 Kartuş/rezervuarın fiziksel olarak değiştirilmesi **AAPS** üzerinden yapılamaz, doğrudan pompada yapılmalıdır. Bu değişiklikler tamamlandıktan sonra **AAPS**'e elle kaydedilmelidir.
 
@@ -31,6 +31,7 @@ Kartuş/rezervuarın fiziksel olarak değiştirilmesi **AAPS** üzerinden yapıl
 * Varsayılan doldurma miktarlarını **Hazırla/doldur** ayarlarında belirleyebilir/değiştirebilirsiniz — bu ayarları açmak için ana ekrandaki arama çubuğuna "prime" yazın (bkz. [Tercihler](../SettingUpAaps/Preferences.md)). Kanülünüz için kaç ünite doldurulması gerektiğini (iğne uzunluğuna ve hortum uzunluğuna bağlı olarak) kanül kutusundaki kullanım kılavuzunda bulabilirsiniz.
 
 * Doldurma işleviyle verilen insülin, **AAPS** aktif insülini (AİNS) hesaplarken dikkate alınmaz ve [Tedavi geçmişi](#aaps-screens-treatments)nde "Doldur" olarak işaretlenir.
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * Pompa bağlantısı kesikken pompadan verilen bolus insülini de **AAPS** tarafından dikkate alınmaz. **AAPS** bağlantısı kesikken doğrudan pompadan bolus yaparsanız, pompayı tekrar bağladıktan sonra bu insülini **İnsülin** iletişim kutusunda (bolus yapmadan) bildirebilirsiniz (aşağıdaki [Gerçekten bolus yapmadan verilen insülini bildirmek](#pumps-cannulas-announce-insulin) bölümüne bakın).
 

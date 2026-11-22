@@ -55,14 +55,14 @@ Prižiūrinčio asmens telefone atsisiųskite (iš App Store arba Google Play) i
 
 Telefone eikite į **Apps > AAPS > Permissions** (programėlės, leidimai). Įsitikinkite, kad **SMS** ir **Phone** (telefonas) leidžiami.
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android gali blokuoti leidimą **SMS** programėlėms, kurios buvo įdiegtos ne iš programėlių parduotuvės, pavyzdžiui, **AAPS**. Jei suteikdami leidimą **SMS** matote šį pranešimą, atidarykite telefono **Settings > Apps > AAPS** (nustatymai, programėlės), bakstelėkite meniu **⋮** (viršuje dešinėje) ir pasirinkite **Allow restricted settings** (leisti ribotus nustatymus). Tada vėl suteikite leidimą **SMS**.
 ```
 
-![Programėlei uždrausta prieiga prie SMS](../images/sms_permission_restricted.png)
+![Programėlei uždrausta prieiga prie SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Datos ir laiko sinchronizavimas
 
@@ -82,7 +82,7 @@ Atidarykite **SMS komandos** nustatymus.
 
 Įjunkite **Leisti nuotolines komandas SMS žinutėmis**. Parinktys **Papildomas privalomas PIN kodas žymeklio gale** ir **Autentifikavimo sąrankos nustatymas** atsiranda tik tai įjungus:
 
-![SMS komandos nustatymai](../images/sms_communicator_settings.png)
+![SMS komandos nustatymai](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Patvirtinti telefono numeriai
@@ -97,7 +97,7 @@ Atminkite, kad „+“ prieš numerį, priklausomai nuo jūsų vietovės, gali b
 
 Jei norite pridėti daugiau nei vieną telefono numerį, atskirkite juos kabliataškiais, **BE tarpų tarp numerių** (tai labai svarbu!). Pasirinkite **OK**:
 
-![Patvirtinti telefono numeriai](../images/sms_allowed_numbers.png)
+![Patvirtinti telefono numeriai](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Mažiausias intervalas tarp nuotolinių bolusų
 
@@ -115,7 +115,7 @@ Reikalavimai PIN kodui:
 
 Saugesniam PIN kodui nenaudokite to paties skaitmens daug kartų (_pvz._, 111111) arba skaitmenų sekos (_pvz._, 123456).
 
-![Additional mandatory PIN at token end](../images/sms_pin.png)
+![Additional mandatory PIN at token end](../images/remote_control_and_following/sms_pin.png)
 
 #### Authenticator setup
 
@@ -123,7 +123,7 @@ Saugesniam PIN kodui nenaudokite to paties skaitmens daug kartų (_pvz._, 111111
 * _Prižiūrinčio asmens telefone_ atidarykite įdiegtą autentifikavimo programėlę, nustatykite naują ryšį ir
 * Prižiūrinčio asmens telefonu nuskenuokite QR kodą, rodomą skiltyje **Skanuokite kodą AAPS OTP kodų nustatymui**.
 
-![Autentifikavimo sąranka su QR kodu](../images/sms_authenticator_setup.png)
+![Autentifikavimo sąranka su QR kodu](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Skiltyje **Patikrinti vienkartinį slaptažodį** į laukelį **Kodas patikrinimui** įveskite vienkartinį slaptažodį iš prižiūrinčio asmens telefono autentifikavimo programėlės ir po jo – savo PIN kodą:
 
@@ -134,7 +134,7 @@ Pavyzdys:
 
 Jei įvedėte teisingai, raudonas užrašas „NETEISINGAS PIN“ automatiškai pasikeis į žalią „OK“. **Nėra jokio mygtuko, kurį reikėtų paspausti!** Procesas baigtas, įvedus kodą nereikia spausti jokio mygtuko „OK“:
 
-![Vienkartinio slaptažodžio patikrinimas ir autentifikatorių atstatymas](../images/sms_authenticator_test.png)
+![Vienkartinio slaptažodžio patikrinimas ir autentifikatorių atstatymas](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Dabar SMS komandos turėtų būti nustatytos.
 
@@ -146,7 +146,7 @@ Jei norite pašalinti sukurtus autentifikatorius, naudokite mygtuką **Atstatyti
 
 1)  Kad patikrintumėte, ar viską nustatėte teisingai, išbandykite ryšį: iš prižiūrinčio asmens telefono į **AAPS** telefoną išsiųskite SMS žinutę „bg“. Turėtumėte gauti atsakymą, panašų į parodytą čia:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Jei negavote jokio atsakymo, žr. toliau skyrių [Trikčių šalinimas](#SMSCommands-troubleshooting).
 
@@ -154,7 +154,7 @@ Jei negavote jokio atsakymo, žr. toliau skyrių [Trikčių šalinimas](#SMSComm
 
 Kai SMS komandą siunčiate pirmą kartą, išbandykite ją būdami šalia **AAPS** telefono, kad pamatytumėte, kaip tai veikia:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 Prižiūrinčio asmens telefonas gaus atsakymo SMS iš **AAPS**, patvirtinančią, ar nuotolinė SMS komanda sėkmingai įvykdyta.
 
@@ -182,7 +182,7 @@ Kad išvengtumėte hipoglikemijos, verta pradėti atsargiai ir suleisti **mažia
 
 Komandas reikia siųsti anglų kalba, o atsakymas bus jūsų kalba, jei atsakymo eilutė jau [išversta](#translations-translate-strings-for-AAPS-app). Komandose didžiosios ir mažosios raidės nesvarbios, galite rašyti mažosiomis arba didžiosiomis raidėmis.
 
-![SMS komandų pavyzdys](../images/SMSCommands.png)
+![SMS komandų pavyzdys](../images/remote_control_and_following/SMSCommands.png)
 
 Toliau pateiktose **SMS komandų lentelėse** nurodytos visos galimos SMS komandos. Kad būtų lengviau suprasti, pateiktos _pavyzdinės reikšmės_. Komandoms galioja tos pačios galimų reikšmių ribos (tikslai, profilio procentas ir kt.), kurios leidžiamos pačioje **AAPS** programėlėje.
 
@@ -191,11 +191,11 @@ Toliau pateiktose **SMS komandų lentelėse** nurodytos visos galimos SMS komand
 
 Į kai kurias SMS komandas atsakoma iš karto, o kai kurioms SMS komandoms reikia griežto **autentifikavimo** per autentifikavimo programėlę. Paprastą užklausą, pvz., „**BG**“ (kuria prašoma dabartinės gliukozės reikšmės), greita parašyti, jai nereikia autentifikavimo, o atsakyme gaunama toliau parodyta **AAPS** būsenos informacija:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Komandoms, kurioms reikia daugiau saugumo, reikia įvesti kodą, pavyzdžiui:
 
-![SMS su autentifikavimu](../images/remote-control-07.png)
+![SMS su autentifikavimu](../images/remote_control_and_following/remote-control-07.png)
 
 Toliau pateiktų lentelių stulpelyje *Autent.* nurodyta, ar kiekvienai komandai reikia tokio griežto autentifikavimo.
 
@@ -311,12 +311,12 @@ Tam gali būti viena iš šių priežasčių:
 ### Visiškai jokio atsakymo į SMS komandas
 
 Prižiūrinčio asmens telefone ir (arba) **AAPS** telefone pabandykite išjungti šias parinktis:
-* **Send as chat message** (siųsti kaip pokalbio pranešimą) ![Disable SMS as chat message](../images/SMSdisableChat.png)
+* **Send as chat message** (siųsti kaip pokalbio pranešimą) ![Disable SMS as chat message](../images/remote_control_and_following/SMSdisableChat.png)
 * Jei naudojate Android Messages arba Google Messages programėlę, išjunkite RCS pranešimus:
   - atidarykite konkretų SMS pokalbį programėlėje Messages
   - Pasirinkite parinkčių meniu (trys taškai) viršutiniame dešiniajame kampe
   - pasirinkite „Details“ (išsami informacija)
-  - Įjunkite „Only send SMS and MMS messages“ (siųsti tik SMS ir MMS žinutes) ![Išjunkite RCS kaip pokalbio pranešimą](../images/SMSdisableRCS.png)
+  - Įjunkite „Only send SMS and MMS messages“ (siųsti tik SMS ir MMS žinutes) ![Išjunkite RCS kaip pokalbio pranešimą](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Klaidos vykdant komandas
 
@@ -331,7 +331,7 @@ Yra kelios galimos priežastys, kodėl komanda gali būti neįvykdyta:
 
 Dažnos klaidos parodytos toliau pateiktuose pavyzdžiuose:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### Kaip sustabdyti komandą, kai ji jau patvirtinta autentifikavimo kodu?
 

@@ -182,7 +182,7 @@
 
 Αυτή η οθόνη εμφανίζεται μόνο όταν το **AAPS** βρει ρυθμίσεις που εξάγατε παλαιότερα στον φάκελο **AAPS** («Βρέθηκαν αποθηκευμένες ρυθμίσεις»), για παράδειγμα όταν εγκαθιστάτε ξανά την εφαρμογή ή περνάτε σε νέο τηλέφωνο.
 
-- Για να επαναφέρετε την προηγούμενη διαμόρφωσή σας, πατήστε «**Εισαγωγή ρυθμίσεων**» — δείτε [Εξαγωγή και εισαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Για να ξεκινήσετε με νέα διαμόρφωση, πατήστε «**ΕΠΟΜΕΝΟ**» και συνεχίστε με τον Οδηγό.
 
 ![Εισαγωγή ρυθμίσεων](../images/setup-wizard/Wizard-ImportSettings.png)

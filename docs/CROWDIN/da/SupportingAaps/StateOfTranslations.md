@@ -1,26 +1,26 @@
-# State of translation for the app and the documentation
+# Status for oversættelse af appen og dokumentationen
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Status opdateres én gang i timen og viser kun status i Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Bemærk: procenten for korrekturlæsning er altid lavere end eller lig med procenten for oversættelse, men Crowdin viser den oven på oversættelserne.
+Det er bedst kun at se på procenten for oversættelse for at se, om der er arbejde at gøre.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Efter oversættelse i Crowdin sendes oversættelserne hver dag til GitHub som en pull request (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+PR'en godkendes manuelt, og det sker så hurtigt som muligt.
 ```
 
-## state app translation
+## status for oversættelse af appen
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Status for oversættelse af **appen** pr. sprog (landekode, procent oversat, procent korrekturlæst).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![status for oversættelse af appen](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## status for oversættelse af dokumentationen
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Status for oversættelse af **dokumentationen** pr. sprog (landekode, procent oversat, procent korrekturlæst).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![status for oversættelse af dokumentationen](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

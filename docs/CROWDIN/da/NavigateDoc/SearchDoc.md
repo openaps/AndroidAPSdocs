@@ -1,25 +1,25 @@
-# Search the documentation
+# Søg i dokumentationen
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+Dokumentationen indeholder mange oplysninger. Hvis du leder efter et bestemt emne, begreb eller indstilling, er det ofte hurtigere at bruge søgefunktionen end at gå gennem menuen.
 
-## How to search
+## Sådan søger du
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Søgefeltet sidder øverst i navigationspanelet i venstre side af skærmen.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+På små skærme (f.eks. en telefon) er navigationspanelet skjult. Tryk på menuikonet (☰) i øverste venstre hjørne for at åbne det og vise søgefeltet.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Skriv et eller flere søgeord i søgefeltet.
+2. Tryk på `Enter`, eller tryk på søgeikonet.
+3. En side med resultater åbner. Den viser alle sider, hvor dine søgeord findes. Klik på et resultat for at gå til den side, der passer.
 
-## Tips for better results
+## Tips til bedre resultater
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Brug præcise ord (f.eks. `temp target` eller `autosens`) i stedet for hele sætninger.
+- Når du søger med flere søgeord, får du de sider, der indeholder disse ord. Start bredt, og tilføj søgeord for at indsnævre resultaterne.
+- Søgningen dækker kun det sprog og den version af dokumentationen, som du læser lige nu. Hvis du ikke kan finde noget, kan du prøve at skifte til den engelske version, som er den mest komplette (se [Skift sprog og version](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+Søgeindekset bygges automatisk. Indhold, der er tilføjet for nylig, kan tage lidt tid om at blive søgbart.
 ```

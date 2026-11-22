@@ -1,37 +1,37 @@
-# SMS Commands
+# SMS-kommandoer
 
 ```{contents} Table of contents
 :depth: 2
 ```
 
-Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
+De fleste justeringer på afstand (midlertidige mål, kulhydrater, profilskift og, når klienten er parret, boluser) kan laves med [appen **AAPSClient**](../RemoteFeatures/RemoteMonitoring.md) på en Android-telefon med internetforbindelse, se [Styring mellem hovedenhed ↔ klient](#client-master-control) (en iPhone-version af **AAPSClient** er under udvikling, se [AAPSClient-appen](AapsClient.md)). SMS-kommandoer er stadig et alternativ, der virker uden internet, og den eneste mulighed for fjernstyring, hvis du bruger en iPhone som følger og ikke har **AAPSClient** endnu.
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS-kommandoer er meget nyttige:**
+1. Til almindelig fjernstyring
 
-2. If you want to remotely bolus insulin without a paired **AAPSClient**
+2. Hvis du vil give en fjernbolus med insulin uden en parret **AAPSClient**
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. I et område med dårlig internetdækning, hvor SMS'er kan komme igennem, men hvor data/internet på telefonen er begrænset. Det er meget nyttigt, når du tager til afsidesliggende områder (f.eks. camping, skiferie).
 
-4. If your other method of remote control (**AAPSClient**) is temporarily not working
+4. Hvis din anden måde til fjernstyring (**AAPSClient**) midlertidigt ikke virker
 
-## Safety First
+## Sikkerhed først
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+Hvis du aktiverer **SMS-kommunikator** i **AAPS**, skal du tænke på, at den telefon, der er sat op til at sende fjernkommandoer, kan blive stjålet og/eller brugt af en anden. Lås altid din telefon med mindst en PIN. En stærk adgangskode og/eller biometrisk lås anbefales stærkt. Sørg for, at den er forskellig fra din hovedadgangskode til APK'en (den adgangskode, der kræves for at eksportere **AAPS**-indstillinger).
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+Det anbefales også at tillade et [andet telefonnummer](#SMSCommands-authorized-phone-numbers) til SMS-kommandoer. Så kan du bruge det andet nummer til at [deaktivere](#SMSCommands-other) SMS-kommunikatoren, hvis din vigtigste fjerntelefon bliver kompromitteret.
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+Den mindste standardtid mellem boluskommandoer er 15 minutter, regnet fra det øjeblik, pumpen accepterer en bolus. Af sikkerhedsgrunde skal du tilføje mindst to godkendte telefonnumre for at ændre dette til en kortere ventetid. Hvis du prøver at give en fjernbolus igen inden for 15 minutter efter den forrige bolus, får du svaret »Fjernbolus er ikke tilgængelig. Prøv igen senere.«
 
-AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+AAPS informerer dig også med en SMS, når dine fjernkommandoer, f.eks. en bolus eller en profilændring, er udført. Det er en god idé at sætte det op, så bekræftelsesbeskeder bliver sendt til mindst to forskellige telefonnumre, hvis en af de modtagende telefoner bliver stjålet.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**Hvis du giver bolus via SMS-kommandoer, skal du indtaste kulhydraterne separat (anden SMS, AAPSClient ...)!** Hvis du ikke gør det, vil IOB være korrekt, men COB vil være for lav. Det kan betyde, at en korrektionsbolus ikke bliver givet, fordi **AAPS** antager, at du har for meget aktiv insulin.
 
-For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
+Til de følsomme kommandoer skal der bruges en godkendelsesapp med en tidsbaseret engangsadgangskode for at øge sikkerheden.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+Hvis du vil fjerne muligheden for, at en omsorgspersons telefon kan sende SMS-kommandoer, så brug nødknappen »[Nulstil autentificering](#sms-commands-authenticator-setup)« i **AAPS**, eller send SMS-kommandoen »[SMS stop](#SMSCommands-other)«. Når du nulstiller godkendelsesapps, bliver ALLE omsorgspersoners telefoner ugyldige. Du skal sætte dem op igen.
 
-## Setup SMS commands
+## Opsæt SMS-kommandoer
 
 ```{contents} The overall process is as follows
 :depth: 1
@@ -39,315 +39,315 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 ```
 
 (sms-commands-authenticator-setup)=
-### Authenticator setup
+### Authenticator opsætning
 
-Two-factor authentication is used to improve safety.
+Tofaktorgodkendelse bruges for at øge sikkerheden.
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Popular free apps are:
+Download (fra App Store eller Google Play) og installer en godkendelsesapp på omsorgspersonens telefon. Populære gratis apps er:
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Disse godkendelsesapps laver en tidsbegrænset 6-cifret engangsadgangskode, ligesom ved mobilbank eller netbutikker. Du kan bruge en anden godkendelsesapp, så længe den understøtter RFC 6238 TOTP-tokens. Microsoft Authenticator virker ikke.
 
-### Check phone settings
+### Tjek telefonens indstillinger
 
-On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
+På din telefon skal du gå til **Apps > AAPS > Tilladelser** (Permissions). Sørg for, at **SMS** og **Telefon** (Phone) er tilladt.
 
-![image](../images/remote-control-08.png)
+![billede](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
-Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+Android kan blokere tilladelsen **SMS** for apps, der ikke er installeret fra en appbutik, f.eks. **AAPS**. Hvis du ser denne besked, når du giver tilladelsen **SMS**, så åbn telefonens **Indstillinger > Apps > AAPS**, tryk på menuen **⋮** (øverst til højre), og vælg **Tillad begrænsede indstillinger** (Allow restricted settings). Giv derefter tilladelsen **SMS** igen.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![Appen fik ikke adgang til SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
-### Date and time syncing
+### Synkronisering af dato og tid
 
-The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+Tiden på begge telefoner skal være synkroniseret. Det bedste er at lade tiden blive sat automatisk fra netværket. Forskelle i tiden kan give problemer med godkendelsen.
 
-On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
+Tjek på både **AAPS**-telefonen og omsorgspersonens telefon, at dato og tid er synkroniseret. Hvordan du præcis gør det, afhænger af din enhed. Du skal måske prøve forskellige indstillinger.
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
+Eksempel (for Samsung S23): **Indstillinger > Generel administration > Dato og tid**: sørg for, at **Automatisk dato og tid** er slået til.
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
+Nogle muligheder kan være grå, fordi de kræver en administrator via en familiekonto, hvis telefonen er sat op som en børnekonto. Denne indstilling for dato og tid hedder »Indstil automatisk« (set automatically) på en omsorgspersons/forælders iPhone. Hvis du ikke er sikker på, om telefonerne er synkroniseret, så bare rolig. Du kan sætte SMS-kommandoerne op og finde fejlen bagefter, hvis det ser ud til at give problemer (spørg om hjælp, hvis det er nødvendigt).
 
-### AAPS settings
+### AAPS-indstillinger
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
+Nu hvor telefonens indstillinger er tjekket, skal du i selve **AAPS**-appen gå til [**Konfiguration** → **Kommunikation**](../SettingUpAaps/ConfigBuilder.md) og aktivere pluginet **SMS-kommunikator**.
 
-Open the **SMS Communicator** settings.
+Åbn indstillingerne for **SMS-kommunikator**.
 
-Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
+Aktiver **Tillad fjernkommandoer via SMS**. Mulighederne **Yderligere obligatorisk pinkode i slutningen** og **Authenticator opsætning** vises først, når dette er aktiveret:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![Indstillinger for SMS-kommunikator](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### Tilladte telefonnumre
 
-Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
-* UK phone number: +447976304596
-* US phone number: +11234567890
-* FR phone number:  +33612344567
-* _etc._
+Indtast omsorgspersonens telefonnummer/-numre. Tag landekoden med, og udelad det første »0« i telefonnummeret, som vist i disse eksempler:
+* Britisk telefonnummer: +447976304596
+* Amerikansk telefonnummer: +11234567890
+* Fransk telefonnummer:  +33612344567
+* _osv._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
+Bemærk, at »+« foran nummeret måske er nødvendigt, måske ikke, afhængigt af hvor du bor. For at finde ud af det skal du sende en prøvebesked. Den viser det modtagne format på skærmen for pluginet **SMS-kommunikator** (**Konfiguration** → **Kommunikation** → **SMS-kommunikator** → **Åbn plugin**).
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
+Hvis du skal tilføje mere end ét telefonnummer, så adskil dem med semikolon, **UDEN mellemrum mellem numrene** (dette er meget vigtigt!). Vælg **OK**:
 
-![Allowed phone numbers](../images/sms_allowed_numbers.png)
+![Tilladte telefonnumre](../images/remote_control_and_following/sms_allowed_numbers.png)
 
-#### Remote bolus min distance
+#### Min. tid mellem fjernboluser
 
-- You can define the minimum delay (in minutes) between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- Du kan angive den mindste ventetid (i minutter) mellem to boluser, der gives via SMS.
+- Af sikkerhedsgrunde skal du tilføje mindst to godkendte telefonnumre for at ændre denne værdi.
 
-#### Additional mandatory PIN at token end
+#### Yderligere obligatorisk pinkode i slutningen
 
-For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+Af sikkerhedsgrunde skal svarkoden følges af en PIN. Vælg en PIN, som du (og alle andre omsorgspersoner) skal skrive efter koden fra godkendelsesappen, når SMS-kommandoen sendes.
 
-PIN requirements are:
+Krav til PIN:
 
-* at least 6 digits
-* digits only
+* mindst 6 cifre
+* kun cifre
 
-For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
+For en sikrere PIN skal du ikke bruge det samme ciffer mange gange (_f.eks._ 111111) eller en talrække (_f.eks._ 123456).
 
-![Additional mandatory PIN at token end](../images/sms_pin.png)
+![Yderligere obligatorisk pinkode i slutningen](../images/remote_control_and_following/sms_pin.png)
 
-#### Authenticator setup
+#### Authenticator opsætning
 
-* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
-* Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+* Tryk på **Authenticator opsætning**, og følg vejledningen trin for trin på skærmen.
+* Åbn den installerede godkendelsesapp på _omsorgspersonens telefon_, opsæt en ny forbindelse og
+* Brug omsorgspersonens telefon til at scanne QR-koden, der vises under **Scan kode for at opsætte AAPS OTP-koder**.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![Authenticator opsætning med QR-kode](../images/remote_control_and_following/sms_authenticator_setup.png)
 
-* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
+* Under **Test Engangsadgangskode** skal du i **Kode, der skal kontrolleres** indtaste engangskoden fra godkendelsesappen på omsorgspersonens telefon efterfulgt af din PIN:
 
-Example:
-* The token from the authenticator app is 457051
-* Your mandatory PIN is 2401
-* Code to check: 4570512401
+Eksempel:
+* Token fra godkendelsesappen er 457051
+* Din obligatoriske PIN er 2401
+* Kode, der skal kontrolleres: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+Hvis indtastningen er korrekt, skifter den røde tekst »FORKERT PIN« automatisk til et grønt »OK«. **Der er ingen knap, du kan trykke på!** Processen er nu færdig. Der er ingen »OK«-knap, du skal trykke på, efter at du har indtastet koden:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![Test Engangsadgangskode og Nulstil autentificering](../images/remote_control_and_following/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+Nu skulle du have SMS-kommandoer sat op.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Brug knappen **Nulstil autentificering** nederst på skærmen **Authenticator opsætning**, hvis du vil fjerne godkendelsesapps, der er sat op. (Når du nulstiller godkendelse, bliver ALLE godkendelsesapps, der allerede er sat op, ugyldige. Du skal sætte dem op igen.)
 
-## SMS commands usage
+## Brug af SMS-kommandoer
 
-### First steps using SMS commands
+### De første skridt med SMS-kommandoer
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  For at tjekke, at du har sat alt korrekt op, så test forbindelsen ved at sende »bg« som SMS fra omsorgspersonens telefon til **AAPS**-telefonen. Du skulle få et svar, der ligner det, der er vist her:
 
-![image](../images/remote-control-06.png)
+![billede](../images/remote_control_and_following/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+Hvis du ikke får noget svar, så se afsnittet [Fejlfinding](#SMSCommands-troubleshooting) nedenfor.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  Prøv nu en SMS-kommando, der kræver godkendelsesappen, _f.eks._ »target hypo«. Omsorgspersonens telefon får en SMS tilbage, som beder dig indtaste den **sekscifrede adgangskode** fra godkendelsesappen efterfulgt af den ekstra hemmelige **PIN**, som kun omsorgspersoner/følgere kender (i alt en række på tolv cifre, hvis din PIN har 6 cifre).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+Når du prøver at sende en SMS-kommando første gang, så gør det, mens **AAPS**-telefonen er i nærheden, så du kan se, hvordan det virker:
 
-![image](../images/remote-control-16.png)
+![billede](../images/remote_control_and_following/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+Omsorgspersonens telefon får en SMS som svar fra **AAPS**, der bekræfter, om SMS-fjernkommandoen er udført.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+Hvis din kommando lykkes, får du et svar, der bekræfter det. Hvis der er et problem, får du en fejlbesked. Se [Fejlfinding](#SMSCommands-troubleshooting) nedenfor for almindelige fejl.
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Tip**: Det kan være nyttigt at have fri SMS i dit telefonabonnement (for hver telefon, der bruges), hvis der bliver sendt mange SMS'er.
 
-### Delivering mealtime boluses through SMS commands
+### Måltidsboluser via SMS-kommandoer
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Fjernbolus med insulin kan gives via **SMS-kommandoer** eller via en parret **AAPSClient** (se [Styring mellem hovedenhed ↔ klient](#client-master-control)); det kan ikke gøres via Nightscout-hjemmesiden. Kulhydrater kan også meldes via SMS eller **AAPSClient**. Med SMS er det ikke muligt at sende både kulhydrat- og insulinkommandoer i én SMS. Disse kommandoer skal sendes hver for sig sådan her:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  Send insulinbolussen (_f.eks._ giver »bolus 2« en bolus på 2 enheder) via SMS-kommandoer. Det svarer til **Behandlinger** → **Insulin** i **AAPS**. 2)  Send kulhydraterne (_f.eks._ melder »carbs 20« 20 g kulhydrater). Det svarer til **Behandlinger** → **Kulhydrater** i **AAPS**.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+For at undgå hypoer er det en god idé at starte forsigtigt og give en bolus med **mindre insulin**, end din kulhydratratio siger, fordi du ikke tager højde for det aktuelle glukoseniveau eller glukosetrenden.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**Rækkefølgen, du sender disse kommandoer i, er vigtig**. Hvis du melder mange kulhydrater på nogen måde og har SMB'er aktiveret, kan **AAPS** straks svare ved at give en delvis insulinbolus. Hvis du så prøver at sende en insulinbolus _efter_ at have meldt kulhydraterne, kan du få en irriterende forsinkelse og en besked om »bolus i gang«, og så skal du tjekke, hvad der er givet som SMB. Eller hvis du ikke opdager, at en SMB bliver givet, og din egen bolus bagefter også lykkes, kan der i alt blive givet for meget insulin til måltidet. Når du giver bolus til måltider på afstand, skal du derfor altid sende insulinbolussen _før_ du melder kulhydraterne. Hvis du vil, kan du kombinere **AAPSClient** med SMS-kommandoer: kulhydrater, der indtastes på en parret **AAPSClient**, kræver ingen godkendelseskode og er derfor hurtigere end SMS-kommandoer. Kulhydrater eller andre behandlinger, der indtastes på Nightscout-hjemmesiden, bliver **ikke** brugt, mens klientstyring er slået til; **AAPS** er så i [hærdet tilstand](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
-## Commands
+## Kommandoer
 
 ```{contents} List of command groups
 :depth: 1
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+Kommandoer skal sendes på engelsk. Svaret kommer på dit eget sprog, hvis svarteksten allerede er [oversat](#translations-translate-strings-for-AAPS-app). Kommandoerne skelner ikke mellem store og små bogstaver. Du kan bruge små eller store bogstaver.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![Eksempel på SMS-kommandoer](../images/remote_control_and_following/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+**Tabellerne over SMS-kommandoer** nedenfor viser alle mulige SMS-kommandoer. Der er givet _eksempelværdier_ for at gøre det lettere at forstå. Kommandoerne har det samme område af mulige værdier (mål, profilprocent osv.), som er tilladt i selve **AAPS**-appen.
 
 (authentication-or-not)=
-### Authentication or not?
+### Godkendelse eller ej?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+Nogle SMS-kommandoer giver et svar med det samme, og nogle SMS-kommandoer kræver stærk **godkendelse** via godkendelsesappen. En simpel forespørgsel som »**BG**« (som beder om det aktuelle glukoseniveau) er hurtig at skrive, kræver ingen godkendelse og returnerer den statusinformation fra **AAPS**, der er vist nedenfor:
 
-![image](../images/remote-control-06.png)
+![billede](../images/remote_control_and_following/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Kommandoer, der kræver mere sikkerhed, kræver, at der indtastes en kode, for eksempel:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS med godkendelse](../images/remote_control_and_following/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+Kolonnen *Godk.* i tabellerne nedenfor viser, om en sådan stærk godkendelse kræves for hver kommando.
 
-### CGM data
+### CGM-data
 
-| Command    | Auth | Function & *Response*                                                                                                                                                                                                             |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                                                                   |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| Kommando   | Godk. | Funktion og *svar*                                                                                                                                                                                                                       |
+| ---------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Nej   | Returnerer: sidste BS, delta, IOB (bolus og basal), COB<br/>*Sidste BG: 5,6 4min siden, Delta: -0,2 mmol, IOB: 0,20IE (Bolus: 0,10IE Basal: 0,10IE)*                                                                               |
+| CAL 5.6/90 | Ja    | Kalibrerer CGM'en med værdien 5.6/90<br/>(brug den værdi, der passer til dine glukoseenheder)<br/>Virker kun, hvis det er sat korrekt op i **AAPS**.<br/>*Kalibrering sendt. Modtagelse skal være aktiveret i xDrip+.* |
 
-### Pump
+### Pumpe
 
-| Command              | Auth | Function & *Response*                                                                                |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                  |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                     |
+| Kommando             | Godk. | Funktion og *svar*                                                                                   |
+| -------------------- | ----- | ---------------------------------------------------------------------------------------------------- |
+| PUMP                 | Nej   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Ja    | Afbryder pumpen i *30* minutter                                                                      |
+| PUMP CONNECT         | Ja    | Pumpe tilsluttet igen                                                                                |
 
 ### Basal
 
-| Command           | Auth | Function & *Response*            |
-| ----------------- | ---- | -------------------------------- |
-| BASAL 0.3         | Yes  | To start basal 0.3U/h for 30 min |
-| BASAL 0.3 20      | Yes  | To start basal 0.3U/h for 20 min |
-| BASAL 30%         | Yes  | To start basal 30% for 30 min    |
-| BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
-| BASAL STOP/CANCEL | Yes  | To stop temp basal               |
+| Kommando          | Godk. | Funktion og *svar*             |
+| ----------------- | ----- | ------------------------------ |
+| BASAL 0.3         | Ja    | Starter basal 0,3 E/t i 30 min |
+| BASAL 0.3 20      | Ja    | Starter basal 0,3 E/t i 20 min |
+| BASAL 30%         | Ja    | Starter basal 30% i 30 min     |
+| BASAL 30% 50      | Ja    | Starter basal 30% i 50 min     |
+| BASAL STOP/CANCEL | Ja    | Stopper midlertidig basal      |
 
-Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+Nogle pumper tager kun midlertidig basal i procent, andre kun i E/t. Hvis du bruger den anden form, svarer **AAPS** *»Denne pumpe tager kun midlertidig basal i procent, ikke i E/t.«* (eller omvendt) og sætter ingenting. Varigheden skal være et multiplum af trinnet for varigheden af midlertidig basal på din pumpe.
 
 
 ### Loop
 
-| Command           | Auth | Function & *Response*                                                                                                                                                                                                                                                              |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                                                          |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                                                                     |
-| LOOP CLOSED       | Yes  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Yes  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| Kommando          | Godk. | Funktion og *svar*                                                                                                                                                                                                                                                                                 |
+| ----------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Nej   | Svaret afhænger af den aktuelle status:<br/> - *Loop er deaktiveret*, hvis loopet er deaktiveret<br/> - *Loop er aktiveret*, hvis loopet er lukket, åbent eller LGS<br/> - *Pumpe afbrudt*, hvis pumpen er afbrudt<br/> - *Suspenderet (10 m)*, hvis loopet er suspenderet |
+| LOOP STOP/DISABLE | Ja    | Pumpen går tilbage til den forprogrammerede basalrate.<br/>*Loop er blevet deaktiveret*                                                                                                                                                                                                      |
+| LOOP SUSPEND 20   | Ja    | *Loop suspended*                                                                                                                                                                                                                                                                                   |
+| LOOP RESUME       | Ja    | *Loop genoptaget*                                                                                                                                                                                                                                                                                  |
+| LOOP CLOSED       | Ja    | *Aktuel loop-tilstand: Lukket loop*                                                                                                                                                                                                                                                                |
+| LOOP LGS          | Ja    | *Aktuel loop-tilstand: Stop ved lavt BS*                                                                                                                                                                                                                                                           |
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Fjernbolus er ikke tilladt inden for 15 min (denne værdi kan kun ændres, hvis der er tilføjet 2 telefonnumre) efter den sidste boluskommando eller fjernkommando! I så fald vil svaret være *Fjernbolus er ikke tilgængelig. Prøv igen senere.* Dette svar sendes også, når pumpen er i gang med at give en bolus.
 
-| Command              | Auth | Function & *Response*                                                                                                                                             |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                                                                   |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target)                                      |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                                                      |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.                                         |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                                                            |
+| Kommando             | Godk. | Funktion og *svar*                                                                                                                                                   |
+| -------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BOLUS 1.2            | Ja    |                                                                                                                                                                      |
+| BOLUS 0.60 MEAL      | Ja    | Giver den angivne bolus på 0,60 IE<br/>**og** sætter det [midlertidige mål Spiser snart](#TempTargets-eating-soon-temp-target)                                 |
+| CARBS 5              | Ja    | Indtaster 5 g uden bolus                                                                                                                                             |
+| CARBS 5 17:35/5:35PM | Ja    | Indtaster 5 g kl. 17:35.<br/>Hvilket tidsformat der virker, afhænger<br/> af tidsindstillingen (12 t/24 t) på telefonen.                                 |
+| EXTENDED 2 120       | Ja    | Starter forlænget bolus på 2 IE i 120 min.<br/>Kun for [kompatible pumper](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
+| EXTENDED STOP/CANCEL | Ja    | Stopper forlænget bolus                                                                                                                                              |
 
-### Profile
+### Profil
 
-| Command        | Auth | Function & *Response*                                                                                                                                        |
-| -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                                               |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
+| Kommando       | Godk. | Funktion og *svar*                                                                                                             |
+| -------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------ |
+| PROFILE STATUS | Nej   | Aktuel profil og procent                                                                                                       |
+| PROFILE LIST   | Nej   | Den aktuelle liste over profiler i **AAPS**, f.eks.:<br/>1. Profile1<br/> 2. Profile2                              |
+| PROFILE 1      | Ja    | Skifter til profil 1 på listen.<br/>Brug numrene fra **PROFILE LIST**,<br/>ikke profilnavnene, som du har gemt dem |
+| PROFILE 2 30   | Ja    | Skifter til Profile2 30%                                                                                                       |
 
-The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
+Procenten skal være mellem 30 og 250%, som i appen. En værdi uden for dette område bliver afvist, før du bliver bedt om godkendelseskoden.
 
-### Temporary Targets
+### Midlertidige mål
 
-| Command                   | Auth | Function & *Response*                     |
-| ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+| Kommando                  | Godk. | Funktion og *svar*                                                           |
+| ------------------------- | ----- | ---------------------------------------------------------------------------- |
+| TARGET MEAL/ACTIVITY/HYPO | Ja    | Sætter det midlertidige mål MEAL/ACTIVITY/HYPO (Spiser snart/Aktivitet/Hypo) |
+| TARGET STOP/CANCEL        | Ja    | Annullerer det midlertidige mål                                              |
 
 
 (SMSCommands-other)=
-### Other
+### Andet
 
-| Command          | Auth | Function & *Response*                                                                                                                                                                                                                                                  |
-| ---------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESTART          | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                                      |
-| SMS DISABLE/STOP | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                       |
-| HELP             | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                   |
+| Kommando         | Godk. | Funktion og *svar*                                                                                                                                                                                                                                          |
+| ---------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESTART          | Ja    | Genstarter AAPS. Nyttigt, hvis du har problemer, som normalt bliver løst med en genstart.                                                                                                                                                                   |
+| SMS DISABLE/STOP | Ja    | For at deaktivere SMS-fjernstyring skal du svare med koden.<br/>Husk, at du kun kan genaktivere den direkte<br/>fra **AAPS** på hovedenheden.                                                                                                   |
+| HELP             | Nej   | Returnerer alle funktioner, der kan spørges om:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send kommandoen ***HELP ***FUNKTION****** for at vise<br/>alle muligheder i dette afsnit. |
+| HELP BOLUS       |       | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                        |
 
 (SMSCommands-troubleshooting)=
-## Troubleshooting and FAQ
+## Fejlfinding og ofte stillede spørgsmål
 
 ```{contents} List of questions and issues
 :depth: 1
 :local: true
 ```
 
-### What _can’t_ we do with SMS commands?
+### Hvad _kan_ vi ikke gøre med SMS-kommandoer?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1)  **Du kan ikke lave et _midlertidigt_ profilskift** (f.eks. at sætte »profil motion« i 60 minutter), men du kan skifte permanent til »profil motion«. Midlertidige profilskift kan i stedet laves via **AAPSClient**.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **Du kan ikke annullere automatiseringer** eller **sætte brugerdefinerede mål**, men der er løsninger, der kommer tæt på: Forestil dig som eksempel, at det normale mål i profilen er 5,5. Du har lavet en automatisering i AAPS, der altid sætter et højt mål på 7,0 mellem kl. 14.30 og 15.30 på grund af idræt i skolen, og en betingelse for automatiseringen er, at »der ikke findes et midlertidigt mål«. I denne uge har du fået at vide med kort varsel, at idrætstimen er aflyst og bliver erstattet af en pizzaspisning, men dit barn er allerede i skole med **AAPS**-telefonen. Hvis det høje midlertidige mål på 7,0 bliver startet af automatiseringen, og du annullerer det (på **AAPS**-telefonen eller på afstand), er betingelserne for automatiseringen stadig opfyldt, og **AAPS** sætter bare det høje mål igen et minut senere.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**Hvis du har adgang til AAPS-telefonen**, kan du slå automatiseringen fra eller ændre den. Eller hvis du ikke vil det, kan du bare sætte et nyt midlertidigt mål på 5,6 i 60 min ved at trykke på målet på hovedskærmen eller via **Administrer** → **Midlertidigt mål**. Det forhindrer automatiseringen i at sætte det høje mål på 7,0.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**Hvis du ikke har adgang til AAPS-telefonen**, kan SMS-kommandoer bruges til en løsning, der kommer tæt på: f.eks. ved at bruge kommandoen »target meal« til at sætte et mål på 5,0 i 45 min (andre standardmål er 8,0 for aktivitet eller hypo, se tabellen). Men med SMS-kommandoer kan du ikke angive en _bestemt_ målværdi (f.eks. 5,6 i 60 minutter). Til det skal du bruge **AAPSClient**.
 
-### What happens if I change my mind about a command I have just sent?
+### Hvad sker der, hvis jeg fortryder en kommando, som jeg lige har sendt?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS** udfører kun den nyeste kommando. Hvis du altså skriver »bolus 1.5« og derefter, uden at godkende, sender en ny kommando »bolus 1«, ignorerer den den tidligere kommando med 1.5. **AAPS** sender altid omsorgspersonens telefon et svar, der bekræfter, hvad SMS-kommandoen er, før du bliver bedt om at indtaste godkendelseskoden, og også et svar efter handlingen.
 
-### Why didn't I get a response to an SMS command?
+### Hvorfor fik jeg ikke svar på en SMS-kommando?
 
-It could be for one of these reasons:
+Det kan være af en af disse grunde:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  Beskeden er ikke nået frem til telefonen (problemer med netværket). 2)  **AAPS** er stadig i gang med at behandle anmodningen (_f.eks._ en bolus, som kan tage noget tid at levere, afhængigt af din bolushastighed). 3)  **AAPS**-telefonen har ikke en god Bluetooth-forbindelse til pumpen, når kommandoen modtages, og kommandoen er mislykkedes (det giver som regel en alarm på **AAPS**-telefonen).
 
-### No response whatsoever for SMS commands
+### Slet intet svar på SMS-kommandoer
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
-* If using Android Messages App or Google Messages App, disable RCS messaging:
-  - open the specific SMS conversation in Messages
-  - Select the options ellipsis in the top right corner
-  - select "Details"
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+På omsorgspersonens telefon og/eller **AAPS**-telefonen kan du prøve at deaktivere følgende muligheder:
+* **Send som chatbesked** ![Deaktiver SMS som chatbesked](../images/remote_control_and_following/SMSdisableChat.png)
+* Hvis du bruger appen Android Messages eller Google Beskeder, så deaktiver RCS-beskeder:
+  - åbn den pågældende SMS-samtale i Beskeder
+  - Vælg menuen med de tre prikker øverst til højre
+  - vælg »Detaljer«
+  - Aktiver »Send kun SMS- og MMS-beskeder« ![Deaktiver RCS som chatbesked](../images/remote_control_and_following/SMSdisableRCS.png)
 
-### Errors carrying out commands
+### Fejl ved udførelse af kommandoer
 
-There are several possible reasons the command may not be successful:
+Der er flere mulige grunde til, at kommandoen ikke lykkes:
 
-* SMS commands setup isn’t complete/correct
-* You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
-* You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
-* The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led **AAPS** to calculate that the authenticator code had expired
-* The **AAPS** phone is out of range/contact with the pump
-* The system is already busy delivering a bolus
+* Opsætningen af SMS-kommandoer er ikke færdig/korrekt
+* Du har sendt en kommando i et forkert format (f.eks. »disconnect pump 45« i stedet for »pump disconnect 45«)
+* Du har brugt en forkert eller udløbet kode fra godkendelsesappen (det er som regel godt at vente et par sekunder på en ny kode, hvis den aktuelle snart udløber)
+* Kode+PIN var OK, men SMS'en blev forsinket på vej ud eller ind, så **AAPS** beregnede, at koden fra godkendelsesappen var udløbet
+* **AAPS**-telefonen er uden for rækkevidde/kontakt med pumpen
+* Systemet er allerede i gang med at give en bolus
 
-Common errors are shown in the examples below:
+Almindelige fejl er vist i eksemplerne nedenfor:
 
-![image](../images/remote-control-17.png)
+![billede](../images/remote_control_and_following/remote-control-17.png)
 
-### How can I stop a command once it has been authenticated?
+### Hvordan kan jeg stoppe en kommando, når den er godkendt?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+Det kan du ikke. Men du kan annullere en bolus, der er sendt via SMS, på selve **AAPS**-telefonen ved bare at annullere den i bolus-popup-vinduet, hvis du er hurtig. Mange SMS-kommandoer (bortset fra bolus og kulhydratmeldinger) kan let fortrydes, eller du kan gøre noget for at mindske uønskede virkninger, hvis der sker en fejl.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+Ved fejl med bolus og kulhydratmeldinger kan du stadig gøre noget. Hvis du f.eks. har meldt 20 g kulhydrater, men dit barn kun spiser 10 g, og du (eller en omsorgsperson på stedet) ikke kan slette behandlingen direkte på **AAPS**-telefonen, kan du sætte et højt midlertidigt mål eller vælge en lavere profil for at få **AAPS** til at være mindre aggressiv.
 
-### Multiple SMS
+### Flere SMS'er
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+Hvis du får den samme besked igen og igen (_f.eks._ et profilskift), har du måske ved et uheld lavet en løkke med andre apps. Det kan f.eks. være xDrip. Hvis det er tilfældet, så sørg for, at xDrip (eller en anden app) ikke uploader behandlinger til Nightscout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Hvis den anden app er installeret på flere telefoner, så sørg for at deaktivere upload på dem alle.
 
 (sms-commands-too-many-messages)=
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### Jeg får alt for mange SMS'er fra SMS-kommandoer. Kan jeg få færre, eller kan jeg få dem til at stoppe?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+Når du bruger SMS-kommandoer, kan der komme mange automatiske beskeder fra **AAPS**-telefonen til omsorgspersonens telefon. Du får også beskeder, f.eks. »Basalprofilen i pumpen er opdateret«, hvis du har automatiseringer sat op i **AAPS**. Det kan være nyttigt at have fri SMS i abonnementet til din **AAPS**-telefon (og til hver omsorgspersons telefon), hvis der bliver sendt mange SMS'er, og at slå SMS-notifikationer, alarmer eller vibrationer fra på alle telefoner. Det er ikke muligt at bruge SMS-kommandoer uden at få disse opdateringer. Derfor vil du måske hellere bruge en anden måde at kommunikere direkte med dit barn på (hvis barnet er gammelt nok) i stedet for SMS. Almindelige andre kommunikationsapps, som omsorgspersoner til **AAPS** bruger, er WhatsApp, LINE, Telegram og Facebook Messenger.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+Det er muligt at slå SMS'en »Basalprofilen i pumpen er opdateret« fra, når profilændringen kom fra Nightscout. For at gøre det skal du oprette en fil, der hedder **præcis** `do_not_send_sms_on_profile_change`, i mappen `extra` i din AAPS-mappe.

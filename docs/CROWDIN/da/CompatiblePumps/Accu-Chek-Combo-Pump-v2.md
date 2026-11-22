@@ -1,11 +1,11 @@
 # Accu-Chek Combo
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Denne software er en del af en gør-det-selv-løsning og er ikke et produkt. Den kræver, at DU læser, lærer og forstår systemet, også hvordan du bruger det. Den klarer ikke hele din diabetesbehandling for dig, men den kan hjælpe dig med at forbedre din diabetes og din livskvalitet, hvis du vil bruge den tid, der skal til. Skynd dig ikke, men giv dig selv tid til at lære. Du alene er ansvarlig for det, du gør med den.**
 
 ```{admonition} Accu-Chek Combo is being phased out
 :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche trækker sig ud af markedet for insulinpumper for at fokusere sine diabetesprodukter på Accu-Chek SmartGuide CGM. Roche har meddelt, at salget af både Accu-Chek Combo- og Accu-Chek Insight-pumperne stopper; den sidste pumpe, mikropumpen Accu-Chek Solo, udfases også (sidste leveringer i Tyskland i slutningen af 2025). Ændringen indføres region for region. Den begynder i Tyskland, og andre europæiske markeder ventes at følge efter. Hvis du er afhængig af denne pumpe, så planlæg i god tid et skift til en understøttet pumpe.
 ```
 
 ```{contents} Table of contents
@@ -13,327 +13,327 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Pumpens funktioner med AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Automatic DST and timezone handling.
+* Kommunikerer med **AAPS** via telefonens indbyggede Bluetooth uden en ekstra kommunikationsenhed.
+* Automatisk håndtering af sommertid og tidszoner.
 
-## Hardware and software requirements
+## Krav til hardware og software
 
-* A Roche Accu-Chek Combo (any firmware, they all work).
-* A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
-* A compatible phone running Android 12 or newer. See [release notes](#maintenance-android-version-aaps-version) for details.
-* The **AAPS** app installed on your phone.
+* En Roche Accu-Chek Combo (al firmware virker).
+* En Smartpix- eller Realtyme-enhed sammen med 360 Configuration Software til at konfigurere pumpen. (Roche sender gratis Smartpix-enheder og konfigurationssoftwaren til sine kunder, hvis de beder om det.)
+* En kompatibel telefon med Android 12 eller nyere. Se [Udgivelsesnoter](#maintenance-android-version-aaps-version) for detaljer.
+* Appen **AAPS** installeret på din telefon.
 
-Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
+Nogle telefoner virker bedre end andre. Det afhænger af, hvor god deres Bluetooth-understøttelse er, og om de har ekstra, meget aggressiv strømsparing. En liste over telefoner findes i dokumentet [Telefoner](#Phones-list-of-tested-phones). Bemærk, at listen ikke er komplet og bygger på brugernes egne erfaringer. Du er velkommen til også at skrive dine erfaringer ind og dermed hjælpe andre (disse projekter bygger på, at man giver hjælpen videre).
 
 (combov2-before-you-begin)=
-## Before you begin
+## Før du starter
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
+**SIKKERHED FØRST** - prøv ikke denne proces i en situation, hvor du ikke kan rette op på en fejl. Hav din Smartpix-/Realtyme-enhed klar sammen med 360 Configuration Software. Regn med at bruge cirka en time på at sætte alt op og kontrollere, at alt virker korrekt.
 
-Be aware of the following limitations:
+Vær opmærksom på disse begrænsninger:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
-* Only one basal profile (the first one) is supported.
-* The lowest basal rate in your **Profile** is 0.05 U/h. **AAPS** refuses a **Profile** with a lower rate. The Combo rounds basal rates to its own steps (0.01 U/h below 1 U/h, 0.05 U/h up to 10 U/h, 0.1 U/h above). **AAPS** uses the rates the pump really gives.
-* Temporary basal rates are limited to 500% of the current basal rate. **AAPS** takes this limit into account.
-* The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because you tap **Refresh** on the Accu-Chek Combo pump screen), it will notice that profile no. 1 is the current one, and enable the loop again.
-* If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
-* Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
-* Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB.
+* Forlænget bolus og multiwave-bolus understøttes ikke i øjeblikket (du kan bruge [Forlængede kulhydrater / »e-kulhydrater«](../DailyLifeWithAaps/ExtendedCarbs.md) i stedet).
+* Kun én basalprofil (den første) understøttes.
+* Den laveste basalrate i din **Profil** er 0,05 E/t. **AAPS** afviser en **Profil** med en lavere rate. Combo runder basalrater af til sine egne trin (0,01 E/t under 1 E/t, 0,05 E/t op til 10 E/t, 0,1 E/t over). **AAPS** bruger de rater, som pumpen faktisk giver.
+* Midlertidige basalrater er begrænset til 500% af den aktuelle basalrate. **AAPS** tager højde for denne grænse.
+* Loopet deaktiveres, hvis den aktive profil på pumpen ikke er profil nr. 1. Det fortsætter, indtil profil nr. 1 er gjort aktiv. Når det er gjort, opdager AAPS næste gang, den forbinder (enten af sig selv efter et stykke tid eller fordi du trykker på **Opdater** på Accu-Chek Combo-pumpeskærmen), at profil nr. 1 er den aktive, og aktiverer loopet igen.
+* Hvis loopet beder om at annullere en kørende TBR, sætter Combo i stedet en TBR på 90% eller 110% i 15 minutter. Det er, fordi en rigtig annullering af en TBR giver en alarm på pumpen med mange vibrationer, og disse vibrationer kan ikke slås fra.
+* Bluetooth-forbindelsens stabilitet er forskellig fra telefon til telefon. Det giver advarsler om »pump unreachable« (pumpe utilgængelig), hvor der ikke længere er forbindelse til pumpen. Hvis fejlen opstår, så sørg for, at Bluetooth er slået til, og tryk på **Opdater** på pumpeskærmen (**Administrer** > **Pumpe**) for at se, om det skyldtes et kortvarigt problem. Hvis der stadig ikke er forbindelse, så genstart telefonen, hvilket normalt løser det.
+* Der er et andet problem, hvor en genstart ikke hjælper, men hvor der skal trykkes på en knap på pumpen (det nulstiller pumpens Bluetooth-stak), før pumpen igen tager imod forbindelser fra telefonen.
+* Undgå at sætte en TBR på pumpen, da loopet styrer TBR'er. Det kan tage op til 20 minutter at opdage en ny TBR på pumpen, og TBR'ens virkning regnes først med fra det øjeblik, den opdages. I værste fald kan der altså være 20 minutter med en TBR, som ikke er med i IOB.
 
-The driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+Driveren understøtter i øjeblikket følgende sprog på Combo. (Det har intet med sproget i AAPS at gøre - det er sproget, der vises på selve Combos LCD-skærm.)
 
-* English
-* Spanish
-* French
-* Italian
-* Russian
-* Turkish
-* Polish
-* Czech
-* Hungarian
-* Slovak
-* Romanian
-* Croatian
-* Dutch
-* Greek
-* Finnish
-* Norwegian
-* Portuguese
-* Swedish
-* Danish
-* German
-* Slovenian
-* Lithuanian
+* Engelsk
+* Spansk
+* Fransk
+* Italiensk
+* Russisk
+* Tyrkisk
+* Polsk
+* Tjekkisk
+* Ungarsk
+* Slovakisk
+* Rumænsk
+* Kroatisk
+* Hollandsk
+* Græsk
+* Finsk
+* Norsk
+* Portugisisk
+* Svensk
+* Dansk
+* Tysk
+* Slovensk
+* Litauisk
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**Vigtigt**: Hvis din pumpe er sat til et sprog, som ikke er på denne liste, så kontakt udviklerne, og sæt pumpens sprog til et sprog på listen. Ellers virker driveren ikke korrekt.
 
-## Phone setup
+## Opsætning af telefonen
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+Det er meget vigtigt at sikre, at batterioptimering er slået fra. AAPS opdager allerede selv, når den er udsat for denne optimering, og beder i sin brugerflade om, at den bliver slået fra. Men på nyere Android-telefoner er Bluetooth _selv_ en app (en system-app). Og denne »Bluetooth-app« kører normalt _med batterioptimering slået til som standard_. Derfor kan Bluetooth holde op med at svare, når telefonen vil spare strøm, fordi den lukker Bluetooth-appen. Det betyder, at batterioptimering også skal slås fra i indstillingerne for Bluetooth-system-appen. Desværre er det forskelligt fra telefon til telefon, hvordan man finder Bluetooth-system-appen. I standard-Android går du til Indstillinger -> Apps -> Se alle N apps (N = antallet af apps på din telefon). Åbn derefter menuen i øverste højre hjørne, og tryk på »Vis system«, »Vis system-apps« eller »Alle apps«. Find nu en »Bluetooth«-app i den udvidede liste over apps. Vælg den, og tryk på »Batteri« på skærmen »Appinfo«. Slå batterioptimering fra der (kaldes nogle gange »batteriforbrug«).
 
-## Combo setup
+## Opsætning af Combo
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
+* Konfigurer pumpen med Accu-Chek 360 Configuration Software. Hvis du ikke har softwaren, så kontakt din Accu-Chek-hotline. De sender normalt registrerede brugere en cd med »360° Pump Configuration Software« og en SmartPix USB-infrarød forbindelsesenhed (Realtyme-enheden virker også, hvis du har den).
 
-  - **Required settings** (marked green in screenshots):
+  - **Krævede indstillinger** (markeret med grønt på skærmbillederne):
 
-     * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
-     * Enable Bluetooth
+     * Sæt eller lad menukonfigurationen stå på »Standard«. Så viser pumpen kun de menuer og handlinger, der understøttes, og skjuler dem, der ikke understøttes (forlænget bolus/multiwave-bolus, flere basalrater). Hvis de bruges, begrænses loop-funktionen, fordi loopet så ikke kan køre sikkert.
+     * Kontroller, at _Quick Info Text_ er sat til »QUICK INFO« (uden anførselstegn, findes under _Insulin Pump Options_).
+     * Sæt TBR _Maximum Adjustment_ til 500%
+     * Slå _Signal End of Temporary Basal Rate_ fra
+     * Sæt TBR _Duration increment_ til 15 min
+     * Slå Bluetooth til
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Anbefalede indstillinger** (markeret med blåt på skærmbillederne)
 
-     * Set low cartridge alarm to your liking
-     * Configure a max bolus suited for your therapy to protect against bugs in the software
-     * Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-     * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+     * Sæt alarmen for lav ampul, som du ønsker
+     * Konfigurer en maks. bolus, der passer til din behandling, for at beskytte mod fejl i softwaren
+     * Konfigurer på samme måde en maksimal TBR-varighed som sikkerhed. Tillad mindst 3 timer, da muligheden for at afbryde pumpen i 3 timer sætter 0% i 3 timer.
+     * Slå tastelåsen på pumpen til for at undgå bolus fra pumpen, især hvis pumpen er brugt før, og du er vant til at give hurtigbolus.
+     * Sæt display-timeout og menu-timeout til minimum, henholdsvis 5,5 og 5. Så kan AAPS hurtigere komme sig efter fejlsituationer, og der kommer færre vibrationer under sådanne fejl
 
-  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+  ![Skærmbillede af indstillinger for brugermenu](../images/combo/combo-menu-settings.png)
 
-  ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+  ![Skærmbillede af TBR-indstillinger](../images/combo/combo-tbr-settings.png)
 
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![Skærmbillede af bolusindstillinger](../images/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Skærmbillede af indstillinger for insulinampul](../images/combo/combo-insulin-settings.png)
 
-## Activating the driver and pairing it with the Combo
+## Aktivering af driveren og parring med Combo
 
-* Open the **menu** (☰) in the top-left corner, go to [**Configuration** > **Pump**](../SettingUpAaps/ConfigBuilder.md) and select **Accu-Chek Combo**.
+* Åbn **menuen** (☰) i øverste venstre hjørne, gå til [**Konfiguration** > **Pumpe**](../SettingUpAaps/ConfigBuilder.md), og vælg **Accu-Chek Combo**.
 
-  ![Configuration > Pump with the Accu-Chek Combo plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![Konfiguration > Pumpe med Accu-Chek Combo-pluginet](../images/v4/Configuration/configuration_pump_list_1.png)
 
-  Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
+  Når det er valgt, viser kortet **Accu-Chek Combo** to knapper, **Indstillinger** og **Åbn plugin**:
 
-  ![The Accu-Chek Combo plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_combo_enabled.png)
+  ![Accu-Chek Combo-pluginet valgt i Konfiguration > Pumpe](../images/v4/Pumps/accu_chek_combo_enabled.png)
 
-  **Settings** opens the settings of the Accu-Chek Combo driver (see [Settings](#combov2-preferences) below):
+  **Indstillinger** åbner indstillingerne for Accu-Chek Combo-driveren (se [Indstillinger](#combov2-preferences) nedenfor):
 
-  ![Accu-Chek Combo driver settings](../images/v4/Pumps/accu_chek_combo_settings.png)
+  ![Indstillinger for Accu-Chek Combo-driveren](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Open plugin** (or **Manage** > **Pump**) opens the Accu-Chek Combo pump screen. Before a pump is paired it shows **Not paired to a pump**:
+  **Åbn plugin** (eller **Administrer** > **Pumpe**) åbner Accu-Chek Combo-pumpeskærmen. Før en pumpe er parret, viser den **Ikke parret til en pumpe**:
 
-  ![Accu-Chek Combo pump screen before pairing](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
+  ![Accu-Chek Combo-pumpeskærmen før parring](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. The **Pair with pump** screen opens. Follow the steps shown on screen, then tap **Start pairing**. When Android asks for permission to make the phone visible to other Bluetooth devices, tap **Allow**. Eventually, the Combo shows a 10-digit pairing PIN on its screen, and **AAPS** asks for it. Enter that PIN in the **10-digit PIN** field.
+* Tryk på **Parring** på pumpeskærmen. Skærmen **Par med pumpe** åbner. Følg trinene på skærmen, og tryk derefter på **Start parring**. Når Android beder om tilladelse til at gøre telefonen synlig for andre Bluetooth-enheder, så tryk på **Tillad**. Til sidst viser Combo en 10-cifret parrings-PIN på sin skærm, og **AAPS** beder om den. Indtast denne PIN i feltet **10-cifret PIN**.
 
-  ![The Pair with pump screen with the Start pairing button](../images/combo/combov2-pairing-screen-1.png)
+  ![Skærmen Par med pumpe med knappen Start parring](../images/combo/combov2-pairing-screen-1.png)
 
-  ![Android asking to make the phone visible to other Bluetooth devices](../images/combo/combov2-pairing-bt-visible-prompt.png)
+  ![Android beder om at gøre telefonen synlig for andre Bluetooth-enheder](../images/combo/combov2-pairing-bt-visible-prompt.png)
 
-  ![Combo pairing in progress, scanning for the pump](../images/combo/combov2-pairing-screen-2.png)
+  ![Combo-parring i gang, scanner efter pumpen](../images/combo/combov2-pairing-screen-2.png)
 
-  The next pictures are from an older **AAPS** version. The steps and texts are the same, but the screens look slightly different.
+  De næste billeder er fra en ældre version af **AAPS**. Trinene og teksterne er de samme, men skærmene ser lidt anderledes ud.
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
+  ![Skærmbillede af Combos parringsskærm 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Skærmbillede af Combos parringsskærm 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Skærmbillede af Combos parringsskærm 4](../images/combo/combov2-pairing-screen-5.png)
 
-* If the PIN is entered incorrectly, **AAPS** shows **PIN did not work. Check if there was a typo. If this keeps happening, cancel and retry pairing.**
+* Hvis PIN indtastes forkert, viser **AAPS** **PIN virkede ikke. Tjek om der var en tastefejl. Hvis dette bliver ved med at ske, annuller og prøv at parre igen.**
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+  ![Skærmbillede af Combos parringsskærm 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* When **Successfully paired with Combo** is shown, tap **OK**. You return to the pump screen, which now shows the pump status (see [Accu-Chek Combo pump screen contents](#combov2-tab-contents) below). The **Pairing** button is replaced by **Unpair**.
+* Når **Succesfuldt parret med Combo** vises, så tryk på **OK**. Du kommer tilbage til pumpeskærmen, som nu viser pumpestatus (se [Indhold på Accu-Chek Combo-pumpeskærmen](#combov2-tab-contents) nedenfor). Knappen **Parring** erstattes af **Ophæv parring**.
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* For at kontrollere din opsætning (med pumpen **afbrudt** fra enhver kanyle for en sikkerheds skyld!) bruger du AAPS til at sætte en TBR på 500% i 15 min og give en bolus. Pumpen skal nu have en kørende TBR og bolussen i historikken. AAPS skal også vise den aktive TBR og den leverede bolus.
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* På Combo anbefales det at slå tastelåsen til for at undgå bolus fra pumpen, især hvis pumpen er brugt før, og du er vant til at bruge funktionen »quick bolus«.
 
-## Notes about pairing
+## Noter om parring
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+Accu-Chek Combo blev udviklet, før Bluetooth 4.0 kom, og kun ét år efter den allerførste Android-version kom. Derfor er dens måde at parre med andre enheder på ikke 100% kompatibel med, hvordan det gøres i Android i dag. For helt at løse dette skulle AAPS have tilladelser på systemniveau, og dem har kun system-apps. De installeres af telefonproducenterne på telefonen - brugere kan ikke installere system-apps.
 
-The consequence of this is that pairing will never be 100% without problems. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+Derfor vil parring aldrig være 100% uden problemer. Under parring kan Androids Bluetooth-PIN-dialog især vises kort og forsvinde af sig selv. Men nogle gange bliver den på skærmen og beder om en 4-cifret PIN. (Den må ikke forveksles med Combos 10-cifrede parrings-PIN.) Indtast ikke noget, tryk bare på Annuller. Hvis parringen ikke fortsætter, så følg vejledningen på skærmen for at prøve parringen igen.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo pump screen contents
+## Indhold på Accu-Chek Combo-pumpeskærmen
 
-To open the pump screen, go to **Manage** > **Pump**. Once a pump is paired, it shows the following information (items are listed from top to bottom):
+Gå til **Administrer** > **Pumpe** for at åbne pumpeskærmen. Når en pumpe er parret, viser den følgende oplysninger (punkterne står fra top til bund):
 
-![Screenshot of the Accu-Chek Combo pump screen with pairing (older AAPS version)](../images/combo/combov2-tab-with-pairing.png)
+![Skærmbillede af Accu-Chek Combo-pumpeskærmen med parring (ældre AAPS-version)](../images/combo/combov2-tab-with-pairing.png)
 
-1. **Driver state**: The driver can be in one of the following states:
-   - **Disconnected**: There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - **Connecting**
-   - **Checking pump**: the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - **Ready**: the driver is ready to accept commands from AAPS
-   - **Suspended**: the pump is suspended (shown as "stopped" in the Combo)
-   - A description of the command being executed, for example **Setting basal profile** or **Updating pump status**
-   - **Error**: an error occurred; the connection was terminated, any ongoing command was aborted
-2. **Last connection**: How many minutes ago the driver successfully connected to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. **Battery**: Battery level; the Combo only indicates **Full**, **Low** or **Empty**, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-4. **Reservoir**: How many IU are currently in the Combo's reservoir
-5. **Last bolus**: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is not shown
-6. **Temp basal**: Details about the currently active temporary basal; if none is currently active, this is not shown
-7. **Base basal rate**: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-8. **Serial number**: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-9. **Bluetooth address**: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+1. **Driver-status**: Driveren kan være i en af følgende tilstande:
+   - **Forbindelse afbrudt**: Der er ingen Bluetooth-forbindelse. Driveren er i denne tilstand det meste af tiden og forbinder kun til pumpen, når det er nødvendigt - det sparer strøm
+   - **Forbinder**
+   - **Kontrollerer pumpe**: Pumpen er forbundet, men driveren udfører lige nu sikkerhedskontroller for at sikre, at alt er OK og opdateret
+   - **Klar**: Driveren er klar til at modtage kommandoer fra AAPS
+   - **Sat på pause**: Pumpen er sat på pause (vises som »stopped« på Combo)
+   - En beskrivelse af den kommando, der udføres, f.eks. **Indstiller basalprofil** eller **Opdaterer pumpestatus**
+   - **Fejl**: Der er sket en fejl; forbindelsen blev afsluttet, og en igangværende kommando blev afbrudt
+2. **Seneste forbindelse**: Hvor mange minutter siden driveren sidst fik forbindelse til Combo. Hvis det er mere end 30 minutter, vises punktet med rød farve
+3. **Batteri**: Batteriniveau. Combo viser kun **Fuldt**, **Lavt** eller **Tomt** og giver ikke noget mere præcist (som en procent), så kun disse tre niveauer vises her
+4. **Reservoir**: Hvor mange IE der lige nu er i Combos reservoir
+5. **Seneste bolus**: Hvor mange minutter siden den seneste bolus blev givet. Hvis der ikke er givet nogen bolus, siden AAPS blev startet, vises dette ikke
+6. **Midlertidig basal**: Detaljer om den aktive midlertidige basal. Hvis ingen er aktiv, vises dette ikke
+7. **Standardbasalrate**: Den aktive standardbasalrate (»standard« betyder basalraten uden en aktiv TBR, der ændrer basalratens faktor)
+8. **Serienummer**: Combos serienummer, som pumpen viser det (det svarer til serienummeret bag på Combo)
+9. **Bluetooth adresse**: Combos 6-byte Bluetooth-adresse, vist i formatet `XX:XX:XX:XX:XX:XX`
 
-While the driver is doing something (for example, setting a basal profile), a box below the list describes the current activity, with a thin progress bar showing the progress.
+Mens driveren er i gang med noget (f.eks. at sætte en basalprofil), beskriver en boks under listen den aktuelle aktivitet med en tynd statuslinje, der viser fremskridtet.
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing. When the driver switches to the command mode however, that field is left blank.
+Combo kan styres via Bluetooth i tilstanden _remote-terminal_ eller i tilstanden _command_. Remote-terminal-tilstanden svarer til »fjernbetjeningstilstanden« på Combos måler, som efterligner pumpens LCD-skærm og fire knapper. Nogle kommandoer skal driveren udføre i denne tilstand, da de ikke findes i command-tilstanden. Den sidste tilstand er meget hurtigere, men som sagt begrænset i, hvad den kan. Når remote-terminal-tilstanden er aktiv, vises den aktuelle remote-terminal-skærm i feltet lige over tegningen af Combo. Når driveren skifter til command-tilstanden, er feltet dog tomt.
 
-(You do not influence this; the driver fully decides on its own what mode to use. This is merely a note for you to know why sometimes you can see Combo frames in that field.)
+(Det har du ingen indflydelse på; driveren bestemmer helt selv, hvilken tilstand den bruger. Det er kun en note, så du ved, hvorfor du nogle gange kan se Combo-billeder i feltet.)
 
-At the bottom, there are these buttons:
+Nederst er der disse knapper:
 
-- **Refresh**: Triggers an immediate pump status update. It is also used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)). You can only tap it when the driver is disconnected, suspended or in the error state.
-- **Unpair**: Unpairs the paired Combo from **AAPS** and Android, after you confirm **Do you really want to unpair the pump?**. When no pump is paired, this button is replaced by **Pairing**.
+- **Opdater**: Starter en opdatering af pumpestatus med det samme. Den bruges også til at fortælle AAPS, at en tidligere fundet fejl nu er løst, og at AAPS igen kan kontrollere, at alt er OK (mere om det nedenfor i [afsnittet om alarmer](#combov2-alerts)). Du kan kun trykke på den, når driveren er afbrudt, sat på pause eller i fejltilstand.
+- **Ophæv parring**: Ophæver parringen mellem den parrede Combo og **AAPS** og Android, efter du har bekræftet **Vil du virkelig ophæve parringen med pumpen?**. Når ingen pumpe er parret, erstattes denne knap af **Parring**.
 
 (combov2-preferences)=
-## Settings
+## Indstillinger
 
-These settings are available for the Combo driver (**Configuration** > **Pump** > **Accu-Chek Combo** > **Settings**, or the settings icon (cog wheel) on the pump screen). Items are listed from top to bottom:
+Disse indstillinger findes for Combo-driveren (**Konfiguration** > **Pumpe** > **Accu-Chek Combo** > **Indstillinger**, eller indstillingsikonet (tandhjul) på pumpeskærmen). Punkterne står fra top til bund:
 
-1. **Discovery duration (in seconds)**: When pairing, the driver makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
-2. **Autodetect and automatically enter insulin reservoir change**: If enabled, the driver enters the "reservoir change" that you would normally enter yourself with **Manage** > **Prime/Fill**. This is explained [in further detail below](#combov2-autodetections).
-3. **Autodetect and automatically enter battery change**: If enabled, the driver enters the "battery change" that you would normally enter yourself with **Manage** > **Pump Battery Change**. This is explained [in further detail below](#combov2-autodetections).
-4. **Enable verbose Combo logging**: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to **AAPS** logs and lessen their usefulness.
+1. **Opdagelsesvarighed (i sekunder)**: Ved parring gør driveren telefonen synlig for pumpen. Dette styrer, hvor længe telefonen kan findes. Som standard er maksimum (300 sekunder = 5 minutter) valgt. Android tillader ikke, at telefonen kan findes uden tidsgrænse, så der skal vælges en varighed.
+2. **Registrer skift af insulinreservoir automatisk**: Hvis den er slået til, registrerer driveren det »reservoirskift«, som du normalt selv ville registrere med **Administrer** > **Klargør/Fyld**. Det forklares [mere detaljeret nedenfor](#combov2-autodetections).
+3. **Registrer batteriskift automatisk**: Hvis den er slået til, registrerer driveren det »batteriskift«, som du normalt selv ville registrere med **Administrer** > **Skift af pumpebatteri**. Det forklares [mere detaljeret nedenfor](#combov2-autodetections).
+4. **Aktiver detaljeret Combo-logning**: Driveren logger da meget mere. **FORSIGTIG**: Slå ikke dette til, medmindre en udvikler beder dig om det. Ellers kan det give meget støj i logfilerne fra **AAPS** og gøre dem mindre nyttige.
 
-Pairing and unpairing are done on the pump screen, not in the settings (see above).
+Parring og ophævelse af parring sker på pumpeskærmen, ikke i indstillingerne (se ovenfor).
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## Automatisk opdagelse og registrering af batteri- og reservoirskift
 
-The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
+Driveren kan opdage batteri- og reservoirskift ved at holde øje med batteri- og reservoirniveauet. Hvis Combo sidste gang, pumpestatus blev opdateret, meldte batteriniveauet som lavt, og batteriniveauet nu ved den nye opdatering af pumpestatus er normalt, så konkluderer driveren, at brugeren må have skiftet batteriet. Samme logik bruges for reservoirniveauet: Hvis det nu er højere end før, tolkes det som et reservoirskift.
 
-This only works if the battery and reservoir are replaced when these levels are reported as low _and_ the battery and reservoir are sufficiently filled.
+Det virker kun, hvis batteri og reservoir skiftes, når niveauerne meldes som lave, _og_ det nye batteri og reservoir er tilstrækkeligt fyldt.
 
-These autodetections can be turned off in the driver [settings](#combov2-preferences).
+Denne automatiske opdagelse kan slås fra i driverens [indstillinger](#combov2-preferences).
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## Alarmer (advarsler og fejl) og hvordan de håndteres
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+Combo viser alarmer som remote-terminal-skærme. Advarsler vises med en »Wx«-kode (x er et ciffer) sammen med en kort beskrivelse. Et eksempel er »W7«, »TBR OVER«. Fejl ligner dem, men vises i stedet med en »Ex«-kode.
 
-Certain warnings are automatically dismissed by the driver. These are:
+Visse advarsler afvises automatisk af driveren. Det er:
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main screen
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main screen
-- W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
+- W1 »reservoir low« : driveren laver den om til en advarsel om »lavt reservoir«, som vises på AAPS' hovedskærm
+- W2 »battery low« : driveren laver den om til en advarsel om »lavt batteri«, som vises på AAPS' hovedskærm
+- W3, W6, W7, W8 : disse er kun til information for brugeren, så det er sikkert, at driveren afviser dem automatisk
 
-Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo pump screen contents above](#combov2-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by tapping **Refresh** on the Accu-Chek Combo pump screen. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+Andre advarsler afvises _ikke_ automatisk. Fejl afvises heller _aldrig_ automatisk. Begge dele håndteres på samme måde: Driveren viser en alarmdialog oven på AAPS' brugerflade og afbryder alle igangværende kommandoer. Driveren skifter så til tilstanden »fejl« (se [Indhold på Accu-Chek Combo-pumpeskærmen ovenfor](#combov2-tab-contents)). I denne tilstand kan der ikke udføres kommandoer. Brugeren skal håndtere fejlen på pumpen; f.eks. kan en tilstopningsfejl kræve, at kanylen skiftes. Når brugeren har løst fejlen, kan normal drift genoptages ved at trykke på **Opdater** på Accu-Chek Combo-pumpeskærmen. Driveren forbinder så til Combo og opdaterer dens status. Den kontrollerer bl.a., om der stadig vises en fejl på skærmen. Driveren opdaterer også selv pumpestatus efter et stykke tid, så du behøver ikke trykke på knappen.
 
-Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Combo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
+Bolus er et særtilfælde. Den gives i Combos command-tilstand, som ikke melder, hvis der kommer en alarm midt i en bolus. Derfor kan driveren ikke automatisk afvise advarsler _under_ en bolus. Det betyder desværre, at pumpen bipper, indtil bolussen er færdig. Den mest almindelige alarm midt i en bolus er normalt W1 »reservoir low«. **Afvis ikke** selv Combo-advarsler manuelt på pumpen under en bolus. Du risikerer at afbryde bolussen. Driveren tager sig af advarslen, når bolussen er færdig.
 
-Alerts that happen while the driver is not connected to the Combo will not be noticed by the driver. The Combo has no way of automatically pushing that alert to the phone; it is always the phone that has to initiate the connection. As a consequence, the alert will persist until the driver connects to the pump. You can tap **Refresh** on the pump screen to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+Driveren opdager ikke alarmer, der kommer, mens den ikke er forbundet til Combo. Combo kan ikke selv sende alarmen til telefonen; det er altid telefonen, der skal starte forbindelsen. Derfor bliver alarmen ved, indtil driveren forbinder til pumpen. Du kan trykke på **Opdater** på pumpeskærmen for at starte en forbindelse, så driveren kan håndtere alarmen med det samme (i stedet for at vente, til AAPS selv starter en forbindelse).
 
-**IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by tapping **Refresh** or by the driver's eventual auto-update) and no error is shown anymore.
+**VIGTIGT**: Hvis der opstår en fejl, eller der vises en advarsel, som ikke er en af dem, der afvises automatisk, går driveren i fejltilstand. I denne tilstand **BLIVER LOOPET BLOKERET**, indtil pumpestatus er opdateret! Blokeringen ophæves, når pumpestatus er opdateret (enten ved at trykke på **Opdater** eller ved driverens egen automatiske opdatering), og der ikke længere vises en fejl.
 
-## Things to be careful about when using the Combo
+## Ting du skal passe på, når du bruger Combo
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-* Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
-* Don't set or cancel a TBR on the pump. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-* Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#combov2-before-you-begin)).
-* Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](#combov2-alerts) for a more detailed explanation why.
+* Husk, at dette ikke er et produkt. Især i starten skal brugeren holde øje med og forstå systemet, dets begrænsninger og hvordan det kan svigte. Det frarådes kraftigt at bruge dette system, hvis den person, der bruger det, ikke helt kan forstå systemet.
+* På grund af den måde, Combos fjernbetjening virker på, er flere handlinger (især at sætte en basalprofil) langsomme sammenlignet med andre pumper. Det er en uheldig begrænsning ved Combo, som ikke kan løses.
+* Sæt eller annuller ikke en TBR på pumpen. Loopet styrer TBR'er og kan ikke virke pålideligt på anden måde, da det ikke er muligt at finde starttidspunktet for en TBR, som brugeren har sat på pumpen.
+* Tryk ikke på knapper på pumpen, mens AAPS kommunikerer med pumpen (Bluetooth-logoet vises på pumpen, mens den er forbundet til AAPS). Gør du det, afbrydes Bluetooth-forbindelsen. Gør det kun, hvis der er problemer med at oprette forbindelse (se [afsnittet »Før du starter« ovenfor](#combov2-before-you-begin)).
+* Tryk ikke på knapper, mens pumpen giver bolus. Prøv især ikke at afvise alarmer ved at trykke på knapper. Se [afsnittet om alarmer](#combov2-alerts) for en mere detaljeret forklaring af hvorfor.
 
-## Checklist for when no connection can be established with the Combo
+## Tjekliste, når der ikke kan oprettes forbindelse til Combo
 
-The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
+Driveren gør sit bedste for at forbinde til Combo og bruger et par tricks for at gøre forbindelsen så pålidelig som muligt. Alligevel oprettes forbindelsen nogle gange ikke. Her er nogle trin, du kan prøve for at løse problemet.
 
-1. Press a button on the Combo. Sometimes, the Combo's Bluetooth stack becomes non-responsive, and does not accept connections anymore. By pressing a button on the Combo and making the LCD show something, the Bluetooth stack is reset. Most of the time, this is the only step that's needed to fix the connection issues.
-2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
-3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
-4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+1. Tryk på en knap på Combo. Nogle gange holder Combos Bluetooth-stak op med at svare og tager ikke længere imod forbindelser. Når du trykker på en knap på Combo, så LCD-skærmen viser noget, nulstilles Bluetooth-stakken. Som regel er det det eneste trin, der skal til for at løse forbindelsesproblemerne.
+2. Genstart telefonen. Det kan være nødvendigt, hvis der er et problem med selve telefonens Bluetooth-stak.
+3. Hvis Combos batterilåg er gammelt, så overvej at skifte det. Gamle batterilåg kan give problemer med Combos strømforsyning, og det påvirker Bluetooth.
+4. Hvis forbindelsesforsøgene stadig fejler, så overvej at ophæve parringen og derefter parre pumpen igen.
 
 (combov2-tips-for-basic-usage)=
-## Tips for basic usage
+## Tips til almindelig brug
 
-### How to ensure smooth operations
+### Sådan sikrer du en stabil drift
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tips regarding the battery.
-* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys.
+* **Hav altid smartphonen med dig**, og læg den ved siden af din seng om natten. Da din pumpe kan ligge bag eller under din krop, mens du sover, virker en højere placering (på en hylde eller et bræt) bedst.
+* Sørg altid for, at pumpebatteriet er så fuldt som muligt. Se afsnittet om batteriet for tips om batteriet.
+* Betjen så vidt muligt kun pumpen via AAPS-appen. Det bliver lettere, hvis du slår tastelåsen til på pumpen under **PUMP SETTINGS / KEY LOCK / ON**. Kun når du skifter batteri eller ampul, er det nødvendigt at bruge pumpens knapper.
 
-![Keylock](../images/combo/combo-tips-keylock.png)
+![Tastelås](../images/combo/combo-tips-keylock.png)
 
-### Pump not reachable. What to do?
+### Pumpen kan ikke nås. Hvad gør du?
 
-#### Activate pump unreachable alarm
-* In **AAPS**, tap the **Settings** (gear) icon at the top right of the main screen, go to **Local alerts**, activate **Alert if pump is unreachable** and set **Pump unreachable threshold** to **31** minutes.
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+#### Aktiver alarmen for utilgængelig pumpe
+* I **AAPS** trykker du på ikonet **Indstillinger** (tandhjul) øverst til højre på hovedskærmen, går til **Lokale alarmer**, aktiverer **Advar, hvis pumpen er utilgængelig** og sætter **Grænse for utilgængelig pumpe** til **31** minutter.
+* Så har du tid nok til at forlade rummet, mens din telefon ligger på bordet, uden at alarmen går. Men du får besked, hvis pumpen ikke kan nås i længere tid end varigheden af en midlertidig basalrate.
 
-#### Restore reachability of the pump
+#### Få forbindelse til pumpen igen
 
-* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, tap **Refresh** on the Accu-Chek Combo pump screen (**Manage** > **Pump**). Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump.
+* Når AAPS melder en **Pumpe utilgængelig**-alarm, så lås først tastelåsen op, og **tryk på en vilkårlig knap på pumpen** (f.eks. »ned«-knappen). Så snart pumpens display er slukket, så tryk på **Opdater** på Accu-Chek Combo-pumpeskærmen (**Administrer** > **Pumpe**). Som regel virker kommunikationen så igen.
+* Hvis det ikke hjælper, så genstart din smartphone. Efter genstarten aktiveres AAPS igen, og der oprettes en ny forbindelse til pumpen.
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* Test med forskellige smartphones har vist, at visse smartphones udløser fejlen »pumpe utilgængelig« oftere end andre. Se [Telefoner](#Phones-list-of-tested-phones) for smartphones, der er testet med godt resultat.
 
-#### Root causes and consequences of frequent communication errors
-* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the treatment buttons (QuickLaunch toolbar) on the main screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last connection** field of the pump screen (**Manage** > **Pump**), you can check when AAPS last communicated with the pump.
+#### Årsager til og følger af hyppige kommunikationsfejl
+* På telefoner med **lidt hukommelse** (eller **aggressive strømspareindstillinger**) bliver AAPS ofte lukket ned. Du kan se det ved, at behandlingsknapperne (Hurtigstart-værktøjslinjen) på hovedskærmen ikke vises, når du åbner AAPS, fordi systemet er ved at starte op. Det kan udløse alarmer om »pumpe utilgængelig« ved opstart. I feltet **Seneste forbindelse** på pumpeskærmen (**Administrer** > **Pumpe**) kan du se, hvornår AAPS sidst kommunikerede med pumpen.
 
-![No connection to pump](../images/combo/combov2-tips-no-connection-to-pump.png)
+![Ingen forbindelse til pumpen](../images/combo/combov2-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed.
+* Denne fejl kan tømme pumpens batteri hurtigere, fordi basalprofilen læses fra pumpen, når appen genstartes.
+* Den øger også risikoen for den fejl, der får pumpen til at afvise alle forbindelser, indtil der trykkes på en knap på pumpen.
 
-### Cancellation of temporary basal rate fails
-* Occasionally, AAPS cannot automatically cancel a **TBR CANCELED** alert. Then you have to either tap **Refresh** on the Accu-Chek Combo pump screen or the alarm on the pump will need to be confirmed.
+### Annullering af midlertidig basalrate mislykkes
+* En gang imellem kan AAPS ikke automatisk afvise en **TBR CANCELED**-alarm. Så skal du enten trykke på **Opdater** på Accu-Chek Combo-pumpeskærmen eller bekræfte alarmen på pumpen.
 
-### Pump battery considerations
+### Om pumpebatteriet
 
-#### Changing the battery
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop** for 1 hour.
-* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
+#### Skift af batteri
+* Efter en alarm om **lavt batteri** skal batteriet skiftes så hurtigt som muligt, så der altid er strøm nok til en pålidelig Bluetooth-forbindelse til smartphonen, også hvis telefonen er længere væk fra pumpen.
+* Selv efter en alarm om **lavt batteri** kan batteriet ofte bruges i ret lang tid. Det anbefales dog altid at have et nyt batteri med dig, når alarmen »lavt batteri« har lydt.
+* Før du skifter batteriet, så tryk på **Loop**-symbolet på hovedskærmen, og vælg **Suspender loop** i 1 time.
+* Vent, til telefonen kommunikerer med pumpen, og Bluetooth-logoet på pumpen forsvinder.
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![Bluetooth slået til](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* You don't need to re-set the pump's clock after the battery change: AAPS automatically updates the pump's date and time.
-* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
+* Lås tastelåsen op på pumpen, sæt pumpen i stop-tilstand, bekræft en eventuelt annulleret midlertidig basalrate, og skift batteriet hurtigt.
+* Du behøver ikke at stille pumpens ur igen efter batteriskiftet: AAPS opdaterer automatisk pumpens dato og klokkeslæt.
+* Sæt derefter pumpen tilbage i kørselstilstand, og vælg **Genoptag**, når du trykker på ikonet **Loop suspenderet** på hovedskærmen.
+* AAPS sætter en nødvendig midlertidig basalrate igen, når den næste blodsukkerværdi kommer.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
-#### Battery type and causes of short battery life
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries.
+#### Batteritype og årsager til kort batterilevetid
+* Da meget Bluetooth-kommunikation bruger meget strøm, skal du kun bruge **batterier af høj kvalitet** som Energizer Ultimate Lithium, »power one«-batterierne fra den »store« Accu-Chek-servicepakke, eller, hvis du vil bruge et genopladeligt batteri, Eneloop-batterier.
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+Typisk levetid for de forskellige batterityper:
+* **Energizer Ultimate Lithium**: 4 til 7 uger
+* **Power One Alkaline** (Varta) fra servicepakken: 2 til 4 uger
+* **Eneloop genopladelige** batterier (BK-3MCCE): 1 til 3 uger
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period.
-* The smart phone hardware and software (Android operating system and Bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+Hvis din batterilevetid er meget kortere end ovenfor, så tjek disse mulige årsager:
+* Der findes nogle varianter af Combo-pumpens skruelåg til batteriet, som delvist kortslutter batterierne og tømmer dem hurtigt. Låg uden dette problem kan kendes på de gyldne metalkontakter.
+* Hvis pumpens ur ikke »overlever« et kort batteriskift, er kondensatoren, som holder uret i gang under en kort strømafbrydelse, sandsynligvis i stykker. I så fald kan det hjælpe at få pumpen udskiftet af Roche, hvilket ikke er et problem i garantiperioden.
+* Smartphonens hardware og software (Android-styresystemet og Bluetooth-stakken) påvirker også pumpens batterilevetid, selvom de præcise faktorer endnu ikke er helt kendt. Hvis du har mulighed for det, så prøv en anden smartphone, og sammenlign batterilevetiden.
 
-### Extended bolus, multiwave bolus
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Use **e-Carbs** when entering carbs or using the Bolus wizard by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in your blood. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.
-* Before eating, set a temporary **Eating Soon** target of 80 mg/dL (4.4 mmol/L) for several hours (press the target on the main screen, or **Manage** > **Temp Target**). The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **Bolus wizard** to enter the full carbs of the meal, but do not directly apply the values it suggests. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+### Forlænget bolus, multiwave-bolus
+OpenAPS-algoritmen understøtter ikke en samtidig forlænget bolus eller multiwave-bolus. Men en lignende behandling kan opnås med disse alternativer:
+* Brug **e-kulhydrater**, når du indtaster kulhydrater eller bruger bolusberegneren: Indtast kulhydraterne for hele måltidet og den tid, du forventer, at kulhydraterne er om at komme ud i blodet som glukose. Systemet beregner så små kulhydratmængder fordelt ligeligt over hele varigheden. Det får algoritmen til at give tilsvarende insulin, mens den hele tiden holder øje med, om blodsukkeret stiger eller falder. For en multiwave-lignende bolus kan du også kombinere en mindre bolus med det samme med e-kulhydrater.
+* Før du spiser, så sæt et midlertidigt mål **Spiser snart** på 80 mg/dl (4,4 mmol/l) i flere timer (tryk på målet på hovedskærmen, eller **Administrer** > **Midlertidigt mål**). Varigheden bør bygge på det tidsrum, du ville vælge til en forlænget bolus. Det holder dit mål lavere end normalt og øger derfor den mængde insulin, der gives.
+* Brug derefter **Bolusberegner** til at indtaste alle måltidets kulhydrater, men brug ikke direkte de værdier, den foreslår. Hvis der skal gives en multiwave-lignende bolus, så sæt insulindosis ned. Afhængigt af måltidet skal algoritmen nu give ekstra SMB'er eller højere midlertidige basalrater for at modvirke stigningen i blodsukkeret. Her skal du være meget forsigtig, når du afprøver basalratens sikkerhedsgrænser (maks. E/t, maks. basal-IOB), og om nødvendigt ændre dem midlertidigt.
 
-* Don't use the extended or multiwave bolus directly on the pump. The driver does not support them (see [Before you begin](#combov2-before-you-begin)); if a multiwave bolus is given on the pump anyway, **AAPS** records it from the pump history as a normal bolus plus an extended bolus, so it is counted in IOB. An extended bolus does not work in a closed loop environment (see [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details).
+* Brug ikke forlænget bolus eller multiwave-bolus direkte på pumpen. Driveren understøtter dem ikke (se [Før du starter](#combov2-before-you-begin)). Hvis der alligevel gives en multiwave-bolus på pumpen, registrerer **AAPS** den fra pumpehistorikken som en normal bolus plus en forlænget bolus, så den tælles med i IOB. En forlænget bolus virker ikke i et lukket loop (se [denne side](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for detaljer).
 
-### Alarms at bolus delivery
-* After each bolus, the driver reads the pump's bolus history. This is a safety mechanism to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump.
-* Before a bolus, if the pump history has a bolus that **AAPS** did not know about (for example, a bolus given directly on the pump), the requested bolus is **not given**, because it was calculated without that insulin. **AAPS** shows **The pump history has a bolus that AAPS did not know about. The requested bolus was not given...** Check the bolus history on the pump and your IOB. If a bolus is still needed, calculate it again. This also applies when the unknown bolus is found on a new connection.
-* If the bolus was given but the pump history also had other boluses that **AAPS** did not know about, they are recorded now and **AAPS** asks you to check IOB before the next bolus.
-* If the connection to the pump is lost **during** a bolus, **AAPS** does not record 0 U: it shows how much the pump had given by then and warns that the pump may still give the rest. **Do not bolus again.** **AAPS** reads the real amount from the pump history at the next connection.
-* If the connection is lost while **AAPS** sends the bolus, it is not known whether the pump got it. Check the bolus history on the pump before the next bolus.
-* If **AAPS** cannot confirm that a bolus was delivered, it shows **Bolus delivery failed. It appears no bolus was delivered. To be sure, please check the pump to avoid a double bolus and then bolus again.** Boluses are never retried automatically.
+### Alarmer ved bolus
+* Efter hver bolus læser driveren pumpens bolushistorik. Det er en sikkerhedsfunktion, så insulin om bord (IOB) beregnes korrekt, også når en bolus gives direkte fra pumpen.
+* Hvis pumpehistorikken før en bolus har en bolus, som **AAPS** ikke kendte til (f.eks. en bolus givet direkte på pumpen), bliver den ønskede bolus **ikke givet**, fordi den blev beregnet uden den insulin. **AAPS** viser **Pumpehistorikken har en bolus, som AAPS ikke kendte til. Den ønskede bolus blev ikke givet...** Tjek bolushistorikken på pumpen og din IOB. Hvis der stadig er brug for en bolus, så beregn den igen. Det gælder også, når den ukendte bolus findes ved en ny forbindelse.
+* Hvis bolussen blev givet, men pumpehistorikken også havde andre boluser, som **AAPS** ikke kendte til, bliver de registreret nu, og **AAPS** beder dig tjekke IOB før næste bolus.
+* Hvis forbindelsen til pumpen afbrydes **under** en bolus, registrerer **AAPS** ikke 0 IE: Den viser, hvor meget pumpen havde givet indtil da, og advarer om, at pumpen måske stadig giver resten. **Giv ikke bolus igen.** **AAPS** læser den rigtige mængde fra pumpehistorikken ved næste forbindelse.
+* Hvis forbindelsen afbrydes, mens **AAPS** sender bolussen, vides det ikke, om pumpen modtog den. Tjek bolushistorikken på pumpen før næste bolus.
+* Hvis **AAPS** ikke kan bekræfte, at en bolus blev givet, viser den **Bolus levering mislykkedes. Det ser ud til at ingen bolus blev leveret. Kontroller venligst pumpen for at undgå en dobbelt bolus og derefter bolus igen.** Boluser gentages aldrig automatisk.
 
-## Where to get help
+## Hvor kan du få hjælp
 
-Development of the Combo driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Combo-driveren udvikles af fællesskabet på **frivillig** basis. Før du beder om hjælp:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Læs** det relevante afsnit i denne dokumentation for at bekræfte, hvordan funktionen skal virke.
+2. **Spørg** i kanalen *#AAPS* på [Discord](https://discord.gg/4fQUWHZ4Mw) eller i en af de andre [kanaler i fællesskabet](../GettingHelp/WhereCanIGetHelp.md).
+3. **Rapporter en fejl** ved at søge i de [eksisterende issues](https://github.com/nightscout/AndroidAPS/issues); hvis din fejl ikke er på listen, så opret et [nyt issue](https://github.com/nightscout/AndroidAPS/issues), og vedhæft dine [logfiler](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Når du beder om hjælp, så oplys din telefons mærke og model, Android-version, **AAPS**-version og en enkel beskrivelse af problemet (hvad er ændret, hvornår virkede det sidst).

@@ -73,7 +73,7 @@ HbA1c: odhad výsledného glykovaného hemoglobínu na základe priemeru meraní
 
 - **Graf**: jeden deň od polnoci do polnoci. Čiara je **Medián** (polovica vašich hodnôt v danej hodine bola nižšia, polovica vyššia). Okolo nej jedno pásmo obsahuje strednú polovicu vašich hodnôt (**25–75%**) a širšie pásmo väčšinu z nich (**10–90%**). Úzke pásmo znamená, že vaša glykémia je v danej hodine zo dňa na deň podobná. Prerušované čiary označujú vašu hodnotu **Dolná značka**, 140 mg/dl (7,8 mmol/l) a vašu hodnotu **Horná značka**.
 - **Prehľad glykémie**: čas strávený vo vašom rozsahu, v úzkom rozsahu (70–140 mg/dl alebo 3,9–7,8 mmol/l), nad vaším rozsahom a pod ním, potom **Priemer** a **Medián** vašej glykémie. Váš rozsah tvoria **Dolná značka** a **Horná značka** nastavené v časti [Rozsah pre zobrazenie](#Preferences-range-for-visualization).
-- **eA1c** a **GMI**: dva odhady HbA1c vypočítané z vašich hodnôt z CGM. Rovnako ako vyššie uvedený HbA1c sa nemusia zhodovať s vašimi výsledkami HbA1c z krvi.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Rovnako ako vyššie uvedený HbA1c sa nemusia zhodovať s vašimi výsledkami HbA1c z krvi.
 - **SD** (smerodajná odchýlka) a **CV** (variačný koeficient): ako veľmi vaša glykémia kolíše. Nižšia hodnota znamená stabilnejšiu glykémiu.
 - **Dni**: počet dní, z ktorých sa použili dáta z CGM.
 
@@ -114,7 +114,7 @@ Na konci každého riadka malé ikony ukazujú, odkiaľ dáta pochádzajú alebo
 (screens-bolus-carbs)=
 ### Sacharidy a bolusy
 
-![Sacharidy a bolusy](../images/TreatmentsView1.png)
+![Sacharidy a bolusy](../images/Maintenance/TreatmentsView1.png)
 
 Na tejto karte si môžete zobraziť záznam bolusov a sacharidov. Pri každom boluse (riadok **1**) sa vedľa množstva inzulínu zobrazuje zostávajúci súvisiaci IOB. Pôvod bolusu môže byť:
 * Jedlo (zadané ručne tlačidlami Inzulín, Rýchly sprievodca alebo Bolusová kalkulačka)
@@ -141,7 +141,7 @@ Históriu ošetrení môžete použiť na opravu chybne zadaných sacharidov (_n
 
 ### Dočasný bazál
 
-![Dočasný bazál](../images/TreatmentsView2.png)
+![Dočasný bazál](../images/Maintenance/TreatmentsView2.png)
 
 Tu sa zobrazujú **dočasné bazály**, ktoré nastavil okruh. Ak má záznam stále vplyv na IOB, táto informácia sa zobrazuje vedľa dávky (riadok **1**). Môže to byť:
 * Kladný IOB, ak bol dočasný bazál vyšší ako bazál nastavený v profile
@@ -153,13 +153,13 @@ Odstránenie záznamov ovplyvní iba vaše reporty v Nightscoute a pravdepodobne
 
 ### Dočasný cieľ
 
-![Dočasný cieľ](../images/TreatmentsView3.png)
+![Dočasný cieľ](../images/Maintenance/TreatmentsView3.png)
 
 Históriu dočasných cieľov si môžete pozrieť tu.
 
 ### Prepnutie profilu
 
-![Prepnutie profilu](../images/TreatmentsView4.png)
+![Prepnutie profilu](../images/Maintenance/TreatmentsView4.png)
 
 Históriu prepínania profilov si môžete pozrieť tu. Pri každom prepnutí profilu môžete vidieť viac záznamov: riadok **1**, uložený v NS aj v histórii pumpy, zodpovedá skutočnému prepnutiu. Riadok **2**, uložený v Nightscoute, ale nie v histórii pumpy, zodpovedá požiadavke používateľa na prepnutie profilu.
 
@@ -169,14 +169,14 @@ Tlačidlom **Klonovať** v riadku **2** môžete vytvoriť kópiu **Prepnutia pr
 
 ### Starostlivosť
 
-![Starostlivosť](../images/TreatmentsView5.png)
+![Starostlivosť](../images/Maintenance/TreatmentsView5.png)
 
 Táto karta zobrazuje všetky poznámky a záznamy v Starostlivosti zaznamenané v Nightscoute.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Režim prevádzky
 
-![Režim prevádzky](../images/TreatmentsView6.png)
+![Režim prevádzky](../images/Maintenance/TreatmentsView6.png)
 
 Táto karta zobrazuje históriu zmien [stavu okruhu](#AapsScreens-loop-status): otvorený, uzavretý, Ochrana pred nízkou glykémiou (LGS), pozastavený, odpojený.
 

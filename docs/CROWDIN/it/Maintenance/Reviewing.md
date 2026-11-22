@@ -73,7 +73,7 @@ The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually move
 
 - **Il grafico**: un giorno da mezzanotte a mezzanotte. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). Una fascia stretta significa che a quell'ora la tua glicemia è simile da un giorno all'altro. Le linee tratteggiate indicano il tuo **Limite BASSO**, 140 mg/dL (7,8 mmol/L) e il tuo **Limite ALTO**.
 - **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Like the HbA1c above, they might not match your blood HbA1c tests.
 - **SD** (deviazione standard) e **CV** (coefficiente di variazione): quanto varia la tua glicemia. Un valore più basso significa una glicemia più stabile.
 - **Giorni**: quanti giorni di dati del CGM sono stati usati.
 
@@ -114,7 +114,7 @@ At the end of each line, small icons show where the data comes from or has been 
 (screens-bolus-carbs)=
 ### CHO e boli
 
-![CHO e boli](../images/TreatmentsView1.png)
+![CHO e boli](../images/Maintenance/TreatmentsView1.png)
 
 In questa scheda puoi vedere il registro dei boli e dei carboidrati. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. L'origine del bolo può essere:
 * Pasto (inserito a mano con i pulsanti Insulina, Assistente Rapido o Calcolatore)
@@ -141,7 +141,7 @@ The Treatments history can be used to correct faulty carb entries (_i.e._ you ov
 
 ### Basale temporanea
 
-![Basale temporanea](../images/TreatmentsView2.png)
+![Basale temporanea](../images/Maintenance/TreatmentsView2.png)
 
 The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). Può essere:
 * Positive IOB if the temp basal was higher than the one set in the Profile
@@ -153,13 +153,13 @@ A sinistra di una riga, una S rossa significa “Sospeso”: succede quando la b
 
 ### Target temporaneo
 
-![Target temporaneo](../images/TreatmentsView3.png)
+![Target temporaneo](../images/Maintenance/TreatmentsView3.png)
 
 Qui puoi vedere la cronologia dei target temporanei.
 
 ### Cambio profilo
 
-![Cambio profilo](../images/TreatmentsView4.png)
+![Cambio profilo](../images/Maintenance/TreatmentsView4.png)
 
 Qui puoi vedere la cronologia dei cambi profilo. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
 
@@ -169,14 +169,14 @@ You can use the **Clone** button shown on line **2** to make a copy of a **Profi
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Care portal](../images/Maintenance/TreatmentsView5.png)
 
 This tab shows all notes and careportal entries recorded in Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Modalità esecuzione
 
-![Modalità esecuzione](../images/TreatmentsView6.png)
+![Modalità esecuzione](../images/Maintenance/TreatmentsView6.png)
 
 Questa scheda mostra la cronologia dei cambi dello [stato del loop](#AapsScreens-loop-status): aperto, chiuso, LGS, sospeso, disconnesso.
 

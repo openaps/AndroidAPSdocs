@@ -4,7 +4,7 @@
 
 以下描述的程序僅適用於有管幫浦，不適用於像 Omnipod、Medtrum Nano、Accu-Chek Solo 等無管幫浦。這個程序有時稱為「更換輸注組」，其中「完整」更換輸注組包括更換胰島素儲藥槽和導管；「部分」更換輸注組則只更換導管。
 
-貼片式幫浦會在自己的註冊嚮導中自行填充和預充，而且導管已經置入體內。 **AAPS** 不提供這類幫浦的預充功能：**預充／填充**不會顯示在**管理**面板或 QuickLaunch 中。請參閱[相容的幫浦](../Getting-Started/CompatiblePumps.md)頁面中，您所使用的幫浦相關資訊。
+貼片式幫浦會在自己的註冊嚮導中自行填充和預充，而且導管已經置入體內。 **AAPS** 不提供這類幫浦的預充功能：**預充／填充**不會顯示在**管理**面板或 QuickLaunch 中。 The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. 請參閱[相容的幫浦](../Getting-Started/CompatiblePumps.md)頁面中，您所使用的幫浦相關資訊。
 
 物理藥匣/儲液罐的更換無法通過 **AAPS** 完成，必須直接在幫浦上進行。這些需要在完成後手動記錄在**AAPS**中。
 
@@ -31,6 +31,7 @@
 * 您可以在 **預充／填充**設定中設定或調整預設預充量——在主畫面的搜尋列輸入「預充」即可開啟設定（請參閱[偏好設定](../SettingUpAaps/Preferences.md)）。請參閱你的套管包裝內的使用說明書，以了解根據針頭長度和輸液管長度應注射多少單位。
 
 * 使用預充功能輸送的胰島素不會納入 **AAPS** 的體內胰島素（IOB）計算，並會在[治療紀錄](#aaps-screens-treatments)中標示為「預充」。
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * 幫浦中斷連線期間，從幫浦注射的任何胰島素也不會納入 **AAPS** 的計算。如果您在 **AAPS** 中斷連線時直接從幫浦注射，重新連線後，可以在**胰島素**對話框中記錄這筆胰島素（不必再次注射；請參閱下方的[如何記錄已輸送的胰島素而不實際注射](#pumps-cannulas-announce-insulin)）。
 

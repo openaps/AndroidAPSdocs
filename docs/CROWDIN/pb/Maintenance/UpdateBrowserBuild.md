@@ -9,7 +9,7 @@ Você compilou o AAPS com o **AAPS Builder**? Você não precisa desta página: 
 O **AAPS** não está disponível para download por causa das regras para dispositivos médicos. É legal compilar o app para uso próprio, mas você não deve dar uma cópia para outras pessoas! Veja a página [FAQ para loopers](../UsefulLinks/FAQ.md) para mais detalhes.
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Depois siga o [procedimento de compilação do **AAPS** no navegador](../SettingUpAaps/BrowserBuild.md) em vez deste guia. Em vez de criar uma nova keystore, você deve selecionar a que você copiou do seu computador.
+Se você quer atualizar o **AAPS** pelo navegador pela primeira vez: copie o arquivo de backup da sua keystore para o seu Google Drive. Depois siga o [procedimento de compilação do **AAPS** no navegador](../SettingUpAaps/BrowserBuild.md) em vez deste guia. Em vez de criar uma nova keystore, você deve selecionar a que você copiou do seu computador.
 Essa operação só é obrigatória na primeira vez. Nas próximas atualizações você poderá seguir este guia.
 ```
 
@@ -57,7 +57,7 @@ Observação: se você modificou a sua cópia do AndroidAPS por engano, você ve
 
 ![Descartar modificações indesejadas](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Muito bem.
+Agora você sincronizou (atualizou) a sua própria cópia com a versão mais recente do **AAPS**. Muito bem.
 
 ![Repositório sincronizado](../images/update/CI/GitHubUpdate5.png)
 
@@ -73,17 +73,17 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Deixe o branch como master. Em **Select AAPS Version**, verifique se a **4.0.0**, a versão mais nova no topo da lista, está selecionada. Se o seu fork não estiver atualizado, a versão já selecionada será uma versão mais antiga: se você executar o workflow com o formulário do jeito que ele abre, você compila de novo essa versão antiga e o seu app não é atualizado. Escolha a [variante](#browserbuild-variant) (fullRelease) e depois toque em Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   A lista de versões faz parte do workflow no seu fork. Se a **4.0.0** não estiver na lista, o seu fork ainda não está sincronizado: volte para [Atualize seu repositório no GitHub](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Você verá a mensagem Workflow run was successfully requested. Atualize a página do navegador e você poderá acompanhar o progresso da compilação. Quando a ação terminar, a ação AAPS CI mostrará um sinal verde de confirmação. You have successfully built the updated version of **AAPS**. Isso significa que os apks Master e Wear agora são salvos diretamente no seu Google Drive (como abaixo). O apk do AAPSClient pode ser baixado em Github > nightscout > AndroidAPS [aqui](https://github.com/nightscout/AndroidAPS/releases)
+6. Você verá a mensagem Workflow run was successfully requested. Atualize a página do navegador e você poderá acompanhar o progresso da compilação. Quando a ação terminar, a ação AAPS CI mostrará um sinal verde de confirmação. Você compilou com sucesso a versão atualizada do **AAPS**. Isso significa que os apks Master e Wear agora são salvos diretamente no seu Google Drive (como abaixo). O apk do AAPSClient pode ser baixado em Github > nightscout > AndroidAPS [aqui](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Acompanhar o workflow](../images/update/CI/GitHubActions4.png)

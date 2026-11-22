@@ -8,13 +8,13 @@ Os desenvolvedores são pais, cuidadores, pessoas queridas e pessoas com diabete
 
 (donate-to-aaps)=
 
-### How can I donate?
+### Como posso doar?
 
-You can support **AAPS** in several ways:
+Você pode apoiar o **AAPS** de várias formas:
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation:** doe em [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** ajude a financiar o trabalho para certificar o AAPS como dispositivo médico em [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** envie para este endereço **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
 ## Eu sei programar! Como posso participar?
 

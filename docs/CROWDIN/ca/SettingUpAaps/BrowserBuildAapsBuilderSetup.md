@@ -1,269 +1,270 @@
 (aaps-builder-setup)=
 
-# AAPS Builder setup page
+# Pàgina de configuració d'AAPS Builder
 
-Build your own **AAPS** app in GitHub. No programs to install, no terminal. Takes about 10 minutes the first time, then you start each build yourself.
+Compileu la vostra pròpia aplicació **AAPS** a GitHub. No cal instal·lar cap programa ni fer servir cap terminal. La primera vegada triga uns 10 minuts. Després, cada compilació la inicieu vosaltres.
 
-Each step is explained in more detail, with screenshots, in [Browser build with AAPS Builder](#aaps-builder). Keep that page open in another tab.
+Cada pas s'explica amb més detall, amb captures de pantalla, a [Compilació al navegador amb AAPS Builder](#aaps-builder). Mantingueu aquella pàgina oberta en una altra pestanya.
 
-The buttons below open GitHub in a new Chrome tab. To come back to this page, tap the tab button next to Chrome's address bar (the square with a number) and choose this page.
+Els botons de sota obren GitHub en una pestanya nova de Chrome. Per tornar a aquesta pàgina, toqueu el botó de pestanyes al costat de la barra d'adreces de Chrome (el quadrat amb un número) i trieu aquesta pàgina.
 
 (aaps-builder-setup-step1)=
 
-## Step 1 – Create your private build repository
+## Pas 1 – Creeu el vostre repositori privat de compilació
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Only you can see it and the apps it builds. You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build.
+Això crea la vostra pròpia còpia privada d'AAPS Builder al vostre compte de GitHub: un repositori que ja conté el workflow de compilació. Només vosaltres podeu veure'l, i també les aplicacions que compila. **No** cal fer un fork d'AndroidAPS: el codi font d'AAPS es descarrega del repositori oficial d'AndroidAPS a cada compilació.
 
-<label class="aapsb-label" for="aapsb-user">Your GitHub username</label>
+<label class="aapsb-label" for="aapsb-user">El vostre nom d'usuari de GitHub</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
 <span class="aapsb-msg" id="aapsb-userMsg"></span>
 
-First log in to github.com in this browser (no account? create one for free). Then come back here. Use your username (shown in your GitHub profile), not your e-mail: the page asks GitHub whether this username exists.
+Primer inicieu la sessió a github.com en aquest navegador (no teniu compte? creeu-ne un de franc). Després torneu aquí. Feu servir el vostre nom d'usuari (es mostra al vostre perfil de GitHub), no el vostre correu electrònic: la pàgina pregunta a GitHub si aquest nom d'usuari existeix.
 
-<label class="aapsb-label" for="aapsb-repo">Name of your repository</label>
+<label class="aapsb-label" for="aapsb-repo">Nom del vostre repositori</label>
 <input class="aapsb-input" type="text" id="aapsb-repo" spellcheck="false" placeholder="my-aaps" />
 
-Keep the suggestion. Already created your repository with another name? Type that exact name here.
+Mantingueu el nom proposat. Ja heu creat el vostre repositori amb un altre nom? Escriviu aquí exactament aquell nom.
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**Ja teniu un repositori d'AAPS Builder** (fet amb una versió anterior d'aquesta pàgina)? No en creeu un de nou: escriviu-ne aquí el nom exacte, no feu servir el botó de sota i actualitzeu el seu workflow una vegada: vegeu **Actualitzar la vostra còpia** al final d'aquest pas. Els vostres secrets es queden com estan.
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+Si igualment voleu un repositori nou, trieu un nom que encara no tingueu, per exemple `my-aaps-2`, i feu servir el mateix magatzem de claus al pas 2.
 
-Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+No escriviu el nom del vostre fork d'AndroidAPS: un fork és públic i ja compila amb el seu propi workflow **AAPS CI**.
 ```
 
-Your repository: <code class="aapsb-repoUrl"></code>
+El vostre repositori:<code class="aapsb-repoUrl"></code>
 
-Check this name before you use the buttons below: the page remembers the name from your last visit.
+Comproveu aquest nom abans de fer servir els botons de sota: la pàgina recorda el nom de la vostra última visita.
 
-<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Create my private repository</a>
+<a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Crear el meu repositori privat</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+A la pàgina de GitHub que s'obre, tot ja està emplenat: la plantilla `nightscout/aaps-builder`, el vostre compte com a propietari, el nom del vostre repositori i **Private**. No canvieu res i deixeu **Include all branches** sense marcar.
 
-1. Click the green **Create repository** button.
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Come back to this page for step 2.
+1. Feu clic al botó verd **Create repository**.
+2. GitHub mostra el vostre repositori nou amb una carpeta `.github` i un fitxer `README.md`: el workflow de compilació hi és. Torneu a aquesta pàgina per al pas 2.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+No s'ha creat a partir de la plantilla. Elimineu-lo (**Settings** → part de baix de la pàgina → **Delete this repository**) i després toqueu de nou **Crear el meu repositori privat**.
 ```
 
 ```{admonition} GitHub says "my-aaps already exists in this account"?
 :class: tip
 
-You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+Ja teniu el vostre repositori: tanqueu la pestanya de GitHub i continueu amb aquesta pàgina. Si la vostra clau ja hi és, continueu amb el [pas 4](#aaps-builder-setup-step4). Vegeu la [resolució de problemes](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. El vostre secret `KEYSTORE_SET` es queda tal com és.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
    On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
-```
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Toqueu el menú **⋯** a dalt a la dreta del fitxer i després **Edit file… In place** (en un ordinador, feu clic al llapis).
+3. Substituïu tot el text pel workflow copiat (en un telèfon: mantingueu premut → **Select all** → **Paste**) i després feu clic dues vegades a **Commit changes…**. La primera línia del fitxer mostra la seva versió.
+
+</div>
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## Pas 2 – La vostra clau de signatura
 
-The app must be signed with your own key. Always use the same key, otherwise you have to uninstall AAPS (and lose its settings) to update. Choose one of the two tabs.
+L'aplicació s'ha de signar amb la vostra pròpia clau. Feu servir sempre la mateixa clau. Si no, per actualitzar haureu de desinstal·lar AAPS (i perdreu la seva configuració). Trieu una de les dues pestanyes.
 
 `````{tab-set}
 
-````{tab-item} I already have a keystore
-For example from Android Studio (.jks).
+````{tab-item} Ja tinc un magatzem de claus
+Per exemple, d'Android Studio (.jks).
 
-<label class="aapsb-label" for="aapsb-ksFile">Keystore file</label>
+<label class="aapsb-label" for="aapsb-ksFile">Fitxer del magatzem de claus</label>
 <input type="file" id="aapsb-ksFile" accept=".jks,.keystore,.p12,.pfx,application/octet-stream">
 
-<label class="aapsb-label" for="aapsb-ksPass">Keystore password</label>
+<label class="aapsb-label" for="aapsb-ksPass">Contrasenya del magatzem de claus</label>
 <input class="aapsb-input" type="password" id="aapsb-ksPass" autocomplete="off">
 
-<label class="aapsb-label" for="aapsb-ksAlias">Key alias</label>
+<label class="aapsb-label" for="aapsb-ksAlias">Àlies de la clau</label>
 <select class="aapsb-input" id="aapsb-ksAliasSel" hidden></select>
 <input class="aapsb-input" type="text" id="aapsb-ksAlias" autocomplete="off" spellcheck="false" placeholder="key0">
 
-<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> Key password is the same as the keystore password</label>
+<label class="aapsb-check"><input type="checkbox" id="aapsb-samePass" checked> La contrasenya de la clau és la mateixa que la del magatzem de claus</label>
 
 <div id="aapsb-keyPassWrap" hidden>
 
-<label class="aapsb-label" for="aapsb-keyPass">Key password</label>
+<label class="aapsb-label" for="aapsb-keyPass">Contrasenya de la clau</label>
 <input class="aapsb-input" type="password" id="aapsb-keyPass" autocomplete="off">
 
 </div>
 
-<button class="aapsb-btn" type="button" id="aapsb-haveGo">Check and continue</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-haveGo">Comprovar i continuar</button> <span class="aapsb-msg" id="aapsb-haveMsg"></span>
 ````
 
-````{tab-item} Create a new key
-First time building AAPS? A new key is created here in your browser. Nothing is sent anywhere.
+````{tab-item} Crear una clau nova
+És la primera vegada que compileu AAPS? Aquí, al vostre navegador, es crea una clau nova. No s'envia res enlloc.
 
-<label class="aapsb-label" for="aapsb-newPass">Choose a password (at least 8 characters, no accented letters)</label>
+<label class="aapsb-label" for="aapsb-newPass">Trieu una contrasenya (com a mínim 8 caràcters, sense lletres accentuades)</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass" autocomplete="new-password">
 
-<label class="aapsb-label" for="aapsb-newPass2">Repeat the password</label>
+<label class="aapsb-label" for="aapsb-newPass2">Repetiu la contrasenya</label>
 <input class="aapsb-input" type="password" id="aapsb-newPass2" autocomplete="new-password">
 
-<button class="aapsb-btn" type="button" id="aapsb-newGo">Create key</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
+<button class="aapsb-btn" type="button" id="aapsb-newGo">Crear clau</button> <span class="aapsb-msg" id="aapsb-newMsg"></span>
 
 <div class="aapsb-box" id="aapsb-backupBox" hidden>
 
-**Save a backup of your key!**
+**Deseu una còpia de seguretat de la vostra clau!**
 
-Download the file. Keep these three together, somewhere safe off your phone (e.g. your own cloud storage):
+Descarregueu el fitxer. Guardeu aquestes tres coses juntes, en un lloc segur fora del telèfon (p. ex. al vostre propi emmagatzematge al núvol):
 
-- the file `aaps-keystore.jks`
-- your password
-- the alias of the key: **`key0`**
+- el fitxer `aaps-keystore.jks`
+- la vostra contrasenya
+- l'àlies de la clau: **`key0`**
 
-You will need all three if you ever build AAPS another way, e.g. with Android Studio.
+Les necessitareu totes tres si algun dia compileu AAPS d'una altra manera, p. ex. amb Android Studio.
 
-<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Download backup (aaps-keystore.jks)</button>
+<button class="aapsb-btn" type="button" id="aapsb-downloadKs">Descarregar còpia de seguretat (aaps-keystore.jks)</button>
 
 </div>
 ````
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
-<span id="aapsb-s3wait">Finish step 2 first.</span>
+## Pas 3 – Doneu la clau al vostre repositori
+<span id="aapsb-s3wait">Primer acabeu el pas 2.</span>
 
 <div id="aapsb-s3ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. 2. Tap "Copy name", then paste it into the small "Name" field: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy name</button> 3. Tap "Copy secret", then paste the long code into the big "Secret" box: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> The secret is a very long code (thousands of characters), NOT the word KEYSTORE_SET. Copy and paste the name first, then the long code. 4. Tap "Add secret". Done, you never need to do this again.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Obrir la pàgina de secrets</a> S'obre: <code class="aapsb-repoUrl"></code> Rebeu «Page not found» (404)? Primer comproveu que heu iniciat la sessió a github.com en aquest navegador: GitHub mostra 404 per als repositoris privats quan no heu iniciat la sessió. Si no és això, el nom d'usuari o el nom del repositori del pas 1 no coincideixen amb el vostre repositori: comproveu-los a github.com i escriviu-los al pas 1. 2. Toqueu «Copiar nom» i enganxeu-lo al camp petit «Name»: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copiar nom</button> 3. Toqueu «Copiar secret» i enganxeu el codi llarg a la casella gran «Secret»: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copiar secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> El secret és un codi molt llarg (milers de caràcters), NO la paraula KEYSTORE_SET. Copieu i enganxeu primer el nom i després el codi llarg. 4. Toqueu «Add secret». Fet. No ho haureu de tornar a fer mai més.
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## Pas 4 – Compileu l'aplicació
 
-1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Open the build page</a>
+1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Obrir la pàgina de compilació</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   S'obre: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1. The GitHub app opened instead? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again. If the app still shows "Nothing to see here", pull the list down to see your build.
-2. If asked, click the green button to enable workflows.
-The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
-3. Click "Run workflow", then the green "Run workflow" button. "latest" builds the newest AAPS version. ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
-4. Wait about 15–30 minutes. A green check means it is done.
-Want an e-mail when the build is done? GitHub only e-mails you when a build fails. To also get one when it succeeds: on github.com, open your profile picture → Settings → Notifications → System → Actions, and untick "Only notify for failed workflows".
+   Rebeu «Page not found» (404)? Primer comproveu que heu iniciat la sessió a github.com en aquest navegador: GitHub mostra 404 per als repositoris privats quan no heu iniciat la sessió. Si no és això, el nom d'usuari o el nom del repositori del pas 1 no coincideixen amb el vostre repositori: comproveu-los a github.com i escriviu-los al pas 1. S'ha obert l'aplicació de GitHub? Toqueu «RUN WORKFLOW», comproveu la versió i la variant, i toqueu «RUN WORKFLOW» una altra vegada. Si l'aplicació encara mostra «Nothing to see here», estireu la llista cap avall per veure la vostra compilació.
+2. Si us ho demana, feu clic al botó verd per activar els workflows.
+La llista de workflows mostra dues entrades: feu servir «Build AAPS». No feu cas de «AAPS Builder»: conté els passos de compilació i no té cap botó «Run workflow».
+3. Feu clic a «Run workflow» i després al botó verd «Run workflow». «latest» compila la versió més nova d'AAPS. ***consell:*** *podeu compilar una altra versió si escriviu el nom de la seva [etiqueta (tag)](https://github.com/nightscout/AndroidAPS/tags) en lloc de «latest»*
+4. Espereu uns 15–30 minuts. Una marca verda vol dir que ja ha acabat.
+Voleu rebre un correu electrònic quan acabi la compilació? GitHub només us envia un correu quan una compilació falla. Per rebre'n també un quan acaba bé: a github.com, obriu la vostra foto de perfil → Settings → Notifications → System → Actions, i desmarqueu «Only notify for failed workflows».
 
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
-2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
-3. Open the Actions tab. If it says workflows are disabled, click the green button to enable them. Then click "Build AAPS" in the list.
+1. Obriu el vostre repositori i comproveu que té una carpeta `.github` amb el fitxer `workflows/build.yml`. Si el repositori és buit, no s'ha creat a partir de la plantilla: elimineu-lo (**Settings** → part de baix de la pàgina → **Delete this repository**) i torneu a fer el [pas 1](#aaps-builder-setup-step1) amb el botó.
+2. El fitxer hi és, però GitHub mostra «This workflow does not exist»: vegeu [resolució de problemes](#aaps-builder-ts-workflow-not-found).
+3. Obriu la pestanya Actions. Si diu que els workflows estan desactivats, feu clic al botó verd per activar-los. Després feu clic a «Build AAPS» a la llista.
 ```
 
 (aaps-builder-setup-step5)=
 
-## Step 5 – Install on your phone
+## Pas 5 – Instal·lar al vostre telèfon
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
 
-1. In AAPS: Maintenance → Export settings. (Do this regularly anyway, e.g. after a profile change or once a month.)
-2. Copy the exported file OFF the phone, e.g. to Google Drive or Dropbox. A backup that only lives on the phone is lost together with the phone.
-3. Keep the APK files and several older exports there too. Then you can always go back.
+1. A AAPS: Manteniment → Exportar configuració. (Feu-ho de tota manera de forma regular, p. ex. després d'un canvi de perfil o una vegada al mes.)
+2. Copieu el fitxer exportat FORA del telèfon, p. ex. a Google Drive o Dropbox. Una còpia de seguretat que només és al telèfon es perd juntament amb el telèfon.
+3. Guardeu-hi també els fitxers APK i diverses exportacions més antigues. Així sempre podreu tornar enrere.
 
-[How to export settings](#ExportImportSettings-Settings-Export) · [AAPS FAQ: how to organize backups](#FAQ-organize-backups)
+[Com exportar la configuració](#ExportImportSettings-Settings-Export) · [Preguntes freqüents d'AAPS: com organitzar les còpies de seguretat](#FAQ-organize-backups)
 ```
 
-1. Open this page on your phone, in the web browser (Chrome). Log in to github.com if asked.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Open my builds</a>
+1. Obriu aquesta pàgina al telèfon, al navegador web (Chrome). Inicieu la sessió a github.com si us ho demana.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openRuns" target="_blank" rel="noopener">Obrir les meves compilacions</a>
 
-   The GitHub app opened instead? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome (or "Copy link", then paste the link in Chrome's address bar). Continue in Chrome.
+   S'ha obert l'aplicació de GitHub? No pot descarregar compilacions. A l'aplicació, obriu la compilació més nova i toqueu «Artifacts ↗», o toqueu la icona de compartir i trieu Chrome (o «Copy link», i després enganxeu l'enllaç a la barra d'adreces de Chrome). Continueu a Chrome.
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
+   Rebeu «Page not found» (404)? Primer comproveu que heu iniciat la sessió a github.com en aquest navegador: GitHub mostra 404 per als repositoris privats quan no heu iniciat la sessió. Si no és això, el nom d'usuari o el nom del repositori del pas 1 no coincideixen amb el vostre repositori: comproveu-los a github.com i escriviu-los al pas 1.
 
-   To stop GitHub links opening in the app: Android Settings → Apps → GitHub → Open by default → turn off "Open supported links".
-3. Tap the newest build with a green check ✅.
-4. Scroll down to the build summary and tap the big link "📱 Download AAPS …" (or scroll further down to "Artifacts" and tap aaps-….apk). Scroll with your finger on the text, not on the diagram of the build steps.
-5. When the download is done, tap the file and choose Install. If asked, allow installing apps from this source.
-6. aaps-wear-….apk is for a smartwatch. Skip it if you do not use one.
+   Perquè els enllaços de GitHub no s'obrin a l'aplicació: Configuració d'Android → Aplicacions → GitHub → Obre de manera predeterminada → desactiveu «Obre els enllaços compatibles».
+3. Toqueu la compilació més nova que tingui una marca verda ✅.
+4. Baixeu fins al resum de la compilació i toqueu l'enllaç gran «📱 Download AAPS …» (o baixeu més avall fins a «Artifacts» i toqueu aaps-….apk). Desplaceu-vos amb el dit sobre el text, no sobre el diagrama dels passos de compilació.
+5. Quan s'acabi la descàrrega, toqueu el fitxer i trieu Instal·lar. Si us ho demana, permeteu instal·lar aplicacions d'aquesta font.
+6. aaps-wear-….apk és per a un rellotge intel·ligent. Si no en feu servir cap, no el descarregueu.
 
-The APK is not shown under "Code" in your repository, only on the build page. It is kept for 14 days.
+L'APK no es mostra a «Code» al vostre repositori, només a la pàgina de la compilació. Es guarda durant 14 dies.
 
-New AAPS version? Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). Your repository never builds anything by itself.
+Hi ha una nova versió d'AAPS? Feu una còpia de seguretat de la configuració i després compileu-la amb el [pas 4](#aaps-builder-setup-step4). El vostre repositori mai no compila res tot sol.
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Optional: get the app in Google Drive
+## Pas 6 – Opcional: tenir l'aplicació a Google Drive
 
-Want the APK to show up in your Google Drive (kept forever)? Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+Voleu que l'APK aparegui al vostre Google Drive (es guarda per sempre)? Afegiu un secret més, GDRIVE_OAUTH2. Aquesta pàgina l'obté de Google per a vosaltres. Aleshores AAPS només pot veure i canviar els fitxers que crea al vostre Google Drive, res més.
 
-1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
+1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connectar Google Drive</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
-2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
+   Google s'obre en una pestanya nova. Trieu el vostre compte de Google i permeteu que AAPS vegi i canviï els seus propis fitxers. Si Google diu que l'aplicació no està verificada, toqueu «Advanced» i després «Go to …».
+2. Aleshores la pestanya nova mostra un error com **«This site can't be reached»** o **«127.0.0.1 refused to connect»**. **Això és normal.** La resposta de Google és a l'adreça d'aquella pestanya.
 
-   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
-3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+   Toqueu la barra d'adreces d'aquella pestanya i després la icona de copiar al costat de l'adreça (en un ordinador: seleccioneu tota l'adreça i copieu-la). Comença amb `http://127.0.0.1:47913/`. Torneu a aquesta pàgina en pocs minuts: la resposta només és vàlida durant poc temps.
+3. <label class="aapsb-label" for="aapsb-googleUrl">Enganxeu aquí l'adreça copiada</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Obtenir GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
-4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Obrir la pàgina de secrets</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   S'obre: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise your username or repository name in step 1 does not match your repository: check them on github.com and type them in step 1.
-5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
-7. Tap "Add secret".
+   Rebeu «Page not found» (404)? Primer comproveu que heu iniciat la sessió a github.com en aquest navegador: GitHub mostra 404 per als repositoris privats quan no heu iniciat la sessió. Si no és això, el nom d'usuari o el nom del repositori del pas 1 no coincideixen amb el vostre repositori: comproveu-los a github.com i escriviu-los al pas 1.
+5. Toqueu «Copiar nom» i enganxeu-lo al camp petit «Name»: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copiar nom</button>
+6. Toqueu «Copiar secret» i enganxeu el codi a la casella gran «Secret»: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copiar secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+7. Toqueu «Add secret».
 
 </div>
 
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+També funciona un valor de la pàgina de preparació d'AAPS de l'altra compilació al navegador: obriu la pàgina de secrets, afegiu el nom `GDRIVE_OAUTH2` i enganxeu-hi el vostre valor. Vegeu [Desar les compilacions a Google Drive](#aaps-builder-google-drive).
 ```
 
-Next build, the APKs are also saved in Google Drive in the folder AAPS/&lt;version&gt;.
+A la propera compilació, els APK també es desen a Google Drive, a la carpeta AAPS/&lt;version&gt;.
 
-If you do not build for 6 months, or change your Google password, Google stops the access. The build then says so: redo this step.
+Si no compileu durant 6 mesos, o si canvieu la contrasenya de Google, Google atura l'accés. Aleshores la compilació us ho diu: torneu a fer aquest pas.
 
 ----
 
-Everything on this page runs in your browser. Your key and passwords are never sent anywhere except where you paste them yourself. Only your GitHub username is sent to GitHub, to check that it exists. In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
+Tot el que hi ha en aquesta pàgina funciona al vostre navegador. La vostra clau i les contrasenyes no s'envien mai enlloc, excepte on les enganxeu vosaltres mateixos. Només el vostre nom d'usuari de GitHub s'envia a GitHub, per comprovar que existeix. Al pas 6, la resposta de Google només s'envia a Google, per obtenir GDRIVE_OAUTH2. El workflow de compilació el mantenen els desenvolupadors d'AAPS a [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), basat en AAPS Builder (AGPL-3.0).
 
 <div id="aapsb-msgs" hidden>
 
-- <span data-aapsb-msg="copied">Long code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
-- <span data-aapsb-msg="copiedName">Name copied: paste it in the small "Name" field.</span>
-- <span data-aapsb-msg="userOk">✓ GitHub user found.</span>
-- <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Available: {aliases}</span>
-- <span data-aapsb-msg="errFormat">This does not look like a keystore file.</span>
-- <span data-aapsb-msg="okHave">Keystore OK! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. The password will be checked when you build. Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – no spaces, no accented letters and not |</span>
-- <span data-aapsb-msg="errMatch">The passwords do not match.</span>
-- <span data-aapsb-msg="working">Creating key…</span>
-- <span data-aapsb-msg="okNew">Key created. Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="copied">Codi llarg copiat: enganxeu-lo a la casella gran «Secret» i després toqueu «Add secret».</span>
+- <span data-aapsb-msg="copiedName">Nom copiat: enganxeu-lo al camp petit «Name».</span>
+- <span data-aapsb-msg="userOk">✓ Usuari de GitHub trobat.</span>
+- <span data-aapsb-msg="userBad">✗ No hi ha cap usuari de GitHub amb aquest nom. Feu servir el vostre nom d'usuari (es mostra al vostre perfil de GitHub), no el vostre correu electrònic.</span>
+- <span data-aapsb-msg="copiedShort">Copiat ✓</span>
+- <span data-aapsb-msg="needUser">Primer escriviu el vostre nom d'usuari de GitHub al pas 1.</span>
+- <span data-aapsb-msg="errPipe">Les contrasenyes i l'àlies no poden contenir el caràcter |</span>
+- <span data-aapsb-msg="errNoFile">Trieu el vostre fitxer del magatzem de claus.</span>
+- <span data-aapsb-msg="errEmpty">Ompliu la contrasenya i l'àlies.</span>
+- <span data-aapsb-msg="errPass">Contrasenya del magatzem de claus incorrecta.</span>
+- <span data-aapsb-msg="errKeyPass">Contrasenya de la clau incorrecta.</span>
+- <span data-aapsb-msg="errAlias">No s'ha trobat l'àlies al magatzem de claus. Disponibles: {aliases}</span>
+- <span data-aapsb-msg="errFormat">No sembla un fitxer de magatzem de claus.</span>
+- <span data-aapsb-msg="okHave">Magatzem de claus correcte! Continueu amb el pas 3.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Magatzem de claus llegit. La contrasenya es comprovarà quan compileu. Continueu amb el pas 3.</span>
+- <span data-aapsb-msg="errShort">La contrasenya ha de tenir com a mínim 8 caràcters.</span>
+- <span data-aapsb-msg="errAscii">Feu servir només a–z, A–Z, 0–9 i símbols com ara ! ? # – sense espais, sense lletres accentuades i sense |</span>
+- <span data-aapsb-msg="errMatch">Les contrasenyes no coincideixen.</span>
+- <span data-aapsb-msg="working">S'està creant la clau…</span>
+- <span data-aapsb-msg="okNew">Clau creada. Descarregueu la còpia de seguretat de sota i després continueu amb el pas 3.</span>
+- <span data-aapsb-msg="gNoUrl">Primer enganxeu l'adreça sencera de la pestanya de Google.</span>
+- <span data-aapsb-msg="gNoCode">Aquesta adreça no conté cap resposta de Google. Copieu l'adreça sencera de la pestanya que mostra l'error, que comença amb http://127.0.0.1:47913/</span>
+- <span data-aapsb-msg="gDenied">No s'ha permès l'accés a Google. Toqueu «Connectar Google Drive» de nou i permeteu l'accés.</span>
+- <span data-aapsb-msg="gOldUrl">Aquesta adreça és d'un intent anterior. Toqueu «Connectar Google Drive» de nou i feu servir l'adreça nova.</span>
+- <span data-aapsb-msg="gWorking">S'està preguntant a Google…</span>
+- <span data-aapsb-msg="gFailed">Google no ho ha acceptat ({error}). La resposta només és vàlida durant uns pocs minuts i una sola vegada: toqueu «Connectar Google Drive» de nou.</span>
+- <span data-aapsb-msg="gNoRefresh">Google no ha enviat cap accés de llarga durada. Toqueu «Connectar Google Drive» de nou.</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 està a punt. Afegiu-lo com a secret a sota.</span>
+- <span data-aapsb-msg="gCopied">Codi copiat: enganxeu-lo a la casella gran «Secret» i després toqueu «Add secret».</span>
 
 </div>
 

@@ -142,7 +142,7 @@ Neste momento, o driver suporta os seguintes idiomas na Combo. (Isto não tem na
 
   ![Captura de ecrã da interface de emparelhamento da Combo 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* Quando aparecer **Emparelhamento bem sucedido**, toque em **OK**. Volta ao ecrã da bomba, que agora mostra o estado da bomba (veja [Conteúdo do ecrã da bomba Accu-Chek Combo](#combov2-tab-contents) abaixo). O botão **Emparelhamento** é substituído por **Desemparelhar**.
+* Quando aparecer **Emparelhamento com a Combo concluído com sucesso**, toque em **OK**. Volta ao ecrã da bomba, que agora mostra o estado da bomba (veja [Conteúdo do ecrã da bomba Accu-Chek Combo](#combov2-tab-contents) abaixo). O botão **Emparelhamento** é substituído por **Desemparelhar**.
 
 * Para verificar a configuração (com a bomba **desligada** de qualquer cânula, por segurança!), use o AAPS para definir uma basal temporária de 500 % durante 15 min e dê um bólus. A bomba deve agora ter uma basal temporária em curso e o bólus no histórico. O AAPS também deve mostrar a basal temporária ativa e o bólus administrado.
 
@@ -167,7 +167,7 @@ Para abrir o ecrã da bomba, vá a **Gerir** > **Bomba**. Depois de emparelhar u
    - **A verificar a bomba**: a bomba está ligada, mas o driver está a fazer verificações de segurança para garantir que está tudo bem e atualizado
    - **Pronto**: o driver está pronto para aceitar comandos do AAPS
    - **Suspenso**: a bomba está suspensa (na Combo aparece como «parada»)
-   - Uma descrição do comando em execução, por exemplo **A definir perfil basal** ou **A obter estado bomba**
+   - Uma descrição do comando em execução, por exemplo **A definir perfil basal** ou **A atualizar o estado da bomba**
    - **Erro**: ocorreu um erro; a ligação foi terminada e qualquer comando em curso foi interrompido
 2. **Última ligação**: há quantos minutos o driver se ligou com sucesso à Combo; se passar de 30 minutos, este item aparece a vermelho
 3. **Bateria**: nível da bateria; a Combo só indica **Cheia**, **Fraca** ou **Vazia** e não dá nada mais exato (como uma percentagem), por isso só aparecem aqui estes três níveis
@@ -195,9 +195,9 @@ Em baixo, existem estes botões:
 Estas definições estão disponíveis para o driver da Combo (**Configuração** > **Bomba** > **Accu-Chek Combo** > **Definições**, ou o ícone das definições (roda dentada) no ecrã da bomba). Os itens estão listados de cima para baixo:
 
 1. **Duração da procura (em segundos)**: durante o emparelhamento, o driver torna o telefone visível para a bomba. Isto controla durante quanto tempo o telefone fica visível. Por predefinição, está selecionado o máximo (300 segundos = 5 minutos). O Android não permite que o telefone fique visível por tempo ilimitado, por isso é preciso escolher uma duração.
-2. **Detetar automaticamente e inserir alteração de reservatório insulina**: se estiver ativo, o driver regista a «mudança de reservatório» que normalmente registaria em **Gerir** > **Purgar/Preencher**. Isto é explicado [com mais detalhe abaixo](#combov2-autodetections).
+2. **Detetar automaticamente e registar a troca do reservatório de insulina**: se estiver ativo, o driver regista a «mudança de reservatório» que normalmente registaria em **Gerir** > **Purgar/Preencher**. Isto é explicado [com mais detalhe abaixo](#combov2-autodetections).
 3. **Autodetetar e inserir automaticamente a mudança de bateria**: se estiver ativo, o driver regista a «mudança de bateria» que normalmente registaria em **Gerir** > **Troca Bateria Bomba**. Isto é explicado [com mais detalhe abaixo](#combov2-autodetections).
-4. **Ativ. registo detal. Da Combo**: aumenta muito a quantidade de registos feitos pelo driver. **ATENÇÃO**: não ative isto, a não ser que um programador lho peça. Caso contrário, isto pode encher os registos do **AAPS** de informação inútil e torná-los menos úteis.
+4. **Ativar registo detalhado da Combo**: aumenta muito a quantidade de registos feitos pelo driver. **ATENÇÃO**: não ative isto, a não ser que um programador lho peça. Caso contrário, isto pode encher os registos do **AAPS** de informação inútil e torná-los menos úteis.
 
 O emparelhamento e o desemparelhamento são feitos no ecrã da bomba, não nas definições (veja acima).
 
@@ -315,7 +315,7 @@ Se a duração da sua bateria for muito mais curta do que os intervalos acima, v
 ### Bólus prolongado, bólus multionda
 O algoritmo OpenAPS não suporta um bólus prolongado ou um bólus multionda em paralelo. Mas pode conseguir um tratamento parecido com as seguintes alternativas:
 * Use **hidratos-e** ao introduzir hidratos de carbono ou ao usar o assistente de bólus: introduza os hidratos de carbono da refeição completa e a duração em que espera que esses hidratos de carbono cheguem ao sangue como glicose. O sistema calcula então pequenas quantidades de hidratos de carbono distribuídas por igual ao longo de toda a duração, o que faz o algoritmo dar doses de insulina equivalentes, enquanto continua a verificar a subida ou descida geral da glicose. Para um bólus parecido com um bólus multionda, também pode combinar um bólus imediato mais pequeno com hidratos-e.
-* Before eating, set a temporary **Eating Soon** target of 80 mg/dL (4.4 mmol/L) for several hours (press the target on the main screen, or **Manage** > **Temp Target**). A duração deve basear-se no intervalo que escolheria para um bólus prolongado. Assim o seu alvo fica mais baixo do que o normal e por isso aumenta a quantidade de insulina administrada.
+* Antes de comer, defina um alvo temporário **Comer Brevemente** de 80 mg/dl (4,4 mmol/l) durante várias horas (toque no alvo no ecrã principal ou em **Gerir** > **Alvo temporário**). A duração deve basear-se no intervalo que escolheria para um bólus prolongado. Assim o seu alvo fica mais baixo do que o normal e por isso aumenta a quantidade de insulina administrada.
 * Depois use o **Assistente de Bólus** para introduzir todos os hidratos de carbono da refeição, mas não aplique diretamente os valores que ele sugere. Se quiser dar um bólus parecido com um bólus multionda, reduza a dose de insulina. Conforme a refeição, o algoritmo tem agora de dar SMB adicionais ou basais temporárias mais altas para contrariar a subida da glicose. Aqui, deve experimentar com muito cuidado os limites de segurança da taxa basal (U/h máx., IA basal máxima) e, se for necessário, alterá-los temporariamente.
 
 * Não use o bólus prolongado nem o bólus multionda diretamente na bomba. O driver não os suporta (veja [Antes de começar](#combov2-before-you-begin)); se mesmo assim for dado um bólus multionda na bomba, o **AAPS** regista-o a partir do histórico da bomba como um bólus normal mais um bólus prolongado, por isso é contado na IA. Um bólus prolongado não funciona num ambiente de loop fechado (veja [esta página](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) para mais detalhes).

@@ -1,23 +1,23 @@
-# Change language and version
+# Promjena jezika i verzije
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Dokumentacija koju upravo čitate dostupna je na nekoliko jezika i odnosi se na određenu verziju **AAPS-a**. I jezik i verziju možete promijeniti u izborniku u donjem desnom kutu zaslona.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Kliknite na traku u donjem desnom kutu zaslona da otvorite izbornik za odabir jezika i verzije.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Otvaranje izbornika jezika](../images/documentation_language_menu.png)
 
-## Change language
+## Promjena jezika
 
-In the menu, select the language you want to read the documentation in.
+U izborniku odaberite jezik na kojem želite čitati dokumentaciju.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Slobodno se pridružite prevoditeljima i lektorima na [Crowdinu](https://crowdin.com/project/androidapsdocs) i pomozite prevesti dokumentaciju na svoj jezik.
 
-## Change version
+## Promjena verzije
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+Trenutna verzija prikazana je u donjem desnom kutu zaslona. Za prelazak na drugu verziju kliknite na trenutnu verziju i odaberite verziju koja vam treba.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Kada promijenite jezik i/ili verziju, može se pojaviti greška 404 – Stranica nije pronađena, ako stranica na tom jeziku ili u toj verziji ne postoji. To se često događa kod promjene verzije, ali ne bi se trebalo događati kod promjene jezika: ako stranica još nije prevedena, prikazat će se na engleskom.
 ```

@@ -1,10 +1,10 @@
-# Exchange site for custom watchfaces
+# Stranica za razmjenu prilagođenih Watchfaceova
 
-Here you can download Zip-Files with custom watchfaces users have prepared and want to share with you.
+Ovdje možete preuzeti Zip-datoteke s prilagođenim Watchfaceovima koje su korisnici pripremili i žele ih podijeliti s vama.
 
-The Zip-Files can be uploaded in the folder "**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**" via a Pull Request into GitHub as usual.
+Zip-datoteke mogu se, kao i obično, prenijeti u mapu „**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**“ putem zahtjeva za povlačenje (Pull Request) na GitHubu.
 
-During merge of the pull request the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file, and add it to the list below.
+Prilikom spajanja zahtjeva za povlačenje (pull request) tim za dokumentaciju izdvojit će datoteku CustomWatchface.png, dodati joj naziv Zip-datoteke kao prefiks i dodati je na popis ispod.
 
 
 
@@ -18,5 +18,5 @@ During merge of the pull request the documentation team will extract the CustomW
 |    [![Robby watchface](../images/ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png) <br>**Robby watchface**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Robby_watchface.zip)    |        [![SimpleDigital](../images/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png) <br>**SimpleDigital**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3.zip)         |            [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br>**AAPS (SteamPunk)**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SteamPunk.zip)            |
 |               [![Blue Ring](../images/ExchangeSiteCustomWatchfaces/Blue_Ring-CustomWatchface.jpg) <br/>**Blue Ring**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Blue_Ring.zip)                | [![AAPSV2 TT DarkOnly](../images/ExchangeSiteCustomWatchfaces/AAPSV2_TT_DarkOnly-CustomWatchface.png) <br/>**AAPSV2 + TT DarkOnly** *](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/AAPSV2_TT_DarkOnly.zip) |                                                                                                                                                                                                                                                                    |
 
-*Requires Custom WatchFace V2 or above installed within Wear Watch (AAPS V3.3.0 or above)
+*Zahtijeva Custom WatchFace V2 ili noviji instaliran na satu (AAPS V3.3.0 ili noviji)
 

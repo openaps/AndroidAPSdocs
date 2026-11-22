@@ -1,16 +1,16 @@
-# Making changes to your AAPS configuration
+# Alterar a configuração do AAPS
 
 Depois de concluir o **[Assistente de Configuração](../SettingUpAaps/SetupWizard.md)**, não precisa de executar todo o assistente outra vez se quiser alterar apenas partes da configuração do **AAPS**.
 
 Há três caminhos para alterar a configuração do **AAPS**. O caminho que escolher é apenas uma questão de comodidade ou de preferência pessoal, porque todos levam às mesmas definições.
 
-These are as follows:
+São as seguintes:
 
 1. O ecrã **Configuração**,
 2. O ecrã **Definições** ou
 3. As **Definições** de um plugin, abertas a partir da sua categoria em **Configuração**.
 
-Here we explain which option is most convenient for each situation:
+Aqui explicamos qual é a opção mais prática para cada situação:
 
 ## Configuração
 

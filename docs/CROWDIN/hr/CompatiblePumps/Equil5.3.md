@@ -1,131 +1,132 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Ove upute služe za konfiguraciju inzulinske pumpe Equil.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Mogućnosti pumpe s AAPS-om
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Pumpa bez katetera (patch pumpa) koja komunicira s **AAPS-om** preko ugrađenog Bluetootha vašeg telefona, bez dodatnog komunikacijskog uređaja.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
+* Dok je pumpa suspendirana ili zaustavljena, **AAPS** bilježi privremeni bazal od 0 J/h, pa se bazalni inzulin ne računa u aktivni inzulin (IOB).
+* Promjene ljetnog računanja vremena i vremenske zone morate obaviti ručno.
 
-## Hardware and software requirements
-* **Compatible Equil hardware**
+## Zahtjevi za hardver i softver
+* **Kompatibilni hardver Equil**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  Trenutno su podržani Equil 5.3 i 5.4.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* **AAPS** izrađen i instaliran prema uputama [Izrada AAPS-a](../SettingUpAaps/BuildingAaps.md)
 
-## Setup
+## Postavljanje
 
-### Select Equil pump
+### Odaberite pumpu Equil
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Otvorite **izbornik** (☰) u gornjem lijevom kutu, odaberite **[Konfiguracija](#Config-Builder-pump)** i pod **Pumpa** odaberite **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Kada je odabrana, kartica **Equil** prikazuje dva gumba, **Postavke** i **Otvori dodatak**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![Dodatak Equil odabran u Konfiguracija > Pumpa](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Otvori dodatak** (ili **Upravljanje** → **Pumpa**) otvara zaslon pumpe Equil. Prije uparivanja pumpe izgleda ovako:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![Zaslon pumpe Equil prije uparivanja](../images/v4/Pumps/equil_pump_screen.png)
 
-### Settings
+### Postavke
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Postavke pumpe Equil otvorite gumbom **Postavke** na kartici **Equil** ili ikonom zupčanika u gornjem desnom kutu zaslona pumpe.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Postavke upravljačkog programa Equil](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Alarm za nisku razinu baterije**: upozorava vas kada je baterija pumpe pri kraju.
+* **Alarm za nisku razinu inzulina u spremniku**: upozorava vas kada u spremniku ima malo inzulina.
+* **Zvuk upozorenja**: kako vas pumpa upozorava: **Bez zvuka**, **Samo vibracija**, **Samo zvuk** ili **Vibracija i zvuk**.
+* **Brzina bolusa**: koliko brzo se daje bolus: **1,5 J/min (standardno)**, **3 J/min**, **6 J/min** ili **12 J/min**. Brži bolus može izazvati više alarma okluzije.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Izbor brzine bolusa u postavkama pumpe Equil](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+Sama pumpa odbija svaku bazalnu stopu iznad maksimuma koji **AAPS** u nju programira. **AAPS** uzima veću od dvije vrijednosti: vašu [postavku](../SettingUpAaps/Preferences.md) **maksimalni bazal** ili najveću satnu bazalnu stopu u vašem **profilu**, pa pumpa uvijek prihvaća vaš profil i privremene bazale koje petlja traži. **AAPS** u pumpu šalje i vaš najveći dopušteni bolus.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+Kada promijenite **maksimalni bazal** ili **maksimalni bolus**, **AAPS** automatski šalje nove vrijednosti u pumpu. Šalju se i pri svakoj zamjeni profila. Na samoj pumpi ne trebate ništa postavljati.
 ```
 
-### Pair the pump
+### Uparivanje pumpe
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+Na zaslonu pumpe pritisnite **Upari**. Čarobnjak vas vodi kroz svaki korak. Red točaka na vrhu pokazuje koliko ste daleko stigli.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Ako Android pita smije li **AAPS** pronaći uređaje u blizini i povezati se s njima, pritisnite **Dopusti**. **AAPS** to treba kako bi pronašao pumpu.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Android traži dopuštenje za pronalaženje uređaja u blizini](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+Čarobnjak ima ove korake. Pritisnite **Sljedeći** za nastavak ili **Otkaži** za izlaz iz čarobnjaka.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Potreban je profil**: prikazuje se samo ako u **AAPS-u** nikada niste aktivirali **profil**. Odaberite profil koji želite koristiti i pritisnite **Aktiviraj profil**.
+1. **Sastavi pumpu**: sastavite pumpu, napunjeni spremnik i napunjenu bateriju.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![Korak Sastavi pumpu](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Pronađi pumpu**: **AAPS** traži pumpe Equil u blizini. Odaberite svoju pumpu s popisa.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![Korak Pronađi pumpu s pumpom Equil na popisu](../images/Equil/find_pump.png)
+1. **Uparivanje uređaja**: lozinku za uparivanje možete unijeti u **Postavi lozinku za uparivanje**. Mora imati 4 znaka, odabrana iz `ABCDEF0123456789`. Pritisnite **Upari**.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![Korak Uparivanje uređaja s lozinkom za uparivanje](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Odaberi inzulin**: prikazuje se samo ako imate postavljeno više od jednog inzulina. Odaberite inzulin koji je u spremniku.
+1. **Punjenje**: pumpa **ne smije** biti na svojoj baznoj pločici. Pritisnite **Punjenje** i punite spremnik dok se na vrhu igle ne pojavi kap inzulina. Pritisnite **Sljedeći**.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![Korak Punjenje](../images/Equil/prime_fill.png)
+1. **Rotacija mjesta primjene**: prikazuje se samo ako je u postavkama rotacije mjesta primjene uključeno **Upravljaj rotacijom mjesta pumpe**. Dodirnite mjesto na koje ćete pričvrstiti pumpu ili pritisnite **Preskoči**.
+1. **Pričvrsti pumpu**: pričvrstite pumpu na njezinu baznu pločicu.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![Korak Pričvrsti pumpu](../images/Equil/attach_pump.png)
+1. **Napuni kanilu**: kada je pumpa na baznoj pločici, pritisnite **Ispuštanje zraka** kako biste uklonili zrak iz kanile. Pritisnite **Sljedeći**.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![Korak Napuni kanilu s gumbom Ispuštanje zraka](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Potvrdi**: stavite pumpu na tijelo i pritisnite **Završi**.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![Korak Potvrdi s gumbom Završi](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Ako ste postavili vlastitu lozinku za uparivanje (preporučeno radi vaše sigurnosti), spremite je na sigurno mjesto. Lozinka se sprema u pumpi. Pumpa je traži pri svakom novom uparivanju dok je ispravno ne rasparite u **AAPS-u**. Do tada se pumpa ne može koristiti ni s originalnim ručnim upravljačem (PDA).
 ```
 
-### Pump screen after pairing
+### Zaslon pumpe nakon uparivanja
 
-Once the pump is paired, the pump screen shows these buttons:
+Kada je pumpa uparena, zaslon pumpe prikazuje ove gumbe:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Osvježi**: odmah čita stanje i povijest pumpe.
+* **Obustavi** / **Nastavi isporuku**: zaustavlja ili ponovno pokreće isporuku inzulina.
+* **Promijeni spremnik**: vodi vas kroz odvajanje pumpe, umetanje novog spremnika (i po potrebi nove baterije), punjenje i ponovno pričvršćivanje. Prvi korak pita *Hoćete li postaviti i novi infuzijski set (postolje i kanilu)?*
+  * **Da, novi infuzijski set**: odabirete mjesto, kanila se puni, a **AAPS** bilježi promjenu inzulina i promjenu kanile.
+  * **Ne, samo spremnik ili bateriju**: kanila se ne puni, a **AAPS** bilježi samo promjenu inzulina.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Nakon promjene spremnika razina baterije prikazuje **-** dok je **AAPS** ponovno ne pročita iz pumpe.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![Prvi korak Promijeni spremnik pita o novom infuzijskom setu](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Povijest**: prikazuje događaje koje je pumpa zabilježila.
+* **Raspari uređaj**: vodi vas kroz odvajanje pumpe i rasparivanje od **AAPS-a**. Time se zaustavlja isporuka inzulina, klip pumpe vraća se na dno, a uparivanje se briše.
 
-### Alarms
+### Alarmi
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Alarm za nisku razinu inzulina oglašava se jednom na svakoj razini (10 J, 5 J i 2 J) i kada je spremnik prazan. Alarm za nisku razinu baterije oglašava se jednom na 10 % i jednom na 5 %. Svaka razina alarmira samo jednom do sljedeće promjene spremnika.
+* Alarmi i zaustavljanja pumpe bilježe se i kao objave u tretmanima, u vrijeme kada ih je pumpa zabilježila, pa kasnije možete vidjeti kada je i zašto pumpa stala.
+* Ako se spremnik isprazni tijekom bolusa, **AAPS** bilježi samo inzulin isporučen do tada i javlja vam obje količine.
 
-## Where to get help
+## Gdje dobiti pomoć
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Razvoj upravljačkog programa Equil provodi zajednica na **dobrovoljnoj** bazi. Prije nego što zatražite pomoć:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Pročitajte** odgovarajući odjeljak ove dokumentacije kako biste provjerili kako bi funkcija trebala raditi.
+2. **Pitajte** na kanalu *#AAPS* na [Discordu](https://discord.gg/4fQUWHZ4Mw) ili na jednom od drugih [kanala zajednice](../GettingHelp/WhereCanIGetHelp.md).
+3. **Prijavite grešku**: najprije pretražite [postojeće prijave](https://github.com/nightscout/AndroidAPS/issues); ako vaše nema na popisu, otvorite [novu prijavu](https://github.com/nightscout/AndroidAPS/issues) i priložite svoje [datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Kada tražite pomoć, navedite proizvođača i model telefona, verziju Androida, verziju **AAPS-a** i jednostavan opis problema na engleskom (što se promijenilo, kada je zadnji put radilo).

@@ -6,7 +6,7 @@
 Це **Крок 1** [Збірки в браузері](BrowserBuild.md).
 ```
 
-You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
+Вам потрібно буде зберегти свій особистий ключ Android Java (Android Java Key) і дані Google Drive як секрети (secrets) у GitHub (як це зробити, пояснимо далі).
 
 Оскільки в публічному репозиторії AndroidAPS цього зробити не можна, вам потрібна власна копія вихідного коду (вона називається fork).
 
@@ -29,7 +29,7 @@ You will need to store your personal Android Java Key and Google Drive informati
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
+*Примітка: ви можете **зняти позначку** "Copy the master branch only", якщо захочете збирати версії для розробників або власні зміни.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 

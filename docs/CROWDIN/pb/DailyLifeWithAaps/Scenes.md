@@ -45,7 +45,7 @@ Toque no botão **+** para criar um novo cenário.
 
 ### Começar a partir de um modelo
 
-Para **criar** um cenário, toque no botão **+** na tela Cenários. O primeiro passo é **Começar a partir de um modelo**: escolha um cenário pronto para uma situação comum — *Exercício*, *Dia de doença*, *Dia de doença — vômitos*, *Sono*, *Noite pós-exercício*, *Antes da refeição*, *Álcool*, *Direção*, *Banho*, *Fase lútea*, *Clima quente*, *Procedimento médico* — ou comece com um cenário *Em branco*. Cada modelo **já preenche as ações recomendadas**, e você pode ajustar tudo nos passos seguintes.
+Para **criar** um cenário, toque no botão **+** na tela Cenários. O primeiro passo é **Começar a partir de um modelo**: escolha um cenário pronto para uma situação comum — *Exercício*, *Dia de doença*, *Dia de doença — vômitos*, *Sono*, *Noite pós-exercício*, *Antes da refeição*, *Álcool*, *Direção*, *Banho*, *Fase lútea*, *Clima quente*, *Procedimento médico* — ou comece com um cenário *Em branco*. Cada modelo **já preenche as ações recomendadas**, e você pode ajustar tudo nos passos seguintes. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![“Começar a partir de um modelo” — escolha um ponto de partida](../images/v4/Scenes/templates_picker.png)
 
@@ -99,7 +99,7 @@ Ative um cenário na lista **Cenários** (o botão **▶**) ou no item **Cenári
 
 ![O painel Cenários da navegação inferior](../images/v4/Scenes/scenes_sheet.png)
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+Se a [Proteção do bólus](#Preferences-protection) estiver ativa, o **AAPS** pede essa proteção antes de um cenário começar ou terminar. Para alterar um cenário, é preciso passar pela [Proteção das configurações](#Preferences-settings-protection).
 
 Antes de qualquer coisa ser aplicada, você recebe uma **confirmação** que lista exatamente o que o cenário vai fazer, para que você possa conferir:
 
@@ -124,7 +124,7 @@ Um cenário sem cenário seguinte só pede que você confirme:
 
 ![Diálogo Encerrar cenário](../images/v4/Scenes/scene_end_dialog.png)
 
-Encerrar um cenário **desfaz** as mudanças que ele fez (por exemplo, a troca de perfil e o alvo temporário que ele iniciou).
+Encerrar um cenário **desfaz** as mudanças que ele fez (por exemplo, a troca de perfil e o alvo temporário que ele iniciou). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Enquanto um cenário está ativo, o perfil e o alvo na tela principal mostram um pequeno ícone de cenário quando foi o cenário que os definiu. O painel **Cenários** da navegação inferior continua disponível para iniciar outro cenário:
 

@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Control principal ↔ client (control remot signat)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+A partir de la versió 4 d'**AAPS**, un telèfon seguidor amb **AAPSClient** pot fer molt més que *anunciar* tractaments a través de Nightscout: un cop **emparellat** amb el telèfon principal, pot enviar **ordres signades** que el telèfon principal (el **dispositiu principal**) comprova, confirma i executa, fins i tot el lliurament d'un **bolus d'insulina** amb la bomba del dispositiu principal.
 
-This page explains how it works, and how to set it up and use it.
+Aquesta pàgina explica com funciona, com configurar-ho i com fer-ho servir.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Principal** = el telèfon **AAPS** principal, que té la bomba i executa el llaç (l'aplicació `full`).
+- **Client** = un telèfon amb **AAPSClient**, sense bomba, que segueix el dispositiu principal i ara també el *controla*.
+- Els dos telèfons han d'estar connectats al **mateix** lloc de Nightscout. Tota la comunicació continua passant per Nightscout: no cal cap connexió directa entre els telèfons.
 ```
 
 ---
 
-## How it works
+## Com funciona
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+A **AAPS** v3, **AAPSClient** només podia escriure a Nightscout tractaments del portal de cures sense signar, i no podia lliurar bolus. Ara el control remot necessita un [emparellament](#client_master_master_setup) que es fa una sola vegada. Vegeu també [Què ha canviat a AAPS v4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4 fa servir un canal propi de **control des de clients** (Client-Control). Continua passant pel vostre lloc de Nightscout (a la col·lecció `settings`), però cada missatge està **signat criptogràficament** amb un secret que només coneixen els dos telèfons. El secret es passa una sola vegada, durant l'**emparellament**, i just després se substitueix per un de nou, de manera que mai no viatja en text clar.
 
-The guiding principle is **the master is in charge**:
+El principi bàsic és que **el dispositiu principal mana**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. El client envia una *intenció* («bolus de 2 U», «iniciar l'escena Esport», «establir aquest objectiu temporal»…).
+2. El **dispositiu principal** torna a calcular l'acció i la **limita** segons les seves **pròpies** dades actuals (perfil, IOB, COB, objectiu temporal actual, bomba), i **redacta la confirmació exacta** que veurà l'usuari.
+3. El client (o el rellotge) mostra el text de confirmació del **dispositiu principal**: mai no en crea un de propi.
+4. Quan es confirma, el dispositiu principal **l'executa una sola vegada** i envia el resultat al client.
 
-What this means for you:
+Què vol dir això per a vosaltres:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **Ordres signades**: només els clients que heu emparellat poden enviar ordres (secret d'emparellament i signatura per a cada client). Les ordres antigues o repetides es rebutgen.
+- **Un rol per a cada client**: decidiu què pot fer cada client, des de *Només lectura* fins a *Admin*. Vegeu [Rols dels clients](#client-master-control-roles).
+- **Bolus d'insulina des d'un client**: el dispositiu principal el lliura amb la seva bomba, i el client mostra el progrés del lliurament.
+- **El dispositiu principal decideix**: limita cada acció segons les seves pròpies restriccions i escriu la confirmació que es mostra al client.
+- **Només els clients emparellats canvien la teràpia**: mentre el control des dels clients està activat, el dispositiu principal ja no accepta tractaments ni canvis escrits directament a Nightscout. Vegeu [Mode reforçat](#client-master-control-hardened-mode).
+- **Cada client té el seu propi token de Nightscout**, només amb els permisos que necessita un client. Vegeu [El token de Nightscout propi del client](#client-master-control-own-token).
+- **Dispositiu principal fora de línia**: les accions es bloquegen amb un missatge clar.
+- **Revocar un client** només demana un toc (per a cada client), o podeu fer servir l'interruptor del dispositiu principal per aturar tots els clients.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Accions que es poden fer des d'un client: **bolus**, **carbohidrats / e-carbs**, **objectiu temporal** (establir i cancel·lar), **canvi de perfil**, canvi de **llaç / mode de funcionament**, **basal temporal** (establir i cancel·lar), **bolus estès** (establir i cancel·lar), **selecció de la insulina** i **[escenes](../DailyLifeWithAaps/Scenes.md)**. Una part de la **configuració** bidireccional també es manté sincronitzada entre el dispositiu principal i els clients.
 
 ---
 
-## Roles and prerequisites
+## Rols i requisits previs
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients. Your Nightscout host must support websockets.
+- El **dispositiu principal** fa servir la compilació **AAPS** normal `full` i està connectat a la vostra bomba.
+- El **dispositiu principal** fa servir **NSClientV3** amb el vostre Nightscout i mostra *connectat*. Doneu-li un **token d'administrador** del vostre Nightscout: amb aquest token, el dispositiu principal pot crear un token propi per a cada client i mostrar-lo al client com a codi QR.
+- El **client** fa servir **[AAPSClient](AapsClient.md)** (o **AAPSClient2** / **AAPSClient3** per a altres pacients; vegeu [Sobre AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)). Ha de fer servir el **mateix** Nightscout. Si el configureu amb el codi QR del dispositiu principal, el client rep del dispositiu principal l'adreça i el token de Nightscout; si no, configureu-hi primer **NSClientV3** vosaltres mateixos.
+- Els websockets són **obligatoris** per al control remot des d'**AAPSClient**, als dos telèfons. Una ordre només és vàlida durant uns segons: sense websockets falla en lloc d'arribar tard. Mentre el control des dels clients està activat, **AAPS** manté els websockets activats, al dispositiu principal i als clients emparellats. El vostre proveïdor de Nightscout ha de permetre websockets.
 ```
 
-Pairing and synchronization are two different things:
+L'emparellament i la sincronització són dues coses diferents:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- La **sincronització** (dades: glucèmia, tractaments, perfil) es configura com abans. Vegeu [Sincronització](#RemoteControl_aapsclient). El codi QR del dispositiu principal ho pot fer per vosaltres al client.
+- L'**emparellament** (control: el canal d'ordres signades que es descriu aquí) és el pas nou que es descriu a continuació.
 
 ---
 
-## Setting it up
+## Configuració
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. Al dispositiu principal: activar el control i afegir un client
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+Al dispositiu principal, obriu la pantalla **Gestionar** i trieu **Clients autoritzats**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+Activeu **Permetre el control des dels clients** (per defecte està **desactivat**). Aquest és l'interruptor general: si està desactivat, cap client no pot enviar ordres, però els clients emparellats es conserven i el podeu tornar a activar més tard. En activar-lo també s'activa el [mode reforçat](#client-master-control-hardened-mode), que es mostra com a «*Mode reforçat activat*» amb una **(i)** que l'explica. En [Mode simple](#preferences-simple-mode), el control des dels clients sempre està activat, per això l'interruptor no es mostra.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![Pantalla Clients autoritzats al dispositiu principal](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Premeu el botó **+** (a baix a la dreta) per afegir un client. Al diàleg **Client nou**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Introduïu un **nom del dispositiu** per poder-lo reconèixer a la llista.
+2. Trieu **com es configura el telèfon** (vegeu la taula de sota).
+3. Trieu-ne el **[rol](#client-master-control-roles)**. No hi ha res seleccionat per defecte: el rol correcte depèn de qui fa servir el telèfon.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![Diàleg Client nou al dispositiu principal: nom del dispositiu, com es configura el telèfon i el seu rol](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Manera                                  | Què rep el telèfon nou                                                                          | Feu-la servir quan                                                                                            |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Codi QR: Nightscout i emparellament** | l'adreça de Nightscout, el seu propi token de Nightscout i l'emparellament, amb un sol escaneig | el telèfon nou té càmera: és la manera més ràpida, no cal escriure res                                        |
+| **Codi QR: només Nightscout**           | l'adreça de Nightscout i el seu propi token de Nightscout, sense emparellament                  | el telèfon només ha de **mostrar** dades i mai no ha d'enviar ordres                                          |
+| **PIN**                                 | només l'emparellament; conserva la configuració de Nightscout que ja té                         | el telèfon no té càmera (o el dispositiu principal no pot crear tokens); ja ha d'estar connectat a Nightscout |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+Les dues maneres amb codi QR necessiten un **token d'administrador** a la configuració de **NSClientV3** del dispositiu principal, perquè el dispositiu principal crea el token del client a Nightscout. Sense aquest token, les opcions de codi QR es mostren però no es poden triar, i el diàleg n'explica el motiu; el **PIN** sempre funciona.
 
-#### With a QR code
+#### Amb un codi QR
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+Premeu **OK**: el dispositiu principal crea el token de Nightscout del client i mostra un **codi QR**. Un codi que també emparella funciona durant uns **dos minuts**; la pantalla fa un compte enrere i es tanca sola quan el client s'ha emparellat. Escanegeu-lo al telèfon nou tal com es descriu a [Al client](#client_master_client_setup).
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+Qualsevol persona que vegi el codi QR pot llegir el vostre Nightscout, i un codi que emparella també porta l'emparellament. Mostreu-lo només al telèfon nou. **AAPS** bloqueja les captures de pantalla mentre el codi és a la pantalla.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![La pantalla del codi QR al dispositiu principal amb el compte enrere (codi difuminat)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### Amb un PIN
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Premeu **OK**: el dispositiu principal mostra un **PIN d'emparellament** de 8 xifres, en dos grups de quatre (per exemple `1234 5678`). Aquest PIN és **d'un sol ús** i **caduca al cap d'uns dos minuts**. Igual que amb el codi QR, el dispositiu principal rebutja un nom de client que ja és a la seva llista: cada client rep el seu propi token de Nightscout amb el seu nom.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![Pantalla d'emparellament del dispositiu principal amb el PIN d'un sol ús (el PIN que es veu aquí ha caducat)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+El PIN protegeix el secret d'emparellament que s'intercanvia a través de Nightscout. Compartiu-lo només amb el dispositiu que esteu emparellant, no el publiqueu i deixeu que caduqui si no el feu servir. Sempre podeu generar un PIN nou prement **+** una altra vegada.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. Al client: emparellar amb el dispositiu principal
 
-#### Scanning the QR code
+#### Escanejar el codi QR
 
-You can scan the master's QR code in two places:
+Podeu escanejar el codi QR del dispositiu principal en dos llocs:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- a l'**Assistent de configuració** del client, al pas «**Configurar des del dispositiu principal**», que ve abans del pas de Nightscout. Llavors un sol escaneig configura Nightscout i, amb un codi que emparella, també l'emparellament, de manera que la configuració s'ha acabat: l'assistent es tanca i s'obre la pantalla d'inici;
+- en qualsevol moment més tard, des de **Gestionar → Emparellar amb el dispositiu principal → Escanejar codi QR**.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+La primera vegada, **AAPSClient** demana el permís de la **càmera**. Si el rebutgeu, la pantalla diu que cal la càmera, i la podeu permetre amb **Tornar-ho a provar** o bé emparellar amb el PIN.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+Apunteu la càmera al codi. El client mostra què fa el codi (l'adreça de Nightscout i, per a un codi que emparella, el dispositiu principal amb què s'emparella) i pregunta «**Fer servir aquest codi?**». Premeu **Utilitzar**: el client activa **NSClientV3**, substitueix la seva adreça i el seu token de Nightscout pels del codi i activa els websockets. Un codi que emparella també emparella el telèfon; aquest saluda el dispositiu principal tan bon punt s'ha connectat a Nightscout.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![El pas de l'assistent Configurar des del dispositiu principal al client](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-A computer without camera: use the PIN there.
+En un ordinador sense càmera, feu servir el PIN.
 ```
 
-#### Entering the PIN
+#### Introduir el PIN
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+Al client, obriu **Gestionar → Emparellar amb el dispositiu principal** (o el pas de l'assistent **Emparellar amb el dispositiu principal**, després del pas de Nightscout), **introduïu el PIN de 8 xifres** que es mostra al dispositiu principal i premeu **Emparellar**. El client fa servir el PIN per obtenir de manera segura l'oferta d'emparellament a través de Nightscout, i després pregunta «**Emparellar amb aquest dispositiu principal?**» i mostra l'identificador del dispositiu principal. Premeu **Emparellar** per confirmar (vegeu [Emparellament amb el dispositiu principal](#aapsclient-pairing-with-the-master) per veure'n una captura de pantalla).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![Pantalla Emparellar amb el dispositiu principal al client abans de l'emparellament: introduïu-hi el PIN](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### Després de l'emparellament
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+Un cop emparellat, el client envia una salutació (**Hello**) al dispositiu principal i apareix a la llista **Clients autoritzats** del dispositiu principal com a **Actiu**, amb l'hora de la *«darrera connexió»*. El client coneix el seu [rol](#client-master-control-roles) gràcies a l'emparellament, per això mostra de seguida els botons correctes. Un emparellament fet a l'Assistent de configuració acaba l'assistent. En el mateix pas, els dos telèfons substitueixen el secret d'emparellament per un de nou que mai no ha viatjat (vegeu [Notes de seguretat](#client-master-control-security)), i un client configurat amb el PIN rep el seu propi token de Nightscout (vegeu [El token de Nightscout propi del client](#client-master-control-own-token)). Un client només es pot emparellar amb **un** dispositiu principal alhora; per emparellar-lo amb un altre dispositiu principal, primer premeu **Desemparellar**.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![Pantalla Emparellar amb el dispositiu principal al client (ja emparellat)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. Gestionar els clients
 
-From the master's **Authorized clients** screen you can, at any time:
+Des de la pantalla **Clients autoritzats** del dispositiu principal podeu, en qualsevol moment:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- **Canviar el rol** d'un client amb la fila de quatre botons que hi ha sota el seu nom. El rol nou s'aplica de seguida, sense tornar a emparellar.
+- **Veure amb quin token de Nightscout** escriu un client: «*Token de Nightscout propi*» és el que voleu. Una línia vermella «*Fa servir el token de Nightscout …, que té més permisos dels que necessita un client*» vol dir que el client encara fa servir un token amb més permisos, normalment el vostre token d'administrador. Vegeu [El token de Nightscout propi del client](#client-master-control-own-token).
+- **Revocar** un sol client: premeu la icona de la **paperera** que hi ha al costat. El client ja no pot enviar ordres fins que no es torni a emparellar. També s'elimina el seu token de Nightscout propi, de manera que tampoc no pot llegir el vostre Nightscout.
+- **Aturar tot el control** sense perdre els emparellaments: desactiveu **Permetre el control des dels clients**.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+Els telèfons configurats amb **Codi QR: només Nightscout** apareixen sota els clients, a «**Només lectura de Nightscout**». Per a cadascun podeu tornar a mostrar el codi QR (per configurar de nou el mateix telèfon) o eliminar-ne el token, cosa que li treu l'accés al vostre Nightscout.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![Clients autoritzats amb un client emparellat (botons de rol, token de Nightscout propi) i un telèfon a Només lectura de Nightscout](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## Rols dels clients
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+Cada client emparellat té un **rol**. El dispositiu principal el comprova en cada ordre, i el client només mostra el que permet el seu rol. Un rol nou s'aplica de seguida, sense tornar a emparellar. Els rols es basen els uns en els altres: cadascun pot fer tot el que pot fer l'anterior.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| Rol               | El client pot                                                                                                                                                                                                                                                                  |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Només lectura** | només mostrar dades. Continua emparellat, així que està preparat quan li doneu un rol superior.                                                                                                                                                                                |
+| **Àpats**         | fer un bolus, fer servir la calculadora de bolus i l'assistent ràpid, introduir carbohidrats i aturar un bolus en curs. Els carbohidrats introduïts aquí poden fer que el llaç doni més insulina.                                                                              |
+| **Cuidador**      | fer tot el que fa un usuari a **AAPS**: objectius temporals, canvis de perfil i d'insulina, mode del llaç, basal temporal, bolus estès, escenes, esdeveniments del portal de cures, calibracions i eliminació de registres. No pot canviar la configuració ni els predefinits. |
+| **Admin**         | fer-ho tot, també la configuració i els predefinits (assistent ràpid, objectius temporals predefinits, escenes, perfils, automatització, insulina).                                                                                                                            |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+La **(i)** a la part superior de la pantalla **Clients autoritzats** mostra la mateixa explicació. Al client, **Gestionar → Emparellar amb el dispositiu principal** mostra el rol del mateix telèfon.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## Mode reforçat
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+Quan **Permetre el control des dels clients** està activat, el dispositiu principal és en **mode reforçat**: només accepta canvis dels clients emparellats. **No** accepta tractaments, objectius temporals, canvis de perfil, canvis de mode de funcionament ni eliminacions fets directament a Nightscout, per exemple al web de Nightscout o en altres aplicacions.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- Les opcions per acceptar dades de Nightscout (**NSClientV3 → Sincronització**) s'amaguen mentre el mode reforçat està activat; **AAPS** les fa servir com si estiguessin desactivades.
+- El dispositiu principal continua **enviant** totes les seves dades a Nightscout, també la glucèmia, i manté els **websockets** activats.
+- Si el dispositiu principal obté la **glucèmia de Nightscout**, la continua agafant d'allà.
+- Per carregar l'historial en un dispositiu principal **nou**, feu servir **Sincronització completa** a **NSClientV3**: agafa tot el que hi ha a Nightscout, també els perfils.
+- Les [ordres SMS](SMSCommands.md) no es veuen afectades.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+Un client emparellat segueix el mode reforçat del dispositiu principal: manté els websockets activats, i també s'hi amaguen les mateixes opcions de Nightscout. Un client no emparellat conserva la seva pròpia configuració.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+El [Mode simple](#preferences-simple-mode) sempre activa el mode reforçat. Per desactivar-lo, sortiu del mode simple i desactiveu **Permetre el control des dels clients** al dispositiu principal.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+Tot el que envia un client emparellat està signat, i el dispositiu principal ho comprova i ho confirma. Un tractament escrit al web de Nightscout no ho està: qualsevol persona amb permís d'escriptura al vostre Nightscout el podria afegir. En mode reforçat, només les ordres signades poden canviar el que fa el dispositiu principal.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## El token de Nightscout propi del client
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+Un client no necessita un token d'administrador. Només llegeix el vostre Nightscout i hi envia les seves ordres per al dispositiu principal; ell mateix no hi envia res més. Per això el dispositiu principal dona a cada client un token de Nightscout propi, només amb aquests permisos:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- llegir-ho tot,
+- escriure a la col·lecció `settings`, el canal cap al dispositiu principal,
+- postposar les alarmes de Nightscout.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+El token pertany a un rol de Nightscout anomenat **`aaps-client`**, que el dispositiu principal crea la primera vegada que el necessita. Podeu veure el rol i els tokens (anomenats `aaps-` més el nom del client) a **Admin tools** del vostre lloc de Nightscout. Si s'hi canvia el rol, el dispositiu principal el restableix la propera vegada que crea un token o que obriu **Clients autoritzats**.
 
-How a client gets its token:
+Com rep el seu token un client:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **Configurat amb un codi QR**: el token és dins del codi.
+- **Emparellat amb el PIN** (o emparellat abans que existís aquesta funció): després de l'emparellament, el dispositiu principal envia al client el seu token propi pel canal emparellat, encriptat. Primer el client comprova que s'hi pot iniciar sessió, i després el fa servir en lloc del token que tenia. Això necessita un token d'administrador al dispositiu principal; sense aquest token, el client conserva el seu token, i la seva targeta al dispositiu principal mostra la línia vermella.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**Un client conserva el seu token propi.** Quan el dispositiu principal ha vist que un client escriu amb el seu token propi, només accepta les ordres d'aquest client amb aquest token. Una ordre escrita amb un altre token (per exemple un token d'administrador introduït més tard al client, o el token d'un altre client) es rebutja, encara que el client estigui emparellat, i el client diu «*El telèfon principal ho ha rebutjat: aquest telèfon escriu a Nightscout amb un token diferent del seu*». La seva targeta al dispositiu principal també ho indica en vermell. El client continua apareixent en línia, perquè pugueu veure què passa. Per solucionar-ho, elimineu el client al dispositiu principal i torneu-lo a afegir.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+El dispositiu principal mai no elimina ni canvia un token de Nightscout que no ha creat ell (un token amb rols diferents d'`aaps-client`): aquests tokens són vostres. Elimina el token propi d'un client quan elimineu el client.
 
 ---
 
-## Using remote control
+## Fer servir el control remot
 
-### Triggering an action from the client
+### Fer una acció des del client
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+Feu servir el client exactament com faríeu servir el mateix telèfon: obriu **Carbs**, **Insulina**, **Objectiu temporal**, **Perfil**, **Escenes**, el full **Gestionar**, etc., i ompliu els valors.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+Quan confirmeu, el client mostra un moment **«Contactant amb el telèfon principal…»**, el **dispositiu principal** calcula i limita l'acció, i després el client mostra la **confirmació del mateix dispositiu principal**: les mateixes línies, valors i colors que el dispositiu principal mostraria a la seva pantalla. Reviseu-les i premeu **OK** per continuar.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![Una confirmació d'escena redactada pel dispositiu principal i mostrada al client](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+El mateix passa amb una simple entrada de carbohidrats: la quantitat que es mostra per confirmar és la que ha calculat el dispositiu principal:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![Confirmació de carbohidrats redactada pel dispositiu principal](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+Després de confirmar, el dispositiu principal executa l'acció una sola vegada i el resultat es mostra al client.
 
-### Insulin bolus from a client
+### Bolus d'insulina des d'un client
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+Aquesta és la funció nova principal de la v4. Un bolus iniciat en un client **el lliura el dispositiu principal amb la seva bomba**; el dispositiu principal el limita segons les seves pròpies restriccions, i el client mostra el **progrés del lliurament en directe** mentre dura (i una alarma si la bomba informa d'un error).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+Un client mai no decideix tot sol la quantitat lliurada. El dispositiu principal la torna a calcular i la limita, vosaltres confirmeu la quantitat redactada pel dispositiu principal, i només llavors es lliura.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### Quan el dispositiu principal està fora de línia
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+Si no es pot contactar amb el dispositiu principal (el telèfon està apagat o en repòs, no està connectat a Nightscout o els websockets no funcionen), les accions de control al client **es bloquegen abans d'enviar res**, i rebeu un missatge clar. No s'aplica res a mitges.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![Missatge del client quan el dispositiu principal està fora de línia](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+El client torna a comprovar automàticament si pot contactar amb el dispositiu principal i torna a activar el control quan el dispositiu principal torna a estar en línia.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### Wear OS (rellotge) en un client
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+Un rellotge emparellat amb un telèfon **client** passa les seves accions al dispositiu principal a través del client (rellotge → client → dispositiu principal). El rellotge mostra les línies de confirmació del **dispositiu principal** i el resultat real, igual que el telèfon. La configuració del rellotge no canvia. Vegeu [Configurar AAPS al vostre rellotge Wear OS](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,90 +271,149 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## Canviar el configurador i la configuració
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+L'emparellament fa més que passar accions puntuals: també manté alineats el **configurador** i moltes **opcions de configuració** entre el dispositiu principal i els seus clients.
 
-### Configuration (which plugins are active)
+### Configurador (quins plugins estan actius)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+Els **plugins** actius (algoritme APS, sensibilitat, suavitzat, …) es trien al **dispositiu principal** i es **copien** a cada client emparellat. En un client, aquestes seleccions porten una petita **icona de mòbil** a la pantalla [Configurador](#configuration_sync_icon): canvieu-les al dispositiu principal i els clients les segueixen automàticament, i a l'inrevés.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+En un client, la icona de mòbil apareix a *Suavitzat*, *Calibració*, *Detecció de sensibilitat* i *APS* (sincronitzats des del dispositiu principal), però no a *Comunicació*:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![Llista del configurador en un client: la icona de mòbil marca les categories sincronitzades amb el dispositiu principal](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+Les dades de connexió pròpies de cada dispositiu (sobretot l'**URL de Nightscout / el token d'accés de NSClient**) *no* es sincronitzen. Cada telèfon té les seves; en un client provenen del codi QR del dispositiu principal, o les configureu vosaltres.
 
-### Profiles
+### Perfils
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+La vostra **llista de perfils** també es manté sincronitzada entre el dispositiu principal i els seus clients emparellats. En un client emparellat, **Gestionar → Perfil** mostra els mateixos perfils que el dispositiu principal; podeu **editar** un perfil o **activar-ne** un i, com qualsevol altra ordre, el canvi s'envia al **dispositiu principal**, s'hi aplica i es torna a sincronitzar.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+La primera vegada que activeu un perfil en un client acabat d'instal·lar, és possible que el client mostri «*Encara no hi ha cap insulina en ús*» i us demani que **seleccioneu la insulina**. Trieu la insulina que està activa al dispositiu principal (**Gestionar → Configuració d'insulina** al dispositiu principal la mostra).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+En un client **no emparellat**, la pantalla Perfil continua disponible, però **només de lectura**: el client mostra els perfils que rep a través de Nightscout (els necessita per als seus propis càlculs), però no hi ha cap botó per editar ni activar: no hi ha cap dispositiu principal a qui enviar el canvi.
 
-### Preferences
+### Configuració
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+Una part de les **opcions de configuració** és **bidireccional**: les podeu canviar al **dispositiu principal o en un client emparellat**, i el canvi se sincronitza a l'altra banda. Quan canvieu una d'aquestes opcions en un client, s'envia al dispositiu principal pel canal signat, s'hi aplica i es torna el valor que compta, de manera que el que veieu al client sempre és el que ha desat el dispositiu principal. Si la mateixa opció es canvia en dos dispositius gairebé alhora, **guanya el canvi més recent**. En una opció amb un control lliscant, el valor nou s'envia quan aixequeu el dit.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+Dins de la configuració, la mateixa petita **icona de mòbil** marca les opcions concretes que se sincronitzen. En l'exemple de sota, *Límit d'absorció* se sincronitza (icona de mòbil), mentre que les opcions sense la icona són locals del dispositiu:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![La configuració d'un plugin: la icona de mòbil marca les opcions sincronitzades](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Com que el dispositiu principal és qui mana sobre el valor desat, per editar des d'un client un element del configurador controlat pel dispositiu principal o una opció bidireccional cal que es pugui **contactar** amb el dispositiu principal. Quan el dispositiu principal està fora de línia, aquests controls estan desactivats al client (vegeu [Quan el dispositiu principal està fora de línia](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## Notes de seguretat
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **Secret d'emparellament**: el dispositiu principal el dona al client una sola vegada (protegit amb el PIN en un document de Nightscout, o dins del codi QR) i tots dos el guarden encriptat.
+- **Un secret nou just després de l'emparellament**: el primer missatge del client després de l'emparellament inicia un intercanvi de claus, i a partir d'aquell moment els dos telèfons fan servir un secret que mai no ha viatjat. Un secret que algú pot haver vist (un codi QR fotografiat, una oferta de PIN llegida de Nightscout) després ja no serveix de res. Els telèfons emparellats abans que existís aquesta funció fan el mateix una vegada després de l'actualització.
+- **Cada ordre està signada** (HMAC). El dispositiu principal rebutja tot el que tingui una signatura que no correspongui a un client emparellat.
+- **Les repeticions s'eviten** amb un comptador creixent per a cada client, i cada ordre **caduca** al cap de poc temps.
+- **Els mínims permisos a Nightscout**: cada client té el seu [token de Nightscout propi](#client-master-control-own-token), que només pot llegir i escriure al canal de control des de clients. Quan el client l'ha fet servir, el dispositiu principal només accepta les seves ordres amb aquest token. Si s'elimina el client, s'elimina el token.
+- **Només canvis signats**: en [mode reforçat](#client-master-control-hardened-mode), el dispositiu principal ignora els canvis de teràpia escrits directament a Nightscout.
+- **El dispositiu principal signa el que comparteix**: la configuració, la llista de clients i el senyal «el dispositiu principal funciona» que el dispositiu principal posa a Nightscout per als seus clients porten la signatura del dispositiu principal. Un client només els accepta si la signatura és del dispositiu principal, de manera que el token d'un altre client no els pot canviar. El client coneix la clau del dispositiu principal quan s'emparella, o pel codi QR en el cas d'un telèfon que només llegeix Nightscout. Un document rebutjat apareix al registre de NSClient com a «*✕ SETTINGS … refused*».
+- **Vosaltres manteniu el control**: doneu a cada client el [rol](#client-master-control-roles) que necessita, revoqueu un client amb un toc, o desactiveu-ho tot amb **Permetre el control des dels clients**.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+Si un client es restaura des d'una còpia de seguretat que fa tornar enrere el seu comptador d'ordres, el dispositiu principal rebutjarà les seves properes ordres com a repeticions. Per solucionar-ho, només cal **desemparellar i tornar a emparellar**.
 ```
 
 ---
 
 (client-master-control-troubleshooting)=
 
-## Troubleshooting
+## Resolució de problemes
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands **fail** or the master is often **offline**                                                       | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                    |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+Per a problemes de Nightscout o de sincronització, vegeu primer [Resolució de problemes de NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+### Emparellament
+
+**Les opcions de codi QR no es poden triar al diàleg Client nou**
+
+El diàleg n'explica el motiu:
+
+- *No és un token d'administrador*: doneu al dispositiu principal un token d'administrador del vostre Nightscout, o afegiu el client amb el **PIN**.
+- *No connectat*: espereu fins que el dispositiu principal mostri *connectat* a **NSClientV3**.
+
+**«Nightscout ja té un token amb aquest nom i altres permisos»**
+
+Un dels vostres tokens de Nightscout es diu `aaps-` més aquest nom. Trieu un altre nom per al client.
+
+**«Ja hi ha un client amb aquest nom a la llista»**
+
+Trieu un altre nom o elimineu primer aquest client.
+
+**El client diu «Aquest codi és d'una altra versió d'AAPS»**
+
+El dispositiu principal i el client han de fer servir la **mateixa** versió d'**AAPS**. Actualitzeu el que tingui la versió més antiga.
+
+**El client diu «Aquest codi ha caducat»**
+
+Un codi que emparella funciona durant uns dos minuts. Torneu a afegir el client al dispositiu principal per obtenir un codi nou.
+
+**El client diu «Aquest telèfon ja està emparellat»**
+
+Primer desemparelleu-lo (**Gestionar → Emparellar amb el dispositiu principal → Desemparellar**) i després torneu a escanejar. Un codi **només Nightscout** també funciona en un telèfon emparellat.
+
+**L'emparellament es cancel·la amb «No s'ha pogut desar el secret d'emparellament»**
+
+No s'ha canviat res. Torneu a començar l'emparellament. Si continua fallant, reinicieu **AAPSClient** i torneu-ho a provar una vegada més.
+
+**El client diu que no està emparellat**
+
+Torneu a emparellar des de **Gestionar → Emparellar amb el dispositiu principal**. Comproveu que el client apareix com a **Actiu** a la llista **Clients autoritzats** del dispositiu principal.
+
+**No passa res després de l'emparellament**
+
+Comproveu que **Permetre el control des dels clients** està ACTIVAT al dispositiu principal i que el dispositiu principal està connectat a Nightscout.
+
+### Ordres
+
+**El client diu que el dispositiu principal està fora de línia, o les ordres fallen**
+
+Comproveu que:
+
+- el telèfon principal està actiu i **AAPS** s'està executant,
+- els dos telèfons estan connectats a **NSClientV3**, al mateix lloc de Nightscout,
+- els **websockets** estan activats als dos telèfons.
+
+Els websockets són **obligatoris** per al control remot des d'**AAPSClient**. Si la connexió websocket es talla sovint, el control remot no funciona. Vegeu [Resolució de problemes de NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**El dispositiu principal rebutja una ordre**
+
+El dispositiu principal torna a comprovar cada ordre amb el seu estat actual: per exemple, el perfil triat ja no existeix, o el tipus de bomba no coincideix. Comproveu-ho al dispositiu principal.
+
+**Els tractaments introduïts al web de Nightscout no s'apliquen**
+
+És el comportament esperat en [mode reforçat](#client-master-control-hardened-mode). Introduïu-los en un client emparellat.
+
+### Tokens i configuració de Nightscout
+
+**El client diu «El telèfon principal ho ha rebutjat: aquest telèfon escriu a Nightscout amb un token diferent del seu»**
+
+El client feia servir abans el seu token de Nightscout propi i ara escriu amb un altre, per exemple després d'introduir un token a la seva configuració de Nightscout. Elimineu el client al dispositiu principal i torneu-lo a afegir (vegeu [El token de Nightscout propi del client](#client-master-control-own-token)).
+
+**La targeta del client mostra «Fa servir el token de Nightscout …» en vermell**
+
+El client encara escriu amb un token que té més permisos dels que necessita. El dispositiu principal envia al client el seu token propi després de l'emparellament, però només si el dispositiu principal té un token d'administrador. Comproveu el token del dispositiu principal, o torneu a configurar el client amb un codi QR.
+
+**El registre de NSClient al client mostra «✕ SETTINGS … refused» i la seva configuració ja no segueix el dispositiu principal**
+
+Algú altre ha escrit el document de configuració del dispositiu principal, o el dispositiu principal té una clau nova (per exemple, després d'esborrar-ne les dades). Un client emparellat agafa la clau nova automàticament la propera vegada que es connecta a Nightscout. Un telèfon que només llegeix Nightscout necessita de nou el codi QR del dispositiu principal (**Només lectura de Nightscout → mostrar el codi**).
+
+**Un client ja no pot llegir Nightscout**
+
+El seu token s'ha eliminat, per exemple perquè el client s'ha eliminat al dispositiu principal. Torneu-lo a afegir.
 
 ---
 

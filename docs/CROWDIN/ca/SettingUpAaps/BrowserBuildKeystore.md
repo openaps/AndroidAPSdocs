@@ -1,82 +1,82 @@
 (aaps-ci-preparation)=
 
-# Browser build – Step 2: Create your signing keystore
+# Compilació al navegador – Pas 2: Creeu el vostre magatzem de claus de signatura
 
 ```{note}
-This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
+Aquest és el **Pas 2** de la [Compilació al navegador](BrowserBuild.md). Primer completeu el [Pas 1 – Creeu el vostre fork a GitHub](BrowserBuildFork.md).
 ```
 
-AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+AAPS s'ha de signar amb claus privades desades en un **Java KeyStore (JKS)**. Aquesta és la decisió més important de tot el procés, perquè determina si més endavant podreu **actualitzar** AAPS sense reinstal·lar-lo.
 
 ```{note}
-In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
+En els passos següents desareu informació privada (el vostre magatzem de claus i, més endavant, l'accés al vostre Google Drive) dins de GitHub com a **secrets**. Un secret és simplement un valor xifrat que només la vostra pròpia compilació pot llegir – ningú més el pot veure, ni tan sols les persones que miren el vostre fork. Així la vostra compilació continua sent només vostra.
 ```
 
-## Choose your keystore strategy
+## Trieu com voleu obtenir el magatzem de claus
 
-Read both options and pick the one that matches your situation.
+Llegiu les dues opcions i trieu la que correspon a la vostra situació.
 
-### Option 1 – Generate a new keystore (new users)
+### Opció 1 – Generar un nou magatzem de claus (usuaris nous)
 
-Choose this if **any** of these is true:
+Trieu aquesta opció si **qualsevol** d'aquests punts és cert:
 
-- This is your **first time** building AAPS.
-- You don't have a keystore from a previous Android Studio (computer) build.
-- You have forgotten your keystore password or alias.
+- És la **primera vegada** que compileu AAPS.
+- No teniu cap magatzem de claus d'una compilació anterior amb Android Studio (a l'ordinador).
+- Heu oblidat la contrasenya o l'àlies del vostre magatzem de claus.
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Compilar AAPS amb l'**Opció 1** crea un magatzem de claus completament nou, per tant **no us permetrà actualitzar l'AAPS que ja teniu instal·lat**. Per passar a aquesta nova compilació, heu d'exportar la vostra configuració, desinstal·lar l'AAPS antic, instal·lar el nou i tornar a importar la vostra configuració. Seguiu els passos de [Reinstal·lar AAPS amb un nou magatzem de claus](#reinstall-aaps).
 ```
 
-**→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
+**→ [Continueu amb l'Opció 1 – Generar un nou magatzem de claus](BrowserBuildO1.md)**
 
-### Option 2 – Upload your existing keystore (existing / past users)
+### Opció 2 – Pujar el vostre magatzem de claus existent (usuaris actuals o antics)
 
-Choose this if you **already have** the `.jks` keystore you used on a previous build of AAPS from a computer in Android Studio, **and** you know its password and alias (usually `key0`).
+Trieu aquesta opció si **ja teniu** el magatzem de claus `.jks` que vau fer servir en una compilació anterior d'AAPS a l'ordinador amb Android Studio, **i** en sabeu la contrasenya i l'àlies (normalment `key0`).
 
-This keeps your current AAPS install upgradeable: future updates will use the same keystore.
+Així l'AAPS que teniu instal·lat es podrà continuar actualitzant: les actualitzacions futures faran servir el mateix magatzem de claus.
 
-**→ [Continue with Option 2 – Upload your existing keystore](BrowserBuildO2.md)**
+**→ [Continueu amb l'Opció 2 – Pujar el vostre magatzem de claus existent](BrowserBuildO2.md)**
 
 ----
 
 ```{note}
-On the next page you will pick your device (computer or iPhone). Each device page then walks you through downloading and opening the preparation file the right way for that device, and creating your keystore. The built AAPS app will be saved in your Google Drive.
+A la pàgina següent triareu el vostre dispositiu (ordinador o iPhone). Després, la pàgina de cada dispositiu us guia per descarregar i obrir el fitxer de preparació de la manera correcta per a aquest dispositiu, i per crear el vostre magatzem de claus. L'aplicació AAPS compilada es desarà al vostre Google Drive.
 ```
 
-**Next: choose [Option 1](BrowserBuildO1.md) or [Option 2](BrowserBuildO2.md) above, then follow the page for your device.**
+**Següent: trieu l'[Opció 1](BrowserBuildO1.md) o l'[Opció 2](BrowserBuildO2.md) de més amunt i després seguiu la pàgina del vostre dispositiu.**
 
 ----
 
 (ci-keystore-export)=
 
-## Export your keystore (optional)
+## Exporteu el vostre magatzem de claus (opcional)
 
-If you want to export your stored keystore, use this method.
+Si voleu exportar el magatzem de claus que teniu desat, feu servir aquest mètode.
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+Aquest script exporta la informació del magatzem de claus que heu configurat abans (amb l'Opció 1 o l'Opció 2) com a fitxer ZIP protegit amb contrasenya a la carpeta `/AAPS/KeyStore` del vostre Google Drive.
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+Abans de fer servir aquest mètode d'exportació, assegureu-vos que heu completat la configuració del magatzem de claus i de Google Drive.
 ```
 
-### Steps:
+### Passos:
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **Afegiu el secret de la contrasenya del ZIP:**
+   - Aneu a **Settings** → **Secrets and variables** → **Actions** del vostre repositori
+   - Feu clic a **New repository secret**
+   - Al camp **Name**, escriviu: `ZIP_PASSWORD`
+   - Al camp **Secret**, escriviu la vostra pròpia contrasenya per xifrar el ZIP
+   - Feu servir només lletres angleses i números per a la contrasenya (sense símbols especials)
+   - Feu clic a **Add secret**
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI Keystore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **Executeu el workflow d'exportació:**
+   - Aneu a la pestanya **Actions** del vostre repositori
+   - Seleccioneu **CI Keystore Export**
+   - Feu clic a **Run workflow**
+   - El fitxer ZIP amb el magatzem de claus exportat es desarà al vostre Google Drive
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
@@ -85,6 +85,6 @@ Before using this export method, make sure your keystore and Google Drive settin
 ```{toctree}
 :hidden:
 
-Option 1 – Generate a new keystore <BrowserBuildO1.md>
-Option 2 – Upload your existing keystore <BrowserBuildO2.md>
+Opció 1 – Generar un nou magatzem de claus <BrowserBuildO1.md>
+Opció 2 – Pujar el vostre magatzem de claus existent <BrowserBuildO2.md>
 ```

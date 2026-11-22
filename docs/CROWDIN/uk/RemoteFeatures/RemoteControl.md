@@ -7,8 +7,8 @@
 
 Є чотири дуже ефективні інструменти для віддаленого керування **AAPS**:
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
-4) [Smartwatches](#RemoteControl_smartwatches) (Android)
+1) [SMS-команди](#RemoteControl_SMS-Commands) (телефон-послідовник може бути з Android або iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (пристрій-послідовник — телефон або планшет з Android, або комп'ютер з Windows, Mac чи Linux; на iPhone ви [збираєте застосунок самі](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS або інший комп'ютер/пристрій), переважно для стеження: див. примітку про [керування з клієнта](#client-master-control) в цьому розділі.  
+4) [Розумні годинники](#RemoteControl_smartwatches) (Android)
 
 Перші три підходять переважно для доглядачів/батьків, але розумні годинники дуже корисні і для доглядачів/батьків, **і** для дорослих з діабетом.
 
@@ -42,7 +42,7 @@
 
 **AAPSClient** можна встановити на один або на кілька телефонів-послідовників (наприклад, телефон-послідовник батька 1 і телефон-послідовник батька 2), щоб обидва доглядачі мали доступ і могли віддалено керувати телефоном пацієнта з **AAPS**.
 
-To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Щоб завантажити **AAPSClient**, перейдіть до [репозиторію GitHub](https://github.com/nightscout/AndroidAPS/releases/) і натисніть на файл **“app-AAPSClient-release_x.x.x.x”** (версія може бути новішою, ніж на знімку екрана нижче):
 
 ![зображення](../images/remote_control_and_following/AAPSClient_download_02.png)
 
@@ -56,7 +56,7 @@ To download **AAPSClient**, navigate to the [GitHub repository](https://github.c
 
 перенести на телефон-послідовник через USB-кабель; або перетягнути в папку Google Drive, а потім встановити на телефоні-послідовнику, торкнувшись файлу «app-AAPSClient-release».
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. Причина в тому, що не можна встановити на один телефон **AAPS** і **AAPSClient**, підписані різними ключами. <br/> Щоб зібрати **AAPSClient** самостійно, виконайте ті самі кроки, що і для [звичайної збірки AAPS](../SettingUpAaps/BuildingAaps.md). На сторінці **Generate signed App Bundle or APK** виберіть **aapsclientRelease** замість **fullRelease**.
+Якщо вам потрібен **AAPS** для себе, а **AAPSClient** для стеження за кимось іншим, вам треба зібрати **AAPSClient** самостійно, а не завантажувати його з репозиторію GitHub, як описано вище. Причина в тому, що не можна встановити на один телефон **AAPS** і **AAPSClient**, підписані різними ключами. <br/> Щоб зібрати **AAPSClient** самостійно, виконайте ті самі кроки, що і для [звичайної збірки AAPS](../SettingUpAaps/BuildingAaps.md). На сторінці **Generate signed App Bundle or APK** виберіть **aapsclientRelease** замість **fullRelease**.
 
 Те саме правило діє, коли ви встановлюєте кілька клієнтських застосунків (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) на один телефон-послідовник: усі вони мають бути підписані **тим самим ключем**. Інакше Android не дасть встановити другий (помилка `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
@@ -74,9 +74,9 @@ Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring s
 
 - Введіть **Токен доступу Nightscout** у тих самих налаштуваннях. Будь ласка, дотримуйтеся інструкцій [тут](https://nightscout.github.io/nightscout/security/#create-a-token). На телефоні з **AAPS** використовуйте **токен адміністратора (admin token)**: з ним **AAPS** створює окремий токен для кожного телефону-послідовника.
 
-- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. На обох телефонах вони також прискорюють синхронізацію, але трохи більше витрачають батарею.
+- Enable **Use websockets** on **both** phones. Websockets **обов'язкові** для віддаленого керування з **AAPSClient** на обох телефонах. Без них **AAPSClient** може стежити за **AAPS**, але не може ним керувати. На обох телефонах вони також прискорюють синхронізацію, але трохи більше витрачають батарею.
 
-  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+  Ваш хостинг Nightscout має підтримувати websockets. Якщо з'єднання websocket постійно розривається, віддалене керування не працює. Див. [Усунення проблем з NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Налаштування > NSClientV3 з URL Nightscout, токеном доступу Nightscout і «Використовувати websockets»](../images/preferences/settings_nsclient.png)
 
@@ -134,21 +134,21 @@ Nightscout — це сервер «у хмарі», але є також окр�
 
 Після встановлення застосунку **Nightscout** на iPhone відкрийте його і виконайте кроки налаштування: введіть адресу вашого Nightscout (див. нижче, ліворуч). Вигляд адреси може бути різним, залежно від того, де розміщено ваш Nightscout. (_наприклад,_ http://youraddresshere.herokuapp.com). Потім введіть ваш API secret Nightscout (див. нижче, праворуч). Якщо застосунок не запитав пароль API, введіть його, натиснувши на замок угорі застосунку:
 
-![зображення](../images/remote-control-24.png)
+![зображення](../images/remote_control_and_following/remote-control-24.png)
 
 Більше інформації про налаштування є прямо на сайті [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 Під час першого входу ви побачите дуже простий екран. Налаштуйте, що показувати: виберіть меню-«гамбургер» угорі праворуч і прогорніть вниз:
 
-![зображення](../images/remote-control-25.png)
+![зображення](../images/remote_control_and_following/remote-control-25.png)
 
 Прогорніть вниз до «Settings» (Налаштування). Можливо, ви захочете змінити «scale» (шкала) на «linear» (лінійна), бо за замовчуванням ГК показано в логарифмічній шкалі, а в «render basal» (показ базалу) вибрати «default» (за замовчуванням), щоб було видно базал помпи.
 
-![зображення](../images/remote-control-25b.png)
+![зображення](../images/remote_control_and_following/remote-control-25b.png)
 
 Виберіть потрібні параметри. Зніміть позначку з сигналів, якщо для сигналів ви використовуєте інший застосунок.
 
-![зображення](../images/remote-control-26.png)
+![зображення](../images/remote_control_and_following/remote-control-26.png)
 
 Гортайте далі вниз до «show plugins» (показати плагіни).
 
@@ -156,7 +156,7 @@ Nightscout — це сервер «у хмарі», але є також окр�
 
 Важливо: тепер натисніть «save» (зберегти) внизу, щоб зміни почали діяти.
 
-![зображення](../images/remote-control-27.png)
+![зображення](../images/remote_control_and_following/remote-control-27.png)
 
 Після натискання «save» застосунок повернеться до головного екрана Nightscout, який виглядатиме приблизно так:
 
@@ -170,7 +170,7 @@ Nightscout — це сервер «у хмарі», але є також окр�
 8. Профіль базального інсуліну
 9. Зелена лінія = історія глюкози Сині лінії = прогноз глюкози
 
-![зображення](../images/remote-control-28.png)
+![зображення](../images/remote_control_and_following/remote-control-28.png)
 
 Докладніше про меню вгорі ліворуч у застосунку Nightscout:
 
@@ -179,7 +179,7 @@ Nightscout — це сервер «у хмарі», але є також окр�
 3. Гамбургер — для налаштувань
 4. Careportal — запис терапії (див. [нижче](#RemoteControl_nightscout-treatments), коли **AAPS** застосовує ці записи)
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Верхня панель Nightscout](../images/remote_control_and_following/remote-control-29.png)
 
 На цьому екрані в сірих вкладках є дуже багато інформації про стан системи **AAPS** (а якщо торкнутися вкладки, з'явиться ще більше):
 
@@ -195,16 +195,16 @@ Nightscout — це сервер «у хмарі», але є також окр�
 10. Стан батареї телефону з AAPS
 11. Розмір вашої бази даних. Якщо вона надто заповнена (лише для власного Nightscout — для платних хостингів це неважливо), можуть початися проблеми зі зв'язком. Щоб зменшити це число, можна видалити дані в меню Admin tools (через гамбургер).
 
-![зображення](../images/remote-control-30.png)
+![зображення](../images/remote_control_and_following/remote-control-30.png)
 
-![зображення](../images/remote-control-31.png)
+![зображення](../images/remote_control_and_following/remote-control-31.png)
 
 Натисніть «refresh» внизу сторінки, щоб закрити спливне вікно.
 
 (RemoteControl_nightscout-treatments)=
 ### Надсилання терапії в AAPS через застосунок Nightscout
 
-In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. Поки увімкнено керування з клієнтів, телефон з **AAPS** працює в [захищеному режимі](#client-master-control-hardened-mode): терапія, тимчасові цілі і перемикання профілю, введені на сайті Nightscout або в застосунку Nightscout, **не** застосовуються. Тоді застосунок Nightscout — це інструмент лише для стеження.
+В **AAPS** 4 підтримуваний спосіб віддаленого керування **AAPS** — це **спарений AAPSClient**, див. [Керування «основний телефон ↔ клієнт»](#client-master-control): кожен клієнт має [роль](#client-master-control-roles), яка обмежує, що йому дозволено, а кожну команду клієнт підписує, а телефон з **AAPS** перевіряє та підтверджує. Поки увімкнено керування з клієнтів, телефон з **AAPS** працює в [захищеному режимі](#client-master-control-hardened-mode): терапія, тимчасові цілі і перемикання профілю, введені на сайті Nightscout або в застосунку Nightscout, **не** застосовуються. Тоді застосунок Nightscout — це інструмент лише для стеження.
 
 ```{admonition} Only when client control is off
 :class: warning
@@ -233,7 +233,7 @@ In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSC
 
 ### Варіант 1) Керування AAPS з годинника Wear OS
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Коли ви [налаштуєте **AAPS** на годиннику](../WearOS/BuildingAapsWearOS.md), докладний опис циферблатів і їхніх функцій див. на сторінці [Налаштування AAPS на годиннику з Wear OS](../WearOS/WearOsSmartwatch.md).
 
@@ -279,25 +279,25 @@ a)  **AAPSClient** або **SMS**-команди не можуть працюв�
 
 b)  користувач не хоче вводити код автентифікації (потрібний для SMS-команд).
 
-Щоб керувати **AAPS**, розумному годиннику потрібна **Wear OS 3 або новіша**. Будь ласка, перевірте технічні характеристики годинника і див. сторінку [Розумні годинники та AAPS](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
+Щоб керувати **AAPS**, розумному годиннику потрібна **Wear OS 3 або новіша**. Будь ласка, перевірте технічні характеристики годинника і див. сторінку [Розумні годинники та AAPS](../Getting-Started/Watches.md). Якщо ви не впевнені, пошукайте інформацію або запитайте в групах **AAPS** у Facebook/Discord.
 
 Нижче наведено інструкції з налаштування **AAPS** на популярному годиннику Samsung Galaxy Watch 4 (40 мм). Годинник [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) теж популярний вибір. Якщо ви налаштовували інший розумний годинник і вважаєте, що це буде корисно іншим, будь ласка, додайте це на ці сторінки ([редагувати документацію](../SupportingAaps/HowToEditTheDocs.md)), щоб поділитися досвідом з усією спільнотою **AAPS**.
 
 ### Варіант 3) AAPSClient на годиннику для віддаленого керування **AAPS** на телефоні
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
+Програму для годинника, **AAPSClient** Wear apk, можна завантажити прямо з [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Щоб завантажити програму, натисніть на застосунок для годинника, який відповідає клієнтському застосунку на телефоні: **wear-aapsclient-release_**_версія_ — для **AAPSClient**, **wear-aapsclient2-release_**_версія_ — для **AAPSClient2** (див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![зображення](../images/github_release_wear_aapsclient_apk.png)
+![зображення](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Потім виберіть «save as» (зберегти як) і збережіть файл у зручне місце на комп'ютері:
 
 
-![зображення](../images/save_as_wear_aapsclient_apk.png)
+![зображення](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 

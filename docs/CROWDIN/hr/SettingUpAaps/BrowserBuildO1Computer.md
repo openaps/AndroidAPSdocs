@@ -1,39 +1,39 @@
 (aaps-ci-option1-computer)=
 
-# Option 1 · Computer – Generate a new keystore
+# Opcija 1 · Računalo – Izradite novo spremište ključeva
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on a **computer** (Windows / Mac / Linux).
+[Opcija 1](BrowserBuildO1.md) (izrada novog spremišta ključeva) na **računalu** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Preuzmite pripremnu datoteku
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and generate the keystore
+## 2. Pokrenite lokalni poslužitelj i izradite spremište ključeva
 
-Use a computer (supports Windows/Mac/Linux)
+Koristite računalo (podržani su Windows/Mac/Linux)
 
-Open the webpage [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
+Otvorite web-stranicu [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
+Instalirajte Simple Web Server<br/> Ako koristite Windows ili Mac, možete ga instalirati iz trgovine Microsoft Store ili Mac App Store.<br/> Ako vas preglednik pita želite li otvoriti aplikaciju trgovine, dopustite to.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
-Example on Mac:
+Primjer na Macu:
 
-- get → install → open<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
+- preuzmi → instaliraj → otvori<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
-- Click Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
+- Kliknite Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- Click New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
+- Kliknite New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
-- In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
+- U polju Folder Path odaberite mapu u kojoj se nalazi aaps-ci-preparation.html, a zatim kliknite Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
-- Seeing this screen means the server has been started.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
+- Ako vidite ovaj zaslon, poslužitelj je pokrenut.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Do not close Simple Web Server. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Ne zatvarajte Simple Web Server. Prebacite se u preglednik i otvorite<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+- Za sljedeće korake pogledajte videozapis ispod, od 1 minute i 37 sekundi.
 
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -50,4 +50,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Sljedeće: [Korak 3 – Autorizirajte Google Drive](BrowserBuildGoogleDrive.md) →**

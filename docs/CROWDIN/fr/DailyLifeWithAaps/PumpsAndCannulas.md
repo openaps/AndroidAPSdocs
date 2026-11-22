@@ -4,7 +4,7 @@
 
 La procédure décrite ci-dessous concerne seulement les pompes à tubulure. Elle ne s'applique pas aux pompes patch comme Omnipod, Medtrum Nano, Accu-Chek Solo, etc. Cette procédure est parfois appelée « changement de set » : un changement de set « complet » comprend le réservoir d'insuline et la canule, un changement de set « partiel » ne concerne que la canule.
 
-Les pompes patch se remplissent et s'amorcent elles-mêmes dans leur propre assistant d'activation, et leur canule est déjà dans le corps. **AAPS** ne propose pas d'amorçage pour elles : **Amorcer/Remplir** n'apparaît ni dans le panneau **Gestion** ni dans QuickLaunch. Voir la page de votre pompe dans [Pompes compatibles](../Getting-Started/CompatiblePumps.md).
+Les pompes patch se remplissent et s'amorcent elles-mêmes dans leur propre assistant d'activation, et leur canule est déjà dans le corps. **AAPS** ne propose pas d'amorçage pour elles : **Amorcer/Remplir** n'apparaît ni dans le panneau **Gestion** ni dans QuickLaunch. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Voir la page de votre pompe dans [Pompes compatibles](../Getting-Started/CompatiblePumps.md).
 
 Le changement physique de la cartouche ou du réservoir ne peut pas se faire depuis **AAPS** : il doit être fait directement sur la pompe. Une fois le changement fait, il doit être enregistré manuellement dans **AAPS**.
 
@@ -31,6 +31,7 @@ Le changement physique de la cartouche ou du réservoir ne peut pas se faire dep
 * Vous pouvez régler les quantités d'amorçage par défaut dans les paramètres **Amorcer/Remplir** — tapez « amorcer » dans la barre de recherche de l'écran principal pour les ouvrir (voir [Préférences](../SettingUpAaps/Preferences.md)). Consultez la notice dans votre boîte de canules pour savoir combien d'unités il faut amorcer pour votre canule (cela dépend de la longueur de l'aiguille et de la tubulure).
 
 * L'insuline délivrée avec la fonction d'amorçage n'est pas prise en compte par **AAPS** pour calculer l'insuline active (IA), et elle est marquée « Amorcer » dans l'[Historique Traitements](#aaps-screens-treatments).
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * Toute insuline donnée en bolus depuis la pompe pendant une déconnexion de la pompe n'est pas non plus prise en compte par **AAPS**. Si vous faites un bolus directement depuis la pompe pendant qu'**AAPS** est déconnecté, vous pouvez, une fois la pompe reconnectée, déclarer cette insuline (sans la délivrer) dans la boîte de dialogue **Insuline** (voir [Déclarer de l'insuline délivrée sans faire de bolus](#pumps-cannulas-announce-insulin) ci-dessous).
 

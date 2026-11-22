@@ -20,7 +20,7 @@ As estratégias mais usadas em conjunto com o **AAPS** são explicadas com mais 
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) e [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![imagem](../images/following_dexcom_follow.png)
+![imagem](../images/remote_control_and_following/following_dexcom_follow.png)
 
 * O Dexcom Follow é compatível com muitos telemóveis (Android e iPhone). O Dexcom Follow pode ser usado mesmo que não use a app oficial da Dexcom para receber os dados do sensor.
 
@@ -47,7 +47,7 @@ Para o Dexcom Follow, os dados do sensor são então exportados do telefone do *
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![imagem](../images/following_nightguard.png)
+![imagem](../images/remote_control_and_following/following_nightguard.png)
 
 Vantagens (segundo os utilizadores):
 
@@ -73,7 +73,7 @@ Desvantagens (segundo os utilizadores)
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![imagem](../images/following_nightwatch.png)
+![imagem](../images/remote_control_and_following/following_nightwatch.png)
 
 
 * O Nightwatch apresenta-se como um cliente do Nightscout e monitoriza os níveis da glicose do utilizador no Nightscout, num telefone ou tablet Android.
@@ -114,7 +114,7 @@ Se a fonte de dados do **AAPS** não for o xDrip, mas puder mostrar os dados da 
 
 ![imagem](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+O xDripSwift nasceu da adaptação da app xDrip original para iOS e evoluiu para o "xDrip for iOS", escrito como **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -132,7 +132,7 @@ Se quiser, pode depois tornar-se um "releaser" e [partilhar um Personal Testflig
 
 
 
-![imagem](../images/following_xdrip4ios.png)
+![imagem](../images/remote_control_and_following/following_xdrip4ios.png)
 
 "O que é o **Shuggah**?" Um grupo de programadores ucranianos copiou o código do projeto xDrip4iOS (que é partilhado publicamente no GitHub) e publicou-o na App Store com uma conta empresarial. A versão Shuggah não é de modo nenhum gerida pelos programadores do xDrip4iOS.
 
@@ -140,9 +140,9 @@ O [grupo do xDrip4iOS no Facebook](https://www.facebook.com/groups/8539946150568
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![imagem](../images/following_sugarmate.png)
+![imagem](../images/remote_control_and_following/following_sugarmate.png)
 
-![imagem](../images/following_sugarmate_graph.png)
+![imagem](../images/remote_control_and_following/following_sugarmate_graph.png)
 
 
 O [Sugarmate](https://sugarmate.io/) pode ser descarregado para iPhones a partir da App Store. O Sugarmate é compatível com:
@@ -150,12 +150,12 @@ O [Sugarmate](https://sugarmate.io/) pode ser descarregado para iPhones a partir
 * Apple iPad (precisa da versão de software 13.0 ou superior)
 * Google Android (guarde a app web no ecrã inicial)
 
-Utilizadores do Sugarmate dizem que pode ser usado com o Apple CarPlay nos EUA para mostrar as leituras da glicose durante a condução. Ainda não se sabe se isto é possível noutros países fora dos EUA. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Utilizadores do Sugarmate dizem que pode ser usado com o Apple CarPlay nos EUA para mostrar as leituras da glicose durante a condução. Ainda não se sabe se isto é possível noutros países fora dos EUA. Se souber mais sobre isto, acrescente aqui os detalhes à documentação com um [pull request](../SupportingAaps/HowToEditTheDocs.md), o que é rápido e fácil de fazer.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![imagem](../images/following_spike.png)
+![imagem](../images/remote_control_and_following/following_spike.png)
 
 O Spike pode ser usado como recetor principal ou como app de seguidor, e mostra a glicose, alarmes, a IA e mais.
 
@@ -175,7 +175,7 @@ Veja [aqui](../Getting-Started/Watches.md).
 
 ### M5Stack
 
-![imagem](../images/following_m5stack.png)
+![imagem](../images/remote_control_and_following/following_m5stack.png)
 
 O M5Stack é uma pequena caixa que pode ser programada para muitas aplicações. O projeto do Martin, [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki), mostra os valores e as tendências da glicose do sensor, a IA e os HCA. Está numa caixa de plástico, com ecrã a cores, ranhura para cartão micro SD, 3 botões, altifalante e bateria interna. É um ótimo monitor da glicose e é relativamente fácil de configurar se tiver uma conta Nightscout. Normalmente, os utilizadores usam-no na rede Wi-Fi de casa, mas alguns dizem que o usam como ecrã quando andam de mota, ligado a um hotspot Wi-Fi do telefone.
 
@@ -183,9 +183,9 @@ O M5Stack é uma pequena caixa que pode ser programada para muitas aplicações.
 
 O SugarPixel é um dispositivo secundário de visualização e alerta da glicose para a monitorização contínua da glicose. Liga-se à app da Dexcom ou à app do Nightscout no smartphone do utilizador. O dispositivo mostra as leituras da glicose em tempo real. Este monitor de CGM tem alertas sonoros com tons aleatórios (que são muito altos), alertas por vibração para pessoas com problemas de audição, opções de ecrã personalizáveis e seguimento nativo por vários utilizadores.
 
-![imagem](../images/following_sugarpixel.png)
+![imagem](../images/remote_control_and_following/following_sugarpixel.png)
 
-![imagem](../images/following_sugarpixel_led_display.png)
+![imagem](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
 * O SugarPixel tem várias opções de ecrã em mg/dl e mmol/l, para as necessidades do utilizador, com valores da glicose em cores.
 * O mostrador padrão mostra a glicose, a seta de tendência e o delta. O delta é a variação, + ou -, em relação à última leitura.
@@ -197,7 +197,7 @@ O SugarPixel é um dispositivo secundário de visualização e alerta da glicose
 
 O **Nightscout Clock** é um software de código aberto que funciona no dispositivo **Ulanzi TC001**. Liga-se aos servidores da Dexcom ou ao Nightscout e mostra as leituras da glicose em tempo real.
 
-![Seguir com o Nightscout Clock](../images/FollowingNightscoutClock.png)
+![Seguir com o Nightscout Clock](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * O relógio suporta as unidades mmol/l e mg/dl e tem alarmes sonoros.
 * Há vários ecrãs disponíveis; veja o [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) para uma visão geral.

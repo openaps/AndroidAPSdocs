@@ -1,6 +1,6 @@
 # Майбутні (можливі) драйвери помп
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Це список деяких помп на ринку, стан їх підтримки в інших системах петлі та їхній стан в AAPS. У кінці є трохи інформації про те, що потрібно помпі, щоб вона могла працювати в петлі («Loop capable»).
 
     {contents} Зміст
     :depth: 1
@@ -13,6 +13,8 @@ This is a list of some pumps on the market, the status of their support in other
 Omnipod 5 ([Вебсайт](https://www.omnipod.com/))
 
 ![Драйвер Omnipod 5 у розробці](../images/future-pumps/omnipod5-driver.png)
+
+See [Omnipod 5](../CompatiblePumps/Omnipod5.md) for how the driver in development works.
 
 Tandem: t:Mobi ([Вебсайт](https://www.tandemdiabetes.com/))
 
@@ -42,7 +44,7 @@ Tandem: t:Mobi ([Вебсайт](https://www.tandemdiabetes.com/))
 
 ### Інсулінова помпа Willcare ([Вебсайт](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Стан для петлі:** зараз помпа не є кандидатом для петлі, але її співробітники звʼязалися з нами, і вони зацікавлені зробити помпу придатною для петлі (схоже, не вистачає лише команд для читання/запису профілю (get/set profile)).
 
 **Апаратні вимоги для AAPS:** немає. Схоже, має Bluetooth.
 

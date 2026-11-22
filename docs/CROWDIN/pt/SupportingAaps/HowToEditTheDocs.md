@@ -38,7 +38,7 @@ Usamos markdown nas páginas da documentação. Os ficheiros têm a extensão ".
 
 ![Editar branch](../images/docs_pr_edit_file.png)
 
-4. Tem estado a trabalhar no separador "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Se vir uma melhoria necessária, volte ao separador de edição para fazer mais melhorias. 
+4. Tem estado a trabalhar no separador "<>Edit file". Selecione o separador «Preview changes» (pré-visualizar alterações) para ver tudo de novo e confirmar que o que alterou ficou como queria (verifique se há erros de escrita). Se vir uma melhoria necessária, volte ao separador de edição para fazer mais melhorias. 
 
 ![modo de pré-visualização](../images/docs_pr_preview_changes.png)
 
@@ -54,7 +54,7 @@ Usamos markdown nas páginas da documentação. Os ficheiros têm a extensão ".
 
 ![Acompanhamento do PR](../images/docs_pr_tracking.png)
 
-PS: o seu fork e o seu branch continuam na sua conta pessoal do GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Nas próximas alterações, se seguir este procedimento, as alterações começam sempre a partir de uma versão atualizada dos repositórios do AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Como as pessoas costumam esquecer-se de atualizar os seus repositórios, recomendamos usar o processo de PR descrito acima até estar habituado a fazer "compares".
+PS: o seu fork e o seu branch continuam na sua conta pessoal do GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Nas próximas alterações, se seguir este procedimento, as alterações começam sempre a partir de uma versão atualizada dos repositórios do AndroidAPSdocs. Se escolher outro método para iniciar um PR (por exemplo, editar a partir do branch master do seu repositório fork), tem de garantir que o seu repositório está atualizado: faça primeiro um «compare» e integre todas as atualizações feitas desde a última vez que atualizou o seu fork. Como as pessoas costumam esquecer-se de atualizar os seus repositórios, recomendamos usar o processo de PR descrito acima até estar habituado a fazer "compares".
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Quem escreve apenas marca, por exemplo, um título como título de nível 1, e o
 A ideia por trás disto é que
 
 - quem escreve deve pensar primeiro no texto e não na formatação,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- o texto markdown pode ser trocado entre diferentes ferramentas markdown, em vez de, por exemplo, ferramentas proprietárias como o Microsoft Word, e
 - pode gerar vários formatos de saída a partir de um ficheiro markdown.
 
 O markdown não é uma norma 100% fixa e tentamos ficar o mais perto possível da norma, para
@@ -219,9 +219,9 @@ Além disso, pode adicionar notas que se podem recolher para informação detalh
     Isto é um aviso.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Título do aviso
     :class: warning
-    This is a warning.
+    Isto é um aviso.
     ```
     
     #### Notas que se podem recolher
@@ -244,7 +244,7 @@ Além disso, pode adicionar notas que se podem recolher para informação detalh
 
 ## Tabelas
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Evite tabelas com textos longos: o conteúdo é difícil de formatar em Markdown, normalmente não cabe na largura do ecrã de um telemóvel e provavelmente não aparece da mesma forma depois da tradução.
 
 ## Guia de estilo
 
@@ -262,7 +262,7 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 Use inglês simples sempre que possível. Isto ajuda os leitores que não são nativos e também facilita a tradução dos documentos do AAPS para outras línguas. Escreva como numa conversa com o utilizador: imagine que está sentado à secretária, em frente da pessoa para quem escreve. Lembre-se: a maioria dos utilizadores do AAPS não tem formação em programação. A própria diabetes também tem muito jargão e muitas abreviaturas. Tenha em conta que algumas pessoas podem ter sido diagnosticadas há pouco tempo, podem ter menos experiência com a diabetes do que o leitor, ou podem ter recebido uma formação diferente sobre a diabetes. Se usar uma forma curta ou uma abreviatura, escreva-a por extenso na primeira vez que a usa, com a abreviatura logo a seguir entre parênteses, como “super micro bolus (SMB)”. Ponha também um link para o glossário. Os termos técnicos que o leitor pode não conhecer também podem ser explicados entre parênteses.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Em vez de: *“What causes high postprandial BG peaks in closed loop?”*
 
 Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
@@ -296,7 +296,7 @@ Sobretudo se gravar vídeos ou fizer capturas de ecrã, não mostre os seus dado
 
 Os comandos são a forma mais rápida de dar instruções, mas quem escreve às vezes tem medo de dar ordens e escreve “you should do this” em vez de apenas “do this”. Talvez as pessoas tenham receio de que as ordens pareçam demasiado duras. Muitas vezes pode resolver isto ao colocar a palavra 'please' antes. Mas, se algo tem mesmo de ser feito, é melhor não dizer ‘please’, porque isso dá ao leitor a opção de recusar.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Em vez de: *“You should just think of it as a complete statement.”*
 
 Use: *“Think of it as a complete statement.”*
 
@@ -403,7 +403,7 @@ Um tutorial ajuda o aluno a adquirir competências básicas. O utilizador vai **
 
 - Ignore opções/alternativas/…. Sem ambiguidade
 
-- Transições entre passos: termine um passo com uma frase que leva ao passo seguinte, numa progressão lógica. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Transições entre passos: termine um passo com uma frase que leva ao passo seguinte, numa progressão lógica. Exemplo: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
 
 - Título do **Tutorial** (título de nível 1)
 
@@ -453,7 +453,7 @@ O objetivo de um guia prático é ajudar o utilizador que já tem competências 
 
 - COMO FAZER
 
-- narrator directly talks to the reader: In this guide **you** will
+- o narrador fala diretamente com o leitor: In this guide **you** will
 
 - Futuro -> para mostrar o objetivo final
 

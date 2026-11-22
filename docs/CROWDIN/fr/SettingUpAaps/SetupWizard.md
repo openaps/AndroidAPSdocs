@@ -182,7 +182,7 @@ Quand vous avez terminé, appuyez sur « **SUIVANT** » pour passer à l'écra
 
 Cet écran n'est affiché que si **AAPS** trouve des paramètres exportés auparavant dans le répertoire **AAPS** (« Paramètres sauvegardés trouvés »), par exemple quand vous réinstallez l'application ou passez à un nouveau téléphone.
 
-- Pour restaurer votre configuration précédente, appuyez sur « **Importer les paramètres** » : voir [Exporter et importer les paramètres](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Pour commencer avec une nouvelle configuration, appuyez sur « **SUIVANT** » et continuez avec l'assistant.
 
 ![Importer les paramètres](../images/setup-wizard/Wizard-ImportSettings.png)

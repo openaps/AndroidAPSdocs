@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# Escenes (configuracions per a cada situació)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+Una **escena** és una configuració amb nom que aplica un **conjunt d'accions alhora**: per exemple una configuració *Dormir*, *Esport* o *Dia de malaltia* que canvia el perfil, posa un objectiu temporal, activa o desactiva SMB i afegeix una nota al portal de cures amb un sol toc, si voleu durant un temps fix.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,172 +10,172 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## Què és una escena
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+En lloc de canviar diverses coses a mà cada vegada que torna una situació habitual, les configureu una vegada com a escena i l'activeu amb un toc. Una escena pot agrupar qualsevol d'aquestes accions:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **Canvi de perfil**: canvia el perfil i/o l'ajusta amb un percentatge (p. ex. 70%).
+- **Objectiu temporal**: posa un objectiu temporal (p. ex. *Activitat*, *Menjar aviat* o un valor propi).
+- **SMB activat/desactivat**: activa o desactiva els SMB (super micro bolus) mentre l'escena està activa.
+- **Mode de funcionament**: canvia el mode de funcionament (p. ex. a un mode més prudent).
+- **Nota del portal de cures**: registra un esdeveniment (p. ex. *Esport*, *Malaltia*) perquè es vegi al gràfic i a Nightscout.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+Una escena també té una **durada** (un temps fix en minuts/hores/dies, o *Indefinida (finalització manual)*) i una **acció final** que s'executa quan s'acaba: o bé un **avís**, o bé pot **encadenar** una altra escena (per exemple *Dia de malaltia → Esport*).
 
 ---
 
-## Creating or editing a scene
+## Gestionar les escenes
 
-### Start from a template
+Obriu **Gestionar → Escenes** per veure, crear, editar, activar/desactivar i reordenar les vostres escenes.
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![La pantalla de gestió d'escenes](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+Cada targeta d'escena mostra:
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- una **casella** per activar/desactivar l'escena,
+- una **icona** i un **nom**,
+- un resum, *«N accions, durada»*, i l'**→ escena encadenada** si encadena una altra escena,
+- i tres botons: **▶ activar**, **✏️ editar**, **🗑️ eliminar**.
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+Toqueu el botó **+** per crear una escena nova.
 
 ---
 
-## Activating a scene
+## Crear o editar una escena
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### Partir d'una plantilla
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+Per **crear** una escena, toqueu el botó **+** a la pantalla Escenes. El primer pas és **Partir d'una plantilla**: trieu una escena preparada per a una situació habitual (*Esport*, *Dia de malaltia*, *Dia de malaltia — Vòmits*, *Dormir*, *Nit després de l'esport*, *Abans de menjar*, *Alcohol*, *Conduir*, *Bany*, *Fase lútia*, *Temps calorós*, *Procediment mèdic*) o comenceu amb una escena *En blanc*. Cada plantilla **omple per endavant les accions recomanades**, i ho podeu ajustar tot als passos següents. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+![«Partir d'una plantilla»: trieu un punt de partida](../images/v4/Scenes/templates_picker.png)
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+Quan trieu una plantilla, abans de continuar s'explica per a què serveix: *quan* i *per què* fer-la servir.
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+![L'explicació d'una plantilla](../images/v4/Scenes/template_explanation.png)
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+### Passar per les accions
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+La resta de l'editor és un assistent curt **pas a pas**. Cada pas és un tipus d'acció amb un interruptor *«Incloure … a l'escena»*: activeu-lo només per a les accions que voleu que faci aquesta escena, i deixeu les altres desactivades.
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+![L'editor d'escenes: el pas Canvi de perfil](../images/v4/Scenes/scene_editor.png)
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+Passeu pels passos amb **Següent**/**Enrere**: *Canvi de perfil*, *Objectiu temporal*, *SMB*, *Mode de funcionament*, *Nota del portal de cures*, després la **durada**, l'**acció final** (avisar o encadenar una altra escena) i, finalment, el **nom i la icona** de l'escena. Deseu quan hàgiu acabat. (Per **editar** una escena que ja existeix, toqueu el seu botó **✏️**: anireu directament a aquests passos.)
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+Cada pas comença amb una explicació curta del que fa l'acció. Els passos són així, aquí amb la plantilla *Esport*:
 
-The scene's actions stay in effect until:
+**Objectiu temporal**: trieu un dels vostres objectius temporals predefinits:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+![El pas Objectiu temporal](../images/v4/Scenes/scene_editor_step3.png)
 
-A scene without follow-up only asks you to confirm:
+**SMB**: activeu o desactiveu SMB mentre l'escena està activa:
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+![El pas SMB](../images/v4/Scenes/scene_editor_step4.png)
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+**Mode de funcionament**: si voleu, canvieu el mode del llaç:
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+![El pas Mode de funcionament](../images/v4/Scenes/scene_editor_step5.png)
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+**Portal de cures**: el tipus d'esdeveniment i la nota que es registren:
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+![El pas Portal de cures](../images/v4/Scenes/scene_editor_step6.png)
 
----
+**Durada**: quant de temps queda activa l'escena; 0 vol dir fins que la finalitzeu vosaltres:
 
-## Triggering scenes from Automation
+![El pas Durada](../images/v4/Scenes/scene_editor_step7.png)
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+**Escena següent**: si voleu, l'escena que comença quan aquesta s'acaba:
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+![El pas Escena següent](../images/v4/Scenes/scene_editor_followup.png)
 
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
+**Escena**: el nom i la icona. Premeu **Finalitzar** per desar:
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+![El pas del nom i la icona](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Scenes with Master/Client and a watch
+## Activar una escena
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+Activeu una escena des de la llista **Escenes** (el botó **▶**) o des de l'entrada **Escenes** de la navegació inferior. Al full **Escenes** de la navegació inferior, cada escena mostra el mateix resum que a la llista d'escenes, i el **llapis** a dalt del full obre **Gestionar → Escenes** per crear o editar les vostres escenes.
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+![El full Escenes de la navegació inferior](../images/v4/Scenes/scenes_sheet.png)
+
+Si la [protecció del bolus](#Preferences-protection) està activada, **AAPS** la demana abans que una escena comenci o s'acabi. Per canviar una escena cal la [protecció de la configuració](#Preferences-settings-protection).
+
+Abans d'aplicar res, rebeu una **confirmació** amb la llista exacta del que farà l'escena, perquè ho pugueu revisar:
+
+![Confirmació d'activació de l'escena, amb la llista de les accions agrupades](../images/v4/Scenes/scene_confirmation.png)
+
+Si l'escena encadena una altra escena, la confirmació acaba amb **→** i el nom de l'escena següent, igual que es mostra a la llista d'escenes.
+
+Quan inicieu l'escena des de l'entrada **Escenes** de la navegació inferior, la confirmació és un diàleg més senzill amb la mateixa llista d'accions. Premeu **OK** per activar-la:
+
+![Confirmació de l'escena quan s'inicia des de la navegació inferior](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
+Quan confirmeu, s'apliquen les accions i l'**escena activa** es mostra a dalt del resum amb un botó **Finalitzar escena**. Si l'escena encadena una altra escena, la franja també mostra el nom de l'escena següent:
+
+![La franja de l'escena activa al resum, amb el botó Finalitzar escena](../images/v4/Scenes/scene_active_banner.png)
+
+Les accions de l'escena continuen actives fins que:
+
+- s'acaba la seva **durada** (s'executa l'**acció final**: un avís, o encadena l'escena següent), o
+- toqueu **Finalitzar escena** per acabar-la a mà. Si l'escena encadena una altra escena, teniu dues opcions: **Passar a** l'escena següent (l'escena activa s'acaba i la següent comença ara), o **Finalitzar escena** (l'escena activa s'acaba i la següent no comença).
+
+Una escena sense escena següent només us demana que confirmeu:
+
+![Diàleg Finalitzar escena](../images/v4/Scenes/scene_end_dialog.png)
+
+Finalitzar una escena **desfà** els canvis que ha fet (per exemple el canvi de perfil i l'objectiu temporal que ha iniciat). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+
+Mentre una escena està activa, el perfil i l'objectiu de la pantalla principal porten una petita icona d'escena quan els ha posat l'escena. El full **Escenes** de la navegació inferior continua disponible per iniciar una altra escena:
+
+![El full Escenes mentre una escena està activa](../images/v4/Scenes/scenes_sheet_active.png)
+
+Quan la durada s'acaba sola, els canvis es desfan de seguida i la franja canvia a **Escena finalitzada** amb un botó **Ignorar**. Ignorar només treu la franja de la pantalla: l'escena ja s'ha acabat, per això les regles d'automatització i una escena encadenada continuen sense esperar.
+
+---
+
+## Activar escenes des de l'Automatització
+
+No cal iniciar una escena a mà: l'**Automatització** la pot executar per vosaltres. Quan afegiu una acció a una regla d'automatització (**Gestionar → Automatització**), el selector d'accions té una categoria **Escenes**:
+
+- **Executar escena**: activa una escena quan s'activen els activadors de la regla (per exemple a una hora fixada, quan arribeu a un lloc o quan la glucèmia passa un llindar).
+- **Activar escena** / **Desactivar escena**: fa que una escena estigui disponible (o no disponible) sense activar-la.
+
+![Les accions «Escenes» al selector d'accions de l'Automatització](../images/v4/Scenes/automation_scene_action.png)
+
+L'Automatització també pot **reaccionar a** una escena: la llista d'activadors inclou un activador **Escena**, perquè una regla només s'executi mentre una escena concreta està activa. Junt amb l'**acció final** d'una escena (desfer, avisar o encadenar una altra escena), això permet que les escenes comencin, continuïn i s'acabin automàticament.
+
+---
+
+## Escenes amb principal/client i un rellotge
+
+L'**escena activa es sincronitza** entre tots els vostres dispositius emparellats: activeu-la en un telèfon i els altres també la mostren.
+
+Un **client** emparellat (**AAPSClient**) també pot activar o finalitzar una escena: la petició s'envia al **dispositiu principal**, que crea la confirmació i aplica l'escena al seu propi estat. Vegeu [Control principal ↔ client (control remot signat)](../RemoteFeatures/ClientMasterControl.md) per saber com funciona.
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### Des d'un rellotge Wear OS
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+Les escenes estan disponibles en un **rellotge Wear OS** com a **mosaic Escena**. Llisqueu fins al mosaic **Escena** al carrusel de mosaics del rellotge (si encara no hi és, primer afegiu-lo des de la llista de mosaics del carrusel) i toqueu l'escena que voleu iniciar:
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![El mosaic Escena en un rellotge Wear OS](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+El mosaic té quatre posicions. Per defecte, cada posició s'omple **automàticament** amb la següent de les vostres escenes activades, en l'ordre que tenen al telèfon. Per triar-les vosaltres, **manteniu premut el mosaic** i obriu-ne la configuració: per a cadascuna de les quatre posicions podeu deixar **Automàtic**, fixar una **escena concreta** o seleccionar **Cap** per deixar la posició buida. Una posició fixada a una escena que després s'ha eliminat o desactivat mostra **No disponible**: trieu-hi una altra escena.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+Després el rellotge mostra una confirmació: toqueu **✓** per activar-la, o llisqueu enrere per cancel·lar:
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![Confirmar una escena al rellotge](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+Igual que en un client, el **dispositiu principal crea la confirmació i executa l'escena**; el rellotge només transmet la petició (a través del telèfon client, si el rellotge està emparellat amb un client).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+Mentre una escena està en marxa (o la seva franja **Escena finalitzada** encara es veu al telèfon), el mosaic mostra un botó **Finalitzar** amb el nom de l'escena a sota. Toqueu-lo per finalitzar l'escena activa, o per treure la franja que queda, des del canell.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+Si l'escena en marxa encadena una altra escena, el mosaic també mostra un botó **Ometre** amb el nom de l'escena següent a sota. Són les mateixes dues opcions que al telèfon:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **Finalitzar**: l'escena activa s'acaba. La confirmació us diu que l'escena següent no començarà.
+- **Ometre**: l'escena activa s'acaba i l'escena següent comença ara. La confirmació mostra el nom de les dues escenes.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+La [pantalla Estat del llaç](#WearOsSmartwatch-loop-status) del rellotge també mostra l'escena activa, el temps que li queda i l'escena següent.
 
 ---
 

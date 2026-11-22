@@ -67,6 +67,8 @@ xDrip może odczytywać powiadomienia z aplikacji producenta, tak jak ESEL. Uzup
 
 **AAPS** może odczytywać wartości glukozy bezpośrednio z powiadomień oficjalnej aplikacji Eversense, bez żadnej innej aplikacji pośredniej. Uzupełnianie brakujących danych nie jest dostępne.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Wybierz **Odczyt powiadomień** w [**Konfiguracja → Źródło BG**](#Config-Builder-bg-source) i zezwól **AAPS** na dostęp do powiadomień, gdy pojawi się prośba.
 - Upewnij się, że aplikacja Eversense pokazuje aktualną wartość glukozy w swoim powiadomieniu.
 

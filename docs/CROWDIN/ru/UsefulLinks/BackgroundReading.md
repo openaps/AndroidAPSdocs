@@ -6,7 +6,7 @@
 
 [Проект OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[Документация OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Документация Loop - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
@@ -20,17 +20,17 @@
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[Почему мы часто ошибаемся в длительности действия инсулина (DIA) и почему это важно](https://www.diabettech.com/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[Какие выводы можно сделать, если изучать чувствительность к инсулину с помощью функции Autosens в #OpenAPS?](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[«Bright Spots and Landmines»](https://diatribe.org/bright-spots-and-landmines/), автор Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe), автор Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+[«Pumping insulin»](https://amzn.eu/d/iaCsFa2), авторы John Walsh и Ruth Roberts
 
 ## Фоновое чтение и статьи о замкнутом цикле DIY
 

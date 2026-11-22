@@ -8,8 +8,8 @@
 -   Старайтесь калибровать на ровных значениях ГК (обычно достаточно 15-30 минут с плоской шкалой)
 -   Избегайте калибровки при повышении или понижении уровня глюкозы.
 -   По возможности проводите «достаточно» калибровок – на официальных приложениях раз или два раза за сутки появляется предложение откалибровать систему. В самодельных системах таких напоминаний не бывает, поэтому будьте осторожны если давно не делали калибровки.
--   Для сенсоров, не требующих или не разрешающих калибровку, по крайней мере ежедневно проверяйте реальный сахар крови. AAPS будет насколько безопасным, насколько надежны данные с сенсора.
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   Для сенсоров, не требующих или не разрешающих калибровку, по крайней мере ежедневно проверяйте реальный сахар крови. AAPS будет настолько безопасным, насколько надежны данные с сенсора.
+-   По возможности калибруйте и при более низких значениях (4–5 ммоль/л или 72–90 мг/дл), и при немного более высоких (7–9 ммоль/л или 126–160 мг/дл): так диапазон для калибровки по точке/наклону будет лучше.
 
 ## Установка сенсора (G6)
 
@@ -22,7 +22,7 @@
 
 ### Проблемы с подключением
 
-Соединение Bluetooth может быть нарушено другими близлежащими устройствами Bluetooth, такими как глюкометры, гарнитуры, планшеты, кухонные устройства, микроволновые печи или керамические плиты. In this case xDrip does not display any BG values. Когда соединение Bluetooth восстанавливается, пропущенные данные заполняются.
+Соединение Bluetooth может быть нарушено другими близлежащими устройствами Bluetooth, такими как глюкометры, гарнитуры, планшеты, кухонные устройства, микроволновые печи или керамические плиты. В этом случае xDrip не показывает значения ГК. Когда соединение Bluetooth восстанавливается, пропущенные данные заполняются.
 
 ### Ошибки сенсора
 
@@ -32,10 +32,10 @@
 
 ### Скачки данных
 
-You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". См. также [Сглаживание данных ГК](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Можно попробовать изменить настройки блокировки шума в xDrip (Settings - Inter-App Settings - Noise Blocking), например, «Block Very High noise and worse». См. также [Сглаживание данных ГК](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Отрицательный срок работы сенсора
 
-![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
+![Возраст сенсора в строке «Сенсор» развернутой панели состояния](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+Возраст сенсора показан в строке **Сенсор** панели состояния на главном экране (нажмите на стрелку, чтобы развернуть ее). Отрицательный возраст появляется, если есть либо двойная [запись портала терапии](#aaps-screens-careportal) «Установка сенсора», либо установка сенсора с неверной датой. Откройте **История терапии** (меню ☰), выберите вкладку **Портал терапии** и удалите неверную запись.

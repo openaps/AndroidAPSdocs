@@ -15,7 +15,7 @@
 ![Помпа DanaR](../images/danar1.png)
 
 * Відкрийте Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Якщо DanaR не з'являється під час пошуку, перезапустіть телефон, вийміть батарею з DanaR, вставте її знову і повторіть ці два кроки.
+* У налаштуваннях телефону перейдіть до Bluetooth, знайдіть пристрої поблизу, виберіть серійний номер вашої DanaR і введіть пароль (пароль для спарування: 0000). Якщо DanaR не з'являється під час пошуку, перезапустіть телефон, вийміть батарею з DanaR, вставте її знову і повторіть ці два кроки.
 
 * В **AAPS** відкрийте **меню** (☰) у верхньому лівому куті, перейдіть до **Конфігурація** > **Помпа** і виберіть ваш тип DanaR (**DanaR**, **DanaR Korean** або **DanaRv2**).
   

@@ -67,6 +67,8 @@ xDrip יכול לקרוא התראות מאפליקציית היצרן, כמו �
 
 **AAPS** יכול לקרוא את ערכי הסוכר ישירות מההתראות שאפליקציית Eversense הרשמית מציגה, בלי אפליקציה נוספת באמצע. No backfilling available.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - בחרו **קורא התראות** ב-[**הגדרות תצורה ← מקור ערכי הסוכר**](#Config-Builder-bg-source) ואשרו ל-**AAPS** גישה להתראות כשהבקשה מופיעה.
 - ודאו שאפליקציית Eversense מציגה את ערך הסוכר הנוכחי בהתראה שלה.
 

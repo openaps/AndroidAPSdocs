@@ -1,66 +1,66 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs (and the notes you add to your treatments) and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool és una eina d'un tercer que recull dades de glucèmia, insulina i carbohidrats (i les notes que afegiu als tractaments) i que es pot fer servir per analitzar aquestes dades i compartir-les amb el vostre equip clínic. Des de la versió 3.2 d'AAPS, es pot fer servir en lloc de Nightscout per complir una part de l'Objectiu 1. També es pot fer servir juntament amb Nightscout, com una plataforma d'informes alternativa que s'integra bé amb l'entorn clínic. Pot ser l'opció preferida per a nens que fan servir AAPS i volen les funcions de monitoratge i control remot de Nightscout, però també una plataforma d'informes amb què el seu equip clínic se senti més còmode.
 
-It is important to understand that Tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone, you must set up Nightscout as well.
+És important entendre que Tidepool serveix només per a informes. NO és una aplicació de seguiment en temps real. Si necessiteu seguidors a part del telèfon principal amb AAPS, també heu de configurar Nightscout.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
-
-
-## Step 1 - Set up a Tidepool account
-
-- Navigate to [tidepool.org](https://www.tidepool.org/)
-
-- Select “Personal Sign Up” or “Sign Up”
-
-- Create and document an email and password
-
-- Select “Personal Account” and click “Continue”
-
-- Complete the patient information section and accept the terms of use
-
-- Verify your email address via the instructions received to your email
+Nota: l'organització Tidepool ha portat al mercat el producte Loop per a iOS amb l'aprovació de la FDA. Aquest projecte no té res a veure amb la seva plataforma d'informes de dades ni amb AAPS.
 
 
-## Step 2 - Connect AAPS to Tidepool
+## Pas 1 – Creeu un compte de Tidepool
 
-- Open the **menu** (☰) in the top-left corner of the main screen and select "**Configuration**"
+- Aneu a [tidepool.org](https://www.tidepool.org/)
 
-- Open the "**Communication**" category and enable "**Tidepool**":
+- Seleccioneu «Personal Sign Up» o «Sign Up»
 
-![Enable Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+- Creeu un correu electrònic i una contrasenya i apunteu-los
 
-- Tap "**Open plugin**" underneath Tidepool, then tap the **Login** icon (an arrow going into a door) in the top-right corner
+- Seleccioneu «Personal Account» i feu clic a «Continue»
 
-- A browser window opens on the Tidepool login page. Log in with the email address and password you created in Step 1 above:
+- Completeu la secció d'informació del pacient i accepteu les condicions d'ús
 
-![Tidepool login page](../images/v4/Tidepool/tidepool_login.png)
+- Verifiqueu la vostra adreça de correu electrònic seguint les instruccions que rebreu per correu
 
-- After a successful login the browser closes and the Tidepool screen shows the status "**Connected**"; the log below documents the data uploads. If the login fails, confirm your credentials are correct and that you have verified your email address with Tidepool.
 
-![Tidepool connected](../images/v4/Tidepool/tidepool_status.png)
+## Pas 2 – Connecteu AAPS a Tidepool
 
-- In the "**Settings**" of the Tidepool plugin, open "**Connection settings**". By default "**Use Nightscout connection settings**" is on, so Tidepool uploads under the same conditions you set for Nightscout. Turn it off if you want separate conditions for Tidepool, for example to upload to Tidepool only on Wi-Fi and while charging, while Nightscout also uses mobile data.
+- Obriu el **menú** (☰) a la cantonada superior esquerra de la pantalla principal i seleccioneu «**Configurador**»
 
-![Connection settings with Use Nightscout connection settings on](../images/v4/Tidepool/tidepool_connection_settings.png) ![Separate connection settings for Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+- Obriu la categoria «**Comunicació**» i activeu «**Tidepool**»:
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+![Activar Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+
+- Toqueu «**Obrir plugin**» a sota de Tidepool i després toqueu la icona **Iniciar sessió** (una fletxa que entra en una porta) a la cantonada superior dreta
+
+- S'obre una finestra del navegador amb la pàgina d'inici de sessió de Tidepool. Inicieu la sessió amb l'adreça de correu electrònic i la contrasenya que heu creat al pas 1:
+
+![Pàgina d'inici de sessió de Tidepool](../images/v4/Tidepool/tidepool_login.png)
+
+- Quan l'inici de sessió és correcte, el navegador es tanca i la pantalla de Tidepool mostra l'estat «**Connectat**»; el registre de sota mostra els enviaments de dades. Si l'inici de sessió falla, comproveu que les vostres dades d'accés són correctes i que heu verificat la vostra adreça de correu electrònic a Tidepool.
+
+![Tidepool connectat](../images/v4/Tidepool/tidepool_status.png)
+
+- A la «**Configuració**» del plugin Tidepool, obriu «**Configuració de connexió**». Per defecte, «**Fer servir la configuració de connexió de Nightscout**» està activat, de manera que Tidepool envia les dades en les mateixes condicions que heu definit per a Nightscout. Desactiveu-ho si voleu condicions diferents per a Tidepool, per exemple per enviar a Tidepool només amb Wi-Fi i mentre el telèfon es carrega, mentre Nightscout també fa servir dades mòbils.
+
+![Configuració de connexió amb «Fer servir la configuració de connexió de Nightscout» activat](../images/v4/Tidepool/tidepool_connection_settings.png) ![Configuració de connexió separada per a Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+
+Per obtenir més ajuda sobre com fer servir les vostres dades un cop enviades a Tidepool, visiteu: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
 
 (tidepool-menu)=
-## The Tidepool buttons
+## Els botons de Tidepool
 
-In the top-right corner of the Tidepool screen:
+A la cantonada superior dreta de la pantalla de Tidepool:
 
-- The **Login** or **Logout** icon — connect to or disconnect from your Tidepool account. Only one of them is shown: **Login** while you are logged out, **Logout** while you are logged in. **AAPS** asks you to confirm before it logs you out.
-- The gear icon — the Tidepool settings.
+- La icona **Iniciar sessió** o **Tancar sessió**: connectar-vos al vostre compte de Tidepool o desconnectar-vos-en. Només se'n mostra una: **Iniciar sessió** quan no teniu la sessió iniciada, **Tancar sessió** quan la teniu iniciada. **AAPS** us demana que ho confirmeu abans de tancar la sessió.
+- La icona de la roda dentada: la configuració de Tidepool.
 
-The buttons at the bottom of the Tidepool screen:
+Els botons de la part de baix de la pantalla de Tidepool:
 
-- "**Upload now**" — upload new data straight away instead of waiting for the next automatic upload.
-- "**Full synchronization**" — upload all data stored in **AAPS** again.
-- "**Purge all data**" — delete **all** data that **AAPS** has uploaded to your Tidepool account. This cannot be undone. Use it only to remove wrong or duplicate data, then run "**Full synchronization**" to upload your data again.
-- "**Clear log**" — empty the log shown on the Tidepool screen.
+- «**Enviar ara**»: enviar les dades noves immediatament en lloc d'esperar el següent enviament automàtic.
+- «**Sincronització completa**»: tornar a enviar totes les dades guardades a **AAPS**.
+- «**Esborrar totes les dades**»: eliminar **totes** les dades que **AAPS** ha enviat al vostre compte de Tidepool. Això no es pot desfer. Feu-lo servir només per eliminar dades incorrectes o duplicades, i després executeu «**Sincronització completa**» per tornar a enviar les vostres dades.
+- «**Buidar log**»: buidar el registre que es mostra a la pantalla de Tidepool.
 
-![The Tidepool screen and its buttons](../images/v4/Tidepool/tidepool_menu.png)
+![La pantalla de Tidepool i els seus botons](../images/v4/Tidepool/tidepool_menu.png)
 
-In Tidepool, the data uploaded by **AAPS** 4 is shown under the device name **AAPS**. See [What changed in AAPS v4](#v4changes-tidepool) if you used Tidepool with an older version. 
+A Tidepool, les dades enviades per **AAPS** 4 es mostren amb el nom de dispositiu **AAPS**. Vegeu [Què ha canviat a AAPS v4](#v4changes-tidepool) si fèieu servir Tidepool amb una versió anterior. 

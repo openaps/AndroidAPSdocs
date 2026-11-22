@@ -1,154 +1,154 @@
-# Dexcom G7, ONE+ and Stelo
+# Dexcom G7, ONE+ i Stelo
 
 
-## Fundamental in advance
+## Važno za početak
 
-Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Važno je znati da sustavi G7, ONE+ i Stelo, za razliku od G6, ne zaglađuju vrijednosti, ni u aplikaciji ni u čitaču. Više detalja o tome [ovdje](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+Pročitajte prijedloge za [metodu zaglađivanja](../CompatibleCgms/SmoothingBloodGlucoseData.md) za Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip (direct connection to G7, ONE+ or Stelo)
+## 1. xDrip (izravna veza s G7, ONE+ ili Stelo)
 
-- xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
-- Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- xDrip se sam povezuje sa senzorom: deinstalirajte aplikaciju Dexcom, jer se sa senzorom može povezati samo jedna aplikacija. Ako želite zadržati aplikaciju Dexcom, umjesto toga koristite [xDrip Companion App](#DexcomG7-xdrip-companion-app).
+- Slijedite upute ovdje: [xDrip G7, ONE+ i Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). Potrebno je novije izdanje xDripa – minimalnu verziju pogledajte na povezanoj stranici.
+- Odaberite xDrip u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- Prilagodite postavke xDripa prema objašnjenjima na stranici [Postavke xDripa](../CompatibleCgms/xDrip.md).
 
-## 2. Build Your Own Dexcom App (G7 only)
+## 2. Build Your Own Dexcom App (samo G7)
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated. Not available for ONE+ or Stelo.
+Dexcom BYODA je sada vrlo stara verzija aplikacije i ne može se ažurirati. Nije dostupno za ONE+ ni Stelo.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) podržava lokalno emitiranje (local broadcast) u AAPS
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
--   Uninstall the original Dexcom app
--   Install the downloaded apk
--   Enter sensor code in patched app
--   After a short time BYODA should pick up the sensor signal.
+-   Ova aplikacija vam omogućuje korištenje Dexcoma G7 s bilo kojim Android pametnim telefonom.
+-   Deinstalirajte originalnu aplikaciju Dexcom
+-   Instalirajte preuzeti apk
+-   Unesite kod senzora u zakrpanu aplikaciju
+-   Nakon kratkog vremena BYODA bi trebao uhvatiti signal senzora.
 
 (DexcomG7-xdrip-companion-app)=
 
-## 3. xDrip Companion App (G7, ONE+ and Stelo)
+## 3. xDrip Companion App (G7, ONE+ i Stelo)
 
-The official Dexcom app stays connected to the sensor. xDrip reads the glucose values from the notifications of the Dexcom app and sends them to **AAPS**.
+Službena aplikacija Dexcom ostaje povezana sa senzorom. xDrip čita vrijednosti glukoze iz obavijesti aplikacije Dexcom i šalje ih u **AAPS**.
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
+**AAPS** ne smatra xDrip u načinu Companion App [pouzdanim izvorom podataka GUK-a](#GettingStarted-TrustedBGSource): SMB-ovi nisu dopušteni cijelo vrijeme.
 
-To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG7-notification-reader).
+Za čitanje obavijesti aplikacije Dexcom bez xDripa, kao pouzdanog izvora podataka, koristite [Čitač obavijesti](#DexcomG7-notification-reader).
 ```
 
-### Read the Dexcom app notifications
+### Čitanje obavijesti aplikacije Dexcom
 
-- Keep the Dexcom app installed and connected to the sensor. Its notifications must stay visible: do not silence or hide them.
-- Download and install [xDrip](https://github.com/NightscoutFoundation/xDrip). Use the same glucose units in xDrip as in the Dexcom app.
-- In xDrip, go to **Settings** > **Hardware Data Source** and select **Companion App**.
+- Ostavite aplikaciju Dexcom instaliranu i povezanu sa senzorom. Njezine obavijesti moraju ostati vidljive: nemojte ih utišati ni sakriti.
+- Preuzmite i instalirajte [xDrip](https://github.com/NightscoutFoundation/xDrip). U xDripu koristite iste jedinice glukoze kao u aplikaciji Dexcom.
+- U xDripu idite na **Settings** > **Hardware Data Source** i odaberite **Companion App**.
 
   ![xDrip Hardware Data Source: Companion App](../images/xDrip_Companion_DataSource.png)
 
-- xDrip asks for permission to read notifications. Tap **OK**, then select **xDrip** in the list and turn on **Allow notification access**.
+- xDrip traži dopuštenje za čitanje obavijesti. Dodirnite **OK**, zatim na popisu odaberite **xDrip** i uključite **Dopusti pristup obavijestima**.
 
-  ![Notification access list](../images/xDrip_Companion_NotificationAccess1.png)
+  ![Popis pristupa obavijestima](../images/xDrip_Companion_NotificationAccess1.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because xDrip was not installed from the Play Store:
+- Ako je **Dopusti pristup obavijestima** zasivljeno (*Upravlja ograničena postavka* (Controlled by Restricted Setting)), Android to blokira jer xDrip nije instaliran iz Trgovine Play:
 
-  ![Notification access controlled by restricted setting](../images/xDrip_Companion_Restricted.png)
+  ![Pristupom obavijestima upravlja ograničena postavka](../images/xDrip_Companion_Restricted.png)
 
-  Open the xDrip app info (long press the xDrip icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Then go back to the notification access screen and allow it.
+  Otvorite informacije o aplikaciji xDrip (dugo pritisnite ikonu xDrip > **Informacije o aplikaciji**), dodirnite izbornik s tri točke gore desno i odaberite **Dopusti ograničene postavke**. Zatim se vratite na zaslon pristupa obavijestima i dopustite ga.
 
-  ![App info: Allow restricted settings](../images/xDrip_Companion_AllowRestricted.png)
+  ![Informacije o aplikaciji: Dopusti ograničene postavke](../images/xDrip_Companion_AllowRestricted.png)
 
-  ![Notification access allowed for xDrip](../images/xDrip_Companion_NotificationAccess2.png)
+  ![Pristup obavijestima dopušten za xDrip](../images/xDrip_Companion_NotificationAccess2.png)
 
-- Readings appear in xDrip when the Dexcom app shows a new value. If nothing appears, you may need to start a sensor in xDrip: this has no effect on the real sensor. Stelo gives a reading every 15 minutes in this mode.
+- Očitanja se pojavljuju u xDripu kada aplikacija Dexcom prikaže novu vrijednost. Ako se ništa ne pojavi, možda ćete morati pokrenuti senzor u xDripu: to nema utjecaja na stvarni senzor. U ovom načinu Stelo daje očitanje svakih 15 minuta.
 
 ### Companion Bluetooth (G7)
 
-When the Dexcom app is connected to a G7 sensor, xDrip can also listen to the readings the sensor sends to the Dexcom app over Bluetooth. xDrip does not pair with the sensor and you do not need to enter the sensor code: the Dexcom app stays in control.
+Kada je aplikacija Dexcom povezana sa senzorom G7, xDrip može i slušati očitanja koja senzor šalje aplikaciji Dexcom putem Bluetootha. xDrip se ne uparuje sa senzorom i ne trebate unositi kod senzora: aplikacija Dexcom i dalje upravlja senzorom.
 
-With **Companion Bluetooth**, xDrip gets the exact time and trend of each reading from the sensor, instead of the time the notification appeared, and fills gaps when the phone was out of range (backfill).
+S opcijom **Companion Bluetooth** xDrip od senzora dobiva točno vrijeme i trend svakog očitanja, umjesto vremena kada se pojavila obavijest, i popunjava praznine kada je telefon bio izvan dometa (backfill).
 
-- In xDrip, go to **Settings** > **Less common settings** > **Bluetooth Settings** and enable **Companion Bluetooth**.
+- U xDripu idite na **Settings** > **Less common settings** > **Bluetooth Settings** i uključite **Companion Bluetooth**.
 
   ![xDrip Bluetooth Settings: Companion Bluetooth](../images/xDrip_Companion_Bluetooth.png)
 
-- This does not work on all phones and Android versions. Disable it if you see problems.
-- If an old Dexcom sensor is still in the phone's Bluetooth list, xDrip might listen to the wrong one: in Android **Settings** > **Connected devices**, forget sensors you no longer use.
-- Companion Bluetooth is made for the G7. With ONE+ and Stelo, rely on notifications.
+- To ne radi na svim telefonima i verzijama Androida. Ako primijetite probleme, isključite to.
+- Ako je stari senzor Dexcom još na popisu Bluetooth uređaja telefona, xDrip bi mogao slušati pogrešan senzor: u Androidu, u **Postavke** > **Povezani uređaji**, zaboravite senzore koje više ne koristite.
+- Companion Bluetooth napravljen je za G7. S ONE+ i Stelo oslonite se na obavijesti.
 
-### Configuration in AAPS
+### Konfiguracija u AAPS-u
 
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- Odaberite xDrip u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
+- Prilagodite postavke xDripa prema objašnjenjima na stranici [Postavke xDripa](../CompatibleCgms/xDrip.md).
 
-## 4. Juggluco (G7 and ONE+)
+## 4. Juggluco (G7 i ONE+)
 
-Version 9.0+ required
+Potrebna je verzija 9.0 ili novija
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- Onemogućite aplikaciju koja je prije bila povezana sa senzorom: deinstalirajte aplikaciju ili koristite „Prisilno zaustavi“. U postavkama aplikacije onemogućite dopuštenje „Uređaji u blizini“. Ograničite potrošnju baterije aplikacije.
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Zaboravite senzor u postavkama Bluetootha: u postavkama Androida pronađite senzor među uparenim uređajima i odaberite „Zaboravi“. Nazivi senzora Dexcom G7 počinju s DXCM.
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- Izbjegnite smetnje od drugih senzora: držite stare senzore Dexcom izvan dometa Bluetootha.
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- Povežite senzor G7 s Jugglucom: otvorite Juggluco → lijevi izbornik → Photo. Skenirajte podatkovnu matricu (data matrix) na aplikatoru senzora G7. Pričekajte do 5 minuta da Juggluco pronađe senzor.
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Uvjeti za uparivanje: pristanite na uparivanje senzora s Jugglucom. Pazite da zaslon nije zaključan tijekom uparivanja. Ako uparivanje ne uspije, pričekajte 5 minuta prije novog pokušaja.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Iznimka: Wear OS satovi mogu se upariti bez pritiska na gumb za pristanak.
 
 (DexcomG7-notification-reader)=
 
-## 5. Notification Reader (G7, ONE+ and Stelo)
+## 5. Čitač obavijesti (G7, ONE+ i Stelo)
 
-The official Dexcom app stays connected to the sensor. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+Službena aplikacija Dexcom ostaje povezana sa senzorom. **AAPS** čita vrijednost glukoze izravno iz obavijesti aplikacije Dexcom, bez ikakve druge aplikacije između.
 
 ```{admonition} Trusted data source
 :class: note
-Readings from the Dexcom G7, ONE+ and Stelo apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+Očitanja iz aplikacija Dexcom G7, ONE+ i Stelo su [pouzdan izvor podataka GUK-a](#GettingStarted-TrustedBGSource): SMB-ovi mogu biti dopušteni cijelo vrijeme.
 ```
 
-Compared to the other methods on this page, the Notification Reader has limits:
+U usporedbi s drugim metodama na ovoj stranici, Čitač obavijesti ima ograničenja:
 
-- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
-- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
-- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
-- Stelo gives a reading every 15 minutes.
+- **Nema strelice trenda** i **nema naknadnog popunjavanja (backfill)**: očitanja propuštena dok je telefon bio isključen ili izvan dometa su izgubljena.
+- Svako očitanje dobiva vrijeme kada se obavijest pojavila, a ne točno vrijeme očitanja senzora.
+- Čitaju se samo vrijednosti između 40 i 405 mg/dL (2,2 i 22,5 mmol/L). "LOW" i "HIGH" se ne čitaju.
+- Stelo daje očitanje svakih 15 minuta.
 
-### Set up the Dexcom app
+### Postavite aplikaciju Dexcom
 
-- Keep the Dexcom app installed and connected to the sensor.
-- Make sure the Dexcom app shows the current glucose value in its notification. Its notifications must stay visible: do not silence or hide them.
-- Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+- Ostavite aplikaciju Dexcom instaliranu i povezanu sa senzorom.
+- Provjerite prikazuje li aplikacija Dexcom trenutnu vrijednost glukoze u svojoj obavijesti. Njezine obavijesti moraju ostati vidljive: nemojte ih utišati ni sakriti.
+- U aplikaciji Dexcom koristite iste jedinice glukoze (mg/dL ili mmol/L) kao u **AAPS-u**. Inače **AAPS** ne može pročitati vrijednost.
 
-### Configuration in AAPS
+### Konfiguracija u AAPS-u
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+- Odaberite **Čitač obavijesti** u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source) i potvrdite promjenu.
 
-  ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+  ![Izvor GUK-a: odabran Čitač obavijesti](../images/NotificationReader_BgSource.png)
 
-- Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+- Na glavnom zaslonu **AAPS** zatim prikazuje **Potrebna dopuštenja**. Pokraj **Pristup obavijestima** dodirnite **Odobri**.
 
-  ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+  ![Potrebna dopuštenja: Pristup obavijestima](../images/NotificationReader_Permissions.png)
 
-- Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+- Android otvara svoj popis pristupa obavijestima (njegov naziv ovisi o vašoj verziji Androida, na primjer *Čitanje obavijesti, odgovaranje i upravljanje* (Notification read, reply & control)). Odaberite **AAPS**, uključite **Dopusti pristup obavijestima** i potvrdite s **Dopusti**.
 
-  ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+  ![Android traži da dopustite pristup obavijestima za AAPS](../images/NotificationReader_AllowDialog.png)
 
-  Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+  Android upozorava da bi **AAPS** mogao čitati sve vaše obavijesti. **AAPS** čita samo obavijesti podržanih CGM aplikacija i zanemaruje sve ostale.
 
-  ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+  ![Pristup obavijestima dopušten za AAPS](../images/NotificationReader_AccessOn.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Then go back to the notification access screen and allow it.
-- Readings appear in **AAPS** when the Dexcom app shows a new value.
+- Ako je **Dopusti pristup obavijestima** zasivljeno (*Kontrolira ograničena postavka* (Controlled by Restricted Setting)), Android to blokira jer **AAPS** nije instaliran iz Trgovine Play. Otvorite informacije o aplikaciji **AAPS** (dugo pritisnite ikonu **AAPS** > **Informacije o aplikaciji**), dodirnite izbornik s tri točke gore desno i odaberite **Dopusti ograničene postavke**. Zatim se vratite na zaslon pristupa obavijestima i dopustite ga.
+- Očitanja se prikazuju u **AAPS-u** kada aplikacija Dexcom prikaže novu vrijednost.
 
 ```{warning}
-If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+Ako obavijest aplikacije Dexcom prikazuje više od jednog broja glukoze ili nijedan, **AAPS** preskače tu obavijest.
 ```

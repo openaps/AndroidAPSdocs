@@ -1,13 +1,13 @@
 # Ottai M8
 
 
-## Using M8 with Ottai app
+## Usar o M8 com o app Ottai
 
 -   Baixe e instale o apk de <https://play.google.com/store/apps/details?id=com.ottai.seas>. Para a versão chinesa do Ottai, use <https://ottai.com.cn/70ICjxAI4i>
 
--   Start sensor
+-   Iniciar o sensor
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Selecione **Syai/Ottai** em [**Configuração → Fonte de BG**](#Config-Builder-bg-source).
 
 Ative a transmissão (broadcast) no app Ottai:
 

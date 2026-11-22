@@ -8,7 +8,7 @@ Pense em arranjar um segundo telefone de reserva e em praticar a restauração d
 
 ```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
 :class: warning
-Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+Desde o **AAPS** 4.0, as definições ficam guardadas num armazenamento encriptado no telefone e ficam de fora da cópia de segurança da Google e da transferência de telefone para telefone quando muda de telefone. Uma exportação das definições, como descrita nesta página, é a única forma de as levar para o novo telefone.
 ```
 
 Para conseguir restaurar, é importante ter à mão os seguintes itens:
@@ -59,11 +59,11 @@ Exportar as definições do AAPS para um ficheiro permite-lhe restaurar a config
 
 * Sempre que pensar fazer alterações importantes à sua configuração (alterar definições do SMB, mudar o tipo de insulina, mudar de bomba, alterar automatizações), deve fazer uma cópia de segurança das suas **Definições** antes e depois das alterações. Assim tem as suas definições mais recentes e também uma cópia das definições antes das alterações, para o caso de precisar de voltar a elas.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Se não tiver uma cópia das suas preferências exportada depois de iniciar o seu Pod atual, terá de iniciar um novo Pod se precisar de substituir o seu telefone atual.
+* Apenas para utilizadores de bombas sem tubo (como Omnipod e Medtrum): o ficheiro de **Definições** contém os dados de ligação do seu Pod atual e pode ser usado para restabelecer a ligação a esse Pod num novo telefone. Se não tiver uma cópia das suas preferências exportada depois de iniciar o seu Pod atual, terá de iniciar um novo Pod se precisar de substituir o seu telefone atual.
 
 **Como fazer uma cópia de segurança manualmente:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Defina uma senha e anote-a num local seguro. _Sem esta senha, não vai conseguir aceder às cópias de segurança das suas **Definições**._
+1. Se for a primeira vez que importa ou exporta as **Definições**, tem de definir uma senha mestre em [Definições > Proteção](#Preferences-master-password). Defina uma senha e anote-a num local seguro. _Sem esta senha, não vai conseguir aceder às cópias de segurança das suas **Definições**._
 
 2. No ecrã principal do **AAPS**, abra o **menu** (☰) > **Manutenção**. Escolha onde guardar o ficheiro com os chips **Local** e **Nuvem** ao lado de **Exportar definições** (veja **Exportar ou importar definições** abaixo) e depois toque em **Exportar definições**. O **AAPS** mostra para onde vai o ficheiro: o nome do ficheiro para **Local**, **Google Drive** para **Nuvem**. Toque em **OK**.
 
@@ -97,7 +97,7 @@ Recomenda-se exportar as definições com regularidade, sobretudo antes e depois
 
 **Nota**: _As definições exportadas são encriptadas com a sua senha mestre do AAPS: sem a senha mestre usada na exportação não vai conseguir importar o ficheiro de definições!_
 
-If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+Se se esqueceu da senha mestre, pode [repô-la](#FAQ-reset-master-password), mas os ficheiros de definições exportados com a senha antiga continuam a precisar da senha antiga.
 
 ### Exportar ou importar definições
 Para exportar ou importar definições, abra o **menu** (☰) e selecione **Manutenção**. Em **Gestão de ficheiros**, os chips **Local** e **Nuvem** ao lado de **Exportar definições** e **Importar definições** escolhem onde o ficheiro de definições é guardado ou de onde é lido: **Local** é a pasta AAPS no seu telefone, **Nuvem** fica disponível depois de configurar uma [Pasta na nuvem](#preferences-maintenance-cloud). Tocar num chip liga-o ou desliga-o; pelo menos um fica sempre selecionado, e as duas linhas partilham a mesma escolha. Depois toque no próprio **Exportar definições** ou **Importar definições** para começar.
@@ -107,7 +107,7 @@ Para exportar ou importar definições, abra o **menu** (☰) e selecione **Manu
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatizar a exportação de definições
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Para automatizar as exportações das definições [(**veja Automatização**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), abra [**Definições** > **Manutenção**](#preferences-maintenance-settings), expanda **Exportação de definições sem intervenção** e ligue **Ativar exportação automática das definições**.
 
 Agora pode configurar a [Automatização](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) para exportar as definições, com regularidade (_por exemplo_, todas as semanas) ou depois de uma mudança de Pod.
 
@@ -178,7 +178,7 @@ Por predefinição, uma importação não mexe nas definições da bomba: a bomb
 
 12. O **AAPS** pergunta **Aplicar as definições importadas?** e indica quantas definições vão mudar e, se deixou a caixa desmarcada, quantas definições da bomba são mantidas. Ainda não foi gravado nada, por isso **Cancelar** deixa o seu telefone exatamente como estava. Toque em **OK** para aplicar.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![Caixa de diálogo Aplicar as definições importadas](../images/Maintenance/import_settings_apply.png)
 
 13. O **AAPS** aplica as definições importadas de imediato, sem reiniciar. Só os plugins cujas definições mudaram são reiniciados. Enquanto isto decorre, o **AAPS** mostra **A aplicar as definições…**; se a bomba estiver ocupada, mostra **A aguardar a bomba…** e aplica as definições quando a bomba ficar livre. Se a bomba continuar ocupada após um minuto, o **AAPS** oferece-se para tentar de novo. A mensagem **Definições aplicadas** confirma que as definições importadas estão em uso. Qualquer tratamento que tenha ficado em fila durante a importação é descartado e o **AAPS** informa que foi cancelado, para que nada seja enviado duas vezes para a bomba.
 

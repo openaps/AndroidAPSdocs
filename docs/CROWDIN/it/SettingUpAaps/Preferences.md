@@ -31,6 +31,7 @@ In **AAPS** v4 le preferenze si trovano nella schermata **Impostazioni**. There 
 - By default **AAPS** follows the language of the phone (recommended).
 
 - Se vuoi **AAPS** in una lingua diversa da quella del telefono, sceglila qui. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Quando cambi la lingua, i testi di **AAPS** passano subito alla nuova lingua. If some texts still show the old language, restart **AAPS**.
 - On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
@@ -86,6 +87,10 @@ Choose between the light theme, the dark theme, or following the phone's system 
 
 ![Impostazioni > Protezione](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Password Master
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### Protezione applicazione
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
+If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Protezione bolo
 

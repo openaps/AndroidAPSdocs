@@ -160,29 +160,29 @@ Dėl aukščiau paaiškinto nulinės laikinos bazės poveikio ir AAPS naudojamos
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Kadangi valandinė bazė AAPS netiesiogiai veikia AIO mažėjimą, per didelė valandinė bazė gali paslėpti per ilgą IVT, ir atvirkščiai. Todėl verta pirmiausia kruopščiai sureguliuoti valandinę bazę ir tik tada keisti IVT ir piką. Be to, atminkite, kad IVT ir piko nustatymai veikia vienas kitą: IVT poveikis priklauso nuo piko, ir atvirkščiai.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Šie grafikai rodo tikslų IVT ir piko poveikį AIO kreivėms visame leistinų reikšmių intervale.
 
-Adjusting DIA:
+IVT keitimas:
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Piko keitimas:
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Galiausiai palyginimas, kai IVT ir pikas keičiami kartu. Abi reikšmės keičiamos tuo pačiu santykiu, todėl `49/35 ~ 7/5`. Arba panašiai `120/93 ~ 9/7`. Intervalai bus vienodi, nepriklausomai nuo pradinio IVT ar piko, jei santykinis pokytis abiem yra vienodas.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Atkreipkite dėmesį: kai IVT ir pikas keičiami tokiu būdu, kiekvienas kreivės taškas pasislenka tuo pačiu santykiniu dydžiu.
 
 ````
 
@@ -313,6 +313,7 @@ When you select another pump, **AAPS** asks you to confirm the change:
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Virtual pump: open loop - **AAPS** suggestions only
   - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   - pompai, kuri dar neturi tvarkyklės

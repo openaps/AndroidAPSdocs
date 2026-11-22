@@ -1,115 +1,115 @@
-# Update with a browser (fork)
+# Ažuriranje putem preglednika (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Izradili ste AAPS s **AAPS Builderom**? Ova stranica vam ne treba: pogledajte [Ažuriranje AAPS-a s AAPS Builderom](#aaps-builder-updates).
 ```
 
-## Build yourself instead of download
+## Izradite sami umjesto preuzimanja
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** nije dostupan za preuzimanje zbog propisa o medicinskim uređajima. Zakonito je izraditi aplikaciju za vlastitu upotrebu, ali kopiju ne smijete dati drugima! Pojedinosti pogledajte na stranici [Česta pitanja korisnika petlje](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
-This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+Ako želite prvi put ažurirati **AAPS** putem preglednika: kopirajte sigurnosnu kopiju datoteke spremišta ključeva na svoj Google Drive. Zatim umjesto ovog vodiča slijedite [postupak izrade **AAPS-a** u pregledniku](../SettingUpAaps/BrowserBuild.md). Umjesto izrade novog spremišta ključeva morate odabrati ono koje ste kopirali sa svog računala.
+Taj korak je obavezan samo prvi put, a za sljedeća ažuriranja možete slijediti ovaj vodič.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Prelazite na AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) je jednostavnija izrada u pregledniku: nema forka koji treba sinkronizirati, a aplikaciju preuzimate izravno s GitHuba. Ne morate prijeći: ovaj vodič i dalje radi. Ako prijeđete, najprije uzmite kopiju svog spremišta ključeva iz svog forka, kako je objašnjeno u [Prelazak s prethodne izrade u pregledniku (fork)](#aaps-builder-from-fork). Inače nova izrada ne može ažurirati AAPS na vašem telefonu.
 ```
 
-## Overview for updating to a new version of AAPS with a browser
+## Pregled ažuriranja na novu verziju AAPS-a putem preglednika
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Ako imate problema, pogledajte posebnu stranicu [Izrada u pregledniku: rješavanje problema](../GettingHelp/BrowserBuildTroubleshooting.md).
 
-### Export your settings
+### Izvezite svoje postavke
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Izvezite postavke iz postojeće verzije **AAPS-a** na svom telefonu. Možda vam neće trebati, ali bolje je biti siguran.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Ako se ne sjećate kako se to radi, pogledajte stranicu [Izrada i vraćanje sigurnosnih kopija](ExportImportSettings.md).
 
 (Update-to-new-version-update-your-repo)=
-### Update your GitHub repository
+### Ažurirajte svoj GitHub repozitorij
 
-[Log into GitHub](https://github.com/login).
+[Prijavite se na GitHub](https://github.com/login).
 
-1. Select Repositories.
-2. Scroll down and select your own AndroidAPS repository.
+1. Odaberite Repositories.
+2. Pomaknite se prema dolje i odaberite svoj repozitorij AndroidAPS.
 
-![Select AndroidAPS repo](../images/update/CI/GitHubUpdate1.png)
+![Odabir repozitorija AndroidAPS](../images/update/CI/GitHubUpdate1.png)
 
-3. Verify you are using your own copy of AndroidAPS (Forked from nightscout/AndroidAPS)
-4. Tap Sync Fork to update it (the number of commits behind might differ from the picture)
+3. Provjerite koristite li vlastitu kopiju AndroidAPS-a (Forked from nightscout/AndroidAPS).
+4. Dodirnite Sync Fork da je ažurirate (broj commita koji nedostaju može se razlikovati od slike).
 
 
 
-![Sync AndroidAPS repo](../images/update/CI/GitHubUpdate2.png)
+![Sinkronizacija repozitorija AndroidAPS](../images/update/CI/GitHubUpdate2.png)
 
-5. Tap Update Branch
+5. Dodirnite Update Branch.
 
-![Update AndroidAPS repo](../images/update/CI/GitHubUpdate3.png)
+![Ažuriranje repozitorija AndroidAPS](../images/update/CI/GitHubUpdate3.png)
 
-Note: if you have modified your copy of AndroidAPS by mistake, you will see this screen. Discard all changes (commits) to return to the released version.
+Napomena: ako ste greškom promijenili svoju kopiju AndroidAPS-a, vidjet ćete ovaj zaslon. Odbacite sve promjene (commite) da se vratite na objavljenu verziju.
 
-![Discard rogue modifications](../images/update/CI/GitHubUpdate4.png)
+![Odbacivanje neželjenih promjena](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Good job.
+Sada ste sinkronizirali (ažurirali) svoju kopiju s najnovijim izdanjem **AAPS-a**. Odlično.
 
-![Repo sync'ed](../images/update/CI/GitHubUpdate5.png)
+![Repozitorij je sinkroniziran](../images/update/CI/GitHubUpdate5.png)
 
-### Run the Workflow to Build the Signed APK
+### Pokrenite workflow za izradu potpisanog APK-a
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. U svojoj GitHub kopiji AndroidAPS-a odaberite Actions.
+2. Proširite All Workflows.
+3. Odaberite AAPS-CI.
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Pomaknite se prema dolje i dodirnite Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Ostavite granu postavljenu na master. U **Select AAPS Version** provjerite je li odabrana verzija **4.0.0**, najnovija verzija na vrhu popisa. Ako vaš fork nije ažuran, unaprijed odabrana verzija je starija: ako pokrenete workflow s obrascem kakav se otvori, ponovno ćete izraditi tu stariju verziju i vaša aplikacija neće biti ažurirana. Odaberite [varijantu](#browserbuild-variant) (fullRelease), a zatim dodirnite Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Popis verzija dio je workflowa u vašem forku. Ako **4.0.0** nedostaje, vaš fork još nije sinkroniziran: vratite se na [Ažurirajte svoj GitHub repozitorij](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of **AAPS**. This means that the Master and Wear apk is now directly saved into your Google Drive (as per below). AAPSClient apk can be downloaded from Github > nightscout > AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
+6. Vidjet ćete poruku „Workflow run was successfully requested“. Osvježite stranicu u pregledniku i moći ćete pratiti napredak izrade. Kada radnja završi, radnja AAPS CI prikazat će zelenu kvačicu. Uspješno ste izradili ažuriranu verziju **AAPS-a**. To znači da se APK za glavni uređaj i APK za Wear sada spremaju izravno na vaš Google Drive (kao niže). APK AAPSClienta možete preuzeti s Github > nightscout > AndroidAPS [ovdje](https://github.com/nightscout/AndroidAPS/releases)
 
 
-![Monitor Workflow](../images/update/CI/GitHubActions4.png)
+![Praćenje workflowa](../images/update/CI/GitHubActions4.png)
 
 
-### Install the AAPS APK
+### Instalirajte APK AAPS-a
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Otvorite svoj Google Drive.
+2. Otvorite mapu AAPS, odaberite mapu nove verzije i u njoj ćete naći verziju za telefon i verziju za Android Wear.
 
-![Google Drive Location](../images/update/CI/GitHubActions5.png)
+![Lokacija na Google Driveu](../images/update/CI/GitHubActions5.png)
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Od rujna 2026. Googleova [provjera Android razvojnih programera](#android-developer-verification) može, ovisno o vašoj zemlji, blokirati instalaciju APK datoteke dodirom na datoteku. Besplatna zaobilazna rješenja objašnjena su na toj stranici.
 ```
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+Nastavite [ovdje](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
-## Troubleshooting
+## Rješavanje problema
 
-If anything goes wrong, don't panic.
+Ako nešto pođe po zlu, ne paničarite.
 
-Take a breath!
+Duboko udahnite!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Zatim provjerite je li vaš problem već opisan: pogledajte [Rješavanje problema s AAPS Builderom](#aaps-builder-troubleshooting) ako izrađujete s **AAPS Builderom**, inače [Izrada u pregledniku: rješavanje problema](#aaps-ci-troubleshooting).
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Ako trebate dodatnu pomoć, obratite se drugim korisnicima **AAPS-a** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) ili [Discordu](https://discord.gg/4fQUWHZ4Mw).

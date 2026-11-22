@@ -1,249 +1,249 @@
-# Preparing to start with AAPS
+# Priprema za početak s AAPS-om
 
-Welcome. This documentation aims to guide users who are preparing to set up and start using the Android Artificial Pancreas System (**AAPS**).
+Dobro došli. Ova dokumentacija vodi korisnike koji se pripremaju postaviti i početi koristiti sustav umjetne gušterače za Android (**AAPS**).
 
-## Finding your way around the documentation
+## Kako se snaći u dokumentaciji
 
-An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+**Kazalo** i objašnjenje strukture dokumentacije možete naći [ovdje](../index.md), a do njega dolazite i klikom na simbol **AAPS** gore lijevo u dokumentaciji. Tamo ćete naći pregled svrhe različitih odjeljaka dokumentacije. Za kretanje kroz dokumentaciju možete koristiti i naslove s lijeve strane ove stranice. Na kraju, tu je i praktična funkcija pretraživanja, odmah ispod simbola **AAPS**.
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+Želimo da lako možete saznati i mogućnosti i ograničenja **AAPS-a**. Može biti razočaravajuće kad nakon vremena uloženog u čitanje dokumentacije otkrijete da možda nemate kompatibilnu inzulinsku pumpu ili CGM, ili da **AAPS** nudi drugačije funkcije nego što ste se nadali.
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+Mnogi detalji iz iskustva u dokumentaciji **AAPS-a** imaju više smisla kad **AAPS** stvarno koristite u stvarnom vremenu. Kao što je teško naučiti sport samo čitanjem pravila, potrebno je oboje: naučiti osnove pravila za sigurno korištenje **AAPS-a**, a zatim naučiti kako ta pravila najbolje primijeniti kad počnete koristiti **AAPS**.
 
 (preparing-safety-first)=
 
-## Safety First
-“With great power comes great responsibility…”
+## Sigurnost na prvom mjestu
+„S velikom moći dolazi i velika odgovornost…“
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### Tehnička sigurnost
+**AAPS** ima mnogo sigurnosnih značajki. One uvode ograničenja koja se postupno uklanjaju kako u koracima ispunjavate niz [Ciljeva](../SettingUpAaps/CompletingTheObjectives.md), u kojima testirate određene parametre i odgovarate na pitanja s višestrukim izborom. Značajke **AAPS-a** otključavaju se kako uspješno ispunjavate Ciljeve. Tako korisnik može sigurno, u koracima, prijeći s otvorene petlje na zatvorenu petlju i usput upoznati različite značajke **AAPS-a**.
 
-The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimize these issues.
+[Ciljevi](../SettingUpAaps/CompletingTheObjectives.md) su osmišljeni kao najbolji mogući uvod u **AAPS**. Uzimaju u obzir tipične pogreške i opće obrasce koje su razvojni programeri **AAPS-a** primijetili kod novih korisnika. Pogreške se mogu dogoditi jer početnik nema iskustva i previše želi brzo početi s **AAPS-om** ili je previdio važne stvari. [Ciljevi](../SettingUpAaps/CompletingTheObjectives.md) žele smanjiti te probleme.
 
-### Medical safety
+### Medicinska sigurnost
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
-Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+Oprez kod brzog poboljšanja kontrole glukoze u krvi i snižavanja HbA1c 
 ```
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicians make their patients aware of this issue.
+Važno sigurnosno pitanje: **brzo snižavanje HbA1c i bolja kontrola glukoze u krvi kod osoba koje su dulje vrijeme imale povišenu glukozu mogu uzrokovati trajno oštećenje**. Mnoge osobe s dijabetesom to ne znaju, a ne upozoravaju svi liječnici svoje pacijente na ovaj problem.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occurring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 11.1 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+To oštećenje može uključivati **gubitak vida i trajnu neuropatiju (bol)**. To se oštećenje može izbjeći ako se prosječna razina glukoze snižava sporije. Ako sada imate povišen HbA1c i prelazite na **AAPS** (ili bilo koji drugi sustav zatvorene petlje), _molimo_ razgovarajte o tom mogućem riziku sa svojim liječničkim timom prije početka i s njima dogovorite vremenski plan s postupno nižim sigurnim ciljevima glukoze. Na početku lako možete postaviti više ciljeve glukoze u **AAPS-u** (sada je najviši cilj koji možete odabrati 11,1 mmol/L, ali po potrebi možete i namjerno zadržati slab profil), a zatim cilj snižavati kako mjeseci prolaze.
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### Koliko brzo mogu sniziti HbA1c bez rizika od trajnog oštećenja?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+Jedna retrospektivna [studija](https://pubmed.ncbi.nlm.nih.gov/1464975/) 76 pacijenata pokazala je da se rizik napredovanja retinopatije povećao 1,6 puta, 2,4 puta i 3,8 puta ako je HbA1c pao za 1 %, 2 % odnosno 3 % tijekom 6 mjeseci. Predložili su da **„sniženje vrijednosti HbA1c u bilo kojem razdoblju od 6 mjeseci treba biti manje od 2 %, kako bi se spriječilo napredovanje retinopatije.... Prebrzo sniženje na početku kontrole glikemije moglo bi uzrokovati teško ili prolazno pogoršanje napredovanja retinopatije.“**
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
+Napomena: Ako koristite druge jedinice za HbA1c (mmol/mol umjesto %), kliknite [ovdje](https://www.diabetes.co.uk/hba1c-units-converter.html) za kalkulator HbA1c.
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+U drugoj retrospektivnoj [procjeni](https://academic.oup.com/brain/article/138/1/43/337923) 954 pacijenta istraživači su zabilježili:
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**„Uz sniženje HbA1c od 2–3 postotna boda tijekom 3 mjeseca apsolutni rizik razvoja neuropatije uzrokovane liječenjem dijabetesa bio je 20 %, a uz sniženje HbA1c od >4 postotna boda tijekom 3 mjeseca apsolutni rizik razvoja neuropatije uzrokovane liječenjem dijabetesa bio je veći od 80 %.“**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+[Komentar](https://academic.oup.com/brain/article/138/1/2/340563) na ovaj rad složio se da bi, kako bi se izbjegle komplikacije, **cilj trebao biti sniziti A1c za <2 % tijekom 3 mjeseca.** Druge preglede na ovu temu možete pročitati [ovdje](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) i [ovdje](https://www.mdpi.com/1999-4923/15/7/1791).
 
-It is generally recognized that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+Općenito je poznato da osobe s _novootkrivenim_ dijabetesom tipa 1 (koje pri dijagnozi, prije početka liječenja inzulinom, često imaju vrlo visok HbA1c) mogu brzo sniziti HbA1c odmah nakon dijagnoze, a da ti rizici nisu jednako veliki, jer nisu tako dugo imale povišenu glukozu u krvi. Ipak, o tome svakako razgovarajte sa svojim liječnikom.
 
 (PreparingForAaps-no-sglt-2-inhibitors)=
-### No SGLT-2 inhibitors
+### Bez SGLT-2 inhibitora
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+SGLT-2 inhibitori, koji se zovu i glifozini, sprječavaju ponovnu apsorpciju glukoze u bubrezima. Glifozini snižavaju šećer u krvi u količini koja se ne može izračunati, pa ih NE SMIJETE uzimati dok koristite sustav zatvorene petlje kao što je AAPS! Postojao bi velik rizik od ketoacidoze i/ili hipoglikemije! Kombinacija ovog lijeka sa sustavom koji smanjuje bazalne stope kako bi podigao GUK posebno je opasna. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. The problem is that, unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs. This leaves your body with too much insulin compared to the absorbed carbs, resulting in hypoglycemia.
+Ukratko:
+- **Primjer 1: rizik od hipoglikemije**
+>Za ručak pomoću **AAPS-a** date bolus za 45 g ugljikohidrata. Problem je u tome što inhibitori, a AAPS to ne zna, uzrokuju da tijelo izbaci dio ugljikohidrata. Tako u tijelu ostaje previše inzulina u odnosu na apsorbirane ugljikohidrate, što dovodi do hipoglikemije.
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background, causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake, including basal. Over time this can result in your BG remaining below target value, to the point where the body does not have enough background insulin to absorb any carbs, resulting in ketoacidosis. Ordinarily, ketoacidosis develops in T1D patients because their pump fails, which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with gliflozins is that there would be no AAPS alerts, as the pump remains operational and the BG potentially remains within target.
+- **Primjer 2: rizik od ketoacidoze**
+>Inhibitori u pozadini izbacuju dio ugljikohidrata, pa vam GUK pada. **AAPS** će automatski dati pumpi naredbu da smanji isporuku inzulina, uključujući bazal. S vremenom vam GUK može ostati ispod ciljne vrijednosti, sve dok tijelo nema dovoljno bazalnog inzulina da iskoristi ugljikohidrate, što dovodi do ketoacidoze. Obično se ketoacidoza kod osoba s T1D-om razvija jer pumpa zakaže, što bi pokrenulo upozorenja na telefonu i bilo bi vidljivo po visokoj vrijednosti GUK-a. Kod glifozina je opasnost u tome što AAPS ne bi dao nikakva upozorenja, jer pumpa i dalje radi, a GUK možda ostaje unutar cilja.
 
-Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
+Česti trgovački nazivi SGLT-2 inhibitora su: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro i Xigduo XR, i drugi.
 ```
 
 
-### Key principles of looping with AAPS
+### Osnovna načela korištenja petlje s AAPS-om
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+Prije korištenja **AAPS-a** morate razumjeti osnovna načela i pojmove petlje. To postižete tako da uložite svoje vrijeme u čitanje dokumentacije **AAPS-a** i ispunite Ciljeve, koji vam žele dati čvrstu osnovu za sigurno i učinkovito korištenje **AAPS-a**. Količina dokumentacije **AAPS-a** na početku može izgledati prevelika, ali budite strpljivi i vjerujte postupku – s pravim pristupom uspjet ćete!
 
-The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and set up **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 7 of **AAPS** you are closed looping, the later objectives add in additional features like **SMB** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
+Brzina napredovanja ovisi o osobi, ali znajte da ispunjavanje svih ciljeva obično traje 6 – 9 tjedana. Mnogi ljudi izrade, instaliraju i postave **AAPS** dosta prije nego što ga počnu koristiti. Kao pomoć, sustav ima „virtualnu pumpu“ koju možete koristiti dok ispunjavate prve ciljeve. Tako možete upoznati **AAPS** bez stvarne isporuke inzulina. Detaljan vremenski plan nalazi se ispod. Znajte da s **AAPS-om** do cilja 7 već koristite zatvorenu petlju, a kasniji ciljevi dodaju dodatne značajke kao što su **SMB** i **automatizacije**, koje su nekim korisnicima korisne, ali nisu nužne za osnovnu funkciju **AAPS-a**.
 
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
+Za uspjeh s **AAPS-om** potreban je aktivan pristup, spremnost da razmišljate o podacima GUK-a i fleksibilnost da napravite potrebne prilagodbe u **AAPS-u** kako biste poboljšali svoje rezultate. Kao što je gotovo nemoguće naučiti neki sport samo čitanjem pravila, isto vrijedi i za **AAPS**.
 
-#### Plan for delays and minor issues in getting everything set up and running
+#### Računajte na kašnjenja i manje probleme dok sve postavite i pokrenete
 
-In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
+U prvim fazama početka s **AAPS-om** možete imati poteškoća da sve komponente petlje dobro komuniciraju jedna s drugom (i s mogućim pratiteljima) te pri finom podešavanju postavki. Neki se problemi ne mogu riješiti dok se **AAPS** ne koristi u svakodnevnom životu, ali mnogo pomoći možete dobiti u Facebook grupi i na Discordu. Molimo planirajte unaprijed i za traženje i rješavanje problema odaberite „dobro“ vrijeme, na primjer mirno jutro vikenda (dakle ne kasno navečer, kad ste umorni, ili prije važnog sastanka ili putovanja).
 
-#### Technology compatibility
+#### Kompatibilnost tehnologije
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections.
+**AAPS** radi samo s određenim vrstama inzulinskih pumpi, CGM-ova i telefona, a neka tehnologija možda nije dostupna u svim zemljama. Kako biste izbjegli razočaranje ili frustraciju, molimo pročitajte odjeljke [CGM](../Getting-Started/CompatiblesCgms.md), [pumpa](../Getting-Started/CompatiblePumps.md) i [telefon](../Getting-Started/Phones.md).
 
-#### App build time and progressing to full looping
+#### Vrijeme izrade aplikacije i put do potpune petlje
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
+Vrijeme izrade aplikacije **AAPS** ovisi o vašem znanju i tehničkim sposobnostima. Neiskusnim korisnicima izrada **AAPS-a** obično traje do pola dana ili cijeli dan (uz pomoć zajednice). S novijim verzijama **AAPS-a** postupak će biti znatno brži, jer ćete imati više iskustva.
 
-Several parts of this documentation are dedicated to helping you through the build process:
+Nekoliko dijelova ove dokumentacije pomaže vam kroz postupak izrade:
 
-- [Building AAPS](../SettingUpAaps/BuildingAaps.md) takes you step-by-step through building the app and installing it on your phone;
+- [Izrada AAPS-a](../SettingUpAaps/BuildingAaps.md) vodi vas korak po korak kroz izradu aplikacije i njezinu instalaciju na telefon;
 
-- the [FAQ](../UsefulLinks/FAQ.md) answers common questions and explains the errors most likely to occur; and
+- [Česta pitanja (FAQ)](../UsefulLinks/FAQ.md) odgovaraju na uobičajena pitanja i objašnjavaju najčešće pogreške; i
 
-- the [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) hub collects solutions to the most frequent problems, organised by topic.
+- središnja stranica [Rješavanje problema](../GettingHelp/GeneralTroubleshooting.md) skuplja rješenja najčešćih problema, poredana po temama.
 
-How long it takes to get to closed looping depends on the individual; an approximate timeline for reaching full looping with **AAPS** is given [below](#preparing-how-long-will-it-take).
-
-
-#### Keystore & configuration settings export file
-
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
-
-1.  Save your keystore file (.jks file used to sign your app) in a safe place;
-
-2.  Keep a note of your password for your keystore file.
-
-How you save the keystore depends on your build method:
-
-- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
-- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
-- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
-
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
-
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
-
-#### Troubleshooting
-
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
-
-##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
-
-##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
+Koliko traje put do zatvorene petlje ovisi o osobi; približan vremenski plan do potpunog korištenja petlje s **AAPS-om** nalazi se [ispod](#preparing-how-long-will-it-take).
 
 
+#### Spremište ključeva i datoteka za izvoz postavki konfiguracije
+
+„Spremište ključeva“ (.jks datoteka) je datoteka zaštićena lozinkom koja pripada samo vašoj kopiji **AAPS-a**. Vaš Android telefon pomoću nje osigurava da nitko drugi bez tog spremišta ključeva ne može ažurirati vašu kopiju. Ukratko, kao dio izrade **AAPS-a** trebate:
+
+1.  Spremiti datoteku spremišta ključeva (.jks datoteku kojom se potpisuje aplikacija) na sigurno mjesto;
+
+2.  Zapisati lozinku za datoteku spremišta ključeva.
+
+Kako ćete spremiti spremište ključeva ovisi o načinu izrade:
+
+- **Izrada s Android Studiom (računalo)**: spremište ključeva nastaje tijekom izrade – upute o tome gdje ga spremiti nalaze se u [Generate signed APK](#Building-APK-generate-signed-apk).
+- **AAPS Builder**: sačuvajte sigurnosnu kopiju datoteke `aaps-keystore.jks` koju vam je stranica postavki ponudila kad ste izradili ključ, zajedno s lozinkom i aliasom. Ako ste prenijeli svoje spremište ključeva, sačuvajte tu datoteku.
+- **Izrada u pregledniku s forkom**: pomoću posebnog workflowa [Export keystore](#ci-keystore-export) preuzmite kopiju na svoj Google Drive.
+
+Tako ćete moći koristiti potpuno istu datoteku spremišta ključeva svaki put kad se izradi nova verzija **AAPS-a**. U prosjeku su potrebna 2 ažuriranja **AAPS-a** godišnje.
+
+Osim toga, **AAPS** vam omogućuje [izvoz svih postavki konfiguracije](../Maintenance/ExportImportSettings.md). Tako možete sigurno vratiti svoj sustav kad mijenjate telefon ili ažurirate / ponovno instalirate aplikaciju, uz što manje prekida. 
+
+#### Rješavanje problema
+
+Slobodno se obratite zajednici AAPS-a ako u nešto niste sigurni – ne postoji glupo pitanje! Svi korisnici, s bilo kojom razinom iskustva, slobodno mogu postavljati pitanja. Odgovori na pitanja obično stižu brzo, jer **AAPS** koristi mnogo ljudi.
+
+##### [pitajte u Facebook grupi AAPS-a](https://www.facebook.com/groups/AndroidAPSUsers/)
+
+##### [pitajte na Discord kanalu AAPS-a](https://discord.gg/4fQUWHZ4Mw)
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
-This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
-#### [Section For Clinicians](../UsefulLinks/ClinicianGuideToAaps.md)
+#### [Gdje mogu dobiti pomoć](../GettingHelp/WhereCanIGetHelp.md)?
 
-This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+Ovaj odjeljak daje novim korisnicima poveznice na izvore pomoći, uključujući podršku zajednice novih i iskusnih korisnika koji mogu odgovoriti na pitanja i riješiti uobičajene probleme s AAPS-om.
 
-## What are we going to build and install?
+#### [Odjeljak za zdravstvene djelatnike](../UsefulLinks/ClinicianGuideToAaps.md)
 
-This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
+Ovo je [odjeljak posebno za zdravstvene djelatnike](../UsefulLinks/ClinicianGuideToAaps.md) koji žele znati više o AAPS-u i tehnologiji umjetne gušterače otvorenog koda. U Uvodu postoje i savjeti o tome [kako razgovarati sa svojim liječničkim timom](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team).
+
+## Što ćemo izraditi i instalirati?
+
+Ovaj dijagram daje pregled glavnih komponenti (hardvera i softvera) sustava **AAPS**:
 
 ![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 
-In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
+Osim tri osnovne hardverske komponente (telefon, pumpa, senzor glukoze), potrebni su nam i: 1) aplikacija **AAPS** 2) poslužitelj za izvješća i 3) aplikacija za kontinuirano mjerenje glukoze (CGM)
 
-### 1) An Android Phone Application: **AAPS**
+### 1) Aplikacija za Android telefon: **AAPS**
 
-**AAPS** is an app that runs on Android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
+**AAPS** je aplikacija koja radi na Android pametnim telefonima i uređajima. Aplikaciju **AAPS** (APK datoteku) izradit ćete sami, prema uputama korak po korak: preuzet ćete izvorni kod **AAPS-a** s GitHuba, instalirati potrebne programe (Android Studio, GitHub Desktop) na računalo i izraditi svoju kopiju aplikacije **AAPS**. Zatim ćete aplikaciju **AAPS** prenijeti na svoj pametni telefon (e-poštom, USB kabelom _itd._) i instalirati je.
 
-### 2) A reporting server: Nightscout (Tidepool*)
+### 2) Poslužitelj za izvješća: Nightscout (Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to set up a Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. Tidepool is also available as an alternative to Nightscout.
+Kako biste u potpunosti iskoristili **AAPS**, trebate postaviti Nightscout poslužitelj. To možete [napraviti sami](https://nightscout.github.io/nightscout/new_user/#free-diy) ili platiti malu naknadu da vam netko postavi [upravljanu uslugu Nightscout](https://nightscout.github.io/#nightscout-as-a-service). Nightscout skuplja podatke iz **AAPS-a** kroz vrijeme i može izraditi detaljna izvješća koja povezuju obrasce CGM-a i inzulina. Njegovatelji također mogu koristiti Nightscout za daljinsku komunikaciju s aplikacijom **AAPS**, kako bi nadzirali liječenje dijabetesa svog djeteta. Takve značajke daljinske komunikacije uključuju praćenje razine glukoze i inzulina u stvarnom vremenu, daljinski bolus inzulina (putem SMS poruka) i najavu obroka. Analizirati liječenje dijabetesa gledajući podatke CGM-a odvojeno od podataka pumpe je kao vožnja automobila u kojem je vozač slijep, a suvozač mu opisuje što vidi. Kao zamjena za Nightscout dostupan je i Tidepool.
 
-### 3) CGM sensor app
+### 3) Aplikacija za CGM senzor
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
+Ovisno o vašem senzoru glukoze / CGM-u, trebat će vam kompatibilna aplikacija koja prima očitanja glukoze i šalje ih u **AAPS**. Različite mogućnosti prikazane su ispod, a više informacija ima u odjeljku [Kompatibilni CGM-ovi](../Getting-Started/CompatiblesCgms.md):
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
-### Maintenance of the **AAPS** system
+### Održavanje sustava **AAPS**
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+I **Nightscout** i **AAPS** treba ažurirati otprilike jednom godišnje, kad izađu poboljšane verzije. U nekim slučajevima ažuriranje se može odgoditi, a u drugima se snažno preporučuje ili je nužno zbog sigurnosti. Obavijesti o tim ažuriranjima objavljuju se u Facebook grupama i na Discord poslužiteljima. Iz bilješki o izdanju bit će jasno o kojem se slučaju radi. U vrijeme ažuriranja vjerojatno će mnogi ljudi postavljati slična pitanja kao vi, i imat ćete podršku pri ažuriranju.
 
 (preparing-how-long-will-it-take)=
-## How long will it take to set everything up?
+## Koliko vremena treba da se sve postavi?
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
+Kao što je ranije rečeno, korištenje **AAPS-a** je više „putovanje“ koje traži da uložite svoje vrijeme. To nije postavljanje koje se radi samo jednom. Prema sadašnjim procjenama, izrada **AAPS-a**, instalacija i konfiguracija **AAPS-a** i softvera za **CGM** te prijelaz s otvorene petlje na hibridnu zatvorenu petlju s **AAPS-om** ukupno traju oko 4 do 6 mjeseci. Zato preporučujemo da aplikaciju **AAPS** izradite i počnete s prvim ciljevima što prije, čak i ako još koristite drugi sustav za isporuku inzulina (virtualnu pumpu možete koristiti do cilja 5).
 
-Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time; these minimum waiting times have been set for your own safety.
+Za neke ciljeve mora proći određen broj dana, kako biste sigurno razumjeli novu funkciju. To vrijeme čekanja ne može se preskočiti; ta najmanja vremena čekanja postavljena su radi vaše sigurnosti.
 
-Here is an approximate timeframe:
+Ovo je približan vremenski okvir:
 
-| Tasks                                                         |           Approx time            |
-| ------------------------------------------------------------- |:--------------------------------:|
-| Initial reading of the documentation                          |             1-2 days             |
-| Configuring GitHub to allow the browser build                 |            1-4 hours             |
-| Setting up a reporting server                                 |              1 hour              |
-| Installing a CGM app (xDrip, BYODA, …)                        |              1 hour              |
-| Configuring CGM → xDrip → AAPS initially                      |              1 hour              |
-| Configuring AAPS → pump initially                             |              1 hour              |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers     |              1 hour              |
-| Objective 1: Setting up visualization and monitoring          |              1 hour              |
-| Objective 2: Learn how to control AAPS                        |             2 hours              |
-| Objective 3: Prove your knowledge                             |          Up to 14 days           |
-| Objective 4: Starting on an open loop                         |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |              7 days              |
-| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
-| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
-| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| Objective 10: Automation                                      |        Minimum of 28 days        |
+| Zadaci                                                                  |      Približno vrijeme      |
+| ----------------------------------------------------------------------- |:---------------------------:|
+| Prvo čitanje dokumentacije                                              |          1–2 dana           |
+| Konfiguracija GitHuba za izradu u pregledniku                           |          1–4 sata           |
+| Postavljanje poslužitelja za izvješća                                   |            1 sat            |
+| Instalacija aplikacije za CGM (xDrip, BYODA, …)                         |            1 sat            |
+| Prva konfiguracija CGM → xDrip → AAPS                                   |            1 sat            |
+| Prva konfiguracija AAPS → pumpa                                         |            1 sat            |
+| Konfiguracija AAPS → Nightscout/Tidepool (samo za izvješća)             |            1 sat            |
+| Neobavezno: konfiguracija Nightscout ↔ **AAPS** i NS pratitelji         |            1 sat            |
+| Cilj 1: Postavljanje prikaza i praćenja                                 |            1 sat            |
+| Cilj 2: Naučite kako kontrolirati AAPS                                  |           2 sata            |
+| Cilj 3: Dokažite svoje znanje                                           |         Do 14 dana          |
+| Cilj 4: Početak s otvorenom petljom                                     |       Najmanje 7 dana       |
+| Cilj 5: Razumijevanje otvorene petlje                                   |           7 dana            |
+| Cilj 6: Početak zatvorene petlje (zaštita od niske razine glukoze, LGS) |   Najmanje 5, do 14 dana    |
+| Cilj 7: Podešavanje zatvorene petlje                                    |  Najmanje 1 dan, do 7 dana  |
+| Cilj 8: Prilagodite bazale i omjere, omogućite Autosens                 | Najmanje 7 dana, do 14 dana |
+| Cilj 9: Omogućavanje Super Micro Bolusa (SMB)                           |      Najmanje 28 dana       |
+| Cilj 10: Automatizacija                                                 |      Najmanje 28 dana       |
 
-Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
+I kad **AAPS** potpuno radi, i dalje ćete morati redovito fino podešavati postavke kako biste poboljšali liječenje dijabetesa.
 
-## Requirements
+## Preduvjeti
 
-### Medical considerations
+### Medicinska razmatranja
 
-In addition to the medical warnings in the [safety section](#preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+Osim medicinskih upozorenja u [odjeljku o sigurnosti](#preparing-safety-first), postoje i različiti parametri, ovisno o tome koji inzulin koristite u pumpi.
 
-#### Insulin choice
+#### Izbor inzulina
 
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). You configure your insulin in **Manage → Insulin settings**: set its **Peak** and **DIA**, or use **Load peak from** to fill in the standard peak time of one of the presets:
+Izračuni **AAPS-a** temelje se na koncentraciji inzulina od 100 J/ml (isto kao standard pumpe). Inzulin konfigurirate u **Upravljanje → Postavke inzulina**: postavite njegov **Vrh djelovanja** i **DIA** ili pomoću **Učitaj vrh djelovanja iz** unesite standardno vrijeme vrha djelovanja jednog od predložaka:
 
-- **Novorapid** (also for Humalog and NovoLog)
+- **Novorapid** (i za Humalog i NovoLog)
 - **Fiasp**
 - **Lyumjev**
 
-Advanced users can enter any peak time (35 to 120 minutes) directly, for example for a mixture of insulins. See [Insulin settings](#Config-Builder-insulin).
+Napredni korisnici mogu izravno unijeti bilo koje vrijeme vrha djelovanja (od 35 do 120 minuta), na primjer za mješavinu inzulina. Pogledajte [Postavke inzulina](#Config-Builder-insulin).
 
 
-### Technical
+### Tehnički dio
 
-This documentation aims to reduce the technical expertise required to an absolute minimum. To build the **AAPS** app, you have several options — see [Building AAPS](../SettingUpAaps/BuildingAaps.md) for an overview:
+Ova dokumentacija želi potrebno tehničko znanje smanjiti na apsolutni minimum. Za izradu aplikacije **AAPS** imate nekoliko mogućnosti – pregled je na stranici [Izrada AAPS-a](../SettingUpAaps/BuildingAaps.md):
 
-- **Browser build** (recommended): build the app directly from your smartphone using GitHub Actions, with no computer or Android Studio required. With [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) you only need a GitHub account: you download the app directly from GitHub. The fork method also needs a Google account to store the app in your Google Drive.
-- **Android Studio build**: build the app on your computer using Android Studio. This is mostly used by developers who intend to make code changes.
-- **Command-line build**: for users who prefer to build locally without installing Android Studio.
+- **Izrada u pregledniku** (preporučeno): aplikaciju izradite izravno sa svog pametnog telefona pomoću GitHub Actions, bez računala i bez Android Studija. Uz [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) trebate samo GitHub račun: aplikaciju preuzimate izravno s GitHuba. Metoda s forkom treba i Google račun, kako bi se aplikacija spremila na vaš Google Drive.
+- **Izrada s Android Studiom**: aplikaciju izradite na računalu pomoću Android Studija. Ovo uglavnom koriste razvojni programeri koji žele mijenjati kod.
+- **Izrada iz naredbenog retka**: za korisnike koji žele izraditi aplikaciju lokalno, bez instalacije Android Studija.
 
-Beyond building the app, you also need to set up a reporting server, configure several Android phone apps and develop expertise in diabetes management. This can be achieved by moving step-by-step, being patient, and with help from the **AAPS** community. If you are already able to navigate the internet and manage your own Gmail emails, building **AAPS** is a feasible task. Just take your time.
+Osim izrade aplikacije, trebate postaviti i poslužitelj za izvješća, konfigurirati nekoliko aplikacija na Android telefonu i steći znanje o liječenju dijabetesa. To ćete postići ako idete korak po korak, strpljivo i uz pomoć zajednice **AAPS-a**. Ako se već znate snalaziti na internetu i sami upravljate svojom Gmail e-poštom, izrada **AAPS-a** je ostvariv zadatak. Samo si uzmite vremena.
 
-### Smartphones
+### Pametni telefoni
 
-#### AAPS and Android Versions
+#### AAPS i verzije Androida
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Trenutačna verzija **AAPS-a** (4.0) zahtijeva Android pametni telefon s Googleovim **Androidom 12.0 ili novijim**. Ako razmišljate o kupnji novog telefona (stanje u siječnju 2026.), preporučuje se Android 16.<br/> Zbog sigurnosti snažno preporučujemo korisnicima da svoju verziju **AAPS-a** drže ažurnom. Ipak, za korisnike koji ne mogu koristiti uređaj s Androidom 12.0 ili novijim i dalje su dostupne starije verzije **AAPS-a** za starije verzije Androida, pogledajte: [Bilješke o izdanju](#maintenance-android-version-aaps-version).
 
-#### Smartphone model choice
-The exact model you buy depends on the desired function(s). You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
+#### Izbor modela pametnog telefona
+Točan model koji kupite ovisi o funkcijama koje želite. Na [stranici Telefoni](../Getting-Started/Phones.md) naći ćete preporuke i iskustva korisnika o postavama koje rade.
 
-Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+Preporučujemo korisnicima da Android na telefonu drže ažurnim, uključujući sigurnosna ažuriranja. Ipak, ako ste novi u **AAPS-u** ili niste tehnički stručnjak, možda je bolje da odgodite ažuriranje telefona dok ga drugi ne naprave i na našim forumima ne potvrde da je sigurno.
 
 ```{admonition} Delaying Samsung phone updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates on their phones, which can cause Bluetooth connectivity issues. To disable these forced updates, you need to switch the phone to "developer mode":
+Samsung nažalost ima naviku nametati ažuriranja na svojim telefonima, što može uzrokovati probleme s Bluetooth vezom. Kako biste isključili ta nametnuta ažuriranja, telefon trebate prebaciti u „način za razvojne programere“:
 
-1. Go to **Settings** > **About phone** > **Software information**, then tap **Build number** until it confirms you have unlocked developer mode.
-2. Go back to the main **Settings** menu, where you should see a new **Developer options** menu item.
-3. Open **Developer options**, scroll to find **Auto system update**, and turn it off.
+1. Idite na **Postavke** > **O telefonu** > **Informacije o softveru**, a zatim dodirujte **Broj međuverzije** dok telefon ne potvrdi da ste otključali način za razvojne programere.
+2. Vratite se u glavni izbornik **Postavke**, gdje biste trebali vidjeti novu stavku **Opcije za razvojne programere**.
+3. Otvorite **Opcije za razvojne programere**, pronađite **Automatsko ažuriranje sustava** (Auto system update) i isključite ga.
 ```
 
 ```{admonition} Google Play Protect potential issue
 :class: warning
-There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens, you will have to go to the Google Play options and disable **Google Play Protect**. Not all phone models or all Android versions are affected.
+Bilo je više prijava da Google Play zaštita svako jutro bez razloga zaustavlja **AAPS**. Ako se to dogodi, morate otići u opcije Google Playa i isključiti **Google Play zaštitu**. To se ne događa na svim modelima telefona ni na svim verzijama Androida.
 ```
 
 ```{admonition} Android developer verification
 :class: note
-From September 2026, Google is gradually introducing [Android developer verification](#android-developer-verification), which changes how a self-built app is installed on the phone. Building **AAPS** is not affected, and free installation methods remain available — see the linked page for details.
+Od rujna 2026. Google postupno uvodi [potvrdu identiteta razvojnih programera za Android](#android-developer-verification), koja mijenja način na koji se aplikacija koju ste sami izradili instalira na telefon. To ne utječe na izradu **AAPS-a**, a besplatni načini instalacije i dalje su dostupni – detalje pogledajte na povezanoj stranici.
 ```
 

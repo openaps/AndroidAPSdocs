@@ -26,11 +26,11 @@ Mantemos uma lista das [configurações de hardware testadas](https://docs.googl
 
 Esta lista reúne a experiência dos utilizadores com um telefone usado com o **AAPS** e uma determinada bomba e CGM. Pode ajudar a verificar se o seu telefone / bomba / CGM já foi usado com sucesso por outros utilizadores.
 
-The document is read-only. Com CTRL-F, pode pesquisar no texto da folha do Google.
+O documento é só de leitura. Com CTRL-F, pode pesquisar no texto da folha do Google.
 
 Para registar o seu teste de uma configuração de hardware, preencha este [formulário](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Depois de preencher o formulário, a folha é atualizada automaticamente a cada 5 minutos.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Se tiver problemas com a folha de cálculo, contacte a pessoa que a mantém, *@theodoor5137*, no Discord, ou veja a página [Onde posso obter ajuda?](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Não encontrei o meu telefone
 

@@ -1,171 +1,171 @@
-# DanaRS, Dana-i and Dana-i2
+# DanaRS, Dana-i i Dana-i2
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*Ove upute služe za konfiguraciju aplikacije i pumpe ako imate DanaRS iz 2017. ili novije, Dana-i ili Dana-i2. Ako umjesto toga imate originalnu pumpu DanaR, pogledajte [DanaR](./DanaR-Insulin-Pump.md).*
 
-**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+**Dana-i2 može se koristiti od verzije AAPS-a 4.0 nadalje.** Koristi isti upravljački program **Dana-i/RS** kao i Dana-i.
 
-* In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
+* Na pumpi DanaRS/i/i2 aplikacija koristi "BASAL A". Postojeći podaci bit će prebrisani.
 
-    {contents} Table of contents
+    {contents} Sadržaj
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Mogućnosti pumpe s AAPS-om
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually (see [Timezone traveling](#timezone-traveling-danarv2-danars)).
+* S **AAPS-om** komunicira preko ugrađenog Bluetootha vašeg telefona, bez dodatnog komunikacijskog uređaja.
+* Prijelaz na ljetno računanje vremena i promjene vremenske zone morate obaviti ručno (pogledajte [Putovanje kroz vremenske zone](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
-## Pairing pump
+## Uparivanje pumpe
 
-* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* Tap **Pump** and select **Dana-i/RS**.
+* Otvorite **izbornik** (☰) u gornjem lijevom kutu glavnog zaslona **AAPS-a** i odaberite **Konfiguracija**.
+* Dodirnite **Pumpa** i odaberite **Dana-i/RS**.
     
-    ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+    ![Konfiguracija > Pumpa s dodatkom Dana-i/RS](../images/v4/Configuration/configuration_pump_list_2.png)
     
-    Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
+    Kada je odabrana, kartica **Dana-i/RS** prikazuje dva gumba, **Postavke** i **Otvori dodatak**:
     
-    ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+    ![Dodatak Dana-i/RS odabran u Konfiguracija > Pumpa](../images/v4/Pumps/dana_i_rs_enabled.png)
     
-    **Settings** opens the settings of the Dana-i/RS driver:
+    **Postavke** otvaraju postavke upravljačkog programa Dana-i/RS:
     
-    ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+    ![Postavke upravljačkog programa Dana-i/RS](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+    **Otvori dodatak** (ili **Upravljanje** > **Pumpa**) otvara zaslon pumpe Dana-i/RS. Prije uparivanja pumpe izgleda ovako:
     
-    ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+    ![Zaslon pumpe Dana-i/RS prije uparivanja](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* Na zaslonu pumpe dodirnite **Uparivanje**. **AAPS** traži pumpe u blizini.
 
-* Tap the entry for your pump in the list.
+* Dodirnite svoju pumpu na popisu.
     
-    ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
+    ![Zaslon Uparivanje s pumpom Dana koju je pronašlo skeniranje](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
+* **Uparivanje morate potvrditi na pumpi!** To radi na isti način kao i druga Bluetooth uparivanja koja možda poznajete (na primjer pametni telefon i audio sustav u automobilu).
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Potvrda uparivanja na Dana RS](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Uparivanje provedite prema vrsti i firmwareu vaše pumpe:
     
-    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
-    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+    * Za DanaRS v1 **AAPS** traži **Lozinka pumpe (samo v1)**. Unesite lozinku pumpe (pogledajte [Zadana lozinka](#DanaRS-Insulin-Pump-default-password)).
+    * Za DanaRS v3 **AAPS** traži da pritisnete OK na pumpi i upišete 2 niza brojeva i slova koji se prikazuju na pumpi. Zaslon pumpe držite uključenim pritiskom na tipku minus dok ne završite. Zatim dodirnite **Gotovo**.
+    * Za Dana-i i Dana-i2 pojavljuje se standardni Android dijalog za uparivanje. Unesite 6-znamenkasti broj koji se prikazuje na pumpi.
 
-* When **Pairing successful!** is shown, tap **Done**.
+* Kada se prikaže **Uparivanje je uspjelo!**, dodirnite **Gotovo**.
     
-    ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    ![Uparivanje je uspjelo!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
-    You are back on the pump screen, which now shows your pump's status.
+    Vratili ste se na zaslon pumpe, koji sada prikazuje status vaše pumpe.
     
-    ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
+    ![Zaslon pumpe Dana-i/RS nakon uparivanja](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+* U **Postavkama** odaberite **Brzina bolusa** za promjenu zadane brzine bolusa (12 s/J, 30 s/J ili 60 s/J).
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
-* Enable extended boluses on pump
+* U liječničkom izborniku (Doctors menu) postavite bazalni korak na pumpi na 0,01 J/h (pogledajte korisnički priručnik pumpe).
+* U liječničkom izborniku (Doctors menu) postavite bolusni korak na pumpi na 0,05 J (pogledajte korisnički priručnik pumpe). **AAPS** čita bazalni i bolusni korak s pumpe i koristi ih za svaki bolus, tako da bolus uvijek odgovara koraku postavljenom na pumpi. Zaslon pumpe prikazuje ih u retku **Bazalni/bolusni korak**.
+* Omogućite produžene boluse na pumpi
 
-### Options shown only for some models
+### Opcije koje se prikazuju samo za neke modele
 
-* **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
-* **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
-* If a Dana-i2 refuses a bolus, **AAPS** shows the reason, for example *Pump is not primed*, *Not enough insulin in the reservoir* or *Easy sleep mode is on in the pump*.
+* **Automatsko zaključavanje**: na Dana-i2 zaslon **Korisničke opcije** (na zaslonu pumpe, **Upravljanje** > **Pumpa**) ima prekidač **Automatsko zaključavanje** za postavku automatskog zaključavanja pumpe. Nakon promjene pritisnite **Spremi opcije u pumpu**.
+* **Jednostavni način**: na modelima pumpe koji imaju jednostavni način izbornika zaslon pumpe prikazuje redak **Jednostavni način** s vrijednošću **Uključeno** ili **Isključeno**.
+* Ako Dana-i2 odbije bolus, **AAPS** prikazuje razlog, na primjer *Kateter pumpe nije napunjen*, *Nema dovoljno inzulina u spremniku* ili *Na pumpi je uključen način Easy sleep*.
 
 (DanaRS-Insulin-Pump-default-password)=
 
-### Default password
+### Zadana lozinka
 
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* Za DanaRS s firmwareom v1 i v2 zadana lozinka je 1234.
+* Za DanaRS s firmwareom v3 ili Dana-i zadana lozinka izvodi se iz datuma proizvodnje i računa se kao MMDD, gdje je MM mjesec, a DD dan proizvodnje pumpe (npr. '0124' znači mjesec 01 i dan 24).
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manufacturing date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
+    * U glavnom izborniku (MAIN MENU) odaberite REVIEW, a zatim u podizborniku otvorite SHIPPING INFORMATION
+    * Broj 3 je datum proizvodnje. 
+    * Kod v3/i ova se lozinka koristi samo za zaključavanje izbornika na pumpi. Ne koristi se za komunikaciju i nije ju potrebno unositi u AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
-## Change password on pump
+## Promjena lozinke na pumpi
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
+* Pritisnite tipku OK na pumpi
+* U glavnom izborniku odaberite "OPTION" (pomaknite se udesno tako da nekoliko puta pritisnete tipku sa strelicom)
     
-    ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+    ![Glavni izbornik DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
-* In options menu select "USER OPTION"
+* U izborniku opcija odaberite "USER OPTION"
     
-    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+    ![Izbornik opcija DanaRS](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. password"
+* Tipkom sa strelicom pomaknite se prema dolje do "11. password"
     
-    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+    ![DanaRS 11. Lozinka](../images/DanaRSPW_03_11PW.png)
 
-* Press OK to enter old password.
+* Pritisnite OK za unos stare lozinke.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* Unesite **staru lozinku** (zadanu lozinku pogledajte [gore](#DanaRS-Insulin-Pump-default-password)) i pritisnite OK
     
-    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS unos stare lozinke](../images/DanaRSPW_04_11PWenter.png)
 
-* If wrong password is entered here there will be no message indicating failure!
+* Ako ovdje unesete pogrešnu lozinku, neće se pojaviti nikakva poruka o pogrešci!
 
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* Postavite **novu lozinku** (brojeve mijenjajte tipkama + i - / udesno se pomičite tipkom sa strelicom).
     
-    ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+    ![DanaRS nova lozinka](../images/DanaRSPW_05_PWnew.png)
 
-* Confirm with OK button.
+* Potvrdite tipkom OK.
 
-* Press OK to save setting.
+* Pritisnite OK za spremanje postavke.
     
-    ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+    ![DanaRS spremanje nove lozinke](../images/DanaRSPW_06_PWnewSave.png)
 
-* Move down to "14. EXIT" and press OK to exit.
+* Pomaknite se prema dolje do "14. EXIT" i pritisnite OK za izlaz.
     
-    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+    ![DanaRS izlaz](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
-## Dana RS specific errors
+## Pogreške specifične za Dana RS
 
-### Error during insulin delivery
+### Pogreška tijekom isporuke inzulina
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Ako se veza između AAPS-a i Dana RS prekine tijekom isporuke bolusa (npr. udaljite se od telefona dok Dana RS isporučuje inzulin), vidjet ćete sljedeću poruku i čuti zvuk alarma.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarm isporuke inzulina](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
-* Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
-* The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
+* U većini slučajeva to je samo problem u komunikaciji i isporučena je točna količina inzulina.
+* U povijesti pumpe provjerite je li isporučen točan bolus. To možete učiniti na samoj pumpi ili u **AAPS-u** na zaslonu pumpe (**Upravljanje** > **Pumpa**) > **Povijest pumpe** > **Bolusi**.
+* Ako želite, izbrišite unos o pogrešci u [tretmanima](#screens-bolus-carbs).
+* Stvarna količina očitava se i bilježi pri sljedećem povezivanju. Da biste to odmah pokrenuli, dodirnite **Osvježi** na zaslonu pumpe ili samo pričekajte sljedeće povezivanje.
 
-## Special note when switching phone
+## Posebna napomena pri promjeni telefona
 
-When switching to a new phone the following steps are necessary:
+Pri prelasku na novi telefon potrebni su sljedeći koraci:
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone
+* [Izvezite postavke](../Maintenance/ExportImportSettings.md) na starom telefonu
+* Prijenos postavki sa starog na novi telefon
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AAPS on the new phone.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* **Ručno uparite** Dana RS s novim telefonom
+* Ako pri uvozu označite **Zamijeni i postavke pumpe**, uvezu se i postavke veze s pumpom, pa će AAPS na novom telefonu već "poznavati" pumpu i zato neće pokrenuti Bluetooth skeniranje. Zato se novi telefon i pumpa moraju upariti ručno.
+* Instalirajte AAPS na novi telefon.
+* [Uvezite postavke](../Maintenance/ExportImportSettings.md) na novom telefonu
 
 ### DanaRS v3, Dana-i, Dana-i2
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
+* Pokrenite postupak uparivanja kako je opisano [gore](#DanaRS-Insulin-Pump-pairing-pump).
+* Ponekad ćete možda prvo morati obrisati podatke o uparivanju u **AAPS-u**. Na zaslonu pumpe (**Upravljanje** > **Pumpa**) dodirnite **Raspari** i potvrdite **Poništiti podatke o uparivanju?**. Zatim ponovno dodirnite **Uparivanje**.
 
-## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
+## Putovanje kroz vremenske zone s pumpama DanaRS, Dana-i i Dana-i2
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Za informacije o putovanju kroz vremenske zone pogledajte odjeljak [Promjena vremenske zone s pumpama](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## Gdje dobiti pomoć
 
-Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Upravljački program DanaRS/Dana-i/Dana-i2 razvija zajednica na **dobrovoljnoj** osnovi. Prije nego što zatražite pomoć:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Pročitajte** odgovarajući odjeljak ove dokumentacije da provjerite kako bi funkcija trebala raditi.
+2. **Pitajte** na kanalu *#AAPS* na [Discordu](https://discord.gg/4fQUWHZ4Mw) ili na nekom od drugih [kanala zajednice](../GettingHelp/WhereCanIGetHelp.md).
+3. **Prijavite grešku**: najprije pretražite [postojeće prijave (issues)](https://github.com/nightscout/AndroidAPS/issues); ako vaša nije na popisu, otvorite [novu prijavu](https://github.com/nightscout/AndroidAPS/issues) i priložite svoje [datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Kada tražite pomoć, navedite marku i model telefona, verziju Androida, verziju **AAPS-a** i jednostavan opis problema na engleskom jeziku (što se promijenilo, kada je zadnji put radilo).

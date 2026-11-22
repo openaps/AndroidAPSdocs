@@ -1,196 +1,196 @@
-# Creating and restoring back-ups
+# Crear i restaurar còpies de seguretat
 
-When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself: "What if?"
+Quan instal·leu AAPS al telèfon, aquest es converteix en un «dispositiu mèdic» del qual depeneu cada dia. És molt recomanable tenir un pla d'emergència per si el telèfon s'espatlla, us el roben o el perdeu. Per això és essencial preparar-se preguntant-vos: «I si...?»
 
-To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone). Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
+Per restaurar la configuració d'AAPS en un telèfon existent o nou, és important guardar els elements següents en un lloc segur (és a dir, no al telèfon). El millor és tenir com a mínim dues còpies de seguretat separades: en un disc dur local, en un llapis USB i (preferiblement) en un emmagatzematge al núvol com Google Drive o Microsoft 365 OneDrive. Si guardeu les còpies de seguretat al núvol, sempre tindreu tot el que cal accessible des del telèfon per restaurar la configuració on sigui i quan sigui.
 
-Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
+Penseu a tenir un segon telèfon de reserva i a practicar la restauració d'AAPS, per assegurar-vos que el telèfon de reserva funciona com cal. Aquest pas us donarà la confiança que el vostre pla d'emergència funciona i que podeu continuar utilitzant AAPS sense problemes si el vostre telèfon principal deixa d'estar disponible.
 
 ```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
 :class: warning
-Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+Des d'**AAPS** 4.0 la configuració es guarda en un emmagatzematge xifrat al telèfon, i no s'inclou ni a la còpia de seguretat de Google ni a la transferència d'un telèfon a un altre quan configureu un telèfon nou. Una exportació de la configuració, com s'explica en aquesta pàgina, és l'única manera de passar-la al telèfon nou.
 ```
 
-To be able to restore, having the following items at hand is important:
+Per poder restaurar, és important tenir a mà els elements següents:
 
-- Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
-- A recent copy of the **AAPS installer .APK**
-- A recent **settings export** file: For restoring important settings (which includes your objectives!).
-- Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip.
-- Personal notes on your setup.
+- El vostre **fitxer del magatzem de claus d'Android Studio** i la seva **contrasenya**: necessaris per (tornar a) compilar el fitxer d'instal·lació .APK d'AAPS.
+- Una còpia recent de l'**instal·lador .APK d'AAPS**
+- Un fitxer recent d'**exportació de la configuració**: per restaurar la configuració important (també els vostres objectius!).
+- La vostra **clau mestra d'AAPS**
+- Còpies de seguretat d'altres eines: per exemple BYODA i/o xDrip.
+- Notes personals sobre la vostra configuració.
 
-Below are the items that are recommended for keeping back-ups.
+A continuació trobareu els elements dels quals és recomanable tenir còpies de seguretat.
 
-## Creating back-ups
+## Crear còpies de seguretat
 
-### Keystore file from the computer you used to build the APK
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then [reinstall](#reinstall-aaps) and reconfigure AAPS.
+### Fitxer del magatzem de claus de l'ordinador amb què vau compilar l'APK
+Quan compileu el fitxer d'instal·lació .APK amb Android Studio, s'utilitzen el **fitxer del magatzem de claus i la contrasenya per signar el fitxer d'instal·lació .APK**. Per actualitzar la instal·lació actual d'AAPS, cal signar el fitxer d'instal·lació .APK de l'actualització amb el mateix magatzem de claus que es va fer servir per a la primera instal·lació. En actualitzar, es conserven tota la configuració i la base de dades d'AAPS. Tingueu en compte que, sense això, primer haureu de desinstal·lar l'aplicació actual i després [reinstal·lar](#reinstall-aaps) i tornar a configurar AAPS.
 
-Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK.
+Si guardeu el magatzem de claus i la seva contrasenya, en el futur actualitzar l'APK serà molt més senzill, sobretot si heu de compilar l'aplicació en un ordinador nou. Vegeu la secció [Actualitzar a una nova versió o branca](../Maintenance/UpdateToNewVersion.md) per saber com s'utilitza el magatzem de claus quan compileu un APK nou.
 
-**When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
+**Quan fer la còpia de seguretat:** Feu una còpia de seguretat del magatzem de claus després de compilar per primera vegada el fitxer d'instal·lació .APK d'**AAPS**.
 
-**How to back-up:** Locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**Com fer la còpia de seguretat:** Busqueu el camí del magatzem de claus. Si no el recordeu, el podeu trobar a Android Studio seleccionant **Build > APK > Next**. El camí apareix a «Key store path». Amb l'explorador de fitxers, aneu a aquest camí i feu una còpia del fitxer del magatzem de claus (amb l'extensió `.jks`). Deseu-lo en un lloc segur al núvol, per si el vostre ordinador deixa de funcionar. Apunteu també la contrasenya del magatzem de claus, l'àlies de la clau i la contrasenya de la clau.
 
-### Copies of the most recent APK
-In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
+### Còpies de l'APK més recent
+Si perdeu o s'espatlla el vostre telèfon principal d'**AAPS**, amb una còpia de l'APK podreu tornar a utilitzar **AAPS** ràpidament en un telèfon nou. Nota: també necessitareu una còpia de seguretat de la configuració, com s'explica més avall.
 
-**When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason.
+**Quan fer la còpia de seguretat:** Guardeu una còpia de seguretat de l'APK més recent que heu instal·lat al vostre telèfon principal d'**AAPS**. També podeu guardar una versió anterior, per si per algun motiu heu de tornar-hi.
 
-**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
+**Com fer la còpia de seguretat:** Guardeu una còpia a l'ordinador amb què compileu l'APK amb Android Studio. A més, us recomanem fer servir una plataforma al núvol per guardar una còpia de l'APK d'instal·lació. Assegureu-vos que sabeu on trobar les dues còpies de seguretat quan les necessiteu. Penseu a crear carpetes dedicades per guardar aquestes còpies de seguretat.
 
-### AAPS settings file (also referred to as 'Preferences')
+### Fitxer de configuració d'AAPS (també anomenat «Preferences»)
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+Trobareu la configuració al **Directori d'AAPS** que vau seleccionar durant la [configuració d'AAPS](#SetupWizard-StoragePermission).</br>
+També podeu canviar el **Directori d'AAPS** a la pantalla **Manteniment** (**menú** (☰) > **Manteniment**), vegeu [Definir el directori local d'AAPS](#preferences-maintenance-logdirectory).
 ```
 
-With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
+Amb una còpia del fitxer d'instal·lació APK (vegeu més amunt) i el vostre fitxer de **Configuració**, podeu tornar a funcionar ràpidament en un telèfon existent o nou.
 
-The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your **Configuration** settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+El fitxer de **Configuració** serveix per adaptar l'aplicació AAPS al vostre equip concret. Inclouen detalls com la configuració del **Configurador**, l'estat dels objectius, la configuració de la comunicació amb altres serveis (per exemple, Nightscout, Tidepool), les automatitzacions i els perfils.
 
-Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
+Si exporteu la configuració d'AAPS a un fitxer, podeu restaurar-la tal com era en un moment concret. Com s'ha dit, a més de tota la configuració, el fitxer d'exportació també conté l'estat dels vostres objectius, que heu de restaurar quan **(re)instal·leu** AAPS. Sense això, haureu de tornar a fer tots els objectius des del principi per activar el llaç tancat. Els fitxers de configuració també us permeten restaurar l'última configuració «que funcionava bé» per desfer qualsevol canvi de configuració.
 
-**When to back-up AAPS settings:**
-* Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
+**Quan fer una còpia de seguretat de la configuració d'AAPS:**
+* Cada vegada que completeu un objectiu, per no perdre el vostre progrés. _Sense una còpia de la vostra **Configuració**, haureu de completar de nou tots els objectius si heu de reinstal·lar AAPS o substituir el telèfon._
 
-* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+* Cada vegada que vulgueu fer canvis importants a la configuració (canviar la configuració d'SMB, canviar el tipus d'insulina, canviar de bomba, modificar automatitzacions), feu una còpia de seguretat de la **Configuració** abans i després dels canvis. Així teniu la configuració més recent i també una còpia de com era abans dels canvis, per si heu de tornar-hi.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* Només per a usuaris de bombes sense tub (com Omnipod i Medtrum): el fitxer de **Configuració** conté les dades de connexió del pod actual i es pot fer servir per restaurar la connexió amb aquest pod des d'un telèfon nou. Si no teniu una còpia de la configuració exportada després d'iniciar el pod actual, haureu d'iniciar un pod nou si heu de substituir el telèfon.
 
-**How to back-up manually:**
+**Com fer la còpia de seguretat manualment:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. Si és la primera vegada que importeu o exporteu la **Configuració**, haureu de definir una clau mestra a [Configuració > Protecció](#Preferences-master-password). Definiu una contrasenya i guardeu-la en un lloc segur. _Sense aquesta contrasenya no podreu accedir a les còpies de seguretat de la **Configuració**._
 
-2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
+2. A la pantalla principal d'**AAPS**, obriu el **menú** (☰) > **Manteniment**. Trieu on es desa el fitxer amb els xips **Local** i **Núvol** al costat d'**Exportar configuració** (vegeu **Exportar o importar la configuració** més avall) i després toqueu **Exportar configuració**. **AAPS** mostra on anirà el fitxer: el nom del fitxer per a **Local** i **Google Drive** per a **Núvol**. Toqueu **OK**.
 
-   ![Export settings to a local file](../images/Maintenance/export_settings_confirm_local.png)
+   ![Exportar la configuració a un fitxer local](../images/Maintenance/export_settings_confirm_local.png)
 
-   ![Export settings to Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+   ![Exportar la configuració a Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
 
-   Type the master password set above and tap **OK**.
+   Escriviu la clau mestra definida abans i toqueu **OK**.
 
-   ![Master password for the export](../images/Maintenance/export_settings_password.png)
+   ![Clau mestra per a l'exportació](../images/Maintenance/export_settings_password.png)
 
-   **Settings exported** (local) or **Cloud export successful** (cloud) confirms the export.
+   El missatge **Configuració exportada** (local) o **Exportació al núvol correcta** (núvol) confirma l'exportació.
 
-   ![Settings exported message](../images/Maintenance/export_settings_done_local.png)
+   ![Missatge «Configuració exportada»](../images/Maintenance/export_settings_done_local.png)
 
-   ![Cloud export successful message](../images/Maintenance/export_settings_done_cloud.png)
+   ![Missatge «Exportació al núvol correcta»](../images/Maintenance/export_settings_done_cloud.png)
 
-3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+3. Amb l'explorador de fitxers del telèfon (normalment s'anomena «Fitxers» o «Els meus fitxers»), aneu a Emmagatzematge intern > AAPS > preferences. Aquí veureu una còpia de tots els fitxers de configuració exportats. El nom del fitxer ha de ser `YYYY-MM-DD_Time_appname.json`. Pugeu aquest fitxer a la plataforma al núvol que preferiu. Després, des de la plataforma al núvol, descarregueu també una còpia al vostre ordinador.
 
 (ExportImportSettings-Settings-Export)=
 
-## Settings Export
+## Exportar la configuració
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+Trobareu la configuració al **Directori d'AAPS** que vau seleccionar durant la [configuració d'AAPS](#SetupWizard-StoragePermission).</br>
+També podeu canviar el **Directori d'AAPS** a la pantalla **Manteniment** (**menú** (☰) > **Manteniment**), vegeu [Definir el directori local d'AAPS](#preferences-maintenance-logdirectory).
 ```
 
-It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
+Us recomanem exportar la configuració regularment, sobretot abans i després de fer canvis a la configuració. Podeu fer les exportacions **manualment o (preferiblement) amb una automatització**. Apunteu la vostra clau mestra d'AAPS i feu còpies de seguretat dels fitxers de configuració copiant-los fora del telèfon, per exemple a un emmagatzematge al núvol.
 
-**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
+**Nota**: _La configuració exportada es xifra amb la vostra clau mestra d'AAPS: sense la clau mestra que vau fer servir en exportar no podreu importar el fitxer de configuració!_
 
-If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+Si heu oblidat la clau mestra, la podeu [restablir](#FAQ-reset-master-password), però els fitxers de configuració exportats amb la clau antiga continuen necessitant la clau antiga.
 
-### Exporting or Importing Settings
-To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
+### Exportar o importar la configuració
+Per exportar o importar la configuració, obriu el **menú** (☰) i seleccioneu **Manteniment**. A **Gestió d'arxius**, els xips **Local** i **Núvol** al costat d'**Exportar configuració** i **Importar configuració** trien on es desa o d'on es llegeix el fitxer de configuració: **Local** és el directori d'AAPS al telèfon, i **Núvol** està disponible quan heu configurat una [Carpeta al núvol](#preferences-maintenance-cloud). Si toqueu un xip, l'activeu o el desactiveu; sempre en queda com a mínim un seleccionat, i les dues files comparteixen la mateixa tria. Després toqueu **Exportar configuració** o **Importar configuració** per començar.
 
-![Maintenance menu with the Export settings and Import settings rows](../images/Maintenance/maintenance_export_import.png)
+![Menú Manteniment amb les files Exportar configuració i Importar configuració](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### Automatitzar l'exportació de la configuració
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Per automatitzar les exportacions de la configuració [(**vegeu Automatització**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), obriu [**Configuració** > **Manteniment**](#preferences-maintenance-settings), desplegueu **Exportació automàtica de la configuració** i activeu **Activar l'exportació automàtica de la configuració**.
 
-You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
+Ara podeu configurar l'[Automatització](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) perquè exporti la configuració, de manera regular (_per exemple_, cada setmana) o després d'un canvi de pod.
 
-_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
+_**Nota:** En importar la configuració, l'usuari sempre ha d'introduir la clau mestra d'AAPS!_
 
-![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
+![Configuració > Manteniment > Exportació automàtica de la configuració amb l'interruptor Activar l'exportació automàtica de la configuració](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
-## Restoring from your backups on a new phone or fresh installation of AAPS
+## Restaurar les còpies de seguretat en un telèfon nou o en una instal·lació nova d'AAPS
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).</br>
-If **AAPS** loses access to that directory (this can happen after a reinstall or after clearing the app's storage), it shows an **Access to the AAPS directory was lost** notification and stops saving settings to the phone until you [select the directory again](#preferences-maintenance-logdirectory).
+Trobareu la configuració al **Directori d'AAPS** que vau seleccionar durant la [configuració d'AAPS](#SetupWizard-StoragePermission).</br>
+També podeu canviar el **Directori d'AAPS** a la pantalla **Manteniment** (**menú** (☰) > **Manteniment**), vegeu [Definir el directori local d'AAPS](#preferences-maintenance-logdirectory).</br>
+Si **AAPS** perd l'accés a aquest directori (pot passar després d'una reinstal·lació o després d'esborrar l'emmagatzematge de l'aplicació), mostra l'avís **S'ha perdut l'accés al directori AAPS** i deixa de desar la configuració al telèfon fins que [torneu a seleccionar el directori](#preferences-maintenance-logdirectory).
 ```
 
-Use these instructions if you have a back-up of your APK and **Settings** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+Feu servir aquestes instruccions si teniu una còpia de seguretat de l'APK i de la **Configuració** que voleu carregar en un telèfon nou, o si per algun motiu heu hagut d'eliminar i reinstal·lar l'APK al telèfon actual.
 
-_If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
+_Si actualitzeu **AAPS** amb un APK compilat amb el mateix magatzem de claus, no cal seguir aquest procés. Tot i així, us recomanem fer una còpia de seguretat abans d'aplicar l'actualització._
 
-If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone. See [Reinstalling AAPS with a new keystore](#reinstall-aaps) for the full procedure.
+Si actualitzeu **AAPS** després d'haver perdut o substituït el magatzem de claus original (per exemple, amb un ordinador de compilació nou sense haver-hi passat el magatzem de claus), feu primer una còpia de seguretat de tota la configuració com s'explica més amunt i després desinstal·leu la versió actual d'**AAPS** del telèfon. Vegeu [Reinstal·lar AAPS amb un nou magatzem de claus](#reinstall-aaps) per al procediment complet.
 
-If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
+Si cal, [configureu el receptor del CGM / de l'origen de glucèmia](../Getting-Started/CompatiblesCgms.md) abans de fer els passos següents
 
 (ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-The **Preferences** file contains the session of the pod or patch that was active when you exported it.
-- **Export right after every pod or patch activation** and copy the file off your phone.
-- **Same phone, pod still running:** leave **Also replace pump settings** unticked. Your current pod is kept and only the other settings are imported.
-- **New phone taking over the pod:** tick **Also replace pump settings**, and only use a file exported during the pod you are wearing now. A file from an earlier pod replaces your current pod session, and you will need to start a new pod.
-- **An old pod session was imported by mistake:** **AAPS** keeps trying to reach that pod and you cannot activate a new one. Deactivate it; if that fails, discard it (see for example [Discarding a pod](#omnipod-dash-discard-pod) for Omnipod DASH).
+El fitxer de **Configuració** conté la sessió del pod o del patch que estava actiu quan el vau exportar.
+- **Exporteu just després de cada activació d'un pod o d'un patch** i copieu el fitxer fora del telèfon.
+- **Mateix telèfon, el pod continua funcionant:** deixeu **Substituir també la configuració de la bomba** sense marcar. Es conserva el pod actual i només s'importa la resta de la configuració.
+- **Un telèfon nou es fa càrrec del pod:** marqueu **Substituir també la configuració de la bomba** i feu servir només un fitxer exportat durant el pod que porteu ara. Un fitxer d'un pod anterior substitueix la sessió del pod actual, i haureu d'iniciar un pod nou.
+- **S'ha importat per error una sessió de pod antiga:** **AAPS** continua intentant connectar amb aquell pod i no en podeu activar un de nou. Desactiveu-lo; si no funciona, descarteu-lo (vegeu per exemple [Descartar un pod](#omnipod-dash-discard-pod) per a Omnipod DASH).
 ```
 
 ```{admonition} Pump settings are kept unless you say otherwise
 :class: note
-By default, an import leaves your pump settings alone: the pump selected in **Configuration**, its pairing and all its other settings stay as they are on this phone. Tick **Also replace pump settings** on the import screen only when you restore onto a new phone that should take over the same pump. Settings that are not in the file are never deleted by an import.
+Per defecte, una importació no toca la configuració de la bomba: la bomba seleccionada al **Configurador**, el seu emparellament i tota la resta de la seva configuració es queden com estan en aquest telèfon. Marqueu **Substituir també la configuració de la bomba** a la pantalla d'importació només quan restaureu en un telèfon nou que s'ha de fer càrrec de la mateixa bomba. Una importació no elimina mai la configuració que no és al fitxer.
 ```
 
-1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
+1. Amb la còpia de seguretat de l'APK de més amunt, seguiu les instruccions per a una [instal·lació nova](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-2. Launch **AAPS** and allow any requested permissions
+2. Obriu **AAPS** i concediu tots els permisos que demani
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Settings**
+3. Sortiu de l'assistent de configuració. Importarem tota la configuració necessària des de la còpia de seguretat de la **Configuració**
 
-4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
+4. A la pantalla principal d'**AAPS**, premeu **Concedir** i permeteu tots els permisos de la secció **Permisos necessaris** de la part de dalt
 
-5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+5. A la pantalla principal d'**AAPS**, definiu la clau mestra a [Configuració > Protecció](#Preferences-master-password) amb la mateixa contrasenya que vau fer servir per a les còpies de seguretat.
 
-6. If you haven't done it yet, [set the **AAPS directory**](#preferences-maintenance-logdirectory): from the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **AAPS directory**.
+6. Si encara no ho heu fet, [definiu el **Directori d'AAPS**](#preferences-maintenance-logdirectory): a la pantalla principal d'**AAPS**, obriu el **menú** (☰) > **Manteniment** > **Directori d'AAPS**.
 
-7. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **Export settings** > type in the master password set above > **OK**. This will create the preferences folder if it does not already exist on your phone.
+7. A la pantalla principal d'**AAPS**, obriu el **menú** (☰) > **Manteniment** > **Exportar configuració** > escriviu la clau mestra definida abans > **OK**. Això crea la carpeta preferences si encara no existeix al vostre telèfon.
 
-8. Download the back-up of your **Preferences** file from your cloud platform.
+8. Descarregueu de la plataforma al núvol la còpia de seguretat del vostre fitxer de **Configuració**.
 
-9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+9. Amb l'explorador de fitxers (normalment s'anomena «Fitxers» o «Els meus fitxers»), moveu el fitxer de les baixades a `/internal storage/AAPS/preferences` si el vostre **Directori d'AAPS** és `/internal storage/AAPS`
 
-10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Select the preferences file you want to restore from (the newest is at the top). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
+10. A la pantalla principal d'**AAPS**, obriu el **menú** (☰) > **Manteniment** i toqueu **Importar configuració**. Seleccioneu el fitxer de configuració que voleu restaurar (el més recent és a dalt de tot). Assegureu-vos de seleccionar el fitxer de configuració correcte: es mostren tots els fitxers .json de la carpeta preferences (o de la carpeta al núvol, amb **Núvol**).
 
-    ![List of settings files to import](../images/Maintenance/import_settings_files.png)
+    ![Llista de fitxers de configuració per importar](../images/Maintenance/import_settings_files.png)
 
-    **AAPS** shows the details of the file. Type the master password set above and tap **Decrypt & Review**.
+    **AAPS** mostra els detalls del fitxer. Escriviu la clau mestra definida abans i toqueu **Desencriptar i revisar**.
 
-11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
+11. Quan el fitxer s'ha desencriptat, decidiu què feu amb la configuració de la bomba. En un telèfon nou que es fa càrrec de la mateixa bomba, marqueu **Substituir també la configuració de la bomba** perquè l'emparellament i la configuració de la bomba vinguin del fitxer. Deixeu la casella sense marcar per conservar la bomba amb què aquest telèfon ja està emparellat. Després toqueu **Importar**.
 
-    ![Decrypted settings file with the Also replace pump settings box and the Import button](../images/Maintenance/import_settings_review.png)
+    ![Fitxer de configuració desencriptat amb la casella Substituir també la configuració de la bomba i el botó Importar](../images/Maintenance/import_settings_review.png)
 
-12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
+12. **AAPS** pregunta **Aplicar la configuració importada?** i us diu quantes opcions de configuració canviaran i, si heu deixat la casella sense marcar, quantes opcions de la bomba es conserven. Encara no s'ha escrit res, així que **Cancel·lar** deixa el telèfon exactament com estava. Toqueu **OK** per aplicar-la.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![Diàleg «Aplicar la configuració importada?»](../images/Maintenance/import_settings_apply.png)
 
-13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+13. **AAPS** aplica la configuració importada immediatament, sense reiniciar. Només es reinicien els plugins la configuració dels quals ha canviat. Mentre això passa, **AAPS** mostra **Aplicant la configuració…**; si la bomba està ocupada, mostra **Esperant la bomba…** i aplica la configuració quan la bomba queda lliure. Si la bomba encara està ocupada al cap d'un minut, **AAPS** ofereix tornar-ho a provar. El missatge **Configuració aplicada** confirma que la configuració importada ja s'està utilitzant. Qualsevol tractament que estigués a la cua mentre es feia la importació es descarta, i **AAPS** us avisa que s'ha cancel·lat, perquè no s'enviï res dues vegades a la bomba.
 
-    ![Settings applied message](../images/Maintenance/import_settings_applied.png)
+    ![Missatge «Configuració aplicada»](../images/Maintenance/import_settings_applied.png)
 
-If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
+Si el fitxer seleccionava una bomba que aquesta versió d'**AAPS** no té, **AAPS** passa a la **Bomba virtual** i us ho diu. Torneu a seleccionar la vostra bomba al **Configurador** i comproveu-ne la configuració.
 
-14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+14. Només per a usuaris de bombes sense tub (Omnipod i Medtrum): si heu marcat **Substituir també la configuració de la bomba** i la còpia de seguretat de la **Configuració** no és del mateix pod que feu servir ara, haureu d'iniciar un pod nou per començar el lliurament d'insulina.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, open the **menu** (☰) in the top left > **Configuration** > **Pump** > switch to **Virtual Pump** > then switch back to your pump type
+**Resolució de problemes:** si no podeu activar un perfil des de la pantalla principal d'**AAPS**, obriu el **menú** (☰) a dalt a l'esquerra > **Configurador** > **Bomba** > canvieu a **Bomba virtual** > després torneu a canviar al vostre tipus de bomba
 
-### Note for Dana RS users
+### Nota per als usuaris de Dana RS
 
-- If you ticked **Also replace pump settings**, the pump connection settings are imported too: **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
-- Please pair new phone and pump manually.
+- Si heu marcat **Substituir també la configuració de la bomba**, també s'importa la configuració de connexió de la bomba: **AAPS** al telèfon nou ja «coneixerà» la bomba i per això no començarà una cerca Bluetooth.
+- Emparelleu el telèfon nou i la bomba manualment.

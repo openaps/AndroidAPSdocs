@@ -10,7 +10,7 @@ Desative a otimização de bateria e permita a atividade em segundo plano para o
 
 Você não deve deixar nenhum outro app enviar dados (glicose e tratamentos) para o Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Switch **OFF** `Enabled` (5)
+→ Menu hambúrguer (1) → Settings (2) → Cloud Upload (3) → Nightscout Sync (REST-API) (4) → Desligue (**OFF**) `Enabled` (5)
 
 ![Configurações básicas do xDrip 1](../images/xDrip_Basic1.png)
 
@@ -34,7 +34,7 @@ A opção `Alert on failures` também deve ser desativada (10). Caso contrário,
 
 ### **Inter-app Settings** (Broadcast)
 
-If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so the data is forwarded to AAPS.
+Se você usa o AAPS, precisa ativar a transmissão (broadcast) nas Inter-app settings do xDrip para que os dados sejam enviados ao AAPS.
 
 → Menu hambúrguer (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
@@ -66,7 +66,7 @@ Lembre-se de desativar Import Sounds para evitar que o xDrip toque um som toda v
 - Se você quer poder usar o AAPS para calibrar, vá no xDrip em Settings → Interapp Compatibility → Accept Calibrations e selecione ON. 
 - Você também pode querer rever as opções em Settings → Less Common Settings → Advanced Calibration Settings.
 
-## Dexcom sensors
+## Sensores Dexcom
 
 Tudo o que se refere ao próprio sensor e transmissor Dexcom (iniciar, parar, substituir, calibrar, resolver problemas) está documentado e atualizado na [documentação Dexcom do xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Siga essas instruções para o sensor; as configurações que conectam o xDrip ao **AAPS** (descritas acima nesta página) são a única parte específica do AAPS.
 

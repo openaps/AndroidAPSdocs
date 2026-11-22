@@ -1,92 +1,92 @@
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 i 2+
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+Senzor Freestyle Libre 2 sada je pravi CGM čak i sa službenom aplikacijom. Ipak, LibreLink ne može slati podatke u AAPS. Postoji nekoliko načina da ga koristite s AAPS-om.
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. Koristite Bluetooth most i OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+Bluetooth odašiljači mogu se koristiti s Libre 2 (EU) ili 2+ (EU) i aplikacijom s vanjskim algoritmom (out of process, OOP). Očitanja GUK-a možete primati svakih 5 minuta, kao i s [Libre 1](./Libre1.md).
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip.
+Provjerite jesu li most i aplikacija koje želite koristiti kompatibilni s vašim senzorom i xDripom.
 
-The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip.
+Libre2 OOP (pronađite ga [ovdje](#Libre2_OOP2)) stvara ista očitanja GUK-a kao izvorni čitač. AAPS s Libre 2 zaglađuje podatke 10 do 25 minuta kako bi izbjegao određene skokove. Pogledajte niže [Zaglađivanje vrijednosti & sirove vrijednosti](#libre2-value-smoothing-raw-values). OOP stvara očitanja svakih 5 minuta kao prosjek zadnjih 5 minuta. Zato očitanja GUK-a nisu toliko glatka, ali odgovaraju izvornom čitaču i brže prate „stvarna“ očitanja GUK-a. Ako želite koristiti petlju s OOP-om, u xDripu uključite sve postavke zaglađivanja.
 
-There are some good reasons to use a Bluetooth transmitter:
+Postoji nekoliko dobrih razloga za korištenje Bluetooth odašiljača:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Možete odabrati različite strategije kalibracije OOP2 (1): vrijednosti čitača uz „no calibration“, kalibraciju senzora kao kod Libre 1 uz „calibrate based on raw“ ili kalibraciju vrijednosti sličnih čitaču uz „calibrate based on glucose“.  
+  OOP1 ostavite isključen (2).
 
     → Hamburger Menu → Settings → Less common settings → Other misc. options
 
-![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
+![Kalibracija OOP2](../images/Libre2_OOP2Calibration.png)
 
--   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours backfilling is fully supported
+-   Senzor Libre 2 može se koristiti 14,5 dana kao i Libre 1
+-   Naknadno popunjavanje 8 sati potpuno je podržano
 
-Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
+Napomena: odašiljač se može koristiti usporedo s aplikacijom LibreLink, a da je ne ometa.
 
-### Start sensor
+### Pokrenite senzor
 
-- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
+- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → odgovorite „Not Today“ (4).
 
-![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip: pokretanje odašiljača Libre & senzora 3](../images/xDrip_Libre_Transmitter03.png)
 
-This will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Time se fizički ne pokreće nijedan senzor Libre2 niti se s njim na bilo koji način komunicira. Time se xDripu samo javlja da novi senzor isporučuje vrijednosti GUK-a. Ako je moguće, unesite dvije vrijednosti izmjerene iz krvi za početnu kalibraciju. Sada bi se vrijednosti GUK-a trebale prikazivati u xDripu svakih 5 minuta. Propuštene vrijednosti, npr. zato što ste bili predaleko od telefona, neće se naknadno popuniti.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
+Nakon promjene senzora xDrip će automatski prepoznati novi senzor i izbrisati sve podatke o kalibraciji. Nakon aktivacije možete provjeriti GUK i napraviti novu početnu kalibraciju.
 
-### Configure AAPS (for looping only)
+### Konfiguracija AAPS-a (samo za korištenje petlje)
 
--   In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **BG Source** and select **xDrip+**
+-   U **AAPS-u** otvorite **izbornik** (☰) u gornjem lijevom kutu, idite na **Konfiguracija** > **Izvor GUK-a** i odaberite **xDrip+**
 
-![Configuration > BG Source with xDrip+ BG selected](../images/v4/Configuration/configuration_bg_source.png)
+![Konfiguracija > Izvor GUK-a s odabranim xDrip+ GUK](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
+-   Ako AAPS ne prima vrijednosti GUK-a kada je telefon u načinu rada u zrakoplovu, koristite 'Identify receiver' kako je opisano na stranici [Postavke xDripa](#xdrip-identify-receiver).
 
-## 2. Use xDrip direct connection
+## 2. Koristite izravnu vezu u xDripu
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip doesn't support direct connection to Libre 2 US and AUS.
-Only Libre 2 and 2+ **EU** models.
+xDrip ne podržava izravnu vezu sa senzorima Libre 2 US i AUS.
+Samo modeli Libre 2 i 2+ **EU**.
 ```
 
-- Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip as the original documentation links to an obsolete OOP2  version.
-- Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
+- Slijedite [ove upute](./Libre2MinimalL00per.md) za postavljanje xDripa, jer izvorna dokumentacija upućuje na zastarjelu verziju OOP2.
+- Slijedite upute za postavljanje na stranici [Postavke xDripa](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in [Configuration > BG Source](#Config-Builder-bg-source).
+-   Odaberite xDrip+ u [Konfiguracija > Izvor GUK-a](#Config-Builder-bg-source).
 
 (libre2-value-smoothing-raw-values)=
 
-### Value smoothing & raw values
+### Zaglađivanje vrijednosti & sirove vrijednosti
 
-Technically, the current blood sugar value is transmitted to xDrip every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Tehnički, trenutna vrijednost GUK-a šalje se u xDrip svake minute. Filtar ponderiranog prosjeka prema zadanim postavkama izračunava zaglađenu vrijednost za zadnjih 25 minuta. Razdoblje možete promijeniti u izborniku NFC Scan features.
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+![Napredne postavke xDripa za Libre 2 & sirove vrijednosti](../images/libre3/xDrip_Libre3_Smooth.png)
 
-This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
+To je obavezno za korištenje petlje. Krivulje izgledaju glatko, a rezultati petlje su odlični. Sirove vrijednosti na kojima se temelje alarmi malo više skaču, ali odgovaraju vrijednostima koje prikazuje i čitač. Osim toga, sirove vrijednosti mogu se prikazati na grafu u xDripu, kako biste mogli na vrijeme reagirati na brze promjene. Uključite Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" i "show Sensors Infos". Tada se sirove vrijednosti dodatno prikazuju kao male bijele točke, a dodatni podaci o senzoru dostupni su u izborniku sustava.
 
-The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
+Sirove vrijednosti vrlo su korisne kada se GUK brzo mijenja. Iako točke više skaču, trend ćete prepoznati mnogo bolje nego iz zaglađene linije, pa možete donositi ispravne odluke o terapiji.
 
 → Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
 
-![xDrip advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
+![Napredne postavke xDripa za Libre 2 & sirove vrijednosti](../images/Libre2_RawValues.png)
 
 
 
-#### Calibration
+#### Kalibracija
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
+Libre2 možete kalibrirati **s pomakom od -40 mg/dL do +20 mg/dL \[-2,2 mmol/L do +1,1 mmol/L\]** (odsječak). Nagib se ne može mijenjati. Provjerite mjerenjem iz prsta nakon postavljanja novog senzora i imajte na umu da u prvih 12 sati nakon umetanja možda neće biti točan. Budući da mogu postojati velike razlike u odnosu na mjerenja iz krvi, provjeravajte svaka 24 sata i po potrebi kalibrirajte. Ako je senzor nakon nekoliko dana potpuno netočan, treba ga zamijeniti.
 
-## 3. Use Diabox
+## 3. Koristite Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- Instalirajte [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). U Diaboxu otvorite Settings → Integration i omogućite Share data with other apps (dijeljenje podataka s drugim aplikacijama).
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in [Configuration > BG Source](#Config-Builder-bg-source).
+- Odaberite xDrip+ u [Konfiguracija > Izvor GUK-a](#Config-Builder-bg-source).
 
-## 4. Use Juggluco
+## 4. Koristite Juggluco
 
-See [here](./Juggluco.md).
+Pogledajte [ovdje](./Juggluco.md).

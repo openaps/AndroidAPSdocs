@@ -45,7 +45,7 @@ Paspauskite mygtuką **+**, kad sukurtumėte naują scenarijų.
 
 ### Pradėkite nuo ruošinio
 
-Norėdami **sukurti** scenarijų, ekrane Scenarijai paspauskite mygtuką **+**. Pirmas žingsnis yra **Pradėti nuo ruošinio**: pasirinkite paruoštą scenarijų dažnai situacijai – *Sportas*, *Liga*, *Liga — vėmimas*, *Miegas*, *Naktis po sporto*, *Prieš valgį*, *Alkoholis*, *Vairavimas*, *Maudymasis*, *Liuteininė fazė*, *Karštas oras*, *Medicininė procedūra* – arba pradėkite nuo scenarijaus *Tuščias*. Kiekvienas ruošinys **iš anksto užpildo rekomenduojamus veiksmus**, o kituose žingsniuose galite viską pakeisti.
+Norėdami **sukurti** scenarijų, ekrane Scenarijai paspauskite mygtuką **+**. Pirmas žingsnis yra **Pradėti nuo ruošinio**: pasirinkite paruoštą scenarijų dažnai situacijai – *Sportas*, *Liga*, *Liga — vėmimas*, *Miegas*, *Naktis po sporto*, *Prieš valgį*, *Alkoholis*, *Vairavimas*, *Maudymasis*, *Liuteininė fazė*, *Karštas oras*, *Medicininė procedūra* – arba pradėkite nuo scenarijaus *Tuščias*. Kiekvienas ruošinys **iš anksto užpildo rekomenduojamus veiksmus**, o kituose žingsniuose galite viską pakeisti. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![„Pradėti nuo ruošinio“ – pasirinkite, nuo ko pradėti](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Scenarijus be tolesnio scenarijaus tik paprašo patvirtinti:
 
 ![Dialogas Baigti scenarijų](../images/v4/Scenes/scene_end_dialog.png)
 
-Baigiant scenarijų, jo atlikti pakeitimai **atšaukiami** (pavyzdžiui, jo pradėtas profilio keitimas ir laikinas tikslas).
+Baigiant scenarijų, jo atlikti pakeitimai **atšaukiami** (pavyzdžiui, jo pradėtas profilio keitimas ir laikinas tikslas). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Kol scenarijus aktyvus, prie profilio ir tikslo pagrindiniame ekrane rodoma maža scenarijaus piktograma, jei juos nustatė scenarijus. Apatinės navigacijos langas **Scenarijai** lieka pasiekiamas, kad galėtumėte paleisti kitą scenarijų:
 

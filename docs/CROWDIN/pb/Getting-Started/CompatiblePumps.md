@@ -1,6 +1,6 @@
 # Bombas compatíveis
 
-AAPS works with a number of insulin pumps. A lista a seguir mostra os dispositivos suportados no momento. Entre parênteses, ela indica se o AAPS se comunica com a bomba pela função Bluetooth do seu telefone ou se precisa de um dispositivo compatível com RileyLink.
+O AAPS funciona com várias bombas de insulina. A lista a seguir mostra os dispositivos suportados no momento. Entre parênteses, ela indica se o AAPS se comunica com a bomba pela função Bluetooth do seu telefone ou se precisa de um dispositivo compatível com RileyLink.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -9,6 +9,7 @@ AAPS works with a number of insulin pumps. A lista a seguir mostra os dispositiv
 
 ../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
 ../CompatiblePumps/Accu-Chek-Insight-Pump.md
+../CompatiblePumps/AP550-Insulin-Pump.md
 ../CompatiblePumps/CareLevo.md
 ../CompatiblePumps/DanaR-Insulin-Pump.md
 ../CompatiblePumps/DanaRS-Insulin-Pump.md
@@ -18,12 +19,14 @@ AAPS works with a number of insulin pumps. A lista a seguir mostra os dispositiv
 ../CompatiblePumps/MedtronicPump.md
 ../CompatiblePumps/MedtrumNano.md
 ../CompatiblePumps/OmnipodDASH.md
+../CompatiblePumps/Omnipod5.md
 ../CompatiblePumps/OmnipodEros.md
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
 
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; veja também [Dicas para o uso básico](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md) (Bluetooth)
 - [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
@@ -36,14 +39,15 @@ AAPS works with a number of insulin pumps. A lista a seguir mostra os dispositiv
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
+- [Omnipod 5](../CompatiblePumps/Omnipod5.md) (Bluetooth; driver in development, test builds only)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (precisa de um [dispositivo de comunicação adicional](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## A minha bomba não está na lista
 
 Detalhes sobre o status de outras bombas que talvez possam funcionar com o AAPS estão na página [Drivers de bombas futuros (possíveis)](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Dispositivo de comunicação adicional
 
 Se nenhum dispositivo de comunicação adicional for mencionado, a comunicação entre a bomba de insulina e o **AAPS** usa a pilha Bluetooth integrada do Android. Não é preciso um dispositivo de comunicação adicional para "traduzir" o protocolo de comunicação.
 

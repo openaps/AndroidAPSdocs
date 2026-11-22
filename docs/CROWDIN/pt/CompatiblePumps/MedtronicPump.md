@@ -81,7 +81,7 @@ Ao configurar o AAPS para funcionar com a sua bomba Medtronic, tem de definir os
 - **Basal Máxima na Bomba (U/h)**: Tem de ser igual ao valor definido na sua bomba (ver Configuração da bomba acima). Mais uma vez, esta definição deve ser escolhida com cuidado, porque determina quanto o AAPS pode administrar através da taxa basal. Na prática, isto define a taxa basal temporária máxima. Por exemplo, definir este valor como quatro vezes a sua taxa basal normal máxima permite uma basal temporária de 400 %. O valor máximo permitido pela bomba é 34,9 unidades por hora.
 - **Bólus Máximo na Bomba (U)** (numa hora): Tem de ser igual ao valor definido na sua bomba (ver Configuração da bomba acima). Esta definição deve ser bem pensada, porque determina o tamanho máximo de um bólus que o AAPS pode alguma vez definir.
 - **Tempo de espera para iniciar Bólus (s)**: O número de segundos entre a ordem de um bólus e o envio real do comando para a bomba. Este tempo permite ao utilizador cancelar o bólus caso um comando de bólus tenha sido enviado por engano. Não é possível cancelar pelo AAPS um bólus que já começou. A única forma de cancelar um bólus que já começou é suspender a bomba manualmente e depois retomá-la.
-- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). É preferível selecionar a codificação por hardware (ou seja, feita pelo dispositivo compatível com o Rileylink), porque assim são enviados menos dados. Selecionar a codificação por software (ou seja, feita pelo AAPS) pode ajudar se houver muitas desconexões. Esta definição é ignorada se o seu dispositivo Rileylink tiver a versão de firmware 0.x.
+- **Codificação Medtronic**: Define onde é feita a codificação Medtronic (hardware ou software). É preferível selecionar a codificação por hardware (ou seja, feita pelo dispositivo compatível com o Rileylink), porque assim são enviados menos dados. Selecionar a codificação por software (ou seja, feita pelo AAPS) pode ajudar se houver muitas desconexões. Esta definição é ignorada se o seu dispositivo Rileylink tiver a versão de firmware 0.x.
 - **Tipo de Bateria (Visualização Detalhada)**: Para determinar corretamente o nível restante da bateria, deve selecionar o tipo de pilha AAA que usa. Quando é selecionado um valor diferente de «Visualização simples», o AAPS mostra a percentagem e a tensão (volts) restantes calculadas da bateria. Estão disponíveis as seguintes opções:
     
     - Não selecionado (Visualização simples)
@@ -91,7 +91,7 @@ Ao configurar o AAPS para funcionar com a sua bomba Medtronic, tem de definir os
     - NiMH (Visualização estendida)
 - **Usar Pesquisa**: Ativa a pesquisa Bluetooth antes de ligar aos seus dispositivos compatíveis com o Rileylink. Isto deve melhorar a fiabilidade da ligação ao dispositivo.
 
-- **Mostrar o nível de bateria reportada pelo OrangeLink/EmaLink/DiaLink**: Esta função só é suportada em dispositivos mais recentes, como o EmaLink ou o OrangeLink. O valor aparece como **Bateria RileyLink** no ecrã da bomba Medtronic.
+- **Mostrar o nível de bateria reportado pelo OrangeLink/EmaLink/DiaLink**: Esta função só é suportada em dispositivos mais recentes, como o EmaLink ou o OrangeLink. O valor aparece como **Bateria RileyLink** no ecrã da bomba Medtronic.
 - **Definir basais temporárias neutras**: Por defeito, as bombas Medtronic emitem um bip a cada hora certa quando está ativa uma basal temporária. Ativar esta opção pode reduzir o número de bips, porque interrompe a basal temporária na mudança de hora para evitar o bip.
 
 (pairing-your-rileylink-compatible-device)=
@@ -109,7 +109,7 @@ O seu dispositivo compatível com o RileyLink é emparelhado a partir do ecrã d
 Para abrir o ecrã da bomba Medtronic, vá a **Gerir** > **Bomba**. O ecrã da bomba mostra informações sobre o estado atual da bomba e algumas ações específicas da Medtronic (ver a imagem do ecrã da bomba acima).
 
 - **Estado do RileyLink**: O estado atual da ligação entre o seu telefone e o dispositivo compatível com o Rileylink. Deve mostrar sempre «Ligado». Qualquer outro estado pode exigir uma ação do utilizador. 
-- **Bateria RileyLink**: O nível atual da bateria do seu dispositivo EmaLink ou OrangeLink. Só aparece se **Mostrar o nível de bateria reportada pelo OrangeLink/EmaLink/DiaLink** estiver ativado nas definições da Medtronic.
+- **Bateria RileyLink**: O nível atual da bateria do seu dispositivo EmaLink ou OrangeLink. Só aparece se **Mostrar o nível de bateria reportado pelo OrangeLink/EmaLink/DiaLink** estiver ativado nas definições da Medtronic.
 - **Estado da Bomba**: O estado atual da ligação à bomba. Como a bomba não está sempre ligada, aqui aparece sobretudo o ícone de repouso. Há vários outros estados possíveis, incluindo «A acordar» quando o AAPS está a tentar enviar um comando, ou outros comandos da bomba, como «Obter Hora», «Definir basal temporária», etc.
 - **Bateria**: Mostra o estado da bateria com base no valor escolhido em **Tipo de Bateria (Visualização Detalhada)** nas definições da Medtronic.
 - **Última ligação**: Há quanto tempo foi feita a última ligação bem-sucedida à bomba.

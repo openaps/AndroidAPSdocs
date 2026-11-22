@@ -1,193 +1,193 @@
-# Set up AAPS on your Wear OS watch
+# Настройка AAPS на часах Wear OS
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Инструкции ниже относятся к apk **AAPS Wear**, который вам нужно собрать. Если вы его еще не собрали, см. руководство по ссылке [здесь](../WearOS/BuildingAapsWearOS.md). При сборке обязательно используйте тот же файл хранилища ключей, что и для apk **AAPS** на телефоне.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+Часть информации подходит также для apk **Wear** для **AAPSClient** и **PumpControl**. Каждое приложение **Wear** связывается с соответствующим приложением на телефоне. Например, приложение **AAPSClient Wear** можно использовать, чтобы показывать данные **AAPSClient**, а не данные **AAPS**. Если рядом установлено несколько вариантов клиента (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), у карточек каждого из них есть небольшой заголовок в акцентном цвете этого варианта, чтобы их можно было различить при пролистывании.
 
-## Wear OS Versions and compatibility
+## Версии Wear OS и совместимость
 
 (wearos-watchface-changes)=
 
-### Wear OS watch face changes (impact on AAPS watchfaces)
+### Изменения циферблатов в Wear OS (влияние на циферблаты AAPS)
 
 ```{admonition} Why newer Wear OS watches break AAPS watchfaces
 :class: warning
 
-In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+В июне 2025 года Google [объявил об изменениях](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html): старый движок циферблатов (движок AndroidX / Wearable Support Library, или «WSL») постепенно заменяется новым декларативным форматом **Watch Face Format**. Пользовательские циферблаты **AAPS** построены на старом движке, поэтому чем новее версия Wear OS, тем выше вероятность, что циферблат AAPS будет работать неправильно или перестанет работать.
 
-This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+Это касается именно **циферблатов** — **дополнения** AAPS, карточки и функции удаленного управления не затронуты. Поэтому же **обновление прошивки/системы на часах Wear OS может сломать циферблаты AAPS**, а вернуть часы к более старой версии Wear OS после этого нельзя. Если ваш циферблат AAPS сейчас работает, **отключите автоматическое обновление часов**.
 ```
 
-The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+В таблице ниже показано, как изменение Google влияет на циферблаты AAPS (на старом движке) в зависимости от версии Wear OS:
 
-| Wear OS version         | Base Android | API level | Impact on AAPS (legacy) watchfaces                                                                                                                                                          |
-| ----------------------- | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wear OS 6               | Android 16   | 36        | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
-| Wear OS 5               | Android 14   | 34        | **Severe** — active (interactive) mode often fails, complications freeze, animations stop                                                                                                   |
-| Wear OS 4               | Android 13   | 33        | **Moderate** — throttling, missed updates, partial failures                                                                                                                                 |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30        | **Low** — legacy engine still supported                                                                                                                                                     |
+| Версия Wear OS          | Базовая версия Android | Уровень API | Влияние на циферблаты AAPS (старые)                                                                                                                                                                             |
+| ----------------------- | ---------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wear OS 6               | Android 16             | 36          | **Старые циферблаты больше недоступны** — вместо них AAPS устанавливает [циферблат в формате Watch Face Format](#wearos-aaps-v4-watchface): ваш пользовательский циферблат или циферблат с дополнениями AAPS V4 |
+| Wear OS 5               | Android 14             | 34          | **Сильное** — активный (интерактивный) режим часто не работает, дополнения зависают, анимации останавливаются                                                                                                   |
+| Wear OS 4               | Android 13             | 33          | **Среднее** — замедление, пропущенные обновления, частичные сбои                                                                                                                                                |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11             | 30          | **Слабое** — старый движок все еще поддерживается                                                                                                                                                               |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+Если на вашей версии часов циферблаты AAPS работают ненадежно, вы можете показывать данные AAPS с помощью **дополнений** на совместимом циферблате или использовать [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) с дополнением, который получает данные от модуля [Внешние приложения-компаньоны](#external-companion-apps) в **AAPS**. На **Wear OS 6 и новее** AAPS устанавливает замещающий циферблат в новом формате — см. ниже.
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the watchface AAPS installs
+### Wear OS 6 и новее — циферблат, который устанавливает AAPS
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
+Часы с **Wear OS 6 или новее** не могут использовать классические циферблаты AAPS как циферблаты. Для таких часов приложение AAPS для часов содержит два циферблата в новом формате Google **Watch Face Format**. Wear OS позволяет приложению установить только **один** циферблат, поэтому вы выбираете, какой из двух будет на часах:
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
-- **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
+- **Пользовательский циферблат** (по умолчанию): показывает пользовательский циферблат, который вы загрузили с телефона кнопкой **Загрузить циферблат** (см. [Переход на циферблат AAPS](#WearOS_changing-to-AAPS-watchface)). Часы рисуют ваш дизайн как картинку, поэтому работает любой существующий пользовательский циферблат. Ячейки для дополнений, которые может задавать пользовательский циферблат, на этой картинке **недоступны**, потому что Wear OS передает данные дополнений только настоящему циферблату. Нажмите и удерживайте циферблат, чтобы открыть его единственную настройку: что показывает режим Always On — простые часы или ваш дизайн с пониженной яркостью.
+- **Циферблат с дополнениями** (циферблат **AAPS V4**): его **семь ячеек для дополнений** уже **настроены на данные AAPS**: значение ГК, IOB, COB, [дополнение «График ГК»](#Watchfaces-complications), базальная скорость / временная цель и значок **Режим работы** в левой верхней ячейке (нажмите на него, чтобы изменить режим цикла с часов). Нажмите на время вверху, чтобы открыть на часах приложение будильника. В редакторе циферблата можно изменить, что показывает каждая ячейка.
 
-You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+Выбор делается на телефоне: откройте модуль **Смарт-часы Wear** и в разделе **Циферблат, установленный на часах** выберите один из двух. Эта карточка видна, только пока подключены часы с Wear OS 6 или новее. **AAPS** просит подтверждения, потому что часы сразу меняют циферблат. При переключении с **Циферблата с дополнениями** дополнения, которые вы изменили в редакторе циферблата, также сбрасываются на значения по умолчанию, и подтверждение об этом предупреждает. Пока выбран **Циферблат с дополнениями**, кнопки пользовательского циферблата скрыты, а вместо них показан предварительный просмотр циферблата. Если вы загружаете пользовательский циферблат, пока выбран **Циферблат с дополнениями**, **AAPS** напоминает, что нужно переключиться на **Пользовательский циферблат**, чтобы увидеть его на часах.
 
-- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+- Выбранный циферблат **устанавливается и включается автоматически** при первом запуске приложения AAPS на таких часах и **обновляется автоматически** вместе с приложением для часов.
+- Если вы удалили циферблат, внизу **главного меню** AAPS на часах появляется пункт **Установить циферблат** — нажмите на него, чтобы установить циферблат снова.
 
-While a watch running Wear OS 5 or older is connected, the **Watchface installed on watch** card is not shown at all (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
+Пока подключены часы с Wear OS 5 или старше, карточка **Циферблат, установленный на часах** не показывается совсем (нужный для нее механизм требует Wear OS 6); классические циферблаты работают там как раньше.
 
 (wearos-complications-watchface-setup)=
 
-### Complications watchface — recommended setup
+### Циферблат с дополнениями — рекомендуемая настройка
 
-The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+У **Циферблата с дополнениями** семь ячеек для дополнений. Нажмите и удерживайте циферблат, нажмите **Настроить** и выберите источник данных для каждой ячейки. Ячейки пронумерованы так же, как в редакторе циферблата: **1** слева, **2** в центре, **3** справа, **4** график, **5** внизу, **6** слева вверху и **7** справа вверху.
 
-| Default setup                                                                                   | Alternative setup                                                                                       |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+| Настройка по умолчанию                                                                                    | Альтернативная настройка                                                                                        |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| ![Циферблат с дополнениями, настройка по умолчанию](../images/wearos/complications_watchface_default.png) | ![Циферблат с дополнениями, альтернативная настройка](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
-| ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
-| 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
-| 3    | Right     | CoB Icon                                                            | BR & Target                           |
-| 4    | Graph     | BG Graph                                                            | BG Graph                              |
-| 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Режим работы                                                        | Режим работы                          |
-| 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| Ячейка | Положение     | Default                                                                       | Альтернатива                                  |
+| ------ | ------------- | ----------------------------------------------------------------------------- | --------------------------------------------- |
+| 1      | Слева         | IoB Icon                                                                      | CoB & IoB                                     |
+| 2      | В центре      | Blood Glucose                                                                 | Blood Glucose                                 |
+| 3      | Справа        | CoB Icon                                                                      | BR & Target                                   |
+| 4      | Graph         | BG Graph                                                                      | BG Graph                                      |
+| 5      | Внизу         | BR & Target                                                                   | Uploader/Phone Battery                        |
+| 6      | Слева вверху  | Режим работы                                                                  | Режим работы                                  |
+| 7      | Справа вверху | Батарея загрузчика/телефона или ярлык приложения **Отложить оповещения AAPS** | Ярлык приложения **Отложить оповещения AAPS** |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+Ярлык **Отложить оповещения AAPS** выбирается среди собственных дополнений часов **Ярлык приложения**. Нажатие на него откладывает сигнал тревоги, который звучит на телефоне.
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+Включите **Always On Display** на часах (**Настройки** > **Экран**). Тогда циферблат продолжает показывать вашу глюкозу, когда рука опущена, а не пустой экран или простые часы.
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+Если в **Настройки** > **Безопасность и конфиденциальность** задан **Тип блокировки**, часы скрывают данные дополнений, пока они заблокированы, и на циферблате видны пустые ячейки, пока вы их не разблокируете. Чтобы данные оставались видны, выключите **Скрыть информацию** (Hide information) в том же меню.
 ```
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+Установите apk **AAPS Wear** с помощью [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (описано ниже) или ADB.  
+Работа **AAPS Wear** без ограничений.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 и Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+Пример: Galaxy Watch 4, 5, 6, 7 и Ultra или Pixel Watch, которые **еще не** обновлены до Wear OS 6. Проверьте версию в **Настройки** > **Сведения о часах** > **Программное обеспечение**.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+Установите apk **AAPS Wear** с помощью [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (для Wear OS 5 следуйте [этому видео](https://www.youtube.com/watch?v=yef_qGvcCnk)). Все функции **AAPS Wear** работают, но классические циферблаты **AAPS** ограничены, как описано в таблице выше: замедлены на Wear OS 4 и часто не работают на Wear OS 5.
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+На Wear OS 5 циферблат AAPS нужно выбрать в Wear Installer 2 сразу после установки приложения Wear: в конце установки программа предлагает циферблат **AAPS (Custom)**. Если вы случайно переключитесь на другой циферблат, повторите установку. Изменить настройки циферблата (Тёмная, Соответствующий делитель и т. д.) может быть невозможно.
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+Если классический циферблат у вас сейчас работает, **отключите автоматическое обновление часов**: следующее обновление прошивки, скорее всего, его сломает. Если вы все же обновитесь до Wear OS 6, прочитайте раздел выше: тогда **AAPS** устанавливает свой циферблат в новом формате.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+Если циферблат работает слишком ненадежно, используйте вместо него [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) с дополнением. Для этого в **AAPS** должен быть включен модуль [Внешние приложения-компаньоны](#external-companion-apps).
 
-### Wear OS 6 and newer
+### Wear OS 6 и новее
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+Пример: Galaxy Watch 4 и новее с One UI 8 Watch, Pixel Watch после обновления 2025 года. Большинство часов Galaxy и Pixel уже получили это обновление.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+Установите apk **AAPS Wear** с помощью [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Классические циферблаты недоступны; **AAPS** автоматически устанавливает циферблат, выбранный на телефоне, см. [циферблат, который устанавливает AAPS](#wearos-aaps-v4-watchface). Работа **AAPS Wear** без ограничений.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Как настроить смарт-часы Samsung Galaxy Watch 4 для работы с **AAPS**
 
 This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
 
-_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
+_Это руководство написано для Galaxy Watch с Wear OS 3._ На Wear OS 4 и новее часы запрашивают **код сопряжения**, когда телефон или компьютер подключается через ADB. Wear Installer 2 и порядок действий в терминале [ниже](#BuildingAapsWearOs-WearOS5-TShoot) это поддерживают.
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+Вот базовые руководства по настройке [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) и [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
 ## Basic smartwatch familiarity
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+После базовой настройки часов по видео выше откройте Play Маркет на телефоне и скачайте следующие приложения: «Galaxy Wearable», «Samsung» и либо «Easy Fire tools», либо «Wear Installer 2».
 
 There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. В зависимости от версии вам может быть предложено установить еще одно приложение, «galaxy watch 4 plugin», из Play Маркета (скачивание занимает время). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
 
 ## Setting up a Samsung account
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Убедитесь, что в учетной записи электронной почты, с которой вы создаете учетную запись Samsung, указана дата рождения, по которой пользователю 13 лет или больше. Иначе разрешения Samsung очень трудно подтвердить. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## Перенос приложения **AAPS** Wear на телефон с **AAPS**
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Перенести Wear.apk из Android Studio на телефон можно одним из способов:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a) с помощью USB-кабеля скопировать apk-файл **AAPS** Wear на телефон, а затем установить его на часы вручную (sideload). Transfer Wear.apk to the phone via USB into the downloads folder; or
 
 b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+Чтобы вручную установить (sideload) AAPS на часы, можно использовать: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Мы рекомендуем Wear Installer 2, потому что инструкции и процесс в видео очень понятны и хорошо объяснены. Если Wear Installer 2 у вас не работает, попробуйте Easy Fire Tools или ADB, оба способа описаны ниже.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Ручная установка (sideload) **AAPS** Wear с телефона на часы с помощью Wear Installer 2
 
- ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
+ ![Значок приложения Wear Installer 2](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Wear Installer 2, разработанный [Malcolm Bryant](https://www.youtube.com/@Freepoc), можно скачать из Google Play на телефон и использовать для ручной установки (sideload) приложения AAPS Wear на часы. В приложении есть удобное [видео](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) о том, как выполнить ручную установку (sideload).
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+Для часов с Wear OS 5 следуйте инструкциям из [этого видео](https://www.youtube.com/watch?v=yef_qGvcCnk).
+Советы по устранению неполадок см. [ниже](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
+Там есть все нужные подробности (лучше открыть видео на другом устройстве, чтобы смотреть его во время настройки телефона).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Как сказано в видео, после завершения выключите отладку ADB на часах, чтобы не разряжать батарею смарт-часов.
 
-Alternatively, but not for Wear OS 5, you can:
+Или вы можете (но не для Wear OS 5):
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### Ручная установка **AAPS** Wear на часы с помощью Easy Fire tools
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1) Скачайте _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ из Play Маркета на телефон
 
 ![изображение](../images/wearos/easyfire01.png)
 
 2)  Make yourself a developer in the watch (once set up and connected to phone):
 
-Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
+Откройте **Настройки** > **Система** > **О часах** > **Версии** (названия меню отличаются у разных марок часов — на некоторых часах это **Сведения о часах** > **Сведения о ПО** > **Версия ПО**).
 
 ![изображение](../images/wearos/easyfire02.png)
 
-Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
+Быстро нажмите несколько раз на **Номер сборки** (или **Версия ПО**), пока не появится сообщение, что вы стали разработчиком.
 
 ![изображение](../images/wearos/easyfire03.png)
 
-Go back to **Settings** > **System**: a new **Developer options** menu is now shown.
+Вернитесь в **Настройки** > **Система**: теперь там есть новое меню **Параметры разработчика**.
 
-In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.
+В **Параметрах разработчика** включите **Отладку ADB** и **Отладку по Wi-Fi** (Wireless debugging) и подтвердите запросы. Затем в разделе отладки по Wi-Fi показываются **IP-адрес и порт** часов, например: **192.168.1.214** : 5555. Вам нужен только IP-адрес (здесь **192.168.1.214**), а не номер порта после двоеточия. Обратите внимание, что IP-адрес может измениться, например каждый раз, когда вы переходите на новый телефон для AAPS.
 
 ![изображение](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+ШАГ 3) Введите IP-адрес, _например_ **192.168.1.214**, в Easy Fire tools на телефоне (откройте меню слева, настройки и введите IP-адрес).
 
 ![изображение](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Then click the plug socket icon on the top right. При подключении он станет зеленым.
 
 ![изображение](../images/wearos/easyfire06.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+ШАГ 4) Следуйте инструкциям [здесь](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true), чтобы вручную установить (т. е. перенести) aaps-wear.apk на смарт-часы с помощью Easy Fire tools
 
 
 ![изображение](../images/wearos/easyfire07.png)
@@ -195,95 +195,95 @@ STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/0
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Через терминал
+Подключите смарт-часы и компьютер к одной сети Wi-Fi.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- Чтобы установить ADB, скачайте его отсюда: https://developer.android.com/tools/releases/platform-tools
+- Откройте терминал.
+- В Windows создайте новую папку с именем `adb` на диске `C:`. Откройте скачанный ранее файл `platform-tools-latest-windows.zip`. Скопируйте все файлы из `platform-tools` в `C:\adb` и откройте эту папку в командной строке (правый клик и «Открыть в терминале»). Введите команду ниже, чтобы добавить в путь папку, где находится ADB: `setx PATH "%PATH%;C:\adb"`
+- На Mac вместо ручной установки можно использовать homebrew: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+На часах:
+- Откройте Настройки → Сведения о часах → **Сведения о ПО**
+- Нажмите на «Версия ПО» 7 раз, пока не увидите, что режим разработчика включен.
+- Откройте Настройки → Параметры разработчика. Включите **Отладку ADB**
+- Откройте Настройки → Параметры разработчика → Отладка по Wi-Fi (Wireless debugging) → **Подключить новое устройство** (Pair new device)
 
-You will see a Wi-Fi pairing code and IP address and port appearing:
+Появятся код сопряжения Wi-Fi, IP-адрес и порт:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/watch_wifi_pairing_code.png)
+![Экран часов с кодом сопряжения Wi-Fi, IP-адресом и портом](../images/wearos/watch_wifi_pairing_code.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+- В терминале: `adb pair ipaddress:port` Например: `adb pair 10.10.1.125:36299`
+- Вас попросят ввести код сопряжения. Введите его.
+- Вы увидите ответ:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- В терминале введите: <br>`adb devices`.<br> Вы должны увидеть примерно следующее:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Теперь перейдите в папку на компьютере, где находится apk Wear, и введите<br> `adb install wear-full.apk` <br>заменив wear-full.apk на имя вашего apk-файла.
+- Вы увидите:<br> `Performing Streamed Install`<br> `Success`
 
 
 (wear-os-5-troubleshooting)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Общие рекомендации по устранению неполадок для Wear OS 5
 
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- Не используйте раздачу Wi-Fi (точку доступа на телефоне). Это не сработает.
+- Отладку ADB на телефоне включать не нужно (только на часах). Выключите отладку ADB на телефоне.
+- Подключайтесь к своей локальной сети, в которой телефон и часы видят друг друга (не подключайтесь к гостевой сети Wi-Fi).
+- Убедитесь, что часы и телефон находятся в одной сети и подключены к одному устройству Wi-Fi. Особенно проблемы могут создавать повторители Wi-Fi или точки доступа.
+- Находитесь рядом с основным роутером, затем перезапустите телефон и часы.
 
 **Pairing :**
 
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP in the Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the pairing code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- Часы: Отладка по Wi-Fi (Wireless debugging): запишите IP-адрес.
+- Wear Installer: введите IP-адрес в приложении Wear Installer.
+- Выберите «Подключить новое устройство» (Pair new), запишите показанный код сопряжения и номер порта.
+- Wear Installer: введите код сопряжения + пробел + номер порта.
+- Wear Installer должен сообщить, что сопряжение выполнено успешно. Если этого не произошло, закройте Wear Installer и попробуйте снова.
 
-Once paired you should be able to install the AAPS wear apk:
+После сопряжения вы сможете установить apk AAPS Wear:
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- Закройте и снова запустите Wear Installer.
+- В разделе отладки по Wi-Fi запишите IP-адрес и номер порта и проверьте или введите IP-адрес и номер порта в Wear Installer.
+- Примечание: этот номер порта отличается от того, который использовался для сопряжения!
 
 ## Setting up the connection between the watch and the phone from **AAPS**
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
+Последний шаг — настроить **AAPS** на телефоне для работы с **Wear.apk** на часах. Для этого включите модуль Wear:
 
-* Go to the **AAPS** app on the phone
+* Откройте приложение **AAPS** на телефоне
 
-* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
+* Откройте **меню** (☰) в левом верхнем углу и перейдите в **Конфигурация** > **Связь**
 
-* Tick the **Wear** box
+* Отметьте **Смарт-часы Wear**
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Конфигурация > Связь с включенным модулем «Смарт-часы Wear»](../images/v4/Configuration/configuration_communication_wear.png)
 
-To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+Чтобы вводить болюс или выполнять другие действия с часов, включите также **Управление с часов** в [Настройки > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Then swipe right until you get to all the **AAPS**  faces.
+Чтобы перейти на другой циферблат **AAPS**, нажмите и удерживайте циферблат на главном экране часов и нажмите **Настроить**. Then swipe right until you get to all the **AAPS**  faces.
 
 If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
 
 
-![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
+![Модуль Wear с подключенными Galaxy Watch и приложение AAPS на часах](../images/wearos/wear_apk_installed.png)
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
+На некоторых смарт-часах, например Samsung Galaxy, нужно **включить** «Удаленное подключение» в разделе «Дополнительные функции» Samsung Galaxy, чтобы использовать **Wear.apk** и **AAPS** удаленно через Wi-Fi.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, «Дополнительные функции», «Удаленное подключение» включено](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### Устранение неполадок связи между часами **AAPS** и телефоном **AAPS**
 
 1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
 2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
 3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
 4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
+5.  Если вам удалось скачать Wear.apk на телефон, но данные ГК не приходят, _проверьте_, что вы установили на часы правильный apk **AAPS** Wear: приложение для часов из сборки через браузер — это файл `aaps-wear-….apk`, см. [Сборка приложения AAPS для Wear](../WearOS/BuildingAapsWearOS.md). Если вы установили один из следующих файлов: a) apk **AAPSClient** Wear (а на телефоне работает **AAPS**); b) файл `.aab`; или c) файл со словом «debug» в имени, значит, при сборке вы выбрали не тот apk для Wear OS.
 6.  Check that your router is not isolating the devices from one another.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Больше советов по устранению неполадок можно найти [здесь](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
@@ -291,34 +291,34 @@ More troubleshooting tips can be found [here](https://freepoc.org/wear-installer
 
 There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. На часах (с WearOS) нажмите и удерживайте текущий циферблат, чтобы открыть экран выбора циферблатов, прокрутите до конца вправо, пока не увидите кнопку «Добавить циферблат», и нажмите ее
 
-![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
+![Экран выбора циферблатов с кнопкой «Добавить циферблат»](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. Прокручивайте список, пока не найдете "AAPS (Custom)" (в зависимости от часов циферблаты установленных приложений находятся в разделе «Загруженные» или сгруппированы по приложениям), и нажмите на середину изображения, чтобы добавить его в список ваших текущих циферблатов. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
 
-![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
+![Список циферблатов AAPS с AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
+3. Теперь откройте AAPS на телефоне и откройте модуль Wear: **Конфигурация** > **Связь** > **Смарт-часы Wear** > **Открыть модуль** (если модуль не включен, сначала отметьте **Смарт-часы Wear**).
 
-![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
+![Модуль Wear с карточкой «Пользовательский циферблат»](../images/wearos/wear_plugin_custom_watchface.png)
 
 4. Click on the "Load Watchface" button and select the watchface that you like
 
-![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
+![Список выбора пользовательского циферблата](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Проверьте часы: циферблат "AAPS (Custom)" теперь должен показывать выбранный вами вид. Give it a few seconds to refresh. Экран **Wear** на телефоне теперь показывает название загруженного циферблата и его предварительный просмотр. **Циферблат Infos** показывает его подробности и поля, которые он содержит, а **Еще циферблаты** открывает [сайт обмена](../ExchangeSiteCustomWatchfaces/index.md), где можно скачать другие пользовательские циферблаты. Теперь вы можете настроить дополнения и т. д.: нажмите и удерживайте циферблат, а затем нажмите кнопку «Настроить» на изображении циферблата.
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings** > **AAPS(Custom)**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+Пользовательские циферблаты, созданные в версии 3.0 или новее формата пользовательских циферблатов, могут содержать до пяти ячеек для дополнений; их положение и размер задает циферблат (**Расположение дополнений**). На часах нажмите и удерживайте циферблат, нажмите **Настроить** и нажмите на **Дополнение 1** … **Дополнение 5**, чтобы выбрать источник данных для каждой ячейки. Те же строки есть в приложении AAPS на часах в **Настройки** > **AAPS(Custom)**; нажатие на строку там открывает тот же выбор. **Приоритет типа дополнения** определяет, что ячейка предпочитает — значение или шкалу, текст или значок, — когда источник данных предлагает несколько вариантов. Измененный приоритет применяется только при следующем выборе источника данных для этой ячейки.
 
-These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+Эти ячейки работают только на часах с **Wear OS 5 или старше**, где пользовательский циферблат работает как настоящий циферблат. На **Wear OS 6 и новее** пользовательский циферблат показывается как картинка без ячеек для дополнений, и шаги 1 и 2 выше не нужны: проверьте, что в модуле **Смарт-часы Wear** на телефоне в разделе **Циферблат, установленный на часах** выбран **Пользовательский циферблат** (см. [циферблат, который устанавливает AAPS](#wearos-aaps-v4-watchface)).
 ```
 
 ## AAPSv2 watchface - Legend
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Условные обозначения циферблата AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - time since last loop run
 
@@ -326,7 +326,7 @@ B - CGM reading
 
 C - minutes since last CGM reading
 
-D - change compared to last CGM reading (in mmol or mg/dL)
+D - изменение по сравнению с последним значением CGM (в ммоль/л или мг/дл)
 
 E - average change CGM reading last 15 minutes
 
@@ -334,7 +334,7 @@ F - phone battery
 
 G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - BGI (влияние на глюкозу крови) -> насколько ГК «должна» расти или падать только из-за действия инсулина.
 
 I - carbs (carbs on board | e-carbs in the future)
 

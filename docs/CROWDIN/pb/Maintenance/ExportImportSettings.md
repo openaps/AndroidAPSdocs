@@ -8,7 +8,7 @@ Considere ter um segundo telefone de reserva e praticar a restauração do AAPS 
 
 ```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
 :class: warning
-Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+Desde o **AAPS** 4.0, as configurações ficam guardadas em um armazenamento criptografado no telefone e não entram no backup do Google nem na transferência de dados de um telefone para um telefone novo. Exportar as configurações, como descrito nesta página, é a única forma de levá-las para o novo telefone.
 ```
 
 Para poder restaurar, é importante ter à mão os seguintes itens:
@@ -59,11 +59,11 @@ Exportar as configurações do AAPS para um arquivo permite restaurar a configur
 
 * Sempre que planejar fazer mudanças importantes na sua configuração (alterar as configurações de SMB, alterar tipos de insulina, trocar de bomba, alterar automações), você deve fazer backup das suas **Configurações** antes e depois das mudanças. Assim você tem as suas configurações mais recentes e também uma cópia de como elas eram antes das alterações, caso precise voltar a elas.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Se você não tiver uma cópia das suas preferências exportada depois de iniciar o seu Pod atual, precisará iniciar um novo Pod caso tenha que substituir o seu telefone atual.
+* Somente para usuários de bombas sem tubo (como Omnipod e Medtrum): o arquivo de **Configurações** contém os dados de conexão do seu Pod atual e pode ser usado para restaurar a conexão com esse Pod em um telefone novo. Se você não tiver uma cópia das suas preferências exportada depois de iniciar o seu Pod atual, precisará iniciar um novo Pod caso tenha que substituir o seu telefone atual.
 
 **Como fazer o backup manualmente:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Defina uma senha e guarde-a em um lugar seguro. _Sem esta senha você não conseguirá acessar os seus backups de **Configurações**._
+1. Se esta é a primeira vez que você importa ou exporta as **Configurações**, você vai precisar definir uma senha mestra em [Configurações > Proteção](#Preferences-master-password). Defina uma senha e guarde-a em um lugar seguro. _Sem esta senha você não conseguirá acessar os seus backups de **Configurações**._
 
 2. Na tela principal do **AAPS**, abra o **menu** (☰) > **Manutenção**. Escolha onde salvar o arquivo com os chips **Local** e **Nuvem** ao lado de **Exportar configurações** (veja **Exportar ou importar configurações** abaixo) e toque em **Exportar configurações**. O **AAPS** mostra para onde o arquivo vai: o nome do arquivo para **Local**, **Google Drive** para **Nuvem**. Toque em **OK**.
 
@@ -97,7 +97,7 @@ Você também pode alterar o **Diretório do AAPS** na tela **Manutenção** (**
 
 **Observação**: _As configurações exportadas serão criptografadas com a sua senha mestra do AAPS: sem a senha mestra usada na exportação você não conseguirá importar o arquivo de configurações!_
 
-If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+Se você esqueceu a sua senha mestra, você pode [redefini-la](#FAQ-reset-master-password), mas os arquivos de configurações exportados com a senha antiga continuam precisando da senha antiga.
 
 ### Exportar ou importar configurações
 Para exportar ou importar configurações, abra o **menu** (☰) e selecione **Manutenção**. Em **Gerenciamento de arquivos**, os chips **Local** e **Nuvem** ao lado de **Exportar configurações** e **Importar configurações** escolhem onde o arquivo de configurações é salvo ou de onde é lido: **Local** é o diretório do AAPS no seu telefone, **Nuvem** fica disponível quando um [Diretório da nuvem](#preferences-maintenance-cloud) estiver configurado. Tocar em um chip liga ou desliga esse chip; pelo menos um fica sempre selecionado, e as duas linhas usam a mesma escolha. Depois toque no próprio **Exportar configurações** ou **Importar configurações** para começar.
@@ -107,7 +107,7 @@ Para exportar ou importar configurações, abra o **menu** (☰) e selecione **M
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatizar a exportação de configurações
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Para automatizar a exportação das configurações [(**veja Automação**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), abra [**Configurações** > **Manutenção**](#preferences-maintenance-settings), expanda **Exportação automática de configurações** e ligue **Ativar exportação automática das configurações**.
 
 Agora você pode configurar uma [Automação](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) para exportar as configurações, seja regularmente (_por exemplo_, toda semana), seja após a troca do Pod.
 
@@ -178,7 +178,7 @@ Por padrão, uma importação não altera as configurações da bomba: a bomba s
 
 12. O **AAPS** pergunta **Aplicar as configurações importadas?** e informa quantas configurações vão mudar e, se você deixou a caixa desmarcada, quantas configurações da bomba são mantidas. Nada foi gravado ainda, então **Cancelar** deixa o seu telefone exatamente como estava. Toque em **OK** para aplicar.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![Diálogo Aplicar as configurações importadas](../images/Maintenance/import_settings_apply.png)
 
 13. O **AAPS** aplica as configurações importadas imediatamente, sem reiniciar. Apenas os plugins cujas configurações mudaram são reiniciados. Enquanto isso acontece, o **AAPS** mostra **Aplicando configurações…**; se a bomba estiver ocupada, mostra **Aguardando a bomba…** e aplica as configurações quando a bomba ficar livre. Se a bomba ainda estiver ocupada após um minuto, o **AAPS** oferece tentar novamente. Uma mensagem **Configurações aplicadas** confirma que as configurações importadas estão em uso. Qualquer tratamento que estava na fila durante a importação é descartado, e o **AAPS** informa que ele foi cancelado, para que nada seja enviado à bomba duas vezes.
 

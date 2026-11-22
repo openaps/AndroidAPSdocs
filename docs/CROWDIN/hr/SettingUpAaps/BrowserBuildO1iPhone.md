@@ -1,19 +1,19 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# Opcija 1 · iPhone / iPad – Izradite novo spremište ključeva
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+[Opcija 1](BrowserBuildO1.md) (izrada novog spremišta ključeva) na **iPhoneu / iPadu** (kao primjer je prikazan iPad).
 ```
 
-## 1. Download the preparation file
+## 1. Preuzmite pripremnu datoteku
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. Otvorite pripremnu datoteku i izradite spremište ključeva
 
-Compatible with iOS (using iPad as an example)
+Kompatibilno s iOS-om (kao primjer je korišten iPad)
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -30,4 +30,4 @@ Compatible with iOS (using iPad as an example)
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Sljedeće: [Korak 3 – Autorizirajte Google Drive](BrowserBuildGoogleDrive.md) →**

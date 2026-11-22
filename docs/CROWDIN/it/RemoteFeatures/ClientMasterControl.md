@@ -334,27 +334,86 @@ If a client is restored from a backup that rolls its command counter backwards, 
 
 ## Troubleshooting
 
-| Sintomo                                                                                                       | Cosa controllare                                                                                                                                                                                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Il client dice che il **master è offline**                                                                    | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                              | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Comando **rifiutato** dal master                                                                              | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Ricontrolla sul master.                                                                                                                                                                       |
-| Commands **fail** or the master is often **offline**                                                          | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                    |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                          | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                                 | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| Le opzioni con codice QR non si possono scegliere nella finestra **Nuovo client**                             | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout ha un token con questo nome e altri diritti"*                                                    | Uno dei tuoi token Nightscout si chiama `aaps-` più questo nome. Scegli un altro nome per il client.                                                                                                                                                                                                                         |
-| *"A client with this name is in the list already"*                                                            | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                    | Master e client devono usare la **stessa** versione di **AAPS**. Update the older one.                                                                                                                                                                                                                                       |
-| Il client dice *"Questo codice è scaduto"*                                                                    | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                              | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"*    | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| Il log di NSClient sul client mostra *"✕ SETTINGS … refused"* e le sue impostazioni non seguono più il master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                                | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Controlla il token del master, oppure configura di nuovo il client con un codice QR.                                                                    |
-| A client can no longer read Nightscout                                                                        | Its token was deleted, for example because the client was removed on the master. Aggiungilo di nuovo.                                                                                                                                                                                                                        |
-| Treatments entered on the Nightscout website are not applied                                                  | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
-
 For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**.
+- *Not connected*: wait until the master shows *connected* in **NSClientV3**.
+
+**"Nightscout ha un token con questo nome e altri diritti"**
+
+Uno dei tuoi token Nightscout si chiama `aaps-` più questo nome. Scegli un altro nome per il client.
+
+**"A client with this name is in the list already"**
+
+Choose another name, or remove that client first.
+
+**The client says "This code is from another AAPS version"**
+
+Master e client devono usare la **stessa** versione di **AAPS**. Update the older one.
+
+**The client says "This code has expired"**
+
+A code that pairs works for about two minutes. Add the client again on the master to get a new code.
+
+**The client says "This phone is paired already"**
+
+Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+Nothing was changed. Avvia di nuovo l'accoppiamento. Se continua a non riuscire, riavvia **AAPSClient** e prova ancora una volta.
+
+**Il client dice che non è accoppiato**
+
+Pair again from **Manage → Pair with master**. Controlla che il client sia **Attivo** nell'elenco **Client autorizzati** del master.
+
+**Nothing happens after pairing**
+
+Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.
+
+### Comandi
+
+**Il client dice che il master è offline, oppure i comandi non riescono**
+
+Controlla che:
+
+- il telefono master sia attivo (non in sospensione) e **AAPS** sia in esecuzione,
+- entrambi i telefoni siano collegati in **NSClientV3** allo stesso sito Nightscout,
+- i **websockets** siano attivi su entrambi i telefoni.
+
+I websockets sono **obbligatori** per il controllo remoto da **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**Il master rifiuta un comando**
+
+Il master controlla di nuovo ogni comando in base al suo stato attuale: per esempio, il profilo scelto non esiste più, oppure il tipo di micro non corrisponde. Controlla sul master.
+
+**Treatments entered on the Nightscout website are not applied**
+
+Questo è normale in [modalità protetta](#client-master-control-hardened-mode). Inseriscili invece su un client accoppiato.
+
+### Token e impostazioni di Nightscout
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+The client still writes with a token that has more rights than it needs. Dopo l'accoppiamento il master invia al client il suo token, ma solo se il master ha un token admin. Controlla il token del master, oppure configura di nuovo il client con un codice QR.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). Un client accoppiato riceve da solo la nuova chiave la prossima volta che si collega a Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**).
+
+**A client can no longer read Nightscout**
+
+Its token was deleted, for example because the client was removed on the master. Aggiungilo di nuovo.
 
 ---
 

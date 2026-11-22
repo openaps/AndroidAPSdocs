@@ -1,47 +1,47 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# Troubleshooting NSClient
+# Fejlfinding af NSClient
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+NSClient har brug for en stabil forbindelse til Nightscout. En ustabil forbindelse giver synkroniseringsfejl og højt dataforbrug.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Hvis ingen følger dig på Nightscout, kan du sætte NSClient på pause for at spare batteri, eller du kan sætte NSClient op, så den kun forbinder via Wi-Fi og/eller under opladning.
 
-* How to detect an unstable connection?
+* Hvordan finder du en ustabil forbindelse?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. If you see many reconnections, then there is a problem.
+Åbn NSClient-skærmen (**Konfiguration** > **Kommunikation** > **NSClientV3** > **Åbn plugin**), og hold øje med **Status** og loggen. Når websockets er aktiveret, bør status blive ved med at være »connected« (forbundet), næsten uden beskeder om genforbindelse i loggen. Hvis du ser mange genforbindelser, er der et problem.
 
-* Restart
+* Genstart
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Som første trin skal du genstarte Nightscout og derefter din telefon for at se, om problemet er permanent.
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Hvis din Nightscout er hostet på Heroku, kan du genstarte Nightscout sådan: Log ind på Heroku, klik på navnet på din Nightscout-app, klik på menuen 'More', og derefter 'Restart all dynos'.
 
-For other hosts, please follow your hosts guidance documentation.
+For andre hosts skal du følge vejledningen fra din host.
 
-* Phone issues
+* Problemer med telefonen
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android kan sætte din telefon i dvaletilstand. Kontroller, om AAPS har en undtagelse i telefonens strømindstillinger, så appen altid må køre i baggrunden.
 
-Check the NSClient again when in strong network signal location.
+Kontroller NSClient igen et sted med et stærkt netværkssignal.
 
-Try another phone.
+Prøv en anden telefon.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Hvis dit site er hostet på Azure, har mange oplevet færre forbindelsesproblemer efter at være flyttet til Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+En løsning på forbindelsesproblemer i Azure er at sætte HTTP protocol til 2.0 og Websockets til ON i Application settings
 
-    {admonition} Remote control needs websockets
+    {admonition} Fjernstyring kræver websockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    Websockets er **påkrævet** for fjernstyring fra **AAPSClient**, på begge telefoner. Hvis websocket-forbindelsen bliver ved med at falde ud, virker fjernstyring ikke. Datasynkronisering virker stadig, men langsommere. Din Nightscout-host skal understøtte websockets.
 
-* No BG reading from Nightscout
+* Ingen BS-værdier fra Nightscout
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Hvis **AAPS** forbinder korrekt til Nightscout, men BS vises som N/A: åbn **Synkronisering** i [NSClientV3-indstillingerne](#Preferences-nsclient), og slå **Modtag CGM-data fra NS** til. Denne mulighed er skjult, mens klientstyring er slået til ([hærdet tilstand](#client-master-control-hardened-mode)); kontroller i så fald, at **NSClient BS** er valgt i **Konfiguration** → **BS-kilde**.
 
-* If you still get an error...
+* Hvis du stadig får en fejl ...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Kontroller størrelsen på din database i MongoDB (eller med database size-pluginet i Nightscout). Hvis du bruger den gratis plan i MongoDB, betyder 496MB, at den er fuld og skal ryddes op. [Følg denne vejledning fra Nightscout for at kontrollere størrelsen på din database og rydde data op](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Før du sletter data fra din database, og hvis du ikke allerede har sat det op, bør du overveje at donere dine AAPS-data til Open Humans-projektet (til forskning). Vejledningen står på [siden om konfiguration af Open Humans](../SupportingAaps/OpenHumans.md).

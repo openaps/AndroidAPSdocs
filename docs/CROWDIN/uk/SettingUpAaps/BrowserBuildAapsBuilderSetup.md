@@ -12,7 +12,7 @@
 
 ## Крок 1 – Створіть свій приватний репозиторій для збірки
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Лише ви бачите його і застосунки, які він збирає. Вам **не** потрібно робити fork AndroidAPS: вихідний код AAPS завантажується з офіційного репозиторію AndroidAPS під час кожної збірки.
+Це створює вашу власну приватну копію AAPS Builder у вашому обліковому записі GitHub: репозиторій, у якому вже є робочий процес збірки. Лише ви бачите його і застосунки, які він збирає. Вам **не** потрібно робити fork AndroidAPS: вихідний код AAPS завантажується з офіційного репозиторію AndroidAPS під час кожної збірки.
 
 <label class="aapsb-label" for="aapsb-user">Ваше ім'я користувача GitHub</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
@@ -26,53 +26,54 @@ This creates your own private copy of AAPS Builder in your GitHub account: a rep
 Залиште запропоновану назву. Ви вже створили репозиторій з іншою назвою? Введіть тут саме цю назву.
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**У вас уже є репозиторій AAPS Builder** (створений попередньою версією цієї сторінки)? Не створюйте новий: введіть тут його точну назву, пропустіть кнопку нижче й один раз оновіть його робочий процес: дивіться **Updating your copy** (Оновлення вашої копії) в кінці цього кроку. Ваші секрети залишаються такими, як є.
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+Якщо ви все ж хочете новий репозиторій, виберіть назву, якої у вас ще немає, наприклад `my-aaps-2`, і використайте той самий keystore на кроці 2.
 
-Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+Не вводьте назву свого fork AndroidAPS: fork є публічним, і він уже збирається власним робочим процесом **AAPS CI**.
 ```
 
 Ваш репозиторій:<code class="aapsb-repoUrl"></code>
 
-Check this name before you use the buttons below: the page remembers the name from your last visit.
+Перевірте цю назву, перш ніж користуватися кнопками нижче: сторінка пам’ятає назву з вашого останнього відвідування.
 
 <a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Створити мій приватний репозиторій</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+На сторінці GitHub, яка відкриється, усе вже заповнено: шаблон `nightscout/aaps-builder`, ваш обліковий запис як власник, назва вашого репозиторію і **Private**. Нічого не змінюйте і залиште **Include all branches** без позначки.
 
 1. Натисніть зелену кнопку **Create repository** (створити репозиторій).
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Поверніться на цю сторінку для кроку 2.
+2. GitHub показує ваш новий репозиторій з папкою `.github` і файлом `README.md`: у ньому є робочий процес збірки. Поверніться на цю сторінку для кроку 2.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+Його створено не з шаблону. Видаліть його (**Settings** → унизу сторінки → **Delete this repository**), а потім знову натисніть **Створити мій приватний репозиторій**.
 ```
 
 ```{admonition} GitHub says "my-aaps already exists in this account"?
 :class: tip
 
-You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+У вас уже є репозиторій: закрийте вкладку GitHub і продовжуйте на цій сторінці. Якщо ваш ключ уже в ньому, продовжуйте з [кроку 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Ваш секрет `KEYSTORE_SET` залишається без змін.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
    On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
-```
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Натисніть меню **⋯** угорі праворуч від файлу, потім **Edit file… In place** (на комп’ютері натисніть олівець).
+3. Замініть увесь текст скопійованим робочим процесом (на телефоні: натисніть і утримуйте → **Select all** → **Paste**), потім двічі натисніть **Commit changes…**. Перший рядок файлу показує його версію.
+
+</div>
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## Крок 2 – Ваш ключ для підпису
 
 Застосунок має бути підписаний вашим власним ключем. Завжди використовуйте той самий ключ, інакше для оновлення доведеться видалити AAPS (і втратити його налаштування). Виберіть одну з двох вкладок.
 
@@ -133,22 +134,22 @@ The build steps are updated for you: at every build, your repository runs the ve
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
-<span id="aapsb-s3wait">Finish step 2 first.</span>
+## Крок 3 – Передайте ключ своєму репозиторію
+<span id="aapsb-s3wait">Спочатку завершіть крок 2.</span>
 
 <div id="aapsb-s3ready" hidden>
   1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Відкрити сторінку секретів</a> Відкриє: <code class="aapsb-repoUrl"></code> Бачите "Page not found" (404, сторінку не знайдено)? Спочатку перевірте, що ви увійшли на github.com у цьому браузері: для приватних репозиторіїв GitHub показує 404, якщо ви не увійшли. Інакше ім'я користувача або назва репозиторію з кроку 1 не збігаються з вашим репозиторієм: перевірте їх на github.com і введіть у кроці 1. 2. Натисніть «Копіювати назву», потім вставте її в маленьке поле «Name»: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Копіювати назву</button> 3. Натисніть «Копіювати секрет», потім вставте довгий код у велике поле «Secret»: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Копіювати секрет</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Секрет – це дуже довгий код (тисячі символів), а НЕ слово KEYSTORE_SET. Спочатку скопіюйте і вставте назву, потім довгий код. 4. Натисніть «Add secret» (додати секрет). Готово, більше вам ніколи не треба цього робити.
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## Крок 4 – Зберіть застосунок
 
 1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Відкрити сторінку збірки</a>
 
    Відкриє: <code class="aapsb-repoUrl"></code>
 
    Бачите "Page not found" (404, сторінку не знайдено)? Спочатку перевірте, що ви увійшли на github.com у цьому браузері: для приватних репозиторіїв GitHub показує 404, якщо ви не увійшли. Інакше ім'я користувача або назва репозиторію з кроку 1 не збігаються з вашим репозиторієм: перевірте їх на github.com і введіть у кроці 1. Натомість відкрився застосунок GitHub? Натисніть «RUN WORKFLOW», перевірте версію та варіант і знову натисніть «RUN WORKFLOW». Якщо застосунок і далі показує «Nothing to see here», потягніть список униз, щоб побачити свою збірку.
-2. If asked, click the green button to enable workflows.
-The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
+2. Якщо з’явиться запит, натисніть зелену кнопку, щоб увімкнути робочі процеси.
+У списку робочих процесів є два записи: використовуйте «Build AAPS». Не звертайте уваги на «AAPS Builder»: він містить кроки збірки і не має кнопки «Run workflow».
 3. Натисніть «Run workflow», а потім зелену кнопку «Run workflow». «latest» збирає найновішу версію AAPS. ***порада:*** *ви можете зібрати іншу версію, ввівши назву її [тегу](https://github.com/nightscout/AndroidAPS/tags) замість «latest»*
 4. Зачекайте приблизно 15–30 хвилин. Зелена галочка означає, що збірку завершено.
 Хочете отримати e-mail, коли збірка завершиться? GitHub надсилає e-mail лише тоді, коли збірка не вдалася. Щоб отримувати його й після успішної збірки: на github.com відкрийте своє фото профілю → Settings → Notifications → System → Actions і зніміть позначку «Only notify for failed workflows» (повідомляти лише про невдалі робочі процеси).
@@ -156,14 +157,14 @@ The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder"
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
-2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+1. Відкрийте свій репозиторій і перевірте, що в ньому є папка `.github` з файлом `workflows/build.yml`. Якщо репозиторій порожній, його створено не з шаблону: видаліть його (**Settings** → унизу сторінки → **Delete this repository**) і знову виконайте [крок 1](#aaps-builder-setup-step1) за допомогою кнопки.
+2. Файл є, але GitHub показує «This workflow does not exist»: дивіться [усунення проблем](#aaps-builder-ts-workflow-not-found).
 3. Відкрийте вкладку Actions. Якщо там написано, що робочі процеси вимкнено, натисніть зелену кнопку, щоб їх увімкнути. Потім натисніть «Build AAPS» у списку.
 ```
 
 (aaps-builder-setup-step5)=
 
-## Step 5 – Install on your phone
+## Крок 5 – Встановіть на телефон
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
@@ -190,31 +191,31 @@ The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder"
 
 APK не видно в розділі «Code» вашого репозиторію, лише на сторінці збірки. Він зберігається 14 днів.
 
-Нова версія AAPS? Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). Ваш репозиторій ніколи нічого не збирає сам.
+Нова версія AAPS? Створіть резервну копію налаштувань, потім зберіть нову версію в [кроці 4](#aaps-builder-setup-step4). Ваш репозиторій ніколи нічого не збирає сам.
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Optional: get the app in Google Drive
+## Крок 6 – Необов’язково: отримуйте застосунок у Google Drive
 
-Хочете, щоб APK з'являвся у вашому Google Drive (і зберігався назавжди)? Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+Хочете, щоб APK з'являвся у вашому Google Drive (і зберігався назавжди)? Додайте ще один секрет, GDRIVE_OAUTH2. Ця сторінка отримає його від Google для вас. Після цього AAPS зможе бачити та змінювати у вашому Google Drive лише файли, які він сам створює, і нічого іншого.
 
-1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
+1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Підключити Google Drive</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
-2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
+   Google відкривається в новій вкладці. Виберіть свій обліковий запис Google і дозвольте AAPS бачити та змінювати його власні файли. Якщо Google повідомляє, що застосунок не перевірено, натисніть «Advanced» (Додатково), потім «Go to …» (Перейти до …).
+2. Потім нова вкладка покаже помилку на зразок **"This site can't be reached"** або **"127.0.0.1 refused to connect"**. **Так і має бути.** Відповідь Google міститься в адресі цієї вкладки.
 
-   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
-3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+   Натисніть адресний рядок цієї вкладки, потім значок копіювання поруч з адресою (на комп’ютері виділіть усю адресу та скопіюйте її). Вона починається з `http://127.0.0.1:47913/`. Поверніться на цю сторінку протягом кількох хвилин: відповідь дійсна лише короткий час.
+3. <label class="aapsb-label" for="aapsb-googleUrl">Вставте сюди скопійовану адресу</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Отримати GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
-4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Відкрити сторінку секретів</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Відкриє: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? Спочатку перевірте, що ви увійшли на github.com у цьому браузері: для приватних репозиторіїв GitHub показує 404, якщо ви не увійшли. Інакше ім'я користувача або назва репозиторію з кроку 1 не збігаються з вашим репозиторієм: перевірте їх на github.com і введіть у кроці 1.
-5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+   Бачите "Page not found" (404, сторінку не знайдено)? Спочатку перевірте, що ви увійшли на github.com у цьому браузері: для приватних репозиторіїв GitHub показує 404, якщо ви не увійшли. Інакше ім'я користувача або назва репозиторію з кроку 1 не збігаються з вашим репозиторієм: перевірте їх на github.com і введіть у кроці 1.
+5. Натисніть «Копіювати назву», потім вставте її в маленьке поле «Name»: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Копіювати назву</button>
+6. Натисніть «Копіювати секрет», потім вставте код у велике поле «Secret»: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Копіювати секрет</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
 7. Натисніть «Add secret» (додати секрет).
 
 </div>
@@ -222,7 +223,7 @@ APK не видно в розділі «Code» вашого репозиторі
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+Значення зі сторінки підготовки AAPS іншого способу збірки в браузері теж підходить: відкрийте сторінку секретів, додайте назву `GDRIVE_OAUTH2` і вставте своє значення. Дивіться [Зберігання збірок у Google Drive](#aaps-builder-google-drive).
 ```
 
 Під час наступної збірки APK-файли також буде збережено в Google Drive у папці AAPS/&lt;version&gt;.
@@ -231,39 +232,39 @@ A value from the AAPS preparation page of the other browser build works too: ope
 
 ----
 
-Усе на цій сторінці працює у вашому браузері. Ваш ключ і паролі нікуди не надсилаються, крім місць, куди ви самі їх вставляєте. У GitHub надсилається лише ваше ім'я користувача GitHub, щоб перевірити, чи воно існує. In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
+Усе на цій сторінці працює у вашому браузері. Ваш ключ і паролі нікуди не надсилаються, крім місць, куди ви самі їх вставляєте. У GitHub надсилається лише ваше ім'я користувача GitHub, щоб перевірити, чи воно існує. На кроці 6 відповідь Google надсилається лише в Google, щоб отримати GDRIVE_OAUTH2. Робочий процес збірки підтримують розробники AAPS у [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder). Він базується на AAPS Builder (AGPL-3.0).
 
 <div id="aapsb-msgs" hidden>
 
 - <span data-aapsb-msg="copied">Довгий код скопійовано: вставте його у велике поле «Secret», потім натисніть «Add secret».</span>
 - <span data-aapsb-msg="copiedName">Назву скопійовано: вставте її в маленьке поле «Name».</span>
 - <span data-aapsb-msg="userOk">✓ Користувача GitHub знайдено.</span>
-- <span data-aapsb-msg="userBad">✗ Користувача GitHub з таким ім'ям немає. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Доступні: {aliases}</span>
+- <span data-aapsb-msg="userBad">✗ Користувача GitHub з таким ім'ям немає. Вкажіть ім’я користувача (його видно у вашому профілі GitHub), а не адресу електронної пошти.</span>
+- <span data-aapsb-msg="copiedShort">Скопійовано ✓</span>
+- <span data-aapsb-msg="needUser">Спочатку введіть своє ім’я користувача GitHub у кроці 1.</span>
+- <span data-aapsb-msg="errPipe">Паролі та псевдонім не можуть містити символ |</span>
+- <span data-aapsb-msg="errNoFile">Виберіть файл keystore.</span>
+- <span data-aapsb-msg="errEmpty">Заповніть пароль і псевдонім.</span>
+- <span data-aapsb-msg="errPass">Неправильний пароль keystore.</span>
+- <span data-aapsb-msg="errKeyPass">Неправильний пароль ключа.</span>
+- <span data-aapsb-msg="errAlias">Псевдонім не знайдено в keystore. Доступні: {aliases}</span>
 - <span data-aapsb-msg="errFormat">Це не схоже на файл keystore.</span>
-- <span data-aapsb-msg="okHave">Keystore у порядку! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. Пароль буде перевірено під час збірки. Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – без пробілів, без кирилиці, без літер з діакритикою і без |</span>
+- <span data-aapsb-msg="okHave">Keystore у порядку! Продовжуйте з кроку 3.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Keystore прочитано. Пароль буде перевірено під час збірки. Продовжуйте з кроку 3.</span>
+- <span data-aapsb-msg="errShort">Пароль має містити щонайменше 8 символів.</span>
+- <span data-aapsb-msg="errAscii">Використовуйте лише a–z, A–Z, 0–9 і символи, як-от ! ? # – без пробілів, без кирилиці, без літер з діакритикою і без |</span>
 - <span data-aapsb-msg="errMatch">Паролі не збігаються.</span>
 - <span data-aapsb-msg="working">Створення ключа…</span>
-- <span data-aapsb-msg="okNew">Ключ створено. Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="okNew">Ключ створено. Завантажте резервну копію нижче, потім продовжуйте з кроку 3.</span>
+- <span data-aapsb-msg="gNoUrl">Спочатку вставте повну адресу вкладки Google.</span>
+- <span data-aapsb-msg="gNoCode">У цій адресі немає відповіді від Google. Скопіюйте повну адресу вкладки, яка показує помилку. Вона починається з http://127.0.0.1:47913/</span>
+- <span data-aapsb-msg="gDenied">Доступ до Google не дозволено. Знову натисніть «Підключити Google Drive» і дозвольте доступ.</span>
+- <span data-aapsb-msg="gOldUrl">Ця адреса належить до попередньої спроби. Знову натисніть «Підключити Google Drive» і використайте нову адресу.</span>
+- <span data-aapsb-msg="gWorking">Запит до Google…</span>
+- <span data-aapsb-msg="gFailed">Google не прийняв відповідь ({error}). Відповідь дійсна лише кілька хвилин і лише один раз: знову натисніть «Підключити Google Drive».</span>
+- <span data-aapsb-msg="gNoRefresh">Google не надав довготривалого доступу. Знову натисніть «Підключити Google Drive».</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 готовий. Додайте його як секрет нижче.</span>
+- <span data-aapsb-msg="gCopied">Код скопійовано: вставте його у велике поле «Secret», потім натисніть «Add secret».</span>
 
 </div>
 

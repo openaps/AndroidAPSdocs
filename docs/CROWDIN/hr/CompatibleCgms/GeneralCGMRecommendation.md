@@ -1,41 +1,41 @@
-# General CGM recommendations
+# Opće preporuke za CGM
 
-## CGM hygiene
+## Higijena CGM-a
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Koji god CGM sustav koristite, ako ćete ga kalibrirati vrijednostima iz krvi, postoje vrlo jasna pravila koja trebate slijediti, bez obzira na to koristite li DIY CGM softver ili službene aplikacije.
 
--   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   Pazite da su ruke i pribor čisti.
+-   Pokušajte kalibrirati kad imate niz točaka s ravnom strelicom (15–30 minuta obično je dovoljno)
+-   Izbjegavajte kalibraciju dok glukoza raste ili pada.
+-   Radite „dovoljno“ kalibracija – službene aplikacije tražit će provjeru jednom ili dvaput dnevno. DIY sustavi to možda neće tražiti, pa budite oprezni ako nastavljate bez kalibracija.
+-   Kod senzora koji ne trebaju ili ne dopuštaju kalibraciju barem jednom dnevno provjerite stvarni šećer u krvi. AAPS je siguran onoliko koliko su pouzdana očitanja vašeg senzora.
+-   Ako je ikako moguće, kalibrirajte s nekim očitanjima u nižem rasponu (4–5 mmol/L ili 72–90 mg/dL) i nekim na malo višoj razini (7–9 mmol/L ili 126–160 mg/dL), jer to daje bolji raspon za kalibraciju točke i nagiba.
 
-## Setting sensor (G6)
+## Postavljanje senzora (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+Pri postavljanju senzora preporučuje se ne pritiskati aplikator prejako, da se izbjegne krvarenje. Kontakti senzora ne smiju doći u dodir s krvlju.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Nakon postavljanja senzora odašiljač se može utaknuti u držač senzora. Oprez! Prvo ga utaknite na kvadratnoj strani, a zatim pritisnite okruglu stranu.
 
 (general-cgm-troubleshooting)=
-## Troubleshooting
+## Rješavanje problema
 
-### Connection problems
+### Problemi s vezom
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+Bluetooth vezu mogu ometati drugi Bluetooth uređaji u blizini, kao što su mjerači glukoze, slušalice, tableti ili kuhinjski uređaji poput mikrovalnih pećnica ili keramičkih ploča za kuhanje. U tom slučaju xDrip ne prikazuje vrijednosti GUK-a. Kad se Bluetooth veza ponovno uspostavi, podaci koji nedostaju se nadopune.
 
-### Sensor Errors
+### Greške senzora
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+Ako se greške senzora ponavljaju, pokušajte postaviti senzor na drugo mjesto na tijelu. Kontakti senzora ne smiju doći u dodir s krvlju.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+„Sensor Error“ se često može ispraviti ako odmah popijete nešto i masirate područje oko senzora!
 
-### Jumpy values
+### Nestabilne vrijednosti
 
-You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Možete pokušati promijeniti postavke blokiranja šuma u xDripu (Settings - Inter-App Settings - Noise Blocking), npr. „Block Very High noise and worse“. Pogledajte i [Zaglađivanje podataka GUK-a](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-### Negative Sensor Age
+### Negativna starost senzora
 
-![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
+![Starost senzora u retku Senzor proširenog panela statusa](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+Starost senzora prikazuje se u retku **Senzor** panela statusa na glavnom zaslonu (dodirnite strelicu da biste ga proširili). Negativna starost nastaje ako postoji dvostruki [unos u Careportal](#aaps-screens-careportal) „Umetanje senzora“ ili umetanje senzora s pogrešnim datumom. Otvorite **Povijest tretmana** (izbornik ☰), odaberite karticu **Careportal** i izbrišite pogrešan unos.

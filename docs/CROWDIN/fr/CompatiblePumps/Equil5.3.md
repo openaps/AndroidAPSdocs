@@ -10,7 +10,8 @@ Ces instructions expliquent comment configurer la pompe à insuline Equil.
 ## Fonctionnalités de la pompe avec AAPS
 
 * Pompe patch sans tubulure qui communique avec **AAPS** par le Bluetooth natif de votre téléphone, sans appareil de communication supplémentaire.
-* **AAPS** traite l'Equil comme une pompe patch avec un réservoir de 200 U : l'écran principal affiche les voyants d'état d'une pompe patch, et **Amorcer/Remplir** et **Changement pile pompe** ne sont pas proposés. Le remplissage, l'amorçage et le changement de pile se font dans les assistants de la pompe.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Quand la pompe est suspendue ou arrêtée, **AAPS** enregistre un débit basal temporaire de 0 U/h ; ainsi, aucune insuline basale n'est comptée dans l'IA.
 * Les changements d'heure d'été et de fuseau horaire doivent être faits à la main.
 

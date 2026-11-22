@@ -1,24 +1,24 @@
-# Development branch
+# Udviklingsgren
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+Dev-grenen er kun til videreudvikling af AAPS. Den skal bruges på en separat telefon til test <font color="#FF0000">**ikke til rigtigt loop!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Den mest stabile version af AAPS findes i [master-grenen](https://github.com/nightscout/AndroidAPS/tree/master). Vi anbefaler, at du bliver på master-grenen, når du looper i hverdagen.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in the directory /AAPS/extra. Enabling the engineering mode might break the loop entirely.
+Dev-versionen af AAPS er kun til udviklere og testere, der er vant til at arbejde med stacktraces, se logfiler igennem og måske starte debuggeren for at lave fejlrapporter, som udviklerne kan bruge (kort sagt: folk, der ved, hvad de gør, uden at få hjælp!). Derfor er mange funktioner, der ikke er færdige, deaktiveret. For at slå disse funktioner til skal du gå i **Engineering Mode** ved at oprette en fil med navnet `engineering_mode` i mappen /AAPS/extra. Hvis du slår engineering mode til, kan det få loopet til at holde helt op med at virke.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Dev-grenen er dog et godt sted at se, hvilke funktioner der bliver testet, at hjælpe med at rette fejlene og give feedback på, hvordan de nye funktioner virker i praksis. Mange tester dev-grenen på en gammel telefon og pumpe, indtil de er sikre på, at den er stabil - al brug sker på eget ansvar. Når du tester nye funktioner, så husk, at du selv vælger at teste en funktion, som stadig er under udvikling. Det sker på eget ansvar, og du skal være omhyggelig med at passe på din egen sikkerhed.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Hvis du finder en fejl eller mener, at noget er gået galt, når du bruger dev-grenen, så se under [fanen Issues](https://github.com/nightscout/AndroidAPS/issues), om andre allerede har fundet den, eller tilføj den selv, hvis ikke. Jo flere oplysninger du kan dele her, jo bedre (husk, at du måske skal dele dine [logfiler](../GettingHelp/AccessingLogFiles.md)). De nye funktioner kan også diskuteres på [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+En dev-version har en udløbsdato. Det kan virke upraktisk, når den fungerer godt, men det har et formål. Når der kun er én dev-version i omløb, er det lettere at holde styr på de fejl, folk melder. Udviklerne vil ikke ende i en situation, hvor der er tre dev-versioner i omløb, hvor fejl er rettet i nogle og ikke i andre, og folk bliver ved med at melde fejl, der allerede er rettet.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Test en bestemt gren (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+For at bygge en testgren skal du vælge branch-ci, som lader dig vælge en bestemt gren, som APK'en bygges fra. Du kan bruge denne metode, når du skal teste dev-grenen.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Test ændringer i en pull request (GitHub CI actions deploy)
 
-Available from 3.3.2.1.dev
+Tilgængelig fra 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Egnet til testere eller dem, der hjælper med at teste.
 
 ```{eval-rst}
 .. raw:: html
@@ -51,22 +51,22 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
+- Target repository: det repository, der indeholder PR'en, i formatet owner/repo. Behold standardværdien **nightscout/AndroidAPS**, medmindre du har fået besked på at bruge et andet repository (det bør kun udviklere gøre).
 
-- PR number: Please enter the PR number that you want to test.
+- PR number: Indtast nummeret på den PR, du vil teste.
 
-- PR reference types: PR reference types include two options:
+- PR reference types: Der er to muligheder for PR-referencetype:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Henter det faktiske indhold fra PR-forfatterens gren (dvs. den oprindelige commit-historik uden nogen merge).
+    - Det svarer til PR-grenens oprindelige tilstand, som om den blev hentet direkte fra en fork eller en feature-gren.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Henter resultatet af GitHubs forudgående simulerede merge af PR'en ind i målgrenen (f.eks. dev).
+    - Det er et virtuelt merge-commit, som GitHub laver automatisk.
+    - Dette commit findes kun, når PR'en ikke har konflikter og kan merges.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Se [variant](#browserbuild-variant)

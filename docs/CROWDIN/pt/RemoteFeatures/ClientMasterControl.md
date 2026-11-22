@@ -57,7 +57,7 @@ Ações que podem ser iniciadas a partir de um cliente: **bólus**, **hidratos d
 - O **telefone principal** usa a compilação `full` normal do **AAPS** e está ligado à sua bomba.
 - O **telefone principal** usa o **NSClientV3** com o seu Nightscout e mostra *Ligado*. Dê-lhe um **token de administrador** do seu Nightscout: com ele, o telefone principal pode criar um token próprio para cada cliente e mostrá-lo ao cliente como código QR.
 - O **cliente** usa o **[AAPSClient](AapsClient.md)** (ou o **AAPSClient2** / **AAPSClient3** para outros doentes — veja [Sobre o AAPSClient, o AAPSClient2 e o AAPSClient3](#remotecontrol-aapsclient-versions)). Tem de usar o **mesmo** Nightscout. Se o configurar com o código QR do telefone principal, o cliente recebe o endereço e o token do Nightscout do telefone principal; caso contrário, configure primeiro o **NSClientV3** no cliente.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. Enquanto o controlo pelos clientes estiver ligado, o **AAPS** mantém os websockets ligados, no telefone principal e nos clientes emparelhados. Your Nightscout host must support websockets.
+- Os websockets são **obrigatórios** para o controlo remoto a partir do **AAPSClient**, nos dois telefones. Um comando só é válido durante alguns segundos: sem websockets, falha em vez de chegar atrasado. Enquanto o controlo pelos clientes estiver ligado, o **AAPS** mantém os websockets ligados, no telefone principal e nos clientes emparelhados. O seu servidor (host) do Nightscout tem de suportar websockets.
 ```
 
 Emparelhamento e sincronização são duas coisas diferentes:
@@ -107,7 +107,7 @@ Qualquer pessoa que veja o código QR pode ler o seu Nightscout, e um código qu
 
 #### Com um PIN
 
-Toque em **OK**: o telefone principal mostra um **PIN de emparelhamento** de 8 dígitos, em dois grupos de quatro (por exemplo `1234 5678`). Este PIN é de **utilização única** e **expira após cerca de dois minutos**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Toque em **OK**: o telefone principal mostra um **PIN de emparelhamento** de 8 dígitos, em dois grupos de quatro (por exemplo `1234 5678`). Este PIN é de **utilização única** e **expira após cerca de dois minutos**. Tal como com o código QR, o telefone principal recusa um nome de cliente que já está na sua lista: cada cliente recebe o seu próprio token do Nightscout com o seu nome.
 
 ![Ecrã de emparelhamento do telefone principal com o PIN de utilização única (o PIN mostrado aqui já expirou)](../images/v4/ClientMaster/pairing_pin_master.png)
 
@@ -134,7 +134,7 @@ Aponte a câmara para o código. O cliente mostra o que o código faz — o ende
 
 ```{admonition} Scanning is available on Android
 :class: note
-A computer without camera: use the PIN there.
+Num computador sem câmara: use aí o PIN.
 ```
 
 #### Introduzir o PIN
@@ -334,27 +334,86 @@ Se um cliente for restaurado a partir de uma cópia de segurança que faz recuar
 
 ## Resolução de Problemas
 
-| Sintoma                                                                                                                     | O que verificar                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| O cliente diz que o **telefone principal está offline**                                                                     | O telefone principal está ativo e com o **AAPS** a funcionar; os dois telefones estão ligados no **NSClientV3**; os **websockets** estão ativados nos dois; é o mesmo site Nightscout.                                                                                                                                                                                                                                  |
-| O cliente diz que **não está emparelhado**                                                                                  | Emparelhe outra vez em **Gerir → Emparelhar com o telefone principal**. Confirme que o cliente está **Ativo** na lista **Clientes autorizados** do telefone principal.                                                                                                                                                                                                                                                  |
-| Comando **rejeitado** pelo telefone principal                                                                               | O telefone principal volta a validar com base no seu estado atual — por ex., o perfil escolhido já não existe, ou o tipo de bomba não corresponde. Verifique outra vez no telefone principal.                                                                                                                                                                                                                           |
-| Commands **fail** or the master is often **offline**                                                                        | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                                                                                                               |
-| O emparelhamento é cancelado com *«Não foi possível guardar o segredo de emparelhamento»*                                   | Nada foi alterado. Inicie novamente o emparelhamento; se continuar a falhar, reinicie o **AAPSClient** e tente mais uma vez.                                                                                                                                                                                                                                                                                            |
-| Não acontece nada depois do emparelhamento                                                                                  | Verifique se **Permitir controlo pelos clientes** está LIGADO no telefone principal e se o telefone principal está ligado ao Nightscout.                                                                                                                                                                                                                                                                                |
-| As opções de código QR não podem ser escolhidas na caixa de diálogo **Novo cliente**                                        | A caixa de diálogo explica porquê. *Não é um token de administrador*: dê ao telefone principal um token de administrador do seu Nightscout ou adicione o cliente com o **PIN**. *Não ligado*: espere até o telefone principal mostrar *Ligado* no **NSClientV3**.                                                                                                                                                       |
-| *«O Nightscout tem um token com este nome e com outros direitos»*                                                           | Um dos seus próprios tokens do Nightscout chama-se `aaps-` seguido deste nome. Escolha outro nome para o cliente.                                                                                                                                                                                                                                                                                                       |
-| *«Já existe na lista um cliente com este nome»*                                                                             | Escolha outro nome ou remova primeiro esse cliente.                                                                                                                                                                                                                                                                                                                                                                     |
-| O cliente diz *«Este código é de outra versão do AAPS»*                                                                     | O telefone principal e o cliente têm de usar a **mesma** versão do **AAPS**. Atualize o mais antigo.                                                                                                                                                                                                                                                                                                                    |
-| O cliente diz *«Este código expirou»*                                                                                       | Um código que emparelha funciona durante cerca de dois minutos. Adicione outra vez o cliente no telefone principal para obter um novo código.                                                                                                                                                                                                                                                                           |
-| O cliente diz *«Este telefone já está emparelhado»*                                                                         | Desemparelhe-o primeiro (**Gerir → Emparelhar com o telefone principal → Desemparelhar**) e depois leia o código outra vez. Um código **só Nightscout** também funciona num telefone emparelhado.                                                                                                                                                                                                                       |
-| O cliente diz *«O telefone principal recusou-o: este telefone escreve no Nightscout com um token que não é o seu»*          | O cliente usava antes o seu próprio token do Nightscout e agora escreve com outro, por exemplo depois de ter sido introduzido um token nas definições do Nightscout do cliente. Remova o cliente no telefone principal e adicione-o outra vez (veja [O token do Nightscout próprio do cliente](#client-master-control-own-token)).                                                                                      |
-| O registo do NSClient no cliente mostra *"✕ SETTINGS … refused"* e as suas definições deixam de seguir o telefone principal | Outra pessoa escreveu o documento de definições do telefone principal, ou o telefone principal tem uma nova chave (por exemplo, depois de os seus dados terem sido apagados). Um cliente emparelhado recebe sozinho a nova chave da próxima vez que se ligar ao Nightscout. Um telefone que só lê o Nightscout precisa outra vez do código QR do telefone principal (**Só leitura do Nightscout → Mostrar código QR**). |
-| O cartão do cliente mostra *«Usa o token do Nightscout …»* a vermelho                                                       | O cliente ainda escreve com um token que tem mais direitos do que precisa. O telefone principal envia-lhe o seu próprio token depois do emparelhamento, mas só se o telefone principal tiver um token de administrador. Verifique o token do telefone principal ou configure outra vez o cliente com um código QR.                                                                                                      |
-| Um cliente deixou de poder ler o Nightscout                                                                                 | O seu token foi apagado, por exemplo porque o cliente foi removido no telefone principal. Adicione-o outra vez.                                                                                                                                                                                                                                                                                                         |
-| Os tratamentos introduzidos no site do Nightscout não são aplicados                                                         | É o esperado no [modo reforçado](#client-master-control-hardened-mode): introduza-os antes num cliente emparelhado.                                                                                                                                                                                                                                                                                                     |
-
 Para problemas do Nightscout / sincronização, veja primeiro [Resolução de problemas do NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Pairing
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *Não é um token de administrador*: dê ao telefone principal um token de administrador do seu Nightscout ou adicione o cliente com o **PIN**.
+- *Não ligado*: espere até o telefone principal mostrar *Ligado* no **NSClientV3**.
+
+**«O Nightscout tem um token com este nome e com outros direitos»**
+
+Um dos seus próprios tokens do Nightscout chama-se `aaps-` seguido deste nome. Escolha outro nome para o cliente.
+
+**«Já existe na lista um cliente com este nome»**
+
+Escolha outro nome ou remova primeiro esse cliente.
+
+**The client says "This code is from another AAPS version"**
+
+O telefone principal e o cliente têm de usar a **mesma** versão do **AAPS**. Atualize o mais antigo.
+
+**The client says "This code has expired"**
+
+Um código que emparelha funciona durante cerca de dois minutos. Adicione outra vez o cliente no telefone principal para obter um novo código.
+
+**The client says "This phone is paired already"**
+
+Desemparelhe-o primeiro (**Gerir → Emparelhar com o telefone principal → Desemparelhar**) e depois leia o código outra vez. Um código **só Nightscout** também funciona num telefone emparelhado.
+
+**O emparelhamento é cancelado com «Não foi possível guardar o segredo do emparelhamento»**
+
+Nada foi alterado. Inicie o emparelhamento outra vez. Se continuar a falhar, reinicie o **AAPSClient** e tente mais uma vez.
+
+**O cliente diz que não está emparelhado**
+
+Emparelhe outra vez em **Gerir → Emparelhar com o telefone principal**. Verifique se o cliente está **Ativo** na lista **Clientes autorizados** do telefone principal.
+
+**Não acontece nada depois do emparelhamento**
+
+Verifique se **Permitir controlo pelos clientes** está LIGADO no telefone principal e se o telefone principal está ligado ao Nightscout.
+
+### Comandos
+
+**O cliente diz que o telefone principal está sem ligação, ou os comandos falham**
+
+Verifique se:
+
+- o telefone principal está ativo (não em repouso) e o **AAPS** está a funcionar,
+- ambos os telefones estão ligados no **NSClientV3**, ao mesmo site do Nightscout,
+- os **websockets** estão ativados nos dois telefones.
+
+Os websockets são **obrigatórios** para o controlo remoto a partir do **AAPSClient**. Se a ligação websocket cair repetidamente, o controlo remoto não funciona. Veja [Resolução de problemas do NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**Um comando é recusado pelo telefone principal**
+
+O telefone principal verifica outra vez cada comando com o seu estado atual: por exemplo, o perfil escolhido já não existe, ou o tipo de bomba não corresponde. Verifique no telefone principal.
+
+**Os tratamentos introduzidos no site do Nightscout não são aplicados**
+
+Isto é normal no [modo reforçado](#client-master-control-hardened-mode). Em vez disso, introduza-os num cliente emparelhado.
+
+### Tokens e definições do Nightscout
+
+**O cliente diz «O telefone principal recusou: este telefone escreve no Nightscout com outro token que não o seu»**
+
+O cliente usava antes o seu próprio token do Nightscout e agora escreve com outro, por exemplo depois de ter sido introduzido um token nas definições do Nightscout do cliente. Remova o cliente no telefone principal e adicione-o outra vez (veja [O token do Nightscout próprio do cliente](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+O cliente ainda escreve com um token que tem mais direitos do que precisa. O telefone principal envia ao cliente o token próprio do cliente depois do emparelhamento, mas só se o telefone principal tiver um token de administrador. Verifique o token do telefone principal ou configure outra vez o cliente com um código QR.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+Outra pessoa escreveu o documento de definições do telefone principal, ou o telefone principal tem uma nova chave (por exemplo, depois de os seus dados terem sido apagados). Um cliente emparelhado recebe a nova chave sozinho, da próxima vez que se ligar ao Nightscout. Um telefone que só lê o Nightscout precisa outra vez do código QR do telefone principal (**Só leitura do Nightscout → Mostrar código QR**).
+
+**Um cliente deixou de poder ler o Nightscout**
+
+O seu token foi apagado, por exemplo porque o cliente foi removido no telefone principal. Adicione-o outra vez.
 
 ---
 

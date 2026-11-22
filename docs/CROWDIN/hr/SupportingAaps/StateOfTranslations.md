@@ -1,26 +1,26 @@
-# State of translation for the app and the documentation
+# Stanje prijevoda aplikacije i dokumentacije
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Stanje se ažurira jednom na sat i prikazuje samo stanje u Crowdinu.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Pazite: postotak lekture uvijek je manji od postotka prijevoda ili jednak njemu, ali ga Crowdin prikazuje iznad prijevoda.
+Bolje je gledati samo postotak prijevoda da biste vidjeli ima li još posla.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Nakon prijevoda u Crowdinu svaki je dan zakazana sinkronizacija s GitHubom koja prenosi prijevode na GitHub kao zahtjev za povlačenje (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+Prihvaćanje PR-a radi se ručno i obavit će se što je brže moguće.
 ```
 
-## state app translation
+## stanje prijevoda aplikacije
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Stanje prijevoda **aplikacije** po jezicima (kod zemlje, postotak prijevoda, postotak lekture).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![stanje prijevoda aplikacije](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## stanje prijevoda dokumentacije
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Stanje prijevoda **dokumentacije** po jezicima (kod zemlje, postotak prijevoda, postotak lekture).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![stanje prijevoda dokumentacije](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

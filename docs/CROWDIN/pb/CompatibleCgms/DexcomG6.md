@@ -21,7 +21,7 @@ Leia mais no [artigo](https://www.diabettech.com/artificial-pancreas/diy-looping
 - Os transmissores Dexcom G6 e ONE podem ser conectados ao mesmo tempo ao receptor Dexcom (ou, como alternativa, à bomba t:slim) e a um app no seu telefone.
 - Ao usar o xDrip como receptor, desinstale primeiro o app da Dexcom. **Você não pode conectar o xDrip e o app da Dexcom ao transmissor ao mesmo tempo!**
 - Se você precisa do Clarity e quer aproveitar os alarmes do xDrip, use o [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (somente G6) com transmissão local (local broadcast) para o xDrip.
-- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings. To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG6-notification-reader).
+- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings. Para ler as notificações do app Dexcom sem o xDrip, como fonte de dados confiável, use o [Leitor de notificações](#DexcomG6-notification-reader).
 - Com os transmissores atuais, o xDrip sempre usa o [algoritmo nativo](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) do transmissor; não há motivo para desativá-lo. Os [reinícios preventivos](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) só funcionam em transmissores antigos (firmware 1.6.5.25 ou anterior), onde são necessários para evitar que o sensor pare após 10 dias; os transmissores recentes (Firefly) os ignoram. Veja [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) antes de tentar qualquer reinício.
 - Tudo o que se refere ao próprio sensor e ao transmissor está documentado na [página Dexcom do xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
@@ -40,7 +40,7 @@ O Dexcom BYODA é agora uma versão muito antiga do app e não pode ser atualiza
 -   Instale o apk baixado
 -   Digite o código do sensor e o número de série do transmissor no app modificado.
 -   Nas configurações do telefone, vá em apps > Dexcom G6 > permissões > permissões adicionais e toque em 'Access Dexcom app'.
--   After a short time BYODA should pick up the transmitter signal.
+-   Depois de pouco tempo, o BYODA deve captar o sinal do transmissor.
 
 ### Configurações do AAPS
 
@@ -54,50 +54,50 @@ O Dexcom BYODA é agora uma versão muito antiga do app e não pode ser atualiza
 -   O comando 'start sensor' precisa ser executado no xDrip para receber valores. Isso não afeta o seu sensor atual, que é controlado pelo Build Your Own Dexcom App.
 
 (DexcomG6-notification-reader)=
-## If using G6 or ONE with the Notification Reader
+## Se você usa o G6 ou o ONE com o Leitor de notificações
 
-The official Dexcom G6 or ONE app stays connected to the transmitter. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+O app oficial Dexcom G6 ou ONE continua conectado ao transmissor. O **AAPS** lê o valor da glicose diretamente da notificação do app Dexcom, sem nenhum outro app no meio.
 
 ```{admonition} Trusted data source
 :class: note
-Readings from the Dexcom G6 and ONE apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+As leituras dos apps Dexcom G6 e ONE são uma [fonte de dados de glicose confiável](#GettingStarted-TrustedBGSource): os SMBs podem ser permitidos o tempo todo.
 ```
 
-Compared to BYODA or xDrip, the Notification Reader has limits:
+Comparado ao BYODA ou ao xDrip, o Leitor de notificações tem limites:
 
-- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
-- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
-- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
+- **Sem seta de tendência** e **sem preenchimento retroativo (backfill)**: as leituras perdidas enquanto o telefone estava desligado ou fora de alcance são perdidas.
+- Cada leitura recebe o horário em que a notificação apareceu, não o horário exato da leitura do sensor.
+- Só são lidos valores entre 40 e 405 mg/dl (2,2 e 22,5 mmol/l). "LOW" e "HIGH" não são lidos.
 
-### Set up the Dexcom app
+### Configurar o app Dexcom
 
--   Keep the Dexcom app installed and connected to the transmitter.
--   Make sure the Dexcom app shows the current glucose value in its notification. As notificações dele devem continuar visíveis: não silencie nem oculte essas notificações.
--   Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+-   Mantenha o app Dexcom instalado e conectado ao transmissor.
+-   Verifique se o app Dexcom mostra o valor atual da glicose na notificação. As notificações dele devem continuar visíveis: não silencie nem oculte essas notificações.
+-   Use as mesmas unidades de glicose (mg/dl ou mmol/l) no app Dexcom e no **AAPS**. Caso contrário, o **AAPS** não consegue ler o valor.
 
 ### Configuração no AAPS
 
--   Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+-   Selecione **Leitor de notificações** em [**Configuração → Fonte de BG**](#Config-Builder-bg-source) e confirme a troca.
 
-    ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+    ![Fonte de BG: Leitor de notificações selecionado](../images/NotificationReader_BgSource.png)
 
--   Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+-   De volta à tela principal, o **AAPS** mostra **Permissões necessárias**. Ao lado de **Acesso às notificações**, toque em **Conceder**.
 
-    ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+    ![Permissões necessárias: Acesso às notificações](../images/NotificationReader_Permissions.png)
 
--   Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+-   O Android abre a sua lista de acesso às notificações (o nome depende da versão do Android, por exemplo *Leitura, resposta e controle de notificações*). Selecione o **AAPS**, ative **Permitir acesso às notificações** e confirme com **Permitir**.
 
-    ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+    ![O Android pede para permitir o acesso às notificações para o AAPS](../images/NotificationReader_AllowDialog.png)
 
-    Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+    O Android avisa que o **AAPS** poderia ler todas as suas notificações. O **AAPS** só lê as notificações dos apps de CGM compatíveis e ignora todas as outras.
 
-    ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+    ![Acesso às notificações permitido para o AAPS](../images/NotificationReader_AccessOn.png)
 
--   If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Depois volte à tela de acesso a notificações e permita o acesso.
--   Readings appear in **AAPS** when the Dexcom app shows a new value.
+-   Se **Permitir acesso às notificações** estiver cinza (*Controlado por configuração restrita*), o Android bloqueia essa opção porque o **AAPS** não foi instalado pela Play Store. Abra as informações do app **AAPS** (toque longo no ícone do **AAPS** > **Informações do app**), toque no menu de três pontos no canto superior direito e selecione **Permitir configurações restritas**. Depois volte à tela de acesso a notificações e permita o acesso.
+-   As leituras aparecem no **AAPS** quando o app Dexcom mostra um novo valor.
 
 ```{warning}
-If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+Se a notificação do app Dexcom mostrar mais de um número de glicose, ou nenhum, o **AAPS** ignora essa notificação.
 ```
 
 

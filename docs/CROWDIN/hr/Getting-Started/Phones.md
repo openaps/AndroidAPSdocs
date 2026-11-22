@@ -1,4 +1,4 @@
-# Phones
+# Telefoni
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -9,41 +9,41 @@
 ../CompatiblePhones/Huawei.md
 ```
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+Trenutačna verzija **AAPS-a** (4.0) zahtijeva Android pametni telefon s Googleovim **Androidom 12.0 ili novijim**. Ako razmišljate o kupnji novog telefona (stanje u siječnju 2026.), **preporučuje se Android 16**, a Android 15 se ne preporučuje.
 
-Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+Najnovije informacije o ovoj temi potražite na [Facebooku ili Discordu](../GettingHelp/WhereCanIGetHelp.md).
 
-Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Iz sigurnosnih razloga korisnicima se snažno preporučuje da svoju verziju **AAPS-a** redovito ažuriraju. Ipak, za korisnike koji ne mogu koristiti uređaj s Androidom 12.0 ili novijim i dalje su dostupne starije verzije **AAPS-a** za starije verzije Androida, pogledajte: [Bilješke o izdanju](#maintenance-android-version-aaps-version).
 
-- [Jelly Pro Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+- [Postavke za Jelly Pro](../CompatiblePhones/Jelly.md)
+- [Postavke za Huawei](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## List of tested phones
+## Popis testiranih telefona
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
+Vodimo popis [testiranih kombinacija uređaja](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) koji možete [pregledavati u jednostavnom sučelju](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Doprinesite tako da ispunite [Google obrazac](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) i dodate svoju kombinaciju!
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+Ovaj popis donosi povratne informacije korisnika o korištenju telefona s **AAPS-om** i određenom pumpom i CGM-om. Pomoću njega možete provjeriti jesu li drugi korisnici uspješno koristili vaš telefon / pumpu / CGM.
 
-The document is read-only. With CTRL-F, you can search in the text of the Google sheet.
+Dokument je samo za čitanje. Pomoću CTRL-F možete pretraživati tekst u Google tablici.
 
-To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes.
+Da biste zabilježili svoj test neke kombinacije uređaja, ispunite ovaj [obrazac](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Nakon što ispunite obrazac, tablica se automatski ažurira svakih 5 minuta.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Za sve probleme s tablicom obratite se osobi koja je održava, *@theodoor5137*, na Discordu ili pogledajte stranicu [Gdje mogu dobiti pomoć?](../GettingHelp/WhereCanIGetHelp.md).
 
-## I didn't find my phone
+## Nisam pronašao svoj telefon
 
-If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+Ako imate pitanja o određenom modelu telefona, pretražite ili pitajte u našoj [zajednici na Facebooku ili Discordu](../GettingHelp/WhereCanIGetHelp.md).
 
-To make a donation of smartphone or smartwatch models that still need testing, please email <donations@androidaps.org>.
+Ako želite donirati modele pametnih telefona ili satova koje još treba testirati, pošaljite e-poruku na <donations@androidaps.org>.
 
 (Phones-phone-wallpaper)=
 
-## Phone wallpaper
+## Pozadina za telefon
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+Ako želite svoj telefon ukrasiti s još više **AAPS-a**, sliku pozadine možete preuzeti [ovdje](../images/bg_phone.jpg)!
 
-![phone background](../images/bg_phone_thump.jpg)
+![pozadina telefona](../images/bg_phone_thump.jpg)
 
-Design: Thiago :)
+Dizajn: Thiago :)

@@ -116,7 +116,7 @@ AAPS Builder의 빌드도 Google Drive에 저장하려면 [6단계](#aaps-builde
 
 1. 이 브라우저에서 github.com에 로그인되어 있는지 확인하십시오.
 
-2. **Your GitHub username**(GitHub 사용자 이름)에 이메일이 아니라 GitHub 사용자 이름을 입력하십시오. 페이지가 GitHub에서 이름을 확인합니다: **✓ GitHub user found**(GitHub 사용자를 찾음)가 표시되면 올바른 것입니다.
+2. **Your GitHub username**(GitHub 사용자 이름)에 이메일이 아니라 GitHub 사용자 이름을 입력하십시오. 페이지가 GitHub에서 이름을 확인합니다: **✓ GitHub 사용자를 찾았습니다**라는 메시지가 표시되면 올바른 것입니다.
 
 3. **Name of your repository**(저장소 이름)에서는 제안된 `my-aaps`를 그대로 두십시오. 이미 다른 이름으로 저장소를 만들었다면 그 이름을 정확히 입력하십시오.
 
@@ -173,7 +173,7 @@ GitHub says **my-aaps already exists in this account**? You already have your re
 5. 키 비밀번호가 키 저장소 비밀번호와 다르면 **Key password is the same as the keystore password**(키 비밀번호가 키 저장소 비밀번호와 같음)의 체크를 해제하고 키 비밀번호를 입력하십시오.
 6. **Check and continue**(확인 후 계속)를 누르십시오.
 
-페이지가 기기 안에서 비밀번호와 별칭을 확인합니다. **Keystore OK! Continue with step 3.**(키 저장소 정상, 3단계로 계속)이 표시되면 모두 올바른 것입니다. 비밀번호를 빌드할 때 확인한다고 표시되면 그냥 계속하십시오: 문제가 있으면 빌드에서 알려 줍니다.
+페이지가 기기 안에서 비밀번호와 별칭을 확인합니다. **키 저장소 확인 완료! Continue with step 3.**(키 저장소 정상, 3단계로 계속)이 표시되면 모두 올바른 것입니다. 비밀번호를 빌드할 때 확인한다고 표시되면 그냥 계속하십시오: 문제가 있으면 빌드에서 알려 줍니다.
 
 ### 새 키 만들기
 
@@ -181,7 +181,7 @@ GitHub says **my-aaps already exists in this account**? You already have your re
 
 2. 비밀번호를 정하고 두 번 입력하십시오. 규칙: 8자 이상이며, 영문자 a–z와 A–Z, 숫자 0–9, 그리고 `! ? #` 같은 기호만 사용할 수 있습니다. 공백, 악센트가 있는 문자, `|` 문자는 사용할 수 없습니다.
 
-3. **Create key**(키 만들기)를 누르십시오. 몇 초 뒤에 **Key created**(키가 만들어짐)가 나타납니다.
+3. **Create key**(키 만들기)를 누르십시오. 몇 초 뒤에 **키를 만들었습니다**라는 메시지가 나타납니다.
 
    ![비밀번호를 두 번 입력한 새 키 양식](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
@@ -333,11 +333,11 @@ GitHub에 **Page not found**(페이지를 찾을 수 없음, 404)가 표시됩�
 
    ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
-4. 몇 분 안에 설정 페이지 탭으로 돌아가십시오: Google의 응답은 짧은 시간 동안 한 번만 유효합니다. 주소를 **Paste the copied address here**(복사한 주소를 여기에 붙여 넣기)에 붙여 넣고 **Get GDRIVE_OAUTH2**(GDRIVE_OAUTH2 받기)를 누르십시오. 페이지에 **GDRIVE_OAUTH2 is ready**(GDRIVE_OAUTH2 준비됨)가 표시됩니다.
+4. 몇 분 안에 설정 페이지 탭으로 돌아가십시오: Google의 응답은 짧은 시간 동안 한 번만 유효합니다. 주소를 **Paste the copied address here**(복사한 주소를 여기에 붙여 넣기)에 붙여 넣고 **Get GDRIVE_OAUTH2**(GDRIVE_OAUTH2 받기)를 누르십시오. 페이지에 **GDRIVE_OAUTH2가 준비되었습니다**라는 메시지가 표시됩니다.
 
    ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
-   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+   ![GDRIVE_OAUTH2가 준비되었습니다](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
 5. **Open the secrets page**(secret 페이지 열기)를 누르십시오. **Copy name**을 누른 다음 작은 **Name** 칸에 붙여 넣으십시오(이름은 `GDRIVE_OAUTH2`입니다). **Copy secret**을 누르고, 큰 **Secret** 상자에 붙여 넣은 다음 **Add secret**을 누르십시오.
 

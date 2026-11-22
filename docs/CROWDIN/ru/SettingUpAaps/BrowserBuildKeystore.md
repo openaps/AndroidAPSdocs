@@ -1,82 +1,82 @@
 (aaps-ci-preparation)=
 
-# Browser build – Step 2: Create your signing keystore
+# Сборка через браузер – Шаг 2: Создайте хранилище ключей для подписи
 
 ```{note}
-This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
+Это **Шаг 2** раздела [Сборка через браузер](BrowserBuild.md). Сначала выполните [Сборка через браузер – Шаг 1: Создайте свой fork на GitHub](BrowserBuildFork.md).
 ```
 
-AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+AAPS нужно подписать закрытыми ключами, которые хранятся в **Java KeyStore (JKS)** (хранилище ключей Java). Это самое важное решение во всем процессе, потому что от него зависит, сможете ли вы позже **обновлять** AAPS без переустановки.
 
 ```{note}
-In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
+На следующих шагах вы сохраните личную информацию (ваше хранилище ключей, а позже доступ к Google Диску) в GitHub как **секреты** (secrets). Секрет — это просто зашифрованное значение, которое может прочитать только ваша собственная сборка. Никто другой его не видит, даже люди, которые смотрят ваш fork. Так ваша сборка остается только вашей.
 ```
 
-## Choose your keystore strategy
+## Выберите способ работы с хранилищем ключей
 
-Read both options and pick the one that matches your situation.
+Прочитайте оба варианта и выберите тот, который подходит к вашей ситуации.
 
-### Option 1 – Generate a new keystore (new users)
+### Вариант 1 – Создать новое хранилище ключей (новые пользователи)
 
-Choose this if **any** of these is true:
+Выберите этот вариант, если верно **хотя бы одно** из следующего:
 
-- This is your **first time** building AAPS.
-- You don't have a keystore from a previous Android Studio (computer) build.
-- You have forgotten your keystore password or alias.
+- Вы собираете AAPS **впервые**.
+- У вас нет хранилища ключей от прежней сборки в Android Studio (на компьютере).
+- Вы забыли пароль или псевдоним (alias) хранилища ключей.
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Сборка AAPS по **варианту 1** создает совершенно новое хранилище ключей, поэтому **вы не сможете обновить уже установленный AAPS** поверх старой версии. Чтобы перейти на эту новую сборку, нужно экспортировать настройки, удалить старый AAPS, установить новый и снова импортировать настройки. Выполните шаги из раздела [Переустановка AAPS с новым хранилищем ключей](#reinstall-aaps).
 ```
 
-**→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
+**→ [Продолжить с вариантом 1 – Создать новое хранилище ключей](BrowserBuildO1.md)**
 
-### Option 2 – Upload your existing keystore (existing / past users)
+### Вариант 2 – Загрузить существующее хранилище ключей (нынешние и прежние пользователи)
 
-Choose this if you **already have** the `.jks` keystore you used on a previous build of AAPS from a computer in Android Studio, **and** you know its password and alias (usually `key0`).
+Выберите этот вариант, если у вас **уже есть** хранилище ключей `.jks`, которое вы использовали для прежней сборки AAPS на компьютере в Android Studio, **и** вы знаете его пароль и псевдоним (alias, обычно `key0`).
 
-This keeps your current AAPS install upgradeable: future updates will use the same keystore.
+Так ваш установленный AAPS можно будет обновлять: будущие обновления будут использовать то же хранилище ключей.
 
-**→ [Continue with Option 2 – Upload your existing keystore](BrowserBuildO2.md)**
+**→ [Продолжить с вариантом 2 – Загрузить существующее хранилище ключей](BrowserBuildO2.md)**
 
 ----
 
 ```{note}
-On the next page you will pick your device (computer or iPhone). Each device page then walks you through downloading and opening the preparation file the right way for that device, and creating your keystore. The built AAPS app will be saved in your Google Drive.
+На следующей странице вы выберете свое устройство (компьютер или iPhone). Затем страница для каждого устройства шаг за шагом покажет, как правильно скачать и открыть файл подготовки на этом устройстве и создать хранилище ключей. Собранное приложение AAPS будет сохранено на вашем Google Диске.
 ```
 
-**Next: choose [Option 1](BrowserBuildO1.md) or [Option 2](BrowserBuildO2.md) above, then follow the page for your device.**
+**Далее: выберите [вариант 1](BrowserBuildO1.md) или [вариант 2](BrowserBuildO2.md) выше, затем следуйте странице для вашего устройства.**
 
 ----
 
 (ci-keystore-export)=
 
-## Export your keystore (optional)
+## Экспорт хранилища ключей (необязательно)
 
-If you want to export your stored keystore, use this method.
+Если вы хотите экспортировать сохраненное хранилище ключей, используйте этот способ.
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+Этот скрипт экспортирует ранее настроенные данные хранилища ключей (из варианта 1 или варианта 2) в виде ZIP-файла, защищенного паролем, в папку `/AAPS/KeyStore` на вашем Google Диске.
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+Перед этим способом экспорта убедитесь, что настройка хранилища ключей и Google Диска завершена.
 ```
 
 ### Steps:
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **Добавьте секрет с паролем для ZIP:**
+   - Откройте в вашем репозитории **Settings** → **Secrets and variables** → **Actions**
+   - Нажмите **New repository secret**
+   - В поле **Name** введите: `ZIP_PASSWORD`
+   - В поле **Secret** введите свой пароль для шифрования ZIP
+   - Используйте в пароле только английские буквы и цифры (без специальных символов)
+   - Нажмите **Add secret**
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI Keystore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **Запустите workflow экспорта:**
+   - Откройте вкладку **Actions** в вашем репозитории
+   - Выберите **CI Keystore Export**
+   - Нажмите **Run workflow**
+   - ZIP-файл с экспортированным хранилищем ключей будет сохранен на вашем Google Диске
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
@@ -85,6 +85,6 @@ Before using this export method, make sure your keystore and Google Drive settin
 ```{toctree}
 :hidden:
 
-Option 1 – Generate a new keystore <BrowserBuildO1.md>
-Option 2 – Upload your existing keystore <BrowserBuildO2.md>
+Вариант 1 – Создать новое хранилище ключей <BrowserBuildO1.md>
+Вариант 2 – Загрузить существующее хранилище ключей <BrowserBuildO2.md>
 ```

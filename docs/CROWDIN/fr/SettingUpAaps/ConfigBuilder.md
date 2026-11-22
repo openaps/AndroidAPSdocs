@@ -160,29 +160,29 @@ Dans cet exemple, le pic est réglé sur 55 minutes, la DAI est de 8 heures et l
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Comme le débit basal a une influence indirecte sur la diminution de l'IA dans AAPS, des débits basals trop élevés peuvent masquer une DAI trop longue, et inversement. Il est donc logique de bien régler d'abord les débits basals avant d'ajuster la DAI et le pic. De plus, les réglages de DAI et de pic interagissent : l'effet de la DAI dépend du pic, et inversement.
+Comme le débit basal a une influence indirecte sur la baisse de l'IA dans AAPS, des débits basaux trop élevés peuvent masquer une DAI trop longue, et inversement. Il est donc logique de régler d'abord soigneusement les débits basaux avant de modifier la DAI et le pic. De plus, les paramètres DAI et pic agissent l'un sur l'autre : l'effet de la DAI dépend du pic, et inversement.
 
 Ces graphiques montrent l'effet exact de la DAI et du pic sur les courbes d'IA, sur toute la plage des valeurs autorisées.
 
-Ajustement de la DAI :
+Modification de la DAI :
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Ajustement du pic :
+Modification du pic :
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Enfin, une comparaison où la DAI et le pic sont ajustés en même temps. L'idée est que les deux valeurs sont ajustées dans les mêmes proportions, de sorte que `49/35 ~ 7/5`. Ou de la même façon, `120/93 ~ 9/7`. Les intervalles restent les mêmes quelle que soit la DAI ou le pic de départ, tant que le changement relatif est le même pour les deux.
+Enfin, une comparaison où la DAI et le pic sont modifiés ensemble. L'idée est que les deux valeurs changent dans la même proportion, de sorte que `49/35 ~ 7/5`. Ou de la même façon, `120/93 ~ 9/7`. Les intervalles restent les mêmes, quelles que soient la DAI ou le pic de départ, tant que le changement relatif est le même pour les deux.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Notez que quand la DAI et le pic sont ajustés de cette façon, chaque point de la courbe se décale de la même proportion.
+Quand la DAI et le pic sont modifiés de cette façon, chaque point de la courbe se décale dans la même proportion.
 
 ````
 
@@ -237,37 +237,37 @@ Choisissez comment **AAPS** traite les valeurs qu'il reçoit de votre capteur :
 
 How to use **Linear calibration**:
 
-1. Select **Linear calibration** in the **Calibration** category.
-2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+1. Sélectionnez **Étalonnage linéaire** dans la catégorie **Calibration**.
+2. Quand vous posez un nouveau capteur, enregistrez le changement de capteur : utilisez **Enregistrer le changement de capteur** sur l'écran d'étalonnage, ou saisissez une insertion de capteur MGC dans le Careportal. Cela indique à **AAPS** quand la session du capteur a commencé. Si **AAPS** remarque un trou de plus de 30 minutes dans les valeurs, il peut vous demander d'enregistrer un changement de capteur ; cette demande apparaît uniquement sur le maître, pas sur un client.
+3. Ouvrez le plugin et appuyez sur **Ajouter une calibration**. Saisissez votre mesure au doigt. **AAPS** l'associe à la valeur du capteur des 10 dernières minutes.
 
 A calibration is accepted only when:
 
 - a sensor change is logged and at least **2 hours** have passed since then (warm-up),
 - your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
 - there is a CGM reading from the last 10 minutes,
-- it is for the current moment. You cannot enter older fingerstick values.
+- it is for the current moment. Vous ne pouvez pas saisir d'anciennes mesures au doigt.
 
 How the correction works:
 
 - **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-- Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
+- Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. La droite suit donc votre capteur quand il dérive.
 - At least **2 pairs** are needed.
 - If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
 - The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-- Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+- Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. Cela vous protège d'une saisie erronée.
 
 What it changes:
 
-- The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-- A new sensor change starts from zero. Pairs from earlier sensors no longer count.
+- The corrected value is used everywhere: the BG on the main screen, the graph and the loop. Les valeurs du capteur elles-mêmes ne sont pas modifiées. La correction est appliquée par-dessus, aussi aux valeurs précédentes du capteur actuel.
+- A new sensor change starts from zero. Les paires des capteurs précédents ne comptent plus.
 - On the graph, a calibration is shown as a marker at the fingerstick value.
 - Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
 
 Check and remove entries:
 
 - **Open plugin** shows the status (for example _Slope 0.85, mid-range correction -0.4_), a chart of your pairs with the line, and the list of entries.
-- If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+- If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. La droite est recalculée immédiatement.
 
 ```{admonition} Using xDrip+ as BG source?
 :class: note
@@ -313,6 +313,7 @@ Quand vous sélectionnez une autre pompe, **AAPS** vous demande de confirmer le 
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Pompe virtuelle : boucle ouverte - suggestions d'**AAPS** uniquement
   - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   - pour une pompe qui n'a pas encore de pilote

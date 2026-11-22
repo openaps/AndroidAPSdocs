@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# Instruccions de compilació des de la línia d'ordres
 
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+L'opció més senzilla per compilar AAPS és l'alternativa de la [Compilació al navegador](./BrowserBuild.md).
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Provat amb Fedora i Debian Linux. Altres sistemes haurien de funcionar amb pocs canvis.
 
-## Requirements
+## Requisits
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+Consulteu la versió mínima de Java necessària a [aquesta taula](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Instal·leu el paquet OpenJDK adequat amb el gestor de paquets del sistema. Per exemple, a Debian els paquets tenen noms com `openjdk-21-jdk`. Ha d'incloure els binaris `javac` i `keytool`.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+Descarregueu el paquet *Android Command line tools* de la [pàgina d'Android Studio](https://developer.android.com/studio#command-line-tools-only). No cal instal·lar Android Studio. Trobareu més informació sobre la instal·lació d'aquest paquet a la [documentació de sdkmanager](https://developer.android.com/tools/sdkmanager). Després d'instal·lar el paquet, heu de definir a mà dues [variables d'entorn](https://developer.android.com/tools/variables): `ANDROID_HOME` i `PATH`. Finalment, executeu `sdkmanager --licenses` per acabar la instal·lació.
 
-## Building AAPS with Gradle wrapper
+## Compilar AAPS amb el Gradle wrapper
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. Generar un fitxer de magatzem de claus (keystore) de Java per signar AAPS
 
-If you already have a keystore file for signing AAPS, reuse that.
+Si ja teniu un fitxer de magatzem de claus per signar AAPS, feu-lo servir de nou.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+Necessitareu el fitxer del magatzem de claus i la contrasenya cada vegada que actualitzeu AAPS.
 
-### 2. Compile the AAPS APK file
+### 2. Compilar el fitxer APK d'AAPS
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+Cloneu el [repositori git](https://github.com/nightscout/AndroidAPS) si encara no l'heu clonat. AAPS fa servir la branca master per a l'última versió estable. Assegureu-vos que esteu a la branca o etiqueta (tag) que voleu compilar.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+Executeu `./gradlew :app:assembleFullRelease` dins del repositori. Descarrega automàticament Gradle i les dependències, i després compila el codi. Quan la compilació acabi bé, tindreu un APK sense signar a `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. També hauria d'haver instal·lat un binari `apksigner` a `$ANDROID_HOME`. Actualitzeu de nou el vostre `PATH`.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. Crear un fitxer APK signat a partir del no signat
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+Aneu al vostre directori personal i creeu un fitxer APK signat:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+Ara teniu `app-full-release-signed.apk` a punt per instal·lar o actualitzar.

@@ -10,7 +10,8 @@ Diese Anleitung führt Dich durch die Konfiguration der Equil-Insulinpumpe.
 ## Funktionalitäten bei der Nutzung mit AAPS
 
 * Schlauchlose Patch-Pumpe, die mit **AAPS** über das Bluetooth Deines Smartphones kommuniziert, ohne zusätzliches Kommunikationsgerät.
-* **AAPS** behandelt die Equil als Patch-Pumpe mit einem 200-IE-Reservoir: Der Startbildschirm zeigt die Statusanzeigen für Patch-Pumpen, und **Nadelwechsel/Füllen** sowie **Pumpenbatterie-Wechsel** werden nicht angeboten. Füllen, Entlüften und Batteriewechsel erledigst Du in den Assistenten der Pumpe.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Solange die Pumpe angehalten oder gestoppt ist, erfasst **AAPS** eine temporäre Basalrate von 0 IE/h, sodass kein Basalinsulin im IOB berücksichtigt wird.
 * Sommerzeit- und Zeitzonenwechsel müssen manuell erledigt werden.
 

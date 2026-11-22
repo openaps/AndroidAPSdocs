@@ -2,7 +2,7 @@
 
 O Freestyle Libre 3 (FSL3) precisa de uma configuração especial para enviar valores de glicose (BG) ao AAPS. Há duas formas possíveis de enviar os valores do Freestyle Libre 3 (FSL3) ao AAPS.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Os métodos abaixo usam o app separado Juggluco. Ele usa o Juggluco para receber do sensor dados brutos em intervalos de 1 minuto, que depois são enviados ao xDrip ou ao AAPS. Novos sensores podem ser iniciados com o app Libre 3 ou diretamente no Juggluco. O guia abaixo mostra como iniciar um sensor com o app Juggluco. Se o sensor foi iniciado com uma conta Libreview conectada, também é possível alternar entre o Juggluco e o app Libre 3 como receptor.
 
@@ -38,7 +38,7 @@ Os valores de glicose são recebidos pelo app xDrip no celular.
 
   → Menu hambúrguer → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip advanced settings Libre 2 & raw values](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
@@ -69,7 +69,7 @@ Depois de uma troca de sensor, o xDrip vai detectar o novo sensor automaticament
 
 ![Encerrar o sensor](../images/libre3/step_14.jpg)
 
-Observação: quando dois sensores estão ativos, o Juggluco envia ao xDrip o valor mais recente de qualquer um dos sensores. If the sensors are not calibrated to read BG similarly, this may result in jumpy BG values being reported to xDrip. Se você encerrar o sensor errado, pode reativá-lo simplesmente escaneando o sensor.
+Observação: quando dois sensores estão ativos, o Juggluco envia ao xDrip o valor mais recente de qualquer um dos sensores. Se os sensores não estiverem calibrados para ler a glicose de forma parecida, isso pode fazer com que valores de glicose com saltos sejam enviados ao xDrip. Se você encerrar o sensor errado, pode reativá-lo simplesmente escaneando o sensor.
 
 ## Alternar o sensor entre o app Libre 3 e o Juggluco
 
@@ -99,4 +99,4 @@ Para mudar do app Libre 3 para o Juggluco, você precisa forçar a parada do app
 
 Instruções originais: [site de jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Additional GitHub repo: [GitHub link](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Repositório adicional no GitHub: [link do GitHub](https://github.com/maheini/FreeStyle-Libre-3-patch)

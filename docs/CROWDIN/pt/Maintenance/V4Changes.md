@@ -27,7 +27,7 @@ Se o seu AAPS (ou o seu seguidor **AAPSClient**) ainda sincronizava com o antigo
 - Introduza o **URL do Nightscout** e um **token de acesso** (o NSClientV3 usa um token de acesso, *não* o antigo API secret — consulte [criar um token](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - O seu site Nightscout tem de suportar a **API v3** (Nightscout 15 ou mais recente).
 - Se usar **websockets**, ative-os ou desative-os em **ambos** os telefones, o principal e o seguidor — nunca só num deles.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Os websockets são **obrigatórios** para o controlo remoto a partir do **AAPSClient**, nos dois telefones.
 ```
 
 Isto muda apenas a forma como a aplicação comunica com o Nightscout; os seus dados no Nightscout não são alterados.
@@ -110,6 +110,8 @@ No **AAPS** v3, podia alterar a DAI da insulina em uso a qualquer momento.
 No **AAPS** v4, a insulina marcada como **ATIVO** em **Gerir → Definições de insulina** aparece a cinzento: não a pode editar nem eliminar.
 
 Ao atualizar, o **AAPS** mantém a insulina e a DAI que as suas trocas de perfil do v3 já guardaram. Se encontrar registos antigos em que a insulina é conhecida mas a DAI não, usa uma DAI predefinida para eles e mostra uma mensagem uma vez, por exemplo *Os registos antigos não tinham duração da insulina, por isso foram usadas 9,0 horas para Lyumjev. Verifique as definições da insulina — os registos já migrados não são atualizados depois.* Quando vir esta mensagem, verifique as definições da insulina.
+
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
 
 ```{admonition} What you need to do
 :class: important

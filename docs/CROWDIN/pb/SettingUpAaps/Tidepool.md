@@ -1,10 +1,10 @@
 # Tidepool
 
-O Tidepool é uma ferramenta de terceiros que coleta dados de glicose (BG), insulina e carboidratos (e as notas que você adiciona aos seus tratamentos). Ele pode ser usado para analisar esses dados e compartilhá-los com a sua equipe médica. Desde a versão 3.2 do AAPS, ele pode ser usado como alternativa ao Nightscout para cumprir parte do Objetivo 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+O Tidepool é uma ferramenta de terceiros que coleta dados de glicose (BG), insulina e carboidratos (e as notas que você adiciona aos seus tratamentos). Ele pode ser usado para analisar esses dados e compartilhá-los com a sua equipe médica. Desde a versão 3.2 do AAPS, ele pode ser usado como alternativa ao Nightscout para cumprir parte do Objetivo 1. Ele também pode ser usado junto com o Nightscout, como uma plataforma alternativa de relatórios que se integra bem ao ambiente clínico. Esta pode ser a opção desejada para crianças que usam o AAPS e querem as funções de monitoramento e controle remoto do Nightscout, mas também uma plataforma de relatórios com a qual a equipe médica se sinta mais à vontade.
 
-É importante entender que o Tidepool serve apenas para relatórios. It is NOT a real-time follow app. Se você precisa de seguidores além do telefone principal do AAPS, também deve configurar o Nightscout.
+É importante entender que o Tidepool serve apenas para relatórios. Ele NÃO é um app de acompanhamento em tempo real. Se você precisa de seguidores além do telefone principal do AAPS, também deve configurar o Nightscout.
 
-Observação: a organização Tidepool lançou no mercado o produto iOS Loop com aprovação da FDA. This effort has nothing to do with their data reporting platform or AAPS.
+Observação: a organização Tidepool lançou no mercado o produto iOS Loop com aprovação da FDA. Esse trabalho não tem nada a ver com a plataforma de relatórios de dados deles nem com o AAPS.
 
 
 ## Etapa 1 - Crie uma conta no Tidepool

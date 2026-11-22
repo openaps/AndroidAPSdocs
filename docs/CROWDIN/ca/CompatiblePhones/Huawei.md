@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Com configurar un telèfon Huawei
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**Telèfons que tracta aquesta pàgina:** telèfons Huawei amb **EMUI 12 a EMUI 15**. Totes aquestes versions es basen en Android 12, el mínim per a la versió actual d'**AAPS**. En un telèfon amb una versió d'EMUI més antiga, només podeu fer servir una [versió d'AAPS més antiga](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} Telèfons amb HarmonyOS NEXT / HarmonyOS 5 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+Els telèfons Huawei recents que es venen a la Xina funcionen amb HarmonyOS NEXT (HarmonyOS 5 i posteriors). Aquest sistema ja no és Android i no pot executar **AAPS**. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Els telèfons Huawei tanquen de manera molt agressiva les aplicacions que funcionen en segon pla. Apliqueu tots els ajustos següents a **AAPS** i a la vostra aplicació de CGM (per exemple xDrip+ o Juggluco). Si no ho feu, el llaç i les lectures de glucèmia es poden aturar quan la pantalla està apagada.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+Els noms dels menús poden ser una mica diferents segons el model. Si no trobeu un ajust, escriviu-ne el nom a la barra de cerca de la part superior de **Configuració**.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+Les captures de pantalla següents són d'una versió d'EMUI més antiga. Els ajustos són els mateixos a EMUI 12 a 15.
 
-## Ignore battery optimization
+## Ignorar l'optimització de la bateria
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. Obriu **Configuració > Aplicacions > Aplicacions**.
+2. Toqueu el menú **⋮** a l'angle superior dret i seleccioneu **Accés especial > Optimització de la bateria**.
+3. Toqueu la fletxa de la part superior de la llista i seleccioneu **Totes les aplicacions**.
+4. Seleccioneu **AAPS** i trieu **No permetre**. Huawei ja no optimitzarà les aplicacions d'aquesta llista.
+5. Repetiu-ho per a la vostra aplicació de CGM.
 
-![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+![Huawei: ignorar l'optimització de la bateria](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## Inici d'aplicacions: permetre el funcionament en segon pla
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. Obriu **Configuració > Bateria > Inici d'aplicacions** (o **Configuració > Aplicacions > Aplicacions >** seleccioneu l'aplicació **> Bateria > Inici d'aplicacions**).
+2. Cerqueu **AAPS** i desactiveu **Gestionar automàticament**.
+3. A la finestra **Gestionar manualment**, activeu les tres opcions: 
+    - **Inici automàtic**
+    - **Inici secundari** (altres aplicacions la poden iniciar)
+    - **Executar en segon pla**
+4. Repetiu-ho per a la vostra aplicació de CGM.
 
-![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+![Huawei: opcions de la bateria](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## Bloquejar AAPS a les aplicacions recents
 
-Locked apps are not closed when you clear the recent apps list.
+Les aplicacions bloquejades no es tanquen quan esborreu la llista d'aplicacions recents.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. Obriu la llista d'aplicacions recents.
+2. Llisqueu cap avall sobre la targeta d'**AAPS**. Apareix un símbol de cadenat a la targeta.
+3. Feu el mateix per a la vostra aplicació de CGM.
 
-![Huawei - lock app](../images/Huawei_LockApp.png)
+![Huawei: bloquejar l'aplicació](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Mode d'estalvi d'energia
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+Mantingueu desactivats el **Mode d'estalvi d'energia** i l'**Estalvi d'energia ultra** (**Configuració > Bateria**). Tanquen les aplicacions en segon pla, encara que hàgiu fet els ajustos anteriors.
 
-## If AAPS still stops in the background
+## Si AAPS encara s'atura en segon pla
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Consulteu [Don't kill my app](https://dontkillmyapp.com/huawei) per trobar més solucions específiques per a Huawei.
 
-## Honor phones
+## Telèfons Honor
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Ara Honor és una marca independent i els seus telèfons funcionen amb MagicOS en lloc d'EMUI. Els ajustos de segon pla són molt semblants: cerqueu **Inici d'aplicacions** a la configuració de bateria de l'aplicació, desactiveu **Gestionar automàticament** i permeteu les tres opcions. Després, traieu l'aplicació de l'optimització de la bateria.

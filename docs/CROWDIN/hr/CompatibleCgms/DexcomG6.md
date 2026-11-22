@@ -1,117 +1,117 @@
-# Dexcom G6 and ONE
+# Dexcom G6 i ONE
 
-## Basics first
+## Najprije osnove
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+-   Slijedite opće preporuke za higijenu CGM-a i postavljanje senzora [ovdje](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-## General hints for looping with G6 and ONE
+## Opći savjeti za korištenje petlje s G6 i ONE
 
-- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
+- Novi odašiljači zovu se Firefly. Senzori se ne mogu ponovno pokrenuti bez uklanjanja odašiljača, a sam odašiljač ne može se resetirati; ti odašiljači također ne daju sirove podatke.
 
-- If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
+- Ako ponovno pokrećete senzore, budite spremni na kalibraciju i pratite odstupanja.
 
-- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+- Namakanje G6/ONE unaprijed (pre-soak) uz tvorničku kalibraciju vjerojatno će dati odstupanja u rezultatima. Ako senzor namačete unaprijed (pre-soak), za najbolje rezultate vjerojatno ćete ga morati kalibrirati.
 
-Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Više pročitajte u [članku](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) koji je objavio Tim Street na [www.diabettech.com](https://www.diabettech.com).
 
-## If using G6 or ONE with xDrip
+## Ako koristite G6 ili ONE s xDripom
 
-- If not already set up, download [xDrip](https://github.com/NightscoutFoundation/xDrip) and adjust its settings following the [xDrip settings page](../CompatibleCgms/xDrip.md).
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip.
-- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings. To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG6-notification-reader).
-- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days; recent (Firefly) transmitters ignore them. See [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) before attempting any restart.
-- Everything related to the sensor and transmitter themselves is documented on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- Ako to još niste učinili, preuzmite [xDrip](https://github.com/NightscoutFoundation/xDrip) i podesite njegove postavke prema stranici [Postavke xDripa](../CompatibleCgms/xDrip.md).
+- Odaberite xDrip u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
+- Odašiljači Dexcom G6 i ONE mogu istodobno biti povezani s Dexcomovim prijemnikom (ili umjesto njega s pumpom t:slim) i s jednom aplikacijom na vašem telefonu.
+- Kada xDrip koristite kao prijemnik, najprije deinstalirajte aplikaciju Dexcom. **Ne možete istodobno povezati xDrip i aplikaciju Dexcom s odašiljačem!**
+- Ako vam treba Clarity i želite koristiti alarme xDripa, koristite [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (samo G6) s lokalnim emitiranjem (local broadcast) u xDrip.
+- xDrip možete koristiti i kao pomoćnu aplikaciju uz službenu aplikaciju Dexcom, ali tada očitanja GUK-a mogu kasniti. Za čitanje obavijesti aplikacije Dexcom bez xDripa, kao pouzdanog izvora podataka, koristite [Čitač obavijesti](#DexcomG6-notification-reader).
+- S današnjim odašiljačima xDrip uvijek koristi [izvorni algoritam](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) odašiljača; nema razloga da ga isključite. [Preventivna ponovna pokretanja](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) rade samo na starim odašiljačima (firmware 1.6.5.25 ili stariji), gdje su potrebna da se senzor ne zaustavi nakon 10 dana; novi odašiljači (Firefly) ih zanemaruju. Prije bilo kakvog ponovnog pokretanja pročitajte [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) (ponovno pokretanje senzora).
+- Sve što se odnosi na sam senzor i odašiljač opisano je na stranici [xDrip Dexcom](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
-## If using G6 with Build Your Own Dexcom App
+## Ako koristite G6 s aplikacijom Build Your Own Dexcom App
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom BYODA je sada vrlo stara verzija aplikacije i ne može se ažurirati.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) podržava lokalno emitiranje (local broadcast) u AAPS i/ili xDrip
 
--   This app lets you use your Dexcom G6 with any Android smartphone.
--   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
--   Install the downloaded apk
--   Enter sensor code and transmitter serial no. in patched app.
--   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   After a short time BYODA should pick up the transmitter signal.
+-   Ova aplikacija omogućuje korištenje vašeg Dexcoma G6 s bilo kojim Android pametnim telefonom.
+-   Deinstalirajte originalnu aplikaciju Dexcom ili izmijenjenu aplikaciju Dexcom ako ste prije koristili jednu od njih (**nemojte zaustaviti** senzor koji trenutno radi)
+-   Instalirajte preuzeti apk
+-   U izmijenjenoj aplikaciji unesite kôd senzora i serijski broj odašiljača.
+-   U postavkama telefona idite na aplikacije > Dexcom G6 > dopuštenja > dodatna dopuštenja i pritisnite 'Access Dexcom app'.
+-   Nakon kratkog vremena BYODA bi trebao uhvatiti signal odašiljača.
 
-### Settings for AAPS
+### Postavke za AAPS
 
--   Select **BYODA** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Odaberite **BYODA** u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
--   If you don't receive any values select any other data source, then re-select **BYODA** to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+-   Ako ne primate nikakve vrijednosti, odaberite bilo koji drugi izvor podataka, a zatim ponovno odaberite **BYODA** da se zatraže dopuštenja za uspostavu veze između AAPS-a i emitiranja BYODA.
 
-### Settings for xDrip
+### Postavke za xDrip
 
--   Select '640G/Eversense' as data source.
--   Command 'start sensor' must be performed in xDrip in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+-   Kao izvor podataka odaberite '640G/Eversense'.
+-   Da biste primali vrijednosti, u xDripu morate izvršiti naredbu 'start sensor'. To neće utjecati na vaš trenutni senzor kojim upravlja Build Your Own Dexcom App.
 
 (DexcomG6-notification-reader)=
-## If using G6 or ONE with the Notification Reader
+## Ako koristite G6 ili ONE s Čitačem obavijesti
 
-The official Dexcom G6 or ONE app stays connected to the transmitter. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+Službena aplikacija Dexcom G6 ili ONE ostaje povezana s odašiljačem. **AAPS** čita vrijednost glukoze izravno iz obavijesti aplikacije Dexcom, bez ikakve druge aplikacije između.
 
 ```{admonition} Trusted data source
 :class: note
-Readings from the Dexcom G6 and ONE apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+Očitanja iz aplikacija Dexcom G6 i ONE su [pouzdan izvor podataka GUK-a](#GettingStarted-TrustedBGSource): SMB-ovi mogu biti dopušteni cijelo vrijeme.
 ```
 
-Compared to BYODA or xDrip, the Notification Reader has limits:
+U usporedbi s BYODA ili xDripom, Čitač obavijesti ima ograničenja:
 
-- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
-- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
-- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
+- **Nema strelice trenda** i **nema naknadnog popunjavanja (backfill)**: očitanja propuštena dok je telefon bio isključen ili izvan dometa su izgubljena.
+- Svako očitanje dobiva vrijeme kada se obavijest pojavila, a ne točno vrijeme očitanja senzora.
+- Čitaju se samo vrijednosti između 40 i 405 mg/dL (2,2 i 22,5 mmol/L). "LOW" i "HIGH" se ne čitaju.
 
-### Set up the Dexcom app
+### Postavite aplikaciju Dexcom
 
--   Keep the Dexcom app installed and connected to the transmitter.
--   Make sure the Dexcom app shows the current glucose value in its notification. Its notifications must stay visible: do not silence or hide them.
--   Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+-   Neka aplikacija Dexcom ostane instalirana i povezana s odašiljačem.
+-   Provjerite prikazuje li aplikacija Dexcom trenutnu vrijednost glukoze u svojoj obavijesti. Njezine obavijesti moraju ostati vidljive: nemojte ih utišati ni sakriti.
+-   U aplikaciji Dexcom koristite iste jedinice glukoze (mg/dL ili mmol/L) kao u **AAPS-u**. Inače **AAPS** ne može pročitati vrijednost.
 
-### Configuration in AAPS
+### Konfiguracija u AAPS-u
 
--   Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+-   Odaberite **Čitač obavijesti** u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source) i potvrdite promjenu.
 
-    ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+    ![Izvor GUK-a: odabran Čitač obavijesti](../images/NotificationReader_BgSource.png)
 
--   Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+-   Na glavnom zaslonu **AAPS** zatim prikazuje **Potrebna dopuštenja**. Pokraj **Pristup obavijestima** dodirnite **Odobri**.
 
-    ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+    ![Potrebna dopuštenja: Pristup obavijestima](../images/NotificationReader_Permissions.png)
 
--   Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+-   Android otvara svoj popis pristupa obavijestima (njegov naziv ovisi o vašoj verziji Androida, na primjer *Čitanje obavijesti, odgovaranje i upravljanje* (Notification read, reply & control)). Odaberite **AAPS**, uključite **Dopusti pristup obavijestima** i potvrdite s **Dopusti**.
 
-    ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+    ![Android traži da dopustite pristup obavijestima za AAPS](../images/NotificationReader_AllowDialog.png)
 
-    Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+    Android upozorava da bi **AAPS** mogao čitati sve vaše obavijesti. **AAPS** čita samo obavijesti podržanih CGM aplikacija i zanemaruje sve ostale.
 
-    ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+    ![Pristup obavijestima dopušten za AAPS](../images/NotificationReader_AccessOn.png)
 
--   If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Then go back to the notification access screen and allow it.
--   Readings appear in **AAPS** when the Dexcom app shows a new value.
+-   Ako je **Dopusti pristup obavijestima** zasivljeno (*Kontrolira ograničena postavka* (Controlled by Restricted Setting)), Android to blokira jer **AAPS** nije instaliran iz Trgovine Play. Otvorite informacije o aplikaciji **AAPS** (dugo pritisnite ikonu **AAPS** > **Informacije o aplikaciji**), dodirnite izbornik s tri točke gore desno i odaberite **Dopusti ograničene postavke**. Zatim se vratite na zaslon pristupa obavijestima i dopustite ga.
+-   Očitanja se prikazuju u **AAPS-u** kada aplikacija Dexcom prikaže novu vrijednost.
 
 ```{warning}
-If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+Ako obavijest aplikacije Dexcom prikazuje više od jednog broja glukoze ili nijedan, **AAPS** preskače tu obavijest.
 ```
 
 
 (DexcomG6-troubleshooting-g6)=
-## Troubleshooting G6 and ONE
+## Rješavanje problema s G6 i ONE
 
-### Dexcom G6/ONE specific troubleshooting
+### Rješavanje problema specifičnih za Dexcom G6/ONE
 
--   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+-   Pomaknite se prema dolje do **Troubleshooting** (rješavanje problema) [ovdje](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
-### General troubleshooting
+### Opće rješavanje problema
 
-General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
+Opće rješavanje problema za CGM-ove možete pronaći [ovdje](#general-cgm-troubleshooting).
 
-### New transmitter with running sensor
+### Novi odašiljač sa senzorom koji već radi
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). If you opt for [this solution](https://youtu.be/tx-kTsrkNUM) instead, you must be careful to avoid [damaging sensor contacts](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) with the strip.
+Ako slučajno mijenjate odašiljač tijekom sesije senzora koji radi, možete pokušati ukloniti odašiljač bez oštećenja nosača senzora. Videozapis možete pronaći [ovdje](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). Ako umjesto toga odaberete [ovo rješenje](https://youtu.be/tx-kTsrkNUM), morate paziti da trakom ne [oštetite kontakte senzora](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html).

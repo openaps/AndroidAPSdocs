@@ -27,7 +27,7 @@ Se você (ou o seu seguidor **AAPSClient**) ainda sincronizava com o plugin anti
 - Digite a sua **URL do Nightscout** e um **token de acesso** (o NSClientV3 usa um token de acesso, *não* o antigo API secret — veja [como criar um token](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - O seu site do Nightscout precisa ser compatível com a **API v3** (Nightscout 15 ou mais novo).
 - Se você usa **websockets**, ative ou desative em **ambos**, no dispositivo principal e no seguidor — nunca em apenas um.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Os websockets são **obrigatórios** para o controle remoto pelo **AAPSClient**, nos dois telefones.
 ```
 
 Isso afeta apenas a forma como o app se comunica com o Nightscout; os seus dados no Nightscout não mudam.
@@ -110,6 +110,8 @@ No **AAPS** v3, você podia mudar a DIA da insulina em uso a qualquer momento.
 No **AAPS** v4, a insulina marcada como **ATIVO** em **Gerenciar → Configurações de insulina** fica cinza: você não pode editá-la nem excluí-la.
 
 Ao atualizar, o **AAPS** mantém a insulina e a DIA que as suas trocas de perfil do v3 já tinham salvo. Se encontrar registros antigos com a insulina conhecida, mas sem a DIA, ele usa uma DIA padrão para eles e mostra uma mensagem uma vez, por exemplo *Registros antigos não tinham duração da insulina, por isso foi usado 9,0 horas para Lyumjev. Verifique suas configurações de insulina — os registros já migrados não são atualizados depois.* Quando vir essa mensagem, verifique as suas configurações de insulina.
+
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
 
 ```{admonition} What you need to do
 :class: important

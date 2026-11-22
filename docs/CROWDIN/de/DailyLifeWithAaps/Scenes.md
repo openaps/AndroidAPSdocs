@@ -45,7 +45,7 @@ Tippe auf den Knopf **+**, um eine neue Szene zu erstellen.
 
 ### Mit einer Vorlage beginnen
 
-Um eine Szene zu **erstellen**, tippe im Bildschirm Szenen auf den Knopf **+**. Der erste Schritt ist **Mit einer Vorlage beginnen**: Wähle eine fertige Szene für eine typische Situation – *Bewegung*, *Krankheitstag*, *Krankheitstag — Erbrechen*, *Schlaf*, *Nach der Bewegung (Nacht)*, *Vor der Mahlzeit*, *Alkohol*, *Autofahren*, *Baden*, *Lutealphase*, *Heißes Wetter*, *Medizinischer Eingriff* – oder beginne mit einer *Leeren Vorlage*. Jede Vorlage **füllt die empfohlenen Aktionen vor**, und Du kannst in den folgenden Schritten alles anpassen.
+Um eine Szene zu **erstellen**, tippe im Bildschirm Szenen auf den Knopf **+**. Der erste Schritt ist **Mit einer Vorlage beginnen**: Wähle eine fertige Szene für eine typische Situation – *Bewegung*, *Krankheitstag*, *Krankheitstag — Erbrechen*, *Schlaf*, *Nach der Bewegung (Nacht)*, *Vor der Mahlzeit*, *Alkohol*, *Autofahren*, *Baden*, *Lutealphase*, *Heißes Wetter*, *Medizinischer Eingriff* – oder beginne mit einer *Leeren Vorlage*. Jede Vorlage **füllt die empfohlenen Aktionen vor**, und Du kannst in den folgenden Schritten alles anpassen. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Eine Szene ohne Folgeszene fragt nur nach Deiner Bestätigung:
 
 ![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
 
-Beim Beenden einer Szene werden ihre Änderungen **rückgängig gemacht** (zum Beispiel der Profilwechsel und das temporäre Ziel, die sie gestartet hat).
+Beim Beenden einer Szene werden ihre Änderungen **rückgängig gemacht** (zum Beispiel der Profilwechsel und das temporäre Ziel, die sie gestartet hat). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Solange eine Szene aktiv ist, tragen Profil und Zielwert auf dem Startbildschirm ein kleines Szenen-Symbol, wenn die Szene sie gesetzt hat. Das Fenster **Szenen** der unteren Navigationsleiste bleibt verfügbar, um eine andere Szene zu starten:
 

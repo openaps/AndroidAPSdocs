@@ -31,7 +31,7 @@ Son dört parametre (glikoz hedefleri, bazal oranlar, insülin duyarlılık fakt
 
 Aşağıda **AAPS**'ten _örnek_ bir profilin ekran görüntüleri gösterilmektedir. Lütfen dikkat: aşağıdaki örnek profil çok sayıda zaman noktası gösterir. **AAPS** ile yeni başladığınızda profiliniz muhtemelen çok daha basit olacaktır.
 
-![Örnek etkin profil](../images/Profile-Example-Active.png)
+![Örnek etkin profil](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Glikoz hedefleri
@@ -55,7 +55,7 @@ Hedefler şu sınırlar içinde tanımlanabilir:
 
 **Aşağıdaki şekil**, hedefin bir **AAPS** profilinde nasıl ayarlanabileceğine dair bir örnek gösterir.
 
-![Target](../images/Profile_Target.png)
+![Target](../images/v4/Profiles/Profile_Target.png)
 
 **KŞ** hedefleri kişisel tercihlerinize ve ihtiyaçlarınıza göre ayarlanır. Örneğin geceleri hipolardan endişe ediyorsanız, hedefinizi 21:00 - 07:00 arası için biraz daha yüksek, 117 mg/dL (6,5 mmol/L) olarak ayarlayabilirsiniz. Kahvaltı bolusundan önce sabah yeterince aktif insülininiz (AİNS) olduğundan emin olmak istiyorsanız, sabah 7 ile 8 arası için daha düşük bir hedef, 81 mg/dL (4,5 mmol/L) ayarlayabilirsiniz.
 
@@ -89,7 +89,7 @@ Tersine, çok düşük bir bazal oran yüksek KŞ değerlerine ve değerlerin he
 
 **Aşağıdaki şekil**, bazal oranların bir **AAPS** profilinde nasıl ayarlanabileceğine dair bir örnek gösterir.
 
-![Bazal oranlar](../images/Profile_BasalRates.png)
+![Bazal oranlar](../images/v4/Profiles/Profile_BasalRates.png)
 
 Bazal oranlarınızı doğru ayarlamak deneme yanılma ile yapılır ve diyabet ekibinize danışılarak yapılmalıdır.
 
@@ -147,7 +147,7 @@ Bu örneklerden görebileceğiniz gibi, **İDF** değeri ne kadar _küçükse_, 
 
 Çok düşük (ve bu yüzden daha agresif, nadir olmayan) bir **İDF** 'aşırı düzeltmelere' yol açabilir, çünkü **AAPS** kullanıcının yüksek bir **KŞ**'yi düzeltmek için gerçekte gerekenden daha fazla insüline ihtiyacı olduğunu hesaplar. Bu, aşağıdaki resimde görüldüğü gibi 'hız treni' şeklinde KŞ düzeylerine yol açabilir (özellikle aç karnına). Bu durumda **AAPS**'i daha az agresif yapmak için **İDF** değeri artırılmalıdır. Böylece **AAPS** daha küçük düzeltme dozları verir ve yüksek bir **KŞ**'yi aşırı düzelterek düşük **KŞ**'ye neden olmaktan kaçınır.
 
-![İDF çok düşük](../images/isf.jpg)
+![İDF çok düşük](../images/v4/Profiles/isf.jpg)
 
 Tersine, çok yüksek ayarlanmış bir **İDF** yetersiz düzeltmelere yol açabilir; yani **KŞ**'niz hedefin üzerinde kalır – bu özellikle gece belirgindir.
 
@@ -155,7 +155,7 @@ Tersine, çok yüksek ayarlanmış bir **İDF** yetersiz düzeltmelere yol açab
 
 İDF değerlerinin bir **AAPS** profilinde nasıl ayarlanabileceğine dair bir örnek için **aşağıdaki şekle** bakın.
 
-![Profil İDF](../images/Profile_ISF.png)
+![Profil İDF](../images/v4/Profiles/Profile_ISF.png)
 
 Gündüz İDF'nizi belirlemek için temel bir başlangıç noktası, onu 1.700 (94) kuralını kullanarak toplam günlük dozunuza (TGD) dayandırmaktır. Daha fazla bilgi Gary Scheiner'ın [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) kitabının 7. bölümünde verilmiştir.
 
@@ -213,7 +213,7 @@ Hormon düzeyleri ve fiziksel aktivite nedeniyle günün farklı saatlerinde far
 
 **Aşağıdaki şekil**, bir kullanıcının **ICR** değerinin bir örneğini ve bunun bir **AAPS Profili**'nde nasıl ayarlanabileceğini gösterir. Bu değerleri girerken oranın son kısmını gireriz; yani 1:3,5'lik bir karbonhidrat insülin oranı yalnızca “3,5” olarak girilir.
 
-![Profil ICR](../images/Profile_ICR.png)
+![Profil ICR](../images/v4/Profiles/Profile_ICR.png)
 
 Bir öğün sindirildikten ve **AİNS** sıfıra döndükten sonra **KŞ**'niz yemekten öncekinden yüksek kalıyorsa, **ICR**'niz büyük olasılıkla çok zayıftır (_yani_ sayı çok yüksektir ve yavaş yavaş düşürülmelidir). Tersine, **KŞ**'niz yemekten öncekinden düşükse **ICR** çok güçlüdür (_yani_ sayı çok küçüktür ve yavaş yavaş artırılmalıdır).
 
@@ -292,7 +292,7 @@ Her çizelge bir **zaman blokları** listesidir: bir blok ekleyin, başlangıç 
 
 Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulması için çocuklar için iki farklı hastaneden veri seti sunar.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Profile Helper Kids 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. **Profil 1** sekmesinde olduğunuzdan emin olun.
 2. **Profil tipi** alanında "Varsayılan profil" seçili olduğundan emin olun.
@@ -303,7 +303,7 @@ Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulmas�
 7. **Karşılaştırma** sekmesini açın. Ayarlanan iki profilin karşılaştırması görüntülenir (aşağıdaki ekran görüntüsüne bakın).
 8. Profilinizde bu önerilerden birine göre ince ayar yapmaya başlamak istiyorsanız, karşılaştırmanın altındaki **Klon** düğmesini kullanın.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Profile Helper Kids 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Profil değiştirme
 
@@ -312,7 +312,7 @@ Bkz. [Profil değişimi ve profil yüzdesi](../DailyLifeWithAaps/ProfileSwitch-P
 (your-aaps-profile-clone-profile-switch)=
 ### Bir Profil değişimini yeni bir Profile klonlama
 
-![Profil değişimi](../images/TreatmentsView4.png)
+![Profil değişimi](../images/Maintenance/TreatmentsView4.png)
 
 [Tedavi geçmişi](#aaps-screens-treatments) tüm geçmiş **Profil değişimlerini** gösterir. **Profil değişimi** sekmesine gittiğinizde, yeni bir **Profil** oluşturmak için geçmiş bir **Profil değişimini** temel olarak kullanabilirsiniz. Bu durumda zaman kayması ve yüzde yeni yerel profile uygulanır. **2**. satırda gösterilen **Klon** düğmesini kullanın.
 
@@ -335,14 +335,14 @@ Bu, daha kapsamlı bir **Profil**'de büyük değişiklikler yapmak üzereyken f
 
 Ancak bunu yapmak için, Nightscout düzenleyicisinde birkaç profilden oluşan **veritabanı kaydının** tamamını klonlamak önemlidir (aşağıdaki ekran görüntüsündeki mavi ok). Yeni veritabanı kayıtları bu durumda güncel tarihi taşır. Kaydettikten sonra, değiştirilen/yeni **Profil** **AAPS**'te normal bir [Profil değişimi](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) ile etkinleştirilebilir.
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Clone database records](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### İki Profili karşılaştırma
 
 [Profil yardımcısını](#aaps-screens-profile-helper) (menü ☰ → **Profil yardımcısı**) iki farklı profili veya profil değişimini (daha önce bir [profil değişiminde](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) kullanılan profillerinizden birinin yüzdesi) karşılaştırmak için de kullanabilirsiniz.
 
-![Profil yardımcısı 1](../images/ProfileHelper1.png)
+![Profil yardımcısı 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. **Profil 1** sekmesinde olduğunuzdan emin olun.
 2. **Profil tipi** alanında, kayıtlı tüm **Profiller** arasından seçim yapmak için "Kullanılabilir profil" seçin.
@@ -352,4 +352,4 @@ Ancak bunu yapmak için, Nightscout düzenleyicisinde birkaç profilden oluşan 
 6. Karşılaştırmak istediğiniz **Profil değişimi**'ni seçin.
 7. **Karşılaştırma** sekmesini açın. İki profilin karşılaştırması görüntülenir (aşağıdaki ekran görüntüsüne bakın).
 
-![Profil yardımcısı 2](../images/ProfileHelper2.png)
+![Profil yardımcısı 2](../images/v4/Profiles/ProfileHelper2.png)

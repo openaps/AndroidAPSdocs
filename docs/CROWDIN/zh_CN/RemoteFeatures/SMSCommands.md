@@ -55,14 +55,14 @@ AAPS还会通过短信通知您，远程指令（如大剂量注射或配置切�
 
 在手机上，转到**应用程序 > AAPS > 权限**。确保**短信**和**电话**权限已允许。
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![App was denied access to SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### 日期时间同步
 
@@ -82,7 +82,7 @@ Open the **SMS Communicator** settings.
 
 Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![SMS Communicator settings](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### 允许的手机号码
@@ -97,7 +97,7 @@ Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at toke
 
 如果您要添加多个手机号码，请用分号分隔它们，**号码之间不要有空格**（这很重要！）。 Select **OK**:
 
-![允许的手机号码](../images/sms_allowed_numbers.png)
+![允许的手机号码](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Remote bolus min distance
 
@@ -115,7 +115,7 @@ PIN码要求：
 
 For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
 
-![验证码末尾强制附加的PIN码](../images/sms_pin.png)
+![验证码末尾强制附加的PIN码](../images/remote_control_and_following/sms_pin.png)
 
 #### 身份验证器设置
 
@@ -123,7 +123,7 @@ For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a seque
 * 在_照护者手机_上打开已安装的身份验证器应用程序，设置新连接，
 * Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![Authenticator setup with QR code](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
 
@@ -134,7 +134,7 @@ Example:
 
 If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![Test One-Time-Password and Reset Authenticators](../images/remote_control_and_following/sms_authenticator_test.png)
 
 You should now be set up with SMS commands.
 
@@ -146,7 +146,7 @@ Use the **Reset Authenticators** button at the bottom of the **Authenticator set
 
 1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
 
@@ -154,7 +154,7 @@ If you don't receive any response, check the [Troubleshooting](#SMSCommands-trou
 
 When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
 
@@ -182,7 +182,7 @@ To avoid hypos, it is a good idea to start conservatively, by bolusing **less in
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![SMS Commands Example](../images/remote_control_and_following/SMSCommands.png)
 
 The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
 
@@ -191,11 +191,11 @@ The **SMS Commands Tables** below show all the possible SMS commands. _Example v
 
 Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Commands which need more security require a code to be entered, for example:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS authenticated](../images/remote_control_and_following/remote-control-07.png)
 
 The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
 
@@ -210,7 +210,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 | 指令                   | 身份验证 | 功能与*回复*                                                                                              |
 | -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| 泵                    | 否    | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP                 | 否    | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
 | PUMP DISCONNECT *30* | 是    | 断开泵连接*30*分钟                                                                                          |
 | PUMP CONNECT         | 是    | 重新连接泵                                                                                                |
 
@@ -311,12 +311,12 @@ It could be for one of these reasons:
 ### SMS命令完全没有回复
 
 On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **作为聊天消息发送** ![禁用SMS作为聊天消息](../images/SMSdisableChat.png)
+* **作为聊天消息发送** ![禁用SMS作为聊天消息](../images/remote_control_and_following/SMSdisableChat.png)
 * 如果使用Android Messages应用或Google Messages应用，禁用RCS消息：
   - 打开Messages中的特定SMS对话
   - 选择右上角的点状选项
   - 选择“详细信息”
-  - 激活“仅发送SMS和MMS消息” ![禁用RCS作为聊天消息](../images/SMSdisableRCS.png)
+  - 激活“仅发送SMS和MMS消息” ![禁用RCS作为聊天消息](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### 执行命令时出错
 
@@ -331,7 +331,7 @@ There are several possible reasons the command may not be successful:
 
 Common errors are shown in the examples below:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### 一旦命令经过身份验证，我可以停止它吗？
 

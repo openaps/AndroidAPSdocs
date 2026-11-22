@@ -14,6 +14,8 @@ Omnipod 5 ([Webbplats](https://www.omnipod.com/))
 
 ![Drivrutin för Omnipod 5 under utveckling](../images/future-pumps/omnipod5-driver.png)
 
+See [Omnipod 5](../CompatiblePumps/Omnipod5.md) for how the driver in development works.
+
 Tandem: t:Mobi ([Webbplats](https://www.tandemdiabetes.com/))
 
 ![Drivrutin för Tandem t:Mobi under utveckling](../images/future-pumps/tandem-mobi-driver.png)

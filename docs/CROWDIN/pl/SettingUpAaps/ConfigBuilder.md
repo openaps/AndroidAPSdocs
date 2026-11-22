@@ -160,29 +160,29 @@ Z powodu opisanego wyżej wpływu zerowej bazy tymczasowej oraz wzoru, którego 
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Ponieważ dawka bazowa pośrednio wpływa na spadek IOB w AAPS, za wysokie dawki bazowe mogą ukrywać za długie DIA i odwrotnie. Dlatego warto najpierw starannie dopasować dawki bazowe, a dopiero potem zmieniać DIA i szczyt. Pamiętaj też, że ustawienia DIA i szczytu wpływają na siebie: działanie DIA zależy od szczytu i odwrotnie.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Te wykresy pokazują dokładny wpływ DIA i szczytu na krzywe IOB w całym zakresie dozwolonych wartości.
 
-Adjusting DIA:
+Zmiana DIA:
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Zmiana szczytu:
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Na koniec porównanie, w którym DIA i szczyt zmienia się jednocześnie. Zasada jest taka, że obie wartości zmienia się w tej samej proporcji, więc `49/35 ~ 7/5`. Podobnie `120/93 ~ 9/7`. Odstępy będą takie same niezależnie od wyjściowego DIA lub szczytu, o ile względna zmiana jest taka sama dla obu.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Pamiętaj, że gdy DIA i szczyt zmienia się w ten sposób, każdy punkt krzywej przesuwa się o tę samą względną wartość.
 
 ````
 
@@ -313,6 +313,7 @@ When you select another pump, **AAPS** asks you to confirm the change:
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Virtual pump: open loop - **AAPS** suggestions only
   - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   - dla pompy, która nie ma jeszcze żadnego sterownika

@@ -182,7 +182,7 @@ Gdy skończysz, naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
 Ten ekran pojawia się tylko wtedy, gdy **AAPS** znajdzie w katalogu **AAPS** wcześniej wyeksportowane ustawienia („Znaleziono zapisane ustawienia”), na przykład gdy instalujesz aplikację ponownie albo przenosisz się na nowy telefon.
 
-- Aby przywrócić poprzednią konfigurację, naciśnij „**Importuj ustawienia**” — patrz [Tworzenie i przywracanie kopii zapasowych](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Aby zacząć z nową konfiguracją, naciśnij „**DALEJ**” i kontynuuj w kreatorze.
 
 ![Importuj ustawienia](../images/setup-wizard/Wizard-ImportSettings.png)

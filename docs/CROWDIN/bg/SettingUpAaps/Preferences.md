@@ -31,6 +31,7 @@
 - По подразбиране **AAPS** използва езика на телефона (препоръчително).
 
 - Ако искате **AAPS** да е на език, различен от този на телефона, изберете го тук. На Android 13 и по-нови версии **AAPS** записва избрания език като собствен език на приложението в Android, така че всички негови екрани, главният екран, уиджетите и начинът на изписване на числата го следват.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Когато смените езика, текстовете на **AAPS** веднага преминават на новия език. Ако някои текстове все още са на стария език, рестартирайте **AAPS**.
 - На Android 12 тази настройка не се показва: **AAPS** винаги използва езика на телефона.
@@ -86,6 +87,10 @@
 
 ![Настройки > Защита](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Главна парола
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### Защита на приложението
 
-Ако приложението е защитено, трябва да въведете паролата или да използвате биометричното удостоверяване на телефона, за да отворите **AAPS**, и отново, когато се върнете в него след изтичане на [таймаута за защита](#Preferences-password-and-pin-retention).
+Ако приложението е защитено, трябва да въведете паролата или да използвате биометричното удостоверяване на телефона, за да отворите **AAPS**, и отново, когато се върнете в него след изтичане на [таймаута за защита](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** ще се затвори веднага, ако се въведе грешна парола, но ще продължи да работи във фонов режим, ако преди това е бил отворен успешно.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Защита от болус
 

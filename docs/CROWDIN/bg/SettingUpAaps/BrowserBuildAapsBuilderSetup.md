@@ -56,19 +56,20 @@ Your repository:<code class="aapsb-repoUrl"></code>
 You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-Стъпките за компилиране се актуализират вместо вас: при всяка компилация вашето хранилище изпълнява версията, издадена от разработчиците на AAPS в nightscout/aaps-builder, и нищо във вашето хранилище не се променя. Заменяте файла с работния процес само когато [Актуализации и промени в документацията](../Maintenance/DocumentationUpdate.md) съобщи за това (например за нов вариант на компилацията) или веднъж, ако хранилището ви е създадено с по-стара версия на тази страница или от стария шаблон. Вашият секрет `KEYSTORE_SET` остава както е.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Вашият секрет `KEYSTORE_SET` остава както е.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   На компютър натиснете **иконата за копиране** („Copy raw file“) горе вдясно на файла. На телефон вместо това отворете <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">обикновената текстова версия</a>, задръжте пръст върху текста → **Избиране на всички** (Select all) → **Копиране** (Copy).
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
    Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Заменете целия текст с копирания работен процес (на телефон: продължително натискане → **Избиране на всички** (Select all) → **Поставяне** (Paste)), след това натиснете **Commit changes…** два пъти. Първият ред на файла показва неговата версия.
-```
+
+</div>
 
 (aaps-builder-setup-step2)=
 
@@ -235,35 +236,35 @@ APK файлът не се показва под „Code“ във вашето 
 
 <div id="aapsb-msgs" hidden>
 
-- <span data-aapsb-msg="copied">Long code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
-- <span data-aapsb-msg="copiedName">Name copied: paste it in the small "Name" field.</span>
-- <span data-aapsb-msg="userOk">✓ GitHub user found.</span>
-- <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Available: {aliases}</span>
-- <span data-aapsb-msg="errFormat">This does not look like a keystore file.</span>
-- <span data-aapsb-msg="okHave">Keystore OK! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. The password will be checked when you build. Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – no spaces, no accented letters and not |</span>
-- <span data-aapsb-msg="errMatch">The passwords do not match.</span>
-- <span data-aapsb-msg="working">Creating key…</span>
-- <span data-aapsb-msg="okNew">Key created. Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="copied">Дългият код е копиран: поставете го в голямото поле „Secret“, след това докоснете „Add secret“.</span>
+- <span data-aapsb-msg="copiedName">Името е копирано: поставете го в малкото поле „Name“.</span>
+- <span data-aapsb-msg="userOk">✓ Потребителят в GitHub е намерен.</span>
+- <span data-aapsb-msg="userBad">✗ Няма потребител в GitHub с това име. Използвайте потребителското си име (показано във вашия профил в GitHub), а не имейла си.</span>
+- <span data-aapsb-msg="copiedShort">Копирано ✓</span>
+- <span data-aapsb-msg="needUser">Първо въведете потребителското си име в GitHub в стъпка 1.</span>
+- <span data-aapsb-msg="errPipe">Паролите и псевдонимът не могат да съдържат знака |</span>
+- <span data-aapsb-msg="errNoFile">Изберете файла на хранилището за ключове.</span>
+- <span data-aapsb-msg="errEmpty">Попълнете паролата и псевдонима.</span>
+- <span data-aapsb-msg="errPass">Грешна парола за хранилището за ключове.</span>
+- <span data-aapsb-msg="errKeyPass">Грешна парола за ключа.</span>
+- <span data-aapsb-msg="errAlias">Псевдонимът не е намерен в хранилището за ключове. Налични: {aliases}</span>
+- <span data-aapsb-msg="errFormat">Това не прилича на файл на хранилище за ключове.</span>
+- <span data-aapsb-msg="okHave">Хранилището за ключове е наред! Продължете със стъпка 3.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Хранилището за ключове е прочетено. Паролата ще бъде проверена, когато компилирате. Продължете със стъпка 3.</span>
+- <span data-aapsb-msg="errShort">Паролата трябва да е поне 8 знака.</span>
+- <span data-aapsb-msg="errAscii">Използвайте само a–z, A–Z, 0–9 и символи като ! ? # – без интервали, без букви с ударения и без |</span>
+- <span data-aapsb-msg="errMatch">Паролите не съвпадат.</span>
+- <span data-aapsb-msg="working">Създаване на ключ…</span>
+- <span data-aapsb-msg="okNew">Ключът е създаден. Изтеглете резервното копие по-долу, след това продължете със стъпка 3.</span>
+- <span data-aapsb-msg="gNoUrl">Първо поставете целия адрес от раздела на Google.</span>
+- <span data-aapsb-msg="gNoCode">В този адрес няма отговор от Google. Копирайте целия адрес на раздела, който показва грешката (адресът започва с http://127.0.0.1:47913/)</span>
+- <span data-aapsb-msg="gDenied">Достъпът до Google не беше разрешен. Докоснете отново „Connect Google Drive“ и разрешете достъпа.</span>
+- <span data-aapsb-msg="gOldUrl">Този адрес е от по-стар опит. Докоснете отново „Connect Google Drive“ и използвайте новия адрес.</span>
+- <span data-aapsb-msg="gWorking">Изпращане на заявка към Google…</span>
+- <span data-aapsb-msg="gFailed">Google не го прие ({error}). Отговорът е валиден само няколко минути и само веднъж: докоснете отново „Connect Google Drive“.</span>
+- <span data-aapsb-msg="gNoRefresh">Google не изпрати дълготраен достъп. Докоснете отново „Connect Google Drive“.</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 е готов. Добавете го като секрет по-долу.</span>
+- <span data-aapsb-msg="gCopied">Кодът е копиран: поставете го в голямото поле „Secret“, след това докоснете „Add secret“.</span>
 
 </div>
 

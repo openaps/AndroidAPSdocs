@@ -17,7 +17,7 @@ Ligar um smartwatch ao **AAPS** pode ser útil em muitas situações, por exempl
 
 ## Vantagens específicas para pais/cuidadores que usam o **AAPS**
 
-For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. Isto pode ser útil, por exemplo, se o telefone com o **AAPS** estiver guardado numa cinta da bomba.
+No caso de uma criança, se o telefone com o **AAPS** estiver por perto, um cuidador pode usar um smartwatch para acompanhar ou fazer alterações sem precisar de usar o telefone com o **AAPS**. Isto pode ser útil, por exemplo, se o telefone com o **AAPS** estiver guardado numa cinta da bomba.
 
 Um smartwatch pode ser usado _em conjunto com_ as opções baseadas no TELEFONE para controlo remoto ou para [apenas seguir](../RemoteFeatures/FollowingOnly.md), ou _em alternativa_ a elas.
 
@@ -49,19 +49,19 @@ A melhor forma de escolher um smartwatch é procurar publicações sobre «watch
 
 ## Android completo
 
-Parece uma opção atraente, não é? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Há poucos smartwatches com uma interface razoável que também funcionem bem com o uso autónomo do **AAPS** e da sua aplicação de CGM. Alguns modelos populares são o LEMFO LEM 15 Pro e o 16. Tem de instalar no relógio o apk «full» do **AAPS** (o apk que normalmente se instala num smartphone) e não o apk «wear» do **AAPS**.
+Parece uma opção atraente, não é? No entanto, de momento, só alguns entusiastas estão a experimentar o **AAPS** num relógio autónomo. Há poucos smartwatches com uma interface razoável que também funcionem bem com o uso autónomo do **AAPS** e da sua aplicação de CGM. Alguns modelos populares são o LEMFO LEM 15 Pro e o 16. Tem de instalar no relógio o apk «full» do **AAPS** (o apk que normalmente se instala num smartphone) e não o apk «wear» do **AAPS**.
 
 Embora não haja uma especificação clara que lhe diga se um relógio vai funcionar bem para usar o **AAPS** de forma autónoma, os parâmetros seguintes ajudam:
 
 1)  Android 12 ou mais recente. 2)  Poder tirar a watchface do modo «quadrado» para tornar o texto maior e mais fácil de ler. 3)  Bateria com muito boa autonomia. 4)  Bom alcance Bluetooth.
 
-A maioria das frustrações com relógios **AAPS** autónomos vem de usar um ecrã muito pequeno e do facto de a interface atual da aplicação AAPS completa não ter sido feita para um relógio. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+A maioria das frustrações com relógios **AAPS** autónomos vem de usar um ecrã muito pequeno e do facto de a interface atual da aplicação AAPS completa não ter sido feita para um relógio. Pode preferir usar uma caneta stylus para editar as definições do **AAPS** no relógio, porque o ecrã é pequeno, e alguns botões do AAPS podem não aparecer no ecrã do relógio.
 
 Outras dificuldades: é difícil ter bateria suficiente, e os relógios com bateria suficiente são muitas vezes grandes e grossos. Os utilizadores relatam lutas com o sistema operativo e com as definições de poupança de energia, dificuldade em iniciar sensores no relógio, fraco alcance Bluetooth (para manter a ligação ao sensor e à bomba) e resistência à água duvidosa. Há exemplos nas fotografias abaixo.
 
-![imagem](../images/watch_standalone_aaps_and_xdrip.png)
+![imagem](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Se tiver interesse em configurar um relógio autónomo, leia as publicações e os comentários no grupo do **AAPS** no Facebook (bons termos de pesquisa são “standalone” e “Lemfo”) e no Discord para mais informações.
 
 ## Wear OS
 
@@ -88,7 +88,7 @@ As alterações recentes do **Wear OS** estragam progressivamente as watchfaces 
 
 Depois de [instalar o **AAPS** no seu relógio](../WearOS/WearOsSmartwatch.md), pode logo escolher a sua watchface preferida entre estas watchfaces próprias do **AAPS**. Na maioria dos relógios, basta tocar sem soltar no ecrã inicial até o ecrã encolher e deslizar para a direita para escolher outro ecrã:
 
-![imagem](../images/watchfaces_aaps_selection.png)
+![imagem](../images/watches/watchfaces_aaps_selection.png)
 
 Estes são os ecrãs básicos incluídos no **AAPS**. Há [mais watchfaces](#WearOS_changing-to-AAPS-watchface) e também pode usar [complicações](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ Há algumas watchfaces para Garmin que se integram com o [AAPS](https://apps.gar
 
 ![Configuração > Comunicação: o cartão Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-O [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integra-se diretamente com o **AAPS**. Mostra dados do estado do loop (insulina ativa, basal temporária) além dos valores de glicose e envia a frequência cardíaca para o **AAPS**. Está disponível na loja ConnectIQ; ative o plugin **Garmin** em **Configuração → Comunicação**. ![Watchface AAPS Glucose Watch com campos numerados](../images/Garmin_WF-annotated.png)
+O [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integra-se diretamente com o **AAPS**. Mostra dados do estado do loop (insulina ativa, basal temporária) além dos valores de glicose e envia a frequência cardíaca para o **AAPS**. Está disponível na loja ConnectIQ; ative o plugin **Garmin** em **Configuração → Comunicação**. ![Watchface AAPS Glucose Watch com campos numerados](../images/watches/Garmin_WF-annotated.png)
 
 1. Valores de glicose mais alto e mais baixo no gráfico
 2. Variação da glicose por minuto
@@ -155,7 +155,7 @@ Seguem-se algumas opções de relógios apenas para seguir, populares entre os u
 
 O **WatchDrip+** é uma aplicação complementar feita pela comunidade que mostra os dados da glicose e do loop em vários modelos de smartwatch, sobretudo das marcas Xiaomi (_p. ex._ Mi Band) e Amazfit:
 
-![imagem](../images/watch_watchdrip_plus.png)
+![imagem](../images/watches/watch_watchdrip_plus.png)
 
 Desde a versão 0.5, o **WatchDrip+** lê os dados diretamente do **AAPS**, sem o xDrip+ como intermediário. No telefone com o **AAPS**:
 
@@ -170,12 +170,12 @@ Pode ler mais sobre eles, incluindo como os configurar, no [site do WatchDrip+](
 
 ### Relógio Pebble
 
-![imagem](../images/watch_pebble.png)
+![imagem](../images/watches/watch_pebble.png)
 
-![imagem](../images/watch_pebble_watchface.png)
+![imagem](../images/watches/watch_pebble_watchface.png)
 
 
-Os relógios Pebble ([já descontinuados](https://en.wikipedia.org/wiki/Pebble_(watch))) estiveram à venda de 2013 a 2016 e ainda podem estar disponíveis em segunda mão. A Fitbit ficou com os ativos da Pebble. Os utilizadores do Pebble podem usar a watchface Urchin para ver os dados do Nightscout. Os dados que podem ser mostrados incluem a IA, a basal temporária ativa e as previsões. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
+Os relógios Pebble ([já descontinuados](https://en.wikipedia.org/wiki/Pebble_(watch))) estiveram à venda de 2013 a 2016 e ainda podem estar disponíveis em segunda mão. A Fitbit ficou com os ativos da Pebble. Os utilizadores do Pebble podem usar a watchface Urchin para ver os dados do Nightscout. Os dados que podem ser mostrados incluem a IA, a basal temporária ativa e as previsões. Em loop aberto, pode usar o IFTTT para criar um applet que, quando é recebida uma notificação do **AAPS**, envia um SMS ou uma notificação Pushover.
 
 ### [Relógios Bluejay](https://bluejay.website/)
 

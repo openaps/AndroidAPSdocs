@@ -73,7 +73,7 @@ HbA1c: apskaičiuotas glikuoto hemoglobino įvertis pagal NGJ matavimų vidurkį
 
 - **Grafikas**: viena para nuo vidurnakčio iki vidurnakčio. Linija yra **Mediana** (pusė jūsų rodmenų tą valandą buvo mažesni, pusė – didesni). Aplink ją viena juosta apima vidurinę jūsų rodmenų pusę (**25–75 %**), o platesnė juosta – didžiąją jų dalį (**10–90 %**). Siaura juosta reiškia, kad tą valandą jūsų gliukozė kiekvieną dieną yra panaši. Brūkšninės linijos žymi jūsų ribas: **Žemoji riba**, 140 mg/dL (7,8 mmol/l) ir **Aukštoji riba**.
 - **Glikemijos apžvalga**: laikas jūsų intervale, siaurame intervale (70–140 mg/dL arba 3,9–7,8 mmol/l), virš jūsų intervalo ir žemiau jo, tada jūsų gliukozės **Vidurkis** ir **Mediana**. Jūsų intervalą sudaro **Žemoji riba** ir **Aukštoji riba**, nustatytos parametre [Vizualizacijos diapazonas](#Preferences-range-for-visualization).
-- **eA1c** ir **GMI**: du HbA1c įverčiai, apskaičiuoti pagal jūsų NGJ rodmenis. Kaip ir aukščiau aprašytas HbA1c, jie gali nesutapti su jūsų HbA1c kraujo tyrimų rezultatais.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Kaip ir aukščiau aprašytas HbA1c, jie gali nesutapti su jūsų HbA1c kraujo tyrimų rezultatais.
 - **SD** (standartinis nuokrypis) ir **CV** (variacijos koeficientas): kiek svyruoja jūsų gliukozė. Mažesnė reikšmė reiškia stabilesnę gliukozę.
 - **D.**: kiek dienų NGJ duomenų panaudota.
 
@@ -114,7 +114,7 @@ Kiekvienos eilutės gale mažos piktogramos rodo, iš kur duomenys gauti arba ku
 (screens-bolus-carbs)=
 ### AV ir bolusai
 
-![AV ir bolusai](../images/TreatmentsView1.png)
+![AV ir bolusai](../images/Maintenance/TreatmentsView1.png)
 
 Šiame skirtuke galite peržiūrėti bolusų ir angliavandenių žurnalą. Prie kiekvieno boluso (**1** eilutė) šalia insulino kiekio rodomas su juo susijęs likęs AIO. Bolusas gali būti:
 * Valgiui (įvestas rankiniu būdu mygtukais Insulinas, Greitasis vedlys arba Boluso patarėjas)
@@ -141,7 +141,7 @@ Terapijos istoriją galima naudoti klaidingiems angliavandenių įrašams taisyt
 
 ### Laikina bazė
 
-![Laikina bazė](../images/TreatmentsView2.png)
+![Laikina bazė](../images/Maintenance/TreatmentsView2.png)
 
 Čia rodomos ciklo nustatytos **laikinos bazės**. Kai įrašas vis dar turi įtakos AIO, ši informacija rodoma šalia bazės dydžio (**1** eilutė). Ji gali būti:
 * Teigiamas AIO, jei laikina bazė buvo didesnė už nustatytą profilyje
@@ -153,13 +153,13 @@ Raudona S raidė eilutės kairėje reiškia „Suspend“ (sustabdyta): taip bū
 
 ### Temporary target
 
-![Temporary target](../images/TreatmentsView3.png)
+![Temporary target](../images/Maintenance/TreatmentsView3.png)
 
 Čia matoma laikinų tikslų istorija.
 
 ### Profilio keitimas
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 Čia matoma profilio keitimų istorija. Kiekvieną kartą keičiant profilį galite matyti kelis įrašus: **1** eilutė, įrašyta ir NS, ir pompos istorijoje, atitinka faktinį keitimą. **2** eilutė, įrašyta Nightscout, bet ne pompos istorijoje, atitinka naudotojo pateiktą profilio keitimo užklausą.
 
@@ -169,14 +169,14 @@ Mygtuku **Klonuoti**, rodomu **2** eilutėje, galite sukurti **Profilio keitimas
 
 ### Terapija
 
-![Terapija](../images/TreatmentsView5.png)
+![Terapija](../images/Maintenance/TreatmentsView5.png)
 
 Šiame skirtuke rodomos visos Nightscout įrašytos pastabos ir terapijos įrašai.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Veikimo režimas
 
-![Veikimo režimas](../images/TreatmentsView6.png)
+![Veikimo režimas](../images/Maintenance/TreatmentsView6.png)
 
 Šiame skirtuke rodoma [ciklo būsenos](#AapsScreens-loop-status) pokyčių istorija: atviras, uždaras, LGS, sustabdytas, atjungtas.
 

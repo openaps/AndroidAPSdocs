@@ -1,41 +1,41 @@
-# General CGM recommendations
+# Generelle anbefalinger om CGM
 
-## CGM hygiene
+## CGM-hygiejne
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Uanset hvilket CGM-system du bruger, er der nogle meget klare regler, du bør følge, hvis du vil kalibrere med blod, uanset om du bruger DIY CGM-software eller de officielle apps.
 
--   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   Sørg for, at hænder og udstyr er rene.
+-   Prøv at kalibrere, når du har en række punkter med en vandret pil (15-30 minutter er som regel nok)
+-   Undgå at kalibrere, når glukoseniveauet stiger eller falder.
+-   Lav »nok« kalibreringer – i de officielle apps bliver du bedt om en kontrol en eller to gange om dagen. I DIY-systemer bliver du måske ikke bedt om det, og du skal være forsigtig med at fortsætte uden kalibreringer.
+-   For sensorer, der ikke kræver eller ikke tillader kalibrering, skal du mindst én gang om dagen kontrollere dit rigtige blodsukker. AAPS er kun så sikker, som dine sensorværdier er pålidelige.
+-   Hvis det overhovedet er muligt, så kalibrer med nogle af dine værdier i et lavere område (4-5 mmol/l eller 72-90 mg/dl) og nogle på et lidt højere niveau (7-9 mmol/l eller 126-160 mg/dl), da det giver et bedre område for punkt/hældning-kalibreringen.
 
-## Setting sensor (G6)
+## Isætning af sensor (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+Når du sætter sensoren i, anbefales det ikke at trykke for hårdt på indføreren, så du undgår blødning. Sensorens kontakter må ikke komme i kontakt med blod.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+Når sensoren er sat i, kan senderen klikkes fast i sensorholderen. Forsigtig! Klik først den firkantede side i, og tryk derefter den runde side ned.
 
 (general-cgm-troubleshooting)=
-## Troubleshooting
+## Fejlfinding
 
-### Connection problems
+### Forbindelsesproblemer
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+Bluetooth-forbindelsen kan blive forstyrret af andre Bluetooth-enheder i nærheden, f.eks. blodsukkermålere, headsets, tablets eller køkkenapparater som mikrobølgeovne eller keramiske kogeplader. I så fald viser xDrip ingen BS-værdier. Når Bluetooth-forbindelsen er genoprettet, bliver de manglende data udfyldt.
 
-### Sensor Errors
+### Sensorfejl
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+Hvis der ofte opstår sensorfejl, så prøv at vælge et andet sted på kroppen til din sensor. Sensorens kontakter må ikke komme i kontakt med blod.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Ofte kan en »Sensor Error« (sensorfejl) rettes ved straks at drikke noget og massere området omkring sensoren!
 
-### Jumpy values
+### Springende værdier
 
-You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Du kan prøve at ændre indstillingerne for støjblokering i xDrip (Settings - Inter-App Settings - Noise Blocking), f.eks. »Block Very High noise and worse«. Se også [Udjævning af blodsukkerdata](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-### Negative Sensor Age
+### Negativ sensoralder
 
-![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
+![Sensoralder i rækken Sensor i det udvidede statuspanel](../images/main/main_status_row_expanded.png)
 
-The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
+Sensoralderen vises i rækken **Sensor** i statuspanelet på hovedskærmen (tryk på pilen for at udvide det). En negativ alder opstår, hvis der enten er to [Careportal-registreringer](#aaps-screens-careportal) af typen »Sensorindstik«, eller et sensorindstik med forkert dato. Åbn **Behandlingshistorik** (menu ☰), vælg fanen **Careportal**, og slet den forkerte registrering.

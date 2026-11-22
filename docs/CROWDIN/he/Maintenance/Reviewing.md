@@ -73,7 +73,7 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 
 - **התרשים**: יום אחד מחצות עד חצות. הקו הוא ה**חציון** (חצי מהקריאות שלכם באותה שעה היו נמוכות ממנו, וחצי היו גבוהות ממנו). סביבו, רצועה אחת מכילה את החצי האמצעי של הקריאות שלכם (**25–75%**) ורצועה רחבה יותר מכילה את רובן (**10–90%**). רצועה צרה פירושה שרמת הגלוקוז שלכם דומה מיום ליום באותה שעה. קווים מקווקווים מסמנים את ה**סימון נמוך**, את 140 mg/dL (7.8 mmol/L) ואת ה**סימון גבוה** שלכם.
 - **סקירה גליקמית**: הזמן שעבר בטווח שלכם, בטווח הצר (70–140 mg/dL או 3.9–7.8 mmol/L), מעל הטווח שלכם ומתחתיו, ואחר כך ה**ממוצע** וה**חציון** של הגלוקוז שלכם. הטווח שלכם הוא ה**סימון נמוך** וה**סימון גבוה** שהוגדרו ב[טווח להצגה](#Preferences-range-for-visualization).
-- **eA1c** ו-**GMI**: שני אומדנים של HbA1c שמחושבים מקריאות ה-CGM שלכם. כמו ה-HbA1c שלמעלה, ייתכן שהם לא יתאימו לבדיקות HbA1c בדם שלכם.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. כמו ה-HbA1c שלמעלה, ייתכן שהם לא יתאימו לבדיקות HbA1c בדם שלכם.
 - **SD** (סטיית תקן) ו-**CV** (מקדם השונות): כמה רמת הגלוקוז שלכם משתנה. ערך נמוך יותר פירושו גלוקוז יציב יותר.
 - **ימים**: כמה ימים של נתוני CGM שימשו לחישוב.
 
@@ -114,7 +114,7 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 (screens-bolus-carbs)=
 ### פחמ' ובולוס
 
-![פחמימות & בולוס](../images/TreatmentsView1.png)
+![פחמימות & בולוס](../images/Maintenance/TreatmentsView1.png)
 
 בלשונית זו ניתן לראות את יומן הבולוסים והפחמימות. כל בולוס (שורה **1**) מציג ליד כמות האינסולין את ה-IOB שעוד נשאר ממנו. מקור הבולוס יכול להיות:
 * ארוחה (הוזן ידנית דרך הלחצנים אינסולין, אשף מהיר או אשף בולוס)
@@ -141,7 +141,7 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 
 ### בזאלי זמני
 
-![בזאלי זמני](../images/TreatmentsView2.png)
+![בזאלי זמני](../images/Maintenance/TreatmentsView2.png)
 
 כאן מוצגים ה**קצבים הבזאליים הזמניים** שהלולאה הפעילה. כשלרשומה עדיין יש השפעה על ה-IOB, המידע מוצג ליד המינון (שורה **1**). הוא יכול להיות:
 * IOB חיובי אם הבזאלי הזמני היה גבוה מזה שמוגדר בפרופיל
@@ -153,13 +153,13 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 
 ### יעד זמני
 
-![יעד זמני](../images/TreatmentsView3.png)
+![יעד זמני](../images/Maintenance/TreatmentsView3.png)
 
 כאן ניתן לראות את היסטוריית היעדים הזמניים.
 
 ### החלפת פרופיל
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 כאן ניתן לראות את היסטוריית החלפות הפרופיל. ייתכן שתראו כמה רשומות בכל פעם שמחליפים פרופיל: שורה **1**, שנשמרת גם ב-NS וגם בהיסטוריית המשאבה, מתאימה להחלפה עצמה. שורה **2**, שנשמרת ב-Nightscout אבל לא בהיסטוריית המשאבה, מתאימה לבקשה להחלפת פרופיל שהמשתמש ביצע.
 
@@ -169,14 +169,14 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 
 ### פורטל הטיפולים
 
-![פורטל הטיפולים](../images/TreatmentsView5.png)
+![פורטל הטיפולים](../images/Maintenance/TreatmentsView5.png)
 
 לשונית זו מציגה את כל ההערות ורשומות פורטל הטיפולים שנרשמו ב-Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### מצב הפעלה
 
-![מצב הפעלה](../images/TreatmentsView6.png)
+![מצב הפעלה](../images/Maintenance/TreatmentsView6.png)
 
 לשונית זו מציגה את ההיסטוריה של שינויי [מצב הלולאה](#AapsScreens-loop-status): פתוחה, סגורה, LGS, השהיה, ניתוק.
 

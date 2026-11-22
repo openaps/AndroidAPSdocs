@@ -24,7 +24,7 @@ Há boas razões para usar um transmissor Bluetooth:
 
 Nota: o transmissor pode ser usado ao mesmo tempo que a app LibreLink, sem interferir com ela.
 
-### Start sensor
+### Iniciar o sensor
 
 - → Menu hambúrguer (1) → Start sensor (2) → Start sensor (3) → Responda "Not Today" (4).
 
@@ -40,7 +40,7 @@ Após uma mudança de sensor, o xDrip deteta automaticamente o novo sensor e apa
 
 ![Configuração > Fonte da Glicose com xDrip+ selecionado](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
+-   Se o AAPS não receber valores de glicose quando o telefone está em modo de voo, use 'Identify receiver' (identificar recetor) como descrito na [página de definições do xDrip](#xdrip-identify-receiver).
 
 ## 2. Usar a ligação direta do xDrip
 
@@ -63,11 +63,11 @@ Tecnicamente, o valor atual da glicose é enviado para o xDrip a cada minuto. Um
 
 → Menu hambúrguer → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![Definições avançadas do xDrip para o Libre 2 e valores brutos](../images/xDrip_Libre3_Smooth.png)
+![Definições avançadas do xDrip para o Libre 2 e valores brutos](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Isto é obrigatório para usar o loop. As curvas ficam suaves e os resultados do loop são ótimos. Os valores brutos em que os alarmes se baseiam oscilam um pouco mais, mas correspondem aos valores que o leitor também mostra. Além disso, os valores brutos podem ser mostrados no gráfico do xDrip, para poder reagir a tempo a mudanças rápidas. Ative Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" e "show Sensors Infos". Depois, os valores brutos são também mostrados como pequenos pontos brancos e há mais informação do sensor no menu do sistema.
 
-Os valores brutos são muito úteis quando a glicose está a mudar depressa. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
+Os valores brutos são muito úteis quando a glicose está a mudar depressa. Mesmo que os pontos variem mais, consegue ver a tendência muito melhor do que com a linha suavizada, para tomar boas decisões de tratamento.
 
 → Menu hambúrguer → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -77,7 +77,7 @@ Os valores brutos são muito úteis quando a glicose está a mudar depressa. Eve
 
 #### Calibração
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). O declive (slope) não pode ser alterado. Depois de colocar um sensor novo, verifique com uma picada no dedo. Lembre-se de que pode não ser exato nas primeiras 12 horas após a inserção. Como pode haver grandes diferenças em relação às medições no sangue, verifique a cada 24 horas e calibre se for preciso. Se o sensor estiver completamente errado após alguns dias, deve então ser substituído.
+Pode calibrar o Libre2 **com um desvio de -40 mg/dl a +20 mg/dl \[-2,2 mmol/l a +1,1 mmol/l\]** (intercept). O declive (slope) não pode ser alterado. Depois de colocar um sensor novo, verifique com uma picada no dedo. Lembre-se de que pode não ser exato nas primeiras 12 horas após a inserção. Como pode haver grandes diferenças em relação às medições no sangue, verifique a cada 24 horas e calibre se for preciso. Se o sensor estiver completamente errado após alguns dias, deve então ser substituído.
 
 ## 3. Usar o Diabox
 

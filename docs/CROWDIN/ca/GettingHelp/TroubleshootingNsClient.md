@@ -1,47 +1,47 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# Troubleshooting NSClient
+# Resolució de problemes de NSClient
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+NSClient necessita una comunicació estable amb Nightscout. Una connexió inestable provoca errors de sincronització i un gran consum de dades.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Si ningú no us segueix a Nightscout, podeu posar en pausa NSClient per estalviar bateria, o podeu configurar NSClient perquè només es connecti amb Wi-Fi i/o mentre es carrega.
 
-* How to detect an unstable connection?
+* Com detectar una connexió inestable?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. If you see many reconnections, then there is a problem.
+Obriu la pantalla de NSClient (**Configurador** > **Comunicació** > **NSClientV3** > **Obrir plugin**) i mireu l'**Estat** i el registre. Amb els websockets activats, l'estat hauria de quedar «connectat» (connected), gairebé sense missatges de reconnexió al registre. Si veieu moltes reconnexions, hi ha un problema.
 
-* Restart
+* Reiniciar
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Com a primer pas, reinicieu Nightscout i després el telèfon per veure si el problema és permanent.
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Si el vostre Nightscout està allotjat a Heroku, podeu reiniciar Nightscout així: inicieu la sessió a Heroku, feu clic al nom de la vostra aplicació de Nightscout, feu clic al menú 'More' i després a 'Restart all dynos'.
 
-For other hosts, please follow your hosts guidance documentation.
+Per a altres proveïdors, seguiu la documentació del vostre proveïdor.
 
-* Phone issues
+* Problemes del telèfon
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android pot posar el telèfon en mode de repòs. Comproveu si teniu una excepció per a AAPS a les opcions d'energia del telèfon, perquè pugui funcionar sempre en segon pla.
 
-Check the NSClient again when in strong network signal location.
+Torneu a comprovar NSClient en un lloc amb bon senyal de xarxa.
 
-Try another phone.
+Proveu amb un altre telèfon.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Si el vostre lloc està allotjat a Azure, molta gent ha vist que els problemes de connexió han millorat després de passar a Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Una solució per als problemes de connexió a Azure és posar, a la configuració de l'aplicació (Application settings), el protocol HTTP a 2.0 i Websockets a ON
 
-    {admonition} Remote control needs websockets
+    {admonition} El control remot necessita websockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    Els websockets són **obligatoris** per al control remot des d'**AAPSClient**, als dos telèfons. Si la connexió websocket es talla sovint, el control remot no funciona. La sincronització de dades continua funcionant, però més lentament. El vostre proveïdor de Nightscout ha de permetre websockets.
 
-* No BG reading from Nightscout
+* No hi ha valors de glucèmia de Nightscout
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Si **AAPS** es connecta bé a Nightscout però la glucèmia es mostra com a N/A: a la [configuració de NSClientV3](#Preferences-nsclient), obriu **Sincronització** i activeu **Rebre dades de CGM de NS**. Aquesta opció està amagada mentre el control del client està activat ([mode reforçat](#client-master-control-hardened-mode)); en aquest cas, comproveu que **Glucèmia NSClient** està seleccionat a **Configurador** → **Origen glucèmia**.
 
-* If you still get an error...
+* Si encara teniu un error...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Comproveu la mida de la vostra base de dades a MongoDB (o amb el plugin de mida de la base de dades a Nightscout). Si feu servir el nivell gratuït de MongoDB, 496 MB vol dir que està plena i cal netejar-la. [Seguiu aquestes instruccions de Nightscout per comprovar la mida de la base de dades i esborrar dades](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Abans d'esborrar dades de la base de dades, i si encara no ho heu configurat, penseu a donar les vostres dades d'AAPS al projecte Open Humans (per a la recerca). Les instruccions són a la [pàgina de configuració d'Open Humans](../SupportingAaps/OpenHumans.md).

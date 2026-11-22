@@ -1,6 +1,6 @@
 # Drivers de bombas futuros (possíveis)
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Esta é uma lista de algumas bombas do mercado, do status do suporte a elas em outros sistemas de loop e do status delas no AAPS. No final, há algumas informações sobre o que uma bomba precisa para ser "compatível com loop".
 
     {contents} Índice
     :depth: 1
@@ -13,6 +13,8 @@ This is a list of some pumps on the market, the status of their support in other
 Omnipod 5 ([Site](https://www.omnipod.com/))
 
 ![Driver do Omnipod 5 em desenvolvimento](../images/future-pumps/omnipod5-driver.png)
+
+See [Omnipod 5](../CompatiblePumps/Omnipod5.md) for how the driver in development works.
 
 Tandem: t:Mobi ([Site](https://www.tandemdiabetes.com/))
 
@@ -42,7 +44,7 @@ Tandem: t:Mobi ([Site](https://www.tandemdiabetes.com/))
 
 ### Bomba de insulina Willcare ([Site](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Status de loop:** no momento não é candidata a loop, mas a equipe do fabricante entrou em contato conosco e tem interesse em tornar a bomba compatível com loop (parece que faltam só os comandos de ler/gravar perfil).
 
 **Requisito de hardware para o AAPS:** nenhum. Parece ter Bluetooth.
 

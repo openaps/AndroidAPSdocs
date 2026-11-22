@@ -1,82 +1,82 @@
 (aaps-ci-preparation)=
 
-# Browser build – Step 2: Create your signing keystore
+# Izrada u pregledniku – Korak 2: Izradite spremište ključeva za potpisivanje
 
 ```{note}
-This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
+Ovo je **Korak 2** [izrade u pregledniku](BrowserBuild.md). Najprije završite [Izrada u pregledniku – Korak 1: Izradite svoj GitHub fork](BrowserBuildFork.md).
 ```
 
-AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+AAPS mora biti potpisan privatnim ključevima spremljenima u **Java KeyStore (JKS)** (spremište ključeva). Ovo je najvažnija odluka u cijelom postupku, jer o njoj ovisi hoćete li kasnije moći **ažurirati** AAPS bez ponovne instalacije.
 
 ```{note}
-In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
+U sljedećim koracima spremit ćete privatne podatke (svoje spremište ključeva, a kasnije i pristup Google Driveu) u GitHub kao **tajne** (secrets). Tajna je jednostavno šifrirana vrijednost koju može pročitati samo vaša vlastita izrada – nitko drugi je ne može vidjeti, čak ni ljudi koji gledaju vaš fork. Tako vaša izrada ostaje vaša.
 ```
 
-## Choose your keystore strategy
+## Odaberite način za spremište ključeva
 
-Read both options and pick the one that matches your situation.
+Pročitajte obje opcije i odaberite onu koja odgovara vašoj situaciji.
 
-### Option 1 – Generate a new keystore (new users)
+### Opcija 1 – Izradite novo spremište ključeva (novi korisnici)
 
-Choose this if **any** of these is true:
+Odaberite ovo ako vrijedi **bilo što** od ovoga:
 
-- This is your **first time** building AAPS.
-- You don't have a keystore from a previous Android Studio (computer) build.
-- You have forgotten your keystore password or alias.
+- Ovo je **prvi put** da izrađujete AAPS.
+- Nemate spremište ključeva od prethodne izrade u Android Studiju (na računalu).
+- Zaboravili ste lozinku ili alias svog spremišta ključeva.
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Izrada AAPS-a s **Opcijom 1** stvara potpuno novo spremište ključeva, pa vam **neće omogućiti ažuriranje postojećeg AAPS-a** na mjestu. Da prijeđete na ovu novu izradu, morate izvesti svoje postavke, deinstalirati stari AAPS, instalirati novi i ponovno uvesti svoje postavke. Slijedite korake u [Ponovna instalacija AAPS-a s novim spremištem ključeva](#reinstall-aaps).
 ```
 
-**→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
+**→ [Nastavite s Opcijom 1 – Izradite novo spremište ključeva](BrowserBuildO1.md)**
 
-### Option 2 – Upload your existing keystore (existing / past users)
+### Opcija 2 – Prenesite postojeće spremište ključeva (postojeći / bivši korisnici)
 
-Choose this if you **already have** the `.jks` keystore you used on a previous build of AAPS from a computer in Android Studio, **and** you know its password and alias (usually `key0`).
+Odaberite ovo ako **već imate** spremište ključeva `.jks` koje ste koristili za prethodnu izradu AAPS-a na računalu u Android Studiju **i** znate njegovu lozinku i alias (obično `key0`).
 
-This keeps your current AAPS install upgradeable: future updates will use the same keystore.
+Tako se vaša trenutna instalacija AAPS-a i dalje može ažurirati: buduća ažuriranja koristit će isto spremište ključeva.
 
-**→ [Continue with Option 2 – Upload your existing keystore](BrowserBuildO2.md)**
+**→ [Nastavite s Opcijom 2 – Prenesite postojeće spremište ključeva](BrowserBuildO2.md)**
 
 ----
 
 ```{note}
-On the next page you will pick your device (computer or iPhone). Each device page then walks you through downloading and opening the preparation file the right way for that device, and creating your keystore. The built AAPS app will be saved in your Google Drive.
+Na sljedećoj stranici odabrat ćete svoj uređaj (računalo ili iPhone). Stranica za svaki uređaj zatim vas vodi kroz preuzimanje i otvaranje datoteke za pripremu na ispravan način za taj uređaj te kroz izradu spremišta ključeva. Izrađena aplikacija AAPS bit će spremljena na vaš Google Drive.
 ```
 
-**Next: choose [Option 1](BrowserBuildO1.md) or [Option 2](BrowserBuildO2.md) above, then follow the page for your device.**
+**Sljedeće: odaberite [Opciju 1](BrowserBuildO1.md) ili [Opciju 2](BrowserBuildO2.md) iznad, a zatim slijedite stranicu za svoj uređaj.**
 
 ----
 
 (ci-keystore-export)=
 
-## Export your keystore (optional)
+## Izvezite svoje spremište ključeva (neobavezno)
 
-If you want to export your stored keystore, use this method.
+Ako želite izvesti svoje spremljeno spremište ključeva, koristite ovaj način.
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+Ova skripta izvozi podatke o spremištu ključeva koje ste prije postavili (u Opciji 1 ili Opciji 2) kao ZIP datoteku zaštićenu lozinkom u mapu `/AAPS/KeyStore` na vašem Google Driveu.
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+Prije korištenja ovog načina izvoza provjerite jeste li završili postavke spremišta ključeva i Google Drivea.
 ```
 
-### Steps:
+### Koraci:
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **Dodajte tajnu s lozinkom za ZIP:**
+   - Idite u **Settings** → **Secrets and variables** → **Actions** svog repozitorija
+   - Kliknite **New repository secret**
+   - U polje **Name** upišite: `ZIP_PASSWORD`
+   - U polje **Secret** upišite svoju lozinku za šifriranje ZIP datoteke
+   - Za lozinku koristite samo engleska slova i brojeve (bez posebnih znakova)
+   - Kliknite **Add secret**
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI Keystore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **Pokrenite workflow za izvoz:**
+   - Idite na karticu **Actions** u svom repozitoriju
+   - Odaberite **CI Keystore Export**
+   - Kliknite **Run workflow**
+   - Izvezena ZIP datoteka spremišta ključeva bit će spremljena na vaš Google Drive
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
@@ -85,6 +85,6 @@ Before using this export method, make sure your keystore and Google Drive settin
 ```{toctree}
 :hidden:
 
-Option 1 – Generate a new keystore <BrowserBuildO1.md>
-Option 2 – Upload your existing keystore <BrowserBuildO2.md>
+Opcija 1 – Izradite novo spremište ključeva <BrowserBuildO1.md>
+Opcija 2 – Prenesite postojeće spremište ključeva <BrowserBuildO2.md>
 ```

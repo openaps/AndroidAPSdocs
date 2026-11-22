@@ -1,100 +1,100 @@
-# Update with Android Studio
+# Opdatering med Android Studio
 
-## Build yourself instead of download
+## Byg selv i stedet for at downloade
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** kan ikke downloades, på grund af regler for medicinsk udstyr. Det er lovligt at bygge appen til eget brug, men du må ikke give en kopi til andre! Se [Ofte stillede spørgsmål for loopere](../UsefulLinks/FAQ.md) for detaljer.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Hvis du vil bygge **AAPS** på en ny computer: kopier din sikkerhedskopi af keystore-filen til den nye computer. Følg derefter [vejledningen til første build af **AAPS**](../SettingUpAaps/BuildingAaps.md) i stedet for denne vejledning. Den eneste forskel er, at du ikke opretter et nyt keystore. Du kan i stedet vælge det keystore, du har kopieret til den nye computer.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Oversigt over opdatering til en ny version af AAPS med Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Hvis du får problemer, så se den separate side [Fejlfinding i Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### Export your settings
+### Eksporter dine indstillinger
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Eksporter dine indstillinger fra den **AAPS**-version, der er på din telefon nu. Du får måske ikke brug for dem, men det er bedre at være på den sikre side.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Se siden [Oprettelse og gendannelse af sikkerhedskopier](ExportImportSettings.md), hvis du ikke kan huske, hvordan du gør.
 
-### Check your Android Studio version
+### Kontroller din version af Android Studio
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+Den mindste krævede version står i [byggevejledningen](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Hvis din version er ældre, skal du [opdatere Android Studio først](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Opdater din lokale kopi
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Åbn dit eksisterende AAPS-projekt i Android Studio. Du skal måske vælge dit projekt. (Dobbelt)klik på AAPS-projektet.
 
   ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* Vælg Git -> Fetch i menulinjen i Android Studio
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Android Studio-menu - Git - Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Du ser en meddelelse i nederste højre hjørne om, at Fetch lykkedes.
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+   ![Android Studio-menu - Git - Fetch lykkedes](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Vælg nu Git -> Pull i menulinjen
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+   ![Android Studio-menu - Git - Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Lad alle valg være, som de er (origin/master), og vælg Pull
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+   ![Android Studio - Git - dialogen Pull](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Vent, mens download er i gang. Du kan se det som information i den nederste linje. Når den er færdig, ser du en meddelelse om, at det lykkedes.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  De filer, der blev opdateret, kan være forskellige! Det er ikke et tegn på et problem.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio - Pull lykkedes](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Gradle Sync kører for at downloade nogle afhængigheder. Vent, til den er færdig.
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Kontroller JVM-versionen
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Denne kontrol er især vigtig, hvis du allerede har bygget en tidligere version af **AAPS** på den samme computer.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Se i [byggevejledningen](#Building-APK-recommended-specification-of-computer-for-building-apk-file), hvilken JVM-version der kræves til den version af **AAPS**, som du nu bygger. Følg derefter trinene i [Inkompatibel Gradle JVM](#incompatible-gradle-jvm) for at sikre, at du bruger den rigtige version.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### Byg den signerede APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Din kildekode er nu den aktuelle udgivne version, og alle forudsætninger er kontrolleret. Nu skal du bygge den signerede apk som beskrevet i [afsnittet om at bygge en signeret apk](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Overfør og installer APK'en
+Du skal overføre apk'en til din telefon, så du kan installere den.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Hvis du byggede med det samme eksisterende keystore i Android Studio, behøver du ikke fjerne den eksisterende app fra din telefon. Når du installerer apk'en, skal du følge vejledningen på skærmen for at installere opdateringer.
+I andre tilfælde, f.eks. hvis du opretter et nyt keystore i Android Studio til din signerede apk, skal du slette den gamle app, før du installerer apk'en. **Husk at eksportere dine indstillinger!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Se vejledningen til [overførsel og installation af AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Hvor Googles [verificering af Android-udviklere](#android-developer-verification) håndhæves (fra september 2026, afhængigt af dit land), skal du installere med [ADB](#android-developer-verification-adb) i stedet for at trykke på APK-filen.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Fortsæt [her](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
-## Troubleshooting
+## Fejlfinding
 
-If anything goes wrong, don't panic.
+Hvis noget går galt, så gå ikke i panik.
 
-Take a breath!
+Træk vejret dybt!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Kontroller derefter, om dit problem allerede er beskrevet på den separate side [Fejlfinding i Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Hvis du har brug for mere hjælp, så kontakt andre **AAPS**-brugere på [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) eller [Discord](https://discord.gg/4fQUWHZ4Mw).

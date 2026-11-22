@@ -31,6 +31,7 @@ V **AAPS** v4 nájdete nastavenia na obrazovke **Nastavenia**. Dostanete sa k ni
 - **AAPS** predvolene používa jazyk telefónu (odporúča sa).
 
 - Ak chcete **AAPS** v inom jazyku, ako má telefón, vyberte ho tu. V Androide 13 a novšom ho **AAPS** zaregistruje v Androide ako vlastný jazyk aplikácie, takže sa ním riadia všetky jeho obrazovky, hlavná obrazovka, widgety aj spôsob zápisu čísel.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Keď zmeníte jazyk, texty **AAPS** sa hneď prepnú do nového jazyka. Ak sa niektoré texty stále zobrazujú v starom jazyku, reštartujte **AAPS**.
 - V Androide 12 sa toto nastavenie nezobrazuje: **AAPS** vždy používa jazyk telefónu.
@@ -86,6 +87,10 @@ Vyberte svetlú tému, tmavú tému alebo nastavenie systému telefónu.
 
 ![Nastavenia > Ochrana](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Hlavné heslo
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### Ochrana aplikácie
 
-Ak je aplikácia chránená, musíte na otvorenie **AAPS** zadať heslo alebo použiť biometrické overenie telefónu, a to znova, keď sa do nej vrátite po uplynutí [časového limitu ochrany](#Preferences-password-and-pin-retention).
+Ak je aplikácia chránená, musíte na otvorenie **AAPS** zadať heslo alebo použiť biometrické overenie telefónu, a to znova, keď sa do nej vrátite po uplynutí [časového limitu ochrany](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** sa okamžite vypne, ak zadáte nesprávne heslo, ale bude stále bežať na pozadí, ak bol predtým úspešne spustený.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Ochrana bolusu
 

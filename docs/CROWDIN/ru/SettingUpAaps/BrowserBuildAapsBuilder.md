@@ -1,9 +1,9 @@
 (aaps-builder)=
 
-# Browser build with AAPS Builder
+# Сборка через браузер с AAPS Builder
 
 ```{note}
-This is the recommended way to build AAPS from an **Android phone**. It also works from any computer browser. For the other ways to build from a computer or an iPhone, see the [Browser build](BrowserBuild.md) overview.
+Это рекомендуемый способ собрать AAPS с **телефона Android**. Он также работает в браузере на любом компьютере. О других способах сборки на компьютере или iPhone см. обзор [Сборка через браузер](BrowserBuild.md).
 ```
 
 ```{contents} In this page
@@ -11,371 +11,371 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 :depth: 2
 ```
 
-**AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
+**AAPS Builder** собирает приложение AAPS за вас на GitHub — бесплатном сайте для хранения кода. На телефон ничего устанавливать не нужно, и файл подготовки открывать тоже не нужно.
 
-A setup page walks you through it. It takes about 10 minutes the first time:
+Страница настройки проведет вас через все шаги. В первый раз это занимает около 10 минут:
 
-1. Create your own **private copy** of AAPS Builder in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm. The build workflow, the file that tells GitHub how to build AAPS, is already in it.
-2. Create or upload your **signing key** (the keystore).
-3. Give the key to your repository as a GitHub **secret**.
-4. **Build** the app. One build takes 15 to 30 minutes.
-5. **Download and install** the app on your phone.
+1. Создайте свою **приватную копию** AAPS Builder в своей учетной записи GitHub: страница настройки открывает GitHub, где все уже заполнено, вам остается только подтвердить. Workflow сборки — файл, который говорит GitHub, как собирать AAPS, — уже в ней есть.
+2. Создайте или загрузите свой **ключ подписи** (хранилище ключей).
+3. Передайте ключ своему репозиторию как **секрет** GitHub.
+4. **Соберите** приложение. Одна сборка занимает от 15 до 30 минут.
+5. **Скачайте и установите** приложение на телефон.
 
-You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build. You also do **not** need Google Drive: you download the app directly from GitHub.
+Делать fork AndroidAPS **не** нужно: исходный код AAPS скачивается из официального репозитория AndroidAPS при каждой сборке. Google Диск тоже **не** нужен: приложение скачивается прямо с GitHub.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+Workflow сборки поддерживают разработчики AAPS в репозитории [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), а ваш репозиторий — его копия. [Workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) в вашей копии короткий: он запускает [шаги сборки](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml), которые хранятся в том репозитории, поэтому улучшения доходят до вас без изменений в вашем репозитории. Оба файла можно прочитать. Во время сборки workflow скачивает только официальный исходный код AAPS и собственные инструменты сборки GitHub. Ваше хранилище ключей никогда не покидает ваш браузер и ваш приватный репозиторий.
 ```
 
 (aaps-builder-before-you-start)=
 
-## Before you start
+## Перед началом
 
-You will need:
+Вам понадобится:
 
-- A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
-- A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
-- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
-- Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
+- **Учетная запись GitHub** (бесплатная). Если ее нет, сначала создайте ее на [github.com](https://github.com/signup).
+- **Веб-браузер**: Chrome на телефоне или любой браузер на компьютере. Перед началом войдите на github.com в этом браузере.
+- **Приложение GitHub на телефоне?** Его можно оставить. Тогда некоторые кнопки страницы настройки открывают это приложение вместо Chrome. Сборка работает и в приложении, но приложение **не может скачать** готовый AAPS: в [шаге 5](#aaps-builder-step5) показано, как перейти в Chrome для скачивания.
+- Ваше **существующее хранилище ключей** (файл `.jks`), его пароль и его псевдоним (alias), если вы уже собирали AAPS и хотите обновить его без переустановки.
 
 ```{warning}
-**Your build repository must stay private.** Everything a build produces is visible to anyone who can see the repository. The setup page creates a private repository for you. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
+**Ваш репозиторий сборки должен оставаться приватным.** Все, что создает сборка, видно любому, кто может видеть репозиторий. Страница настройки создает для вас приватный репозиторий. Никогда не делайте его публичным и не делайте **fork** AAPS Builder вместо этого: fork всегда публичный.
 
-A private repository gets 2000 free GitHub Actions minutes per month, which is enough for several builds.
+Приватный репозиторий получает 2000 бесплатных минут GitHub Actions в месяц, этого хватает на несколько сборок.
 ```
 
 ```{warning}
-**New key or existing key: this decides whether you can update AAPS.**
+**Новый ключ или существующий ключ: от этого зависит, сможете ли вы обновить AAPS.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+- **AAPS уже есть на вашем телефоне, и он собран с хранилищем ключей, которое у вас сохранилось**: выберите на странице настройки **У меня уже есть хранилище ключей** и загрузите его. Следующая сборка обновит AAPS поверх установленного. Собирали AAPS прежним способом сборки через браузер (свой fork)? Ваше хранилище ключей находится в вашем fork: [сначала получите его копию](#aaps-builder-from-fork).
+- **Вы собираете AAPS впервые или потеряли хранилище ключей или его пароль**: выберите **Создать новый ключ**. Приложение, подписанное новым ключом, **не может обновить** AAPS, подписанный другим ключом. Нужно экспортировать настройки, скопировать файл с телефона в другое место, удалить старый AAPS, установить новый, а затем импортировать настройки: см. [Переустановка AAPS с новым хранилищем ключей](#reinstall-aaps).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
+В дальнейшем всегда используйте один и тот же ключ. Когда вы создаете новый ключ, скачайте резервную копию, которую предлагает страница, и храните ее вместе с паролем и псевдонимом (`key0`) в надежном месте вне телефона.
 ```
 
 (aaps-builder-from-fork)=
 
-## Coming from the previous browser build (fork)
+## Переход с прежней сборки через браузер (fork)
 
-Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+Пропустите этот раздел, если вы никогда не собирали AAPS прежним способом сборки через браузер (своя копия, или fork, AndroidAPS на GitHub, с файлом подготовки и Google Диском).
 
-Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Ваше хранилище ключей хранится в виде секретов в вашем fork. GitHub больше никогда не показывает секрет, поэтому скопировать его в новый репозиторий нельзя. Сначала получите копию своего хранилища ключей, затем используйте ее в [шаге 2](#aaps-builder-step2) с вариантом **У меня уже есть хранилище ключей**.
 
 ```{warning}
-Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+Не выбирайте **Создать новый ключ**. AAPS, собранный с новым ключом, не может обновить AAPS на вашем телефоне.
 ```
 
-Which case is yours?
+Какой у вас случай?
 
-- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 2.
-- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+- **Вы использовали Вариант 2** (загрузили собственное хранилище ключей из Android Studio), и у вас все еще есть файл `.jks`, его пароли и псевдоним: здесь ничего делать не нужно. Используйте этот файл в шаге 2.
+- **Вы использовали Вариант 1** (ключ создал файл подготовки) или у вас больше нет файла хранилища ключей: экспортируйте его из своего fork, как описано ниже.
 
-To export your keystore from your fork:
+Чтобы экспортировать хранилище ключей из fork:
 
-1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
-2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
-3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
-4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
-   - `keystore.jks`: your keystore,
-   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
-5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+1. В своем fork откройте **Settings** → **Secrets and variables** → **Actions** и добавьте секрет с именем `ZIP_PASSWORD`. Выберите пароль только из английских букв и цифр. Он защищает файл, который вы сейчас создадите.
+2. Откройте вкладку **Actions** своего fork, нажмите **CI Keystore Export**, затем **Run workflow**. Подробнее: [Экспорт хранилища ключей](#ci-keystore-export).
+3. Когда у запуска появится зеленая галочка, откройте Google Диск: файл `keystore.zip` находится в папке **AAPS** → **KeyStore**. Если запуск завершается ошибкой на шаге Google Диска, срок доступа вашего fork к Google Диску истек: см. [Истек срок действия токена обновления Google](#aaps-ci-google-token-expired).
+4. Скачайте `keystore.zip` и откройте его с помощью `ZIP_PASSWORD`: на компьютере или на телефоне в файловом менеджере, который умеет открывать ZIP-файлы с паролем. Он содержит:
+   - `keystore.jks`: ваше хранилище ключей,
+   - `keyStoreInfo.txt`: ваши `KEYSTORE_PASSWORD`, `KEY_PASSWORD` и `ALIAS` (обычно `key0`).
+5. Скопируйте `keystore.jks` на телефон (или в Google Диск, чтобы выбрать его оттуда).
 
-In [step 2](#aaps-builder-step2) of the setup page:
+В [шаге 2](#aaps-builder-step2) страницы настройки:
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose `keystore.jks`.
-3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
-4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
-5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+1. Нажмите **У меня уже есть хранилище ключей**.
+2. В поле **Файл хранилища ключей** выберите `keystore.jks`.
+3. В поле **Пароль хранилища ключей** введите `KEYSTORE_PASSWORD` из `keyStoreInfo.txt`.
+4. В поле **Псевдоним ключа** выберите или введите `ALIAS` из `keyStoreInfo.txt`.
+5. Если `KEY_PASSWORD` отличается от `KEYSTORE_PASSWORD`, снимите флажок **Пароль ключа совпадает с паролем хранилища ключей** и введите `KEY_PASSWORD`.
 
-Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+Храните `keystore.zip` и его `ZIP_PASSWORD` в надежном месте вне телефона: это резервная копия вашего ключа.
 
-To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+Чтобы сборки AAPS Builder тоже сохранялись в Google Диск, выполните [шаг 6](#aaps-builder-google-drive): страница настройки получит для вас новый `GDRIVE_OAUTH2`. Вы можете оставить свой fork, пока на телефоне не будет установлен AAPS, собранный с помощью AAPS Builder.
 
-## Open the setup page
+## Откройте страницу настройки
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ [Открыть страницу настройки AAPS Builder](#aaps-builder-setup)**
 
-The setup page is part of this documentation, in your language. Keep this page open in another tab as well: the sections below explain each step of the setup page in more detail, with screenshots.
+Страница настройки — часть этой документации, на вашем языке. Держите эту страницу открытой и в другой вкладке: в разделах ниже каждый шаг страницы настройки описан подробнее, со снимками экрана.
 
-The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+Страница настройки открывает каждую страницу GitHub в новой вкладке Chrome. Чтобы вернуться на страницу настройки, нажмите кнопку вкладок рядом с адресной строкой Chrome (квадрат с числом) и выберите страницу настройки AAPS Builder.
 
-![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
+![Переключатель вкладок](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+Страница настройки работает полностью в вашем браузере: ваш ключ и пароли никуда не отправляются, кроме секрета GitHub, в который вы сами их вставляете. В GitHub отправляется только ваше имя пользователя GitHub, чтобы проверить, что оно существует. Она запоминает ваше имя пользователя GitHub и название репозитория, поэтому вы можете вернуться к ней в любое время, чтобы снова открыть страницу секретов или свои сборки.
 
-![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
+![Страница настройки AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
 (aaps-builder-step1)=
 
-## Step 1 – Create your private build repository
+## Шаг 1 – Создайте свой приватный репозиторий сборки
 
-This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Only you can see it and the apps it builds.
+На этом шаге создается ваша собственная приватная копия AAPS Builder в вашей учетной записи GitHub, в которой уже есть workflow сборки. Только вы видите его и приложения, которые он собирает.
 
-1. Make sure you are logged in to github.com in this browser.
+1. Убедитесь, что вы вошли на github.com в этом браузере.
 
-2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
+2. В поле **Ваше имя пользователя GitHub** введите свое имя пользователя GitHub, а не адрес электронной почты. Страница проверяет его на GitHub: **✓ Пользователь GitHub найден** означает, что оно правильное.
 
-3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+3. В поле **Название вашего репозитория** оставьте предложенное `my-aaps`. Если вы уже создали репозиторий с другим названием, введите именно это название.
 
    ```{note}
-   **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+   **У вас уже есть репозиторий AAPS Builder** (созданный более ранней версией страницы настройки)? Не создавайте новый: введите его точное название, пропустите **Создать мой приватный репозиторий** и один раз обновите его workflow, как описано в разделе [Обновление AAPS](#aaps-builder-updates). Ваши секреты остаются как есть. Если вы все же хотите новый репозиторий, выберите название, которого у вас еще нет, например `my-aaps-2`, и используйте то же хранилище ключей в шаге 2.
 
-   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   Не вводите название своего fork AndroidAPS: fork публичный, и он уже собирает приложение своим workflow **AAPS CI**.
    ```
 
-   ![Setup page step 1 filled in](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
+   ![Заполненный шаг 1 страницы настройки](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. Проверьте строку **Ваш репозиторий:** она показывает `github.com/<your username>/my-aaps`. Страница настройки запоминает название с вашего прошлого посещения: проверяйте его каждый раз, прежде чем нажимать ее кнопки.
 
-5. Tap **Create my private repository**.
+5. Нажмите **Создать мой приватный репозиторий**.
 
-   ![The repository line and the Create my private repository button](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
+   ![Строка репозитория и кнопка «Создать мой приватный репозиторий»](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
-6. GitHub opens **Create a new repository** in a new tab. Everything is already filled in: under **Start with a template**, the template `nightscout/aaps-builder` with **Include all branches** off, and under **General**, your account as **Owner** and the name you chose.
+6. GitHub открывает **Create a new repository** в новой вкладке. Все уже заполнено: в разделе **Start with a template** — шаблон `nightscout/aaps-builder` с выключенным **Include all branches**, а в разделе **General** — ваша учетная запись как **Owner** и выбранное вами название.
 
-   ![GitHub Create a new repository page](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
+   ![Страница GitHub Create a new repository](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Don't change anything.
+   Ничего не меняйте.
 
-7. Scroll down: under **Configuration**, **Choose visibility** is already **Private**. Tap the green **Create repository** button.
+7. Прокрутите вниз: в разделе **Configuration** для **Choose visibility** уже выбрано **Private**. Нажмите зеленую кнопку **Create repository**.
 
-   ![Visibility Private and the Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
+   ![Видимость Private и кнопка Create repository](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
+   GitHub показывает ваш новый репозиторий: в нем есть папка `.github` (с workflow сборки) и файл `README.md`. **Вернитесь на вкладку страницы настройки** для шага 2: нажмите кнопку вкладок рядом с адресной строкой Chrome и выберите страницу настройки.
 
-   ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
+   ![Новый репозиторий](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
 
 ```{warning}
-**Your new repository is empty**, with no files? It was not created from the template, and it cannot build. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** on the setup page again.
+**Ваш новый репозиторий пустой**, без файлов? Он создан не из шаблона и не может собирать. Удалите его (**Settings** → внизу страницы → **Delete this repository**), затем снова нажмите **Создать мой приватный репозиторий** на странице настройки.
 ```
 
 ```{tip}
-GitHub says **my-aaps already exists in this account**? You already have your repository: close the GitHub tab and go on with the setup page. If your key is already in it, continue with [step 4](#aaps-builder-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+GitHub пишет **my-aaps already exists in this account**? Ваш репозиторий уже есть: закройте вкладку GitHub и продолжайте на странице настройки. Если ваш ключ уже в нем, переходите к [шагу 4](#aaps-builder-step4). См. [устранение неполадок](#aaps-builder-ts-repo-exists).
 ```
 
 (aaps-builder-step2)=
 
-## Step 2 – Your signing key
+## Шаг 2 – Ваш ключ подписи
 
-The app must be signed with your own key. Choose one of the two tabs. Read the [new key or existing key warning](#aaps-builder-before-you-start) first.
+Приложение должно быть подписано вашим собственным ключом. Выберите одну из двух вкладок. Сначала прочитайте [предупреждение о новом или существующем ключе](#aaps-builder-before-you-start).
 
-![Setup page step 2: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
+![Шаг 2 страницы настройки: два варианта ключа](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
-### I already have a keystore
+### У меня уже есть хранилище ключей
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
-3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
-5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
-6. Tap **Check and continue**.
+1. Нажмите **У меня уже есть хранилище ключей**.
+2. В поле **Файл хранилища ключей** выберите ваш файл `.jks` (или `.keystore`, `.p12`, `.pfx`). На телефоне сначала скопируйте файл на телефон или в Google Диск.
+3. В поле **Пароль хранилища ключей** введите пароль хранилища ключей.
+4. В поле **Псевдоним ключа** выберите псевдоним из списка или введите его, если списка нет. Для хранилищ ключей, созданных в Android Studio, это обычно `key0`.
+5. Если пароль ключа отличается от пароля хранилища ключей, снимите флажок **Пароль ключа совпадает с паролем хранилища ключей** и введите пароль ключа.
+6. Нажмите **Проверить и продолжить**.
 
-The page checks the password and the alias on your device. **Keystore OK! Continue with step 3.** means everything is right. If it says the password will be checked when you build, continue anyway: the build tells you if something is wrong.
+Страница проверяет пароль и псевдоним на вашем устройстве. **Хранилище ключей в порядке! Перейдите к шагу 3.** означает, что все правильно. Если там написано, что пароль будет проверен при сборке, все равно продолжайте: сборка сообщит, если что-то не так.
 
-### Create a new key
+### Создать новый ключ
 
-1. Tap **Create a new key**.
+1. Нажмите **Создать новый ключ**.
 
-2. Choose a password and type it twice. Rules: at least 8 characters, only the letters a–z and A–Z, the digits 0–9 and symbols such as `! ? #`. No spaces, no accented letters, and not the `|` character.
+2. Придумайте пароль и введите его дважды. Правила: не менее 8 символов, только буквы a–z и A–Z, цифры 0–9 и символы, например `! ? #`. Без пробелов, без букв с диакритикой и без символа `|`.
 
-3. Tap **Create key**. It takes a few seconds before **Key created** appears.
+3. Нажмите **Создать ключ**. Через несколько секунд появится **Ключ создан**.
 
-   ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
+   ![Форма нового ключа с паролем, введенным дважды](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+4. Нажмите **Скачать резервную копию (aaps-keystore.jks)**. Если Chrome спрашивает **Download file again?**, на телефоне уже есть более старая резервная копия с тем же именем: нажмите **Download again**. Тогда Chrome сохранит новый ключ как `aaps-keystore (1).jks`: это файл, который относится к этому ключу, сохраните его и не перепутайте со старым.
 
-   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+   Храните эти три вещи вместе, в надежном месте вне телефона (например, в своем облачном хранилище):
 
-   - the file `aaps-keystore.jks`,
-   - your password,
-   - the alias of the key: **`key0`**.
+   - файл `aaps-keystore.jks`,
+   - ваш пароль,
+   - псевдоним ключа: **`key0`**.
 
-   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
+   Все три понадобятся, если вы когда-нибудь будете собирать AAPS другим способом, например в Android Studio. У ключей, созданных в более ранней версии страницы настройки, псевдоним `aaps`.
 
-   ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
+   ![Ключ создан, и поле для резервной копии](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
 (aaps-builder-step3)=
 
-## Step 3 – Give the key to your repository
+## Шаг 3 – Передайте ключ в репозиторий
 
-Step 3 unlocks when step 2 is done. Your key, its passwords and its alias are packed into one value, the `KEYSTORE_SET` secret.
+Шаг 3 становится доступен, когда шаг 2 выполнен. Ваш ключ, его пароли и его псевдоним упаковываются в одно значение — секрет `KEYSTORE_SET`.
 
-1. Tap **Open the secrets page**.
+1. Нажмите **Открыть страницу секретов**.
 
-![Setup page step 3](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
+![Шаг 3 страницы настройки](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
-2. GitHub opens the **New secret** page of your repository. On a phone, it is below the settings menu: scroll down.
+2. GitHub открывает страницу **New secret** вашего репозитория. На телефоне она находится под меню настроек: прокрутите вниз.
 
-![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
+![Форма GitHub New secret](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
+3. Перейдите на вкладку страницы настройки и нажмите **Копировать имя**. Вернитесь на вкладку GitHub и вставьте его в маленькое поле **Name**. Имя — `KEYSTORE_SET`.
 
-4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
+4. Перейдите на вкладку страницы настройки и нажмите **Копировать секрет**. Вернитесь на вкладку GitHub и вставьте его в большое поле **Secret** (на телефоне — долгим нажатием). Секрет — это очень длинный код из тысяч символов: страница настройки показывает его первые символы рядом с кнопкой. Не вставляйте туда слово `KEYSTORE_SET`.
 
-5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
+5. Нажмите **Add secret**. `KEYSTORE_SET` теперь отображается в разделе **Repository secrets**.
 
-![Repository secrets list with KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
+![Список Repository secrets с KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
 
-You only need to do this once.
+Это нужно сделать только один раз.
 
 ```{tip}
-GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+GitHub показывает **Page not found** (404)? Сначала проверьте, что вы вошли на github.com в этом браузере: если вы не вошли, GitHub показывает 404 для приватных репозиториев. Иначе имя пользователя или название репозитория в шаге 1 не совпадает с вашим репозиторием. Проверьте имя на github.com, исправьте его в шаге 1 и снова нажмите кнопку.
 ```
 
 (aaps-builder-step4)=
 
-## Step 4 – Build the app
+## Шаг 4 – Соберите приложение
 
-1. On the setup page, tap **Open the build page**. GitHub opens the **Build AAPS** page of your repository.
+1. На странице настройки нажмите **Открыть страницу сборки**. GitHub открывает страницу **Build AAPS** вашего репозитория.
 
-   ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
+   ![Страница GitHub Build AAPS с кнопкой Run workflow](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
+   Если вместо этого открывается **приложение GitHub**: нажмите **RUN WORKFLOW**, проверьте версию и вариант и снова нажмите **RUN WORKFLOW**. Приложение может еще показывать **Nothing to see here**: потяните список вниз, чтобы обновить его и увидеть свою сборку. Затем переходите к шагу 4 ниже.
 
-2. If GitHub asks, tap the green button to enable workflows.
+2. Если GitHub попросит, нажмите зеленую кнопку, чтобы включить workflows.
 
-   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+   В списке workflows две записи: используйте **Build AAPS**. Не обращайте внимания на **AAPS Builder**: в нем хранятся шаги сборки, и у него нет кнопки **Run workflow**.
 
-3. Tap **Run workflow**. A small form opens:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
-   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-   - Tap the green **Run workflow** button.
+3. Нажмите **Run workflow**. Откроется небольшая форма:
+   - **Version**: оставьте `latest`, чтобы собрать самый новый выпуск AAPS, или введите номер версии, например `4.0.0`.
+   - **Variant**: оставьте `fullRelease` для обычного использования с помпой. Другие варианты описаны в разделе [варианты сборки](#browserbuild-variant). `aapsclient3Release` собирает **AAPSClient3**, доступный начиная с версии **AAPS** 4.0 (см. [Об AAPSClient, AAPSClient2 и AAPSClient3](#remotecontrol-aapsclient-versions)).
+   - Нажмите зеленую кнопку **Run workflow**.
 
-   ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
+   ![Форма Run workflow с latest и fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
 
-4. The build starts and shows **In progress**, with two parts: **AAPS / Check**, then **AAPS / Build AAPS**.
+4. Сборка начинается и показывает **In progress**, в ней две части: **AAPS / Check**, затем **AAPS / Build AAPS**.
 
-   ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
+   ![Сборка выполняется](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
-5. Wait 15 to 30 minutes. A green check means the build is done. A red cross means it failed: open the build to read the message, then see [troubleshooting](#aaps-builder-troubleshooting).
+5. Подождите от 15 до 30 минут. Зеленая галочка означает, что сборка завершена. Красный крестик означает, что сборка не удалась: откройте сборку, чтобы прочитать сообщение, затем см. [устранение неполадок](#aaps-builder-troubleshooting).
 
-   ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+   ![Завершенная сборка с зеленой галочкой](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
 
    ```{tip}
-   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   **Письмо, когда сборка готова:** GitHub присылает письмо только тогда, когда сборка не удалась. Чтобы получать письмо и при успешной сборке: на github.com откройте свое фото профиля → **Settings** → **Notifications** → **System** → **Actions** и снимите флажок **Only notify for failed workflows**.
    ```
 
-If there is no **Build AAPS** or **Run workflow** button:
+Если кнопки **Build AAPS** или **Run workflow** нет:
 
-- Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
-- The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
-- Open the **Actions** tab. If it says workflows are disabled, tap the green button to enable them, then tap **Build AAPS** in the list.
+- Откройте свой репозиторий и проверьте, что в нем есть папка `.github` с файлом `workflows/build.yml`. Если репозиторий пустой, он создан не из шаблона: удалите его (**Settings** → внизу страницы → **Delete this repository**) и снова выполните [шаг 1](#aaps-builder-step1) с помощью кнопки.
+- Файл есть, но GitHub показывает **This workflow does not exist**: см. [устранение неполадок](#aaps-builder-ts-workflow-not-found).
+- Откройте вкладку **Actions**. Если там написано, что workflows отключены, нажмите зеленую кнопку, чтобы включить их, затем нажмите **Build AAPS** в списке.
 
 (aaps-builder-step5)=
 
-## Step 5 – Install the app on your phone
+## Шаг 5 – Установите приложение на телефон
 
 ```{warning}
-**Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
+**Перед каждым обновлением** [экспортируйте настройки](#ExportImportSettings-Automating-Settings-Export) в AAPS и скопируйте файл **с телефона в другое место** (Google Диск, Dropbox…). Храните там также несколько старых экспортов и файлы APK, чтобы всегда можно было вернуться назад.
 ```
 
-1. On your phone, open the setup page in **Chrome**. Log in to github.com if asked.
-2. Tap **Open my builds**, then the newest build with a green check.
+1. На телефоне откройте страницу настройки в **Chrome**. Если потребуется, войдите на github.com.
+2. Нажмите **Открыть мои сборки**, затем самую новую сборку с зеленой галочкой.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). The build opens in Chrome: continue with the next step there.
+   Приложение GitHub не может скачивать сборки. В приложении откройте самую новую сборку, затем нажмите **Artifacts ↗** или нажмите значок «Поделиться» вверху и выберите **Chrome** (или **Copy link**, затем вставьте ссылку в адресную строку Chrome). Сборка откроется в Chrome: продолжайте там со следующего шага.
 
-   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+   Чтобы ссылки GitHub не открывались в приложении: Android **Настройки** → **Приложения** → **GitHub** → **Открывать по умолчанию** → выключите **Открывать поддерживаемые ссылки**.
    ```
 
-   ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
+   ![Завершенная сборка: статус Success и 2 артефакта](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
 
-3. Scroll down to the build summary and tap the **Download AAPS** link.
+3. Прокрутите вниз до сводки сборки и нажмите ссылку **Download AAPS**.
 
-   ![Build summary with the Download AAPS link](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
+   ![Сводка сборки со ссылкой Download AAPS](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
 
    ```{tip}
-   Scroll with your finger on the text, not on the diagram of the build steps: the diagram moves instead of the page.
+   Прокручивайте пальцем по тексту, а не по схеме шагов сборки: иначе вместо страницы сдвигается схема.
    ```
 
-   You can also scroll further down to **Artifacts** and tap the download icon next to `aaps-….apk`.
+   Можно также прокрутить ниже до раздела **Artifacts** и нажать значок скачивания рядом с `aaps-….apk`.
 
-   ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+   ![Artifacts с приложениями для телефона и часов](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-4. When the download is done, open Chrome's menu **⋮** → **Downloads**, tap `aaps-….apk` and choose **Install**. If asked, allow installing apps from this source.
+4. Когда скачивание завершится, откройте меню Chrome **⋮** → **Downloads**, нажмите `aaps-….apk` и выберите **Установить**. Если потребуется, разрешите установку приложений из этого источника.
 
-   ![Chrome Downloads with the AAPS APK](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
+   ![Загрузки Chrome с APK AAPS](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
 
-`aaps-wear-….apk` is the smartwatch app. Skip it if you don't use one.
+`aaps-wear-….apk` — это приложение для смарт-часов. Если вы ими не пользуетесь, пропустите его.
 
-The app is kept on the build page for **14 days**. It is not shown under **Code** in your repository. Copy it somewhere safe, off your phone, together with your settings exports.
+Приложение хранится на странице сборки **14 дней**. Оно не отображается в разделе **Code** вашего репозитория. Скопируйте его в надежное место вне телефона вместе с экспортами настроек.
 
-For more ways to install the app, see [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Другие способы установки приложения см. на странице [Перенос и установка AAPS на смартфон](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+С сентября 2026 года [проверка разработчиков Android](#android-developer-verification) от Google может, в зависимости от вашей страны, блокировать установку APK нажатием на файл. Бесплатные обходные пути описаны на той странице.
 ```
 
 (aaps-builder-google-drive)=
 
-## Step 6 (optional) – Also save the app in Google Drive
+## Шаг 6 (необязательно) – Сохраняйте приложение и в Google Диск
 
-You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
+Можно также сохранять каждую сборку в ваш Google Диск, в папку `AAPS/<version>`. Это необязательно: приложение всегда доступно на странице сборки.
 
-It needs one more secret, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
+Для этого нужен еще один секрет — `GDRIVE_OAUTH2`. Шаг 6 страницы настройки получает его у Google за вас, на телефоне или на компьютере. После этого **AAPS** может видеть и менять в вашем Google Диске только созданные им файлы, больше ничего.
 
-1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
+1. На странице настройки нажмите **Подключить Google Диск**. Google откроется в новой вкладке.
 
-2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
+2. Выберите свою учетную запись Google и разрешите доступ. Если Google сообщает, что приложение не проверено, нажмите **Advanced**, затем **Go to …**.
 
-   ![Choose an account](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
+   ![Выбор учетной записи](../images/Building-the-App/CI/AapsBuilder61_GoogleChoose.png)
 
-   ![Continue](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
+   ![Продолжить](../images/Building-the-App/CI/AapsBuilder63_GoogleContinue.png)
 
-3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, then the copy icon next to the address (on a computer: select the whole address and copy it). It starts with `http://127.0.0.1:47913/`.
+3. Затем новая вкладка показывает ошибку, например **This site can't be reached** или **127.0.0.1 refused to connect**. **Так и должно быть:** ответ Google находится в адресе этой вкладки. Нажмите на адресную строку, затем на значок копирования рядом с адресом (на компьютере: выделите весь адрес и скопируйте его). Он начинается с `http://127.0.0.1:47913/`.
 
    ![This site can't be reached](../images/Building-the-App/CI/AapsBuilder64_GoogleAnswer.png)
 
-   ![Copy icon](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
+   ![Значок копирования](../images/Building-the-App/CI/AapsBuilder65_CopyAddress.png)
 
-4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
+4. Вернитесь на вкладку страницы настройки в течение нескольких минут: ответ Google действителен только короткое время и только один раз. Вставьте адрес в поле **Вставьте сюда скопированный адрес** и нажмите **Получить GDRIVE_OAUTH2**. Страница покажет **GDRIVE_OAUTH2 готов**.
 
-   ![Address pasted](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
+   ![Адрес вставлен](../images/Building-the-App/CI/AapsBuilder67_Pasted.png)
 
-   ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
+   ![GDRIVE_OAUTH2 готов](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
-5. Tap **Open the secrets page**. Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+5. Нажмите **Открыть страницу секретов**. Нажмите **Копировать имя**, затем вставьте его в маленькое поле **Name** (имя — `GDRIVE_OAUTH2`). Нажмите **Копировать секрет**, вставьте его в большое поле **Secret** и нажмите **Add secret**.
 
-   ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
+   ![Добавление секрета](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
-From the next build, the APKs are also saved in Google Drive.
+Начиная со следующей сборки, файлы APK также сохраняются в Google Диск.
 
-Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
+У вас уже есть значение `GDRIVE_OAUTH2` из файла подготовки других способов сборки через браузер? Оно тоже подойдет: добавьте его как секрет `GDRIVE_OAUTH2`.
 
-Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
+Google прекращает доступ, если вы не собираете приложение 6 месяцев или если вы меняете пароль Google. Тогда сборка сообщит об этом: повторите эти шаги. См. [Истек срок действия токена обновления Google](#aaps-ci-google-token-expired).
 
 (aaps-builder-updates)=
 
 ## Updating AAPS
 
-Your repository never builds anything by itself: you decide when to build, which version and which variant. When a new AAPS version is released:
+Ваш репозиторий никогда ничего не собирает сам: вы решаете, когда собирать, какую версию и какой вариант. Когда выходит новая версия AAPS:
 
-1. [Back up your settings](#aaps-builder-step5) as explained in step 5.
-2. Build the new version as in [step 4](#aaps-builder-step4). Keep `latest`, or type the release number.
-3. Download and install it as in [step 5](#aaps-builder-step5).
+1. [Сделайте резервную копию настроек](#aaps-builder-step5), как описано в шаге 5.
+2. Соберите новую версию, как в [шаге 4](#aaps-builder-step4). Оставьте `latest` или введите номер версии.
+3. Скачайте и установите ее, как в [шаге 5](#aaps-builder-step5).
 
-**Updates of the build steps** reach you by themselves: at every build, your repository runs the build steps released by the AAPS developers in nightscout/aaps-builder. Nothing changes in your repository, and there is no automatic build.
+**Обновления шагов сборки** приходят к вам сами: при каждой сборке ваш репозиторий запускает шаги сборки, выпущенные разработчиками AAPS в nightscout/aaps-builder. В вашем репозитории ничего не меняется, и автоматической сборки нет.
 
-**Updates of your workflow file** are rare: only when the **Run workflow** form changes, for example for a new build variant, or once if your repository was made with an earlier version of the setup page (an empty repository with a short workflow file) or from the old template. The [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. Your `KEYSTORE_SET` secret stays as it is. On the setup page, open **Updating your copy** at the end of step 1:
+**Обновления вашего файла workflow** нужны редко: только когда меняется форма **Run workflow**, например для нового варианта сборки, или один раз, если ваш репозиторий был создан более ранней версией страницы настройки (пустой репозиторий с коротким файлом workflow) или из старого шаблона. Об этом сообщает страница [Обновления и изменения в документации](../Maintenance/DocumentationUpdate.md). Ваш секрет `KEYSTORE_SET` остается без изменений. На странице настройки откройте **Обновление вашей копии** в конце шага 1:
 
-1. Tap **Open the newest workflow**. On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the **plain-text version** instead, press and hold the text, then **Select all** and **Copy**.
-2. Tap **Open my workflow file**, then the **⋯** menu at the top right of the file and **Edit file… In place** (on a computer, click the pencil).
-3. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-4. Tap **Commit changes…**, then **Commit changes**.
+1. Нажмите **Открыть последний workflow**. На компьютере нажмите **значок копирования** («Copy raw file») в правом верхнем углу файла. На телефоне вместо этого откройте **текстовую версию**, нажмите и удерживайте текст, затем выберите **Выбрать все** и **Копировать**.
+2. Нажмите **Открыть мой файл workflow**, затем меню **⋯** в правом верхнем углу файла и **Edit file… In place** (на компьютере нажмите на карандаш).
+3. Замените весь текст скопированным workflow (на телефоне долгое нажатие: **Выбрать все**, затем **Вставить**).
+4. Нажмите **Commit changes…**, затем **Commit changes**.
 
-The first line of the file shows its version.
+Первая строка файла показывает его версию.
 
 ## Устранение неполадок
 
-Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
+Что-то пошло не так? См. [Устранение неполадок AAPS Builder](#aaps-builder-troubleshooting).
 
 ```{toctree}
 :hidden:
 
-AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+Страница настройки AAPS Builder <BrowserBuildAapsBuilderSetup.md>
 ```

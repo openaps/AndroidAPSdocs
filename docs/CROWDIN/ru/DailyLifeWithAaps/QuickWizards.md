@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Мастер быстрых настроек (болюс одним нажатием)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+**Мастер быстрых настроек** — это сохраненная кнопка для частого приема пищи или ситуации, которая срабатывает одним нажатием. В ней задано фиксированное количество **углеводов** (и способ расчета дозы на них). Поэтому вы можете ввести болюс — или только записать углеводы — одним нажатием и подтверждением, не открывая каждый раз полный калькулятор болюса.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Как открыть мастер быстрых настроек
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Откройте экран **Управление** (нижняя панель навигации) и выберите **Мастер быстрых настроек** (*«Управление предустановками мастера быстрых настроек»*).
 
 ---
 
-## The three modes
+## Управление кнопками мастера быстрых настроек
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Ваши кнопки мастера быстрых настроек показаны в виде **карусели карточек, которые можно листать** (на каждой карточке видны текст кнопки, углеводы и действующий временной диапазон). Редактор ниже настраивает **выбранную** кнопку; на нижней панели действий есть кнопки **➕ добавить**, **⧉ клонировать**, **🗑️ удалить** и кнопка **▶**, которая запускает выбранную кнопку мастера быстрых настроек.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![Редактор мастера быстрых настроек — режим, углеводы, время приема углеводов и действующий временной диапазон](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+Основные поля редактора:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Текст на кнопке** — надпись, которая видна на кнопке.
+- **Углеводы** и **Время приема углеводов** — количество углеводов и их сдвиг по времени.
+- **Действующий временной диапазон** — см. [Срок действия](#quickwizard_validity).
+- **Настройки калькулятора** и **Выбор устройства** — см. ниже.
 
 ---
 
-## Validity — when the button appears
+## Три режима
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+Переключатель вверху редактора — **Помощник / Инсулин / Углеводы** — определяет, **что делает кнопка** при нажатии:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Помощник** — запускает полный **калькулятор болюса** для заданных углеводов с учетом ваших текущих **ГК, IOB, COB и тренда** (согласно *настройкам калькулятора* ниже). Он вводит *рассчитанный* болюс и записывает углеводы. Это классический мастер быстрых настроек.
+- **Инсулин** — вводит **фиксированное, заранее заданное количество инсулина**, которое вы установили, — без расчета.
+- **Углеводы** — записывает **только заданные углеводы**,**без болюса**.
 
 ---
 
-## Invocation points — where you use it
+## Настройки калькулятора (режим «Помощник»)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Для кнопки в режиме **Помощник** вы выбираете, какие данные использует расчет:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Использовать ГК**, **Использовать COB**, **Использовать IOB** (с вариантом *Только положительный активный инсулин IOB*), **Использовать тренд** (*Все / Только положительный / Только отрицательный*), **Использовать временную цель**, **Использовать будильник**.
+- **Процент болюса** — изменяет рассчитанный болюс в процентах.
+- **Добавить eCarbs** — дополнительно планирует растянутые углеводы.
+
+![Настройки калькулятора, процент болюса и выбор устройства](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Срок действия — когда кнопка видна
+
+(quickwizard_validity)= **Действующий временной диапазон** (*С / До*) определяет, **когда** кнопка мастера быстрых настроек видна и доступна. Кнопка, настроенная, например, на **06:00–10:00**, видна только утром — поэтому кнопка *Завтрак* не загромождает экран (и ее нельзя случайно нажать) во время ужина. Вне своего временного окна кнопка скрыта из панели **Терапия** и из [панели быстрого запуска](QuickLaunch.md). Кнопка на панели не удаляется: она снова появляется, когда окно снова открывается.
+
+Если действующий временной диапазон короче 4 часов, кнопка также скрывается на 30 минут после использования, чтобы один и тот же прием пищи не был введен дважды по ошибке.
+
+---
+
+## Где запускать кнопку
+
+Переключатели в разделе **Выбор устройства** определяют, где появляется каждая кнопка мастера быстрых настроек:
+
+- **Показать на телефоне** — кнопка появляется на **панели [Терапия](../Maintenance/V4Changes.md)** (рассчитанная доза видна прямо на кнопке). Кнопку мастера быстрых настроек, которая видна на телефоне, также можно **закрепить как кнопку быстрого действия на главном экране**: откройте *Настроить быстрый запуск* (значок ⚙ на панели [Быстрый запуск](QuickLaunch.md)) и добавьте ее из категории **Мастер быстрых настроек**.
+- **Показать на часах** — кнопка появляется на **плитке мастера быстрых настроек Wear OS** (пролистайте до нее в карусели плиток часов и нажмите кнопку, чтобы запустить ее, — так же, как на [плитке сценариев](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Раздел **Выбор устройства** появляется в редакторе, только если модуль **Смарт-часы Wear** включен и в его настройках включен параметр **Управление с Wear**. Без этого каждая кнопка мастера быстрых настроек просто показывается на телефоне.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+На телефоне кнопки мастера быстрых настроек видны вверху нижней панели **Терапия**:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Кнопки мастера быстрых настроек (вверху) на открытой нижней панели «Терапия»](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…и как кнопка быстрого действия на главном экране:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Кнопка быстрого действия мастера быстрых настроек на главном экране](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Плитка мастера быстрых настроек на часах Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Сопряженный **клиент** (**AAPSClient**) также может запустить кнопку мастера быстрых настроек — **основной телефон** рассчитывает и вводит болюс (см. [Управление «основной телефон ↔ клиент»](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Откуда бы ни была запущена кнопка мастера быстрых настроек, при нажатии всегда сначала показывается **подтверждение** (при запуске с клиента или часов — подтверждение, составленное основным телефоном), и только потом что-то вводится.
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Кнопка мастера быстрых настроек отклоняется, если ее доза больше вашего максимального болюса или если ее углеводы или eCarbs больше вашего максимума углеводов (например, после того как вы снизили ограничение). Если углеводы больше ограничения, кнопка на панели **Терапия** неактивна. Измените кнопку мастера быстрых настроек или ограничение.
 
 ---
 
-## Adding and removing
+## Добавление и удаление
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Добавить** — создать новую кнопку мастера быстрых настроек.
+- **⧉ Клонировать** — сделать копию кнопки как отправную точку.
+- **🗑️ Удалить** — удалить кнопку.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Если у вас две кнопки мастера быстрых настроек или больше, вы также можете изменить их порядок в карусели: нажмите значок **Изменить порядок** (⇅) на верхней панели, перемещайте центральную карточку **кнопками перемещения ◀ / ▶**, затем подтвердите нажатием **✓**. (Элементы управления выглядят так же, как при [изменении порядка профилей](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Кнопки мастера быстрых настроек входят в синхронизируемую конфигурацию, поэтому они общие для основного телефона и сопряженных клиентов.
 
 ---
 

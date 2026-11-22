@@ -10,7 +10,8 @@
 ## Pompos galimybės su AAPS
 
 * Pompa be vamzdelio (patch), kuri ryšį su **AAPS** palaiko per telefono vidinį Bluetooth, be papildomo ryšio įrenginio.
-* **AAPS** Equil laiko pompa be vamzdelio (patch) su 200 V rezervuaru: pagrindiniame ekrane rodomos tokios pompos būsenos lemputės, o **Užpildymas** ir **Baterijos keitimas** nesiūlomi. Pildymas, užpildymas ir baterijos keitimas atliekami pompos vedliuose.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Kol pompa sustabdyta, **AAPS** įrašo 0 V/val. laikiną bazę, todėl į AIO neįskaičiuojamas joks bazinis insulinas.
 * Vasaros laiko ir laiko juostos pakeitimus reikia tvarkyti rankiniu būdu.
 

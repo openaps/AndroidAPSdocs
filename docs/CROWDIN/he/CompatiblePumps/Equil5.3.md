@@ -10,7 +10,8 @@ These instructions are for configuring the Equil insulin pump.
 ## Pump capabilities with AAPS
 
 * משאבת פאץ' ללא צינורית שמתקשרת עם **AAPS** דרך ה-Bluetooth המובנה של הטלפון, ללא מכשיר תקשורת נוסף.
-* **AAPS** מתייחס ל-Equil כמשאבת פאץ' עם מכל של 200 U: המסך הראשי מציג את נורות המצב של משאבת פאץ', והאפשרויות **תיחול/מילוי** ו**החלפת סוללת משאבה** לא מוצעות. מילוי, תיחול והחלפת סוללה נעשים באשפי המשאבה.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * כשהמשאבה מושהית או עצורה, **AAPS** רושם בזאלי זמני של 0 U/h, כך שאינסולין בזאלי לא נספר ב-IOB.
 * את המעבר לשעון קיץ/חורף ואת שינויי אזור הזמן יש לבצע ידנית.
 

@@ -5,7 +5,7 @@
 O **AAPS** não está disponível para transferência, devido às regras sobre dispositivos médicos. É legal compilar a app para uso próprio, mas não pode dar uma cópia a outras pessoas! Veja a [página FAQ](../UsefulLinks/FAQ.md) para mais detalhes.
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Depois siga o [procedimento da primeira compilação do **AAPS**](../SettingUpAaps/BuildingAaps.md) em vez deste guia. A única diferença é que, em vez de criar uma nova keystore, pode selecionar a que copiou para o computador novo.
+Se quiser compilar o **AAPS** num computador novo, copie a cópia de segurança do ficheiro da keystore para o novo computador. Depois siga o [procedimento da primeira compilação do **AAPS**](../SettingUpAaps/BuildingAaps.md) em vez deste guia. A única diferença é que, em vez de criar uma nova keystore, pode selecionar a que copiou para o computador novo.
 ```
 
 ## Visão geral da atualização para uma nova versão do AAPS com o Android Studio
@@ -95,6 +95,6 @@ Se algo correr mal, não entre em pânico.
 
 Respire fundo!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Depois verifique se o seu problema já está descrito na página separada [Resolução de problemas do Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Se precisar de mais ajuda, contacte outros utilizadores do **AAPS** no [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ou no [Discord](https://discord.gg/4fQUWHZ4Mw).

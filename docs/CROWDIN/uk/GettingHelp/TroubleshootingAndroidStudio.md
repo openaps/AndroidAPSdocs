@@ -49,7 +49,7 @@ There are uncommitted changes.
 
   * Ви маєте отримати повідомлення про те, яку версію Git встановлено, як видно на знімку екрана вище. У такому випадку перейдіть до [кроку 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Якщо ви бачите повідомлення
     ```
     Git: command not found
     ```
@@ -59,13 +59,13 @@ There are uncommitted changes.
 
   * Якщо ви працюєте у Windows і Git щойно встановлено, перезапустіть комп'ютер, щоб Git став доступним глобально після встановлення
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Якщо Git встановлено, ви перезапустили комп'ютер (у Windows), але Git досі не знаходиться:
 
   * Знайдіть на комп'ютері файл «git.exe».
 
     Запишіть собі, в якому каталозі він збережений.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Додайте каталог, у якому ви знайшли встановлений Git.
+  * Відкрийте змінні середовища (Environment variables) у Windows, виберіть змінну "PATH" і натисніть «Змінити» (Edit). Додайте каталог, у якому ви знайшли встановлений Git.
 
   * Збережіть і закрийте.
 
@@ -139,7 +139,7 @@ The maximum compatible Gradle JVM version is 19.
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Якщо ви бачите наведене вище повідомлення про помилку, потрібно завантажити правильну версію JVM, перш ніж знову пробувати зібрати застосунок:
 
 1.  Перевірте в [таблиці вимог](#Building-APK-recommended-specification-of-computer-for-building-apk-file), яка версія JVM потрібна для версії **AAPS**, яку ви збираєте, і запишіть її.
 
@@ -252,7 +252,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Apk встановлено, але версія стара
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Якщо ви успішно зібрали застосунок, перенесли його на телефон і успішно встановили, але номер версії не змінився, можливо, ви забули [оновити свою локальну копію](#Update-to-new-version-update-your-local-copy)
 
 ## Нічого з наведеного не допомогло
 

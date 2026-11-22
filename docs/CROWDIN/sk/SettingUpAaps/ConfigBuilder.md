@@ -160,29 +160,29 @@ Pre vplyv nulového dočasného bazálu opísaný vyššie a pre vzorec, ktorý 
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Keďže bazálna dávka má v AAPS nepriamy vplyv na pokles IOB, príliš vysoké bazálne dávky môžu zakryť príliš vysoké DIA a naopak. Je rozumné najprv starostlivo vyladiť bazálne dávky a až potom upravovať DIA a vrchol. Majte tiež na pamäti, že nastavenia DIA a vrcholu sa navzájom ovplyvňujú: účinok DIA závisí od vrcholu a naopak.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Tieto grafy ukazujú presný vplyv DIA a vrcholu na krivky IOB v celom rozsahu povolených hodnôt.
 
-Adjusting DIA:
+Úprava DIA:
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Úprava vrcholu:
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Nakoniec porovnanie, keď sa DIA a vrchol upravujú súčasne. Logika je tu taká, že obe hodnoty sa upravia v rovnakom pomere, takže `49/35 ~ 7/5`. Alebo podobne `120/93 ~ 9/7`. Intervaly budú rovnaké bez ohľadu na východiskové DIA alebo vrchol, pokiaľ je pomerná zmena pre obe hodnoty rovnaká.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Všimnite si, že keď sa DIA a vrchol upravujú týmto spôsobom, každý bod krivky sa posunie o rovnaký pomer.
 
 ````
 
@@ -313,6 +313,7 @@ When you select another pump, **AAPS** asks you to confirm the change:
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Virtual pump: open loop - **AAPS** suggestions only
   - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   - pre pumpu, ktorá ešte nemá žiadny ovládač

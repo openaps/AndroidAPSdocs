@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Styring mellem hovedenhed ↔ klient (signeret fjernstyring)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+Fra **AAPS** version 4 kan en følgertelefon med **AAPSClient** meget mere end bare at *meddele* behandlinger via Nightscout: når den er **parret** med den primære telefon, kan den sende **signerede kommandoer**, som den primære telefon (**hovedenheden**) kontrollerer, bekræfter og udfører — også levering af en **insulinbolus** på hovedenhedens pumpe.
 
-This page explains how it works, and how to set it up and use it.
+Denne side forklarer, hvordan det virker, og hvordan du sætter det op og bruger det.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Hovedenhed** = den primære **AAPS**-telefon, som har pumpen og kører loopet (appen `full`).
+- **Klient** = en **AAPSClient**-telefon uden pumpe, som følger og nu også *styrer* hovedenheden.
+- Begge telefoner skal være forbundet til **den samme Nightscout**-side. Al kommunikation går stadig via Nightscout — der er ikke brug for en direkte forbindelse mellem telefonerne.
 ```
 
 ---
 
-## How it works
+## Sådan virker det
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+I **AAPS** v3 kunne **AAPSClient** kun skrive usignerede careportal-behandlinger til Nightscout og kunne ikke levere en bolus. Fjernstyring kræver nu en [parring](#client_master_master_setup), som kun skal laves én gang. Se også [Hvad er ændret i AAPS v4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4 bruger en særskilt **Client-Control**-kanal. Den kører stadig via din Nightscout-side (i samlingen `settings`), men hver besked er **kryptografisk signeret** med en hemmelig nøgle, som kun de to telefoner kender. Nøglen bliver overdraget én gang, under **parringen**, og lige efter erstattet af en ny, så den aldrig sendes i klartekst.
 
-The guiding principle is **the master is in charge**:
+Grundprincippet er: **hovedenheden bestemmer**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. Klienten sender en *hensigt* (»bolus 2 IE«, »start scenen Motion«, »sæt dette midlertidige mål«…).
+2. **Hovedenheden** beregner handlingen igen og **begrænser** den ud fra sine **egne** aktuelle data (profil, IOB, COB, aktuelt midlertidigt mål, pumpe), og **skriver selv den præcise bekræftelse**, som brugeren ser.
+3. Klienten (eller uret) viser **hovedenhedens** bekræftelsestekst — den laver aldrig sin egen.
+4. Når du bekræfter, **udfører hovedenheden handlingen én gang** og melder resultatet tilbage til klienten.
 
-What this means for you:
+Hvad det betyder for dig:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **Signerede kommandoer**: kun de klienter, du har parret, kan sende kommandoer (egen parringsnøgle og signatur for hver klient). Gamle eller gentagne kommandoer bliver afvist.
+- **En rolle for hver klient**: du bestemmer, hvad hver klient må, fra *Skrivebeskyttet* til *Admin* — se [Klientroller](#client-master-control-roles).
+- **Insulinbolus fra en klient**: hovedenheden leverer den på sin pumpe, og klienten viser, hvor langt leveringen er nået.
+- **Hovedenheden bestemmer**: den begrænser hver handling ud fra sine egne grænser og skriver den bekræftelse, der vises på klienten.
+- **Kun parrede klienter ændrer behandlingen**: når styring fra klienter er slået til, tager hovedenheden ikke længere imod behandlinger eller ændringer, der er skrevet direkte i Nightscout — se [Hærdet tilstand](#client-master-control-hardened-mode).
+- **Hver klient får sit eget Nightscout-token** med kun de rettigheder, en klient har brug for — se [Klientens eget Nightscout-token](#client-master-control-own-token).
+- **Hovedenhed offline**: handlinger bliver blokeret med en klar besked.
+- **At tilbagekalde en klient** kræver kun ét tryk (for hver klient), eller du kan bruge hovedenhedens kontakt til at stoppe alle klienter.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Handlinger, der kan startes fra en klient: **bolus**, **kulhydrater / e-kulhydrater**, **midlertidigt mål** (sæt og annuller), **profilskift**, ændring af **loop / loop-tilstand**, **midlertidig basal** (sæt og annuller), **forlænget bolus** (sæt og annuller), **valg af insulin** og **[scener](../DailyLifeWithAaps/Scenes.md)**. En del af **indstillingerne** bliver også holdt synkroniseret i begge retninger mellem hovedenhed og klienter.
 
 ---
 
-## Roles and prerequisites
+## Roller og forudsætninger
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients. Your Nightscout host must support websockets.
+- **Hovedenheden** kører det normale **AAPS**-build `full` og er forbundet til din pumpe.
+- **Hovedenheden** bruger **NSClientV3** med din Nightscout og viser *forbundet*. Giv den et **admin-token** til din Nightscout: med det kan hovedenheden lave et eget token til hver klient og vise det for klienten som en QR-kode.
+- **Klienten** kører **[AAPSClient](AapsClient.md)** (eller **AAPSClient2** / **AAPSClient3** til flere patienter — se [Om AAPSClient, AAPSClient2 og AAPSClient3](#remotecontrol-aapsclient-versions)). Den skal bruge **samme** Nightscout. Hvis du sætter den op med hovedenhedens QR-kode, får klienten sin Nightscout-adresse og sit token fra hovedenheden; ellers skal du selv sætte **NSClientV3** op på den først.
+- Websockets er **påkrævet** for fjernstyring fra **AAPSClient**, på begge telefoner. En kommando gælder kun i få sekunder: uden websockets mislykkes den i stedet for at komme frem for sent. Mens styring fra klienter er slået til, holder **AAPS** websockets slået til på hovedenheden og på parrede klienter. Din Nightscout-host skal understøtte websockets.
 ```
 
-Pairing and synchronization are two different things:
+Parring og synkronisering er to forskellige ting:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- **Synkronisering** (data: BS, behandlinger, profil) sættes op som før — se [Synkronisering](#RemoteControl_aapsclient). Hovedenhedens QR-kode kan gøre det for dig på klienten.
+- **Parring** (styring: den signerede kommandokanal, som beskrives her) er det nye trin nedenfor.
 
 ---
 
-## Setting it up
+## Opsætning
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. På hovedenheden — aktiver styring og tilføj en klient
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+På hovedenheden åbner du skærmen **Administrer** og vælger **Godkendte klienter**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+Slå **Tillad styring fra klienter** til (den er **slået fra** som standard). Dette er hovedafbryderen: når den er slået fra, kan ingen klient sende kommandoer, men dine parrede klienter bliver gemt, så du kan slå den til igen senere. Når du slår den til, slås [Hærdet tilstand](#client-master-control-hardened-mode) også til. Det vises som »*Hærdet tilstand til*« med et **(i)**, der forklarer det. I [Simpel tilstand](#preferences-simple-mode) er styring fra klienter altid slået til, så kontakten vises ikke.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![Skærmen Godkendte klienter på hovedenheden](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Tryk på knappen **+** (nederst til højre) for at tilføje en klient. I dialogen **Ny klient**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Skriv et **enhedsnavn**, så du kan genkende den på listen.
+2. Vælg **hvordan telefonen sættes op** (se tabellen nedenfor).
+3. Vælg dens **[rolle](#client-master-control-roles)**. Intet er valgt på forhånd: den rigtige rolle afhænger af, hvem der bruger telefonen.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![Dialogen Ny klient på hovedenheden: enhedsnavn, hvordan telefonen sættes op, og dens rolle](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Måde                               | Hvad den nye telefon får                                                     | Brug den, når                                                                                                              |
+| ---------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **QR-kode: Nightscout og parring** | Nightscout-adressen, sit eget Nightscout-token og parringen, med én scanning | den nye telefon har et kamera: den hurtigste måde, du skal ikke skrive noget                                               |
+| **QR-kode: kun Nightscout**        | Nightscout-adressen og sit eget Nightscout-token, ingen parring              | telefonen kun skal **vise** data og aldrig sende kommandoer                                                                |
+| **PIN**                            | kun parringen; den beholder de Nightscout-indstillinger, den har             | telefonen har ikke noget kamera (eller hovedenheden kan ikke lave tokens); den skal allerede være forbundet til Nightscout |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+De to måder med QR-kode kræver et **admin-token** i hovedenhedens **NSClientV3**-indstillinger, fordi hovedenheden laver klientens token i Nightscout. Uden et sådant token vises mulighederne med QR-kode, men de kan ikke vælges, og dialogen forklarer hvorfor; **PIN** virker altid.
 
-#### With a QR code
+#### Med en QR-kode
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+Tryk på **OK**: hovedenheden laver klientens Nightscout-token og viser en **QR-kode**. En kode, der også parrer, virker i ca. **to minutter**; skærmen tæller ned og lukker af sig selv, når klienten er parret. Scan den på den nye telefon som beskrevet i [På klienten](#client_master_client_setup).
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+Alle, der ser QR-koden, kan læse din Nightscout, og en kode, der parrer, indeholder også parringen. Vis den kun til den nye telefon. **AAPS** blokerer skærmbilleder, mens koden vises på skærmen.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![Hovedenhedens skærm med QR-koden og nedtællingen (koden er sløret)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### Med en PIN
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Tryk på **OK**: hovedenheden viser en 8-cifret **parrings-PIN** i to grupper med fire cifre (for eksempel `1234 5678`). Denne PIN kan kun bruges **én gang** og **udløber efter ca. to minutter**. Som med QR-koden afviser hovedenheden et klientnavn, der allerede er på listen: hver klient får sit eget Nightscout-token under sit navn.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![Hovedenhedens parringsskærm med engangs-PIN (den viste PIN er udløbet)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+PIN beskytter parringsnøglen, der udveksles via Nightscout. Del den kun med den enhed, du parrer, slå den ikke op offentligt, og lad den udløbe, hvis du ikke bruger den. Du kan altid lave en ny PIN ved at trykke på **+** igen.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. På klienten — par med hovedenheden
 
-#### Scanning the QR code
+#### Scan QR-koden
 
-You can scan the master's QR code in two places:
+Du kan scanne hovedenhedens QR-kode to steder:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- i klientens **Opsætningsguide**, på trinnet »**Opsæt fra hovedenheden**«, som kommer før Nightscout-trinnet. Én scanning sætter så Nightscout op og, med en kode der parrer, også parringen, så opsætningen er færdig: guiden lukker, og startskærmen åbner;
+- når som helst senere fra **Administrer → Par med hovedenhed → Scan QR-kode**.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+Første gang beder **AAPSClient** om tilladelse til at bruge **kameraet**. Hvis du afviser det, siger skærmen, at kameraet er nødvendigt, og du kan tillade det med **Prøv igen** eller parre med PIN i stedet.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+Ret kameraet mod koden. Klienten viser, hvad koden gør — Nightscout-adressen og, for en kode der parrer, den hovedenhed, den parrer med — og spørger »**Brug denne kode?**«. Tryk på **Brug**: klienten slår **NSClientV3** til, erstatter sin Nightscout-adresse og sit token med dem fra koden og slår websockets til. En kode, der parrer, parrer også telefonen; den siger goddag til hovedenheden, så snart den har forbindelse til Nightscout.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![Klientens trin Opsæt fra hovedenheden i guiden](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-A computer without camera: use the PIN there.
+En computer uden kamera: brug PIN der.
 ```
 
-#### Entering the PIN
+#### Indtast PIN
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+På klienten åbner du **Administrer → Par med hovedenhed** (eller trinnet **Par med hovedenhed** i guiden, efter Nightscout-trinnet), **indtaster den 8-cifrede PIN**, der vises på hovedenheden, og trykker på **Par**. Klienten bruger PIN til sikkert at hente parringstilbuddet via Nightscout, spørger derefter »**Par med denne hovedenhed?**« og viser hovedenhedens identifikation. Tryk på **Par** for at bekræfte (se [Parring med hovedenheden](#aapsclient-pairing-with-the-master) for et skærmbillede).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![Skærmen Par med hovedenhed på klienten før parring — indtast PIN her](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### Efter parring
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+Når en klient er parret, sender den et **Hello** til hovedenheden og vises på hovedenhedens liste **Godkendte klienter** som **Aktiv**, med et tidspunkt for *»sidst set«*. Klienten kender sin [rolle](#client-master-control-roles) fra parringen, så den viser de rigtige knapper med det samme. En parring, der laves i opsætningsguiden, afslutter guiden. I samme trin erstatter de to telefoner parringsnøglen med en ny, som aldrig er blevet sendt (se [Om sikkerhed](#client-master-control-security)), og en klient, der blev sat op med PIN, får sit eget Nightscout-token (se [Klientens eget Nightscout-token](#client-master-control-own-token)). En klient kan være parret med **én** hovedenhed ad gangen; for at parre med en anden hovedenhed skal du først vælge **Ophæv parring**.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![Skærmen Par med hovedenhed på klienten (allerede parret)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. Administrer klienter
 
-From the master's **Authorized clients** screen you can, at any time:
+Fra hovedenhedens skærm **Godkendte klienter** kan du når som helst:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- **Skifte rollen** for en klient med rækken med fire knapper under dens navn. Den nye rolle gælder med det samme, uden at du skal parre igen.
+- **Se, hvilket Nightscout-token** en klient skriver med: »*Eget Nightscout-token*« er det, du vil have. En rød linje »*Bruger Nightscout-tokenet …, som har flere rettigheder, end en klient har brug for*« betyder, at klienten stadig bruger et token med flere rettigheder, som regel dit admin-token — se [Klientens eget Nightscout-token](#client-master-control-own-token).
+- **Tilbagekalde** en enkelt klient — tryk på ikonet **skraldespand** ved siden af den. Klienten kan ikke længere sende kommandoer, før den bliver parret igen. Dens eget Nightscout-token bliver også slettet, så den heller ikke længere kan læse din Nightscout.
+- **Stoppe al styring** uden at miste parringerne — slå **Tillad styring fra klienter** fra.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+Telefoner, der er sat op med **QR-kode: kun Nightscout**, vises under klienterne, under »**Læser kun Nightscout**«. For hver af dem kan du vise QR-koden igen (for at sætte den samme telefon op igen) eller slette dens token, hvilket stopper dens adgang til din Nightscout.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![Godkendte klienter med en parret klient (rolleknapper, eget Nightscout-token) og en telefon under Læser kun Nightscout](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## Klientroller
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+Hver parret klient har en **rolle**. Hovedenheden kontrollerer den for hver kommando, og klienten viser kun det, som dens rolle tillader. En ny rolle gælder med det samme, uden at du skal parre igen. Rollerne bygger på hinanden: hver rolle kan alt det, som rollen før den kan.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| Rolle               | Klienten må                                                                                                                                                                                                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Skrivebeskyttet** | kun vise data. Den forbliver parret, så den er klar, når du giver den en højere rolle.                                                                                                                                                                                          |
+| **Måltider**        | give en bolus, bruge bolusberegneren og hurtigbolus, indtaste kulhydrater og stoppe en igangværende bolus. Kulhydrater, der indtastes her, kan få loopet til at give mere insulin.                                                                                              |
+| **Omsorgsperson**   | gøre alt, hvad en bruger gør i **AAPS**: midlertidige mål, skift af profil og insulin, loop-tilstand, midlertidig basal, forlænget bolus, scener, careportal-hændelser, kalibreringer og sletning af registreringer. Den kan ikke ændre indstillinger eller forudindstillinger. |
+| **Admin**           | gøre alt, også indstillinger og forudindstillinger (hurtigbolus, forudindstillinger for midlertidige mål, scener, profiler, automatisering, insulin).                                                                                                                           |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+**(i)** øverst på skærmen **Godkendte klienter** viser den samme forklaring. På klienten viser **Administrer → Par med hovedenhed** telefonens egen rolle.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## Hærdet tilstand
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+Når **Tillad styring fra klienter** er slået til, er hovedenheden i **hærdet tilstand**: den tager kun imod ændringer fra parrede klienter. Den tager **ikke** imod behandlinger, midlertidige mål, profilændringer, ændringer af loop-tilstand eller sletninger, der er lavet direkte i Nightscout, for eksempel på Nightscout-hjemmesiden eller i andre apps.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- Indstillingerne for at tage imod data fra Nightscout (**NSClientV3 → Synkronisering**) er skjult, mens hærdet tilstand er slået til; **AAPS** bruger dem, som om de var slået fra.
+- Hovedenheden **uploader** stadig alle sine data til Nightscout, også BS, og holder **websockets** slået til.
+- Hvis hovedenheden får sit **BS fra Nightscout**, tager den stadig BS derfra.
+- For at hente historikken på en **ny** hovedenhed skal du bruge **Fuld synkronisering** i **NSClientV3**: den tager alt, hvad der er i Nightscout, også profiler.
+- [SMS-kommandoer](SMSCommands.md) påvirkes ikke.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+En parret klient følger hovedenhedens hærdede tilstand: den holder websockets slået til, og de samme Nightscout-indstillinger er skjult på den. En klient, der ikke er parret, beholder sine egne indstillinger.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+[Simpel tilstand](#preferences-simple-mode) slår altid hærdet tilstand til. For at slå den fra skal du forlade simpel tilstand og slå **Tillad styring fra klienter** fra på hovedenheden.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+Alt, hvad en parret klient sender, er signeret, kontrolleret og bekræftet af hovedenheden. En behandling, der er skrevet på Nightscout-hjemmesiden, er ikke: alle med skriveadgang til din Nightscout kunne have tilføjet den. I hærdet tilstand kan kun signerede kommandoer ændre, hvad hovedenheden gør.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## Klientens eget Nightscout-token
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+En klient har ikke brug for et admin-token. Den læser kun din Nightscout og sender sine kommandoer til hovedenheden via den; den uploader ikke selv noget. Derfor giver hovedenheden hver klient sit eget Nightscout-token med kun disse rettigheder:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- læse alt,
+- skrive til samlingen `settings`, kanalen til hovedenheden,
+- udsætte (snooze) Nightscout-alarmer.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+Tokenet hører til en Nightscout-rolle med navnet **`aaps-client`**, som hovedenheden opretter første gang, den har brug for den. Du kan se rollen og tokens (med navnet `aaps-` og klientens navn) i **Admin tools** (administrationsværktøjer) på din Nightscout-side. Hvis rollen bliver ændret der, sætter hovedenheden den tilbage, næste gang den laver et token, eller når du åbner **Godkendte klienter**.
 
-How a client gets its token:
+Sådan får en klient sit token:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **Sat op med en QR-kode**: tokenet er i koden.
+- **Parret med PIN** (eller parret, før denne funktion fandtes): efter parringen sender hovedenheden klientens eget token til den via den parrede kanal, krypteret. Klienten kontrollerer først, at et login med det virker, og bruger det derefter i stedet for det token, den havde. Det kræver et admin-token på hovedenheden; uden et sådant beholder klienten sit token, og dens kort på hovedenheden viser den røde linje.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**En klient beholder sit eget token.** Når hovedenheden har set en klient skrive med sit eget token, tager den kun imod den klients kommandoer med det token. En kommando, der er skrevet med et andet token (for eksempel et admin-token, der senere er skrevet ind i klienten, eller en anden klients token), bliver afvist, selv om klienten er parret, og klienten siger »*Hovedenheden afviste det: denne telefon skriver til Nightscout med et andet token end sit eget*«. Dens kort på hovedenheden siger det samme med rødt. Klienten vises stadig som online, så du kan se, hvad der er galt. For at rette det skal du fjerne klienten på hovedenheden og tilføje den igen.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+Hovedenheden sletter eller ændrer aldrig et Nightscout-token, som den ikke selv har lavet (et med andre roller end `aaps-client`): de er dine. Den sletter en klients eget token, når du fjerner klienten.
 
 ---
 
-## Using remote control
+## Brug af fjernstyring
 
-### Triggering an action from the client
+### Start en handling fra klienten
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+Brug klienten præcis som du ville bruge selve telefonen: åbn **Kulhydrater**, **Insulin**, **Midlertidigt mål**, **Profil**, **Scener**, arket **Administrer** osv., og udfyld værdierne.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+Når du bekræfter, viser klienten kort **»Kontakter hovedenhed…«**, **hovedenheden** beregner og begrænser handlingen, og klienten viser derefter **hovedenhedens egen bekræftelse** — præcis de linjer, værdier og farver, som hovedenheden ville vise på sin egen skærm. Gennemgå dem, og tryk på **OK** for at fortsætte.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![En bekræftelse af en scene, skrevet af hovedenheden og vist på klienten](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+Det samme gælder for en simpel indtastning af kulhydrater — mængden, der vises til bekræftelse, er den, som hovedenheden har beregnet:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![Bekræftelse af kulhydrater, skrevet af hovedenheden](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+Når du har bekræftet, udfører hovedenheden handlingen én gang, og resultatet vises tilbage på klienten.
 
-### Insulin bolus from a client
+### Insulinbolus fra en klient
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+Dette er den vigtigste nye funktion i v4. En bolus, der startes på en klient, **leveres af hovedenheden på dens pumpe**; hovedenheden begrænser den ud fra sine egne grænser, og klienten viser **leveringen live**, mens den kører (og en alarm, hvis pumpen melder en fejl).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+En klient bestemmer aldrig selv den leverede mængde. Hovedenheden beregner og begrænser den igen, du bekræfter den mængde, som hovedenheden har skrevet, og først derefter bliver den leveret.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### Når hovedenheden er offline
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+Hvis hovedenheden ikke kan nås (telefonen er slukket/i dvale, ikke forbundet til Nightscout, eller websockets er nede), bliver styringshandlinger på klienten **blokeret, før noget bliver sendt**, og du får en klar besked. Intet bliver udført halvt.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![Besked på klienten, når hovedenheden er offline](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+Klienten kontrollerer automatisk igen, om hovedenheden kan nås, og aktiverer styringen igen, når hovedenheden er online igen.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### Wear OS (ur) på en klient
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+Et ur, der er parret med en **klient**-telefon, sender sine handlinger via klienten videre til hovedenheden (ur → klient → hovedenhed). Uret viser **hovedenhedens** bekræftelseslinjer og det rigtige resultat, præcis som telefonen. Opsætningen af uret er uændret — se [Wear OS](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,90 +271,149 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## Ændring af konfiguration og indstillinger
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+Parring gør mere end at videresende enkelte handlinger — den holder også **konfigurationen** og mange **indstillinger** ens mellem hovedenheden og dens klienter.
 
-### Configuration (which plugins are active)
+### Konfiguration (hvilke plugins der er aktive)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+De aktive **plugins** (APS-algoritme, følsomhed, udjævning, …) vælges på **hovedenheden** og **spejles** til alle parrede klienter. På en klient er disse valg markeret med et lille **mobilikon** på skærmen [Konfiguration](#configuration_sync_icon) — ændr dem på hovedenheden, så følger klienterne automatisk med, og omvendt.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+På en klient vises mobilikonet ved *Udjævning*, *Kalibrering*, *Detektering af følsomhed* og *APS* (synkroniseret fra hovedenheden), men ikke ved *Kommunikation*:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![Konfigurationslisten på en klient — mobilikonet markerer de kategorier, der synkroniseres med hovedenheden](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+Forbindelsesoplysninger, som er unikke for hver enhed — især **NSClient Nightscout-URL / adgangstoken** — bliver *ikke* synkroniseret. Hver telefon har sine egne; på en klient kommer de fra hovedenhedens QR-kode, eller du indstiller dem selv.
 
-### Profiles
+### Profiler
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+Din **profilliste** bliver også holdt synkroniseret mellem hovedenheden og dens parrede klienter. På en parret klient viser **Administrer → Profil** de samme profiler som hovedenheden; du kan **redigere** en profil eller **aktivere** en, og — som alle andre kommandoer — sendes ændringen til **hovedenheden**, udføres der og synkroniseres tilbage.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+Første gang du aktiverer en profil på en nyinstalleret klient, kan klienten vise »*Ingen insulin er i brug endnu*« og bede dig om at **vælge insulinen**. Vælg den insulin, der er aktiv på hovedenheden (**Administrer → Insulinindstillinger** på hovedenheden viser den).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+På en klient, der **ikke er parret**, er skærmen Profil stadig tilgængelig, men **kun til visning**: klienten viser de profiler, den modtager via Nightscout (den har brug for dem til sine egne beregninger), men der er ingen knap til at redigere eller aktivere — der er ingen hovedenhed at sende ændringen til.
 
-### Preferences
+### Indstillinger
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+En del af **indstillingerne** er **tovejs**: du kan ændre dem på **hovedenheden eller på en parret klient**, og ændringen bliver synkroniseret til den anden side. Når du ændrer sådan en indstilling på en klient, bliver den sendt til hovedenheden via den signerede kanal, udført der, og den gældende værdi bliver sendt tilbage — så det, du ser på klienten, er altid det, som hovedenheden har gemt. Hvis den samme indstilling bliver ændret på to enheder næsten samtidig, er det **den seneste ændring, der gælder**. For en indstilling med en skyder bliver den nye værdi sendt, når du løfter fingeren.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+Inde i indstillingerne markerer det samme lille **mobilikon** de enkelte indstillinger, der bliver synkroniseret. I eksemplet nedenfor bliver *Absorptionsgrænse* synkroniseret (mobilikon), mens indstillinger uden ikonet kun gælder på enheden selv:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![Et plugins indstillinger — mobilikonet markerer de synkroniserede indstillinger](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Fordi hovedenheden bestemmer den gemte værdi, skal hovedenheden kunne **nås**, når du ændrer et konfigurationspunkt, som hovedenheden styrer, eller en tovejs-indstilling fra en klient. Når hovedenheden er offline, er disse knapper deaktiveret på klienten (se [Når hovedenheden er offline](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## Om sikkerhed
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **Parringsnøgle**: hovedenheden giver den til klienten én gang — beskyttet af PIN i et Nightscout-dokument eller inde i QR-koden — og begge gemmer den krypteret.
+- **En ny nøgle lige efter parringen**: klientens første besked efter parringen starter en udveksling af nøgler, og fra da af bruger begge telefoner en nøgle, som aldrig er blevet sendt. En nøgle, som nogen måske har set (en fotograferet QR-kode, et PIN-tilbud læst fra Nightscout), kan ikke bruges til noget bagefter. Telefoner, der blev parret, før denne funktion fandtes, gør det samme én gang efter opdateringen.
+- **Hver kommando er signeret** (HMAC). Hovedenheden afviser alt, hvis signatur ikke passer til en parret klient.
+- **Gentagelse forhindres** med en tæller for hver klient, som kun går opad, og hver kommando **udløber** efter kort tid.
+- **Færrest mulige rettigheder i Nightscout**: hver klient har sit [eget Nightscout-token](#client-master-control-own-token), som kun kan læse og skrive til kanalen for klientstyring. Når klienten har brugt det, tager hovedenheden kun imod dens kommandoer med det token. Når du fjerner klienten, slettes tokenet.
+- **Kun signerede ændringer**: i [hærdet tilstand](#client-master-control-hardened-mode) ignorerer hovedenheden ændringer af behandlingen, der er skrevet direkte i Nightscout.
+- **Hovedenheden signerer det, den deler**: indstillingerne, klientlisten og tegnet »hovedenheden er i live«, som hovedenheden lægger i Nightscout til sine klienter, har hovedenhedens signatur. En klient tager kun imod dem, når signaturen er hovedenhedens, så en anden klients token kan ikke ændre dem. Klienten lærer hovedenhedens nøgle, når den parres, eller fra QR-koden for en telefon, der kun læser Nightscout. Et afvist dokument vises i NSClient-loggen som »*✕ SETTINGS … refused*«.
+- **Du har stadig kontrollen**: giv hver klient den [rolle](#client-master-control-roles), den har brug for, tilbagekald en klient med ét tryk, eller slå alt fra med **Tillad styring fra klienter**.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+Hvis en klient bliver gendannet fra en sikkerhedskopi, som sætter dens kommandotæller tilbage, vil hovedenheden afvise dens næste kommandoer som gentagelser. **Ophæv parringen, og par igen** for at rette det.
 ```
 
 ---
 
 (client-master-control-troubleshooting)=
 
-## Troubleshooting
+## Fejlfinding
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands **fail** or the master is often **offline**                                                       | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                    |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+Ved problemer med Nightscout / synkronisering skal du først se [Fejlfinding af NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+### Pairing
+
+**QR-kode-mulighederne kan ikke vælges i dialogen Ny klient**
+
+Dialogen siger hvorfor:
+
+- *Ikke et admin-token*: giv hovedenheden et admin-token til din Nightscout, eller tilføj klienten med **PIN**.
+- *Ikke forbundet*: vent, til hovedenheden viser *forbundet* i **NSClientV3**.
+
+**»Nightscout har et token med dette navn og andre rettigheder«**
+
+Et af dine egne Nightscout-tokens hedder `aaps-` og dette navn. Vælg et andet navn til klienten.
+
+**»En klient med dette navn er allerede på listen«**
+
+Vælg et andet navn, eller fjern den klient først.
+
+**Klienten siger »Denne kode er fra en anden AAPS-version«**
+
+Hovedenhed og klient skal køre **samme** version af **AAPS**. Opdater den ældre af dem.
+
+**Klienten siger »Denne kode er udløbet«**
+
+En kode, der parrer, virker i ca. to minutter. Tilføj klienten igen på hovedenheden for at få en ny kode.
+
+**Klienten siger »Denne telefon er allerede parret«**
+
+Ophæv parringen først (**Administrer → Par med hovedenhed → Ophæv parring**), og scan derefter igen. En kode med **kun Nightscout** virker også på en parret telefon.
+
+**Parringen bliver annulleret med »Parringsnøglen kunne ikke gemmes«**
+
+Intet blev ændret. Start parringen igen. Hvis det bliver ved med at fejle, så genstart **AAPSClient** og prøv én gang til.
+
+**Klienten siger, at den ikke er parret**
+
+Par igen fra **Administrer → Par med hovedenhed**. Kontroller, at klienten er **Aktiv** på hovedenhedens liste **Godkendte klienter**.
+
+**Der sker ikke noget efter parringen**
+
+Sørg for, at **Tillad styring fra klienter** er slået TIL på hovedenheden, og at hovedenheden er forbundet til Nightscout.
+
+### Kommandoer
+
+**Klienten siger, at hovedenheden er offline, eller kommandoer mislykkes**
+
+Kontroller, at:
+
+- hovedenheden er vågen, og **AAPS** kører,
+- begge telefoner er forbundet i **NSClientV3** til den samme Nightscout-side,
+- **websockets** er slået til på begge telefoner.
+
+Websockets er **påkrævet** for fjernstyring fra **AAPSClient**. Hvis websocket-forbindelsen bliver ved med at falde ud, virker fjernstyring ikke. Se [Fejlfinding af NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**En kommando bliver afvist af hovedenheden**
+
+Hovedenheden kontrollerer hver kommando igen ud fra sin aktuelle tilstand: for eksempel findes den valgte profil ikke længere, eller pumpetypen passer ikke. Kontroller på hovedenheden.
+
+**Behandlinger, der indtastes på Nightscout-hjemmesiden, bliver ikke udført**
+
+Det er forventet i [hærdet tilstand](#client-master-control-hardened-mode). Indtast dem på en parret klient i stedet.
+
+### Nightscout-tokens og indstillinger
+
+**Klienten siger »Hovedenheden afviste det: denne telefon skriver til Nightscout med et andet token end sit eget«**
+
+Klienten brugte før sit eget Nightscout-token og skriver nu med et andet, for eksempel efter at et token blev skrevet ind i dens Nightscout-indstillinger. Fjern klienten på hovedenheden, og tilføj den igen (se [Klientens eget Nightscout-token](#client-master-control-own-token)).
+
+**Klientens kort viser »Bruger Nightscout-tokenet …« med rødt**
+
+Klienten skriver stadig med et token, der har flere rettigheder, end den har brug for. Hovedenheden sender klienten sit eget token efter parringen, men kun hvis hovedenheden har et admin-token. Kontroller hovedenhedens token, eller sæt klienten op igen med en QR-kode.
+
+**NSClient-loggen på klienten viser »✕ SETTINGS … refused«, og dens indstillinger følger ikke længere hovedenheden**
+
+En anden har skrevet hovedenhedens indstillingsdokument, eller hovedenheden har en ny nøgle (for eksempel efter at dens data blev slettet). En parret klient tager selv imod den nye nøgle, næste gang den forbinder til Nightscout. En telefon, der kun læser Nightscout, skal have hovedenhedens QR-kode igen (**Læser kun Nightscout → Vis QR-kode**).
+
+**En klient kan ikke længere læse Nightscout**
+
+Dens token blev slettet, for eksempel fordi klienten blev fjernet på hovedenheden. Tilføj den igen.
 
 ---
 

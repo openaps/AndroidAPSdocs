@@ -1,98 +1,98 @@
-# COB calculation
+# COB-beregning
 
-## How does AAPS calculate the COB value?
+## Hvordan beregner AAPS COB-værdien?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
+Når brugeren indtaster kulhydrater som en del af et måltid eller en kulhydratkorrektion, lægger **AAPS** dem til de aktuelle kulhydrater om bord (**COB**). **AAPS** beregner derefter, hvordan brugerens kulhydrater bliver absorberet, ud fra de afvigelser, der ses i brugerens **BS**-værdier. Absorptionshastigheden afhænger af kulhydratfølsomhedsfaktoren (**CSF**). Dette er ikke en indstilling i brugerens **profil**. **AAPS** beregner den ud fra opsætningen af **ISF/I:C**, og den bestemmes af, hvor mange mg/dl 1 g kulhydrat hæver brugerens **BS**.
 
-## Carb Sensitivity Factor
+## Kulhydratfølsomhedsfaktor
 
-The formula adopted by **AAPS** is:
+Den formel, som **AAPS** bruger, er:
 
 - absorbed_carbs = deviation * ic / isf.
 
-The effect on the user’s **Profile** will:
+Virkningen på brugerens **profil** er:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _øg_ **IC** – flere kulhydrater bliver absorberet hvert 5. minut, så den samlede absorptionstid bliver kortere;
 
-- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
+- _øg_ **ISF** – færre kulhydrater bliver absorberet hvert 5. minut, så den samlede absorptionstid bliver længere; og
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- _ændr_ **Profilprocent** – begge værdier øges/mindskes, så det har ingen virkning på kulhydraternes absorptionstid.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
+Hvis brugerens **profil**-**ISF** f.eks. er 100 og **I:C** er 5, vil brugerens kulhydratfølsomhedsfaktor være 20. For hver 20 mg/dl brugerens **BS** stiger, beregner **AAPS**, at 1 g kulhydrat er absorberet. Positiv **IOB** påvirker også beregningen af **COB**. Så hvis **AAPS** forudsiger, at brugerens **BS** vil falde 20 mg/dl på grund af **IOB**, men BS i stedet bliver liggende, vil **AAPS** også beregne, at 1 g kulhydrat er absorberet.
 
-Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+Kulhydrater bliver også absorberet efter de metoder, der er beskrevet nedenfor. Det afhænger af, hvilken følsomhedsalgoritme brugeren har valgt i **AAPS**.
 
-## Carbs Sensitivity - Oref1
+## Kulhydratfølsomhed – Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Kulhydrater, der ikke er absorberet, bliver skåret af efter en bestemt tid:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![COB graph with Oref1 cut-off](../images/cob_oref0_orange_I.png)
+![COB-graf med Oref1-afskæring](../images/cob_oref0_orange_I.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the graphs look slightly different, but the **COB** graph carries the same information.
+Skærmbilledet ovenfor er fra en tidligere version af **AAPS** – i **AAPS** 4 ser graferne lidt anderledes ud, men **COB**-grafen viser de samme oplysninger.
 ```
 
 
-## Carbs Sensitivity - WeightedAverage
+## Kulhydratfølsomhed – WeightedAverage
 
-Absorption is calculated to have COB = 0 after specified time:
+Absorptionen bliver beregnet, så COB = 0 efter en bestemt tid:
 
 ![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
+Hvis den minimale kulhydratabsorption (min_5m_carbimpact) bliver brugt i stedet for en værdi, der er beregnet ud fra **BS**-afvigelser, vises en orange prik på **COB**-grafen.
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## Registrering af forkerte COB-værdier
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
+**AAPS** advarer brugeren, hvis brugeren er ved at give bolus med **COB** fra et tidligere måltid, og algoritmen vurderer, at den aktuelle **COB**-beregning er forkert. I dette tilfælde giver AAPS brugeren et ekstra tip på bekræftelsesskærmen, efter at bolusberegneren er brugt.
 
-### How does AAPS detect wrong COB values?
+### Hvordan registrerer AAPS forkerte COB-værdier?
 
-Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](#Preferences-min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
+Normalt registrerer __AAPS__ kulhydratabsorption ud fra **BS**-afvigelser. Hvis brugeren har indtastet kulhydrater, men **AAPS** ikke kan registrere den forventede absorption ud fra **BS**-afvigelser, bruger AAPS i stedet metoden [min_5m_carbimpact](#Preferences-min_5m_carbimpact) til at beregne absorptionen (såkaldt »fallback«). Da denne metode kun beregner den minimale kulhydratabsorption uden at tage hensyn til **BS**-afvigelser, kan den give forkerte COB-værdier.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Tip om forkert COB-værdi](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+På skærmbilledet ovenfor blev kulhydratabsorptionen 66% af tiden beregnet med min_5m_carbimpact i stedet for den værdi, der blev registreret ud fra afvigelser. Det betyder, at brugeren måske har haft mindre **COB** end beregnet af algoritmen.
 
-### How to deal with this warning?
+### Hvad gør du ved denne advarsel?
 
-- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
-- If you need a correction bolus, enter it manually.
-- Be careful not to overdose or stack insulin!
-
-
-### Why does the algorithm not detect COB correctly?
-
-This could be because:
-- Potentially the user overestimated carbs when entering them.
-- Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- Overvej at annullere behandlingen – tryk på »Annuller« i stedet for OK.
+- Beregn dit næste måltid igen med bolusberegneren, og lad **COB** være uden flueben.
+- Hvis du har brug for en korrektionsbolus, så indtast den manuelt.
+- Pas på, at du ikke overdoserer eller stabler insulin!
 
 
-## Manual correction of carbs entered
+### Hvorfor registrerer algoritmen ikke COB korrekt?
 
-If carbs are over or underestimated this can be corrected through the **Treatments history** screen as described [here](#screens-bolus-carbs).
+Det kan skyldes:
+- Måske har brugeren overvurderet kulhydraterne, da de blev indtastet.
+- Aktivitet / motion efter dit forrige måltid.
+- I:C skal justeres.
+- Værdien for min_5m_carbimpact er forkert (anbefalet er 8 med SMB, 3 med AMA).
 
 
-## Carb correction - how to delete a Carb entry from Treatments
+## Manuel rettelse af indtastede kulhydrater
+
+Hvis kulhydrater er over- eller undervurderet, kan det rettes på skærmen **Behandlingshistorik** som beskrevet [her](#screens-bolus-carbs).
 
 
-The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. This may be because the user over or underestimated the carb entry:
+## Kulhydratkorrektion – sådan sletter du en kulhydratindtastning i Behandlinger
 
-![Deleting a carb entry from Treatments history](../images/treatments_history_delete_carbs.png)
 
-1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
-2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
-3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
-4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
-5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
-6. Do the same for **IOB** if there is just one line including carbs and insulin.
-7. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
-8. Enter the correct carbs amount through the **Carbs** dialog (**Treatments** → **Carbs**) and set the correct event time.
-9. If there was just one line including carbs and insulin the user should also re-add the amount of insulin. Make sure to set the correct event time and check **IOB** on the main screen after confirming the new entry.
+Skærmen **Behandlingshistorik** kan bruges til at rette en forkert kulhydratindtastning ved at slette den. Det kan skyldes, at brugeren har over- eller undervurderet kulhydratindtastningen:
+
+![Sletning af en kulhydratindtastning i Behandlingshistorik](../images/treatments_history_delete_carbs.png)
+
+1. Se efter, og husk de aktuelle værdier for **COB** og **IOB** på hovedskærmen i **AAPS**.
+2. Åbn **Behandlingshistorik** (sidemenuen → *Behandlingshistorik*), fanen **Kulhydrater og bolus**. Afhængigt af pumpen kan kulhydraterne vises sammen med insulin på én linje eller som en separat indtastning (f.eks. med Dana RS).
+3. **Tryk længe** på den forkerte kulhydratindtastning – listen skifter til **valgtilstand** med et afkrydsningsfelt på hver linje, og indtastningen er markeret (mærket **1** ovenfor). Sæt flueben ved andre indtastninger, som du også vil fjerne.
+4. Tryk på ikonet **🗑 Slet** i den øverste bjælke (mærket **2**), og bekræft – bekræftelsesdialogen viser præcis, hvad der bliver fjernet.
+5. Kontroller, at kulhydraterne er fjernet, ved at se på **COB** på hovedskærmen i **AAPS** igen.
+6. Gør det samme for **IOB**, hvis der kun er én linje med både kulhydrater og insulin.
+7. Hvis kulhydrater ikke bliver fjernet som tænkt, og der bliver tilføjet ekstra kulhydrater som forklaret i dette afsnit, bliver **COB** for høj. Det kan føre til, at **AAPS** giver for meget insulin.
+8. Indtast den rigtige mængde kulhydrater i dialogen **Kulhydrater** (**Behandlinger** → **Kulhydrater**), og indstil det rigtige tidspunkt for hændelsen.
+9. Hvis der kun var én linje med både kulhydrater og insulin, skal brugeren også tilføje insulinmængden igen. Sørg for at indstille det rigtige tidspunkt for hændelsen, og kontroller **IOB** på hovedskærmen, når du har bekræftet den nye indtastning.
 

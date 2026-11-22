@@ -121,6 +121,8 @@ Trykk på **Forkast patch** på pumpeskjermen og bekreft. Insulinleveringen stop
 
 Når en kritisk alarm har stoppet patchen, tilbyr alarmen **Deaktiver patch** i stedet. Trykker du på den, forkastes patchen på samme måte.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarmer og varsler

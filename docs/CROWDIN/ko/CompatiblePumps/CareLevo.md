@@ -121,6 +121,8 @@ CareLevo 드라이버는 **AAPS**에 새로 추가되었습니다. 첫 번째 �
 
 위험 알람으로 패치가 멈춘 경우에는 알람에 대신 **사용 종료** 버튼이 표시됩니다. 이 버튼을 누르면 같은 방법으로 패치가 폐기됩니다.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## 알람 및 알림

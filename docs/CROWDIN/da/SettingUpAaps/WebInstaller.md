@@ -1,71 +1,71 @@
 (web-installer)=
 
-# AAPS web installer
+# Webinstallationsprogram til AAPS
 
-Install the **AAPS** APK you built onto your Android phone, straight from this browser, over a USB cable. No command line, nothing to download. Installed this way (the ADB way), apps are **exempt from Google's Android developer verification**.
+Installer den **AAPS**-APK, du har bygget, på din Android-telefon direkte fra denne browser via et USB-kabel. Ingen kommandolinje, intet at downloade. Apps, der installeres på denne måde (via ADB), er **undtaget fra Googles udviklerverificering på Android**.
 
 ```{admonition} This page runs entirely in your browser
 :class: tip
 
-Your APK file and your phone's data never leave this computer: the page cannot send data anywhere (its *Content-Security-Policy* blocks all uploads; you can check this in the browser's developer tools, Network tab). Only ever use this page at its official address, linked from [Transferring and installing AAPS](#android-developer-verification-web) in the **AAPS** documentation.
+Din APK-fil og din telefons data forlader aldrig denne computer: siden kan ikke sende data nogen steder hen (dens *Content-Security-Policy* blokerer alle uploads; du kan kontrollere det i browserens udviklerværktøjer, fanen Network). Brug kun denne side på dens officielle adresse, som der linkes til fra [Overførsel og installation af AAPS på din telefon](#android-developer-verification-web) i **AAPS**-dokumentationen.
 ```
 
 <noscript>
 
-**JavaScript is disabled.** This page needs JavaScript to talk to your phone.
+**JavaScript er slået fra.** Denne side skal bruge JavaScript for at tale med din telefon.
 
 </noscript>
 
 <div id="aapsi-unsupported" class="aapsi-box aapsi-error" hidden>
 
-**This browser cannot talk to USB devices.** Please open this page in **Google Chrome**, **Microsoft Edge** or **Opera**, on a computer or an Android device. Firefox, Safari and all iPhone browsers do not support WebUSB.
+**Denne browser kan ikke tale med USB-enheder.** Åbn denne side i **Google Chrome**, **Microsoft Edge** eller **Opera** på en computer eller en Android-enhed. Firefox, Safari og alle browsere på iPhone understøtter ikke WebUSB.
 
 </div>
 
 (web-installer-prepare)=
 
-## Step 1 – Before you start
+## Trin 1 – Før du starter
 
-- **Enable USB debugging** on the phone (one-time setup):
-  - Go to **Settings** > **About phone** and tap **Build number** seven times, until the phone confirms you are a developer.
-  - Back in the main **Settings**, open **Developer options** and switch on **USB debugging**.
-- Connect the phone with a **data-capable USB cable** (some charging cables cannot transfer data: if the phone is never detected, try another cable).
-- **Close Android Studio** and any other program that uses ADB: only one program can talk to the phone at a time.
-- Have your **AAPS APK file** ready on this computer (for the browser build, download it from your Google Drive first).
+- **Slå USB-fejlretning til** på telefonen (skal kun gøres én gang):
+  - Gå til **Indstillinger** > **Om telefonen**, og tryk syv gange på **Buildnummer**, indtil telefonen bekræfter, at du er udvikler.
+  - Gå tilbage til hovedmenuen **Indstillinger**, åbn **Udviklerindstillinger**, og slå **USB-fejlretning** til.
+- Forbind telefonen med et **USB-kabel, der kan overføre data** (nogle ladekabler kan ikke overføre data: hvis telefonen aldrig bliver fundet, så prøv et andet kabel).
+- **Luk Android Studio** og alle andre programmer, der bruger ADB: kun ét program ad gangen kan tale med telefonen.
+- Hav din **AAPS-APK-fil** klar på denne computer (ved build i browseren skal du først downloade den fra dit Google Drive).
 
-No computer? This page also works from Chrome on *another Android phone*, connected with a USB-C to USB-C cable.
+Ingen computer? Denne side virker også fra Chrome på *en anden Android-telefon*, forbundet med et USB-C til USB-C-kabel.
 
 (web-installer-connect)=
 
-## Step 2 – Connect your phone
+## Trin 2 – Forbind din telefon
 
-Click the button, then pick your phone in the list the browser shows.
+Klik på knappen, og vælg derefter din telefon på listen, som browseren viser.
 
-<button class="aapsi-btn" type="button" id="aapsi-connect-btn">Connect phone</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>Disconnect</button>
+<button class="aapsi-btn" type="button" id="aapsi-connect-btn">Forbind telefon</button> <button class="aapsi-btn aapsi-secondary" type="button" id="aapsi-disconnect-btn" hidden>Afbryd forbindelse</button>
 
 <span class="aapsi-status" id="aapsi-connect-status"></span>
 
 <div class="aapsi-box aapsi-warn" id="aapsi-authorize-hint" hidden>
 
-**Look at your phone now:** tap **Allow** on the "Allow USB debugging?" message, and tick *"Always allow from this computer"*. Don't see it? Unlock the phone's screen, or unplug and replug the cable.
+**Se på din telefon nu:** tryk på **Tillad** i beskeden »Vil du tillade USB-fejlretning?«, og sæt flueben ved *»Tillad altid fra denne computer«*. Kan du ikke se den? Lås telefonens skærm op, eller tag kablet ud og sæt det i igen.
 
 </div>
 
 <div id="aapsi-connect-help" hidden>
 
-```{admonition} The phone doesn't show up, or connecting fails?
+```{admonition} Telefonen vises ikke, eller forbindelsen mislykkes?
 :class: note
 
-- Check that **USB debugging** is on ([step 1](#web-installer-prepare)) and the cable is a data cable.
-- Close **Android Studio**, or run `adb kill-server` if you have ADB installed, then unplug and replug the phone.
-- On Windows, an OEM USB driver installed for your phone can also hold the connection: unplug other Android tools and try again.
+- Kontroller, at **USB-fejlretning** er slået til ([trin 1](#web-installer-prepare)), og at kablet er et datakabel.
+- Luk **Android Studio**, eller kør `adb kill-server`, hvis du har ADB installeret, og tag derefter telefonen ud og sæt den i igen.
+- På Windows kan en USB-driver fra producenten, der er installeret til din telefon, også holde forbindelsen: tag andre Android-værktøjer ud, og prøv igen.
 ```
 
 </div>
 
 (web-installer-file)=
 
-## Step 3 – Choose your AAPS APK file
+## Trin 3 – Vælg din AAPS-APK-fil
 
 <input type="file" id="aapsi-apk-input" accept=".apk" disabled />
 
@@ -73,11 +73,11 @@ Click the button, then pick your phone in the list the browser shows.
 
 (web-installer-install)=
 
-## Step 4 – Install
+## Trin 4 – Installer
 
-Updating an existing **AAPS**? All its settings and history are kept, exactly like `adb install -r`.
+Opdaterer du en eksisterende **AAPS**? Alle dens indstillinger og al dens historik bevares, præcis som med `adb install -r`.
 
-<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>Install on phone</button>
+<button class="aapsi-btn" type="button" id="aapsi-install-btn" disabled>Installer på telefonen</button>
 
 <div id="aapsi-progress-wrap" hidden>
 
@@ -88,7 +88,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <div class="aapsi-box aapsi-success" id="aapsi-result-success" hidden>
 
-**AAPS is installed.** You can unplug the phone. If this was your first installation, continue with the [Setup Wizard](SetupWizard.md).
+**AAPS er installeret.** Du kan tage telefonen ud. Hvis dette var din første installation, så fortsæt med [AAPS-opsætningsguide](SetupWizard.md).
 
 </div>
 
@@ -96,7 +96,7 @@ Updating an existing **AAPS**? All its settings and history are kept, exactly li
 
 <span id="aapsi-error-message"></span>
 
-Technical details:
+Tekniske detaljer:
 
 <pre id="aapsi-error-details"></pre>
 
@@ -104,37 +104,37 @@ Technical details:
 
 ----
 
-Part of the **AAPS** documentation. Built on the open-source [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb) libraries (MIT license). Page source and build instructions: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
+En del af **AAPS**-dokumentationen. Bygget på [Tango (ya-webadb)](https://github.com/yume-chan/ya-webadb)-bibliotekerne med åben kildekode (MIT-licens). Sidens kildekode og byggevejledning: [openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs).
 
-**AAPS** is a DIY system, not a commercial product: you build it, you install it, you are responsible for it. This page is provided by the community without any warranty.
+**AAPS** er et gør-det-selv-system, ikke et kommercielt produkt: du bygger det, du installerer det, og du har ansvaret for det. Denne side stilles til rådighed af fællesskabet uden nogen garanti.
 
 <div id="aapsi-msgs" hidden>
 
-- <span data-aapsi-msg="noDetails">(no further details)</span>
-- <span data-aapsi-msg="errSignature">This APK was built with a different signing key than the AAPS already installed on the phone. Use the same keystore as before, or export your AAPS settings and uninstall the old AAPS first (uninstalling loses all its settings and history: export first!).</span>
-- <span data-aapsi-msg="errDowngrade">The phone already has a newer version of this app. To go back to an older version, export your settings and uninstall the current app first.</span>
-- <span data-aapsi-msg="errStorage">There is not enough free storage on the phone. Free up some space and try again.</span>
-- <span data-aapsi-msg="errInvalidApk">The phone does not recognize this file as a valid APK. Check that you selected the right file and that the download completed.</span>
-- <span data-aapsi-msg="errOldSdk">The Android version on this phone is too old for this APK.</span>
-- <span data-aapsi-msg="errCanceled">The installation was declined on the phone. Watch the phone's screen and allow the installation when asked.</span>
-- <span data-aapsi-msg="errBusy">Another program is using the phone's ADB connection. Close Android Studio (or run "adb kill-server"), unplug and replug the cable, then try again.</span>
-- <span data-aapsi-msg="errLost">The connection to the phone was lost. Check the cable, then connect again.</span>
-- <span data-aapsi-msg="errGeneric">The installation failed. See the technical details below, and ask for help on the AAPS community channels if needed.</span>
-- <span data-aapsi-msg="errDisconnectedDuringInstall">The phone was disconnected during the installation. Reconnect it and try again: nothing is broken.</span>
-- <span data-aapsi-msg="waitingPick">Waiting for you to pick a device…</span>
-- <span data-aapsi-msg="noDevice">No device selected. Is USB debugging enabled, and is the cable a data cable?</span>
-- <span data-aapsi-msg="connecting">Connecting…</span>
-- <span data-aapsi-msg="phoneDisconnected">The phone was disconnected.</span>
-- <span data-aapsi-msg="androidDevice">Android device</span>
-- <span data-aapsi-msg="connectedTo">Connected to {name}.</span>
-- <span data-aapsi-msg="couldNotConnect">Could not connect.</span>
-- <span data-aapsi-msg="disconnected">Disconnected.</span>
-- <span data-aapsi-msg="notApk">"{file}" is not an .apk file. Please select the AAPS APK you built.</span>
-- <span data-aapsi-msg="emptyFile">This file is empty. Please check the download and select it again.</span>
-- <span data-aapsi-msg="notRealApk">"{file}" does not look like a real APK file. Did you select the right file?</span>
-- <span data-aapsi-msg="selected">Selected: {file} ({size})</span>
-- <span data-aapsi-msg="copying">Copying to phone… {done} of {total}</span>
-- <span data-aapsi-msg="installingOnPhone">Installing on the phone… (this can take a minute)</span>
+- <span data-aapsi-msg="noDetails">(ingen yderligere detaljer)</span>
+- <span data-aapsi-msg="errSignature">Denne APK blev bygget med en anden signeringsnøgle end den AAPS, der allerede er installeret på telefonen. Brug det samme keystore som før, eller eksporter dine AAPS-indstillinger og afinstaller først den gamle AAPS (ved afinstallation mister du alle dens indstillinger og al historik: eksporter først!).</span>
+- <span data-aapsi-msg="errDowngrade">Telefonen har allerede en nyere version af denne app. For at gå tilbage til en ældre version skal du eksportere dine indstillinger og først afinstallere den nuværende app.</span>
+- <span data-aapsi-msg="errStorage">Der er ikke nok ledig lagerplads på telefonen. Frigør noget plads, og prøv igen.</span>
+- <span data-aapsi-msg="errInvalidApk">Telefonen genkender ikke denne fil som en gyldig APK. Kontroller, at du har valgt den rigtige fil, og at downloadet er fuldført.</span>
+- <span data-aapsi-msg="errOldSdk">Android-versionen på denne telefon er for gammel til denne APK.</span>
+- <span data-aapsi-msg="errCanceled">Installationen blev afvist på telefonen. Hold øje med telefonens skærm, og tillad installationen, når du bliver spurgt.</span>
+- <span data-aapsi-msg="errBusy">Et andet program bruger telefonens ADB-forbindelse. Luk Android Studio (eller kør "adb kill-server"), tag kablet ud og sæt det i igen, og prøv så igen.</span>
+- <span data-aapsi-msg="errLost">Forbindelsen til telefonen blev afbrudt. Kontroller kablet, og forbind derefter igen.</span>
+- <span data-aapsi-msg="errGeneric">Installationen mislykkedes. Se de tekniske detaljer nedenfor, og spørg om hjælp i AAPS-fællesskabets kanaler, hvis det er nødvendigt.</span>
+- <span data-aapsi-msg="errDisconnectedDuringInstall">Forbindelsen til telefonen blev afbrudt under installationen. Forbind den igen, og prøv igen: intet er gået i stykker.</span>
+- <span data-aapsi-msg="waitingPick">Venter på, at du vælger en enhed…</span>
+- <span data-aapsi-msg="noDevice">Ingen enhed valgt. Er USB-fejlretning slået til, og er kablet et datakabel?</span>
+- <span data-aapsi-msg="connecting">Forbinder…</span>
+- <span data-aapsi-msg="phoneDisconnected">Forbindelsen til telefonen blev afbrudt.</span>
+- <span data-aapsi-msg="androidDevice">Android-enhed</span>
+- <span data-aapsi-msg="connectedTo">Forbundet til {name}.</span>
+- <span data-aapsi-msg="couldNotConnect">Kunne ikke forbinde.</span>
+- <span data-aapsi-msg="disconnected">Forbindelse afbrudt.</span>
+- <span data-aapsi-msg="notApk">»{file}« er ikke en .apk-fil. Vælg den AAPS-APK, du har bygget.</span>
+- <span data-aapsi-msg="emptyFile">Denne fil er tom. Kontroller downloadet, og vælg filen igen.</span>
+- <span data-aapsi-msg="notRealApk">»{file}« ligner ikke en rigtig APK-fil. Har du valgt den rigtige fil?</span>
+- <span data-aapsi-msg="selected">Valgt: {file} ({size})</span>
+- <span data-aapsi-msg="copying">Kopierer til telefonen… {done} af {total}</span>
+- <span data-aapsi-msg="installingOnPhone">Installerer på telefonen… (dette kan tage et minut)</span>
 - <span data-aapsi-msg="megabytes">{n} MB</span>
 
 </div>

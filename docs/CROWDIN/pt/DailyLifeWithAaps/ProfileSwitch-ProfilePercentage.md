@@ -10,7 +10,7 @@ Quando começar a usar o **AAPS**, vai precisar de criar um **Perfil**, perceber
 
 - Trabalhadores noturnos ou por turnos - pode configurar um deslocamento temporal no **Perfil** para trabalhadores por turnos, alterando o número de horas no **Perfil** conforme o utilizador se deita ou acorda mais tarde/mais cedo.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Assim, o **AAPS** faz um cálculo equilibrado ao administrar a insulina do utilizador. Uma redução da basal no **Perfil** do utilizador no **AAPS** traz pouco benefício se o algoritmo continuar a usar os mesmos valores de FSI e IHC.
+Porquê usar uma **Percentagem do Perfil** em vez de um ajuste temporário da basal? Para ser mais eficaz, uma **Percentagem do Perfil** aplica uma redução ou um aumento proporcional à basal, ao FSI e ao IHC. Assim, o **AAPS** faz um cálculo equilibrado ao administrar a insulina do utilizador. Uma redução da basal no **Perfil** do utilizador no **AAPS** traz pouco benefício se o algoritmo continuar a usar os mesmos valores de FSI e IHC.
 
 (ProfileSwitch-change-percentage)=
 
@@ -54,9 +54,9 @@ Precisa de ter pelo menos um **Perfil** guardado. Uma **Percentagem do Perfil** 
 
 No **AAPS** v4, os perfis são geridos e ativados a partir do ecrã **Gerir** (navegação inferior) → **Perfil** (*«Gerir e ativar perfis»*).
 
-O ecrã Perfil mostra os seus perfis num **carrossel de cartões deslizantes**. O cartão do perfil ativo está marcado como **ATIVO** e mostra a sua basal diária total (p. ex. *∑ 30,15 U*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+O ecrã Perfil mostra os seus perfis num **carrossel de cartões deslizantes**. O cartão do perfil ativo está marcado como **ATIVO** e mostra a sua basal diária total (p. ex. *∑ 30,15 U*). Abaixo do cartão selecionado vê os detalhes desse perfil: o tipo de **Insulina** e os horários de **IHC**, **FSI**, **basal** e **alvo**, com gráficos.
 
-When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
+Quando há uma troca temporária em curso, o cartão **ATIVO** mostra a percentagem e o deslocamento temporal com o tempo que falta, por exemplo *110% +2 h · 2 h 40 min*, por cima de uma barra de progresso. Ambos são atualizados a cada 30 segundos. Os detalhes abaixo têm então duas colunas: os valores do perfil a azul e os valores em uso, com a percentagem, a vermelho.
 
 ![O ecrã Perfil — carrossel de perfis, detalhes e barra de ações](../images/v4/Profiles/profile_manage.png)
 
@@ -127,7 +127,7 @@ O efeito de uma Percentagem do **Perfil** está resumido na tabela abaixo:
 
 | Percentagem da  
 Troca de Perfil |   Efeito   |     IHC  
-g/U     | Example  
+g/U     | Exemplo  
 15 g |          FSI  
 mmol/l/U  
 mg/dl/U          | U para baixar  
@@ -155,7 +155,7 @@ mg/dl/U          | U para baixar
 
 Um «deslocamento temporal» no **Perfil** do utilizador move as definições do **Perfil** ao longo do relógio diário («circadiano») pelo número de horas introduzido. Isto pode ser útil para:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
+- **trabalhadores noturnos ou por turnos**: para os turnos da noite, altere o número de horas conforme o utilizador se deita ou acorda mais tarde/mais cedo em relação ao **Perfil**; 
 - **utilizadores que mudam de fuso horário em viagem**; ou
 - **crianças com diabetes tipo 1**: que têm uma rotina fixa para a hora de dormir e a resistência à insulina prevista no seu **Perfil**. Se, por qualquer razão, a criança for dormir mais tarde do que o habitual, o cuidador pode aplicar um «deslocamento temporal» ao **Perfil** da criança, para que o **AAPS** reaja à resistência à insulina no período de tempo pretendido.
 
@@ -171,7 +171,7 @@ A questão é sempre esta: as definições de que hora do **Perfil** devem subst
 
 ![Direções do deslocamento temporal na troca de perfil](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Este mecanismo de guardar «fotografias» do **Perfil** permite um cálculo muito mais preciso do passado e a possibilidade de seguir as alterações do **Perfil**.
 
 (ProfileSwitch-keep-for-later)=
 

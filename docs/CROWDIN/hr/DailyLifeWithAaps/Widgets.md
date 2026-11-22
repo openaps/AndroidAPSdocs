@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Widgeti na početnom zaslonu
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** ima widgete koje možete dodati na početni zaslon telefona. Widget prikazuje vaše trenutne podatke bez otvaranja aplikacije. Dodirnite widget da otvorite **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Dostupni widgeti
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Dostupno je pet widgeta. Nalaze se pod **AAPS** u Androidovom izborniku widgeta:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![Widgeti AAPS-a u Androidovom izborniku widgeta](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| Widget                               | Zadana veličina | Što prikazuje                                                                                                                                                                                                                                                     |
+| ------------------------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AAPS widget**                      | 5 × 2           | Statusni blok glavnog zaslona: GUK s trendom i deltom, način rada petlje kao ikona pokraj naziva profila, cilj, osjetljivost (prikazana kao na glavnom zaslonu), IOB i COB. Tekstovi se smanjuju da stanu u veličinu koju date widgetu, umjesto da budu odrezani. |
+| **AAPS krug glukoze**                | 2 × 2           | Krug GUK-a s glavnog zaslona: prsten u boji GUK-a, luk trenda, delta, vrijednost GUK-a i vrijeme od zadnjeg očitanja.                                                                                                                                             |
+| **AAPS mali**                        | 2 × 2           | Naziv profila, GUK sa strelicom trenda, vrijeme od zadnjeg očitanja, delta, aktivni inzulin (IOB) i aktivni ugljikohidrati (COB).                                                                                                                                 |
+| **AAPS GUK + IOB + COB (kompaktno)** | 4 × 1           | Jedan redak s GUK-om i strelicom trenda, IOB-om i COB-om.                                                                                                                                                                                                         |
+| **AAPS GUK graf**                    | 3 × 1           | Vrijednost GUK-a s malim grafom nedavnih očitanja.                                                                                                                                                                                                                |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+Widget **AAPS widget**, widget **krug glukoze** i widget **mali** na početnom zaslonu:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![AAPS widget, krug glukoze i mali widget na početnom zaslonu](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+Widget **kompaktno** i widget **GUK graf**:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Kompaktni widget i widget GUK graf na početnom zaslonu](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+Vrijednosti GUK-a imaju iste boje kao u **AAPS-u**: zelena u rasponu, žuta iznad raspona, crvena ispod raspona.
 
 ---
 
-## Widget configuration
+## Dodavanje widgeta
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Točni koraci ovise o vašem telefonu i njegovom pokretaču (launcheru). Na većini telefona:
 
-The **Widget configuration** dialog has two settings:
+1. Dugo pritisnite prazno mjesto na početnom zaslonu i odaberite **Widgeti**.
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![Izbornik widgeta](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Otvorite **AAPS** na popisu i dodirnite widget koji želite.
+3. Pritisnite **Dodaj** (ili povucite widget na mjesto koje želite).
 
-Each widget has its own configuration.
+   ![Gumb Dodaj ispod odabranog widgeta](../images/widgets/widget_picker_add_button.png)
+
+Widget se postavlja na početni zaslon. Odmah nakon dodavanja prikazuje se s ručkama: povucite ručku da **promijenite veličinu** widgeta ili povucite widget da ga premjestite. Krugu glukoze možete dati bilo koju veličinu.
+
+![Upravo dodani widget s ručkama za promjenu veličine i gumbom za postavke](../images/widgets/widget_glucose_circle_added.png)
+
+Ako je stranica početnog zaslona puna, telefon stavlja widget na novu stranicu.
 
 ---
 
-## Good to know
+## Konfiguracija widgeta
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Dodirnite gumb s **olovkom** koji se prikazuje na widgetu odmah nakon što ste ga dodali. Kasnije dugo pritisnite widget da se ručke i olovka opet pojave.
+
+Dijalog **Konfiguracija widgeta** ima dvije postavke:
+
+- **Podesi prozirnost** — koliko je pozadina widgeta neprozirna. Niska vrijednost propušta pozadinsku sliku zaslona.
+- **Koristi crnu boju** — koristi crnu pozadinu umjesto zadane.
+
+![Konfiguracija widgeta](../images/widgets/widget_configuration.png)
+
+Svaki widget ima svoju konfiguraciju.
+
+---
+
+## Dobro je znati
+
+- Widget samo **prikazuje** podatke. Iz widgeta ne možete dati bolus niti išta promijeniti.
+- Widget osvježava **AAPS**. Ako **AAPS** ne radi ili ga Android ograničava u pozadini, widget može prikazivati stare podatke. Provjerite vrijeme od zadnjeg očitanja i provjerite je li **AAPS** izuzet iz [optimizacije baterije](#SetupWizard-StoragePermission).
+- U aplikacijama **AAPSClient**, **AAPSClient2** i **AAPSClient3** pozadina widgeta je žuta, plava ili zelena, tako da možete razlikovati aplikacije. Povećajte neprozirnost u konfiguraciji widgeta ako se boja teško vidi. Pogledajte [O aplikacijama AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions).

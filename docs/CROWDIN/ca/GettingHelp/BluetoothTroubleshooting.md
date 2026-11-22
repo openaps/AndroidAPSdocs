@@ -1,150 +1,150 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# Bluetooth related issues
+# Problemes relacionats amb el Bluetooth
 
-Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues.
+Alguns usuaris han tingut problemes amb errors d'activació de l'Omnipod DASH, problemes de connexió de la Medtrum Nano i altres errors del pod relacionats amb el Bluetooth. Molts d'aquests problemes tenen l'origen en una de les causes següents.
 
-Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medtrum Nano has known issues with nearby device permission as well as the Omnipod DASH.
+Algunes d'aquestes causes probablement afecten també altres bombes d'insulina Bluetooth. La Medtrum Nano té problemes coneguts amb el permís de dispositius propers, igual que l'Omnipod DASH.
 
 ---
 
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
-## Cannot start Omnipod with Android 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this version has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+## No es pot iniciar l'Omnipod amb Android 16
+- Android 16 necessita com a mínim la versió 3.3.2.1 d'**AAPS** perquè l'Omnipod DASH funcioni bé, ja que aquesta versió inclou correccions per als problemes coneguts que Android 16 va introduir per a l'Omnipod.
 
 ---
 
 (bluetoothtroubleshooting-bluetooth-battery-optimisation)=
 
-## Bluetooth Battery Optimisation
+## Optimització de bateria del Bluetooth
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
+Les versions noves d'Android tenen activada l'optimització de bateria per a l'aplicació del sistema Bluetooth. Se sap que això causa alguns problemes a bombes i CGM Bluetooth.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+Si heu seguit l'[Assistent de configuració d'AAPS](../SettingUpAaps/SetupWizard.md) i la configuració de la secció [Optimització de bateria del Bluetooth](#setup-wizard-bluetooth-battery-optimisation), aquesta opció ja hauria d'estar bé. Però si vau seguir una versió antiga d'aquesta guia, és possible que no l'hàgiu canviada.
 
-Verify this is correctly configured if you have pump and CGM disconnections.
+Comproveu que estigui ben configurada si teniu desconnexions de la bomba o del CGM.
 
 ---
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission)=
 
-## Apps that use the "Nearby devices" Android permission can cause connection drops and Pod activation problems
+## Les aplicacions que fan servir el permís d'Android «Dispositius propers» poden provocar talls de connexió i problemes d'activació del pod
 
-Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
+Android us permet controlar què pot fer o a què pot accedir cada aplicació del telèfon amb un sistema de permisos. Per a cada aplicació instal·lada podeu permetre o denegar permisos concrets, per exemple accedir als fitxers del dispositiu, accedir al Bluetooth, cercar dispositius propers, etc.
 
-**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+**AAPS** necessita diversos permisos concrets per funcionar. Un d'ells, necessari perquè els pods funcionin, és el permís «Dispositius propers». Moltes altres aplicacions també necessiten aquest permís. La comunitat ha vist que, en alguns dispositius, diverses aplicacions amb aquest permís concedit poden provocar problemes en activar pods nous.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### Apps that use "Nearby device" permissions and are known to have caused problems:
+### Aplicacions que fan servir el permís «Dispositius propers» i que se sap que han causat problemes:
 
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too.
+Les aplicacions d'aquesta llista s'han esmentat en un o més llocs de la comunitat perquè causen problemes amb l'Omnipod DASH i, en alguns casos, també amb la Medtrum Nano.
 
 ```{admonition} Updating the list
 :class: note
-Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to this list.
+Escriviu a @XiTatiON al canal de Discord #omnipod-dash per parlar d'aplicacions que s'han d'afegir a aquesta llista.
 ```
 
-- **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
+- **myBMW** MyBMW interrompia la Medtrum Nano i l'Omnipod DASH. L'aplicació MyBMW demana el permís «trobar dispositius propers» només una vegada. Si no el concediu, l'aplicació continua funcionant perfectament.
 
-- **Amazon Alexa**  Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IoT devices
+- **Amazon Alexa**  Treure el permís «Dispositius propers» a l'aplicació Alexa va resoldre el problema per a algunes persones, però impedeix emparellar dispositius IoT Matter.
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
+- **Aplicació MINI**  Sembla que l'aplicació es basa en l'aplicació myBMW i, per tant, pot tenir el mateix comportament.
 
-- **BM2** Solar Battery Monitoring app, used in some camper van and camping solar setups: when the app was running, it prevented activation of a new Pod. Force Stopping the app while activating a new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
+- **BM2** Aplicació de control de bateries solars, que es fa servir en algunes instal·lacions solars d'autocaravanes i de càmping: quan l'aplicació estava en marxa, impedia activar un pod nou. Forçar l'aturada de l'aplicació mentre activeu un pod nou evita el problema. Després d'això, fer servir l'aplicació no semblava afectar el funcionament del Dash (en un Pixel 8 Pro amb Android 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### How to revoke "Nearby device" permissions for other apps:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
+### Com retirar el permís «Dispositius propers» a altres aplicacions:
+Si teniu problemes per activar un pod nou i feu servir la versió d'**AAPS** compatible amb la vostra versió d'Android, pot ser que calgui retirar el permís a altres aplicacions mentre activeu un pod nou.
 
-Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
+Seguiu aquest procediment per retirar el permís «Dispositius propers» a totes les aplicacions excepte **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
-The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufacturers and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+Les captures de pantalla i les instruccions d'aquesta guia són d'una instal·lació d'Android 16 estàndard (Vanilla) en un Google Pixel 8 Pro. Altres fabricants i dispositius probablement no tindran exactament aquests menús i opcions. Adapteu els passos al vostre dispositiu i, si us encalleu, mireu la secció [On trobar ajuda per al Dash](#omnipod-dash-where-to-get-help-for-dash) per saber com demanar ajuda a la comunitat.
 ```
 
-1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
+1. Obriu la configuració d'Android al telèfon, desplaceu-vos cap avall i premeu **Seguretat i privadesa (1)**.
 
     ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)
 
-2. Scroll down and press on **Privacy controls (1)**.
+2. Desplaceu-vos cap avall i premeu **Controls de privadesa (1)**.
 
    ![android_sec_priv](../images/android_16/android_sec_priv.png)
 
-3. Press on **Permission manager (1)**.
+3. Premeu **Gestor de permisos (1)**.
 
    ![android_priv_control](../images/android_16/android_priv_control.png)
 
-3. Scroll down and press on **Nearby devices (1)**.
+3. Desplaceu-vos cap avall i premeu **Dispositius propers (1)**.
 
    ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)
 
-4. Browse the list of apps and press on the app you wish to revoke **Nearby devices** permissions for.
+4. Mireu la llista d'aplicacions i premeu l'aplicació a la qual voleu retirar el permís **Dispositius propers**.
 
-   In this guide **Android Auto (1)** is the app we will revoke the permission on.
+   En aquesta guia, **Android Auto (1)** és l'aplicació a la qual retirarem el permís.
 
-   To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
+   Per no fer malbé més pods, al principi recomanem a tothom retirar el permís a totes les aplicacions excepte **AAPS**.
 
 ```{admonition} Which app to select?
 :class: tip
-If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.
+Si no sabeu quina aplicació us causa el problema, desactiveu-les totes (mireu també la llista d'aplicacions problemàtiques conegudes i comenceu per aquestes). Si podeu permetre perdre alguns pods pel camí, activeu el permís a una aplicació nova abans de cada activació d'un pod nou, fins que trobeu quina aplicació concreta causa els problemes amb el pod. Si trobeu noves aplicacions problemàtiques, digueu-nos-ho al canal de Discord #omnipod-dash.
 ```
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)
 
-5. To revoke the permission Press on **Don't allow (1)**, then Press on **Don't allow anyway (2)**. If done correctly you should see **Don't allow (3)** as the selected Toggle option. You can now go back to the **Nearby device** menu by pressing the **Back arrow (4)** and change this setting on other apps if required.
+5. Per retirar el permís, premeu **No permetis (1)** i després premeu **No permetis igualment (2)**. Si ho heu fet bé, veureu **No permetis (3)** com a opció seleccionada. Ara podeu tornar al menú **Dispositius propers** prement la **fletxa Enrere (4)** i canviar aquesta opció a altres aplicacions si cal.
 
    ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### How to re-enable "Nearby device" permissions for system apps and other apps:
+### Com tornar a activar el permís «Dispositius propers» per a aplicacions del sistema i altres aplicacions:
 
-1. If required Reference the **"How to revoke 'Nearby device' permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
+1. Si cal, consulteu la secció **«Com retirar el permís "Dispositius propers" a altres aplicacions»** per saber com arribar a la configuració de privadesa de les aplicacions. Un cop a la configuració de **Dispositius propers**, continueu al pas 2.
 
-2. Browse the list of apps and press on the app you wish to allow **Nearby devices** permissions for.
+2. Mireu la llista d'aplicacions i premeu l'aplicació a la qual voleu permetre el permís **Dispositius propers**.
 
-   In this guide **Android Auto (1)** is the app we will allow the permission on.
+   En aquesta guia, **Android Auto (1)** és l'aplicació a la qual permetrem el permís.
 
-   You will notice that **Android Auto (1)** is missing in the app list after the permission is revoked. This is because the **Android Auto** app is a **System app** and by default system apps are hidden.
+   Veureu que **Android Auto (1)** no apareix a la llista d'aplicacions després de retirar el permís. Això passa perquè l'aplicació **Android Auto** és una **aplicació del sistema**, i les aplicacions del sistema estan amagades per defecte.
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. You should now be able to see the hidden system app in the list **Android Auto (3)**.
+3. Per mostrar les aplicacions del sistema amagades, premeu el **menú de tres punts (⋮) (1)** a la cantonada superior dreta i després premeu **«Mostra el sistema» (2)**. Ara hauríeu de veure l'aplicació del sistema amagada a la llista: **Android Auto (3)**.
 
 ```{admonition} Find your app
 :class: tip
-If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.
+Si a una aplicació se li ha retirat el permís, haureu de desplaçar-vos cap avall fins que vegeu la llista d'aplicacions sense permís, més avall a la llista.
 ```
 
    ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png)
 
-5. Follow the guidance in **"How to revoke 'Nearby device' permissions for other apps"** in reverse to re-enable permissions for each app.
+5. Seguiu les indicacions de **«Com retirar el permís "Dispositius propers" a altres aplicacions»** a l'inrevés per tornar a activar el permís a cada aplicació.
 
 ---
 
 (bluetoothtroubleshooting-android-15-bluetooth-connection-problems)=
 
-## Android 15 Frequent Bluetooth connection problems
+## Android 15: problemes freqüents de connexió Bluetooth
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+Després d'actualitzar Android o de passar a un telèfon recent, **AAPS** perd sovint la connexió Bluetooth amb la bomba. El problema desapareix durant un temps quan reinicieu el telèfon. Si feu servir un **Omnipod DASH** i el telèfon té Android 15, activar l'opció **Vinculació Bluetooth** pot ajudar a millorar l'estabilitat de la connexió Bluetooth. Per activar-la:
 
 ```{admonition} Android 16
 :class: warning
-Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
+Activeu la **Vinculació Bluetooth** només a Android 15, i només si teniu problemes de connexió. NO activeu la vinculació a Android 16.
 ```
 
-1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
+1. Obriu la [configuració del Dash](#omnipod-dash-settings): obriu la pantalla de la bomba DASH amb **Gestionar** > **Bomba** i premeu la icona de **Configuració** (engranatge) a la cantonada superior dreta.
 
-   ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
+   ![La pantalla de la bomba DASH](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
+2. Obriu la secció **Configuració avançada** i activeu **Vinculació Bluetooth**.
 
-   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+   ![Vinculació Bluetooth a la secció Configuració avançada](../images/v4/Pumps/dash_settings_advanced.png)
 
-3. If the phone shows a pairing request, accept it.
+3. Si el telèfon mostra una sol·licitud d'emparellament, accepteu-la.
 
-4. Restart your phone.
+4. Reinicieu el telèfon.

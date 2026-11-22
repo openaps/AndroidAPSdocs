@@ -1,44 +1,44 @@
-# Smoothing blood glucose data
+# Zaglađivanje podataka GUK-a
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Ako su podaci **GUK-a** nestabilni ili imaju šum, **AAPS** može pogrešno dozirati inzulin, što dovodi do visokih ili niskih vrijednosti. Ako primijetite greške ili imate nestabilne podatke s CGM-a, važno je onemogućiti petlju dok se problem ne riješi. Ovisno o vašem CGM-u, takvi problemi mogu biti posljedica konfiguracije CGM-a u **AAPS-u** (kako je objašnjeno niže) ili problema s mjestom CGM senzora (zbog čega će možda trebati zamijeniti CGM senzor).
 
-## Smoothing data within AAPS
+## Zaglađivanje podataka u AAPS-u
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** nudi mogućnost zaglađivanja podataka u **AAPS-u** umjesto u CGM aplikaciji. Otvorite **izbornik** (☰), odaberite [**Konfiguracija**](../SettingUpAaps/ConfigBuilder.md), zatim **Zaglađivanje**. Postoje četiri opcije i samo jedna može biti aktivna u isto vrijeme: **Bez zaglađivanja**, **Eksponencijalno zaglađivanje**, **Prosječno zaglađivanje** i **Unscented Kalman Filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Konfiguracija > Zaglađivanje](../images/v4/Configuration/configuration_smoothing.png)
 
-### Exponential smoothing
+### Eksponencijalno zaglađivanje
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Općenito, s ovom opcijom preporučuje se početi, jer najsnažnije uklanja šum i prepravlja najnoviju vrijednost. Ipak, pogledajte tablicu ispod za druge posebne preporuke.
 
-### Average smoothing
+### Prosječno zaglađivanje
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Ova opcija radi slično kao zaglađivanje unatrag (back smoothing) koje je ranije postojalo na nekim CGM platformama. Brže reagira na nedavne promjene vrijednosti GUK-a, pa je zato sklonija pogrešnoj reakciji na CGM podatke sa šumom.
 
-### No Smoothing
+### Bez zaglađivanja
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Ovu opciju koristite samo ako vaša aplikacija za prikupljanje podataka već ispravno zaglađuje CGM podatke prije nego što ih pošalje u **AAPS**.
 
 ### Unscented Kalman Filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Ova opcija koristi statistički model koji stalno procjenjuje vašu stvarnu vrijednost glukoze i brzinu njezine promjene iz pristiglih očitanja (koja mogu imati šum) i sama se prilagođava tome koliko šuma vaš senzor trenutačno ima. Također prepoznaje i odbacuje iznenadna očitanja koja jako odstupaju. To je naprednija zamjena za eksponencijalno i prosječno zaglađivanje, korisna ako želite da se zaglađivanje samo prilagođava promjenjivoj razini šuma vašeg senzora umjesto da koristi fiksnu metodu.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Prijedlozi za korištenje zaglađivanja
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Metodu zaglađivanja možete mijenjati i automatski, na primjer ovisno o starosti senzora, pomoću [radnje automatizacije](#automations-automation-action) **Promijeni zaglađivanje**.
 
-|               | Exponential |  Average  | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               | Eksponencijalno |    Prosječno    | Bez zaglađivanja |
+| ------------- |:---------------:|:---------------:|:----------------:|
+| G5/G6/ONE     |  Ako ima šuma   |                 |   Preporučeno    |
+| G7/ONE+/Stelo |  Ako ima šuma   | Ako je stabilno |                  |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Libre senzori imaju šum i mogu trebati zaglađivanje. Kad koristite izravnu vezu xDripa ili izvor podataka zakrpane aplikacije (primanje iz druge aplikacije, uključujući Juggluco), [zaglađivanje se već radi u aplikaciji](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Senzor / izvor podataka | Juggluco  | xDrip izravno | xDrip bridge | xDrip zakrpana aplikacija |
+| ----------------------- |:---------:|:-------------:|:------------:|:-------------------------:|
+| Libre 1/14 dana/Pro     |    N/P    |      N/P      |  Prosječno   |            N/P            |
+| Libre 2/2+ (EU)         | Prosječno |      Bez      |  Prosječno   |            Bez            |
+| Libre 2/2+/3/3+         | Prosječno |      N/P      |     N/P      |            Bez            |

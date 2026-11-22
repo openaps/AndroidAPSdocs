@@ -10,7 +10,8 @@
 ## AAPS에서 사용할 수 있는 펌프 기능
 
 * 추가 통신 장치 없이 휴대폰의 자체 블루투스로 **AAPS**와 통신하는 튜브 없는 패치 펌프입니다.
-* **AAPS**는 Equil을 200 U 레저버가 있는 패치 펌프로 취급합니다: 메인 화면에 패치 펌프 상태 표시등이 나타나고, **프라임/채우기**와 **펌프 배터리 교체**는 제공되지 않습니다. 채우기, 프라임, 배터리 교체는 펌프 마법사에서 합니다.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * 펌프가 일시 중지되거나 멈춘 동안 **AAPS**는 0 U/h 임시 기저를 기록합니다. 그래서 기저 인슐린이 IOB에 포함되지 않습니다.
 * 서머타임(DST)과 시간대 변경은 수동으로 처리해야 합니다.
 

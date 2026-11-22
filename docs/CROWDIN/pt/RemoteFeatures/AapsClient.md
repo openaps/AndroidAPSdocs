@@ -11,7 +11,7 @@ O **AAPSClient** é a aplicação complementar do **AAPS**: uma aplicação para
 
 ```{admonition} Which devices can run AAPSClient?
 :class: note
-From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on Wear OS watches and on computers (Windows, Mac and Linux). On an iPhone there is no ready-made download: you build the app yourself. See the [table of downloads by device](#aapsclient-platforms).
+A partir da versão 4 do **AAPS**, o **AAPSClient** funciona em telefones e tablets Android, em relógios Wear OS e em computadores (Windows, Mac e Linux). Para o iPhone não há nenhum ficheiro pronto a descarregar: tem de compilar a aplicação por si próprio. Veja a [tabela de transferências por dispositivo](#aapsclient-platforms).
 ```
 
 ```{contents} Table of contents
@@ -36,38 +36,38 @@ Podem ser instaladas até três aplicações cliente lado a lado no mesmo telefo
 (aapsclient-platforms)=
 ## Obter a aplicação
 
-All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
+Todos os ficheiros prontos estão na lista *Assets* da última versão no [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (clique em *Assets*, no fim da versão, para abrir a lista). Na tabela, *x.y.z* representa o número da versão. Escolha o ficheiro que corresponde ao seu dispositivo:
 
-| Device                  | File to download                    | Notas                                                                                                                                                                                        |
-| ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
-| Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
-| Windows computer        | `AAPSClient-x.y.z.msi`              | Open the file to install.                                                                                                                                                                    |
-| Mac                     | `AAPSClient-x.y.z.dmg`              | See the note on macOS below the table.                                                                                                                                                       |
-| Linux (Debian, Ubuntu)  | `aapsclient_x.y.z_amd64.deb`        | Install it with your package manager.                                                                                                                                                        |
-| iPhone                  | nenhuma                             | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
+| Device                     | Ficheiro a descarregar              | Notas                                                                                                                                                                                                              |
+| -------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Telefone ou tablet Android | `app-aapsclient-release_x.y.z.apk`  | Instale-o como a aplicação principal: veja [Descarregar e instalar o AAPSClient](#RemoteControl_aapsclient) e [Transferir e instalar o AAPS no seu smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md). |
+| Relógio Wear OS            | `wear-aapsclient-release_x.y.z.apk` | Funciona com a aplicação AAPSClient no telefone. Veja [Configurar o AAPS no seu relógio Wear OS](../WearOS/WearOsSmartwatch.md).                                                                                   |
+| Computador Windows         | `AAPSClient-x.y.z.msi`              | Abra o ficheiro para instalar.                                                                                                                                                                                     |
+| Mac                        | `AAPSClient-x.y.z.dmg`              | Veja a nota sobre o macOS por baixo da tabela.                                                                                                                                                                     |
+| Linux (Debian, Ubuntu)     | `aapsclient_x.y.z_amd64.deb`        | Instale-o com o seu gestor de pacotes.                                                                                                                                                                             |
+| iPhone                     | nenhuma                             | Não há versão na App Store nem ficheiro para descarregar. Tem de compilar a aplicação por si próprio, veja [AAPSClient num iPhone](#aapsclient-iphone).                                                            |
 
-**Following two people?** Each file above also exists as *aapsclient2* / *AAPSClient2*. It is a second client app that installs next to the first one, so one device can follow two people (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** is not in the release assets: build it yourself ([build variants](#browserbuild-variant)).
+**Segue duas pessoas?** Cada ficheiro acima existe também como *aapsclient2* / *AAPSClient2*. É uma segunda aplicação cliente que se instala ao lado da primeira, para que um dispositivo possa seguir duas pessoas (veja [Sobre o AAPSClient, o AAPSClient2 e o AAPSClient3](#remotecontrol-aapsclient-versions)). O **AAPSClient3** não está nos ficheiros da versão: compile-o por si próprio ([variantes de compilação](#browserbuild-variant)).
 
-**Files to ignore:** the *pumpcontrol* files (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) are not a client. Leave them out.
+**Ficheiros a ignorar:** os ficheiros *pumpcontrol* (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) não são um cliente. Não os use.
 
-**Mac: the first start.** The app is not notarized by Apple, so macOS blocks it the first time you open it. Click *Done*, then open *System Settings → Privacy & Security*, scroll down and click *Open Anyway*.
+**Mac: o primeiro arranque.** A aplicação não é notarizada pela Apple, por isso o macOS bloqueia-a da primeira vez que a abre. Clique em *Concluído*, depois abra *Definições do Sistema → Privacidade e segurança*, desça até ao fim e clique em *Abrir mesmo assim*.
 
-**Computer: how to connect.** A computer has no camera, so the QR code cannot be scanned. Set up **Nightscout** in the client, then on the master add the client with a **PIN** and type the 8-digit PIN in the client (**Pair with master**). See [Pairing with the master](#aapsclient-pairing-with-the-master).
+**Computador: como ligar.** Um computador não tem câmara, por isso não pode ler o código QR. Configure o **Nightscout** no cliente. Depois, no telefone principal, adicione o cliente com um **PIN** e escreva o PIN de 8 dígitos no cliente (**Emparelhar com o telefone principal**). Veja [Emparelhar com o telefone principal](#aapsclient-pairing-with-the-master).
 
-**Same version everywhere.** The master and all its clients must run the same **AAPS** version. When you update the master, update the clients too.
+**A mesma versão em todo o lado.** O telefone principal e todos os seus clientes têm de usar a mesma versão do **AAPS**. Quando atualizar o telefone principal, atualize também os clientes.
 
 (aapsclient-iphone)=
-### AAPSClient on an iPhone
+### AAPSClient num iPhone
 
-There is no **AAPSClient** in the App Store and no ready-made file to download, so you build the app yourself:
+Não há **AAPSClient** na App Store nem ficheiro pronto a descarregar, por isso tem de compilar a aplicação por si próprio:
 
-- You need a Mac with **Xcode** and an Apple developer account.
-- The project is the `ios` folder of the [AndroidAPS repository on GitHub](https://github.com/nightscout/AndroidAPS/tree/master/ios).
-- A build for a real iPhone is signed with your own Apple developer team. A build for the iPhone simulator does not need one.
-- There is no step-by-step guide yet. This page will be updated when there is one.
+- Precisa de um Mac com o **Xcode** e de uma conta de programador Apple.
+- O projeto é a pasta `ios` do [repositório AndroidAPS no GitHub](https://github.com/nightscout/AndroidAPS/tree/master/ios).
+- Uma compilação para um iPhone real é assinada com a sua própria equipa de programador Apple. Uma compilação para o simulador de iPhone não precisa de equipa.
+- Ainda não há um guia passo a passo. Esta página será atualizada quando houver um.
 
-The iPhone version pairs with the master like the others. Unlike the computer versions, the iPhone can scan the master's QR code with its camera.
+A versão para iPhone emparelha com o telefone principal como as outras. Ao contrário das versões para computador, o iPhone pode ler o código QR do telefone principal com a câmara.
 
 ## Primeiro arranque: um Assistente de Configuração mais curto
 
@@ -75,11 +75,11 @@ No primeiro arranque, o **AAPSClient** executa o mesmo **Assistente de Configura
 
 1. **Bem-vindo**, **Condições de Utilização**, **Permissões** e **Senha Mestre** — iguais aos da aplicação principal, consulte o [Assistente de Configuração do AAPS](../SettingUpAaps/SetupWizard.md).
 2. O cliente **não** pede as **Unidades** nem as **marcas baixa/alta**: recebe-os do telefone principal assim que estiver ligado ao Nightscout. Pode vê-los mais tarde nas **Definições**, onde um pequeno **ícone de telefone** mostra que estão [sincronizados com o telefone principal](#client-master-config-prefs). Só podem ser editados enquanto o telefone principal estiver acessível.
-3. **Configurar a partir do telefone principal** — no telefone principal, abra **Gerir → Clientes autorizados**, adicione este telefone com um **código QR** e toque aqui em **Ler o código QR**. Uma única leitura configura o Nightscout com um token próprio deste telefone e, se o código incluir o emparelhamento, também emparelha o telefone. O telefone também usa como nome da instância o nome com que foi adicionado no telefone principal (as letras com acentos passam a letras simples: «Miloš» fica «Milos»). **Depois da leitura, a configuração fica concluída**: o assistente fecha, porque os passos seguintes só mostrariam o que o código já fez. Sem código QR, salte este passo. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
+3. **Configurar a partir do telefone principal** — no telefone principal, abra **Gerir → Clientes autorizados**, adicione este telefone com um **código QR** e toque aqui em **Ler o código QR**. Uma única leitura configura o Nightscout com um token próprio deste telefone e, se o código incluir o emparelhamento, também emparelha o telefone. O telefone também usa como nome da instância o nome com que foi adicionado no telefone principal (as letras com acentos passam a letras simples: «Miloš» fica «Milos»). **Depois da leitura, a configuração fica concluída**: o assistente fecha, porque os passos seguintes só mostrariam o que o código já fez. Sem código QR, salte este passo. (Num computador não: não tem câmara, veja [Obter a aplicação](#aapsclient-platforms).)
 
    ![O passo Configurar a partir do telefone principal com o botão Ler o código QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Comunicação** — a lista de plugins só oferece o que um seguidor precisa (NSClientV3, xDrip+, Wear, Aplicações externas complementares, Garmin). Se não leu um código QR, ative o **NSClientV3** e introduza o **mesmo URL do Nightscout** que no telefone principal e um token de acesso, com os **websockets** ativados — exatamente como descrito em [Sincronização](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+4. **Comunicação** — a lista de plugins só oferece o que um seguidor precisa (NSClientV3, xDrip+, Wear, Aplicações externas complementares, Garmin). Se não leu um código QR, ative o **NSClientV3** e introduza o **mesmo URL do Nightscout** que no telefone principal e um token de acesso, com os **websockets** ativados — exatamente como descrito em [Sincronização](#RemoteControl_aapsclient). Os websockets são **obrigatórios** para o controlo remoto a partir do **AAPSClient**, nos dois telefones.
 
    ![O passo Comunicação no cliente](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 

@@ -1,102 +1,102 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
-# Extended carbs / "eCarbs"
+# Produženi ugljikohidrati / „e-ugljikohidrati“
 
-## What are eCarbs and when are they useful?
+## Što su eUH i kada su korisni?
 
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+Kod obične terapije pumpom produženi bolusi dobar su način za masne ili druge obroke koji se sporo apsorbiraju i koji podižu GUK dulje nego što inzulin djeluje. U petlji, međutim, produženi bolusi nemaju toliko smisla (i stvaraju tehničke poteškoće), jer su oni u osnovi fiksni visoki privremeni bazal, a to je suprotno načinu rada petlje, koja bazalnu stopu prilagođava dinamički. Za pojedinosti pogledajte [produženi bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) u nastavku.
 
-The need to deal with such meals still exists though. Which is why AAPS supports so called extended carbs or eCarbs.
+Ipak, potreba da se riješe takvi obroci i dalje postoji. Zato AAPS podržava takozvane produžene ugljikohidrate ili eUH.
 
-eCarbs are carbs that are split up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
+eUH su ugljikohidrati raspodijeljeni na nekoliko sati. Za uobičajene obroke s više ugljikohidrata nego masti/proteina obično je dovoljno unijeti ugljikohidrate odmah (i po potrebi smanjiti početni bolus) kako bi se spriječila prerana isporuka inzulina.  No za obroke koji se sporije apsorbiraju, kod kojih unos svih ugljikohidrata odmah daje previše aktivnog inzulina od SMB-a, eUH se mogu koristiti da se točnije simulira kako se ugljikohidrati (i svi ekvivalenti ugljikohidrata koje unesete za druge makronutrijente) apsorbiraju i utječu na GUK. S tim podacima petlja može postupnije davati SMB-ove za te ugljikohidrate, što se može smatrati dinamičkim produženim bolusom (ovo bi trebalo raditi i bez SMB-ova, ali je vjerojatno manje učinkovito).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Napomena:** eUH nisu ograničeni na masne obroke / obroke bogate proteinima: mogu pomoći i u svakoj situaciji u kojoj nešto podiže GUK, npr. drugi lijekovi kao što su kortikosteroidi.
 
-## Mechanics of using eCarbs
+## Kako se koriste eUH
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+Za unos eUH otvorite dijalog **UH** (**Tretmani** → **UH**), unesite ukupne ugljikohidrate, postavite **Trajanje** i po želji pomaknite početak pomoću **Vrijeme UH** (*brojevi u nastavku samo su primjeri; morat ćete isprobati vlastite vrijednosti da biste dobili zadovoljavajući odgovor glukoze za svoje situacije*):
 
-![Enter carbs](../images/eCarbs_Dialog.png)
+![Unos ugljikohidrata](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+eUH na glavnom zaslonu: broj u zagradama u polju **Aktivni UGH** pokazuje ugljikohidrate koji tek dolaze, a graf **Aktivni UGH** prikazuje svaki budući unos eUH kao narančastu oznaku. Ako ne vidite graf **Aktivni UGH**, dodajte ga pomoću **Dodaj graf** ispod grafova (pogledajte [Zasloni AAPS-a](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+![eUH u polju aktivnih ugljikohidrata (COB) i na grafu COB](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## Vrsta ugljikohidrata u bolus kalkulatoru: kruh, kolač ili pizza
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+U [bolus kalkulatoru](#aaps-screens-bolus-wizard) tri gumba ispod polja **UH** omogućuju vam da odaberete koliko se brzo vaš obrok apsorbira. Odaberite jedan prije nego što potvrdite. Ovisno o vrsti, **AAPS** dio unesenih ugljikohidrata uzima kao obične ugljikohidrate, a kasnije dodaje [produžene ugljikohidrate („eUH“)](#Extended-Carbs-extended-carbs-ecarbs) za spore, bogate obroke. Pritisnite ikonu **(i)** pokraj gumba da vidite tipičnu hranu za odabranu vrstu i što ona čini s vašim ugljikohidratima.
 
-| Type                | Typical foods (examples from the app)                                                                | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | None                                                 |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| Vrsta             | Tipična hrana (primjeri iz aplikacije)                                                                          | Ugljikohidrati sada, korišteni za bolus | Dodani eUH                                                |
+| ----------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------- | --------------------------------------------------------- |
+| **Kruh** (zadano) | Kruh, slana peciva, jogurt, voće, krumpir, riža, zobena kaša, povrće                                            | 100 %                                   | Bez                                                       |
+| **Kolač**         | Knedle, tjestenina, azijska jela bogata ugljikohidratima i mastima, slatka i dizana peciva, žitarice, med, džem | 90 %                                    | 20 %, počinje 60 minuta kasnije, raspodijeljeno na 2 sata |
+| **Pizza**         | Lazanje, pizza, hamburgeri, pomfrit, pečeni krumpir, čips                                                       | 80 %                                    | 35 %, počinje 60 minuta kasnije, raspodijeljeno na 3 sata |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**Primjer**: unesete 100 g i odaberete **Pizza**. Bolus se izračunava za 80 g, zabilježenih sada. 35 g eUH počinje 1 sat kasnije i raspodjeljuje se na 3 sata.
 
-Good to know:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
-
-______________________________________________________________________
-
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+Dobro je znati:
+* Ovo nije obična podjela: s **Kolač** i **Pizza** zabilježeni ugljikohidrati ukupno su **više od onoga što ste unijeli** (110 % i 115 %). Višak je samo u eUH.
+* Bolus pokriva samo ugljikohidrate unesene sada. **AAPS** ne daje bolus unaprijed za eUH: petlja ih uzima u obzir kada počnu, kao i sve druge [eUH](#Extended-Carbs-extended-carbs-ecarbs).
+* Ako postavite **Vrijeme UH**, eUH počinju 60 minuta nakon tog vremena.
+* Dijalog za potvrdu prikazuje eUH u zasebnom retku, _npr._ „eUH 35 g / 3 h (+60 min)“.
+* Grami se zaokružuju naniže na cijele brojeve.
+* Postoci, odgode i trajanja su fiksni; ne mogu se promijeniti u postavkama.
+* Odabir se ne pamti: kalkulator se svaki put otvara s odabirom **Kruh**.
 
 ______________________________________________________________________
 
-## Recommended setup, example scenario, and important notes
+Jedan način kako s ovom značajkom uzeti u obzir masti i proteine opisan je ovdje: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+______________________________________________________________________
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+## Preporučene postavke, primjer i važne napomene
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+Preporučuje se koristiti dodatak OpenAPS SMB APS, s omogućenim SMB-ovima i s omogućenom postavkom *Omogući SMB uz COB*.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
+Primjer za pizzu može biti da odmah date (djelomični) bolus putem *bolus kalkulatora*, a zatim pomoću dijaloga *UH* unesete preostale ugljikohidrate s trajanjem od 4–6 sati, s početkom nakon 1 ili 2 sata.
+
+Za brži početak *bolus kalkulator* može dodati eUH umjesto vas: odaberite [vrstu ugljikohidrata](#AapsScreens-carbs-type) **Kolač** ili **Pizza** ispod polja **UH** (pogledajte gore). Količine i vrijeme su fiksni, pa ako želite druge vrijednosti, umjesto toga koristite dijalog *UH*.
+
+**Važne napomene:** Naravno, morat ćete isprobati koje vrijednosti odgovaraju vama. Također možete pažljivo prilagoditi postavku *Maks. minuta bazala za ograničenje SMB-a* kako bi algoritam bio više ili manje agresivan. Kod obroka s malo ugljikohidrata, a puno masti/proteina, može biti dovoljno koristiti samo eUH bez ručnih bolusa (pogledajte gore navedeni blog). Kada se stvore eUH, stvara se i bilješka u Careportalu koja bilježi sve unose, kako biste lakše isprobavali i poboljšavali unose.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended boluses and why they don't work in a closed-loop environment
+## Produženi bolusi i zašto ne rade u zatvorenoj petlji
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Kao što je gore spomenuto, produženi ili viševalni bolusi zapravo ne rade u zatvorenoj petlji. [Pogledajte u nastavku](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) za pojedinosti
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### Extended bolus and switch to open loop - Dana and Insight pump only
+### Produženi bolus i prelazak na otvorenu petlju - samo za pumpe Dana i Insight
 
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
+Neki ljudi su ipak tražili mogućnost korištenja produženog bolusa u AAPS-u jer su posebnu hranu htjeli liječiti na način na koji su navikli.
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+Zato **AAPS** nudi produženi bolus korisnicima pumpi Dana i Insight: otvorite **Upravljanje** i odaberite **Produženi bolus**.
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+**AAPS** vas najprije upozorava da će zatvorena petlja biti zaustavljena dok traje produženi bolus. Dodirnite **U redu** za nastavak:
 
-![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+![Upozorenje: produženi bolus zaustavlja način rada zatvorene petlje](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+Unesite količinu **Inzulin** i **Trajanje**, zatim dodirnite gumb za potvrdu na dnu i **U redu**:
 
-![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+![Dijalog produženog bolusa s 2 J tijekom 60 minuta](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+Na pumpi Insight produženi bolus *nije dostupan* ako se koristi [emulacija TBR-a](#Accu-Chek-Insight-Pump-settings-in-aaps).
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+Dok traje produženi bolus, petlja radi u načinu **Otvorena petlja** (ikona petlje na glavnom zaslonu se mijenja), a zatvorena petlja se automatski ponovno uključuje kada produženi bolus završi:
 
-![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+![Ikona otvorene petlje na glavnom zaslonu dok traje produženi bolus](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+Izbornik **Upravljanje** prikazuje gumb **Otkaži** sa stopom i proteklim / ukupnim vremenom (na primjer **Otkaži 2,00 J/h 1/60'**). Dodirnite ga da ranije zaustavite produženi bolus:
 
-![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
+![Gumb Otkaži za produženi bolus koji traje u izborniku Upravljanje](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### Why extended boluses won't work in a closed loop environment
+### Zašto produženi bolusi ne rade u zatvorenoj petlji
 
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
+1. Petlja odredi da se sada treba isporučiti 1,55 J/h. Za algoritam nije važno isporučuje li se to kao produženi bolus ili kao TBR. Zapravo, neke pumpe koriste produženi bolus. Što bi se tada trebalo dogoditi? Većina upravljačkih programa pumpi tada zaustavi produženi bolus -> Niste ga ni trebali pokretati.
 
-2. If you had the extended bolus as input, what should happen in the model?
+2. Ako ste produženi bolus imali kao ulazni podatak, što bi se trebalo dogoditi u modelu?
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. Treba li ga smatrati neutralnim zajedno s bazalnom stopom i na njemu raditi petlju? Onda bi petlja trebala moći i smanjiti bolus ako, na primjer, GUK padne prenisko i sav „neutralni“ inzulin se ukloni?
+   2. Treba li produženi bolus jednostavno dodati? Dakle, petlji bi jednostavno trebalo dopustiti da nastavi? Čak i kod najgore hipoglikemije? Mislim da to nije baš dobro: hipoglikemija se predviđa, ali se ne smije spriječiti?
 
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. Aktivni inzulin koji produženi bolus stvori pojavljuje se nakon 5 minuta, pri sljedećem pokretanju. Prema tome, petlja bi dala manje bazala. Dakle, ne mijenja se puno... osim što se gubi mogućnost izbjegavanja hipoglikemije.

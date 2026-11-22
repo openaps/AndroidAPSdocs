@@ -2,16 +2,16 @@
 
 # Устранение неполадок
 
-**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
+**Начните здесь, если что-то не работает.** Информация об устранении неполадок есть на многих страницах документации. Эта страница собирает ее вместе: это один набор ссылок, отсортированных по темам, который поможет решить самые частые проблемы.
 
-If you do not find your answer below, also check:
+Если вы не нашли ответ ниже, посмотрите также:
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
-* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+* [Часто задаваемые вопросы по работе ИПЖ](../UsefulLinks/FAQ.md) – ответы на частые вопросы, и
+* [Настройка профиля AAPS](ProfileTuning.md), если цикл работает, но контроль глюкозы нужно улучшить.
 
 ```{admonition} Still stuck?
 :class: tip
-If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+Если ни одна ссылка не решила вашу проблему, см. [Где получить помощь?](WhereCanIGetHelp.md), чтобы спросить сообщество (Facebook, Discord), или отправьте разработчикам свои [файлы журналов](AccessingLogFiles.md).
 ```
 
 ---
@@ -22,65 +22,65 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 ### Сборка и обновление
 
-* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+* Если сборка не удалась, см. [Если сборка не удалась](#building-aaps-troubleshooting): там указан раздел устранения неполадок для каждого способа сборки:
   * [AAPS Builder](#aaps-builder-troubleshooting)
   * [Сборка через браузер](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* Хранилище ключей потеряно или новое хранилище ключей: [Переустановка AAPS](#reinstall-aaps)
+* Обновление **AAPS**: [с AAPS Builder](#aaps-builder-updates), [при сборке через браузер (fork)](#update-browser-build-troubleshooting), [через Android Studio](#update-computer-build-troubleshooting)
 
-### Installing
+### Установка
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
-* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [Предупреждение Google Play Защиты](#transferring-installing-play-protect-warning): приложение отмечено как небезопасное.
+* Установка **заблокирована** с сообщением о непроверенном разработчике: бесплатные способы установки см. в разделе [Проверка разработчиков Android](#android-developer-verification).
 
 ### Настройки
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
+* [Профиль: «Базальная скорость несовместима с текущей помпой»](#your-aaps-profile-basal-not-compatible)
+* [Помпа: «Данные поступают с другой помпы»](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **«Не удается прочитать настройки AAPS»** при запуске: настройки зашифрованы ключом, который Android хранит для **AAPS**, и этот ключ больше не открывает их, например после сброса хранилища ключей телефона. Пока этот экран показан, **AAPS** не работает и не управляет помпой. Нажмите **Повторить**: **AAPS** закроется и запустится снова. Если это не помогает, перезапустите телефон. Используйте **Начать заново**, только если ничего другого не помогает: нечитаемый файл настроек откладывается в сторону (он переименовывается и сохраняется), и **AAPS** запускается с пустыми настройками. Затем импортируйте последний [экспорт настроек](../Maintenance/ExportImportSettings.md).
 
 ### Usage
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
-* [Full closed loop](#full-closed-loop-troubleshooting)
+* [Неверные значения углеводов (медленное усвоение углеводов)](#CobCalculation-detection-of-wrong-cob-values)
+* [Автоматизация](#automations-troubleshooting)
+* [Автономный замкнутый цикл](#full-closed-loop-troubleshooting)
 
 ---
 
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Проблемы, связанные с Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Об известных проблемах с соединением Bluetooth, обрывах связи с помпой или Pod, а также о проблемах активации и соединения см. [Проблемы с Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Проблемы, связанные с Android
 
-### Battery optimization
+### Оптимизация батареи
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** может помочь найти правильные настройки для вашего телефона: откройте **меню** (☰) > **О программе** и нажмите **Не останавливать приложение?**. Откроются инструкции для вашей марки телефона на сайте [Don't kill my app](https://dontkillmyapp.com/). [Мастер установки](#setup-wizard-bluetooth-battery-optimisation) тоже просит отключить оптимизацию батареи для **AAPS** и Bluetooth.
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+В Android есть настройки экономии батареи, которые включены по умолчанию. Эти настройки автоматически приостанавливают приложения, которые не нужны для работы системы, чтобы снизить расход батареи приложениями, которым не нужно работать все время.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
+Если она включена, это, скорее всего, вызовет проблемы у **AAPS** и других вспомогательных приложений, например **xDrip**.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Важно отключить оптимизацию батареи, чтобы **AAPS** и другие вспомогательные приложения все время оставались активными.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+В зависимости от модели и производителя телефона это может понадобиться отключить в нескольких местах и настройках.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***ПРИМЕЧАНИЕ:** Выполните шаги ниже, чтобы отключить оптимизацию батареи для службы Bluetooth, если на вашем телефоне есть такая возможность. Те же шаги подходят для **AAPS** и других приложений, но снимки экрана показывают это только для службы Bluetooth.*
 
-#### Pixel phones (stock Android)
+#### Телефоны Pixel (чистый Android)
 
-* Go to the Android settings, select "Apps".
+* Перейдите в настройки Android и выберите «Приложения».
 
-  ![Настройки Android¦приложений](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![Настройки Android¦Приложения](../images/troubleshooting/pixel/01_androidsettings.png)
 
 * Выберите "Просмотреть все приложения"
 
@@ -94,7 +94,7 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Приложение Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
+* Нажмите «Использование батареи приложением» и выберите «Без ограничений» (в некоторых старых версиях Android – «Не оптимизировать»).
 
   ![Оптимизация батареи BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
@@ -109,7 +109,7 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Показать системные приложения](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* Теперь найдите приложение Bluetooth и выберите его, чтобы открыть его настройки.
 
   ![Приложение Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
@@ -117,13 +117,13 @@ Depending on your phone model and make there may be more than one location and s
 
   ![Батарея](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
+* Установите «Без ограничений» (в некоторых старых версиях Android – «Не оптимизировать»).
 
-  ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Без ограничений](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Телефоны Huawei
 
-See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+См. это руководство: [Bluetooth и оптимизация батареи на Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
@@ -131,11 +131,11 @@ See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones
 
 ## Непрерывный мониторинг гликемии
 
-Useful links to known issues and steps to resolve for CGMs.
+Полезные ссылки на известные проблемы с CGM и способы их решения.
 
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Libre 2 с Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [xDrip - нет данных CGM](#xdrip-identify-receiver)
 * [xDrip - Устранение неполадок Dexcom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
@@ -146,7 +146,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 ## Помпы
 
-Useful links to known issues and steps to resolve for Pumps
+Полезные ссылки на известные проблемы с помпами и способы их решения
 
 * [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
@@ -165,20 +165,20 @@ Useful links to known issues and steps to resolve for Pumps
 
 ## Телефоны
 
-Useful links to known issues and steps to resolve for Phones
+Полезные ссылки на известные проблемы с телефонами и способы их решения
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Список проверенных телефонов и устройств](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Bluetooth и оптимизация батареи на Huawei](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Удаленное управление
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
+* [AAPSClient и удаленное управление (сопряжение, команды не доходят)](#client-master-control-troubleshooting)
+* [Проблемы с «Кодом доступа Nightscout»](#remotecontrol-nightscout-access-token)
 * [SMS-команды](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
@@ -188,9 +188,9 @@ Useful links to known issues and steps to resolve for Phones
 
 ## Смарт-часы
 
-Useful links to known issues and steps to resolve for Smartwatches
+Полезные ссылки на известные проблемы со смарт-часами и способы их решения
 
 * [Устранение неполадок в приложении Wear](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [Часы и телефон не связываются](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
-* [Building the Wear app](#building-aaps-wear-os-troubleshooting)
+* [Сборка приложения AAPS для Wear](#building-aaps-wear-os-troubleshooting)

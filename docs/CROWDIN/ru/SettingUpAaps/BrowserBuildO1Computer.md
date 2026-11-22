@@ -1,39 +1,39 @@
 (aaps-ci-option1-computer)=
 
-# Option 1 · Computer – Generate a new keystore
+# Вариант 1 · Компьютер – Создать новое хранилище ключей
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on a **computer** (Windows / Mac / Linux).
+[Вариант 1](BrowserBuildO1.md) (создать новое хранилище ключей) на **компьютере** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Скачайте файл подготовки
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and generate the keystore
+## 2. Запустите локальный сервер и создайте хранилище ключей
 
-Use a computer (supports Windows/Mac/Linux)
+Используйте компьютер (Windows/Mac/Linux)
 
-Open the webpage [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
+Откройте страницу [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
+Установите Simple Web Server<br/> Если вы пользуетесь Windows или Mac, его можно установить из Microsoft Store или Mac App Store.<br/> Если браузер спросит, открыть ли приложение магазина, разрешите это.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
-Example on Mac:
+Пример на Mac:
 
 - get → install → open<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)<br/><br/>
 
-- Click Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
+- Нажмите Get Started<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)<br/><br/>
 
-- Click New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
+- Нажмите New Server<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)<br/><br/>
 
-- In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
+- В поле Folder Path выберите папку, в которой лежит файл aaps-ci-preparation.html, затем нажмите Create Server.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)<br/><br/>
 
-- Seeing this screen means the server has been started.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
+- Если вы видите этот экран, сервер запущен.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Do not close Simple Web Server. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Не закрывайте Simple Web Server. Перейдите в браузер и откройте<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
-- For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+- Дальнейшие шаги смотрите в видео ниже, начиная с 1 минуты 37 секунд.
 
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -50,4 +50,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Далее: [Сборка через браузер – Шаг 3: Дайте доступ к Google Диску](BrowserBuildGoogleDrive.md) →**

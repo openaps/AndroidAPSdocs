@@ -11,7 +11,7 @@ Als je een apk probeert te installeren die met een andere keystore is onderteken
 Je moet **AAPS** verwijderen en opnieuw installeren als je nieuwe apk met een andere keystore is ondertekend, bijvoorbeeld:
 
 - Je kunt je oude keystore of het wachtwoord niet meer vinden.
-- Je hebt een nieuwe keystore gemaakt, bijvoorbeeld met [optie 1 van bouwen in de browser](../SettingUpAaps/BrowserBuildKeystore.md) of met **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
+- Je hebt een nieuwe keystore gemaakt, bijvoorbeeld met [optie 1 van bouwen in de browser](../SettingUpAaps/BrowserBuildKeystore.md) of met **Een nieuwe sleutel maken** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
 - Je bouwt op een nieuwe computer en hebt je keystore daar niet naartoe gekopieerd.
 
 Heb je je keystore nog, dan heb je deze pagina niet nodig: gebruik de keystore opnieuw en [werk **AAPS** bij](../Maintenance/UpdateToNewVersion.md) zonder te verwijderen.

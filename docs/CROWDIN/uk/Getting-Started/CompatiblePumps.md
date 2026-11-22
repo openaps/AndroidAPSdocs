@@ -1,6 +1,6 @@
 # Сумісні помпи
 
-AAPS works with a number of insulin pumps. У списку нижче наведено пристрої, які зараз підтримуються. У дужках вказано, чи AAPS зв'язується з помпою через вбудований Bluetooth вашого телефону, чи для цього потрібен пристрій, сумісний з RileyLink.
+AAPS працює з низкою інсулінових помп. У списку нижче наведено пристрої, які зараз підтримуються. У дужках вказано, чи AAPS зв'язується з помпою через вбудований Bluetooth вашого телефону, чи для цього потрібен пристрій, сумісний з RileyLink.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -9,6 +9,7 @@ AAPS works with a number of insulin pumps. У списку нижче навед
 
 ../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
 ../CompatiblePumps/Accu-Chek-Insight-Pump.md
+../CompatiblePumps/AP550-Insulin-Pump.md
 ../CompatiblePumps/CareLevo.md
 ../CompatiblePumps/DanaR-Insulin-Pump.md
 ../CompatiblePumps/DanaRS-Insulin-Pump.md
@@ -18,12 +19,14 @@ AAPS works with a number of insulin pumps. У списку нижче навед
 ../CompatiblePumps/MedtronicPump.md
 ../CompatiblePumps/MedtrumNano.md
 ../CompatiblePumps/OmnipodDASH.md
+../CompatiblePumps/Omnipod5.md
 ../CompatiblePumps/OmnipodEros.md
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
 
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; див. також [Поради щодо базового використання](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md) (Bluetooth)
 - [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
@@ -36,14 +39,15 @@ AAPS works with a number of insulin pumps. У списку нижче навед
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
+- [Omnipod 5](../CompatiblePumps/Omnipod5.md) (Bluetooth; driver in development, test builds only)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (потрібен [додатковий пристрій зв'язку](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## Моєї помпи немає в списку
 
 Стан інших помп, які потенційно можуть працювати з AAPS, описано на сторінці [Майбутні (можливі) драйвери помп](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Додатковий пристрій зв’язку
 
 Якщо додатковий пристрій зв'язку не вказано, зв'язок між інсуліновою помпою та **AAPS** працює через вбудований стек Bluetooth в Android. Додатковий пристрій для перекладу протоколу зв'язку не потрібен.
 

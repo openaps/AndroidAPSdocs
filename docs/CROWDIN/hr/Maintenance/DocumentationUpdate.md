@@ -2,270 +2,270 @@
 tocdepth: 1
 - - -
 
-# Docs updates & changes
+# Ažuriranja i promjene dokumentacije
 
-## October 2026
+## Listopad 2026.
 
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
-- [Smartwatches and AAPS](#watches-external-companion-apps): the **Samsung Tizen** section becomes **External Companion Apps** and lists the apps that read the **AAPS** broadcast (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 and later connect directly to **AAPS** without xDrip+: setup steps added, also summarized in [Configuration](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) and [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md). Bluejay watches: GTS discontinued, current model updated @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 6. The build steps now use exact, reviewed versions of GitHub's tools and build machine, and the build explains clearly when the wrong text was pasted into the `KEYSTORE_SET` secret. The [setup page](#aaps-builder-setup) is now part of the documentation and translated, checks your GitHub username, and has clearer help for the secret, "Page not found" (404) and the GitHub app. If your `.github/workflows/build.yml` says version 5 or earlier, replace it as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- [AAPS web installer](#web-installer): now a documentation page, translated like the others. The old address still works @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 3 adds the `aapsclient3Release` variant (**AAPSClient3**, AAPS 4.0 and later). To build it, replace your `.github/workflows/build.yml` as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- [Dexcom G7](../CompatibleCgms/DexcomG7.md): removed the patched Dexcom G7 app (DiaKEM), which no longer works for new installs @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 2. Automatic weekly builds are removed (no schedule, no `AUTO_BUILD` / `AUTO_VARIANT` variables, no `built/…` tags): every build is started by you, with the version and variant you choose, and the workflow only has read access to your repository. If your `.github/workflows/build.yml` says version 1, replace it as explained in [Updating AAPS](#aaps-builder-updates). Added screenshots for every step @psonnera
-- [Browser build with AAPS Builder](#aaps-builder): the build workflow is now part of this documentation. No template repository: you create an empty private repository and add the workflow from the setup page (new step 2). The workflow no longer checks an outside repository for updates. If you created your repository from the earlier template, replace `.github/workflows/build.yml` with the workflow from the setup page as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
-- New page [Browser build with AAPS Builder](#aaps-builder): build AAPS from an Android phone with a setup page hosted on this site, with automatic weekly builds and no preparation file. It replaces the Android instructions of the browser build (File Manager Plus pages removed). AAPS Builder created by @dio99, docs @psonnera
+- [Izrada u pregledniku s AAPS Builderom](#aaps-builder): workflow za izradu, verzija 8, sada ga održavaju razvojni programeri AAPS-a u repozitoriju [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder). Postavljanje je kraće za jedan korak: [korak 1](#aaps-builder-step1) [stranice postavki](#aaps-builder-setup) izrađuje vaš privatni repozitorij kao kopiju tog repozitorija, u kojoj je workflow za izradu već uključen, pa više ne morate dodavati workflow. Od sada se koraci izrade ažuriraju umjesto vas: vaš repozitorij pri svakoj izradi pokreće verziju koju su objavili razvojni programeri AAPS-a, bez ikakve promjene s vaše strane (i dalje bez automatske izrade). Sama izrada se ne mijenja, a vaš postojeći repozitorij i dalje radi. Da biste dobivali ova automatska ažuriranja, jednom zamijenite svoju datoteku `.github/workflows/build.yml` kako je objašnjeno u [Ažuriranje AAPS-a](#aaps-builder-updates). Vaša tajna `KEYSTORE_SET` ostaje kakva jest. Neobavezni [korak za Google Drive](#aaps-builder-google-drive) sada radi izravno na stranici postavki, na telefonu ili računalu: datoteka za pripremu više nije potrebna @psonnera
+- [Pametni satovi i AAPS](#watches-external-companion-apps): odjeljak **Samsung Tizen** postaje **Vanjske prateće aplikacije** i navodi aplikacije koje čitaju broadcast **AAPS-a** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 i novije verzije povezuju se izravno s **AAPS-om** bez xDripa+: dodani su koraci postavljanja, sažeti i na stranicama [Konfiguracija](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) i [Daljinski nadzor](../RemoteFeatures/RemoteMonitoring.md). Satovi Bluejay: GTS se više ne proizvodi, ažuriran je trenutni model @psonnera
+- [Izrada u pregledniku s AAPS Builderom](#aaps-builder): workflow za izradu, verzija 6. Koraci izrade sada koriste točne, provjerene verzije GitHubovih alata i računala za izradu. Izrada također jasno objašnjava kada je u tajnu `KEYSTORE_SET` zalijepljen pogrešan tekst. [Stranica postavki](#aaps-builder-setup) sada je dio dokumentacije i prevedena je. Provjerava vaše GitHub korisničko ime i ima jasniju pomoć za tajnu, „Page not found“ (404) i aplikaciju GitHub. Ako u vašoj datoteci `.github/workflows/build.yml` piše verzija 5 ili starija, zamijenite je kako je objašnjeno u [Ažuriranje AAPS-a](#aaps-builder-updates) @psonnera
+- [Web instalacijski program za AAPS](#web-installer): sada je stranica dokumentacije, prevedena kao i ostale. Stara adresa i dalje radi @psonnera
+- [Izrada u pregledniku s AAPS Builderom](#aaps-builder): workflow za izradu, verzija 3, dodaje varijantu `aapsclient3Release` (**AAPSClient3**, AAPS 4.0 i noviji). Da biste je izradili, zamijenite svoju datoteku `.github/workflows/build.yml` kako je objašnjeno u [Ažuriranje AAPS-a](#aaps-builder-updates) @psonnera
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md): uklonjena je zakrpana aplikacija Dexcom G7 (DiaKEM) jer više ne radi za nove instalacije @psonnera
+- [Izrada u pregledniku s AAPS Builderom](#aaps-builder): workflow za izradu, verzija 2. Automatske tjedne izrade su uklonjene (nema rasporeda, nema varijabli `AUTO_BUILD` / `AUTO_VARIANT`, nema oznaka `built/…`): svaku izradu pokrećete vi, s verzijom i varijantom koju odaberete, a workflow ima samo pravo čitanja vašeg repozitorija. Ako u vašoj datoteci `.github/workflows/build.yml` piše verzija 1, zamijenite je kako je objašnjeno u [Ažuriranje AAPS-a](#aaps-builder-updates). Dodane su snimke zaslona za svaki korak @psonnera
+- [Izrada u pregledniku s AAPS Builderom](#aaps-builder): workflow za izradu sada je dio ove dokumentacije. Nema više repozitorija predloška: izradite prazan privatni repozitorij i dodajte workflow sa stranice postavki (novi korak 2). Workflow više ne provjerava ažuriranja u vanjskom repozitoriju. Ako ste svoj repozitorij izradili iz ranijeg predloška, zamijenite `.github/workflows/build.yml` workflowom sa stranice postavki kako je objašnjeno u [Ažuriranje AAPS-a](#aaps-builder-updates) @psonnera
+- Nova stranica [Izrada u pregledniku s AAPS Builderom](#aaps-builder): izradite AAPS s Android telefona pomoću stranice postavki na ovoj web-stranici, s automatskim tjednim izradama i bez datoteke za pripremu. Zamjenjuje upute za Android kod izrade u pregledniku (stranice za File Manager Plus su uklonjene). AAPS Builder izradio je @dio99, dokumentaciju @psonnera
 
-## August 2026
+## Kolovoz 2026.
 
-- [Transferring and Installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md): merged the *Android developer verification* page into the installation guide, added the [web installer](#android-developer-verification-web) (install the APK straight from the browser, exempt from verification) and wireless ADB @psonnera
+- [Prijenos i instalacija AAPS-a na vaš pametni telefon](../SettingUpAaps/TransferringAndInstallingAaps.md): stranica *Android developer verification* (provjera Android razvojnih programera) spojena je s vodičem za instalaciju, dodan je [web instalacijski program](#android-developer-verification-web) (instalacija APK-a izravno iz preglednika, bez provjere) i bežični ADB @psonnera
 
-## July 2026
+## Srpanj 2026.
 
-- [Introduction](../Getting-Started/Introduction.md): accuracy review of the APS section. Corrected the Frontiers citation title and link, reframed it as background rather than a current market guide, updated the dual-hormone and full closed loop statements, clarified that the controller is not always a phone app, removed commercial brand names and unsourced user counts, and fixed OS-AID to *Open-Source Automated Insulin Delivery* @psonnera
-- [Glossary](../UsefulLinks/Glossary.md): added **AID**, **FCL**, **HCL** and **OS-AID** entries, cross-linked from **APS** and **Closed Loop** @psonnera
-- New page [Android developer verification](#android-developer-verification): impact of Google's upcoming verification requirement on installing self-built apps, with free installation methods (ADB, advanced flow, limited distribution account) @psonnera
+- [Uvod u APS i AAPS](../Getting-Started/Introduction.md): provjera točnosti odjeljka o APS-u. Ispravljeni su naslov i poveznica citata iz časopisa Frontiers, citat je predstavljen kao pozadina, a ne kao trenutni vodič kroz tržište. Ažurirane su izjave o dvohormonskim sustavima i potpuno zatvorenoj petlji, pojašnjeno je da kontroler nije uvijek aplikacija na telefonu, uklonjeni su komercijalni nazivi marki i brojevi korisnika bez izvora, a OS-AID je ispravljen u *Open-Source Automated Insulin Delivery* (automatizirana isporuka inzulina otvorenog koda) @psonnera
+- [Pojmovnik](../UsefulLinks/Glossary.md): dodani su pojmovi **AID**, **FCL**, **HCL** i **OS-AID**, s poveznicama iz pojmova **APS** i **Closed Loop** @psonnera
+- Nova stranica [Provjera Android razvojnih programera](#android-developer-verification): utjecaj Googleova budućeg zahtjeva za provjeru na instalaciju aplikacija koje ste sami izradili, s besplatnim načinima instalacije (ADB, napredni postupak, račun za ograničenu distribuciju) @psonnera
 
-## June 2026
+## Lipanj 2026.
 
-- [Browser Build](#browser-build): restructured into a decision-first, multi-page flow (Fork → keystore Option 1/Option 2 with a dedicated page per device → Google Drive → Build → Troubleshooting); removed nested tabs and made installing File Manager Plus a prominent step @psonnera
-- [Introduction](../Getting-Started/Introduction.md): terminology switched from *DIY* to *OS-AID* (Open-Source Automated Insulin Delivery), added Trio and Stelo, updated pump/CGM compatibility table @tmhastings
+- [Izrada u pregledniku](#browser-build): preuređena u tijek na više stranica koji počinje odlukom (Fork → spremište ključeva Opcija 1/Opcija 2 s posebnom stranicom za svaki uređaj → Google Drive → Izrada → Rješavanje problema); uklonjene su ugniježđene kartice, a instalacija aplikacije File Manager Plus sada je istaknuti korak @psonnera
+- [Uvod u APS i AAPS](../Getting-Started/Introduction.md): izraz *DIY* zamijenjen je izrazom *OS-AID* (Open-Source Automated Insulin Delivery – automatizirana isporuka inzulina otvorenog koda), dodani su Trio i Stelo, ažurirana je tablica kompatibilnosti pumpi i CGM-ova @tmhastings
 
-## March 2026
+## Ožujak 2026.
 
-- [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
-- Rename *Computer Build* to *Android Studio Build*. Preserve file names for URLs.
+- [Dodana opcija izrade iz naredbenog retka (CLI)](../SettingUpAaps/CLIBuild.md) @je-l
+- *Computer Build* preimenovan je u *Android Studio Build*. Nazivi datoteka zadržani su za URL-ove.
 
-## January 2025
+## Siječanj 2025.
 
-- [3.4](#version3400) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
-- CGM list update. Dexcom G5, Tomato, Glimp removed.
-- [Site rotation UI](#Aapsscreens-site-rotation)
-- [Running mode](#AapsScreens-running-mode)
+- Izdanje [3.4](#version3400) i skupno ažuriranje dokumentacije (čarobnjak, verzije za izradu na računalu, Konfiguracija)
+- Ažuriranje popisa CGM-ova. Uklonjeni su Dexcom G5, Tomato i Glimp.
+- [Sučelje za rotaciju mjesta primjene](#Aapsscreens-site-rotation)
+- [Način rada](#AapsScreens-running-mode)
 - [Autotune](../AdvancedOptions/Autotune.md)
 
-## December 2025
+## Prosinac 2025.
 
-- [Profile tuning](../GettingHelp/ProfileTuning.md) from @robrub
+- [Podešavanje profila u AAPS-u](../GettingHelp/ProfileTuning.md) od @robrub
 
-## October 2025
+## Listopad 2025.
 
-- DiaKEM: new installs don't work after servers upgrade @psonnera
-- Removed Libre 2 patched app (obsolete): doesn't work with new sensors @psonnera
-- Reworked Omnipod DASH page @XiTatiON
+- DiaKEM: nove instalacije ne rade nakon nadogradnje poslužitelja @psonnera
+- Uklonjena je zakrpana aplikacija za Libre 2 (zastarjela): ne radi s novim senzorima @psonnera
+- Preuređena stranica za Omnipod DASH @XiTatiON
 
-## August 2025
+## Kolovoz 2025.
 
-- Updated versions and Android Studio prerequisites
-- Added [3.3.2.1](#version3321) release, removed Android 16 references (fixed)
-- Added [Browser Build](#browser-build) @Angus
+- Ažurirane verzije i preduvjeti za Android Studio
+- Dodano izdanje [3.3.2.1](#version3321), uklonjeni spomeni Androida 16 (popravljeno)
+- Dodana je [Izrada u pregledniku](#browser-build) @Angus
 
-## May 2025
+## Svibanj 2025.
 
-- Added [3.2.0.4 upgrade page](#update-aaps-3204) @psonnera
+- Dodana je [stranica za nadogradnju na 3.2.0.4](#update-aaps-3204) @psonnera
 
-## January 2025
+## Siječanj 2025.
 
-- Quick wizard [long press feature](#Preferences-quick-wizard) @emilise
-- [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) page rewritten @emilise
+- Brzi kalkulator: [funkcija dugog pritiska](#Preferences-quick-wizard) @emilise
+- Stranica [Dinamički ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md) napisana je iznova @emilise
 
-## December 2024
+## Prosinac 2024.
 
-- Documentation of [3.3 version](#version3300) @emilise
+- Dokumentacija [verzije 3.3](#version3300) @emilise
 
-## November 2024
+## Studeni 2024.
 
-- Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
+- Ažuriranje stranice [Vaš AAPS profil](../SettingUpAaps/YourAapsProfile.md) @emilise
+- Preuređen je sadržaj [Pametni satovi s Wear OS-om](../WearOS/BuildingAapsWearOS.md) @psonnera
 
-## October 2024
+## Listopad 2024.
 
-- Update of several pages:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
-- [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
+- Ažuriranje nekoliko stranica:
+  - [Koliko će to trajati](#preparing-how-long-will-it-take), [Pregled komponenti](../Getting-Started/ComponentOverview.md), [Ispunjavanje ciljeva](../SettingUpAaps/CompletingTheObjectives.md), [Vaš AAPS profil](../SettingUpAaps/YourAapsProfile.md), [Konfiguracija (Config Builder)](../SettingUpAaps/ConfigBuilder.md) i [Postavke](../SettingUpAaps/Preferences.md), [Zasloni AAPS-a](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [Izračun aktivnih ugljikohidrata (COB)](../DailyLifeWithAaps/CobCalculation.md), [Dinamički ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+- [Upute za izradu s Android Studiom Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
+- Tehnički rad (postupak objave dokumentacije, organizacija datoteka...) @psonnera i @emilise
 
 ***
 
-Missing history from March 2022 to September 2024
+Nedostaje povijest od ožujka 2022. do rujna 2024.
 
-With 3.2 rework, some obsolete information was removed. You can find it in the previous documentation version:
+Pri preradi za verziju 3.2 uklonjene su neke zastarjele informacije. Možete ih pronaći u prethodnoj verziji dokumentacije:
 
-AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/3.1/index.html).
+Dokumentacija za AAPS 3.1 dostupna je [ovdje](https://androidaps.readthedocs.io/en/3.1/index.html).
 
 ***
 
 ```{dropdown} Older updates (2019 to 2022)
-**February 2022**
+**Veljača 2022.**
 
-- [BG quality warning sign](#aaps-screens-bg-warning-sign) @tanja
-- [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
+- [Znak upozorenja za kvalitetu GUK-a](#aaps-screens-bg-warning-sign) @tanja
+- [Ažuriranje za Medtronic pumpe](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
+- [Potrebne provjere nakon ažuriranja na AAPS 3.0](Update3_0.md) @tanja
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
-- Update docs for AAPS 3.0 (partly) @xJoe
-- [Wear OS for AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
+- Ažuriranje dokumentacije za AAPS 3.0 (djelomično) @xJoe
+- [Wear OS za AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
-**January 2022**
+**Siječanj 2022.**
 
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
+- [Rješavanje problema s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md) – ažuriranje @tanja
 
-**December 2021**
+**Prosinac 2021.**
 
-- [Building the APK](../SettingUpAaps/BuildingAaps.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
-- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) information added @MilosKozak
+- [Izrada APK-a](../SettingUpAaps/BuildingAaps.md) – ažuriranje za Android Studio Arctic Fox | 2020.3.1 @tanja
+- Dodane informacije o [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) @MilosKozak
 
-**November 2021**
+**Studeni 2021.**
 
-- Best practices for calibrating a Libre 2 sensor
-- [ISF](../UsefulLinks/FAQ.md) reformulation of impact
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
-- Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
+- Dobra praksa za kalibraciju senzora Libre 2
+- [ISF](../UsefulLinks/FAQ.md) – novi opis utjecaja
+- Ažuriranje stranice [Rješavanje problema s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md)
+- Uklonjena zakrpana aplikacija [Dexcom](../CompatibleCgms/DexcomG6.md) jer je zastarjela
 
-**October 2021**
+**Listopad 2021.**
 
-- [Release notes](ReleaseNotes.md) AAPS 3.0 beta
+- [Bilješke o izdanju](ReleaseNotes.md) AAPS 3.0 beta
 
-**September 2021**
+**Rujan 2021.**
 
-- Recommended computer specification to [build AAPS app](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
+- Preporučena specifikacija računala za [izradu aplikacije AAPS](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
 
-**June 2021**
+**Lipanj 2021.**
 
-- [Watchface sideload](../WearOS/WearOsSmartwatch.md)
+- [Ručna instalacija Watchfacea (sideload)](../WearOS/WearOsSmartwatch.md)
 
-**April 2021**
+**Travanj 2021.**
 
-- List of [communication devices](#CompatiblePumps-additional-communication-device) for Omnipod and Medtronic pumps
-- AAPS predictions in [Nightscout](#Nightscout-manual-nightscout-setup)
+- Popis [komunikacijskih uređaja](#CompatiblePumps-additional-communication-device) za pumpe Omnipod i Medtronic
+- Predviđanja AAPS-a u [Nightscoutu](#Nightscout-manual-nightscout-setup)
 
-**March 2021**
+**Ožujak 2021.**
 
-- Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
+- Komunikacija razvojnih programera premještena je s Gittera na [Discord](https://discord.gg/4fQUWHZ4Mw)
 
-**February 2021**
+**Veljača 2021.**
 
-- New navigation bar and [language switch](../NavigateDoc/ChangeLanguageVersion.md)
+- Nova navigacijska traka i [promjena jezika](../NavigateDoc/ChangeLanguageVersion.md)
 
-**January 2021**
+**Siječanj 2021.**
 
-- [Action tab](#screens-action-tab) - more details on page 'AAPS screens'
-- Dexcom G6 with [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
-- Libre smart reader [battery level](#screens-sensor-level-battery)
-- [Objectives](#objectives-objective3) - new questions
-- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
+- [Kartica Radnje](#screens-action-tab) – više pojedinosti na stranici „Zasloni AAPS-a“
+- Dexcom G6 s aplikacijom [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
+- [Razina baterije](#screens-sensor-level-battery) čitača Libre smart reader
+- [Ciljevi](#objectives-objective3) – nova pitanja
+- Ostale [nove funkcije AAPS-a 2.8.0](#Releasenotes-version-2-8-0)
 
-**December 2020**
+**Prosinac 2020.**
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
-- [OpenAPS hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 Manual Installation of Google Play Service
+- [Libre 2](../CompatibleCgms/Libre2.md) – zakrpana aplikacija ne radi sa senzorima iz SAD-a
+- [Čvrste granice u OpenAPS-u](#Open-APS-features-overview-of-hard-coded-limits)
+- Sony Smartwatch 3: ručna instalacija usluge Google Play
 
-**October 2020**
+**Listopad 2020.**
 
-- Accu-Chek Combo - update [time adjustment daylight savings time](#time-adjustment-daylight-savings-time-dst)
-- Accu-Chek Insight - Option to [upload absolute values](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- Logs - more details about [folder location](../GettingHelp/AccessingLogFiles.md)
-- Omnipod Eros - status update
-- [SMS commands - time sync](../RemoteFeatures/SMSCommands.md)
+- Accu-Chek Combo – ažuriranje [prilagodbe vremena za ljetno računanje vremena](#time-adjustment-daylight-savings-time-dst)
+- Accu-Chek Insight – opcija za [prijenos apsolutnih vrijednosti](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- Dnevnici – više pojedinosti o [lokaciji mape](../GettingHelp/AccessingLogFiles.md)
+- Omnipod Eros – ažuriranje statusa
+- [SMS naredbe – sinkronizacija vremena](../RemoteFeatures/SMSCommands.md)
 
-**September 2020**
+**Rujan 2020.**
 
-- Major update for new AAPS version 2.7
-- For details see the [release notes](#Releasenotes-version-2-7-0)
+- Veliko ažuriranje za novu verziju AAPS-a 2.7
+- Pojedinosti pogledajte u [bilješkama o izdanju](#Releasenotes-version-2-7-0)
 
-**June 2020**
+**Lipanj 2020.**
 
-- Libre 2 - more details patched Libre Link app & use of Bluetooth transmitters
-- [Time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
+- Libre 2 – više pojedinosti o zakrpanoj aplikaciji Libre Link i korištenju Bluetooth odašiljača
+- [Putovanje kroz vremenske zone](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) s Libre 2
 
-**May 2020**
+**Svibanj 2020.**
 
-- [Extended bolus only for Dana + Insight pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Insight deactivate vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
-- [Minimal request rate](#Preferences-minimal-request-change) to reduce number of notifications in open loop mode
-- Patched Libre Link app - check if correctly patched
-- [Prediction lines](#aaps-screens-prediction-lines) - more details
+- [Produženi bolus samo za pumpe Dana i Insight](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Insight: isključivanje vibracije](#Accu-Chek-Insight-Pump-vibration) (samo firmware 3.x)
+- [Minimalna promjena zahtjeva](#Preferences-minimal-request-change) za manje obavijesti u načinu otvorene petlje
+- Zakrpana aplikacija Libre Link – provjerite je li ispravno zakrpana
+- [Linije predviđanja](#aaps-screens-prediction-lines) – više pojedinosti
 
-**April 2020**
+**Travanj 2020.**
 
-- Backdate insulin (i.e. given by syringe)
-- Android 6 support will be discontinued in next master version
+- Unos inzulina s ranijim vremenom (npr. dan špricom)
+- Podrška za Android 6 prestat će u sljedećoj master verziji
 
-**March 2020**
+**Ožujak 2020.**
 
-- [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
-- [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
-- [Extended bolus and switch to open loop](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
+- [Izrada APK-a s Android Studiom 3.6.1](../SettingUpAaps/BuildingAaps.md)
+- [DanaRS s firmwareom v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **trenutno se ne može koristiti s AAPS-om!**
+- [Produženi bolus i prelazak na otvorenu petlju](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Ažuriranje APK-a s Android Studiom 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
-**February 2020**
+**Veljača 2020.**
 
-- Automation caveats
-- [Autosens](#Open-APS-features-autosens) - short explanation
-- Careportal alternatives
-- [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
-- Sample Setup - update Dexcom G6
-- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
-- [Wear complications](../WearOS/WearOsSmartwatch.md)
+- Upozorenja za automatizaciju
+- [Autosens](#Open-APS-features-autosens) – kratko objašnjenje
+- Alternative za Careportal
+- Funkcija [produženog bolusa](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) – zatvorena petlja bit će onemogućena
+- Novi [dodatak Lokalni profil](../SettingUpAaps/ConfigBuilder.md)
+- Primjer postavljanja – ažuriranje za Dexcom G6
+- [Verzija 2.6.0](#Releasenotes-version-2-6-0) – velike nove značajke
+- [Komplikacije za Wear](../WearOS/WearOsSmartwatch.md)
 
-**January 2020**
+**Siječanj 2020.**
 
-- [Manual carb correction](#screens-bolus-carbs) for faulty carb entries
-- [Image size](../SupportingAaps/HowToEditTheDocs.md) when editing docs
+- [Ručna korekcija ugljikohidrata](#screens-bolus-carbs) za pogrešne unose ugljikohidrata
+- [Veličina slike](../SupportingAaps/HowToEditTheDocs.md) pri uređivanju dokumentacije
 
-**December 2019**
+**Prosinac 2019.**
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
-- [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
-- [Glimp](#Config-Builder-bg-source) - version 4.15.57 and newer supported
-- [Watchfaces](../WearOS/WearOsSmartwatch.md) - major update, way more details
-- [Watchface complications](#Watchfaces-complications) - use your favorite watchface with AAPS data
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) – postavljanje sa snimkama zaslona
+- [Accu-Chek Insight i Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) – zaobilazno rješenje za korištenje
+- [Glimp](#Config-Builder-bg-source) – podržana je verzija 4.15.57 i novije
+- [Watchfaceovi](../WearOS/WearOsSmartwatch.md) – veliko ažuriranje, mnogo više pojedinosti
+- [Komplikacije za Watchface](#Watchfaces-complications) – koristite svoj omiljeni Watchface s podacima AAPS-a
 
-**November 2019**
+**Studeni 2019.**
 
-- [Automation - deactivate when disabling loop](../DailyLifeWithAaps/Automations.md)
-- [Dexcom G6 replace transmitter update](#xdrip-replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [FAQ - sports](#FAQ-sports)
-- [Homescreen - lines on graph](#aaps-screens-main-graph)
-- [Insight - Disable absolute values in NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Medtronic pump - possible double entries](../CompatiblePumps/MedtronicPump.md)
-- [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
-- [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-- [SMS commands update](../RemoteFeatures/SMSCommands.md)
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
-- [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
-- Update - quick walk-through for experienced users
-- Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
+- [Automatizacija – deaktivacija kada se petlja onemogući](../DailyLifeWithAaps/Automations.md)
+- [Dexcom G6 – ažuriranje zamjene odašiljača](#xdrip-replace-transmitter)
+- [Produženi bolus – zašto ne radi uz petlju](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Česta pitanja – sport](#FAQ-sports)
+- [Početni zaslon – linije na grafu](#aaps-screens-main-graph)
+- [Insight – onemogućite apsolutne vrijednosti u NS Clientu](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Medtronic pumpa – mogući dvostruki unosi](../CompatiblePumps/MedtronicPump.md)
+- [Novi vodič za Freestyle Libre 2](../CompatibleCgms/Libre2.md)
+- [Zamjena profila s postotkom – primjer](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+- [Ažuriranje SMS naredbi](../RemoteFeatures/SMSCommands.md)
+- [Rješavanje problema s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md)
+- [Rješavanje problema – zbirka poveznica](../GettingHelp/GeneralTroubleshooting.md)
+- Ažuriranje – kratki pregled za iskusne korisnike
+- Dokumentacija – ažuriranje za [uređivanje](#edit-the-docs-code-syntax) i [prevođenje](#translations-translation-of-the-documentation).
 
-**October 2019**
+**Listopad 2019.**
 
-- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
-- [COB - wrong COB value detection](#CobCalculation-detection-of-wrong-cob-values)
-- [Dexcom G6 specific troubleshooting](#DexcomG6-troubleshooting-g6)
-- [Objectives update version 2.5](../SettingUpAaps/CompletingTheObjectives.md)
-- [Preferences update](../SettingUpAaps/Preferences.md)
-- [SGLT-2 inhibitors - do not use when looping](#PreparingForAaps-no-sglt-2-inhibitors)
-- [SMS Commands Troubleshooting](#SMSCommands-troubleshooting)
-- [xDrip - update G6 transmitter replacement](#xdrip-replace-transmitter)
+- Ažuriranja za [AAPS verziju 2.5](#Releasenotes-version-2-5-0) (posebno na [stranici za ažuriranje](../Maintenance/UpdateToNewVersion.md))
+- [Accu-Chek Insight – opcije dnevnika](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Izračun aktivnih ugljikohidrata (COB) na posebnoj stranici](../DailyLifeWithAaps/CobCalculation.md)
+- [COB – otkrivanje pogrešne vrijednosti COB-a](#CobCalculation-detection-of-wrong-cob-values)
+- [Rješavanje problema specifičnih za Dexcom G6](#DexcomG6-troubleshooting-g6)
+- [Ažuriranje ciljeva za verziju 2.5](../SettingUpAaps/CompletingTheObjectives.md)
+- [Ažuriranje postavki](../SettingUpAaps/Preferences.md)
+- [SGLT-2 inhibitori – ne koristite ih uz petlju](#PreparingForAaps-no-sglt-2-inhibitors)
+- [Rješavanje problema sa SMS naredbama](#SMSCommands-troubleshooting)
+- [xDrip – ažuriranje zamjene odašiljača G6](#xdrip-replace-transmitter)
 
-**September 2019**
+**Rujan 2019.**
 
-- [Automate](../DailyLifeWithAaps/Automations.md)
-- [Bolus calculator](#AapsScreens-wrong-cob-detection) - slow carb absorption
-- [Nightscout security](#Nightscout-security-considerations)
-- [Profile timeshift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (more details)
-- [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md)
-- [What is a closed loop system?](#Introduction-what-does-hybrid-closed-loop-mean)
+- [Automatizacija](../DailyLifeWithAaps/Automations.md)
+- [Bolus kalkulator](#AapsScreens-wrong-cob-detection) – spora apsorpcija ugljikohidrata
+- [Sigurnost Nightscouta](#Nightscout-security-considerations)
+- [Vremenski pomak profila](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (više pojedinosti)
+- [Daljinski nadzor](../RemoteFeatures/RemoteMonitoring.md)
+- [Što je sustav zatvorene petlje?](#Introduction-what-does-hybrid-closed-loop-mean)
 
-**August 2019**
+**Kolovoz 2019.**
 
-- Dexcom G6 patched app region
-- [Dexcom G6 new transmitter](#xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
-- What do I need? - new structure & additional information
-- New structure
+- Regija zakrpane aplikacije Dexcom G6
+- [Novi odašiljač Dexcom G6](#xdrip-connect-g6-transmitter-for-the-first-time) („firefly“ / 8G...)
+- Što mi je potrebno? - nova struktura i dodatne informacije
+- Nova struktura
 ```

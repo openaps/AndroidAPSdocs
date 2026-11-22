@@ -54,7 +54,7 @@ As estatísticas do tempo no alvo apertado (TITR), 70–140 mg/dl ou 3,9–7,8 m
 
 **Fale sobre os alvos com o seu endocrinologista**
 
-A sua diabetes pode ser diferente. Qualquer alvo sugerido deve ser discutido com o seu endocrinologista ou com a sua equipa médica. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+A sua diabetes pode ser diferente. Qualquer alvo sugerido deve ser discutido com o seu endocrinologista ou com a sua equipa médica. Se forem usadas corretamente, as estatísticas do AAPS podem ser uma ferramenta eficaz para seguir as tendências da __glicose__ e acompanhar o progresso.
 
 ![Estatísticas](../images/Maintenance/statistics3.png)
 
@@ -73,7 +73,7 @@ O **Perfil de glicose ambulatório** (**AGP**) mostra como a sua glicose costuma
 
 - **O gráfico**: um dia, da meia-noite à meia-noite. A linha é a **Mediana** (metade das suas leituras a essa hora foram mais baixas, metade foram mais altas). À volta dela, uma faixa contém a metade central das suas leituras (**25–75%**) e uma faixa mais larga contém a maior parte delas (**10–90%**). Uma faixa estreita significa que a sua glicose é parecida de dia para dia a essa hora. Linhas tracejadas marcam a sua **Marca BAIXA**, 140 mg/dl (7,8 mmol/l) e a sua **Marca ALTA**.
 - **Visão geral glicémica**: o tempo passado no seu intervalo, no intervalo apertado (70–140 mg/dl ou 3,9–7,8 mmol/l), acima e abaixo do seu intervalo, e depois a sua glicose **Média** e **Mediana**. O seu intervalo é definido pela **Marca BAIXA** e pela **Marca ALTA** em [Intervalo para visualização](#Preferences-range-for-visualization).
-- **eA1c** e **GMI**: duas estimativas da HbA1c calculadas a partir das suas leituras do CGM. Tal como a HbA1c acima, podem não coincidir com as suas análises de HbA1c ao sangue.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Tal como a HbA1c acima, podem não coincidir com as suas análises de HbA1c ao sangue.
 - **DP** (desvio padrão) e **CV** (coeficiente de variação): quanto a sua glicose varia. Um valor mais baixo significa uma glicose mais estável.
 - **Dias**: quantos dias de dados do CGM foram usados.
 
@@ -114,10 +114,10 @@ No fim de cada linha, pequenos ícones mostram de onde vêm os dados ou para ond
 (screens-bolus-carbs)=
 ### Hidratos e bólus
 
-![Hidratos e bólus](../images/TreatmentsView1.png)
+![Hidratos e bólus](../images/Maintenance/TreatmentsView1.png)
 
 Neste separador pode ver o registo de bólus e de hidratos de carbono. Cada bólus (linha **1**) mostra a IA associada que ainda resta ao lado da quantidade de insulina. A origem do bólus pode ser:
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
+* Refeição (introduzida manualmente com os botões Insulina, Assistente Rápido ou Assistente de Bólus)
 * SMB, quando usa a funcionalidade SMB
 
 Os registos de hidratos de carbono (linha **2**) aparecem com a quantidade em gramas.
@@ -141,25 +141,25 @@ O Histórico de tratamentos pode ser usado para corrigir registos de hidratos de
 
 ### Basal temporária
 
-![Basal temporária](../images/TreatmentsView2.png)
+![Basal temporária](../images/Maintenance/TreatmentsView2.png)
 
 As **basais temporárias** aplicadas pelo loop aparecem aqui. Quando um registo ainda tem impacto na IA, essa informação aparece ao lado da taxa (linha **1**). Pode ser:
 * IA positiva, se a basal temporária foi mais alta do que a definida no Perfil
 * IA negativa, para uma basal temporária de zero (como na linha **1**) ou se a basal temporária foi mais baixa do que a definida no Perfil
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+Apagar os registos só afeta os seus relatórios no Nightscout e provavelmente vai distorcer a sua IA real - não é recomendado.
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. É uma situação normal, por exemplo, durante a mudança de um Pod.
+À esquerda de uma linha, um S vermelho significa “Suspend” (suspensão): acontece quando a basal não está a ser administrada nesse momento. É uma situação normal, por exemplo, durante a mudança de um Pod.
 
 ### Alvo Temporário
 
-![Alvo Temporário](../images/TreatmentsView3.png)
+![Alvo Temporário](../images/Maintenance/TreatmentsView3.png)
 
 O histórico dos alvos temporários pode ser visto aqui.
 
 ### Troca de Perfil
 
-![Troca de Perfil](../images/TreatmentsView4.png)
+![Troca de Perfil](../images/Maintenance/TreatmentsView4.png)
 
 O histórico das trocas de perfil pode ser visto aqui. Pode ver vários registos de cada vez que troca de perfil: a linha **1**, guardada no NS e no histórico da bomba, corresponde à troca real. A linha **2**, guardada no Nightscout mas não no histórico da bomba, corresponde ao pedido de troca de perfil feito pelo utilizador.
 
@@ -169,16 +169,16 @@ Pode usar o botão **Clonar** na linha **2** para fazer uma cópia de uma **Troc
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Este separador mostra todas as notas e registos do careportal gravados no Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Modo de funcionamento
 
-![Modo de funcionamento](../images/TreatmentsView6.png)
+![Modo de funcionamento](../images/Maintenance/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+Este separador mostra o histórico das mudanças do [estado do loop](#AapsScreens-loop-status): aberto, fechado, SGB, suspenso, desligado.
 
 ### Entrada de Utilizador
 

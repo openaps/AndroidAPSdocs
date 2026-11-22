@@ -1,26 +1,26 @@
-# State of translation for the app and the documentation
+# Estat de la traducció de l'aplicació i de la documentació
 
-The state is once per hour updated and reflects only the state in Crowdin.
+L'estat s'actualitza una vegada per hora i només mostra l'estat a Crowdin.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
-It's better to look only at the percentage level of translations to see if work is to be done.
+Compte: el percentatge de revisió sempre és més baix o igual que el percentatge de traducció, però Crowdin el mostra a sobre de les traduccions.
+Per saber si queda feina per fer, és millor mirar només el percentatge de traducció.
 ```
 
 ```{admonition} needed time for final publication
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Després de traduir a Crowdin, cada dia hi ha una sincronització programada que envia les traduccions a GitHub com a pull request (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+L'acceptació del PR es fa a mà i es farà tan aviat com sigui possible.
 ```
 
-## state app translation
+## estat de la traducció de l'aplicació
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Estat de les traduccions de l'**aplicació** per idioma (codi de país, percentatge traduït, percentatge revisat).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![estat de la traducció de l'aplicació](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## estat de la traducció de la documentació
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Estat de les traduccions de la **documentació** per idioma (codi de país, percentatge traduït, percentatge revisat).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![estat de la traducció de la documentació](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

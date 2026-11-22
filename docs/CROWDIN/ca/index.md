@@ -1,222 +1,222 @@
-# Welcome to the AAPS documentation
+# Benvinguts a la documentació d'AAPS
 
-![image](./images/basic-outline-of-AAPS.png)
+![imatge](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+31 d'octubre de 2026: ja ha sortit la versió 4.0.0. Consulteu les [Notes de la versió](#latestrelease) per veure les novetats i seguiu les instruccions del [manual d'actualització](./Maintenance/UpdateToNewVersion.md) per actualitzar.
 
 ```
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an OpenAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: **(1)** an Android phone, **(2)** a continuous glucose monitor (CGM), and **(3)** an FDA/CE approved insulin pump. You can also add **(4)** cloud services to remotely control **AAPS**, share your data, and store it on a reporting server, and **(5)** a smartwatch.
+Android APS (**AAPS**) és una aplicació de codi obert per a persones amb diabetis que depenen de la insulina. És un sistema de pàncrees artificial (APS) que funciona en telèfons intel·ligents Android. **AAPS** fa servir un algoritme d'OpenAPS i intenta fer el mateix que un pàncrees real: mantenir la glucèmia dins de límits saludables amb dosificació automàtica d'insulina. Per fer servir **AAPS** necessiteu **tres** dispositius compatibles: **(1)** un telèfon Android, **(2)** un monitor continu de glucosa (CGM) i **(3)** una bomba d'insulina aprovada per la FDA/CE. També podeu afegir **(4)** serveis al núvol per controlar **AAPS** a distància, compartir les vostres dades i desar-les en un servidor d'informes, i **(5)** un rellotge intel·ligent.
 
-This documentation explains how to set up and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy **Search docs** function), or by using the [index](#index-aaps-documentation-index) at the bottom of this page.
+Aquesta documentació explica com configurar i fer servir **AAPS**. Podeu navegar per la documentació d'**AAPS** amb el menú de l'esquerra (i la pràctica funció **Cerca a la documentació**), o amb l'[índex](#index-aaps-documentation-index) al final d'aquesta pàgina.
 
-## Overview of the AAPS documentation ("The docs")
+## Visió general de la documentació d'AAPS («la documentació»)
 
-Section **1) Getting Started**, the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
+A la secció **1) Primers passos**, la [Introducció a APS i AAPS](Getting-Started/Introduction.md) explica la idea general de què ha de fer un sistema de pàncrees artificial (APS). Explica la base del llaç en general, per què es va desenvolupar **AAPS**, compara **AAPS** amb altres sistemes i parla de la seguretat. Dona consells per parlar d'**AAPS** amb el vostre equip mèdic, explica per què heu de compilar vosaltres mateixos l'aplicació **AAPS** en lloc de només descarregar-la, i dona una visió general de les connexions típiques d'un sistema **AAPS**. També parla de l'accessibilitat i de qui pot treure profit d'**AAPS**.
 
-[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Preparació per començar amb AAPS](./Getting-Started/PreparingForAaps.md) dona més detalls sobre la seguretat i sobre els telèfons, els CGM (monitors continus de glucosa) i les bombes d'insulina compatibles amb **AAPS**. Dona una visió general del procés que seguireu i un calendari aproximat per arribar a fer servir totes les funcions d'**AAPS**. Aquesta secció us prepara tècnicament per muntar el vostre sistema **AAPS** de la manera més ràpida i eficient possible. La subsecció [CGM compatibles](./Getting-Started/CompatiblesCgms.md) explica com optimitzar la configuració del vostre CGM i quines opcions de suavitzat són les millors.
 
-Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
+Ara que enteneu bé el procés, podeu començar a muntar el vostre llaç **AAPS**.
 
-Section **2) Build the app** explains why you need to build the **AAPS** app yourself rather than just downloading it, and takes you step-by-step through [building it](./SettingUpAaps/BuildingAaps.md) (using a browser, Android Studio, or the command line) and then transferring and installing it on your phone. It starts with an optional step, setting up a [dedicated Google account](./UsefulLinks/DedicatedGoogleAccountForAaps.md) to hold your builds and backups. It also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects how self-built apps are installed.
+La secció **2) Compilar l'aplicació** explica per què heu de compilar vosaltres mateixos l'aplicació **AAPS** en lloc de només descarregar-la, i us guia pas a pas per [compilar-la](./SettingUpAaps/BuildingAaps.md) (amb un navegador, Android Studio o la línia d'ordres) i després transferir-la i instal·lar-la al vostre telèfon. Comença amb un pas opcional: crear un [compte de Google dedicat](./UsefulLinks/DedicatedGoogleAccountForAaps.md) per guardar les vostres compilacions i còpies de seguretat. També explica la [verificació de desenvolupadors d'Android](#android-developer-verification), un canvi que Google aplica a partir de setembre de 2026 i que afecta com s'instal·len les aplicacions compilades per un mateix.
 
-Section **3) Setting up the reporting server** covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data.
+La secció **3) Configurar el servidor d'informes** explica com triar i [configurar el vostre servidor d'informes](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout o Tidepool) perquè pugueu revisar i compartir les vostres dades.
 
-Section **4) [Configure AAPS](./SettingUpAaps/SetupWizard.md)** covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then introduced to everything **AAPS** can do, through a safe, carefully paced, step-by-step process. This makes sure that you (or your child) are thoroughly familiar and comfortable navigating all the different levels and menu configurations before moving on to the next phase, commonly called the next "Objective". You keep progressing this way until you have enough experience to begin using the more advanced options in the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+La secció **4) [Configurar AAPS](./SettingUpAaps/SetupWizard.md)** explica com configurar l'aplicació **AAPS** amb l'assistent de configuració, com connectar-la amb la vostra aplicació de CGM i amb una bomba d'insulina real o virtual, i com connectar **AAPS** amb el vostre servidor d'informes. Després coneixereu tot el que **AAPS** pot fer, amb un procés pas a pas, segur i al ritme adequat. Així us assegureu que vosaltres (o el vostre fill) coneixeu bé i us sentiu còmodes amb tots els nivells i menús de configuració abans de passar a la fase següent, que s'anomena el següent «objectiu». Continueu així fins que tingueu prou experiència per començar a fer servir les opcions més avançades de l'aplicació. Aquests objectius estan pensats per desbloquejar a poc a poc més possibilitats d'**AAPS** i passar del llaç obert al llaç tancat.
 
-Section **5) [Daily life with AAPS](./DailyLifeWithAaps/AapsScreens.md)** covers key **AAPS** features, to help you use (and customize) **AAPS**. This includes understanding the screens, carbs-on-board, sensitivity, DynamicISF, profile switching, temp targets, extended carbs (or eCarbs), automations, and [reviewing your data](./Maintenance/Reviewing.md) in the history browser and statistics. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, [traveling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md), and sports. Common questions and answers are located within the troubleshooting section.
+La secció **5) [Vida diària amb AAPS](./DailyLifeWithAaps/AapsScreens.md)** explica les funcions principals d'**AAPS**, per ajudar-vos a fer servir (i personalitzar) **AAPS**. Això inclou entendre les pantalles, els carbohidrats a bord, la sensibilitat, l'ISF dinàmic, els canvis de perfil, els objectius temporals, els carbohidrats estesos (o e-carbs), les automatitzacions i [revisar les vostres dades](./Maintenance/Reviewing.md) a l'historial i a les estadístiques. També parla de temes freqüents com gestionar diferents tipus d'àpats, els canvis de cànula i de sensor, les actualitzacions del telèfon, els canvis d'horari d'estiu, [viatjar amb AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) i l'esport. Les preguntes i respostes habituals es troben a la secció de resolució de problemes.
 
-Section **6) [Remote AAPS features](./RemoteFeatures/RemoteControl.md)** highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.
+La secció **6) [Funcions remotes d'AAPS](./RemoteFeatures/RemoteControl.md)** mostra un punt fort real d'**AAPS**. Hi ha moltes possibilitats per enviar ordres a distància a **AAPS** o simplement seguir-ne les dades. Això és igual d'útil per als cuidadors que volen fer servir **AAPS** per a menors, i per als adults amb diabetis que volen controlar la glucèmia (i altres dades) de manera més còmoda que només al telèfon (en un rellotge, al cotxe, _etc._), o que volen que altres persones properes també puguin veure les dades. Aquesta secció també explica com fer servir Android Auto per veure la glucèmia al cotxe.
 
-Section **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** gives information and procedures to use an Android **Wear OS** smartwatch with the dedicated **AAPS** watchfaces or custom watchfaces, either as a remote control of your phone or just a display indicator.
-
-
-Section **8) [Maintenance of AAPS](./Maintenance/ExportImportSettings.md)** covers how to export and back up your settings (which is very important in case you lose/break your phone), gives the latest version notes, details how to update **AAPS** and explains what happens when a version reaches its end of life. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries.
-
-Section **9) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. It is the single place to go when something is not working: the [Troubleshooting](GettingHelp/GeneralTroubleshooting.md) hub collects, by topic, the solutions to the most common problems, and the [FAQ](UsefulLinks/FAQ.md) answers frequent questions. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at.
-
-Section **10)** covers **[Advanced AAPS options](./AdvancedOptions/FullClosedLoop.md)** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), how to [tune your profile](./GettingHelp/ProfileTuning.md) and use Autotune, and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup.
-
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
-
-Section **12) Resources**, contains archived or additional documentation, including a subsection for [clinicians](UsefulLinks/ClinicianGuideToAaps.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are also contained in this section. It includes the [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example.
+La secció **7) [Rellotges intel·ligents Wear OS](./WearOS/BuildingAapsWearOS.md)** dona informació i procediments per fer servir un rellotge intel·ligent Android **Wear OS** amb els watchfaces dedicats d'**AAPS** o amb watchfaces personalitzats, com a control remot del vostre telèfon o només com a pantalla.
 
 
- ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md).
+La secció **8) [Manteniment d'AAPS](./Maintenance/ExportImportSettings.md)** explica com exportar i fer una còpia de seguretat de la vostra configuració (molt important si perdeu o trenqueu el telèfon), dona les notes de la darrera versió, explica com actualitzar **AAPS** i què passa quan una versió arriba a la fi del suport. Podeu esperar una versió nova i 2–3 actualitzacions obligatòries cada any. Com amb qualsevol programari, heu de fer aquestes actualitzacions, perquè s'hi corregeixen errors petits i s'hi fan millores a **AAPS**. Hi ha una secció específica de resolució de problemes d'«actualització» amb les preguntes habituals.
+
+La secció **9) [Ajuda i resolució de problemes](GettingHelp/WhereCanIGetHelp.md)** us ha d'indicar els millors llocs on trobar ajuda general amb **AAPS**. És l'únic lloc on heu d'anar quan alguna cosa no funciona: la pàgina de [Resolució de problemes](GettingHelp/GeneralTroubleshooting.md) recull, per temes, les solucions als problemes més habituals, i les [Preguntes freqüents](UsefulLinks/FAQ.md) responen les preguntes més comunes. Això és molt important per poder contactar amb altres persones tan aviat com sigui possible, aclarir dubtes i resoldre els problemes habituals. Molta gent ja fa servir **AAPS** amb èxit, però tothom té en algun moment una pregunta que no pot resoldre sol. Com que hi ha molts usuaris, les respostes a les preguntes solen arribar molt de pressa, normalment en poques hores. No tingueu por de demanar ajuda: no hi ha preguntes ximples! Animem els usuaris de qualsevol nivell d'experiència a fer totes les preguntes que creguin necessàries per començar a fer-lo servir de manera segura. Aquesta secció inclou la resolució de problemes general d'**AAPS** i d'**AAPSClient** (una aplicació complementària per seguir les dades), i explica com enviar les vostres dades d'**AAPS** (fitxers de registre) als desenvolupadors perquè les investiguin, si creieu que cal revisar un problema tècnic d'**AAPS**.
+
+La secció **10)** explica les **[Opcions avançades d'AAPS](./AdvancedOptions/FullClosedLoop.md)**, com ara passar de fer servir **AAPS** en llaç tancat híbrid (amb bolus per als àpats, _etc._) al llaç tancat complet (sense bolus), com [ajustar el vostre perfil](./GettingHelp/ProfileTuning.md) i fer servir Autotune, i dona detalls dels modes de desenvolupament i d'enginyeria. La majoria d'usuaris funcionen molt bé amb la versió principal («Master») d'**AAPS** sense mirar aquestes opcions. Aquesta secció és per als usuaris que ja tenen un bon control i volen millorar encara més el seu sistema.
+
+A la secció **11) [Com donar suport a AAPS](SupportingAaps/HowCanIHelp.md)** donem informació perquè pugueu donar suport a aquest projecte. Podeu donar diners, material o coneixements. Podeu proposar o fer vosaltres mateixos canvis a la documentació, ajudar amb la [traducció de la documentació](SupportingAaps/Translations.md) i compartir les vostres dades amb el projecte Open Humans.
+
+La secció **12) Recursos** conté documentació arxivada o addicional, amb una subsecció per als [professionals sanitaris](UsefulLinks/ClinicianGuideToAaps.md) interessats en la tecnologia de pàncrees artificial de codi obert com **AAPS**, o per als pacients que volen compartir aquesta informació amb els seus metges. La introducció també parla d'aquest tema. Aquesta secció també conté més referències i recursos sobre la diabetis i el llaç. Inclou el [Glossari](./UsefulLinks/Glossary.md), una llista de les sigles (o noms curts) que es fan servir a **AAPS**. Aquí podeu trobar, per exemple, què volen dir els termes ISF o TT.
+
+
+ ### Voleu començar a fer servir **AAPS**? Llegiu més sobre **AAPS** a la [Introducció a APS i AAPS](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: danger
-The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+La seguretat d'**AAPS** depèn de les funcions de seguretat del vostre maquinari (telèfon, bomba, CGM). Feu servir només una bomba d'insulina i un CGM que funcionin perfectament i que estiguin aprovats per la FDA/CE. No feu servir bombes d'insulina ni receptors de CGM trencats, modificats o fets per vosaltres mateixos. Feu servir només consumibles originals (aplicadors, cànules i reservoris d'insulina) aprovats pel fabricant per a la vostra bomba i el vostre CGM. Fer servir consumibles no provats o modificats pot causar imprecisions i errors en la dosi d'insulina, i això és un risc important per a l'usuari. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+No feu servir **AAPS** si preneu inhibidors de l'SGLT-2 (gliflozines), perquè fan baixar la glucèmia. Augmenta el risc de cetoacidosi diabètica (CAD) perquè es lliura menys insulina, i el risc d'hipoglucèmia perquè baixa la glucèmia. 
 ```
 
 ```{admonition} Disclaimer
 :class: note
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout currently makes no attempt at HIPAA privacy compliance. 
-- Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+- Tota la informació i el codi que es descriuen aquí són només per a finalitats informatives i educatives. Feu servir [Nightscout](https://nightscout.github.io/) i **AAPS** sota la vostra responsabilitat, i no feu servir la informació ni el codi per prendre decisions mèdiques. Actualment, Nightscout no intenta complir la normativa de privadesa HIPAA. 
+- El codi de github.com es fa servir sense cap garantia ni suport formal de cap mena. Llegiu la LICENSE d'aquest repositori per a més detalls.
+- Tots els noms de productes i empreses, marques comercials, marques de servei, marques registrades i marques de servei registrades són propietat dels seus titulars. El seu ús és només informatiu i no indica cap relació amb ells ni cap aval per part seva.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) or [Syai](https://www.syai.com/).
+**AAPS** no té cap relació amb aquestes empreses ni té el seu aval: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/), [Medtronic](https://www.medtronic.com/), [Diaconn](https://www.diaconn.com/en/index.html), [EOFlow](http://www.eoflow.com/), [MicroTech Medical (Equil)](https://www.microtechmd.com/), [Medtrum](https://www.medtrum.com/), [Senseonics (Eversense)](https://www.senseonics.com/), [i-SENS (CareSens)](https://i-sens.com/), [POCTech](https://poctechcorp.com/en/), [Ottai](https://ottai.com/) o [Syai](https://www.syai.com/).
 
 ```
 
 (index-aaps-documentation-index)=
 
-## AAPS Documentation Index
+## Índex de la documentació d'AAPS
 
 ```{toctree}
-:caption: Using this documentation
+:caption: Ús d'aquesta documentació
 :titlesonly:
 
-Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
-Search the documentation <./NavigateDoc/SearchDoc.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
+Canviar l'idioma i la versió <./NavigateDoc/ChangeLanguageVersion.md>
+Cercar a la documentació <./NavigateDoc/SearchDoc.md>
+Actualitzacions i canvis de la documentació <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
-:caption: 1) Getting started
+:caption: 1) Primers passos
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+Introducció a APS i AAPS <./Getting-Started/Introduction.md>
+Preparació per començar amb AAPS <./Getting-Started/PreparingForAaps.md>
+Visió general dels components <./Getting-Started/ComponentOverview.md>
+- Bombes compatibles <./Getting-Started/CompatiblePumps.md>
+- CGM compatibles <./Getting-Started/CompatiblesCgms.md>
+- Telèfons <./Getting-Started/Phones.md>
+- Rellotges intel·ligents i AAPS <./Getting-Started/Watches.md>
 ```
 
 ```{toctree}
-:caption: 2) Build the app
+:caption: 2) Compilar l'aplicació
 
-Dedicated Google account for AAPS (optional) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Un compte de Google dedicat per a AAPS (opcional) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
+Compilar AAPS <./SettingUpAaps/BuildingAaps.md>
+- Compilació al navegador <./SettingUpAaps/BrowserBuild.md>
+- Compilació amb Android Studio <./SettingUpAaps/ComputerBuild.md>
+- Instruccions de compilació des de la línia d'ordres <./SettingUpAaps/CLIBuild.md>
+Transferir i instal·lar AAPS al vostre telèfon <./SettingUpAaps/TransferringAndInstallingAaps.md>
 ```
 ```{toctree}
-:caption: 3) Setting up the reporting server
+:caption: 3) Configurar el servidor d'informes
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Configurar el servidor d'informes <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Configurar AAPS
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Assistent de configuració d'AAPS <./SettingUpAaps/SetupWizard.md>
+El vostre perfil d'AAPS <./SettingUpAaps/YourAapsProfile.md>
+Fer canvis a la configuració d'AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configurador (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Configuració <./SettingUpAaps/Preferences.md>
+Completar els objectius <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
-:caption: 5) Daily Life with AAPS
+:caption: 5) Vida diària amb AAPS
 
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
-Scenes <./DailyLifeWithAaps/Scenes.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-QuickLaunch toolbar <./DailyLifeWithAaps/QuickLaunch.md>
-Home screen widgets <./DailyLifeWithAaps/Widgets.md>
-Food database <./DailyLifeWithAaps/Food.md>
-Global search <./DailyLifeWithAaps/GlobalSearch.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
+Pantalles d'AAPS <./DailyLifeWithAaps/AapsScreens.md>
+Funcions principals d'AAPS <./DailyLifeWithAaps/KeyAapsFeatures.md>
+Càlcul del COB <./DailyLifeWithAaps/CobCalculation.md>
+Detecció de sensibilitat <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+ISF dinàmic (DynISF) <./DailyLifeWithAaps/DynamicISF.md>
+Canvi de perfil i percentatge del perfil <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Objectius temporals <./DailyLifeWithAaps/TempTargets.md>
+Carbohidrats estesos / «e-carbs» <./DailyLifeWithAaps/ExtendedCarbs.md>
+Assistents ràpids (bolus amb un toc) <./DailyLifeWithAaps/QuickWizards.md>
+Escenes (configuracions per a cada situació) <./DailyLifeWithAaps/Scenes.md>
+Automatització <./DailyLifeWithAaps/Automations.md>
+Accés ràpid (barra d'accions ràpides del resum) <./DailyLifeWithAaps/QuickLaunch.md>
+Widgets de la pantalla d'inici <./DailyLifeWithAaps/Widgets.md>
+Aliments (la vostra base de dades d'aliments) <./DailyLifeWithAaps/Food.md>
+Cerca global <./DailyLifeWithAaps/GlobalSearch.md>
+Revisar les vostres dades <./Maintenance/Reviewing.md>
+AAPS per a nens <./DailyLifeWithAaps/AapsForChildren.md>
+Bombes i cànules <./DailyLifeWithAaps/PumpsAndCannulas.md>
+Canvi de fus horari i horari d'estiu <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
 ```{toctree}
-:caption: 6) Remote AAPS features
+:caption: 6) Funcions remotes d'AAPS
 
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
+Monitoratge remot <./RemoteFeatures/RemoteMonitoring.md>
+Seguir AAPS (sense interacció amb el sistema AAPS) <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-The AAPSClient app <./RemoteFeatures/AapsClient.md>
-Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
+Control remot d'AAPS <./RemoteFeatures/RemoteControl.md>
+L'aplicació AAPSClient <./RemoteFeatures/AapsClient.md>
+Control principal ↔ client (control remot signat) <./RemoteFeatures/ClientMasterControl.md>
+Ordres SMS <./RemoteFeatures/SMSCommands.md>
 
 ```
 ```{toctree}
-:caption: 7) Wear OS Smartwatches
+:caption: 7) Rellotges intel·ligents Wear OS
 
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
-```
-
-```{toctree}
-:caption: 8) Maintenance of AAPS
-
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Compilar l'aplicació AAPS per a Wear OS <./WearOS/BuildingAapsWearOS.md>
+Configurar AAPS al vostre rellotge Wear OS <./WearOS/WearOsSmartwatch.md>
+Controlar AAPS amb el vostre rellotge Wear OS <./RemoteFeatures/RemoteControlWearOS.md>
+Document de referència de watchfaces personalitzats <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
+Lloc d'intercanvi de watchfaces personalitzats <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
 ```{toctree}
-:caption: 9) Help & Troubleshooting
+:caption: 8) Manteniment d'AAPS
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
-- Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-- Reinstalling AAPS (new keystore) <./GettingHelp/ReinstallAaps.md>
-- Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
-FAQ <./UsefulLinks/FAQ.md>
+Crear i restaurar còpies de seguretat <./Maintenance/ExportImportSettings.md>
+Notes de la versió <./Maintenance/ReleaseNotes.md>
+Què ha canviat a AAPS v4 <./Maintenance/V4Changes.md>
+Actualitzar a una nova versió o branca <./Maintenance/UpdateToNewVersion.md>
+- Actualitzar amb el navegador (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Actualitzar amb Android Studio <./Maintenance/UpdateComputerBuild.md>
+Fi del suport <./Maintenance/EndOfLife.md>
+
 ```
 
 ```{toctree}
-:caption: 10) Advanced AAPS options
+:caption: 9) Ajuda i resolució de problemes
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Autotune <./AdvancedOptions/Autotune.md>
-Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
+On puc trobar ajuda? <./GettingHelp/WhereCanIGetHelp.md>
+Resolució de problemes <./GettingHelp/GeneralTroubleshooting.md>
+- Problemes relacionats amb el Bluetooth <./GettingHelp/BluetoothTroubleshooting.md>
+- Resolució de problemes de NSClient <./GettingHelp/TroubleshootingNsClient.md>
+- Resolució de problemes d'Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+- Compilació al navegador: resolució de problemes <./GettingHelp/BrowserBuildTroubleshooting.md>
+- Reinstal·lar AAPS amb un nou magatzem de claus <./GettingHelp/ReinstallAaps.md>
+- Accés als fitxers de registre <./GettingHelp/AccessingLogFiles.md>
+Preguntes freqüents per a usuaris del llaç <./UsefulLinks/FAQ.md>
+```
+
+```{toctree}
+:caption: 10) Opcions avançades d'AAPS
+
+Llaç tancat complet <./AdvancedOptions/FullClosedLoop.md>
+Ajustar el perfil d'AAPS <./GettingHelp/ProfileTuning.md>
+Com utilitzar el plugin Autotune <./AdvancedOptions/Autotune.md>
+Concentració d'insulina <./AdvancedOptions/InsulinConcentration.md>
+Branca de desenvolupament <./AdvancedOptions/DevBranch.md>
+Compilació al navegador: cherry-pick d'un commit <./AdvancedOptions/BrowserBuildCherryPick.md>
 
 ```
 ```{toctree}
-:caption: 11) How to support AAPS
+:caption: 11) Com donar suport a AAPS
 
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
+Com ajudar AAPS <./SupportingAaps/HowCanIHelp.md>
+Com editar la documentació <./SupportingAaps/HowToEditTheDocs.md>
+Com traduir textos de l'aplicació AAPS o de la documentació <./SupportingAaps/Translations.md>
+Estat de la traducció de l'aplicació i de la documentació <./SupportingAaps/StateOfTranslations.md>
 Open Humans Uploader <./SupportingAaps/OpenHumans.md>
 
 ```
 ```{toctree}
-:caption: 12) Resources
+:caption: 12) Recursos
 
-Glossary <./UsefulLinks/Glossary.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-For Clinicians <./UsefulLinks/ClinicianGuideToAaps.md>
+Glossari <./UsefulLinks/Glossary.md>
+Recursos útils per llegir abans de començar <./UsefulLinks/BackgroundReading.md>
+Per a professionals sanitaris – Introducció general i guia d'AAPS <./UsefulLinks/ClinicianGuideToAaps.md>
 ```

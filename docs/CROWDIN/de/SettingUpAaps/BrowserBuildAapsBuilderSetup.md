@@ -56,19 +56,20 @@ Es wurde nicht aus der Vorlage angelegt. Delete it (**Settings** → bottom of t
 You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). Siehe [Fehlerbehebung](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-Die Build-Schritte werden für Dich aktualisiert: Bei jedem Build führt Dein Repository die Version aus, die die AAPS-Entwickler in nightscout/aaps-builder veröffentlicht haben, und in Deinem Repository ändert sich nichts. Deine Workflow-Datei ersetzt Du nur, wenn [Aktualisierungen & Änderungen der Dokumentation](../Maintenance/DocumentationUpdate.md) es ankündigt (zum Beispiel für eine neue Build-Variante), oder einmalig, wenn Dein Repository mit einer früheren Version dieser Seite oder aus der alten Vorlage angelegt wurde. Dein Secret `KEYSTORE_SET` bleibt, wie es ist.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Dein Secret `KEYSTORE_SET` bleibt, wie es ist.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. Öffne auf einem Smartphone stattdessen die <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">Nur-Text-Version</a>, halte den Text gedrückt → **Alles auswählen** → **Kopieren**.
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
    Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Ersetze den gesamten Text durch den kopierten Workflow (auf einem Smartphone: gedrückt halten → **Alles auswählen** → **Einfügen**) und klicke dann zweimal auf **Commit changes…**. Die erste Zeile der Datei zeigt ihre Version.
-```
+
+</div>
 
 (aaps-builder-setup-step2)=
 

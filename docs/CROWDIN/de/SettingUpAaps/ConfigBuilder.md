@@ -313,6 +313,7 @@ Wenn Du eine andere Pumpe auswählst, bittet Dich **AAPS**, den Wechsel zu best�
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Virtuelle Pumpe: Open Loop – **AAPS** macht ausschließlich Vorschläge
   - während Deiner ersten Schritte mit **AAPS** in den ersten [Zielen](../SettingUpAaps/CompletingTheObjectives.md)
   - für Pumpen, die noch nicht kompatibel sind

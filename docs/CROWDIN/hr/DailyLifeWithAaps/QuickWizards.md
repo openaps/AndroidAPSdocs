@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Brzi kalkulatori (bolusi jednim dodirom)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+**Brzi kalkulator** je spremljeni gumb za jedan dodir za obrok ili situaciju koja se ponavlja. Sadrži stalnu količinu **ugljikohidrata** (i način doziranja za njih), pa možete isporučiti bolus – ili samo zapisati ugljikohidrate – jednim dodirom i potvrdom, umjesto da svaki put otvarate cijeli bolus kalkulator.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Otvaranje brzih kalkulatora
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Otvorite zaslon **Upravljanje** (donja navigacija) i odaberite **Brzi kalkulator** (*„Upravljajte predlošcima brzog kalkulatora“*).
 
 ---
 
-## The three modes
+## Upravljanje brzim kalkulatorima
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Vaši brzi kalkulatori prikazani su kao **vrtuljak kartica koje možete listati** (svaka kartica prikazuje tekst gumba, ugljikohidrate i vremenski raspon valjanosti). Uređivač ispod podešava **odabrani** brzi kalkulator; donja traka s radnjama ima **➕ dodaj**, **⧉ kloniraj**, **🗑️ izbriši** i gumb **▶** koji pokreće odabrani brzi kalkulator.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![Uređivač brzog kalkulatora – način, ugljikohidrati, vrijeme ugljikohidrata i vremenski raspon valjanosti](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+Glavna polja uređivača su:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Tekst gumba** – natpis koji se prikazuje na gumbu.
+- **UH** i **Vrijeme ugljikohidrata** – količina ugljikohidrata i njezin vremenski pomak.
+- **Vremenski raspon valjanosti** – pogledajte [Valjanost](#quickwizard_validity).
+- **Opcije kalkulatora** i **Odabir uređaja** – pogledajte niže.
 
 ---
 
-## Validity — when the button appears
+## Tri načina
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+Izbornik na vrhu uređivača – **Kalkulator / Inzulin / Ugljikohidrati** – određuje **što gumb radi** kada ga dodirnete:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Kalkulator** – pokreće cijeli **bolus kalkulator** za postavljene ugljikohidrate, uz vaše trenutne **GUK, aktivni inzulin (IOB), aktivne ugljikohidrate (COB) i trend** (prema *Opcijama kalkulatora* niže). Isporučuje *izračunati* bolus i zapisuje ugljikohidrate. Ovo je klasični brzi kalkulator.
+- **Inzulin** – isporučuje **stalnu, unaprijed postavljenu količinu inzulina** koju ste sami postavili – bez izračuna.
+- **Ugljikohidrati** – zapisuje **samo postavljene ugljikohidrate**,**bez bolusa**.
 
 ---
 
-## Invocation points — where you use it
+## Opcije kalkulatora (način Kalkulator)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Za gumb u načinu **Kalkulator** birate koje ulazne podatke izračun koristi:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Koristi GUK**, **Koristi aktivne ugljikohidrate**, **Koristi aktivni inzulin** (sa *Samo pozitivni aktivni inzulin*), **Koristi trend** (*Sve / Samo pozitivni / Samo negativni*), **Koristi privremeni cilj**, **Koristi alarm**.
+- **Postotak bolusa** – mijenja veličinu izračunatog bolusa.
+- **Dodaj eUH** – zakazuje i produžene ugljikohidrate.
+
+![Opcije kalkulatora, postotak bolusa i odabir uređaja](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Valjanost – kada se gumb prikazuje
+
+(quickwizard_validity)= **Vremenski raspon valjanosti** (*Od / Do*) određuje **kada** je brzi kalkulator prikazan i kada se može koristiti. Gumb postavljen, na primjer, na **06:00–10:00** prikazuje se samo ujutro – tako brzi kalkulator za *doručak* ne zatrpava vaš zaslon (i ne dodirnete ga greškom) za vrijeme večere. Izvan svog vremenskog prozora gumb je skriven na ploči **Tretmani** i na alatnoj traci [Brzo pokretanje](QuickLaunch.md). Gumb na alatnoj traci ne briše se: vraća se kada se vremenski prozor ponovno otvori.
+
+Kada je vremenski raspon valjanosti kraći od 4 sata, gumb je također skriven 30 minuta nakon što ga upotrijebite, kako se isti obrok ne bi greškom unio dvaput.
+
+---
+
+## Mjesta pokretanja – gdje ga koristite
+
+Prekidači u **Odabiru uređaja** određuju gdje se svaki brzi kalkulator prikazuje:
+
+- **Prikaži na telefonu** – prikazuje se na **ploči [Tretmani](../Maintenance/V4Changes.md)** (s izračunatom dozom prikazanom izravno na gumbu). Brzi kalkulator prikazan na telefonu možete i **prikvačiti kao gumb za brzu radnju u Pregledu**: otvorite *Postavi brzo pokretanje* (⚙ na alatnoj traci [Brzo pokretanje](QuickLaunch.md)) i dodajte ga iz kategorije **Brzi kalkulator**.
+- **Prikaži na satu** – prikazuje se na **Wear OS pločici Brzi kalkulator** (prijeđite prstom do nje u vrtuljku pločica na satu, zatim dodirnite gumb da ga pokrenete – kao kod [pločice Scene](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Odjeljak **Odabir uređaja** prikazuje se u uređivaču samo kada je dodatak **Wear** omogućen i kada je njegova postavka **Upravljanje sa sata** uključena. Bez toga se svaki brzi kalkulator jednostavno prikazuje na telefonu.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+Na telefonu se brzi kalkulatori prikazuju na vrhu donje ploče **Tretmani**:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Brzi kalkulatori (na vrhu) na otvorenoj donjoj ploči Tretmani](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…i kao gumb za brzu radnju u Pregledu:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Gumb za brzu radnju brzog kalkulatora u Pregledu](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Pločica Brzi kalkulator na Wear OS satu](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Upareni **klijent** (**AAPSClient**) također može pokrenuti brzi kalkulator – **glavni uređaj** ga izračunava i isporučuje (pogledajte [Upravljanje glavni uređaj ↔ klijent (potpisano daljinsko upravljanje)](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Gdje god ga pokrenete, dodir na brzi kalkulator uvijek prikazuje **potvrdu** (potvrdu koju izrađuje glavni uređaj, kada ga pokrenete s klijenta ili sata) prije nego što se išta isporuči.
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Brzi kalkulator se odbija kada je njegova doza veća od vašeg maksimalnog bolusa ili kada su njegovi ugljikohidrati ili eUH veći od vaših maksimalnih ugljikohidrata (na primjer nakon što ste smanjili granicu). Kada su ugljikohidrati iznad granice, gumb na ploči **Tretmani** je onemogućen. Uredite brzi kalkulator ili granicu.
 
 ---
 
-## Adding and removing
+## Dodavanje i uklanjanje
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Dodaj** – izradite novi brzi kalkulator.
+- **⧉ Kloniraj** – napravite kopiju jednog kao početnu točku.
+- **🗑️ Izbriši** – uklonite jedan.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+S dva ili više brzih kalkulatora možete promijeniti i njihov redoslijed u vrtuljku: dodirnite ikonu **Promijeni redoslijed** (⇅) u gornjoj traci, pomičite središnju karticu **gumbima za pomicanje ◀ / ▶**, zatim potvrdite s **✓**. (Kontrole izgledaju isto kao kod [promjene redoslijeda profila](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Brzi kalkulatori dio su sinkronizirane konfiguracije, pa ih dijele vaš glavni uređaj i upareni klijenti.
 
 ---
 

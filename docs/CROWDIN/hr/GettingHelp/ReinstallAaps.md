@@ -1,153 +1,153 @@
 (reinstall-aaps)=
-# Reinstalling AAPS with a new keystore
+# Ponovna instalacija AAPS-a s novim spremištem ključeva
 
-Every **AAPS** apk is signed with a **keystore**. An update only installs over your current **AAPS** if it is signed with the **same keystore**: all your settings and data are then kept. That's why it is recommended to store the keystore and its password in a safe place.
+Svaki apk **AAPS-a** potpisan je **spremištem ključeva**. Ažuriranje se instalira preko vašeg trenutnog **AAPS-a** samo ako je potpisano **istim spremištem ključeva**: tada se sve vaše postavke i podaci zadržavaju. Zato se preporučuje spremište ključeva i njegovu lozinku čuvati na sigurnom mjestu.
 
-If you try to install an apk signed with a different keystore than before, you will get an error message explaining that the installation failed!
+Ako pokušate instalirati apk potpisan drugim spremištem ključeva nego prije, dobit ćete poruku o pogrešci da instalacija nije uspjela!
 
 (reinstall-aaps-when)=
-## When do you need to reinstall?
+## Kada je potrebna ponovna instalacija?
 
-You need to uninstall and reinstall **AAPS** when your new apk is signed with a different keystore, for example:
+**AAPS** morate deinstalirati i ponovno instalirati kada je vaš novi apk potpisan drugim spremištem ključeva, na primjer:
 
-- You cannot find your old keystore or its password.
-- You created a new keystore, for example with [Option 1 of the browser build](../SettingUpAaps/BrowserBuildKeystore.md) or **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
-- You build on a new computer and did not copy your keystore to it.
+- Ne možete pronaći svoje staro spremište ključeva ili njegovu lozinku.
+- Izradili ste novo spremište ključeva, na primjer s [Opcijom 1 izrade u pregledniku](../SettingUpAaps/BrowserBuildKeystore.md) ili s **Izradi novi ključ** u [AAPS Builderu](../SettingUpAaps/BrowserBuildAapsBuilder.md).
+- Izrađujete aplikaciju na novom računalu i na njega niste kopirali svoje spremište ključeva.
 
-If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
+Ako još imate svoje spremište ključeva, ova stranica vam ne treba: koristite ga ponovno i [ažurirajte **AAPS**](../Maintenance/UpdateToNewVersion.md) na isti način kao i inače.
 
 (reinstall-aaps-before)=
-## Before you start
+## Prije nego počnete
 
-- Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
-- The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
-- **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
-- If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) before you start.
+- Deinstalacija **AAPS-a** briše sve njegove postavke, vaše [ciljeve](../SettingUpAaps/CompletingTheObjectives.md) i trenutnu vezu s pumpom. Vraćate ih uvozom svoje **datoteke postavki**, pa provjerite imate li nedavnu.
+- Datoteka postavki ne sadrži vašu povijest tretmana i glukoze. Ako podatke prenosite u [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), možete ih ponovno učitati nakon ponovne instalacije (korak 8).
+- Potrebna vam je vaša [**glavna lozinka**](#Preferences-master-password): datoteka postavki šifrirana je njome. Resetiranje zaboravljene glavne lozinke ovdje ne pomaže: datoteka postavki može se uvesti samo lozinkom s kojom je izvezena (pogledajte [Kako resetirati glavnu lozinku?](#FAQ-reset-master-password)).
+- **Korisnici Omnipoda i Medtruma:** najprije pročitajte [Pumpe bez katetera](#ExportImportSettings-tubeless-pumps). Vaša datoteka postavki mora biti izvezena tijekom Pod-a ili flastera (patch) koji sada nosite.
+- Ako je potrebno, prije početka [postavite svoj CGM / prijemnik izvora GUK-a](../Getting-Started/CompatiblesCgms.md).
 
 (reinstall-aaps-steps)=
-## Steps
+## Koraci
 
-The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
+Slike prikazuju prelazak s **AAPS-a** 3.4 (koraci 1 do 3) na **AAPS** 4 (koraci 6 do 8). Druge verzije izgledaju malo drugačije.
 
 (reinstall-aaps-export)=
-### 1. Export your settings
+### 1. Izvezite svoje postavke
 
-Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
+Izvezite svoje postavke s **AAPS-om** koji je trenutno instaliran na vašem telefonu. Za pojedinosti pogledajte [Izvoz postavki](#ExportImportSettings-Settings-Export).
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+U **AAPS-u** 3.4: otvorite **Održavanje** i dodirnite **Opcije izvoza**. Pod **Korisničke postavke** označite **Lokalna pohrana** i dodirnite **U redu**.
 
-*Note: you can also use [Cloud Storage](#preferences-maintenance-cloud) to have a safety backup copy: that's a good idea, but keep Local Storage for recovering settings quickly.*
+*Napomena: možete koristiti i [pohranu u oblaku](#preferences-maintenance-cloud) za sigurnosnu kopiju: to je dobra ideja, ali zadržite lokalnu pohranu za brzo vraćanje postavki.*
 
-![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
+![Opcije izvoza s Korisničkim postavkama postavljenima na Lokalnu pohranu](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+Gumb sada glasi **Izvezi postavke (lokalno)**. Dodirnite ga.
 
-![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
+![Održavanje s gumbom Izvezi postavke (lokalno)](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
-**AAPS** shows the name of the file it will create. Tap **OK**, type your master password and tap **OK**.
+**AAPS** prikazuje naziv datoteke koju će izraditi. Dodirnite **U redu**, upišite svoju glavnu lozinku i dodirnite **U redu**.
 
-![Export settings confirmation with the file name](../images/ReinstallAaps/reinstall_export_confirm.png)
+![Potvrda izvoza postavki s nazivom datoteke](../images/ReinstallAaps/reinstall_export_confirm.png)
 
-In **AAPS** 4: open **Maintenance**, select the **Local** chip next to **Export settings** and tap **Export settings**.
+U **AAPS-u** 4: otvorite **Održavanje**, odaberite oznaku **Lokalno** pokraj **Izvezi postavke** i dodirnite **Izvezi postavke**.
 
 (reinstall-aaps-copy)=
-### 2. Copy the settings file off your phone
+### 2. Kopirajte datoteku postavki s telefona
 
-The file is in the **preferences** folder of your [**AAPS** directory](#SetupWizard-StoragePermission), named like `2026-10-13_222735_full.json`. Copy or upload it to an external location (i.e. your computer, cloud storage service...). The file normally stays on your phone after the uninstall, but keep a copy elsewhere in case.
+Datoteka je u mapi **preferences** vaše [**AAPS** mape](#SetupWizard-StoragePermission), s nazivom kao `2026-10-13_222735_full.json`. Kopirajte je ili prenesite na vanjsko mjesto (npr. na svoje računalo, uslugu pohrane u oblaku...). Datoteka obično ostaje na telefonu nakon deinstalacije, ali za svaki slučaj čuvajte kopiju i negdje drugdje.
 
 (reinstall-aaps-nightscout-before)=
-### 3. Synchronize with Nightscout
+### 3. Sinkronizirajte s Nightscoutom
 
-This step is not mandatory but recommended if you use [DynISF](#Open-APS-features-DynamicISF): it will allow you to resume directly with the current settings instead of waiting 5 days to build necessary data for the plugin. NSClient V3 needs to be [enabled and configured](../SettingUpAaps/SettingUpTheReportingServer.md).
+Ovaj korak nije obavezan, ali se preporučuje ako koristite [DynISF](#Open-APS-features-DynamicISF): omogućit će vam da odmah nastavite s trenutnim postavkama, umjesto da čekate 5 dana da se skupe podaci potrebni dodatku. NSClient V3 mora biti [omogućen i postavljen](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Make sure Nightscout has all your data before you uninstall.
+Prije deinstalacije provjerite ima li Nightscout sve vaše podatke.
 
-Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
+Otvorite **NSClient**, dodirnite gumb **Potpuna sinkronizacija** na dnu zaslona, zatim **U redu**.
 
-![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![Zaslon NSClienta s gumbom Potpuna sinkronizacija](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
-*Note: the time necessary depends on your Nightscout hosting service.*
+*Napomena: potrebno vrijeme ovisi o usluzi na kojoj je smješten vaš Nightscout.*
 
-![Full synchronization confirmation](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
+![Potvrda potpune sinkronizacije](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
 
-**AAPS** then offers to clean up its database. **OK** removes data older than 3 months from the phone, which makes the synchronization much faster. **Cancel** synchronizes without cleaning up. The phone database is deleted when you uninstall anyway, so both are fine.
+**AAPS** zatim nudi čišćenje svoje baze podataka. **U redu** uklanja s telefona podatke starije od 3 mjeseca, pa je sinkronizacija mnogo brža. **Otkaži** sinkronizira bez čišćenja. Baza podataka na telefonu ionako se briše pri deinstalaciji, pa su oba izbora u redu.
 
-![Database cleanup question](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
+![Pitanje o čišćenju baze podataka](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
 
-Leave **AAPS** running until the synchronization is finished.
+Ostavite **AAPS** da radi dok se sinkronizacija ne završi.
 
 (reinstall-aaps-build)=
-### 4. Build the new apk
+### 4. Izradite novi apk
 
-[Build](../SettingUpAaps/BuildingAaps.md) a new signed apk with your new keystore and transfer it to your phone.
+[Izradite](../SettingUpAaps/BuildingAaps.md) novi potpisani apk sa svojim novim spremištem ključeva i prenesite ga na telefon.
 
 (reinstall-aaps-uninstall)=
-### 5. Uninstall AAPS
+### 5. Deinstalirajte AAPS
 
-In your phone's **Settings** > **Apps** > **AAPS**, tap **Uninstall** and confirm with **OK**.
+Na telefonu u **Postavke** > **Aplikacije** > **AAPS** dodirnite **Deinstaliraj** i potvrdite s **U redu**.
 
-![App info of AAPS with the Uninstall button](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
+![Informacije o aplikaciji AAPS s gumbom Deinstaliraj](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
 
 (reinstall-aaps-install)=
-### 6. Install and start the new AAPS
+### 6. Instalirajte i pokrenite novi AAPS
 
-[Install](../SettingUpAaps/TransferringAndInstallingAaps.md) the new apk and start **AAPS**. The [setup wizard](../SettingUpAaps/SetupWizard.md) asks for the permissions **AAPS** needs: tap **Grant** for each of them. This also turns [battery optimization](#setup-wizard-bluetooth-battery-optimisation) off again.
+[Instalirajte](../SettingUpAaps/TransferringAndInstallingAaps.md) novi apk i pokrenite **AAPS**. [Čarobnjak za postavljanje](../SettingUpAaps/SetupWizard.md) traži dopuštenja koja su **AAPS-u** potrebna: za svako dodirnite **Odobri**. Time se ponovno isključuje i [optimizacija baterije](#setup-wizard-bluetooth-battery-optimisation).
 
-![Permissions Required list of the setup wizard](../images/ReinstallAaps/reinstall_permissions.png)
+![Popis Potrebna dopuštenja u čarobnjaku za postavljanje](../images/ReinstallAaps/reinstall_permissions.png)
 
-For **AAPS Directory**, select the same **AAPS** folder as before (the one with the **preferences** folder in it), tap **Use this folder** and **Allow**.
+Za **AAPS mapa** odaberite istu mapu **AAPS** kao prije (onu u kojoj je mapa **preferences**), dodirnite **Koristi ovu mapu** i **Dopusti**.
 
-![Selecting the existing AAPS folder](../images/ReinstallAaps/reinstall_aaps_directory.png)
+![Odabir postojeće mape AAPS](../images/ReinstallAaps/reinstall_aaps_directory.png)
 
-When **AAPS** finds your exported settings, the setup wizard shows a [Stored settings found](#setup-wizard-import-settings) screen where you can import them. You can also close the wizard and import from **Maintenance** as described below.
+Kada **AAPS** pronađe vaše izvezene postavke, čarobnjak za postavljanje prikazuje zaslon [Pronađene su spremljene postavke](#setup-wizard-import-settings) na kojem ih možete uvesti. Možete i zatvoriti čarobnjak i uvesti postavke iz **Održavanja** kako je opisano niže.
 
 (reinstall-aaps-import)=
-### 7. Import your settings
+### 7. Uvezite svoje postavke
 
-If the settings file is no longer on your phone, copy it back to the **preferences** folder of your **AAPS** directory.
+Ako datoteka postavki više nije na telefonu, kopirajte je natrag u mapu **preferences** svoje **AAPS** mape.
 
-Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Import settings** and tap **Import settings**.
+Otvorite izbornik (☰) > **Održavanje**, odaberite oznaku **Lokalno** pokraj **Uvezi postavke** i dodirnite **Uvezi postavke**.
 
-![Maintenance with Import settings](../images/ReinstallAaps/reinstall_maintenance_import.png)
+![Održavanje s Uvezi postavke](../images/ReinstallAaps/reinstall_maintenance_import.png)
 
-The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
+Popis prikazuje svaku datoteku s njezinom verzijom **AAPS-a** i koliko je stara. Odaberite datoteku koju ste izvezli u koraku 1.
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![Popis datoteka postavki za uvoz](../images/ReinstallAaps/reinstall_import_file_list.png)
 
-You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
+U novom **AAPS-u** ne morate prije toga postaviti glavnu lozinku. Upišite glavnu lozinku koju ste koristili za izvoz u **Lozinka za dešifriranje** i dodirnite **Dešifriraj**. **Datoteka je šifrirana drugom lozinkom** je očekivano: novi **AAPS** još ne zna vašu lozinku. Uvoz je vraća zajedno s vašim ostalim postavkama.
 
-![Decryption password for the settings file](../images/ReinstallAaps/reinstall_import_password.png)
+![Lozinka za dešifriranje datoteke postavki](../images/ReinstallAaps/reinstall_import_password.png)
 
-Tick **Also replace pump settings**: without it, your pump and its settings are not restored. Omnipod and Medtrum users: only tick it if the file was exported during your current pod or patch (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+Označite **Zamijeni i postavke pumpe**: bez toga se vaša pumpa i njezine postavke ne vraćaju. Korisnici Omnipoda i Medtruma: označite to samo ako je datoteka izvezena tijekom vašeg trenutnog Pod-a ili flastera (pogledajte [Pumpe bez katetera](#ExportImportSettings-tubeless-pumps)).
 
-![Also replace pump settings ticked](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![Označeno Zamijeni i postavke pumpe](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
-Tap **Import**, then **OK** to apply the settings and **OK** again on **Settings applied**.
+Dodirnite **Uvezi**, zatim **U redu** da primijenite postavke i ponovno **U redu** na **Postavke su primijenjene**.
 
-![Apply imported settings confirmation](../images/ReinstallAaps/reinstall_import_apply.png)
+![Potvrda primjene uvezenih postavki](../images/ReinstallAaps/reinstall_import_apply.png)
 
 (reinstall-aaps-nightscout-after)=
-### 8. Get your history back from Nightscout
+### 8. Vratite svoju povijest iz Nightscouta
 
-Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Communication** and tap **Open plugin** under **NSClientV3**. Check that the status shows **Connected**. If it doesn't, see [Troubleshooting NSClient](TroubleshootingNsClient.md).
+Otvorite izbornik (☰) > [**Konfiguracija**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Komunikacija** i dodirnite **Otvori dodatak** pod **NSClientV3**. Provjerite prikazuje li status **Povezano**. Ako ne prikazuje, pogledajte [Rješavanje problema s NSClientom](TroubleshootingNsClient.md).
 
-![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
+![Komunikacija s gumbom Otvori dodatak za NSClientV3](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
+Dodirnite gumb **Potpuna sinkronizacija** na dnu zaslona i **U redu**. Baza podataka je nova, pa na pitanje o čišćenju možete odgovoriti bilo kako.
 
-![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![Zaslon NSClientV3 s gumbom Potpuna sinkronizacija](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
-**AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
+**AAPS** učitava vaše podatke iz Nightscouta. Kada završi, dnevnik prikazuje **Full sync finished**.
 
-![NSClientV3 log with Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
+![Dnevnik NSClientV3 s Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
 
 (reinstall-aaps-check)=
-### 9. Check and keep looping
+### 9. Provjerite i nastavite s petljom
 
-Check that your pump is connected and your CGM values arrive, then keep on looping.
+Provjerite je li vaša pumpa povezana i stižu li vrijednosti CGM-a, a zatim nastavite koristiti petlju.
 
 (reinstall-aaps-afterwards)=
-## Afterwards
+## Nakon toga
 
-Always keep using your new keystore from now on, and store it with its password somewhere safe, off your phone. See [Creating back-ups](../Maintenance/ExportImportSettings.md).
+Od sada uvijek koristite svoje novo spremište ključeva i čuvajte ga zajedno s lozinkom na sigurnom mjestu, izvan telefona. Pogledajte [Izrada i vraćanje sigurnosnih kopija](../Maintenance/ExportImportSettings.md).

@@ -1,310 +1,310 @@
-# Remote control of AAPS
+# Control remot d'AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-There are four highly effective tools for remotely managing **AAPS**:
+Hi ha quatre eines molt eficaces per gestionar **AAPS** a distància:
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
-4) [Smartwatches](#RemoteControl_smartwatches) (Android)
+1) [Ordres SMS](#RemoteControl_SMS-Commands) (el telèfon seguidor pot ser Android o iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (el dispositiu seguidor és un telèfon o tauleta Android, o un ordinador Windows, Mac o Linux; en un iPhone [compileu l'aplicació vosaltres mateixos](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS o un altre ordinador o dispositiu), sobretot per seguir: vegeu la nota sobre el [control des del client](#client-master-control) en aquella secció.  
+4) [Rellotges intel·ligents](#RemoteControl_smartwatches) (Android)
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+Les tres primeres són sobretot adequades per a cuidadors i pares, però els rellotges intel·ligents són molt útils per a cuidadors i pares **i** també per a adults amb diabetis.
 
-![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
+![imatge](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
 (RemoteControl_SMS-Commands)=
 
-## 1) SMS Commands
+## 1) Ordres SMS
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Vegeu la pàgina dedicada [Ordres SMS](../RemoteFeatures/SMSCommands.md).
 
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver the same screens and buttons to send commands remotely to **AAPS**:
+**AAPSClient** s'assembla molt al mateix **AAPS**: ofereix al cuidador les mateixes pantalles i botons per enviar ordres a distància a **AAPS**:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Pantalla d'inici d'AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
 (remotecontrol-aapsclient-versions)=
-### About AAPSClient, AAPSClient2 and AAPSClient3
+### Sobre AAPSClient, AAPSClient2 i AAPSClient3
 
-There are 3 versions of the client app: **AAPSClient**, **AAPSClient2** and **AAPSClient3**. They work the same way. The only difference is that they can be installed side by side on the same follower phone.
+Hi ha 3 versions de l'aplicació client: **AAPSClient**, **AAPSClient2** i **AAPSClient3**. Funcionen igual. L'única diferència és que es poden instal·lar juntes al mateix telèfon seguidor.
 
-A caregiver who follows one person needs only **AAPSClient**. To follow and remote control a second person (with their own **Nightscout** site and their own **AAPS** phone), install **AAPSClient2** as well, and **AAPSClient3** for a third person. Each app is set up and [paired](#aapsclient-pairing-with-the-master) on its own, with the **Nightscout** site and the **AAPS** phone of the person it follows.
+Un cuidador que segueix una sola persona només necessita **AAPSClient**. Per seguir i controlar a distància una segona persona (amb el seu propi lloc **Nightscout** i el seu propi telèfon **AAPS**), instal·leu també **AAPSClient2**, i **AAPSClient3** per a una tercera persona. Cada aplicació es configura i s'[emparella](#aapsclient-pairing-with-the-master) per separat, amb el lloc **Nightscout** i el telèfon **AAPS** de la persona que segueix.
 
-To tell the apps apart, some elements have a different color: yellow for **AAPSClient**, blue for **AAPSClient2** and green for **AAPSClient3**. Those elements are the app icon, the widget background, and the **AAPS** status section on the home screen of the app. <br/> Note: the opacity of the widget background can be set in the widget configuration. At a low opacity the color is hard to see.
+Per distingir les aplicacions, alguns elements tenen un color diferent: groc per a **AAPSClient**, blau per a **AAPSClient2** i verd per a **AAPSClient3**. Aquests elements són la icona de l'aplicació, el fons del widget i la secció d'estat d'**AAPS** a la pantalla d'inici de l'aplicació. <br/> Nota: l'opacitat del fons del widget es pot ajustar a la configuració del widget. Amb una opacitat baixa, el color es veu malament.
 
-![Widget and status section colors of AAPSClient, AAPSClient2 and AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+![Colors del widget i de la secció d'estat d'AAPSClient, AAPSClient2 i AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
-### Download and installation
+### Descàrrega i instal·lació
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+**AAPSClient** es pot instal·lar en un sol telèfon o en diversos telèfons seguidors (p. ex. el telèfon seguidor del pare 1 i el del pare 2), perquè tots dos cuidadors tinguin accés i puguin controlar a distància el telèfon **AAPS** del pacient.
 
-To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Per descarregar **AAPSClient**, aneu al [repositori de GitHub](https://github.com/nightscout/AndroidAPS/releases/) i feu clic a l'arxiu **“app-AAPSClient-release_x.x.x.x”** (pot ser una versió més nova que la de la captura de sota):
 
-![image](../images/remote_control_and_following/AAPSClient_download_02.png)
+![imatge](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, _downloads_ will show in the right hand ribbon:
+Després aneu a les _baixades_ de l'ordinador. A Windows, les _baixades_ es mostren a la barra de la dreta:
 
-![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
+![imatge](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+Un cop descarregat, feu clic a _mostra a la carpeta_ per trobar el fitxer.
 
-The **AAPSClient** apk can now be either:
+Ara l'apk d'**AAPSClient** es pot:
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+Transferir-lo al telèfon seguidor amb un cable USB; o Arrossegar-lo a una carpeta de Google Drive i després afegir-lo al telèfon seguidor fent clic al fitxer "app-AAPSClient-release".
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+Si necessiteu **AAPS** per a vosaltres i **AAPSClient** per seguir una altra persona, haureu de compilar **AAPSClient** vosaltres mateixos en lloc de descarregar-lo del repositori de GitHub com s'ha explicat abans. El motiu és que no podeu instal·lar **AAPS** i **AAPSClient** al mateix telèfon si estan signats amb claus diferents. <br/> Per compilar **AAPSClient** vosaltres mateixos, seguiu el mateix procés que per a la [compilació normal d'AAPS](../SettingUpAaps/BuildingAaps.md). A la pàgina **Generate signed App Bundle or APK**, seleccioneu **aapsclientRelease** en lloc de **fullRelease**.
 
-The same rule applies when you install several client apps (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) on one follower phone: they must all be signed with the **same key**. Otherwise Android refuses to install the second one (error `INSTALL_FAILED_DUPLICATE_PERMISSION`).
+La mateixa regla s'aplica quan instal·leu diverses aplicacions client (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) en un telèfon seguidor: totes han d'estar signades amb la **mateixa clau**. Si no, Android no deixa instal·lar la segona (error `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
-### Synchronization: AAPSClient and AAPS set up
+### Sincronització: configuració d'AAPSClient i d'AAPS
 
-Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip).
+Un cop instal·lat l'apk d'__AAPSClient__ al telèfon seguidor, assegureu-vos que **NSClientV3** està configurat igual als dos telèfons per a Nightscout 15 (vegeu les [notes d'actualització](../Maintenance/UpdateToNewVersion.md)). L'exemple de sota mostra la configuració de la sincronització amb NSClientV3 i Nightscout 15; a __AAPS__ hi ha altres fonts de dades disponibles (p. ex. xDrip).
 
-In **Configuration** > **Communication**, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
+A **Configurador** > **Comunicació**, l'usuari sincronitza les seves dades amb Nightscout mitjançant __NSClientV3__ (amb l'API v3), configurat de la mateixa manera tant a __AAPS__ com al telèfon seguidor.
 
-![Configuration > Communication with NSClientV3 selected](../images/v4/Configuration/configuration_communication.png)
+![Configurador > Comunicació amb NSClientV3 seleccionat](../images/v4/Configuration/configuration_communication.png)
 
-The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by setting up NSClientV3 on each. On the follower phone this can be done by scanning a QR code shown by **AAPS** instead, see [Pairing AAPSClient with AAPS](#remotecontrol-pairing) below:
+L'usuari s'ha d'assegurar que __tots dos__ telèfons, AAPS i AAPS Client, estiguin sincronitzats configurant NSClientV3 a cadascun. Al telèfon seguidor, també es pot fer escanejant un codi QR que mostra **AAPS**; vegeu [Emparellar AAPSClient amb AAPS](#remotecontrol-pairing) més avall:
 
-- Enter your **Nightscout URL** in the NSClientV3 **Settings**
+- Introduïu la vostra **URL de Nightscout** a la **Configuració** de NSClientV3
 
-- Enter your **Nightscout access token** in the same settings. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token). On the **AAPS** phone use an **admin token**: with it **AAPS** makes a token of its own for each follower phone.
+- Introduïu el vostre **Token d'accés de Nightscout** a la mateixa configuració. Seguiu les notes [d'aquí](https://nightscout.github.io/nightscout/security/#create-a-token). Al telèfon **AAPS**, feu servir un **token d'administrador**: amb aquest token, **AAPS** crea un token propi per a cada telèfon seguidor.
 
-- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. On both phones they also make synchronization faster, at the cost of slightly higher battery use.
+- Activeu **Utilitzar websockets** als **dos** telèfons. Els websockets són **obligatoris** per al control remot des d'**AAPSClient**, als dos telèfons. Sense ells, **AAPSClient** pot seguir **AAPS** però no el pot controlar. En tots dos telèfons també fan la sincronització més ràpida, a canvi d'un consum de bateria una mica més alt.
 
-  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+  El vostre proveïdor de Nightscout ha de permetre websockets. Si la connexió websocket es talla sovint, el control remot no funciona. Vegeu [Resolució de problemes de NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
-![Settings > NSClientV3 with Nightscout URL, Nightscout access token and Use websockets](../images/preferences/settings_nsclient.png)
+![Configuració > NSClientV3 amb URL de Nightscout, Token d'accés de Nightscout i Utilitzar websockets](../images/preferences/settings_nsclient.png)
 
 
-The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ in the **NSClientV3** screen of each phone. At this point **AAPSClient** follows **AAPS** (BG, treatments, profile), but it cannot control it yet: pair the two phones as described below.
+L'usuari s'ha d'assegurar que tant __AAPSClient__ com __AAPS__ mostren «connectat» a la pantalla **NSClientV3** de cada telèfon. En aquest moment **AAPSClient** segueix **AAPS** (glucèmia, tractaments, perfil), però encara no el pot controlar: emparelleu els dos telèfons com s'explica a continuació.
 
 (remotecontrol-pairing)=
-### Pairing AAPSClient with AAPS (remote control)
+### Emparellar AAPSClient amb AAPS (control remot)
 
-From **AAPS** version 4, **AAPSClient** controls **AAPS** through a secure, **paired** connection. Synchronization alone is not enough: until the phones are paired, **AAPSClient** only shows **Manage** with a view-only **Profile** and **Pair with master**.
+Des de la versió 4 d'**AAPS**, **AAPSClient** controla **AAPS** mitjançant una connexió segura i **emparellada**. La sincronització sola no n'hi ha prou: fins que els telèfons no estan emparellats, **AAPSClient** només mostra **Gestionar** amb un **Perfil** només de lectura i **Emparellar amb el dispositiu principal**.
 
-1. On the **AAPS** phone, open **Manage → Authorized clients** and turn on **Allow client control** (it is off by default, and always on in Simple Mode).
-2. Tap **+**, enter a name for the follower phone, choose how it is set up and choose its **role**:
-   - **QR code: Nightscout and pairing** — **AAPS** shows a QR code that sets up Nightscout on the follower phone and pairs it, in one scan. This needs an admin token in the **AAPS** phone's NSClientV3 settings.
-   - **PIN** — for a follower phone without a camera, already connected to Nightscout: note the one-time **PIN** (valid for about two minutes).
-3. On the **AAPSClient** phone, scan the code (in the Setup Wizard, or **Manage → Pair with master → Scan QR code**), or open **Manage → Pair with master** and enter the PIN. Confirm.
+1. Al telèfon **AAPS**, obriu **Gestionar → Clients autoritzats** i activeu **Permetre el control des dels clients** (està desactivat per defecte i sempre activat en el mode simple).
+2. Premeu **+**, introduïu un nom per al telèfon seguidor, trieu com es configura i trieu el seu **rol**:
+   - **Codi QR: Nightscout i emparellament**: **AAPS** mostra un codi QR que configura Nightscout al telèfon seguidor i l'emparella, tot amb un sol escaneig. Cal un token d'administrador a la configuració de NSClientV3 del telèfon **AAPS**.
+   - **PIN**: per a un telèfon seguidor sense càmera i ja connectat a Nightscout. Apunteu el **PIN** d'un sol ús (és vàlid uns dos minuts).
+3. Al telèfon **AAPSClient**, escanegeu el codi (a l'assistent de configuració, o a **Gestionar → Emparellar amb el dispositiu principal → Escanejar codi QR**), o obriu **Gestionar → Emparellar amb el dispositiu principal** i introduïu el PIN. Confirmeu.
 
-The follower phone then appears as **Active** in the **Authorized clients** list, and **AAPSClient** shows **Treatments**, **Scenes** and **Manage**. The follower phone gets a Nightscout token of its own, with only the rights it needs. The full procedure, with screenshots and troubleshooting, is on [Master ↔ Client control](#client_master_master_setup).
+Aleshores el telèfon seguidor apareix com a **Actiu** a la llista **Clients autoritzats**, i **AAPSClient** mostra **Tractaments**, **Escenes** i **Gestionar**. El telèfon seguidor rep un token de Nightscout propi, només amb els permisos que necessita. El procediment complet, amb captures de pantalla i resolució de problemes, és a [Control principal ↔ client](#client_master_master_setup).
 
-Check that the set-up works: enter carbs on **AAPSClient**, confirm the amount shown, and check that the entry appears in **Treatments** on both phones.
+Comproveu que la configuració funciona: introduïu carbohidrats a **AAPSClient**, confirmeu la quantitat que es mostra i comproveu que l'entrada apareix a **Tractaments** als dos telèfons.
 
 (remotecontrol-nightscout-access-token)=
 
-### Troubleshooting 'Nightscout access token' configuration issues
+### Resolució de problemes amb la configuració del «Token d'accés de Nightscout»
 
-The precise 'Nightscout access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
+La configuració exacta del «Token d'accés de Nightscout» pot ser diferent segons si el vostre proveïdor de Nightscout és un servei allotjat de pagament o no.
 
-If you are struggling with **AAPS** to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+Si teniu problemes perquè **AAPS** accepti el «Token d'accés de Nightscout» i feu servir un Nightscout allotjat de pagament, potser és millor consultar primer el vostre proveïdor de Nightscout per resoldre els problemes amb el token. Si no, contacteu amb el grup d'**AAPS**, però abans comproveu bé que heu seguit correctament les notes [d'aquí](https://nightscout.github.io/nightscout/security/#create-a-token).
 
-### What AAPSClient offers
+### Què ofereix AAPSClient
 
-Once paired, **AAPSClient** offers the caregiver almost the same screens as **AAPS** itself:
+Un cop emparellat, **AAPSClient** ofereix al cuidador gairebé les mateixes pantalles que el mateix **AAPS**:
 
-- **Treatments**: insulin bolus, carbs and the bolus wizard.
-- **Scenes**: start and stop [scenes](../DailyLifeWithAaps/Scenes.md).
-- **Manage**: profiles, insulin settings, temporary targets, QuickWizard, automation, food, site rotation, pairing and the running temp basal.
-- **Main menu**: treatments history, history browser, statistics, maintenance, configuration.
+- **Tractaments**: bolus d'insulina, carbohidrats i la calculadora de bolus.
+- **Escenes**: iniciar i aturar [escenes](../DailyLifeWithAaps/Scenes.md).
+- **Gestionar**: perfils, configuració d'insulina, objectius temporals, Assistent ràpid, automatització, aliments, rotació de punts d'inserció, emparellament i la basal temporal en curs.
+- **Menú principal**: historial de tractaments, historial, estadístiques, manteniment, configurador.
 
-There is no pump and no objectives on **AAPSClient**. See [The AAPSClient app](AapsClient.md) for a detailed description.
+A **AAPSClient** no hi ha bomba ni objectius. Vegeu [L'aplicació AAPSClient](AapsClient.md) per a una descripció detallada.
 
-**AAPSClient** lets the caregiver make most of the adjustments allowed directly in **AAPS**, **including insulin boluses**, remotely over the mobile or internet network. Every command is signed and sent through Nightscout to the **AAPS** phone, which checks it against its own data, caps it, shows you its own confirmation, and only then executes it. **AAPSClient** _can_ be much faster than [SMS Commands](../RemoteFeatures/SMSCommands.md), especially for commands that would need authentication.
+**AAPSClient** permet al cuidador fer a distància, per la xarxa mòbil o per internet, la majoria dels ajustos que es poden fer directament a **AAPS**, **també bolus d'insulina**. Cada ordre es signa i s'envia a través de Nightscout al telèfon **AAPS**, que la comprova amb les seves pròpies dades, la limita, us mostra la seva pròpia confirmació i només aleshores l'executa. **AAPSClient** _pot_ ser molt més ràpid que les [Ordres SMS](../RemoteFeatures/SMSCommands.md), sobretot per a ordres que necessitarien autenticació.
 
-Treatments entered in Nightscout by other means (for example the Nightscout website) are not applied while client control is on: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode) and takes changes only from paired clients. With client control off, they are applied only if the matching **Receive** options are enabled in the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+Els tractaments introduïts a Nightscout d'una altra manera (per exemple, al web de Nightscout) no s'apliquen mentre el control des del client està activat: aleshores **AAPS** és en [mode reforçat](#client-master-control-hardened-mode) i només accepta canvis dels clients emparellats. Amb el control des del client desactivat, només s'apliquen si les opcions **Rebre** corresponents estan activades a la [secció Sincronització de la configuració de NSClient](#Preferences-nsclient-synchronization).
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc).
+El control remot amb **AAPSClient** només es recomana si la sincronització funciona bé (_és a dir_, no veieu canvis de dades no desitjats, com OT o TBR que es modifiquen sols, etc.).
 
-### AAPSClient with smartwatch options
+### AAPSClient amb opcions de rellotge intel·ligent
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG and loop status. Once **AAPSClient** is paired with **AAPS**, the watch actions (including boluses, carbs, temp targets and profile changes) are relayed through **AAPSClient** to **AAPS**, which confirms and executes them: see [Wear OS on a client](#clientmastercontrol-wear-os-on-a-client). You can read more about Smartwatches [here](#remotecontrol-smartwatches).
+Un rellotge intel·ligent pot ser una eina molt útil per ajudar a gestionar **AAPS** amb nens. Es poden fer servir diverses configuracions. Si **AAPSClient** està instal·lat al telèfon del cuidador, l'[aplicació **AAPSClient WearOS**](https://github.com/nightscout/AndroidAPS/releases/) es pot descarregar i instal·lar en un rellotge intel·ligent compatible connectat al telèfon del pare o la mare. Això mostra la glucèmia actual i l'estat del llaç. Un cop **AAPSClient** està emparellat amb **AAPS**, les accions del rellotge (també bolus, carbohidrats, objectius temporals i canvis de perfil) passen per **AAPSClient** fins a **AAPS**, que les confirma i les executa: vegeu [Wear OS en un client](#clientmastercontrol-wear-os-on-a-client). Podeu llegir més sobre els rellotges intel·ligents [aquí](#remotecontrol-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+A més de ser un servidor «al núvol», Nightscout també té una aplicació **Nightscout** pròpia, que podeu descarregar directament de l'App Store al vostre iPhone. Si teniu un telèfon seguidor Android, no hi ha cap aplicació Nightscout dedicada i és millor fer servir [**AAPSClient**](#RemoteControl_aapsclient). Si només voleu seguir, sense enviar tractaments, podeu descarregar i instal·lar l'aplicació [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) de Play Store.
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+Un cop instal·lada l'aplicació **Nightscout** a l'iPhone, obriu-la i seguiu els passos de configuració: introduïu l'adreça del vostre Nightscout (vegeu a sota, a l'esquerra). El format de l'adreça pot variar segons on estigui allotjat el vostre Nightscout. (_p. ex._ http://youraddresshere.herokuapp.com). Després introduïu l'API secret del vostre Nightscout (vegeu a sota, a la dreta). Si l'aplicació no us demana la contrasenya de l'API, l'heu d'introduir fent clic al cadenat de la part de dalt de l'aplicació:
 
-![image](../images/remote-control-24.png)
+![imatge](../images/remote_control_and_following/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+Trobareu més informació sobre la configuració directament a [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
+Quan inicieu la sessió per primera vegada, la pantalla serà molt senzilla. Personalitzeu les opcions de visualització: seleccioneu el menú «hamburguesa» (a dalt a la dreta) i desplaceu-vos cap avall:
 
-![image](../images/remote-control-25.png)
+![imatge](../images/remote_control_and_following/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
+Desplaceu-vos cap avall fins a «Settings». Potser voleu canviar «scale» a «linear», perquè la visualització de la glucèmia és logarítmica per defecte. A «render basal», seleccioneu «default» perquè es mostri la basal de la bomba.
 
-![image](../images/remote-control-25b.png)
+![imatge](../images/remote_control_and_following/remote-control-25b.png)
 
-Select your desired options. Uncheck alarms if you use an alternative app for alarms.
+Seleccioneu les opcions que vulgueu. Desmarqueu les alarmes si feu servir una altra aplicació per a les alarmes.
 
-![image](../images/remote-control-26.png)
+![imatge](../images/remote_control_and_following/remote-control-26.png)
 
-Continue to scroll down until you get to “show plugins”.
+Continueu baixant fins a «show plugins».
 
-You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+Assegureu-vos que «careportal» estigui marcat. També podeu seleccionar altres dades (les més útils són: IOB, care portal, pump, cannula age, insulin age, basal profile i OpenAPS).
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+Important: ara heu de fer clic a «save», a la part de baix, perquè els canvis tinguin efecte.
 
-![image](../images/remote-control-27.png)
+![imatge](../images/remote_control_and_following/remote-control-27.png)
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+Després de prémer «save», l'aplicació torna a la pantalla principal de Nightscout, que serà semblant a aquesta:
 
-1. Current glucose value
-2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
-3. Recent glucose trace with treatments (carbs, boluses) displayed
-4. Longer-term glucose trace
-5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies them).
-7. Select different time period to display
-8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+1. Valor actual de glucèmia
+2. Informació sobre l'estat del sistema AAPS: toqueu cada pestanya de la pantalla per veure'n més detalls. Afegiu o traieu aquestes opcions de visualització amb el menú hamburguesa.
+3. Corba recent de glucèmia amb els tractaments (carbohidrats, bolus)
+4. Corba de glucèmia a més llarg termini
+5. Menú «hamburguesa» per a les opcions de visualització, crear informes, editar perfils i les eines d'administració de Nightscout
+6. Menú «**+**» per introduir tractaments (vegeu [més avall](#RemoteControl_nightscout-treatments) quan els aplica **AAPS**).
+7. Seleccionar un altre període de temps per mostrar
+8. Perfil d'insulina basal
+9. Línia verda = glucèmia passada Línies blaves = glucèmia prevista
 
-![image](../images/remote-control-28.png)
+![imatge](../images/remote_control_and_following/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+Vegem amb més detall el menú de dalt a l'esquerra de l'aplicació Nightscout:
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
+1. Edició retrospectiva del Careportal
+2. Activar/desactivar les alarmes
+3. Hamburguesa: per a la configuració
+4. Careportal - Anotar tractament (vegeu [més avall](#RemoteControl_nightscout-treatments) quan els aplica **AAPS**)
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Barra superior de Nightscout](../images/remote_control_and_following/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+En aquesta pantalla hi ha moltíssima informació sobre l'estat del sistema **AAPS** a les pestanyes grises (i encara més si toqueu la pestanya):
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
-9. Cannula age
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+1. Tendència de glucèmia de 5 min
+2. Previsualització de la calculadora de bolus (BWP)
+3. Premeu Basal per veure el vostre perfil actual i la informació de la basal
+4. Temps des de l'última lectura del CGM a AAPS
+5. **Bomba**: insulina, % de pila i quan AAPS s'hi va connectar per última vegada
+6. Última actualització d'AAPS: si fa més de 5 min, pot indicar un problema de connexió entre el telèfon AAPS i la bomba o el CGM
+7. Premeu IOB per veure la insulina basal i la de bolus per separat
+8. Edat de la insulina al reservori
+9. Edat de la cànula
+10. Estat de la bateria del telèfon AAPS
+11. Mida de la vostra base de dades. Si s'omple massa (només Nightscout autoallotjat (DIY); els serveis allotjats no en fan cas), podeu començar a tenir problemes de connexió. Podeu eliminar dades per reduir aquest número al menú Admin tools (des del menú hamburguesa).
 
-![image](../images/remote-control-30.png)
+![imatge](../images/remote_control_and_following/remote-control-30.png)
 
-![image](../images/remote-control-31.png)
+![imatge](../images/remote_control_and_following/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+Premeu «refresh» a la part de baix de la pàgina per tancar la finestra emergent.
 
 (RemoteControl_nightscout-treatments)=
-### Sending treatments through the Nightscout app to AAPS
+### Enviar tractaments a AAPS amb l'aplicació Nightscout
 
-In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. While client control is on, the **AAPS** phone is in [hardened mode](#client-master-control-hardened-mode): treatments, temporary targets and profile switches entered on the Nightscout website or in the Nightscout app are **not** applied. The Nightscout app is then a tool for following only.
+A **AAPS** 4, la manera admesa de controlar **AAPS** a distància és un **AAPSClient emparellat**, vegeu [Control principal ↔ client](#client-master-control): cada client té un [rol](#client-master-control-roles) que limita el que pot fer, i cada ordre la signa el client i després la comprova i la confirma el telèfon **AAPS**. Mentre el control des del client està activat, el telèfon **AAPS** és en [mode reforçat](#client-master-control-hardened-mode): els tractaments, objectius temporals i canvis de perfil introduïts al web de Nightscout o a l'aplicació Nightscout **no** s'apliquen. Aleshores l'aplicació Nightscout és només una eina per seguir.
 
 ```{admonition} Only when client control is off
 :class: warning
-If **Allow client control** is off in **Manage → Authorized clients** (and Simple Mode is off), **AAPS** applies careportal entries from Nightscout only for the data types you turned on under **Receive** in the [Synchronization section of the NSClientV3 settings](#Preferences-nsclient-synchronization): carbs, temporary targets, profile switches and the other careportal entries. Insulin is never delivered this way: a "Correction bolus" entered in Nightscout is only *announced*, and **AAPS** counts it as insulin on board without delivering it. This set-up is not recommended for remote control; use a paired **AAPSClient** instead.
+Si **Permetre el control des dels clients** està desactivat a **Gestionar → Clients autoritzats** (i el mode simple està desactivat), **AAPS** aplica les entrades del Careportal de Nightscout només per als tipus de dades que heu activat a **Rebre**, a la [secció Sincronització de la configuració de NSClientV3](#Preferences-nsclient-synchronization): carbohidrats, objectius temporals, canvis de perfil i les altres entrades del Careportal. Mai no es lliura insulina d'aquesta manera: un «Bolus de correcció» introduït a Nightscout només s'*anota*, i **AAPS** el compta com a insulina a bord sense lliurar-lo. Aquesta configuració no es recomana per al control remot; feu servir un **AAPSClient** emparellat.
 ```
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
+Llegiu més sobre les opcions de **Nightscout** [aquí](https://nightscout.github.io/)
 
-### Tips for getting the most out of the Nightscout app
+### Consells per treure el màxim profit de l'aplicació Nightscout
 
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
+1). Si us «quedeu encallats» en una pàgina i voleu tornar a veure la pantalla principal, feu clic a «refresh» (a baix al mig) i tornareu a la pàgina d'inici de **Nightscout** amb el gràfic de glucèmia.
 
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+Per veure el perfil actual que funciona al telèfon, premeu les diverses icones de la pantalla, a sobre del gràfic. Podeu veure més informació (ràtio de carbohidrats actual, sensibilitat, fus horari, etc.) prement «basal». «OpenAPS» dona informació sobre el perfil, l'objectiu actual, etc. També podeu controlar el % de bateria del telèfon i el % de pila de la bomba. BWP dona informació sobre el que l'algoritme creu que passarà en el futur, segons l'IOB i el COB.
 
-#### Other icons in the menu: what does the pencil (edit) mean?
+#### Altres icones del menú: què vol dir el llapis (editar)?
 
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
+(Tècnicament) podeu fer servir el llapis d'edició per moure o eliminar tractaments de bolus o de correcció de les últimes 48 h.
 
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+Més informació [aquí](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
+Això podria ser útil per eliminar carbohidrats anotats (però sense bolus), però a la pràctica ara mateix no funciona bé amb **AAPS**. Us recomanem fer aquests canvis directament a l'aplicació **AAPS**.
 
 (RemoteControl_smartwatches)= (remotecontrol-smartwatches)=
 
-## 4) Smartwatches
+## 4) Rellotges intel·ligents
 
-### Option 1) Controlling AAPS from a Wear OS Watch
+### Opció 1) Controlar AAPS des d'un rellotge Wear OS
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear remot 1](../images/remote_control_and_following/Wear_Remote1.png)
 
-Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Un cop hàgiu [configurat **AAPS** al vostre rellotge](../WearOS/BuildingAapsWearOS.md), trobareu molts detalls sobre les esferes del rellotge i les seves funcions a [Configurar AAPS al vostre rellotge Wear OS](../WearOS/WearOsSmartwatch.md).
 
-As a brief overview, the following functions can be triggered from the smartwatch:
+En resum, des del rellotge intel·ligent es poden fer aquestes funcions:
 
-* set a temporary target
+* establir un objectiu temporal
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+* fer servir la calculadora de bolus (les variables del càlcul es poden definir a la configuració del telèfon)
 
-* administer eCarbs
+* administrar e-carbs
 
-* administer a bolus (insulin + carbs)
+* administrar un bolus (insulina + carbohidrats)
 
-* watch settings
+* configuració del rellotge
 
-* status
+* estat
 
-* check pump status
+* comprovar l'estat de la bomba
 
-* check loop status
+* comprovar l'estat del llaç
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* comprovar i canviar el perfil, CPP (Circadian Percentage Profile = desplaçament horari + percentatge)
 
-* show TDD (Total daily dose = bolus + basal per day)
+* mostrar la TDD (dosi diària total = bolus + basal per dia)
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* Bolus remot quan el cuidador i el nen amb DT1 són en llocs diferents (és possible amb el rellotge **AAPS** i el telèfon **AAPS** si tots dos dispositius estan connectats a la xarxa)
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### Comunicació dels cuidadors amb el rellotge mitjançant altres aplicacions (com WhatsApp)
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+Es poden afegir altres aplicacions al rellotge, com WhatsApp, per enviar missatges (per exemple) entre cuidadors i nens. És important tenir només UN compte de Google associat al telèfon; si no, el rellotge no rebrà aquestes dades. Cal tenir 13 anys o més per tenir un compte de Samsung, i s'ha de crear amb la mateixa adreça de correu que es fa servir al telèfon Android.
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+Hi ha un vídeo que explica com configurar WhatsApp per a missatges al rellotge Galaxy 4 (no hi teniu totes les funcions de WhatsApp) [aquí](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+Si feu ajustos tant a l'aplicació **Galaxy wearable** del telèfon **AAPS** com al rellotge, els missatges de WhatsApp poden avisar amb una vibració suau, i el missatge de WhatsApp es pot mostrar per sobre del watchface.
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### Opció 2) **AAPS** al rellotge, per controlar a distància **AAPS** en un telèfon
 
-Similarly to using a follower phone with **AAPSClient** or SMS commands (see the sections above), a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via Bluetooth and needs neither Nightscout nor an authentication code. As a side-note, if both smartwatch and **AAPS** phone linked by Bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations, which can be useful in circumstances where the T1D child is in school.
+De manera semblant a fer servir un telèfon seguidor amb **AAPSClient** o ordres SMS (vegeu les seccions anteriors), un rellotge intel·ligent es pot fer servir per controlar **AAPS** a distància i veure totes les dades del perfil. Una diferència clau respecte a un telèfon seguidor és que l'enllaç entre el rellotge i el telèfon **AAPS** és per Bluetooth i no necessita ni Nightscout ni codi d'autenticació. Com a nota, si el rellotge i el telèfon **AAPS** enllaçats per Bluetooth també estan en una xarxa Wi-Fi o de dades mòbils, el rellotge també es comunicarà amb el telèfon **AAPS** per aquesta xarxa, i l'abast de comunicació serà més gran. Això inclou lliurar un bolus a distància quan el cuidador amb el rellotge **AAPS** i el nen amb DT1 (amb el telèfon **AAPS**) són en llocs diferents, cosa que pot ser útil quan el nen amb DT1 és a l'escola.
 
-A remote control smartwatch is therefore often useful in any situation where:
+Per tant, un rellotge intel·ligent per al control remot sovint és útil en qualsevol situació en què:
 
-a)  **AAPSClient** or **SMS** commands cannot work; or
+a)  Les ordres d'**AAPSClient** o **SMS** no poden funcionar; o
 
-b)  The user wishes to avoid typing an authentication code (as required for SMS commands).
+b)  L'usuari vol evitar escriure un codi d'autenticació (com cal per a les ordres SMS).
 
-A smartwatch needs **Wear OS 3 or newer** to be able to control **AAPS**. Please check the technical specifications of the watch, and see the [Smartwatches page](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
+Un rellotge intel·ligent necessita **Wear OS 3 o més nou** per poder controlar **AAPS**. Comproveu les especificacions tècniques del rellotge i vegeu la pàgina [Rellotges intel·ligents i AAPS](../Getting-Started/Watches.md). Si teniu dubtes, cerqueu o pregunteu als grups de Facebook/Discord d'**AAPS**.
 
-Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
+A continuació hi ha guies pas a pas per configurar **AAPS** al popular Samsung Galaxy Watch 4 (40 mm). El rellotge [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) també és una opció popular. Si teniu experiència configurant un altre rellotge intel·ligent i creieu que pot ser útil per a altres persones, afegiu-ho a aquestes pàgines ([editeu la documentació](../SupportingAaps/HowToEditTheDocs.md)) per compartir-ho amb tota la comunitat d'**AAPS**.
 
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+### Opció 3) AAPSClient en un rellotge, per controlar a distància **AAPS** en un telèfon
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear remot 2](../images/remote_control_and_following/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
+El programari per al rellotge, l'apk de Wear d'**AAPSClient**, es pot descarregar directament de [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
-To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
+Per descarregar el programari, feu clic a l'aplicació de rellotge que correspon a l'aplicació client del telèfon: **wear-aapsclient-release_**_versió_ va amb **AAPSClient**, **wear-aapsclient2-release_**_versió_ va amb **AAPSClient2** (vegeu [Sobre AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/github_release_wear_aapsclient_apk.png)
-
-
-Then "save as" and save the file to a convenient location on your computer:
+![imatge](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
-![image](../images/save_as_wear_aapsclient_apk.png)
+Després feu «Desa com» i deseu el fitxer en un lloc còmode de l'ordinador:
 
 
+![imatge](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+
+
+L'apk de Wear d'**AAPSClient** es pot transferir al telèfon i instal·lar manualment al rellotge de la mateixa manera que l'aplicació Wear d'**AAPS**, com s'explica a [Transferir l'aplicació Wear al vostre telèfon AAPS](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
 
 
 

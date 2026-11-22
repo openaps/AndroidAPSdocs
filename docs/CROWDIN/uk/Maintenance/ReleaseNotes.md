@@ -52,7 +52,7 @@ UpdateAaps3204.md
 WearOS 5, API рівня 34 (Android 14) має [обмеження](#BuildingAapsWearOs-WearOS5).
 ```
 
-Versions with a heading are the latest release for each Android version (see the table above). The other releases follow in between, with their notes or a link to them on GitHub.
+Версії із заголовком — це останні випуски для кожної версії Android (див. таблицю вище). Інші випуски йдуть між ними, з їхніми примітками або посиланням на них на GitHub.
 
 (latestrelease)=
 
@@ -77,7 +77,7 @@ Release date: 31-10-2026
 - Керування інсуліном: каталог інсулінів, псевдоніми, вибір у профілі та калькуляторі @Philoul
 - Плагін калібрування @MilosKozak
 - [Згладжування](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
-- New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
+- Нові [дії автоматизації](#automations-automation-action): **Змінити згладжування** @olorinmaia, а також **Запустити**, **Увімкнути** або **Вимкнути сцену** @MilosKozak
 - [Чергування місць введення](#Aapsscreens-site-rotation): відстеження і чергування місць інфузії @Philoul @MilosKozak
 - Перероблено [Autotune](../AdvancedOptions/Autotune.md) @Philoul
 - Нові [віджети](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
@@ -97,7 +97,7 @@ Release date: 31-10-2026
 **Pump Driver Improvements**
 
 - Екрани огляду помп перебудовано для Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn і Equil @MilosKozak
-- **Omnipod DASH**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
+- **Omnipod DASH**: коди Ref як у PDM і зрозумілі описи несправностей, компенсація дрейфу завжди увімкнена, краще відображення типу болюса @nl-ruud
 - **Omnipod**: жорстка дата завершення для Dash і Eros @mcnelson
 - **DanaR, RS**: емулятор помпи для тестування @MilosKozak
 - **Equil**: емулятор помпи для тестування @MilosKozak
@@ -212,8 +212,8 @@ Release date: 08-03-2026
 
 **Pump Driver Improvements**
 
-- **Omnipod DASH**: refactor BLE driver code to omnipod/common module @jwoglom
-- **Omnipod DASH**: try to fix connection state @MilosKozak
+- **Omnipod DASH**: код драйвера BLE перенесено в модуль omnipod/common @jwoglom
+- **Omnipod DASH**: спроба виправити стан підключення @MilosKozak
 - **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
 - **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
 - **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
@@ -275,7 +275,7 @@ Release date: 31-12-2025
 * [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
 * [Site rotation](#Aapsscreens-site-rotation) support @Philoul
 * New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
-* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
+* CGM Syai — це [довірене джерело](#GettingStarted-TrustedBGSource), і він підтримує розширену фільтрацію @MilosKozak
 
 **Wear OS Improvements**
 
@@ -350,7 +350,7 @@ Release date: 31-12-2025
 
 (version-enforcement)=
 
-**Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
+**Починаючи з цієї версії, сповіщення та примусове оновлення версії спрощено й пом'якшено, і вони працюють так:**
 
 *  Термін дії не закінчується, коли пристрій офлайн (немає підключення до інтернету). Це означає, що додаткових періодів 60 і 90 днів більше немає.
 *  Після закінчення терміну дії примусово вмикається режим LGS
@@ -502,7 +502,7 @@ Release date: 29-12-2024
 
 * [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
 * New [QuickWizard](#Preferences-quick-wizard) options @radicalb
-  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard to pre-bolus.
+  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. Тепер у Швидкому майстрі можна використовувати поле «Час прийому вуглеводів», щоб ввести болюс заздалегідь.
 * New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
 * [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
   * Sections are now collapsed by default. Use arrow to expand.
@@ -614,11 +614,11 @@ Release date: 23-10-2023
 - tests cleanup @ryanhaining @MilosKozak
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
-(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Important comments on using v3 versus v1 API for Nightscout with AAPS**
+(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Важливі зауваження щодо використання API v3 і v1 для Nightscout з AAPS**
 
 v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
 - v1 sends only 2 days of data
-- v1 sends all 2 days of data on every reconnection
+- v1 надсилає всі дані за 2 дні при кожному повторному підключенні
 - using websockets is mandatory = permanent connection, more battery consumption
 - during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
 
@@ -639,7 +639,7 @@ RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
 - v3 is preferred because of efficiency
 - using websockets or not using with v3 depends on your preference
-- it is HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+- ДУЖЕ рекомендовано, щоб AAPS збирав усі дані, а потім вивантажував їх у NS як єдиний вивантажувач. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
 ---
 
@@ -667,7 +667,7 @@ Release date: 31-01-2022
 
 Release date: 05-10-2021
 
-This version is the last one supporting Android 8. [Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
+This version is the last one supporting Android 8. [Примітки до випуску](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
 
 ---
 

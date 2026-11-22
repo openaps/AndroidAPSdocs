@@ -1,31 +1,31 @@
-# AAPS for children
+# AAPS per a nens
 
-**AAPS** can be used successfully with type 1 kids as well. However, there are some things to consider.
+**AAPS** també es pot fer servir amb èxit en nens amb diabetis tipus 1. Però cal tenir en compte algunes coses.
 
-## Things to consider
+## Coses a tenir en compte
 
-### Initial Profile
+### Perfil inicial
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, ISF, I:C...) and [insulin type](#Config-Builder-insulin-dia) (DIA) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, ISF and DIA. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.
+Configurar el [**Perfil**](../SettingUpAaps/YourAapsProfile.md) correcte (taxa basal, ISF, I:C...) i el [tipus d'insulina](#Config-Builder-insulin-dia) (DIA) pot ser difícil per a nens amb diabetis tipus 1, sobretot quan hi intervenen les hormones del creixement. Preneu-vos temps per provar i assegurar-vos que la basal, la ràtio I:C, l'ISF i la DIA del vostre fill són correctes. Proveu-los a la vida real amb el vostre fill o filla al costat abans de començar el monitoratge remot i el tractament remot. Els caps de setmana o les vacances escolars poden ser un bon moment per fer-ho.
 
-### Monitor and adjust your child’s Profile where necessary
+### Seguiu i ajusteu el perfil del vostre fill quan calgui
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+A mesura que el nen creix, caldrà ajustar el **Perfil** per adaptar-lo a les necessitats del seu cos. Però aquest problema existeix per a tots els nens amb diabetis tipus 1, també els que fan servir altres bombes o injeccions.
 
-### Keeping the phone in range
+### Mantenir el telèfon a l'abast
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good Bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+Penseu com mantindreu el telèfon del nen a l'abast de la bomba i del **CGM**. Això pot ser difícil amb nens massa petits per fer-se responsables d'un telèfon. Cal triar un telèfon per a **AAPS** amb un bon abast de connexió Bluetooth, i trobar una manera còmoda perquè el nen porti la bomba i el telèfon. Hi ha moltes solucions, com cinturons per a bombes d'insulina que també tenen lloc per a un telèfon, o un arnès que es porta com una motxilla.
 
-### How to protect your child’s AAPS from being misused?
+### Com protegir l'AAPS del vostre fill contra un mal ús?
 
-There are several protection settings available in **AAPS** to prevent the child or a stranger from misusing **AAPS**. See [Settings → Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+A **AAPS** hi ha diverses opcions de protecció per evitar que el nen o una persona desconeguda facin un mal ús d'**AAPS**. Vegeu [Configuració → Protecció](#Preferences-protection) per afegir una contrasenya o protecció biomètrica als bolus, als canvis de configuració o fins i tot a tot **AAPS**.
 
-## Remote monitoring and remote control
+## Monitoratge remot i control remot
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+El monitoratge remot és una funció essencial quan es fa servir **AAPS** per a nens. Vegeu la secció dedicada [Monitoratge remot](../RemoteFeatures/RemoteMonitoring.md) per conèixer les opcions possibles.
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.
+El monitoratge i el tractament remots poden ser molt útils per als pares d'un nen amb diabetis tipus 1, sobretot quan el nen va a la llar d'infants i a l'escola primària. Però assegureu-vos que els mestres i educadors coneixen el pla de tractament del vostre fill.
 
-Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher "follow" phone.
+Penseu com el control remot funcionarà amb el pla existent o com el millorarà. Molts pares troben útil tenir una línia de comunicació separada amb els cuidadors, per exemple un telèfon «de seguiment» petit i barat per al mestre.
 
-Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+Podeu trobar exemples de plans d'atenció escolar a la [secció de fitxers del grup d'usuaris d'AAPS](https://www.facebook.com/groups/AndroidAPSUsers/files/) a Facebook. 

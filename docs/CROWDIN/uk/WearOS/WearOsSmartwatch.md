@@ -91,7 +91,7 @@
 
 ```{admonition} Wear OS 5
 :class: warning
-На Wear OS 5 циферблат AAPS треба вибрати у Wear Installer 2 одразу після встановлення застосунку Wear: наприкінці встановлення програма пропонує циферблат **AAPS (Персональний)**. Якщо ви випадково перемкнулися на інший циферблат, повторіть встановлення. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+На Wear OS 5 циферблат AAPS треба вибрати у Wear Installer 2 одразу після встановлення застосунку Wear: наприкінці встановлення програма пропонує циферблат **AAPS (Персональний)**. Якщо ви випадково перемкнулися на інший циферблат, повторіть встановлення. Змінити налаштування циферблата («Темна», «Відповідний роздільник» тощо) може бути неможливо.
 
 Якщо класичний циферблат зараз у вас працює, **вимкніть автоматичні оновлення годинника**: наступне оновлення прошивки, найімовірніше, його зламає. Якщо ви все ж оновитеся до Wear OS 6, прочитайте розділ вище: тоді **AAPS** встановлює власний циферблат у новому форматі.
 ```
@@ -114,13 +114,13 @@ _Цей посібник написано для Galaxy Watch з Wear OS 3._ Н�
 
 ## Знайомство з розумним годинником
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Після базового налаштування годинника за відео вище відкрийте Play Маркет на телефоні та завантажте такі застосунки: "Galaxy Wearable", “Samsung” і або “Easy Fire tools”, або "Wear Installer 2".
 
 Є багато відео на YouTube від інших авторів, які допоможуть вам познайомитися з новим розумним годинником, наприклад:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-У застосунку “Galaxy Wearable” також є розділ з інструкцією. Відкрийте Galaxy Wearable на телефоні, знайдіть годинник і спробуйте спарувати годинник з телефоном. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Встановіть його на телефон, а потім знову спробуйте спарувати годинник і телефон у застосунку Wearable. Пройдіть кілька меню і позначте потрібні налаштування.
+У застосунку “Galaxy Wearable” також є розділ з інструкцією. Відкрийте Galaxy Wearable на телефоні, знайдіть годинник і спробуйте спарувати годинник з телефоном. Залежно від вашої версії може з'явитися запит встановити ще один застосунок, “galaxy watch 4 plugin”, з Play Маркет (завантаження триває деякий час). Встановіть його на телефон, а потім знову спробуйте спарувати годинник і телефон у застосунку Wearable. Пройдіть кілька меню і позначте потрібні налаштування.
 
 ## Налаштування облікового запису Samsung
 
@@ -260,7 +260,7 @@ Wear Installer 2, розроблений [Malcolm Bryant](https://www.youtube.co
 
 Щоб вводити болюс або виконувати інші дії з годинника, також увімкніть **Керування з годинника** в [Налаштування > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Потім гортайте праворуч, поки не побачите всі циферблати **AAPS**.
+Щоб перейти на інший циферблат **AAPS**, натисніть і утримуйте циферблат на головному екрані годинника і торкніться **Customize** (Налаштувати). Потім гортайте праворуч, поки не побачите всі циферблати **AAPS**.
 
 Якщо **AAPS** Wear.apk успішно встановлено на розумний годинник, це виглядатиме так:
 
@@ -318,7 +318,7 @@ To change to a different **AAPS**  watchface, long-press the watchface on the ho
 
 ## Циферблат AAPSv2 – легенда
 
-![Легенда циферблата AAPSv2](../images/Watchface_Legend.png)
+![Легенда циферблата AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A – час від останнього запуску петлі
 
@@ -334,7 +334,7 @@ F – батарея телефона
 
 G – базальна швидкість (в Од/год при стандартній швидкості і в % під час TBR)
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H – BGI (blood glucose impact, вплив на глюкозу крові) -> наскільки ГК «мала б» зростати чи знижуватися лише через дію інсуліну.
 
 I – вуглеводи (активні вуглеводи | e-carbs у майбутньому)
 

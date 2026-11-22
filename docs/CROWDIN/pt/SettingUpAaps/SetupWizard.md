@@ -7,7 +7,7 @@
 
 Quando inicia o **AAPS** pela primeira vez, é guiado pelo "**Assistente de Configuração**", para configurar rapidamente, de uma só vez, todas as definições básicas da app. O **Assistente de Configuração** guia-o para evitar que se esqueça de algo essencial. Por exemplo, as **definições de permissões** são fundamentais para configurar corretamente o **AAPS**.
 
-No entanto, não é obrigatório deixar tudo configurado na primeira utilização do **Assistente de Configuração**: pode sair facilmente do assistente e voltar a ele mais tarde. Depois do **Assistente de Configuração**, há três caminhos para otimizar ou alterar mais a configuração. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+No entanto, não é obrigatório deixar tudo configurado na primeira utilização do **Assistente de Configuração**: pode sair facilmente do assistente e voltar a ele mais tarde. Depois do **Assistente de Configuração**, há três caminhos para otimizar ou alterar mais a configuração. Isto é explicado na secção seguinte. Por isso, não faz mal saltar alguns pontos no Assistente de Configuração: pode configurá-los facilmente mais tarde.
 
 Durante a utilização do **Assistente de Configuração**, e logo a seguir, pode não notar mudanças visíveis importantes no **AAPS**. Para ativar o loop do **AAPS**, tem de seguir os **Objetivos** para ativar uma função após outra. Vai iniciar o **Objetivo 1** no fim do Assistente de Configuração. É o utilizador que manda no **AAPS**, e não o contrário.
 
@@ -23,9 +23,9 @@ Por isso, tome o seu tempo a configurar o seu loop; os benefícios de um loop do
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Se houver um erro na documentação ou tiver uma ideia melhor para explicar alguma coisa, pode pedir ajuda à comunidade, como explicado em [Contactar outros utilizadores](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Mensagem de boas-vindas
 
 Quando o Assistente de Configuração abre, mostra uma curta mensagem de boas-vindas e logo um painel "**Permissões necessárias**" na parte de baixo do ecrã (ver a secção seguinte).
 
@@ -33,7 +33,7 @@ Depois de conceder as permissões, o painel fecha-se e o ecrã de boas-vindas mo
 
 ![Bem-vindo](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Permissões necessárias
 
 O **AAPS** precisa de algumas permissões para funcionar corretamente. O assistente agrupa-as num único painel "**Permissões necessárias**", cada uma com o seu próprio botão "**Conceder**". Conceda-as uma a uma — o ícone ao lado de cada item passa a um visto quando estiver feito.
 
@@ -53,7 +53,7 @@ Toque em "**Conceder**" ao lado de "**Otimização da bateria**" e depois seleci
 
 ### Pasta AAPS
 
-O **AAPS** precisa de guardar as suas definições e informações de registo no armazenamento permanente do seu smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+O **AAPS** precisa de guardar as suas definições e informações de registo no armazenamento permanente do seu smartphone. Armazenamento permanente quer dizer que os dados continuam disponíveis mesmo depois de reiniciar o smartphone. As outras informações perdem-se, porque não são guardadas no armazenamento permanente.
 
 Toque em "**Conceder**" ao lado de "**Pasta AAPS**". Isto abre o sistema de ficheiros do seu telefone e permite escolher onde o **AAPS** guarda as suas informações.
 
@@ -72,7 +72,7 @@ Confirme com "**ALLOW**" (Permitir) que quer dar ao **AAPS** acesso à pasta sel
 
 ### Notificações
 
-Android requires special permission for apps if they want to send you notifications.
+O Android exige uma permissão especial para as apps que lhe queiram enviar notificações.
 
 Embora seja útil desativar as notificações, _por exemplo_ das apps de redes sociais, é essencial que permita que o **AAPS** lhe envie notificações.
 
@@ -122,7 +122,7 @@ Siga estes passos no Android 16; nas outras versões, os ecrãs são um pouco di
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. No Android 12, clique em `Bateria`; no Android 13 e mais recente, clique em `Utilização da bateria da app`.
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -134,9 +134,9 @@ Siga estes passos no Android 16; nas outras versões, os ecrãs são um pouco di
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Contrato de licença
 
-O contrato de licença do utilizador final contém informações importantes sobre os aspetos legais da utilização do **AAPS**. Please read it carefully.
+O contrato de licença do utilizador final contém informações importantes sobre os aspetos legais da utilização do **AAPS**. Leia-o com atenção.
 
 Se não compreender ou não puder aceitar o contrato de licença do utilizador final, não use o **AAPS**!
 
@@ -172,7 +172,7 @@ Volte atrás com a seta no canto superior esquerdo. O assistente mostra agora "*
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NÃO PERCA A SUA SENHA MESTRE**. Anote-a, _por exemplo_ no Google Drive, que é um bom local porque a Google faz cópias de segurança por si. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date. See [How to reset the master password?](#FAQ-reset-master-password)
+**NÃO PERCA A SUA SENHA MESTRE**. Anote-a, _por exemplo_ no Google Drive, que é um bom local porque a Google faz cópias de segurança por si. O seu smartphone ou PC pode avariar e pode não ter nenhuma cópia atual. Se se esquecer da sua Senha Mestre, pode ser difícil recuperar mais tarde a configuração do seu perfil e o seu progresso nos **Objetivos**. Veja [Como repor a senha mestre?](#FAQ-reset-master-password)
 ```
 
 Quando terminar, toque em "**SEGUINTE**" para ir para o ecrã seguinte.
@@ -182,7 +182,7 @@ Quando terminar, toque em "**SEGUINTE**" para ir para o ecrã seguinte.
 
 Este ecrã só é mostrado quando o **AAPS** encontra definições exportadas antes na pasta do **AAPS** ("Definições armazenadas encontradas"), por exemplo quando reinstala a app ou muda para um telefone novo.
 
-- Para restaurar a sua configuração anterior, toque em "**Importar definições**" — consulte [Criar e restaurar cópias de segurança](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Para começar com uma configuração nova, toque em "**SEGUINTE**" e continue com o assistente.
 
 ![Importar definições](../images/setup-wizard/Wizard-ImportSettings.png)
@@ -197,11 +197,11 @@ Selecione se os seus valores de glicose estão em mg/dl ou mmol/l e depois toque
 
 Aqui define a "**Marca BAIXA**" e a "**Marca ALTA**" para a apresentação da glicose do sensor. Os valores de glicose entre estas duas marcas são mostrados como "no alvo". Pode deixar os valores predefinidos (72 e 180 mg/dl) por agora e alterá-los mais tarde.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Os valores que escolher só afetam a apresentação gráfica do diagrama e mais nada.
 
 O seu alvo de glicose, _por exemplo_, é configurado à parte no seu perfil.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+O intervalo para analisar o TIR (tempo no alvo) é configurado à parte, no seu servidor de relatórios.
 
 Se for preciso, ajuste as marcas com os botões "−" / "+" e depois toque no botão "**SEGUINTE**":
 
@@ -229,7 +229,7 @@ Deslize para baixo para ver o resto da lista:
 
 Pode configurar vários destes agora, mas na primeira utilização vamos concentrar-nos só no servidor de relatórios. Se não o conseguir configurar agora, salte este passo por enquanto — pode configurá-lo mais tarde.
 
-Neste exemplo usamos o Nightscout como servidor de relatórios. Marque a caixa à direita de "**NSClientV3**" para o ativar. For Tidepool it is even simpler, as you only need your personal login information.
+Neste exemplo usamos o Nightscout como servidor de relatórios. Marque a caixa à direita de "**NSClientV3**" para o ativar. No Tidepool é ainda mais simples, porque só precisa dos seus dados pessoais de início de sessão.
 
 Depois de ativado, toque em "**Definições**" por baixo de NSClientV3 para o configurar:
 
@@ -241,9 +241,9 @@ Aqui configura o servidor de relatórios Nightscout. As definições do NSClient
 
 Toque em "**URL do Nightscout**" e introduza o endereço do seu servidor Nightscout pessoal (o URL que configurou ou que recebeu do seu fornecedor de serviço). Confirme com "**OK**".
 
-Toque em "**Token de acesso do Nightscout**" e introduza o token de acesso do seu servidor Nightscout. Without this token, access will not work. Se ainda não o tiver, consulte a documentação sobre a configuração do servidor de relatórios.
+Toque em "**Token de acesso do Nightscout**" e introduza o token de acesso do seu servidor Nightscout. Sem este token, o acesso não funciona. Se ainda não o tiver, consulte a documentação sobre a configuração do servidor de relatórios.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Os websockets são **obrigatórios** para o controlo remoto a partir do **AAPSClient**, nos dois telefones.
 
 As restantes secções podem ficar com os valores predefinidos por agora. São descritas aqui para saber onde as encontrar mais tarde:
 
@@ -283,19 +283,19 @@ Toque em "**SEGUINTE**" para ir para o ecrã seguinte.
 
 Aqui introduz o nome da pessoa que usa este telefone. Serve para distinguir esta instância do **AAPS** de outras nos relatórios e na sincronização, por exemplo se duas crianças da sua família usam o **AAPS**. Também é usado nos nomes dos ficheiros de definições exportados e é mostrado no relógio.
 
-It can be anything. Pode alterá-lo mais tarde em **Definições → Geral → Nome da instância**.
+Pode ser qualquer coisa. Pode alterá-lo mais tarde em **Definições → Geral → Nome da instância**.
 
 Toque em "**SEGUINTE**" para ir para o ecrã seguinte.
 
 ![Nome](../images/setup-wizard/Wizard-Name.png)
 
-## Patient type
+## Tipo de paciente
 
-Aqui seleciona o seu "Tipo de paciente", o que é importante, porque o software **AAPS** tem limites diferentes conforme a idade do paciente. This is important for security and safety reasons.
+Aqui seleciona o seu "Tipo de paciente", o que é importante, porque o software **AAPS** tem limites diferentes conforme a idade do paciente. Isto é importante por razões de segurança.
 
-É também aqui que configura o **bólus máximo permitido** para uma refeição. That is, the largest bolus you need to give to cover your typical meals. É uma função de segurança para ajudar a evitar uma sobredosagem acidental quando dá um bólus para uma refeição.
+É também aqui que configura o **bólus máximo permitido** para uma refeição. Ou seja, o maior bólus de que precisa para cobrir as suas refeições habituais. É uma função de segurança para ajudar a evitar uma sobredosagem acidental quando dá um bólus para uma refeição.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+O segundo limite tem uma ideia semelhante, mas refere-se à quantidade máxima de hidratos de carbono que espera comer.
 
 Depois de definir estes valores, toque em "**SEGUINTE**" para ir para o ecrã seguinte:
 
@@ -333,7 +333,7 @@ Se um cliente emparelhado (_por exemplo_ outro telefone) alterou a configuraçã
 
 Toque no ícone de guardar (canto superior direito) e depois toque em "**SEGUINTE**" para ir para o ecrã seguinte.
 
-## Blood sugar source
+## Fonte da glicose
 
 Aqui seleciona de onde o **AAPS** recebe os dados da glicose. Leia a documentação da sua [fonte da glicose](../Getting-Started/CompatiblesCgms.md).
 
@@ -350,7 +350,7 @@ Depois de fazer a sua escolha, toque em "**SEGUINTE**" para ir para o ecrã segu
 (setup-wizard-profile)=
 ## Perfil
 
-Now we are entering a very important part of the Setup Wizard.
+Agora entramos numa parte muito importante do Assistente de Configuração.
 
 Leia a documentação sobre [perfis](../SettingUpAaps/YourAapsProfile.md) antes de tentar introduzir os dados do seu perfil no ecrã seguinte.
 
@@ -371,7 +371,7 @@ O editor abre vazio ("Não há registos disponíveis"). Toque no botão "**+**" 
 
 ![Perfil vazio](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+A longo prazo, pode ter vários perfis, se precisar. Aqui só criamos um.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
@@ -402,7 +402,7 @@ Toque em "**ALV**" e introduza os seus valores alvo de glicose.
 
 Em loop aberto, este alvo pode ser um intervalo mais largo, caso contrário o **AAPS** avisa-o constantemente para alterar a basal temporária ou outra definição, o que pode ser cansativo.
 
-Later, for closed looping, you will generally have only one value for top and bottom. Isto facilita ao **AAPS** atingir o alvo e dar-lhe um melhor controlo geral da diabetes.
+Mais tarde, com o loop fechado, terá normalmente um só valor para o limite superior e inferior. Isto facilita ao **AAPS** atingir o alvo e dar-lhe um melhor controlo geral da diabetes.
 
 ![ALV](../images/setup-wizard/Wizard-Profile-TARG.png)
 
@@ -462,7 +462,7 @@ Toque em "**SEGUINTE**" para ir para o ecrã seguinte.
 
 ## Algoritmo APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Apesar do nome, a função SMB do algoritmo está desativada até estar familiarizado com o AAPS e ter completado os primeiros objetivos. De qualquer forma, o OpenAPS SMB é mais recente e, em geral, melhor do que o OpenAPS AMA.
+Use o algoritmo OpenAPS SMB como o seu algoritmo APS. Apesar do nome, a função SMB do algoritmo está desativada até estar familiarizado com o AAPS e ter completado os primeiros objetivos. De qualquer forma, o OpenAPS SMB é mais recente e, em geral, melhor do que o OpenAPS AMA.
 
 O SMB está desativado no início porque a função SMB reage mais depressa a uma subida da glicose, usando um Super Micro Bólus em vez de aumentar a percentagem da taxa basal. Como o seu perfil, em geral, não é tão bom no início como depois de alguma experiência, a função fica desativada no princípio.
 
@@ -495,7 +495,7 @@ Se tocar em "**Definições**", pode rever as definições de absorção; os val
 
 Toque em "**SEGUINTE**" para ir para o ecrã seguinte.
 
-## Start Objective 1
+## Iniciar o Objetivo 1
 
 Está agora a entrar nos Objetivos — a qualificação para aceder a mais funções do **AAPS**.
 
@@ -503,9 +503,9 @@ Toque em "**Abrir Objetivos**":
 
 ![Objetivos](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Aqui iniciamos o Objetivo 1, mesmo que de momento a nossa configuração ainda não esteja totalmente pronta para concluir este Objetivo. Mas é o início.
 
-Press the "**Start**" button of **Objective 1**:
+Prima o botão «**Iniciar**» do **Objetivo 1**:
 
 ![Lista de objetivos](../images/setup-wizard/Wizard-Objectives-List.png)
 

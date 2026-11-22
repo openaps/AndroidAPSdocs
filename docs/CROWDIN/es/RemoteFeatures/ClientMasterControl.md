@@ -334,27 +334,86 @@ Si un cliente se restaura desde una copia de seguridad que hace retroceder su co
 
 ## Solucionando problemas
 
-| Síntoma                                                                                                          | Qué comprobar                                                                                                                                                                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| El cliente dice que el **máster no tiene conexión**                                                              | El teléfono máster está activo y ejecuta **AAPS**; los dos teléfonos están conectados en **NSClientV3**; los **websockets** están activados en los dos; mismo sitio de Nightscout.                                                                                                                                                                                      |
-| El cliente dice que **no está emparejado**                                                                       | Vuelve a emparejar desde **Administrar → Emparejar con el máster**. Comprueba que el cliente está **Activo** en la lista **Clientes autorizados** del máster.                                                                                                                                                                                                           |
-| Comando **rechazado** por el máster                                                                              | El máster vuelve a validar según su estado actual; por ejemplo, el perfil elegido ya no existe o el tipo de bomba no coincide. Vuelve a comprobarlo en el máster.                                                                                                                                                                                                       |
-| Commands **fail** or the master is often **offline**                                                             | Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).                                                                                                                               |
-| El emparejamiento se cancela con *«No se ha podido almacenar el secreto de emparejamiento»*                      | No se ha cambiado nada. Vuelve a empezar el emparejamiento; si sigue fallando, reinicia **AAPSClient** e inténtalo una vez más.                                                                                                                                                                                                                                         |
-| No pasa nada después del emparejamiento                                                                          | Asegúrate de que **Permitir control del cliente** está ACTIVADO en el máster y de que el máster está conectado a Nightscout.                                                                                                                                                                                                                                            |
-| Las opciones de código QR no se pueden elegir en el diálogo **Nuevo cliente**                                    | El diálogo explica por qué. *No es un token de administrador*: da al máster un token de administrador de tu Nightscout, o añade el cliente con el **PIN**. *No conectado*: espera hasta que el máster muestre *conectado* en **NSClientV3**.                                                                                                                            |
-| *«Nightscout tiene un token con este nombre y otros permisos»*                                                   | Uno de tus propios tokens de Nightscout se llama `aaps-` más este nombre. Elige otro nombre para el cliente.                                                                                                                                                                                                                                                            |
-| *«Ya hay un cliente con este nombre en la lista»*                                                                | Elige otro nombre, o elimina primero ese cliente.                                                                                                                                                                                                                                                                                                                       |
-| El cliente dice *«Este código es de otra versión de AAPS»*                                                       | El máster y el cliente deben ejecutar la **misma** versión de **AAPS**. Actualiza el más antiguo.                                                                                                                                                                                                                                                                       |
-| El cliente dice *«Este código ha caducado»*                                                                      | Un código que empareja funciona unos dos minutos. Vuelve a añadir el cliente en el máster para obtener un código nuevo.                                                                                                                                                                                                                                                 |
-| El cliente dice *«Este teléfono ya está emparejado»*                                                             | Primero desvincúlalo (**Administrar → Emparejar con el máster → Desvincular**) y después vuelve a escanear. Un código **solo Nightscout** también funciona en un teléfono emparejado.                                                                                                                                                                                   |
-| El cliente dice *«El máster lo ha rechazado: este teléfono escribe en Nightscout con un token distinto al suyo»* | El cliente usaba antes su propio token de Nightscout y ahora escribe con otro, por ejemplo después de escribir un token en sus ajustes de Nightscout. Elimina el cliente en el máster y vuelve a añadirlo (consulta [El token de Nightscout propio del cliente](#client-master-control-own-token)).                                                                     |
-| El registro de NSClient en el cliente muestra *«✕ SETTINGS … refused»* y sus ajustes ya no siguen al máster      | Otra persona escribió el documento de ajustes del máster, o el máster tiene una clave nueva (por ejemplo, después de borrar sus datos). Un cliente emparejado toma la clave nueva por sí solo la próxima vez que se conecta a Nightscout. Un teléfono que solo lee Nightscout necesita otra vez el código QR del máster (**Leer solo Nightscout → mostrar el código**). |
-| La tarjeta del cliente muestra *«Utiliza el token de Nightscout …»* en rojo                                      | El cliente todavía escribe con un token que tiene más permisos de los que necesita. El máster le envía su propio token después del emparejamiento, pero solo si el máster tiene un token de administrador. Comprueba el token del máster, o vuelve a configurar el cliente con un código QR.                                                                            |
-| Un cliente ya no puede leer Nightscout                                                                           | Su token se eliminó, por ejemplo porque el cliente se eliminó en el máster. Vuelve a añadirlo.                                                                                                                                                                                                                                                                          |
-| No se aplican los tratamientos introducidos en la web de Nightscout                                              | Es lo esperado en [modo reforzado](#client-master-control-hardened-mode): introdúcelos en un cliente emparejado.                                                                                                                                                                                                                                                        |
-
 Para problemas de Nightscout o de sincronización, consulta primero [Solución de problemas de NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+### Emparejamiento
+
+**The QR code options cannot be chosen in the New client dialog**
+
+The dialog says why:
+
+- *No es un token de administrador*: da al máster un token de administrador de tu Nightscout, o añade el cliente con el **PIN**.
+- *No conectado*: espera hasta que el máster muestre *conectado* en **NSClientV3**.
+
+**«Nightscout tiene un token con este nombre y otros permisos»**
+
+Uno de tus propios tokens de Nightscout se llama `aaps-` más este nombre. Elige otro nombre para el cliente.
+
+**«Ya hay un cliente con este nombre en la lista»**
+
+Elige otro nombre, o elimina primero ese cliente.
+
+**The client says "This code is from another AAPS version"**
+
+El máster y el cliente deben ejecutar la **misma** versión de **AAPS**. Actualiza el más antiguo.
+
+**The client says "This code has expired"**
+
+Un código que empareja funciona unos dos minutos. Vuelve a añadir el cliente en el máster para obtener un código nuevo.
+
+**The client says "This phone is paired already"**
+
+Primero desvincúlalo (**Administrar → Emparejar con el máster → Desvincular**) y después vuelve a escanear. Un código **solo Nightscout** también funciona en un teléfono emparejado.
+
+**Pairing is cancelled with "The pairing secret could not be stored"**
+
+No se ha cambiado nada. Vuelve a iniciar el emparejamiento. Si sigue fallando, reinicia **AAPSClient** e inténtalo una vez más.
+
+**El cliente dice que no está emparejado**
+
+Vuelve a emparejar desde **Administrar → Emparejar con el máster**. Comprueba que el cliente está **Activo** en la lista **Clientes autorizados** del máster.
+
+**No pasa nada después del emparejamiento**
+
+Asegúrate de que **Permitir control del cliente** está ACTIVADO en el máster y de que el máster está conectado a Nightscout.
+
+### Comandos
+
+**El cliente dice que el máster está sin conexión, o los comandos fallan**
+
+Comprueba que:
+
+- el teléfono máster está despierto y **AAPS** está en marcha,
+- los dos teléfonos están conectados en **NSClientV3** al mismo sitio de Nightscout,
+- los **websockets** están activados en los dos teléfonos.
+
+Los websockets son **obligatorios** para el control remoto desde **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+
+**El máster rechaza un comando**
+
+El máster vuelve a comprobar cada comando con su estado actual: por ejemplo, el perfil elegido ya no existe o el tipo de bomba no coincide. Compruébalo en el máster.
+
+**No se aplican los tratamientos introducidos en la web de Nightscout**
+
+Esto es lo esperado en el [modo reforzado](#client-master-control-hardened-mode). En su lugar, introdúcelos en un cliente emparejado.
+
+### Tokens y ajustes de Nightscout
+
+**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+
+El cliente usaba antes su propio token de Nightscout y ahora escribe con otro, por ejemplo después de escribir un token en sus ajustes de Nightscout. Elimina el cliente en el máster y vuelve a añadirlo (consulta [El token de Nightscout propio del cliente](#client-master-control-own-token)).
+
+**The client's card shows "Uses the Nightscout token …" in red**
+
+El cliente todavía escribe con un token que tiene más permisos de los que necesita. El máster envía al cliente su propio token después del emparejamiento, pero solo si el máster tiene un token de administrador. Comprueba el token del máster, o vuelve a configurar el cliente con un código QR.
+
+**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+
+Otra persona escribió el documento de ajustes del máster, o el máster tiene una clave nueva (por ejemplo, después de borrar sus datos). Un cliente emparejado recibe la nueva clave por sí solo la próxima vez que se conecta a Nightscout. Un teléfono que solo lee Nightscout necesita otra vez el código QR del máster (**Leer solo Nightscout → mostrar el código**).
+
+**Un cliente ya no puede leer Nightscout**
+
+Su token se eliminó, por ejemplo porque el cliente se eliminó en el máster. Vuelve a añadirlo.
 
 ---
 

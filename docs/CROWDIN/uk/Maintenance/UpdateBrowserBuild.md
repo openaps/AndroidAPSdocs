@@ -9,7 +9,7 @@
 **AAPS** не можна завантажити через правила для медичних виробів. Збирати застосунок для власного використання законно, але ви не повинні давати його копію іншим! Докладніше див. на [сторінці FAQ](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Потім виконайте [процедуру збірки **AAPS** в браузері](../SettingUpAaps/BrowserBuild.md), а не цю інструкцію. Замість того щоб створювати новий keystore, ви повинні вибрати той, який скопіювали зі свого комп’ютера.
+Якщо ви хочете вперше оновити **AAPS** у браузері: скопіюйте резервну копію файлу keystore на свій Google Drive. Потім виконайте [процедуру збірки **AAPS** в браузері](../SettingUpAaps/BrowserBuild.md), а не цю інструкцію. Замість того щоб створювати новий keystore, ви повинні вибрати той, який скопіювали зі свого комп’ютера.
 Це обов’язково лише перший раз, а для наступних оновлень ви зможете виконувати цю інструкцію.
 ```
 
@@ -57,7 +57,7 @@ In case you want to upgrade **AAPS** with a browser for the first time: copy you
 
 ![Відхилення випадкових змін](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Чудово.
+Тепер ви синхронізували (оновили) свою копію з останнім випуском **AAPS**. Чудово.
 
 ![Репозиторій синхронізовано](../images/update/CI/GitHubUpdate5.png)
 
@@ -73,17 +73,17 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Залиште гілку master. У полі **Select AAPS Version** (вибір версії AAPS) перевірте, що вибрано **4.0.0** — найновішу версію вгорі списку. Якщо ваш fork не оновлено, заздалегідь вибрано старішу версію: якщо ви запустите workflow з формою в тому вигляді, як вона відкрилася, ви знову зберете цю старішу версію, і ваш застосунок не оновиться. Виберіть [варіант](#browserbuild-variant) (fullRelease), а потім натисніть Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Список версій є частиною workflow у вашому fork. Якщо **4.0.0** немає, ваш fork ще не синхронізовано: поверніться до розділу [Оновіть ваш репозиторій GitHub](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run workflow](../images/update/CI/GitHubActions3.png)
 
-6. Ви побачите повідомлення Workflow run was successfully requested. Оновіть сторінку в браузері, і ви зможете стежити за ходом збірки. Коли дія завершиться, біля дії AAPS CI з’явиться зелена галочка. You have successfully built the updated version of **AAPS**. Це означає, що apk для основного телефона (Master) і для годинника (Wear) тепер зберігаються прямо у вашому Google Drive (як показано нижче). apk AAPSClient можна завантажити з Github > nightscout > AndroidAPS [тут](https://github.com/nightscout/AndroidAPS/releases)
+6. Ви побачите повідомлення Workflow run was successfully requested. Оновіть сторінку в браузері, і ви зможете стежити за ходом збірки. Коли дія завершиться, біля дії AAPS CI з’явиться зелена галочка. Ви успішно зібрали оновлену версію **AAPS**. Це означає, що apk для основного телефона (Master) і для годинника (Wear) тепер зберігаються прямо у вашому Google Drive (як показано нижче). apk AAPSClient можна завантажити з Github > nightscout > AndroidAPS [тут](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Стеження за робочим процесом](../images/update/CI/GitHubActions4.png)

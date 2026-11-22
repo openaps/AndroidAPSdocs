@@ -1,45 +1,45 @@
-# How to help with AAPS
+# Kako pomoći AAPS-u
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS u potpunosti radi na dobrovoljnom radu i nema plaćenih zaposlenika.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Razvojni programeri su roditelji, njegovatelji, bliski ljudi i osobe s dijabetesom koji zajedno razvijaju i poboljšavaju rješenje za vrlo čestu potrebu. Razvojni programeri besplatno daruju svoje slobodno vrijeme, ali nije pošteno očekivati da imaju i dodatne troškove kako bi nešto tako sjajno ostalo otvorenog koda i besplatno za sve.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Da bi potpuno testirali novi sustav, razvojni programeri trebaju rezervni telefon i rezervnu pumpu, jer se sustav ne smije koristiti na čovjeku dok nije stabilan. Noviji modeli trebaju testiranje čim postanu dostupni. Dio doniranog novca potreban je i za troškove slanja te opreme razvojnim programerima u različite zemlje. Ponekad je lijepo pomoći i s troškovima da razvojni programeri izađu iz svojih zamračenih soba i upoznaju se na konferencijama i događanjima, gdje mogu razmjenjivati kreativne i analitičke ideje.*
 
 (donate-to-aaps)=
 
-### How can I donate?
+### Kako mogu donirati?
 
-You can support **AAPS** in several ways:
+**AAPS** možete podržati na nekoliko načina:
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation:** donirajte na [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** pomozite financirati rad na certificiranju AAPS-a kao medicinskog uređaja na [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** pošaljite na ovu adresu **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
-## I can write code! How do I participate?
+## Znam pisati kod! Kako mogu sudjelovati?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Super! Pogledajte prijave problema (issues), pitajte na Discord kanalu – uvijek ima puno posla! Za početak odaberite mali zadatak i napravite svoj prvi pull request! :)
 
-## I know the system and can write documentation!
+## Poznajem sustav i mogu pisati dokumentaciju!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+Odlično, to se jako cijeni i dobar je način da pomognete drugima!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* Discord kanal za wiki možete naći ovdje: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Vodič kako napraviti izmjene (commite) na engleskom wikiju možete naći ovdje: [Kako uređivati dokumentaciju](../SupportingAaps/HowToEditTheDocs.md). Ostali jezici samo se prevode s engleskog i ne mogu se izravno uređivati, kako bi sadržaj ostao usklađen.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## Govorim više jezika i želim prevoditi aplikaciju ili dokumentaciju
 
-If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+Ako nešto prevodite prvi put, počnite s prijevodom tekstova aplikacije, jer je to lakše i brže ćete vidjeti rezultate.
 
-You are welcome to start as a translator for the documentation in parallel or later.
+Možete istodobno ili kasnije početi prevoditi i dokumentaciju.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+Stanje prijevoda aplikacije i dokumentacije za pojedine jezike možete provjeriti [ovdje](StateOfTranslations.md).
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Ako želite prevesti **aplikaciju** na druge jezike (hvala vam), koristite [Crowdin](https://crowdin.com/project/androidaps).
+* Ako želite prevesti **dokumentaciju** na druge jezike (hvala vam), koristite [Crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Samo se registrirajte na CROWDIN, kliknite svoj jezik, pričekajte odobrenje administratora i počnite!
 
-## Are there other ways to help?
+## Postoje li drugi načini pomoći?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Potrebna su znanja iz grafičkog dizajna i UX dizajna, prevoditelji, urednici wikija, ili jednostavno pomozite drugima tako da odgovarate na jednostavna pitanja na Discordu i Facebooku, kako bi razvojni programeri imali vremena i prostora za teže stvari.

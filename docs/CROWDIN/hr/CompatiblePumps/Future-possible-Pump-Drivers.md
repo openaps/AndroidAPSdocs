@@ -1,62 +1,64 @@
-# Future (possible) Pump Drivers
+# Budući (mogući) upravljački programi pumpi
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Ovo je popis nekih pumpi na tržištu, status njihove podrške u drugim sustavima petlje i njihov status u AAPS-u. Na kraju su informacije o tome što pumpa treba da bi bila „pogodna za petlju“.
 
-    {contents} Table of contents
+    {contents} Sadržaj
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Pumpe u fazi integracije u AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Uskoro:** upravljački programi za ove pumpe su u razvoju i već rade u testnim izradama.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([početna stranica](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Upravljački program za Omnipod 5 u razvoju](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+See [Omnipod 5](../CompatiblePumps/Omnipod5.md) for how the driver in development works.
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+Tandem: t:Mobi ([početna stranica](https://www.tandemdiabetes.com/))
 
-## Pumps that are Loopable
+![Upravljački program za Tandem t:Mobi u razvoju](../images/future-pumps/tandem-mobi-driver.png)
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+## Pumpe koje se mogu koristiti s petljom
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+### Kaleido ([početna stranica](https://www.hellokaleido.com/))
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Status za petlju:** Pumpa je kandidat za petlju, ali protokol je za sada nepoznat. Proizvođač nije zainteresiran za otvoreni kod.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+**Hardver potreban za AAPS:** nema. Čini se da ima Bluetooth.
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+### Tandem: t:slim X3 ([početna stranica](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**Status za petlju:** Mogući budući kandidat za petlju. Nada je da će t:slim X3 omogućiti potpuno upravljanje s telefona, što bi omogućilo podršku u AAPS-u, ali vremenski okvir i značajke još nisu poznati.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Hardver potreban za AAPS:** nema. Očekuje se da će imati Bluetooth.
 
-### Twiist ([Homepage](https://www.twiist.com/))
+**Komentari:** Još nije izašla. Čini se da t:slim X3 u Tandemovim planovima stalno dobiva manju važnost u korist pumpe t:Mobi (uključujući verziju bez cijevi) i pumpe Sigi (njihove pumpe bez katetera).
 
-**Loop status:** Loop candidate.
+### Twiist ([početna stranica](https://www.twiist.com/))
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Status za petlju:** Kandidat za petlju.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+**Hardver potreban za AAPS:** nema. Ima Bluetooth.
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+### Inzulinska pumpa Willcare ([početna stranica](http://shinmyungmedi.com/en/))
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Status za petlju:** Trenutno nije kandidat za petlju, ali njihovo osoblje nam se javilo i zainteresirani su da pumpu prilagode za petlju (čini se da joj nedostaju samo naredbe za dohvaćanje/postavljanje profila).
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Hardver potreban za AAPS:** nema. Čini se da ima Bluetooth.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+**Komentari:** Budući da je tvrtka zainteresirana za integraciju s AAPS-om, možda će sama napraviti implementaciju.
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+### Ypsopump ([početna stranica](https://www.ypsomed.com/))
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Status za petlju:** Kandidat za petlju. Zajednica je obrnutim inženjeringom otkrila Bluetooth protokol pumpe, pa je komunikacija s njom u načelu moguća.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Hardver potreban za AAPS:** nema. Ima Bluetooth.
 
-## Pumps no longer sold (companies no longer operating)
+**Komentari:** Ypsopump štiti svoju Bluetooth komunikaciju jakim šifriranjem treće strane. Rad s tim šifriranjem tehnički je zahtjevan, pa je teško izraditi i održavati pouzdan upravljački program. Još ne postoji upravljački program za AAPS spreman za svakodnevnu upotrebu.
+
+## Pumpe koje se više ne prodaju (tvrtke više ne posluju)
 
 ### Animas Vibe
 
@@ -66,53 +68,53 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Komentari:** Kraj podrške u ožujku 2025.
 
-## Pumps that aren't Loopable
+## Pumpe koje se ne mogu koristiti s petljom
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Komentari:** Medtronic je [odustao](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([početna stranica](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Komentari:** Tandemov Bluetooth protokol otkriven je obrnutim inženjeringom, ali na t:slim X2 mogu se davati samo bolusi — isporukom bazala ne može se upravljati — pa se pumpa ne može sigurno koristiti s petljom. To se vjerojatno neće promijeniti osim ako Tandem ne dopusti potpuno upravljanje pumpom X2 s telefona, a to će vjerojatnije doći s t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Komentari:** Zajednica nije uspjela komunicirati s pumpom Solo.
 
-## Requirements for pumps being loopable
+## Što pumpa treba da bi se mogla koristiti s petljom
 
-**Prerequisite**
+**Preduvjet**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Pumpa mora podržavati neku vrstu daljinskog upravljanja. (BT, radiofrekvencija itd.)
+- Protokol je razbijen/dokumentiran/itd.
 
-**Minimal requirement**
+**Minimalni zahtjevi**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Postavi privremenu bazalnu stopu
+- Dohvati status
+- Otkaži privremenu bazalnu stopu
 
-**For oref1(SMB) or Bolusing:**
+**Za oref1 (SMB) ili davanje bolusa:**
 
-- Set Bolus
+- Postavi bolus
 
-**Good to have**
+**Dobro je imati**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Otkaži bolus
+- Dohvati bazalni profil (gotovo obavezno)
+- Postavi bazalni profil (dobro je imati)
+- Čitaj povijest 
 
-**Other (not required but good to have)**
+**Ostalo (nije obavezno, ali je dobro imati)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Postavi produženi bolus
+- Otkaži produženi bolus
+- Čitaj povijest
+- Čitaj TDD
 
-### Other pumps support
+### Podrška za ostale pumpe
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Ako želite znati status neke druge pumpe, javite nam se na Discordu.

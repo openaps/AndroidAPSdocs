@@ -1,4 +1,4 @@
-# AAPS screens
+# Pantalles d'AAPS
 
 ```{contents}
 :backlinks: entry
@@ -7,784 +7,784 @@
 
 (the-homescreen)= (AapsScreens-the-homescreen)=
 
-## The main screen
+## La pantalla principal
 
-![Main screen](../images/main/Home_Homescreen.png)
+![Pantalla principal](../images/main/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Aquesta és la primera pantalla que veureu quan obriu **AAPS**, i conté la major part de la informació que necessitareu cada dia.
 
-### Section A - Top bar
+### Secció A - Barra superior
 
-* The **menu** (☰) on the left opens the navigation drawer with **Treatments history**, **History browser**, **Statistics**, **Profile helper**, **Maintenance**, **Setup Wizard**, **Configuration** and more.
-* The **search bar** finds settings, dialogs and documentation — just start typing (see [Global search](../DailyLifeWithAaps/GlobalSearch.md)).
-* The **Settings** (gear) icon on the right opens all [settings](../SettingUpAaps/Preferences.md).
+* El **menú** (☰) de l'esquerra obre el calaix de navegació amb **Historial de tractaments**, **Historial**, **Estadístiques**, **Assistent de perfil**, **Manteniment**, **Assistent de configuració**, **Configurador** i més.
+* La **barra de cerca** troba configuracions, diàlegs i documentació: només cal que comenceu a escriure (vegeu [Cerca global](../DailyLifeWithAaps/GlobalSearch.md)).
+* La icona **Configuració** (engranatge) de la dreta obre tota la [configuració](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
-### Section B - Status block
+### Secció B - Bloc d'estat
 
-#### Current blood glucose
+#### Glucèmia actual
 
-The latest blood glucose reading from your CGM is shown in the big circle on the left, together with the difference to the previous reading (delta) and the age of the reading.
+L'última lectura de glucèmia del CGM es mostra al cercle gran de l'esquerra, juntament amb la diferència respecte a la lectura anterior (delta) i l'antiguitat de la lectura.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+El color del valor de glucèmia mostra l'estat respecte al [rang](#Preferences-range-for-visualization) definit.
 
-* green = in range
-* red = below range
-* yellow = above range
+* verd = dins del rang
+* vermell = per sota del rang
+* groc = per sobre del rang
 
-![BG circle in range, green](../images/main/Home_Delta.png) ![BG circle above range, yellow](../images/main/Home_Delta_high.png) ![BG circle below range, red](../images/main/Home_Delta_low.png)
+![Cercle de glucèmia dins del rang, verd](../images/main/Home_Delta.png) ![Cercle de glucèmia per sobre del rang, groc](../images/main/Home_Delta_high.png) ![Cercle de glucèmia per sota del rang, vermell](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
-#### Loop status
+#### Estat del llaç
 
-![Loop status](../images/main/main_loop_status.png)
+![Estat del llaç](../images/main/main_loop_status.png)
 
-Next to the BG circle, an icon shows the running mode of the loop (from top to bottom in the picture):
+Al costat del cercle de glucèmia, una icona mostra el mode de funcionament del llaç (de dalt a baix a la imatge):
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
-4. Red circle with cross = loop disabled (not working permanently)
-5. Red pause icon = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown next to the icon
-6. Grey circle with plug = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown next to the icon
+1. Cercle verd = [llaç tancat](#KeyAapsFeatures-ClosedLoop), llaç en funcionament
+2. Cercle lila amb línia de punts = [suspensió per glucèmia baixa (LGS)](#KeyAapsFeatures-LGS)
+3. Cercle blau amb línia de punts = [llaç obert](#KeyAapsFeatures-OpenLoop)
+4. Cercle vermell amb una creu = llaç desactivat (no funciona de manera permanent)
+5. Icona vermella de pausa = llaç suspès (aturat temporalment, però es dona la insulina basal); el temps restant es mostra al costat de la icona
+6. Cercle gris amb un endoll = bomba desconnectada (temporalment no es dona gens d'insulina); el temps restant es mostra al costat de la icona
 
-Press the icon to open the Loop dialog. The dialog's content depends on the current state:
+Premeu la icona per obrir el diàleg del llaç. El contingut del diàleg depèn de l'estat actual:
 
-* While the loop is **running** (closed, open or LGS), you can switch the running mode (Closed Loop, Low Glucose Suspend, Open Loop or Disable loop), **suspend** the loop or **disconnect** the pump for a chosen duration.
-* While the loop is **disabled**, you can re-enable it by selecting a running mode, or disconnect the pump.
-* While the loop is **suspended**, you can **resume** it, disconnect the pump, or pick a new duration under **Suspend loop** to extend the suspension.
-* While the pump is **disconnected**, you can **reconnect** the pump, or pick a new duration under **Disconnect pump** to extend the disconnection.
+* Mentre el llaç està **en funcionament** (tancat, obert o LGS), podeu canviar el mode de funcionament (Llaç tancat, Suspensió per glucèmia baixa, Llaç obert o Desactivar llaç), **suspendre** el llaç o **desconnectar** la bomba durant el temps que trieu.
+* Mentre el llaç està **desactivat**, el podeu tornar a activar triant un mode de funcionament, o podeu desconnectar la bomba.
+* Mentre el llaç està **suspès**, el podeu **reprendre**, podeu desconnectar la bomba, o podeu triar una durada nova a **Suspendre el llaç** per allargar la suspensió.
+* Mentre la bomba està **desconnectada**, podeu **reconnectar** la bomba, o podeu triar una durada nova a **Desconnectar bomba** per allargar la desconnexió.
 
-When you extend a suspension or a disconnection, the new duration **starts from now**: it replaces the remaining time, it is not added to it. You do not have to resume or reconnect first.
+Quan allargueu una suspensió o una desconnexió, la durada nova **comença ara**: substitueix el temps restant, no s'hi suma. No cal reprendre ni reconnectar abans.
 
-The dialog while the loop is running in closed loop:
+El diàleg mentre el llaç funciona en llaç tancat:
 
-![Loop dialog in closed loop](../images/loop/loop_dialog_closed_loop.png)
+![Diàleg del llaç en llaç tancat](../images/loop/loop_dialog_closed_loop.png)
 
-The dialog while the loop is suspended, with **Resume** and the durations to extend the suspension:
+El diàleg mentre el llaç està suspès, amb **Reprendre** i les durades per allargar la suspensió:
 
-![Loop dialog while the loop is suspended](../images/loop/loop_dialog_suspended.png)
+![Diàleg del llaç mentre el llaç està suspès](../images/loop/loop_dialog_suspended.png)
 
-The dialog while the pump is disconnected, with **Reconnect Pump** and the durations to extend the disconnection:
+El diàleg mentre la bomba està desconnectada, amb **Reconnectar bomba** i les durades per allargar la desconnexió:
 
-![Loop dialog while the pump is disconnected](../images/loop/loop_dialog_disconnected.png)
+![Diàleg del llaç mentre la bomba està desconnectada](../images/loop/loop_dialog_disconnected.png)
 
-The dialog in Low Glucose Suspend, in open loop and while the loop is disabled only differs in the running modes it offers:
+El diàleg en Suspensió per glucèmia baixa, en llaç obert i amb el llaç desactivat només canvia en els modes de funcionament que ofereix:
 
-![Loop dialog in Low Glucose Suspend](../images/loop/loop_dialog_lgs.png)
+![Diàleg del llaç en Suspensió per glucèmia baixa](../images/loop/loop_dialog_lgs.png)
 
-![Loop dialog in open loop](../images/loop/loop_dialog_open_loop.png)
+![Diàleg del llaç en llaç obert](../images/loop/loop_dialog_open_loop.png)
 
-![Loop dialog while the loop is disabled](../images/loop/loop_dialog_disabled.png)
+![Diàleg del llaç amb el llaç desactivat](../images/loop/loop_dialog_disabled.png)
 
-This is how the main screen looks in each mode. The color band at the top of the graph changes at the time of the switch.
+Així es veu la pantalla principal en cada mode. La franja de color a la part de dalt del gràfic canvia en el moment del canvi.
 
-Low Glucose Suspend:
+Suspensió per glucèmia baixa:
 
-![Main screen in Low Glucose Suspend](../images/main/main_screen_loop_lgs.png)
+![Pantalla principal en Suspensió per glucèmia baixa](../images/main/main_screen_loop_lgs.png)
 
-Open loop:
+Llaç obert:
 
-![Main screen in open loop](../images/main/main_screen_loop_open.png)
+![Pantalla principal en llaç obert](../images/main/main_screen_loop_open.png)
 
-Loop disabled:
+Llaç desactivat:
 
-![Main screen with the loop disabled](../images/main/main_screen_loop_disabled.png)
+![Pantalla principal amb el llaç desactivat](../images/main/main_screen_loop_disabled.png)
 
-Loop suspended — the remaining time is shown next to the icon:
+Llaç suspès; el temps restant es mostra al costat de la icona:
 
-![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
+![Pantalla principal amb el llaç suspès](../images/main/main_screen_loop_suspended.png)
 
-Pump disconnected — the remaining time is shown next to the icon. The treatment buttons stay in the QuickLaunch toolbar, so you can still record insulin given with a pen or carbs:
+Bomba desconnectada; el temps restant es mostra al costat de la icona. Els botons de tractament es queden a la barra d'accés ràpid, així que encara podeu registrar insulina posada amb ploma o carbohidrats:
 
-![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
+![Pantalla principal amb la bomba desconnectada](../images/main/main_screen_pump_disconnected.png)
 
-A validation is required after each selection.
+Cal una confirmació després de cada selecció.
 
-```{admonition} Alarm: the pump did not accept the zero temp basal :class: warning While the pump is disconnected, **AAPS** keeps a zero temporary basal on the pump and sets it again if it is missing. If this still fails after 10 minutes, **AAPS** raises an urgent alarm: *"The pump did not accept the zero temp basal. It may still be giving basal insulin. Check the pump."* The alarm repeats every 15 minutes until the zero temporary basal is set or the disconnection ends. If you see it, check your pump: it may be delivering basal insulin although **AAPS** shows it as disconnected.
+```{admonition} Alarma: la bomba no ha acceptat la basal temporal zero :class: warning Mentre la bomba està desconnectada, **AAPS** manté una basal temporal zero a la bomba i la torna a establir si falta. Si després de 10 minuts encara falla, **AAPS** fa sonar una alarma urgent: *«La bomba no ha acceptat la basal temporal zero. És possible que encara estigui donant insulina basal. Comproveu la bomba.»* L'alarma es repeteix cada 15 minuts fins que s'estableix la basal temporal zero o s'acaba la desconnexió. Si la veieu, comproveu la bomba: és possible que estigui lliurant insulina basal tot i que **AAPS** la mostra com a desconnectada.
 
-    <br />Note: the modes offered depend on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) — Closed Loop and LGS only become available as you complete them.
+    <br />Nota: els modes disponibles depenen del vostre progrés als [Objectius](../SettingUpAaps/CompletingTheObjectives.md); Llaç tancat i LGS només es fan disponibles a mesura que els completeu.
     
     (aaps-screens-bg-warning-sign)=
-    #### BG warning sign
+    #### Senyal d'avís de glucèmia
     
-    If **AAPS** detects a problem with the BG readings it receives, a shortcut to your BG source (named after it, for example **xDrip+ BG**) appears in the bottom bar of the main screen, with a red warning badge. Tap it to open the [BG source screen](#aaps-screens-bg-source).
+    Si **AAPS** detecta un problema amb les lectures de glucèmia que rep, a la barra inferior de la pantalla principal apareix una drecera a l'origen de glucèmia (amb el seu nom, per exemple **xDrip+ BG**), amb una insígnia vermella d'avís. Toqueu-la per obrir la [pantalla de l'origen de glucèmia](#aaps-screens-bg-source).
     
-    ##### Duplicate BG data
+    ##### Dades de glucèmia duplicades
     
-    The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which prevents the loop from doing its work right. **AAPS** cannot calculate your BG trend reliably from duplicated readings, so it stops correcting.
+    El senyal vermell d'avís us diu que actueu immediatament: rebeu **dades de glucèmia duplicades**, i això impedeix que el llaç faci bé la seva feina. **AAPS** no pot calcular de manera fiable la tendència de la glucèmia amb lectures duplicades, i per això deixa de corregir.
     
-    If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode: the loop icon turns purple.
+    Si el llaç estava tancat, **AAPS** el passa al mode [Suspensió per glucèmia baixa (LGS)](#KeyAapsFeatures-LGS): la icona del llaç es torna lila.
     
-      ![Duplicate BG data: LGS loop icon and the BG source shortcut with a red warning badge](../images/bg_warn_red.png)
+      ![Dades de glucèmia duplicades: icona del llaç LGS i drecera a l'origen de glucèmia amb una insígnia vermella d'avís](../images/bg_warn_red.png)
     
-    Press the loop icon: the **Constraints** card at the top tells you why: "BgQualityCheck: LGS mode due to doubled values in BG source".
+    Premeu la icona del llaç: la targeta **Restriccions** de la part de dalt us diu per què: «BgQualityCheck: Mode LGS per valors duplicats a l'origen de glucèmia».
     
-      ![Running mode dialog: LGS due to doubled values](../images/main/bg_doubled_constraint.png)
+      ![Diàleg del mode de funcionament: LGS per valors duplicats](../images/main/bg_doubled_constraint.png)
     
-    ```{admonition} Your loop is running in Low Glucose Suspend
+    ```{admonition} El vostre llaç funciona en Suspensió per glucèmia baixa
     :class: note
-    Your loop keeps running, but only to protect you against lows: **AAPS** can still reduce or suspend your basal, and it will not give any correction insulin until you solve this issue !
+    El llaç continua funcionant, però només per protegir-vos de les hipoglucèmies: **AAPS** encara pot reduir o suspendre la basal, i no donarà cap insulina de correcció fins que no resolgueu aquest problema!
     
 
-You need to find out why you get duplicate BGs:
+Heu de trobar per què rebeu glucèmies duplicades:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
+* Teniu activat el pont de Dexcom (Dexcom bridge) al vostre lloc Nightscout? Desactiveu el pont al tauler d'administració de la vostra instància de Nightscout: editeu la variable "enable" i traieu-ne la part "bridge". (Per a Heroku, [trobareu els detalls aquí](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Hi ha diverses fonts que envien la vostra glucèmia a Nightscout? Si feu servir l'aplicació BYODA, activeu l'enviament a **AAPS**, però no l'activeu a xDrip, si el feu servir.
+* Teniu seguidors que reben la vostra glucèmia però que també la tornen a enviar al vostre lloc Nightscout?
+* Últim recurs: a la [configuració de NSClient](#Preferences-nsclient), obriu la configuració de sincronització i desactiveu l'opció «Rebre dades de CGM de NS».
 
-To remove the warning immediately and get your loop correcting again, delete the duplicate entries from the BG source screen: tap the shortcut in the bottom bar. The duplicate reading is highlighted in red. Long press a reading to start selecting, tick the duplicates and tap the trash icon at the top right.
+Per treure l'avís immediatament i que el llaç torni a corregir, elimineu les entrades duplicades a la pantalla de l'origen de glucèmia: toqueu la drecera de la barra inferior. La lectura duplicada es ressalta en vermell. Manteniu premuda una lectura per començar a seleccionar, marqueu els duplicats i toqueu la icona de la paperera a dalt a la dreta.
 
-![BG source screen: duplicates selected for deletion](../images/main/bg_source_delete_duplicates.png)
+![Pantalla de l'origen de glucèmia: duplicats seleccionats per eliminar](../images/main/bg_source_delete_duplicates.png)
 
-However, when there are a lot of duplicates, it might be easier to
+Però si hi ha molts duplicats, pot ser més fàcil
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [fer una còpia de seguretat de la configuració](../Maintenance/ExportImportSettings.md),
+* restablir la base de dades al menú Manteniment i
+* [tornar a importar la configuració](../Maintenance/ExportImportSettings.md)
 
-    {admonition} Switch back to Closed Loop yourself
+    {admonition} Torneu vosaltres mateixos a Llaç tancat
     :class: important
-    **AAPS** does not return to **Closed Loop** on its own once the duplicates are gone. Press the loop icon on the main screen and select **Closed Loop** again.
+    **AAPS** no torna sol a **Llaç tancat** quan els duplicats ja no hi són. Premeu la icona del llaç a la pantalla principal i torneu a seleccionar **Llaç tancat**.
 
-##### Flat BG data
+##### Dades de glucèmia planes
 
-With some BG sources (Libre 1, AiDEX, Glutec, Medtronic and sources that do not report their sensor type), **AAPS** also checks for readings that do not change: if your BG has changed by less than 2 mg/dL (0.1 mmol/L) for 45 minutes, the data is considered wrong. The BG source shortcut then shows a red flat-trend badge, and the loop stops any high temporary basal and gives no correction insulin until the readings change again. Check your sensor and the app that sends the readings.
+Amb alguns orígens de glucèmia (Libre 1, AiDEX, Glutec, Medtronic i els orígens que no informen del tipus de sensor), **AAPS** també comprova si hi ha lectures que no canvien: si la glucèmia ha canviat menys de 2 mg/dl (0,1 mmol/l) durant 45 minuts, les dades es consideren errònies. La drecera de l'origen de glucèmia mostra llavors una insígnia vermella de tendència plana, i el llaç atura qualsevol basal temporal alta i no dona insulina de correcció fins que les lectures tornen a canviar. Comproveu el sensor i l'aplicació que envia les lectures.
 
-##### Irregular BG data
+##### Dades de glucèmia irregulars
 
-When readings arrive at irregular intervals or some are missing, **AAPS** recalculates 5-minute values from the readings it has. This happens for example after a sensor change, or with Libre sensors, whose timing slips a minute or two every few hours. The loop keeps working and you do not have to take any action. **AAPS** 4 no longer shows a yellow warning sign for this.
+Quan les lectures arriben a intervals irregulars o en falten algunes, **AAPS** torna a calcular valors cada 5 minuts a partir de les lectures que té. Això passa, per exemple, després d'un canvi de sensor, o amb els sensors Libre, que s'endarrereixen un minut o dos cada poques hores. El llaç continua funcionant i no cal que feu res. **AAPS** 4 ja no mostra cap senyal groc d'avís per a això.
 
-#### Current Profile
+#### Perfil actual
 
-The current profile is displayed next to the star icon.
+El perfil actual es mostra al costat de la icona de l'estrella.
 
-Tap the profile name to open the [Profile screen](#aaps-screens-profile), where you can view the profile details and [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Toqueu el nom del perfil per obrir la [pantalla Perfil](#aaps-screens-profile), on podeu veure els detalls del perfil i [canviar entre perfils diferents](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Step by step: [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Per **canviar el percentatge del perfil** (i la seva durada), toqueu el nom del perfil i després toqueu el botó rodó **▶** (Activar) a baix a la dreta de la pantalla Perfil. A **AAPS** 3.x aquesta pantalla s'obria mantenint premut el nom del perfil; a **AAPS** 4 mantenir-lo premut no fa res. Pas a pas: [Canviar el percentatge del perfil](#ProfileSwitch-change-percentage).
 
-![Profile with an active profile switch](../images/main/main_profile_switch.png)
+![Perfil amb un canvi de perfil actiu](../images/main/main_profile_switch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a specific percentage of 90% and a remaining duration of 9 minutes — the profile name turns yellow while a temporary profile switch is running.
-3. Profile switch with a time shift of 1 hour and a remaining duration of 9 minutes.
+1. Visualització normal amb l'activació d'un perfil estàndard.
+2. Canvi de perfil amb un percentatge específic del 90% i 9 minuts restants; el nom del perfil es torna groc mentre hi ha un canvi de perfil temporal en curs.
+3. Canvi de perfil amb un desplaçament horari d'1 hora i 9 minuts restants.
 
-#### Target
+#### Objectiu
 
-![Temp target remaining duration](../images/main/main_temp_target.png)
+![Temps restant de l'objectiu temporal](../images/main/main_temp_target.png)
 
-The current target blood glucose level is displayed below the profile name.
+L'objectiu de glucèmia actual es mostra sota el nom del perfil.
 
-Short press the target to open the **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)** screen.
+Premeu breument l'objectiu per obrir la pantalla **[Objectiu temporal](../DailyLifeWithAaps/TempTargets.md)**.
 
-1. Regular display: the target range defined in your profile.
-2. If a temp target is set, the target turns yellow/orange with the icon of the used preset, and the remaining time in minutes is shown in brackets.
+1. Visualització normal: el rang objectiu definit al vostre perfil.
+2. Si hi ha un objectiu temporal, l'objectiu es torna groc/taronja amb la icona del predefinit utilitzat, i el temps restant en minuts es mostra entre parèntesis.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
-#### Visualization of Dynamic target adjustment
+#### Visualització de l'ajust dinàmic de l'objectiu
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+Si feu servir l'[algoritme SMB](#Config-Builder-aps) i la funció [Autosens](#Open-APS-features-autosens), **AAPS** pot ajustar l'objectiu de manera dinàmica segons la sensibilitat.
 
-Enable either one or both of the following options in [OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+Activeu una o les dues opcions següents a la [configuració d'OpenAPS SMB](#Preferences-openaps-smb-settings):
 
-* "Sensitivity raises target" and/or
-* "Resistance lowers target"
+* «La sensibilitat puja l'objectiu» i/o
+* «La resistència baixa l'objectiu»
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile, and the displayed target changes color to indicate the adjustment.
+Si **AAPS** detecta resistència o sensibilitat, l'objectiu canviarà respecte al que hi ha al perfil, i l'objectiu que es mostra canvia de color per indicar l'ajust.
 
 (aaps-screens-iob-cob-basal-sens)=
 
-#### IOB, COB, basal and sensitivity
+#### IOB, COB, basal i sensibilitat
 
-![IOB, COB, basal and sensitivity](../images/main/main_iob_cob_basal_sensitivity.png)
+![IOB, COB, basal i sensibilitat](../images/main/main_iob_cob_basal_sensitivity.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-    * IOB may be negative if there have recently been periods of reduced basal.
-    * Press the chip to see the split of bolus and basal insulin (first dialog in the picture — here with a negative IOB after a period of reduced basal)
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
-3. The teal button on the right reflects the **current basal delivery**: a flat line when the profile basal is running, a changed icon while a temporary basal rate is active
-4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). When the loop changes your ISF, the row also shows the profile ISF, an arrow and the ISF the loop uses now, for example "80% 2.0 ↗ 2.5". Press it to see the Autosens value and the effective ISF (second dialog in the picture). If the loop works with a different value than the last Autosens result (for example because a temp target changes your sensitivity), the dialog also shows that value as **Autosens in algorithm**. When Autosens is off, the loop keeps your profile ISF and no effective ISF is shown.
+1. **Xeringa**: insulina a bord (IOB): quantitat d'insulina activa dins del vostre cos  
+    La xifra d'insulina a bord seria zero si només funcionés la basal estàndard i no quedés insulina de bolus anteriors. 
+    * L'IOB pot ser negativa si hi ha hagut fa poc períodes amb menys basal.
+    * Premeu el xip per veure la divisió entre insulina de bolus i insulina basal (primer diàleg de la imatge; aquí amb una IOB negativa després d'un període amb menys basal)
+2. **Gra**: [carbohidrats a bord (COB)](../DailyLifeWithAaps/CobCalculation.md): carbohidrats que heu menjat abans i que encara no s'han absorbit
+3. El botó verd blavós de la dreta mostra el **lliurament basal actual**: una línia plana quan funciona la basal del perfil, i una icona diferent mentre hi ha una basal temporal activa
+4. La **fila del percentatge** mostra la sensibilitat actual ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). Quan el llaç canvia el vostre ISF, la fila també mostra l'ISF del perfil, una fletxa i l'ISF que el llaç fa servir ara, per exemple «80% 2.0 ↗ 2.5». Premeu-la per veure el valor d'Autosens i l'ISF efectiu (segon diàleg de la imatge). Si el llaç treballa amb un valor diferent de l'últim resultat d'Autosens (per exemple, perquè un objectiu temporal canvia la vostra sensibilitat), el diàleg també mostra aquest valor com a **Autosens a l'algoritme**. Quan Autosens està desactivat, el llaç manté l'ISF del perfil i no es mostra cap ISF efectiu.
 
-The IOB dialog, opened by pressing the IOB chip:
+El diàleg d'IOB, que s'obre prement el xip d'IOB:
 
-![IOB dialog with bolus IOB and basal IOB](../images/main/main_chip_iob.png)
+![Diàleg d'IOB amb IOB Bolus i IOB Basal](../images/main/main_chip_iob.png)
 
-Press the teal button to see the temporary basal rate that is running, when it started and how long it has been running:
+Premeu el botó verd blavós per veure la basal temporal que està funcionant, quan va començar i quant de temps fa que funciona:
 
-![Temp basal dialog](../images/main/main_chip_temp_basal.png)
+![Diàleg de la basal temporal](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 
-#### Carbs required
+#### Calen carbohidrats
 
-![Carbs required shown in the COB chip](../images/main/main_screen_carbs_required.png)
+![Carbohidrats necessaris al xip de COB](../images/main/main_screen_carbs_required.png)
 
-Carbs suggestions are given when the reference design detects that it requires carbs.
+Els suggeriments de carbohidrats apareixen quan el disseny de referència detecta que calen carbohidrats.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Això passa quan l'algoritme oref creu que no us pot salvar amb una basal temporal zero i que necessitareu carbohidrats per corregir-ho.
 
-The carb notifications are much more sophisticated than the bolus calculator ones. You might see a carbs suggestion while the bolus calculator does not show missing carbs.
+Els avisos de carbohidrats són molt més elaborats que els de la calculadora de bolus. És possible que vegeu un suggeriment de carbohidrats mentre la calculadora de bolus no mostra carbohidrats que falten.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Si voleu, els avisos de carbohidrats necessaris es poden enviar a Nightscout. En aquest cas es mostrarà i es difondrà un avís.
 
-### Section C - Status row
+### Secció C - Fila d'estat
 
-![Status row](../images/main/main_status_row.png)
+![Fila d'estat](../images/main/main_status_row.png)
 
-The status row gives a visual warning for
+La fila d'estat dona un avís visual per a
 
-* Cannula age
-* Insulin age (days reservoir is used) and reservoir level (units)
-* Sensor age
-* Pump battery age and level (%)
+* Edat de la cànula
+* Edat de la insulina (dies que fa que es fa servir el reservori) i nivell del reservori (unitats)
+* Edat del sensor
+* Edat i nivell (%) de la pila de la bomba
 
-If threshold warning is exceeded, values will be shown in yellow.
+Si se supera el llindar d'avís, els valors es mostren en groc.
 
-If threshold critical is exceeded, values will be shown in red.
+Si se supera el llindar crític, els valors es mostren en vermell.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+L'edat sempre es mostra en format curt, sigui quina sigui la mida de la pantalla: *4h* el primer dia, *3d4h* més endavant.
 
-Thresholds can be changed via the small **Settings** icon shown when the status row is **expanded** (chevron on the right) — see [Status lights](#Preferences-status-lights).
+Els llindars es poden canviar amb la petita icona **Configuració** que apareix quan la fila d'estat està **desplegada** (fletxa de la dreta); vegeu [Llums d'estat](#Preferences-status-lights).
 
-The expanded status panel also has a button at the end of some rows to record a change, which resets the corresponding age: **Add** on the **Sensor** row records a sensor insertion. If your pump supports it, **Prime/Fill** appears on the **Cannula** (or **Patch pump**) and **Insulin** rows, and **Add** on the **Pump battery** row.
+El panell d'estat desplegat també té un botó al final d'algunes files per registrar un canvi, que posa a zero l'edat corresponent: **Afegir** a la fila **Sensor** registra la inserció d'un sensor. Si la vostra bomba ho permet, **Encebar** apareix a les files **Cànula** (o **Bomba patch**) i **Insulina**, i **Afegir** a la fila **Pila de la bomba**.
 
-![Expanded status panel with Prime/Fill on the Cannula and Insulin rows and Add on the Sensor and Pump battery rows](../images/main/main_status_row_expanded.png)
+![Panell d'estat desplegat amb Encebar a les files Cànula i Insulina i Afegir a les files Sensor i Pila de la bomba](../images/main/main_status_row_expanded.png)
 
-Depending on the pump you use, you may not have all of these icons.
+Segons la bomba que feu servir, potser no tindreu totes aquestes icones.
 
 (screens-sensor-level-battery)=
 
-#### Sensor level (battery)
+#### Nivell del sensor (bateria)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send battery level information to xDrip.)
+Funciona per a CGM amb un transmissor addicional com el MiaoMiao 2. (Tècnicament, el sensor ha d'enviar la informació del nivell de bateria a xDrip.)
 
-Thresholds can be set in [Status lights](#Preferences-status-lights).
+Els llindars es poden definir a [Llums d'estat](#Preferences-status-lights).
 
 (aaps-screens-main-graph)=
 
-### Section D - Main graph
+### Secció D - Gràfic principal
 
-![Main graph](../images/main/main_graph.png)
+![Gràfic principal](../images/main/main_graph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+El gràfic mostra la vostra glucèmia tal com la llegeix el monitor de glucosa (CGM).
 
-Use scroll and pinch-zoom gestures on the graph to change the visible time frame.
+Feu servir els gestos de desplaçar i de pinçar per fer zoom al gràfic per canviar el període de temps visible.
 
-The green area reflects your target range.
+L'àrea verda mostra el vostre rang objectiu.
 
-This information is also shown on this graph :
+Aquesta informació també es mostra en aquest gràfic:
 
-* Manual boluses: blue triangle just above the BG curve, pointing down at the reading of that moment, with the insulin amount
-* Carbs entries: orange triangle just below the BG curve, pointing up at the reading, with the carb amount. A meal entered with its bolus looks like one marker, split by the reading.
-* The triangles come in three sizes (small, medium, large), following the amount compared with the largest of the day. If there is no BG reading at that time (sensor gap), the triangle is drawn at the bottom of the graph.
-* BG checks and calibrations: drawn at their own measured value, so you can compare them with the sensor curve
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star icons at the top of the graph
-* Loop status: color band at the top of the graph when the [running mode](#AapsScreens-loop-status) is anything else than closed loop: blue = open loop, purple = LGS, red = loop disabled, yellow = loop suspended, grey = pump disconnected, orange = superbolus (in the screenshot: purple, then yellow). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
-* [SMBs](#Open-APS-features-super-micro-bolus-smb) are not drawn on the BG graph (there would be one every few minutes): they are shown on the [IOB graph](#aaps-screens-iob).
+* Bolus manuals: triangle blau just a sobre de la corba de glucèmia, que apunta cap avall a la lectura d'aquell moment, amb la quantitat d'insulina
+* Entrades de carbohidrats: triangle taronja just a sota de la corba de glucèmia, que apunta cap amunt a la lectura, amb la quantitat de carbohidrats. Un àpat introduït amb el seu bolus es veu com una sola marca, partida per la lectura.
+* Els triangles tenen tres mides (petita, mitjana, gran), segons la quantitat comparada amb la més gran del dia. Si no hi ha cap lectura de glucèmia en aquell moment (buit del sensor), el triangle es dibuixa a la part de baix del gràfic.
+* Controls de glucèmia i calibracions: es dibuixen al seu valor mesurat, perquè els pugueu comparar amb la corba del sensor
+* Objectiu definit al perfil o modificat per un objectiu temporal: línia verda
+* Canvis de perfil: icones d'estrella a la part de dalt del gràfic
+* Estat del llaç: franja de color a la part de dalt del gràfic quan el [mode de funcionament](#AapsScreens-loop-status) no és llaç tancat: blau = llaç obert, lila = LGS, vermell = llaç desactivat, groc = llaç suspès, gris = bomba desconnectada, taronja = superbolus (a la captura: lila i després groc). L'historial d'aquests canvis es mostra a [Mode de funcionament](#AapsScreens-running-mode)
+* Els [SMB](#Open-APS-features-super-micro-bolus-smb) no es dibuixen al gràfic de glucèmia (n'hi hauria un cada pocs minuts): es mostren al [gràfic d'IOB](#aaps-screens-iob).
 
-Tap a **BG check** in the graph to see its value, and its note if you wrote one.
+Toqueu un **Control glucèmia** al gràfic per veure'n el valor i la nota, si n'heu escrit una.
 
 (aaps-screens-graph-press-and-hold)=
 
-#### See the values at a given time
+#### Veure els valors en un moment concret
 
-**Press and hold** the BG graph for a moment to see the values at one reading. A dot marks the nearest reading, a dashed line is drawn at that time in all the graphs, and a pop-up at the top of the graph shows:
+**Manteniu premut** el gràfic de glucèmia un moment per veure els valors d'una lectura. Un punt marca la lectura més propera, es dibuixa una línia discontínua en aquell moment a tots els gràfics, i una finestra a la part de dalt del gràfic mostra:
 
-* the time and the BG value
-* IOB, COB (only when it is above 0 g) and the basal rate at that time — the basal icon shows whether a temporary basal rate was running, as on the main screen
-* any bolus, SMB or carbs at that time, with the same triangles as in the graphs
+* l'hora i el valor de glucèmia
+* IOB, COB (només quan és més de 0 g) i la taxa basal en aquell moment; la icona de la basal mostra si hi havia una basal temporal en funcionament, com a la pantalla principal
+* qualsevol bolus, SMB o carbohidrats en aquell moment, amb els mateixos triangles que als gràfics
 
-Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
+Mantingueu el dit a la pantalla i moveu-lo a l'esquerra o a la dreta per anar d'una lectura a la següent. Notareu una vibració suau a cada lectura, i el gràfic no es desplaça mentre ho feu. La finestra es queda 2 segons després d'aixecar el dit.
 
-This works the same way on the [additional graphs](#aaps-screens-additional-graphs) below the BG graph (IOB, COB...): press and hold any of them.
+Funciona igual als [gràfics addicionals](#aaps-screens-additional-graphs) sota el gràfic de glucèmia (IOB, COB...): manteniu premut qualsevol d'ells.
 
-![Press and hold the BG graph: the pop-up shows time, BG, IOB and basal](../images/main/graph_press_and_hold.png)
+![Manteniu premut el gràfic de glucèmia: la finestra mostra l'hora, la glucèmia, l'IOB i la basal](../images/main/graph_press_and_hold.png)
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Canvis d'hora
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Quan el rellotge del telèfon ha fet un salt, en un canvi d'horari d'estiu o en un fus horari nou, una línia vertical discontínua marca aquest moment al gràfic de glucèmia, amb una petita icona de rellotge a la base. La mateixa línia discontínua travessa els [gràfics addicionals](#aaps-screens-additional-graphs) de sota.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![La marca de canvi d'hora: una línia discontínua amb una icona de rellotge, al costat de la línia d'ara](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
-#### Activate optional information
+#### Activar informació opcional
 
-Press the **pencil** icon in the top-right corner of the graph to open the graph settings:
+Premeu la icona del **llapis** a la cantonada de dalt a la dreta del gràfic per obrir la configuració del gràfic:
 
-![Main graph setting](../images/main/main_graph_settings.png)
+![Configuració del gràfic principal](../images/main/main_graph_settings.png)
 
-* **Graph height** adjusts how tall the graph is drawn.
-* **ACT** overlays the insulin activity curve: a solid yellow-green line <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (not to be confused with the dotted yellow UAM prediction)
-* **PRED** overlays the [prediction lines](#aaps-screens-prediction-lines) (see below)
+* **Alçada del gràfic** ajusta l'altura del gràfic.
+* **ACT** superposa la corba d'activitat de la insulina: una línia contínua groc verdosa <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (no la confongueu amb la predicció UAM groga de punts)
+* **PRED** superposa les [línies de predicció](#aaps-screens-prediction-lines) (vegeu més avall)
 
 (aaps-screens-prediction-lines)=
 
-#### Prediction lines
+#### Línies de predicció
 
-When **PRED** is on, AAPS draws its predictions as **dotted lines** to the right of the "now" line. Each prediction has its own color. The dark theme uses lighter shades of the same colors, and a line inside the green target range can look slightly greener.
+Quan **PRED** està activat, AAPS dibuixa les prediccions com a **línies de punts** a la dreta de la línia «ara». Cada predicció té el seu color. El tema fosc fa servir tons més clars dels mateixos colors, i una línia dins del rang objectiu verd pot semblar una mica més verda.
 
-| Line                   | Light theme                                                                                                                       | Dark theme                                                                                                                         | What it predicts            |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| **IOB** (blue)         | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | insulin only                |
-| **COB** (orange)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | carbs on board              |
-| **UAM** (yellow)       | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | unannounced meal            |
-| **ZT** (cyan)          | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | zero-temp (insulin stopped) |
-| **aCOB** (pale orange) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | older AMA algorithm only    |
+| Línia                      | Tema clar                                                                                                                         | Tema fosc                                                                                                                          | Què prediu                             |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| **IOB** (blau)             | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | només insulina                         |
+| **COB** (taronja)          | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | carbohidrats a bord                    |
+| **UAM** (groc)             | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | àpat no anunciat                       |
+| **ZT** (cian)              | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | basal temporal zero (insulina aturada) |
+| **aCOB** (taronja pàl·lid) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | només l'algoritme AMA, més antic       |
 
-When two predictions give the same values, their dots overlap and you only see one of the colors (for example, UAM on top of IOB when BG is flat).
+Quan dues prediccions donen els mateixos valors, els punts se superposen i només veieu un dels colors (per exemple, UAM sobre IOB quan la glucèmia és plana).
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* Línia **COB** (taronja): [carbohidrats a bord](CobCalculation.md) (a tot AAPS el taronja es fa servir per al COB i els carbohidrats)
     
-    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
+    Aquesta línia de predicció mostra cap on anirà la vostra glucèmia (no el COB mateix!) segons la configuració actual del **perfil**, suposant que les desviacions per l'absorció de carbohidrats es mantenen constants. Aquesta línia només apareix si hi ha COB conegut.
 
-* **IOB** line (blue): insulin on board (blue is used throughout AAPS for IOB and insulin)
+* Línia **IOB** (blava): insulina a bord (a tot AAPS el blau es fa servir per a l'IOB i la insulina)
     
-    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+    Aquesta línia de predicció mostra què passaria només amb l'efecte de la insulina. Per exemple, si us heu posat insulina i després no heu menjat carbohidrats.
 
-* **ZT** line (cyan): zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* Línia **ZT** (cian): basal temporal zero (glucèmia prevista si s'establís una basal temporal del 0%)
     
-    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR). The line stops once it rises above your target.
+    Aquesta línia de predicció mostra com canviaria la trajectòria de la glucèmia si la bomba aturés tot el lliurament d'insulina (TBR del 0%). La línia s'atura quan puja per sobre del vostre objectiu.
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *Aquesta línia només apareix quan es fa servir l'algoritme [SMB](#Config-Builder-aps).*
 
-* **UAM** line (yellow): [unannounced meals](#SensitivityDetectionAndCob-sensitivity-oref1)
+* Línia **UAM** (groga): [àpats no anunciats](#SensitivityDetectionAndCob-sensitivity-oref1)
     
-    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+    Àpats no anunciats vol dir que es detecta una pujada important de la glucèmia per àpats, adrenalina o altres causes. Aquesta línia de predicció és semblant a la **línia taronja del COB**, però suposa que les desviacions baixaran a un ritme constant (allargant el ritme actual de reducció).
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used, **Enable UAM** is on in the OpenAPS SMB settings, and BG is rising more than insulin alone explains.*
+    *Aquesta línia només apareix quan es fa servir l'algoritme [SMB](#Config-Builder-aps), **Activar UAM** està activat a la configuració d'OpenAPS SMB i la glucèmia puja més del que explica només la insulina.*
 
-* **aCOB** line (pale, see-through orange): accelerated carbohydrate absorption
+* Línia **aCOB** (taronja pàl·lid i transparent): absorció accelerada de carbohidrats
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Deprecated and of limited usefulness.
+    Semblant al COB, però suposant una velocitat d'absorció de carbohidrats fixa de 10 mg/dl/5 min (0,555 mmol/l/5 min). Obsolet i de poca utilitat.
     
-    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+    *Aquesta línia només apareix quan es fa servir l'algoritme [AMA](#Config-Builder-aps), més antic.*
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Normalment la vostra corba real de glucèmia acaba al mig d'aquestes línies, o a prop de la línia les suposicions de la qual s'assemblen més a la vostra situació.
 
 (aaps-screens-how-predictions-become-a-dosing-decision)=
 
-#### How AAPS turns predictions into a dosing decision
+#### Com converteix AAPS les prediccions en una decisió de dosi
 
-AAPS doesn't dose insulin based on your current BG alone — every loop cycle (roughly every 5 minutes) it looks at all of the prediction lines above together and works out the safest course of action.
+AAPS no dosifica la insulina només segons la glucèmia actual: a cada cicle del llaç (aproximadament cada 5 minuts) mira totes les línies de predicció de dalt juntes i decideix l'acció més segura.
 
-The core rule is **safety first**: if *any* prediction line, in any time frame, dips below your low safety threshold, AAPS issues a zero-temp (0% temporary basal rate) and withholds further insulin, even if your current BG is high. Only once every prediction line stays above that threshold will AAPS consider giving more insulin.
+La regla bàsica és **primer la seguretat**: si *qualsevol* línia de predicció, en qualsevol moment, baixa per sota del vostre llindar de seguretat baix, AAPS estableix una basal temporal zero (basal temporal del 0%) i no dona més insulina, encara que la glucèmia actual sigui alta. Només quan totes les línies de predicció es mantenen per sobre d'aquest llindar, AAPS es planteja donar més insulina.
 
-When it is safe to give more insulin, AAPS looks at where BG is ultimately predicted to end up (the **eventual BG**) across the blended predictions, and works out how much correction is needed to bring that eventual BG back to target — delivered either as an increased temporary basal rate, or (if the oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) algorithm is enabled) as a small immediate bolus. If BG is high now but is already trending down enough on its own, AAPS will hold off, or may even reduce the basal rate, rather than add insulin that would only push a later low even lower.
+Quan és segur donar més insulina, AAPS mira on es preveu que acabarà la glucèmia (la **glucèmia final**) segons les prediccions combinades, i calcula quanta correcció cal per tornar aquesta glucèmia final a l'objectiu; la dona com a basal temporal augmentada o (si l'algoritme oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) està activat) com un petit bolus immediat. Si la glucèmia és alta ara però ja baixa prou sola, AAPS espera, o fins i tot pot reduir la taxa basal, en lloc d'afegir insulina que només faria més baixa una hipoglucèmia posterior.
 
-For worked examples of this decision logic with real screenshots, see the [dosing scenarios in the Clinician's guide](#clinicianguide-dosing-scenarios) — they were written for a clinician audience but apply to any AAPS user.
+Per veure exemples pràctics d'aquesta lògica de decisió amb captures reals, vegeu els [escenaris de dosificació de la guia per a professionals sanitaris](#clinicianguide-dosing-scenarios); es van escriure per a professionals sanitaris, però serveixen per a qualsevol usuari d'AAPS.
 
-*For the full technical treatment of how these predictions and the resulting dosing decision are calculated, see [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
+*Per a l'explicació tècnica completa de com es calculen aquestes prediccions i la decisió de dosi que en resulta, vegeu la [documentació de determine-basal d'OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
 
 #### Basals
 
-A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+Una línia **blava contínua** mostra el lliurament basal de la bomba i reflecteix el lliurament real al llarg del temps.
 
-The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
+La línia **blava de punts** és la taxa basal que hi hauria sense ajustos de basal temporal (TBR).
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+Quan es dona la taxa basal estàndard, l'àrea sota la corba es mostra en blau fosc. Quan la taxa basal s'ajusta temporalment (augmentada o reduïda), l'àrea sota la corba es mostra en blau clar.
 
-#### Activity
+#### Activitat
 
-The **thin yellow** line shows the activity of Insulin.
+La línia **groga fina** mostra l'activitat de la insulina.
 
-It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+Es basa en la baixada de glucèmia esperada per la insulina del vostre cos si no hi hagués altres factors (com els carbohidrats).
 
 (AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-### Section E - Additional graphs
+### Secció E - Gràfics addicionals
 
-You can activate additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Podeu activar gràfics addicionals sota el gràfic principal. En [Mode simple](#preferences-simple-mode), els gràfics addicionals estan predefinits i no es poden canviar. Desactiveu el **Mode simple** si voleu configurar vosaltres mateixos els gràfics addicionals.
 
-The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. A sideways drag on an additional graph also scrolls all the graphs. They have no time labels of their own — read the time on the BG graph.
+Els gràfics addicionals segueixen el gràfic principal: quan desplaceu o feu zoom al gràfic de glucèmia, es mouen amb ell. Arrossegar de costat un gràfic addicional també desplaça tots els gràfics. No tenen etiquetes d'hora pròpies: llegiu l'hora al gràfic de glucèmia.
 
-To configure an additional graph, press the **pencil** icon in its top-right corner:
+Per configurar un gràfic addicional, premeu la icona del **llapis** a la seva cantonada de dalt a la dreta:
 
-![Additional graph settings](../images/main/main_additional_graph_settings.png)
+![Configuració addicional dels gràfics](../images/main/main_additional_graph_settings.png)
 
-Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
+Seleccioneu els xips de les dades que voleu veure en aquest gràfic; el botó **Eliminar** esborra el gràfic.
 
-To create one more graph, press **Add graph** below the last graph and select its chips in the same way:
+Per crear un gràfic més, premeu **Afegir gràfic** sota l'últim gràfic i seleccioneu-ne els xips de la mateixa manera:
 
-![Add graph](../images/main/graph_add.png)
+![Afegir gràfic](../images/main/graph_add.png)
 
-The new graph is added below the others — here a second additional graph with **SENS%** and **DEV**:
+El gràfic nou s'afegeix sota els altres; aquí, un segon gràfic addicional amb **SENS%** i **DEV**:
 
-![Main screen with a second additional graph](../images/main/main_screen_additional_graph.png)
+![Pantalla principal amb un segon gràfic addicional](../images/main/main_screen_additional_graph.png)
 
-Most users find the following configuration of additional graphs to be adequate :
+La majoria d'usuaris troben adequada aquesta configuració de gràfics addicionals:
 
-* Graph 1 with IOB, BAS
-* Graph 2 with COB, Sensitivity change
-* Graph 3 with Deviations and BGI.
+* Gràfic 1 amb IOB, BAS
+* Gràfic 2 amb COB, Canvi de sensibilitat
+* Gràfic 3 amb Desviacions i BGI.
 
-#### Absolute insulin (ABS)
+#### Insulina absoluta (ABS)
 
-Active insulin including boluses **and basal**.
+Insulina activa, incloent-hi els bolus **i la basal**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Insulina a bord (IOB)
 
-Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+Mostra la insulina a bord (= insulina activa al vostre cos). Inclou la insulina dels bolus i de la basal temporal (**però no les taxes basals definides al perfil**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Si durant el temps de la DIA no hi hagués hagut [SMB](#Open-APS-features-super-micro-bolus-smb), ni bolus, ni TBR, seria zero.
 
-SMBs are shown on this graph as blue triangles, in three sizes following the amount compared with the largest SMB of the day.
+Els SMB es mostren en aquest gràfic com a triangles blaus, en tres mides segons la quantitat comparada amb l'SMB més gran del dia.
 
-IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+L'IOB pot ser negativa si no us queda insulina de bolus i durant molt de temps heu tingut una basal temporal zero o baixa.
 
-Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin-dia).
+L'absorció depèn de la vostra [configuració de la DIA i del tipus d'insulina](#Config-Builder-insulin-dia).
 
-#### Carbs On Board (COB)
+#### Carbohidrats a bord (COB)
 
-Shows the carbs you have on board (= active, not yet decayed carbs in your body).
+Mostra els carbohidrats a bord (= carbohidrats actius al vostre cos que encara no s'han absorbit).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+L'absorció depèn de les [desviacions que detecta l'algoritme](../DailyLifeWithAaps/CobCalculation.md).
 
-If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
+Si detecta una absorció de carbohidrats més alta de l'esperada, es donarà insulina i això farà pujar l'IOB (més o menys, segons la vostra configuració de seguretat).
 
-#### Sensitivity change (SENS%)
+#### Canvi de sensibilitat (SENS%)
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Mostra la sensibilitat que ha detectat [Autosens](#Open-APS-features-autosens).
 
-Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+La sensibilitat és un càlcul de la sensibilitat a la insulina com a resultat de l'esport, les hormones, etc.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Tingueu en compte que heu d'estar a l'[Objectiu 8](#objectives-objective8) perquè la Detecció de sensibilitat/[Autosens](#Open-APS-features-autosens) pugui ajustar automàticament la quantitat d'insulina lliurada. Abans d'arribar a aquest objectiu, la línia del gràfic només es mostra a títol informatiu.
 
-### Variable sensitivity (VSENS)
+### Sensibilitat variable (VSENS)
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Mostra la sensibilitat calculada per [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Només té dades si feu servir aquesta funció.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate (HR) & Steps
+#### Freqüència cardíaca (HR) i passos
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Aquestes dades poden estar disponibles si feu servir un [rellotge intel·ligent Wear OS](../WearOS/WearOsSmartwatch.md). Activeu-les a l'aplicació **AAPS** Wear i doneu permís per a les dades de salut.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Els passos es dibuixen com a columnes, i la freqüència cardíaca com una línia corba que s'interromp on el rellotge no ha enviat dades.
 
-#### Deviations (DEV)
+#### Desviacions (DEV)
 
-* **Grey** bars show a deviation due to carbs.
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* Les barres **grises** mostren una desviació deguda als carbohidrats.
+* Les barres **verdes** mostren que la glucèmia és més alta del que esperava l'algoritme. Les barres verdes serveixen per augmentar la resistència a [Autosens](#Open-APS-features-autosens).
+* Les barres **vermelles** mostren que la glucèmia és més baixa del que esperava l'algoritme. Les barres vermelles serveixen per augmentar la sensibilitat a [Autosens](#Open-APS-features-autosens).
+* Les barres **grogues** mostren una desviació deguda a UAM.
+* Les barres **negres** mostren desviacions petites que no es tenen en compte per a la sensibilitat
 
-#### Blood Glucose Impact (-BGI)
+#### Impacte en la glucèmia (-BGI)
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Aquesta línia mostra quant «hauria» de pujar o baixar la glucèmia només per l'activitat de la insulina.
 
-![Deviations and BGI](../images/main/graph_dev_bgi.png)
+![Desviacions i BGI](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are well above the BGI line: BG rises more than insulin activity alone explains (for example after carbs). At the time marked **2**, the Deviation bars are below zero (red): BG is lower than the algorithm expected.
+És una bona combinació mostrar aquesta línia juntament amb les barres de desviació. Comparteixen la mateixa escala, però és diferent de la de les altres dades opcionals, per això és bona idea mostrar-les en un gràfic separat, com es veu a dalt. Comparar la línia BGI i les barres de desviació és una altra manera d'entendre com varia la **glucèmia**. Aquí, al moment marcat amb **1**, les barres de desviació estan molt per sobre de la línia BGI: la glucèmia puja més del que explica només l'activitat de la insulina (per exemple, després de menjar carbohidrats). Al moment marcat amb **2**, les barres de desviació estan per sota de zero (vermelles): la glucèmia és més baixa del que esperava l'algoritme.
 
-### Section F - QuickLaunch toolbar
+### Secció F - Barra d'accés ràpid
 
-![QuickLaunch toolbar](../images/main/main_quicklaunch_toolbar.png)
+![Barra d'accés ràpid](../images/main/main_quicklaunch_toolbar.png)
 
-The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
+La barra flotant de la part de baix de la pantalla conté les vostres accions d'**[accés ràpid](../DailyLifeWithAaps/QuickLaunch.md)**. El petit **engranatge** obre la configuració de l'accés ràpid, on trieu quins botons es mostren (tractaments, entrades del portal de cures, accions del CGM, les pantalles del full **Gestionar**, botons d'[Assistent ràpid](../DailyLifeWithAaps/QuickWizards.md), [Escenes](../DailyLifeWithAaps/Scenes.md) i més).
 
-A typical configuration is shown above: **Insulin**, **Carbs** and the **Bolus wizard**.
+A dalt es mostra una configuració típica: **Insulina**, **Carbs** i la **Calculadora de bolus**.
 
-While the pump is **disconnected**, the treatment buttons stay in the toolbar, for example to record insulin given with a pen (see [Insulin](#aaps-screens-buttons-insulin) below). The same actions are also available in the [Treatments sheet](#aaps-screens-treatments-sheet) of the bottom navigation.
+Mentre la bomba està **desconnectada**, els botons de tractament es queden a la barra, per exemple per registrar insulina posada amb ploma (vegeu [Insulina](#aaps-screens-buttons-insulin) més avall). Les mateixes accions també estan disponibles al [full Tractaments](#aaps-screens-treatments-sheet) de la navegació inferior.
 
 (aaps-screens-buttons-insulin)=
 
-#### Insulin
+#### Insulina
 
-![Insulin dialog](../images/v4/Screens/insulin_dialog.png)
+![Diàleg d'insulina](../images/v4/Screens/insulin_dialog.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Per donar una quantitat d'insulina sense fer servir la [calculadora de bolus](#aaps-screens-bolus-wizard).
 
-By enabling **Start Eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Si activeu **Iniciar OT: Menjar aviat**, podeu iniciar automàticament el vostre [objectiu temporal Menjar aviat](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". An additional **Time** row, set to **Now**, lets you record an insulin injection made in the past: use **-** / **+** to change it, or tap the chevron to type the minutes or pick a date and time.
+Si no voleu fer el bolus amb la bomba, sinó registrar una quantitat d'insulina (p. ex. insulina posada amb ploma), activeu «**El bolus només es registrarà (la bomba no el lliurarà)**». Una fila addicional **Hora**, posada a **Ara**, us permet registrar una injecció d'insulina feta en el passat: feu servir **-** / **+** per canviar-la, o toqueu la fletxa per escriure els minuts o triar una data i una hora.
 
-![The Time row, folded](../images/v4/Screens/insulin_dialog_record_only_time.png) ![The Time row, opened with the chevron](../images/v4/Screens/insulin_dialog_time_open.png)
+![La fila Hora, plegada](../images/v4/Screens/insulin_dialog_record_only_time.png) ![La fila Hora, oberta amb la fletxa](../images/v4/Screens/insulin_dialog_time_open.png)
 
-You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin quantity. The increment values can be changed in the [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result).
+Podeu fer servir els botons **+0.5 / +1.0 / +2.0** per augmentar ràpidament la quantitat d'insulina. Els valors d'increment es poden canviar a la [configuració de la calculadora de bolus](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-The insulin dialog can be used when the pump is suspended or disconnected as well, e.g. to record insulin injected with a pen. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+El diàleg d'insulina també es pot fer servir quan la bomba està suspesa o desconnectada, per exemple per registrar insulina injectada amb ploma. En aquest cas, «**El bolus només es registrarà (la bomba no el lliurarà)**» està forçat a activat (es mostra en vermell) i apareixen camps addicionals per seleccionar el tipus d'insulina i un desplaçament d'**Hora** per a una injecció feta en el passat:
 
-![Insulin dialog with pump disconnected](../images/main/insulin_dialog_pump_disconnected.png)
+![Diàleg d'insulina amb la bomba desconnectada](../images/main/insulin_dialog_pump_disconnected.png)
 
 #### Carbs
 
-![Carbs dialog](../images/v4/Screens/carbs_dialog.png)
+![Diàleg de carbohidrats](../images/v4/Screens/carbs_dialog.png)
 
-To record carbs without bolusing.
+Per registrar carbohidrats sense fer un bolus.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) (Hypo, Eating soon, Activity) can be started directly with the switches on top.
+Alguns [objectius temporals predefinits](#TempTargets-hypo-temp-target) (Hipo, Menjar aviat, Activitat) es poden iniciar directament amb els interruptors de dalt.
 
-**Carb time**: When will you / have you been eating carbs.
+**Hora dels carbohidrats**: quan menjareu o heu menjat els carbohidrats.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). This row is folded, so that you do not type the grams into it by mistake: use **-** / **+** to change it, or tap the chevron to open it and type a value.
+**Durada**: s'utilitza per als [«carbohidrats estesos»](ExtendedCarbs.md). Aquesta fila està plegada perquè no hi escriviu els grams per error: feu servir **-** / **+** per canviar-la, o toqueu la fletxa per obrir-la i escriure un valor.
 
-You can use the **+5 / +10 / +20** buttons to quickly increase the carb amount.
+Podeu fer servir els botons **+5 / +10 / +20** per augmentar ràpidament la quantitat de carbohidrats.
 
-#### Quick Wizard
+#### Assistent ràpid
 
-Easily enter amount of carbs and set calculation basics with a single pre-configured button.
+Introduïu fàcilment la quantitat de carbohidrats i definiu les bases del càlcul amb un sol botó preconfigurat.
 
-Details are set up in [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md).
+Els detalls es configuren a [Assistent ràpid](../DailyLifeWithAaps/QuickWizards.md).
 
 (aaps-screens-treatments-sheet)=
 
-### Section G - Bottom navigation
+### Secció G - Navegació inferior
 
-The bottom navigation bar gives access to:
+La barra de navegació inferior dona accés a:
 
-* **Treatments** — a quick-actions sheet with your treatment actions:
+* **Tractaments**: un full d'accions ràpides amb les vostres accions de tractament:
     
-    ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
+    ![Full Tractaments](../images/v4/Screens/treatments_sheet.png)
 
-* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now. The **pencil** at the top of the sheet opens **Manage → Scenes**.
+* **Escenes**: només es mostra si teniu com a mínim una [escena](../DailyLifeWithAaps/Scenes.md) o una tasca d'**Automatització** marcada com a **Acció de l'usuari**. Obre un full des del qual les podeu iniciar; una insígnia mostra quantes en podeu iniciar ara mateix. El **llapis** de la part de dalt del full obre **Gestionar → Escenes**.
 
-* **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin settings, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump and Authorized clients. Below them are device and basal actions such as Sensor Insert and Temp Basal. Some items only appear when they apply to your setup — for example Prime/Fill and battery change depend on your pump, and Temp Basal, Extended Bolus and the Careportal entries are hidden in [Simple Mode](#preferences-simple-mode):
+* **Gestionar**: el centre de tot el que gestioneu a **AAPS**: Perfil, Configuració d'insulina, Objectiu temporal, Assistent ràpid, Escenes, Automatització, Aliments, Rotació de punts d'inserció, Bomba i Clients autoritzats. A sota hi ha accions de dispositius i de basal, com Inserció del sensor i Basal temporal. Alguns elements només apareixen quan s'apliquen a la vostra configuració; per exemple, Encebar i el canvi de pila depenen de la bomba, i Basal temporal, Bolus estès i les entrades del portal de cures s'amaguen en [Mode simple](#preferences-simple-mode):
     
-    ![Manage sheet](../images/v4/Screens/manage_sheet.png)
+    ![Full Gestionar](../images/v4/Screens/manage_sheet.png)
 
-* **Objectives** — your progress through the [Objectives](../SettingUpAaps/CompletingTheObjectives.md); a badge shows how many are completed. This item disappears once all objectives are finished, and is not present on **AAPSClient**.
+* **Objectius**: el vostre progrés als [objectius](../SettingUpAaps/CompletingTheObjectives.md); una insígnia mostra quants n'heu completat. Aquest element desapareix quan s'han acabat tots els objectius, i no hi és a **AAPSClient**.
 
 (aaps-screens-notifications)=
 
-#### Notifications
+#### Notificacions
 
-A **notification bubble** may appear above the bottom bar, on the right. It collects the active notifications of **AAPS**; the small number shows how many there are. Its color follows the most important one: red for an urgent message, green for a simple information.
+Pot aparèixer una **bombolla d'avisos** a sobre de la barra inferior, a la dreta. Recull els avisos actius d'**AAPS**; el número petit mostra quants n'hi ha. El seu color segueix el més important: vermell per a un missatge urgent, verd per a una simple informació.
 
-![Main screen with the notification bubble](../images/main/main_screen_notification_bubble.png)
+![Pantalla principal amb la bombolla d'avisos](../images/main/main_screen_notification_bubble.png)
 
-Tap the bubble to open the **Notification** panel. Each message shows the time it was raised. Press **Dismiss** below a message to remove it; some messages have another button instead, to take you to the setting that needs your attention.
+Toqueu la bombolla per obrir el panell d'**Avís**. Cada missatge mostra l'hora en què va aparèixer. Premeu **Ignorar** sota un missatge per treure'l; alguns missatges tenen un altre botó en lloc d'aquest, que us porta a la configuració que necessita la vostra atenció.
 
-![Notification panel with one message and its Dismiss button](../images/main/notification_panel.png)
+![Panell d'avisos amb un missatge i el seu botó Ignorar](../images/main/notification_panel.png)
 
-![Notification panel](../images/main/main_notification_panel.png)
+![Panell d'avisos](../images/main/main_notification_panel.png)
 
 (bolus-wizard)= (aaps-screens-bolus-wizard)=
 
-## Bolus Wizard
+## Calculadora de bolus
 
-![Bolus wizard](../images/v4/Screens/bolus_wizard.png)
+![Calculadora de bolus](../images/v4/Screens/bolus_wizard.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Quan vulgueu fer un bolus d'àpat, normalment el fareu des d'aquí.
 
-### Section I
+### Secció I
 
-The **Calculation** header shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+La capçalera **Càlcul** mostra el bolus calculat. Si la insulina a bord ja supera el bolus calculat, només mostrarà la quantitat de carbohidrats que encara calen.
 
-The bolus calculator can be used whatever your current **BG**, including when it is too high or too low. If **BG** is above target, a correction is added to the meal bolus. If **BG** is below target, the bolus is reduced and, if the insulin already on board is more than needed, the calculator tells you how many carbs are still required instead of proposing insulin.
+La calculadora de bolus es pot fer servir sigui quina sigui la **glucèmia** actual, també quan és massa alta o massa baixa. Si la **glucèmia** és per sobre de l'objectiu, s'afegeix una correcció al bolus d'àpat. Si la **glucèmia** és per sota de l'objectiu, el bolus es redueix i, si la insulina a bord ja és més de la necessària, la calculadora us diu quants carbohidrats encara calen en lloc de proposar insulina.
 
-The icon row below the header shows which inputs enter the calculation (BG, trend, IOB, temporary target, COB). Pressing an icon enables / disables this entry from the calculation; the **(i)** icon shows the detailed numbers behind the calculation.
+La fila d'icones sota la capçalera mostra quines dades entren al càlcul (glucèmia, tendència, IOB, objectiu temporal, COB). Prémer una icona activa / desactiva aquesta dada al càlcul; la icona **(i)** mostra els números detallats del càlcul.
 
-#### Combinations of COB and IOB and what they mean
+#### Combinacions de COB i IOB i què volen dir
 
-* For safety reasons, the IOB input cannot be disabled when COB is enabled as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you enable COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you enable IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
-* For safety reasons, a **temporary target** is only included in the calculation if you enable its input manually.
+* Per seguretat, la dada IOB no es pot desactivar quan el COB està activat, perquè podríeu arriscar-vos a posar massa insulina, ja que **AAPS** no tindria en compte la que ja s'ha donat.
+* Si activeu COB i IOB, es tindran en compte els carbohidrats no absorbits que encara no estan coberts amb insulina + tota la insulina lliurada com a TBR o SMB.
+* Si activeu IOB sense COB, **AAPS** té en compte la insulina ja lliurada, però no la compensa amb els carbohidrats que encara s'han d'absorbir. Això provoca un avís de «carbohidrats que falten».
+* Si feu un bolus per a **menjar addicional** poc després d'un bolus d'àpat (p. ex. unes postres), pot ser útil **desactivar totes les dades**. Així només s'afegeixen els carbohidrats nous, perquè l'àpat principal no s'ha d'haver absorbit necessàriament, i l'IOB no coincidirà exactament amb el COB poc després d'un bolus d'àpat.
+* Per seguretat, un **objectiu temporal** només s'inclou al càlcul si activeu aquesta dada manualment.
 
 (AapsScreens-section-j)=
 
-### Section J - Entry fields
+### Secció J - Camps d'entrada
 
-In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the **+** buttons below it add carbs quickly. **AAPS** only works with grams: if you count in bread units or exchanges (*e.g.* DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
+Al camp **Carbs** introduïu la vostra estimació de la quantitat de carbohidrats, **en grams**, per a la qual voleu fer el bolus; els botons **+** de sota afegeixen carbohidrats ràpidament. **AAPS** només treballa amb grams: si compteu en racions o unitats de pa (*p. ex.* intercanvis «CHO» de DAFNE), convertiu-les a grams abans d'introduir-les. Vegeu la [nota sobre les unitats de pa](#your-aaps-profile-insulin-to-carbs-ratio) a la pàgina del perfil.
 
-#### Carbs type: bread, cake or pizza
+#### Tipus de carbohidrats: pa, pastís o pizza
 
-Below the **Carbs** field, the **Bread**, **Cake** and **Pizza** buttons tell **AAPS** how fast the meal is absorbed. With **Cake** and **Pizza**, the bolus covers only a part of the carbs now and the rest is added later as eCarbs. See [Carbs type: bread, cake or pizza](#AapsScreens-carbs-type) on the Extended carbs page for the percentages and timing.
+Sota el camp **Carbs**, els botons **Pa**, **Pastís** i **Pizza** diuen a **AAPS** com de ràpid s'absorbeix l'àpat. Amb **Pastís** i **Pizza**, el bolus cobreix ara només una part dels carbohidrats i la resta s'afegeix més tard com a e-carbs. Vegeu [Tipus de carbohidrats: pa, pastís o pizza](#AapsScreens-carbs-type) a la pàgina de carbohidrats estesos per als percentatges i els temps.
 
-The **Correction** row is if you want to modify the end dosage for some reason.
+La fila **Correcció** serveix si voleu modificar la dosi final per algun motiu.
 
-Only the **Carbs** field is always open. The other rows (**Correction**, **Carb time**, **BG** and **Use percentage**) are folded: they show their value with **-** / **+** buttons, so you can change it in small steps. Tap the chevron to open a row and type a value, and tap it again to close the row. This avoids typing grams into the **Correction** field by mistake.
+Només el camp **Carbs** està sempre obert. Les altres files (**Correcció**, **Hora dels carbohidrats**, **Glucèmia** i **Utilitzar percentatge**) estan plegades: mostren el seu valor amb els botons **-** / **+**, perquè el pugueu canviar a passos petits. Toqueu la fletxa per obrir una fila i escriure un valor, i torneu-la a tocar per tancar la fila. Així s'evita escriure grams al camp **Correcció** per error.
 
-![Folded rows in the bolus wizard](../images/v4/Screens/bolus_wizard_bottom.png)
+![Files plegades a la calculadora de bolus](../images/v4/Screens/bolus_wizard_bottom.png)
 
-Tap anywhere on the **Profile** row to open the list of your profiles, then tap a name to use that profile for this calculation.
+Toqueu qualsevol punt de la fila **Perfil** per obrir la llista dels vostres perfils, i després toqueu un nom per fer servir aquest perfil per a aquest càlcul.
 
-![The list of profiles in the bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
+![La llista de perfils a la calculadora de bolus](../images/v4/Screens/bolus_wizard_profile_list.png)
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+El camp **Hora dels carbohidrats** serveix per al prebolus: així podeu dir al sistema que els carbohidrats arribaran amb un retard. Podeu posar un nombre negatiu en aquest camp si feu un bolus per carbohidrats passats.
 
-**Set alarm** (eating reminder): when a carb time in the future is entered, a "**Set alarm**" switch appears so that you are reminded at the given time, when to eat the carbs you have input into **AAPS**:
+**Establir alarma** (recordatori per menjar): quan s'introdueix una hora dels carbohidrats en el futur, apareix un interruptor «**Establir alarma**» perquè us recordi a l'hora indicada que mengeu els carbohidrats que heu introduït a **AAPS**:
 
-![Set alarm for future carbs](../images/v4/Screens/bolus_wizard_set_alarm.png)
+![Establir alarma per a carbohidrats futurs](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+El recordatori comença quan s'ha lliurat el bolus. Mentre funciona, una barra **Hora de menjar** a la pantalla principal fa el compte enrere, amb **Aturar** i **+5 min**. **+5 min** mou el final de l'espera cinc minuts més tard, i la barra mostra l'espera total. Quan arriba l'hora, el recordatori sona amb el seu propi so, un temporitzador de cuina suau. A més de **Silenciar alarma** (la pantalla es queda oberta) i **Silenciar i tancar**, la pantalla de l'alarma ofereix **+5 min**, que comença una nova espera de cinc minuts. Un cop ha sonat, la barra diu *S'ha acabat el temps* amb **+5 min** i **Ignorar**; **Silenciar i tancar** també treu la barra. La barra i l'alarma també es mostren a **AAPSClient** i al [rellotge](#WearOsSmartwatch-wizard-carb-time). El recordatori no crea cap temporitzador a l'aplicació de rellotge del telèfon. Si Android no deixa que **AAPS** posi alarmes, la calculadora us demana que permeteu *Alarmes i recordatoris* per a **AAPS** a la configuració d'Android. La campana no s'ofereix per a una hora dels carbohidrats en el passat.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![La barra Hora de menjar a la pantalla principal, amb +5 min i Aturar](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![La pantalla de l'alarma Hora de menjar: +5 min, Silenciar alarma, Silenciar i tancar](../images/main/eat_reminder_alarm.png)
 
-The **BG** field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. When the reading is recent, the **BG** row stays folded. The field follows new readings while the wizard is open, until you change it yourself.
+El camp **Glucèmia** normalment ja té l'última lectura del CGM. Si no teniu un CGM que funcioni, estarà en blanc. Quan la lectura és recent, la fila **Glucèmia** es queda plegada. El camp segueix les lectures noves mentre la calculadora està oberta, fins que el canvieu vosaltres.
 
-The result button at the bottom shows the proposed bolus; pressing it asks for confirmation before any insulin is delivered. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+El botó de resultat de la part de baix mostra el bolus proposat; si el premeu, demana confirmació abans de lliurar cap insulina. Mentre la confirmació està esperant, el llaç no dona SMB, així el bolus que confirmeu continua sent correcte. Si s'està lliurant un SMB en aquell moment, **OK** espera fins que acabi.
 
-Good to know:
+Bo de saber:
 
-* If the calculated bolus is above your **[Maximum bolus](#Preferences-maximum-bolus)**, it is reduced to the max bolus, and the confirmation shows the warning "Bolus constraint applied". A [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) is refused instead.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
-* A bolus you give by hand has priority over an [SMB](#Open-APS-features-super-micro-bolus-smb) that is waiting to be delivered: the SMB is dropped and the loop calculates again. If an SMB is being delivered right now, your bolus is refused with the message "An SMB is being delivered right now. Try again when it has finished." No insulin is given, and carbs entered with that bolus are not saved: wait a moment and enter them again.
+* Si el bolus calculat és més alt que el vostre **[Bolus màxim](#Preferences-maximum-bolus)**, es redueix al bolus màxim, i la confirmació mostra l'avís «Restricció de bolus aplicada». En canvi, un [Assistent ràpid](../DailyLifeWithAaps/QuickWizards.md) es rebutja.
+* Quan el bolus només es registra (per exemple, mentre la bomba està desconnectada), l'avís «**El bolus només es registrarà (la bomba no el lliurarà)**» es queda a la part de dalt del diàleg, també quan us desplaceu.
+* Un bolus que doneu a mà té prioritat sobre un [SMB](#Open-APS-features-super-micro-bolus-smb) que està esperant per lliurar-se: l'SMB es descarta i el llaç torna a calcular. Si s'està lliurant un SMB en aquest moment, el vostre bolus es rebutja amb el missatge «S'està lliurant un SMB en aquest moment. Torneu-ho a provar quan hagi acabat.» No es dona insulina, i els carbohidrats introduïts amb aquest bolus no es desen: espereu un moment i torneu-los a introduir.
 
 (AapsScreens-wrong-cob-detection)=
 
-#### Wrong COB detection
+#### Detecció errònia del COB
 
-![Slow carb absorption](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
+![Absorció lenta de carbohidrats](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Si veieu l'avís de dalt després de fer servir la calculadora de bolus, **AAPS** ha detectat que el valor de COB calculat pot ser erroni. Per tant, si voleu tornar a fer un bolus després d'un àpat anterior amb COB, tingueu cura de no fer una sobredosi!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Per a més detalls, vegeu els consells a la [pàgina Càlcul del COB](#CobCalculation-detection-of-wrong-cob-values).
 
-Looking for the **Actions** tab of **AAPS** 3.x? Its functions moved to the main screen, the **Manage** sheet and the QuickLaunch toolbar: see [Where did the Actions tab go?](#screens-action-tab).
+Busqueu la pestanya **Accions** d'**AAPS** 3.x? Les seves funcions s'han mogut a la pantalla principal, al full **Gestionar** i a la barra d'accés ràpid: vegeu [On és la pestanya Accions?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-## Careportal entries
+## Entrades del portal de cures
 
-The ages and levels shown in the [status row](#screens-sensor-level-battery) (sensor, insulin, cannula, pump battery) are based on careportal entries: **Prime/Fill** (records pump site and insulin cartridge changes), **Sensor Insert** and **Pump Battery Change**.
+Les edats i els nivells que es mostren a la [fila d'estat](#screens-sensor-level-battery) (sensor, insulina, cànula, pila de la bomba) es basen en entrades del portal de cures: **Encebar** (registra els canvis del punt d'infusió i del cartutx d'insulina), **Inserció del sensor** i **Canvi de pila de la bomba**.
 
-You can record them from the expanded status panel on the main screen, from the **Manage** sheet, or with [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
+Les podeu registrar des del panell d'estat desplegat de la pantalla principal, des del full **Gestionar** o amb botons d'[accés ràpid](../DailyLifeWithAaps/QuickLaunch.md).
 
-**Prime/Fill** records a pump site change and/or an insulin cartridge change, and can deliver a prime amount:
+**Encebar** registra un canvi del punt d'infusió i/o un canvi del cartutx d'insulina, i pot lliurar una quantitat d'encebament:
 
-![Prime/Fill dialog](../images/dialogs/prime_fill.png)
+![Diàleg Encebar](../images/dialogs/prime_fill.png)
 
-**Sensor Insert** and **Pump Battery Change** only ask for the time of the event:
+**Inserció del sensor** i **Canvi de pila de la bomba** només demanen l'hora de l'esdeveniment:
 
-![Sensor Insert dialog](../images/dialogs/sensor_insert.png)
+![Diàleg Inserció del sensor](../images/dialogs/sensor_insert.png)
 
-![Pump Battery Change dialog](../images/dialogs/pump_battery_change.png) Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
+![Diàleg Canvi de pila de la bomba](../images/dialogs/pump_battery_change.png) Les entrades d'esport, avís, pregunta i nota reflecteixen el portal de cures de Nightscout i són formes especials de notes.
 
-In the **Manage** sheet, scroll down and press **Careportal** to show these entries: **BG Check**, **Note**, **Exercise**, **Question** and **Announcement**.
+Al full **Gestionar**, desplaceu-vos cap avall i premeu **Portal de cures** per mostrar aquestes entrades: **Control glucèmia**, **Nota**, **Esport**, **Pregunta** i **Avís**.
 
-![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
+![Secció Portal de cures del full Gestionar](../images/v4/Screens/manage_sheet_careportal.png)
 
-**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Meter**.
+**Control glucèmia**, **Pregunta** i **Avís** us permeten introduir un valor de glucèmia (d'un glucòmetre, del sensor o d'una altra font), una nota i l'hora de l'esdeveniment. A **Pregunta** i **Avís**, la fila de glucèmia està plegada i mostra el tipus de mesura al costat del valor: si canvieu el valor, el tipus canvia de **Sensor** a **Glucòmetre**.
 
-![Question with the folded glucose row](../images/dialogs/careportal_question.png)
+![Pregunta amb la fila de glucèmia plegada](../images/dialogs/careportal_question.png)
 
-![BG Check dialog](../images/dialogs/careportal_bg_check.png)
+![Diàleg Control glucèmia](../images/dialogs/careportal_bg_check.png)
 
-**Note** and **Exercise** let you enter a duration (a folded row: use **-** / **+**, or tap the chevron to type it), a note and the time of the event:
+**Nota** i **Esport** us permeten introduir una durada (una fila plegada: feu servir **-** / **+**, o toqueu la fletxa per escriure-la), una nota i l'hora de l'esdeveniment:
 
-![Exercise dialog](../images/dialogs/careportal_exercise.png)
+![Diàleg Esport](../images/dialogs/careportal_exercise.png)
 
-In all these dialogs (**Prime/Fill**, **Sensor Insert**, **Pump Battery Change** and the careportal entries), the time of the event uses the same **Time** row as the [insulin dialog](#aaps-screens-buttons-insulin) and the bolus wizard: use **-** / **+** to move the time in 5-minute steps (up to one week back and 12 hours ahead), or tap the chevron to pick any date and time.
+En tots aquests diàlegs (**Encebar**, **Inserció del sensor**, **Canvi de pila de la bomba** i les entrades del portal de cures), l'hora de l'esdeveniment fa servir la mateixa fila **Hora** que el [diàleg d'insulina](#aaps-screens-buttons-insulin) i la calculadora de bolus: feu servir **-** / **+** per moure l'hora a passos de 5 minuts (fins a una setmana enrere i 12 hores endavant), o toqueu la fletxa per triar qualsevol data i hora.
 
-## Site Rotation
+## Rotació de punts d'inserció
 
-**Manage → Site Rotation** records where each cannula and sensor was placed on a body map, so you can rotate your sites: see [Site Rotation](#Aapsscreens-site-rotation) on the Pumps and cannulas page.
+**Gestionar → Rotació de punts d'inserció** registra on s'ha posat cada cànula i cada sensor en un mapa del cos, perquè pugueu anar canviant els punts: vegeu [Rotació de punts d'inserció](#Aapsscreens-site-rotation) a la pàgina Bombes i cànules.
 
-**TDD** (total daily dose) and the basal/bolus ratio rule of thumb are explained with the [Statistics Insulin tab](#reviewing-tdd).
+La **TDD** (dosi diària total) i la regla pràctica de la proporció basal/bolus s'expliquen amb la [pestanya Insulina de les estadístiques](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 
-## Insulin
+## Insulina
 
-![Insulin screen](../images/manage/insulin_profile.png)
+![Pantalla d'insulina](../images/manage/insulin_profile.png)
 
-**Manage → Insulin settings** shows and manages your insulin configurations. Each configuration is shown on a card with its **peak time** and **[DIA](#Config-Builder-insulin-dia)**; the one in use is marked **ACTIVE**. Below the card you see the activity curve. You can edit the nickname, peak and DIA of any configuration except the active one: to change the insulin you are using, [add a new configuration and activate it](#Config-Builder-insulin-change-active).
+**Gestionar → Configuració d'insulina** mostra i gestiona les vostres configuracions d'insulina. Cada configuració es mostra en una targeta amb el seu **temps del pic** i la seva **[DIA](#Config-Builder-insulin-dia)**; la que s'està fent servir està marcada com a **ACTIU**. Sota la targeta veieu la corba d'activitat. Podeu editar el nom, el pic i la DIA de qualsevol configuració excepte l'activa: per canviar la insulina que feu servir, [afegiu una configuració nova i activeu-la](#Config-Builder-insulin-change-active).
 
-See [Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
+Vegeu [Durada de l'acció de la insulina](#Config-Builder-insulin-dia) per saber més sobre què és i com configurar-la.
 
-## Pump Status
+## Estat bomba
 
-![Virtual Pump status screen](../images/v4/Pumps/virtual_pump_screen.png)
+![Pantalla d'estat de la bomba virtual](../images/v4/Pumps/virtual_pump_screen.png)
 
-**Manage → Pump** (or **Configuration → Pump → Open plugin**) shows the status of your pump: last connection, base basal rate, battery, reservoir...
+**Gestionar → Bomba** (o **Configurador → Bomba → Obrir plugin**) mostra l'estat de la bomba: última connexió, taxa basal base, bateria, reservori...
 
-* Displayed information depends on your pump model.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+* La informació que es mostra depèn del model de la vostra bomba.
+* Vegeu la [pàgina de bombes](../Getting-Started/CompatiblePumps.md) per a més detalls.
 
-## Loop, AMA / SMB
+## Llaç, AMA / SMB
 
-**Configuration → Loop → Open plugin** (and **Configuration → APS → Open plugin**) show details about the algorithm's calculations and why **AAPS** acts the way it does: last run, the resulting request, and the constraints. The **Loop** screen lists only the constraints that actually limited the delivered temp basal rate or SMB (and why closed loop is not allowed, if that is the case); the **APS** screen lists every constraint that went into the calculation.
+**Configurador → Llaços → Obrir plugin** (i **Configurador → APS → Obrir plugin**) mostren detalls dels càlculs de l'algoritme i per què **AAPS** actua com actua: última execució, la petició resultant i les restriccions. La pantalla **Llaç** només mostra les restriccions que realment han limitat la basal temporal o l'SMB lliurats (i per què no es permet el llaç tancat, si és el cas); la pantalla **APS** mostra totes les restriccions que han entrat al càlcul.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+Els càlculs es fan cada vegada que el sistema rep una lectura nova del CGM.
 
-For more details see the [APS section of the Configuration page](#Config-Builder-aps).
+Per a més detalls, vegeu la [secció APS de la pàgina Configurador](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## Perfil
 
-![Profile](../images/screens/Screenshots_Profile.png)
+![Perfil](../images/screens/Screenshots_Profile.png)
 
-**Manage → Profile** (or a tap on the profile name on the main screen) opens the Profile screen: your profiles as a swipeable card carousel, with buttons to add, edit, clone, delete and **activate** a profile.
+**Gestionar → Perfil** (o un toc al nom del perfil a la pantalla principal) obre la pantalla Perfil: els vostres perfils com un carrusel de targetes que podeu fer lliscar, amb botons per afegir, editar, duplicar, eliminar i **activar** un perfil.
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+El perfil conté la informació sobre la configuració personal de la vostra diabetis. Per a més informació, vegeu la pàgina detallada **[El vostre perfil d'AAPS](../SettingUpAaps/YourAapsProfile.md)**.
 
-## Automation
+## Automatització
 
-![Automation](../images/v4/Screens/automation_overview.png)
+![Automatització](../images/v4/Screens/automation_overview.png)
 
-**Manage → Automation** lists your automation rules. See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+**Gestionar → Automatització** mostra les vostres tasques d'automatització. Vegeu la pàgina dedicada [aquí](../DailyLifeWithAaps/Automations.md).
 
 ## NSClient
 
 ![NSClient](../images/screens/Screenshots_NSClient.png)
 
-**Configuration → Communication → NSClientV3 → Open plugin** displays the status of the connection with your Nightscout site: URL, websocket status, queue and a log of the synchronization activity.
+**Configurador → Comunicació → NSClientV3 → Obrir plugin** mostra l'estat de la connexió amb el vostre lloc Nightscout: URL, estat del websocket, cua i un registre de l'activitat de sincronització.
 
-Settings can be changed in [NSClient settings](#Preferences-nsclient).
+La configuració es pot canviar a la [configuració de NSClient](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Per resoldre problemes, vegeu aquesta [pàgina](../GettingHelp/TroubleshootingNsClient.md).
 
 (aaps-screens-bg-source)=
 
-## BG Source - xDrip, BYODA...
+## Origen glucèmia - xDrip, BYODA...
 
-![BG Source screen](../images/screens/Screenshots_BGSource.png)
+![Pantalla Origen glucèmia](../images/screens/Screenshots_BGSource.png)
 
-**Configuration → BG Source → Open plugin** shows the history of CGM readings and offers the option to remove readings in case of failure (i.e. compression low) or duplicate readings.
+**Configurador → Origen glucèmia → Obrir plugin** mostra l'historial de lectures del CGM i ofereix l'opció d'eliminar lectures en cas d'error (p. ex. una falsa baixada per compressió) o de lectures duplicades.
 
-## Treatments history
+## Historial de tractaments
 
-Open the **menu** (☰) and select **Treatments history** to view, check and correct everything **AAPS** has recorded: carbs and boluses, temp basals, temporary targets, profile switches, careportal entries, loop mode changes and user entries. See [Treatments history](#aaps-screens-treatments) on the Reviewing your data page.
+Obriu el **menú** (☰) i seleccioneu **Historial de tractaments** per veure, comprovar i corregir tot el que **AAPS** ha registrat: carbohidrats i bolus, basals temporals, objectius temporals, canvis de perfil, entrades del portal de cures, canvis del mode del llaç i entrades d'usuari. Vegeu [Historial de tractaments](#aaps-screens-treatments) a la pàgina Revisar les vostres dades.
 
-## History Browser
+## Historial
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Historial](../images/v4/Screens/history_browser.png)
 
-Open the **menu** (☰) and select **History browser**.
+Obriu el **menú** (☰) i seleccioneu **Historial**.
 
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
+Us permet tornar enrere a l'historial d'**AAPS**. Vegeu la pàgina dedicada [Revisar les vostres dades > Historial](../Maintenance/Reviewing.md).
 
 (aaps-screens-statistics)=
 
-## Statistics
+## Estadístiques
 
-![Statistics](../images/v4/Screens/statistics.png)
+![Estadístiques](../images/v4/Screens/statistics.png)
 
-Open the **menu** (☰) and select **Statistics**.
+Obriu el **menú** (☰) i seleccioneu **Estadístiques**.
 
-Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Us dona estadístiques sobre la dosi diària total, el temps en rang, el vostre perfil de glucèmia al llarg del dia (AGP) i el vostre patró de cicle d'insulina, en quatre pestanyes. Vegeu la pàgina dedicada [Revisar les vostres dades > Estadístiques](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Assistent de perfil
 
-Open the **menu** (☰) and select **Profile helper**.
+Obriu el **menú** (☰) i seleccioneu **Assistent de perfil**.
 
-![Profile helper](../images/screens/profile_helper.png)
+![Assistent de perfil](../images/screens/profile_helper.png)
 
-The Profile helper lets you compare profiles and generate starting profiles for children. See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) — sections [Build a Profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid) and [Compare two Profiles](#your-aaps-profile-compare-profiles).
+L'assistent de perfil us permet comparar perfils i generar perfils inicials per a nens. Vegeu [El vostre perfil d'AAPS](../SettingUpAaps/YourAapsProfile.md), seccions [Crear un perfil des de zero per a un nen](#your-aaps-profile-profile-from-scratch-for-a-kid) i [Comparar dos perfils](#your-aaps-profile-compare-profiles).
 
 (aaps-screens-widgets)=
 
-## Home screen widgets
+## Widgets de la pantalla d'inici
 
-**AAPS** provides five widgets that you can add to your phone's home screen, to see your data without opening the app. See the dedicated page [Home screen widgets](../DailyLifeWithAaps/Widgets.md).
+**AAPS** ofereix cinc widgets que podeu afegir a la pantalla d'inici del telèfon, per veure les vostres dades sense obrir l'aplicació. Vegeu la pàgina dedicada [Widgets de la pantalla d'inici](../DailyLifeWithAaps/Widgets.md).
 
-![AAPS widgets on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![Widgets d'AAPS a la pantalla d'inici](../images/widgets/home_widgets_full_circle_small.png)

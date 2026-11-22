@@ -21,7 +21,7 @@ Se ativar o **Comunicador SMS** no **AAPS**, tenha em conta que o telefone confi
 
 Além disso, recomenda-se permitir um [segundo número de telefone](#SMSCommands-authorized-phone-numbers) para os comandos SMS. Assim, pode usar o segundo número para [desativar](#SMSCommands-other) o Comunicador SMS, se o seu telefone remoto principal for comprometido.
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. Por razões de segurança, tem de adicionar pelo menos dois números de telefone autorizados para mudar este intervalo para um valor mais curto. Se tentar dar outro bólus remoto nos 15 minutos seguintes ao bólus anterior, recebe a resposta “O bólus remoto não está disponível. Tente novamente mais tarde”
+O intervalo mínimo predefinido entre comandos de bólus é de 15 minutos, contados a partir do momento em que a bomba aceita um bólus. Por razões de segurança, tem de adicionar pelo menos dois números de telefone autorizados para mudar este intervalo para um valor mais curto. Se tentar dar outro bólus remoto nos 15 minutos seguintes ao bólus anterior, recebe a resposta “O bólus remoto não está disponível. Tente novamente mais tarde”
 
 O AAPS também o informa por mensagem de texto se os seus comandos remotos, como um bólus ou uma troca de perfil, foram executados. É aconselhável configurar isto de forma que as mensagens de confirmação sejam enviadas para, pelo menos, dois números de telefone diferentes, para o caso de um dos telefones ser roubado.
 
@@ -55,14 +55,14 @@ Estas apps de autenticação geram uma senha única de 6 dígitos, válida por p
 
 No seu telefone, vá a **Apps > AAPS > Permissions** (Aplicações, AAPS, Autorizações). Certifique-se de que **SMS** e **Phone** (Telefone) estão permitidos.
 
-![imagem](../images/remote-control-08.png)
+![imagem](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 O Android pode bloquear a autorização **SMS** para apps que não foram instaladas a partir de uma loja de apps, como o **AAPS**. Se vir esta mensagem quando der a autorização **SMS**, abra **Settings > Apps > AAPS** (Definições, Aplicações, AAPS) do telefone, toque no menu **⋮** (em cima, à direita) e selecione **Allow restricted settings** (Permitir definições restritas). Depois, dê novamente a autorização **SMS**.
 ```
 
-![App was denied access to SMS (a app não tem acesso a SMS)](../images/sms_permission_restricted.png)
+![App was denied access to SMS (a app não tem acesso a SMS)](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Sincronizar a data e a hora
 
@@ -82,7 +82,7 @@ Abra as definições do **Comunicador SMS**.
 
 Ative **Permitir comandos remotos por SMS**. As opções **PIN obrigatório adicional no token final** e **Configuração do Autenticador** só aparecem depois de ativar esta opção:
 
-![Definições do Comunicador SMS](../images/sms_communicator_settings.png)
+![Definições do Comunicador SMS](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Números de telefone permitidos
@@ -97,7 +97,7 @@ O “+” antes do número pode ou não ser necessário, conforme o local onde e
 
 Se tiver mais do que um número de telefone para adicionar, separe-os com ponto e vírgula, **SEM espaço entre os números** (isto é muito importante!). Selecione **OK**:
 
-![Números de telefone permitidos](../images/sms_allowed_numbers.png)
+![Números de telefone permitidos](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Intervalo mín. entre bólus remotos
 
@@ -115,7 +115,7 @@ Requisitos do PIN:
 
 Para um PIN mais seguro, não use o mesmo dígito muitas vezes (_por exemplo,_ 111111) nem uma sequência (_por exemplo,_ 123456).
 
-![PIN obrigatório adicional no token final](../images/sms_pin.png)
+![PIN obrigatório adicional no token final](../images/remote_control_and_following/sms_pin.png)
 
 #### Configuração do Autenticador
 
@@ -123,7 +123,7 @@ Para um PIN mais seguro, não use o mesmo dígito muitas vezes (_por exemplo,_ 1
 * Abra a app de autenticação instalada no _telefone do cuidador_, configure uma nova ligação e
 * Use o telefone do cuidador para ler o código QR mostrado em **Digitalize o código para configurar os códigos OTP AAPS**.
 
-![Configuração do Autenticador com código QR](../images/sms_authenticator_setup.png)
+![Configuração do Autenticador com código QR](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Em **Testar Uma-Senha-Única (OTP)**, introduza em **Código para verificar** a senha única da app de autenticação do telefone do cuidador, seguida do seu PIN:
 
@@ -134,7 +134,7 @@ Exemplo:
 
 Se o código estiver certo, o texto vermelho “PIN ERRADO” muda automaticamente para um “OK” verde. **Não há nenhum botão para premir!** O processo está concluído; não existe um botão “OK” para premir depois de introduzir o código:
 
-![Testar Uma-Senha-Única (OTP) e Repor Autenticadores](../images/sms_authenticator_test.png)
+![Testar Uma-Senha-Única (OTP) e Repor Autenticadores](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Os comandos SMS devem agora estar configurados.
 
@@ -146,7 +146,7 @@ Use o botão **Repor Autenticadores**, no fundo do ecrã **Configuração do Aut
 
 1)  Para verificar se configurou tudo corretamente, teste a ligação: escreva “bg” numa mensagem SMS do telefone do cuidador para o telefone com o **AAPS**. Deve receber uma resposta parecida com a que se mostra aqui:
 
-![imagem](../images/remote-control-06.png)
+![imagem](../images/remote_control_and_following/remote-control-06.png)
 
 Se não receber nenhuma resposta, veja a secção [Resolução de problemas](#SMSCommands-troubleshooting) abaixo.
 
@@ -154,7 +154,7 @@ Se não receber nenhuma resposta, veja a secção [Resolução de problemas](#SM
 
 Quando enviar um comando SMS pela primeira vez, faça-o perto do telefone com o **AAPS**, para ver como funciona:
 
-![imagem](../images/remote-control-16.png)
+![imagem](../images/remote_control_and_following/remote-control-16.png)
 
 O telefone do cuidador recebe um SMS de resposta do **AAPS** a confirmar se o comando SMS remoto foi executado com sucesso.
 
@@ -182,7 +182,7 @@ Para evitar hipoglicemias, é boa ideia começar com prudência e dar **menos in
 
 Os comandos têm de ser enviados em inglês; a resposta vem na sua língua, se o texto da resposta já estiver [traduzido](#translations-translate-strings-for-AAPS-app). Os comandos não distinguem maiúsculas de minúsculas; pode usar minúsculas ou maiúsculas.
 
-![Exemplo de comandos SMS](../images/SMSCommands.png)
+![Exemplo de comandos SMS](../images/remote_control_and_following/SMSCommands.png)
 
 As **tabelas de comandos SMS** abaixo mostram todos os comandos SMS possíveis. São dados _valores de exemplo_ para ajudar a perceber. Os comandos aceitam os mesmos intervalos de valores (alvos, percentagem do perfil, etc.) que são permitidos na própria app **AAPS**.
 
@@ -191,28 +191,28 @@ As **tabelas de comandos SMS** abaixo mostram todos os comandos SMS possíveis. 
 
 Alguns comandos SMS dão uma resposta imediata e outros exigem uma **autenticação** forte através da app de autenticação. Um pedido simples como “**BG**” (que pede a glicose atual) é rápido de escrever, não precisa de autenticação e devolve as informações de estado do **AAPS** mostradas abaixo:
 
-![imagem](../images/remote-control-06.png)
+![imagem](../images/remote_control_and_following/remote-control-06.png)
 
 Os comandos que precisam de mais segurança exigem que se introduza um código, por exemplo:
 
-![SMS autenticado](../images/remote-control-07.png)
+![SMS autenticado](../images/remote_control_and_following/remote-control-07.png)
 
 A coluna *Aut.* nas tabelas abaixo indica se cada comando exige esta autenticação forte.
 
 ### Dados do CGM
 
-| Comando    | Aut. | Função e *Resposta*                                                                                                                                                                                                               |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | Não  | Devolve: última glicose, delta, IA (bólus e basal), HCA<br/>*Última GLIC: 5.6 4min atrás, Delta: -0,2 mmol, IA: 0.20U (Bólus: 0.10U Basal: 0.10U)*                                                                          |
-| CAL 5.6/90 | Sim  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| Comando    | Aut. | Função e *Resposta*                                                                                                                                                                                                                  |
+| ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BG         | Não  | Devolve: última glicose, delta, IA (bólus e basal), HCA<br/>*Última GLIC: 5.6 4min atrás, Delta: -0,2 mmol, IA: 0.20U (Bólus: 0.10U Basal: 0.10U)*                                                                             |
+| CAL 5.6/90 | Sim  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receção tem de estar ativada na xDrip+.* |
 
 ### Bomba
 
-| Comando              | Aut. | Função e *Resposta*                                                                                  |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| BOMBA                | Não  | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Sim  | Para desligar a bomba durante *30* minutos                                                           |
-| PUMP CONNECT         | Sim  | Bomba religada                                                                                       |
+| Comando              | Aut. | Função e *Resposta*                                                                             |
+| -------------------- | ---- | ----------------------------------------------------------------------------------------------- |
+| PUMP                 | Não  | ÚltLig: há 1 min<br/>Temp: 0.00U/h @11:38 5/30min<br/>IA: 0.5U Reserv: 34U Bat: 100 |
+| PUMP DISCONNECT *30* | Sim  | Para desligar a bomba durante *30* minutos                                                      |
+| PUMP CONNECT         | Sim  | Bomba religada                                                                                  |
 
 ### Basal
 
@@ -229,14 +229,14 @@ Algumas bombas só aceitam uma basal temporária em percentagem, outras só em U
 
 ### Loop
 
-| Comando           | Aut. | Função e *Resposta*                                                                                                                                                                                                                                                                |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | Não  | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Sim  | A bomba volta à taxa basal programada.<br/>*Loop foi desativado*                                                                                                                                                                                                             |
-| LOOP SUSPEND 20   | Sim  | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Sim  | *Loop retomado*                                                                                                                                                                                                                                                                    |
-| LOOP CLOSED       | Sim  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Sim  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| Comando           | Aut. | Função e *Resposta*                                                                                                                                                                                                                                                                               |
+| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LOOP STATUS       | Não  | A resposta depende do estado real:<br/> - *Loop está desativado* se o loop estiver desativado<br/> - *Loop ativado* se o loop estiver fechado, aberto ou em SGB<br/> - *Bomba desligada* se a bomba estiver desligada<br/> - *Suspenso (10 m)* se o loop estiver suspenso |
+| LOOP STOP/DISABLE | Sim  | A bomba volta à taxa basal programada.<br/>*Loop foi desativado*                                                                                                                                                                                                                            |
+| LOOP SUSPEND 20   | Sim  | *Loop suspended*                                                                                                                                                                                                                                                                                  |
+| LOOP RESUME       | Sim  | *Loop retomado*                                                                                                                                                                                                                                                                                   |
+| LOOP CLOSED       | Sim  | *Modo de funcionamento atual: Loop Fechado*                                                                                                                                                                                                                                                       |
+| LOOP LGS          | Sim  | *Modo de funcionamento atual: Suspensão Glicose Baixa*                                                                                                                                                                                                                                            |
 
 ### Bólus
 
@@ -311,12 +311,12 @@ Pode ser por uma destas razões:
 ### Nenhuma resposta aos comandos SMS
 
 No telefone do cuidador e/ou no telefone com o **AAPS**, experimente desativar as seguintes opções:
-* **Send as chat message** (enviar como mensagem de chat) ![Desativar o envio de SMS como mensagem de chat](../images/SMSdisableChat.png)
+* **Send as chat message** (enviar como mensagem de chat) ![Desativar o envio de SMS como mensagem de chat](../images/remote_control_and_following/SMSdisableChat.png)
 * Se usar a app Android Messages ou Google Messages, desative as mensagens RCS:
   - abra a conversa SMS em causa na app Mensagens
   - Selecione o menu de opções (três pontos) no canto superior direito
   - selecione "Details" (Detalhes)
-  - Ative "Only send SMS and MMS messages" (enviar apenas mensagens SMS e MMS) ![Desative o RCS como mensagem de chat](../images/SMSdisableRCS.png)
+  - Ative "Only send SMS and MMS messages" (enviar apenas mensagens SMS e MMS) ![Desative o RCS como mensagem de chat](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Erros ao executar comandos
 
@@ -331,7 +331,7 @@ Há várias razões possíveis para o comando não ter sucesso:
 
 Os erros mais comuns são mostrados nos exemplos abaixo:
 
-![imagem](../images/remote-control-17.png)
+![imagem](../images/remote_control_and_following/remote-control-17.png)
 
 ### Como posso parar um comando depois de ter sido autenticado?
 
@@ -348,6 +348,6 @@ Se a outra app estiver instalada em vários telefones, desative o envio em todos
 (sms-commands-too-many-messages)=
 ### Recebo demasiadas mensagens de texto dos comandos SMS. Posso reduzir a frequência ou fazer com que parem?
 
-Usar comandos SMS pode gerar muitas mensagens automáticas do telefone com o **AAPS** para o telefone do cuidador. Também recebe mensagens, por exemplo «Perfil Basal atualizado na bomba», se tiver automatizações configuradas no **AAPS**. Pode ser útil ter SMS ilimitados no tarifário do telefone com o **AAPS** (e de cada telefone de cuidador usado), se forem enviados muitos SMS, e desativar as notificações, alarmes ou vibrações dos SMS em todos os telefones. Não é possível usar comandos SMS sem receber estas atualizações. Por isso, pode querer outra forma de comunicar diretamente com a criança (se tiver idade para isso), em vez de SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+Usar comandos SMS pode gerar muitas mensagens automáticas do telefone com o **AAPS** para o telefone do cuidador. Também recebe mensagens, por exemplo «Perfil Basal atualizado na bomba», se tiver automatizações configuradas no **AAPS**. Pode ser útil ter SMS ilimitados no tarifário do telefone com o **AAPS** (e de cada telefone de cuidador usado), se forem enviados muitos SMS, e desativar as notificações, alarmes ou vibrações dos SMS em todos os telefones. Não é possível usar comandos SMS sem receber estas atualizações. Por isso, pode querer outra forma de comunicar diretamente com a criança (se tiver idade para isso), em vez de SMS. Outras apps de comunicação muito usadas pelos cuidadores do **AAPS** são o WhatsApp, o LINE, o Telegram e o Facebook Messenger.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+É possível desativar o SMS «Perfil Basal atualizado na bomba» quando a alteração do Perfil veio do Nightscout. Para isso, crie um ficheiro chamado **exatamente** `do_not_send_sms_on_profile_change` na pasta `extra` da pasta do AAPS.

@@ -31,7 +31,7 @@ As part of **AAPS**’ management, users should continually assess and scrutiniz
 
 以下是AAPS中**示例**配置文件的屏幕截图。请注意，下面的示例配置文件显示了大量时间点。当你刚开始使用**AAPS**时，你的配置文件可能非常简单。
 
-![Example active profile](../images/Profile-Example-Active.png)
+![Example active profile](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## 血糖目标
@@ -55,7 +55,7 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL 
 
 **下图**显示了如何在**AAPS**中设置目标的示例。
 
-![血糖控制目标值](../images/Profile_Target.png)
+![血糖控制目标值](../images/v4/Profiles/Profile_Target.png)
 
 **血糖（Blood Glucose，BG）**目标是根据您的个人偏好和需求来设定的。例如，如果你担心夜间低血糖，你可以在晚上9点至早上7点将目标稍微设置高一些，如117 mg/dL（6.5 mmol/L）。如果你想确保在早上注射早餐前有足够的胰岛素在体内（IOB），你可以在早上7点至8点将目标设置低一些，如81 mg/dL（4.5 mmol/L）。
 
@@ -89,7 +89,7 @@ AAPS以默认基础率为“基线”。如果基础率设置得太高，那么�
 
 **下图**显示了如何在**AAPS**配置文件中设置基础率。
 
-![基础率](../images/Profile_BasalRates.png)
+![基础率](../images/v4/Profiles/Profile_BasalRates.png)
 
 Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
 
@@ -147,7 +147,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 **ISF**设置过低（因此更激进，这并不罕见）可能导致“过度纠正”，因为**AAPS**计算出用户需要比实际更多的胰岛素来纠正高血糖。这可能导致“过山车”式的BG水平（尤其是在禁食时），如下图所示。在这种情况下，应增加**ISF**值，以使**AAPS**不那么激进。这将确保**AAPS**输送更小的纠正剂量，并避免过度纠正**高血糖**导致**低血糖**。
 
-![ISF（胰岛素敏感系数）过低](../images/isf.jpg)
+![ISF（胰岛素敏感系数）过低](../images/v4/Profiles/isf.jpg)
 
 相反，如果设置的**胰岛素敏感系数（ISF）**过高，可能会导致校正不足，即你的**血糖（BG**）会保持在目标水平之上——尤其在夜间更为明显。
 
@@ -155,7 +155,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 **下图**显示了如何在**AAPS**配置文件中设置ISF值。
 
-![配置文件ISF](../images/Profile_ISF.png)
+![配置文件ISF](../images/v4/Profiles/Profile_ISF.png)
 
 确定日间ISF的一个基本起点是根据你的每日总剂量（TDD）使用1700（94）规则。 Gary Scheiner的[“像胰腺一样思考（Think like a Pancreas）”](https://amzn.eu/d/iVU0RGe)第7章提供了更多详细信息。
 
@@ -213,7 +213,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 **下图**显示了一个用户的**ICR**以及如何在**AAPS配置文件**中设置它。 When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
-![配置文件ICR](../images/Profile_ICR.png)
+![配置文件ICR](../images/v4/Profiles/Profile_ICR.png)
 
 如果在消化完一顿饭并且IOB已恢复到零后，你的**BG**仍然高于餐前水平，那么你的**ICR**可能太弱（_即_数字太高，应逐渐降低）。相反，如果你的**BG**低于餐前水平，**ICR**可能太强（_即_数字太小，应逐渐增加）。
 
@@ -292,7 +292,7 @@ The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helpe
 
 配置文件助手为儿童提供了两家不同医院的数据集，以找到适合你孩子的初始配置文件（18岁以下）。
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Profile Helper Kids 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. Make sure you are on the **Profile 1** tab.
 2. 在“配置文件类型”中，确保已选择“默认配置文件”。
@@ -303,7 +303,7 @@ The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helpe
 7. Open the **Comparison** tab. 将显示两个调整后的配置文件的比较（见下方截图）。
 8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Profile Helper Kids 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### 配置文件切换
 
@@ -312,7 +312,7 @@ The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helpe
 (your-aaps-profile-clone-profile-switch)=
 ### 将配置文件克隆并切换至新配置文件
 
-![配置文件切换](../images/TreatmentsView4.png)
+![配置文件切换](../images/Maintenance/TreatmentsView4.png)
 
 The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. 在这种情况下，时间偏移和百分比将应用于新的本地配置文件。 Use the **Clone** button shown on line **2**.
 
@@ -335,14 +335,14 @@ If enabled, **Profile** changes made directly in Nightscout can be received in *
 
 然而，要执行此操作，重要的是在Nightscout编辑器中克隆由多个配置文件组成的整个**数据库记录**（见下方截图中的蓝色箭头）。新的数据库记录将包含当前日期。保存后，可以在AAPS中通过常规的[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)激活更改/新的配置文件。
 
-![克隆数据库记录](../images/Nightscout_Profile_Editor.PNG)
+![克隆数据库记录](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### 比较两个Profile
 
 You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Profile Helper 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. Make sure you are on the **Profile 1** tab.
 2. 在**配置文件类型（Profile type）**中，选择“可用配置文件（Available profile）”以在所有存储的**配置文件**中进行选择。
@@ -352,4 +352,4 @@ You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ �
 6. 选择您想要与之比较的**配置文件切换**。
 7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Profile Helper 2](../images/v4/Profiles/ProfileHelper2.png)

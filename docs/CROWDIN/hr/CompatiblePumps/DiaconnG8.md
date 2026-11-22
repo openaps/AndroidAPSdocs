@@ -5,137 +5,137 @@
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Mogućnosti pumpe s AAPS-om
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Komunicira s **AAPS-om** preko ugrađenog Bluetootha vašeg telefona, bez dodatnog komunikacijskog uređaja.
+* Promjene ljetnog računanja vremena i vremenske zone morate obaviti ručno.
 
-## Insulin Pump Bluetooth Pairing
+## Bluetooth uparivanje inzulinske pumpe
 
-- Tap the **menu** (☰) in the top-left corner.
+- Dodirnite **izbornik** (☰) u gornjem lijevom kutu.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![Izbornik sa stavkom Konfiguracija](../images/v4/Configuration/configuration_menu.png)
 
-- Tap **Configuration** > **Pump** and select **Diaconn G8**.
+- Dodirnite **Konfiguracija** > **Pumpa** i odaberite **Diaconn G8**.
 
-![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Konfiguracija > Pumpa s dodatkom Diaconn G8](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and **Open plugin**:
+Kada je odabrana, kartica **Diaconn G8** prikazuje dva gumba, **Postavke** i **Otvori dodatak**:
 
-![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
+![Dodatak Diaconn G8 odabran u Konfiguracija > Pumpa](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-**Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
+**Postavke** otvara postavke upravljačkog programa Diaconn G8 (pogledajte [Postavke opcija inzulinske pumpe Diaconn G8](#diaconn-g8-insulin-pump-option-setting) ispod).
 
-**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**Otvori dodatak** (ili **Upravljanje** > **Pumpa**) otvara zaslon pumpe Diaconn G8. Prije uparivanja pumpe izgleda ovako:
 
-![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
+![Zaslon pumpe Diaconn G8 prije uparivanja](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![slika](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing starts from the **Pair** button on the pump screen; there is no **Selected pump** setting.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 uparivanje počinje gumbom **Upari** na zaslonu pumpe; postavka **Odabrana pumpa** više ne postoji.
 ```
 
-- On the pump screen, tap **Pair**. The **Diaconn Pump Pairing** screen opens and **AAPS** scans for nearby pumps.
-- Tap your insulin pump's model number once it appears in the list (for example **DIACONN-65010**).
+- Na zaslonu pumpe dodirnite **Upari**. Otvara se zaslon **Uparivanje pumpe Diaconn** i **AAPS** traži pumpe u blizini.
+- Dodirnite broj modela svoje inzulinske pumpe kada se pojavi na popisu (na primjer **DIACONN-65010**).
 
-![Diaconn Pump Pairing screen scanning for pumps](../images/DiaconnG8/DiaconnG8_05.png)
+![Zaslon Uparivanje pumpe Diaconn traži pumpe](../images/DiaconnG8/DiaconnG8_05.png)
 
-- There are two options to check your model number:
+- Broj modela možete provjeriti na dva načina:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+1. Zadnjih 5 znamenki serijskog broja (SN) na stražnjoj strani pumpe.
+2. Pritisnite tipku O > Information > BLE > zadnjih 5 znamenki.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![slika](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a PIN code. Enter the PIN number displayed on your pump to complete the connection.
+- Kada odaberete pumpu, pojavit će se prozor koji traži PIN kôd. Unesite PIN broj prikazan na pumpi kako biste dovršili spajanje.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![slika](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- When **Pairing successful!** is shown, tap **OK** to go back to the pump screen.
+- Kada se prikaže **Uparivanje je uspjelo!**, dodirnite **U redu** za povratak na zaslon pumpe.
 
-## Pump status check and log synchronization
+## Provjera statusa pumpe i sinkronizacija dnevnika
 
-- Once your pump is connected, open the pump screen (**Manage** > **Pump**). It shows the pump status (battery, reservoir, last connection, last bolus, basal rate and more).
-- Tap **Refresh** to connect to the pump, update the status and synchronize the logs.
-- Tap **Pump history** to see the history read from the pump.
+- Kada je pumpa spojena, otvorite zaslon pumpe (**Upravljanje** > **Pumpa**). Prikazuje status pumpe (baterija, spremnik, zadnja veza, zadnji bolus, bazalna stopa i drugo).
+- Dodirnite **Osvježi** za spajanje s pumpom, ažuriranje statusa i sinkronizaciju dnevnika.
+- Dodirnite **Povijest pumpe** da vidite povijest pročitanu s pumpe.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![slika](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump status is shown on the pump screen (**Manage** > **Pump**) and synchronized with the **Refresh** button.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 status pumpe prikazuje se na zaslonu pumpe (**Upravljanje** > **Pumpa**) i sinkronizira se gumbom **Osvježi**.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
 
-## Bluetooth Troubleshooting
+## Rješavanje problema s Bluetoothom
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Što učiniti kada je Bluetooth veza s pumpom nestabilna.**
 
-### Method 1) Restart AAPS, then check the pump again
+### Metoda 1) Ponovno pokrenite AAPS, zatim ponovno provjerite pumpu
 
-- Tap the **menu** (☰) in the top-left corner.
-- Tap **Exit** at the bottom of the menu.
+- Dodirnite **izbornik** (☰) u gornjem lijevom kutu.
+- Dodirnite **Izlaz** na dnu izbornika.
 
-![The menu with the Exit entry at the bottom](../images/v4/Configuration/configuration_menu.png)
+![Izbornik sa stavkom Izlaz na dnu](../images/v4/Configuration/configuration_menu.png)
 
-- Start **AAPS** again and check the connection to the pump.
+- Ponovno pokrenite **AAPS** i provjerite vezu s pumpom.
 
-### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
+### Metoda 2) Ako prva metoda ne pomogne, odspojite Bluetooth i zatim se ponovno spojite.
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+- Pritisnite i držite tipku Bluetooth na vrhu oko 3 sekunde.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![slika](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Kliknite tipku Setting (postavke) pored uparene inzulinske pumpe Diaconn G8.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![slika](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Unpair.
+- Rasparite.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![slika](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- In **AAPS**, open the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**.
-- Repeat the Bluetooth pairing process for the pump (see above).
+- U **AAPS-u** otvorite zaslon pumpe (**Upravljanje** > **Pumpa**), dodirnite **Raspari** i potvrdite **Poništiti podatke o uparivanju?**.
+- Ponovite postupak Bluetooth uparivanja pumpe (pogledajte gore).
 
-## Further Information
+## Dodatne informacije
 
 (diaconn-g8-insulin-pump-option-setting)=
 
-### Diaconn G8 Insulin pump option setting
+### Postavke opcija inzulinske pumpe Diaconn G8
 
-- **Configuration** > **Pump** > **Diaconn G8** > **Settings**
-- Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
+- **Konfiguracija** > **Pumpa** > **Diaconn G8** > **Postavke**
+- Ili na zaslonu pumpe (**Upravljanje** > **Pumpa**) dodirnite ikonu postavki (zupčanik) u gornjem desnom kutu.
 
-![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
+![Postavke upravljačkog programa Diaconn G8](../images/v4/Pumps/diaconn_g8_settings.png)
 
-- **Bolus speed** sets how fast the pump delivers a bolus.
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a "Site Change" event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically added as a note when a "Tube Change" event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
-- **Diaconn Cloud Sync** sends the pump logs to the Diaconn Cloud.
+- **Brzina bolusa** određuje koliko brzo pumpa isporučuje bolus.
+- Ako je opcija **Zabilježi promjenu spremnika** uključena, podaci se automatski prenose u Careportal kada se dogodi događaj „Promjena inzulina“.
+- Ako je opcija **Zabilježi promjenu igle** uključena, podaci se automatski prenose u Careportal kada se dogodi događaj „Promjena mjesta primjene“.
+- Ako je opcija **Zabilježi promjenu cijevi** uključena, podaci se automatski dodaju kao bilješka kada se dogodi događaj „Promjena cijevi“.
+- Ako je opcija **Zabilježi zamjenu baterije** uključena, podaci se automatski prenose u Careportal kada se dogodi događaj „Zamjena baterije“. Zamjenu baterije možete zabilježiti i sami putem **Upravljanje** > **Zamjena baterije pumpe**. (Napomena: prije zamjene baterije zaustavite sve funkcije ubrizgavanja koje su u tijeku.)
+- **Sinkronizacija s Diaconn Cloudom** šalje dnevnike pumpe u Diaconn Cloud.
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+![Izbornik radnji Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a battery change is recorded with **Manage** > **Pump Battery Change**; there is no **Actions** tab.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 zamjena baterije bilježi se putem **Upravljanje** > **Zamjena baterije pumpe**; kartica **Radnje** više ne postoji.
 ```
 
-### Extended Bolus function
+### Funkcija produženog bolusa
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Ako koristite produženi bolus, on će isključiti zatvorenu petlju.
+- Na [ovoj stranici](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) pogledajte zašto produženi bolus ne radi u zatvorenoj petlji.
 
-## Where to get help
+## Gdje dobiti pomoć
 
-Development of the Diaconn G8 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Upravljački program Diaconn G8 razvija zajednica na **dobrovoljnoj** osnovi. Prije nego što zatražite pomoć:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Pročitajte** odgovarajući odjeljak ove dokumentacije kako biste provjerili kako bi funkcija trebala raditi.
+2. **Pitajte** na kanalu *#AAPS* na [Discordu](https://discord.gg/4fQUWHZ4Mw) ili na jednom od drugih [kanala zajednice](../GettingHelp/WhereCanIGetHelp.md).
+3. **Prijavite grešku**: najprije pretražite [postojeće prijave](https://github.com/nightscout/AndroidAPS/issues); ako vaše nema na popisu, otvorite [novu prijavu](https://github.com/nightscout/AndroidAPS/issues) i priložite svoje [datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Kada tražite pomoć, navedite proizvođača i model telefona, verziju Androida, verziju **AAPS-a** i jednostavan opis problema na engleskom (što se promijenilo, kada je zadnji put radilo).

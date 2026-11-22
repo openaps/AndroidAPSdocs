@@ -131,7 +131,7 @@
 
 Вам потрібно з’ясувати, чому ви отримуєте дубльовані значення ГК:
 
-* Чи увімкнено Dexcom bridge на вашому сайті Nightscout? Вимкніть bridge: відкрийте панель адміністрування вашого Nightscout, змініть змінну "enable" і видаліть з неї частину "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Чи увімкнено Dexcom bridge на вашому сайті Nightscout? Вимкніть bridge: відкрийте панель адміністрування вашого Nightscout, змініть змінну "enable" і видаліть з неї частину "bridge". (Для Heroku [подробиці можна знайти тут](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Чи кілька джерел вивантажують ваші значення ГК у Nightscout? Якщо ви використовуєте застосунок BYODA, увімкніть вивантаження в **AAPS**, але не вмикайте його в xDrip, якщо ви його використовуєте.
 * Чи є у вас послідовники, які отримують ваші значення ГК, але також знову вивантажують їх на ваш сайт Nightscout?
 * Крайній захід: у [налаштуваннях NSClient](#Preferences-nsclient) виберіть налаштування синхронізації і вимкніть параметр «Отримувати дані CGM з NS».
@@ -247,11 +247,11 @@
 
 Якщо перевищено критичний поріг, значення показуються червоним.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+Вік завжди показується в короткій формі, незалежно від розміру екрана: *4год* у перший день, *3д4год* пізніше.
 
 Пороги можна змінити через маленький значок **Налаштування**, який видно, коли рядок статусу **розгорнуто** (шеврон справа) — дивіться [Покажчики статусу](#Preferences-status-lights).
 
-У розгорнутій панелі статусу в кінці деяких рядків також є кнопка, щоб записати заміну, яка скидає відповідний вік: **Додати** в рядку **Сенсор** записує встановлення сенсора. Якщо ваша помпа це підтримує, **Підготовка/Заповнення** з’являється в рядках **Канюля** (або **Patch-помпа**) та **Інсулін**, а **Додати** — в рядку **Батарея помпи**.
+У розгорнутій панелі статусу в кінці деяких рядків також є кнопка, щоб записати заміну, яка скидає відповідний вік: **Додати** в рядку **Сенсор** записує встановлення сенсора. Якщо ваша помпа це підтримує, **Підготовка/Заповнення** з’являється в рядках **Канюля** (або **Патч-помпа**) та **Інсулін**, а **Додати** — в рядку **Батарея помпи**.
 
 ![Розгорнута панель статусу з кнопкою Підготовка/Заповнення в рядках Канюля та Інсулін і кнопкою Додати в рядках Сенсор та Батарея помпи](../images/main/main_status_row_expanded.png)
 
@@ -308,11 +308,11 @@ The age is always shown in its short form, whatever the screen size: *4h* on the
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Зміни часу
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Коли годинник телефона переводиться (при переході на літній/зимовий час або в новому часовому поясі), вертикальна пунктирна лінія позначає цей момент на графіку ГК, з маленькою іконкою годинника внизу. Та сама пунктирна лінія проходить через [додаткові графіки](#aaps-screens-additional-graphs) нижче.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![Позначка зміни часу: пунктирна лінія з іконкою годинника поруч із лінією поточного часу](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -364,7 +364,7 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 * Лінія **aCOB** (бліда, напівпрозора помаранчева): прискорене засвоєння вуглеводів
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Застаріле і має обмежену користь.
+    Подібно до COB, але з постійною швидкістю засвоєння вуглеводів 10 мг/дл/5хв (0,555 ммоль/л/5хв). Застаріле і має обмежену користь.
     
     *Ця лінія з’являється, лише коли використовується старіший алгоритм [AMA](#Config-Builder-aps).*
 
@@ -422,8 +422,8 @@ AAPS дозує інсулін не лише за вашою поточною Г
 
 Більшості користувачів підходить така конфігурація додаткових графіків:
 
-* Graph 1 with IOB, BAS
-* Graph 2 with COB, Sensitivity change
+* Графік 1 з IOB, BAS
+* Графік 2 з COB, зміною чутливості
 * Graph 3 with Deviations and BGI.
 
 #### Абсолютний інсулін (ABS)
@@ -470,7 +470,7 @@ IOB може бути від’ємним, якщо у вас немає зал�
 
 Ці дані можуть бути доступні, якщо ви використовуєте [смарт-годинник Wear](../WearOS/WearOsSmartwatch.md). Увімкніть їх у застосунку **AAPS** Wear і надайте дозвіл на дані про здоров’я.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Кроки показано стовпцями, а пульс — кривою лінією, яка переривається там, де годинник не надсилав даних.
 
 #### Відхилення (ВІДХ)
 
@@ -486,7 +486,7 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 ![Відхилення і BGI](../images/main/graph_dev_bgi.png)
 
-Цю лінію добре показувати разом зі стовпчиками відхилень. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Порівняння лінії BGI і стовпчиків відхилень — ще один спосіб зрозуміти, як змінюється **ГК**. Тут у момент, позначений **1**, стовпчики відхилень значно вище лінії BGI: ГК зростає більше, ніж можна пояснити лише активністю інсуліну (наприклад, після вуглеводів). У момент, позначений **2**, стовпчики відхилень нижче нуля (червоні): ГК нижча, ніж очікував алгоритм.
+Цю лінію добре показувати разом зі стовпчиками відхилень. Вони мають спільну шкалу, але вона відрізняється від шкали інших додаткових даних, тому їх варто показувати на окремому графіку, як показано вище. Порівняння лінії BGI і стовпчиків відхилень — ще один спосіб зрозуміти, як змінюється **ГК**. Тут у момент, позначений **1**, стовпчики відхилень значно вище лінії BGI: ГК зростає більше, ніж можна пояснити лише активністю інсуліну (наприклад, після вуглеводів). У момент, позначений **2**, стовпчики відхилень нижче нуля (червоні): ГК нижча, ніж очікував алгоритм.
 
 ### Розділ F — Панель швидкого запуску
 
@@ -508,13 +508,13 @@ Steps are drawn as columns, and the heart rate as a curved line that breaks wher
 
 Увімкнувши **Запустити ТЦ «Очікуваний прийом їжі»**, ви можете автоматично запустити вашу [тимчасову ціль «Очікуваний прийом їжі»](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Додатковий рядок **Час**, встановлений на **Зараз**, дає змогу записати ін’єкцію інсуліну, зроблену раніше: змінюйте його кнопками **-** / **+** або торкніться шеврона, щоб ввести хвилини чи вибрати дату і час.
+Якщо ви не хочете вводити болюс через помпу, а лише записати кількість інсуліну (наприклад, інсулін, введений шприц-ручкою), увімкніть «**Болюс буде лише записаний (не подається помпою)**». Додатковий рядок **Час**, встановлений на **Зараз**, дає змогу записати ін’єкцію інсуліну, зроблену раніше: змінюйте його кнопками **-** / **+** або торкніться шеврона, щоб ввести хвилини чи вибрати дату і час.
 
 ![Рядок «Час», згорнутий](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Рядок «Час», відкритий шевроном](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Ви можете використовувати кнопки **+0.5 / +1.0 / +2.0**, щоб швидко збільшити кількість інсуліну. Значення кроків можна змінити в [налаштуваннях калькулятора болюса](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Діалог інсуліну можна використовувати й тоді, коли помпу призупинено або від’єднано, наприклад щоб записати інсулін, введений шприц-ручкою. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+Діалог інсуліну можна використовувати й тоді, коли помпу призупинено або від’єднано, наприклад щоб записати інсулін, введений шприц-ручкою. У цьому випадку «**Болюс буде лише записаний (не подається помпою)**» увімкнено примусово (показано червоним), і з'являються додаткові поля для вибору типу інсуліну та зсуву **Час** для ін'єкції, зробленої в минулому:
 
 ![Діалог інсуліну, коли помпу від’єднано](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -620,20 +620,20 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 ![Нагадування для майбутніх вуглеводів](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+Нагадування починається, коли болюс введено. Поки воно працює, панель **Час їсти** на головному екрані показує зворотний відлік, з кнопками **Зупинити** і **+5 хв**. **+5 хв** переносить кінець очікування на п'ять хвилин пізніше, а панель показує загальний час очікування. Коли час настає, нагадування звучить власним звуком — тихим кухонним таймером. Крім **Вимкнути звук** (екран залишається відкритим) і **Вимкнути звук і закрити**, екран сигналу пропонує **+5 хв**, що запускає нове очікування на п'ять хвилин. Після сигналу панель показує *Час минув* з кнопками **+5 хв** і **Закрити**; **Вимкнути звук і закрити** також прибирає панель. Панель і сигнал також показуються в **AAPSClient** і на [годиннику](#WearOsSmartwatch-wizard-carb-time). Нагадування не створює таймер у застосунку «Годинник» вашого телефона. Якщо Android не дозволяє **AAPS** встановлювати будильники, калькулятор попросить вас дозволити *Будильники й нагадування* для **AAPS** у налаштуваннях Android. Дзвіночок не пропонується для часу вуглеводів у минулому.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![Панель «Час їсти» на головному екрані з кнопками +5 хв і Зупинити](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![Екран сигналу «Час їсти»: +5 хв, Вимкнути звук, Вимкнути звук і закрити](../images/main/eat_reminder_alarm.png)
 
-Поле **ГК** зазвичай уже заповнене останнім значенням з вашого CGM. Якщо у вас немає працюючого CGM, поле буде порожнім. Коли значення свіже, рядок **ГК** залишається згорнутим. The field follows new readings while the wizard is open, until you change it yourself.
+Поле **ГК** зазвичай уже заповнене останнім значенням з вашого CGM. Якщо у вас немає працюючого CGM, поле буде порожнім. Коли значення свіже, рядок **ГК** залишається згорнутим. Поле оновлюється з новими значеннями, поки калькулятор відкритий, доки ви самі його не зміните.
 
-Кнопка результату внизу показує запропонований болюс; після її натискання потрібне підтвердження, перш ніж буде введено будь-який інсулін. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Кнопка результату внизу показує запропонований болюс; після її натискання потрібне підтвердження, перш ніж буде введено будь-який інсулін. Поки підтвердження очікує, петля не дає SMB, тож болюс, який ви підтверджуєте, залишається правильним. Якщо в цей момент вводиться SMB, **OK** чекає, доки він завершиться.
 
 Корисно знати:
 
 * Якщо розрахований болюс більший за ваш **[Максимальний болюс](#Preferences-maximum-bolus)**, його зменшують до максимального болюса, а в підтвердженні показується попередження «Застосовано обмеження болюса». [Швидкий майстер](../DailyLifeWithAaps/QuickWizards.md) натомість відхиляється.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
+* Коли болюс лише записується (наприклад, поки помпа відʼєднана), попередження «**Болюс буде лише записаний (не подається помпою)**» залишається вгорі діалогу, також коли ви прокручуєте.
 * Болюс, який ви вводите вручну, має пріоритет над [SMB](#Open-APS-features-super-micro-bolus-smb), який чекає на введення: SMB скасовується, і петля розраховує знову. Якщо SMB вводиться саме зараз, ваш болюс відхиляється з повідомленням «Зараз вводиться SMB. Спробуйте ще раз, коли введення завершиться.» Інсулін не вводиться, а вуглеводи, введені з цим болюсом, не зберігаються: зачекайте трохи і введіть їх знову.
 
 (AapsScreens-wrong-cob-detection)=
@@ -773,7 +773,7 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Помічник профілю
 
 Відкрийте **меню** (☰) і виберіть **Помічник профілю**.
 

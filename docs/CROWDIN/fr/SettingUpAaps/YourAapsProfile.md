@@ -31,7 +31,7 @@ Les quatre derniers paramètres (cibles de glycémie, débits de basal, facteurs
 
 Des captures d'écran d'un profil _d'exemple_ dans **AAPS** sont montrées ci-dessous. Remarque : l'exemple de profil ci-dessous montre un grand nombre de plages horaires. Quand vous débutez avec **AAPS**, votre profil sera sans doute beaucoup plus simple.
 
-![Exemple de profil actif](../images/Profile-Example-Active.png)
+![Exemple de profil actif](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Cibles de glycémie
@@ -55,7 +55,7 @@ Si la cible de votre **Profil** est très large (par exemple 3 mmol/l ou plus [5
 
 La **figure ci-dessous** montre un exemple de réglage de la cible dans un profil **AAPS**.
 
-![Cible](../images/Profile_Target.png)
+![Cible](../images/v4/Profiles/Profile_Target.png)
 
 Les cibles de **glycémie** sont réglées selon vos préférences et vos besoins personnels. Par exemple, si vous craignez les hypoglycémies la nuit, vous pouvez mettre une cible un peu plus haute, à 117 mg/dl (6,5 mmol/l), de 21 h à 7 h. Si vous voulez être sûr d'avoir assez d'insuline active (IA) le matin avant le bolus du petit-déjeuner, vous pouvez régler une cible plus basse de 81 mg/dl (4,5 mmol/l) de 7 h à 8 h.
 
@@ -89,7 +89,7 @@ Donc un débit de basal trop élevé provoque des **glycémies** basses avec le 
 
 La **figure ci-dessous** montre un exemple de réglage des débits de basal dans un profil **AAPS**.
 
-![Débits de basal](../images/Profile_BasalRates.png)
+![Débits de basal](../images/v4/Profiles/Profile_BasalRates.png)
 
 Bien régler vos débits de basal se fait par essais successifs, et doit se faire avec votre équipe diabète.
 
@@ -147,7 +147,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 Un **SI** trop bas (et donc plus agressif, ce qui est assez fréquent) peut provoquer des « surcorrections ». En effet, **AAPS** calcule qu'il faut plus d'insuline que nécessaire pour corriger une **glycémie** haute. Cela peut donner une glycémie en « montagnes russes » (surtout à jeun), comme le montre l'image ci-dessous. Dans ce cas, il faut augmenter la valeur du **SI** pour rendre **AAPS** moins agressif. Ainsi, **AAPS** donnera des doses de correction plus petites et évitera de trop corriger une **glycémie** haute, ce qui provoquerait une **glycémie** basse.
 
-![SI trop faible](../images/isf.jpg)
+![SI trop faible](../images/v4/Profiles/isf.jpg)
 
 À l'inverse, un **SI** trop haut peut provoquer des sous-corrections : votre **glycémie** reste au-dessus de la cible, surtout la nuit.
 
@@ -155,7 +155,7 @@ Un **SI** trop bas (et donc plus agressif, ce qui est assez fréquent) peut prov
 
 Voir la **figure ci-dessous** pour un exemple de réglage des valeurs de SI dans un profil **AAPS**.
 
-![SI du profil](../images/Profile_ISF.png)
+![SI du profil](../images/v4/Profiles/Profile_ISF.png)
 
 Pour commencer, vous pouvez calculer votre SI de jour à partir de votre dose totale quotidienne (DTQ) avec la règle des 1 700 (94). Plus de détails sont donnés dans le chapitre 7 de [« Think like a Pancreas »](https://amzn.eu/d/iVU0RGe) de Gary Scheiner.
 
@@ -213,7 +213,7 @@ Un **G/I plus haut / plus faible** = plus de nourriture par unité : vous recev
 
 La **figure ci-dessous** montre un exemple de **G/I** d'un utilisateur et comment le régler dans un **Profil AAPS**. Quand on saisit ces valeurs, on entre la dernière partie du ratio : un ratio glucides/insuline de 1:3,5 se saisit simplement « 3,5 ».
 
-![G/I du profil](../images/Profile_ICR.png)
+![G/I du profil](../images/v4/Profiles/Profile_ICR.png)
 
 Si, après la digestion d'un repas et le retour de l'**IA** à zéro, votre **glycémie** reste plus haute qu'avant le repas, votre **G/I** est sans doute trop faible (_c.-à-d._ le nombre est trop grand et doit être baissé petit à petit). À l'inverse, si votre **glycémie** est plus basse qu'avant le repas, le **G/I** est trop fort (_c.-à-d._ le nombre est trop petit et doit être augmenté petit à petit).
 
@@ -292,7 +292,7 @@ L'[Assistant Profil](#aaps-screens-profile-helper) (menu ☰ → **Assistant Pro
 
 L'assistant de profil propose un ensemble de données d'enfants provenant de deux hôpitaux différents pour vous permettre de trouver un profil initial pour votre enfant jusqu'à 18 ans.
 
-![Assistant Profil Enfant 1](../images/ProfileHelperKids1.png)
+![Assistant Profil Enfant 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. Vérifiez que vous êtes sur l'onglet **Profil 1**.
 2. Dans **Type de profil**, vérifiez que « Profil par défaut » est sélectionné.
@@ -303,7 +303,7 @@ L'assistant de profil propose un ensemble de données d'enfants provenant de deu
 7. Open the **Comparison** tab. La comparaison des deux profils ajustés s'affiche (voir la capture d'écran ci-dessous).
 8. Si vous voulez commencer à ajuster votre profil à partir d'une de ces propositions, utilisez le bouton **Dupliquer** en bas de la comparaison.
 
-![Assistant Profil Enfant 2](../images/ProfileHelperKids2.png)
+![Assistant Profil Enfant 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Changer de profil
 
@@ -312,7 +312,7 @@ Voir [Changement de profil et pourcentage de profil](../DailyLifeWithAaps/Profil
 (your-aaps-profile-clone-profile-switch)=
 ### Dupliquer un changement de profil vers un nouveau profil
 
-![Changement de profil](../images/TreatmentsView4.png)
+![Changement de profil](../images/Maintenance/TreatmentsView4.png)
 
 L'[Historique Traitements](#aaps-screens-treatments) montre tous les **Changements de profil** passés. Dans l'onglet **Changement de profil**, vous pouvez utiliser un ancien **Changement de profil** comme base pour créer un nouveau **Profil**. Dans ce cas, le décalage horaire et le pourcentage sont appliqués au nouveau profil local. Utilisez le bouton **Dupliquer** sur la ligne **2**.
 
@@ -335,14 +335,14 @@ Cela peut être utile avant de faire de grosses modifications sur un **Profil** 
 
 Mais pour cela, il est important de dupliquer tout l'**enregistrement de la base de données**, qui contient plusieurs profils, dans l'éditeur Nightscout (flèche bleue sur la capture d'écran ci-dessous). Les nouveaux enregistrements de la base de données portent alors la date du jour. Après l'enregistrement, le **Profil** modifié ou nouveau peut être activé dans **AAPS** avec un [changement de profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) normal.
 
-![Cloner les enregistrements de la base de données](../images/Nightscout_Profile_Editor.PNG)
+![Cloner les enregistrements de la base de données](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Comparer deux profils
 
 Vous pouvez aussi utiliser l'[Assistant Profil](#aaps-screens-profile-helper) (menu ☰ → **Assistant Profil**) pour comparer deux profils ou changements de profil différents (le pourcentage d'un de vos profils utilisé avant dans un [changement de profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
-![Assistant Profil 1](../images/ProfileHelper1.png)
+![Assistant Profil 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. Vérifiez que vous êtes sur l'onglet **Profil 1**.
 2. Dans **Type de profil**, sélectionnez « Profils disponibles » pour choisir parmi tous les **Profils** enregistrés.
@@ -352,4 +352,4 @@ Vous pouvez aussi utiliser l'[Assistant Profil](#aaps-screens-profile-helper) (m
 6. Choisissez le **Changement de profil** avec lequel vous voulez le comparer.
 7. Open the **Comparison** tab. La comparaison des deux profils s'affiche (voir la capture d'écran ci-dessous).
 
-![Assistant Profil 2](../images/ProfileHelper2.png)
+![Assistant Profil 2](../images/v4/Profiles/ProfileHelper2.png)

@@ -1,153 +1,153 @@
 (reinstall-aaps)=
-# Reinstalling AAPS with a new keystore
+# Reinstal·lar AAPS amb un nou magatzem de claus
 
-Every **AAPS** apk is signed with a **keystore**. An update only installs over your current **AAPS** if it is signed with the **same keystore**: all your settings and data are then kept. That's why it is recommended to store the keystore and its password in a safe place.
+Cada apk d'**AAPS** està signat amb un **magatzem de claus** (keystore). Una actualització només s'instal·la sobre l'**AAPS** actual si està signada amb el **mateix magatzem de claus**: llavors es conserven tota la configuració i totes les dades. Per això es recomana guardar el magatzem de claus i la seva contrasenya en un lloc segur.
 
-If you try to install an apk signed with a different keystore than before, you will get an error message explaining that the installation failed!
+Si intenteu instal·lar un apk signat amb un magatzem de claus diferent de l'anterior, rebreu un missatge d'error que diu que la instal·lació ha fallat!
 
 (reinstall-aaps-when)=
-## When do you need to reinstall?
+## Quan cal reinstal·lar?
 
-You need to uninstall and reinstall **AAPS** when your new apk is signed with a different keystore, for example:
+Heu de desinstal·lar i tornar a instal·lar **AAPS** quan el nou apk està signat amb un magatzem de claus diferent, per exemple:
 
-- You cannot find your old keystore or its password.
-- You created a new keystore, for example with [Option 1 of the browser build](../SettingUpAaps/BrowserBuildKeystore.md) or **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
-- You build on a new computer and did not copy your keystore to it.
+- No trobeu el vostre magatzem de claus antic o la seva contrasenya.
+- Heu creat un nou magatzem de claus, per exemple amb l'[opció 1 de la compilació al navegador](../SettingUpAaps/BrowserBuildKeystore.md) o amb **Crear una clau nova** a [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
+- Compileu en un ordinador nou i no hi heu copiat el vostre magatzem de claus.
 
-If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
+Si encara teniu el vostre magatzem de claus, no necessiteu aquesta pàgina: torneu-lo a fer servir i [actualitzeu **AAPS**](../Maintenance/UpdateToNewVersion.md) directament.
 
 (reinstall-aaps-before)=
-## Before you start
+## Abans de començar
 
-- Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
-- The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it. Resetting a forgotten master password does not help here: a settings file can only be imported with the password it was exported with (see [How to reset the master password?](#FAQ-reset-master-password)).
-- **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
-- If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) before you start.
+- Desinstal·lar **AAPS** elimina tota la seva configuració, els vostres [objectius](../SettingUpAaps/CompletingTheObjectives.md) i la connexió actual amb la bomba. Els recupereu important el vostre **fitxer de configuració**, així que assegureu-vos que en teniu un de recent.
+- El fitxer de configuració no conté l'historial de tractaments i de glucèmia. Si envieu les dades a [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), les podeu tornar a carregar després de la reinstal·lació (pas 8).
+- Necessiteu la vostra [**clau mestra**](#Preferences-master-password): el fitxer de configuració està encriptat amb ella. Restablir una clau mestra oblidada no ajuda aquí: un fitxer de configuració només es pot importar amb la contrasenya amb què es va exportar (vegeu [Com restablir la clau mestra?](#FAQ-reset-master-password)).
+- **Usuaris d'Omnipod i Medtrum:** primer llegiu [Bombes sense tub](#ExportImportSettings-tubeless-pumps). El fitxer de configuració s'ha d'haver exportat durant el pod o el patch que porteu ara.
+- Si cal, [configureu el receptor del vostre CGM / origen de glucèmia](../Getting-Started/CompatiblesCgms.md) abans de començar.
 
 (reinstall-aaps-steps)=
-## Steps
+## Passos
 
-The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
+Les imatges mostren el pas d'**AAPS** 3.4 (passos 1 a 3) a **AAPS** 4 (passos 6 a 8). Altres versions es veuen una mica diferents.
 
 (reinstall-aaps-export)=
-### 1. Export your settings
+### 1. Exporteu la vostra configuració
 
-Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
+Exporteu la configuració amb l'**AAPS** que teniu instal·lat ara al telèfon. Vegeu [Exportar la configuració](#ExportImportSettings-Settings-Export) per a més detalls.
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+A **AAPS** 3.4: obriu **Manteniment** i premeu **Opcions d'exportació**. A **Configuració de l'usuari**, marqueu **Emmagatzematge local** i premeu **OK**.
 
-*Note: you can also use [Cloud Storage](#preferences-maintenance-cloud) to have a safety backup copy: that's a good idea, but keep Local Storage for recovering settings quickly.*
+*Nota: també podeu fer servir l'[emmagatzematge al núvol](#preferences-maintenance-cloud) per tenir una còpia de seguretat addicional. És una bona idea, però mantingueu l'emmagatzematge local per recuperar la configuració ràpidament.*
 
-![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
+![Opcions d'exportació amb Configuració de l'usuari a Emmagatzematge local](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+Ara el botó diu **Exportar configuració (local)**. Toqueu-lo.
 
-![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
+![Manteniment amb el botó Exportar configuració (local)](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
-**AAPS** shows the name of the file it will create. Tap **OK**, type your master password and tap **OK**.
+**AAPS** mostra el nom del fitxer que crearà. Premeu **OK**, escriviu la vostra clau mestra i premeu **OK**.
 
-![Export settings confirmation with the file name](../images/ReinstallAaps/reinstall_export_confirm.png)
+![Confirmació d'Exportar configuració amb el nom del fitxer](../images/ReinstallAaps/reinstall_export_confirm.png)
 
-In **AAPS** 4: open **Maintenance**, select the **Local** chip next to **Export settings** and tap **Export settings**.
+A **AAPS** 4: obriu **Manteniment**, seleccioneu el xip **Local** al costat d'**Exportar configuració** i premeu **Exportar configuració**.
 
 (reinstall-aaps-copy)=
-### 2. Copy the settings file off your phone
+### 2. Copieu el fitxer de configuració fora del telèfon
 
-The file is in the **preferences** folder of your [**AAPS** directory](#SetupWizard-StoragePermission), named like `2026-10-13_222735_full.json`. Copy or upload it to an external location (i.e. your computer, cloud storage service...). The file normally stays on your phone after the uninstall, but keep a copy elsewhere in case.
+El fitxer és a la carpeta **preferences** del vostre [directori d'**AAPS**](#SetupWizard-StoragePermission), amb un nom com `2026-10-13_222735_full.json`. Copieu-lo o pugeu-lo a un lloc extern (per exemple el vostre ordinador, un servei d'emmagatzematge al núvol...). Normalment el fitxer es queda al telèfon després de desinstal·lar, però per si de cas guardeu-ne una còpia en un altre lloc.
 
 (reinstall-aaps-nightscout-before)=
-### 3. Synchronize with Nightscout
+### 3. Sincronitzeu amb Nightscout
 
-This step is not mandatory but recommended if you use [DynISF](#Open-APS-features-DynamicISF): it will allow you to resume directly with the current settings instead of waiting 5 days to build necessary data for the plugin. NSClient V3 needs to be [enabled and configured](../SettingUpAaps/SettingUpTheReportingServer.md).
+Aquest pas no és obligatori, però es recomana si feu servir [DynISF](#Open-APS-features-DynamicISF): us permetrà continuar directament amb la configuració actual, en lloc d'esperar 5 dies a tenir les dades que necessita el plugin. NSClient V3 ha d'estar [activat i configurat](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Make sure Nightscout has all your data before you uninstall.
+Assegureu-vos que Nightscout té totes les vostres dades abans de desinstal·lar.
 
-Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
+Obriu **NSClient**, premeu el botó **Sincronització completa** a la part de baix de la pantalla i després **OK**.
 
-![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![Pantalla de NSClient amb el botó Sincronització completa](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
-*Note: the time necessary depends on your Nightscout hosting service.*
+*Nota: el temps que cal depèn del vostre servei d'allotjament de Nightscout.*
 
-![Full synchronization confirmation](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
+![Confirmació de Sincronització completa](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
 
-**AAPS** then offers to clean up its database. **OK** removes data older than 3 months from the phone, which makes the synchronization much faster. **Cancel** synchronizes without cleaning up. The phone database is deleted when you uninstall anyway, so both are fine.
+Després **AAPS** ofereix netejar la seva base de dades. **OK** elimina del telèfon les dades de més de 3 mesos, i així la sincronització és molt més ràpida. **Cancel·lar** sincronitza sense netejar. De tota manera, la base de dades del telèfon s'elimina quan desinstal·leu, així que totes dues opcions són correctes.
 
-![Database cleanup question](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
+![Pregunta de neteja de la base de dades](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
 
-Leave **AAPS** running until the synchronization is finished.
+Deixeu **AAPS** en marxa fins que acabi la sincronització.
 
 (reinstall-aaps-build)=
-### 4. Build the new apk
+### 4. Compileu el nou apk
 
-[Build](../SettingUpAaps/BuildingAaps.md) a new signed apk with your new keystore and transfer it to your phone.
+[Compileu](../SettingUpAaps/BuildingAaps.md) un nou apk signat amb el vostre nou magatzem de claus i transferiu-lo al telèfon.
 
 (reinstall-aaps-uninstall)=
-### 5. Uninstall AAPS
+### 5. Desinstal·leu AAPS
 
-In your phone's **Settings** > **Apps** > **AAPS**, tap **Uninstall** and confirm with **OK**.
+Al telèfon, a **Configuració** > **Aplicacions** > **AAPS**, premeu **Desinstal·la** i confirmeu amb **D'acord**.
 
-![App info of AAPS with the Uninstall button](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
+![Informació de l'aplicació AAPS amb el botó Desinstal·la](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
 
 (reinstall-aaps-install)=
-### 6. Install and start the new AAPS
+### 6. Instal·leu i inicieu el nou AAPS
 
-[Install](../SettingUpAaps/TransferringAndInstallingAaps.md) the new apk and start **AAPS**. The [setup wizard](../SettingUpAaps/SetupWizard.md) asks for the permissions **AAPS** needs: tap **Grant** for each of them. This also turns [battery optimization](#setup-wizard-bluetooth-battery-optimisation) off again.
+[Instal·leu](../SettingUpAaps/TransferringAndInstallingAaps.md) el nou apk i inicieu **AAPS**. L'[assistent de configuració](../SettingUpAaps/SetupWizard.md) demana els permisos que necessita **AAPS**: premeu **Concedir** per a cadascun. Això també torna a desactivar l'[optimització de la bateria](#setup-wizard-bluetooth-battery-optimisation).
 
-![Permissions Required list of the setup wizard](../images/ReinstallAaps/reinstall_permissions.png)
+![Llista de Permisos necessaris de l'assistent de configuració](../images/ReinstallAaps/reinstall_permissions.png)
 
-For **AAPS Directory**, select the same **AAPS** folder as before (the one with the **preferences** folder in it), tap **Use this folder** and **Allow**.
+A **Directori AAPS**, seleccioneu la mateixa carpeta d'**AAPS** que abans (la que té la carpeta **preferences** a dins), premeu **Utilitza aquesta carpeta** i **Permet**.
 
-![Selecting the existing AAPS folder](../images/ReinstallAaps/reinstall_aaps_directory.png)
+![Selecció de la carpeta d'AAPS existent](../images/ReinstallAaps/reinstall_aaps_directory.png)
 
-When **AAPS** finds your exported settings, the setup wizard shows a [Stored settings found](#setup-wizard-import-settings) screen where you can import them. You can also close the wizard and import from **Maintenance** as described below.
+Quan **AAPS** troba la configuració exportada, l'assistent de configuració mostra una pantalla [Trobada configuració emmagatzemada](#setup-wizard-import-settings) on la podeu importar. També podeu tancar l'assistent i importar-la des de **Manteniment**, com es descriu a continuació.
 
 (reinstall-aaps-import)=
-### 7. Import your settings
+### 7. Importeu la configuració
 
-If the settings file is no longer on your phone, copy it back to the **preferences** folder of your **AAPS** directory.
+Si el fitxer de configuració ja no és al telèfon, torneu-lo a copiar a la carpeta **preferences** del vostre directori d'**AAPS**.
 
-Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Import settings** and tap **Import settings**.
+Obriu el menú (☰) > **Manteniment**, seleccioneu el xip **Local** al costat d'**Importar configuració** i premeu **Importar configuració**.
 
-![Maintenance with Import settings](../images/ReinstallAaps/reinstall_maintenance_import.png)
+![Manteniment amb Importar configuració](../images/ReinstallAaps/reinstall_maintenance_import.png)
 
-The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
+La llista mostra cada fitxer amb la seva versió d'**AAPS** i l'antiguitat. Trieu el fitxer que heu exportat al pas 1.
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![Llista de fitxers de configuració per importar](../images/ReinstallAaps/reinstall_import_file_list.png)
 
-You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
+No cal que primer definiu una clau mestra al nou **AAPS**. Escriviu la clau mestra que vau fer servir per a l'exportació a **Contrasenya de desencriptació** i premeu **Desencriptar**. El missatge **L'arxiu es va encriptar amb una contrasenya diferent** és normal: el nou **AAPS** encara no coneix la vostra contrasenya. La importació la restaura juntament amb la resta de la configuració.
 
-![Decryption password for the settings file](../images/ReinstallAaps/reinstall_import_password.png)
+![Contrasenya de desencriptació per al fitxer de configuració](../images/ReinstallAaps/reinstall_import_password.png)
 
-Tick **Also replace pump settings**: without it, your pump and its settings are not restored. Omnipod and Medtrum users: only tick it if the file was exported during your current pod or patch (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+Marqueu **Substituir també la configuració de la bomba**: si no ho feu, la bomba i la seva configuració no es restauren. Usuaris d'Omnipod i Medtrum: marqueu-ho només si el fitxer es va exportar durant el pod o el patch actual (vegeu [Bombes sense tub](#ExportImportSettings-tubeless-pumps)).
 
-![Also replace pump settings ticked](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![Substituir també la configuració de la bomba marcat](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
-Tap **Import**, then **OK** to apply the settings and **OK** again on **Settings applied**.
+Premeu **Importar**, després **OK** per aplicar la configuració i un altre cop **OK** a **Configuració aplicada**.
 
-![Apply imported settings confirmation](../images/ReinstallAaps/reinstall_import_apply.png)
+![Confirmació per aplicar la configuració importada](../images/ReinstallAaps/reinstall_import_apply.png)
 
 (reinstall-aaps-nightscout-after)=
-### 8. Get your history back from Nightscout
+### 8. Recupereu l'historial des de Nightscout
 
-Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Communication** and tap **Open plugin** under **NSClientV3**. Check that the status shows **Connected**. If it doesn't, see [Troubleshooting NSClient](TroubleshootingNsClient.md).
+Obriu el menú (☰) > [**Configurador**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Comunicació** i premeu **Obrir plugin** a **NSClientV3**. Comproveu que l'estat mostra **Connectat**. Si no és així, vegeu [Resolució de problemes de NSClient](TroubleshootingNsClient.md).
 
-![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
+![Comunicació amb el botó Obrir plugin de NSClientV3](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
+Premeu el botó **Sincronització completa** a la part de baix de la pantalla i **OK**. La base de dades és nova, així que podeu respondre la pregunta de neteja com vulgueu.
 
-![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![Pantalla de NSClientV3 amb el botó Sincronització completa](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
-**AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
+**AAPS** carrega les vostres dades des de Nightscout. Quan acaba, el registre mostra **Full sync finished**.
 
-![NSClientV3 log with Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
+![Registre de NSClientV3 amb Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
 
 (reinstall-aaps-check)=
-### 9. Check and keep looping
+### 9. Comproveu-ho i continueu amb el llaç
 
-Check that your pump is connected and your CGM values arrive, then keep on looping.
+Comproveu que la bomba està connectada i que arriben els valors del CGM, i després continueu amb el llaç.
 
 (reinstall-aaps-afterwards)=
-## Afterwards
+## Després
 
-Always keep using your new keystore from now on, and store it with its password somewhere safe, off your phone. See [Creating back-ups](../Maintenance/ExportImportSettings.md).
+A partir d'ara feu servir sempre el vostre nou magatzem de claus, i guardeu-lo amb la seva contrasenya en un lloc segur, fora del telèfon. Vegeu [Crear i restaurar còpies de seguretat](../Maintenance/ExportImportSettings.md).

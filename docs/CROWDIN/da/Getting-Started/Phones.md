@@ -1,4 +1,4 @@
-# Phones
+# Telefoner
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -9,41 +9,41 @@
 ../CompatiblePhones/Huawei.md
 ```
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+Den nuværende version af **AAPS** (4.0) kræver en Android-smartphone med Google **Android 12.0 eller nyere**. Hvis du overvejer at købe en ny telefon, er **Android 16 at foretrække** (januar 2026). Android 15 anbefales ikke.
 
-Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+Se [Facebook eller Discord](../GettingHelp/WhereCanIGetHelp.md) for de nyeste opdateringer om dette emne.
 
-Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Af sikkerhedshensyn opfordrer vi kraftigt brugerne til at holde deres build af **AAPS** opdateret. Brugere, der ikke kan bruge en enhed med Android 12.0 eller nyere, kan dog stadig bruge ældre versioner af **AAPS**, som passer til ældre Android-versioner. Se: [Udgivelsesnoter](#maintenance-android-version-aaps-version).
 
-- [Jelly Pro Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+- [Indstillinger for Jelly Pro](../CompatiblePhones/Jelly.md)
+- [Indstillinger for Huawei](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## List of tested phones
+## Liste over testede telefoner
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
+Vi har en liste over [testede hardwareopsætninger](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), som du kan [udforske med en brugervenlig visning](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Bidrag ved at udfylde [Google-formularen](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) og tilføje din opsætning!
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+Denne liste viser brugernes erfaringer med at bruge en telefon sammen med **AAPS** og en bestemt pumpe og CGM. Den kan hjælpe dig med at se, om andre brugere har brugt din telefon / pumpe / CGM med succes.
 
-The document is read-only. With CTRL-F, you can search in the text of the Google sheet.
+Dokumentet er skrivebeskyttet. Med CTRL-F kan du søge i teksten i Google-regnearket.
 
-To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes.
+Hvis du vil registrere din test af en hardwareopsætning, så udfyld denne [formular](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Når du har udfyldt formularen, bliver regnearket opdateret automatisk hvert 5. minut.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Hvis der er problemer med regnearket, så kontakt den person, der vedligeholder det, *@theodoor5137*, på Discord, eller se siden om, [hvor du kan få hjælp](../GettingHelp/WhereCanIGetHelp.md).
 
-## I didn't find my phone
+## Jeg kunne ikke finde min telefon
 
-If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+Hvis du har spørgsmål om en bestemt telefonmodel, så søg eller spørg i vores [Facebook- eller Discord-fællesskab](../GettingHelp/WhereCanIGetHelp.md).
 
-To make a donation of smartphone or smartwatch models that still need testing, please email <donations@androidaps.org>.
+Hvis du vil donere modeller af smartphones eller smarture, som stadig skal testes, så send en e-mail til <donations@androidaps.org>.
 
 (Phones-phone-wallpaper)=
 
-## Phone wallpaper
+## Baggrundsbillede til telefonen
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+Hvis du vil pynte din telefon med mere **AAPS**, kan du downloade baggrundsbilledet [her](../images/bg_phone.jpg)!
 
-![phone background](../images/bg_phone_thump.jpg)
+![baggrundsbillede til telefonen](../images/bg_phone_thump.jpg)
 
 Design: Thiago :)

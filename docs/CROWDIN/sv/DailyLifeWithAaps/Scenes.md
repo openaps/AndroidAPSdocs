@@ -45,7 +45,7 @@ Tryck på knappen **+** för att skapa en ny scen.
 
 ### Börja från en mall
 
-För att **skapa** en scen trycker du på knappen **+** på skärmen Scener. Första steget är **Börja från en mall**: välj en färdig scen för en vanlig situation – *Träning*, *Sjukdag*, *Sjukdag — Kräkningar*, *Sömn*, *Natt efter träning*, *Innan måltid*, *Alkohol*, *Bilkörning*, *Bad*, *Lutealfas*, *Varmt väder*, *Medicinskt ingrepp* – eller börja från en *Tom* scen. Varje mall **fyller i de rekommenderade åtgärderna i förväg**, och du kan justera allt i nästa steg.
+För att **skapa** en scen trycker du på knappen **+** på skärmen Scener. Första steget är **Börja från en mall**: välj en färdig scen för en vanlig situation – *Träning*, *Sjukdag*, *Sjukdag — Kräkningar*, *Sömn*, *Natt efter träning*, *Innan måltid*, *Alkohol*, *Bilkörning*, *Bad*, *Lutealfas*, *Varmt väder*, *Medicinskt ingrepp* – eller börja från en *Tom* scen. Varje mall **fyller i de rekommenderade åtgärderna i förväg**, och du kan justera allt i nästa steg. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![”Börja från en mall” – välj en startpunkt](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ En scen utan uppföljningsscen ber dig bara att bekräfta:
 
 ![Dialogrutan Avsluta scen](../images/v4/Scenes/scene_end_dialog.png)
 
-När en scen avslutas **återställs** ändringarna som den gjorde (till exempel profilbytet och det tillfälliga målvärdet som den startade).
+När en scen avslutas **återställs** ändringarna som den gjorde (till exempel profilbytet och det tillfälliga målvärdet som den startade). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Medan en scen är aktiv visar profilen och målvärdet på huvudskärmen en liten scenikon om scenen har ställt in dem. Panelen **Scener** i den nedre navigeringen finns kvar, så att du kan starta en annan scen:
 

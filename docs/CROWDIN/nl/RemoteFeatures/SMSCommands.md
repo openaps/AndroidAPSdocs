@@ -55,14 +55,14 @@ Deze authenticator-apps maken een tijdgebonden, eenmalig wachtwoord van 6 cijfer
 
 Ga op je telefoon naar **Apps > AAPS > Machtigingen**. Zorg dat **Sms** en **Telefoon** zijn toegestaan.
 
-![Afbeelding](../images/remote-control-08.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android kan de machtiging **Sms** blokkeren voor apps die niet uit een app store zijn geïnstalleerd, zoals **AAPS**. Als je deze melding ziet wanneer je de machtiging **Sms** geeft, open dan op de telefoon **Instellingen > Apps > AAPS**, tik op het menu **⋮** (rechtsboven) en kies **Allow restricted settings** (beperkte instellingen toestaan). Geef daarna de machtiging **Sms** opnieuw.
 ```
 
-![App is toegang tot SMS geweigerd](../images/sms_permission_restricted.png)
+![App is toegang tot SMS geweigerd](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Datum en tijd gelijk laten lopen
 
@@ -82,7 +82,7 @@ Open de instellingen van **SMS Commando's**.
 
 Schakel **Sta opdrachten via SMS toe** in. De opties **Extra verplichte PIN aan einde van token** en **Authenticatie instellingen** verschijnen pas als dit is ingeschakeld:
 
-![Instellingen van SMS Commando's](../images/sms_communicator_settings.png)
+![Instellingen van SMS Commando's](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Geautoriseerde telefoonnummers
@@ -97,7 +97,7 @@ Let op: afhankelijk van waar je woont is de “+” voor het nummer wel of niet 
 
 Als je meer dan één telefoonnummer wilt toevoegen, scheid ze dan met puntkomma's, **ZONDER spatie tussen de nummers** (dit is heel belangrijk!). Kies **OK**:
 
-![Geautoriseerde telefoonnummers](../images/sms_allowed_numbers.png)
+![Geautoriseerde telefoonnummers](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Minimale tijd tussen opdrachten
 
@@ -115,7 +115,7 @@ Eisen voor de pincode:
 
 Gebruik voor een veiligere PIN niet vaak hetzelfde cijfer (_bijv._ 111111) of een reeks (_bijv._ 123456).
 
-![Extra verplichte PIN aan einde van token](../images/sms_pin.png)
+![Extra verplichte PIN aan einde van token](../images/remote_control_and_following/sms_pin.png)
 
 #### Authenticatie instellingen
 
@@ -123,7 +123,7 @@ Gebruik voor een veiligere PIN niet vaak hetzelfde cijfer (_bijv._ 111111) of ee
 * Open de geïnstalleerde authenticator-app op de _telefoon van de verzorger_, stel een nieuwe verbinding in en
 * Scan met de telefoon van de verzorger de QR-code die getoond wordt onder **Scan code om AAPS OTP codes in te stellen**.
 
-![Authenticator instellen met QR-code](../images/sms_authenticator_setup.png)
+![Authenticator instellen met QR-code](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Voer onder **Test eenmalig wachtwoord (One Time Password)** bij **Te controleren code** de eenmalige code uit de authenticator-app op de telefoon van de verzorger in, gevolgd door je PIN:
 
@@ -134,7 +134,7 @@ Voorbeeld:
 
 Als de invoer goed is, verandert de rode tekst “FOUTIEVE PIN” vanzelf in een groene “OK”. **Er is geen knop om op te drukken!** Het proces is nu klaar. Er is geen knop “OK” waarop je moet drukken na het invoeren van de code:
 
-![Test eenmalig wachtwoord en Reset Authenticatie](../images/sms_authenticator_test.png)
+![Test eenmalig wachtwoord en Reset Authenticatie](../images/remote_control_and_following/sms_authenticator_test.png)
 
 De SMS-commando's zijn nu ingesteld.
 
@@ -146,7 +146,7 @@ Gebruik de knop **Reset Authenticatie** onderaan het scherm **Authenticatie inst
 
 1)  Controleer of je alles goed hebt ingesteld: test de verbinding door “bg” als SMS te sturen van de telefoon van de verzorger naar de **AAPS**-telefoon. Je krijgt dan een antwoord dat lijkt op het voorbeeld hier:
 
-![Afbeelding](../images/remote-control-06.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-06.png)
 
 Als je geen antwoord krijgt, kijk dan in het onderdeel [Probleemoplossing](#SMSCommands-troubleshooting) hieronder.
 
@@ -154,7 +154,7 @@ Als je geen antwoord krijgt, kijk dan in het onderdeel [Probleemoplossing](#SMSC
 
 Als je voor het eerst een SMS-commando stuurt, probeer het dan uit terwijl de **AAPS**-telefoon bij je is, zodat je ziet hoe het werkt:
 
-![Afbeelding](../images/remote-control-16.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-16.png)
 
 De telefoon van de verzorger krijgt een SMS terug van **AAPS** die bevestigt of het SMS-commando op afstand goed is uitgevoerd.
 
@@ -182,7 +182,7 @@ Om hypo's te voorkomen is het verstandig om voorzichtig te beginnen en **minder 
 
 Commando's moeten in het Engels worden gestuurd. Het antwoord is in je eigen taal als de tekst van het antwoord al [vertaald](#translations-translate-strings-for-AAPS-app) is. De commando's zijn niet hoofdlettergevoelig: je kunt kleine letters of hoofdletters gebruiken.
 
-![Voorbeeld SMS-commando's](../images/SMSCommands.png)
+![Voorbeeld SMS-commando's](../images/remote_control_and_following/SMSCommands.png)
 
 De **tabellen met SMS-commando's** hieronder tonen alle mogelijke SMS-commando's. Er staan _voorbeeldwaarden_ bij, om het beter te begrijpen. Voor de commando's gelden dezelfde mogelijke waarden (streefdoelen, profielpercentage enz.) als in de **AAPS**-app zelf.
 
@@ -191,11 +191,11 @@ De **tabellen met SMS-commando's** hieronder tonen alle mogelijke SMS-commando's
 
 Sommige SMS-commando's geven direct antwoord, en sommige SMS-commando's vragen om sterke **verificatie** via de authenticator-app. Een eenvoudige vraag zoals “**BG**” (die de huidige glucose opvraagt) is snel te typen, heeft geen verificatie nodig en geeft de statusinformatie van **AAPS** terug zoals hieronder:
 
-![Afbeelding](../images/remote-control-06.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-06.png)
 
 Commando's die meer beveiliging nodig hebben, vragen om een code, bijvoorbeeld:
 
-![SMS met verificatie](../images/remote-control-07.png)
+![SMS met verificatie](../images/remote_control_and_following/remote-control-07.png)
 
 De kolom *Verificatie* in de tabellen hieronder geeft aan of zo'n sterke verificatie nodig is voor elk commando.
 
@@ -311,12 +311,12 @@ Dat kan een van deze redenen hebben:
 ### Helemaal geen antwoord op SMS-commando's
 
 Probeer op de telefoon van de verzorger en/of de **AAPS**-telefoon deze opties uit te schakelen:
-* **Send as chat message** (verzenden als chatbericht) ![Schakel SMS als chatbericht uit](../images/SMSdisableChat.png)
+* **Send as chat message** (verzenden als chatbericht) ![Schakel SMS als chatbericht uit](../images/remote_control_and_following/SMSdisableChat.png)
 * Als je de app Android Berichten of Google Berichten gebruikt, schakel dan RCS-berichten uit:
   - open het specifieke SMS-gesprek in Berichten
   - Kies het menu met de drie puntjes rechtsboven
   - kies "Details"
-  - Zet "Alleen sms- en mms-berichten verzenden" aan ![Schakel RCS als chatbericht uit](../images/SMSdisableRCS.png)
+  - Zet "Alleen sms- en mms-berichten verzenden" aan ![Schakel RCS als chatbericht uit](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Fouten bij het uitvoeren van commando's
 
@@ -331,7 +331,7 @@ Er zijn verschillende mogelijke redenen waarom het commando niet lukt:
 
 Veelvoorkomende fouten staan in de voorbeelden hieronder:
 
-![Afbeelding](../images/remote-control-17.png)
+![Afbeelding](../images/remote_control_and_following/remote-control-17.png)
 
 ### Hoe kan ik een commando stoppen als het al geverifieerd is?
 

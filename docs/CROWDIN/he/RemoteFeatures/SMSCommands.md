@@ -55,14 +55,14 @@ These Authenticator apps produce a time-limited, one-time 6-digit password, simi
 
 On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android יכולה לחסום את ההרשאה **SMS** לאפליקציות שלא הותקנו מחנות אפליקציות, כמו **AAPS**. אם ההודעה הזו מופיעה כשנותנים את ההרשאה **SMS**, יש לפתוח בטלפון את **Settings > Apps > AAPS** (הגדרות ← אפליקציות ← AAPS), ללחוץ על התפריט **⋮** (בחלק העליון של המסך) ולבחור **Allow restricted settings** (לאפשר הגדרות מוגבלות). אחר כך יש לתת שוב את ההרשאה **SMS**.
 ```
 
-![App was denied access to SMS (האפליקציה לא קיבלה גישה ל-SMS)](../images/sms_permission_restricted.png)
+![App was denied access to SMS (האפליקציה לא קיבלה גישה ל-SMS)](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Date and time syncing
 
@@ -82,7 +82,7 @@ Some options may be greyed out, due to needing admin via a family account if the
 
 יש להפעיל את **הפעלת פקודות מרחוק באמצעות SMS**. האפשרויות **תוספת PIN חובה בסוף האסימון** ו-**הגדרת מאמת** מופיעות רק אחרי שהאפשרות הזו מופעלת:
 
-![הגדרות תקשורת SMS](../images/sms_communicator_settings.png)
+![הגדרות תקשורת SMS](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Allowed phone numbers
@@ -97,7 +97,7 @@ Note that the “+” in front of the number may or may not be required based on
 
 If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). יש לבחור **אישור**:
 
-![Allowed phone numbers](../images/sms_allowed_numbers.png)
+![Allowed phone numbers](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### מרחק מינימלי לבולוס מרחוק
 
@@ -115,7 +115,7 @@ PIN requirements are:
 
 כדי שה-PIN יהיה בטוח יותר, לא כדאי להשתמש באותה ספרה פעמים רבות (_למשל_ 111111) או ברצף (_למשל_ 123456).
 
-![Additional mandatory PIN at token end](../images/sms_pin.png)
+![Additional mandatory PIN at token end](../images/remote_control_and_following/sms_pin.png)
 
 #### Authenticator setup
 
@@ -123,7 +123,7 @@ PIN requirements are:
 * Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
 * יש להשתמש בטלפון המטפל כדי לסרוק את קוד ה-QR שמוצג תחת **סרקו את הקוד כדי להגדיר את קודי ה-OTP של AAPS**.
 
-![הגדרת מאמת עם קוד QR](../images/sms_authenticator_setup.png)
+![הגדרת מאמת עם קוד QR](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * תחת **בדיקת סיסמה חד-פעמית**, יש להזין בשדה **קוד לבדיקה** את הסיסמה החד-פעמית מאפליקציית האימות בטלפון המטפל, ואחריה את ה-PIN שלכם:
 
@@ -134,7 +134,7 @@ PIN requirements are:
 
 אם הקוד נכון, הטקסט האדום "קוד PIN שגוי" יתחלף אוטומטית ל-"אישור" בירוק. **אין לחצן שצריך ללחוץ עליו!** התהליך הסתיים. אחרי הזנת הקוד אין לחצן "אישור" שצריך ללחוץ עליו:
 
-![בדיקת סיסמה חד-פעמית ואיפוס מאמתים](../images/sms_authenticator_test.png)
+![בדיקת סיסמה חד-פעמית ואיפוס מאמתים](../images/remote_control_and_following/sms_authenticator_test.png)
 
 עכשיו פקודות ה-SMS אמורות להיות מוגדרות.
 
@@ -146,7 +146,7 @@ PIN requirements are:
 
 1)  כדי לבדוק שהכול הוגדר נכון, יש לבדוק את החיבור: לשלוח מטלפון המטפל לטלפון **AAPS** הודעת SMS עם הטקסט "bg". אמורה להגיע תגובה דומה לזו שמוצגת כאן:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 אם לא מגיעה שום תגובה, ראו את החלק [פתרון תקלות](#SMSCommands-troubleshooting) שלמטה.
 
@@ -154,7 +154,7 @@ PIN requirements are:
 
 בפעם הראשונה ששולחים פקודת SMS, כדאי לעשות זאת ליד טלפון **AAPS**, כדי לראות איך זה עובד:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 טלפון המטפל יקבל מ-**AAPS** הודעת SMS בתשובה, שמאשרת אם פקודת ה-SMS מרחוק בוצעה בהצלחה.
 
@@ -182,7 +182,7 @@ PIN requirements are:
 
 יש לשלוח את הפקודות באנגלית. התגובה תגיע בשפה שלכם, אם טקסט התגובה כבר [תורגם](#translations-translate-strings-for-AAPS-app). אין הבדל בין אותיות גדולות לקטנות בפקודות, אפשר להשתמש בשתיהן.
 
-![דוגמה לפקודות SMS](../images/SMSCommands.png)
+![דוגמה לפקודות SMS](../images/remote_control_and_following/SMSCommands.png)
 
 **טבלאות פקודות ה-SMS** שלמטה מציגות את כל פקודות ה-SMS האפשריות. _ערכים לדוגמה_ מופיעים כדי לעזור להבין. לפקודות יש אותו טווח ערכים אפשריים (יעדים, אחוז פרופיל וכו') כמו באפליקציית **AAPS** עצמה.
 
@@ -191,11 +191,11 @@ PIN requirements are:
 
 חלק מפקודות ה-SMS מקבלות תגובה מיידית, וחלק מהן דורשות **אימות** חזק דרך אפליקציית האימות. שאלה פשוטה כמו "**BG**" (שמבקשת את רמת הסוכר הנוכחית) מהירה להקלדה, לא צריכה אימות, ומחזירה את פרטי המצב של **AAPS** שמוצגים למטה:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 פקודות שצריכות יותר אבטחה דורשות להזין קוד, לדוגמה:
 
-![SMS עם אימות](../images/remote-control-07.png)
+![SMS עם אימות](../images/remote_control_and_following/remote-control-07.png)
 
 העמודה *אימות* בטבלאות שלמטה מציינת אם כל פקודה דורשת אימות חזק כזה.
 
@@ -311,12 +311,12 @@ PIN requirements are:
 ### No response whatsoever for SMS commands
 
 בטלפון המטפל ו/או בטלפון **AAPS**, כדאי לנסות להשבית את האפשרויות הבאות:
-* **Send as chat message** (שליחה כהודעת צ'אט) ![Disable SMS as chat message](../images/SMSdisableChat.png)
+* **Send as chat message** (שליחה כהודעת צ'אט) ![Disable SMS as chat message](../images/remote_control_and_following/SMSdisableChat.png)
 * If using Android Messages App or Google Messages App, disable RCS messaging:
   - open the specific SMS conversation in Messages
   - יש לבחור בסמל שלוש הנקודות של האפשרויות בחלק העליון של המסך
   - select "Details"
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Errors carrying out commands
 
@@ -331,7 +331,7 @@ PIN requirements are:
 
 שגיאות נפוצות מוצגות בדוגמאות שלמטה:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### How can I stop a command once it has been authenticated?
 

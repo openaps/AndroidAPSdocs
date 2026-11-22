@@ -1,162 +1,164 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+CareLevo je pumpa bez katetera (patch pumpa) koju proizvodi tvrtka CareMedi. Svaka pumpa sadrži do 300 J inzulina i nosi se do 7 dana (168 sati). S **AAPS-om** komunicira putem Bluetootha vašeg telefona, bez dodatnog uređaja.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+Upravljački program CareLevo je nov u **AAPS-u**. Pročitajte cijelu ovu stranicu prije nego što aktivirate svoju prvu pumpu i držite pri ruci upute za uporabu same pumpe.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+Najmanja doza koju pumpa može isporučiti je 0,05 J. U **Profilu** postavite bazalne stope na najmanje 0,05 J/h u koracima od 0,05 J/h, inače se inzulin koji **Profil** očekuje i inzulin koji pumpa isporuči malo razlikuju. **AAPS** koristi bazalne stope koje je pumpa prihvatila.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Mogućnosti pumpe s AAPS-om
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Komunicira s **AAPS-om** preko ugrađenog Bluetootha vašeg telefona, bez dodatnog komunikacijskog uređaja.
+* Bolus u koracima od 0,05 J.
+* Bazalne stope od 0,05 J/h do 15 J/h u koracima od 0,05 J/h, s bazalnim odsječcima od 30 minuta.
+* Privremene bazalne stope postavljene kao apsolutna stopa, do 12 sati.
+* Produženi bolus do 8 sati.
+* Promjene ljetnog računanja vremena i vremenske zone morate obaviti ručno. Pumpa vas obavještava kada se promijeni vremenska zona.
 
-## Pump Setup
+## Postavljanje pumpe
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Otvorite **izbornik** (☰) u gornjem lijevom kutu glavnog zaslona **AAPS-a** i odaberite **Konfiguracija**.
+1. U odjeljku Pumpa odaberite **Carelevo**.
+1. Pritisnite tipku Natrag za povratak na glavni zaslon.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![Dodatak Carelevo odabran u Konfiguracija > Pumpa](../images/v4/Pumps/carelevo_enabled.png)
 
-## Settings
+## Postavke
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+Otvorite zaslon pumpe putem **Upravljanje → Pumpa** (ili **Konfiguracija → Pumpa → Otvori dodatak**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+Otvorite postavke CareLevo pritiskom na ikonu **Postavke** (zupčanik) u gornjem desnom kutu. Dostupne su tri postavke:
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Postavke upravljačkog programa Carelevo](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### Postavka obavijesti o niskoj razini inzulina
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+Pumpa vas obavještava kada inzulin preostao u spremniku dosegne odabranu količinu. Može se postaviti od 20 J do 50 J u koracima od 5 J. Zadana vrijednost je 30 J. Neovisno o ovoj postavci, pumpa pokreće kritični alarm i zaustavlja isporuku inzulina kada preostane manje od 10 J.
 
-### Patch Usage Notification Setting
+### Postavka obavijesti o vremenu korištenja pumpe
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+Pumpa vas obavještava kada se nosi odabrani broj sati, tako da možete planirati zamjenu. Može se postaviti od 24 do 167 sati. Zadana vrijednost je 116 sati.
 
-### Patch Info Alarm
+### Informativni alarm pumpe
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+Kad je ovo uključeno, Patch se oglasi zvučnim signalom kad bolus, produženi bolus ili privremeni bazal započne i kad završi. Zadano je isključeno.
 
-## The pump screen
+## Zaslon pumpe
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![Zaslon pumpe Carelevo bez aktivne pumpe](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+Zaslon pumpe prikazuje **Status Bluetootha** (Nema aktivne pumpe, Odspojeno ili Povezano), **Serijski br.** pumpe, njezino **Vrijeme aktivacije** i **Istek**, trenutnu **Bazalnu stopu** i **Privremenu bazalnu stopu**, **Preostali inzulin** (preostalo / napunjeno), **Preostalo vrijeme pumpe** i **Ukupno isporučeni inzulin**.
 
-The buttons depend on the state of the patch:
+Gumbi ovise o stanju pumpe:
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **Aktiviraj pumpu**: pokreće aktivaciju nove pumpe, pogledajte niže.
+* **Upute za inzulin**: prikazuje dvanaest koraka za punjenje pumpe inzulinom.
+* **Obustavi isporuku** / **Nastavi isporuku**: pauzira i ponovno pokreće isporuku inzulina, pogledajte niže.
+* **Odbaci pumpu**: zaustavlja trenutnu pumpu kako bi se mogla aktivirati nova.
 
-## Activating a patch
+## Aktivacija pumpe
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+Prije početka provjerite je li u **AAPS-u** aktivan **Profil** i je li Bluetooth uključen. Pumpa se mora aktivirati u ograničenom vremenu nakon uključivanja; ako vrijeme istekne, pumpa pokreće alarm **Isteklo vrijeme za postavljanje pumpe** i ne može se koristiti.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+Na zaslonu pumpe pritisnite **Aktiviraj pumpu** i slijedite korake. Možete otkazati u bilo kojem trenutku prije umetanja igle; ono što ste unijeli se odbacuje.
 
-### Select the insulin
+### Odaberite inzulin
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+Potvrdite inzulin koji koristite. Pumpa zahtijeva brzodjelujući inzulin U-100.
 
-### Fill the patch with insulin
+### Napunite pumpu inzulinom
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+Napunite pumpu s 50 do 300 J, ovisno o tome koliko dugo ćete je nositi. Pritisnite **Upute za inzulin** ako trebate upute za punjenje. Zatim dodirnite količinu punjenja i odaberite količinu koju ste napunili; **AAPS** je koristi za prikaz preostalog inzulina.
 
-### Connect the patch
+### Spojite pumpu
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. Izvadite pumpu iz blistera i skinite kapicu igle.
+1. Pritisnite gumb za uključivanje pumpe dulje od jedne sekunde. Nakon zvučnog signala dodirnite **Traži pumpu**.
+1. Kada je pronađena pumpa ispravna, dodirnite **Potvrdi**. Ako nije, dodirnite **Ponovno skeniraj**.
 
-### Safety check
+### Sigurnosna provjera
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+Kada je pumpa spojena, pritisnite **Sigurnosna provjera**. Pumpa sama sebe testira i provodi punjenje. Provjerite je li se na vrhu igle pojavila kapljica inzulina. Ako kapljica nije vidljiva, pritisnite **Pokušaj ponovno**. Kada je provjera završena, pritisnite **Sljedeći**.
 
-### Site and patch attachment
+### Mjesto primjene i lijepljenje pumpe
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. Odaberite mjesto na kojem ćete nositi pumpu.
+1. Temeljito očistite mjesto alkoholnim tupferom.
+1. Uklonite zaštitnu traku i zalijepite pumpu na kožu tako da označena točka bude okrenuta prema gore.
+1. Kada je pumpa zalijepljena, pritisnite **Sljedeći**.
 
-### Insert the needle
+### Umetnite iglu
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. Okrenite sigurnosnu kapicu u smjeru strelice i skinite je.
+1. Pritisnite gumb aplikatora do kraja i držite ga 10 sekundi. Kada je igla umetnuta, začuje se zvučni signal.
+1. Uklonite aplikator i pritisnite **Potvrdi umetanje**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+Ako umetanje ne uspije, **AAPS** vam kaže koliko je pokušaja preostalo. Kada više nema pokušaja, pumpa pokreće alarm **Greška umetanja igle** i mora se zamijeniti.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+Isporuka inzulina počinje čim se umetanje potvrdi.
 
-## Bolus messages
+## Poruke o bolusu
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+Ako pumpa odbije bolus, **AAPS** vam kaže zašto. Na primjer *Bolus se ne može isporučiti. Dostupni bolus: 2,8 J* znači da pumpa sada može isporučiti samo tu količinu.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+Ako zaustavite bolus, a pumpa ne potvrdi zaustavljanje, **AAPS** čeka kraj bolusa i bilježi količinu koju pumpa javi. Ako bolus nije zabilježen (na primjer jer je zaustavljen dok je trajao), **AAPS** ga dodaje iz ukupnog zbroja pumpe i traži od vas da provjerite aktivni inzulin (IOB) prije nego što pokušate ponovno.
 
-## Suspending and resuming insulin delivery
+## Obustava i nastavak isporuke inzulina
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+Na zaslonu pumpe pritisnite **Obustavi isporuku** i odaberite koliko dugo isporuka treba biti pauzirana: od 30 minuta do 4 sata u koracima od 30 minuta. Isporuka se ne nastavlja sama: kada pauza završi, pumpa pokreće upozorenje **Pokreni inzulin**. Pritisnite **Nastavi isporuku** na zaslonu pumpe ili **Pokreni inzulin** u upozorenju i potvrdite.
 
-## Discarding a patch
+## Odbacivanje pumpe
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+Na zaslonu pumpe pritisnite **Odbaci pumpu** i potvrdite. Isporuka inzulina se zaustavlja i pumpa se više ne može koristiti. Skinite pumpu s tijela i aktivirajte novu.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+Kada je kritični alarm zaustavio pumpu, alarm umjesto toga nudi **Deaktiviraj pumpu**. Pritiskom na taj gumb pumpa se odbacuje na isti način.
+
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## Alarmi i obavijesti
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+Pumpa javlja događaje na tri razine. Svi se prikazuju kao obavijesti **AAPS-a**.
 
-### Critical alarms
+### Kritični alarmi
 
-Insulin delivery has stopped. Act now:
+Isporuka inzulina je zaustavljena. Odmah reagirajte:
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **Niska razina inzulina**: preostalo je manje od 10 J. Deaktivirajte pumpu i zamijenite je.
+* **Pumpa istekla**: pumpa je došla do kraja svog vijeka trajanja. Deaktivirajte pumpu i zamijenite je.
+* **Slaba baterija**: odbacite pumpu i zamijenite je.
+* **Visoka/niska temperatura**: premjestite se na prikladnu temperaturu, između 40 ℉ i 99 ℉ (4,4 ℃ i 37,2 ℃).
+* **Automatsko isključivanje**: pumpa se zaustavila jer je upozorenje Automatsko isključivanje zanemareno. Pritisnite **Pokreni inzulin** za ponovno pokretanje isporuke bazala.
+* **Isteklo vrijeme za postavljanje pumpe**, **Samodijagnostika nije uspjela**, **Greška pumpe**, **Začepljenje** i **Greška umetanja igle**: deaktivirajte pumpu i zamijenite je.
 
-### Alerts
+### Upozorenja
 
-Insulin delivery continues, but something needs your attention:
+Isporuka inzulina se nastavlja, ali nešto zahtijeva vašu pažnju:
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉ (4.4 ℃ and 37.2 ℃).
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **Niska razina inzulina**: spremnik je dosegao količinu postavljenu u **Postavka obavijesti o niskoj razini inzulina**. Pripremite se za zamjenu pumpe.
+* **Pumpa uskoro istječe** i **Istekao vijek rada pumpe**: zamijenite pumpu.
+* **Slaba baterija**: pripremite se za zamjenu pumpe.
+* **Visoka/niska temperatura**: isporuka je pauzirana dok pumpa ponovno ne bude između 40 ℉ i 99 ℉ (4,4 ℃ i 37,2 ℃).
+* **Automatsko isključivanje**: dodirnite **U redu**. Ako se zanemari, upozorenje prelazi u kritični alarm i isporuka se zaustavlja.
+* **Aktivacija pumpe nije dovršena**: dodirnite **U redu** za dovršetak aktivacije.
+* **Pokreni inzulin**: pauza koju ste postavili je završila. Dodirnite **Pokreni inzulin** za nastavak isporuke.
+* **Uključite Bluetooth** i **BLE nije povezan**: telefon ne može doći do pumpe. Uključite Bluetooth ili provjerite vezu s pumpom.
 
-### Notices
+### Obavijesti
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+Samo za informaciju: **Niska razina inzulina**, **Obavijest o vremenu korištenja pumpe** (prošlo je vrijeme postavljeno u **Postavka obavijesti o vremenu korištenja pumpe**), **Obavijest o provjeri pumpe**, **Promjena vremenske zone** i **Provjerite glukozu u krvi** (određeno vrijeme nakon bolusa).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+Pumpa također javlja kada njezina vlastita funkcija zaštite od niske razine glukoze (**LGS**) počne ili završi. **AAPS** ne koristi ovu funkciju; petlja sama upravlja niskom glukozom.
 
-## Where to get help
+## Gdje dobiti pomoć
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Probleme s upravljačkim programom CareLevo prijavite na [stranici GitHub issues za AAPS](https://github.com/nightscout/AndroidAPS/issues) ili u kanalima zajednice AAPS-a, pogledajte [Gdje mogu dobiti pomoć?](../GettingHelp/WhereCanIGetHelp.md).

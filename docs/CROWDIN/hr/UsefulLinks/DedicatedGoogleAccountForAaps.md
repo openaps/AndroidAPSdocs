@@ -1,147 +1,147 @@
-# A dedicated Google account for AAPS (optional)
+# Zaseban Google račun za AAPS (neobavezno)
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+Neki korisnici **AAPS-a** radije koriste svoj glavni račun e-pošte i za **AAPS**. Drugi korisnici **AAPS-a** (ili njihovi njegovatelji) postave zaseban račun e-pošte za **AAPS** – to nije obavezno, a niže dajemo primjer kako to učiniti.
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md).
+Ako ne želite postaviti zaseban Gmail račun za **AAPS**, možete odmah prijeći na sljedeći odjeljak, [Izrada AAPS-a](../SettingUpAaps/BuildingAaps.md).
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
-- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
-- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
-- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
-- Gmail allows you to register up to 4 accounts under the same phone number.
+- Zaseban prostor na Google Driveu znači da nećete riskirati popunjavanje svog osobnog Google Drivea s **Izvezi postavke**.
+- Svaka verzija **AAPS-a** (i pomoćnih aplikacija kao što su xDrip, BYODA itd.) bit će spremljena na jednom mjestu koje ne ovisi o hardveru vašeg računala. Ako vam računalo ili telefon bude ukraden, izgubljen ili pokvaren, i dalje ćete imati pristup.
+- Ujednačeno postavljanje olakšava podršku na internetu među korisnicima sa sličnom strukturom mapa.
+- Ovisno o postavljanju (pogledajte niže), imat ćete zaseban identitet kao pseudonim za komunikaciju unutar zajednice, što može zaštititi vašu privatnost. 
+- Djeca s dijabetesom tipa 1 kao maloljetnici mogu zadržati svoj „svakodnevni“ račun e-pošte, a koristiti **AAPS** i povezane značajke za koje je potreban račun odrasle osobe.
+- Gmail vam dopušta registraciju do 4 računa s istim brojem telefona.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## Kako postaviti zaseban Google račun za AAPS
 
-(⌛About 10 minutes)
+(⌛Oko 10 minuta)
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+Preduvjeti:
 
-* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
-* The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
+* Imate računalo s Windowsima (Windows 10 ili noviji) i Android telefon (Android 12 ili noviji) na kojem će biti aplikacija **AAPS**. Oba uređaja imaju sva najnovija sigurnosna ažuriranja, pristup internetu i administratorska prava, jer neki koraci zahtijevaju preuzimanje i instalaciju programa.
+* Android telefon je već postavljen s vašom osobnom „svakodnevnom“ adresom e-pošte, na primjer Gmail računom.
 
 ```{admonition} Things to consider when setting up your new account
 :class: dropdown
-- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
-- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
-- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
-- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
-- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
-- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+- Iz razloga privatnosti možete koristiti ime koje se razlikuje od vašeg, a povezano je s računom (npr. t1dsuperstar). Tada ga možete koristiti na javnim forumima **AAPS-a**, a vaš pravi identitet ostaje privatan. Budući da Google traži e-poštu i broj telefona za oporavak, račun se ipak može povezati s vama.
+- Novi račun za **AAPS** koristit će za provjeru isti broj telefona kao vaš „_svakodnevni_“ račun. Za provjeru će koristiti „svakodnevnu“ adresu e-pošte;
+- Postavit ćemo prosljeđivanje e-pošte tako da se sva e-pošta poslana na novi zasebni AAPS račun prosljeđuje na glavni račun (pa ne morate provjeravati dva različita sandučića);
+- Koristite različite lozinke za svoj _svakodnevni_ Gmail račun i Gmail račun za AAPS
+- Ako za jedan Gmail račun koristite Googleovu „provjeru u 2 koraka“ (tzv. višefaktorsku autentifikaciju), možete je uključiti i za oba Gmail računa.
+- Ako planirate koristiti Googleove „pristupne ključeve“ (Passkeys), registrirajte više uređaja. Tako se nećete zaključati izvan računa. To radite samo na uređajima kojima nitko drugi nema pristup (_tj._ ne na računalu sa zajedničkim računom koji mogu otključati i drugi ljudi).
 ```
 
 
 ```{admonition} Video Walkthrough!
 :class: note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+Kliknite [ovdje](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) za videozapis koji pokazuje kako postaviti zaseban Google račun.
 ```
 
- These are the steps outlined in the video:
+ Ovo su koraci prikazani u videozapisu:
 
-In this example: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+U ovom primjeru: 
+- Vaš postojeći „_svakodnevni_“ Google račun je <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- Vaš novi „_AAPS_“ Gmail račun bit će: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### Idite na <https://myaccount.google.com> 
 
- If you are already logged into Google, this will direct you to your “Everyday” **My Account** page. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Ako ste već prijavljeni u Google, ovo će vas odvesti na stranicu **My Account** (moj račun) vašeg „svakodnevnog“ računa. (1) Kliknite sliku profila gore desno na stranici (u ovom slučaju jednostavno ![](../images/Building-the-App/building_0002.png)) (2) odaberite „_add another account_“ (dodaj još jedan račun).
 
 ![](../images/Building-the-App/building_0005.png)
 
 
-### Enter your NEW dedicated account details: 
+### Unesite podatke svog NOVOG zasebnog računa: 
 
-- Enter the new account: 
-- Create Account
-- for my personal use. 
+- Unesite novi račun: 
+- Create Account (izrada računa)
+- for my personal use (za osobnu upotrebu). 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Unesite svoje osobne podatke:
+ - Unesite ime
+ - prezime
+ - datum rođenja (morate biti punoljetni)
 
-### Choose your NEW email address & password
+### Odaberite svoju NOVU adresu e-pošte i lozinku
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+U ovom primjeru postojećem računu Donalda Mucka dodaje se „.AAPS“…\
+Postavite lozinku
 
-### Enter a phone number which can receive the SMS verification
+### Unesite broj telefona koji može primiti SMS za provjeru
 
-Gmail will now send you a unique code to enter for validation.
+Gmail će vam sada poslati jedinstveni kôd koji trebate unijeti za provjeru.
 
-### Enter the recovery email address
+### Unesite adresu e-pošte za oporavak
 
-In this case it will be your existing “_everyday_” email…
+U ovom slučaju to će biti vaša postojeća „_svakodnevna_“ e-pošta…
 
-### Finish setting up the account
+### Dovršite postavljanje računa
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail će prikazati naziv računa. Tražit će od vas da prihvatite Gmailove uvjete korištenja i potvrdite postavke personalizacije.
 
-### Customize the new profile display
+### Prilagodite prikaz novog profila
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Sada biste trebali biti na Gmailovoj stranici MyAccount koja prikazuje vaš novi račun e-pošte za **AAPS**. Slika profila prema zadanim postavkama bit će prvo slovo vašeg imena. Promijenite je u nešto jedinstveno da izbjegnete zabunu… u ovom primjeru Donald.Muck.AAPS zamijenio je ![](../images/Building-the-App/building_0002.png) s ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Otvorite web-stranicu Gmaila u oba prozora da postavite novi račun
 
-So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+Da ne morate pratiti zaseban račun e-pošte, proslijedite svu e-poštu s novog računa za **AAPS** na svoj svakodnevni račun\
+Ovaj dio može biti malo zbunjujući, jer ćete se morati prebacivati između oba računa. Da bude lakše, otvorite 2 odvojena prozora preglednika jedan iznad drugoga:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
-2. Right click on your Browser logo in your taskbar
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. Pomaknite postojeći preglednik na vrh zaslona i promijenite mu veličinu tako da zauzima samo otprilike gornju polovicu zaslona…
+2. Desnom tipkom miša kliknite logotip preglednika na programskoj traci
+3. U izborniku odaberite „New Window“ (novi prozor)... i podesite ga tako da zauzima samo donju polovicu zaslona.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+U svakom prozoru preglednika otvorite <https://gmail.com>. Neka vaš osobni račun bude gore, a novi zasebni račun za **AAPS** dolje; lako ga prepoznate po slici profila u gornjem desnom kutu. Po potrebi uvijek možete promijeniti račun tako da kliknete sliku profila i odaberete pravi račun.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Vaše Gmail početne stranice trebale bi izgledati ovako:\
 ![](../images/Building-the-App/building_0010.png)
 
- ### In the new Gmail account (bottom window), open Gmail settings…
+ ### U novom Gmail računu (donji prozor) otvorite postavke Gmaila…
 
-- Click on the gear on the left of the profile picture
-- then select “**See all Settings**”
+- Kliknite zupčanik lijevo od slike profila
+- zatim odaberite „**See all Settings**“ (prikaži sve postavke)
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Postavite prosljeđivanje…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
-- Gmail will send a verification code to your “everyday” email address.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Kliknite karticu postavki „Forwarding and POP/IMAP“ (prosljeđivanje i POP/IMAP)
+- Kliknite „add a forwarding address“ (dodaj adresu za prosljeđivanje)
+- Dodajte svoju „svakodnevnu“ adresu e-pošte
+- Gmail će poslati kôd za provjeru na vašu „svakodnevnu“ adresu e-pošte.
+- Vratit ćete se na svoj svakodnevni profil i kliknuti poveznicu da potvrdite da prihvaćate prosljeđivanje (ili uzmite kôd iz Gmailove e-pošte za provjeru u „svakodnevnom“ Gmail prozoru, pa ga izrežite i zalijepite u „novi AAPS“ Gmail prozor).
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Prilično ćete se prebacivati između prozora, ali tako ćete, kada provjeravate e-poštu „svakodnevnog“ računa, vidjeti i e-poštu proslijeđenu s računa za AAPS, na primjer Gmail upozorenja.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Potvrdite proslijeđenu adresu e-pošte
 
-- In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Open it and “click the link to confirm the request”
+- U „svakodnevnom“ Gmailu (gornji prozor) dobit ćete e-poštu „Gmail forwarding Confirmation“ (potvrda prosljeđivanja).
+- Otvorite je i „click the link to confirm the request“ (kliknite poveznicu da potvrdite zahtjev)
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Arhivirajte proslijeđenu e-poštu u novom zasebnom Gmail računu (donji prozor)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
-4. Scroll all the way to the bottom to save your changes\
+1. Osvježite donji prozor
+2. Označite „forward incoming email“ (prosljeđivanje dolazne e-pošte)
+3. I arhivirajte Gmailovu kopiju (da vaš novi zasebni sandučić ostane uredan)
+4. Pomaknite se sasvim do dna da spremite promjene\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Čestitamo! Sada ste izradili zaseban Google račun za AAPS. Sljedeći korak je [Izrada AAPS-a](../SettingUpAaps/BuildingAaps.md).

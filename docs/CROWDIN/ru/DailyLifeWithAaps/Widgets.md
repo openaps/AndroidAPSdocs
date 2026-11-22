@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Виджеты на главном экране
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** предлагает виджеты, которые можно добавить на главный экран телефона. Виджет показывает текущие данные без открытия приложения. Нажмите на виджет, чтобы открыть **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Доступные виджеты
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Доступно пять виджетов. Они находятся в разделе **AAPS** в списке виджетов Android:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![Виджеты AAPS в списке виджетов Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                                                                                                                                              |
-| --------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, the loop mode as an icon beside the profile name, target, sensitivity (shown as on the main screen), IOB and COB. The texts shrink to fit the size you give the widget instead of being cut. |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading.                                                                                                                     |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                                                                                                                                        |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                                                                                                                                             |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                                                                                                                                    |
+| Виджет                            | Размер по умолчанию | Что показывает                                                                                                                                                                                                                   |
+| --------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AAPS widget**                   | 5 × 2               | Блок состояния с главного экрана: ГК с трендом и дельтой, режим цикла в виде значка рядом с названием профиля, цель, чувствительность (как на главном экране), IOB и COB. Текст уменьшается под размер виджета, а не обрезается. |
+| **AAPS glucose circle**           | 2 × 2               | Круг ГК с главного экрана: кольцо в цвете ГК, дуга тренда, дельта, значение ГК и время с последнего показания.                                                                                                                   |
+| **AAPS Small**                    | 2 × 2               | Название профиля, ГК со стрелкой тренда, время с последнего показания, дельта, IOB и COB.                                                                                                                                        |
+| **AAPS BG + IOB + COB (compact)** | 4 × 1               | Одна строка с ГК и стрелкой тренда, IOB и COB.                                                                                                                                                                                   |
+| **AAPS BG graph**                 | 3 × 1               | Значение ГК с небольшим графиком последних показаний.                                                                                                                                                                            |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+**Виджет AAPS**, **Круг глюкозы** и виджет **Маленький** на главном экране:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![Виджет AAPS, круг глюкозы и виджет «Маленький» на главном экране](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+Виджет **компактный** и виджет **График ГК**:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Компактный виджет и виджет «График ГК» на главном экране](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
+Значения ГК показаны теми же цветами, что и в **AAPS**: зеленый — в диапазоне, желтый — выше диапазона, красный — ниже диапазона.
 
 ---
 
-## Adding a widget
+## Добавление виджета
 
-The exact steps depend on your phone and its launcher. On most phones:
+Точные шаги зависят от телефона и его лаунчера. На большинстве телефонов:
 
-1. Long-press an empty area of the home screen and select **Widgets**.
+1. Нажмите и удерживайте пустое место на главном экране и выберите **Виджеты**.
 
-   ![The widget picker](../images/widgets/widget_picker_list.png)
+   ![Список виджетов](../images/widgets/widget_picker_list.png)
 
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
+2. Откройте **AAPS** в списке и нажмите нужный виджет.
+3. Нажмите **Добавить** (или перетащите виджет в нужное место).
 
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
+   ![Кнопка «Добавить» под выбранным виджетом](../images/widgets/widget_picker_add_button.png)
 
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
+Виджет появится на главном экране. Сразу после добавления у него видны маркеры: потяните маркер, чтобы **изменить размер** виджета, или перетащите виджет, чтобы переместить его. Размер круга глюкозы можно менять как угодно.
 
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
+![Только что добавленный виджет с маркерами изменения размера и кнопкой настроек](../images/widgets/widget_glucose_circle_added.png)
 
-If the home screen page is full, the phone puts the widget on a new page.
+Если страница главного экрана заполнена, телефон поместит виджет на новую страницу.
 
 ---
 
 ## Widget configuration
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Нажмите кнопку с **карандашом**, которая видна на виджете сразу после добавления. Позже нажмите и удерживайте виджет, чтобы снова увидеть маркеры и карандаш.
 
-The **Widget configuration** dialog has two settings:
+В окне **Настройки виджета** два параметра:
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+- **Настроить прозрачность** — насколько непрозрачен фон виджета. При низком значении сквозь виджет видны обои.
+- **Использовать черный цвет** — черный фон вместо фона по умолчанию.
 
 ![Widget configuration](../images/widgets/widget_configuration.png)
 
-Each widget has its own configuration.
+У каждого виджета свои настройки.
 
 ---
 
-## Good to know
+## Полезно знать
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+- Виджет только **показывает** данные. С виджета нельзя ввести болюс или что-либо изменить.
+- Виджет обновляет **AAPS**. Если **AAPS** не работает или Android ограничивает его работу в фоне, виджет может показывать старые данные. Проверяйте время с последнего показания и убедитесь, что **AAPS** исключен из [оптимизации батареи](#SetupWizard-StoragePermission).
+- В **AAPSClient**, **AAPSClient2** и **AAPSClient3** фон виджета желтый, синий или зеленый, чтобы приложения можно было различить. Если цвет плохо видно, увеличьте непрозрачность в настройках виджета. См. [Об AAPSClient, AAPSClient2 и AAPSClient3](#remotecontrol-aapsclient-versions).

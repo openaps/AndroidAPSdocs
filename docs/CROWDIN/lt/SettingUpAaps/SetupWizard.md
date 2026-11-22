@@ -182,7 +182,7 @@ Kai baigsite, spauskite „**TOLIAU**“, kad pereitumėte į kitą ekraną.
 
 Šis ekranas rodomas tik tada, kai **AAPS** randa anksčiau eksportuotus nustatymus **AAPS** aplanke („Rasti išsaugoti nustatymai“), pavyzdžiui, kai iš naujo įdiegiate programėlę ar pereinate prie naujo telefono.
 
-- Kad atkurtumėte ankstesnę konfigūraciją, spauskite „**Importuoti nustatymus**“ – žr. [Nustatymų eksportavimas ir importavimas](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Kad pradėtumėte nuo naujos konfigūracijos, spauskite „**TOLIAU**“ ir tęskite vedlį.
 
 ![Importuokite nustatymus](../images/setup-wizard/Wizard-ImportSettings.png)

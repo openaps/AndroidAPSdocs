@@ -1,19 +1,19 @@
-# Для медицинских работников – Общие сведения и руководство по AndroidAPS
+# Для врачей – общее введение и руководство по AAPS
 
 ```{note}
-This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+Эта страница – общее введение для врачей. Последний раз она проверялась в июне 2026 года. AAPS постоянно развивается, поэтому самые точные и актуальные сведения всегда смотрите в [основной документации AAPS](../index.md).
 ```
 
 Эта страница предназначена для медицинских работников, которые проявили интерес к технологии искусственной поджелудочной железы, такой как AAPS, или для пациентов, которые хотят делиться этой информацией со своими лечащими врачами.
 
-В этом руководстве содержится общая информация о самостоятельно построенных алгоритмах замкнутого цикла и, в частности, о том, как работает AAPS. Детальное описание системы AAPS в [ полной интернет-документации по AAPS ](../index.md). Если вопросы остаются, узнайте подробности у вашего пациента или обратитесь к сообществу. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [ Здесь также можно найти результаты некоторых новых исследований & и связанные с ними данные ](https://openaps.org/outcomes/).
+В этом руководстве содержится общая информация о самостоятельно построенных алгоритмах замкнутого цикла и, в частности, о том, как работает AAPS. Детальное описание системы AAPS в [ полной интернет-документации по AAPS ](../index.md). Если вопросы остаются, узнайте подробности у вашего пациента или обратитесь к сообществу. (Если вы не пользуетесь социальными сетями (например, [Twitter](https://twitter.com/kozakmilos) или Facebook), можете написать на developers@aaps.app). [ Здесь также можно найти результаты некоторых новых исследований & и связанные с ними данные ](https://openaps.org/outcomes/).
 
 ## Этапы самостоятельного создания системы замкнутого цикла:
 
 Для начала работы с AAPS необходимо выполнить следующие действия:
 
-* Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](../Getting-Started/Phones.md), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
+* Найти [совместимую помпу](../Getting-Started/CompatiblePumps.md), [совместимое устройство Android](../Getting-Started/Phones.md) и [совместимый источник CGM](../Getting-Started/CompatiblesCgms.md).
+* [Скачать исходный код AAPS и собрать приложение](../SettingUpAaps/BuildingAaps.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
 ## Как работает замкнутый цикл
@@ -22,11 +22,11 @@ This page is a high-level introduction for clinicians. It was last reviewed in J
 
 С помощью автоматизированной подачи инсулина система делает то же самое: собирает данные с помпы и мониторинга, передает их куда-либо (например, на Nightscout), использует эту информацию для расчетов и принятия решений о необходимом количестве инсулина, повышении или снижении базальной скорости использует временные изменения базы для внесения необходимых корректировок, чтобы в конечном итоге привести ГК в целевой диапазон.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
+Если устройство с AAPS сломается или окажется вне зоны связи с помпой, то после окончания последнего временного базала помпа снова работает как обычная помпа с заранее запрограммированной базальной скоростью.
 
 ## Как собираются данные:
 
-С помощью AAPS, телефон на Android запускает специальное приложение для выполнения математических операций, телефон общается с поддерживаемой помпой через Bluetooth. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+С помощью AAPS, телефон на Android запускает специальное приложение для выполнения математических операций, телефон общается с поддерживаемой помпой через Bluetooth. AAPS может обмениваться данными с другими устройствами и с облаком через Wi-Fi или мобильный интернет. Так он получает дополнительную информацию и сообщает пациенту, опекунам и близким, что он делает и почему.
 
 Устройство Android должно:
 
@@ -39,7 +39,7 @@ If the device running AAPS breaks or goes out of range of the pump, once the lat
 
 ## Откуда он знает, что делать?
 
-Программное обеспечение с открытым исходным кодом предназначено для того, чтобы устройство легко выполняло задания, которые выполнялись в ручном режиме для расчета того, как следует корректировать подачу инсулина. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Затем он отправляет необходимые корректировки на помпу. Затем он снова считывает данные и снова повторяет алгоритм корректировки.
+Программное обеспечение с открытым исходным кодом предназначено для того, чтобы устройство легко выполняло задания, которые выполнялись в ручном режиме для расчета того, как следует корректировать подачу инсулина. Сначала он собирает данные со всех подключенных устройств и из облака, подготавливает их и выполняет расчеты. Затем он прогнозирует, как будет меняться ГК в ближайшие часы в разных сценариях, и рассчитывает изменения, нужные, чтобы удержать ГК в целевом диапазоне или вернуть ее туда. Затем он отправляет необходимые корректировки на помпу. Затем он снова считывает данные и снова повторяет алгоритм корректировки.
 
 Поскольку наиболее важным исходным параметром является уровень глюкозы в крови, поступающий от системы мониторинга, важно иметь высококачественные данные CGM.
 
@@ -47,7 +47,7 @@ AAPS предназначен для прозрачного отслеживан
 
 ## Примеры принятия решений алгоритмом AAPS:
 
-AAPS основывается на том же алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
+AAPS основывается на том же алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. AAPS показывает эти [линии прогноза](#aaps-screens-prediction-lines) разными цветами. В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
 
 ### Ниже приведены примеры фиолетовых линий прогнозирования, а также то, как они могут различаться:
 
@@ -71,7 +71,7 @@ AAPS основывается на том же алгоритме и набор�
 
 ### Сценарий 3 - Требуется больше инсулина
 
-В этом примере, краткосрочный прогноз показывает падение ниже целевого. Однако оно не ниже порога безопасности. Конечная ГК находится выше целевой. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). Затем он оценит возможность добавление инсулина, который приведет самый низкий уровень предсказанной ГК к цели, как только это станет безопасно. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
+В этом примере, краткосрочный прогноз показывает падение ниже целевого. Однако оно не ниже порога безопасности. Конечная ГК находится выше целевой. Поэтому AAPS не будет добавлять инсулин, который мог бы привести к низкой ГК в ближайшее время (то есть инсулин, из-за которого прогноз опустился бы ниже порога). Затем он оценит возможность добавление инсулина, который приведет самый низкий уровень предсказанной ГК к цели, как только это станет безопасно. *(В зависимости от настроек, а также от количества и времени нужного инсулина, этот инсулин может подаваться через временный базал или SMB (супер микроболюсы)).*
 
 ![Сценарий дозирования 3](../images/Dosing_scenario_3.jpg)
 
@@ -87,13 +87,13 @@ AAPS основывается на том же алгоритме и набор�
 
 Самое важное для пациентов-это делать одно изменение за раз, и наблюдать за результатом в течение 2-3 дней, прежде чем решать, изменять ли другой параметр (если только такое изменение явно не идет во вред, - в этом случае следует немедленно вернуться к предыдущему параметру). Человек склонен сразу крутить все настройки и менять все сразу; но если кто-то делает это, то такое поведение приведет к суб-оптимальным настройками и его трудно будет вернуть в известное хорошее состояние.
 
-Один из самых мощных инструментов для изменения настроек-это автоматизированный инструмент вычислений базальной скорости, чувствительности ISF и соотношения инсулин-углеводы CR. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. It is designed to allow the data to guide you or your patient in making incremental changes to settings. Среди пользователей принято запускать (или просматривать) отчеты Autotune, прежде чем пытаться вручную внести изменения в параметры. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Один из самых мощных инструментов для изменения настроек-это автоматизированный инструмент вычислений базальной скорости, чувствительности ISF и соотношения инсулин-углеводы CR. Это называется «[Autotune](#autotune-how-autotune-calculates-adjustments)». Он позволяет данным подсказывать вам или вашему пациенту, как постепенно менять настройки. Среди пользователей принято запускать (или просматривать) отчеты Autotune, прежде чем пытаться вручную внести изменения в параметры. Autotune встроен в AAPS как модуль (**Конфигурация** → **Общее** → **Автонастройка**); см. [Как пользоваться модулем Autotune](../AdvancedOptions/Autotune.md). Его можно запускать вручную или автоматически. Эти параметры нужны и для обычной подачи инсулина помпой, и для подачи инсулина в замкнутом цикле. Поэтому обсуждение результатов Autotune и изменение этих параметров – естественная точка соприкосновения с врачом.
 
-Кроме того, поведение человека (основанное на ручном режиме компенсации диабета) часто влияет на результаты даже и в замкнутом цикле. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). Однако во многих случаях кто-то может взять для корректировки гораздо больше углеводов (например, придерживаясь правила 15), что приведет к более быстрому скачку как из-за дополнительной глюкозы, так и из-за того, что подача инсулина была снижена в период, ведущий к низкому.
+Кроме того, поведение человека (основанное на ручном режиме компенсации диабета) часто влияет на результаты даже и в замкнутом цикле. Например, если прогноз показывает снижение ГК и AAPS уменьшает подачу инсулина во время снижения, то для подъема ГК с 70 мг/дл (3,9 ммоль/л) может понадобиться совсем немного углеводов (например, 3–4 г). Однако во многих случаях кто-то может взять для корректировки гораздо больше углеводов (например, придерживаясь правила 15), что приведет к более быстрому скачку как из-за дополнительной глюкозы, так и из-за того, что подача инсулина была снижена в период, ведущий к низкому.
 
 ## OpenAPS
 
-**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS использует многие методы, реализовываные в OpenAPS, и разделяет большую часть логики и алгоритмов, поэтому это руководство очень похоже на оригинальное руководство. Большая часть информации об OpenAPS можно легко адаптировать к AAPS, при этом главное отличие - это аппаратная платформа, на которой работает программное обеспечение.
+**Это руководство создано на основе [руководства OpenAPS для врачей (The clinician's guide to OpenAPS)](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS – это система, которая работает на маленьком портативном компьютере (его обычно называют «rig»). AAPS использует многие методы, реализовываные в OpenAPS, и разделяет большую часть логики и алгоритмов, поэтому это руководство очень похоже на оригинальное руководство. Большая часть информации об OpenAPS можно легко адаптировать к AAPS, при этом главное отличие - это аппаратная платформа, на которой работает программное обеспечение.
 
 ## Вывод
 
@@ -101,7 +101,7 @@ AAPS основывается на том же алгоритме и набор�
 
 Дополнительное рекомендуемое чтение:
 
-* The [full AAPS documentation](../index.md)
+* [Полная документация AAPS](../index.md)
 * Справочник [ Эталонный дизайн Open](https://OpenAPS.org/reference-design/), в котором объясняются принципы работы и безопасности OpenAPS: https://openaps.org/reference-design/
 * [Полная документация OpenAPS](https://openaps.readthedocs.io/en/latest/index.html) 
-  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
+  * Смотрите в этой документации, [как AAPS превращает прогнозы в решение о дозе](#aaps-screens-how-predictions-become-a-dosing-decision), или [документацию OpenAPS по determine-basal](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic), где алгоритм описан со всеми техническими подробностями

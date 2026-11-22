@@ -7,7 +7,7 @@
 
 Коли ви вперше запускаєте **AAPS**, вас веде «**Майстер налаштування**». Він допомагає швидко налаштувати всі основні параметри застосунку за один раз. **Майстер налаштування** веде вас крок за кроком, щоб ви не забули нічого важливого. Наприклад, **налаштування дозволів** дуже важливі для правильного налаштування **AAPS**.
 
-Але не обовʼязково налаштувати все повністю під час першого запуску **Майстра налаштування**. Ви можете легко вийти з майстра і повернутися до нього пізніше. Після **Майстра налаштування** є три способи далі оптимізувати або змінити конфігурацію. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Але не обовʼязково налаштувати все повністю під час першого запуску **Майстра налаштування**. Ви можете легко вийти з майстра і повернутися до нього пізніше. Після **Майстра налаштування** є три способи далі оптимізувати або змінити конфігурацію. Їх пояснено в наступному розділі. Тож нічого страшного, якщо ви пропустите деякі пункти в майстрі налаштування: їх легко налаштувати пізніше.
 
 Під час роботи з **Майстром налаштування** і відразу після неї ви, можливо, не помітите в **AAPS** значних змін. Щоб увімкнути петлю **AAPS**, вам потрібно проходити **Завдання** і вмикати функції одну за одною. Ви почнете **Завдання 1** наприкінці роботи Майстра налаштування. Ви керуєте **AAPS**, а не навпаки.
 
@@ -23,9 +23,9 @@
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Якщо в документації є помилка або ви знаєте, як пояснити щось краще, можете попросити допомоги в спільноти, як описано в [Спілкування з іншими користувачами](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Вітальне повідомлення
 
 Коли відкривається Майстер налаштування, він вітає вас коротким повідомленням і відразу показує внизу екрана панель «**Потрібні дозволи**» (див. наступний розділ).
 
@@ -33,7 +33,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 ![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Потрібні дозволи
 
 Для правильної роботи **AAPS** потрібно кілька дозволів. Майстер збирає їх на одній панелі «**Потрібні дозволи**», і кожен має власну кнопку «**Надати**». Надайте їх по одному — коли дозвіл надано, значок поруч із пунктом змінюється на галочку.
 
@@ -53,7 +53,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 ### Каталог AAPS
 
-**AAPS** має зберігати свої налаштування та журнали в постійній памʼяті вашого смартфона. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** має зберігати свої налаштування та журнали в постійній памʼяті вашого смартфона. Постійне сховище означає, що дані залишаться доступними навіть після перезавантаження смартфона. Інша інформація просто втрачається, бо вона не зберігається в постійному сховищі.
 
 Натисніть «**Надати**» поруч із «**Каталог AAPS**». Відкриється файлова система телефону, і ви зможете вибрати, де **AAPS** зберігатиме свою інформацію.
 
@@ -72,7 +72,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 ### Сповіщення
 
-Android requires special permission for apps if they want to send you notifications.
+Android вимагає для застосунків спеціальний дозвіл, якщо вони хочуть надсилати вам сповіщення.
 
 Вимикати сповіщення, _наприклад_, від соцмереж — корисно, але дуже важливо дозволити **AAPS** надсилати вам сповіщення.
 
@@ -122,7 +122,7 @@ Android requires special permission for apps if they want to send you notificati
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. На Android 12 натисніть `Battery`, на Android 13+ натисніть `App battery usage`.
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -134,9 +134,9 @@ Android requires special permission for apps if they want to send you notificati
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Ліцензійна угода
 
-Ліцензійна угода кінцевого користувача містить важливу інформацію про юридичні аспекти використання **AAPS**. Please read it carefully.
+Ліцензійна угода кінцевого користувача містить важливу інформацію про юридичні аспекти використання **AAPS**. Уважно прочитайте її.
 
 Якщо ви не розумієте ліцензійної угоди кінцевого користувача або не можете з нею погодитися, не використовуйте **AAPS** взагалі!
 
@@ -172,7 +172,7 @@ Android requires special permission for apps if they want to send you notificati
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Будь ласка, **НЕ ВТРАЧАЙТЕ СВІЙ ГОЛОВНИЙ ПАРОЛЬ**. Запишіть його, _наприклад_, на Google Drive — це гарне місце, бо Google робить для вас резервну копію. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date. See [How to reset the master password?](#FAQ-reset-master-password)
+Будь ласка, **НЕ ВТРАЧАЙТЕ СВІЙ ГОЛОВНИЙ ПАРОЛЬ**. Запишіть його, _наприклад_, на Google Drive — це гарне місце, бо Google робить для вас резервну копію. Ваш смартфон або ПК може зламатися, і у вас може не бути актуальної копії. Якщо ви забудете головний пароль, пізніше може бути важко відновити налаштування профілю і прогрес у **Завданнях**. Див. [Як скинути головний пароль?](#FAQ-reset-master-password)
 ```
 
 Коли закінчите, натисніть «**ДАЛІ**», щоб перейти до наступного екрана.
@@ -182,7 +182,7 @@ Android requires special permission for apps if they want to send you notificati
 
 Цей екран показується лише тоді, коли **AAPS** знаходить у каталозі **AAPS** раніше експортовані налаштування («Знайдено збережені налаштування»), наприклад, коли ви перевстановлюєте застосунок або переходите на новий телефон.
 
-- Щоб відновити попередню конфігурацію, натисніть «**Імпорт налаштувань**» — див. [Створення та відновлення резервних копій](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Щоб почати з нової конфігурації, натисніть «**ДАЛІ**» і продовжуйте роботу з майстром.
 
 ![Імпортуйте налаштування](../images/setup-wizard/Wizard-ImportSettings.png)
@@ -197,11 +197,11 @@ Android requires special permission for apps if they want to send you notificati
 
 Тут ви задаєте «**Нижня межа**» і «**Верхня межа**» для показу глюкози сенсора. Значення глюкози між цими двома межами показуються як «у діапазоні». Поки що можна залишити типові значення (72 і 180 мг/дл) і змінити їх пізніше.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Вибрані значення впливають лише на вигляд графіка і більше ні на що.
 
 Ваша цільова глюкоза, _наприклад_, налаштовується окремо у вашому профілі.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Діапазон для аналізу TIR (час у діапазоні) налаштовується окремо на вашому сервері звітів.
 
 За потреби змініть межі кнопками «−» / «+», потім натисніть кнопку «**ДАЛІ**»:
 
@@ -229,7 +229,7 @@ Your range to analyze TIR (time in range) is configured separately in your repor
 
 Ви можете зараз налаштувати кілька з них, але під час першого запуску ми зосередимося лише на сервері звітів. Якщо зараз ви не можете його налаштувати, пропустіть цей крок — це можна зробити пізніше.
 
-У цьому прикладі як сервер звітів ми використовуємо Nightscout. Поставте галочку праворуч від «**NSClientV3**», щоб увімкнути його. For Tidepool it is even simpler, as you only need your personal login information.
+У цьому прикладі як сервер звітів ми використовуємо Nightscout. Поставте галочку праворуч від «**NSClientV3**», щоб увімкнути його. З Tidepool ще простіше: потрібні лише ваші особисті дані для входу.
 
 Після цього натисніть «**Налаштування**» під NSClientV3, щоб налаштувати його:
 
@@ -241,9 +241,9 @@ Your range to analyze TIR (time in range) is configured separately in your repor
 
 Натисніть «**URL Nightscout**» і введіть адресу вашого особистого сервера Nightscout (URL, який ви налаштували самі або отримали від вашого постачальника послуг). Підтвердіть кнопкою «**OK**».
 
-Натисніть «**Токен доступу Nightscout**» і введіть токен доступу для вашого сервера Nightscout. Without this token, access will not work. Якщо у вас його ще немає, перегляньте документацію про налаштування сервера звітів.
+Натисніть «**Токен доступу Nightscout**» і введіть токен доступу для вашого сервера Nightscout. Без цього токена доступ не працюватиме. Якщо у вас його ще немає, перегляньте документацію про налаштування сервера звітів.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets **обов'язкові** для віддаленого керування з **AAPSClient** на обох телефонах.
 
 Інші розділи поки що можна залишити з типовими значеннями. Їх описано тут, щоб ви знали, де знайти їх пізніше:
 
@@ -283,19 +283,19 @@ Leave "**Use websockets**" enabled for real-time communication with Nightscout. 
 
 Тут ви вводите імʼя людини, яка користується цим телефоном. Так цей екземпляр **AAPS** можна відрізнити від інших у звітах і під час синхронізації, наприклад, якщо у вашій родині **AAPS** користуються двоє дітей. Імʼя також використовується в назвах файлів експортованих налаштувань і показується на годиннику.
 
-It can be anything. Пізніше його можна змінити в **Налаштування → Загальне → Назва екземпляра**.
+Це може бути будь-що. Пізніше його можна змінити в **Налаштування → Загальне → Назва екземпляра**.
 
 Натисніть «**ДАЛІ**», щоб перейти до наступного екрана.
 
 ![Назва](../images/setup-wizard/Wizard-Name.png)
 
-## Patient type
+## Тип пацієнта
 
-Тут ви вибираєте «Тип пацієнта». Це важливо, бо програма **AAPS** має різні обмеження залежно від віку пацієнта. This is important for security and safety reasons.
+Тут ви вибираєте «Тип пацієнта». Це важливо, бо програма **AAPS** має різні обмеження залежно від віку пацієнта. Це важливо з міркувань безпеки.
 
-Тут ви також налаштовуєте **максимальний дозволений болюс** на їжу. That is, the largest bolus you need to give to cover your typical meals. Це функція безпеки, яка допомагає уникнути випадкового передозування, коли ви вводите болюс на їжу.
+Тут ви також налаштовуєте **максимальний дозволений болюс** на їжу. Тобто найбільший болюс, який вам потрібно ввести, щоб покрити вашу звичайну їжу. Це функція безпеки, яка допомагає уникнути випадкового передозування, коли ви вводите болюс на їжу.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+Друге обмеження схоже за змістом, але стосується максимальної кількості вуглеводів, яку ви очікуєте з'їсти.
 
 Після встановлення цих значень натисніть «**ДАЛІ**», щоб перейти до наступного екрана:
 
@@ -333,7 +333,7 @@ The second limit is similar in concept, but relates to the max carbohydrate inta
 
 Натисніть значок збереження (вгорі праворуч), потім натисніть «**ДАЛІ**», щоб перейти до наступного екрана.
 
-## Blood sugar source
+## Джерело глюкози крові
 
 Тут ви вибираєте, звідки **AAPS** отримує дані глюкози. Прочитайте документацію для вашого [джерела ГК](../Getting-Started/CompatiblesCgms.md).
 
@@ -350,7 +350,7 @@ The second limit is similar in concept, but relates to the max carbohydrate inta
 (setup-wizard-profile)=
 ## Профіль
 
-Now we are entering a very important part of the Setup Wizard.
+Тепер ми переходимо до дуже важливої частини майстра налаштування.
 
 Перш ніж вводити дані профілю на наступному екрані, прочитайте документацію про [профілі](../SettingUpAaps/YourAapsProfile.md).
 
@@ -371,7 +371,7 @@ Now we are entering a very important part of the Setup Wizard.
 
 ![Порожній профіль](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+За потреби з часом у вас може бути кілька профілів. Тут ми створюємо лише один.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
@@ -402,7 +402,7 @@ You can have several profiles in the long-term if needed. We only create one her
 
 Для відкритої петлі ця ціль може бути ширшим діапазоном, бо інакше **AAPS** постійно просить вас змінити тимчасовий базал або інше налаштування, а це може дуже втомлювати.
 
-Later, for closed looping, you will generally have only one value for top and bottom. Так **AAPS** легше досягати цілі, і ви отримаєте кращий загальний контроль діабету.
+Пізніше, для закритої петлі, у вас зазвичай буде лише одне значення для верхньої і нижньої межі. Так **AAPS** легше досягати цілі, і ви отримаєте кращий загальний контроль діабету.
 
 ![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
 
@@ -462,7 +462,7 @@ If the pump you select communicates over Bluetooth, **AAPS** asks for permission
 
 ## Алгоритм APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Попри назву, функція SMB в алгоритмі вимкнена, доки ви не освоїте AAPS і не пройдете перші завдання. Утім, OpenAPS SMB новіший і загалом кращий за OpenAPS AMA.
+Використовуйте алгоритм OpenAPS SMB як свій алгоритм APS. Попри назву, функція SMB в алгоритмі вимкнена, доки ви не освоїте AAPS і не пройдете перші завдання. Утім, OpenAPS SMB новіший і загалом кращий за OpenAPS AMA.
 
 SMB спочатку вимкнено, бо функція SMB швидше реагує на зростання глюкози крові: вона вводить супермікроболюс (Super Micro Bolus) замість збільшення відсотка базалу. Оскільки на початку ваш профіль зазвичай не такий добрий, як після певного досвіду, цю функцію спочатку вимкнено.
 
@@ -495,7 +495,7 @@ OpenAPS AMA — найпростіший алгоритм, який не під�
 
 Натисніть «**ДАЛІ**», щоб перейти до наступного екрана.
 
-## Start Objective 1
+## Почніть Завдання 1
 
 Тепер ви переходите до Завдань — кваліфікації для доступу до інших функцій **AAPS**.
 
@@ -503,9 +503,9 @@ OpenAPS AMA — найпростіший алгоритм, який не під�
 
 ![Завдання](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Тут ми починаємо Завдання 1, хоча зараз наше налаштування ще не повністю готове, щоб успішно виконати це завдання. Але це початок.
 
-Press the "**Start**" button of **Objective 1**:
+Натисніть кнопку «**Почати**» у **Завданні 1**:
 
 ![Список завдань](../images/setup-wizard/Wizard-Objectives-List.png)
 

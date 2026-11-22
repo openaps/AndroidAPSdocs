@@ -10,7 +10,8 @@ Estas instrucciones sirven para configurar la bomba de insulina Equil.
 ## Funciones de la bomba con AAPS
 
 * Bomba parche sin tubo que se comunica con **AAPS** mediante el Bluetooth propio del teléfono, sin un dispositivo de comunicación adicional.
-* **AAPS** trata la Equil como una bomba parche con un reservorio de 200 U: la pantalla principal muestra las luces de estado de bomba parche, y no se ofrecen **Cebar/Llenar** ni **Cambio de batería de la bomba**. El llenado, el cebado y el cambio de batería se hacen en los asistentes de la bomba.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Mientras la bomba está suspendida o parada, **AAPS** registra una basal temporal de 0 U/h, así que no se cuenta insulina basal en la IOB.
 * Los cambios de horario de verano (DST) y de zona horaria se deben hacer a mano.
 

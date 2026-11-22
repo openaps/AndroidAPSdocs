@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# Инструкция по сборке из командной строки
 
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+Самый простой способ собрать AAPS – [Сборка через браузер](./BrowserBuild.md).
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Проверено на Fedora и Debian Linux, на других системах все должно работать с минимальными изменениями.
 
 ## Что потребуется:
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+Минимальную нужную версию Java смотрите в [этой таблице](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Установите подходящий пакет OpenJDK с помощью системного менеджера пакетов. Например, в Debian пакеты называются так: `openjdk-21-jdk`. В нем должны быть программы `javac` и `keytool`.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+Скачайте пакет *Android Command line tools* со [страницы Android Studio](https://developer.android.com/studio#command-line-tools-only). Сама программа Android Studio не нужна. Подробнее об установке этого пакета написано в [документации sdkmanager](https://developer.android.com/tools/sdkmanager). После установки пакета нужно вручную задать две [переменные среды](https://developer.android.com/tools/variables): `ANDROID_HOME` и `PATH`. В конце выполните `sdkmanager --licenses`, чтобы завершить установку.
 
-## Building AAPS with Gradle wrapper
+## Сборка AAPS с помощью Gradle wrapper
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. Создайте файл хранилища ключей Java для подписи AAPS
 
-If you already have a keystore file for signing AAPS, reuse that.
+Если у вас уже есть файл хранилища ключей для подписи AAPS, используйте его снова.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+Файл хранилища ключей и пароль понадобятся вам при каждом обновлении AAPS.
 
-### 2. Compile the AAPS APK file
+### 2. Скомпилируйте APK-файл AAPS
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+Клонируйте [git-репозиторий](https://github.com/nightscout/AndroidAPS), если вы еще этого не сделали. Последняя стабильная версия AAPS находится в ветке master; убедитесь, что вы на той ветке или теге, которые хотите собрать.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+Выполните `./gradlew :app:assembleFullRelease` в папке репозитория. Команда сама скачает Gradle и зависимости, а затем скомпилирует код. Если сборка прошла успешно, у вас появится неподписанный APK-файл `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Также в `$ANDROID_HOME` должна быть установлена программа `apksigner`. Снова обновите переменную `PATH`.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. Создайте подписанный APK-файл из неподписанного
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+Перейдите в домашнюю папку и создайте подписанный APK-файл:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+Теперь файл `app-full-release-signed.apk` готов к установке или обновлению.

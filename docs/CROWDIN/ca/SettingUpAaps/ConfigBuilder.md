@@ -1,54 +1,54 @@
-# Configuration (Config Builder)
+# Configurador (Config Builder)
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+El **Config Builder** ara es diu **Configurador** i és al **menú** (☰). Vegeu [Què ha canviat a AAPS v4](#v4-changes).
 ```
 
-**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+Al **Configurador** trieu quins plugins estan actius (CGM, bomba, algoritme APS, sensibilitat, sincronització, …) i obriu cada plugin i la seva configuració. La [guia pas a pas](#configuration-v4) és més avall; la resta d'aquesta pàgina descriu cada secció en detall.
 
 (configuration-v4)=
-## Configuration in AAPS v4
+## El Configurador a AAPS v4
 
-In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (_“Set up your configuration (CGM, pump, …) and enable features”_).
+A **AAPS** v4, toqueu el **menú** (☰) a la cantonada **de dalt a l'esquerra** de la pantalla principal i trieu **Configurador** (_«Configureu els vostres dispositius (CGM, bomba, ...) i activeu funcions»_).
 
-![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![El menú de dalt a l'esquerra amb l'entrada Configurador](../images/v4/Configuration/configuration_menu.png)
 
-Plugins are grouped by **category** — for example _Smoothing_, _Calibration_, _Sensitivity detection_, _APS_, _Communication_ and _General_. Each row shows the category name and the **currently active** plugin (e.g. _APS → OpenAPS SMB_). Tap a row to open a category.
+Els plugins s'agrupen per **categoria**, per exemple _Suavitzat_, _Calibració_, _Detecció de sensibilitat_, _APS_, _Comunicació_ i _General_. Cada fila mostra el nom de la categoria i el plugin **actiu actualment** (p. ex. _APS → OpenAPS SMB_). Toqueu una fila per obrir una categoria.
 
-![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+![La pantalla Configurador, amb la llista de categories de plugins](../images/v4/Configuration/configuration_plugins.png)
 
-Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (_“Choose any that apply”_). Each plugin offers two actions:
+Dins d'una categoria veieu els plugins que hi ha disponibles. A les categories d'una sola opció trieu l'activa; algunes categories permeten triar-ne diverses (_«Trieu tots els que calguin»_). Cada plugin ofereix dues accions:
 
-- **Open plugin** — opens the plugin's own screen.
-- **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+- **Obrir plugin**: obre la pantalla pròpia del plugin.
+- **Configuració**: obre la configuració del plugin (pot estar agrupada en seccions que es poden desplegar).
 
-![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+![Una categoria amb els seus plugins, cadascun amb «Obrir plugin» i «Configuració»](../images/v4/Configuration/configuration_open_plugin.png)
 
 (configuration_sync_icon)=
-### The mobile icon — “synced from the master”
+### La icona del mòbil: «sincronitzat des del telèfon principal»
 
-A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+Una petita **icona de mòbil (telèfon)** al costat d'una categoria o d'una opció vol dir que aquest element està **sincronitzat des del telèfon principal**: el seu valor o la seva selecció arriba a aquest dispositiu pel canal NSClientV3 (Nightscout).
 
-On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on _Smoothing_, _Calibration_, _Sensitivity detection_ and _APS_. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+En un **client** (**AAPSClient**) aquests elements **es mantenen sincronitzats amb el principal**. La icona només es mostra en un client, i per això no apareix a la captura de pantalla de dalt, que es va fer a l'aplicació **AAPS** principal. En un client sol aparèixer a _Suavitzat_, _Calibració_, _Detecció de sensibilitat_ i _APS_. Com es mantenen alineats el principal i els clients, i quins paràmetres podeu canviar des de cada costat, s'explica a [Control principal ↔ client](#client-master-config-prefs).
 
-The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below _Absorption cutoff_ carries the icon; settings without the icon are configured per device:
+La mateixa icona també apareix **dins de la configuració**, al costat de cada preferència que es sincronitza. A l'exemple de sota, _Límit d'absorció_ porta la icona; les opcions sense la icona es configuren a cada dispositiu:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![La configuració d'un plugin: la icona del mòbil marca les opcions sincronitzades](../images/v4/ClientMaster/preferences_synced_icon.png)
 
-Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+Els elements **sense** la icona es configuren **a cada dispositiu**. L'exemple més important és la mateixa connexió **NSClientV3 (Comunicació)**: l'**URL de Nightscout**, el **token d'accés** i els **websockets** es configuren a cada telèfon per separat, per això **no** mostren la icona del mòbil.
 
 ---
 
 (Config-Builder-tab-or-hamburger-menu)=
-## Opening a plugin screen
+## Obrir la pantalla d'un plugin
 
-Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+Cada pantalla de plugin s'obre d'una d'aquestes maneres (les pestanyes i la casella de l'ull d'**AAPS** v3 ja no hi són, vegeu [Què ha canviat a AAPS v4](#v4-changes)):
 
-- **Configuration** → the plugin's category → **Open plugin**,
-- the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
-- a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
-- the **search bar** on the main screen.
+- **Configurador** → la categoria del plugin → **Obrir plugin**,
+- el full **Gestionar** de la navegació inferior, per a les pantalles que feu servir més (Perfil, Configuració d'insulina, Bomba, Automatització, Aliments...),
+- un botó d'[Accés ràpid](../DailyLifeWithAaps/QuickLaunch.md) que afegiu vosaltres mateixos,
+- la **barra de cerca** de la pantalla principal.
 
 ```{contents}
 :backlinks: entry
@@ -57,414 +57,415 @@ Each plugin screen is opened in one of these ways (the tabs and the eye checkbox
 
 (ConfigBuilder_Profile)=
 
-## Profile
+## Perfil
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Aquest mòdul no es pot desactivar perquè és una part central d'**AAPS**.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+Vegeu [El vostre perfil d'AAPS](../SettingUpAaps/YourAapsProfile.md) per entendre els conceptes bàsics del que conté el vostre **Perfil**.
 
 (insulin)=
 (Config-Builder-insulin)=
-## Insulin
+## Insulina
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![Configuració d'insulina](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+A **AAPS** 4 la insulina ja no és un plugin que se selecciona al **Configurador**. Obriu **Gestionar → Configuració d'insulina** per configurar la insulina que feu servir.
 
-The insulin editor lets you:
+L'editor d'insulina us permet:
 
-- give the insulin an **Insulin nickname** so it is easy to recognise,
-- set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Action, in hours), either by typing the value or using the **–** / **+** buttons,
-- tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+- doneu a la insulina un **Àlies de la insulina** perquè sigui fàcil de reconèixer,
+- configureu el **Pic** (temps fins a l'activitat màxima de la insulina, en minuts) i la **DIA** (durada de l'acció de la insulina, en hores), escrivint el valor o amb els botons **–** / **+**,
+- toqueu un botó predefinit de **Carregar el pic de** (**Novorapid** (75 min), **Fiasp** (55 min) o **Lyumjev** (45 min)) per omplir en un sol pas el temps de pic estàndard d'aquella insulina.
 
-The allowed ranges are the same whatever insulin you use:
+Els intervals permesos són els mateixos sigui quina sigui la insulina que feu servir:
 
-- **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
-- **Peak**: 35 to 120 minutes.
+- **DIA**: de 5 a 9 hores (de 5 a 10 hores si el tipus de pacient és **Embaraç**). Vegeu [Durada de l'acció de la insulina (DIA) i pic](#Config-Builder-insulin-dia) per triar un valor.
+- **Pic**: de 35 a 120 minuts.
 
-The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
+Les corbes d'**IOB** (insulina a bord) i d'**Activitat** que es mostren a la part de baix de l'editor s'actualitzen quan canvieu els valors. Així veieu de seguida com la vostra configuració canvia l'acció de la insulina.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+Més informació per entendre el perfil de la insulina tal com el mostra **AAPS** [aquí](#AapsScreens-insulin-profile).
 
 (Config-Builder-insulin-change-active)=
-### Changing the insulin in use (DIA or peak)
+### Canviar la insulina en ús (DIA o pic)
 
-The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
+La insulina marcada com a **ACTIU** és la que fa servir el perfil en ús. Els seus camps estan en gris: no la podeu editar ni eliminar. Així, el nom de la insulina que es mostra al perfil actiu sempre coincideix amb la configuració que realment s'utilitza.
 
-To change the DIA or peak you are using:
+Per canviar la DIA o el pic que feu servir:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
-2. Tap **+** (_Add new insulin_). **AAPS** creates a copy of the insulin shown on screen.
-3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
-4. Tap **▶** (_Activate insulin_) and confirm. The new insulin becomes **ACTIVE**.
+1. Obriu **Gestionar → Configuració d'insulina**. Si la pantalla s'obre només de lectura (un **✏️ llapis** a la barra superior), toqueu el llapis i desbloquegeu la configuració.
+2. Toqueu **+** (_Afegir insulina nova_). **AAPS** crea una còpia de la insulina que es mostra a la pantalla.
+3. Configureu el nou **Pic** i/o la nova **DIA**, i després toqueu la icona de desar (a dalt a la dreta).
+4. Toqueu **▶** (_Activar insulina_) i confirmeu. La insulina nova queda marcada com a **ACTIU**.
 
 ```{admonition} The name includes peak and DIA
 :class: note
-**AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example _Fiasp 55m 8h U100_), so you can tell your configurations apart at a glance.
+**AAPS** afegeix automàticament el pic, la DIA i la concentració al nom de la insulina (per exemple _Fiasp 55m 8h U100_), i així podeu distingir les vostres configuracions d'un cop d'ull.
 ```
 
-You can delete the old insulin once it is no longer active.
+Podeu eliminar la insulina antiga quan ja no estigui activa.
 
-### The "Load peak from" presets
+### Els botons predefinits de «Carregar el pic de»
 
-In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
+A **AAPS** 4 no hi ha cap llista de tipus d'insulina per triar. Totes les insulines fan servir la mateixa corba d'activitat exponencial; només en canvien el **Pic** i la **DIA**. Els valors predefinits de **Carregar el pic de** a l'editor d'insulina omplen amb un sol toc el pic recomanat per a les insulines més habituals (la petita ⓘ al costat de **Carregar el pic de** les mostra amb els seus valors de pic). Després encara podeu ajustar el **Pic** i la **DIA**.
 
-Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+Canvieu el pic respecte al valor recomanat només si enteneu quin efecte té. El [gràfic de la corba d'insulina](#AapsScreens-insulin-profile) us ajuda a entendre les corbes.
 
 #### Novorapid
 
-![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+![Corba de la insulina amb el pic de Novorapid](../images/Profile/ConfBuild_Insulin_RAO.png)
 
-- recommended for Humalog, Novolog and Novorapid (called _Rapid-Acting Oref_ in **AAPS** v3)
-- Peak = 75 minutes after injection
+- recomanat per a Humalog, Novolog i Novorapid (s'anomenava _Rapid-Acting Oref_ a **AAPS** v3)
+- Pic = 75 minuts després de la injecció
 
 #### Fiasp
 
-![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+![Corba de la insulina amb el pic de Fiasp](../images/Profile/ConfBuild_Insulin_URO.png)
 
-- recommended for Fiasp (called _Ultra-Rapid Oref_ in **AAPS** v3)
-- Peak = 55 minutes after injection
+- recomanat per a Fiasp (s'anomenava _Ultra-Rapid Oref_ a **AAPS** v3)
+- Pic = 55 minuts després de la injecció
 
 (Config-Builder-lyumjev)=
 #### Lyumjev
 
-![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+![Corba de la insulina amb el pic de Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
 
-- recommended for Lyumjev
-- Peak = 45 minutes after injection
+- recomanat per a Lyumjev
+- Pic = 45 minuts després de la injecció
 
-#### Custom peak
+#### Pic personalitzat
 
-- There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
-- A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+- A **AAPS** 4 no hi ha cap tipus d'insulina «Oref sense pic» a part: introduïu qualsevol **Pic** (de 35 a 120 minuts) directament a l'[editor de la insulina](#Config-Builder-insulin), sense fer servir cap valor predefinit.
+- Un pic personalitzat és útil si feu servir una insulina que no és a la llista, o una barreja de diferents insulines.
 
 (Config-Builder-insulin-dia)=
-### Duration of insulin action (DIA) and peak
+### Durada de l'acció de la insulina (DIA) i pic
 
 ```{warning}
-In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+Amb el llaç, baixar la DIA o el pic sempre augmenta la insulina administrada. La DIA funciona de manera diferent a AAPS que als sistemes AID comercials, i els canvis fets sense cura en aquesta configuració poden canviar la dosi d'insulina molt més o molt menys del que s'espera.
 ```
 
-AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+AAPS modela l'evolució de l'acció de la insulina amb una fórmula matemàtica, que es configura amb la **DIA** i amb l'opció **pic**, molt relacionada. La DIA és la durada teòrica fins que l'IOB arriba a zero, i el pic és el moment en què l'efecte de la insulina és més fort. D'aquí surt una corba d'IOB i una corba d'activitat, que és simplement la **velocitat** a què baixa l'IOB.
 
-Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
+Tingueu en compte que quan AAPS funciona en llaç, és normal tenir períodes de [basal temporal zero](#Open-APS-features-super-micro-bolus-smb). Aquesta insulina basal que falta es resta completament de l'IOB; per això, a la pràctica, l'IOB arriba a zero moltes hores abans que la DIA configurada. Podeu mirar l'[IOB de bolus i l'IOB basal](#aaps-screens-iob-cob-basal-sens) per separat des de la pantalla principal.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
+Per configurar la DIA i el pic, toqueu **Gestionar** a la pantalla principal i després toqueu **Configuració d'insulina**. AAPS mostra la configuració d'insulina activa així:
 
-![Sample insulin configuration](../images/manage/insulin_profile.png)
+![Exemple de configuració de la insulina](../images/manage/insulin_profile.png)
 
-In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+En aquest exemple, el pic és de 55 minuts, la DIA és de 8 hores i la [concentració de la insulina](#Insulin-Concentration) és l'estàndard de 100 U/ml.
 
-Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
+A causa de l'efecte de les basals temporals a zero explicat més amunt i de la fórmula que AAPS fa servir per a la reducció de l'IOB, la majoria d'usuaris configuren una DIA clarament més alta que en els sistemes comercials. En general, a moltes persones els va bé una **DIA** de 9 h. Quan tingueu més experiència amb AAPS i un perfil ben ajustat, podeu provar de trobar una DIA i un pic personalitzats amb la informació següent.
 
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Com que la taxa basal té una influència indirecta en la baixada de l'IOB a AAPS, unes taxes basals massa altes poden amagar una DIA massa alta, i al revés. Té sentit ajustar primer amb cura les taxes basals abans d'ajustar la DIA i el pic. A més, tingueu en compte que la DIA i el pic s'influeixen l'un a l'altre: l'efecte de la DIA depèn del pic, i al revés.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Aquests gràfics mostren l'efecte exacte de la DIA i el pic sobre les corbes d'IOB, per a tot el rang de valors permesos.
 
-Adjusting DIA:
+Ajust de la DIA:
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Ajust del pic:
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Finalment, una comparació ajustant la DIA i el pic alhora. La idea és que tots dos valors s'ajusten en la mateixa proporció, de manera que `49/35 ~ 7/5`. O de la mateixa manera, `120/93 ~ 9/7`. Els intervals són iguals sigui quina sigui la DIA o el pic de partida, sempre que el canvi relatiu sigui el mateix per a tots dos.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Tingueu en compte que quan la DIA i el pic s'ajusten d'aquesta manera, cada punt de la corba es desplaça en la mateixa proporció.
 
 ````
 
-#### Further reading on DIA and peak configuration
+#### Més lectures sobre la configuració de la DIA i el pic
 
-- [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
-- [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-- [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-- [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+- [Detalls tècnics i història d'OpenAPS, el predecessor d'AAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) (en anglès).
+- [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) (per què sovint fem servir una DIA equivocada i per què és important) a Diabettech.
+- [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) (corbes d'insulina exponencials i Fiasp) a See My CGM (arxiu).
+- [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) (model revisat d'Humalog en un llaç tancat) i altres articles a Bionic Wookie, que recomanen una DIA de 9 h per a Lyumjev, Fiasp, NovoRapid i Humalog.
 
 (Config-Builder-bg-source)=
-## BG Source
-Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+## Origen glucèmia
+Seleccioneu l'origen de glucèmia que feu servir. Vegeu la pàgina [Origen glucèmia](../Getting-Started/CompatiblesCgms.md) per a més informació sobre la configuració.
 
-![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+![Configurador > Origen glucèmia](../images/v4/Configuration/configuration_bg_source.png)
 
-Scroll down to see the other sources:
+Desplaceu-vos cap avall per veure els altres orígens:
 
-![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+![Configurador > Origen glucèmia, continuació](../images/v4/Configuration/configuration_bg_source_2.png)
 
-![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+![Configurador > Origen glucèmia, final de la llista](../images/v4/Configuration/configuration_bg_source_3.png)
 
-- [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
-- [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+- [Glucèmia xDrip+](../CompatibleCgms/xDrip.md): també per a aplicacions compatibles com [Juggluco](../CompatibleCgms/Juggluco.md)
+- [Glucèmia NSClient](../CompatibleCgms/CgmNightscoutUpload.md): només si sabeu el que feu, vegeu [Origen glucèmia](../Getting-Started/CompatiblesCgms.md).
 - [MM640g](../CompatibleCgms/MM640g.md)
-- Glimp - only version 4.15.57 and newer are supported
+- Glimp: només s'admeten la versió 4.15.57 i les més noves
 - [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-- MicroTech CGM App - for the Aidex / LinX CGM
+- App de CGM MicroTech: per al CGM Aidex / LinX
 - [Poctech](../CompatibleCgms/PocTech.md)
-- Tomato (MiaoMiao) - Tomato App for MiaoMiao device
-- [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
-- Intelligo - Intelligo App
-- Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
-- SI App - patched SI App or Sibionics App for Sibionics CGM
-- Sino App - patched app for Sinocare CGM
-- Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
-- Instara - Instara App
-- Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
+- Tomato (MiaoMiao): app Tomato per al dispositiu MiaoMiao
+- [Glunovo](https://infinovo.com/): app Glunovo per al sistema CGM Glunovo
+- Intelligo: app Intelligo
+- Syai/Ottai: per a les apps Syai i Ottai (vegeu [Syai Tag](../CompatibleCgms/SyaiTagX1.md) i [Ottai](../CompatibleCgms/OttaiM8.md))
+- SI App: SI App modificada o app Sibionics per al CGM Sibionics
+- Sino App: app modificada per al CGM Sinocare
+- Lector de notificacions: llegeix els valors de glucèmia de les notificacions que mostren les apps oficials de CGM (Dexcom, Medtronic, Eversense, etc.)
+- Instara: app Instara
+- Glucèmia aleatòria: genera dades de glucèmia aleatòries per fer proves. Només es pot activar en una compilació d'enginyeria (desenvolupador) amb la **Bomba virtual**, de manera que en una instal·lació normal d'**AAPS** no es pot fer servir.
 
-## Smoothing
+## Suavitzat
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Configurador > Suavitzat](../images/v4/Configuration/configuration_smoothing.png)
 
-See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Vegeu [Suavitzat de les dades de glucèmia](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-## Calibration
+## Calibració
 
-Choose how **AAPS** treats the values it receives from your sensor:
+Trieu com tracta **AAPS** els valors que rep del vostre sensor:
 
-- **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
-- **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+- **Sense calibració**: els valors del sensor es fan servir tal com són. Feu-lo servir quan el sensor ja ve calibrat de fàbrica i és precís. Aquesta és l'opció per defecte.
+- **Calibració lineal**: **AAPS** corregeix els valors del sensor amb un pendent i un desplaçament que calcula a partir de les vostres glucèmies manuals.
 
-How to use **Linear calibration**:
+Com fer servir la **Calibració lineal**:
 
-1. Select **Linear calibration** in the **Calibration** category.
-2. When you insert a new sensor, log the sensor change: use **Log sensor change** on the calibration screen, or enter a CGM sensor insert in the Careportal. This tells **AAPS** when the sensor session started. If **AAPS** notices a gap of more than 30 minutes in the readings, it may ask you to mark a sensor change; this prompt appears on the master only, not on a client.
-3. Open the plugin and tap **Add calibration**. Enter your fingerstick value. **AAPS** pairs it with the sensor value from the last 10 minutes.
+1. Seleccioneu **Calibració lineal** a la categoria **Calibració**.
+2. Quan inseriu un sensor nou, registreu el canvi de sensor: feu servir **Registrar canvi de sensor** a la pantalla de calibració, o introduïu una inserció de sensor CGM al Portal de cures. Així **AAPS** sap quan va començar la sessió del sensor. Si **AAPS** detecta un buit de més de 30 minuts en les lectures, us pot demanar que marqueu un canvi de sensor; aquest avís només apareix al principal, no en un client.
+3. Obriu el plugin i toqueu **Afegir calibració**. Introduïu el valor de glucèmia capil·lar. **AAPS** l'aparella amb el valor del sensor dels últims 10 minuts.
 
-A calibration is accepted only when:
+Una calibració només s'accepta quan:
 
-- a sensor change is logged and at least **2 hours** have passed since then (warm-up),
-- your glucose is stable. If it changes too fast, the dialog tells you and shows the limit,
-- there is a CGM reading from the last 10 minutes,
-- it is for the current moment. You cannot enter older fingerstick values.
+- s'ha registrat un canvi de sensor i han passat almenys **2 hores** des de llavors (escalfament),
+- la vostra glucèmia és estable. Si canvia massa de pressa, el diàleg us ho diu i mostra el límit,
+- hi ha una lectura del CGM dels darrers 10 minuts,
+- és per al moment actual. No podeu introduir valors de glucèmia capil·lar més antics.
 
-How the correction works:
+Com funciona la correcció:
 
-- **AAPS** draws a straight line through the pairs of the current sensor: `corrected value = slope × sensor value + offset`.
-- Newer pairs count more than older ones: a pair that is 2 days old counts about 37 %, a 4-day-old pair about 14 %. The line therefore follows your sensor as it drifts.
-- At least **2 pairs** are needed.
-- If the pairs are close together (less than 54 mg/dL / 3 mmol/L apart), only the values are shifted (offset, no slope).
-- The slope is kept between 0.55 and 1.6. A slope outside this range is limited to the nearest value.
-- Safety limit: if the correction at 100 mg/dL (5.5 mmol/L) would be more than ±30 mg/dL (1.7 mmol/L), no correction is applied. This protects you from a wrong entry.
+- **AAPS** traça una línia recta a través de les parelles del sensor actual: `corrected value = slope × sensor value + offset` (valor corregit = pendent × valor del sensor + desplaçament).
+- Les parelles més noves compten més que les antigues: una parella de 2 dies compta un 37% aproximadament, i una de 4 dies un 14% aproximadament. Per això la línia segueix el sensor quan aquest es desvia.
+- Calen almenys **2 parelles**.
+- Si les parelles són molt properes (menys de 54 mg/dl / 3 mmol/l de diferència), només es desplacen els valors (desplaçament, sense pendent).
+- El pendent es manté entre 0,55 i 1,6. Un pendent fora d'aquest rang es limita al valor més proper.
+- Límit de seguretat: si la correcció a 100 mg/dl (5,5 mmol/l) fos de més de ±30 mg/dl (1,7 mmol/l), no s'aplica cap correcció. Això us protegeix d'una entrada errònia.
 
-What it changes:
+Què canvia:
 
-- The corrected value is used everywhere: the BG on the main screen, the graph and the loop. The sensor readings themselves are not changed. The correction is applied on top, also to the earlier readings of the current sensor.
-- A new sensor change starts from zero. Pairs from earlier sensors no longer count.
-- On the graph, a calibration is shown as a marker at the fingerstick value.
-- Calibrations are synchronized through Nightscout, so your clients show the same corrected values.
+- El valor corregit es fa servir a tot arreu: la glucèmia de la pantalla principal, el gràfic i el llaç. Les lectures del sensor no es modifiquen. La correcció s'aplica a sobre, també a les lectures anteriors del sensor actual.
+- Un canvi de sensor nou comença de zero. Els parells de sensors anteriors ja no compten.
+- Al gràfic, una calibració es mostra com una marca al valor de la glucèmia manual.
+- Les calibracions se sincronitzen a través de Nightscout, i així els vostres clients mostren els mateixos valors corregits.
 
-Check and remove entries:
+Comprovar i eliminar entrades:
 
-- **Open plugin** shows the status (for example _Slope 0.85, mid-range correction -0.4_), a chart of your pairs with the line, and the list of entries.
-- If an entry is wrong (for example, you had sugar on your finger), tap the bin icon next to it. The line is calculated again at once.
+- **Obrir plugin** mostra l'estat (per exemple _Pendent 0,85, correcció al mig del rang -0,4_), un gràfic de les vostres parelles amb la línia, i la llista d'entrades.
+- Si una entrada és incorrecta (per exemple, teníeu sucre al dit), toqueu la icona de la paperera que hi ha al costat. La línia es torna a calcular immediatament.
 
 ```{admonition} Using xDrip+ as BG source?
 :class: note
-xDrip+ has its own calibration. Calibrate in one place only, so that the sensor values are not corrected twice.
+xDrip+ té la seva pròpia calibració. Calibreu només en un lloc, perquè els valors del sensor no es corregeixin dues vegades.
 ```
 
 ```{admonition} Calibrate with care
 :class: warning
-A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+Un valor de glucèmia manual incorrecte porta a valors de glucèmia incorrectes i, per tant, a una dosi d'insulina incorrecta. Renteu-vos les mans abans de mesurar, i no calibreu mentre la vostra glucèmia canvia de pressa.
 ```
 
-![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
+![Configurador > Calibració](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
-## Pump
-Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+## Bomba
+Seleccioneu la bomba que feu servir. Vegeu la pàgina [Bombes compatibles](../Getting-Started/CompatiblePumps.md) per a més informació de configuració.
 
-![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+![Configurador > Bomba](../images/v4/Configuration/configuration_pump_list_1.png)
 
-Scroll down to see all the pump drivers:
+Desplaceu-vos cap avall per veure tots els controladors de bomba:
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+![Configurador > Bomba, continuació](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+![Configurador > Bomba, continuació](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+![Configurador > Bomba, final de la llista](../images/v4/Configuration/configuration_pump_list_4.png)
 
-When you select another pump, **AAPS** asks you to confirm the change:
+Quan seleccioneu una altra bomba, **AAPS** us demana que confirmeu el canvi:
 
-![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
+![Confirmació del canvi de plugin](../images/v4/Pumps/switch_plugin_dialog.png)
 
 - [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-- Dana R Korean (for domestic DanaR pump)
-- Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+- Dana R Korean (per a la bomba DanaR coreana)
+- Dana Rv2 (bomba DanaR amb una actualització de firmware no oficial)
 - [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 - [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 - [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
-- Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-- Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+- Omnipod per a [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+- Dash per a [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 - [Medtronic](../CompatiblePumps/MedtronicPump.md)
 - [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md)
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
-- Virtual pump: open loop - **AAPS** suggestions only
-  - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  - for pump which doesn't have any driver yet
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
+- Bomba virtual: llaç obert, **AAPS** només fa suggeriments
+  - quan feu els primers passos amb **AAPS**, durant els primers [objectius](../SettingUpAaps/CompletingTheObjectives.md)
+  - per a bombes que encara no tenen cap controlador
 
 (config-builder-wrong-pump-data)=
-### Message: "Data is coming from different pump"
+### Missatge: «Dades procedents d'una altra bomba»
 
-**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+**AAPS** recorda la bomba a la qual està connectat (tipus de bomba i número de sèrie). Si rep dades d'una altra bomba, per exemple després de substituir la vostra bomba per una de nova del mateix model, mostra aquest missatge i ignora les dades d'aquesta bomba:
 
-![Data is coming from different pump](../images/Screen_DifferentPump.png)
+![Dades procedents d'una altra bomba](../images/Screen_DifferentPump.png)
 
-To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
+Per fer servir la bomba nova, canvieu el controlador de la bomba: seleccioneu **Bomba virtual**, confirmeu, i després torneu a seleccionar la vostra bomba. Llavors **AAPS** registra la bomba a la qual està connectat ara.
 
 (Config-Builder-sensitivity-detection)=
 
-## Sensitivity Detection
+## Detecció de sensibilitat
 
-![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Configurador > Detecció de sensibilitat](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+Seleccioneu el tipus de detecció de sensibilitat. Per a més detalls sobre els diferents tipus, [llegiu aquí](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Analitza les dades històriques sobre la marxa i fa ajustos si detecta que sou més sensibles a la insulina que de costum (o, al contrari, més resistents). Trobareu més detalls sobre com es calcula la ràtio de sensibilitat a [Funcions principals d'AAPS > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SENS% and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Podeu veure la vostra sensibilitat a la pantalla principal en un [gràfic addicional](#AapsScreens-section-g-additional-graphs): seleccioneu SENS% i mireu la línia blanca. Tingueu en compte que heu d'estar a l'[Objectiu 8](#objectives-objective8) perquè la Detecció de sensibilitat/[Autosens](#Open-APS-features-autosens) pugui ajustar automàticament la quantitat d'insulina lliurada. Abans d'arribar a aquest objectiu, el percentatge d'Autosens / la línia del gràfic només es mostra a títol informatiu.
 
-### Absorption settings
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+### Configuració absorció
+Si feu servir Oref1 amb **SMB**, heu de canviar **min_5m_carbimpact** a 8. El valor només es fa servir quan falten lectures del **CGM** o quan l'activitat física «consumeix» tota la pujada de glucèmia que, si no, faria que **AAPS** reduís el COB. Quan l'[absorció de carbohidrats](../DailyLifeWithAaps/CobCalculation.md) no es pot calcular de manera dinàmica a partir de la reacció de la vostra glucèmia, s'aplica una reducció per defecte als vostres carbohidrats. Bàsicament, és una mesura de seguretat.
 
 (Config-Builder-aps)=
 ## APS
 
-![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+![Configurador > APS](../images/v4/Configuration/configuration_aps.png)
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm with **Open plugin**.
+Seleccioneu l'algoritme APS que voleu per als ajustos de la teràpia. Podeu veure els detalls actius de l'algoritme triat amb **Obrir plugin**.
 - OpenAPS AMA
-  - Advanced Meal Assist: older algorithm not recommended anymore.
-  - In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+  - Advanced Meal Assist: algoritme antic que ja no es recomana.
+  - En poques paraules, l'avantatge és que, després de posar-vos un bolus d'àpat, el sistema pot pujar la basal temporal més ràpidament SI introduïu els carbohidrats de manera fiable.
 - [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb)
-  - Super Micro Bolus: most recent algorithm recommended for all users.
-  - In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  - Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+  - Super Micro Bolus: l'algoritme més recent, recomanat per a tots els usuaris.
+  - A diferència d'AMA, SMB no fa servir basals temporals per controlar la glucèmia, sinó sobretot petits **Super Micro Bolus**.
+  - Nota: es recomana fer servir aquest algoritme des del principi, encara que no rebreu SMB de veritat fins a l'[Objectiu 9](#objectives-objective9).
 - [Auto ISF](#Open-APS-features-auto-isf)
-  - Experimental algorithm for advanced users. It is only listed once the objectives are completed.
+  - Algoritme experimental per a usuaris avançats. Només apareix a la llista quan s'han completat els objectius.
 
-If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
+Si canvieu de l'algoritme AMA a SMB, heu de canviar a mà _min_5m_carbimpact_ a **8** (valor per defecte per a SMB) a [Configuració → Configuració absorció](#Preferences-min_5m_carbimpact).
 
-## Loop
+## Llaç
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Aquest mòdul no es pot desactivar perquè és una part central d'**AAPS**.
 
-![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+![Configurador > Llaços](../images/v4/Configuration/configuration_loop.png)
 
-## Constraints
+## Restriccions
 
-![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+![Configurador > Restriccions](../images/v4/Configuration/configuration_constraints.png)
 
-### Objectives
+### Objectius
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system.
+**AAPS** té un programa d'aprenentatge (una sèrie d'objectius) que heu de completar pas a pas. Us ha de guiar de manera segura en la configuració d'un sistema de llaç tancat.
 
-See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
+Vegeu la pàgina [Objectius](../SettingUpAaps/CompletingTheObjectives.md) per a més informació.
 
-## Communication
+## Comunicació
 
-In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
+En aquesta categoria (que a **AAPS** v3 es deia **Sincronització**) trieu si voleu que **AAPS** enviï les vostres dades i on.
 
-![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+![Configurador > Comunicació](../images/v4/Configuration/configuration_communication.png)
 
-Scroll down to see the rest of the list:
+Desplaceu-vos cap avall per veure la resta de la llista:
 
-![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+![Configurador > Comunicació, continuació](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+Es pot fer servir com a [servidor d'informes](../SettingUpAaps/SettingUpTheReportingServer.md) i/o per al [monitoratge remot](../RemoteFeatures/RemoteMonitoring.md) i el [control remot](../RemoteFeatures/RemoteControl.md).
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
+Vegeu [Sincronització amb el servidor d'informes](#SetupWizard-synchronization-with-the-reporting-server-and-more) per configurar la sincronització NSClientV3.
 
 ### Tidepool
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Es pot fer servir com a [servidor d'informes](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-See [Tidepool](../SettingUpAaps/Tidepool.md).
+Vegeu [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
+Es fa servir per **enviar** dades, com els valors de glucèmia i els tractaments, a xDrip+ al mateix telèfon. La seva configuració també conté **Enviar estat a xDrip+**, una línia d'estat amb IOB i COB que mostren xDrip+ i algunes apps complementàries per a rellotges.
 
 ### Open Humans
 
-See [Open Humans](../SupportingAaps/OpenHumans.md).
+Vegeu [Open Humans](../SupportingAaps/OpenHumans.md).
 
 (Config-Builder-wear)=
 ### Wear
-Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+Vigileu i controleu **AAPS** des d'un rellotge Wear OS. La configuració del rellotge s'explica a [Configurar AAPS al vostre rellotge Wear OS](../WearOS/WearOsSmartwatch.md). Després d'activar el plugin, trieu les seves opcions a [Configuració > Wear](#preferences-wear). L'ús del rellotge s'explica a [Controlar AAPS amb el vostre rellotge Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
-### External Companion Apps
+### Apps complementàries externes
 
-Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+Difon les dades d'estat d'**AAPS** dins del telèfon perquè altres apps instal·lades les puguin mostrar, per exemple apps complementàries per a rellotges o widgets. L'emissió inclou la glucèmia i la tendència, IOB, COB, basal i basal temporal, nom del perfil, estat del llaç, bateria del telèfon i pila de la bomba, nivell del reservori i progrés del bolus. Activeu-ho només si una aplicació complementària que feu servir demana aquestes dades.
 
-Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+Les apps que llegeixen aquesta difusió són [WatchDrip+](https://bigdigital.home.blog/) (rellotges Xiaomi i Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (complicacions i widgets de Wear OS, i Android Auto amb GlucoDataAuto) i l'app G-Watch. La seva configuració es descriu a [Rellotges intel·ligents i AAPS](#watches-external-companion-apps). Algunes també fan servir **Enviar estat a xDrip+** del plugin **xDrip** de dalt per a una línia d'estat amb IOB i COB.
 
-In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
+En versions anteriors aquest plugin es deia **Samsung Tizen**, per l'[app G-Watch per a rellotges Samsung Tizen](#Watchfaces-tizen), per a la qual es va fer al principi.
 
 ### Garmin
 
-Connection to Garmin device (Fenix, Edge...)
-## Treatments
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
+Connexió amb un dispositiu Garmin (Fenix, Edge...)
+## Tractaments
+Obriu el **menú** (☰) i seleccioneu [Historial de tractaments](#aaps-screens-treatments) per veure els tractaments que s'han registrat. Si voleu editar o eliminar una entrada (p. ex. heu menjat menys carbohidrats del que esperàveu), seleccioneu «Eliminar» i introduïu el valor nou (canvieu l'hora si cal) a **Tractaments → Carbs** a la navegació inferior (vegeu [Carbs](#screens-bolus-carbs)).
 
 ## General
 
-In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+A **AAPS** 4 la categoria **General** del **Configurador** només conté **Autotune**. Les altres funcions descrites a continuació estan sempre disponibles i ja no cal activar-les aquí; cada paràgraf indica on trobar-les.
 
-![Configuration > General](../images/v4/Configuration/configuration_general.png)
+![Configurador > General](../images/v4/Configuration/configuration_general.png)
 
-### Overview
+### Resum
 
-The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
+La [pantalla principal](#AapsScreens-the-homescreen) d'**AAPS** ja no és un plugin i no té configuració pròpia al **Configurador**. Les opcions que hi havia aquí ara són a **Configuració** (icona de l'engranatge): [Mostrar notes als diàlegs](#Preferences-show-notes-field-in-treatments-dialogs), [Llums d'estat](#Preferences-status-lights) i el [Percentatge del bolus](#Preferences-deliver-this-part-of-bolus-wizard-result) que fa servir la calculadora de bolus. L'opció de superbolus d'**AAPS** 3.x [no està disponible com a opció de configuració](#Preferences-advanced-settings-overview) a **AAPS** 4.
 
 (Config-Builder-actions)=
-### Actions
+### Accions
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+La pestanya Accions d'**AAPS** 3.x ja no existeix. Els seus botons ara són al full **Gestionar**: vegeu [On és la pestanya Accions?](#screens-action-tab).
 
-### Automation
+### Automatització
 
-**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+**Gestionar → Automatització** us permet gestionar les vostres [automatitzacions](../DailyLifeWithAaps/Automations.md), a partir de l'[Objectiu 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
-### SMS Communicator
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+### Comunicador SMS
+Permet als cuidadors a distància controlar algunes funcions d'**AAPS** per SMS. Vegeu [Ordres SMS](../RemoteFeatures/SMSCommands.md) per a més informació de configuració.
 
-### Food
-**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+### Aliments
+**Gestionar → Aliments** mostra els aliments predefinits a la base de dades d'aliments de Nightscout. Vegeu el [Readme de Nightscout](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) per a més informació de configuració.
 
-Note: Entries cannot be used in the **AAPS** calculator. (View only)
+Nota: les entrades no es poden fer servir a la calculadora d'**AAPS**. (només visualització)
 
 (Config-Builder-autotune)=
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Podeu activar Autotune, vegeu [aquí](../AdvancedOptions/Autotune.md).
 
-### Maintenance
+### Manteniment
 
-Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+Obriu el **menú** (☰) i seleccioneu **Manteniment** per exportar / importar la configuració i gestionar els fitxers de registre.
 
-![Maintenance screen, log files](../images/screens/maintenance.png)
+![Pantalla Manteniment, fitxers de registre](../images/screens/maintenance.png)
 
-![Maintenance screen, file management](../images/screens/maintenance_2.png)
+![Pantalla Manteniment, gestió de fitxers](../images/screens/maintenance_2.png)
 
-![Maintenance screen, database management](../images/screens/maintenance_3.png)
+![Pantalla Manteniment, gestió de la base de dades](../images/screens/maintenance_3.png)
 
-### Config Builder
+### Configurador
 
-Now called **Configuration**: this current page.
+Ara es diu **Configurador**: és aquesta mateixa pàgina.

@@ -1,341 +1,341 @@
-# Set up AAPS on your Wear OS watch
+# Postavljanje AAPS-a na vaš Wear OS sat
 
-The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
+Upute u nastavku odnose se na **AAPS Wear** apk koji trebate izraditi. Ako ga još niste izradili, pogledajte povezane upute [ovdje](../WearOS/BuildingAapsWearOS.md). Pri izradi obavezno koristite istu datoteku spremišta ključeva koju ste koristili za **AAPS** apk na telefonu.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+Dio ovih informacija možete koristiti i za **AAPSClient** i **PumpControl** **Wear** apk. Svaka aplikacija **Wear** komunicira s pripadajućom aplikacijom na telefonu. Na primjer: aplikacija **AAPSClient Wear** može se koristiti za prikaz podataka **AAPSClienta**, a ne podataka **AAPS-a**. Kada je instalirano nekoliko inačica klijenta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) jedna uz drugu, pločice svake od njih imaju malo zaglavlje u boji te inačice, pa ih možete razlikovati dok listate.
 
-## Wear OS Versions and compatibility
+## Verzije Wear OS-a i kompatibilnost
 
 (wearos-watchface-changes)=
 
-### Wear OS watch face changes (impact on AAPS watchfaces)
+### Promjene Watchfaceova u Wear OS-u (utjecaj na AAPS Watchfaceove)
 
 ```{admonition} Why newer Wear OS watches break AAPS watchfaces
 :class: warning
 
-In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+U lipnju 2025. Google je [najavio promjene](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) kojima se postupno ukida stari pogon za Watchfaceove (AndroidX / Wearable Support Library, ili „WSL“) u korist novijeg deklarativnog formata **Watch Face Format**. Prilagođeni Watchfaceovi **AAPS-a** izrađeni su na starom pogonu, pa što je verzija Wear OS-a novija, to je vjerojatnije da AAPS Watchface neće raditi ispravno ili će prestati raditi.
 
-This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+To se odnosi posebno na **Watchfaceove** – **komplikacije**, pločice i funkcije daljinskog upravljanja AAPS-a nisu pogođene. To je i razlog zašto **ažuriranje firmwarea/sustava na Wear OS satu može pokvariti AAPS Watchfaceove**, a sat se nakon toga ne može vratiti na stariju verziju Wear OS-a. Ako vaš AAPS Watchface trenutačno radi, **isključite automatska ažuriranja sata**.
 ```
 
-The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+Tablica u nastavku sažima kako Googleova promjena utječe na AAPS Watchfaceove (stari pogon) po verziji Wear OS-a:
 
-| Wear OS version         | Base Android | API level | Impact on AAPS (legacy) watchfaces                                                                                                                                                          |
-| ----------------------- | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wear OS 6               | Android 16   | 36        | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
-| Wear OS 5               | Android 14   | 34        | **Severe** — active (interactive) mode often fails, complications freeze, animations stop                                                                                                   |
-| Wear OS 4               | Android 13   | 33        | **Moderate** — throttling, missed updates, partial failures                                                                                                                                 |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30        | **Low** — legacy engine still supported                                                                                                                                                     |
+| Verzija Wear OS-a       | Osnovni Android | Razina API-ja | Utjecaj na AAPS (stare) Watchfaceove                                                                                                                                                                         |
+| ----------------------- | --------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Wear OS 6               | Android 16      | 36            | **Stari Watchfaceovi više nisu dostupni** – AAPS umjesto njih instalira [Watchface u formatu Watch Face Format](#wearos-aaps-v4-watchface): vaš prilagođeni Watchface ili Watchface s komplikacijama AAPS V4 |
+| Wear OS 5               | Android 14      | 34            | **Ozbiljan** – aktivni (interaktivni) način rada često ne radi, komplikacije se zamrzavaju, animacije se zaustavljaju                                                                                        |
+| Wear OS 4               | Android 13      | 33            | **Umjeren** – usporavanje, propuštena ažuriranja, djelomični kvarovi                                                                                                                                         |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11      | 30            | **Nizak** – stari pogon je još podržan                                                                                                                                                                       |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+Ako vaš sat ima verziju na kojoj AAPS Watchfaceovi nisu pouzdani, podatke AAPS-a možete umjesto toga prikazati pomoću **komplikacija** na kompatibilnom Watchfaceu ili koristiti [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) s komplikacijom, koji dobiva podatke od dodatka [Vanjske prateće aplikacije](#external-companion-apps) u **AAPS-u**. Na **Wear OS 6 i novijem** AAPS instalira zamjenski Watchface izrađen u novom formatu – pogledajte niže.
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the watchface AAPS installs
+### Wear OS 6 i noviji – Watchface koji instalira AAPS
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
+Satovi s **Wear OS 6 ili novijim** ne mogu pokretati klasične AAPS Watchfaceove kao Watchfaceove. Za te satove aplikacija AAPS na satu donosi dva Watchfacea izrađena u Googleovom novom formatu **Watch Face Format**. Wear OS dopušta aplikaciji da instalira samo **jedan** Watchface, pa birate koji će od ta dva biti na satu:
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
-- **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
+- **Prilagođeni Watchface** (zadano): prikazuje prilagođeni Watchface koji ste učitali s telefona pomoću **Učitaj Watchface** (pogledajte [Odabir AAPS Watchfacea](#WearOS_changing-to-AAPS-watchface)). Sat crta vaš dizajn kao sliku, pa radi svaki postojeći prilagođeni Watchface. Mjesta za komplikacije koja prilagođeni Watchface može definirati **nisu dostupna** na toj slici, jer Wear OS šalje podatke komplikacija samo pravom Watchfaceu. Dugo pritisnite Watchface kako biste došli do njegove jedine postavke: prikazuje li uvijek uključen zaslon običan sat ili vaš dizajn, zatamnjen.
+- **Watchface s komplikacijama** (Watchface **AAPS V4**): njegovih **sedam mjesta za komplikacije** dolazi **unaprijed postavljeno s podacima AAPS-a**: vrijednost GUK-a, aktivni inzulin (IOB), aktivni ugljikohidrati (COB), [komplikacija GUK graf](#Watchfaces-complications), bazalna stopa / privremeni cilj i ikona **Način rada** u gornjem lijevom mjestu (dodirnite je kako biste sa sata promijenili način rada petlje). Dodirnite vrijeme na vrhu kako biste otvorili aplikaciju za alarme na satu. U uređivaču Watchfacea možete promijeniti što prikazuje svako mjesto.
 
-You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+Birate na telefonu: otvorite dodatak **Wear** i pod **Watchface instaliran na satu** odaberite jedan od ta dva. Ova kartica prikazuje se samo dok je spojen sat s Wear OS 6 ili novijim. **AAPS** traži da potvrdite, jer sat odmah mijenja Watchface. Prelazak s **Watchface s komplikacijama** na drugi Watchface također vraća komplikacije koje ste promijenili u uređivaču Watchfacea na zadane, i potvrda to navodi. Dok je odabran **Watchface s komplikacijama**, gumbi za prilagođeni Watchface su skriveni, a umjesto njih prikazuje se pregled Watchfacea. Ako učitate prilagođeni Watchface dok je odabran **Watchface s komplikacijama**, **AAPS** vas podsjeća da prijeđete na **Prilagođeni Watchface** kako biste ga vidjeli na satu.
 
-- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+- Odabrani Watchface **instalira se i aktivira automatski** kada se aplikacija AAPS prvi put pokrene na takvom satu, a **ažurira se automatski** zajedno s aplikacijom na satu.
+- Ako ste uklonili Watchface, na dnu **glavnog izbornika** AAPS-a na satu pojavljuje se stavka **Instaliraj watchface** – dodirnite je za ponovnu instalaciju.
 
-While a watch running Wear OS 5 or older is connected, the **Watchface installed on watch** card is not shown at all (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
+Dok je spojen sat s Wear OS 5 ili starijim, kartica **Watchface instaliran na satu** uopće se ne prikazuje (mehanizam na kojem se temelji zahtijeva Wear OS 6); klasični Watchfaceovi tamo rade kao i prije.
 
 (wearos-complications-watchface-setup)=
 
-### Complications watchface — recommended setup
+### Watchface s komplikacijama – preporučene postavke
 
-The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+**Watchface s komplikacijama** ima sedam mjesta za komplikacije. Dugo pritisnite Watchface, dodirnite **Prilagodi** i odaberite izvor podataka za svako mjesto. Mjesta su numerirana kao u uređivaču Watchfacea: **1** lijevo, **2** sredina, **3** desno, **4** graf, **5** dolje, **6** gore lijevo i **7** gore desno.
 
-| Default setup                                                                                   | Alternative setup                                                                                       |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+| Zadane postavke                                                                                      | Druge postavke                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| ![Watchface s komplikacijama, zadane postavke](../images/wearos/complications_watchface_default.png) | ![Watchface s komplikacijama, druge postavke](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
-| ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
-| 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
-| 3    | Right     | CoB Icon                                                            | BR & Target                           |
-| 4    | Graph     | BG Graph                                                            | BG Graph                              |
-| 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Running mode                                                        | Running mode                          |
-| 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| Mjesto | Položaj     | Zadano                                                                          | Drugo                                           |
+| ------ | ----------- | ------------------------------------------------------------------------------- | ----------------------------------------------- |
+| 1      | Lijevo      | Ikona IOB                                                                       | COB & IOB                                       |
+| 2      | Sredina     | Glukoza u krvi                                                                  | Glukoza u krvi                                  |
+| 3      | Desno       | Ikona COB                                                                       | BR & cilj                                       |
+| 4      | Graf        | GUK graf                                                                        | GUK graf                                        |
+| 5      | Dolje       | BR & cilj                                                                       | Baterija uploadera/telefona                     |
+| 6      | Gore lijevo | Način rada                                                                      | Način rada                                      |
+| 7      | Gore desno  | Baterija uploadera/telefona ili prečac aplikacije za **AAPS odgoda upozorenja** | Prečac aplikacije za **AAPS odgoda upozorenja** |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+Prečac **AAPS odgoda upozorenja** odabire se među komplikacijama sata **Prečac aplikacije** (App shortcut). Dodirom na njega odgađa se alarm koji zvoni na telefonu.
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+Uključite **Uvijek uključen zaslon** (Always-on display) na satu (**Postavke** > **Zaslon**). Watchface tada i dalje prikazuje vašu glukozu kada je ruka spuštena, umjesto praznog zaslona ili običnog sata.
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+Ako je postavljena **Vrsta zaključavanja** pod **Postavke** > **Sigurnost i privatnost**, sat skriva podatke komplikacija dok je zaključan, a Watchface prikazuje prazna mjesta dok ga ne otključate. Kako bi podaci ostali vidljivi, isključite **Sakrij informacije** (Hide information) u istom izborniku.
 ```
 
 ### Wear OS 3
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
-No limitation in **AAPS Wear** operations.
+Instalirajte **AAPS Wear** apk pomoću [Wear Installera 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (opisano niže) ili ADB-a.  
+Nema ograničenja u radu **AAPS Weara**.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 i Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+Primjer: Galaxy Watch 4, 5, 6, 7 i Ultra ili Pixel Watch koji još **nisu** ažurirani na Wear OS 6. Provjerite verziju pod **Postavke** > **O satu** > **Softver**.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+Instalirajte **AAPS Wear** apk pomoću [Wear Installera 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (za Wear OS 5 slijedite [ovaj videozapis](https://www.youtube.com/watch?v=yef_qGvcCnk)). Sve funkcije **AAPS Weara** rade, ali klasični Watchfaceovi **AAPS-a** ograničeni su kako je opisano u tablici iznad: usporeni na Wear OS 4, a na Wear OS 5 često ne rade.
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+Na Wear OS 5 AAPS Watchface mora se odabrati u Wear Installeru 2 odmah nakon instalacije aplikacije Wear: na kraju instalacije program nudi Watchface **AAPS (Custom)**. Ako slučajno prijeđete na drugi Watchface, ponovite instalaciju. Promjena postavki Watchfacea (Tamno, Odgovarajući razdjelnik itd.) možda neće biti moguća.
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+Ako vam klasični Watchface trenutačno radi, **isključite automatska ažuriranja sata**: sljedeće ažuriranje firmwarea vjerojatno će ga pokvariti. Ako ipak ažurirate na Wear OS 6, pročitajte odjeljak iznad: **AAPS** tada instalira vlastiti Watchface u novom formatu.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+Ako je Watchface previše nepouzdan, razmislite o korištenju aplikacije [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) s komplikacijom. Za to mora biti omogućen dodatak [Vanjske prateće aplikacije](#external-companion-apps) u **AAPS-u**.
 
-### Wear OS 6 and newer
+### Wear OS 6 i noviji
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+Primjer: Galaxy Watch 4 i noviji s One UI 8 Watch, Pixel Watch nakon ažuriranja iz 2025. Većina satova Galaxy i Pixel dobila je ovo ažuriranje.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+Instalirajte **AAPS Wear** apk pomoću [Wear Installera 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Klasični Watchfaceovi nisu dostupni; **AAPS** automatski instalira Watchface odabran na telefonu, pogledajte [Watchface koji instalira AAPS](#wearos-aaps-v4-watchface). Nema ograničenja u radu **AAPS Weara**.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Kako postaviti pametni sat Samsung Galaxy Watch 4 s **AAPS-om**
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Ovaj odjeljak pretpostavlja da ste potpuni početnik s pametnim satovima. Daje osnovno snalaženje na jednom popularnom satu, **Galaxy Watch 4**, a zatim upute korak po korak za postavljanje **AAPS-a** na sat.
 
-_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
+_Ove upute napisane su za Galaxy Watch s Wear OS 3._ Na Wear OS 4 i novijem sat traži **kod za uparivanje** kada se telefon ili računalo spaja preko ADB-a. Wear Installer 2 i postupak s terminalom [niže](#BuildingAapsWearOs-WearOS5-TShoot) oba to podržavaju.
 
-Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+Ovdje su osnovne upute za postavljanje za [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) i [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-## Basic smartwatch familiarity
+## Osnovno upoznavanje s pametnim satom
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Nakon osnovnog postavljanja sata prema gornjem videozapisu, otvorite Trgovinu Play na telefonu i preuzmite sljedeće aplikacije: „Galaxy Wearable“, „Samsung“ i „Easy Fire tools“ ili „Wear Installer 2“.
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Postoji mnogo YouTube videozapisa drugih autora koji vam mogu pomoći da upoznate svoj novi pametni sat, na primjer:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+Aplikacija „Galaxy Wearable“ ima i odjeljak s uputama za korištenje. Otvorite Galaxy Wearable na telefonu, potražite sat i pokušajte upariti sat s telefonom. Ovisno o vašoj verziji, to može zatražiti instalaciju još jedne aplikacije, „galaxy watch 4 plugin“, iz Trgovine Play (preuzimanje traje neko vrijeme). Instalirajte to na telefon, a zatim ponovno pokušajte upariti sat i telefon u aplikaciji Wearable. Prođite kroz niz izbornika i označite razne postavke.
 
-## Setting up a Samsung account
+## Postavljanje Samsung računa
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Provjerite da e-mail račun kojim postavljate Samsung račun ima datum rođenja prema kojem korisnik ima 13 ili više godina, jer je inače Samsungove dozvole vrlo teško odobriti. Ako ste djetetu mlađem od 13 godina dali Gmail račun i koristite tu e-mail adresu, ne možete ga jednostavno promijeniti u račun za odrasle. Jedno rješenje je promijeniti trenutačni datum rođenja tako da trenutačna dob bude 12 godina i 364 dana. Sljedeći dan račun će biti pretvoren u račun za odrasle i možete nastaviti s postavljanjem Samsung računa.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
-## Transferring the **AAPS** Wear app onto your **AAPS** phone
+## Prijenos aplikacije **AAPS** Wear na vaš **AAPS** telefon
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Wear.apk iz Android Studija možete prenijeti na telefon na jedan od ovih načina:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a)  pomoću USB kabela prenesite **AAPS** Wear apk datoteku na telefon, a zatim je „ručno instalirajte“ (side-load) na sat. Prenesite Wear.apk na telefon putem USB-a u mapu za preuzimanja; ili
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b)  izrežite i zalijepite Wear.apk iz Android Studija na svoj Google Drive.
 
 
-To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+Za ručnu instalaciju AAPS-a na sat možete koristiti: 1) Wear Installer 2 2) Easy Fire tools 3) Android Debug Bridge (ADB) Ovdje preporučujemo Wear Installer 2, jer su upute i postupak u videozapisu vrlo jasni i dobro objašnjeni. Ako vam Wear Installer 2 ne radi, pokušajte s Easy Fire Tools ili ADB-om, oba su opisana niže.
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Korištenje Wear Installera 2 za ručnu instalaciju **AAPS** Weara s telefona na sat
 
- ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
+ ![Ikona aplikacije Wear Installer 2](../images/wearos/wear_installer2_icon.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Wear Installer 2, koji je razvio [Malcolm Bryant](https://www.youtube.com/@Freepoc), možete preuzeti s Google Playa na telefon i pomoću njega ručno instalirati aplikaciju AAPS Wear na sat. Aplikacija sadrži koristan [videozapis](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) „kako ručno instalirati“.
 
 ```{tip}
-For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk).
-See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
+Za satove s Wear OS 5 slijedite [ovaj videozapis](https://www.youtube.com/watch?v=yef_qGvcCnk).
+Pogledajte savjete za rješavanje problema [niže](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
+Ovdje su svi potrebni detalji (najbolje je otvoriti videozapis na drugom uređaju kako biste ga mogli gledati dok postavljate telefon).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Kao što je rečeno u videozapisu, kada završite, isključite ADB otklanjanje pogrešaka na satu kako se baterija pametnog sata ne bi praznila.
 
-Alternatively, but not for Wear OS 5, you can:
+Ili, ali ne za Wear OS 5, možete:
 
-### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+### Korištenje Easy Fire tools za ručnu instalaciju **AAPS** Weara na sat
 
-1)   Download _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ from the Play Store onto phone
+1)   Preuzmite _[Easy Fire Tools](https://play.google.com/store/apps/details?id=de.agondev.easyfiretools&hl=en)_ iz Trgovine Play na telefon
 
-![image](../images/wearos/easyfire01.png)
+![slika](../images/wearos/easyfire01.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2)  Uključite način za razvojne programere na satu (nakon što je sat postavljen i spojen s telefonom):
 
-Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
+Idite na **Postavke** > **Sustav** > **O satu** > **Verzije** (nazivi izbornika razlikuju se ovisno o proizvođaču sata – na nekim satovima to je **O satu** > **Informacije o softveru** > **Verzija softvera**).
 
-![image](../images/wearos/easyfire02.png)
+![slika](../images/wearos/easyfire02.png)
 
-Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
+Brzo dodirnite nekoliko puta **Broj međuverzije** (ili **Verzija softvera**) dok vam poruka ne kaže da ste sada razvojni programer.
 
-![image](../images/wearos/easyfire03.png)
+![slika](../images/wearos/easyfire03.png)
 
-Go back to **Settings** > **System**: a new **Developer options** menu is now shown.
+Vratite se na **Postavke** > **Sustav**: sada se prikazuje novi izbornik **Opcije za razvojne programere**.
 
-In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.
+U **Opcijama za razvojne programere** uključite **ADB otklanjanje pogrešaka** i **Bežično otklanjanje pogrešaka** te potvrdite upite. Bežično otklanjanje pogrešaka zatim prikazuje **IP adresu i port** sata, nešto poput: **192.168.1.214** : 5555. Trebate samo IP adresu (ovdje **192.168.1.214**), ne i broj porta nakon dvotočke. Imajte na umu da se IP adresa može promijeniti, na primjer svaki put kada za AAPS prijeđete na novi telefon.
 
-![image](../images/wearos/easyfire04.png)
+![slika](../images/wearos/easyfire04.png)
 
-STEP 3)     Enter IP address _e.g._ **192.168.1.214** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address).
+KORAK 3)     Unesite IP adresu, _npr._ **192.168.1.214**, u Easy Fire tools na telefonu (otvorite izbornik s tri crtice lijevo, postavke i unesite IP adresu).
 
-![image](../images/wearos/easyfire05.png)
+![slika](../images/wearos/easyfire05.png)
 
-Then click the plug socket icon on the top right. It will turn green when connected.
+Zatim kliknite ikonu utičnice gore desno. Kada se poveže, postat će zeleno.
 
-![image](../images/wearos/easyfire06.png)
-
-
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  aaps-wear.apk onto the smartwatch using Easy Fire tools
+![slika](../images/wearos/easyfire06.png)
 
 
-![image](../images/wearos/easyfire07.png)
+KORAK 4) Slijedite upute [ovdje](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) kako biste ručno instalirali (tj. prenijeli) aaps-wear.apk na pametni sat pomoću Easy Fire tools
+
+
+![slika](../images/wearos/easyfire07.png)
 
 
 (BuildingAapsWearOs-WearOS5-TShoot)=
 
-### Using the terminal
-Connect your smartwatch and computer to the same Wi-Fi network.
+### Korištenje terminala
+Spojite pametni sat i računalo na istu Wi-Fi mrežu.
 
-- To install ADB download it from: https://developer.android.com/tools/releases/platform-tools
-- Open a terminal.
-- For Windows, create a new folder named `adb` under your disk `C:`. Open the `platform-tools-latest-windows.zip` file you downloaded above. Copy all files inside `platform-tools` to `C:\adb` and open this folder with a command prompt (right click and Open in Terminal). Type the command below to set the path to the folder where ADB is located: `setx PATH "%PATH%;C:\adb"`
-- For Mac instead of installing manually you can use homebrew: `brew install android-platform-tools`
+- Za instalaciju ADB-a preuzmite ga s: https://developer.android.com/tools/releases/platform-tools
+- Otvorite terminal.
+- Na Windowsima napravite novu mapu pod nazivom `adb` na disku `C:`. Otvorite datoteku `platform-tools-latest-windows.zip` koju ste gore preuzeli. Kopirajte sve datoteke iz `platform-tools` u `C:\adb` i otvorite tu mapu u naredbenom retku (desni klik i „Otvori u terminalu“). Upišite naredbu u nastavku kako biste postavili putanju do mape u kojoj je ADB: `setx PATH "%PATH%;C:\adb"`
+- Na Macu umjesto ručne instalacije možete koristiti homebrew: `brew install android-platform-tools`
 
-On the watch:
-- Go to Settings → About watch → **Software Information**
-- Tap Software version 7 times until you see Developer mode enabled.
-- Go to Settings → Developer options. Enable **ADB debugging**
-- Go to Settings → Developer options → Wireless debugging → **Pair new device**
+Na satu:
+- Idite na Postavke → O satu → **Informacije o softveru**
+- Dodirnite Verzija softvera 7 puta dok ne vidite poruku da je način za razvojne programere uključen.
+- Idite na Postavke → Opcije za razvojne programere. Uključite **ADB otklanjanje pogrešaka**
+- Idite na Postavke → Opcije za razvojne programere → Bežično otklanjanje pogrešaka → **Upari novi uređaj** (Pair new device)
 
-You will see a Wi-Fi pairing code and IP address and port appearing:
+Pojavit će se kod za uparivanje putem Wi-Fi-ja te IP adresa i port:
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/watch_wifi_pairing_code.png)
+![Zaslon sata s kodom za uparivanje putem Wi-Fi-ja te IP adresom i portom](../images/wearos/watch_wifi_pairing_code.png)
 
-- In the terminal: `adb pair ipaddress:port` E.g. `adb pair 10.10.1.125:36299`
-- You will be asked for the pairing code. Enter it.
-- You will see a response:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
-- In the terminal type: <br>`adb devices`.<br> You should see something like:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
+- U terminalu: `adb pair ipaddress:port` Npr. `adb pair 10.10.1.125:36299`
+- Bit ćete upitani za kod za uparivanje. Unesite ga.
+- Vidjet ćete odgovor:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
+- U terminal upišite: <br>`adb devices`.<br> Trebali biste vidjeti nešto poput:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
-- You will see:<br> `Performing Streamed Install`<br> `Success`
+- Sada idite u mapu na računalu u kojoj je Wear apk i upišite<br> `adb install wear-full.apk` <br>pri čemu wear-full.apk zamijenite nazivom svoje apk datoteke.
+- Vidjet ćete:<br> `Performing Streamed Install`<br> `Success`
 
 
 (wear-os-5-troubleshooting)=
 
-### General troubleshooting recommendations for Wear OS 5
+### Opće preporuke za rješavanje problema za Wear OS 5
 
-- Do not use Wi-Fi Tethering. That won't work.
-- You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
-- Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
-- Make sure to be near your main router, then restart both phone and watch.
+- Nemojte koristiti dijeljenje veze putem Wi-Fi-ja (Wi-Fi Tethering). To neće raditi.
+- Ne morate uključiti ADB otklanjanje pogrešaka na telefonu (samo na satu). Isključite ADB otklanjanje pogrešaka na telefonu.
+- Provjerite da se spajate na svoju lokalnu mrežu u kojoj se telefon i sat mogu vidjeti (nemojte se spajati na Wi-Fi mrežu za goste).
+- Provjerite jesu li sat i telefon na istoj mreži i na istom Wi-Fi uređaju. Posebno Wi-Fi pojačivači (repeateri) ili pristupne točke mogu stvarati probleme.
+- Budite blizu glavnog usmjerivača (routera), a zatim ponovno pokrenite i telefon i sat.
 
-**Pairing :**
+**Uparivanje:**
 
-- Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP in the Wear Installer app.
-- Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the pairing code + space + port number.
-- Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
+- Sat: Bežično otklanjanje pogrešaka: zapišite IP adresu.
+- Wear Installer: unesite IP adresu u aplikaciju Wear Installer.
+- Odaberite uparivanje novog uređaja (Pair new) i zapišite prikazani kod za uparivanje i broj porta.
+- Wear Installer: unesite kod za uparivanje + razmak + broj porta.
+- Wear Installer bi trebao javiti da je uparivanje uspjelo. Ako ne javi, zatvorite Wear Installer i pokušajte ponovno.
 
-Once paired you should be able to install the AAPS wear apk:
+Nakon uparivanja trebali biste moći instalirati AAPS Wear apk:
 
-- Exit/close, then restart Wear Installer.
-- On wireless debug, note the IP and Port number and make sure you check/enter the IP and port number in Wear Installer.
-- Note: the port number is different from the one used for pairing!
+- Izađite / zatvorite, zatim ponovno pokrenite Wear Installer.
+- U bežičnom otklanjanju pogrešaka zapišite IP adresu i broj porta te ih provjerite / unesite u Wear Installer.
+- Napomena: broj porta razlikuje se od onoga koji je korišten za uparivanje!
 
-## Setting up the connection between the watch and the phone from **AAPS**
+## Postavljanje veze između sata i telefona iz **AAPS-a**
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
+Zadnji korak je postaviti **AAPS** na telefonu da radi s **Wear.apk** na satu. Za to omogućite dodatak Wear:
 
-* Go to the **AAPS** app on the phone
+* Otvorite aplikaciju **AAPS** na telefonu
 
-* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
+* Otvorite **izbornik** (☰) u gornjem lijevom kutu i idite na **Konfiguracija** > **Komunikacija**
 
-* Tick the **Wear** box
+* Označite okvir **Wear**
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfiguracija > Komunikacija s uključenim dodatkom Wear](../images/v4/Configuration/configuration_communication_wear.png)
 
-To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+Za bolus ili druge radnje sa sata uključite i **Upravljanje sa sata** u [Postavke > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Then swipe right until you get to all the **AAPS**  faces.
+Za prelazak na drugi **AAPS** Watchface dugo pritisnite Watchface na početnom zaslonu sata i dodirnite **Prilagodi**. Zatim povlačite udesno dok ne dođete do svih Watchfaceova **AAPS**.
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
-
-
-![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
+Ako je **AAPS** Wear.apk uspješno ručno instaliran na pametni sat, to će izgledati ovako:
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
+![Dodatak Wear sa spojenim satom Galaxy Watch i aplikacija AAPS na satu](../images/wearos/wear_apk_installed.png)
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+
+Kod nekih pametnih satova, poput Samsung Galaxyja, opcija „Daljinska veza“ (Remote Connection) pod Naprednim značajkama Samsung Galaxyja mora biti **uključena** kako biste **Wear.apk** i **AAPS** koristili na daljinu putem Wi-Fi-ja.
+
+![Galaxy Wearable, Napredne značajke, Daljinska veza uključena](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
-### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+### Rješavanje problema u komunikaciji između **AAPS** sata i **AAPS** telefona
 
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
-6.  Check that your router is not isolating the devices from one another.
+1.  Ako se EasyFire tools ne poveže ili dobivate poruku „authorisation failed“ > provjerite je li IP adresa točno unesena.
+2.  Provjerite je li pametni sat spojen na internet (a ne samo spojen s telefonom preko Bluetootha).
+3.  Provjerite jesu li **AAPS** telefon i pametni sat upareni ili povezani u aplikaciji Samsung.
+4.  Može pomoći i potpuno ponovno pokretanje telefona i pametnog sata (tj. isključivanje i uključivanje telefona)
+5.  Ako ste uspjeli preuzeti Wear.apk na telefon, ali ne primate nikakve podatke GUK-a, _provjerite_ jeste li na sat ručno instalirali ispravan **AAPS** Wear apk: aplikacija za sat iz izrade u pregledniku je datoteka `aaps-wear-….apk`, pogledajte [Izrada aplikacije AAPS za Wear OS](../WearOS/BuildingAapsWearOS.md). Ako je datoteka koju ste instalirali jedna od sljedećih: a) **AAPSClient** Wear apk (dok na telefonu radi **AAPS**); b) datoteka `.aab`; ili c) datoteka s riječju ‘debug’ u nazivu, tada pri izradi niste odabrali ispravan Wear OS apk.
+6.  Provjerite da vaš usmjerivač (router) ne odvaja uređaje jedan od drugoga.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Više savjeta za rješavanje problema možete pronaći [ovdje](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 (WearOS_changing-to-AAPS-watchface)=
 
-## Changing to an AAPS Watchface on your WearOS watch
+## Odabir AAPS Watchfacea na vašem Wear OS satu
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+U standardnoj izradi AAPS Wear OS APK-a dostupno je nekoliko Watchfaceova. Bit će dostupni kada instalirate AAPS Wear APK na sat. Ovo su koraci za odabir jednog od njih:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. Na satu (pretpostavljamo Wear OS) dugo pritisnite trenutačni Watchface kako biste otvorili zaslon za odabir Watchfacea, pomaknite se skroz udesno dok ne vidite gumb „Dodaj brojčanik“ (Add Watch Face) i odaberite ga
 
-![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
+![Zaslon za odabir Watchfacea s gumbom Dodaj brojčanik](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. Pomičite se kroz popis dok ne pronađete „AAPS (Custom)“ (ovisno o satu, Watchfaceovi instaliranih aplikacija navedeni su u odjeljku „Preuzeto“ (Downloaded) ili grupirani po aplikaciji) i kliknite sredinu slike kako biste ga dodali na svoj kratki popis trenutačnih Watchfaceova. Ne brinite zbog trenutačnog izgleda Watchfacea „AAPS (Custom)“; željeni izgled odabrat ćemo u sljedećem koraku.
 
-![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
+![Popis AAPS Watchfaceova, s AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
+3. Sada otvorite AAPS na telefonu i otvorite dodatak Wear: **Konfiguracija** > **Komunikacija** > **Wear** > **Otvori dodatak** (najprije označite **Wear** ako nije omogućen).
 
-![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
+![Dodatak Wear s karticom Prilagođeni Watchface](../images/wearos/wear_plugin_custom_watchface.png)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. Kliknite gumb „Učitaj Watchface“ i odaberite Watchface koji vam se sviđa
 
-![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
+![Popis Odaberi prilagođeni Watchface](../images/wearos/select_custom_watchface.png)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Pogledajte sat: Watchface „AAPS (Custom)“ sada bi trebao prikazivati izgled koji ste odabrali. Pričekajte nekoliko sekundi da se osvježi. Zaslon **Wear** na telefonu sada prikazuje naziv učitanog Watchfacea i njegov pregled. **Info Watchface** navodi njegove detalje i polja koja sadrži, a **Više Watchfaceova** otvara [stranicu za razmjenu](../ExchangeSiteCustomWatchfaces/index.md) na kojoj možete preuzeti druge prilagođene Watchfaceove. Sada možete prilagoditi komplikacije itd. tako da dugo pritisnete Watchface, a zatim pritisnete gumb „Prilagodi“ (Customize) na slici Watchfacea.
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings** > **AAPS(Custom)**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+Prilagođeni Watchfaceovi izrađeni s verzijom 3.0 ili novijom formata prilagođenih Watchfaceova mogu imati do pet mjesta za komplikacije, čiji položaj i veličinu određuje Watchface (**Raspored komplikacija**). Na satu dugo pritisnite Watchface, dodirnite **Prilagodi** i dodirnite od **Komplikacija 1** do **Komplikacija 5** kako biste odabrali izvor podataka koji se prikazuje na svakom mjestu. Isti redovi navedeni su u aplikaciji AAPS na satu pod **Postavke** > **AAPS(Custom)**; dodir na jedan od njih ondje otvara isti izbornik za odabir. **Prioritet vrste komplikacije** određuje daje li mjesto prednost vrijednosti ili mjeraču, tekstu ili ikoni kada izvor podataka nudi više vrsta. Promijenjeni prioritet primjenjuje se tek kada sljedeći put odaberete izvor podataka za to mjesto.
 
-These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+Ova mjesta rade samo na satovima s **Wear OS 5 ili starijim**, gdje prilagođeni Watchface radi kao pravi Watchface. Na **Wear OS 6 i novijem** prilagođeni Watchface prikazuje se kao slika bez mjesta za komplikacije, a koraci 1 i 2 iznad nisu potrebni: provjerite je li odabran **Prilagođeni Watchface** pod **Watchface instaliran na satu** u dodatku **Wear** na telefonu (pogledajte [Watchface koji instalira AAPS](#wearos-aaps-v4-watchface)).
 ```
 
-## AAPSv2 watchface - Legend
+## Watchface AAPSv2 – legenda
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Legenda Watchfacea AAPSv2](../images/wearos/Watchface_Legend.png)
 
-A - time since last loop run
+A – vrijeme od zadnjeg pokretanja petlje
 
-B - CGM reading
+B – očitanje CGM-a
 
-C - minutes since last CGM reading
+C – minute od zadnjeg očitanja CGM-a
 
-D - change compared to last CGM reading (in mmol or mg/dL)
+D – promjena u odnosu na zadnje očitanje CGM-a (u mmol ili mg/dL)
 
-E - average change CGM reading last 15 minutes
+E – prosječna promjena očitanja CGM-a u zadnjih 15 minuta
 
-F - phone battery
+F – baterija telefona
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G – bazalna stopa (prikazana u J/h kod standardne stope i u % kod privremenog bazala (TBR))
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H – BGI (utjecaj na glukozu u krvi) -> koliko bi GUK „trebao“ rasti ili padati samo na temelju djelovanja inzulina.
 
-I - carbs (carbs on board | e-carbs in the future)
+I – ugljikohidrati (aktivni ugljikohidrati | e-ugljikohidrati u budućnosti)
 
-J - insulin on board (from bolus | from basal)
+J – aktivni inzulin (iz bolusa | iz bazala)

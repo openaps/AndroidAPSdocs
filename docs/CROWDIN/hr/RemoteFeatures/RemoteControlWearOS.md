@@ -1,457 +1,457 @@
-# Operation of AAPS via your Wear OS smartwatch
+# Upravljanje AAPS-om putem pametnog sata s Wear OS-om
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## AAPS Watchfaceovi
 
 ```{warning}
-The classic **AAPS** watchfaces run on Wear OS 5 and older only, and Wear OS 5 already limits them. On **Wear OS 6 and newer** the watch app installs one watchface in Google's Watch Face Format instead: your custom watchface as a picture, or the **Complications watchface**. See [Wear OS watch face changes](#wearos-watchface-changes) for what breaks on each Wear OS version, and [the watchface AAPS installs](#wearos-aaps-v4-watchface) for Wear OS 6.
+Klasični Watchfaceovi **AAPS-a** rade samo na Wear OS-u 5 i starijim verzijama, a Wear OS 5 ih već ograničava. Na **Wear OS-u 6 i novijim verzijama** aplikacija za sat umjesto toga instalira jedan Watchface u Googleovom formatu Watch Face Format: vaš prilagođeni Watchface kao sliku ili **Watchface s komplikacijama**. Pogledajte [Promjene Watchfacea u Wear OS-u](#wearos-watchface-changes) da biste saznali što prestaje raditi u kojoj verziji Wear OS-a, te [Watchface koji AAPS instalira](#wearos-aaps-v4-watchface) za Wear OS 6.
 ```
 
-On Wear OS 5 and older, several classic watchfaces are built into the **AAPS** watch app. They show the glucose value with delta, IOB, the active basal rate and a graph of the readings. Two taps work on them:
+Na Wear OS-u 5 i starijim verzijama u aplikaciju **AAPS** za sat ugrađeno je nekoliko klasičnih Watchfaceova. Prikazuju vrijednost glukoze s deltom, aktivni inzulin (IOB), trenutnu bazalnu stopu i graf očitanja. Na njima rade dva dodira:
 
-* Double-tap the glucose value to open the **AAPS** main menu
-* Double-tap the graph to change its time range
+* Dvaput dodirnite vrijednost glukoze da biste otvorili glavni izbornik **AAPS-a**
+* Dvaput dodirnite graf da biste promijenili njegov vremenski raspon
 
-On every Wear OS version, the [complications](#Watchfaces-complications) and the [tiles](#WearOsSmartwatch-wear-os-tiles) described on this page work with any watchface that has room for them.
+Na svakoj verziji Wear OS-a [komplikacije](#Watchfaces-complications) i [pločice](#WearOsSmartwatch-wear-os-tiles) opisane na ovoj stranici rade sa svakim Watchfaceom koji ima mjesta za njih.
 
-## Configuration
+## Konfiguracija
 
-Enable **Wear** in [**Configuration** > **Communication**](#Config-Builder-wear).
+Omogućite **Wear** u [**Konfiguracija** > **Komunikacija**](#Config-Builder-wear).
 
-To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear). While **Wear control** is off, the phone refuses every treatment or mode change sent from the watch, and the watch shows *"Wear control is turned off in the Wear settings on the phone."*
+Da biste davali bolus ili izvršavali druge radnje sa sata, uključite **Upravljanje sa sata**. Opcije bolus kalkulatora za sat postavljaju se na istom mjestu: pogledajte [Postavke > Wear](#preferences-wear). Dok je **Upravljanje sa sata** isključeno, telefon odbija svaki tretman ili promjenu načina rada poslanu sa sata, a sat prikazuje *„Upravljanje sa sata je isključeno u postavkama Wear na telefonu.“*
 
-With **Open plugin** on the **Wear** card you open the Wear screen:
+Pomoću **Otvori dodatak** na kartici **Wear** otvarate zaslon Wear:
 
-![Wear plugin screen](../images/screens/wear_plugin.png)
+![Zaslon dodatka Wear](../images/screens/wear_plugin.png)
 
-The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
+Gornji redak prikazuje naziv povezanog sata ili **(Sat nije povezan)**. Na ovom zaslonu možete
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
-* Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
-* Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
+* Ponovno pošalji sve podatke. Može pomoći ako sat neko vrijeme nije bio povezan, a vi želite poslati podatke na sat.
+* Otvorite postavke sata izravno s telefona.
+* Odabrati koji Watchface **AAPS** instalira na sat (**Watchface instaliran na satu**: vaš prilagođeni Watchface ili Watchface s komplikacijama). Ova se kartica prikazuje samo dok je povezan sat s **Wear OS-om 6** ili novijim. Pogledajte [Watchface koji AAPS instalira](#wearos-aaps-v4-watchface).
+* Upravljati **Prilagođenim Watchfaceom** (kartica se prikazuje dok je sat povezan): **Učitaj Watchface** šalje prilagođeni Watchface na sat, **Info Watchface** prikazuje pojedinosti učitanog Watchfacea i polja koja sadrži, **Više Watchfaceova** otvara [stranicu za razmjenu](../ExchangeSiteCustomWatchfaces/index.md) u pregledniku, a **Izvezi predložak** sprema predložak koji možete uređivati. Pregled učitanog Watchfacea prikazuje se ispod gumba. Pogledajte [Prelazak na AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+Provjerite da obavijesti AAPS-a nisu blokirane na satu. Potvrda radnje (npr. bolusa, privremenog cilja) stiže kao obavijest koju trebate povući i označiti kvačicom.
 
-## Accessing main menu of AAPS
+## Otvaranje glavnog izbornika AAPS-a
 
-![AAPS main menu on the watch](../images/wearos/main_menu.png)
+![Glavni izbornik AAPS-a na satu](../images/wearos/main_menu.png)
 
-To open the main menu of **AAPS**, use one of these:
+Glavni izbornik **AAPS-a** otvorite na jedan od ovih načina:
 
-* open **AAPS** from the watch's app list
-* tap an **AAPS** complication that opens the menu, see [Complication related settings](#WearOsSmartwatch-complication-settings)
-* tap the **BG Graph** tile with its **Tap action** set to **Main Menu**, see [Tile settings](#WearOsSmartwatch-wear-os-tiles)
-* on a classic **AAPS** watchface, double-tap the glucose value
+* otvorite **AAPS** s popisa aplikacija na satu
+* dodirnite komplikaciju **AAPS-a** koja otvara izbornik, pogledajte [Postavke komplikacija](#WearOsSmartwatch-complication-settings)
+* dodirnite pločicu **GUK graf** kojoj je **Radnja na dodir** postavljena na **Glavni izbornik**, pogledajte [Postavke pločica](#WearOsSmartwatch-wear-os-tiles)
+* na klasičnom Watchfaceu **AAPS-a** dvaput dodirnite vrijednost glukoze
 
 (WearOsSmartwatch-loop-status)=
 
-## Loop Status screen
+## Zaslon Status petlje
 
-The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication. The **Status** menu also has a **Pump** page and a **TDD** page with the total daily doses.
+Zaslon **Status petlje** daje sažetak onoga što petlja radi, a da ne morate uzeti telefon. Otvorite ga iz glavnog izbornika AAPS-a (**Status petlje** ili **Status → Petlja**) ili dodirom na komplikaciju **Glukoza u krvi**. Izbornik **Status** ima i stranicu **Pumpa** i stranicu **TDD** s ukupnim dnevnim dozama.
 
-![Status menu: Pump, Loop and TDD](../images/wearos/status_menu.png)
+![Izbornik Status: Pumpa, Petlja i TDD](../images/wearos/status_menu.png)
 
-![Loop Status screen](../images/wearos/loop_status.png)
+![Zaslon Status petlje](../images/wearos/loop_status.png)
 
-The screen is a list of cards. Scroll down to see them all:
+Zaslon je popis kartica. Pomaknite se prema dolje da biste vidjeli sve:
 
-* **Running mode** — the current mode (closed loop, open loop, LGS, suspended, disconnected…) and, for a temporary mode, how long it still runs.
-* **Loop result** — when the loop last ran, and the temporary basal or SMB it requested.
-* **Scene** — only while a [scene](#scenes-from-watch) is active: its name, the time left (or **Until ended** for a scene without end time) and the **Follow-up** scene that starts when it ends.
-* **Targets** — your target, and the temporary target if one is running.
-* **Profile** — the name of the active profile, with its **Percentage** and **Timeshift** when they are not the default values. A temporary profile switch is highlighted and shows how long it still runs and the profile it **Returns to** when it ends.
-* **Sensitivity** — the same lines as the sensitivity chip on the phone's main screen: the autosens value and the profile, variable and effective ISF.
+* **Način rada** — trenutni način rada (zatvorena petlja, otvorena petlja, LGS, suspendirano, odspojeno…) i, za privremeni način rada, koliko još traje.
+* **Rezultat petlje** — kada je petlja zadnji put radila te privremeni bazal ili SMB koji je zatražila.
+* **Scena** — samo dok je [scena](#scenes-from-watch) aktivna: njezin naziv, preostalo vrijeme (ili **Do završetka** za scenu bez vremena završetka) i sljedeću scenu (**Slijedi**) koja počinje kada ova završi.
+* **Ciljevi** — vaš cilj i privremeni cilj, ako je aktivan.
+* **Profil** — naziv aktivnog profila, s **Postotkom** i **Vremenskim pomakom** kada nisu zadane vrijednosti. Privremena zamjena profila je istaknuta i prikazuje koliko još traje te profil na koji se vraća kada završi (**Vraća na**).
+* **Osjetljivost** — isti redci kao na oznaci osjetljivosti na glavnom zaslonu telefona: vrijednost Autosensa te ISF iz profila, promjenjivi ISF i stvarni ISF.
 
-A small scene icon next to a running mode, a temporary target or a profile switch means it was **set by the active scene**. The same icon is shown in the **Running mode** picker.
+Mala ikona scene pored načina rada, privremenog cilja ili zamjene profila znači da ih je **Postavila aktivna scena**. Ista se ikona prikazuje i u izborniku **Način rada**.
 
-![Profile card with a temporary profile switch set by a scene](../images/wearos/loop_status_profile_scene.png)
+![Kartica profila s privremenom zamjenom profila koju je postavila scena](../images/wearos/loop_status_profile_scene.png)
 
 (WearOsSmartwatch-bolus-calculator)=
 
-## The bolus calculator on the watch
+## Bolus kalkulator na satu
 
-Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
+Otvorite **Kalkulator** iz glavnog izbornika **AAPS-a**, s [pločice Radnje](#WearOsSmartwatch-wear-os-tiles) ili s komplikacije postavljene da otvara kalkulator. Kalkulator ima nekoliko stranica, povucite zdesna nalijevo za sljedeću:
 
-| Carbs                                                           | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
+| Ugljikohidrati                                                   | Zahtjev                                                                 | Rezultat                                                                | Izračun                                                                            | Potvrdi                                                                 |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| ![Stranica UH](../images/wearos/calculator/calculator_carbs.png) | ![Stranica Zahtjev](../images/wearos/calculator/calculator_request.png) | ![Stranica Rezultat](../images/wearos/calculator/calculator_result.png) | ![Pojedinosti izračuna](../images/wearos/calculator/calculator_result_details.png) | ![Stranica Potvrdi](../images/wearos/calculator/calculator_confirm.png) |
 
-1. **Carbs**: enter the carbs with the **+10**, **+5**, **−** and **+** buttons.
-2. **Request**: the last page before the phone takes over. It shows what you entered: the carbs, and the meal type, carb time and percentage when you use them, see [Optional pages](#WearOsSmartwatch-calculator-optional-pages). Tap the check mark to send it to the phone, which runs the calculation.
-3. **Result**: the bolus **AAPS** proposes, with the carbs under it: the carbs now and the eCarbs later, the carb time and the bell of the eat reminder. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
-4. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+1. **UH**: unesite ugljikohidrate gumbima **+10**, **+5**, **−** i **+**.
+2. **Zahtjev**: zadnja stranica prije nego što preuzme telefon. Prikazuje što ste unijeli: ugljikohidrate te vrstu obroka, vrijeme ugljikohidrata i postotak ako ih koristite, pogledajte [Dodatne stranice](#WearOsSmartwatch-calculator-optional-pages). Dodirnite kvačicu da biste zahtjev poslali na telefon, koji izvodi izračun.
+3. **Rezultat**: bolus koji **AAPS** predlaže, a ispod njega ugljikohidrati: ugljikohidrati sada i eUH kasnije, vrijeme ugljikohidrata i zvono podsjetnika za jelo. Dozu prilagodite gumbima **−** i **+**, pogledajte niže. Pomaknite se prema dolje do kartice **Izračun**: dodirnite je da biste vidjeli svaki redak izračuna, isto kao na telefonu.
+4. **Potvrdi**: povucite na drugu stranicu i dodirnite kvačicu. Telefon isporučuje bolus i bilježi ugljikohidrate.
 
 (WearOsSmartwatch-calculator-optional-pages)=
 
-### Optional pages
+### Dodatne stranice
 
-Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
+Tri postavke na satu dodaju po jednu stranicu nakon stranice **UH**. Zadano su isključene. Otvorite glavni izbornik **AAPS-a**, zatim **Postavke** > **Sučelje**, i uključite one koje želite; kada je uključeno više njih, stranice dolaze ovim redom: **Vrsta obroka**, **Vrijeme UH**, **Postotak**. Točke na dnu kalkulatora pokazuju koliko stranica ima.
 
-| Settings                                                                                 | Meal type                                                               | Carb time                                                               | Percentage                                                                |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
+| Postavke                                                                             | Vrsta obroka                                                                   | Vrijeme UH                                                                   | Postotak                                                                    |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| ![Postavke kalkulatora na satu](../images/wearos/calculator/calculator_settings.png) | ![Stranica Vrsta obroka](../images/wearos/calculator/calculator_meal_type.png) | ![Stranica Vrijeme UH](../images/wearos/calculator/calculator_carb_time.png) | ![Stranica Postotak](../images/wearos/calculator/calculator_percentage.png) |
 
-* **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
-* **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
-* **Calculator Percentage**: a percentage of the calculated bolus, for example 70 % when you want a smaller dose. It starts at the **Bolus percentage** of the phone's [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result), 100 % unless you changed it. See also the note under [Adjusting the bolus on the result page](#WearOsSmartwatch-wizard-result).
+* **Vrsta obroka u kalkulatoru**: **Kruh**, **Kolač** ili **Pizza**, što ugljikohidrate sporog obroka dijeli na ugljikohidrate sada i eUH kasnije, pogledajte [Odabir vrste obroka](#WearOsSmartwatch-wizard-meal-type).
+* **Vrijeme UH u kalkulatoru**: minute do jela, sa zvonom **Postavi alarm** za podsjetnik za jelo, pogledajte [Vrijeme ugljikohidrata i podsjetnik za jelo](#WearOsSmartwatch-wizard-carb-time).
+* **Postotak kalkulatora**: postotak izračunatog bolusa, na primjer 70 % kada želite manju dozu. Počinje od vrijednosti **Postotak bolusa** iz [postavki bolus kalkulatora](#Preferences-deliver-this-part-of-bolus-wizard-result) na telefonu, 100 % ako je niste promijenili. Pogledajte i napomenu u odjeljku [Prilagodba bolusa na stranici Rezultat](#WearOsSmartwatch-wizard-result).
 
 (WearOsSmartwatch-wizard-result)=
 
-### Adjusting the bolus on the result page
+### Prilagodba bolusa na stranici Rezultat
 
-The result page shows the bolus **AAPS** proposes, together with a **−** and a **+** button. Use them to adjust the dose before you confirm it, without going back to the phone.
+Stranica Rezultat prikazuje bolus koji **AAPS** predlaže, zajedno s gumbima **−** i **+**. Pomoću njih prilagodite dozu prije nego što je potvrdite, bez povratka na telefon.
 
-| Proposed                                                                          | More                                                                                | Less                                                                                   |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| ![The proposed bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![The bolus raised by 0.20 U](../images/wearos/calculator/calculator_result_up.png) | ![The bolus lowered by 0.10 U](../images/wearos/calculator/calculator_result_down.png) |
+| Predloženo                                                                      | Više                                                                             | Manje                                                                              |
+| ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ![Predloženi bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![Bolus povećan za 0,20 J](../images/wearos/calculator/calculator_result_up.png) | ![Bolus smanjen za 0,10 J](../images/wearos/calculator/calculator_result_down.png) |
 
-* Each press changes the bolus by **one step of your pump**, so the amounts offered always match what your pump can actually deliver.
-* **Press and hold** a button to keep changing the value. The longer you hold, the faster it goes.
-* You cannot go below **0 U**, nor above your **max bolus** setting.
+* Svaki pritisak mijenja bolus za **jedan korak vaše pumpe**, pa ponuđene količine uvijek odgovaraju onome što vaša pumpa stvarno može isporučiti.
+* **Pritisnite i držite** gumb da bi se vrijednost nastavila mijenjati. Što dulje držite, to se brže mijenja.
+* Ne možete ići ispod **0 J** ni iznad postavke **maksimalnog bolusa**.
 
-The running total is shown on the result page, so you always see the amount you are about to confirm. The change is shown after the carbs, for example *(+0.20 U)*, and the button you used turns green for more or red for less.
+Trenutni ukupni iznos prikazan je na stranici Rezultat, tako da uvijek vidite količinu koju ćete potvrditi. Promjena se prikazuje nakon ugljikohidrata, na primjer *(+0,20 J)*, a gumb koji ste koristili postaje zelen za više ili crven za manje.
 
-If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
+Ako je **AAPS** morao ograničiti dozu, na primjer zato što je izračunati bolus veći od postavke **maksimalnog bolusa**, to piše u narančastom retku upozorenja ispod ukupnog iznosa (na primjer *„Primijenjeno ograničenje bolusa“*). Isto vrijedi i za ograničenu količinu ugljikohidrata.
 
-```{admonition} This is not the same as Calculator Percentage :class: note The **Calculator Percentage** setting lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+```{admonition} Ovo nije isto što i Postotak kalkulatora :class: note Postavka **Postotak kalkulatora** omogućuje da unesete *postotak* izračunatog bolusa **prije** nego što se pojavi stranica Rezultat. Gumbi **−** i **+** prilagođavaju *konačnu količinu* **na** stranici Rezultat. Možete koristiti oboje.
 
     <br />(WearOsSmartwatch-wizard-meal-type)=
     
-    ### Choosing the meal type
+    ### Odabir vrste obroka
     
-    The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch's **Settings** > **Interface**. The setting is off by default, and then the **Meal type** page is skipped.
+    Kalkulator na satu može ugljikohidrate sporog obroka podijeliti na ugljikohidrate sada i eUH kasnije, kao [vrsta ugljikohidrata](#AapsScreens-carbs-type) u kalkulatoru na telefonu. Uključite **Vrsta obroka u kalkulatoru** u izborniku sata **Postavke** > **Sučelje**. Postavka je zadano isključena i tada se stranica **Vrsta obroka** preskače.
     
-    * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
-    * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
-    * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
+    * Nakon što unesete ugljikohidrate, stranica **Vrsta obroka** prikazuje tri ikone: **Kruh**, **Kolač** i **Pizza**. Dodirnite ikonu: njezin naziv i ugljikohidrati koje daje prikazuju se ispod ikona, na primjer *65 g* za kruh ili *52+22 g* za pizzu (52 g sada i 22 g eUH kasnije). **Kruh** je zadana vrsta i ostavlja sve ugljikohidrate za sada.
+    * Stranice Zahtjev i Potvrdi prikazuju ugljikohidrate na isti način (*52+22 g*). Stranica Rezultat prikazuje i kada eUH počinju i koliko traju.
+    * Bolus se izračunava samo za ugljikohidrate koje jedete sada. Podjela koristi iste brojeve kao kalkulator na telefonu.
     
     (WearOsSmartwatch-wizard-carb-time)=
     
-    ### Carb time and the eat reminder
+    ### Vrijeme ugljikohidrata i podsjetnik za jelo
     
-    With **Calculator Carb Time** turned on in the watch's **Settings** > **Interface**, a **Carb time** page follows the carbs: the minutes until you eat, like the [carb time](#aaps-screens-bolus-wizard) of the phone wizard. **Now** is the default. **−** and **+** move it in steps of 5 minutes, up to an hour before or after now. A time in the past is for carbs you have eaten already.
+    Kada je **Vrijeme UH u kalkulatoru** uključeno u izborniku sata **Postavke** > **Sučelje**, nakon ugljikohidrata slijedi stranica **Vrijeme UH**: minute do jela, kao [vrijeme ugljikohidrata](#aaps-screens-bolus-wizard) u kalkulatoru na telefonu. **Sada** je zadana vrijednost. **−** i **+** pomiču vrijeme u koracima od 5 minuta, do jednog sata prije ili poslije sadašnjeg trenutka. Vrijeme u prošlosti je za ugljikohidrate koje ste već pojeli.
     
-    With a time in the future, a **Set alarm** bell appears under the value. It is on by default, tap it to turn it off. The request and result pages show the carb time, for example *+30 min*, and the bell. The phone records the carbs at that time, moves the eCarbs of the meal type with it, and starts its **time to eat** reminder.
+    S vremenom u budućnosti ispod vrijednosti se pojavljuje zvono **Postavi alarm**. Zadano je uključeno, dodirnite ga da biste ga isključili. Stranice Zahtjev i Rezultat prikazuju vrijeme ugljikohidrata, na primjer *+30 min*, i zvono. Telefon bilježi ugljikohidrate u to vrijeme, s njima pomiče i eUH vrste obroka te pokreće svoj podsjetnik **Vrijeme za jelo**.
     
-    | Result | BG graph | Running | Time to eat |
+    | Rezultat | GUK graf | U tijeku | Vrijeme za jelo |
     | --- | --- | --- | --- |
-    | ![Result page with a carb time](../images/wearos/calculator/calculator_result_carb_time.png) | ![The reminder in the BG graph](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![The running reminder](../images/wearos/eat_reminder/eat_reminder_running.png) | ![The reminder rings](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
+    | ![Stranica Rezultat s vremenom ugljikohidrata](../images/wearos/calculator/calculator_result_carb_time.png) | ![Podsjetnik na GUK grafu](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![Podsjetnik u tijeku](../images/wearos/eat_reminder/eat_reminder_running.png) | ![Podsjetnik zvoni](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
     
-    The reminder also lives on the watch, so it rings when the phone is out of reach too:
+    Podsjetnik postoji i na satu, pa zvoni i kada telefon nije u blizini:
     
-    * The **BG Graph** screen, the **BG Graph** tile and the graph of the **Complications watchface** draw a dashed orange line where the reminder rings, with the minutes left next to it.
-    * While it runs, a silent **Time to eat** notification with **Stop** and **+5 min** sits in the notification stream. It comes back when you swipe it away, until the reminder is over.
-    * When the time has come, the watch vibrates, and again every half minute for five minutes until you answer. The notification offers **Silence** and **+5 min**, and swiping it away silences it too.
+    * Zaslon **GUK graf**, pločica **GUK graf** i graf na **Watchfaceu s komplikacijama** crtaju narančastu isprekidanu liniju na mjestu gdje podsjetnik zvoni, a pored nje preostale minute.
+    * Dok traje, u popisu obavijesti nalazi se tiha obavijest **Vrijeme za jelo** s gumbima **Zaustavi** i **+5 min**. Vraća se kada je povučete u stranu, sve dok podsjetnik ne završi.
+    * Kada dođe vrijeme, sat vibrira, i ponovno svakih pola minute tijekom pet minuta, dok ne odgovorite. Obavijest nudi **Utišaj** i **+5 min**, a povlačenje obavijesti u stranu također je utišava.
     
-    **Stop**, **Silence** and **+5 min** do the same on the watch, on the phone and on an **AAPSClient**, and all of them show the same reminder.
+    **Zaustavi**, **Utišaj** i **+5 min** rade isto na satu, na telefonu i u aplikaciji **AAPSClient**, i svi prikazuju isti podsjetnik.
     
     (Watchfaces-complications)=
     
-    ## Complications
+    ## Komplikacije
     
-    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+    _Komplikacija_ je pojam iz tradicionalne izrade satova, gdje opisuje dodatak glavnom Watchfaceu – kao još jedan mali prozor ili mali brojčanik (s datumom, danom u tjednu, mjesečevom mijenom itd.). Wear OS 2.0 prenosi tu ideju i omogućuje da se prilagođeni izvori podataka, kao što su vrijeme, obavijesti, brojači kondicije i drugo, dodaju na svaki Watchface koji podržava komplikacije.
     
-    AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+    Aplikacija AAPS za Wear OS podržava komplikacije od verzije `2.6` i omogućuje da se svaki Watchface treće strane koji podržava komplikacije postavi tako da prikazuje podatke AAPS-a (GUK s trendom, aktivni inzulin (IOB), aktivne ugljikohidrate (COB) itd.).
     
-    Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+    Komplikacije služe i kao **prečac** do funkcija AAPS-a. Dodirom na njih možete otvoriti izbornike i dijaloge AAPS-a (ovisno o vrsti komplikacije i konfiguraciji).
     
-    ![The Complications watchface, every slot filled with an AAPS complication](../images/wearos/complications_on_watchface.png)
+    ![Watchface s komplikacijama, svako mjesto popunjeno komplikacijom AAPS-a](../images/wearos/complications_on_watchface.png)
     
-    ### Complication Types
+    ### Vrste komplikacija
     
-    AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+    Aplikacija AAPS za Wear OS daje samo neobrađene podatke, prema unaprijed određenim formatima. Watchface treće strane sam odlučuje gdje i kako će prikazati komplikacije, uključujući raspored, rub, boju i font. Od mnogih dostupnih vrsta komplikacija u Wear OS-u AAPS koristi:
     
-    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-    * `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-    * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
-    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
+    * `SHORT TEXT` – sadrži dva retka teksta, svaki od 7 znakova, koji se ponekad nazivaju vrijednost i oznaka. Obično se prikazuje u krugu ili malom ovalu – jedna ispod druge ili jedna pored druge. To je komplikacija s vrlo malo prostora. AAPS pokušava ukloniti nepotrebne znakove kako bi sve stalo: zaokružuje vrijednosti, uklanja nule na početku i kraju vrijednosti itd.
+    * `LONG TEXT` – sadrži dva retka teksta, svaki od približno 20 znakova. Obično se prikazuje u pravokutniku ili dugom ovalu – jedna ispod druge. Koristi se za više detalja i tekstualni status.
+    * `RANGED VALUE` – koristi se za vrijednosti iz unaprijed određenog raspona, na primjer za postotak. Sadrži ikonu i oznaku, a obično se prikazuje kao kružni pokazivač napretka.
+    * `LARGE IMAGE` – prilagođena slika koja se može koristiti kao pozadina (ako je Watchface podržava).
+    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` – mala ikona. Na mjestu `SMALL IMAGE` AAPS je crta u svojoj boji; na mjestu `MONOCHROMATIC IMAGE` boju joj daje Watchface.
     
-    ### Complication Setup
+    ### Postavljanje komplikacija
     
-    To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+    Da biste dodali komplikaciju na Watchface, konfigurirajte ga dugim pritiskom i dodirom na ikonu zupčanika ispod. Ovisno o tome kako ih pojedini Watchface konfigurira – dodirnite mjesta za komplikacije ili otvorite izbornik postavki Watchfacea za komplikacije. Komplikacije AAPS-a grupirane su pod stavkom izbornika AAPS.
     
-    When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+    Kada konfigurirate komplikacije na Watchfaceu, Wear OS prikazuje i filtrira popis komplikacija koje mogu stati na odabrano mjesto na Watchfaceu. Ako određenu komplikaciju ne možete pronaći na popisu, vjerojatno je razlog njezina vrsta, koja se ne može koristiti na tom mjestu.
     
-    ### Complications provided by AAPS
+    ### Komplikacije koje nudi AAPS
     
-    AAPS provides the complications below. "Opens" is what a tap does with **Complication Tap Action** left at **Default**, see [Complication related settings](#WearOsSmartwatch-complication-settings).
+    AAPS nudi sljedeće komplikacije. „Otvara“ znači što dodir radi kada je **Radnja pri dodiru komplikacije** ostavljena na **Zadano**, pogledajte [Postavke komplikacija](#WearOsSmartwatch-complication-settings).
     
-    **Glucose**
+    **Glukoza**
     
-    * **Blood Glucose** (`SHORT TEXT`, opens _Loop Status_): the glucose value with the trend arrow on the first line, the age of the reading and the delta on the second.
-    * **Blood Glucose (large)** (`SHORT TEXT`, opens _BG Graph_): the glucose value alone on the first line, so the watchface can draw it big. The age and the trend arrow are on the second line.
-    * **BG Graph** (`SMALL IMAGE` / `LARGE IMAGE`, opens _BG Graph_): the BG graph as a picture, for watchfaces with an image slot. This is the graph on the **Complications watchface**.
-    * **Full Status** (`LONG TEXT`, opens _Menu_): most of the data in one line: the glucose value with the trend arrow, the delta and the age of the reading, then carbs on board, insulin on board and the basal rate.
-    * **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): the same, with the two lines swapped, for watchfaces that show only one of the two lines of a `LONG TEXT` slot.
+    * **Glukoza u krvi** (`SHORT TEXT`, otvara _Status petlje_): vrijednost glukoze sa strelicom trenda u prvom retku, starost očitanja i delta u drugom.
+    * **Glukoza u krvi (veliki prikaz)** (`SHORT TEXT`, otvara _GUK graf_): samo vrijednost glukoze u prvom retku, tako da je Watchface može prikazati velikom. Starost očitanja i strelica trenda nalaze se u drugom retku.
+    * **GUK graf** (`SMALL IMAGE` / `LARGE IMAGE`, otvara _GUK graf_): GUK graf kao slika, za Watchfaceove s mjestom za sliku. To je graf na **Watchfaceu s komplikacijama**.
+    * **Potpuni status** (`LONG TEXT`, otvara _Izbornik_): većina podataka u jednom retku: vrijednost glukoze sa strelicom trenda, delta i starost očitanja, zatim aktivni ugljikohidrati, aktivni inzulin i bazalna stopa.
+    * **Potpuni status (okrenut)** (`LONG TEXT`, otvara _Izbornik_): isto, ali s zamijenjenim recima, za Watchfaceove koji prikazuju samo jedan od dva retka mjesta `LONG TEXT`.
     
-    **Insulin and carbs**
+    **Inzulin i ugljikohidrati**
     
-    * **IoB Icon** (`SHORT TEXT`, opens _Bolus_): insulin on board with a syringe icon.
-    * **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): total insulin on board on the first line, the bolus and basal parts on the second.
-    * **CoB Icon** (`SHORT TEXT`, opens _Wizard_): carbs on board with a carbs icon.
-    * **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): the carbs on board now on the first line, the carbs still to come (eCarbs) on the second.
-    * **CoB & IoB** (`SHORT TEXT`, opens _Wizard_): insulin on board on the first line, carbs on board on the second.
+    * **Ikona IOB** (`SHORT TEXT`, otvara _Bolus_): aktivni inzulin s ikonom štrcaljke.
+    * **IOB detaljno** (`SHORT TEXT`, otvara _Bolus_): ukupni aktivni inzulin u prvom retku, bolusni i bazalni dio u drugom.
+    * **Ikona COB** (`SHORT TEXT`, otvara _Kalkulator_): aktivni ugljikohidrati s ikonom ugljikohidrata.
+    * **COB detaljno** (`SHORT TEXT`, otvara _Kalkulator_): aktivni ugljikohidrati sada u prvom retku, ugljikohidrati koji tek dolaze (eUH) u drugom.
+    * **COB & IOB** (`SHORT TEXT`, otvara _Kalkulator_): aktivni inzulin u prvom retku, aktivni ugljikohidrati u drugom.
     
-    **Basal and target**
+    **Bazal i cilj**
     
-    * **Basal rate** (`SHORT TEXT`, opens _Menu_): the current basal rate.
-    * **BR & IoB** (`SHORT TEXT`, opens _Menu_): insulin on board on the first line, the basal rate on the second.
-    * **BR & Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line, with the time left when a temporary target runs, and the basal rate on the second.
-    * **Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line and, while a temporary target runs, its time left on the second.
-    * **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): the basal rate on the first line, carbs on board and insulin on board on the second.
+    * **Bazalna stopa** (`SHORT TEXT`, otvara _Izbornik_): trenutna bazalna stopa.
+    * **BR & IOB** (`SHORT TEXT`, otvara _Izbornik_): aktivni inzulin u prvom retku, bazalna stopa u drugom.
+    * **BR & cilj** (`SHORT TEXT`, otvara _Privremeni cilj_): cilj u prvom retku, s preostalim vremenom kada je aktivan privremeni cilj, i bazalna stopa u drugom.
+    * **Cilj** (`SHORT TEXT`, otvara _Privremeni cilj_): cilj u prvom retku i, dok je aktivan privremeni cilj, njegovo preostalo vrijeme u drugom.
+    * **BR, COB & IOB** (`SHORT TEXT`, otvara _Izbornik_): bazalna stopa u prvom retku, aktivni ugljikohidrati i aktivni inzulin u drugom.
     
-    **Loop and phone**
+    **Petlja i telefon**
     
-    * **Running mode** (`SMALL IMAGE` / `ICON`, opens _Running mode picker_): the current loop mode as an icon: closed loop, open loop, low glucose suspend, suspended, disconnected or disabled. A tap opens a picker with the mode changes allowed right now, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is in the **AAPS** main menu under **Running mode**.
-    * **Uploader/Phone Battery** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, opens _Status_): the battery of the **AAPS** phone, as a gauge with a battery icon, as a number, or as the icon alone. It updates together with the other **AAPS** data, usually every 5 minutes with a new reading.
+    * **Način rada** (`SMALL IMAGE` / `ICON`, otvara _izbornik Način rada_): trenutni način rada petlje kao ikona: zatvorena petlja, otvorena petlja, zaštita od niske razine glukoze, suspendirano, odspojeno ili onemogućeno. Dodir otvara izbornik s promjenama načina rada koje su trenutno dopuštene, na primjer **Suspendiraj petlju**, **Odspoji pumpu**, **Nastavi petlju** ili **Ponovno spoji pumpu**. Isti izbornik nalazi se u glavnom izborniku **AAPS-a** pod **Način rada**.
+    * **Baterija uploadera/telefona** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, otvara _Status_): baterija telefona s **AAPS-om**, kao pokazivač s ikonom baterije, kao broj ili samo kao ikona. Osvježava se zajedno s ostalim podacima **AAPS-a**, obično svakih 5 minuta s novim očitanjem.
     
-    The **Running mode** picker, as opened from the complication, the main menu or the Running mode tile:
+    Izbornik **Način rada**, otvoren iz komplikacije, glavnog izbornika ili pločice Način rada:
     
-    ![Running mode picker with the modes you can switch to](../images/wearos/running_mode_picker.png)
+    ![Izbornik Način rada s načinima rada na koje se možete prebaciti](../images/wearos/running_mode_picker.png)
     
     (WearOsSmartwatch-complication-settings)=
     
-    ### Complication related settings
+    ### Postavke komplikacija
     
-    In the **AAPS** main menu on the watch, open **Settings** > **Complication**:
+    U glavnom izborniku **AAPS-a** na satu otvorite **Postavke** > **Komplikacije**:
     
-    ![Settings > Complication on the watch](../images/wearos/settings_complication.png)
+    ![Postavke > Komplikacije na satu](../images/wearos/settings_complication.png)
     
-    * **Complication Tap Action** (default `Default`): what a tap on an **AAPS** complication opens, for all complications at once:
-      * _Default_: what the complication itself opens, see the list above
-      * _Menu_: the **AAPS** main menu
-      * _Calculator_: the bolus calculator
-      * _Treatment_: the treatment dialog, insulin and carbs
-      * _eCarbs_: the eCarbs dialog
-      * _Status_: the status menu
-      * _Running mode_: the running mode picker. Needs **Wear control** turned on in the phone's Wear settings, otherwise the main menu opens instead.
-      * _None_: a tap does nothing
-    * **BG graph time range** (default `3 hours`): how many hours the **BG Graph** complication shows, 1, 3 or 6. The BG Graph tile has its own setting.
-    * **Unicode in Complications** (default `On`): the complications use Unicode symbols like `Δ` for the delta, `⁞` as separator and `⎍` for the basal rate. How they look depends on the font of the watchface. Turn this `Off` when a watchface draws them as boxes or blanks.
+    * **Radnja pri dodiru komplikacije** (zadano `Default`): što otvara dodir na komplikaciju **AAPS-a**, za sve komplikacije odjednom:
+      * _Zadano_: ono što otvara sama komplikacija, pogledajte gornji popis
+      * _Izbornik_: glavni izbornik **AAPS-a**
+      * _Kalkulator_: bolus kalkulator
+      * _Tretman_: dijalog tretmana, inzulin i ugljikohidrati
+      * _eUH_: dijalog eUH
+      * _Status_: izbornik statusa
+      * _Način rada_: izbornik načina rada. Potrebno je uključeno **Upravljanje sa sata** u postavkama Wear na telefonu, inače se umjesto toga otvara glavni izbornik.
+      * _Nijedan_: dodir ne radi ništa
+    * **Vremenski raspon GUK grafa** (zadano `3 hours`): koliko sati prikazuje komplikacija **GUK graf**, 1, 3 ili 6. Pločica GUK graf ima vlastitu postavku.
+    * **Unicode u komplikacijama** (zadano `On`): komplikacije koriste Unicode simbole kao što su `Δ` za deltu, `⁞` kao razdjelnik i `⎍` za bazalnu stopu. Kako izgledaju ovisi o fontu Watchfacea. Isključite ovo (`Off`) kada ih Watchface prikazuje kao kvadratiće ili prazna mjesta.
     
     (WearOsSmartwatch-wear-os-tiles)=
     
-    ## Wear OS Tiles
+    ## Pločice za Wear OS
     
-    Tiles are the pages you reach by swiping from the watchface. **AAPS** brings seven of them, each a set of up to four buttons. A tap on a button opens the matching dialog on the watch, or asks you to confirm, and the phone then does the work. A tile is a shortcut, not a status display: it does not hold the state of the phone app.
+    Pločice su stranice do kojih dolazite povlačenjem s Watchfacea. **AAPS** donosi sedam pločica, svaka sa skupom od najviše četiri gumba. Dodir na gumb otvara odgovarajući dijalog na satu ili traži potvrdu, a zatim posao obavlja telefon. Pločica je prečac, a ne prikaz statusa: ne sadrži stanje aplikacije na telefonu.
     
-    Before using the tiles, turn on **Wear control** in [Settings > Wear](#preferences-wear).
+    Prije korištenja pločica uključite **Upravljanje sa sata** u [Postavke > Wear](#preferences-wear).
     
-    ### Adding a tile
+    ### Dodavanje pločice
     
-    There are two ways, depending on your watch and phone:
+    Postoje dva načina, ovisno o vašem satu i telefonu:
     
-    1. On the watch: swipe from the watchface past the last tile to **Add tile** and pick an **AAPS** tile. On most watches a long-press on a tile also opens the add and remove view.
-    2. On the phone, in the companion app for your watch (**Galaxy Wearable** for Samsung, **Wear OS** for other brands): open **Tiles**, tap **Add** and pick the **AAPS** tiles you want. The order of the tiles can be changed by dragging.
+    1. Na satu: povucite s Watchfacea dalje od zadnje pločice do **Dodaj pločicu** i odaberite pločicu **AAPS-a**. Na većini satova dugi pritisak na pločicu također otvara prikaz za dodavanje i uklanjanje.
+    2. Na telefonu, u pratećoj aplikaciji vašeg sata (**Galaxy Wearable** za Samsung, **Wear OS** za druge proizvođače): otvorite **Pločice**, dodirnite **Dodaj** i odaberite pločice **AAPS-a** koje želite. Redoslijed pločica možete promijeniti povlačenjem.
     
-    ![The seven AAPS tiles in the companion app](../images/wearos/tiles/tiles_list_companion_app.png)
+    ![Sedam pločica AAPS-a u pratećoj aplikaciji](../images/wearos/tiles/tiles_list_companion_app.png)
     
-    ### Tile settings
+    ### Postavke pločica
     
-    The **Actions**, **Temp Target**, **BG Graph** and **Scene** tiles have settings on the watch. Open the **AAPS** main menu, then **Settings** > **Tiles**, and pick the tile. A long-press on the tile also opens its settings, except on Pixel watches. The other three tiles are filled from the phone and have nothing to set on the watch.
+    Pločice **Radnje**, **Privremeni cilj**, **GUK graf** i **Scena** imaju postavke na satu. Otvorite glavni izbornik **AAPS-a**, zatim **Postavke** > **Pločice**, i odaberite pločicu. Dugi pritisak na pločicu također otvara njezine postavke, osim na satovima Pixel. Ostale tri pločice puni telefon i na satu nemaju ništa za postaviti.
     
-    | Main menu | Settings | Tiles |
+    | Glavni izbornik | Postavke | Pločice |
     | --- | --- | --- |
-    | ![AAPS main menu, Settings](../images/wearos/tiles/tile_settings_menu.png) | ![Settings, Tiles](../images/wearos/tiles/tile_settings_settings.png) | ![Tiles, pick the tile](../images/wearos/tiles/tile_settings_tiles.png) |
+    | ![Glavni izbornik AAPS-a, Postavke](../images/wearos/tiles/tile_settings_menu.png) | ![Postavke, Pločice](../images/wearos/tiles/tile_settings_settings.png) | ![Pločice, odaberite pločicu](../images/wearos/tiles/tile_settings_tiles.png) |
     
-    The settings of a tile are a list of its four places. Tap a place to pick what it shows, or **None** to leave it empty.
+    Postavke pločice su popis njezinih četiriju mjesta. Dodirnite mjesto da biste odabrali što prikazuje ili **Nijedan** da biste ga ostavili praznim.
     
-    | Long-press on the tile | Settings of the Temp Target tile |
+    | Dugi pritisak na pločicu | Postavke pločice Privremeni cilj |
     | --- | --- |
-    | ![Long-press on a tile, tap the pencil](../images/wearos/tiles/tile_settings_long_press.png) | ![Temp Target tile settings, one entry per place](../images/wearos/tiles/tile_settings_temp_target.png) |
+    | ![Dugi pritisak na pločicu, dodirnite olovku](../images/wearos/tiles/tile_settings_long_press.png) | ![Postavke pločice Privremeni cilj, jedna stavka po mjestu](../images/wearos/tiles/tile_settings_temp_target.png) |
     
-    Every tile has four places. A tile with more entries than that shows the first four.
+    Svaka pločica ima četiri mjesta. Pločica s više stavki prikazuje prve četiri.
     
-    ### Actions tile
+    ### Pločica Radnje
     
-    ![Actions tile](../images/wearos/tiles/tile_actions.png)
+    ![Pločica Radnje](../images/wearos/tiles/tile_actions.png)
     
-    Shortcuts to the dialogs of the **AAPS** watch app. Pick up to four of these in the tile settings:
+    Prečaci do dijaloga aplikacije **AAPS** za sat. U postavkama pločice odaberite najviše četiri od sljedećih:
     
-    * **Calc**: the bolus calculator, with a carbs input, an optional percentage [1] and an optional meal type [2]
-    * **Treat**: insulin and carbs in one go
-    * **Insulin**: a bolus, entered in units
-    * **Carbs**: carbs, also extended carbs. A **negative** amount is accepted, down to your current COB, to correct carbs you entered earlier. Carb removals are shown on the watch's BG graph.
-    * **eCarbs**: extended carbs
-    * **TempT**: a temporary target with a custom target and duration
-    * **Profile switch**: a profile switch with percentage, time shift and duration
+    * **Izračun**: bolus kalkulator, s unosom ugljikohidrata, neobaveznim postotkom [1] i neobaveznom vrstom obroka [2]
+    * **Tretman**: inzulin i ugljikohidrati odjednom
+    * **Inzulin**: bolus, unesen u jedinicama
+    * **UH**: ugljikohidrati, također produženi ugljikohidrati. Prihvaća se i **negativna** količina, sve do vaših trenutnih aktivnih ugljikohidrata (COB), kako biste ispravili ugljikohidrate koje ste ranije unijeli. Uklonjeni ugljikohidrati prikazuju se na GUK grafu sata.
+    * **eUH**: produženi ugljikohidrati
+    * **TT**: privremeni cilj s prilagođenim ciljem i trajanjem
+    * **Zamjena profila**: zamjena profila s postotkom, vremenskim pomakom i trajanjem
     
-    ![Actions tile settings: one entry per place](../images/wearos/tiles/tile_settings_actions.png)
+    ![Postavke pločice Radnje: jedna stavka po mjestu](../images/wearos/tiles/tile_settings_actions.png)
     
-    The dialogs the buttons open. Swipe from right to left to reach the next page of a dialog, and tap the check mark on the last page to send the request to the phone:
+    Dijalozi koje gumbi otvaraju. Povucite zdesna nalijevo da biste došli do sljedeće stranice dijaloga, a na zadnjoj stranici dodirnite kvačicu da biste zahtjev poslali na telefon:
     
-    | Treat | Insulin | Carbs | eCarbs | TempT | Profile switch |
+    | Tretman | Inzulin | UH | eUH | TT | Zamjena profila |
     | --- | --- | --- | --- | --- | --- |
-    | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
+    | ![Dijalog Tretman, stranica inzulina](../images/wearos/dialogs/dialog_treatment.png) | ![Dijalog Inzulin](../images/wearos/dialogs/dialog_insulin.png) | ![Dijalog UH](../images/wearos/dialogs/dialog_carbs.png) | ![Dijalog eUH](../images/wearos/dialogs/dialog_ecarbs.png) | ![Dijalog Privremeni cilj, stranica trajanja](../images/wearos/dialogs/dialog_temp_target.png) | ![Dijalog Zamjena profila](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
+    [1] U izborniku sata **Postavke** > **Sučelje** uključite **Postotak kalkulatora** da bi se u bolus kalkulatoru prikazao unos postotka. Zadani postotak dolazi iz postavke telefona [„Postotak bolusa“](#Preferences-deliver-this-part-of-bolus-wizard-result). Ostale postavke kalkulatora su one na telefonu u **Postavke** > **Postavke bolus kalkulatora**.
     
-    [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+    [2] U izborniku sata **Postavke** > **Sučelje** uključite **Vrsta obroka u kalkulatoru** da bi se prikazala stranica **Vrsta obroka**, na kojoj birate **Kruh**, **Kolač** ili **Pizza** kako biste ugljikohidrate sporog obroka podijelili na ugljikohidrate sada i eUH kasnije. Pogledajte [Odabir vrste obroka](#WearOsSmartwatch-wizard-meal-type).
     
-    ### Temp Target tile
+    ### Pločica Privremeni cilj
     
-    ![Temp Target tile](../images/wearos/tiles/tile_temp_target.png)
+    ![Pločica Privremeni cilj](../images/wearos/tiles/tile_temp_target.png)
     
-    Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Settings** > [Default temp targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
+    Privremeni ciljevi iz predložaka na telefonu. Trajanje i cilj svakog predloška postavite na telefonu u **Postavke** > [Zadani privremeni ciljevi](#Preferences-default-temp-targets). U postavkama pločice odaberite najviše četiri od sljedećih:
     
-    * **Activity**: for sport
-    * **Eating**: eating soon, a lower target so there is more insulin on board at the meal
-    * **Hypo**: a higher target during a hypo treatment
-    * **Manual**: a custom target and duration
-    * **Cancel**: stops the running temporary target. The button is shown only while a temporary target is running.
+    * **Aktivnost**: za sport
+    * **Prije obroka**: niži cilj neposredno prije jela, kako bi u vrijeme obroka bilo više aktivnog inzulina
+    * **Hipo**: viši cilj tijekom liječenja hipoglikemije
+    * **Ručno**: prilagođeni cilj i trajanje
+    * **Otkaži**: zaustavlja aktivni privremeni cilj. Gumb se prikazuje samo dok je privremeni cilj aktivan.
     
-    ### Quick Wizard tile
+    ### Pločica Brzi kalkulator
     
-    ![Quick Wizard tile](../images/wearos/tiles/tile_quick_wizard.png)
+    ![Pločica Brzi kalkulator](../images/wearos/tiles/tile_quick_wizard.png)
     
-    The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
+    Stavke [Brzog kalkulatora](#quickwizards) s telefona koje imaju uključeno **Prikaži na satu**, unutar svojih sati valjanosti. Stavka s ugljikohidratima prikazuje svoje ugljikohidrate u g, stavka s inzulinom svoju fiksnu dozu u J. Dodir pokreće stavku nakon potvrde na satu. Na satu nema ništa za postaviti: stavke uredite na telefonu i uključite **Prikaži na satu** pod **Odabir uređaja** za svaku stavku koju želite na pločici. Izvan sati valjanosti svih vaših stavki pločica prikazuje **Konfiguracija nije dostupna**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
+    ![Stavka Brzog kalkulatora s uključenim Prikaži na satu i pločica na kojoj se pojavljuje](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Pločica Scena
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![Pločica Scena](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Each of the four places is set to **Automatic**, **None** or one scene in the tile settings. An **Automatic** place takes the next scene from the phone's list that no other place has claimed. A place set to a scene that no longer exists on the phone shows **Unavailable**.
+    [Scene](#scenes-from-watch) s telefona. U postavkama pločice svako od četiriju mjesta postavlja se na **Automatski**, **Nijedan** ili na jednu scenu. Mjesto postavljeno na **Automatski** uzima sljedeću scenu s popisa na telefonu koju nije zauzelo nijedno drugo mjesto. Mjesto postavljeno na scenu koja više ne postoji na telefonu prikazuje **Nedostupno**.
     
-    ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
+    ![Postavke pločice Scena, četiri mjesta postavljena na Automatski](../images/wearos/tiles/tile_settings_scene.png)
     
-    ### Running mode tile
+    ### Pločica Način rada
     
-    ![Running mode tile](../images/wearos/tiles/tile_running_mode.png)
+    ![Pločica Način rada](../images/wearos/tiles/tile_running_mode.png)
     
-    The [running modes](#aaps-screens-running-mode) you can switch to from the current one, with the same icons as on the phone: closed loop, low glucose suspend, open loop, disable loop, suspend loop and disconnect pump, or resume and reconnect while one of those runs. **Suspend loop** and **Disconnect pump** ask for a duration first. The phone decides which modes are offered, the watch shows the first four and leaves out **Disable loop** when **Suspend loop** is on the list.
+    [Načini rada](#aaps-screens-running-mode) na koje se možete prebaciti iz trenutnog, s istim ikonama kao na telefonu: zatvorena petlja, zaštita od niske razine glukoze, otvorena petlja, onemogućavanje petlje, suspendiranje petlje i odspajanje pumpe, ili nastavak i ponovno spajanje dok je jedan od tih načina aktivan. **Suspendiraj petlju** i **Odspoji pumpu** najprije traže trajanje. Telefon odlučuje koji se načini rada nude, sat prikazuje prva četiri i izostavlja **Onemogući petlju** kada je **Suspendiraj petlju** na popisu.
     
-    ### User Action tile
+    ### Pločica Radnja korisnika
     
-    ![User Action tile](../images/wearos/tiles/tile_user_action.png)
+    ![Pločica Radnja korisnika](../images/wearos/tiles/tile_user_action.png)
     
-    One button for each [automation](#automations-automation-triggers) on the phone whose trigger is **User action**. A tap asks you to confirm, then the phone runs the automation's actions. The buttons are named after the automations, so give them short names. There is nothing to set on the watch.
+    Jedan gumb za svaku [automatizaciju](#automations-automation-triggers) na telefonu čiji je okidač **Radnja korisnika**. Dodir traži potvrdu, a zatim telefon izvršava radnje automatizacije. Gumbi nose nazive automatizacija, zato im dajte kratke nazive. Na satu nema ništa za postaviti.
     
-    ### BG Graph tile
+    ### Pločica GUK graf
     
-    ![BG Graph tile](../images/wearos/tiles/tile_bg_graph.png)
+    ![Pločica GUK graf](../images/wearos/tiles/tile_bg_graph.png)
     
-    The glucose value with arrow, delta and age, below it IOB, COB, basal rate and target, and the BG graph with predictions, boluses, carbs and SMBs. Two settings on the watch: **Time range** (1, 3 or 6 hours) and **Tap action**, which opens the full **BG Graph**, the **Main Menu** or the **Loop Status** screen.
+    Vrijednost glukoze sa strelicom, deltom i starošću očitanja, ispod toga aktivni inzulin (IOB), aktivni ugljikohidrati (COB), bazalna stopa i cilj, te GUK graf s predviđanjima, bolusima, ugljikohidratima i SMB-ovima. Dvije postavke na satu: **Vremenski raspon** (1, 3 ili 6 sati) i **Radnja na dodir**, koja otvara cijeli **GUK graf**, **Glavni izbornik** ili zaslon **Status petlje**.
     
-    ![The BG Graph screen](../images/wearos/bg_graph.png)
+    ![Zaslon GUK graf](../images/wearos/bg_graph.png)
     
-    ![BG Graph tile settings: Time range and Tap action](../images/wearos/tiles/tile_settings_bg_graph.png)
+    ![Postavke pločice GUK graf: Vremenski raspon i Radnja na dodir](../images/wearos/tiles/tile_settings_bg_graph.png)
     
-    ## Always on
+    ## Stalno uključen zaslon
     
-    This section and the next apply to the classic **AAPS** watchfaces on Wear OS 5 and older. On Wear OS 6 the **Complications watchface** has an always-on display of its own, see [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+    Ovaj i sljedeći odjeljak odnose se na klasične Watchfaceove **AAPS-a** na Wear OS-u 5 i starijim verzijama. Na Wear OS-u 6 **Watchface s komplikacijama** ima vlastiti stalno uključen prikaz, pogledajte [Watchface koji AAPS instalira](#wearos-aaps-v4-watchface).
     
-    Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+    Dugo trajanje baterije izazov je za pametne satove s Android Wear OS-om. Neki pametni satovi izdrže i do 30 sati prije ponovnog punjenja. Za najbolju uštedu energije zaslon treba biti isključen kada ga ne koristite. Većina satova podržava zaslon „Uvijek uključen“.
     
-    Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+    Od verzije 3 AAPS-a možemo koristiti „Pojednostavi korisničko sučelje“ u načinu rada sa stalno uključenim zaslonom. Ovo sučelje sadrži samo glukozu u krvi, smjer i vrijeme. Ovo sučelje štedi energiju: rjeđe se osvježava, prikazuje manje informacija i uključuje manje piksela kako bi se uštedjela energija na OLED zaslonima.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
+    Pojednostavljeno sučelje dostupno je za Watchfaceove Digital Style i prilagođene Watchfaceove. Pojednostavljeno sučelje nije obavezno i postavlja se u postavkama Watchfacea (dugo pritisnite Watchface i dodirnite „uredi“ ili ikonu zupčanika). Odaberite postavku „Pojednostavi korisničko sučelje“ i postavite je na „Stalno uključen zaslon“ ili „Stalno uključen zaslon i punjenje“.
     
-    ### Night-time mode
+    ### Noćni način rada
     
-    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+    Tijekom punjenja bilo bi korisno da zaslon ostane „stalno uključen“ i noću prikazuje vašu glukozu u krvi. No standardni Watchfaceovi presvijetli su i prikazuju previše informacija, a pojedinosti se teško čitaju pospanim očima. Zato smo dodali opciju da Watchface pojednostavi sučelje samo tijekom punjenja, ako je tako postavljeno u konfiguraciji.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
+    Pojednostavljeno sučelje dostupno je za Watchfaceove Digital Style i prilagođene Watchfaceove. Pojednostavljeno sučelje nije obavezno i postavlja se u postavkama Watchfacea (dugo pritisnite Watchface i dodirnite „uredi“ ili ikonu zupčanika). Odaberite postavku „Pojednostavi korisničko sučelje“ i postavite je na „Tijekom punjenja“ ili „Stalno uključen zaslon i punjenje“.
     
-    The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
+    Opcije za razvojne programere u Androidu omogućuju da sat ostane budan tijekom punjenja. Kako biste omogućili opcije za razvojne programere, pogledajte [službenu dokumentaciju](https://developer.android.com/training/wearables/get-started/debugging). U opcijama za razvojne programere uključite „Ne isključuj zaslon“ (Stay awake when charging).
     
-    Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+    Napomena: ne podnose svi zasloni dobro stalno uključen prikaz. To može uzrokovati trajno urezivanje slike (burn-in), osobito na starijim OLED zaslonima. Satovi obično zatamnjuju zaslon kako bi spriječili urezivanje slike; savjet potražite u korisničkom priručniku, kod proizvođača ili na internetu.
     
-    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
+    ![Watchface za noćni ormarić](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
+    ![Pojednostavljeno sučelje](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Alarmi telefona na satu
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![Alarm telefona na satu](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. The watch vibrates, and again every half minute for five minutes until you answer. A notification shows the title and the text of the alarm, with the same answers as the [time to eat](#WearOsSmartwatch-wizard-carb-time) reminder:
+    Sat prikazuje alarme telefona, tako da vidite zašto telefon zvoni i možete odgovoriti sa zapešća. Sat vibrira, i ponovno svakih pola minute tijekom pet minuta, dok ne odgovorite. Obavijest prikazuje naslov i tekst alarma, s istim odgovorima kao podsjetnik [Vrijeme za jelo](#WearOsSmartwatch-wizard-carb-time):
     
-    * **Silence**, or a swipe: the alarm stops, and the alarm screen on the phone closes.
-    * **Mute 5 min**: the alarm stops and rings again after five minutes, on the phone and on the watch.
+    * **Utišaj** ili povlačenje u stranu: alarm prestaje, a zaslon alarma na telefonu se zatvara.
+    * **Utišaj 5 min**: alarm prestaje i ponovno zvoni nakon pet minuta, na telefonu i na satu.
     
-    Two kinds of alarm reach the watch:
+    Na sat stižu dvije vrste alarma:
     
-    * The alarm screen of the phone (pump errors, automation alarms, BG alarms): **Silence** and **Mute 5 min**.
-    * Urgent notifications with a sound, like *Pump unreachable* or a Nightscout alarm: **Silence** only. The phone has only **Dismiss** for those, and they come back by themselves while their cause lasts.
+    * Zaslon alarma s telefona (pogreške pumpe, alarmi automatizacije, alarmi GUK-a): **Utišaj** i **Utišaj 5 min**.
+    * Hitne obavijesti sa zvukom, kao što su *Pumpa nedostupna* ili alarm Nightscouta: samo **Utišaj**. Telefon za njih ima samo **Odbaci**, a one se same vraćaju dok god postoji njihov uzrok.
     
-    The *time to eat* reminder is not sent this way: the watch rings that one by itself.
+    Podsjetnik *Vrijeme za jelo* ne šalje se na ovaj način: njega sat oglašava sam.
     
-    ## Snooze Alert shortcut
+    ## Prečac za odgodu upozorenja
     
-    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+    Sat sam [prikazuje alarm](#WearOsSmartwatch-phone-alarms); prečac je drugi način da ga utišate, jednim pritiskom. Moguće je izraditi prečac za odgodu upozorenja/alarma AAPS-a. Isključivanje zvuka putem sata praktično je i brže jer ne morate posegnuti za telefonom. Napomena: i dalje morate provjeriti poruku alarma na telefonu i postupiti u skladu s njom, ali to možete učiniti kasnije. Ako vaš sat ima dva gumba, jednu tipku možete dodijeliti programu `AAPS Snooze Alert`.
     
-    To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+    Da biste povezali gumb na satu Samsung Watch 4, idite na `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
-    On a watchface with complications, an **App shortcut** complication set to **AAPS Snooze Alert** does the same with a tap. The [alternative setup of the Complications watchface](#wearos-complications-watchface-setup) uses its top-right slot for it.
+    Na Watchfaceu s komplikacijama komplikacija **Prečac aplikacije** (App shortcut) postavljena na **AAPS odgoda upozorenja** radi isto jednim dodirom. [Alternativno postavljanje Watchfacea s komplikacijama](#wearos-complications-watchface-setup) za to koristi gornje desno mjesto.
     
-    ### Snooze xDrip
+    ### Odgoda xDripa
     
-    When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm. 
+    Ako koristite xDrip i imate xDrip instaliran na satu, prečac 'AAPS Snooze Alert' odgodit će i svaki alarm xDripa. 
     
     
-    ## Performance and battery life tips
+    ## Savjeti za performanse i trajanje baterije
     
-    Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+    Satovi s Wear OS-om uređaji su s vrlo ograničenom energijom. Veličina kućišta sata ograničava kapacitet ugrađene baterije. Unatoč nedavnom napretku hardvera i softvera, satove s Wear OS-om i dalje treba puniti svaki dan.
     
-    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    Ako baterija traje kraće od jednog dana (od jutra do večeri), evo nekoliko savjeta za rješavanje problema.
     
-    Main battery-demanding areas are:
+    Glavni potrošači baterije su:
     
-    * Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-    * Rendering on screen
-    * Radio communication over Bluetooth
+    * Aktivan zaslon s uključenim pozadinskim osvjetljenjem (za LED) ili u načinu pune jačine (za OLED)
+    * Iscrtavanje na zaslonu
+    * Radijska komunikacija putem Bluetootha
     
-    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in _display time_ area:
+    Budući da ne možemo popustiti na komunikaciji (trebamo najnovije podatke) i želimo prikazati najnovije podatke, većina optimizacija može se napraviti u području _vremena prikaza_:
     
-    * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-    * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-    * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-    * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-    * Use a dark theme on the watchface. On OLED displays fewer lit pixels mean less power and less burn-in.
-    * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-    * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-    * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-    * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+    * Ugrađeni Watchfaceovi obično su bolje optimizirani od prilagođenih, preuzetih iz trgovine.
+    * Bolje je koristiti Watchfaceove koji u neaktivnom / zatamnjenom načinu prikazuju manje podataka.
+    * Budite oprezni kada kombinirate druge komplikacije, kao što su vremenski widgeti trećih strana ili druge – koje koriste podatke iz vanjskih izvora.
+    * Počnite s jednostavnijim Watchfaceovima. Dodajte jednu po jednu komplikaciju i pratite kako utječu na trajanje baterije.
+    * Koristite tamnu temu na Watchfaceu. Na OLED zaslonima manje upaljenih piksela znači manju potrošnju i manje urezivanja slike.
+    * Provjerite što bolje radi na vašem satu: ugrađeni Watchfaceovi AAPS-a ili drugi Watchfaceovi s komplikacijama AAPS-a.
+    * Pratite nekoliko dana, uz različite razine aktivnosti. Većina satova uključuje zaslon kada pogledate sat, pri pokretu i pri drugim okidačima vezanima uz korištenje.
+    * Provjerite globalne postavke sustava koje utječu na performanse: obavijesti, vrijeme do isključivanja pozadinskog osvjetljenja/aktivnog zaslona, kada se uključuje GPS.
+    * Provjerite [popis testiranih telefona i satova](#Phones-list-of-tested-phones) i [pitajte zajednicu](../GettingHelp/WhereCanIGetHelp.md) o iskustvima drugih korisnika i prijavljenom trajanju baterije.
+    * **Ne možemo jamčiti da su podaci prikazani na Watchfaceu ili komplikaciji ažurni**. Na kraju Wear OS odlučuje kada će osvježiti Watchface ili komplikaciju. Čak i kada aplikacija AAPS zatraži osvježavanje, sustav može odlučiti odgoditi ili zanemariti osvježavanja kako bi uštedio bateriju. Ako niste sigurni i baterija sata je pri kraju – uvijek provjerite podatke u glavnoj aplikaciji AAPS na telefonu.
     
     (Watchfaces-troubleshooting-the-wear-app)=
     
-    ## Troubleshooting the wear app
+    ## Rješavanje problema s aplikacijom za sat
     
-    If the watch shows no data or old data, first check the connection between the watch and the phone, see [Troubleshooting the AAPS watch - AAPS phone communication](#wear-os-watch-phone-communication). For a watch on Wear OS 5, see also the [general troubleshooting recommendations for Wear OS 5](#wear-os-5-troubleshooting). A complication that does not update has the same causes as a tile or watchface that does not update, so check those first.
+    Ako sat ne prikazuje podatke ili prikazuje stare podatke, najprije provjerite vezu između sata i telefona, pogledajte [Rješavanje problema s komunikacijom između AAPS-a na satu i AAPS-a na telefonu](#wear-os-watch-phone-communication). Za sat s Wear OS-om 5 pogledajte i [opće preporuke za rješavanje problema za Wear OS 5](#wear-os-5-troubleshooting). Komplikacija koja se ne osvježava ima iste uzroke kao pločica ili Watchface koji se ne osvježava, zato najprije provjerite njih.
     
-    ## Additional AAPS custom watchfaces are also available
+    ## Dostupni su i dodatni prilagođeni Watchfaceovi za AAPS
     
-    [Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+    [Ovdje](../ExchangeSiteCustomWatchfaces/index.md) možete preuzeti Zip-datoteke s prilagođenim Watchfaceovima koje su izradili drugi korisnici.
     
-    ## Build your own watchface
+    ## Izradite vlastiti Watchface
     
-    If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+    Ako želite izraditi vlastiti Watchface, slijedite [ove upute](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+    Kada izradite prilagođeni Watchface, svoj prilagođeni Watchface za **AAPS** možete podijeliti s drugima: Zip-datoteku možete prenijeti u mapu „ExchangeSiteCustomWatchfaces“ putem zahtjeva za povlačenje (Pull Request) na GitHubu. Pri spajanju zahtjeva za povlačenje (pull request) tim za dokumentaciju izdvojit će datoteku CustomWatchface.png i dodati joj naziv Zip-datoteke kao prefiks.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
-    ## Make your own version of the Complications watchface
+    ## Izradite vlastitu verziju Watchfacea s komplikacijama
     
-    The **Complications watchface** that **AAPS** installs on Wear OS 6 (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)) is made with Samsung's **Watch Face Studio**. Its project file is free to download, so you can change it to your taste, or use it on a watch with Wear OS 5 or older where **AAPS** does not install it:
+    **Watchface s komplikacijama** koji **AAPS** instalira na Wear OS 6 (pogledajte [Watchface koji AAPS instalira](#wearos-aaps-v4-watchface)) izrađen je Samsungovim alatom **Watch Face Studio**. Njegova projektna datoteka besplatno se preuzima, tako da je možete prilagoditi svom ukusu ili je koristiti na satu s Wear OS-om 5 ili starijim, na koji je **AAPS** ne instalira:
     
-    [Complications watchface (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
+    [Watchface s komplikacijama (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
     
-    The zip holds four files:
+    Zip sadrži četiri datoteke:
     
-    * `AAPS V4_0_2.wfs`: the project. Open it in [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), change what you like, and install it on the watch from there.
-    * `com.watchfacestudio.aapsv4.apk`: the watchface as it is, ready to install with [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` with the watch connected over ADB debugging.
-    * `README.txt`: the two recommended complication setups, the same as on the [Wear OS page](#wearos-complications-watchface-setup).
-    * `AAPS V4.png`: a preview.
+    * `AAPS V4_0_2.wfs`: projekt. Otvorite ga u alatu [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), promijenite što želite i odande ga instalirajte na sat.
+    * `com.watchfacestudio.aapsv4.apk`: Watchface kakav jest, spreman za instalaciju pomoću [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` dok je sat povezan putem ADB otklanjanja pogrešaka.
+    * `README.txt`: dva preporučena postavljanja komplikacija, ista kao na [stranici Wear OS](#wearos-complications-watchface-setup).
+    * `AAPS V4.png`: pregled.
     
-    ```{admonition} This is not a custom watchface
+    ```{admonition} Ovo nije prilagođeni Watchface
     :class: note
-    The zip is not a custom watchface for **Load Watchface** in the **Wear** plugin, and the phone cannot install it. It must be unzipped and installed on the watch with Watch Face Studio or adb, as above.
+    Zip nije prilagođeni Watchface za **Učitaj Watchface** u dodatku **Wear** i telefon ga ne može instalirati. Mora se raspakirati i instalirati na sat pomoću alata Watch Face Studio ili adb, kao gore.

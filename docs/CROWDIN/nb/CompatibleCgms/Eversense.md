@@ -67,6 +67,8 @@ xDrip kan lese varslinger fra leverandørens app, slik ESEL gjør. Ingen utfylli
 
 **AAPS** kan lese blodsukkerverdiene direkte fra varslingene som den offisielle Eversense-appen viser, uten noen annen app imellom. Ingen utfylling av hull (backfill) er tilgjengelig.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Velg **Varslingsleser** i [**Konfigurasjon → BS-kilde**](#Config-Builder-bg-source) og gi **AAPS** tilgang til varslinger når du blir spurt.
 - Pass på at Eversense-appen viser den gjeldende blodsukkerverdien i varslingen sin.
 

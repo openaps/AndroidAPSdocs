@@ -1,10 +1,10 @@
 # Freestyle Libre 1
 
-Чтобы использовать Libre в качестве мониторинга, который получает новые значения гликемии каждые 5 минут без необходимости сканирования сенсора, нужно сначала приобрести адаптер NFC - Bluetooth (коммерчески доступные устройства, основанные на устаревшем проекте [LimiTTer](https://github.com/JoernL/LimiTTer)).
+Чтобы использовать Libre как CGM, который получает новые значения ГК каждые 5 минут без сканирования сенсора, нужно купить адаптер NFC – Bluetooth (это коммерческие устройства, основанные на устаревшем проекте [LimiTTer](https://github.com/JoernL/LimiTTer)).
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
-:class: предупреждение
-Убедитесь, что мост и приложение, которое вы хотите использовать, совместимо с сенсором.  
+:class: warning
+Убедитесь, что адаптер и приложение, которое вы хотите использовать, совместимы с вашим сенсором.  
 ```
 
 Некоторые адаптеры все еще доступны на рынке:
@@ -15,11 +15,11 @@
 
 ## 1. Using xDrip
 
--   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   xDrip поддерживает Miaomiao, Bubble, Blucon, Atom и LibreAlarm.
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
--   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
+-   Следуйте инструкциям по настройке на [странице настроек xDrip](../CompatibleCgms/xDrip.md).
 -    Вам также нужен OOP2 для Libre 1 США (и Libre 2 EU).
--   Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Выберите xDrip в [**Конфигурация → Источник ГК**](#Config-Builder-bg-source).
 
 ## 2. Использование Diabox
 
@@ -28,4 +28,4 @@
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Выберите xDrip в [**Конфигурация → Источник ГК**](#Config-Builder-bg-source).

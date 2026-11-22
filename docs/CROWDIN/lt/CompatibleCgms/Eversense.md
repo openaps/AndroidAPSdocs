@@ -67,6 +67,8 @@ xDrip gali skaityti gamintojo programėlės pranešimus, kaip tai daro ESEL. Tr�
 
 **AAPS** gali nuskaityti gliukozės reikšmes tiesiai iš oficialios Eversense programėlės pranešimų, be jokios kitos programėlės tarp jų. Trūkstamų duomenų užpildymas negalimas.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source) pasirinkite **Pranešimų skaitytuvas** ir, kai paprašys, suteikite **AAPS** prieigą prie pranešimų.
 - Įsitikinkite, kad Eversense programėlė savo pranešime rodo dabartinę gliukozės reikšmę.
 

@@ -10,7 +10,8 @@
 ## Δυνατότητες της αντλίας με το AAPS
 
 * Αντλία patch χωρίς σωληνάκι που επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή επικοινωνίας.
-* Το **AAPS** χειρίζεται την Equil ως αντλία patch με δεξαμενή 200 U: η κύρια οθόνη δείχνει τις ενδείξεις κατάστασης για αντλία patch, και τα **Πλήρωση/Γέμισμα** και **Αλλαγή Μπαταρίας Αντλίας** δεν προσφέρονται. Το γέμισμα, η πλήρωση και η αλλαγή μπαταρίας γίνονται στους οδηγούς (wizards) της αντλίας.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Όσο η αντλία είναι σε αναστολή ή σταματημένη, το **AAPS** καταγράφει προσωρινό βασικό ρυθμό 0 U/h, ώστε να μη μετράει βασική ινσουλίνη στο IOB.
 * Τις αλλαγές θερινής ώρας και ζώνης ώρας πρέπει να τις κάνετε χειροκίνητα.
 

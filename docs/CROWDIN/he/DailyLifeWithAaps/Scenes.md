@@ -45,7 +45,7 @@
 
 ### התחלה מתבנית
 
-כדי **ליצור** תרחיש, יש ללחוץ על הלחצן **+** במסך התרחישים. השלב הראשון הוא **התחלה מתבנית**: בחירת תרחיש מוכן למצב נפוץ — *פעילות גופנית*, *יום מחלה*, *יום מחלה — הקאות*, *שינה*, *לילה לאחר פעילות גופנית*, *לפני ארוחה*, *אלכוהול*, *נהיגה*, *רחצה*, *השלב הלוטאלי*, *מזג אוויר חם*, *הליך רפואי* — או התחלה מתרחיש *ריק*. כל תבנית **ממלאת מראש את הפעולות המומלצות**, ואפשר לשנות הכול בשלבים הבאים.
+כדי **ליצור** תרחיש, יש ללחוץ על הלחצן **+** במסך התרחישים. השלב הראשון הוא **התחלה מתבנית**: בחירת תרחיש מוכן למצב נפוץ — *פעילות גופנית*, *יום מחלה*, *יום מחלה — הקאות*, *שינה*, *לילה לאחר פעילות גופנית*, *לפני ארוחה*, *אלכוהול*, *נהיגה*, *רחצה*, *השלב הלוטאלי*, *מזג אוויר חם*, *הליך רפואי* — או התחלה מתרחיש *ריק*. כל תבנית **ממלאת מראש את הפעולות המומלצות**, ואפשר לשנות הכול בשלבים הבאים. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 !["התחלה מתבנית": בחירת נקודת התחלה](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@
 
 ![החלון סיום תרחיש](../images/v4/Scenes/scene_end_dialog.png)
 
-סיום של תרחיש **מבטל** את השינויים שהוא עשה (למשל את החלפת הפרופיל ואת היעד הזמני שהוא הפעיל).
+סיום של תרחיש **מבטל** את השינויים שהוא עשה (למשל את החלפת הפרופיל ואת היעד הזמני שהוא הפעיל). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 כל עוד תרחיש פעיל, ליד הפרופיל והיעד במסך הראשי מוצג סמל תרחיש קטן, אם התרחיש הגדיר אותם. החלון **תרחישים** של סרגל הניווט התחתון נשאר זמין כדי להפעיל תרחיש אחר:
 

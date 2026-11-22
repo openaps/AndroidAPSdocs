@@ -1,44 +1,44 @@
-# Smoothing blood glucose data
+# Udjævning af blodsukkerdata
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Hvis **BS**-data springer eller har meget støj, kan **AAPS** dosere insulin forkert, så du får for højt eller for lavt blodsukker. Hvis du ser fejl eller oplever springende data fra din CGM, er det vigtigt at deaktivere loopet, indtil problemet er løst. Afhængigt af din CGM kan sådanne problemer skyldes CGM-konfigurationen i **AAPS** (som forklaret længere nede) eller et problem med CGM-sensorens placering (så du måske skal udskifte CGM-sensoren).
 
-## Smoothing data within AAPS
+## Udjævning af data i AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** giver mulighed for at udjævne dataene i **AAPS** i stedet for i CGM-appen. Åbn **menuen** (☰), vælg [**Konfiguration**](../SettingUpAaps/ConfigBuilder.md) og derefter **Udjævning**. Der er fire muligheder, og kun én kan være aktiv ad gangen: **Ingen udjævning**, **Eksponentiel udjævning**, **Gennemsnitlig udjævning** og **Unscented Kalman-filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Konfiguration > Udjævning](../images/v4/Configuration/configuration_smoothing.png)
 
-### Exponential smoothing
+### Eksponentiel udjævning
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Generelt er det den anbefalede mulighed at starte med, da den fjerner mest støj og omskriver den nyeste værdi. Se dog tabellen nedenfor for andre specifikke anbefalinger.
 
-### Average smoothing
+### Gennemsnitlig udjævning
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Denne mulighed virker på samme måde som den bagudrettede udjævning, der tidligere fandtes på visse CGM-platforme. Den reagerer hurtigere på nye ændringer i BS-værdien og reagerer derfor lettere forkert på CGM-data med støj.
 
-### No Smoothing
+### Ingen udjævning
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Brug kun denne mulighed, hvis dine CGM-data allerede bliver udjævnet korrekt af din indsamlingsapp, før de sendes til **AAPS**.
 
-### Unscented Kalman Filter (UKF)
+### Unscented Kalman-filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Denne mulighed bruger en statistisk model til hele tiden at beregne din sande glukoseværdi og dens ændringshastighed ud fra de indkomne målinger (som kan have støj), og den tilpasser sig automatisk til, hvor meget støj din sensor har lige nu. Den finder og afviser også pludselige afvigende målinger. Det er et mere avanceret alternativ til eksponentiel og gennemsnitlig udjævning, som er nyttigt, hvis du vil have, at udjævningen tilpasser sig din sensors skiftende støjniveau i stedet for at bruge en fast metode.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Forslag til brug af udjævning
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Du kan også skifte udjævningsmetode automatisk, f.eks. afhængigt af sensorens alder, med [automatiseringshandlingen](#automations-automation-action) **Skift udjævning**.
 
-|               | Exponential |  Average  | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               | Eksponentiel | Gennemsnitlig | Ingen udjævning |
+| ------------- |:------------:|:-------------:|:---------------:|
+| G5/G6/ONE     |   Ved støj   |               |    Anbefalet    |
+| G7/ONE+/Stelo |   Ved støj   |  Hvis stabil  |                 |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Libre-sensorer har støj og kan kræve udjævning. Når du bruger xDrip direkte forbindelse eller datakilden fra den modificerede app (modtager fra en anden app, også Juggluco), [er dataene allerede udjævnet i appen](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Sensor / datakilde  |   Juggluco    | xDrip direkte | xDrip bridge  | xDrip modificeret app |
+| ------------------- |:-------------:|:-------------:|:-------------:|:---------------------:|
+| Libre 1/14 dage/Pro | Ikke relevant | Ikke relevant | Gennemsnitlig |     Ikke relevant     |
+| Libre 2/2+ (EU)     | Gennemsnitlig |     Ingen     | Gennemsnitlig |         Ingen         |
+| Libre 2/2+/3/3+     | Gennemsnitlig | Ikke relevant | Ikke relevant |         Ingen         |

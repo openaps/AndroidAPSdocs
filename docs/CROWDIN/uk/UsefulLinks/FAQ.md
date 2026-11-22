@@ -74,7 +74,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
   * поточний [apk](../SettingUpAaps/BuildingAaps.md) AAPS та інших застосунків, якими ви користуєтеся (наприклад, xDrip, Juggluco, BYODA),
   * ваш файл keystore (зі збірки apk) і його пароль,
   * ваші останні файли експорту налаштувань з AAPS та інших застосунків,
-  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
+  * your **AAPS** master password: you cannot import the settings file without it. Якщо ви його забули, див. [Як скинути головний пароль?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -122,7 +122,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 
 #### Чому AAPS пише «SMB завжди і після вуглеводів вимкнено, бо активне джерело ГК не підтримує розширене фільтрування»?
 
-**Увімкнути SMB завжди** і **Увімкнути SMB після вуглеводів** можна використовувати лише з [надійним джерелом даних ГК](#GettingStarted-TrustedBGSource): сенсором і застосунком CGM, які можуть повідомити **AAPS**, з якого сенсора надходять значення. З будь-яким іншим джерелом ГК **AAPS** вимикає ці два параметри й показує це повідомлення. Перегляньте список надійних джерел і, якщо ваш сенсор є в списку, переконайтеся, що використовуєте один із застосунків CGM, указаних для нього. Див. також [Згладжування даних глюкози крові](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Увімкнути SMB завжди** і **Увімкнути SMB після вуглеводів** можна використовувати лише з [довіреним джерелом даних ГК](#GettingStarted-TrustedBGSource): сенсором і застосунком CGM, які можуть повідомити **AAPS**, з якого сенсора надходять значення. З будь-яким іншим джерелом ГК **AAPS** вимикає ці два параметри й показує це повідомлення. Перегляньте список надійних джерел і, якщо ваш сенсор є в списку, переконайтеся, що використовуєте один із застосунків CGM, указаних для нього. Див. також [Згладжування даних глюкози крові](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Помпа
 
@@ -175,7 +175,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 
 Під час використання петлі спробуйте такі кроки:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
+* Зробіть [перемикання профілю](#ProfileSwitch-change-percentage) нижче 100 %: натисніть на назву профілю на головному екрані, натисніть круглу кнопку **▶**, потім задайте **Відсоток** і **Тривалість**.
 * Встановіть [тимчасову ціль „Активність“](#TempTargets-activity-temp-target) вище вашої стандартної цілі. Якщо відсоток менше 100 % і задано тривалість, той самий екран **Активувати** пропонує перемикач **Тимчасова ціль / Активність**, який запускає обидва одночасно.
 * Якщо ви використовуєте SMB, переконайтеся, що [«Увімкнути SMB з високою тимчасовою ціллю»](#Open-APS-features-enable-smb-with-high-temp-targets) і [«Увімкнути SMB завжди»](#Open-APS-features-enable-smb-always) вимкнені.
 
@@ -194,7 +194,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 Вживання алкоголю в режимі закритої петлі ризиковане, бо алгоритм не може правильно передбачити вплив алкоголю на ГК. Вам потрібно знайти власний спосіб упоратися з цим, використовуючи такі функції AAPS:
 
 * Вимкнення режиму закритої петлі та лікування діабету вручну, або
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
+* встановлення високої тимчасової цілі та вимкнення UAM, щоб петля не збільшувала IOB через неоголошений прийом їжі, або
 * зробіть [перемикання профілю](#ProfileSwitch-change-percentage) на значно менше ніж 100 % 
 
 Шаблон [сцени](#scenes) *Алкоголь* — це відправна точка, яку можна адаптувати під ваш власний спосіб.
@@ -294,7 +294,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 1. Створіть порожній файл з назвою `PasswordReset` (без розширення файлу) у підпапці `extra` вашого каталогу AAPS (зазвичай `AAPS/extra`).
 2. Перезапустіть **AAPS**. Ваша помпа має бути підключена: **AAPS** показує «Очікування помпи…» і має зчитати серійний номер помпи протягом 30 секунд.
   
-  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+  Щоб перезапустити, закрийте **AAPS** через **меню** (☰) > **Вихід**, а потім знову відкрийте його. **AAPS** шукає файл лише тоді, коли запускається з нуля. Закрити екран або змахнути застосунок недостатньо, бо **AAPS** і далі працює у фоні. Якщо «Очікування помпи…» не з'являється, використайте **Force stop** (Примусово зупинити) в Android-розділі **App info** (Про застосунок) для **AAPS** або перезапустіть телефон. Повторне встановлення вашого поточного apk **AAPS** поверх встановленого застосунку теж допомагає: так ваші налаштування зберігаються.
 
 3. **AAPS** показує «Пароль встановлено!»: тепер ваш головний пароль — це **серійний номер помпи**. Файл `PasswordReset` видаляється автоматично.
 
@@ -367,7 +367,7 @@ AAPS керує вашою помпою та вводить інсулін. Зг
 
 #### Мій Link/помпа/Pod не відповідає (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+На деяких телефонах Bluetooth-з'єднання з пристроями Link (RL/OL/EmaLink) розривається.
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
 
@@ -423,5 +423,5 @@ Some also have non responsive Links (AAPS says that they are connected but the L
 
 Спочатку прочитайте ці розділи:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
+* [Експорт та імпорт налаштувань](#omnipod-dash-export-import) на сторінці Omnipod DASH і [Безтрубкові помпи](#ExportImportSettings-tubeless-pumps): на новому телефоні позначте **Також замінити налаштування помпи** і використайте файл, експортований, коли ви носили свій поточний Pod,
 * [Викидання Pod](#omnipod-dash-discard-pod), щоб потім видалити Pod зі старого телефона. Тримайте старий телефон у режимі польоту, доки Pod не буде викинуто, щоб два телефони ніколи не зв’язувалися з Pod одночасно.

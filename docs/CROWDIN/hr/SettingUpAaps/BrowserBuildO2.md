@@ -1,43 +1,43 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# Opcija 2 – Prenesite postojeće spremište ključeva
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Ovo je dio [Izrada u pregledniku – Korak 2: Izradite spremište ključeva za potpisivanje](BrowserBuildKeystore.md) na stranici [Izrada u pregledniku](BrowserBuild.md). Provjerite jeste li pročitali [odluku između opcije 1 i opcije 2](#aaps-ci-preparation).
 ```
 
-Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
+Opcija 2 ponovno koristi JKS koji ste već izradili kod ranije izrade AAPS-a na računalu u Android Studiju. Prikladna je za korisnike koji već imaju JKS i znaju lozinku i alias JKS-a.
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+Za `KEYSTORE_PASSWORD`, `KEY_ALIAS` i `KEY_PASSWORD` u GitHubu unesite svoju stvarnu lozinku i alias – one iz Android Studija, pogledajte niže gdje ste ih koristili.
 
 ```{warning}
-**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
+**Lozinke s posebnim znakovima.** Unesite lozinke točno onakve kakve jesu. Ne dodajte obrnutu kosu crtu (backslash) ni bilo koji drugi znak za izbjegavanje (escape): workflow za izradu čuva svaki znak, a dodana obrnuta kosa crta postaje dio lozinke.
 
-If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+Ako izrada i dalje ne uspije u koraku potpisivanja, a vaša lozinka sadrži `$`, obrnuti apostrof (backtick), `"` ili `\`, workflow datoteka u vašem forku je zastarjela. [Sinkronizirajte svoj fork](#Update-to-new-version-update-your-repo) s najnovijom dev granom i ponovno pokrenite izradu. Pogledajte [Izrada u pregledniku: rješavanje problema](#aaps-ci-password-special-characters).
 ```
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Zapamtite lozinke](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## Odaberite svoj uređaj
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Izrađujete s **Android telefona**? Umjesto toga koristite [AAPS Builder](BrowserBuildAapsBuilder.md): ne treba mu pripremna datoteka.
 ```
 
-Follow the page that matches the device you are building from:
+Slijedite stranicu za uređaj s kojeg izrađujete:
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[Računalo](BrowserBuildO2Computer.md)** – Windows, Mac ili Linux.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Uređaj možete promijeniti u bilo kojem trenutku – samo otvorite odgovarajuću stranicu.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO2Computer.md>
+Računalo <BrowserBuildO2Computer.md>
 ```

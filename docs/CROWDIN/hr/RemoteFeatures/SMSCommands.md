@@ -1,37 +1,37 @@
-# SMS Commands
+# SMS naredbe
 
 ```{contents} Table of contents
 :depth: 2
 ```
 
-Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
+Većina daljinskih prilagodbi (privremeni ciljevi, ugljikohidrati, zamjene profila i, nakon što je klijent uparen, bolusi) može se napraviti [aplikacijom **AAPSClient**](../RemoteFeatures/RemoteMonitoring.md) na Android telefonu s internetskom vezom, pogledajte [Upravljanje glavni uređaj ↔ klijent](#client-master-control) (verzija **AAPSClienta** za iPhone je u razvoju, pogledajte [Aplikacija AAPSClient](AapsClient.md)). SMS naredbe ostaju alternativa koja radi bez interneta i jedina su mogućnost daljinskog upravljanja ako kao pratitelj koristite iPhone i još nemate **AAPSClient**.
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS naredbe su vrlo korisne:**
+1. Za uobičajeno daljinsko upravljanje
 
-2. If you want to remotely bolus insulin without a paired **AAPSClient**
+2. Ako želite daljinski dati bolus inzulina bez uparenog **AAPSClienta**
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. U području sa slabim internetskim signalom, gdje SMS poruke prolaze, ali je podatkovna/internetska veza telefona ograničena. To je vrlo korisno kada idete u udaljena područja (npr. kampiranje, skijanje).
 
-4. If your other method of remote control (**AAPSClient**) is temporarily not working
+4. Ako vaš drugi način daljinskog upravljanja (**AAPSClient**) privremeno ne radi
 
-## Safety First
+## Sigurnost na prvom mjestu
 
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to export **AAPS** settings).
+Ako omogućite **SMS Communicator** u **AAPS-u**, imajte na umu da netko može ukrasti telefon s kojeg se šalju daljinske naredbe i/ili ga može koristiti netko drugi. Uvijek zaključajte svoj telefon barem PIN-om. Snažna lozinka i/ili biometrijsko zaključavanje jako se preporučuju; neka se ona razlikuje od vaše Glavne lozinke APK-a (lozinke koja je potrebna za izvoz postavki **AAPS-a**).
 
-Additionally, it is recommended to allow a [second phone number](#SMSCommands-authorized-phone-numbers) for SMS commands. This way, you can use the second number to [disable](#SMSCommands-other) SMS communicator in case your main remote phone gets compromised.
+Osim toga, preporučuje se dopustiti [drugi telefonski broj](#SMSCommands-authorized-phone-numbers) za SMS naredbe. Tako drugim brojem možete [isključiti](#SMSCommands-other) SMS Communicator ako vaš glavni telefon za daljinsko upravljanje bude ugrožen.
 
-The default minimum time delay between bolus commands is 15 minutes, counted from the moment the pump accepts a bolus. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+Zadano najmanje vrijeme između naredbi za bolus je 15 minuta, računajući od trenutka kada pumpa prihvati bolus. Iz sigurnosnih razloga morate dodati najmanje dva ovlaštena telefonska broja da biste ovo mogli promijeniti na kraće vrijeme čekanja. Ako pokušate ponovno daljinski dati bolus unutar 15 minuta od prethodnog bolusa, dobit ćete odgovor „Daljinski bolus nije dostupan. Pokušajte ponovno kasnije.“
 
-AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+AAPS će vas također SMS porukom obavijestiti jesu li vaše daljinske naredbe, kao što su bolus ili promjena profila, izvršene. Preporučuje se postaviti potvrdne poruke tako da se šalju na najmanje dva različita telefonska broja, za slučaj da netko ukrade jedan od telefona koji ih prima.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**Ako bolus dajete SMS naredbama, ugljikohidrate morate unijeti zasebno (drugi SMS, AAPSClient...)!** Ako to ne učinite, aktivni inzulin bit će točan, ali s premalo aktivnih ugljikohidrata (COB), što može dovesti do toga da se korekcijski bolus ne izvrši, jer **AAPS** misli da imate previše aktivnog inzulina.
 
-For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
+Za osjetljive naredbe mora se koristiti aplikacija Authenticator s vremenski ograničenom jednokratnom lozinkom, radi veće sigurnosti.
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “[Reset Authenticators](#sms-commands-authenticator-setup)” in **AAPS** or send the SMS command “[SMS stop](#SMSCommands-other)”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+Ako želite telefonu njegovatelja oduzeti mogućnost slanja SMS naredbi, upotrijebite gumb za hitne slučajeve „[Resetiraj Authenticatore](#sms-commands-authenticator-setup)“ u **AAPS-u** ili pošaljite SMS naredbu „[SMS stop](#SMSCommands-other)“. Resetiranjem Authenticatora SVI telefoni njegovatelja postaju nevažeći. Morat ćete ih ponovno postaviti.
 
-## Setup SMS commands
+## Postavljanje SMS naredbi
 
 ```{contents} The overall process is as follows
 :depth: 1
@@ -39,315 +39,315 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 ```
 
 (sms-commands-authenticator-setup)=
-### Authenticator setup
+### Postavljanje Authenticatora
 
-Two-factor authentication is used to improve safety.
+Dvofaktorska autentifikacija koristi se za veću sigurnost.
 
-On the caregiver phone, download (from the App store or Google play) and install an Authenticator app. Popular free apps are:
+Na telefon njegovatelja preuzmite (iz App Storea ili Google Playa) i instalirajte aplikaciju Authenticator. Popularne besplatne aplikacije su:
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Te aplikacije Authenticator stvaraju vremenski ograničenu jednokratnu lozinku od 6 znamenki, slično kao kod mobilnog bankarstva ili kupovine. Možete koristiti i drugu aplikaciju Authenticator, ako podržava RFC 6238 TOTP tokene. Microsoft Authenticator ne radi.
 
-### Check phone settings
+### Provjera postavki telefona
 
-On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
+Na telefonu idite na **Aplikacije > AAPS > Dopuštenja**. Provjerite jesu li **SMS** i **Telefon** dopušteni.
 
-![image](../images/remote-control-08.png)
+![slika](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
-Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+Android može blokirati dopuštenje za **SMS** za aplikacije koje nisu instalirane iz trgovine aplikacija, kao što je **AAPS**. Ako vidite ovu poruku kada dajete dopuštenje za **SMS**, otvorite na telefonu **Postavke > Aplikacije > AAPS**, dodirnite izbornik **⋮** (gore desno) i odaberite **Dopusti ograničene postavke**. Zatim ponovno dajte dopuštenje za **SMS**.
 ```
 
-![App was denied access to SMS](../images/sms_permission_restricted.png)
+![Aplikaciji je odbijen pristup SMS-u](../images/remote_control_and_following/sms_permission_restricted.png)
 
-### Date and time syncing
+### Usklađivanje datuma i vremena
 
-The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+Vrijeme na oba telefona mora biti usklađeno. Najbolje je da se vrijeme postavlja automatski iz mreže. Razlike u vremenu mogu uzrokovati probleme s autentifikacijom.
 
-On both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific device, you may need to try out different settings.
+Na telefonu s **AAPS-om** i na telefonu njegovatelja provjerite jesu li datum i vrijeme usklađeni. Kako se to točno radi ovisi o vašem uređaju; možda ćete morati isprobati različite postavke.
 
-Example (for Samsung S23): **Settings > General management > Date and time**: make sure that **Automatic date and time** is checked.
+Primjer (za Samsung S23): **Postavke > Općenito upravljanje > Datum i vrijeme**: provjerite je li uključeno **Automatski datum i vrijeme**.
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterward if it seems to be causing problems (ask for help if needed).
+Neke opcije mogu biti zasivljene jer ih, ako je telefon postavljen kao dječji račun, mora odobriti administrator putem obiteljskog računa. Na iPhoneu njegovatelja/roditelja ova postavka datuma i vremena zove se „Postavi automatski“. Ako niste sigurni jesu li telefoni usklađeni, ne brinite: možete postaviti SMS naredbe i kasnije riješiti problem ako se čini da on uzrokuje poteškoće (po potrebi zatražite pomoć).
 
-### AAPS settings
+### Postavke AAPS-a
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
+Nakon što ste provjerili postavke telefona, u samoj aplikaciji **AAPS** idite na [**Konfiguracija** → **Komunikacija**](../SettingUpAaps/ConfigBuilder.md) i omogućite dodatak **SMS Communicator**.
 
-Open the **SMS Communicator** settings.
+Otvorite postavke dodatka **SMS Communicator**.
 
-Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
+Omogućite **Dopusti daljinske naredbe putem SMS-a**. Opcije **Dodatni obavezni PIN na kraju tokena** i **Postavljanje Authenticatora** pojavljuju se tek kada je ovo omogućeno:
 
-![SMS Communicator settings](../images/sms_communicator_settings.png)
+![Postavke SMS Communicatora](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
-#### Allowed phone numbers
+#### Dopušteni telefonski brojevi
 
-Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
-* UK phone number: +447976304596
-* US phone number: +11234567890
-* FR phone number:  +33612344567
-* _etc._
+Unesite telefonski broj (ili brojeve) njegovatelja. Uključite pozivni broj države i izostavite prvu „0“ telefonskog broja, kao u ovim primjerima:
+* Broj telefona u UK-u: +447976304596
+* Broj telefona u SAD-u: +11234567890
+* Broj telefona u Francuskoj:  +33612344567
+* _itd._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
+Imajte na umu da, ovisno o vašoj lokaciji, „+“ ispred broja može, ali ne mora biti potreban. Da biste to utvrdili, pošaljite probnu poruku; primljeni format prikazat će se na zaslonu dodatka **SMS Communicator** (**Konfiguracija** → **Komunikacija** → **SMS Communicator** → **Otvori dodatak**).
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
+Ako dodajete više telefonskih brojeva, odvojite ih točkom sa zarezom, **BEZ razmaka između brojeva** (ovo je vrlo važno!). Odaberite **U redu**:
 
-![Allowed phone numbers](../images/sms_allowed_numbers.png)
+![Dopušteni telefonski brojevi](../images/remote_control_and_following/sms_allowed_numbers.png)
 
-#### Remote bolus min distance
+#### Min. razmak između daljinskih bolusa
 
-- You can define the minimum delay (in minutes) between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- Možete odrediti najmanji razmak (u minutama) između dva bolusa poslana putem SMS-a.
+- Iz sigurnosnih razloga morate dodati najmanje dva ovlaštena telefonska broja da biste mogli promijeniti ovu vrijednost.
 
-#### Additional mandatory PIN at token end
+#### Dodatni obavezni PIN na kraju tokena
 
-For safety reasons, the reply code must be followed by a PIN. Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+Iz sigurnosnih razloga nakon koda za odgovor mora slijediti PIN. Odaberite PIN koji ćete vi (i drugi njegovatelji) dodavati na kraj koda iz Authenticatora kada šaljete SMS naredbu.
 
-PIN requirements are:
+Zahtjevi za PIN su:
 
-* at least 6 digits
-* digits only
+* najmanje 6 znamenki
+* samo znamenke
 
-For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
+Za sigurniji PIN nemojte koristiti istu znamenku mnogo puta (_npr._ 111111) ili niz (_npr._ 123456).
 
-![Additional mandatory PIN at token end](../images/sms_pin.png)
+![Dodatni obavezni PIN na kraju tokena](../images/remote_control_and_following/sms_pin.png)
 
-#### Authenticator setup
+#### Postavljanje Authenticatora
 
-* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
-* Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+* Dodirnite **Postavljanje Authenticatora** i slijedite upute na zaslonu korak po korak.
+* Otvorite instaliranu aplikaciju Authenticator na _telefonu njegovatelja_, postavite novu vezu i
+* Telefonom njegovatelja skenirajte QR kod prikazan pod **Skenirajte kod za postavljanje AAPS OTP kodova**.
 
-![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+![Postavljanje Authenticatora pomoću QR koda](../images/remote_control_and_following/sms_authenticator_setup.png)
 
-* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
+* Pod **Testirajte jednokratnu lozinku** u polje **Kod za provjeru** unesite jednokratnu lozinku iz aplikacije Authenticator na telefonu njegovatelja, a iza nje svoj PIN:
 
-Example:
-* The token from the authenticator app is 457051
-* Your mandatory PIN is 2401
-* Code to check: 4570512401
+Primjer:
+* Token iz aplikacije Authenticator je 457051
+* Vaš obavezni PIN je 2401
+* Kod za provjeru: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
+Ako je unos ispravan, crveni tekst „POGREŠAN PIN“ automatski će se promijeniti u zeleni „OK“. **Ne postoji gumb koji trebate pritisnuti!** Postupak je sada dovršen; nakon unosa koda ne morate pritisnuti nikakav gumb „OK“:
 
-![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
+![Testiranje jednokratne lozinke i resetiranje Authenticatora](../images/remote_control_and_following/sms_authenticator_test.png)
 
-You should now be set up with SMS commands.
+Sada biste trebali imati postavljene SMS naredbe.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Upotrijebite gumb **Resetiraj Authenticatore** na dnu zaslona **Postavljanje Authenticatora** ako želite ukloniti postavljene Authenticatore. (Resetiranjem Authenticatora SVI već postavljeni Authenticatori postaju nevažeći. Morat ćete ih ponovno postaviti.)
 
-## SMS commands usage
+## Korištenje SMS naredbi
 
-### First steps using SMS commands
+### Prvi koraci sa SMS naredbama
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
+1)  Da biste provjerili jeste li sve ispravno postavili, testirajte vezu tako da s telefona njegovatelja na telefon s **AAPS-om** pošaljete SMS poruku „bg“. Trebali biste dobiti odgovor sličan ovome:
 
-![image](../images/remote-control-06.png)
+![slika](../images/remote_control_and_following/remote-control-06.png)
 
-If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
+Ako ne dobijete nikakav odgovor, pogledajte odjeljak [Rješavanje problema](#SMSCommands-troubleshooting) u nastavku.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
+2)  Sada isprobajte SMS naredbu koja zahtijeva Authenticator, _npr._ „target hypo“. Telefon njegovatelja dobit će odgovor koji traži da unesete **šesteroznamenkastu lozinku** iz aplikacije Authenticator, a iza nje dodatni tajni **PIN** koji znaju samo njegovatelji/pratitelji (ukupno niz od dvanaest znamenki, ako vaš PIN ima 6 znamenki).
 
-When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
+Kada prvi put šaljete SMS naredbu, učinite to dok je telefon s **AAPS-om** pokraj vas, da vidite kako to radi:
 
-![image](../images/remote-control-16.png)
+![slika](../images/remote_control_and_following/remote-control-16.png)
 
-The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
+Telefon njegovatelja dobit će SMS odgovor od **AAPS-a** koji potvrđuje je li daljinska SMS naredba uspješno izvršena.
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
+Ako je naredba uspješna, dobit ćete odgovor koji to potvrđuje. Ako postoji problem, dobit ćete poruku o pogrešci. Za česte pogreške pogledajte [Rješavanje problema](#SMSCommands-troubleshooting) u nastavku.
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Savjet**: Ako će se slati puno SMS-ova, korisno je imati neograničen broj SMS-ova u tarifi (za svaki korišteni telefon).
 
-### Delivering mealtime boluses through SMS commands
+### Davanje bolusa za obrok putem SMS naredbi
 
-Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Daljinski bolus inzulina može se dati putem **SMS naredbi** ili putem uparenog **AAPSClienta** (pogledajte [Upravljanje glavni uređaj ↔ klijent](#client-master-control)); ne može se dati putem web stranice Nightscouta. Ugljikohidrati se također mogu najaviti putem SMS-a ili **AAPSClienta**. Putem SMS-a nije moguće poslati naredbe za ugljikohidrate i za inzulin u jednoj SMS poruci. Te naredbe morate poslati zasebno, ovako:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
+1)  Slanje bolusa inzulina (_npr._ „bolus 2“ daje bolus od 2 jedinice) putem SMS naredbi isto je što i **Tretmani** → **Inzulin** u **AAPS-u**. 2)  Pošaljite ugljikohidrate (_npr._ „carbs 20“ najavljuje 20 g ugljikohidrata). To je isto što i **Tretmani** → **UH** u **AAPS-u**.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
+Da biste izbjegli hipoglikemiju, dobro je početi oprezno i dati **manje inzulina** nego što bi bilo potrebno prema vašem omjeru za ugljikohidrate, jer ne uzimate u obzir trenutnu razinu glukoze ni trend glukoze.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
+**Redoslijed kojim šaljete ove naredbe je važan**. Ako na bilo koji način najavite veliku količinu ugljikohidrata, a SMB je omogućen, **AAPS** može odmah reagirati davanjem djelomičnog bolusa inzulina. Ako zatim pokušate poslati bolus inzulina _nakon_ najave ugljikohidrata, može doći do neugodnog čekanja i poruke „bolus u tijeku“, a zatim morate provjeriti što je dano kao SMB. Ili, ako ne primijetite da se isporučuje SMB, a uspije i vaš vlastiti bolus nakon toga, za cijeli obrok može se isporučiti previše inzulina. Zato, kada daljinski dajete bolus za obrok, uvijek pošaljite bolus inzulina _prije_ najave ugljikohidrata. Ako želite, možete kombinirati **AAPSClient** sa SMS naredbama: ugljikohidrati uneseni na uparenom **AAPSClientu** ne trebaju kod za autentifikaciju i zato su brži od SMS naredbi. Ugljikohidrati ili drugi tretmani uneseni na web stranici Nightscouta **ne** primjenjuju se dok je upravljanje s klijenta uključeno; **AAPS** je tada u [zaštićenom načinu rada](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
-## Commands
+## Naredbe
 
 ```{contents} List of command groups
 :depth: 1
 :local: true
 ```
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
+Naredbe se moraju slati na engleskom; odgovor će biti na vašem jeziku ako je tekst odgovora već [preveden](#translations-translate-strings-for-AAPS-app). Za naredbe nije važno pišete li malim ili velikim slovima.
 
-![SMS Commands Example](../images/SMSCommands.png)
+![Primjer SMS naredbi](../images/remote_control_and_following/SMSCommands.png)
 
-The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
+**Tablice SMS naredbi** u nastavku prikazuju sve moguće SMS naredbe. _Primjeri vrijednosti_ navedeni su radi lakšeg razumijevanja. Naredbe imaju isti raspon mogućih vrijednosti (ciljevi, postotak profila itd.) koji je dopušten u samoj aplikaciji **AAPS**.
 
 (authentication-or-not)=
-### Authentication or not?
+### Autentifikacija ili ne?
 
-Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
+Neke SMS naredbe daju odgovor odmah, a neke zahtijevaju snažnu **autentifikaciju** putem aplikacije Authenticator. Jednostavan upit kao što je „**BG**“ (koji traži podatke o trenutnoj glukozi) brzo se upisuje, ne treba autentifikaciju i vraća podatke o statusu **AAPS-a** prikazane u nastavku:
 
-![image](../images/remote-control-06.png)
+![slika](../images/remote_control_and_following/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Naredbe kojima je potrebna veća sigurnost zahtijevaju unos koda, na primjer:
 
-![SMS authenticated](../images/remote-control-07.png)
+![SMS s autentifikacijom](../images/remote_control_and_following/remote-control-07.png)
 
-The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
+Stupac *Autent.* u tablicama u nastavku pokazuje je li za pojedinu naredbu potrebna takva snažna autentifikacija.
 
-### CGM data
+### Podaci CGM-a
 
-| Command    | Auth | Function & *Response*                                                                                                                                                                                                             |
-| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BG         | No   | Returns: last BG, delta, IOB (bolus and basal), COB<br/>*Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)*                                                                                   |
-| CAL 5.6/90 | Yes  | Will calibrate the CGM with a value of 5.6/90<br/>(use the value appropriate to your glucose units)<br/>Works only if properly set-up in **AAPS**.<br/>*Calibration sent. Receiving must be enabled in xDrip+.* |
+| Naredba    | Autent. | Funkcija i *odgovor*                                                                                                                                                                                                                   |
+| ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BG         | Ne      | Vraća: zadnji GUK, deltu, aktivni inzulin (bolus i bazal), aktivne UH<br/>*Zadnji GUK: 5,6 prije 4 min, Delta: -0,2 mmol, Aktivni inzulin: 0,20 J (Bolus: 0,10 J Bazal: 0,10 J)*                                                 |
+| CAL 5.6/90 | Da      | Kalibrira CGM vrijednošću 5.6/90<br/>(koristite vrijednost u svojim jedinicama glukoze)<br/>Radi samo ako je ispravno postavljeno u **AAPS-u**.<br/>*Kalibracija je poslana. Primanje mora biti omogućeno u xDrip+.* |
 
-### Pump
+### Pumpa
 
-| Command              | Auth | Function & *Response*                                                                                |
-| -------------------- | ---- | ---------------------------------------------------------------------------------------------------- |
-| PUMP                 | No   | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
-| PUMP DISCONNECT *30* | Yes  | To disconnect pump for *30* minutes                                                                  |
-| PUMP CONNECT         | Yes  | Pump reconnected                                                                                     |
+| Naredba              | Autent. | Funkcija i *odgovor*                                                                                 |
+| -------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| PUMP                 | Ne      | LastConn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| PUMP DISCONNECT *30* | Da      | Za odspajanje pumpe na *30* minuta                                                                   |
+| PUMP CONNECT         | Da      | Pumpa je ponovno spojena                                                                             |
 
-### Basal
+### Bazal
 
-| Command           | Auth | Function & *Response*            |
-| ----------------- | ---- | -------------------------------- |
-| BASAL 0.3         | Yes  | To start basal 0.3U/h for 30 min |
-| BASAL 0.3 20      | Yes  | To start basal 0.3U/h for 20 min |
-| BASAL 30%         | Yes  | To start basal 30% for 30 min    |
-| BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
-| BASAL STOP/CANCEL | Yes  | To stop temp basal               |
+| Naredba           | Autent. | Funkcija i *odgovor*                   |
+| ----------------- | ------- | -------------------------------------- |
+| BASAL 0.3         | Da      | Za pokretanje bazala 0,3 J/h na 30 min |
+| BASAL 0.3 20      | Da      | Za pokretanje bazala 0,3 J/h na 20 min |
+| BASAL 30%         | Da      | Za pokretanje bazala 30 % na 30 min    |
+| BASAL 30% 50      | Da      | Za pokretanje bazala 30 % na 50 min    |
+| BASAL STOP/CANCEL | Da      | Za zaustavljanje privremenog bazala    |
 
-Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+Neke pumpe primaju privremeni bazal samo u postocima, a druge samo u J/h. Ako upotrijebite drugi oblik, **AAPS** odgovara *„Ova pumpa prima privremeni bazal samo u postocima, ne u J/h.“* (ili obrnuto) i ništa ne postavlja. Trajanje mora biti višekratnik koraka trajanja privremenog bazala vaše pumpe.
 
 
-### Loop
+### Petlja
 
-| Command           | Auth | Function & *Response*                                                                                                                                                                                                                                                              |
-| ----------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LOOP STATUS       | No   | Response depends on actual status:<br/> - *Loop is disabled* if the loop is disabled<br/> - *Loop is enabled* if the loop is closed, open or LGS<br/> - *Pump disconnected* if the pump is disconnected<br/> - *Suspended (10 m)* if the loop is suspended |
-| LOOP STOP/DISABLE | Yes  | The pump will revert to the pre-programmed basal rate.<br/>*Loop has been disabled*                                                                                                                                                                                          |
-| LOOP SUSPEND 20   | Yes  | *Loop suspended*                                                                                                                                                                                                                                                                   |
-| LOOP RESUME       | Yes  | *Loop resumed*                                                                                                                                                                                                                                                                     |
-| LOOP CLOSED       | Yes  | *Current running mode: Closed Loop*                                                                                                                                                                                                                                                |
-| LOOP LGS          | Yes  | *Current running mode: Low Glucose Suspend*                                                                                                                                                                                                                                        |
+| Naredba           | Autent. | Funkcija i *odgovor*                                                                                                                                                                                                                                                                                        |
+| ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| STATUS PETLJE     | Ne      | Odgovor ovisi o stvarnom stanju:<br/> - *Petlja je onemogućena* ako je petlja onemogućena<br/> - *Petlja je omogućena* ako je petlja zatvorena, otvorena ili u LGS načinu<br/> - *Pumpa odspojena* ako je pumpa odspojena<br/> - *Suspendirano (10 min)* ako je petlja suspendirana |
+| LOOP STOP/DISABLE | Da      | Pumpa će se vratiti na unaprijed programiranu bazalnu stopu.<br/>*Petlja je onemogućena*                                                                                                                                                                                                              |
+| LOOP SUSPEND 20   | Da      | *Loop suspended*                                                                                                                                                                                                                                                                                            |
+| LOOP RESUME       | Da      | *Petlja je nastavljena*                                                                                                                                                                                                                                                                                     |
+| LOOP CLOSED       | Da      | *Trenutni način rada: Zatvorena petlja*                                                                                                                                                                                                                                                                     |
+| LOOP LGS          | Da      | *Trenutni način rada: Zaštita od niske razine glukoze*                                                                                                                                                                                                                                                      |
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Daljinski bolus nije dopušten unutar 15 min (ova se vrijednost može promijeniti samo ako su dodana 2 telefonska broja) nakon zadnje naredbe za bolus ili daljinskih naredbi! U tom slučaju odgovor bi bio *Daljinski bolus nije dostupan. Pokušajte ponovno kasnije.* Ovaj se odgovor šalje i kada pumpa upravo isporučuje bolus.
 
-| Command              | Auth | Function & *Response*                                                                                                                                             |
-| -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BOLUS 1.2            | Yes  |                                                                                                                                                                   |
-| BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target)                                      |
-| CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                                                                      |
-| CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.                                         |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
-| EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                                                            |
+| Naredba              | Autent. | Funkcija i *odgovor*                                                                                                                                                          |
+| -------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BOLUS 1.2            | Da      |                                                                                                                                                                               |
+| BOLUS 0.60 MEAL      | Da      | Isporučuje navedeni bolus od 0,60 J<br/>**i** postavlja [privremeni cilj Prije obroka](#TempTargets-eating-soon-temp-target)                                            |
+| CARBS 5              | Da      | Za unos 5 g, bez bolusa                                                                                                                                                       |
+| CARBS 5 17:35/5:35PM | Da      | Za unos 5 g u 17:35.<br/>Prihvaćeni format vremena ovisi<br/> o postavci vremena (12 h/24 h) na telefonu.                                                         |
+| EXTENDED 2 120       | Da      | Za pokretanje produženog bolusa od 2 J na 120 min.<br/>Samo za [kompatibilne pumpe](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
+| EXTENDED STOP/CANCEL | Da      | Za zaustavljanje produženog bolusa                                                                                                                                            |
 
-### Profile
+### Profil
 
-| Command        | Auth | Function & *Response*                                                                                                                                        |
-| -------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PROFILE STATUS | No   | Current profile and percentage                                                                                                                               |
-| PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
-| PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
-| PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                            |
+| Naredba        | Autent. | Funkcija i *odgovor*                                                                                                                                       |
+| -------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PROFILE STATUS | Ne      | Trenutni profil i postotak                                                                                                                                 |
+| PROFILE LIST   | Ne      | Trenutni popis profila u **AAPS-u**, npr.:<br/>1. Profil1<br/> 2. Profil2                                                                      |
+| PROFILE 1      | Da      | Za zamjenu profila na profil 1 s popisa.<br/>Koristite brojeve koje vraća **PROFILE LIST**,<br/>a ne nazive profila pod kojima ste ih spremili |
+| PROFILE 2 30   | Da      | Za zamjenu profila na Profil2 30 %                                                                                                                         |
 
-The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
+Postotak mora biti između 30 i 250 %, kao u aplikaciji. Vrijednost izvan tog raspona odbija se prije nego što se od vas zatraži kod za autentifikaciju.
 
-### Temporary Targets
+### Privremeni ciljevi
 
-| Command                   | Auth | Function & *Response*                     |
-| ------------------------- | ---- | ----------------------------------------- |
-| TARGET MEAL/ACTIVITY/HYPO | Yes  | To set the Temp Target MEAL/ACTIVITY/HYPO |
-| TARGET STOP/CANCEL        | Yes  | To cancel Temp Target                     |
+| Naredba                   | Autent. | Funkcija i *odgovor*                                 |
+| ------------------------- | ------- | ---------------------------------------------------- |
+| TARGET MEAL/ACTIVITY/HYPO | Da      | Za postavljanje privremenog cilja MEAL/ACTIVITY/HYPO |
+| TARGET STOP/CANCEL        | Da      | Za otkazivanje privremenog cilja                     |
 
 
 (SMSCommands-other)=
-### Other
+### Ostalo
 
-| Command          | Auth | Function & *Response*                                                                                                                                                                                                                                                  |
-| ---------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RESTART          | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                                      |
-| SMS DISABLE/STOP | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                       |
-| HELP             | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                   |
+| Naredba          | Autent. | Funkcija i *odgovor*                                                                                                                                                                                                                        |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RESTART          | Da      | Ponovno pokreće AAPS. Korisno ako imate problema koji se obično riješe ponovnim pokretanjem.                                                                                                                                                |
+| SMS DISABLE/STOP | Da      | Za isključivanje usluge SMS Remote Service odgovorite kodom.<br/>Imajte na umu da je ponovno možete aktivirati<br/>samo izravno na glavnom pametnom telefonu s **AAPS-om**.                                                     |
+| HELP             | Ne      | Vraća sve dostupne funkcije:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Pošaljite naredbu ***HELP ***FUNCTION****** za popis<br/>svih opcija dostupnih u tom dijelu. |
+| HELP BOLUS       |         | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                        |
 
 (SMSCommands-troubleshooting)=
-## Troubleshooting and FAQ
+## Rješavanje problema i česta pitanja
 
 ```{contents} List of questions and issues
 :depth: 1
 :local: true
 ```
 
-### What _can’t_ we do with SMS commands?
+### Što _ne možemo_ raditi SMS naredbama?
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
+1)  **Ne možete postaviti _privremenu_ zamjenu profila** (na primjer postaviti „profil vježbanje“ na 60 minuta), ali možete trajno prijeći na „profil vježbanje“. Privremene zamjene profila umjesto toga možete postaviti putem **AAPSClienta**.
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+2)  **Ne možete otkazati automatizacije** ni **postaviti vlastite ciljeve**, ali postoje približna rješenja: Kao primjer, zamislite da je uobičajeni cilj u profilu 5,5. U AAPS-u ste postavili automatizaciju koja uvijek postavlja visoki cilj od 7,0 između 14:30 i 15:30 zbog sata tjelesnog odgoja u školi, a jedan od uvjeta automatizacije je „ne postoji privremeni cilj“. Ovaj tjedan ste u zadnji čas saznali da je sat tjelesnog odgoja otkazan i da se umjesto njega jede pizza, a vaše dijete je već u školi s telefonom s **AAPS-om**. Ako automatizacija pokrene visoki privremeni cilj od 7,0, a vi ga otkažete (na telefonu s **AAPS-om** ili daljinski), uvjeti automatizacije i dalje su ispunjeni i **AAPS** će minutu kasnije jednostavno ponovno postaviti visoki cilj.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
+**Da imate pristup telefonu s AAPS-om**, mogli biste isključiti/promijeniti automatizaciju ili, ako to ne želite, jednostavno postaviti novi privremeni cilj od 5,6 na 60 min pritiskom na cilj na glavnom zaslonu ili putem **Upravljanje** → **Privremeni cilj**. Time biste spriječili da automatizacija postavi visoki cilj od 7,0.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
+**Ako nemate pristup telefonu s AAPS-om**, SMS naredbe možete upotrijebiti za približno rješenje: na primjer naredbom „target meal“ postaviti cilj od 5,0 na 45 min (ostali zadani ciljevi su 8,0 za aktivnost ili hipo, pogledajte tablicu). Međutim, SMS naredbama ne možete zadati _određenu_ ciljnu vrijednost (na primjer 5,6 na 60 minuta); za to biste trebali koristiti **AAPSClient**.
 
-### What happens if I change my mind about a command I have just sent?
+### Što ako se predomislim nakon što sam upravo poslao naredbu?
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
+**AAPS** će izvršiti samo najnoviju naredbu. Dakle, ako upišete „bolus 1.5“, a zatim, bez autentifikacije, pošaljete novu naredbu „bolus 1“, raniju naredbu 1.5 zanemarit će. **AAPS** će telefonu njegovatelja uvijek poslati odgovor koji potvrđuje o kojoj se SMS naredbi radi prije nego što se od vas zatraži kod za autentifikaciju, kao i odgovor nakon izvršene radnje.
 
-### Why didn't I get a response to an SMS command?
+### Zašto nisam dobio odgovor na SMS naredbu?
 
-It could be for one of these reasons:
+Razlog može biti jedan od ovih:
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+1)  Poruka nije stigla do telefona (problemi s mrežom). 2)  **AAPS** još obrađuje zahtjev (_npr._ bolus, čija isporuka može potrajati, ovisno o brzini isporuke bolusa). 3)  Telefon s **AAPS-om** nema dobru Bluetooth vezu s pumpom kada primi naredbu, pa naredba nije uspjela (to obično izazove alarm na telefonu s **AAPS-om**).
 
-### No response whatsoever for SMS commands
+### Nema nikakvog odgovora na SMS naredbe
 
-On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
-* If using Android Messages App or Google Messages App, disable RCS messaging:
-  - open the specific SMS conversation in Messages
-  - Select the options ellipsis in the top right corner
-  - select "Details"
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+Na telefonu njegovatelja i/ili telefonu s **AAPS-om** pokušajte isključiti sljedeće opcije:
+* **Šalji kao chat poruku** (Send as chat message) ![Isključivanje slanja SMS-a kao chat poruke](../images/remote_control_and_following/SMSdisableChat.png)
+* Ako koristite aplikaciju Android Messages ili Google Messages, isključite RCS poruke:
+  - otvorite određeni SMS razgovor u aplikaciji Poruke
+  - Odaberite izbornik s tri točke u gornjem desnom kutu
+  - odaberite „Pojedinosti“
+  - Aktivirajte „Šalji samo SMS i MMS poruke“ (Only send SMS and MMS messages) ![Isključivanje slanja RCS-a kao chat poruke](../images/remote_control_and_following/SMSdisableRCS.png)
 
-### Errors carrying out commands
+### Pogreške pri izvršavanju naredbi
 
-There are several possible reasons the command may not be successful:
+Postoji nekoliko mogućih razloga zašto naredba možda nije uspjela:
 
-* SMS commands setup isn’t complete/correct
-* You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
-* You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
-* The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led **AAPS** to calculate that the authenticator code had expired
-* The **AAPS** phone is out of range/contact with the pump
-* The system is already busy delivering a bolus
+* Postavljanje SMS naredbi nije dovršeno/ispravno
+* Poslali ste naredbu u pogrešnom formatu (npr. „disconnect pump 45“ umjesto „pump disconnect 45“)
+* Upotrijebili ste pogrešan ili istekao kod iz Authenticatora (obično je dobro pričekati nekoliko sekundi na novi kod ako trenutni uskoro istječe)
+* Kod+PIN bili su ispravni, ali je slanje ili primanje SMS-a kasnilo, pa je **AAPS** izračunao da je kod iz Authenticatora istekao
+* Telefon s **AAPS-om** je izvan dometa/nema vezu s pumpom
+* Sustav već isporučuje bolus
 
-Common errors are shown in the examples below:
+Česte pogreške prikazane su u primjerima u nastavku:
 
-![image](../images/remote-control-17.png)
+![slika](../images/remote_control_and_following/remote-control-17.png)
 
-### How can I stop a command once it has been authenticated?
+### Kako mogu zaustaviti naredbu nakon što je autentificirana?
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+Ne možete. Međutim, bolus poslan SMS-om možete otkazati na samom telefonu s **AAPS-om**, jednostavno tako da ga otkažete u skočnom prozoru bolusa, ako ste dovoljno brzi. Mnoge SMS naredbe (osim bolusa i najave ugljikohidrata) mogu se lako poništiti, ili se mogu poduzeti radnje koje ublažavaju neželjene učinke ako pogriješite.
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+I kod pogrešaka s bolusom i najavom ugljikohidrata još uvijek možete nešto poduzeti. Na primjer, ako ste najavili 20 g ugljikohidrata, a vaše dijete pojede samo 10 g, i vi (ili njegovatelj koji je u blizini) ne možete izravno izbrisati tretman na telefonu s **AAPS-om**, mogli biste postaviti visoki privremeni cilj ili smanjeni profil kako bi **AAPS** bio manje agresivan.
 
-### Multiple SMS
+### Više SMS-ova
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
+Ako stalno dobivate istu poruku (_npr._ zamjena profila), možda ste slučajno stvorili petlju s drugim aplikacijama. To može biti, na primjer, xDrip. Ako je tako, provjerite da xDrip (ili bilo koja druga aplikacija) ne prenosi tretmane u Nightscout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Ako je druga aplikacija instalirana na više telefona, isključite prijenos na svima njima.
 
 (sms-commands-too-many-messages)=
-### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
+### Dobivam previše SMS poruka od SMS naredbi. Mogu li ih dobivati rjeđe ili ih potpuno zaustaviti?
 
-Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include WhatsApp, LINE, Telegram, and Facebook Messenger.
+Korištenje SMS naredbi može stvoriti puno automatskih poruka s telefona s **AAPS-om** na telefon njegovatelja. Dobivat ćete i poruke, na primjer „Ažuriran bazalni profil u pumpi“, ako ste u **AAPS-u** postavili automatizacije. Ako će se slati puno SMS-ova, korisno je imati neograničen broj SMS-ova u tarifi telefona s **AAPS-om** (i za svaki korišteni telefon njegovatelja) te isključiti SMS obavijesti, alarme ili vibracije na svim telefonima. Nije moguće koristiti SMS naredbe, a ne primati ta ažuriranja. Zbog toga ćete možda za izravnu komunikaciju s djetetom (ako je dovoljno staro) htjeti koristiti neki drugi način umjesto SMS-a. Česte druge aplikacije za komunikaciju koje koriste njegovatelji korisnika **AAPS-a** su WhatsApp, LINE, Telegram i Facebook Messenger.
 
-It is possible to disable the "Basal profile in pump updated" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly** `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+Moguće je isključiti SMS „Ažuriran bazalni profil u pumpi“ kada je promjena profila došla iz Nightscouta. Da biste to učinili, stvorite datoteku s nazivom **točno** `do_not_send_sms_on_profile_change` u mapi `extra` vaše mape AAPS.

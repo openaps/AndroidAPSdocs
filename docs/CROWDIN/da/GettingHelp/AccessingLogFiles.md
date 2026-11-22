@@ -1,15 +1,15 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Accessing logfiles
+# Adgang til logfiler
 
-* Connect phone to a computer in file transfer mode
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note: log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Forbind telefonen til en computer i tilstanden »Filoverførsel« (File transfer)
+* Find logfilerne i AAPS-datamappen, i `Android\data\info.nightscout.androidaps\files`.  
+    Navnet på rodmappen i lageret kan variere lidt fra telefon til telefon.
+* For [AAPSClient](#RemoteControl_aapsclient) er placeringen `Android\data\info.nightscout.aapsclient\files`.
+* Bemærk: placeringen af loggen er ændret i **AAPS 3.3**. Se dokumentationen til tidligere versioner, hvis du har brug for det.
 
-![logs](../images/aapslog.png)
+![logfiler](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any log viewer Android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Den aktuelle log er en .log-fil, som du kan se på flere måder, f.eks. med [LogCat](https://developer.android.com/studio/debug/am-logcat.html) i Android Studio, med en app til visning af logfiler på Android eller blot som almindelig tekst. 
+* Tidligere logfiler pakkes som zip og gemmes i mapper sorteret efter dato og tid. 
+* Hvis du deler din logfil på [Discord](https://discord.gg/4fQUWHZ4Mw) for at tale om en mulig fejl, skal du pakke filen ud og uploade den fil, der er dateret før fejlen skete.

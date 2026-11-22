@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+Postoje različiti načini korištenja podataka CareSensa s **AAPS-om**:
 
 - xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Napomena:** Za povezivanje s AAPS-om ne trebate aplikaciju za praćenje Sens365.
 
 ## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+1. Instalirajte i postavite službenu aplikaciju CareSens.
+2. U aplikaciji CareSens idite na settings -> Manage Data and Connections -> uključite prekidač xDrip. Ako želite, isključite podatkovne veze prema CareLevo, DIA:CONN, CloudLoop itd. u "others".
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![Podatkovne veze u aplikaciji CareSens](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+2. Instalirajte xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. U xDripu idite na settings -> hardware data source i kao izvor podataka odaberite `Companion App`.
+4. U **AAPS-u** odaberite xDrip u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+1. Instalirajte aplikaciju Juggluco.
+2. U Jugglucu otvorite lijevi izbornik i odaberite `Photo`
+3. Skenirajte QR kôd na pakiranju senzora.
+4. U lijevom izborniku -> settings -> exchange data provjerite je li uključen xDrip broadcast.
+5. U **AAPS-u** odaberite xDrip u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).

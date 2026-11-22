@@ -1,19 +1,19 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# Вариант 1 · iPhone / iPad – Создать новое хранилище ключей
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+[Вариант 1](BrowserBuildO1.md) (создать новое хранилище ключей) на **iPhone / iPad** (в качестве примера показан iPad).
 ```
 
-## 1. Download the preparation file
+## 1. Скачайте файл подготовки
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. Откройте файл подготовки и создайте хранилище ключей
 
-Compatible with iOS (using iPad as an example)
+Работает в iOS (в качестве примера показан iPad)
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -30,4 +30,4 @@ Compatible with iOS (using iPad as an example)
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Далее: [Сборка через браузер – Шаг 3: Дайте доступ к Google Диску](BrowserBuildGoogleDrive.md) →**

@@ -1,6 +1,6 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Accessing logfiles
+# Pristup datotekama dnevnika
 
 * Connect phone to a computer in file transfer mode
 * Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  

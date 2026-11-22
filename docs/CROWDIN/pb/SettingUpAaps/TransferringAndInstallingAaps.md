@@ -13,47 +13,47 @@ Esta página também explica a [verificação de desenvolvedor do Android](#andr
 
 ## Instalar o AAPS tocando no arquivo APK
 
-Hoje, você instala o **AAPS** transferindo o arquivo APK para o seu telefone e abrindo o arquivo (tocando nele). Há várias formas de transferir o arquivo APK do **AAPS** do seu computador para o smartphone. Here we explain two different ways:
+Hoje, você instala o **AAPS** transferindo o arquivo APK para o seu telefone e abrindo o arquivo (tocando nele). Há várias formas de transferir o arquivo APK do **AAPS** do seu computador para o smartphone. Aqui explicamos duas formas diferentes:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Opção 1 -  Use o seu Google Drive (Gdrive)
+* Opção 2 -  Use um cabo USB
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Atenção: a transferência por e-mail pode causar dificuldades e não é recomendada.
 
 ```{admonition} Android developer verification
 :class: warning
 O Google está introduzindo a [verificação de desenvolvedor do Android](#android-developer-verification) a partir de setembro de 2026 (começando no Brasil, Indonésia, Singapura e Tailândia; no mundo todo em 2027). Onde ela for aplicada, a instalação de um APK tocando no arquivo — como descrito nas duas opções abaixo — fica bloqueada. Nesse caso, use um dos [métodos gratuitos de instalação](#android-developer-verification-free-methods) mais abaixo nesta página.
 ```
 
-### Option 1. Use Google drive to transfer files
+### Opção 1. Use o Google Drive para transferir arquivos
 
 Abra [Google.com](https://www.google.com/) no seu navegador e entre na sua Conta do Google.
 
-On the right upper side select the Drive app in the Google menu.
+No canto superior direito, selecione o app Drive no menu do Google.
 
-![Iniciar o app Drive](../images/GoogleDriveInWebbrowser.png)
+![Iniciar o app Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Clique em **New** (Novo) no canto superior esquerdo (ou clique com o botão direito em uma área vazia abaixo dos seus arquivos e pastas) e selecione **File upload** (Upload de arquivo).
 
-![Enviar o arquivo apk com o app Google Drive](../images/GoogleDriveUploadFile.png)
+![Enviar o arquivo apk com o app Google Drive](../images/install/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Agora o arquivo apk deve estar enviado para o Google Drive.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Use o app Google Drive para abrir o arquivo apk e instalá-lo
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Passe para o seu celular e abra o app Google Drive. É um app pré-instalado e pode ser encontrado onde ficam os outros apps do Google, ou pesquisando o nome do app.
 
-![inicie o app Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![inicie o app Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Inicie a instalação do apk tocando no nome do arquivo no app Google Drive do celular.
 
-![inicie a instalação do apk](../images/GoogleDriveMobileUploadedAPK.png)
+![inicie a instalação do apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Se você receber um aviso de segurança de que no momento não é permitido instalar apps a partir do Google Drive, toque em "Settings" (Configurações) e permita isso só por esse curto momento. Depois, proíba de novo, porque deixar isso ativado o tempo todo é um risco de segurança.
 
-![Aviso de segurança do Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Aviso de segurança do Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Aviso de segurança do Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Aviso de segurança do Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Depois que a instalação terminar, esta etapa está concluída.
 
@@ -66,13 +66,13 @@ Você se lembrou de proibir de novo a instalação a partir do Google Drive?
 
 Continue com a [configuração do loop do AAPS](../SettingUpAaps/SetupWizard.md).
 
-### Option 2. Use a USB cable to transfer files
+### Opção 2. Use um cabo USB para transferir arquivos
 
 A segunda forma de transferir o arquivo apk do AAPS é com um [cabo USB](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Transfira o arquivo do local onde ele está no seu computador para a pasta "downloads" (Downloads) do telefone.
 
-On your phone, you will have to allow installation from unknown sources. Explicações de como fazer isso podem ser encontradas na internet (_por exemplo_ [aqui](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [aqui](https://www.androidcentral.com/unknown-sources)).
+No seu telefone, você vai precisar permitir a instalação de fontes desconhecidas. Explicações de como fazer isso podem ser encontradas na internet (_por exemplo_ [aqui](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [aqui](https://www.androidcentral.com/unknown-sources)).
 
 Depois de transferir o arquivo arrastando-o, abra a pasta "Downloads" no telefone e toque no arquivo apk do AAPS:
 
@@ -136,7 +136,7 @@ Os detalhes são publicados pelo Google nas páginas de [verificação de desenv
 
 ### Isso me afeta?
 
-- **Compilar o AAPS não é afetado de forma alguma.** A [compilação no navegador](#browser-build), a [compilação com o Android Studio](ComputerBuild.md) e a [compilação pela linha de comando (CLI)](CLIBuild.md) funcionam exatamente como antes, e a sua keystore não muda.
+- **Compilar o AAPS não é afetado de forma alguma.** A [compilação no navegador](#browser-build), a [compilação no Android Studio](ComputerBuild.md) e a [compilação pela linha de comando (CLI)](CLIBuild.md) funcionam exatamente como antes, e a sua keystore não muda.
 - **O seu AAPS atual continua funcionando.** A verificação só é feita ao instalar ou atualizar um app.
 - **Se você mora no Brasil, Indonésia, Singapura ou Tailândia:** a partir de 30 de setembro de 2026, a verificação é aplicada para apps instalados a partir do Google Play e de algumas outras lojas de apps. O Google afirma que a instalação direta de um arquivo APK não está incluída nesta primeira etapa, então o **AAPS** ainda deve ser instalado normalmente. Mesmo assim, prepare agora um dos [métodos gratuitos de instalação](#android-developer-verification-free-methods) abaixo, para não ser pego de surpresa se isso mudar.
 - **Se você mora em qualquer outro lugar:** nada muda para você antes de 2027, e não fazer nada por enquanto é uma escolha válida. Mas configure um dos [métodos gratuitos de instalação](#android-developer-verification-free-methods) abaixo enquanto nada está quebrado: descobrir o bloqueio no dia em que uma atualização é recusada, com a espera de 24 horas do [fluxo avançado](#android-developer-verification-advanced-flow) pela frente, é o momento errado.

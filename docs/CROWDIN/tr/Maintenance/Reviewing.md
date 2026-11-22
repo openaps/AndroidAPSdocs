@@ -73,7 +73,7 @@ HbA1c: CGM ölçümlerinin ortalamasına göre tahmin edilen glike hemoglobin de
 
 - **Grafik**: gece yarısından gece yarısına bir gün. Çizgi **Medyan** değeridir (o saatteki ölçümlerinizin yarısı daha düşük, yarısı daha yüksekti). Çevresinde bir bant ölçümlerinizin ortadaki yarısını (**%25–75**), daha geniş bir bant ise çoğunu (**%10–90**) gösterir. Dar bir bant, o saatte glikozunuzun günden güne benzer olduğu anlamına gelir. Kesikli çizgiler **DÜŞÜK işareti**, 140 mg/dL (7,8 mmol/L) ve **YÜKSEK işareti** değerlerinizi gösterir.
 - **Glisemik genel bakış**: aralığınızda, dar aralıkta (70–140 mg/dL veya 3,9–7,8 mmol/L), aralığınızın üstünde ve altında geçen süre, ardından **Ortalama** ve **Medyan** glikoz değeriniz. Aralığınız, [Görselleştirme Aralığı](#Preferences-range-for-visualization) içinde ayarlanan **DÜŞÜK işareti** ve **YÜKSEK işareti** değerleridir.
-- **eA1c** ve **GMI**: CGM ölçümlerinizden hesaplanan iki HbA1c tahmini. Yukarıdaki HbA1c gibi, bunlar da kan HbA1c testlerinizle aynı olmayabilir.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Yukarıdaki HbA1c gibi, bunlar da kan HbA1c testlerinizle aynı olmayabilir.
 - **SD** (standart sapma) ve **CV** (varyasyon katsayısı): glikozunuzun ne kadar değiştiği. Daha düşük bir değer, daha dengeli glikoz demektir.
 - **Gün**: kaç günlük CGM verisinin kullanıldığı.
 
@@ -114,7 +114,7 @@ Her satırın sonundaki küçük simgeler, verinin nereden geldiğini veya nerey
 (screens-bolus-carbs)=
 ### Karbonhidrat ve bolus
 
-![Karbonhidrat ve bolus](../images/TreatmentsView1.png)
+![Karbonhidrat ve bolus](../images/Maintenance/TreatmentsView1.png)
 
 Bu sekmede bolus ve karbonhidrat kaydını görebilirsiniz. Her bolus (satır **1**), insülin miktarının yanında kalan ilgili AİNS'i gösterir. Bolusun kaynağı şunlardan biri olabilir:
 * Öğün (İnsülin, Hızlı Asistan veya Bolus sihirbazı düğmeleriyle elle girilen)
@@ -141,7 +141,7 @@ Tedavi geçmişi, hatalı karbonhidrat girişlerini düzeltmek için kullanılab
 
 ### Geçici Bazal
 
-![Geçici Bazal](../images/TreatmentsView2.png)
+![Geçici Bazal](../images/Maintenance/TreatmentsView2.png)
 
 Döngünün uyguladığı **geçici bazallar** burada gösterilir. Bir kaydın AİNS üzerinde hâlâ etkisi varsa, bu bilgi oranın yanında gösterilir (satır **1**). Bu şunlar olabilir:
 * Geçici bazal, Profilde ayarlanandan yüksekse pozitif AİNS
@@ -153,13 +153,13 @@ Bir satırın solundaki kırmızı S, “Askıya al” anlamına gelir: bazal o 
 
 ### Geçici hedef
 
-![Geçici hedef](../images/TreatmentsView3.png)
+![Geçici hedef](../images/Maintenance/TreatmentsView3.png)
 
 Geçici hedeflerin geçmişi burada görülebilir.
 
 ### Profil değişimi
 
-![Profil değişimi](../images/TreatmentsView4.png)
+![Profil değişimi](../images/Maintenance/TreatmentsView4.png)
 
 Profil değişimlerinin geçmişi burada görülebilir. Her profil değiştirdiğinizde birden fazla kayıt görebilirsiniz: hem NS'de hem de Pompa Geçmişinde saklanan satır **1**, gerçek değişime karşılık gelir. Nightscout'ta saklanan ancak Pompa Geçmişinde olmayan satır **2**, kullanıcının yaptığı profil değişimi isteğine karşılık gelir.
 
@@ -169,14 +169,14 @@ Bir **Profil değişimi**'nin kopyasını oluşturmak için satır **2**'de gös
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Bu sekme, Nightscout'a kaydedilen tüm notları ve careportal kayıtlarını gösterir.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Running mode
 
-![Running mode](../images/TreatmentsView6.png)
+![Running mode](../images/Maintenance/TreatmentsView6.png)
 
 Bu sekme, [döngü durumu](#AapsScreens-loop-status) değişikliklerinin geçmişini gösterir: açık, kapalı, LGS, askıya alma, bağlantıyı kesme.
 

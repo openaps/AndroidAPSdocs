@@ -10,7 +10,8 @@ Disse instruksjonene gjelder oppsett av insulinpumpen Equil.
 ## Pumpefunksjoner med AAPS
 
 * Slangeløs patch-pumpe som kommuniserer med **AAPS** over telefonens innebygde Bluetooth, uten en ekstra kommunikasjonsenhet.
-* **AAPS** behandler Equil som en patch-pumpe med et reservoar på 200 E: hovedskjermen viser statuslysene for patch-pumpe, og **Prime/fylling** og **Bytte pumpebatteri** tilbys ikke. Fylling, priming og batteribytte gjøres i pumpeveiviserne.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Mens pumpen er pauset eller stoppet, registrerer **AAPS** en midlertidig basal på 0 E/t, så ingen basalinsulin telles med i IOB.
 * Sommertid (DST) og tidssonebytte må håndteres manuelt.
 

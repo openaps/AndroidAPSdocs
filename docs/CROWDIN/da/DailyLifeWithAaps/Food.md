@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Mad (din maddatabase)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+Databasen **Mad** er din personlige liste over gemte madvarer. Hver post gemmer en madvares **kulhydrater** (og, hvis du vil, dens fedt, protein, energi og en kategori). Så kan du have det, du ofte spiser, samlet ét sted og starte en bolus fra en gemt madvare, hvor kulhydraterne allerede er udfyldt.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Åbn maddatabasen
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Åbn skærmen **Administrer** (navigationen nederst), og vælg **Mad** (*»Administrer poster i maddatabasen«*). I **AAPS** v4 er Mad **ikke længere et plugin** — der er intet at aktivere; det er en selvstændig skærm, som du åbner fra [arket Administrer](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Madlisten
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Dine madvarer vises som en liste, du kan rulle i. Hver række viser madvarens **navn**, dens **portion / enhed / kategori** og dens **kulhydrater**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Listen i maddatabasen med søgning og knappen Tilføj](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Søg** (øverst) — filtrer listen efter **navn** (store og små bogstaver er lige meget).
+- **Kategorifilter** — med chips kan du begrænse listen til en **kategori**; når en kategori er valgt, vises chips for dens **underkategorier**. (Tryk på en valgt chip igen for at fjerne den.)
+- **➕** (nederst til højre) — tilføj en ny madvare (se nedenfor).
+- Tryk på en række for at **redigere** den madvare.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Hvis listen (eller det aktuelle filter) ikke har nogen poster, viser skærmen **Ingen data**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Tilføj og rediger en madvare
+
+Tryk på **➕** for at tilføje, eller tryk på en eksisterende række for at redigere. En editor åbner som et ark nederst (**Tilføj mad** / **Rediger mad**):
+
+![Madeditoren — navn, kategori, portion, kulhydrater og makronæringsstoffer](../images/v4/Food/food_editor.png)
+
+Felterne er:
+
+- **Navn** — skal udfyldes (du kan ikke gemme uden).
+- **Kategori** og **Underkategori** — valgfrie, bruges til at gruppere/filtrere madvarer.
+- **Portion** og **Enhed** — den normale portionsstørrelse; **Enhed** er som standard **g**.
+- **Kulhydrater (g)** — mængden af kulhydrater i madvaren.
+- **Fedt (g)**, **Protein (g)**, **Energi (kJ)** — valgfrie næringsværdier.
+
+Tryk på **Gem** for at gemme, eller på **Annuller** for at kassere. Når du redigerer en eksisterende madvare, har editoren også en knap **Slet**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Når du sletter en madvare, vises beskeden **»Mad slettet«** med handlingen **Fortryd**, så det er nemt at fortryde en sletning ved en fejl.
 ```
 
 ---
 
-## Using a food for a bolus
+## Brug en madvare til en bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Hver række i madlisten har en knap til **beregneren**. Et tryk på den åbner **bolusberegneren** med madvarens **kulhydrater** allerede udfyldt og madvarens **navn** tilføjet som notat til behandlingen — så du bare bekræfter og giver bolus uden at skrive kulhydraterne igen.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Madvarens gemte tal for **kulhydrater** sendes direkte til beregneren — **AAPS** ganger det ikke med portionen eller med, hvor meget du spiste. Hvis du har en anden mængde, så juster kulhydraterne i beregneren, før du bekræfter. (Der er ingen madvælger *inde i* bolusberegneren eller dialogen for kulhydrater; du starter fra madvarens række her.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Hvor madvarerne kommer fra (synkronisering med Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Maddatabasen deles via **Nightscout**, men **kun i én retning**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Download:** **AAPS** **læser** madvarer fra din Nightscout-sides **maddatabase** og holder den lokale liste synkroniseret med den. Det sker som en del af NSClient-synkroniseringen, så en parret **klient/følger** får også de samme madvarer.
+- **Upload:** **AAPS** sender **ikke** madvarer **til** Nightscout — NSClient understøtter ikke upload af madposter. Madvarer, som du opretter eller redigerer **i AAPS**, bliver derfor **på den enhed** og bliver ikke overført til Nightscout eller til dine andre enheder.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Fordi mad **kun downloades**, er måden at dele én madliste mellem din telefon, din følger/[klient](../RemoteFeatures/ClientMasterControl.md) og resten af din opsætning at vedligeholde den i **Nightscout** (dens indbyggede madeditor). **AAPS** henter så disse poster ned. En madvare, der kun er tilføjet i **AAPS**, er lokal på den enhed — og bliver der: en download matcher Nightscout-poster efter deres Nightscout-ID, så den tilføjer og opdaterer dem, men overskriver eller fjerner aldrig en madvare, du har oprettet lokalt (en madvare bliver kun fjernet, når dens kopi i Nightscout bliver slettet i Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Bemærk, at maddatabasen heller **ikke** er en del af den signerede styringskanal mellem hovedenhed ↔ klient — den sendes kun som Nightscout-data.
 ```
 
 ---
 
-## Not on the watch
+## Ikke på uret
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+Maddatabasen er en funktion på **telefonen** — der er ingen madbrowser, intet felt og ingen menu på et **Wear OS-ur**.
 
 ---
 

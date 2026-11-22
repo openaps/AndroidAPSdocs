@@ -67,6 +67,8 @@ xDrip kan läsa aviseringar från tillverkarens app, på samma sätt som ESEL. D
 
 **AAPS** kan läsa glukosvärdena direkt från aviseringarna från den officiella Eversense-appen, utan någon annan app emellan. Det går inte att fylla i saknade data (backfill).
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Välj **Läsare för aviseringar** i [**Konfiguration → BG-källa**](#Config-Builder-bg-source) och ge **AAPS** åtkomst till aviseringar när du blir tillfrågad.
 - Se till att Eversense-appen visar det aktuella glukosvärdet i sin avisering.
 

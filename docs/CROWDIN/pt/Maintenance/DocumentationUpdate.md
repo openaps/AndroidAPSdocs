@@ -6,7 +6,7 @@ tocdepth: 1
 
 ## Outubro de 2026
 
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 8, now maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. Setting up is one step shorter: [step 1](#aaps-builder-step1) of the [setup page](#aaps-builder-setup) creates your private repository as a copy of that repository, with the build workflow already in it, so there is no workflow to add any more. From now on the build steps are updated for you: your repository runs the version released by the AAPS developers at every build, without any change on your side (and still no automatic build). The build itself does not change, and your existing repository keeps working. To get these automatic updates, replace your `.github/workflows/build.yml` once as explained in [Updating AAPS](#aaps-builder-updates). Your `KEYSTORE_SET` secret stays as it is. The optional [Google Drive step](#aaps-builder-google-drive) now works on the setup page itself, on a phone or a computer: no preparation file needed @psonnera
+- [Compilação no navegador com o AAPS Builder](#aaps-builder): versão 8 do workflow de compilação, agora mantida pelos programadores do AAPS no repositório [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder). A configuração tem menos um passo: o [passo 1](#aaps-builder-step1) da [página de configuração](#aaps-builder-setup) cria o seu repositório privado como cópia desse repositório, já com o workflow de compilação, por isso já não é preciso adicionar nenhum workflow. A partir de agora, os passos da compilação são atualizados automaticamente: o seu repositório executa, em cada compilação, a versão publicada pelos programadores do AAPS, sem nenhuma alteração da sua parte (e continua sem compilação automática). A compilação em si não muda e o seu repositório atual continua a funcionar. Para receber estas atualizações automáticas, substitua uma vez o seu `.github/workflows/build.yml`, como explicado em [Atualizar o AAPS](#aaps-builder-updates). O seu secret `KEYSTORE_SET` fica como está. O [passo do Google Drive](#aaps-builder-google-drive) (opcional) funciona agora na própria página de configuração, num telefone ou num computador: não é preciso ficheiro de preparação @psonnera
 - [Smartwatches e o AAPS](#watches-external-companion-apps): a secção **Samsung Tizen** passa a **External Companion Apps** (apps externas complementares) e lista as apps que leem a difusão (broadcast) do **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). O [WatchDrip+](#watches-xiaomi-amazfit) 0.5 e posteriores ligam-se diretamente ao **AAPS** sem o xDrip+: adicionados os passos de configuração, também resumidos em [Configuração](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) e [Monitorização remota](../RemoteFeatures/RemoteMonitoring.md). Relógios Bluejay: GTS descontinuado, modelo atual atualizado @psonnera
 - [Compilação no navegador com o AAPS Builder](#aaps-builder): workflow de compilação versão 6. Os passos de compilação usam agora versões exatas e revistas das ferramentas do GitHub e da máquina de compilação, e a compilação explica claramente quando foi colado o texto errado no secret `KEYSTORE_SET`. A [página de configuração](#aaps-builder-setup) faz agora parte da documentação e está traduzida, verifica o seu nome de utilizador do GitHub e tem ajuda mais clara para o secret, para "Page not found" (404) e para a app do GitHub. Se o seu `.github/workflows/build.yml` indicar a versão 5 ou anterior, substitua-o como explicado em [Atualizar o AAPS](#aaps-builder-updates) @psonnera
 - [Instalador web do AAPS](#web-installer): agora é uma página da documentação, traduzida como as outras. O endereço antigo continua a funcionar @psonnera
@@ -52,7 +52,7 @@ tocdepth: 1
 
 - DiaKEM: as novas instalações não funcionam depois da atualização dos servidores @psonnera
 - Removida a app Libre 2 modificada (patched), por estar obsoleta: não funciona com os sensores novos @psonnera
-- Reworked Omnipod DASH page @XiTatiON
+- Página do Omnipod DASH revista @XiTatiON
 
 ## Agosto de 2025
 
@@ -97,175 +97,175 @@ A documentação do AAPS 3.1 está disponível [aqui](https://androidaps.readthe
 ***
 
 ```{dropdown} Older updates (2019 to 2022)
-**February 2022**
+**Fevereiro de 2022**
 
-- [BG quality warning sign](#aaps-screens-bg-warning-sign) @tanja
-- [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
+- [Sinal de aviso da qualidade da glicose](#aaps-screens-bg-warning-sign) @tanja
+- [Atualização da bomba Medtronic](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
+- [Verificações necessárias após a atualização para o AAPS 3.0](Update3_0.md) @tanja
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) @Freloner @robertrub @vanelsberg
-- Update docs for AAPS 3.0 (partly) @xJoe
-- [Wear OS for AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
+- Atualização da documentação para o AAPS 3.0 (parcial) @xJoe
+- [Wear OS para o AAPS 3.0](../WearOS/WearOsSmartwatch.md) @peterleimbach
 
-**January 2022**
+**Janeiro de 2022**
 
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
+- [Resolução de problemas do Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - atualização @tanja
 
-**December 2021**
+**Dezembro de 2021**
 
-- [Building the APK](../SettingUpAaps/BuildingAaps.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
-- [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) information added @MilosKozak
+- [Compilar o APK](../SettingUpAaps/BuildingAaps.md) - atualização para o Android Studio Arctic Fox | 2020.3.1 @tanja
+- Adicionada informação sobre a [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) @MilosKozak
 
-**November 2021**
+**Novembro de 2021**
 
-- Best practices for calibrating a Libre 2 sensor
-- [ISF](../UsefulLinks/FAQ.md) reformulation of impact
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
-- Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
+- Boas práticas para calibrar um sensor Libre 2
+- [FSI](../UsefulLinks/FAQ.md): nova explicação do impacto
+- Atualização da [resolução de problemas do Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+- Removida a app [Dexcom](../CompatibleCgms/DexcomG6.md) modificada, porque está obsoleta
 
-**October 2021**
+**Outubro de 2021**
 
-- [Release notes](ReleaseNotes.md) AAPS 3.0 beta
+- [Notas das versões](ReleaseNotes.md) do AAPS 3.0 beta
 
-**September 2021**
+**Setembro de 2021**
 
-- Recommended computer specification to [build AAPS app](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
+- Especificações recomendadas do computador para [compilar a app AAPS](#Building-APK-recommended-specification-of-computer-for-building-apk-file)
 
-**June 2021**
+**Junho de 2021**
 
-- [Watchface sideload](../WearOS/WearOsSmartwatch.md)
+- [Instalação manual (sideload) de watchfaces](../WearOS/WearOsSmartwatch.md)
 
-**April 2021**
+**Abril de 2021**
 
-- List of [communication devices](#CompatiblePumps-additional-communication-device) for Omnipod and Medtronic pumps
-- AAPS predictions in [Nightscout](#Nightscout-manual-nightscout-setup)
+- Lista de [dispositivos de comunicação](#CompatiblePumps-additional-communication-device) para bombas Omnipod e Medtronic
+- Previsões do AAPS no [Nightscout](#Nightscout-manual-nightscout-setup)
 
-**March 2021**
+**Março de 2021**
 
-- Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
+- A comunicação dos programadores passou do gitter para o [discord](https://discord.gg/4fQUWHZ4Mw)
 
-**February 2021**
+**Fevereiro de 2021**
 
-- New navigation bar and [language switch](../NavigateDoc/ChangeLanguageVersion.md)
+- Nova barra de navegação e [mudança de idioma](../NavigateDoc/ChangeLanguageVersion.md)
 
-**January 2021**
+**Janeiro de 2021**
 
-- [Action tab](#screens-action-tab) - more details on page 'AAPS screens'
-- Dexcom G6 with [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
-- Libre smart reader [battery level](#screens-sensor-level-battery)
-- [Objectives](#objectives-objective3) - new questions
-- Other [new AAPS 2.8.0 functions](#Releasenotes-version-2-8-0)
+- [Separador Ações](#screens-action-tab) - mais detalhes na página «Ecrãs do AAPS»
+- Dexcom G6 com a [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
+- [Nível da bateria](#screens-sensor-level-battery) do leitor Libre smart reader
+- [Objetivos](#objectives-objective3) - novas perguntas
+- Outras [novas funções do AAPS 2.8.0](#Releasenotes-version-2-8-0)
 
-**December 2020**
+**Dezembro de 2020**
 
-- [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
-- [OpenAPS hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 Manual Installation of Google Play Service
+- [Libre 2](../CompatibleCgms/Libre2.md) - a app modificada não funciona com sensores dos EUA
+- [Limites fixos (hard-coded) do OpenAPS](#Open-APS-features-overview-of-hard-coded-limits)
+- Smartwatch Sony Smartwatch 3: instalação manual do Google Play Service
 
-**October 2020**
+**Outubro de 2020**
 
-- Accu-Chek Combo - update [time adjustment daylight savings time](#time-adjustment-daylight-savings-time-dst)
-- Accu-Chek Insight - Option to [upload absolute values](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- Logs - more details about [folder location](../GettingHelp/AccessingLogFiles.md)
-- Omnipod Eros - status update
-- [SMS commands - time sync](../RemoteFeatures/SMSCommands.md)
+- Accu-Chek Combo - atualização do [ajuste da hora na mudança para a hora de verão](#time-adjustment-daylight-savings-time-dst)
+- Accu-Chek Insight - opção para [enviar valores absolutos](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- Registos - mais detalhes sobre a [localização da pasta](../GettingHelp/AccessingLogFiles.md)
+- Omnipod Eros - atualização do estado
+- [Comandos SMS - sincronização da hora](../RemoteFeatures/SMSCommands.md)
 
-**September 2020**
+**Setembro de 2020**
 
-- Major update for new AAPS version 2.7
-- For details see the [release notes](#Releasenotes-version-2-7-0)
+- Grande atualização para a nova versão 2.7 do AAPS
+- Para mais detalhes, veja as [notas da versão](#Releasenotes-version-2-7-0)
 
-**June 2020**
+**Junho de 2020**
 
-- Libre 2 - more details patched Libre Link app & use of Bluetooth transmitters
-- [Time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
+- Libre 2 - mais detalhes sobre a app Libre Link modificada e o uso de transmissores Bluetooth
+- [Viajar entre fusos horários](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) com o Libre 2
 
-**May 2020**
+**Maio de 2020**
 
-- [Extended bolus only for Dana + Insight pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Insight deactivate vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
-- [Minimal request rate](#Preferences-minimal-request-change) to reduce number of notifications in open loop mode
-- Patched Libre Link app - check if correctly patched
-- [Prediction lines](#aaps-screens-prediction-lines) - more details
+- [Bólus prolongado só para bombas Dana e Insight](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Desativar a vibração da Insight](#Accu-Chek-Insight-Pump-vibration) (só firmware 3.x)
+- [Taxa mínima de pedidos](#Preferences-minimal-request-change) para reduzir o número de notificações no modo de loop aberto
+- App Libre Link modificada - verificar se foi bem modificada
+- [Linhas de previsão](#aaps-screens-prediction-lines) - mais detalhes
 
-**April 2020**
+**Abril de 2020**
 
-- Backdate insulin (i.e. given by syringe)
-- Android 6 support will be discontinued in next master version
+- Registar insulina com data anterior (p. ex. dada com seringa)
+- O suporte para o Android 6 vai terminar na próxima versão master
 
-**March 2020**
+**Março de 2020**
 
-- [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
-- [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
-- [Extended bolus and switch to open loop](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
+- [Compilar o apk com o Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
+- A [DanaRS com firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **não pode, de momento, ser usada com o AAPS!**
+- [Bólus prolongado e mudança para loop aberto](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Atualizar o apk com o Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
-**February 2020**
+**Fevereiro de 2020**
 
-- Automation caveats
-- [Autosens](#Open-APS-features-autosens) - short explanation
-- Careportal alternatives
-- [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md)
-- Sample Setup - update Dexcom G6
-- [Version 2.6.0](#Releasenotes-version-2-6-0) - major new features
-- [Wear complications](../WearOS/WearOsSmartwatch.md)
+- Cuidados com a Automatização
+- [Autosens](#Open-APS-features-autosens) - explicação curta
+- Alternativas ao Careportal
+- Função [Bólus prolongado](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - o loop fechado será desativado
+- Novo [plugin Perfil Local](../SettingUpAaps/ConfigBuilder.md)
+- Exemplo de configuração - atualização do Dexcom G6
+- [Versão 2.6.0](#Releasenotes-version-2-6-0) - grandes funções novas
+- [Complicações Wear](../WearOS/WearOsSmartwatch.md)
 
-**January 2020**
+**Janeiro de 2020**
 
-- [Manual carb correction](#screens-bolus-carbs) for faulty carb entries
-- [Image size](../SupportingAaps/HowToEditTheDocs.md) when editing docs
+- [Correção manual de hidratos de carbono](#screens-bolus-carbs) para registos de hidratos errados
+- [Tamanho das imagens](../SupportingAaps/HowToEditTheDocs.md) ao editar a documentação
 
-**December 2019**
+**Dezembro de 2019**
 
-- [Android Auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
-- [Accu-Chek Insight & Autotune](#Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
-- [Glimp](#Config-Builder-bg-source) - version 4.15.57 and newer supported
-- [Watchfaces](../WearOS/WearOsSmartwatch.md) - major update, way more details
-- [Watchface complications](#Watchfaces-complications) - use your favorite watchface with AAPS data
+- [Android Auto](../RemoteFeatures/AndroidAuto.md) - configuração com capturas de ecrã
+- [Accu-Chek Insight e Autoajuste](#Accu-Chek-Insight-Pump-settings-in-aaps) - solução alternativa para o uso
+- [Glimp](#Config-Builder-bg-source) - suportada a versão 4.15.57 e mais recentes
+- [Watchfaces](../WearOS/WearOsSmartwatch.md) - grande atualização, com muito mais detalhes
+- [Complicações de watchface](#Watchfaces-complications) - use a sua watchface preferida com os dados do AAPS
 
-**November 2019**
+**Novembro de 2019**
 
-- [Automation - deactivate when disabling loop](../DailyLifeWithAaps/Automations.md)
-- [Dexcom G6 replace transmitter update](#xdrip-replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [FAQ - sports](#FAQ-sports)
-- [Homescreen - lines on graph](#aaps-screens-main-graph)
-- [Insight - Disable absolute values in NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Medtronic pump - possible double entries](../CompatiblePumps/MedtronicPump.md)
-- [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
-- [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-- [SMS commands update](../RemoteFeatures/SMSCommands.md)
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
-- [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
-- Update - quick walk-through for experienced users
-- Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
+- [Automatização - desativar ao desativar o loop](../DailyLifeWithAaps/Automations.md)
+- [Dexcom G6 - atualização sobre a troca do transmissor](#xdrip-replace-transmitter)
+- [Bólus prolongado - porque não funciona com o loop](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [FAQ - desporto](#FAQ-sports)
+- [Ecrã inicial - linhas no gráfico](#aaps-screens-main-graph)
+- [Insight - Desativar valores absolutos no NS Client](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Bomba Medtronic - possíveis registos duplicados](../CompatiblePumps/MedtronicPump.md)
+- [Novo tutorial do Freestyle Libre 2](../CompatibleCgms/Libre2.md)
+- [Troca de perfil com percentagem - exemplo](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+- [Atualização dos comandos SMS](../RemoteFeatures/SMSCommands.md)
+- [Resolução de problemas do Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+- [Resolução de problemas - coleção de ligações](../GettingHelp/GeneralTroubleshooting.md)
+- Atualização - guia rápido para utilizadores com experiência
+- Documentação - atualização sobre [editar](#edit-the-docs-code-syntax) e [traduzir](#translations-translation-of-the-documentation).
 
-**October 2019**
+**Outubro de 2019**
 
-- [AAPS version 2.5](#Releasenotes-version-2-5-0) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
-- [Accu-Chek Insight - log options](#Accu-Chek-Insight-Pump-settings-in-aaps)
-- [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
-- [COB - wrong COB value detection](#CobCalculation-detection-of-wrong-cob-values)
-- [Dexcom G6 specific troubleshooting](#DexcomG6-troubleshooting-g6)
-- [Objectives update version 2.5](../SettingUpAaps/CompletingTheObjectives.md)
-- [Preferences update](../SettingUpAaps/Preferences.md)
-- [SGLT-2 inhibitors - do not use when looping](#PreparingForAaps-no-sglt-2-inhibitors)
-- [SMS Commands Troubleshooting](#SMSCommands-troubleshooting)
-- [xDrip - update G6 transmitter replacement](#xdrip-replace-transmitter)
+- Atualizações do [AAPS versão 2.5](#Releasenotes-version-2-5-0) (sobretudo na [página de atualização](../Maintenance/UpdateToNewVersion.md))
+- [Accu-Chek Insight - opções de registo](#Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Cálculo de HCA numa página própria](../DailyLifeWithAaps/CobCalculation.md)
+- [HCA - deteção de valores de HCA errados](#CobCalculation-detection-of-wrong-cob-values)
+- [Resolução de problemas específica do Dexcom G6](#DexcomG6-troubleshooting-g6)
+- [Atualização dos objetivos para a versão 2.5](../SettingUpAaps/CompletingTheObjectives.md)
+- [Atualização das preferências](../SettingUpAaps/Preferences.md)
+- [Inibidores SGLT-2 - não usar com o loop](#PreparingForAaps-no-sglt-2-inhibitors)
+- [Resolução de problemas dos comandos SMS](#SMSCommands-troubleshooting)
+- [xDrip - atualização sobre a troca do transmissor G6](#xdrip-replace-transmitter)
 
-**September 2019**
+**Setembro de 2019**
 
-- [Automate](../DailyLifeWithAaps/Automations.md)
-- [Bolus calculator](#AapsScreens-wrong-cob-detection) - slow carb absorption
-- [Nightscout security](#Nightscout-security-considerations)
-- [Profile timeshift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (more details)
-- [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md)
-- [What is a closed loop system?](#Introduction-what-does-hybrid-closed-loop-mean)
+- [Automatizar](../DailyLifeWithAaps/Automations.md)
+- [Calculadora de bólus](#AapsScreens-wrong-cob-detection) - absorção lenta de hidratos de carbono
+- [Segurança do Nightscout](#Nightscout-security-considerations)
+- [Deslocamento horário do perfil](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (mais detalhes)
+- [Monitorização remota](../RemoteFeatures/RemoteMonitoring.md)
+- [O que é um sistema de loop fechado?](#Introduction-what-does-hybrid-closed-loop-mean)
 
-**August 2019**
+**Agosto de 2019**
 
-- Dexcom G6 patched app region
-- [Dexcom G6 new transmitter](#xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
-- What do I need? - new structure & additional information
-- New structure
+- Região da app Dexcom G6 modificada
+- [Novo transmissor Dexcom G6](#xdrip-connect-g6-transmitter-for-the-first-time) («firefly» / 8G...)
+- Do que preciso? - nova estrutura e informação adicional
+- Nova estrutura
 ```

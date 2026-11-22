@@ -30,7 +30,7 @@ A insulina existe em diferentes concentrações, definidas pelo número de unida
 Usar uma concentração com um dispositivo que não corresponde a ela é extremamente perigoso e pode causar uma superdosagem ou subdosagem grave. **Sempre confira três vezes se a concentração da insulina corresponde às especificações da seringa, da caneta ou da bomba.**
 ```
 
-## When is a non-standard concentration used?
+## Quando uma concentração não padrão é usada?
 
 Embora as bombas de insulina sejam feitas para insulina U100, algumas situações médicas específicas exigem concentrações fora do padrão. Esses casos exigem cuidado extremo e um gerenciamento muito cuidadoso.
 
@@ -182,6 +182,15 @@ Quando você parte de insulina U100, todo o seu perfil, os dados históricos e o
    - Em bombas com tubo, espere a troca de perfil ser aplicada na bomba, ou aplique-a em **Gerenciar → Perfil** ou em **Configurações de insulina**.
 
 Pronto!
+
+```{admonition} If the profile cannot be written to the pump
+:class: warning
+The new insulin is already in the pump before the profile with the new concentration is written to it. Until it is written, the pump gives the wrong amount of insulin.
+
+- While the profile is not written yet, **AAPS** refuses boluses, SMBs, TBRs and extended boluses: *The profile with the new insulin is not written to the pump yet. Insulin cannot be given until it is written.* Prime and cancelling still work.
+- If writing the profile fails, **AAPS** raises an **Insulin change failed** alarm, and raises it again at every retry until the profile is written. **Disconnect or remove the pump**, check your BG and give insulin another way if you need it. Connect the pump again only after the profile is written.
+- If the prime itself fails, the insulin is not switched either. If the new insulin is already in the pump, do not connect the pump, and run the insulin change again.
+```
 
 Se uma **troca de perfil** temporária (com duração) estiver em andamento quando você trocar a insulina, a nova insulina também é atribuída ao perfil que volta quando a troca temporária termina. A insulina antiga não volta.
 

@@ -109,6 +109,8 @@
 
 升級時，**AAPS** 會保留 v3 個人設定檔切換中已儲存的胰島素和 DIA。如果系統找到較舊的紀錄，其中已知胰島素種類，但沒有 DIA，便會為這些紀錄套用預設 DIA，並顯示一次訊息，例如：*較舊的紀錄未提供胰島素作用時間，因此 Lyumjev 使用了 9.0 小時。請檢查胰島素設定 — 已轉移的紀錄之後不會再更新。*看到這則訊息時，請檢查您的胰島素設定。
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 若要變更 DIA 或峰值，請按 **+** 新增胰島素、調整設定、儲存，然後按 **▶ 註冊**。請參閱[變更使用中的胰島素](#Config-Builder-insulin-change-active)。

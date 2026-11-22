@@ -4,7 +4,7 @@
 
 Opisana niżej procedura dotyczy tylko pomp z drenem. Nie dotyczy pomp typu patch, takich jak Omnipod, Medtrum Nano, Accu-Chek Solo itp. Tę procedurę czasem nazywa się „wymianą zestawu”: „pełna” wymiana zestawu obejmuje zbiornik insuliny i kaniulę, a „częściowa” wymiana zestawu oznacza wymianę tylko kaniuli.
 
-Pompy typu patch napełniają się i odpowietrzają same w swoim kreatorze aktywacji, a ich kaniula jest już w ciele. **AAPS** nie oferuje dla nich napełniania: **Napełnij/Wypełnij** nie pokazuje się w panelu **Zarządzaj** ani w QuickLaunch. Zobacz stronę swojej pompy w części [Kompatybilne pompy](../Getting-Started/CompatiblePumps.md).
+Pompy typu patch napełniają się i odpowietrzają same w swoim kreatorze aktywacji, a ich kaniula jest już w ciele. **AAPS** nie oferuje dla nich napełniania: **Napełnij/Wypełnij** nie pokazuje się w panelu **Zarządzaj** ani w QuickLaunch. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Zobacz stronę swojej pompy w części [Kompatybilne pompy](../Getting-Started/CompatiblePumps.md).
 
 Fizycznej wymiany wkładu/zbiornika nie da się wykonać przez **AAPS**. Trzeba ją zrobić bezpośrednio na pompie. Po jej wykonaniu trzeba ją ręcznie zapisać w **AAPS**.
 
@@ -31,6 +31,7 @@ Fizycznej wymiany wkładu/zbiornika nie da się wykonać przez **AAPS**. Trzeba 
 * Domyślne ilości do napełniania możesz ustawić/zmienić w ustawieniach **Napełnij/Wypełnij** — wpisz „prime” w pasku wyszukiwania na ekranie głównym, aby je otworzyć (zobacz [Ustawienia (Preferencje)](../SettingUpAaps/Preferences.md)). Ile jednostek trzeba podać do napełnienia kaniuli (zależnie od długości igły i drenu), sprawdź w ulotce w pudełku z kaniulami.
 
 * Insuliny podanej funkcją napełniania **AAPS** nie liczy do aktywnej insuliny (IOB). W [Historii leczenia](#aaps-screens-treatments) jest oznaczona jako „Prime” (napełnianie).
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * **AAPS** nie uwzględni też insuliny podanej bolusem z pompy w czasie odłączenia pompy. Jeśli podasz bolus bezpośrednio z pompy, gdy **AAPS** jest odłączony, to po ponownym podłączeniu pompy możesz zapisać tę insulinę (bez podawania bolusa) w oknie **Insulina** (zobacz [Zapisanie podanej insuliny bez podawania bolusa](#pumps-cannulas-announce-insulin) poniżej).
 

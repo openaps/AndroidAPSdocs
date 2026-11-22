@@ -160,29 +160,29 @@ In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin con
 ````{admonition} Details on the impact of DIA and peak configuration
 :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Тъй като базалната доза има непряко влияние върху намаляването на IOB в AAPS, твърде високите базални дози могат да скрият твърде дълго DIA, и обратно. Затова е разумно първо внимателно да настроите базалните дози и едва след това да променяте DIA и пика. Освен това имайте предвид, че настройките за DIA и пик си влияят: ефектът на DIA зависи от пика, и обратно.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Тези графики показват точното влияние на DIA и пика върху кривите на IOB в целия диапазон на позволените стойности.
 
-Adjusting DIA:
+Промяна на DIA:
 
-```{image} ../images/iob_remaining_static_peak.png
+```{image} ../images/Profile/iob_remaining_static_peak.png
 :width: 400px
 ```
 
-Adjusting peak:
+Промяна на пика:
 
-```{image} ../images/iob_remaining_static_dia.png
+```{image} ../images/Profile/iob_remaining_static_dia.png
 :width: 400px
 ```
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Накрая, сравнение при едновременна промяна на DIA и пика. Логиката е, че двете стойности се променят с еднакъв относителен размер, така че `49/35 ~ 7/5`. Или по подобен начин `120/93 ~ 9/7`. Интервалите ще са еднакви независимо от началните DIA или пик, стига относителната промяна да е еднаква и за двете.
 
-```{image} ../images/iob_remaining_uniform.png
+```{image} ../images/Profile/iob_remaining_uniform.png
 :width: 400px
 ```
 
-Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+Обърнете внимание, че когато DIA и пикът се променят по този начин, всяка точка от кривата се измества с еднакъв относителен размер.
 
 ````
 
@@ -313,6 +313,7 @@ When you select another pump, **AAPS** asks you to confirm the change:
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Virtual pump: open loop - **AAPS** suggestions only
   - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   - за помпа, която все още няма драйвер

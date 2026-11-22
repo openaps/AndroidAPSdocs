@@ -1,40 +1,40 @@
-# End of life
+# Окончание поддержки
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Даже если ваша система AAPS работает именно так, как вам нравится, обновляться все равно стоит. Новые версии содержат исправления безопасности и ошибок, которые вы можете не замечать, пока они не станут важны. Они сохраняют совместимость с новыми версиями ОС телефона, приложениями CGM, прошивками помп и изменениями в Nightscout. Они добавляют улучшения алгоритма и функции, которые проверило широкое сообщество. И они помогают оставаться на версии, которая еще поддерживается и с которой другие люди реально могут помочь вам решить проблемы. Некоторые старые версии AAPS специально не имеют даты окончания срока действия, чтобы они могли работать на старых версиях Android. Поэтому отсутствие предупреждения об окончании срока не означает, что ваша версия актуальна или еще поддерживается.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+У каждой версии AAPS может быть дата окончания поддержки. После этой даты AAPS может [ограничить работу цикла](#version-enforcement). AAPS предупреждает вас до того, как срок действия версии закончится. Запланируйте обновление до этой даты и следуйте инструкции [Обновление до новой версии или ветки](UpdateToNewVersion.md).
 
-## How to use this page
+## Как пользоваться этой страницей
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. В AAPS откройте **меню** (☰) слева вверху и выберите **О программе**. Там вы увидите вашу версию AAPS.
+2. Найдите эту же версию в первой таблице ниже. Посмотрите дату окончания поддержки рядом с ней. Даты записаны в формате **год-месяц-день**. Например, `2026-10-30` означает 30 октября 2026 года.
+3. Перед обновлением прочитайте [Примечания к изменениям в версиях](ReleaseNotes.md) и инструкцию [Обновление до новой версии или ветки](UpdateToNewVersion.md). Какую версию вы можете использовать, зависит также от версии Android на вашем телефоне.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+В таблице указана дата окончания поддержки не для каждой версии AAPS. Если вашей версии нет в таблице, возможно, дата окончания поддержки для нее еще не назначена. Это не значит, что она будет поддерживаться всегда.
 
-## AAPS version end dates
+## Даты окончания поддержки версий AAPS
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">Загрузка данных о версиях AAPS…</div>
 <noscript>
-  Turn on JavaScript to see the tables.
+  Включите JavaScript, чтобы увидеть таблицы.
 </noscript>
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">Версия AAPS</th><th scope="col">Дата окончания поддержки</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
 
-## Android API levels
+## Уровни API Android
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android присваивает каждой версии системы **уровень API** — это число, которое используют приложения. Например, уровень API 30 — это Android 11. В таблице ниже используются уровни API из данных о версиях AAPS. Версия AAPS в каждой строке — это значение, указанное для показанного уровня API. Это не полный список версий, которые можно установить.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Чтобы выбрать версию AAPS для вашего телефона, используйте [рекомендации по версиям Android в Примечаниях к изменениям в версиях](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Уровень API Android</th><th scope="col">Указанная версия AAPS</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     const label = list => list.length === 1 ? list[0]
-      : list.length === 2 ? `${list[0]} and ${list[1]}`
-      : `${list[0]} to ${list[list.length - 1]}`;
+      : list.length === 2 ? `${list[0]} и ${list[1]}`
+      : `${list[0]} – ${list[list.length - 1]}`;
     showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Please try again later.';
+    status.textContent = 'Не удалось загрузить данные о версиях AAPS. Повторите попытку позже.';
   }
 });
 </script>
