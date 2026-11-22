@@ -313,6 +313,7 @@ xDrip+ 有自己的校正功能。請只在一個地方進行校正，以免感�
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - 虛擬幫浦：開放迴路－僅提供 **AAPS** 建議
   - 在您開始使用 **AAPS** 的初期，完成前幾個[目標](../SettingUpAaps/CompletingTheObjectives.md)期間
   - 針對尚未擁有驅動程式的幫浦
