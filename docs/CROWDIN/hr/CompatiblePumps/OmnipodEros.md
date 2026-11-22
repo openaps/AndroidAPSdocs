@@ -1,130 +1,130 @@
 # Omnipod Eros
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**).
+Ove su upute za konfiguriranje pumpe Omnipod generacije Eros (**NE Omnipod Dash**).
 
 ```{admonition} Omnipod Eros is being phased out
 :class: note
 
-The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-system) (the original Omnipod, comprising both the Personal Diabetes Manager (PDM) and the Pod) is being discontinued, and the end date varies by country. For example, it will no longer be available in Canada after 30 June 2026. If you rely on the Eros pump, plan ahead for a transition to a supported pump.
+[Sustav Omnipod](https://www.omnipod.com/current-podders/resources/omnipod-system) (originalni Omnipod, koji čine Personal Diabetes Manager (PDM) i Pod) prestaje se proizvoditi, a datum završetka razlikuje se od zemlje do zemlje. Na primjer, u Kanadi više neće biti dostupan nakon 30. lipnja 2026. Ako koristite pumpu Eros, na vrijeme planirajte prelazak na podržanu pumpu.
 ```
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**Ovaj softver dio je rješenja za umjetnu gušteraču koje izrađujete sami (DIY). To nije gotov proizvod: VI morate pročitati, naučiti i razumjeti sustav, uključujući i to kako ga koristiti. Samo ste vi odgovorni za ono što s njim radite.**
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Hardware and software requirements
+## Zahtjevi za hardver i softver
 
-- **Pod Communication Device**
+- **Uređaj za komunikaciju s Pod-om**
 
-> Component that bridges communication from your AAPS enabled phone to Eros generation pods.
+> Komponenta koja prenosi komunikaciju s vašeg telefona s AAPS-om do Pod-ova generacije Eros.
 > 
-> > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+> > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [Web stranica OrangeLinka](https://getrileylink.org/product/orangelink)
 > > - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-> > - ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-> > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-> > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+> > - ![EmaLink](../images/omnipod/EmaLink.png)  [Web stranica EmaLinka](https://github.com/sks01/EmaLink) - [Kontakt](mailto:getemalink@gmail.com)
+> > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Kontakt](mailto:Boshetyn@ukr.net)
+> > - ![LoopLink](../images/omnipod/LoopLink.png)  [Web stranica LoopLinka](https://www.getlooplink.org/) - [Kontakt](https://jameswedding.substack.com/) - nije testirano
 
-- ![Android_phone](../images/omnipod/Android_phone.png)  **Mobile Phone Device**
+- ![Android_phone](../images/omnipod/Android_phone.png)  **Mobilni telefon**
 
-> Component that will operate AAPS and send control commands to the Pod communication device.
+> Komponenta na kojoj radi AAPS i koja šalje upravljačke naredbe uređaju za komunikaciju s Pod-om.
 > 
-> > - Supported [Android phone](#Phones-list-of-tested-phones) with **AAPS** and related components set up.
+> > - Podržani [Android telefon](#Phones-list-of-tested-phones) s postavljenim **AAPS-om** i povezanim komponentama.
 
-- ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Insulin Delivery Device**
+- ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Uređaj za isporuku inzulina**
 
 > Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
 > 
-> > - A new Omnipod pod (Eros generation - **NOT DASH**)
+> > - Novi Omnipod Pod (generacija Eros - **NE DASH**)
 
-These instructions assume that you are starting a new pod session. If this is not the case, please be patient and start this process at your next pod change.
+Ove upute pretpostavljaju da započinjete novu sesiju Pod-a. Ako to nije slučaj, budite strpljivi i započnite ovaj postupak kod sljedeće promjene Pod-a.
 
-In this page, **RileyLink** means any of the pod communication devices listed above.
+Na ovoj stranici **RileyLink** znači bilo koji od gore navedenih uređaja za komunikaciju s Pod-om.
 
-## Before you begin
+## Prije nego što počnete
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+**SIGURNOST NA PRVOM MJESTU** - ne pokušavajte ovaj postupak u okruženju u kojem ne možete ispraviti pogrešku (rezervni Pod-ovi, inzulin, napunjen RileyLink i telefon su obavezni).
 
-**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. An Omnipod Eros pod only allows a single device to send communication to it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. The AAPS Omnipod driver with the RileyLink is now your acting PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
+**Vaš Omnipod PDM više neće raditi nakon što upravljački program Omnipod u AAPS-u aktivira vaš Pod**. Prije ste koristili Omnipod PDM za slanje naredbi svom Omnipod Eros Pod-u. Omnipod Eros Pod dopušta komunikaciju samo s jednim uređajem. Uređaj koji uspješno aktivira Pod od tog je trenutka jedini uređaj koji smije komunicirati s njim. To znači da nakon što aktivirate Omnipod Eros Pod s RileyLinkom putem upravljačkog programa Omnipod u AAPS-u, **više nećete moći koristiti svoj PDM s tim Pod-om**. Upravljački program Omnipod u AAPS-u s RileyLinkom sada je vaš PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
 
-**Only one RileyLink at a time can communicate with a pod.** **AAPS** remembers one paired RileyLink. If you pair a different one, it replaces the previous one.
+**S Pod-om može istodobno komunicirati samo jedan RileyLink.** **AAPS** pamti jedan upareni RileyLink. Ako uparite drugi, on zamjenjuje prethodni.
 
-**Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection.
+**Vaš Pod se neće isključiti kada je RileyLink izvan dometa.** Kada je RileyLink izvan dometa ili je signal prema aktivnom Pod-u blokiran, Pod nastavlja isporučivati bazalni inzulin. Kod aktivacije Pod-a, bazalni profil definiran u AAPS-u programira se u novi Pod. Ako izgubite vezu s Pod-om, on se vraća na ovaj bazalni profil. Nove naredbe nećete moći slati dok RileyLink ne dođe ponovno u domet i ponovno uspostavi vezu.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** If you are new to AAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AAPS is not able to take them into account with its algorithms currently.
+**Bazalni profili s polusatnim razmacima (30 min) NISU podržani u AAPS-u.** Ako ste novi u AAPS-u i prvi put postavljate profil bazalne stope, imajte na umu da bazalne stope koje počinju u pola sata nisu podržane. Profil bazalne stope morate prilagoditi tako da stope počinju u puni sat. Na primjer, ako imate bazalnu stopu od 1,1 jedinice koja počinje u 09:30 i traje 2 sata te završava u 11:30, to neće raditi.  Ovu bazalnu stopu od 1,1 jedinice morate promijeniti na vremenski raspon 9:00–11:00 ili 10:00–12:00.  Iako sam hardver Omnipod podržava korake bazalne stope od 30 min, algoritmi AAPS-a ih trenutačno ne mogu uzeti u obzir.
 
-## Enabling the Omnipod Driver in AAPS
+## Omogućavanje upravljačkog programa Omnipod u AAPS-u
 
-You can enable the Omnipod driver in AAPS in **two ways**:
+Upravljački program Omnipod u AAPS-u možete omogućiti na **dva načina**:
 
-### Option 1: The Setup Wizard
+### Opcija 1: Čarobnjak za postavljanje
 
-After installing a new version of AAPS, the **Setup Wizard** starts automatically. If you have already exported your settings from a previous installation, you can import them in the wizard. For new installations, continue below.
+Nakon instalacije nove verzije AAPS-a automatski se pokreće **Čarobnjak za postavljanje**. Ako ste već izvezli postavke iz prethodne instalacije, možete ih uvesti u čarobnjaku. Za nove instalacije nastavite u nastavku.
 
-Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Pump** step, then select **Omnipod Eros** (the description reads "Pump integration for Omnipod Eros").
+Prođite kroz [Čarobnjak za postavljanje AAPS-a](../SettingUpAaps/SetupWizard.md) dok ne dođete do koraka **Pumpa**, a zatim odaberite **Omnipod Eros** (opis glasi „Integracija pumpe za Omnipod Eros“).
 
-![The Pump step of the setup wizard with Omnipod Eros](../images/setup-wizard/Wizard-Pump-Omnipod.png)
+![Korak Pumpa u čarobnjaku za postavljanje s odabranim Omnipod Eros](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-The Setup Wizard does not pair your RileyLink. After finishing the wizard, open the Omnipod pump screen and pair it as described in the [RileyLink Setup section](#OmnipodEros-rileylink-setup).
+Čarobnjak za postavljanje ne uparuje vaš RileyLink. Nakon završetka čarobnjaka otvorite zaslon pumpe Omnipod i uparite RileyLink kako je opisano u [odjeljku Postavljanje RileyLinka](#OmnipodEros-rileylink-setup).
 
-**OR**
+**ILI**
 
-### Option 2: The Configuration screen
+### Opcija 2: Zaslon Konfiguracija
 
-Open the top-left **menu** (☰) > **Configuration** > **Pump** and select the **radio button** of **Omnipod Eros**.
+Otvorite **izbornik** (☰) gore lijevo > **Konfiguracija** > **Pumpa** i odaberite **izborni gumb** za **Omnipod Eros**.
 
-Once it is selected, the **Omnipod Eros** card shows two buttons, **Settings** and **Open plugin**:
+Kada je odabran, kartica **Omnipod Eros** prikazuje dva gumba, **Postavke** i **Otvori dodatak**:
 
-![The Omnipod Eros plugin selected in Configuration > Pump](../images/v4/Pumps/omnipod_enabled.png)
+![Dodatak Omnipod Eros odabran u Konfiguracija > Pumpa](../images/v4/Pumps/omnipod_enabled.png)
 
-**Settings** opens the settings of the Omnipod driver (see [Omnipod Settings](#OmnipodEros-omnipod-settings)):
+**Postavke** otvara postavke upravljačkog programa Omnipod (pogledajte [Postavke Omnipoda](#OmnipodEros-omnipod-settings)):
 
-![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
+![Postavke upravljačkog programa Omnipod](../images/v4/Pumps/omnipod_settings.png)
 
-**Open plugin** opens the Omnipod pump screen. You can also open it at any time from the main screen with **Manage** > **Pump**. This page calls it the **Omnipod pump screen**. Before a RileyLink is paired and a pod is activated, it looks like this:
+**Otvori dodatak** otvara zaslon pumpe Omnipod. Možete ga otvoriti i bilo kada s glavnog zaslona putem **Upravljanje** > **Pumpa**. Na ovoj stranici zovemo ga **zaslon pumpe Omnipod**. Prije uparivanja RileyLinka i aktivacije Pod-a izgleda ovako:
 
-![Omnipod pump screen before pairing](../images/v4/Pumps/omnipod_pump_screen.png)
+![Zaslon pumpe Omnipod prije uparivanja](../images/v4/Pumps/omnipod_pump_screen.png)
 
-### Verification of Omnipod Driver Selection
+### Provjera odabira upravljačkog programa za Omnipod
 
-To verify that you have enabled the Omnipod driver, open **Manage** > **Pump** from the main screen. You should see the **Omnipod Eros** pump screen shown above. If you have not paired a RileyLink yet, **RileyLink Status** shows **Not Started** and **Pod Status** shows **No Active Pod**.
+Da biste provjerili jeste li omogućili upravljački program Omnipod, otvorite **Upravljanje** > **Pumpa** s glavnog zaslona. Trebali biste vidjeti gore prikazani zaslon pumpe **Omnipod Eros**. Ako još niste uparili RileyLink, **Status RileyLinka** prikazuje **Nije započeto**, a **Status Pod-a** prikazuje **Nema aktivnog Pod-a**.
 
-## Omnipod Configuration
+## Konfiguracija Omnipoda
 
-All pod and RileyLink functions are buttons on the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) (**Manage** > **Pump**). Some buttons only appear in certain situations, for example when a pod is active.
+Sve funkcije Pod-a i RileyLinka su gumbi na [zaslonu pumpe Omnipod](#OmnipodEros-omnipod-pod-tab) (**Upravljanje** > **Pumpa**). Neki se gumbi pojavljuju samo u određenim situacijama, na primjer kada je Pod aktivan.
 
-> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Refresh Pod connectivity and status
+> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Osvježavanje veze s Pod-om i statusa Pod-a
 > 
-> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Upravljanje Pod-om (aktivacija, deaktivacija, testni zvučni signal, RileyLink statistika i povijest Pod-a)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no **POD MGMT** button or Pod Management menu: **Refresh** and all pod management actions are buttons on the Omnipod pump screen.
+Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 nema gumba **POD MGMT** ni izbornika Upravljanje Pod-om: **Osvježi** i sve radnje upravljanja Pod-om su gumbi na zaslonu pumpe Omnipod.
 ```
 
 (OmnipodEros-rileylink-setup)=
 
-### RileyLink Setup
+### Postavljanje RileyLinka
 
-If you have already paired your RileyLink, continue to the [Activating a Pod section](#OmnipodEros-activating-a-pod) below.
+Ako ste već uparili RileyLink, nastavite na [odjeljak Aktivacija Pod-a](#OmnipodEros-activating-a-pod) u nastavku.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the treatment buttons (QuickLaunch toolbar) on the main screen will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
+*Napomena: Dobar vizualni znak da RileyLink nije povezan je da na glavnom zaslonu nedostaju gumbi za tretmane (alatna traka Brzo pokretanje). To se događa i otprilike prvih 30 sekundi nakon pokretanja AAPS-a, dok se aktivno spaja na RileyLink.*
 
-1. Make sure that your RileyLink is fully charged and powered on.
+1. Provjerite je li RileyLink potpuno napunjen i uključen.
 
-2. Place the RileyLink [close to your phone](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less).
+2. Postavite RileyLink [blizu telefona](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (oko 30 cm ili manje).
 
-3. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Pair RileyLink**.
+3. Otvorite zaslon pumpe Omnipod (**Upravljanje** > **Pumpa**) i pritisnite **Upari RileyLink**.
 
-4. The **Pair RileyLink** screen starts scanning for Bluetooth devices right away. Tap your RileyLink in the list of found devices.
+4. Zaslon **Upari RileyLink** odmah počinje tražiti Bluetooth uređaje. Dodirnite svoj RileyLink na popisu pronađenih uređaja.
 
-   ![The Pair RileyLink screen scanning for devices](../images/omnipod/eros_pair_rileylink_scanning.png)
+   ![Zaslon Upari RileyLink traži uređaje](../images/omnipod/eros_pair_rileylink_scanning.png)
 
-5. When **RileyLink paired successfully** is shown with the name and address of your device, press **OK**.
+5. Kada se prikaže **RileyLink uspješno uparen** s nazivom i adresom vašeg uređaja, pritisnite **U redu**.
 
-6. Back on the Omnipod pump screen, check that **RileyLink Status** changes to **Connected**. **Pod Status** should show **No Active Pod**. If the RileyLink does not connect, press **Reset RileyLink**, or restart **AAPS**.
+6. Na zaslonu pumpe Omnipod provjerite mijenja li se **Status RileyLinka** u **Povezano**. **Status Pod-a** treba prikazivati **Nema aktivnog Pod-a**. Ako se RileyLink ne poveže, pritisnite **Resetiraj RileyLink** ili ponovno pokrenite **AAPS**.
 
 ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -136,160 +136,160 @@ If you have already paired your RileyLink, continue to the [Activating a Pod sec
 
 ```{admonition} Older screenshot
 :class: note
-The six screenshots above (after step 6) are from an earlier **AAPS** version. In **AAPS** 4 you pair the RileyLink with the **Pair RileyLink** button on the Omnipod pump screen instead of **RileyLink Configuration** in the Omnipod settings, and scanning starts automatically.
+Šest gornjih snimki zaslona (nakon koraka 6) su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 RileyLink uparujete gumbom **Upari RileyLink** na zaslonu pumpe Omnipod umjesto putem **RileyLink Configuration** u postavkama Omnipoda, a traženje uređaja počinje automatski.
 ```
 
 ```{note}
-To switch to another RileyLink (for example a backup device), press **Pair RileyLink** again and select the new device. It replaces the one paired before. You do not need to remove the old device first.
+Da biste prešli na drugi RileyLink (na primjer rezervni uređaj), ponovno pritisnite **Upari RileyLink** i odaberite novi uređaj. On zamjenjuje prethodno upareni uređaj. Stari uređaj ne morate prvo ukloniti.
 ```
 
 (OmnipodEros-activating-a-pod)=
 
-### Activating a Pod
+### Aktivacija Pod-a
 
-Before you can activate a pod, make sure your RileyLink is paired and **RileyLink Status** shows **Connected**. The **Activate Pod** button stays disabled until the RileyLink is ready.
+Prije nego što možete aktivirati Pod, provjerite je li RileyLink uparen i prikazuje li **Status RileyLinka** vrijednost **Povezano**. Gumb **Aktiviraj Pod** ostaje nedostupan dok RileyLink nije spreman.
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(~30 cm away or less) but not on top of or right next to the RileyLink.*
+*PODSJETNIK: Kod aktivacije i uparivanja Pod-a komunikacija s Pod-om radi samo na maloj udaljenosti, zbog sigurnosnih mjera. Prije uparivanja radijski signal Pod-a je slabiji, ali nakon uparivanja radi punom snagom signala. Tijekom ovih postupaka provjerite je li vaš Pod* [u neposrednoj blizini](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) *(oko 30 cm ili manje), ali ne na RileyLinku ili odmah uz njega.*
 
-01. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Activate Pod**.
+01. Otvorite zaslon pumpe Omnipod (**Upravljanje** > **Pumpa**) i pritisnite **Aktiviraj Pod**.
 
-    If you have never activated a profile, a **Profile required** step appears first. Select the profile to apply on activation.
+    Ako nikada niste aktivirali profil, prvo se pojavljuje korak **Potreban je profil**. Odaberite profil koji će se primijeniti kod aktivacije.
 
     > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png) 
     > 
     > ```{admonition} Older screenshot
     >     :class: note
-    >     The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+    >     Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Aktiviraj Pod** je gumb na zaslonu pumpe Omnipod umjesto u izborniku **POD MGMT**.
     > ```
 
-02. The **Fill Pod** screen is displayed. Fill a new pod with enough insulin for 3 days and listen for two beeps. They mean that the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. Do not remove the pod's needle cap yet.
+02. Prikazuje se zaslon **Napuni Pod**. Napunite novi Pod s dovoljno inzulina za 3 dana i poslušajte dva zvučna signala. Oni znače da je napunjena najmanja količina od 80 jedinica. Potpuno ispraznite štrcaljku za punjenje, čak i nakon što čujete dva zvučna signala. Kada računate ukupnu količinu inzulina potrebnu za 3 dana, imajte na umu da punjenje Pod-a troši 12 do 15 jedinica. Još nemojte skidati kapicu igle Pod-a.
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
-    > Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and press **Next**.
+    > Provjerite jesu li novi Pod i RileyLink blizu jedan drugome (oko 30 cm ili manje) i pritisnite **Sljedeći**.
 
-03. **Select Insulin** (only shown if you have more than one insulin configured): select the insulin you are filling the pod with and press **Next**. A profile switch with this insulin is applied after activation.
+03. **Odaberi inzulin** (prikazuje se samo ako imate konfigurirano više inzulina): odaberite inzulin kojim punite Pod i pritisnite **Sljedeći**. Nakon aktivacije primjenjuje se zamjena profila s ovim inzulinom.
 
-04. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and press **Retry**.
+04. Na zaslonu **Inicijaliziraj Pod** Pod počinje punjenje (čut ćete klik i zatim niz zvukova kucanja dok se Pod sam puni). Ako je RileyLink izvan dometa Pod-a koji se aktivira, dobit ćete poruku o pogrešci **Nema odgovora od Pod-a**. Ako se to dogodi, [približite RileyLink](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) Pod-u (oko 30 cm ili manje), ali ne na Pod ili odmah uz njega, i pritisnite **Pokušaj ponovno**.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-05. When priming is successful, a green checkmark is shown and the **Next** button becomes enabled. Press **Next**.
+05. Kada je punjenje uspješno, prikazuje se zelena kvačica i gumb **Sljedeći** postaje dostupan. Pritisnite **Sljedeći**.
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-06. **Site location** (only shown if **Manage pump site rotation** is enabled in [Site Rotation](#Aapsscreens-site-rotation)): select where you place the pod on your body and press **Next**.
+06. **Mjesto primjene** (prikazuje se samo ako je **Upravljaj rotacijom mjesta pumpe** omogućeno u [Rotaciji mjesta primjene](#Aapsscreens-site-rotation)): odaberite gdje na tijelu postavljate Pod i pritisnite **Sljedeći**.
 
-07. The **Attach Pod** screen is displayed. Prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your chosen site on your body. If the cannula sticks out, press **Cancel** and discard the pod. When finished, press **Next**.
+07. Prikazuje se zaslon **Pričvrsti Pod**. Pripremite mjesto infuzije za novi Pod. Skinite plastični poklopac igle i bijelu papirnatu podlogu s ljepljive površine Pod-a i postavite Pod na odabrano mjesto na tijelu. Ako kanila viri van, pritisnite **Otkaži** i bacite Pod. Kada završite, pritisnite **Sljedeći**.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-08. A confirmation dialog appears: "When you press OK, the cannula will be inserted". **ONLY press OK if you are ready to deploy the cannula**.
+08. Pojavljuje se dijalog za potvrdu: „Kada pritisnete U redu, kanila će biti umetnuta“. **Pritisnite U redu SAMO ako ste spremni za umetanje kanile**.
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
-09. On the **Insert Cannula** screen, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+09. Na zaslonu **Umetni kanilu** može proći neko vrijeme prije nego što Omnipod odgovori i umetne kanilu (najviše 1–2 minute), zato budite strpljivi.
 
-    > If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and press **Retry**.
+    > Ako je RileyLink izvan dometa Pod-a koji se aktivira, dobit ćete poruku o pogrešci **Nema odgovora od Pod-a**. Ako se to dogodi, približite RileyLink Pod-u (oko 30 cm ili manje), ali ne na Pod ili odmah uz njega, i pritisnite **Pokušaj ponovno**.
     > 
-    > If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and press **Retry**.
+    > Ako je RileyLink izvan dometa Bluetootha ili nema aktivnu vezu s telefonom, dobit ćete poruku o pogrešci **Nema odgovora od RileyLinka**. Ako se to dogodi, približite RileyLink telefonu i pritisnite **Pokušaj ponovno**.
     > 
-    > *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+    > *NAPOMENA: Prije umetanja kanile dobro je uhvatiti i lagano stisnuti kožu blizu mjesta umetanja kanile. Tako igla ulazi glatko i manja je mogućnost začepljenja.*
     > 
     > ![Activate_Pod_9](../images/omnipod/Activate_Pod_9.png)
     > 
     > ![Activate_Pod_10](../images/omnipod/Activate_Pod_10.png) ![Activate_Pod_11](../images/omnipod/Activate_Pod_11.png)
 
-10. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Press **Next**.
+10. Nakon uspješnog umetanja kanile pojavljuje se zelena kvačica i gumb **Sljedeći** postaje dostupan. Pritisnite **Sljedeći**.
 
     > ![Activate_Pod_12](../images/omnipod/Activate_Pod_12.png)
 
-11. The **Pod Activated** screen is displayed. Check that the cannula has been inserted correctly, and change your pod if you think it has not. Press **Finish**. Congratulations! You have now started a new active pod session.
+11. Prikazuje se zaslon **Pod aktiviran**. Provjerite je li kanila ispravno umetnuta i promijenite Pod ako mislite da nije. Pritisnite **Završi**. Čestitamo! Sada ste započeli novu sesiju aktivnog Pod-a.
 
     > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png) 
     > 
     > ```{admonition} Older screenshot
     >     :class: note
-    >     The screenshots in steps 2 to 11 are from an earlier **AAPS** version and may look different in **AAPS** 4. The **Select Insulin** and **Site location** steps are not pictured.
+    >     Snimke zaslona u koracima 2 do 11 su iz ranije verzije **AAPS-a** i u **AAPS-u** 4 mogu izgledati drugačije. Koraci **Odaberi inzulin** i **Mjesto primjene** nisu prikazani na slikama.
     > ```
 
-12. You are returned to the Omnipod pump screen. The **Activate Pod** button is replaced by **Deactivate Pod**, because you cannot activate another pod without deactivating the active one first.
+12. Vraćate se na zaslon pumpe Omnipod. Gumb **Aktiviraj Pod** zamjenjuje se gumbom **Deaktiviraj Pod**, jer ne možete aktivirati drugi Pod a da prvo ne deaktivirate aktivni.
 
-    The pump screen now shows information about your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. For more details, see the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) section.
+    Zaslon pumpe sada prikazuje informacije o vašem aktivnom Pod-u, uključujući trenutačnu bazalnu stopu, razinu spremnika, isporučeni inzulin, pogreške i upozorenja Pod-a. Za više pojedinosti pogledajte odjeljak [Zaslon pumpe Omnipod](#OmnipodEros-omnipod-pod-tab).
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
     ```{admonition} Older screenshot
     :class: note
-    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no Pod Management menu: you return directly to the Omnipod pump screen, where **Deactivate Pod** replaces **Activate Pod**.
+    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 nema izbornika Upravljanje Pod-om: vraćate se izravno na zaslon pumpe Omnipod, gdje **Deaktiviraj Pod** zamjenjuje **Aktiviraj Pod**.
     ```
 
 ```{note}
-If activation was interrupted after priming (for example the app was closed), press **Activate Pod** again. The wizard continues from the cannula insertion steps.
+Ako je aktivacija prekinuta nakon punjenja (na primjer, aplikacija je zatvorena), ponovno pritisnite **Aktiviraj Pod**. Čarobnjak nastavlja od koraka umetanja kanile.
 ```
 
-### Deactivating a Pod
+### Deaktivacija Pod-a
 
-Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+U normalnim uvjetima Pod traje tri dana (72 sata) i još dodatnih 8 sati nakon upozorenja o isteku Pod-a, ukupno 80 sati korištenja Pod-a.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Da biste deaktivirali Pod (zbog isteka ili zbog kvara Pod-a):
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
+1. Otvorite zaslon pumpe Omnipod (**Upravljanje** > **Pumpa**) i pritisnite **Deaktiviraj Pod**.
 
    > ![Deactivate_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Deactivate_Pod_2](../images/omnipod/Deactivate_Pod_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Deaktiviraj Pod** je gumb na zaslonu pumpe Omnipod umjesto u izborniku **POD MGMT**.
    > ```
 
-2. On the **Deactivate Pod** screen, first make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod. Then press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
+2. Na zaslonu **Deaktiviraj Pod** najprije provjerite je li RileyLink blizu Pod-a, ali ne na Pod-u ili odmah uz njega. Zatim pritisnite **Sljedeći**. Dijalog pita *Deaktivirani Pod ne može se ponovno koristiti. Deaktivirati ovaj Pod sada?* Pritisnite **U redu** za početak deaktivacije Pod-a ili **Otkaži** da ga zadržite. Deaktivacija obustavlja svu isporuku inzulina i ne može se poništiti.
 
    > ![Deactivate_Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
-3. The **Deactivating Pod** screen appears, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. Pojavljuje se zaslon **Deaktiviranje Pod-a**, a Pod zvučnim signalom potvrđuje da je deaktivacija uspjela.
 
    > ![Deactivate_Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
-   > **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod** message. Press **Retry** to attempt deactivation again. If deactivation keeps failing, press **Discard Pod** and confirm. **AAPS** then forgets the pod. Insulin delivery has **not** been suspended, so remove the pod from your body. If your pod has a screaming alarm, you may need to silence it manually (using a pin or a paperclip), because **Discard Pod** does not silence it.
+   > **AKO deaktivacija ne uspije** i ne čujete zvučni signal potvrde, možda ćete dobiti poruku **Nema odgovora od RileyLinka** ili **Nema odgovora od Pod-a**. Pritisnite **Pokušaj ponovno** da biste ponovno pokušali deaktivaciju. Ako deaktivacija i dalje ne uspijeva, pritisnite **Odbaci Pod** i potvrdite. **AAPS** tada zaboravlja Pod. Isporuka inzulina **nije** obustavljena, zato uklonite Pod s tijela. Ako se vaš Pod oglašava neprekidnim alarmom („vrišti“), možda ćete ga morati ručno utišati (pribadačom ili spajalicom), jer **Odbaci Pod** ne utišava alarm.
    > 
    > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
-4. A green checkmark appears when deactivation is successful. Press **Next** to display the **Pod Deactivated** screen. You may now remove your pod as the active session has been deactivated.
+4. Kada je deaktivacija uspješna, pojavljuje se zelena kvačica. Pritisnite **Sljedeći** da biste prikazali zaslon **Pod deaktiviran**. Sada možete ukloniti Pod jer je aktivna sesija deaktivirana.
 
    > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
-5. Press **Finish** to return to the Omnipod pump screen.
+5. Pritisnite **Završi** za povratak na zaslon pumpe Omnipod.
 
    > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots in steps 2 to 5 are from an earlier **AAPS** version and may look different in **AAPS** 4.
+   >    Snimke zaslona u koracima 2 do 5 su iz ranije verzije **AAPS-a** i u **AAPS-u** 4 mogu izgledati drugačije.
    > ```
 
-6. On the Omnipod pump screen, check that **RileyLink Status** shows **Connected** and **Pod Status** shows **No Active Pod**.
+6. Na zaslonu pumpe Omnipod provjerite prikazuje li **Status RileyLinka** vrijednost **Povezano**, a **Status Pod-a** vrijednost **Nema aktivnog Pod-a**.
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Finish** returns you directly to the Omnipod pump screen; there is no Pod Management menu or **Omnipod (POD)** tab.
+   >    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Završi** vas vraća izravno na zaslon pumpe Omnipod; nema izbornika Upravljanje Pod-om ni kartice **Omnipod (POD)**.
    > ```
 
-### Suspending and Resuming Insulin Delivery
+### Obustava i nastavak isporuke inzulina
 
-The process below shows you how to suspend and resume insulin delivery.
+Postupak u nastavku pokazuje kako obustaviti i nastaviti isporuku inzulina.
 
-*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NAPOMENA - ako ne vidite gumb **Obustavi***, on je prema zadanim postavkama skriven. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
-#### Suspending Insulin Delivery
+#### Obustava isporuke inzulina
 
-Use this command to put the active pod into a suspended state. In this suspended state, the pod will no longer deliver any insulin. This command mimics the suspend function that the original Omnipod PDM issues to an active pod.
+Ovom naredbom aktivni Pod stavljate u stanje obustave. U stanju obustave Pod više ne isporučuje inzulin. Ova naredba oponaša funkciju obustave koju originalni Omnipod PDM šalje aktivnom Pod-u.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Suspend**. The suspend command is sent through the RileyLink to the active pod.
+1. Otvorite zaslon pumpe Omnipod (**Upravljanje** > **Pumpa**) i pritisnite **Obustavi**. Naredba za obustavu šalje se preko RileyLinka aktivnom Pod-u.
 
-2. When the pod has suspended all insulin delivery, **Pod Status** shows **Suspended** and the **Suspend** button is replaced by **Resume Delivery**.
+2. Kada Pod obustavi svu isporuku inzulina, **Status Pod-a** prikazuje **Suspendiran**, a gumb **Obustavi** zamjenjuje se gumbom **Nastavi isporuku**.
 
    > ![Suspend_Insulin_Delivery_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Suspend_Insulin_Delivery_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
    > 
@@ -299,18 +299,18 @@ Use this command to put the active pod into a suspended state. In this suspended
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 these steps take place on the Omnipod pump screen instead of the **Omnipod (POD)** tab, and the result is shown in **Pod Status**.
+   >    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovi se koraci odvijaju na zaslonu pumpe Omnipod umjesto na kartici **Omnipod (POD)**, a rezultat se prikazuje u polju **Status Pod-a**.
    > ```
 
-If the command fails, a **Warning** dialog shows "Failed to suspend delivery" with the reason. Check the RileyLink connection and try again.
+Ako naredba ne uspije, dijalog **Upozorenje** prikazuje „Obustava isporuke nije uspjela“ i razlog. Provjerite vezu s RileyLinkom i pokušajte ponovno.
 
-#### Resuming Insulin Delivery
+#### Nastavak isporuke inzulina
 
-Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
+Ovom naredbom aktivnom Pod-u, koji je trenutačno obustavljen, dajete uputu da nastavi isporuku inzulina. Nakon što se naredba uspješno obradi, isporuka inzulina nastavlja se normalno s bazalnom stopom za trenutačno vrijeme iz aktivnog bazalnog profila. Pod ponovno prihvaća naredbe za bolus, TBR i SMB.
 
-1. Open the Omnipod pump screen and check that **Pod Status** shows **Suspended**. Press **Resume Delivery**.
+1. Otvorite zaslon pumpe Omnipod i provjerite prikazuje li **Status Pod-a** vrijednost **Suspendiran**. Pritisnite **Nastavi isporuku**.
 
-2. When the command succeeds, **Pod Status** shows **Running** again and the **Resume Delivery** button disappears (the **Suspend** button is shown again if you have enabled it).
+2. Kada naredba uspije, **Status Pod-a** ponovno prikazuje **U tijeku**, a gumb **Nastavi isporuku** nestaje (gumb **Obustavi** ponovno se prikazuje ako ste ga omogućili).
 
    > ![Resume_Insulin_Delivery_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Resume_Insulin_Delivery_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
    > 
@@ -320,104 +320,104 @@ Use this command to instruct the active, currently suspended pod to resume insul
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 these steps take place on the Omnipod pump screen instead of the **Omnipod (POD)** tab, and the result is shown in **Pod Status**.
+   >    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovi se koraci odvijaju na zaslonu pumpe Omnipod umjesto na kartici **Omnipod (POD)**, a rezultat se prikazuje u polju **Status Pod-a**.
    > ```
 
-If the command fails, a **Warning** dialog shows "Failed to resume delivery" with the reason. Check the RileyLink connection and try again.
+Ako naredba ne uspije, dijalog **Upozorenje** prikazuje „Nastavak isporuke nije uspio“ i razlog. Provjerite vezu s RileyLinkom i pokušajte ponovno.
 
-### Silencing Pod Alerts
+### Utišavanje upozorenja Pod-a
 
-*NOTE - The **Silence Alerts** button is only shown on the Omnipod pump screen while the pod has an active alert (for example the pod expiration or low reservoir alert), and only if **Automatically silence Pod alerts** is disabled.*
+*NAPOMENA - Gumb **Utišaj upozorenja** prikazuje se na zaslonu pumpe Omnipod samo dok Pod ima aktivno upozorenje (na primjer upozorenje o isteku Pod-a ili o niskoj razini spremnika) i samo ako je **Automatski utišaj upozorenja Pod-a** onemogućeno.*
 
-The process below shows you how to silence pod beeps that start when the pod reaches the warning time before it expires. This warning time is set with **Alert at hours before shutdown (80 Hours)** in the Omnipod **Alerts** settings. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hour (3 days) limit.
+Postupak u nastavku pokazuje kako utišati zvučne signale Pod-a koji počinju kada Pod dosegne vrijeme upozorenja prije isteka. To vrijeme upozorenja postavlja se s **Upozorenje ovoliko sati prije gašenja (80 sati)** u postavkama Omnipoda **Upozorenja**. Najdulji vijek trajanja Pod-a je 80 sati (3 dana i 8 sati), ali Insulet preporučuje da ne prelazite granicu od 72 sata (3 dana).
 
-*NOTE - If you have enabled **Automatically silence Pod alerts** in the Omnipod **Alerts** settings, **AAPS** silences the alert automatically at the next communication with the pod, and you do NOT need to do it manually.*
+*NAPOMENA - Ako ste omogućili **Automatski utišaj upozorenja Pod-a** u postavkama Omnipoda **Upozorenja**, **AAPS** automatski utišava upozorenje kod sljedeće komunikacije s Pod-om i to NE morate raditi ručno.*
 
-1. When the warning time is reached, the pod beeps to tell you that it will soon expire and needs to be changed. On the Omnipod pump screen, **Pod Expires** shows the exact time the pod expires (72 hours after activation); it turns **yellow** 4 hours before. **Pod Hard End** shows when the pod stops delivering insulin. **Active Pod Alerts** shows **Pod will expire soon**, and the **Silence Alerts** button appears. **AAPS** also shows a notification about the upcoming pod expiration.
+1. Kada se dosegne vrijeme upozorenja, Pod se oglašava zvučnim signalima da vam javi da će uskoro isteći i da ga treba promijeniti. Na zaslonu pumpe Omnipod **Pod istječe** prikazuje točno vrijeme isteka Pod-a (72 sata nakon aktivacije); 4 sata prije toga postaje **žuto**. **Konačni istek Pod-a** prikazuje kada Pod prestaje isporučivati inzulin. **Aktivna upozorenja Pod-a** prikazuje **Pod će uskoro isteći** i pojavljuje se gumb **Utišaj upozorenja**. **AAPS** prikazuje i obavijest o skorom isteku Pod-a.
 
    > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 the **ACK ALERTS** button is called **Silence Alerts** and is on the Omnipod pump screen.
+   >    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 gumb **ACK ALERTS** zove se **Utišaj upozorenja** i nalazi se na zaslonu pumpe Omnipod.
    > ```
 
-2. Press **Silence Alerts**. The RileyLink sends the command to the pod to stop the expiration warning beeps.
+2. Pritisnite **Utišaj upozorenja**. RileyLink šalje Pod-u naredbu da zaustavi zvučne signale upozorenja o isteku.
 
    > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the button is called **Silence Alerts**.
+   >    Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 gumb se zove **Utišaj upozorenja**.
    > ```
 
-3. When the alerts are silenced, the pod beeps twice. **Active Pod Alerts** no longer shows the warning, the **Silence Alerts** button disappears and the pod stops its expiration warning beeps.
+3. Kada su upozorenja utišana, Pod se dvaput oglasi zvučnim signalom. **Aktivna upozorenja Pod-a** više ne prikazuje upozorenje, gumb **Utišaj upozorenja** nestaje, a Pod prestaje sa zvučnim signalima upozorenja o isteku.
 
    > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the result is shown on the Omnipod pump screen: the warning disappears from **Active Pod Alerts**.
+   >    Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 rezultat se prikazuje na zaslonu pumpe Omnipod: upozorenje nestaje iz polja **Aktivna upozorenja Pod-a**.
    > ```
 
-If the command fails (for example the RileyLink is out of range of the pod), a **Warning** dialog shows "Failed to silence alerts" with the reason. Move the RileyLink closer to the pod and try again.
+Ako naredba ne uspije (na primjer, RileyLink je izvan dometa Pod-a), dijalog **Upozorenje** prikazuje „Utišavanje upozorenja nije uspjelo“ i razlog. Približite RileyLink Pod-u i pokušajte ponovno.
 
 ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Warning** dialog shows "Failed to silence alerts" with the reason.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 dijalog **Upozorenje** prikazuje „Utišavanje upozorenja nije uspjelo“ i razlog.
 ```
 
 (OmnipodEros-view-pod-history)=
 
-### View Pod History
+### Pregled povijesti Pod-a
 
-This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
+Ovaj odjeljak pokazuje kako pregledati povijest aktivnog Pod-a i filtrirati je po različitim kategorijama radnji. Alat za povijest Pod-a omogućuje vam da vidite radnje i rezultate poslane trenutačno aktivnom Pod-u tijekom njegovog vijeka od tri dana (72–80 sati).
 
-This feature is useful for verifying boluses, TBRs, basal changes that were given but you may be unsure if they completed. The remaining categories are useful in general for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+Ova je funkcija korisna za provjeru bolusa, TBR-ova i promjena bazala koji su zadani, ali niste sigurni jesu li izvršeni. Ostale kategorije općenito su korisne za rješavanje problema i za utvrđivanje redoslijeda događaja koji su doveli do kvara.
 
-*NOTE:* **Uncertain** commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
+*NAPOMENA:* **Nesigurne** naredbe pojavit će se u povijesti Pod-a, ali zbog njihove prirode ne možete biti sigurni da su točne.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **Pod History**.
+1. Otvorite zaslon pumpe Omnipod (**Upravljanje** > **Pumpa**) i pritisnite **Povijest Pod-a**.
 
    > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Povijest Pod-a** je gumb na zaslonu pumpe Omnipod umjesto u izborniku **POD MGMT**.
    > ```
 
-2. The **Pod History** screen lists all pod actions and their results, newest first, grouped by day. By default **All** is selected. Tap one of the filter buttons at the top to show only one category. Use the back arrow at the top left to return to the Omnipod pump screen.
+2. Zaslon **Povijest Pod-a** prikazuje sve radnje Pod-a i njihove rezultate, od najnovijih, grupirane po danima. Prema zadanim postavkama odabrano je **Svi**. Dodirnite jedan od gumba filtra na vrhu da biste prikazali samo jednu kategoriju. Strelicom za povratak gore lijevo vratite se na zaslon pumpe Omnipod.
 
-   > ![Pod History screen with the filter buttons](../images/omnipod/Pod_History_3.png)
+   > ![Zaslon Povijest Pod-a s gumbima filtra](../images/omnipod/Pod_History_3.png)
 
    > ![Pod_History_4](../images/omnipod/Pod_History_4.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The second screenshot is from an earlier **AAPS** version and may look different in **AAPS** 4.
+   >    Druga snimka zaslona je iz ranije verzije **AAPS-a** i u **AAPS-u** 4 može izgledati drugačije.
    > ```
 
-### View RileyLink Settings and History
+### Prikaz postavki i povijesti RileyLinka
 
-The **RileyLink Stats** screen shows the settings of your RileyLink and active pod, and the communication history of both. It has two tabs: **Settings** and **History**.
+Zaslon **RileyLink statistika** prikazuje postavke vašeg RileyLinka i aktivnog Pod-a te povijest komunikacije oba uređaja. Ima dvije kartice: **Postavke** i **Povijest**.
 
-The **RileyLink Stats** button is hidden by default. To show it on the Omnipod pump screen, enable **Show RileyLink Stats button in Pod Management menu** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+Gumb **RileyLink statistika** prema zadanim je postavkama skriven. Da biste ga prikazali na zaslonu pumpe Omnipod, omogućite **Prikaži gumb „RileyLink statistika“ u izborniku Upravljanje Pod-om** u [postavkama Omnipoda](#OmnipodEros-omnipod-settings) pod **Ostalo**.
 
-#### Manually Re-establish Pod Communication Device Bluetooth Communication
+#### Ručna ponovna uspostava Bluetooth veze uređaja za komunikaciju s Pod-om
 
-If your pod communication device was out of Bluetooth range of your phone for a while, **RileyLink Status** may report **RileyLink unreachable** on the Omnipod pump screen. **AAPS** normally reconnects by itself when the device is back in range. If it does not:
+Ako je vaš uređaj za komunikaciju s Pod-om neko vrijeme bio izvan Bluetooth dometa telefona, **Status RileyLinka** na zaslonu pumpe Omnipod može prikazivati **RileyLink nedostupan**. **AAPS** se obično sam ponovno poveže kada se uređaj vrati u domet. Ako se ne poveže:
 
-1. Make sure the RileyLink is powered on, charged and close to your phone.
+1. Provjerite je li RileyLink uključen, napunjen i blizu telefona.
 
-2. On the Omnipod pump screen, press **Reset RileyLink**. A message confirms **RileyLink configuration reset**. See the [Reset RileyLink notes](#OmnipodEros-reset-rileylink-config-notes) below.
+2. Na zaslonu pumpe Omnipod pritisnite **Resetiraj RileyLink**. Poruka potvrđuje **Ponovno postavljanje konfiguracije za RileyLink**. Pogledajte [Napomene o resetiranju RileyLinka](#OmnipodEros-reset-rileylink-config-notes) u nastavku.
 
-3. If the **Bluetooth connection** does not re-establish, try manually turning **off** and then back **on** the Bluetooth function on your phone.
+3. Ako se **Bluetooth veza** ne uspostavi ponovno, pokušajte ručno **isključiti** i ponovno **uključiti** Bluetooth na telefonu.
 
-4. If it still does not reconnect, press **Pair RileyLink** and select your RileyLink again.
+4. Ako se i dalje ne poveže, pritisnite **Upari RileyLink** i ponovno odaberite svoj RileyLink.
 
-5. After a successful reconnection, **RileyLink Status** shows **Connected**. You can also check **Connection Status** on the **Settings** tab of the **RileyLink Stats** screen. Congratulations, you have now reconnected your configured pod communication device to AAPS!
+5. Nakon uspješnog ponovnog povezivanja **Status RileyLinka** prikazuje **Povezano**. Možete provjeriti i **Status veze** na kartici **Postavke** zaslona **RileyLink statistika**. Čestitamo, ponovno ste spojili svoj konfigurirani uređaj za komunikaciju s Pod-om s AAPS-om!
 
 ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
@@ -429,370 +429,370 @@ If your pod communication device was out of Bluetooth range of your phone for a 
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you reconnect with **Reset RileyLink** or **Pair RileyLink** on the Omnipod pump screen instead of the refresh button on the RileyLink Settings screen.
+Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ponovno se povezujete gumbom **Resetiraj RileyLink** ili **Upari RileyLink** na zaslonu pumpe Omnipod umjesto gumbom za osvježavanje na zaslonu postavki RileyLinka.
 ```
 
-#### Pod Communication Device and Active Pod Settings
+#### Postavke uređaja za komunikaciju s Pod-om i aktivnog Pod-a
 
-This screen shows information and status for both the currently paired pod communication device and the currently active Omnipod Eros pod. The information refreshes automatically.
+Ovaj zaslon prikazuje informacije i status trenutačno uparenog uređaja za komunikaciju s Pod-om i trenutačno aktivnog Omnipod Eros Pod-a. Informacije se osvježavaju automatski.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**) and press **RileyLink Stats**. The **Settings** tab shows your currently paired **RileyLink** and the active pod (**Device**).
+1. Otvorite zaslon pumpe Omnipod (**Upravljanje** > **Pumpa**) i pritisnite **RileyLink statistika**. Kartica **Postavke** prikazuje vaš trenutačno upareni **RileyLink** i aktivni Pod (**Uređaj**).
 
    > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **RileyLink statistika** je gumb na zaslonu pumpe Omnipod umjesto u izborniku **POD MGMT**.
    > ```
 
    > ![RileyLink_Statistics_Settings_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
 
-##### RileyLink fields
+##### Polja za RileyLink
 
-> - **Address:** MAC address of the paired pod communication device.
-> - **Name:** Bluetooth name of the paired pod communication device.
-> - **Battery Level:** The current battery level of the connected pod communication device. Only shown when **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled.
-> - **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
-> - **Connection Error:** If there is an error with the pod communication device Bluetooth connection, details are displayed here.
-> - **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
+> - **Adresa:** MAC adresa uparenog uređaja za komunikaciju s Pod-om.
+> - **Ime:** Bluetooth naziv uparenog uređaja za komunikaciju s Pod-om.
+> - **Razina baterije:** trenutačna razina baterije povezanog uređaja za komunikaciju s Pod-om. Prikazuje se samo kada je omogućeno **Prikaži razinu baterije koju prijavljuje OrangeLink/EmaLink/DiaLink**.
+> - **Status veze**: trenutačni status Bluetooth veze između uređaja za komunikaciju s Pod-om i telefona na kojem radi AAPS.
+> - **Greška u povezivanju:** ako postoji pogreška u Bluetooth vezi uređaja za komunikaciju s Pod-om, ovdje se prikazuju pojedinosti.
+> - **Verzija firmwarea:** trenutačna verzija firmwarea instalirana na aktivno povezanom uređaju za komunikaciju s Pod-om.
 
-##### Device fields - With an Active Pod
+##### Polja uređaja - s aktivnim Pod-om
 
-> - **Device Type:** The type of device communicating with the pod communication device (Omnipod (Eros)).
-> - **Configured Device Model:** The model of the device configured to communicate with the pod communication device.
-> - **Connected Device Model:** The model of the device currently communicating with the pod communication device.
-> - **Pump Serial Number:** Serial number of the currently activated pod.
-> - **Pump Frequency:** Radio frequency used to communicate with the pod.
-> - **Last Used Frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
-> - **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
+> - **Tip uređaja:** vrsta uređaja koji komunicira s uređajem za komunikaciju s Pod-om (Omnipod (Eros)).
+> - **Konfigurirani model uređaja:** model uređaja konfiguriranog za komunikaciju s uređajem za komunikaciju s Pod-om.
+> - **Model povezanog uređaja:** model uređaja koji trenutačno komunicira s uređajem za komunikaciju s Pod-om.
+> - **Serijski broj pumpe:** serijski broj trenutačno aktiviranog Pod-a.
+> - **Frekventno područje pumpe:** radijska frekvencija koja se koristi za komunikaciju s Pod-om.
+> - **Zadnje korištena frekvencija:** posljednja poznata radijska frekvencija koju je Pod koristio za komunikaciju s uređajem za komunikaciju s Pod-om.
+> - **Posljednji kontakt s uređajem:** datum i vrijeme posljednjeg kontakta Pod-a s uređajem za komunikaciju s Pod-om.
 
 (omnipod-eros-rileylink-and-active-pod-history)=
-#### RileyLink and Active Pod History
+#### Povijest RileyLinka i aktivnog Pod-a
 
-This tab lists, newest first, each state or action of the RileyLink or the currently connected pod. The history is only available for the currently active pod. After a pod change, this history is erased and only events from the newly activated pod are recorded and shown.
+Ova kartica prikazuje, od najnovijeg, svako stanje ili radnju RileyLinka ili trenutačno povezanog Pod-a. Povijest je dostupna samo za trenutačno aktivni Pod. Nakon promjene Pod-a ova se povijest briše i bilježe se i prikazuju samo događaji novo aktiviranog Pod-a.
 
-1. Open the Omnipod pump screen (**Manage** > **Pump**), press **RileyLink Stats** and then tap the **History** tab.
+1. Otvorite zaslon pumpe Omnipod (**Upravljanje** > **Pumpa**), pritisnite **RileyLink statistika** i zatim dodirnite karticu **Povijest**.
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
+   >    Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **RileyLink statistika** je gumb na zaslonu pumpe Omnipod umjesto u izborniku **POD MGMT**.
    > ```
 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Fields
+##### Polja
 
-Each entry shows:
+Svaki unos prikazuje:
 
-> - **Device:** The device to which the action or state refers.
-> - **Time:** The time of the event.
-> - **State or Action:** The state of the device or the action it performed.
+> - **Uređaj:** uređaj na koji se radnja ili stanje odnosi.
+> - **Vrijeme:** vrijeme događaja.
+> - **Stanje ili radnja:** stanje uređaja ili radnja koju je izvršio.
 
 (OmnipodEros-omnipod-pod-tab)=
 
-## Omnipod pump screen
+## Zaslon pumpe Omnipod
 
-Below is an explanation of the status fields and buttons on the **Omnipod pump screen** (**Manage** > **Pump**, or **Configuration** > **Pump** > **Open plugin**).
+U nastavku je objašnjenje statusnih polja i gumba na **zaslonu pumpe Omnipod** (**Upravljanje** > **Pumpa** ili **Konfiguracija** > **Pumpa** > **Otvori dodatak**).
 
-The gear icon at the top right opens the [Omnipod settings](#OmnipodEros-omnipod-settings).
+Ikona zupčanika gore desno otvara [postavke Omnipoda](#OmnipodEros-omnipod-settings).
 
-*NOTE: If any status field shows (uncertain), press **Refresh** to refresh the pod status and clear it.*
+*NAPOMENA: Ako neko statusno polje prikazuje (nesigurno), pritisnite **Osvježi** da biste osvježili status Pod-a i uklonili tu oznaku.*
 
-![Omnipod pump screen](../images/v4/Pumps/omnipod_pump_screen.png)
+![Zaslon pumpe Omnipod](../images/v4/Pumps/omnipod_pump_screen.png)
 
 ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, where this screen was the **Omnipod (POD)** tab. In **AAPS** 4 it is the Omnipod pump screen, and some field names and buttons differ.
+Gornja snimka zaslona je iz ranije verzije **AAPS-a**, u kojoj je ovaj zaslon bio kartica **Omnipod (POD)**. U **AAPS-u** 4 to je zaslon pumpe Omnipod, a neki nazivi polja i gumbi su drugačiji.
 ```
 
-### Fields
+### Polja
 
-- **RileyLink Status:** Displays the current connection status of the RileyLink. Errors are shown in red.
+- **Status RileyLinka:** prikazuje trenutačni status veze RileyLinka. Pogreške se prikazuju crvenom bojom.
 
-- *Not Started* - no RileyLink is paired yet, or the connection has not started.
-- *RileyLink unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-- *RileyLink ready* - pod communication device is powered on and actively initializing the Bluetooth connection.
-- *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+- *Nije započeto* - još nije uparen nijedan RileyLink ili veza još nije započela.
+- *RileyLink nedostupan* - uređaj za komunikaciju s Pod-om nije u Bluetooth dometu telefona, isključen je ili ima kvar koji sprječava Bluetooth komunikaciju.
+- *RileyLink spreman* - uređaj za komunikaciju s Pod-om je uključen i aktivno pokreće Bluetooth vezu.
+- *Povezano* - uređaj za komunikaciju s Pod-om je uključen, povezan i može aktivno komunicirati putem Bluetootha.
 
-- **Unique ID:** Displays the address of the active pod.
+- **Jedinstveni ID:** prikazuje adresu aktivnog Pod-a.
 
-- **LOT Number:** Displays the LOT number of the active pod.
+- **LOT broj:** prikazuje LOT broj aktivnog Pod-a.
 
-- **Sequence Number:** Displays the serial number (TID) of the pod.
+- **Redni broj:** prikazuje serijski broj (TID) Pod-a.
 
-- **Firmware Version:** Displays the firmware version of the active pod.
+- **Firmware verzija:** prikazuje verziju firmwarea aktivnog Pod-a.
 
-- **Time on Pod:** Displays the current time on the active pod. It is highlighted when it differs from the phone time by more than 5 minutes.
+- **Vrijeme na Pod-u:** prikazuje trenutačno vrijeme na aktivnom Pod-u. Označava se kada se od vremena na telefonu razlikuje za više od 5 minuta.
 
-- **Pod Expires:** Displays the date and time when the active pod will expire. The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
+- **Pod istječe:** prikazuje datum i vrijeme kada aktivni Pod istječe. Tekst postaje žut u zadnja 4 sata prije tog vremena. Nikada ne postaje crven jer Pod i nakon toga nastavlja isporučivati inzulin.
 
-- **Pod Hard End:** Displays the end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
+- **Konačni istek Pod-a:** prikazuje kraj dodatnog razdoblja Pod-a (8 sati nakon **Pod istječe**, za najdulji vijek Pod-a od 80 sati). Tekst postaje žut kada počne dodatno razdoblje (u trenutku **Pod istječe**), a crven u zadnja 4 sata prije konačnog isteka. Tijekom produženog razdoblja prikazuje i preostalo vrijeme, na primjer *(preostalo 17 min)*. Pod prestaje isporučivati inzulin u trenutku konačnog isteka i mora se zamijeniti.
 
-- **Pod Status:** Displays the status of the active pod (for example **No Active Pod**, **Running** or **Suspended**).
+- **Status Pod-a:** prikazuje status aktivnog Pod-a (na primjer **Nema aktivnog Pod-a**, **U tijeku** ili **Suspendiran**).
 
-- **Last Connection:** Displays the last time communication with the active pod was achieved. The text turns red when the [pump unreachable threshold](#OmnipodEros-troubleshooting) is exceeded.
+- **Zadnja uspostava veze:** prikazuje kada je zadnji put uspostavljena komunikacija s aktivnim Pod-om. Tekst postaje crven kada se prijeđe [prag nedostupnosti pumpe](#OmnipodEros-troubleshooting).
 
-- *Moments ago* - less than 20 seconds ago.
-- *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-- *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-- *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+- *Prije nekoliko trenutaka* - prije manje od 20 sekundi.
+- *Prije manje od minute* - prije više od 20 sekundi, ali manje od 60 sekundi.
+- *Prije 1 minutu* - prije više od 60 sekundi, ali manje od 120 sekundi (2 min)
+- *Prije XX minuta* - prije više od 2 minute, gdje je XX broj minuta
 
-- **Last Bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+- **Zadnji bolus:** prikazuje dozu zadnjeg bolusa poslanog aktivnom Pod-u i, u zagradi, koliko je vremena prošlo od tada.
 
-- **Base Basal Rate:** Displays the basal rate programmed for the current time from the basal rate profile.
+- **Osnovna bazalna stopa:** prikazuje bazalnu stopu programiranu za trenutačno vrijeme iz profila bazalne stope.
 
-- **Temp Basal Rate:** Only shown while a Temporary Basal Rate is running. Displays it in the following format:
+- **Privremena bazalna stopa:** prikazuje se samo dok je privremena bazalna stopa aktivna. Prikazuje se u sljedećem obliku:
 
-- Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
-- *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+- Jedinice / sat @ vrijeme zadavanja TBR-a (proteklih minuta / ukupno minuta trajanja TBR-a)
+- *Primjer:* 0.00U/h @18:25 ( 90/120 minuta)
 
-- **Reservoir:** Displays **Over 50 U left** when more than 50 units are left in the reservoir. Below this value the approximate number of units is displayed. The text turns red below the low reservoir threshold set in the [Alerts settings](#OmnipodEros-omnipod-settings).
+- **Spremnik:** prikazuje **Preostalo više od 50 J** kada je u spremniku preostalo više od 50 jedinica. Ispod te vrijednosti prikazuje se približan broj jedinica. Tekst postaje crven ispod praga niske razine spremnika postavljenog u [postavkama upozorenja](#OmnipodEros-omnipod-settings).
 
-- **Total Delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
+- **Ukupno isporučeno:** prikazuje ukupan broj jedinica inzulina isporučenih iz spremnika. *Imajte na umu da je ovo procjena jer punjenje Pod-a nije točan postupak.*
 
-- **Active Pod Alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+- **Aktivna upozorenja Pod-a:** prikazuje upozorenja koja su trenutačno aktivna na aktivnom Pod-u. Obično se koristi kada je Pod stariji od 72 sata i kada se oglašavaju zvučna upozorenja samog Pod-a.
 
-- **Errors:** Displays the last error encountered (shown in red). Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Greške:** prikazuje zadnju pogrešku (crvenom bojom). Pregledajte [povijest Pod-a](#OmnipodEros-view-pod-history), [povijest RileyLinka](#omnipod-eros-rileylink-and-active-pod-history) i datoteke dnevnika za ranije pogreške i detaljnije informacije.
 
-### Buttons
+### Gumbi
 
-The buttons at the bottom of the pump screen change depending on the situation. Buttons that cannot be used right now are greyed out, for example while the RileyLink is not connected.
+Gumbi na dnu zaslona pumpe mijenjaju se ovisno o situaciji. Gumbi koji se trenutačno ne mogu koristiti su sivi, na primjer dok RileyLink nije povezan.
 
-**Pod status buttons** (shown when a pod is active):
+**Gumbi za status Pod-a** (prikazuju se kada je Pod aktivan):
 
-- **Refresh:** Sends a refresh command to the active pod to update its status. Use it to refresh the pod status and clear status fields that contain the text (uncertain). See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
+- **Osvježi:** šalje aktivnom Pod-u naredbu za osvježavanje da bi se ažurirao njegov status. Koristite ga za osvježavanje statusa Pod-a i za uklanjanje teksta (nesigurno) iz statusnih polja. Za dodatne informacije pogledajte [odjeljak Rješavanje problema](#OmnipodEros-troubleshooting) u nastavku.
 
   ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Refresh** on the Omnipod pump screen.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovo je tekstni gumb **Osvježi** na zaslonu pumpe Omnipod.
   ```
 
-- **Silence Alerts:** Silences the pod expiration and low reservoir beeps and notifications. Only shown when the pod has an active alert and **Automatically silence Pod alerts** is disabled. After the alerts are silenced, the button disappears.
+- **Utišaj upozorenja:** utišava zvučne signale i obavijesti o isteku Pod-a i niskoj razini spremnika. Prikazuje se samo kada Pod ima aktivno upozorenje i kada je **Automatski utišaj upozorenja Pod-a** onemogućeno. Nakon što su upozorenja utišana, gumb nestaje.
 
   ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this button is called **Silence Alerts**.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovaj se gumb zove **Utišaj upozorenja**.
   ```
 
-- **Set time:** Updates the time on the pod with the current time on your phone. Only shown when the time on the pod differs from the phone time by more than 5 minutes.
+- **Postavi vrijeme:** ažurira vrijeme na Pod-u prema trenutačnom vremenu na telefonu. Prikazuje se samo kada se vrijeme na Pod-u razlikuje od vremena na telefonu za više od 5 minuta.
 
   ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovo je tekstni gumb **Postavi vrijeme** na zaslonu pumpe Omnipod.
   ```
 
-- **Suspend:** Suspends insulin delivery on the active pod. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
+- **Obustavi:** obustavlja isporuku inzulina na aktivnom Pod-u. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Suspend** on the Omnipod pump screen.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovo je tekstni gumb **Obustavi** na zaslonu pumpe Omnipod.
   ```
 
-- **Resume Delivery:** Resumes insulin delivery on the currently suspended, active pod. Only shown while the pod is suspended.
+- **Nastavi isporuku:** nastavlja isporuku inzulina na trenutačno obustavljenom aktivnom Pod-u. Prikazuje se samo dok je Pod obustavljen.
 
   ![resume](../images/omnipod/ICONS/omnipod_overview_resume.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Resume Delivery** on the Omnipod pump screen.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovo je tekstni gumb **Nastavi isporuku** na zaslonu pumpe Omnipod.
   ```
 
-**Pod and RileyLink management buttons:**
+**Gumbi za upravljanje Pod-om i RileyLinkom:**
 
 ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is no Pod Management menu: these actions are buttons directly on the Omnipod pump screen.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 nema izbornika Upravljanje Pod-om: ove su radnje gumbi izravno na zaslonu pumpe Omnipod.
 ```
 
-- **Activate Pod:** Primes and activates a new pod. Shown when no pod is active. It is enabled only when the RileyLink is connected.
+- **Aktiviraj Pod:** puni i aktivira novi Pod. Prikazuje se kada nijedan Pod nije aktivan. Dostupan je samo kada je RileyLink povezan.
 
   ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Aktiviraj Pod** je gumb na zaslonu pumpe Omnipod umjesto u izborniku Upravljanje Pod-om.
   ```
 
-- **Deactivate Pod:** Deactivates the currently active pod. Shown as soon as a pod is paired, also when an activation stopped part-way (for example because the pod failed during activation). It is enabled only when the RileyLink is connected. **AAPS** asks you to confirm before it deactivates the pod.
+- **Deaktiviraj Pod:** deaktivira trenutačno aktivni Pod. Prikazuje se čim je Pod uparen, i kada je aktivacija stala na pola puta (na primjer zato što je Pod zakazao tijekom aktivacije). Dostupan je samo kada je RileyLink povezan. **AAPS** traži da potvrdite prije nego što deaktivira Pod.
 
-- Use this command to deactivate a screaming pod (error 49).
-- If deactivation fails, the deactivation wizard offers a **Discard Pod** option.
+- Ovom naredbom deaktivirajte Pod koji „vrišti“ (pogreška 49).
+- Ako deaktivacija ne uspije, čarobnjak za deaktivaciju nudi opciju **Odbaci Pod**.
 
   ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Deaktiviraj Pod** je gumb na zaslonu pumpe Omnipod umjesto u izborniku Upravljanje Pod-om.
   ```
 
-- **Play Test Beep:** Plays a single test beep on the pod when pressed. Shown when a pod is paired.
+- **Reproduciraj testni zvučni signal:** kada ga pritisnete, Pod se jednom oglasi testnim zvučnim signalom. Prikazuje se kada je Pod uparen.
 
   ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Play Test Beep** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Reproduciraj testni zvučni signal** je gumb na zaslonu pumpe Omnipod umjesto u izborniku Upravljanje Pod-om.
   ```
 
-- **Pod History:** Displays the active pod activity history. See [View Pod History](#OmnipodEros-view-pod-history).
+- **Povijest Pod-a:** prikazuje povijest aktivnosti aktivnog Pod-a. Pogledajte [Prikaz povijesti Pod-a](#OmnipodEros-view-pod-history).
 
   ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Povijest Pod-a** je gumb na zaslonu pumpe Omnipod umjesto u izborniku Upravljanje Pod-om.
   ```
 
-- **Pair RileyLink:** Scans for your pod communication device and pairs it. See [RileyLink Setup](#OmnipodEros-rileylink-setup).
+- **Upari RileyLink:** traži vaš uređaj za komunikaciju s Pod-om i uparuje ga. Pogledajte [Postavljanje RileyLinka](#OmnipodEros-rileylink-setup).
 
-- **RileyLink Stats:** Opens the RileyLink Stats screen with two tabs. Only shown if enabled in the settings (**Show RileyLink Stats button in Pod Management menu**).
+- **RileyLink statistika:** otvara zaslon RileyLink statistika s dvije kartice. Prikazuje se samo ako je omogućeno u postavkama (**Prikaži gumb „RileyLink statistika“ u izborniku Upravljanje Pod-om**).
 
-- **Settings** - displays RileyLink and active pod settings information
-- **History** - displays RileyLink and Pod communication history
+- **Postavke** - prikazuje informacije o postavkama RileyLinka i aktivnog Pod-a
+- **Povijest** - prikazuje povijest komunikacije RileyLinka i Pod-a
 
   ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **RileyLink Stats** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **RileyLink statistika** je gumb na zaslonu pumpe Omnipod umjesto u izborniku Upravljanje Pod-om.
   ```
 
-- **Reset RileyLink:** Resets the configuration of the currently connected pod communication device. When communication is started, specific data is sent to and set in the RileyLink:
+- **Resetiraj RileyLink:** resetira konfiguraciju trenutačno povezanog uređaja za komunikaciju s Pod-om. Kada komunikacija započne, određeni se podaci šalju u RileyLink i postavljaju u njemu:
 
-- Memory Registers are set
-- Communication Protocols are set
-- Tuned Radio Frequency is set
+- Postavljaju se memorijski registri
+- Postavljaju se komunikacijski protokoli
+- Postavlja se podešena radijska frekvencija
   > 
-  > See [additional notes](#OmnipodEros-reset-rileylink-config-notes) below.
+  > Pogledajte [dodatne napomene](#OmnipodEros-reset-rileylink-config-notes) u nastavku.
 
   ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this button is called **Reset RileyLink** and is on the Omnipod pump screen.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovaj se gumb zove **Resetiraj RileyLink** i nalazi se na zaslonu pumpe Omnipod.
   ```
 
-- **Discard Pod:** Discards the pod state of an unresponsive pod, after a confirmation. Only shown when a pod has been started but not fully paired, as proper deactivation is no longer possible:
+- **Odbaci Pod:** nakon potvrde odbacuje stanje Pod-a koji ne odgovara. Prikazuje se samo kada je Pod pokrenut, ali nije potpuno uparen, jer ispravna deaktivacija više nije moguća:
 
-- A **pod is not fully paired** and thus ignores deactivate commands.
-- A **pod is stuck** during the pairing process between steps.
-- A **pod simply does not pair at all.**
+- **Pod nije potpuno uparen** i zato ne prihvaća naredbe za deaktivaciju.
+- **Pod je zapeo** između koraka postupka uparivanja.
+- **Pod se uopće ne uparuje.**
   > 
-  > After you discard a pod, **AAPS** can no longer communicate with it. Remove the pod from your body.
+  > Nakon što odbacite Pod, **AAPS** više ne može komunicirati s njim. Uklonite Pod s tijela.
 
   ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
 
   ```{admonition} Older screenshot
   :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Discard Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
+  Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 **Odbaci Pod** je gumb na zaslonu pumpe Omnipod umjesto u izborniku Upravljanje Pod-om.
   ```
 
 (OmnipodEros-reset-rileylink-config-notes)=
 
-#### *Reset RileyLink Notes*
+#### *Napomene o resetiranju RileyLinka*
 
-- The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-- If the pod communication device is turned off and then back on, press **Reset RileyLink** so that these communication parameters are set again in the pod communication device.
-- If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
-- This button **DOES NOT** need to be pressed when switching between different pod communication devices.
+- Ova se funkcija uglavnom koristi kada trenutačno aktivni uređaj za komunikaciju s Pod-om ne odgovara i komunikacija je zapela.
+- Ako se uređaj za komunikaciju s Pod-om isključi i ponovno uključi, pritisnite **Resetiraj RileyLink** da bi se ti komunikacijski parametri ponovno postavili u uređaju za komunikaciju s Pod-om.
+- Ako to NE učinite, AAPS ćete morati ponovno pokrenuti nakon što isključite i ponovno uključite uređaj za komunikaciju s Pod-om.
+- Ovaj gumb **NE** morate pritisnuti kada prelazite s jednog uređaja za komunikaciju s Pod-om na drugi.
 
 (OmnipodEros-omnipod-settings)=
 
-## Omnipod Settings
+## Postavke Omnipoda
 
-To open the Omnipod driver settings, either:
+Postavke upravljačkog programa Omnipod možete otvoriti na jedan od ovih načina:
 
-- press the gear icon at the top right of the Omnipod pump screen (**Manage** > **Pump**), or
-- open the top-left **menu** (☰) > **Configuration** > **Pump** and press **Settings** on the **Omnipod Eros** card.
+- pritisnite ikonu zupčanika gore desno na zaslonu pumpe Omnipod (**Upravljanje** > **Pumpa**) ili
+- otvorite **izbornik** (☰) gore lijevo > **Konfiguracija** > **Pumpa** i pritisnite **Postavke** na kartici **Omnipod Eros**.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the settings with **Settings** on the **Omnipod Eros** card or the gear icon on the Omnipod pump screen, instead of the settings gear in **Configuration** or the 3-dot menu.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 postavke otvarate gumbom **Postavke** na kartici **Omnipod Eros** ili ikonom zupčanika na zaslonu pumpe Omnipod, umjesto zupčanikom postavki u **Konfiguraciji** ili izbornikom s 3 točke.
 ```
 
-The settings are grouped as listed below. Tap a group to expand it. Most entries are switches you can enable or disable:
+Postavke su grupirane kako je navedeno u nastavku. Dodirnite grupu da biste je proširili. Većina stavki su prekidači koje možete omogućiti ili onemogućiti:
 
-![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
+![Postavke upravljačkog programa Omnipod](../images/v4/Pumps/omnipod_settings.png)
 
-*NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
+*NAPOMENA: Zvjezdica (\*) označava da je postavka prema zadanim vrijednostima omogućena.*
 
 ### RileyLink
 
-Settings for the pod communication device. You pair the device itself with the **Pair RileyLink** button on the pump screen (see [RileyLink Setup](#OmnipodEros-rileylink-setup)).
+Postavke za uređaj za komunikaciju s Pod-om. Sam uređaj uparujete gumbom **Upari RileyLink** na zaslonu pumpe (pogledajte [Postavljanje RileyLinka](#OmnipodEros-rileylink-setup)).
 
-- **Use Scanning:** Scans before connecting to the OrangeLink. This can improve connections. It can also be used with other RileyLink clones if needed.
+- **Koristi skeniranje:** traži uređaj prije spajanja na OrangeLink. To može poboljšati vezu. Po potrebi se može koristiti i s drugim klonovima RileyLinka.
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/DiaLink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
+- **Prikaži razinu baterije koju prijavljuje OrangeLink/EmaLink/DiaLink:** prikazuje stvarnu razinu baterije OrangeLinka/EmaLinka/DiaLinka. **Snažno preporučujemo** da svi korisnici OrangeLinka/EmaLinka/DiaLinka omoguće ovu postavku.
 
-- DOES NOT work with the original RileyLink.
-- May not work with RileyLink alternatives.
-- Enabled - Reports the current battery level for supported pod communication devices.
-- Disabled - Reports a value of n/a.
+- NE radi s originalnim RileyLinkom.
+- Možda ne radi s alternativama za RileyLink.
+- Omogućeno - prikazuje trenutačnu razinu baterije za podržane uređaje za komunikaciju s Pod-om.
+- Onemogućeno - prikazuje vrijednost n/a.
 
-- **Enable battery change logging in Actions:** Only available when the battery reporting setting above is enabled. Some pod communication devices can use regular batteries that you can change. With this setting enabled, you can record a **Pump Battery Change** [careportal entry](#aaps-screens-careportal) to note the change and reset the battery age.
+- **Omogući bilježenje zamjene baterije u Radnjama:** dostupno samo kada je gornja postavka za prikaz baterije omogućena. Neki uređaji za komunikaciju s Pod-om koriste obične baterije koje možete zamijeniti. Kada je ova postavka omogućena, možete zabilježiti [unos u Careportal](#aaps-screens-careportal) **Zamjena baterije pumpe** da biste zabilježili zamjenu i vratili starost baterije na nulu.
 
-### Confirmation Beeps
+### Potvrdni zvučni signali
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Daje zvučne signale potvrde s Pod-a za isporuku i promjene bolusa, bazala, SMB-a i TBR-a.
 
-- **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-- **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-- **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-- **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+- **\*Zvučni signali za bolus omogućeni:** omogućite ili onemogućite zvučne signale potvrde kada se isporuči bolus.
+- **Zvučni signali za bazal omogućeni:** omogućite ili onemogućite zvučne signale potvrde kada se postavi nova bazalna stopa, kada se aktivna bazalna stopa otkaže ili kada se trenutačna bazalna stopa promijeni.
+- **\*Zvučni signali za SMB omogućeni:** omogućite ili onemogućite zvučne signale potvrde kada se isporuči SMB.
+- **Zvučni signali za TBR omogućeni:** omogućite ili onemogućite zvučne signale potvrde kada se TBR postavi ili otkaže.
 
-### Alerts
+### Upozorenja
 
-Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
+Daje upozorenja u AAPS-u i obavijesti u Nightscoutu o isteku Pod-a, gašenju i niskoj razini spremnika prema zadanom pragu jedinica.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT silence the alert UNLESS **Automatically silence Pod alerts** is enabled. To silence the alert MANUALLY, open the Omnipod pump screen and press **Silence Alerts**.*
+*Imajte na umu da će AAPS UVIJEK dati obavijest za svako upozorenje nakon prve komunikacije s Pod-om od trenutka kada se upozorenje pokrenulo. Zatvaranje obavijesti NEĆE utišati upozorenje, OSIM AKO je omogućeno **Automatski utišaj upozorenja Pod-a**. Da biste upozorenje utišali RUČNO, otvorite zaslon pumpe Omnipod i pritisnite **Utišaj upozorenja**.*
 
-- **\*Expiration reminder enabled:** When enabled, the pod beeps when the time set below is reached.
-- **Alert at hours before shutdown (80 Hours):** The number of hours before the pod shuts down (80 hours after activation) at which the expiration reminder is triggered (1 to 8 hours, default 8).
-- **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-- **Number of units:** The number of units at which to trigger the pod low reservoir alert (5 to 50, default 20).
-- **Automatically silence Pod alerts:** When enabled, a notification is still issued, but the alert is silenced automatically at the next communication with the pod after the alert started.
+- **\*Podsjetnik o isteku omogućen:** kada je omogućeno, Pod se oglasi zvučnim signalom kada se dosegne vrijeme postavljeno u nastavku.
+- **Upozorenje ovoliko sati prije gašenja (80 sati):** broj sati prije gašenja Pod-a (80 sati nakon aktivacije) u kojem se pokreće podsjetnik o isteku (1 do 8 sati, zadano 8).
+- **\*Omogućeno upozorenje o niskoj razini spremnika:** omogućite ili onemogućite upozorenje kada preostale jedinice u Pod-u dosegnu granicu niske razine spremnika zadanu u polju Broj jedinica.
+- **Broj jedinica:** broj jedinica kod kojeg se pokreće upozorenje Pod-a o niskoj razini spremnika (5 do 50, zadano 20).
+- **Automatski utišaj upozorenja Pod-a:** kada je omogućeno, obavijest se i dalje prikazuje, ali se upozorenje automatski utišava kod sljedeće komunikacije s Pod-om nakon početka upozorenja.
 
-### Notifications
+### Obavijesti
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
+Daje obavijesti u AAPS-u i zvučna upozorenja na telefonu kada nije sigurno jesu li TBR, SMB ili bolus uspješno izvršeni.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*NAPOMENA: Ovo su samo obavijesti, Pod se ne oglašava zvučnim signalima.*
 
-- **\*Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a TBR was successfully set.
-- **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-- **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+- **\*Omogućen zvuk za obavijesti o nesigurnom TBR-u:** omogućite ili onemogućite ovu postavku za zvučno upozorenje i vizualnu obavijest kada AAPS nije siguran je li TBR uspješno postavljen.
+- **\*Omogućen zvuk za obavijesti o nesigurnom SMB-u:** omogućite ili onemogućite ovu postavku za zvučno upozorenje i vizualnu obavijest kada AAPS nije siguran je li SMB uspješno isporučen.
+- **\*Omogućen zvuk za obavijesti o nesigurnom bolusu:** omogućite ili onemogućite ovu postavku za zvučno upozorenje i vizualnu obavijest kada AAPS nije siguran je li bolus uspješno isporučen.
 
-### Other
+### Ostalo
 
-Provides advanced settings to assist debugging.
+Daje napredne postavke koje pomažu u otklanjanju pogrešaka.
 
 - **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
-- **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
+- **Prikaži gumb „Pulse zapis“ u izborniku Upravljanje Pod-om:** ova je postavka još uvijek na popisu, ali trenutačna verzija zaslona pumpe nema gumb **Pulse zapis**.
 
-- **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
-- **\*DST/Time zone detection enabled:** Allows time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+- **Prikaži gumb „RileyLink statistika“ u izborniku Upravljanje Pod-om:** skriva ili prikazuje gumb **RileyLink statistika** na zaslonu pumpe Omnipod.
+- **\*Otkrivanje ljetnog računanja vremena / vremenske zone omogućeno:** omogućuje automatsko otkrivanje promjena vremenske zone ako se telefon koristi u području u kojem se primjenjuje ljetno računanje vremena.
 
-### Switching or Removing an Active Pod Communication Device (RileyLink)
+### Zamjena ili uklanjanje aktivnog uređaja za komunikaciju s Pod-om (RileyLink)
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink), or the need to have multiple or backup versions of the same pod communication device, you may need to switch to another device.
+Postoje mnogi alternativni modeli originalnog RileyLinka (kao što su OrangeLink ili EmaLink), a možda trebate i više uređaja za komunikaciju s Pod-om ili rezervni uređaj iste vrste. Zato ćete možda morati prijeći na drugi uređaj.
 
-To switch, open the Omnipod pump screen (**Manage** > **Pump**), press **Pair RileyLink** and select the new device, as described in [RileyLink Setup](#OmnipodEros-rileylink-setup). The new device replaces the previously paired one.
+Da biste prešli na drugi uređaj, otvorite zaslon pumpe Omnipod (**Upravljanje** > **Pumpa**), pritisnite **Upari RileyLink** i odaberite novi uređaj, kako je opisano u [Postavljanju RileyLinka](#OmnipodEros-rileylink-setup). Novi uređaj zamjenjuje prethodno upareni.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -804,10 +804,10 @@ To switch, open the Omnipod pump screen (**Manage** > **Pump**), press **Pair Ri
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you add a device with **Pair RileyLink** on the Omnipod pump screen instead of **RileyLink Configuration** in the Omnipod settings, and scanning starts automatically.
+Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 uređaj dodajete gumbom **Upari RileyLink** na zaslonu pumpe Omnipod umjesto putem **RileyLink Configuration** u postavkama Omnipoda, a traženje uređaja počinje automatski.
 ```
 
-There is no separate button to remove a paired device. If you stop using a RileyLink, simply pair the new one when you need it.
+Ne postoji poseban gumb za uklanjanje uparenog uređaja. Ako prestanete koristiti neki RileyLink, jednostavno uparite novi kada vam zatreba.
 
 ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
@@ -819,126 +819,126 @@ There is no separate button to remove a paired device. If you stop using a Riley
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 there is no **Remove** button: pairing a new RileyLink replaces the previous one.
+Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 nema gumba **Ukloni**: uparivanje novog RileyLinka zamjenjuje prethodni.
 ```
 
-## Status row and careportal
+## Redak statusa i Careportal
 
-There are a few items that are specific to how the Omnipod pod differs from tube based pumps, especially after applying a new pod.
+Postoji nekoliko stavki koje su specifične za to kako se Omnipod Pod razlikuje od pumpi s cijevi, posebno nakon postavljanja novog Pod-a.
 
-The **insulin** and **cannula** ages in the [status row](#screens-sensor-level-battery) of the main screen are **reset** to 0 days and 0 hours **after each pod change**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+Starost **inzulina** i **kanile** u [statusnom retku](#screens-sensor-level-battery) glavnog zaslona **vraća se** na 0 dana i 0 sati **nakon svake promjene Pod-a**. To je zbog načina na koji je pumpa Omnipod izrađena i kako radi. **Baterija pumpe** i **spremnik inzulina** nalaze se unutar svakog Pod-a. Budući da Pod umeće kanilu izravno u kožu na mjestu gdje je Pod postavljen, pumpe Omnipod ne koriste klasičnu cijev. *Zato se nakon promjene Pod-a starost svake od ovih vrijednosti automatski vraća na nulu.* **Starost baterije pumpe** se ne prikazuje jer baterija u Pod-u uvijek traje dulje od samog Pod-a (najviše 80 sati).
 
 ![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
-### Levels
+### Razine
 
-**Insulin Level**
+**Razina inzulina**
 
-Reporting of the amount of insulin in the Omnipod Eros Pod is not exact. This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod at least 80 units have been filled. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not an exact process. With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.
+Prikaz količine inzulina u Omnipod Eros Pod-u nije točan. To je zato što se ne zna točno koliko je inzulina stavljeno u Pod, nego samo da je napunjeno najmanje 80 jedinica kada se tijekom punjenja Pod-a oglase 2 zvučna signala. Pod može sadržavati najviše 200 jedinica. I punjenje Pod-a (priming) može unijeti odstupanja jer nije točan postupak. Zbog oba ova čimbenika upravljački program Omnipod napisan je tako da daje najbolju procjenu preostalog inzulina u spremniku.
 
-> - **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
-> - **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir.
-> - **SMS** - Returns value or 50+U for SMS responses
-> - **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+> - **Iznad 50 jedinica** - prikazuje vrijednost 50+U kada je u spremniku trenutačno više od 50 jedinica.
+> - **Ispod 50 jedinica** - prikazuje približnu izračunatu vrijednost preostalog inzulina u spremniku.
+> - **SMS** - u SMS odgovorima vraća vrijednost ili 50+U
+> - **Nightscout** - šalje u Nightscout vrijednost 50 kada je više od 50 jedinica (verzija 14.07 i starije).  Novije verzije prikazuju vrijednost 50+ kada je više od 50 jedinica.
 
-**Battery Level**
+**Razina baterije**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+Prikaz razine baterije je postavka koju možete omogućiti da biste vidjeli trenutačnu razinu baterije uređaja za komunikaciju s Pod-om, kao što su OrangeLink, EmaLink ili DiaLink.  Hardver RileyLinka ne može javiti razinu svoje baterije.  Razina baterije javlja se nakon svake komunikacije s Pod-om, pa se tijekom punjenja možda neće vidjeti ravnomjerni porast.  Ručno osvježavanje ažurira trenutačnu razinu baterije.  Kada je podržani uređaj za komunikaciju s Pod-om odspojen, prikazuje se vrijednost 0 %.
 
-> - **RileyLink hardware is NOT capable of reporting battery level**
-> - **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
-> - **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
-> - **Battery Level reporting MAY work for other devices (excluding RileyLink)**
-> - **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
-> - **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
+> - **Hardver RileyLinka NE MOŽE javiti razinu baterije**
+> - **Postavka „Prikaži razinu baterije koju prijavljuje OrangeLink/EmaLink/DiaLink“ MORA biti omogućena u postavkama Omnipoda da bi se prikazivale vrijednosti razine baterije**
+> - **Prikaz razine baterije radi SAMO za uređaje OrangeLink, EmaLink i DiaLink**
+> - **Prikaz razine baterije MOŽDA radi i za druge uređaje (osim RileyLinka)**
+> - **SMS** - kao odgovor vraća trenutačnu razinu baterije kada stvarna razina postoji; vrijednost n/a se ne vraća
+> - **Nightscout** - razina baterije šalje se kada stvarna razina postoji; vrijednost n/a se ne šalje
 
 (OmnipodEros-troubleshooting)=
 
-## Troubleshooting
+## Rješavanje problema
 
-### Pod Failures
+### Kvarovi Pod-a
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Pod-ovi povremeno zakažu zbog raznih problema, uključujući hardverske probleme samog Pod-a. Najbolje je ne prijavljivati ovo tvrtki Insulet, jer AAPS nije odobren način korištenja. Popis kodova kvarova možete pronaći [ovdje](https://github.com/openaps/openomni/wiki/Fault-event-codes), kao pomoć pri utvrđivanju uzroka.
 
-### Preventing error 49 pod failures
+### Sprječavanje kvarova Pod-a s pogreškom 49
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend that you set Nightscout synchronization to *upload only*: keep all the "Receive ... from NS" options disabled in the synchronization settings of the Nightscout client (see [Nightscout](../SettingUpAaps/Nightscout.md)) to prevent possible failures.
+Ovaj kvar povezan je s pogrešnim stanjem Pod-a za neku naredbu ili s pogreškom tijekom naredbe za isporuku inzulina. Preporučujemo da sinkronizaciju s Nightscoutom postavite na *samo prijenos*: sve opcije „Primaj ... iz NS-a“ ostavite onemogućene u postavkama sinkronizacije Nightscout klijenta (pogledajte [Nightscout](../SettingUpAaps/Nightscout.md)) da biste spriječili moguće kvarove.
 
-### Pump Unreachable Alerts
+### Upozorenja „Pumpa nedostupna“
 
-We recommend setting pump unreachable alerts to **120 minutes**. Press the **Settings** (gear) icon at the top right of the main screen, select **Local alerts** > **Pump unreachable threshold** and set it to **120**.
+Preporučujemo da upozorenja o nedostupnosti pumpe postavite na **120 minuta**. Pritisnite ikonu **Postavke** (zupčanik) gore desno na glavnom zaslonu, odaberite **Lokalna upozorenja** > **Prag nedostupnosti pumpe** i postavite ga na **120**.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
-### Import Settings from previous AAPS
+### Uvoz postavki iz prethodnog AAPS-a
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+Na telefonu koji već upravlja Pod-om ostavite **Zamijeni i postavke pumpe** neoznačeno: sesija Pod-a se zadržava i uvoze se samo ostale postavke. Označite to samo s datotekom izvezenom tijekom Pod-a koji sada nosite. Pogledajte [Pumpe bez katetera](#ExportImportSettings-tubeless-pumps).
 ```
 
-The safest way to reinstall **AAPS** is between two Pods:
+Najsigurnije je ponovno instalirati **AAPS** između dva Pod-a:
 
-1. Deactivate your pod session. Verify that you do not have an active pod session.
-2. Export your settings and store a copy in a safe place.
-3. Uninstall the previous version of AAPS and restart your phone.
-4. Install the new version of AAPS and verify that you do not have an active pod session.
-5. Import your settings and activate your new pod.
+1. Deaktivirajte sesiju Pod-a. Provjerite da nemate aktivnu sesiju Pod-a.
+2. Izvezite postavke i spremite kopiju na sigurno mjesto.
+3. Deinstalirajte prethodnu verziju AAPS-a i ponovno pokrenite telefon.
+4. Instalirajte novu verziju AAPS-a i provjerite da nemate aktivnu sesiju Pod-a.
+5. Uvezite postavke i aktivirajte novi Pod.
 
-### Omnipod driver alerts
+### Upozorenja upravljačkog programa za Omnipod
 
-Please note that the Omnipod driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+Imajte na umu da upravljački program Omnipod prikazuje razna posebna upozorenja na **glavnom zaslonu**. Većina ih je informativna i mogu se zatvoriti, a neka korisniku nude radnju kojom može riješiti uzrok upozorenja. Sažetak glavnih upozorenja na koja možete naići nalazi se u nastavku:
 
-#### No active Pod
+#### Nema aktivnog Pod-a
 
-No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
+Nije otkrivena aktivna sesija Pod-a. Ovo upozorenje možete privremeno odgoditi pritiskom na **SNOOZE**, ali će se ponovno pojavljivati sve dok ne aktivirate novi Pod. Nakon aktivacije ovo se upozorenje automatski utišava.
 
-#### Pod suspended
+#### Pod suspendiran
 
-Informational alert that Pod has been suspended.
+Informativno upozorenje da je Pod suspendiran.
 
-#### Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
+#### Postavljanje bazalnog profila nije uspjelo. Isporuka je možda obustavljena! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
 
-Informational alert that the Pod basal profile setting has failed. Open the Omnipod pump screen and press **Refresh**, then **Resume Delivery** if needed.
+Informativno upozorenje da postavljanje bazalnog profila Pod-a nije uspjelo. Otvorite zaslon pumpe Omnipod i pritisnite **Osvježi**, a zatim po potrebi **Nastavi isporuku**.
 
-#### Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+#### Nije moguće provjeriti je li SMB bolus uspio. Ako ste sigurni da bolus nije uspio, ručno izbrišite unos SMB-a iz Tretmana.
 
-Alert that the SMB bolus success could not be verified. Check the **Last Bolus** field on the Omnipod pump screen to see if the SMB succeeded. If it did not, remove the entry from the treatments.
+Upozorenje da se uspjeh SMB bolusa nije mogao provjeriti. Provjerite polje **Zadnji bolus** na zaslonu pumpe Omnipod da vidite je li SMB uspio. Ako nije, uklonite unos iz tretmana.
 
-#### Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+#### Nije sigurno je li „zadatak bolus/TBR/SMB“ izvršen, ručno provjerite je li uspio.
 
-Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
+Zbog načina na koji RileyLink i Omnipod komuniciraju, može se dogoditi da je *nesigurno* je li naredba uspješno obrađena. Zato je bilo potrebno obavijestiti korisnika o toj nesigurnosti.
 
-Below are a few examples of when an uncertain notification can occur.
+U nastavku je nekoliko primjera kada se može pojaviti obavijest o nesigurnosti.
 
-- **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-- **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message.
-- **Pod Time Deviation -** When the time on the pod and the time on your phone differ too much, it is difficult for the AAPS loop to function and make accurate predictions and dosage recommendations. If the time difference between the pod and the phone is more than 5 minutes, a **Set time** button appears on the Omnipod pump screen. Press **Set time** to synchronize the time on the pod with the time on the phone. If **Pod Status** shows **Suspended** afterwards, press **Resume Delivery** to continue normal pod operations.
+- **Bolusi** - nesigurni bolusi ne mogu se automatski provjeriti. Obavijest ostaje do sljedećeg bolusa, ali ručno osvježavanje Pod-a uklanja poruku. *Zvučni signali upozorenja za ovu vrstu obavijesti prema zadanim su vrijednostima omogućeni jer ih korisnik mora ručno provjeriti.*
+- **TBR-ovi, statusi Pod-a, zamjene profila, promjene vremena** - ručno osvježavanje Pod-a uklanja poruku.
+- **Odstupanje vremena Pod-a -** Kada se vrijeme na Pod-u i vrijeme na telefonu previše razlikuju, petlji AAPS-a je teško raditi te davati točna predviđanja i preporuke za doziranje. Ako je razlika u vremenu između Pod-a i telefona veća od 5 minuta, na zaslonu pumpe Omnipod pojavljuje se gumb **Postavi vrijeme**. Pritisnite **Postavi vrijeme** da biste uskladili vrijeme na Pod-u s vremenom na telefonu. Ako nakon toga **Status Pod-a** prikazuje **Suspendiran**, pritisnite **Nastavi isporuku** da biste nastavili normalan rad Pod-a.
 
-## Best Practices
+## Dobra praksa
 
 (OmnipodEros-optimal-omnipod-and-rileylink-positioning)=
 
-### Optimal Omnipod and RileyLink Positioning
+### Najbolji položaj Omnipoda i RileyLinka
 
-The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
+Antena koju RileyLink koristi za komunikaciju s Omnipod Pod-om je spiralna (helikalna) antena od 433 MHz. Zbog svoje konstrukcije šalje signal u svim smjerovima, u obliku trodimenzionalne krafne, pri čemu os z predstavlja uspravno postavljenu antenu. To znači da postoje najbolji položaji za RileyLink, posebno tijekom aktivacije i deaktivacije Pod-a.
 
 ![Toroid_w_CS](../images/omnipod/Toroid_w_CS.png)
 
-> *(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern*)
+> *(Slika 1. Grafički prikaz spiralne antene sa zračenjem u svim smjerovima*)
 
-Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
+Zbog sigurnosnih razloga *aktivacija* Pod-a mora se obaviti na *manjoj udaljenosti (oko 30 cm ili manje)* nego druge radnje, kao što su davanje bolusa, postavljanje TBR-a ili samo osvježavanje statusa Pod-a. Zbog načina na koji antena RileyLinka šalje signal, NE preporučuje se postaviti Pod izravno na RileyLink ili odmah uz njega.
 
-The image below shows the optimal way to position the RileyLink during pod activation and deactivation procedures. The pod may activate in other positions but you will have the most success using the position in the image below.
+Slika u nastavku pokazuje najbolji položaj RileyLinka tijekom aktivacije i deaktivacije Pod-a. Pod se može aktivirati i u drugim položajima, ali najviše uspjeha imat ćete s položajem sa slike u nastavku.
 
-*Note: If after optimally positioning the pod and RileyLink communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.*
+*Napomena: Ako komunikacija ne uspije ni nakon što ste Pod i RileyLink postavili u najbolji položaj, uzrok može biti slaba baterija, koja smanjuje domet antene RileyLinka. Da biste to izbjegli, provjerite je li RileyLink dobro napunjen ili ga tijekom ovog postupka izravno spojite na kabel za punjenje.*
 
 ![Omnipod_pod_and_RileyLink_Position](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
 
-## Where to get help
+## Gdje dobiti pomoć
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+Sav razvoj upravljačkog programa Omnipod radi zajednica, volonterski. Molimo vas da budete obzirni i da se pridržavate sljedećih smjernica kada tražite pomoć:
 
-- **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
-- **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
-- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
-- **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+- **Razina 0:** Pročitajte odgovarajući dio ove dokumentacije kako biste razumjeli kako bi trebala raditi funkcija s kojom imate poteškoća.
+- **Razina 1:** Ako i dalje imate probleme koje ne možete riješiti s pomoću ovog dokumenta, idite na kanal *#androidaps* na **Discordu** putem [ove pozivnice](https://discord.gg/4fQUWHZ4Mw).
+- **Razina 2:** Pretražite postojeće prijave (issues) da vidite je li vaš problem već prijavljen; ako nije, otvorite novu [prijavu (issue)](https://github.com/nightscout/AndroidAPS/issues) i priložite svoje [datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
+- **Budite strpljivi – većina članova naše zajednice su dobronamjerni volonteri, a rješavanje problema često traži vrijeme i strpljenje i od korisnika i od programera.**
