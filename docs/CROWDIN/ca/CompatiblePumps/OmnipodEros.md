@@ -281,7 +281,7 @@ Per desactivar un pod (perquè ha expirat o perquè ha fallat):
 
 El procés de sota explica com suspendre i reprendre el lliurament d'insulina.
 
-*NOTA - si no veieu el botó **Suspendre***, és perquè està amagat per defecte. Activeu **Mostrar el botó Suspendre a la pantalla de la bomba** a la [configuració d'Omnipod](#OmnipodEros-omnipod-settings), a **Altres**.
+*NOTA - si no veieu el botó **Suspendre***, és perquè està amagat per defecte. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspendre el lliurament d'insulina
 
@@ -591,7 +591,7 @@ Els botons de la part de baix de la pantalla de la bomba canvien segons la situa
   La captura de pantalla de dalt és d'una versió anterior d'**AAPS**. A **AAPS** 4 és un botó de text anomenat **Configurar hora** a la pantalla de la bomba Omnipod.
   ```
 
-- **Suspendre:** suspèn el lliurament d'insulina del pod actiu. Només es mostra si està activat a la configuració (**Mostrar el botó Suspendre a la pantalla de la bomba**).
+- **Suspendre:** suspèn el lliurament d'insulina del pod actiu. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Mostra avisos d'AAPS i alertes sonores al telèfon quan no és segur si els esde
 
 Ofereix opcions avançades per ajudar a depurar errors.
 
-- **Mostrar el botó Suspendre a la pantalla de la bomba:** amaga o mostra el botó **Suspendre** a la pantalla de la bomba Omnipod.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Mostrar botó "Registre de pols" al menú de gestió del pod:** aquesta opció encara apareix a la llista, però la versió actual de la pantalla de la bomba no té cap botó **Registre de pols**.
 
 - **Mostrar botó "Estadístiques RileyLink" al menú de gestió del pod:** amaga o mostra el botó **Estadístiques RileyLink** a la pantalla de la bomba Omnipod.
