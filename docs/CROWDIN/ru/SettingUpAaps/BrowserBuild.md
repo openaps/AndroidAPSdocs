@@ -26,12 +26,12 @@
 
 **→ [Сборка через браузер с AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### На компьютере или iPhone / iPad: fork и файл подготовки
 
 Вы делаете копию (fork) исходного кода AAPS на GitHub, создаете хранилище ключей с помощью файла подготовки, а собранное приложение сохраняется на ваш Google Диск. Выполните четыре шага ниже.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Вы уже собираете через fork?** Продолжайте обновлять его, как описано в разделе [Обновление через браузер (fork)](../Maintenance/UpdateBrowserBuild.md), или перейдите на AAPS Builder. Чтобы перейти, сначала получите копию своего хранилища ключей из fork: смотрите [Переход с прежней сборки через браузер](#aaps-builder-from-fork).
 ```
 
 Вам будет необходимо использовать несколько вкладок браузера и переключаться между ними. Например, в Chrome:
@@ -44,34 +44,34 @@
 
 #### Что вам понадобится
 
-- A **Google account**, so the built app can be saved to your Google Drive.
+- **Учетная запись Google**, чтобы собранное приложение можно было сохранить на ваш Google Диск.
 - **Учетная запись GitHub** (бесплатно) – вы создадите ее на шаге 1.
 - **Веб-браузер**, в котором можно держать открытыми несколько вкладок сразу (ниже предполагается Chrome).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
+- Небольшая **программа-помощник для запуска файла подготовки**. Какая именно – зависит от устройства, с которого вы собираете. Сейчас ничего устанавливать не нужно, на шаге 2 вы получите указания для вашего устройства:
+  - **Компьютер (Windows / Mac / Linux):** Simple Web Server.
   - **iPhone / iPad:** дополнительное приложение не нужно – вы используете встроенное приложение «Файлы» и браузер.
 
-#### The steps
+#### Шаги
 
-The browser build is a series of choices. Выполните эти шаги по порядку:
+Сборка через браузер – это ряд решений. Выполните эти шаги по порядку:
 
 1. **[Создайте свой fork на GitHub](BrowserBuildFork.md)** – сделайте личную копию исходного кода AAPS.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+2. **[Создайте хранилище ключей для подписи](BrowserBuildKeystore.md)** – главное решение: создать новое хранилище ключей (вариант 1) или загрузить уже существующее (вариант 2), затем следуйте странице для вашего устройства.
+3. **[Дайте доступ к Google Диску](BrowserBuildGoogleDrive.md)** – разрешите GitHub сохранять собранное приложение на ваш Google Диск.
+4. **[Соберите APK](BrowserBuildAPK.md)** – запустите workflow GitHub Actions и выберите версию и вариант.
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Если возникнут проблемы, смотрите **[Сборка через браузер: устранение неполадок](../GettingHelp/BrowserBuildTroubleshooting.md)**. Дополнительные операции с fork описаны в разделах [экспорт хранилища ключей](#ci-keystore-export) и [cherry-pick коммита](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Начните с [Шаг 1 – Создайте свой fork на GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Шаг 1: Создайте свой fork на GitHub <BrowserBuildFork.md>
+Шаг 2: Создайте хранилище ключей для подписи <BrowserBuildKeystore.md>
+Шаг 3: Дайте доступ к Google Диску <BrowserBuildGoogleDrive.md>
+Шаг 4: Соберите APK <BrowserBuildAPK.md>
 ```
