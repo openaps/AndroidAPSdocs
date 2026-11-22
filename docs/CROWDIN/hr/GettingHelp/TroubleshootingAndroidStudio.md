@@ -49,7 +49,7 @@ Ponovno klonirajte izvorni kod kako je opisano u wikiju i ne dopustite ažuriran
 
   * Morate dobiti poruku o tome koja je verzija Gita instalirana, kao što vidite na gornjoj snimci zaslona. U tom slučaju idite na [Korak 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Ako dobijete poruku
     ```
     Git: command not found
     ```
@@ -57,15 +57,15 @@ Ponovno klonirajte izvorni kod kako je opisano u wikiju i ne dopustite ažuriran
 
   * [Provjera instalacije Gita](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Ako koristite Windows i Git je upravo instaliran, ponovno pokrenite računalo kako bi Git nakon instalacije bio dostupan posvuda
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Ako je Git instaliran, ponovno ste pokrenuli računalo (ako koristite Windows), a Git se i dalje ne može pronaći:
 
   * Na računalu potražite datoteku „git.exe“.
 
     Zapišite si u kojoj je mapi spremljena.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Dodajte mapu u kojoj ste pronašli svoju instalaciju Gita.
+  * U sustavu Windows otvorite „Varijable okruženja“ (Environment variables), odaberite varijablu „PATH“ i kliknite „Uredi“. Dodajte mapu u kojoj ste pronašli svoju instalaciju Gita.
 
   * Spremite i zatvorite.
 
@@ -139,7 +139,7 @@ Ili:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Ako dobijete gornju poruku o pogrešci, prije ponovne izrade morate preuzeti ispravnu verziju JVM-a:
 
 1.  U [tablici zahtjeva](#Building-APK-recommended-specification-of-computer-for-building-apk-file) provjerite koja vam je verzija JVM-a potrebna za verziju **AAPS-a** koju izrađujete i zapišite je.
 
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK uspješno je izradio 0 varijanti izrade (build variants)
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+Kada izrađujete potpisani APK, možda ćete dobiti obavijest da je izrada uspjela, ali da je izrađeno „0 build variants“ (0 varijanti izrade):
 
 ![APK izrađen s 0 varijanti izrade](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Vaš APK je uspješno izrađen i može se prenijeti na telefon!
 
 ## APK nije instaliran
 
-![phone app not installed](../images/studioTroubleshooting/Update_AppNotInstalled.png)
+![telefon: aplikacija nije instalirana](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Provjerite jeste li datoteku „app-full-release.apk“ prenijeli na telefon.
 * Ova pogreška obično znači da je novi APK potpisan drugim spremištem ključeva nego vaš instalirani **AAPS**. Ako još imate svoje prethodno spremište ključeva, odaberite ga i ponovno pokrenite izradu. Inače pogledajte [Ponovna instalacija AAPS-a s novim spremištem ključeva](#reinstall-aaps).
@@ -252,7 +252,7 @@ Vaš APK je uspješno izrađen i može se prenijeti na telefon!
 
 ## APK je instaliran, ali je verzija stara
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Ako ste aplikaciju uspješno izradili, prenijeli na telefon i uspješno instalirali, ali broj verzije ostaje isti, možda ste zaboravili [ažurirati svoju lokalnu kopiju](#Update-to-new-version-update-your-local-copy)
 
 ## Ništa od navedenoga nije pomoglo
 
