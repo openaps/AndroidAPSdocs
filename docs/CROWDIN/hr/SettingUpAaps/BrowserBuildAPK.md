@@ -79,7 +79,7 @@ Dodirnite **Select AAPS Version** i odaberite verziju za izradu. Najnovija verzi
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Varijante koje završavaju s „Debug“ znače da će se APK izraditi u načinu za otklanjanje pogrešaka (debug), što je korisno razvojnim programerima za rješavanje problema.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
