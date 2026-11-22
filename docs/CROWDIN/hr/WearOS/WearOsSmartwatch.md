@@ -2,7 +2,7 @@
 
 Upute u nastavku odnose se na **AAPS Wear** apk koji trebate izraditi. Ako ga još niste izradili, pogledajte povezane upute [ovdje](../WearOS/BuildingAapsWearOS.md). Pri izradi obavezno koristite istu datoteku spremišta ključeva koju ste koristili za **AAPS** apk na telefonu.
 
-Dio ovih informacija možete koristiti i za **AAPSClient** i **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. Na primjer: aplikacija **AAPSClient Wear** može se koristiti za prikaz podataka **AAPSClienta**, a ne podataka **AAPS-a**. Kada je instalirano nekoliko inačica klijenta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) jedna uz drugu, pločice svake od njih imaju malo zaglavlje u boji te inačice, pa ih možete razlikovati dok listate.
+Dio ovih informacija možete koristiti i za **AAPSClient** i **PumpControl** **Wear** apk. Svaka aplikacija **Wear** komunicira s pripadajućom aplikacijom na telefonu. Na primjer: aplikacija **AAPSClient Wear** može se koristiti za prikaz podataka **AAPSClienta**, a ne podataka **AAPS-a**. Kada je instalirano nekoliko inačica klijenta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) jedna uz drugu, pločice svake od njih imaju malo zaglavlje u boji te inačice, pa ih možete razlikovati dok listate.
 
 ## Verzije Wear OS-a i kompatibilnost
 
@@ -91,7 +91,7 @@ Instalirajte **AAPS Wear** apk pomoću [Wear Installera 2](https://youtu.be/abgN
 
 ```{admonition} Wear OS 5
 :class: warning
-Na Wear OS 5 AAPS Watchface mora se odabrati u Wear Installeru 2 odmah nakon instalacije aplikacije Wear: na kraju instalacije program nudi Watchface **AAPS (Custom)**. Ako slučajno prijeđete na drugi Watchface, ponovite instalaciju. Changing the watchface settings (Dark, Matching divider, etc.) may not be possible.
+Na Wear OS 5 AAPS Watchface mora se odabrati u Wear Installeru 2 odmah nakon instalacije aplikacije Wear: na kraju instalacije program nudi Watchface **AAPS (Custom)**. Ako slučajno prijeđete na drugi Watchface, ponovite instalaciju. Promjena postavki Watchfacea (Tamno, Odgovarajući razdjelnik itd.) možda neće biti moguća.
 
 Ako vam klasični Watchface trenutačno radi, **isključite automatska ažuriranja sata**: sljedeće ažuriranje firmwarea vjerojatno će ga pokvariti. Ako ipak ažurirate na Wear OS 6, pročitajte odjeljak iznad: **AAPS** tada instalira vlastiti Watchface u novom formatu.
 ```
@@ -104,7 +104,7 @@ Primjer: Galaxy Watch 4 i noviji s One UI 8 Watch, Pixel Watch nakon ažuriranja
 
 Instalirajte **AAPS Wear** apk pomoću [Wear Installera 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Klasični Watchfaceovi nisu dostupni; **AAPS** automatski instalira Watchface odabran na telefonu, pogledajte [Watchface koji instalira AAPS](#wearos-aaps-v4-watchface). Nema ograničenja u radu **AAPS Weara**.
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## Kako postaviti pametni sat Samsung Galaxy Watch 4 s **AAPS-om**
 
 Ovaj odjeljak pretpostavlja da ste potpuni početnik s pametnim satovima. Daje osnovno snalaženje na jednom popularnom satu, **Galaxy Watch 4**, a zatim upute korak po korak za postavljanje **AAPS-a** na sat.
 
@@ -114,17 +114,17 @@ Ovdje su osnovne upute za postavljanje za [Galaxy Watch 5](https://www.youtube.c
 
 ## Osnovno upoznavanje s pametnim satom
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable", “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Nakon osnovnog postavljanja sata prema gornjem videozapisu, otvorite Trgovinu Play na telefonu i preuzmite sljedeće aplikacije: „Galaxy Wearable“, „Samsung“ i „Easy Fire tools“ ili „Wear Installer 2“.
 
 Postoji mnogo YouTube videozapisa drugih autora koji vam mogu pomoći da upoznate svoj novi pametni sat, na primjer:
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-Aplikacija „Galaxy Wearable“ ima i odjeljak s uputama za korištenje. Otvorite Galaxy Wearable na telefonu, potražite sat i pokušajte upariti sat s telefonom. Depending on your version, this may prompt you to install one more app, “galaxy watch 4 plugin”, from the playstore (takes a while to download). Instalirajte to na telefon, a zatim ponovno pokušajte upariti sat i telefon u aplikaciji Wearable. Prođite kroz niz izbornika i označite razne postavke.
+Aplikacija „Galaxy Wearable“ ima i odjeljak s uputama za korištenje. Otvorite Galaxy Wearable na telefonu, potražite sat i pokušajte upariti sat s telefonom. Ovisno o vašoj verziji, to može zatražiti instalaciju još jedne aplikacije, „galaxy watch 4 plugin“, iz Trgovine Play (preuzimanje traje neko vrijeme). Instalirajte to na telefon, a zatim ponovno pokušajte upariti sat i telefon u aplikaciji Wearable. Prođite kroz niz izbornika i označite razne postavke.
 
 ## Postavljanje Samsung računa
 
-Provjerite da e-mail račun kojim postavljate Samsung račun ima datum rođenja prema kojem korisnik ima 13 ili više godina, jer je inače Samsungove dozvole vrlo teško odobriti. Ako ste djetetu mlađem od 13 godina dali Gmail račun i koristite tu e-mail adresu, ne možete ga jednostavno promijeniti u račun za odrasle. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. Sljedeći dan račun će biti pretvoren u račun za odrasle i možete nastaviti s postavljanjem Samsung računa.
+Provjerite da e-mail račun kojim postavljate Samsung račun ima datum rođenja prema kojem korisnik ima 13 ili više godina, jer je inače Samsungove dozvole vrlo teško odobriti. Ako ste djetetu mlađem od 13 godina dali Gmail račun i koristite tu e-mail adresu, ne možete ga jednostavno promijeniti u račun za odrasle. Jedno rješenje je promijeniti trenutačni datum rođenja tako da trenutačna dob bude 12 godina i 364 dana. Sljedeći dan račun će biti pretvoren u račun za odrasle i možete nastaviti s postavljanjem Samsung računa.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -218,7 +218,7 @@ Pojavit će se kod za uparivanje putem Wi-Fi-ja te IP adresa i port:
 - Vidjet ćete odgovor:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - U terminal upišite: <br>`adb devices`.<br> Trebali biste vidjeti nešto poput:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
+- Sada idite u mapu na računalu u kojoj je Wear apk i upišite<br> `adb install wear-full.apk` <br>pri čemu wear-full.apk zamijenite nazivom svoje apk datoteke.
 - Vidjet ćete:<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -235,7 +235,7 @@ Pojavit će se kod za uparivanje putem Wi-Fi-ja te IP adresa i port:
 **Uparivanje:**
 
 - Sat: Bežično otklanjanje pogrešaka: zapišite IP adresu.
-- Wear Installer: Enter the IP in the Wear Installer app.
+- Wear Installer: unesite IP adresu u aplikaciju Wear Installer.
 - Odaberite uparivanje novog uređaja (Pair new) i zapišite prikazani kod za uparivanje i broj porta.
 - Wear Installer: unesite kod za uparivanje + razmak + broj porta.
 - Wear Installer bi trebao javiti da je uparivanje uspjelo. Ako ne javi, zatvorite Wear Installer i pokušajte ponovno.
@@ -260,7 +260,7 @@ Zadnji korak je postaviti **AAPS** na telefonu da radi s **Wear.apk** na satu. Z
 
 Za bolus ili druge radnje sa sata uključite i **Upravljanje sa sata** u [Postavke > Wear](#preferences-wear).
 
-To change to a different **AAPS**  watchface, long-press the watchface on the home screen of the watch and tap **Customize**. Zatim povlačite udesno dok ne dođete do svih Watchfaceova **AAPS**.
+Za prelazak na drugi **AAPS** Watchface dugo pritisnite Watchface na početnom zaslonu sata i dodirnite **Prilagodi**. Zatim povlačite udesno dok ne dođete do svih Watchfaceova **AAPS**.
 
 Ako je **AAPS** Wear.apk uspješno ručno instaliran na pametni sat, to će izgledati ovako:
 
@@ -334,7 +334,7 @@ F – baterija telefona
 
 G – bazalna stopa (prikazana u J/h kod standardne stope i u % kod privremenog bazala (TBR))
 
-H - BGI (blood glucose impact) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H – BGI (utjecaj na glukozu u krvi) -> koliko bi GUK „trebao“ rasti ili padati samo na temelju djelovanja inzulina.
 
 I – ugljikohidrati (aktivni ugljikohidrati | e-ugljikohidrati u budućnosti)
 
