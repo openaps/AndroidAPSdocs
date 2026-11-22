@@ -9,7 +9,7 @@ Koji god CGM sustav koristite, ako ćete ga kalibrirati vrijednostima iz krvi, p
 -   Izbjegavajte kalibraciju dok glukoza raste ili pada.
 -   Radite „dovoljno“ kalibracija – službene aplikacije tražit će provjeru jednom ili dvaput dnevno. DIY sustavi to možda neće tražiti, pa budite oprezni ako nastavljate bez kalibracija.
 -   Kod senzora koji ne trebaju ili ne dopuštaju kalibraciju barem jednom dnevno provjerite stvarni šećer u krvi. AAPS je siguran onoliko koliko su pouzdana očitanja vašeg senzora.
--   If at all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
+-   Ako je ikako moguće, kalibrirajte s nekim očitanjima u nižem rasponu (4–5 mmol/L ili 72–90 mg/dL) i nekim na malo višoj razini (7–9 mmol/L ili 126–160 mg/dL), jer to daje bolji raspon za kalibraciju točke i nagiba.
 
 ## Postavljanje senzora (G6)
 
@@ -38,4 +38,4 @@ Možete pokušati promijeniti postavke blokiranja šuma u xDripu (Settings - Int
 
 ![Starost senzora u retku Senzor proširenog panela statusa](../images/main/main_status_row_expanded.png)
 
-Starost senzora prikazuje se u retku **Senzor** panela statusa na glavnom zaslonu (dodirnite strelicu da biste ga proširili). A negative age occurs if there is either a double "Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Otvorite **Povijest tretmana** (izbornik ☰), odaberite karticu **Careportal** i izbrišite pogrešan unos.
+Starost senzora prikazuje se u retku **Senzor** panela statusa na glavnom zaslonu (dodirnite strelicu da biste ga proširili). Negativna starost nastaje ako postoji dvostruki [unos u Careportal](#aaps-screens-careportal) „Umetanje senzora“ ili umetanje senzora s pogrešnim datumom. Otvorite **Povijest tretmana** (izbornik ☰), odaberite karticu **Careportal** i izbrišite pogrešan unos.
