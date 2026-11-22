@@ -1,6 +1,6 @@
 # Izrada i vraćanje sigurnosnih kopija
 
-Kada instalirate AAPS na telefon, on postaje „medicinski uređaj” na koji se svakodnevno oslanjate. Toplo se preporučuje imati plan za hitne slučajeve, za slučaj da vam se telefon pokvari, bude ukraden ili izgubljen. Therefore, it is essential to prepare by asking yourself: "What if?"
+Kada instalirate AAPS na telefon, on postaje „medicinski uređaj” na koji se svakodnevno oslanjate. Toplo se preporučuje imati plan za hitne slučajeve, za slučaj da vam se telefon pokvari, bude ukraden ili izgubljen. Zato je važno pripremiti se tako da se zapitate: „Što ako?”
 
 Da biste mogli vratiti postavke AAPS-a na postojeći ili novi telefon, važno je sljedeće stavke čuvati na sigurnom mjestu (to jest: ne na telefonu). Najbolje je čuvati barem dvije odvojene sigurnosne kopije: na lokalnom tvrdom disku, USB stiku i (preporučeno) u pohrani u oblaku kao što su Google Drive ili Microsoft 365 OneDrive. Ako sigurnosne kopije čuvate u oblaku, sve što vam treba uvijek je dostupno s telefona, pa sustav možete vratiti bilo gdje i bilo kada.
 
@@ -8,7 +8,7 @@ Razmislite o nabavi drugog, rezervnog telefona i vježbajte vraćanje AAPS-a na 
 
 ```{admonition} Android backups and phone-transfer tools do not carry your AAPS settings
 :class: warning
-Since **AAPS** 4.0 the settings are kept in an encrypted store on the phone, and they are left out of the Google backup and of the phone-to-phone transfer of a new phone. A settings export, as described on this page, is the only way to carry them over.
+Od verzije **AAPS** 4.0 postavke se čuvaju u šifriranoj pohrani na telefonu i nisu uključene u Googleovu sigurnosnu kopiju ni u prijenos s telefona na telefon pri postavljanju novog telefona. Izvoz postavki, kako je opisan na ovoj stranici, jedini je način da ih prenesete.
 ```
 
 Da biste mogli vratiti postavke, važno je imati pri ruci sljedeće stavke:
@@ -59,11 +59,11 @@ Izvoz postavki AAPS-a u datoteku omogućuje vam vraćanje konfiguracije na stanj
 
 * Svaki put kada planirate veće promjene konfiguracije (promjena postavki SMB-a, promjena vrste inzulina, promjena pumpe, promjene automatizacija), trebali biste izraditi sigurnosnu kopiju **Postavki** prije i nakon promjena. Tako imate najnovije postavke, ali i kopiju postavki od prije promjena, za slučaj da ih trebate vratiti.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only: the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. Ako nemate kopiju postavki izvezenu nakon što ste pokrenuli trenutni Pod, morat ćete pokrenuti novi Pod ako budete trebali zamijeniti trenutni telefon.
+* Samo za korisnike pumpi bez katetera (kao što su Omnipod i Medtrum): datoteka **Postavke** sadrži podatke o vezi s vašim trenutnim Pod-om i može se koristiti za vraćanje veze s tim Pod-om na novom telefonu. Ako nemate kopiju postavki izvezenu nakon što ste pokrenuli trenutni Pod, morat ćete pokrenuti novi Pod ako budete trebali zamijeniti trenutni telefon.
 
 **Kako ručno izraditi sigurnosnu kopiju:**
 
-1. If this is your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Postavite lozinku i zapišite je na sigurno mjesto. _Bez ove lozinke nećete moći pristupiti sigurnosnim kopijama **Postavki**._
+1. Ako prvi put uvozite ili izvozite **Postavke**, morat ćete postaviti glavnu lozinku u [Postavke > Zaštita](#Preferences-master-password). Postavite lozinku i zapišite je na sigurno mjesto. _Bez ove lozinke nećete moći pristupiti sigurnosnim kopijama **Postavki**._
 
 2. Na glavnom zaslonu **AAPS-a** otvorite **izbornik** (☰) > **Održavanje**. Odaberite gdje spremiti datoteku pomoću oznaka **Lokalno** i **Oblak** pokraj **Izvezi postavke** (pogledajte **Izvoz ili uvoz postavki** u nastavku), a zatim dodirnite **Izvezi postavke**. **AAPS** pokazuje kamo će datoteka biti spremljena: naziv datoteke za **Lokalno**, **Google Drive** za **Oblak**. Dodirnite **U redu**.
 
@@ -97,7 +97,7 @@ Preporučuje se redovito izvoziti postavke, posebno prije i nakon promjena konfi
 
 **Napomena**: _Izvezene postavke šifriraju se vašom glavnom lozinkom AAPS-a: bez glavne lozinke korištene pri izvozu nećete moći uvesti datoteku postavki!_
 
-If you forgot your master password, you can [reset it](#FAQ-reset-master-password), but settings files exported with the old password still need the old one.
+Ako ste zaboravili glavnu lozinku, možete je [resetirati](#FAQ-reset-master-password), ali datoteke postavki izvezene sa starom lozinkom i dalje trebaju staru lozinku.
 
 ### Izvoz ili uvoz postavki
 Da biste izvezli ili uvezli postavke, otvorite **izbornik** (☰) i odaberite **Održavanje**. U odjeljku **Upravljanje datotekama** oznake **Lokalno** i **Oblak** pokraj **Izvezi postavke** i **Uvezi postavke** određuju gdje se datoteka postavki sprema ili odakle se čita: **Lokalno** je AAPS mapa na vašem telefonu, a **Oblak** je dostupan kada postavite [Mapu u oblaku](#preferences-maintenance-cloud). Dodirom na oznaku uključujete je ili isključujete; barem jedna uvijek ostaje odabrana, a oba retka dijele isti odabir. Zatim dodirnite samo **Izvezi postavke** ili **Uvezi postavke** za početak.
@@ -107,11 +107,11 @@ Da biste izvezli ili uvezli postavke, otvorite **izbornik** (☰) i odaberite **
 (ExportImportSettings-Automating-Settings-Export)=
 ### Automatizacija izvoza postavki
 
-To automate settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Da biste automatizirali izvoz postavki [(**pogledajte Automatizaciju**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), otvorite [**Postavke** > **Održavanje**](#preferences-maintenance-settings), proširite **Izvoz postavki bez nadzora** i uključite **Omogući automatski izvoz postavki**.
 
 Sada možete postaviti [Automatizaciju](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) da izvozi postavke, redovito (_npr._ svaki tjedan) ili nakon promjene Pod-a.
 
-_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
+_**Napomena:** Pri uvozu postavki korisnik uvijek mora upisati glavnu lozinku AAPS-a!_
 
 ![Postavke > Održavanje > Izvoz postavki bez nadzora sa sklopkom Omogući automatski izvoz postavki](../images/Maintenance/settings_unattended_export.png)
 
@@ -154,7 +154,7 @@ Uvoz prema zadanim postavkama ne dira postavke pumpe: pumpa odabrana u **Konfigu
 
 3. Izađite iz čarobnjaka za postavljanje. Uvest ćemo sve potrebne postavke iz sigurnosne kopije **Postavki**
 
-4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
+4. Na glavnom zaslonu **AAPS-a** dodirnite **Odobri** i dopustite sva dopuštenja navedena na ploči **Potrebna dopuštenja** na vrhu
 
 5. Na glavnom zaslonu **AAPS-a** postavite glavnu lozinku u [Postavke > Zaštita](#Preferences-master-password) na istu lozinku koju ste koristili za sigurnosne kopije.
 
@@ -178,7 +178,7 @@ Uvoz prema zadanim postavkama ne dira postavke pumpe: pumpa odabrana u **Konfigu
 
 12. **AAPS** pita **Primijeniti uvezene postavke?** i navodi koliko će se postavki promijeniti te, ako ste okvir ostavili neoznačen, koliko se postavki pumpe zadržava. Još ništa nije zapisano, pa **Otkaži** ostavlja vaš telefon točno onakvim kakav je bio. Dodirnite **U redu** za primjenu.
 
-    ![Apply imported settings dialog](../images/Maintenance/import_settings_apply.png)
+    ![Dijalog „Primijeniti uvezene postavke?”](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** odmah primjenjuje uvezene postavke, bez ponovnog pokretanja. Ponovno se pokreću samo dodaci čije su se postavke promijenile. Dok to traje, **AAPS** prikazuje **Primjena postavki…**; ako je pumpa zauzeta, prikazuje **Čekanje na pumpu…** i primjenjuje postavke kada pumpa bude slobodna. Ako je pumpa i nakon jedne minute zauzeta, **AAPS** nudi da pokušate ponovno. Poruka **Postavke su primijenjene** potvrđuje da se uvezene postavke koriste. Svaki tretman koji je bio u redu čekanja dok je uvoz trajao odbacuje se i **AAPS** vam javlja da je otkazan, tako da se ništa ne pošalje pumpi dvaput.
 
