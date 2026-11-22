@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
-31 October 2026: Version 4.0.0 is out. Pogledajte [Bilješke o izdanju](#latestrelease) da vidite što je novo i za ažuriranje slijedite upute u [uputama za ažuriranje](./Maintenance/UpdateToNewVersion.md).
+31. listopada 2026.: izašla je verzija 4.0.0. Pogledajte [Bilješke o izdanju](#latestrelease) da vidite što je novo i za ažuriranje slijedite upute u [uputama za ažuriranje](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -17,7 +17,7 @@ Ova dokumentacija objašnjava kako postaviti i koristiti **AAPS**. Kroz dokument
 
 U odjeljku **1) Prvi koraci**, [Uvod u APS i AAPS](Getting-Started/Introduction.md) objašnjava osnovnu ideju i svrhu sustava umjetne gušterače (APS). Opisuje osnove korištenja petlje općenito, zašto je **AAPS** razvijen, uspoređuje **AAPS** s drugim sustavima i govori o sigurnosti. Daje savjete kako razgovarati s vašim liječničkim timom o **AAPS**-u, objašnjava zašto aplikaciju **AAPS** morate izraditi sami umjesto da je samo preuzmete i daje pregled uobičajenog povezivanja uređaja u sustavu **AAPS**. Govori i o pristupačnosti te o tome kome **AAPS** vjerojatno može pomoći.
 
-[Priprema za početak s AAPS-om](./Getting-Started/PreparingForAaps.md) daje više pojedinosti o sigurnosti te o telefonima, CGM-ovima (uređajima za kontinuirano mjerenje glukoze) i inzulinskim pumpama koji su kompatibilni s **AAPS**-om. Daje pregled postupka kroz koji ćete proći i približan vremenski plan dok ne budete mogli koristiti sve funkcije **AAPS**-a. Ovaj vas odjeljak tehnički priprema da svoj sustav **AAPS** sastavite što brže i učinkovitije. The subsection [Compatible CGMs](./Getting-Started/CompatiblesCgms.md) explains how to optimize your CGM setup and which smoothing options are best.
+[Priprema za početak s AAPS-om](./Getting-Started/PreparingForAaps.md) daje više pojedinosti o sigurnosti te o telefonima, CGM-ovima (uređajima za kontinuirano mjerenje glukoze) i inzulinskim pumpama koji su kompatibilni s **AAPS**-om. Daje pregled postupka kroz koji ćete proći i približan vremenski plan dok ne budete mogli koristiti sve funkcije **AAPS**-a. Ovaj vas odjeljak tehnički priprema da svoj sustav **AAPS** sastavite što brže i učinkovitije. Pododjeljak [Kompatibilni CGM-ovi](./Getting-Started/CompatiblesCgms.md) objašnjava kako optimizirati postavke CGM-a i koje su opcije zaglađivanja najbolje.
 
 Sada kada dobro razumijete postupak, možete početi sastavljati svoju petlju **AAPS**.
 
@@ -40,7 +40,7 @@ Odjeljak **9) [Pomoć i rješavanje problema](GettingHelp/WhereCanIGetHelp.md)**
 
 Odjeljak **10)** opisuje **[Napredne opcije AAPS-a](./AdvancedOptions/FullClosedLoop.md)**, na primjer kako s korištenja **AAPS**-a kao hibridne zatvorene petlje (bolus za obroke _itd._) prijeći na potpuno zatvorenu petlju (bez bolusa), kako [podesiti svoj profil](./GettingHelp/ProfileTuning.md) i koristiti Autotune te opisuje razvojni i inženjerski način rada. Većini korisnika sasvim je dovoljna glavna verzija **AAPS**-a („Master“) bez ovih opcija. Ovaj je odjeljak za korisnike koji već imaju dobru regulaciju i žele dodatno poboljšati svoj sustav.
 
-In section **11) [How to support AAPS](SupportingAaps/HowCanIHelp.md)** we provide information so that you can support this project. Možete donirati novac, opremu ili znanje. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations.md) and provide your data through the Open Humans project.
+U odjeljku **11) [Kako podržati AAPS](SupportingAaps/HowCanIHelp.md)** dajemo informacije o tome kako možete podržati ovaj projekt. Možete donirati novac, opremu ili znanje. Možete sami predložiti ili napraviti izmjene u dokumentaciji, pomoći s [prijevodom dokumentacije](SupportingAaps/Translations.md) i dati svoje podatke putem projekta Open Humans.
 
 Odjeljak **12) Izvori** sadrži arhiviranu ili dodatnu dokumentaciju, uključujući pododjeljak za [zdravstvene djelatnike](UsefulLinks/ClinicianGuideToAaps.md) koje zanima tehnologija umjetne gušterače otvorenog koda kao što je **AAPS**, ili za pacijente koji te informacije žele podijeliti sa svojim liječnicima. Ova je tema obrađena i u uvodu. U ovom se odjeljku nalaze i drugi izvori o dijabetesu i korištenju petlje. Uključuje [Pojmovnik](./UsefulLinks/Glossary.md), popis kratica (ili kratkih naziva) koje se koriste u **AAPS**-u. Ovdje, na primjer, možete saznati što znače pojmovi ISF ili TT.
 
@@ -51,7 +51,7 @@ Odjeljak **12) Izvori** sadrži arhiviranu ili dodatnu dokumentaciju, uključuju
 :class: danger
 Sigurnost **AAPS**-a ovisi o sigurnosnim funkcijama vašeg hardvera (telefon, pumpa, CGM). Koristite samo potpuno ispravnu inzulinsku pumpu i CGM s odobrenjem FDA/CE. Ne koristite pokvarene, preinačene ili samostalno izrađene inzulinske pumpe ili CGM prijemnike. Koristite samo originalni potrošni materijal (aplikatore, kanile i spremnike za inzulin) koji je proizvođač odobrio za vašu pumpu i CGM. Korištenje neispitanog ili preinačenog potrošnog materijala može uzrokovati netočnosti i pogreške u doziranju inzulina, što je ozbiljna opasnost za korisnika. 
 
-Ne koristite **AAPS** ako uzimate inhibitore SGLT-2 (glifozine), jer oni snižavaju razinu šećera u krvi. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+Ne koristite **AAPS** ako uzimate inhibitore SGLT-2 (glifozine), jer oni snižavaju razinu šećera u krvi. Povećavate opasnost od dijabetičke ketoacidoze (DKA) zbog smanjene isporuke inzulina i od hipoglikemije zbog snižene razine šećera u krvi. 
 ```
 
 ```{admonition} Disclaimer
@@ -70,12 +70,12 @@ Ne koristite **AAPS** ako uzimate inhibitore SGLT-2 (glifozine), jer oni snižav
 ## Sadržaj dokumentacije AAPS-a
 
 ```{toctree}
-:caption: Using this documentation
+:caption: Korištenje ove dokumentacije
 :titlesonly:
 
-Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
-Search the documentation <./NavigateDoc/SearchDoc.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
+Promjena jezika i verzije <./NavigateDoc/ChangeLanguageVersion.md>
+Pretraživanje dokumentacije <./NavigateDoc/SearchDoc.md>
+Ažuriranja i promjene dokumentacije <./Maintenance/DocumentationUpdate.md>
 ```
 ```{toctree}
 :caption: 1) Prvi koraci
@@ -107,14 +107,14 @@ Postavljanje poslužitelja za izvješća <./SettingUpAaps/SettingUpTheReportingS
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Configure AAPS
+:caption: 4) Konfiguracija AAPS-a
 
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+Čarobnjak za postavljanje AAPS-a <./SettingUpAaps/SetupWizard.md>
+Vaš AAPS profil <./SettingUpAaps/YourAapsProfile.md>
+Promjene konfiguracije AAPS-a <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Konfiguracija (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Postavke <./SettingUpAaps/Preferences.md>
+Ispunjavanje ciljeva <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -166,15 +166,15 @@ Stranica za razmjenu prilagođenih Watchfaceova <./ExchangeSiteCustomWatchfaces/
 ```
 
 ```{toctree}
-:caption: 8) Maintenance of AAPS
+:caption: 8) Održavanje AAPS-a
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
+Izrada i vraćanje sigurnosnih kopija <./Maintenance/ExportImportSettings.md>
+Bilješke o izdanju <./Maintenance/ReleaseNotes.md>
+Što se promijenilo u AAPS-u v4 <./Maintenance/V4Changes.md>
+Ažuriranje na novu verziju ili granu <./Maintenance/UpdateToNewVersion.md>
+- Ažuriranje putem preglednika (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Ažuriranje s Android Studiom <./Maintenance/UpdateComputerBuild.md>
+Kraj podrške <./Maintenance/EndOfLife.md>
 
 ```
 
