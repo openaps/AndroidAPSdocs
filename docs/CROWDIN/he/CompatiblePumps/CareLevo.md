@@ -121,6 +121,8 @@ CareLevo היא משאבת פאץ' ללא צינורית מתוצרת CareMedi. 
 
 כאשר התראה קריטית עצרה את הפאץ', ההתראה מציעה במקום זאת את **השבתת פאץ'**. לחיצה עליו משליכה את הפאץ' באותו אופן.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## התראות והודעות
