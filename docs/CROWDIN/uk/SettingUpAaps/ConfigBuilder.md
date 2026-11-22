@@ -313,6 +313,7 @@ xDrip+ має власне калібрування. Калібруйте лиш
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Віртуальна помпа: відкрита петля — лише пропозиції **AAPS**
   - коли ви робите перші кроки з **AAPS**, під час перших [завдань](../SettingUpAaps/CompletingTheObjectives.md)
   - для помпи, для якої ще немає драйвера
