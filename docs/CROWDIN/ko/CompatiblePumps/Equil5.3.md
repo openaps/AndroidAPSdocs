@@ -43,7 +43,7 @@
 ![Equil 드라이버 설정](../images/v4/Pumps/equil_settings.png)
 
 * **배터리 부족 알람**: 펌프 배터리가 부족하면 경고합니다.
-* **인슐린 부족 알람**: 레저버의 인슐린이 부족하면 경고합니다.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **알림음**: 펌프가 알리는 방식입니다: **무음**, **진동만**, **소리만** 또는 **진동과 소리**.
 * **볼러스 속도**: 볼러스를 주입하는 속도입니다: **1.5 U/min (표준)**, **3 U/min**, **6 U/min** 또는 **12 U/min**. 볼러스가 빠를수록 막힘 알람이 더 자주 날 수 있습니다.
 
