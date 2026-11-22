@@ -9,7 +9,7 @@
 ../CompatiblePhones/Huawei.md
 ```
 
-The current version of **AAPS** (4.0) requires an Android smartphone with Google **Android 12.0 or above**. Если вы собираетесь купить новый телефон, то (на январь 2026 г.) **лучше выбрать Android 16**, Android 15 не рекомендуется.
+Текущая версия **AAPS** (4.0) требует смартфон на Android с **Android 12.0 или выше**. Если вы собираетесь купить новый телефон, то (на январь 2026 г.) **лучше выбрать Android 16**, Android 15 не рекомендуется.
 
 Последние новости на эту тему смотрите в [Facebook или Discord](../GettingHelp/WhereCanIGetHelp.md).
 
@@ -26,11 +26,11 @@ The current version of **AAPS** (4.0) requires an Android smartphone with Google
 
 В этом списке пользователи рассказывают, как работает телефон с **AAPS** и определенной помпой и CGM. Он поможет проверить, использовали ли уже другие пользователи ваш телефон / помпу / CGM успешно.
 
-Документ доступен только для чтения. With CTRL-F, you can search in the text of the Google sheet.
+Документ доступен только для чтения. С помощью CTRL-F можно искать текст в таблице Google.
 
-Чтобы записать результаты проверки своего набора устройств, заполните эту [форму](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes.
+Чтобы записать результаты проверки своего набора устройств, заполните эту [форму](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). После того как вы заполните форму, таблица обновляется автоматически каждые 5 минут.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Если с таблицей что-то не так, свяжитесь с тем, кто ее ведет, *@theodoor5137*, в Discord или посмотрите страницу [Где получить помощь?](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Я не нашел свой телефон
 
@@ -40,7 +40,7 @@ Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137
 
 (Phones-phone-wallpaper)=
 
-## Phone wallpaper
+## Обои для телефона
 
 Если вы хотите украсить свой телефон символикой **AAPS**, скачайте фоновое изображение [здесь](../images/bg_phone.jpg)!
 
