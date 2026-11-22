@@ -122,7 +122,7 @@ Slijedite ove korake na Androidu 16. Na drugim verzijama izgled će se malo razl
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 click on `Battery`, on Android 13+ click on `App battery usage`.
+   1. Na Androidu 12 dodirnite `Baterija` (Battery), a na Androidu 13+ dodirnite `Potrošnja baterije aplikacije` (App battery usage).
 
    ![settings_apps_16](../images/setup-wizard/app_bluetooth.png)   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
@@ -172,7 +172,7 @@ Vratite se strelicom u gornjem lijevom kutu. Čarobnjak sada prikazuje „**Lozi
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NEMOJTE IZGUBITI GLAVNU LOZINKU**. Zapišite je, _npr._ na Google Drive, koji je dobro mjesto jer Google za vas izrađuje sigurnosne kopije. Vaš pametni telefon ili računalo mogu se pokvariti, a vi možda nemate stvarnu kopiju. Ako zaboravite glavnu lozinku, kasnije će biti teško vratiti konfiguraciju profila i napredak kroz **Ciljeve**. See [How to reset the master password?](#FAQ-reset-master-password)
+**NEMOJTE IZGUBITI GLAVNU LOZINKU**. Zapišite je, _npr._ na Google Drive, koji je dobro mjesto jer Google za vas izrađuje sigurnosne kopije. Vaš pametni telefon ili računalo mogu se pokvariti, a vi možda nemate stvarnu kopiju. Ako zaboravite glavnu lozinku, kasnije će biti teško vratiti konfiguraciju profila i napredak kroz **Ciljeve**. Pogledajte [Kako resetirati glavnu lozinku?](#FAQ-reset-master-password)
 ```
 
 Kada završite, pritisnite „**SLJEDEĆI**“ za prijelaz na sljedeći zaslon.
@@ -243,7 +243,7 @@ Pritisnite „**Nightscout URL**“ i unesite adresu svog osobnog Nightscout pos
 
 Pritisnite „**Nightscout pristupni token**“ i unesite pristupni token za svoj Nightscout poslužitelj. Bez ovog tokena pristup neće raditi. Ako ga još nemate, pogledajte dokumentaciju za postavljanje poslužitelja za izvješća.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+Ostavite „**Koristi WebSockets**“ omogućeno za komunikaciju s Nightscoutom u stvarnom vremenu. Websocketi su **obavezni** za daljinsko upravljanje iz **AAPSClienta**, na oba telefona.
 
 Ostale odjeljke zasad možete ostaviti na zadanim vrijednostima. Ovdje su opisani kako biste kasnije znali gdje ih pronaći:
 
@@ -454,7 +454,7 @@ Kada odaberete pravu pumpu, **AAPS** traži potvrdu jer će kopirati bazalne sto
 
 ![Potvrda pri odabiru prave pumpe](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#setup-wizard-bluetooth-permission)).
+Ako pumpa koju odaberete komunicira putem Bluetootha, **AAPS** traži dopuštenje za povezivanje s uređajima u blizini nakon što završite Čarobnjak (pogledajte [Dopuštenje za Bluetooth](#setup-wizard-bluetooth-permission)).
 
 Ako ste već postavili profil i znate kako spojiti pumpu, slobodno je spojite sada. Inače je zasad ostavite na **Virtualna pumpa** — to možete promijeniti bilo kada. Također možete napustiti Čarobnjak za postavljanje strelicom u gornjem lijevom kutu i pustiti da vam **AAPS** najprije prikaže nekoliko vrijednosti glukoze u krvi.
 
@@ -505,7 +505,7 @@ Pritisnite „**Otvori ciljeve**“:
 
 Ovdje započinjemo Cilj 1, iako trenutno naše postavljanje još nije potpuno spremno za uspješno ispunjavanje ovog cilja. Ali ovo je početak.
 
-Press the "**Start**" button of **Objective 1**:
+Pritisnite gumb „**Započni**“ za **Cilj 1**:
 
 ![Popis ciljeva](../images/setup-wizard/Wizard-Objectives-List.png)
 
