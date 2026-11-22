@@ -313,6 +313,7 @@ Quand vous sélectionnez une autre pompe, **AAPS** vous demande de confirmer le 
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Pompe virtuelle : boucle ouverte - suggestions d'**AAPS** uniquement
   - as you make your first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   - pour une pompe qui n'a pas encore de pilote
