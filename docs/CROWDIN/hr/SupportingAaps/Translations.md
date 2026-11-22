@@ -1,104 +1,104 @@
-# How to translate strings for the AAPS app or the documentation
+# Kako prevesti tekstove aplikacije AAPS ili dokumentacije
 
 * For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Za dokumentaciju posjetite <https://crowdin.com/project/androidapsdocs> i prijavite se svojim GitHub računom
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Pošaljite zahtjev za pridruživanje timu za dokumentaciju. Za to kliknite zastavu željenog jezika, a zatim gumb „Join“ u gornjem desnom kutu sljedeće stranice. Navedite jezik, napišite nešto o sebi i svom iskustvu s AAPS-om te želite li biti prevoditelj ili lektor (samo osobe vješte u prevođenju + napredni korisnici AAPS-a).
 
-```{admonition} Time for Approval :class: note
+```{admonition} Vrijeme za odobrenje :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Odobrenje se radi ručno. Kao neprofitna organizacija ne jamčimo rokove (SLA), ali odobrenje je obično gotovo za manje od 1 dana. Ako nije, javite se timu za dokumentaciju putem Facebooka ili Discorda.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Kada vas odobrimo, kliknite zastavu
+       ![Kada vas odobrimo, kliknite zastavu](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Prijevod aplikacije
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Prevođenje tekstova aplikacije AAPS
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Ako nemate posebnu želju koje tekstove prevodite, samo odaberite gumb „Translate All“ za početak. Prikazat će vam tekstove koje treba prevesti.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Kliknite Translate All](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Ako želite prevesti pojedinu datoteku, potražite je putem dijaloga za pretraživanje ili stabla mapa i kliknite naziv datoteke kako biste počeli prevoditi tekstove u toj datoteci.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Kliknite strings.xml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Prevodite rečenice na lijevoj strani tako da dodate novi prevedeni tekst ili upotrijebite i uredite prijedlog
     
-       ![Translation app](../images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](../images/translations-proofreading-mode.png) 
+       ![Prevođenje aplikacije](../images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### Lektoriranje tekstova aplikacije AAPS
     
-       ![approve text](../images/translations-proofreading.png)
+    * Lektori počinju odabirom „Proofread“ na početnom zaslonu jezika.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Način lektoriranja za aplikaciju](../images/translations-proofreading-mode.png)
+    
+    
+      i odobrite prevedene tekstove
+    
+       ![odobravanje teksta](../images/translations-proofreading.png)
+    
+    Kada lektor odobri prijevod, on će biti dodan u sljedeću verziju AAPS-a.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Prijevod dokumentacije
     
-    * Click the name of the docs page you want to translate
+    * Kliknite naziv stranice dokumentacije koju želite prevesti
     
-    ![Click docs page](../images/translation_WikiPage.png)
+    ![Kliknite stranicu dokumentacije](../images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Prevodite rečenicu po rečenicu
     
-        1. The yellow text is the text you are working at the moment.
+        1. Žuti tekst je tekst na kojem trenutno radite.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Zeleni tekst je već preveden. Ne morate ga ponovno prevoditi.
     
-        1. The red text is the remaining text which have to be translated.
+        1. Crveni tekst je preostali tekst koji treba prevesti.
     
-        1. This is the source text you are working on at the moment
+        1. Ovo je izvorni tekst na kojem trenutno radite
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+        1. Ovo je prijevod koji pripremate. Možete kopirati tekst odozgo ili odabrati jedan od prijedloga ispod.
     
         1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Press the "save" button to save a proposal for the translation. It will then be passed to a proofreader for final check.
+        1. Pritisnite gumb „save“ kako biste spremili prijedlog prijevoda. It will then be passed to a proofreader for final check.
     
-    ![Translation docs](../images/translation_WikiTranslate.png)
+    ![Prevođenje dokumentacije](../images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Prevedena stranica neće biti objavljena u dokumentaciji prije nego što
     
-        1. the translation is proofread
+        1. prijevod je lektoriran
     
         1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
     
-        1. the PR in Github was approved.
+        1. PR na GitHubu je odobren.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    Obično to traje 1 – 3 dana, ali tijekom praznika može potrajati malo duže.
     
-    ### Translating links
+    ### Prevođenje poveznica
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Poveznice se više ne prevode
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Poveznice se više ne prevode. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
-You are translating the text which represents the link. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Prevodite tekst koji predstavlja poveznicu. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
 
-It's the proofreaders job to have a special look on this!
+Lektori na to moraju posebno paziti!
 
-### Proofreading
+### Lektoriranje
 
-* Proofreaders have to switch to Proofreading mode
+* Lektori se moraju prebaciti u način lektoriranja (Proofreading)
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![Način lektoriranja za dokumentaciju](../images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    i odobriti prevedene tekstove
     
-    ![approve text](../images/translations-proofreading.png)
+    ![odobravanje teksta](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. To speed up the process you can inform docs team about new translations.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Kako biste ubrzali postupak, možete obavijestiti tim za dokumentaciju o novim prijevodima.
