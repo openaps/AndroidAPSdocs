@@ -19,7 +19,7 @@ Pravila automatizacije izrađuju se i mijenjaju na zaslonu **Automatizacija** (*
 
 - Jedna ili više radnji koje treba izvršiti.
 
-    Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
+    Na primjer alarm, postavljanje postotka profila ili izvoz postavki AAPS-a pri promjeni Pod-a.
 
 
 Opcija automatizacije ima mnogo i korisnicima se preporučuje da ih prouče u aplikaciji AAPS, u odjeljku Automatizacija. Primjere automatizacije drugih korisnika možete potražiti i u grupama korisnika AAPS-a na [**Facebooku**](https://www.facebook.com/groups/AndroidAPSUsers) i [**Discordu**](https://discord.gg/4fQUWHZ4Mw).
@@ -38,11 +38,11 @@ Primjer u nastavku pokazuje kako **automatizacija** može ukloniti neke korake.
 
 Korisnik vježba svako jutro u 6 sati: mora se sjetiti da u 5 sati, prije vježbanja, u AAPS-u ručno postavi privremeni cilj „Aktivnost“.
 
-![Manual actions without automation](../images/Automations/automation_concept_manual.png)
+![Ručne radnje bez automatizacije](../images/Automations/automation_concept_manual.png)
 
 Korisnik je postavio **automatizaciju** koja u 5 sati pokreće privremeni cilj „Aktivnost“ kako bi njegov **GUK** i **aktivni inzulin** bili optimalni za vježbanje u 6 sati:
 
-![Actions done by an automation](../images/Automations/automation_concept_automated.png)
+![Radnje koje izvršava automatizacija](../images/Automations/automation_concept_automated.png)
 
 ## Važne stvari prije početka korištenja automatizacije
 
@@ -50,7 +50,7 @@ Korisnik je postavio **automatizaciju** koja u 5 sati pokreće privremeni cilj �
 
 1. Kao i svaka tehnologija, **CGM-ovi**, **pumpe** i telefoni mogu zakazati: tehnički problemi ili pogreške senzora mogu ometati radnje **automatizacije**, pa može biti potrebna ručna intervencija.
 
-1. **Requirements for Automations are likely to change as routines change**. Kada prelazite između razdoblja posla, škole i praznika, postavite podsjetnik u kalendaru da provjerite koje su **automatizacije** trenutačno aktivne (lako ih je aktivirati i deaktivirati). Na primjer, ako idete na odmor i više vam ne treba automatizacija za školski sport ili svakodnevno vježbanje, ili trebate promijeniti vremena.
+1. **Potrebe za automatizacijom vjerojatno će se mijenjati kako se mijenja vaša dnevna rutina**. Kada prelazite između razdoblja posla, škole i praznika, postavite podsjetnik u kalendaru da provjerite koje su **automatizacije** trenutačno aktivne (lako ih je aktivirati i deaktivirati). Na primjer, ako idete na odmor i više vam ne treba automatizacija za školski sport ili svakodnevno vježbanje, ili trebate promijeniti vremena.
 
 1. **Automatizacije** mogu biti u sukobu jedna s drugom, pa je dobro svaku novu postavku **automatizacije** pažljivo provjeriti u sigurnom okruženju i razumjeti zašto se neka **automatizacija** pokrenula ili nije pokrenula onako kako ste očekivali.
 
@@ -91,12 +91,12 @@ Da biste postavili **automatizaciju**, na zaslonu Automatizacija pritisnite gumb
 
 Da biste deaktivirali pravilo **automatizacije**, odznačite kućicu lijevo od naziva **automatizacije**. Primjer u nastavku prikazuje **automatizaciju** koja je aktivirana („označeno“) ili deaktivirana („neoznačeno“):
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Uključivanje i isključivanje pravila automatizacije](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 Kada postavljate **automatizaciju**, najprije je možete isprobati tako da pod „Radnje“ uključite opciju „Obavijest“. Tako će **AAPS** najprije prikazati obavijest umjesto da stvarno automatski izvrši radnju. Kada ste sigurni da se obavijest pojavila u pravo vrijeme i pod pravim uvjetima, pravilo **automatizacije** možete promijeniti tako da „Obavijest“ zamijenite „Radnjom“.
 
-![Alert actions](../images/Automations/automation_alert_actions.png)
+![Radnje upozorenja](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -115,7 +115,7 @@ Za **automatizaciju** postoje sigurnosne granice:
 
 * **Privremeni cilj** koji postavlja **automatizacija** mora biti između 72 i 180 mg/dL (ili 4 i 10 mmol/L).
 * **Postotak profila** mora biti između 50% i 130%.
-* There is a 5 minute time limit between executions of **Automation** (and first execution).
+* Između izvršavanja **automatizacije** (i prvog izvršavanja) postoji vremensko ograničenje od 5 minuta.
 
 ## Pravilna upotreba negativnih vrijednosti
 
@@ -127,7 +127,7 @@ Budite oprezni kada u **automatizaciji** odabirete negativnu vrijednost
 
 Budite oprezni kada u „Uvjetu“ **automatizacije** odabirete „negativnu vrijednost“, npr. s „je manje od“. Na primjer:
 
-![Comparison operators](../images/Automations/automation_comparison_operators.png)
+![Operatori usporedbe](../images/Automations/automation_comparison_operators.png)
 
 **Primjer 1:** uvjet **„je manje od“** „-0,1 mmol/L“ (ili „-2 mg/dL“) će:
 
@@ -222,15 +222,15 @@ nema
 * **Profil** mora biti između 50% i 130%
 * radi samo ako je prethodni postotak 100%
 
-**Actions:** **Change smoothing** (in the **Loop & insulin** group)
+**Radnje:** **Promijeni zaglađivanje** (u skupini **Petlja i inzulin**)
 
 **Opcije:**
 
-* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
+* odaberite [metodu zaglađivanja](../CompatibleCgms/SmoothingBloodGlucoseData.md) na koju želite prijeći. Popis je isti kao pod **Konfiguracija** > **Zaglađivanje**, a radnja radi točno ono što radi promjena tamo: nova metoda se sprema, sinkronizira s uparenim klijentima, a podaci GUK-a odmah se ponovno zaglađuju.
 * izvršava se samo ako ta metoda zaglađivanja već nije aktivna — **AAPS** to automatski dodaje u pravilo kao redak „**Preduvjeti: Zaglađivanje … nije aktivno**“. Kada je odabrano zaglađivanje aktivno, pravilo se tiho preskače.
-* Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
-  * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
-  * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
+* Primjer: novi senzor često ima puno šuma tijekom prvog dana. Dva pravila s okidačem **Starost senzora** daju jače filtriranje dok se senzor smiruje, a nakon toga zaglađivanje bez kašnjenja:
+  * **Starost senzora** manje od 24 h: **Promijeni zaglađivanje** na **Unscented Kalman Filter**
+  * **Starost senzora** više od 24 h: **Promijeni zaglađivanje** na **Prosječno zaglađivanje**
 
 **Radnje:** **Bilješka** (u skupini **Upozorenja** na popisu)
 
@@ -242,7 +242,7 @@ nema
 
 ![Događaji radnje Bilješka](../images/Automations/automation_action_careportal_events.png) ![Radnja Bilješka postavljena na Promjena mjesta primjene pumpe](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS to all numbers** (in the **Alerts** group)
+**Radnje:** **Pošalji SMS na sve brojeve** (u skupini **Upozorenja**)
 
 **Opcije:**
 
@@ -260,7 +260,7 @@ nema
 
 * odaberite **Uključeno** ili **Isključeno**. To mijenja postavku **Omogući SMB** u OpenAPS SMB, točno kao da ste je promijenili u **Postavkama**, i ostaje tako dok je vi ili neko drugo pravilo ne vratite.
 
-**Actions:** **Run Autotune** (in the **Loop & insulin** group)
+**Radnje:** **Pokreni Autotune** (u skupini **Petlja i inzulin**)
 
 **Opcije:**
 
@@ -270,7 +270,7 @@ nema
 
 **Opcije:**
 
-* nema. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Dodajte je pravilu koje mora imati prednost pred pravilima ispod njega (pogledajte [redoslijed automatizacija](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* nema. Dok su uvjeti pravila s ovom radnjom ispunjeni, **AAPS** ne provjerava pravila ispod njega na popisu. Čim uvjeti opet nisu ispunjeni, pravila ispod provjeravaju se kao i obično. Dodajte je pravilu koje mora imati prednost pred pravilima ispod njega (pogledajte [redoslijed automatizacija](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
 **Radnje:** **Pokreni scenu**, **Omogući scenu**, **Onemogući scenu** (u skupini **Scene**)
 
@@ -280,39 +280,39 @@ nema
 
 Kada je „Radnja“ dodana, zadane vrijednosti morate promijeniti u željeni broj tako da ih kliknete i podesite.
 
-![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
+![Vrijednosti radnje privremenog cilja](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## Redoslijed **automatizacija** na popisu je važan
- **AAPS** izvršava izrađena pravila redoslijedom prioriteta, počevši od vrha popisa **automatizacije**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+ **AAPS** izvršava izrađena pravila redoslijedom prioriteta, počevši od vrha popisa **automatizacije**. Na primjer, ako je **automatizacija** „Nisko“ najvažnija **automatizacija**, iznad svih drugih pravila, ta **automatizacija** treba biti na vrhu korisnikova popisa **automatizacije**, kao što je prikazano niže:
 
 
-![List of automation rules](../images/Automations/automation_rule_list.png)
+![Popis pravila automatizacije](../images/Automations/automation_rule_list.png)
 
-Da biste promijenili prioritet pravila **automatizacije**, dodirnite i držite ručku **=** na desnoj strani pravila. Reorder the **Automations** by moving the rules up or down.
+Da biste promijenili prioritet pravila **automatizacije**, dodirnite i držite ručku **=** na desnoj strani pravila. Promijenite redoslijed **automatizacija** pomicanjem pravila gore ili dolje.
 
-![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
+![Promjena redoslijeda pravila automatizacije](../images/Automations/automation_rule_reorder.png)
 
 ## Kako izbrisati pravila automatizacije
 
 Da biste izbrisali pravilo **automatizacije**, kliknite ikonu kante za smeće.
 
-![Delete automation rules](../images/Automations/automation_rule_delete.png)
+![Brisanje pravila automatizacije](../images/Automations/automation_rule_delete.png)
 
 ## Primjeri automatizacije
 
-U nastavku su primjeri **automatizacije**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. Primjere u nastavku ne biste trebali preuzimati ako dobro ne razumijete kako će **automatizacija** raditi.
+U nastavku su primjeri **automatizacije**. Više rasprava o **automatizaciji** i o tome kako su korisnici prilagodili svoju **automatizaciju** možete pronaći u grupama za raspravu na Facebooku ili na Discordu. Primjere u nastavku ne biste trebali preuzimati ako dobro ne razumijete kako će **automatizacija** raditi.
 
 (automations-low-glucose-temp-target)=
 ### Privremeni cilj kod niske glukoze
 
 Ova **automatizacija** automatski pokreće **privremeni cilj** kada **GUK** padne ispod određenog praga — ovdje, kada je glukoza manja od 70 mg/dL, pokreće se cilj od 110 mg/dL na 30 minuta:
 
-![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
+![Primjer: pravilo za nisku glukozu](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Privremeni cilj za vrijeme ručka (s „Lokacijom“)
 
-![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
+![Primjer: pravilo za ručak](../images/Automations/automation_example_lunch_rule.png)
 
 Ova **automatizacija** izrađena je za korisnika koji svaki radni dan ruča na poslu otprilike u isto vrijeme, ali pokreće se samo ako se korisnik nalazi na zadanoj „lokaciji“.  Dakle, ako korisnik jednog dana nije na poslu, ova se **automatizacija** neće aktivirati.
 
@@ -320,7 +320,7 @@ Ova **automatizacija** u 13:00 postavlja niski **privremeni cilj** (Prije obroka
 
 „Okidač“ lokacija ima naziv, položaj (dodirnite **Odaberi na karti** ili koristite svoju trenutačnu lokaciju) i polumjer u metrima, a pokreće se kada ste unutar (ili izvan) područja:
 
-![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
+![Primjer: pravilo za ručak s uvjetom lokacije](../images/Automations/automation_example_lunch_location_condition.png)
 
 Zbog veze „I“ **automatizacija** se izvršava samo u „odabrano vrijeme“ i ako je korisnik na odabranoj lokaciji.
 
@@ -330,11 +330,11 @@ Zbog veze „I“ **automatizacija** se izvršava samo u „odabrano vrijeme“ 
 
 Wi-Fi SSID dobra je opcija za pokretanje **automatizacije** dok ste u dometu određene Wi-Fi mreže (u usporedbi s GPS-om): prilično je precizan, troši manje baterije i radi u zatvorenim prostorima gdje GPS i druge usluge lokacije možda nisu dostupne.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
+Evo još jednog primjera postavljanja **privremenog cilja** samo radnim danima prije doručka (1).
 
 
-The **Automation** will trigger at 05:30am only on Monday-Friday (2)  
-and while being connected to a home Wi-Fi network (3).
+**Automatizacija** će se pokrenuti u 5:30 samo od ponedjeljka do petka (2)  
+i dok je telefon spojen na kućnu Wi-Fi mrežu (3).
 
 
 Zatim će postaviti **privremeni cilj** od 75 mg/dL na 30 minuta (4). Jedna od prednosti uključivanja lokacije je da se pravilo neće pokrenuti ako je korisnik, na primjer, na putovanju ili godišnjem odmoru.
@@ -350,7 +350,7 @@ Ovo je snimka zaslona s pojedinostima o okidačima **automatizacije**:
 1) Pod glavnim „I“ (oba uvjeta moraju biti ispunjena za pokretanje) 1) Ponavljajuće vrijeme = P,U,S,Č,P u 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
+![Primjer: uvjet WiFi](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -395,7 +395,7 @@ U primjeru u nastavku omogućeno je pravilo **Low glucose temp target** (1) (pog
 
 Provjerite je li kućica lijevo od naziva **automatizacije** „označena“, kako bi pravilo bilo aktivno:
 
-![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
+![Uključivanje i isključivanje pravila automatizacije](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problem: __Moje automatizacije pokreću se pogrešnim redoslijedom.__
 
