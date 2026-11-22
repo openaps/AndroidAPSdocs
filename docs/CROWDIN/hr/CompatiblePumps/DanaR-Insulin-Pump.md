@@ -15,7 +15,7 @@
 ![Pumpa DanaR](../images/danar1.png)
 
 * Idite na Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Ako se DanaR ne prikazuje pri skeniranju, ponovno pokrenite telefon, izvadite bateriju iz DanaR-a, vratite je i ponovite ova dva koraka.
+* U postavkama telefona idite na Bluetooth, potražite uređaje u blizini, odaberite serijski broj svoje DanaR pumpe i unesite lozinku (lozinka za uparivanje je 0000). Ako se DanaR ne prikazuje pri skeniranju, ponovno pokrenite telefon, izvadite bateriju iz DanaR-a, vratite je i ponovite ova dva koraka.
 
 * U **AAPS-u** otvorite **izbornik** (☰) u gornjem lijevom kutu, idite na **Konfiguracija** > **Pumpa** i odaberite vrstu DanaR pumpe koju imate (**DanaR**, **DanaR Korean** ili **DanaRv2**).
   
