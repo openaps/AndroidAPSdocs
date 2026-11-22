@@ -30,7 +30,7 @@ Dexcom BYODA je sada vrlo stara verzija aplikacije i ne može se ažurirati. Nij
 -   Deinstalirajte originalnu aplikaciju Dexcom
 -   Instalirajte preuzeti apk
 -   Unesite kod senzora u zakrpanu aplikaciju
--   After a short time BYODA should pick up the sensor signal.
+-   Nakon kratkog vremena BYODA bi trebao uhvatiti signal senzora.
 
 (DexcomG7-xdrip-companion-app)=
 
@@ -40,9 +40,9 @@ Službena aplikacija Dexcom ostaje povezana sa senzorom. xDrip čita vrijednosti
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
+**AAPS** ne smatra xDrip u načinu Companion App [pouzdanim izvorom podataka GUK-a](#GettingStarted-TrustedBGSource): SMB-ovi nisu dopušteni cijelo vrijeme.
 
-To read the Dexcom app notifications without xDrip, as a trusted data source, use the [Notification Reader](#DexcomG7-notification-reader).
+Za čitanje obavijesti aplikacije Dexcom bez xDripa, kao pouzdanog izvora podataka, koristite [Čitač obavijesti](#DexcomG7-notification-reader).
 ```
 
 ### Čitanje obavijesti aplikacije Dexcom
@@ -106,49 +106,49 @@ Potrebna je verzija 9.0 ili novija
 
 (DexcomG7-notification-reader)=
 
-## 5. Notification Reader (G7, ONE+ and Stelo)
+## 5. Čitač obavijesti (G7, ONE+ i Stelo)
 
-Službena aplikacija Dexcom ostaje povezana sa senzorom. **AAPS** reads the glucose value directly from the notification of the Dexcom app, without any other app in between.
+Službena aplikacija Dexcom ostaje povezana sa senzorom. **AAPS** čita vrijednost glukoze izravno iz obavijesti aplikacije Dexcom, bez ikakve druge aplikacije između.
 
 ```{admonition} Trusted data source
 :class: note
-Readings from the Dexcom G7, ONE+ and Stelo apps are a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs can be allowed all the time.
+Očitanja iz aplikacija Dexcom G7, ONE+ i Stelo su [pouzdan izvor podataka GUK-a](#GettingStarted-TrustedBGSource): SMB-ovi mogu biti dopušteni cijelo vrijeme.
 ```
 
-Compared to the other methods on this page, the Notification Reader has limits:
+U usporedbi s drugim metodama na ovoj stranici, Čitač obavijesti ima ograničenja:
 
-- **No trend arrow** and **no backfill**: readings missed while the phone was off or out of range are lost.
-- Each reading gets the time the notification appeared, not the exact time of the sensor reading.
-- Only values between 40 and 405 mg/dL (2.2 and 22.5 mmol/L) are read. "LOW" and "HIGH" are not read.
-- Stelo gives a reading every 15 minutes.
+- **Nema strelice trenda** i **nema naknadnog popunjavanja (backfill)**: očitanja propuštena dok je telefon bio isključen ili izvan dometa su izgubljena.
+- Svako očitanje dobiva vrijeme kada se obavijest pojavila, a ne točno vrijeme očitanja senzora.
+- Čitaju se samo vrijednosti između 40 i 405 mg/dL (2,2 i 22,5 mmol/L). "LOW" i "HIGH" se ne čitaju.
+- Stelo daje očitanje svakih 15 minuta.
 
-### Set up the Dexcom app
+### Postavite aplikaciju Dexcom
 
 - Ostavite aplikaciju Dexcom instaliranu i povezanu sa senzorom.
-- Make sure the Dexcom app shows the current glucose value in its notification. Njezine obavijesti moraju ostati vidljive: nemojte ih utišati ni sakriti.
-- Use the same glucose units (mg/dL or mmol/L) in the Dexcom app as in **AAPS**. Otherwise **AAPS** cannot read the value.
+- Provjerite prikazuje li aplikacija Dexcom trenutnu vrijednost glukoze u svojoj obavijesti. Njezine obavijesti moraju ostati vidljive: nemojte ih utišati ni sakriti.
+- U aplikaciji Dexcom koristite iste jedinice glukoze (mg/dL ili mmol/L) kao u **AAPS-u**. Inače **AAPS** ne može pročitati vrijednost.
 
 ### Konfiguracija u AAPS-u
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and confirm the switch.
+- Odaberite **Čitač obavijesti** u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source) i potvrdite promjenu.
 
-  ![BG Source: Notification Reader selected](../images/NotificationReader_BgSource.png)
+  ![Izvor GUK-a: odabran Čitač obavijesti](../images/NotificationReader_BgSource.png)
 
-- Back on the main screen, **AAPS** shows **Permissions Required**. Next to **Notification Access**, tap **Grant**.
+- Na glavnom zaslonu **AAPS** zatim prikazuje **Potrebna dopuštenja**. Pokraj **Pristup obavijestima** dodirnite **Odobri**.
 
-  ![Permissions Required: Notification Access](../images/NotificationReader_Permissions.png)
+  ![Potrebna dopuštenja: Pristup obavijestima](../images/NotificationReader_Permissions.png)
 
-- Android opens its notification access list (its name depends on your Android version, for example *Notification read, reply & control*). Select **AAPS**, turn on **Allow notification access** and confirm with **Allow**.
+- Android otvara svoj popis pristupa obavijestima (njegov naziv ovisi o vašoj verziji Androida, na primjer *Čitanje obavijesti, odgovaranje i upravljanje* (Notification read, reply & control)). Odaberite **AAPS**, uključite **Dopusti pristup obavijestima** i potvrdite s **Dopusti**.
 
-  ![Android asks to allow notification access for AAPS](../images/NotificationReader_AllowDialog.png)
+  ![Android traži da dopustite pristup obavijestima za AAPS](../images/NotificationReader_AllowDialog.png)
 
-  Android warns that **AAPS** could read all your notifications. **AAPS** only reads the notifications of supported CGM apps and ignores all others.
+  Android upozorava da bi **AAPS** mogao čitati sve vaše obavijesti. **AAPS** čita samo obavijesti podržanih CGM aplikacija i zanemaruje sve ostale.
 
-  ![Notification access allowed for AAPS](../images/NotificationReader_AccessOn.png)
+  ![Pristup obavijestima dopušten za AAPS](../images/NotificationReader_AccessOn.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because **AAPS** was not installed from the Play Store. Open the **AAPS** app info (long press the **AAPS** icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Zatim se vratite na zaslon pristupa obavijestima i dopustite ga.
-- Readings appear in **AAPS** when the Dexcom app shows a new value.
+- Ako je **Dopusti pristup obavijestima** zasivljeno (*Kontrolira ograničena postavka* (Controlled by Restricted Setting)), Android to blokira jer **AAPS** nije instaliran iz Trgovine Play. Otvorite informacije o aplikaciji **AAPS** (dugo pritisnite ikonu **AAPS** > **Informacije o aplikaciji**), dodirnite izbornik s tri točke gore desno i odaberite **Dopusti ograničene postavke**. Zatim se vratite na zaslon pristupa obavijestima i dopustite ga.
+- Očitanja se prikazuju u **AAPS-u** kada aplikacija Dexcom prikaže novu vrijednost.
 
 ```{warning}
-If the Dexcom app notification shows more than one glucose number, or none, **AAPS** skips that notification.
+Ako obavijest aplikacije Dexcom prikazuje više od jednog broja glukoze ili nijedan, **AAPS** preskače tu obavijest.
 ```
