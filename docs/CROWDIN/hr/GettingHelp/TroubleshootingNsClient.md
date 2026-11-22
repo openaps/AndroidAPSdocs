@@ -8,11 +8,11 @@ Ako vas nitko ne prati na Nightscoutu, možete pauzirati NSClient da biste ušte
 
 * Kako prepoznati nestabilnu vezu?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Ako vidite mnogo ponovnih povezivanja, postoji problem.
+Otvorite zaslon NSClienta (**Konfiguracija** > **Komunikacija** > **NSClientV3** > **Otvori dodatak**) i pratite **Status** i dnevnik. Kad su WebSockets omogućeni, status bi trebao ostati „connected“, gotovo bez poruka o ponovnom povezivanju u dnevniku. Ako vidite mnogo ponovnih povezivanja, postoji problem.
 
 * Ponovno pokretanje
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Kao prvi korak ponovno pokrenite Nightscout, a zatim svoj telefon, da vidite je li problem trajan.
 
 Ako je vaš Nightscout smješten na Herokuu, Nightscout možete ponovno pokrenuti ovako: prijavite se na Heroku, kliknite naziv svoje aplikacije Nightscout, kliknite izbornik 'More', zatim 'Restart all dynos'.
 
@@ -32,16 +32,16 @@ Ako je vaša stranica smještena na Azureu, mnogi su primijetili da su se proble
 
 Zaobilazno rješenje za probleme s vezom na Azureu je da u Application settings postavite HTTP protocol na 2.0 i Websockets na ON
 
-    {admonition} Remote control needs websockets
+    {admonition} Daljinsko upravljanje treba WebSockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    WebSockets su **obavezni** za daljinsko upravljanje iz **AAPSClienta**, na oba telefona. Ako se WebSocket veza stalno prekida, daljinsko upravljanje ne radi. Sinkronizacija podataka i dalje radi, ali sporije. Vaš Nightscout poslužitelj mora podržavati WebSockets.
 
 * Nema očitanja GUK-a iz Nightscouta
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Ako se **AAPS** ispravno povezuje s Nightscoutom, ali se GUK prikazuje kao N/A: u [postavkama NSClientV3](#Preferences-nsclient) otvorite **Sinkronizacija** i uključite **Primaj CGM podatke iz NS-a**. Ta je opcija skrivena dok je uključeno upravljanje s klijenta ([zaštićeni način rada](#client-master-control-hardened-mode)); u tom slučaju provjerite je li **NSClient GUK** odabran u **Konfiguracija** → **Izvor GUK-a**.
 
 * Ako i dalje dobivate pogrešku...
 
-Provjerite veličinu svoje baze podataka u MongoDB-u (ili putem dodatka za veličinu baze podataka u Nightscoutu). Ako koristite besplatnu razinu (free tier) MongoDB-a, 496 MB znači da je baza puna i da je treba očistiti. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Provjerite veličinu svoje baze podataka u MongoDB-u (ili putem dodatka za veličinu baze podataka u Nightscoutu). Ako koristite besplatnu razinu (free tier) MongoDB-a, 496 MB znači da je baza puna i da je treba očistiti. [Slijedite ove upute Nightscouta za provjeru veličine baze podataka i brisanje podataka](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Prije brisanja podataka iz baze podataka, ako to još niste postavili, razmislite o doniranju svojih podataka AAPS-a projektu Open Humans (za istraživanje). Upute su na [stranici za konfiguraciju OpenHumansa](../SupportingAaps/OpenHumans.md).
