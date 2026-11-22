@@ -10,7 +10,8 @@ Deze instructies gaan over het instellen van de Equil insulinepomp.
 ## Mogelijkheden van de pomp met AAPS
 
 * Patchpomp zonder slang die met **AAPS** communiceert via de eigen Bluetooth van je telefoon, zonder extra communicatieapparaat.
-* **AAPS** behandelt de Equil als patchpomp met een reservoir van 200 E: het hoofdscherm toont de statuslampjes voor een patchpomp, en **Prime/Vul** en **Pomp bat. wissel** worden niet aangeboden. Vullen, voorvullen en de batterij vervangen doe je in de wizards van de pomp.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Zolang de pomp onderbroken of gestopt is, legt **AAPS** een tijdelijk basaal van 0 E/u vast, zodat er geen basale insuline in de IOB wordt meegeteld.
 * Zomertijd en wisselingen van tijdzone moet je zelf afhandelen.
 
