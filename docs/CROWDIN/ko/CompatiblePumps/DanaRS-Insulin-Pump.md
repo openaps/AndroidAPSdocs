@@ -38,7 +38,7 @@
 
 * 펌프 화면에서 **페어링**을 누르십시오. **AAPS**가 주변의 펌프를 검색합니다.
 
-* 목록에서 사용하는 펌프 항목을 누르십시오.
+* Tap the entry for your pump in the list. If your phone still has an old Bluetooth pairing with this pump (for example after the pump was unpaired on the pump itself, or paired with another phone), **AAPS** removes it first and starts a new pairing. You do not need to remove the pump in the Android Bluetooth settings.
     
     ![검색으로 찾은 Dana 펌프가 표시된 페어링 화면](../images/DanaRS_i_Pairing.png)
 
