@@ -183,6 +183,15 @@ Als je begint met U100-insuline, passen je profiel, historische gegevens en rapp
 
 Dat is alles!
 
+```{admonition} If the profile cannot be written to the pump
+:class: warning
+The new insulin is already in the pump before the profile with the new concentration is written to it. Until it is written, the pump gives the wrong amount of insulin.
+
+- While the profile is not written yet, **AAPS** refuses boluses, SMBs, TBRs and extended boluses: *The profile with the new insulin is not written to the pump yet. Insulin cannot be given until it is written.* Prime and cancelling still work.
+- If writing the profile fails, **AAPS** raises an **Insulin change failed** alarm, and raises it again at every retry until the profile is written. **Disconnect or remove the pump**, check your BG and give insulin another way if you need it. Connect the pump again only after the profile is written.
+- If the prime itself fails, the insulin is not switched either. If the new insulin is already in the pump, do not connect the pump, and run the insulin change again.
+```
+
 Als er een tijdelijke **Profiel wissel** (een met een tijdsduur) loopt wanneer je de insuline wisselt, krijgt ook het profiel dat terugkomt na het einde van die tijdelijke wissel de nieuwe insuline. De oude insuline komt niet terug.
 
 ### Concentratie wisselen voor gebruikers met U200-insuline en een profiel van 50% (AAPS 4)
