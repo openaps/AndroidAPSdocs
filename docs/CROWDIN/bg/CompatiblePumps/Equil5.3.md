@@ -10,7 +10,8 @@
 ## Възможности на помпата при употреба с AAPS
 
 * Пач помпа без маркуч, която комуникира с **AAPS** през вградения Bluetooth на телефона, без допълнително комуникационно устройство.
-* **AAPS** третира Equil като пач помпа с резервоар 200 U: главният екран показва индикаторите за състоянието на пач помпата, а **Смяна/Пълнене** и **Смяна на батерия на помпата** не се предлагат. Пълненето, напълването на системата (priming) и смяната на батерията се правят в съветниците на помпата.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Докато помпата е на пауза или е спряна, **AAPS** записва временен базал 0 U/ч. Така в IOB не се отчита базален инсулин.
 * Преминаването към лятно часово време (DST) и смяната на часовата зона трябва да се правят ръчно.
 
