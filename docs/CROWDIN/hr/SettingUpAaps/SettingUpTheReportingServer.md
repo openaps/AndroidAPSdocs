@@ -12,7 +12,7 @@ Preporučujemo korištenje Nightscouta.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout je web aplikacija koja može bilježiti i prikazivati vaše CGM podatke i podatke **AAPS-a** te izrađuje izvješća. To je moćna platforma koja je već mnogo godina integrirana u **AAPS**. Korisnicima i njegovateljima omogućuje praćenje podataka o dijabetesu pacijenta gotovo u stvarnom vremenu (između primanja i prikaza podataka može proći samo nekoliko sekundi, ako sve uključene komponente imaju dovoljno dobru internetsku vezu). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout je web aplikacija koja može bilježiti i prikazivati vaše CGM podatke i podatke **AAPS-a** te izrađuje izvješća. To je moćna platforma koja je već mnogo godina integrirana u **AAPS**. Korisnicima i njegovateljima omogućuje praćenje podataka o dijabetesu pacijenta gotovo u stvarnom vremenu (između primanja i prikaza podataka može proći samo nekoliko sekundi, ako sve uključene komponente imaju dovoljno dobru internetsku vezu). Preko njega idu i daljinske naredbe koje njegovatelji šalju **AAPS-u** iz **AAPSClienta** (pogledajte [Upravljanje glavni uređaj ↔ klijent](#client-master-control)).
 
 Nightscout je softver otvorenog koda. Svatko može izraditi i voditi Nightscout poslužitelj, koristeći besplatne ili plaćene usluge.
 
@@ -44,7 +44,7 @@ Tidepool je dostupan u **AAPS-u** od verzije 3.2, koja je izašla krajem 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
+Budući da kod korištenja **AAPS-a** između primanja i prikaza podataka prolaze tri sata, Tidepool nije prikladan za dijeljenje podataka s njegovateljima u stvarnom vremenu.  
 S druge strane, Tidepool može biti odlično rješenje za dijeljenje izvješća s endokrinologom pacijenta ako Nightscout nije prihvaćeno rješenje.  
 ```
 
