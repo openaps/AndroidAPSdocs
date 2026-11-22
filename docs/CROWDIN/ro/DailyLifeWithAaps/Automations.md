@@ -129,9 +129,9 @@ Caution must be taken when selecting a ‘negative value’ within the ‘Condit
 
 ![Operatori de comparație](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Rețineți că -0,1 (-2) în sine **nu este** inclus în această condiție. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Rețineți că -0,1 (-2) în sine **nu este** inclus în această condiție. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
 
@@ -306,7 +306,7 @@ Mai jos sunt exemple de **Automatizări**. Mai multe discuții despre **Automati
 (automations-low-glucose-temp-target)=
 ### Țintă temporară în caz de hipoglicemie
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Exemplu: regulă pentru glicemie scăzută](../images/Automations/automation_example_low_glucose_rule.png)
 
