@@ -121,6 +121,8 @@ Toque em **Descartar patch** na tela da bomba e confirme. A administração de i
 
 Quando um alarme crítico parou o patch, o alarme oferece **Desativar patch** no lugar. Tocar nele descarta o patch da mesma forma.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarmes e notificações
