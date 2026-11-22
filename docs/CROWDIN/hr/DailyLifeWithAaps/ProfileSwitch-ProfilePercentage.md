@@ -2,7 +2,7 @@
 
 Ovaj odjeljak objašnjava što su **zamjena profila** i **postotak profila**. Kako izraditi **profil**, pročitajte u [Vaš AAPS profil](#your-aaps-profile-create-and-edit-profiles).
 
-Kada počnete koristiti **AAPS**, trebate izraditi **profil**, razumjeti kako napraviti **zamjenu profila** i naučiti kako **postotak profila** djeluje u **AAPS-u**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+Kada počnete koristiti **AAPS**, trebate izraditi **profil**, razumjeti kako napraviti **zamjenu profila** i naučiti kako **postotak profila** djeluje u **AAPS-u**. Značajke **zamjene profila** ili **postotka profila** mogu biti posebno korisne za:
 
 - menstrualni ciklus – u **Automatizaciji** možete postaviti prilagodbu postotka **profila**, tako da **AAPS** uzme u obzir različite faze hormonskog ciklusa i očekivanu inzulinsku rezistenciju.
 
@@ -10,7 +10,7 @@ Kada počnete koristiti **AAPS**, trebate izraditi **profil**, razumjeti kako na
 
 - Noćni rad ili rad u smjenama – za rad u smjenama možete postaviti vremenski pomak **profila**: broj sati u **profilu** promijenite za onoliko koliko će korisnik kasnije/ranije ići spavati ili se probuditi.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. Tako **AAPS** izračunava uravnoteženo doziranje inzulina za korisnika. Smanjenje bazala u korisnikovom **profilu** u **AAPS-u** malo pomaže ako algoritam i dalje koristi iste omjere za ISF i I:C.
+Zašto koristiti **postotak profila** umjesto privremene prilagodbe bazala? Da bi bio učinkovitiji, **postotak profila** razmjerno smanjuje ili povećava bazal, ISF i I:C. Tako **AAPS** izračunava uravnoteženo doziranje inzulina za korisnika. Smanjenje bazala u korisnikovom **profilu** u **AAPS-u** malo pomaže ako algoritam i dalje koristi iste omjere za ISF i I:C.
 
 (ProfileSwitch-change-percentage)=
 
@@ -22,7 +22,7 @@ Trebate barem jedan spremljeni **profil**. **Postotak profila** uvijek se primje
 
     <br />1. Na glavnom zaslonu **dodirnite naziv profila** (pored ikone zvjezdice). [Zaslon profila](#ProfileSwitch-manage-v4) otvara se na kartici **profila** koji je trenutačno aktivan, označenoj s **AKTIVAN**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/v4/Profiles/ProfileSwitch2.png)
+       ![Dodirnite naziv profila na glavnom zaslonu da biste otvorili zaslon profila](../images/v4/Profiles/ProfileSwitch2.png)
     
     2. Ako želite zadržati isti **profil**, ostavite odabranu karticu **AKTIVAN**. Ako istovremeno želite promijeniti **profil**, prijeđite prstom na drugu karticu.
     3. Dodirnite okrugli gumb **▶** (**Aktiviraj**) dolje desno. Otvara se zaslon **Aktiviraj**.
@@ -54,9 +54,9 @@ Trebate barem jedan spremljeni **profil**. **Postotak profila** uvijek se primje
 
 U **AAPS-u** v4 profilima se upravlja i aktiviraju se na zaslonu **Upravljanje** (donja navigacija) → **Profil** (*„Upravljajte profilima i aktivirajte ih“*).
 
-Zaslon profila prikazuje vaše profile kao **niz kartica koje listate prstom**. Kartica aktivnog profila označena je s **AKTIVAN** i prikazuje njegov ukupni dnevni bazal (npr. *∑ 30,15 J*). Below the selected card you see that profile's details — the **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+Zaslon profila prikazuje vaše profile kao **niz kartica koje listate prstom**. Kartica aktivnog profila označena je s **AKTIVAN** i prikazuje njegov ukupni dnevni bazal (npr. *∑ 30,15 J*). Ispod odabrane kartice vidite detalje tog profila – vrstu **inzulina** te rasporede **IC**, **ISF**, **bazala** i **cilja** s grafovima.
 
-When a temporary switch is running, the **ACTIVE** card shows its percentage and time shift with the time left, for example *110% +2 h · 2 h 40 min*, above a progress bar. Both are refreshed every 30 seconds. The details below then have two columns: the values of the profile in blue, and the values in use with the percentage in red.
+Dok traje privremena zamjena, kartica **AKTIVAN** prikazuje njezin postotak i vremenski pomak s preostalim vremenom, na primjer *110% +2 h · 2 h 40 min*, iznad trake napretka. Oboje se osvježava svakih 30 sekundi. Detalji ispod tada imaju dva stupca: vrijednosti profila plavom bojom i vrijednosti koje se koriste s postotkom crvenom bojom.
 
 ![Zaslon profila – kartice profila, detalji i traka s gumbima](../images/v4/Profiles/profile_manage.png)
 
@@ -78,7 +78,7 @@ Odaberite profil i dodirnite **▶ Aktiviraj**. Zaslon **Aktiviraj** omogućuje 
 
 ![Zaslon Aktiviraj – postotak, trajanje, vremenski pomak, vrijeme](../images/v4/Profiles/profile_activate.png)
 
-- **Postotak** (30–250 %, svaki put počinje od 100 %) – mijenja cijeli profil razmjerno. 100 % koristi profil bez promjene; na primjer, 70 % smanjuje bazal i izračunatu dozu inzulina (i boluse za obrok i korekcije) za 30 %. Ne mijenja vaše ciljne vrijednosti glukoze ni apsorpciju ugljikohidrata. See [Profile Percentage](#ProfileSwitch-profile-percentage) for the full effect.
+- **Postotak** (30–250 %, svaki put počinje od 100 %) – mijenja cijeli profil razmjerno. 100 % koristi profil bez promjene; na primjer, 70 % smanjuje bazal i izračunatu dozu inzulina (i boluse za obrok i korekcije) za 30 %. Ne mijenja vaše ciljne vrijednosti glukoze ni apsorpciju ugljikohidrata. Cijeli učinak opisan je u [Postotak profila](#ProfileSwitch-profile-percentage).
 - **Trajanje** (0–10080 minuta, to jest do 7 dana) – koliko dugo traje zamjena. **0 = neograničeno** (dok ponovno ne zamijenite profil); vrijednost različita od nule vraća prethodni profil kada istekne.
 - **Privremeni cilj / Aktivnost** – pojavljuje se samo kada postavite **Trajanje** i **Postotak** manji od 100 %. Uključite ga ako za isto trajanje želite pokrenuti i [privremeni cilj Aktivnost](#TempTargets-activity-temp-target), kao što biste učinili prije tjelovježbe.
 - **Vremenski pomak** – prikazuje *0h*; dodirnite **Promijeni** za pomicanje rasporeda unaprijed ili unatrag za najviše 23 sata (korisno za rad u smjenama ili putovanja). Pogledajte [Vremenski pomak](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
@@ -127,27 +127,27 @@ Učinak postotka **profila** prikazan je u tablici ispod:
 
 | Zamjena profila  
 Postotak |     Učinak     |     I:C  
-g/U     | Example  
+g/J     | Primjer  
 15 g |          ISF  
-mmol/L/U  
-mg/dL/U          | U to lower  
+mmol/L/J  
+mg/dL/J          | J za sniženje  
 2mmol/L  
 40mg/dL |
-|:--------------------------:|:--------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
+|:--------------------------:|:--------------:|:-----------------:|:--------------:|:------------------------------------------:|:---------------------------------:|
 |            90%             |    Slabije     | 5/0,9  
-=**5,55** |     2.7 U      | 2,2/0,9  
+=**5,55** |     2,7 J      | 2,2/0,9  
 =**2,4**  
   
 40/0,9  
-=**44,4** |             0.8 U              |
-|          **100%**          | **Standardno** |       **5**       |    **3 U**     |                **2,2  
-40**                |           **0.9** U            |
+=**44,4** |               0,8 J               |
+|          **100%**          | **Standardno** |       **5**       |    **3 J**     |                **2,2  
+40**                |             **0,9** J             |
 |            130%            |      Jače      | 5/1,3  
-=**3,85** |     3.9 U      | 2,2/1,3  
+=**3,85** |     3,9 J      | 2,2/1,3  
 =**1,7**  
   
 40/1,3  
-=**30,8** |             1.2 U              |
+=**30,8** |               1,2 J               |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
@@ -155,7 +155,7 @@ mg/dL/U          | U to lower
 
 „Vremenski pomak“ u korisnikovom **profilu** pomiče postavke **profila** unutar dnevnog sata („cirkadijalno“) za uneseni broj sati. To može biti korisno za:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
+- **noćni rad ili rad u smjenama**: za noćne smjene broj sati u **profilu** promijenite za onoliko koliko će korisnik kasnije/ranije ići spavati ili se probuditi; 
 - **korisnike koji na putovanju mijenjaju vremensku zonu**; ili
 - **djecu s dijabetesom tipa 1** koja imaju stalnu večernju rutinu i inzulinsku rezistenciju uzetu u obzir u **profilu**. Ako se iz bilo kojeg razloga očekuje da će dijete kasnije ići spavati, njegovatelj može primijeniti „vremenski pomak“ na djetetov **profil**, tako da **AAPS** reagira na inzulinsku rezistenciju u razdoblju koje je odredio korisnik.
 
@@ -171,7 +171,7 @@ Uvijek je pitanje postavke kojeg sata u **profilu** trebaju zamijeniti postavke 
 
 ![Smjerovi vremenskog pomaka pri zamjeni profila](../images/v4/Profiles/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Ovaj način spremanja snimki **profila** omogućuje mnogo točniji izračun prošlosti i praćenje promjena **profila**.
 
 (ProfileSwitch-keep-for-later)=
 
