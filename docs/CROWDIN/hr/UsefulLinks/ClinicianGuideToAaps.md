@@ -22,7 +22,7 @@ Bez sustava zatvorene petlje osoba s dijabetesom prikuplja podatke s pumpe i CGM
 
 Kod automatske isporuke inzulina sustav radi isto: prikuplja podatke s pumpe, CGM-a i sa svih drugih mjesta gdje se bilježe podaci (npr. Nightscout), koristi te podatke za izračun i odlučuje koliko je inzulina potrebno više ili manje (iznad ili ispod osnovne bazalne stope) te koristi privremene bazalne stope za potrebne prilagodbe kako bi GUK zadržao u ciljnom rasponu ili ga u njega na kraju vratio.
 
-If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basal rates running.
+Ako se uređaj na kojem radi AAPS pokvari ili izađe iz dometa pumpe, nakon što završi zadnja privremena bazalna stopa pumpa se vraća u rad kao standardna pumpa s unaprijed programiranim bazalnim stopama.
 
 ## Kako se prikupljaju podaci:
 
@@ -39,7 +39,7 @@ Također prikuplja sve podatke o bolusima, unosu ugljikohidrata i privremenim ci
 
 ## Kako zna što treba učiniti?
 
-Softver otvorenog koda dizajniran je tako da uređaj lako obavlja posao koji su ljudi prije radili sami (u ručnom načinu) kako bi izračunali kako treba prilagoditi isporuku inzulina. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of what BG levels are expected to do during the next hours in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Zatim šalje pumpi sve potrebne prilagodbe. Potom ponovno čita podatke i to radi iznova i iznova.
+Softver otvorenog koda dizajniran je tako da uređaj lako obavlja posao koji su ljudi prije radili sami (u ručnom načinu) kako bi izračunali kako treba prilagoditi isporuku inzulina. Najprije prikuplja podatke sa svih pratećih uređaja i iz oblaka, priprema podatke i radi izračune, predviđa kako će se razina GUK-a kretati u sljedećim satima u različitim scenarijima te izračunava potrebne prilagodbe kako bi GUK zadržao u ciljnom rasponu ili ga u njega vratio. Zatim šalje pumpi sve potrebne prilagodbe. Potom ponovno čita podatke i to radi iznova i iznova.
 
 Budući da je najvažniji ulazni parametar razina glukoze u krvi s CGM-a, važno je imati kvalitetne podatke CGM-a.
 
@@ -71,7 +71,7 @@ U ovom primjeru predviđa se da će GUK kratkoročno pasti nisko, ali da će na 
 
 ### Scenarij 3 – Potrebno je više inzulina
 
-U ovom primjeru kratkoročno predviđanje pokazuje kratak pad ispod cilja. Međutim, ne predviđa se da će pasti ispod sigurnosnog praga. Konačni GUK je iznad cilja. Therefore, AAPS will refrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). Zatim će procijeniti dodavanje inzulina kako bi najnižu razinu konačnog predviđenog GUK-a spustio na cilj, čim to bude sigurno. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMBs (super micro boluses)).*
+U ovom primjeru kratkoročno predviđanje pokazuje kratak pad ispod cilja. Međutim, ne predviđa se da će pasti ispod sigurnosnog praga. Konačni GUK je iznad cilja. Zato AAPS neće dodati inzulin koji bi pridonio kratkoročnoj niskoj vrijednosti (dodavanjem inzulina zbog kojeg bi predviđanje palo ispod praga). Zatim će procijeniti dodavanje inzulina kako bi najnižu razinu konačnog predviđenog GUK-a spustio na cilj, čim to bude sigurno. *(Ovisno o postavkama te količini i vremenu potrebnog inzulina, taj se inzulin može isporučiti putem privremenih bazala ili SMB-ova (super mikro bolusa)).*
 
 ![Scenarij doziranja 3](../images/Dosing_scenario_3.jpg)
 
@@ -87,13 +87,13 @@ Kao zdravstvenom djelatniku koji možda nema iskustva s AAPS-om ili DIY zatvoren
 
 Najvažnije je da pacijenti mijenjaju jednu stvar odjednom i promatraju učinak 2–3 dana prije nego što promijene ili prilagode drugu postavku (osim ako je promjena očito loša i pogoršava stanje; tada se trebaju odmah vratiti na prethodnu postavku). Ljudi su skloni okretati sve gumbe i mijenjati sve odjednom; ali tko to učini, može u budućnosti završiti s još lošijim postavkama i teško se vratiti na poznato dobro stanje.
 
-Jedan od najmoćnijih alata za promjenu postavki je alat za automatski izračun bazalnih stopa, ISF-a i omjera ugljikohidrata. To se zove „[Autotune](#autotune-how-autotune-calculates-adjustments)“. It is designed to allow the data to guide you or your patient in making incremental changes to settings. U zajednici je dobra praksa najprije pokrenuti (ili pregledati) izvješća Autotunea, prije nego što se postavke pokušaju ručno prilagoditi. Autotune je ugrađen u AAPS kao dodatak (**Konfiguracija** → **Općenito** → **Autotune**); pogledajte [Kako koristiti dodatak Autotune](../AdvancedOptions/Autotune.md). Može se pokrenuti na zahtjev ili automatski. Budući da su ti parametri preduvjet i za standardnu isporuku inzulina pumpom i za isporuku inzulina u zatvorenoj petlji, razgovor o rezultatima Autotunea i prilagodba tih parametara prirodna su poveznica sa zdravstvenim djelatnikom.
+Jedan od najmoćnijih alata za promjenu postavki je alat za automatski izračun bazalnih stopa, ISF-a i omjera ugljikohidrata. To se zove „[Autotune](#autotune-how-autotune-calculates-adjustments)“. Dizajniran je tako da vas ili vašeg pacijenta podaci vode pri postupnim promjenama postavki. U zajednici je dobra praksa najprije pokrenuti (ili pregledati) izvješća Autotunea, prije nego što se postavke pokušaju ručno prilagoditi. Autotune je ugrađen u AAPS kao dodatak (**Konfiguracija** → **Općenito** → **Autotune**); pogledajte [Kako koristiti dodatak Autotune](../AdvancedOptions/Autotune.md). Može se pokrenuti na zahtjev ili automatski. Budući da su ti parametri preduvjet i za standardnu isporuku inzulina pumpom i za isporuku inzulina u zatvorenoj petlji, razgovor o rezultatima Autotunea i prilagodba tih parametara prirodna su poveznica sa zdravstvenim djelatnikom.
 
 Osim toga, ljudsko ponašanje (naučeno u ručnom liječenju dijabetesa) često utječe na rezultate, čak i kod DIY zatvorene petlje. Na primjer, ako se predviđa da će GUK pasti nisko, a AAPS na putu prema dolje smanji inzulin, možda je potrebna samo mala količina ugljikohidrata (npr. 3–4 g) da se GUK podigne sa 70 mg/dL (3,9 mmol/L). Međutim, u mnogim slučajevima osoba može hipoglikemiju liječiti s puno više ugljikohidrata (npr. držeći se pravila 15), što uzrokuje brži skok, i zbog dodatne glukoze i zato što je inzulin bio smanjen u razdoblju prije niske vrijednosti.
 
 ## OpenAPS
 
-**This guide was adapted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS koristi mnoge tehnike iz OpenAPS-a i dijeli velik dio logike i algoritama, zato je ovaj vodič vrlo sličan izvornom vodiču. Velik dio informacija o OpenAPS-u lako se može primijeniti na AAPS; glavna je razlika hardverska platforma na kojoj se pojedini softver pokreće.
+**Ovaj je vodič prilagođen prema [vodiču za zdravstvene djelatnike za OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) (The clinician's guide to OpenAPS).** OpenAPS je sustav razvijen za rad na malom prijenosnom računalu (koje se obično naziva „rig“). AAPS koristi mnoge tehnike iz OpenAPS-a i dijeli velik dio logike i algoritama, zato je ovaj vodič vrlo sličan izvornom vodiču. Velik dio informacija o OpenAPS-u lako se može primijeniti na AAPS; glavna je razlika hardverska platforma na kojoj se pojedini softver pokreće.
 
 ## Sažetak
 
