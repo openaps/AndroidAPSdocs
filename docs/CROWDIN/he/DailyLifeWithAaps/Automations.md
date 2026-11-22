@@ -129,9 +129,9 @@ Please be careful when selecting a negative value in **Automation**
 
 ![אופרטורים של השוואה](../images/Automations/automation_comparison_operators.png)
 
-**דוגמה 1:** יצירת תנאי **"פחות מ-"** "-0.1mmol/L" (או "-2mg/dL") פירושה:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. יש לזכור שהערך -0.1 (-2) עצמו **אינו** נכלל בתנאי זה. (התנאי "שווה או פחות מ- -0.1mmol/L (-2 mg/dL)" _כן_ יכלול את -0.1 mmol/L או -2 mg/dL).
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. יש לזכור שהערך -0.1 (-2) עצמו **אינו** נכלל בתנאי זה. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **דוגמה 2:** יצירת תנאי "גדול מ-" -0.1mmol/L (-2mg/dL) פירושה:
 
@@ -306,7 +306,7 @@ Below are examples of **Automations**. דיונים נוספים על **אוטו
 (automations-low-glucose-temp-target)=
 ### יעד זמני בתגובה לרמת סוכר נמוכה
 
-**אוטומציה** זו מפעילה **יעד זמני** אוטומטי כאשר ה-**BG** יורד מתחת לסף מסוים. כאן, כשהגלוקוז פחות מ-70 mg/dL, מופעל יעד של 110 mg/dL למשך 30 דקות:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![דוגמה: כלל לרמת סוכר נמוכה](../images/Automations/automation_example_low_glucose_rule.png)
 
