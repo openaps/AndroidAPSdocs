@@ -74,7 +74,7 @@ Morate sa sobom imati istu opremu za hitne slučajeve kao i svaka druga osoba s 
   * trenutni [APK](../SettingUpAaps/BuildingAaps.md) AAPS-a i svih drugih aplikacija koje koristite (npr. xDrip, Juggluco, BYODA).
   * datoteka spremišta ključeva (iz izrade APK-a) i njezina lozinka,
   * najnovije datoteke izvoza postavki iz AAPS-a i drugih aplikacija,
-  * your **AAPS** master password: you cannot import the settings file without it. If you forgot it, see [How to reset the master password?](#FAQ-reset-master-password)
+  * glavna lozinka za **AAPS**: bez nje ne možete uvesti datoteku postavki. Ako ste je zaboravili, vidi [Kako resetirati glavnu lozinku?](#FAQ-reset-master-password)
 
 (FAQ-organize-backups)=
 
@@ -161,7 +161,7 @@ Pumpu možete skinuti dok se tuširate ili kupate. Za to kratko vrijeme možda v
 
 #### Posao
 
-Ovisno o poslu, radnim danima možete koristiti druge postavke liječenja. Kao korisnik petlje trebali biste razmisliti o [zamjeni profila](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) za svoj tipični radni dan. Na primjer, možete prijeći na profil veći od 100 % ako imate manje zahtjevan posao (npr. sjedite za stolom) ili manji od 100 % ako ste aktivni i cijeli dan na nogama. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. Možete izraditi i drugi profil (npr. 'kuća' i 'radni dan') i svaki dan napraviti zamjenu profila na onaj koji vam zaista treba, ili spremiti postavke za radni dan kao [scenu](#scenes).
+Ovisno o poslu, radnim danima možete koristiti druge postavke liječenja. Kao korisnik petlje trebali biste razmisliti o [zamjeni profila](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) za svoj tipični radni dan. Na primjer, možete prijeći na profil veći od 100 % ako imate manje zahtjevan posao (npr. sjedite za stolom) ili manji od 100 % ako ste aktivni i cijeli dan na nogama. Možete razmisliti i o visokom ili niskom privremenom cilju ili o [vremenskom pomaku profila](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) kada radite mnogo ranije ili kasnije nego obično ili ako radite u smjenama. Možete izraditi i drugi profil (npr. 'kuća' i 'radni dan') i svaki dan napraviti zamjenu profila na onaj koji vam zaista treba, ili spremiti postavke za radni dan kao [scenu](#scenes).
 
 ### Slobodno vrijeme
 
@@ -175,7 +175,7 @@ Tako biste imali više aktivnih ugljikohidrata, ali bi petlja u isto vrijeme dje
 
 Kada koristite petlju, isprobajte ove korake:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) below 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
+* Napravite [zamjenu profila](#ProfileSwitch-change-percentage) ispod 100 %: dodirnite ime profila na glavnom zaslonu, dodirnite okrugli gumb **▶**, zatim postavite **Postotak** i **Trajanje**.
 * Postavite [privremeni cilj za aktivnost](#TempTargets-activity-temp-target) iznad svojeg uobičajenog cilja. S postotkom ispod 100 % i trajanjem, isti zaslon **Aktiviraj** nudi prekidač **Privremeni cilj / Aktivnost** koji pokreće oboje odjednom.
 * Ako koristite SMB, provjerite jesu li [„Omogući SMB s visokim privremenim ciljem“](#Open-APS-features-enable-smb-with-high-temp-targets) i [„Uvijek omogući SMB“](#Open-APS-features-enable-smb-always) isključeni.
 
@@ -194,7 +194,7 @@ Pumpu možete skinuti da budete 'slobodni', ali trebate reći AAPS-u kako bi izr
 Pijenje alkohola u zatvorenoj petlji je rizično, jer algoritam ne može točno predvidjeti GUK pod utjecajem alkohola. Vlastiti način rješavanja ovoga morate isprobati pomoću sljedećih funkcija u AAPS-u:
 
 * isključivanjem zatvorene petlje i ručnim liječenjem dijabetesa ili
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unannounced meal or
+* postavljanjem visokih privremenih ciljeva i isključivanjem UAM-a, kako petlja ne bi povećavala aktivni inzulin zbog nenajavljenog obroka, ili
 * napravite [zamjenu profila](#ProfileSwitch-change-percentage) na znatno manje od 100 % 
 
 Predložak [scene](#scenes) *Alkohol* je početna točka koju možete prilagoditi svojem načinu.
@@ -294,7 +294,7 @@ Ako ste zaboravili glavnu lozinku, možete je resetirati na serijski broj svoje 
 1. Izradite praznu datoteku s imenom `PasswordReset` (bez nastavka) u podmapi `extra` svoje mape AAPS (obično `AAPS/extra`).
 2. Ponovno pokrenite **AAPS**. Pumpa mora biti spojena: **AAPS** prikazuje „Čekanje pumpe…“ i mora pročitati serijski broj pumpe u roku od 30 sekundi.
   
-  To restart, quit **AAPS** with **menu** (☰) > **Exit**, then open it again. **AAPS** only looks for the file when it starts from scratch. Closing the screen or swiping the app away is not enough, because **AAPS** keeps running in the background. If "Waiting for pump…" does not appear, use **Force stop** in the Android **App info** of **AAPS**, or restart your phone. Installing your current **AAPS** apk again over the installed app also works: it keeps your settings.
+  Za ponovno pokretanje zatvorite **AAPS** preko **izbornik** (☰) > **Izlaz**, a zatim ga ponovno otvorite. **AAPS** traži datoteku samo kada se pokreće iz početka. Zatvaranje zaslona ili povlačenje aplikacije s popisa nije dovoljno, jer **AAPS** nastavlja raditi u pozadini. Ako se „Čekanje pumpe…“ ne pojavi, koristite **Prisilno zaustavi** u Androidovim **Informacijama o aplikaciji** za **AAPS** ili ponovno pokrenite telefon. Ponovna instalacija trenutnog APK-a **AAPS-a** preko instalirane aplikacije također radi: zadržava vaše postavke.
 
 3. **AAPS** prikazuje „Lozinka postavljena!“: vaša glavna lozinka sada je **serijski broj pumpe**. Datoteka `PasswordReset` se automatski briše.
 
@@ -367,9 +367,9 @@ Možete promijeniti i kada se upozorenje javlja: pritisnite ikonu **Postavke** (
 
 #### Moj link/pumpa/Pod ne odgovara (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaLink).
+Kod nekih telefona dolazi do prekida Bluetooth veze s Linkovima (RL/OL/EmaLink).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump).
+Kod nekih Linkovi ne odgovaraju (AAPS kaže da su spojeni, ali Linkovi ne mogu doći do pumpe ili joj slati naredbe).
 
 Najprije pokušajte gumb **Resetiraj RileyLink** na zaslonu pumpe (vidi stranicu svoje pumpe: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Ako to ne pomogne, najlakši način da svi ovi dijelovi ponovno rade zajedno je:
 
@@ -405,7 +405,7 @@ To je [zaštićeni način rada](#client-master-control-hardened-mode). Dok je up
 
 Crvena oznaka upozorenja na prečacu izvora GUK-a je sigurnosna značajka AAPS-a. Potpuno objašnjenje pročitajte u [Znak upozorenja za GUK](#aaps-screens-bg-warning-sign).
 
-Crvena oznaka upozorenja na prečacu izvora GUK-a u donjoj traci (crveni trokut iz starijih verzija) znači da imate dvostruke vrijednosti GUK-a i AAPS ne može točno izračunati delte. Zatvorena petlja prelazi u način **Zaštita od niske razine glukoze**: i dalje smanjuje ili zaustavlja bazal da vas zaštiti od niskog GUK-a, ali ne daje korekcijski inzulin. Da biste uklonili upozorenje, morate izbrisati po jednu vrijednost GUK-a od svake dvostruke vrijednosti. Dodirnite prečac da otvorite [zaslon izvora GUK-a](#aaps-screens-bg-source): dvostruka vrijednost je označena crveno. Dugo pritisnite jedan redak koji želite izbrisati, označite po jedan od svakih dvostrukih redaka i dodirnite ikonu koša za smeće. Možda ćete morati resetirati baze podataka AAPS-a ako ima previše dvostrukih vrijednosti GUK-a. In this case, you'll also lose stats, IOB, COB, selected profile.
+Crvena oznaka upozorenja na prečacu izvora GUK-a u donjoj traci (crveni trokut iz starijih verzija) znači da imate dvostruke vrijednosti GUK-a i AAPS ne može točno izračunati delte. Zatvorena petlja prelazi u način **Zaštita od niske razine glukoze**: i dalje smanjuje ili zaustavlja bazal da vas zaštiti od niskog GUK-a, ali ne daje korekcijski inzulin. Da biste uklonili upozorenje, morate izbrisati po jednu vrijednost GUK-a od svake dvostruke vrijednosti. Dodirnite prečac da otvorite [zaslon izvora GUK-a](#aaps-screens-bg-source): dvostruka vrijednost je označena crveno. Dugo pritisnite jedan redak koji želite izbrisati, označite po jedan od svakih dvostrukih redaka i dodirnite ikonu koša za smeće. Možda ćete morati resetirati baze podataka AAPS-a ako ima previše dvostrukih vrijednosti GUK-a. U tom slučaju izgubit ćete i statistiku, aktivni inzulin (IOB), aktivne ugljikohidrate (COB) i odabrani profil.
 
 Kada upozorenje nestane, AAPS se ne vraća sam u **Zatvorena petlja**. Pritisnite ikonu petlje na glavnom zaslonu i ponovno odaberite **Zatvorena petlja**.
 
@@ -423,5 +423,5 @@ Stanje Pod-a uključeno je u izvezene postavke, pa se aktivni Pod može premjest
 
 Najprije pročitajte ove odjeljke:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported while wearing your current Pod,
-* [Odbacivanje Pod-a](#omnipod-dash-discard-pod), kako biste nakon toga uklonili Pod sa starog telefona. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
+* [Izvoz i uvoz postavki](#omnipod-dash-export-import) na stranici Omnipod DASH i [Pumpe bez katetera](#ExportImportSettings-tubeless-pumps): na novom telefonu označite **Zamijeni i postavke pumpe** i koristite datoteku izvezenu dok ste nosili svoj trenutni Pod,
+* [Odbacivanje Pod-a](#omnipod-dash-discard-pod), kako biste nakon toga uklonili Pod sa starog telefona. Stari telefon držite u načinu rada u zrakoplovu dok se Pod ne odbaci, kako dva telefona nikada ne bi istovremeno komunicirala s Pod-om.
