@@ -43,7 +43,7 @@ Abra as configurações da Equil com **Configurações** no cartão **Equil**, o
 ![Configurações do driver da Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Alarme de bateria fraca**: avisa quando a bateria da bomba está fraca.
-* **Alarme de baixo nível de insulina**: avisa quando há pouca insulina no reservatório.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Tom do alerta**: como a bomba alerta você: **Silencioso**, **Somente vibração**, **Somente som** ou **Vibração e som**.
 * **Velocidade do bólus**: a velocidade com que um bólus é aplicado: **1,5 U/min (padrão)**, **3 U/min**, **6 U/min** ou **12 U/min**. Um bólus mais rápido pode causar mais alarmes de oclusão.
 
