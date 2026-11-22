@@ -29,7 +29,7 @@ Prihvaćanje podataka iz Nightscouta (promjene profila, tretmani, ...) nije obav
 
 #### Bez sinkronizacije iz Nightscouta
 
-Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Ako sve opcije „Primaj … iz NS-a“ ostanu isključene, AAPS sigurno neće koristiti nijednu promjenu iz Nightscouta:
 
 ![Samo prijenos u Nightscout](../images/preferences/settings_nsclient_sync.png)
 
