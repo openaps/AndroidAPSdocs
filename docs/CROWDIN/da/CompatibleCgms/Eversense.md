@@ -67,6 +67,8 @@ xDrip kan læse notifikationer fra producentens app, ligesom ESEL gør. Udfyldni
 
 **AAPS** kan læse glukoseværdierne direkte fra de notifikationer, som den officielle Eversense-app viser, uden nogen anden app imellem. Udfyldning af manglende data er ikke tilgængelig.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Vælg **Notifikationslæser** i [**Konfiguration → BS-kilde**](#Config-Builder-bg-source), og giv **AAPS** adgang til notifikationer, når du bliver spurgt.
 - Sørg for, at Eversense-appen viser den aktuelle glukoseværdi i sin notifikation.
 
