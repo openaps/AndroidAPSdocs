@@ -10,7 +10,8 @@ Tento návod popisuje nastavení inzulínové pumpy Equil.
 ## Možnosti pumpy s AAPS
 
 * Patch pumpa bez hadičky, která komunikuje s **AAPS** přes vestavěný Bluetooth vašeho telefonu, bez dalšího komunikačního zařízení.
-* **AAPS** považuje Equil za patch pumpu se zásobníkem 200 U: hlavní obrazovka ukazuje stavové kontrolky patch pumpy a volby **Plnění/doplňování** a **Výměna baterie pumpy** se nenabízejí. Plnění, naplnění kanyly a výměna baterie se provádějí v průvodcích pumpy.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Když je pumpa pozastavená nebo zastavená, **AAPS** zaznamená dočasný bazál 0 U/h, takže se do IOB nezapočítává žádný bazální inzulín.
 * Letní čas a změny časového pásma musíte řešit ručně.
 
