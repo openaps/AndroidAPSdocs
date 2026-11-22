@@ -1,47 +1,47 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# Troubleshooting NSClient
+# Rješavanje problema s NSClientom
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+NSClient ovisi o stabilnoj komunikaciji s Nightscoutom. Nestabilna veza dovodi do pogrešaka sinkronizacije i velike potrošnje podataka.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Ako vas nitko ne prati na Nightscoutu, možete pauzirati NSClient da biste uštedjeli bateriju ili možete postaviti NSClient tako da se povezuje samo preko Wi-Fi mreže i/ili tijekom punjenja.
 
-* How to detect an unstable connection?
+* Kako prepoznati nestabilnu vezu?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. If you see many reconnections, then there is a problem.
+Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Ako vidite mnogo ponovnih povezivanja, postoji problem.
 
-* Restart
+* Ponovno pokretanje
 
 As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Ako je vaš Nightscout smješten na Herokuu, Nightscout možete ponovno pokrenuti ovako: prijavite se na Heroku, kliknite naziv svoje aplikacije Nightscout, kliknite izbornik 'More', zatim 'Restart all dynos'.
 
-For other hosts, please follow your hosts guidance documentation.
+Za druge pružatelje usluge slijedite dokumentaciju svog pružatelja.
 
-* Phone issues
+* Problemi s telefonom
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android može staviti vaš telefon u stanje mirovanja. Provjerite imate li u postavkama napajanja telefona iznimku za AAPS, tako da AAPS može stalno raditi u pozadini.
 
-Check the NSClient again when in strong network signal location.
+Ponovno provjerite NSClient na mjestu s jakim signalom mreže.
 
-Try another phone.
+Pokušajte s drugim telefonom.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Ako je vaša stranica smještena na Azureu, mnogi su primijetili da su se problemi s vezom smanjili nakon prelaska na Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Zaobilazno rješenje za probleme s vezom na Azureu je da u Application settings postavite HTTP protocol na 2.0 i Websockets na ON
 
     {admonition} Remote control needs websockets
     :class: important
     Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
 
-* No BG reading from Nightscout
+* Nema očitanja GUK-a iz Nightscouta
 
 If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
-* If you still get an error...
+* Ako i dalje dobivate pogrešku...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Provjerite veličinu svoje baze podataka u MongoDB-u (ili putem dodatka za veličinu baze podataka u Nightscoutu). Ako koristite besplatnu razinu (free tier) MongoDB-a, 496 MB znači da je baza puna i da je treba očistiti. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Prije brisanja podataka iz baze podataka, ako to još niste postavili, razmislite o doniranju svojih podataka AAPS-a projektu Open Humans (za istraživanje). Upute su na [stranici za konfiguraciju OpenHumansa](../SupportingAaps/OpenHumans.md).
