@@ -73,7 +73,7 @@ HbA1c: 根據CGM測量的平均計算出的糖化血紅蛋白估計值。這是�
 
 - **圖表**：從午夜到午夜的一天。線條代表**中位數**（該時段有一半的讀取值較低，另一半較高）。線條周圍的色帶涵蓋讀取值中間的一半（**25–75%**），較寬的色帶則涵蓋大部分讀取值（**10–90%**）。色帶越窄，表示你在該時段每天的血糖越相近。虛線標示你的**低血糖標記**、140 mg/dL（7.8 mmol/L）以及**高血糖標記**。
 - **血糖概況**：顯示你處於目標範圍內、嚴格目標範圍內（70–140 mg/dL 或 3.9–7.8 mmol/L）、高於目標範圍及低於目標範圍的時間，接著顯示血糖的**平均值**與**中位數**。你的目標範圍是「**低血糖標記**」和「**高血糖標記**」的設定值，設定位置在[視覺化範圍](#Preferences-range-for-visualization)。
-- **eA1c** 和 **GMI**：根據你的 CGM 讀取值計算出的兩種 HbA1c 估算值。和上方的 HbA1c 一樣，這些數值可能與血液檢查得出的 HbA1c 不一致。
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. 和上方的 HbA1c 一樣，這些數值可能與血液檢查得出的 HbA1c 不一致。
 - **SD**（標準差）和 **CV**（變異係數）：表示血糖的變化幅度。數值越低，表示血糖越穩定。
 - **天數**：計算時使用的 CGM 資料天數。
 
@@ -114,7 +114,7 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 (screens-bolus-carbs)=
 ### 碳水化合物與注射
 
-![碳水化合物與注射](../images/TreatmentsView1.png)
+![碳水化合物與注射](../images/Maintenance/TreatmentsView1.png)
 
 在此標籤中，你可以查看注射和碳水化合物的紀錄。每筆注射（第 **1** 行）旁邊都會顯示剩餘的相關活性胰島素（IOB）和胰島素劑量。注射的來源可以是：
 * 餐點（透過「胰島素」、「快速嚮導」或「注射嚮導」按鈕手動輸入）
@@ -141,7 +141,7 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 
 ### 臨時基礎
 
-![臨時基礎率](../images/TreatmentsView2.png)
+![臨時基礎率](../images/Maintenance/TreatmentsView2.png)
 
 循環應用的**臨時基礎**在此顯示。如果某筆項目仍對 IOB 有影響，相關資訊會顯示在速率旁邊（第 **1** 行）。它可以是：
 * 如果臨時基礎率高於設定檔中的基礎率，IOB 會是正值。
@@ -153,13 +153,13 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 
 ### 臨時目標
 
-![臨時目標](../images/TreatmentsView3.png)
+![臨時目標](../images/Maintenance/TreatmentsView3.png)
 
 臨時目標的歷史可以在這裡查看。
 
 ### 設定檔切換
 
-![設定檔切換](../images/TreatmentsView4.png)
+![設定檔切換](../images/Maintenance/TreatmentsView4.png)
 
 設定檔切換的歷史可以在這裡查看。每次切換設定檔時，可能會看到多筆項目：同時儲存在 NS 和幫浦紀錄中的第 **1** 行，代表實際發生的切換。儲存在 Nightscout、但未記錄於幫浦紀錄中的第 **2** 行，代表使用者提出的設定檔切換要求。
 
@@ -169,14 +169,14 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 
 ### 照護入口
 
-![照護入口](../images/TreatmentsView5.png)
+![照護入口](../images/Maintenance/TreatmentsView5.png)
 
 此分頁會顯示所有記錄在 Nightscout 中的備註和照護入口項目。
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### 運行模式
 
-![運行模式](../images/TreatmentsView6.png)
+![運行模式](../images/Maintenance/TreatmentsView6.png)
 
 此分頁會顯示[循環狀態](#AapsScreens-loop-status)的變更記錄：開啟、關閉、LGS、暫停、中斷連線。
 
