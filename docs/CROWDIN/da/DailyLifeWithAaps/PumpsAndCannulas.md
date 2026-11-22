@@ -4,7 +4,7 @@
 
 Fremgangsmåden nedenfor gælder kun for pumper med slange. Den gælder ikke for patchpumper som Omnipod, Medtrum Nano, Accu-Chek Solo osv. Denne fremgangsmåde kaldes nogle gange et »sætskift«. Et »fuldt« sætskift omfatter både insulinreservoir og kanyle, og et »delvist« sætskift betyder, at kun kanylen skiftes.
 
-Patchpumper fylder og klargør sig selv i deres egen aktiveringsguide, og deres kanyle sidder allerede i kroppen. **AAPS** har ingen klargøring for dem: **Klargør/Fyld** vises ikke i **Administrer**-arket eller i Hurtigstart. Se siden for din pumpe under [Kompatible pumper](../Getting-Started/CompatiblePumps.md).
+Patchpumper fylder og klargør sig selv i deres egen aktiveringsguide, og deres kanyle sidder allerede i kroppen. **AAPS** har ingen klargøring for dem: **Klargør/Fyld** vises ikke i **Administrer**-arket eller i Hurtigstart. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Se siden for din pumpe under [Kompatible pumper](../Getting-Started/CompatiblePumps.md).
 
 Fysisk skift af ampul/reservoir kan ikke gøres via **AAPS**. Det skal gøres direkte på pumpen. Skiftet skal registreres manuelt i **AAPS**, når det er gjort.
 
@@ -31,6 +31,7 @@ Fysisk skift af ampul/reservoir kan ikke gøres via **AAPS**. Det skal gøres di
 * Du kan indstille/justere standardmængderne til klargøring i indstillingerne for **Klargør/Fyld** — skriv »prime« i søgefeltet på hovedskærmen for at åbne dem (se [Indstillinger](../SettingUpAaps/Preferences.md)). Se brugsanvisningen i din kanyleæske for, hvor mange enheder (afhængigt af nålens og slangens længde) der skal klargøres for din kanyle.
 
 * Insulin, der leveres med klargøringsfunktionen, medregnes ikke af **AAPS**, når insulin om bord (IOB) beregnes. Den er markeret som »Klargør« i [Behandlingshistorik](#aaps-screens-treatments).
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * Insulin, der gives som bolus fra pumpen, mens pumpen er afbrudt, medregnes heller ikke af **AAPS**. Hvis du giver en bolus direkte fra pumpen, mens **AAPS** er afbrudt, kan du, når du har genforbundet pumpen, registrere denne insulin (uden at give den som bolus) i dialogen **Insulin** (se [Sådan registrerer du leveret insulin uden at give en bolus](#pumps-cannulas-announce-insulin) nedenfor).
 
