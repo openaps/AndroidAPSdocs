@@ -17,7 +17,7 @@ Povezivanje pametnog sata s **AAPS-om** može biti korisno u mnogim situacijama,
 
 ## Posebne prednosti za roditelje/njegovatelje koji koriste **AAPS**
 
-For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. To može biti korisno, na primjer, ako je telefon s **AAPS-om** skriven u pojasu za pumpu.
+Za dijete – ako je njegov telefon s **AAPS-om** u blizini – njegovatelj može pametnim satom pratiti stanje ili mijenjati postavke bez korištenja telefona s **AAPS-om**. To može biti korisno, na primjer, ako je telefon s **AAPS-om** skriven u pojasu za pumpu.
 
 Pametni sat može se koristiti _uz_ opcije za daljinsko upravljanje ili [Praćenje AAPS-a (bez interakcije sa sustavom AAPS)](../RemoteFeatures/FollowingOnly.md) putem TELEFONA, ili _umjesto_ njih.
 
@@ -49,19 +49,19 @@ Najbolji način za odabir pametnog sata je pretražiti objave o satovima („wat
 
 ## Potpuni Android
 
-Zvuči privlačno, zar ne? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Postoji malo pametnih satova s prihvatljivim sučeljem koji uz to dobro rade za samostalno korištenje **AAPS-a** i vaše CGM aplikacije. Popularni modeli su LEMFO LEM 15 Pro i 16. Na sat trebate instalirati „full” apk **AAPS-a** (apk koji se obično instalira na pametni telefon), a ne „wear” apk **AAPS-a**.
+Zvuči privlačno, zar ne? Međutim, trenutno samo nekoliko entuzijasta eksperimentira s **AAPS-om** na samostalnom satu. Postoji malo pametnih satova s prihvatljivim sučeljem koji uz to dobro rade za samostalno korištenje **AAPS-a** i vaše CGM aplikacije. Popularni modeli su LEMFO LEM 15 Pro i 16. Na sat trebate instalirati „full” apk **AAPS-a** (apk koji se obično instalira na pametni telefon), a ne „wear” apk **AAPS-a**.
 
 Iako ne postoji jasna specifikacija po kojoj biste znali hoće li sat dobro raditi za samostalno korištenje **AAPS-a**, pomoći će sljedeći parametri:
 
 1)  Android 12 ili noviji. 2)  Mogućnost isključivanja „kvadratnog” načina Watchfacea, kako bi tekst bio veći i lakši za čitanje. 3)  Vrlo dobro trajanje baterije. 4)  Dobar domet Bluetootha.
 
-Većina frustracija sa samostalnim **AAPS** satovima dolazi od rada na malom zaslonu i od toga što trenutno sučelje potpune aplikacije AAPS nije dizajnirano za sat. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Većina frustracija sa samostalnim **AAPS** satovima dolazi od rada na malom zaslonu i od toga što trenutno sučelje potpune aplikacije AAPS nije dizajnirano za sat. Zbog malog zaslona možda ćete radije koristiti olovku (stylus) za uređivanje postavki **AAPS-a** na satu, a neki gumbi AAPS-a možda se neće vidjeti na zaslonu sata.
 
 Dodatni izazovi su to što je teško postići dovoljno trajanje baterije, a satovi s dovoljno jakom baterijom često su glomazni i debeli. Korisnici navode borbu s operativnim sustavom i postavkama za uštedu energije, teškoće s pokretanjem senzora na satu, slab domet Bluetootha (za održavanje veze i sa senzorom i s pumpom) i upitnu vodootpornost. Primjeri su prikazani na fotografijama ispod.
 
 ![slika](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Ako vas zanima postavljanje samostalnog sata, za više informacija pročitajte objave i komentare u Facebook grupi **AAPS** (dobri pojmovi za pretraživanje su „standalone” i „Lemfo”) i na Discordu.
 
 ## Wear OS
 
@@ -175,7 +175,7 @@ Više o njima, uključujući kako ih postaviti, možete pročitati na [web-stran
 ![slika](../images/watches/watch_pebble_watchface.png)
 
 
-Satovi Pebble ([više se ne proizvode](https://en.wikipedia.org/wiki/Pebble_(watch))) prodavali su se od 2013. do 2016. i možda se još mogu nabaviti rabljeni. Fitbit je preuzeo imovinu Pebblea. Korisnici Pebblea mogu koristiti Watchface Urchin za prikaz podataka iz Nightscouta. Mogući prikazani podaci uključuju aktivni inzulin (IOB), trenutno aktivnu stopu privremenog bazala i predviđanja. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
+Satovi Pebble ([više se ne proizvode](https://en.wikipedia.org/wiki/Pebble_(watch))) prodavali su se od 2013. do 2016. i možda se još mogu nabaviti rabljeni. Fitbit je preuzeo imovinu Pebblea. Korisnici Pebblea mogu koristiti Watchface Urchin za prikaz podataka iz Nightscouta. Mogući prikazani podaci uključuju aktivni inzulin (IOB), trenutno aktivnu stopu privremenog bazala i predviđanja. Ako koristite otvorenu petlju, pomoću IFTTT-a možete izraditi applet koji, kada stigne obavijest iz **AAPS-a**, pošalje SMS ili obavijest putem Pushovera.
 
 ### [Satovi Bluejay](https://bluejay.website/)
 
