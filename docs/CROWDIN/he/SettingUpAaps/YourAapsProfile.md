@@ -31,7 +31,7 @@ Your **Profile** settings interact with one another - you can have 'wrong' setti
 
 Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
-![דוגמה לפרופיל פעיל](../images/Profile-Example-Active.png)
+![דוגמה לפרופיל פעיל](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Glucose targets
@@ -55,7 +55,7 @@ The targets can be defined within those boundaries :
 
 ה**איור להלן** מציג דוגמה להגדרת היעד בפרופיל **AAPS**.
 
-![יעד](../images/Profile_Target.png)
+![יעד](../images/v4/Profiles/Profile_Target.png)
 
 יעדי **BG** נקבעים לפי ההעדפות והצרכים האישיים שלכם. לדוגמה, אם אתם חוששים מהיפוגליקמיה בלילה, תוכלו להגדיר יעד מעט גבוה יותר, 117 mg/dL (6.5 mmol/L), בין 21:00 ל-07:00. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
@@ -89,7 +89,7 @@ Accurate basal rates enable you to wake up in range, and to skip meals - or eat 
 
 ה**איור להלן** מציג דוגמה להגדרת קצבים בזאליים בפרופיל **AAPS**.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Basal rates](../images/v4/Profiles/Profile_BasalRates.png)
 
 כוונון נכון של הקצבים הבזאליים נעשה בניסוי וטעייה, ויש לעשות אותו בהתייעצות עם צוות הסוכרת שלכם.
 
@@ -147,7 +147,7 @@ From these examples you can see that the _smaller_ the **ISF** value, the less s
 
 **ISF** נמוך מדי (ולכן אגרסיבי יותר, וזה לא נדיר) עלול לגרום ל״תיקוני יתר״, כי **AAPS** מחשב שהמשתמש צריך יותר אינסולין ממה שבאמת נדרש כדי לתקן **BG** גבוה. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. במצב זה יש להגדיל את ערך **ISF**, כדי ש-**AAPS** יהיה פחות אגרסיבי. כך **AAPS** ייתן מנות תיקון קטנות יותר, ויימנע מתיקון יתר של **BG** גבוה שיגרום ל-**BG** נמוך.
 
-![ISF נמוך מדי](../images/isf.jpg)
+![ISF נמוך מדי](../images/v4/Profiles/isf.jpg)
 
 לעומת זאת, **ISF** גבוה מדי עלול לגרום לתיקונים חלשים מדי, כך ש-**BG** נשאר מעל היעד – דבר שבולט במיוחד בלילה.
 
@@ -155,7 +155,7 @@ From these examples you can see that the _smaller_ the **ISF** value, the less s
 
 See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
 
-![Profile ISF](../images/Profile_ISF.png)
+![Profile ISF](../images/v4/Profiles/Profile_ISF.png)
 
 A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
@@ -213,7 +213,7 @@ A **higher / weaker ICR** = more food per unit, i.e. you are getting less insuli
 
 The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. כשמזינים את הערכים האלה, מזינים רק את החלק האחרון של היחס. לכן יחס אינסולין-פחמימות של 1:3.5 מוזן פשוט כ-"3.5".
 
-![Profile ICR](../images/Profile_ICR.png)
+![Profile ICR](../images/v4/Profiles/Profile_ICR.png)
 
 If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
 
@@ -292,7 +292,7 @@ Here are some reasons why you may have negative IOB, and what action to take:
 
 עוזר הפרופילים מציע נתונים משני בתי חולים שונים לילדים, כדי למצוא פרופיל ראשוני לילד עד גיל 18.
 
-![עוזר הפרופילים לילדים 1](../images/ProfileHelperKids1.png)
+![עוזר הפרופילים לילדים 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
 1. ודאו שאתם בלשונית **פרופיל 1**.
 2. In **Profile type**, make sure you have "Default profile" selected.
@@ -303,7 +303,7 @@ Here are some reasons why you may have negative IOB, and what action to take:
 7. פתחו את הלשונית **השוואה**. Comparison of the two adjusted profiles will be displayed (see screenshot below).
 8. אם תרצו להתחיל לכוונן את הפרופיל לפי אחת מההצעות האלה, השתמשו בלחצן **שכפול** שבתחתית ההשוואה.
 
-![עוזר הפרופילים לילדים 2](../images/ProfileHelperKids2.png)
+![עוזר הפרופילים לילדים 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
 ### Switch Profile
 
@@ -312,7 +312,7 @@ Here are some reasons why you may have negative IOB, and what action to take:
 (your-aaps-profile-clone-profile-switch)=
 ### Clone a Profile switch to a new Profile
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profile Switch](../images/Maintenance/TreatmentsView4.png)
 
 [היסטוריית הטיפולים](#aaps-screens-treatments) מציגה את כל **החלפות הפרופיל** הקודמות. בלשונית **החלפת פרופיל**, אפשר להשתמש ב**החלפת פרופיל** קודמת כבסיס ליצירת **פרופיל** חדש. במקרה זה, היסט הזמן והאחוז יוחלו על הפרופיל המקומי החדש. השתמשו בלחצן **שכפול** שמוצג בשורה **2**.
 
@@ -335,14 +335,14 @@ This can be helpful when about to make major changes to a more extensive **Profi
 
 To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). רשומות מסד הנתונים החדשות יקבלו את התאריך הנוכחי. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Clone database records](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Compare two Profiles
 
 אפשר גם להשתמש ב[עוזר הפרופילים](#aaps-screens-profile-helper) (תפריט ☰ ← **עוזר הפרופילים**) כדי להשוות בין שני פרופילים שונים או בין החלפות פרופיל (אחוז של אחד הפרופילים שלכם שהשתמשתם בו קודם ב[החלפת פרופיל](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
-![עוזר הפרופילים 1](../images/ProfileHelper1.png)
+![עוזר הפרופילים 1](../images/v4/Profiles/ProfileHelper1.png)
 
 1. ודאו שאתם בלשונית **פרופיל 1**.
 2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
@@ -352,4 +352,4 @@ To do this, however, it is important to clone the whole **database record** cons
 6. Choose the **Profile Switch** you want to compare to.
 7. פתחו את הלשונית **השוואה**. תוצג השוואה של שני הפרופילים (ראו צילום מסך להלן).
 
-![עוזר הפרופילים 2](../images/ProfileHelper2.png)
+![עוזר הפרופילים 2](../images/v4/Profiles/ProfileHelper2.png)
