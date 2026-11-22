@@ -1,362 +1,362 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The DASH driver is a well-established way to loop with Omnipod.
+Ove upute su za konfiguraciju pumpe generacije **Omnipod DASH** **(NE Omnipod Eros)**. Upravljački program za DASH dobro je provjeren način korištenja petlje s Omnipodom.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Omnipod DASH specifications
+## Specifikacije Omnipoda DASH
 
-Key characteristics of the **Omnipod DASH** ('DASH'):
+Glavne značajke **Omnipoda DASH** („DASH“):
 
-- The DASH pods are identified by a **blue needle cap** (the older EROS pod has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-- DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-- The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
-- **AAPS** will wait for pod's accessibility to send commands.
-- On pod activation, **AAPS** will find and connect to a new DASH pod.
-- Expected range from phone: 5-10 meters (YMMV).
+- DASH Pod-ovi prepoznaju se po **plavoj kapici igle** (stariji EROS Pod ima prozirnu kapicu igle). Inače su Pod-ovi jednaki po fizičkim dimenzijama.
+- DASH ne treba BLE uređaj za vezu/most (NE treba RileyLink, OrangeLink ni EmaLink).
+- Bluetooth veza DASH-a koristi se samo kada se šalje naredba (npr. bolus) i prekida se odmah nakon slanja naredbe.
+- **AAPS** će čekati da Pod bude dostupan kako bi poslao naredbe.
+- Pri aktivaciji Pod-a **AAPS** će pronaći novi DASH Pod i spojiti se s njim.
+- Očekivani domet od telefona: 5–10 metara (ovisi o uvjetima).
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to turn on **Bluetooth bonding** (in the **Advanced Settings** section of the [Dash settings](#omnipod-dash-advanced-settings)) to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- DST and timezone changes are not applied automatically. After a clock change you must update the pod manually: press **Refresh** on the DASH pump screen, then press **Set time** (shown when the pod and phone time zones differ) or perform a **Profile Switch** (see [Timezone change for Omnipod Dash](#timezone-traveling-with-pumps)).
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you open **Pod History** on the DASH pump screen, it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
-- The settings file contains the active Pod session. Export your settings after each Pod activation, and see [Export and import settings](#omnipod-dash-export-import) before importing settings.
-- When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
-- If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
+## Poznata ograničenja i problemi Omnipoda DASH u AAPS-u
+- Općenito se savjetuje koristiti **AAPS** na Androidu 14 ili 16. Za Android 15 zajednica je prijavila mnogo [problema](https://github.com/nightscout/AndroidAPS/issues/3471). Ipak, ako koristite Android 15, vjerojatno ćete morati uključiti **Trajno Bluetooth uparivanje (bonding)** (u odjeljku **Napredne postavke** u [postavkama Dasha](#omnipod-dash-advanced-settings)) kako biste uspješno aktivirali i koristili Pod-ove, više o postavkama uparivanja pogledajte u [Rješavanje problema](../GettingHelp/GeneralTroubleshooting.md).
+- Ljetno računanje vremena i promjene vremenske zone ne primjenjuju se automatski. Nakon promjene sata morate ručno ažurirati Pod: pritisnite **Osvježi** na zaslonu pumpe DASH, zatim pritisnite **Postavi vrijeme** (prikazuje se kada se vremenske zone Pod-a i telefona razlikuju) ili napravite **zamjenu profila** (pogledajte [Promjena vremenske zone za Omnipod Dash](#timezone-traveling-with-pumps)).
+- Dash podržava bazalnu stopu samo u koracima od 0,05 J/h. Ako u svom **AAPS profilu** pokušate postaviti bazal u koracima od 0,01, AAPS vas neće upozoriti, iako će Pod zaokružiti stopu na korake od 0,05. Ako otvorite **Povijest Pod-a** na zaslonu pumpe DASH, prikazat će se da je postavljen bazal od 0,05. To također znači da je najniža bazalna stopa koju DASH dopušta u **AAPS-u** 0,05 J/h.
+- Datoteka postavki sadrži aktivnu sesiju Pod-a. Izvezite svoje postavke nakon svake aktivacije Pod-a i prije uvoza postavki pročitajte [Izvoz i uvoz postavki](#omnipod-dash-export-import).
+- Kada se postavlja novi bazalni profil, DASH će obustaviti isporuku prije postavljanja novog bazalnog **Profila**. Ako dođe do prekida komunikacije ili pogreške, bazalni profil se neće automatski ponovno pokrenuti. Pojedinosti potražite u odjeljku [Nastavak isporuke inzulina](#omnipod-dash-resuming-insulin-delivery).
+- Ako su upozorenja postavljena i Pod uskoro istječe, Pod će se oglašavati zvučnim signalima dok se upozorenja ne utišaju, pojedinosti potražite u [Utišavanje upozorenja Pod-a](#omnipod-dash-silencing-pod-alerts).
+- Postoji niz poznatih problema s Bluetoothom koji mogu uzrokovati probleme pri aktivaciji Pod-a. Poznate probleme i njihova rješenja pogledajte u [Problemi s Bluetoothom](../GettingHelp/BluetoothTroubleshooting.md).
 
 (hardware-software-requirements)=
 
 (omnipod-dash-hardware-software-requirements)=
-## Hardware and software requirements
+## Zahtjevi za hardver i softver
 
-- Omnipod DASH is identified by the blue needle cap.
+- Omnipod DASH prepoznaje se po plavoj kapici igle.
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 - **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
-    -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
-      **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.
-       - **NOTE:**
-         - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) list for known working configurations when choosing the phone for an Omnipod DASH setup.
+    -  Upravljački program **AAPS** za Omnipod Dash spaja se s DASH Pod-om putem Bluetootha.  
+      **AAPS** će automatski uspostaviti novu Bluetooth vezu s Pod-om svaki put kada treba poslati naredbu (npr. bolus), a nakon slanja naredbe Bluetooth veza se odmah prekida.
+       - **NAPOMENA:**
+         - Bluetooth vezu mogu prekinuti ili ometati drugi Bluetooth uređaji povezani s telefonom na kojem radi **AAPS**, npr. slušalice itd. Takvi uređaji na nekim modelima telefona mogu uzrokovati pogreške veze ili probleme pri aktivaciji Pod-a. Pri odabiru telefona za Omnipod DASH dobro je pogledati popis [testiranih hardverskih postava](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) s poznatim konfiguracijama koje rade.
          - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-    - The phone must run **Android 12 or newer**, with **AAPS** built and installed using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions. Always run the latest released version.
-- A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+    - Telefon mora imati **Android 12 ili noviji**, a **AAPS** mora biti izrađen i instaliran prema uputama [**Izrada AAPS-a**](../SettingUpAaps/BuildingAaps.md). Uvijek koristite najnoviju objavljenu verziju.
+- Podržani [**kontinuirani monitor glukoze (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
+Upute u nastavku objašnjavaju kako aktivirati novu sesiju Pod-a pomoću **AAPS-a**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Kada se Pod deaktivira, ne može se ponovno koristiti ni ponovno aktivirati, deaktivacija je konačna.
 
-## Before you begin
+## Prije nego što počnete
 
-Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
+Pazite da ste pročitali i razumjeli cijeli ovaj vodič, odjeljak **Prije početka** te **[Poznata ograničenja i problemi Omnipoda DASH u AAPS-u](#omnipod-dash-constraints)** kako biste izbjegli poznate probleme.
 
-### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
-1. Extra pods (3 or more spare)
-2. Spare Insulin and MDI equipment
-3. A working Omnipod PDM (In case **AAPS** fails)
-4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
-5. Correct version of AAPS built and installed
+### **SIGURNOST NA PRVOM MJESTU** – **NE BISTE** trebali prvi put spajati **AAPS** s Pod-om ako nemate pristup svemu sljedećem:
+1. Dodatni Pod-ovi (3 ili više rezervnih)
+2. Rezervni inzulin i pribor za terapiju penovima (MDI)
+3. Ispravan Omnipod PDM (za slučaj da **AAPS** zakaže)
+4. Podržani telefoni su obavezni! (Pogledajte [Zahtjevi za hardver i softver](#hardware-software-requirements))
+5. Ispravna verzija AAPS-a izrađena i instalirana
 
-### Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.
-- Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).
-- The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.
-- The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.
-- **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.
+### Vaš Omnipod Dash PDM postat će suvišan nakon što upravljački program AAPS za Dash aktivira vaš Pod.
+- Prije korištenja **AAPS-a** vi ili vaš njegovatelj upravljali ste Pod-om pomoću Omnipod PDM-a (ili u nekim regijama aplikacije na telefonu) kako biste slali naredbe svom DASH-u (npr. bolus).
+- DASH može imati vezu samo s jednim Bluetooth uređajem (npr. PDM ili telefon) za upravljanje i slanje naredbi.
+- Uređaj koji uspješno aktivira Pod od tog trenutka jedini smije komunicirati s tim Pod-om. To znači da kada aktivirate DASH svojim Android telefonom pomoću **AAPS-a**, **više nećete moći koristiti svoj PDM s tim Pod-om!** Dok je taj Pod aktivan, upravljački program **AAPS** za Dash na vašem Android telefonu novi je PDM za vaš Pod.
+- **NE bacajte svoj PDM!** Preporučuje se da ga čuvate kao rezervu i za hitne slučajeve, na primjer kada izgubite telefon ili **AAPS** ne radi ispravno.
 
-### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
-Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
-As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
-When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
+### Vaš Pod **NEĆE** prestati isporučivati inzulin kada nije spojen s AAPS-om.
+Zadane bazalne stope programiraju se na Pod pri aktivaciji, kako su definirane u trenutno aktivnom [**Profilu**](../SettingUpAaps/YourAapsProfile.md).  
+Dok god **AAPS** radi, slat će naredbe za prilagodbu bazalne stope koje traju najviše 120 minuta.  
+Ako Pod iz nekog razloga ne primi nove naredbe (na primjer jer je komunikacija izgubljena zbog udaljenosti Pod ➜ telefon), Pod će se automatski vratiti na zadane bazalne stope kako su definirane u vašem [**Profilu**](../SettingUpAaps/YourAapsProfile.md).
 
-### AAPS Profile(s) do not support 30 minute basal rate time frames
-If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
-You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
+### AAPS profili ne podržavaju vremenske odsječke bazalne stope od 30 minuta
+Ako ste novi u **AAPS-u** i prvi put postavljate svoj bazalni [**Profil**](../SettingUpAaps/YourAapsProfile.md), imajte na umu da bazalne stope koje počinju na pola sata nisu podržane. Na primjer, ako na svom Omnipod PDM-u imate bazalnu stopu od 1,1 jedinice koja počinje u 09:30 i traje 2 sata, do 11:30, taj točan bazalni **Profil** nije moguće ponoviti u **AAPS-u**.  
+Morat ćete tu bazalnu stopu od 1,1 jedinice prebaciti u vremenski raspon 9:00–11:00 ili 10:00–12:00. Iako sam hardver DASH-a podržava korake **Profila** bazalne stope od 30 minuta, **AAPS** NE podržava tu značajku.
 
-### 0U/h Profile basal rates are NOT supported in AAPS
-While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
-Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
-**NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
+### Bazalne stope od 0 J/h u profilu NISU podržane u AAPS-u
+Iako DASH podržava nultu bazalnu stopu, **AAPS** koristi višekratnike korisnikove bazalne stope iz **Profila** za određivanje automatskog liječenja; ne može raditi s nultom bazalnom stopom.  
+Umjesto toga, privremena nulta bazalna stopa može se postići funkcijom „Odspoji pumpu“ ili kombinacijom Onemogući petlju/privremena bazalna stopa ili Suspendiraj petlju/privremena bazalna stopa.  
+**NAPOMENA:** Najniža bazalna stopa koju DASH dopušta u **AAPS-u** je 0,05 J/h.
 
-## Selecting Dash in AAPS
+## Odabir Dasha u AAPS-u
 
-There are **two** ways to select the Omnipod DASH driver in **AAPS**:
+Postoje **dva** načina odabira upravljačkog programa za Omnipod DASH u **AAPS-u**:
 
-### Option 1: New installations
+### Opcija 1: Nove instalacije
 
-When you install **AAPS** for the first time, the **Setup Wizard** guides you through the key features and installation requirements of **AAPS**. When you reach the **Pump** step, select **Omnipod Dash**.
+Kada prvi put instalirate **AAPS**, **Čarobnjak za postavljanje** vodi vas kroz glavne značajke i zahtjeve za instalaciju **AAPS-a**. Kada dođete do koraka **Pumpa**, odaberite **Omnipod Dash**.
 
-![The Pump step of the setup wizard with Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
+![Korak Pumpa u čarobnjaku za postavljanje s Omnipodom Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-If you are not sure yet, you can select **Virtual Pump** for now and select **Omnipod Dash** later, after setting up **AAPS** (see Option 2).
+Ako još niste sigurni, zasad možete odabrati **Virtualna pumpa**, a **Omnipod Dash** odabrati kasnije, nakon postavljanja **AAPS-a** (pogledajte Opciju 2).
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: The Configuration screen
+### Opcija 2: Zaslon Konfiguracija
 
-On an existing installation you can select the **Omnipod Dash** pump from the **Configuration** screen:
+Na postojećoj instalaciji pumpu **Omnipod Dash** možete odabrati na zaslonu **Konfiguracija**:
 
-1. Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration**.
-2. Tap **Pump** and select the radio button of **Omnipod Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
+1. Otvorite **izbornik** (☰) u gornjem lijevom kutu glavnog zaslona i odaberite **Konfiguracija**.
+2. Dodirnite **Pumpa** i odaberite izborni gumb **Omnipod Dash** (*„Integracija inzulinske Omnipod Dash pumpe (novi model s Bluetoothom i plavim poklopcem igle).“*).
 
-3. Once it is selected, the **Omnipod Dash** card shows two buttons:
-   - **Settings** opens the [Dash settings](#omnipod-dash-settings).
-   - **Open plugin** opens the [DASH pump screen](#omnipod-dash-tab).
+3. Kada je odabran, kartica **Omnipod Dash** prikazuje dva gumba:
+   - **Postavke** otvara [postavke Dasha](#omnipod-dash-settings).
+   - **Otvori dodatak** otvara [zaslon pumpe DASH](#omnipod-dash-tab).
 
-   ![The Omnipod Dash plugin enabled in Configuration > Pump](../images/v4/Pumps/dash_enabled.png)
+   ![Dodatak Omnipod Dash omogućen u Konfiguracija > Pumpa](../images/v4/Pumps/dash_enabled.png)
 
-### Verification of Omnipod Driver Selection
+### Provjera odabira upravljačkog programa za Omnipod
 
-To check that **Omnipod Dash** is selected, open **Manage** (bottom navigation of the main screen) and tap **Pump**. The DASH pump screen opens, as shown in the next section.
+Da biste provjerili je li **Omnipod Dash** odabran, otvorite **Upravljanje** (donja navigacija glavnog zaslona) i dodirnite **Pumpa**. Otvara se zaslon pumpe DASH, kako je prikazano u sljedećem odjeljku.
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## Zaslon pumpe DASH
 
-The DASH pump screen is where you manage your pods: activate and deactivate them, refresh the pod status, silence alerts and look at the pod history. Open it with **Manage** > **Pump**, or with **Open plugin** on the **Omnipod Dash** card in **Configuration** > **Pump**.
+Na zaslonu pumpe DASH upravljate svojim Pod-ovima: aktivirate ih i deaktivirate, osvježavate status Pod-a, utišavate upozorenja i pregledavate povijest Pod-a. Otvorite ga putem **Upravljanje** > **Pumpa** ili gumbom **Otvori dodatak** na kartici **Omnipod Dash** u **Konfiguracija** > **Pumpa**.
 
-This is the screen without an active pod:
+Ovo je zaslon bez aktivnog Pod-a:
 
-![The DASH pump screen without an active pod](../images/v4/Pumps/dash_pump_screen.png)
+![Zaslon pumpe DASH bez aktivnog Pod-a](../images/v4/Pumps/dash_pump_screen.png)
 
-And this is the screen with an active pod:
+A ovo je zaslon s aktivnim Pod-om:
 
-![The DASH pump screen with an active pod](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
+![Zaslon pumpe DASH s aktivnim Pod-om](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-The **Settings** (gear) icon in the top-right corner opens the [Dash settings](#omnipod-dash-settings).
+Ikona **Postavke** (zupčanik) u gornjem desnom kutu otvara [postavke Dasha](#omnipod-dash-settings).
 
-***NOTE:** If a field on the pump screen shows (uncertain), press **Refresh** to update the pod status.*
+***NAPOMENA:** Ako neko polje na zaslonu pumpe prikazuje (nesigurno), pritisnite **Osvježi** kako biste ažurirali status Pod-a.*
 
-### Fields
+### Polja
 
-- **Bluetooth Address:** The Bluetooth address of the pod.
+- **Bluetooth adresa:** Bluetooth adresa Pod-a.
 
-- **Connection quality:** How reliably **AAPS** connects to the pod, shown as *successful connections / all connection attempts :: success rate*, for example `412/420 :: 98.10 %`. After more than 50 successful connections, the value turns yellow below 90 % and red below 70 %. A low value points to a Bluetooth problem (see [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues)).
+- **Kvaliteta veze:** Koliko pouzdano se **AAPS** spaja s Pod-om, prikazano kao *uspješne veze / svi pokušaji spajanja :: postotak uspjeha*, na primjer `412/420 :: 98.10 %`. Nakon više od 50 uspješnih veza vrijednost postaje žuta ispod 90 %, a crvena ispod 70 %. Niska vrijednost ukazuje na problem s Bluetoothom (pogledajte [Problemi s Bluetoothom](#omnipod-dash-bluetooth-related-issues)).
 
-- **Delivery Status:** The raw delivery status reported by the pod. This field is shown only in engineering mode builds.
+- **Status isporuke:** Neobrađeni status isporuke koji javlja Pod. Ovo polje prikazuje se samo u inženjerskim (engineering mode) verzijama.
 
-- **Unique ID:** The unique ID **AAPS** gave to the pod during activation.
+- **Jedinstveni ID:** Jedinstveni ID koji je **AAPS** dodijelio Pod-u tijekom aktivacije.
 
-- **LOT Number:** The production lot number of the pod.
+- **LOT broj:** Proizvodni LOT broj Pod-a.
 
-- **Sequence Number:** The sequence number of the pod.
+- **Redni broj:** Redni broj Pod-a.
 
-- **Firmware Version:** The firmware and Bluetooth versions of the pod.
+- **Firmware verzija:** Verzije firmwarea i Bluetootha Pod-a.
 
-- **Time on Pod:** The current time on the pod, with its time zone. The text turns red when the time zone of the pod is different from the time zone of the phone, and yellow when the pod time is more than 10 minutes off.
+- **Vrijeme na Pod-u:** Trenutno vrijeme na Pod-u, s njegovom vremenskom zonom. Tekst postaje crven kada se vremenska zona Pod-a razlikuje od vremenske zone telefona, a žut kada vrijeme Pod-a odstupa više od 10 minuta.
 
-- **Pod Expires:** The date and time when the pod expires (72 hours after activation). The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
+- **Pod istječe:** Datum i vrijeme isteka Pod-a (72 sata nakon aktivacije). Tekst postaje žut u zadnja 4 sata prije tog vremena. Nikada ne postaje crven jer Pod i nakon toga nastavlja isporučivati inzulin.
 
-- **Pod Hard End:** The end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
+- **Konačni istek Pod-a:** Kraj produženog razdoblja Pod-a (8 sati nakon **Pod istječe**, za najdulji vijek Pod-a od 80 sati). Tekst postaje žut kada počne dodatno razdoblje (u trenutku **Pod istječe**), a crven u zadnja 4 sata prije konačnog isteka. Tijekom produženog razdoblja prikazuje i preostalo vrijeme, na primjer *(preostalo 17 min)*. Pod prestaje isporučivati inzulin u trenutku konačnog isteka i mora se zamijeniti.
 
-- **Pod Status:** The state of the pod: **No Active Pod**, **Setup in progress**, **Running**, **Suspended** or, after a pod fault, **ALARM**.
+- **Status Pod-a:** Stanje Pod-a: **Nema aktivnog Pod-a**, **Postavljanje u tijeku**, **U tijeku**, **Suspendiran** ili, nakon kvara Pod-a, **ALARM**.
 
-- **Last Connection:** How long ago **AAPS** last communicated with the pod.
+- **Zadnja uspostava veze:** Prije koliko vremena je **AAPS** zadnji put komunicirao s Pod-om.
 
-  - *Moments ago* - less than 10 seconds ago.
+  - *Prije nekoliko trenutaka* – prije manje od 10 sekundi.
 
-  - *Less than a minute ago* - between 10 and 60 seconds ago.
+  - *Prije manje od minute* – prije 10 do 60 sekundi.
 
-  - *XX minutes ago* - more than 1 minute ago (and *X hours and XX minutes ago* after an hour).
+  - *prije XX min* – prije više od 1 minute (i *prije X h i XX min* nakon jednog sata).
 
-- **Last bolus:** The amount of the last bolus sent to the pod and how long ago it was given. An unconfirmed bolus is marked (uncertain).
+- **Zadnji bolus:** Količina zadnjeg bolusa poslanog Pod-u i prije koliko vremena je dan. Nepotvrđeni bolus označen je s (nesigurno).
 
-- **Base Basal Rate:** The basal rate programmed for the current time in your basal **Profile**.
+- **Osnovna bazalna stopa:** Bazalna stopa programirana za trenutno vrijeme u vašem bazalnom **Profilu**.
 
-- **Temp Basal Rate:** The temporary basal rate (TBR) that is currently running, with its start time and duration. This field is only shown while a TBR is running.
+- **Privremena bazalna stopa:** Privremena bazalna stopa (TBR) koja je trenutno aktivna, s vremenom početka i trajanjem. Ovo polje prikazuje se samo dok je TBR aktivan.
 
-- **Reservoir:** Shows *Over 50 U left* when more than 50 units are left in the reservoir. Below 50 units, the exact amount is shown. The value turns red below 20 units.
+- **Spremnik:** Prikazuje *Preostalo više od 50 J* kada je u spremniku preostalo više od 50 jedinica. Ispod 50 jedinica prikazuje se točna količina. Vrijednost postaje crvena ispod 20 jedinica.
 
-- **Total Delivered:** The total amount of insulin delivered from the reservoir. This includes the insulin used for priming.
+- **Ukupno isporučeno:** Ukupna količina inzulina isporučena iz spremnika. To uključuje i inzulin potrošen za punjenje.
 
-- **Active Pod Alerts:** Alerts that are currently active on the pod, for example *Pod will expire soon* or *Low Reservoir*.
+- **Aktivna upozorenja Pod-a:** Upozorenja koja su trenutno aktivna na Pod-u, na primjer *Pod će uskoro isteći* ili *Niska razina spremnika*.
 
-- **Errors:** The pod fault, if the pod has failed, shown in red as *Pod Fault:* followed by the fault code and name, for example *Pod Fault: 020 ALARM_OCCLUDED*. Review the [Pod History](#omnipod-dash-view-pod-history) and the log files for past errors and more detailed information. See [Pod Failures](#omnipod-dash-pod-failures).
+- **Greške:** Kvar Pod-a, ako je Pod zakazao, prikazan crvenom bojom kao *Kvar Pod-a:* nakon čega slijede kod i naziv kvara, na primjer *Kvar Pod-a: 020 ALARM_OCCLUDED*. Za prethodne pogreške i detaljnije informacije pregledajte [Povijest Pod-a](#omnipod-dash-view-pod-history) i datoteke dnevnika. Pogledajte [Kvarovi Pod-a](#omnipod-dash-pod-failures).
 
-- **PDM Notification:** Shown only after a pod fault. It shows the fault the way the Omnipod PDM would have shown it: a title (for example *Occlusion Detected*, *Empty Reservoir* or *Pod Expired*), what happened (for example *Insulin delivery stopped. Change Pod now.*) and a *Ref:* code.
+- **PDM obavijest:** Prikazuje se samo nakon kvara Pod-a. Prikazuje kvar onako kako bi ga prikazao Omnipod PDM: naslov (na primjer *Otkriveno začepljenje*, *Prazan spremnik* ili *Pod je istekao*), što se dogodilo (na primjer *Isporuka inzulina je zaustavljena. Odmah promijenite Pod.*) i kod *Ref:*.
 
-### Buttons
+### Gumbi
 
-The buttons at the bottom of the pump screen change with the state of the pod. Only the buttons that make sense at that moment are shown.
+Gumbi na dnu zaslona pumpe mijenjaju se ovisno o stanju Pod-a. Prikazuju se samo gumbi koji u tom trenutku imaju smisla.
 
-- **Refresh:** Asks the pod for its current status.
-  - *Use it to update the pod status and to clear fields that show (uncertain).*
-  - *See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for more information.*
+- **Osvježi:** Traži od Pod-a njegov trenutni status.
+  - *Koristite ga za ažuriranje statusa Pod-a i za brisanje polja koja prikazuju (nesigurno).*
+  - *Više informacija potražite u odjeljku [Rješavanje problema](#omnipod-dash-troubleshooting) u nastavku.*
 
-- **Silence Alerts:** Stops the pod alert beeps (for example pod expiry or low reservoir). Shown only while the pod has an active alert. See [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts).
+- **Utišaj upozorenja:** Zaustavlja zvučne signale upozorenja Pod-a (na primjer istek Pod-a ili niska razina spremnika). Prikazuje se samo dok Pod ima aktivno upozorenje. Pogledajte [Utišavanje upozorenja Pod-a](#omnipod-dash-silencing-pod-alerts).
 
-- **Resume Delivery:** Resumes insulin delivery on a suspended pod. Shown only when delivery is suspended. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
+- **Nastavi isporuku:** Nastavlja isporuku inzulina na suspendiranom Pod-u. Prikazuje se samo kada je isporuka obustavljena. Pogledajte [Nastavak isporuke inzulina](#omnipod-dash-resuming-insulin-delivery).
 
-- **Set time:** Updates the pod to the time zone of your phone by sending your basal **Profile** again. Shown only when the time zone of the pod differs from the time zone of your phone.
+- **Postavi vrijeme:** Prebacuje Pod na vremensku zonu vašeg telefona tako da ponovno pošalje vaš bazalni **Profil**. Prikazuje se samo kada se vremenska zona Pod-a razlikuje od vremenske zone vašeg telefona.
 
-- [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod. Shown when no pod is active.
+- [**Aktiviraj Pod**](#omnipod-dash-activate-pod): puni i aktivira novi Pod. Prikazuje se kada nijedan Pod nije aktivan.
 
-- [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the active pod. Shown as soon as a pod is paired with **AAPS**, also when an activation stopped part-way (for example because the pod failed during activation). **AAPS** asks you to confirm before it deactivates the pod.
+- [**Deaktiviraj Pod**](#omnipod-dash-deactivate-pod): deaktivira aktivni Pod. Prikazuje se čim je Pod uparen s **AAPS-om**, i kada je aktivacija stala na pola puta (na primjer jer je Pod zakazao tijekom aktivacije). **AAPS** traži da potvrdite prije nego što deaktivira Pod.
 
-- **Play Test Beep:** Makes the pod play a single test beep.
+- **Reproduciraj testni zvučni signal:** Pod reproducira jedan testni zvučni signal.
 
-- [**Pod History**](#omnipod-dash-view-pod-history): Shows the activity history of the active pod.
+- [**Povijest Pod-a**](#omnipod-dash-view-pod-history): prikazuje povijest aktivnosti aktivnog Pod-a.
 
-- **Discard Pod:** Removes an unfinished pod from **AAPS**. Shown only when a pod activation stopped part-way. **AAPS** asks you to confirm. After discarding, **AAPS** can no longer communicate with that pod: remove it from your body.
+- **Odbaci Pod:** Uklanja nedovršeni Pod iz **AAPS-a**. Prikazuje se samo kada je aktivacija Pod-a stala na pola puta. **AAPS** traži da potvrdite. Nakon odbacivanja **AAPS** više ne može komunicirati s tim Pod-om: skinite ga s tijela.
 
-![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+![Izbornik Upravljanje Pod-om](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**, koja je imala zaseban izbornik **Upravljanje Pod-om**. U **AAPS-u** 4 sve ove radnje, uključujući **Aktiviraj Pod**, **Deaktiviraj Pod**, **Reproduciraj testni zvučni signal** i **Povijest Pod-a**, gumbi su s tekstom izravno na zaslonu pumpe.
 ```
 
 (omnipod-dash-activate-pod)=
 
-## Activate Pod
+## Aktiviraj Pod
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Activate Pod**. The activation wizard opens.
+1. Otvorite zaslon pumpe DASH (**Upravljanje** > **Pumpa**) i pritisnite **Aktiviraj Pod**. Otvara se čarobnjak za aktivaciju.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 **Aktiviraj Pod** je gumb izravno na zaslonu pumpe DASH, a ne u izborniku **Upravljanje Pod-om**.
    ```
 
-   If you have never activated a **Profile** in **AAPS** before, the wizard first shows the **Profile required** step: select the profile to apply on activation and continue.
+   Ako nikada prije niste aktivirali **Profil** u **AAPS-u**, čarobnjak prvo prikazuje korak **Potreban je profil**: odaberite profil koji će se primijeniti pri aktivaciji i nastavite.
 
-2. The **Fill Pod** step is shown. Fill a new pod with enough insulin for 3 days, **at least 80 units**. Listen for two beeps from the pod: they mean the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. Do not remove the pod's needle cap yet.
+2. Prikazuje se korak **Napuni Pod**. Napunite novi Pod s dovoljno inzulina za 3 dana, **najmanje 80 jedinica**. Osluškujte dva zvučna signala Pod-a: oni znače da je napunjena najmanja količina od 80 jedinica. Potpuno ispraznite štrcaljku za punjenje, čak i nakon što čujete dva zvučna signala. Još nemojte skidati kapicu igle Pod-a.
 
-   ***NOTE:** When you calculate the amount of insulin you need for 3 days, remember that priming the pod uses about 3-10 units.*
+   ***NAPOMENA:** Kada računate količinu inzulina potrebnu za 3 dana, imajte na umu da punjenje Pod-a troši oko 3–10 jedinica.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)
 
    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-   Make sure that the new pod and the phone running **AAPS** are close to each other and press **Next**.
+   Pazite da su novi Pod i telefon s **AAPS-om** blizu jedan drugome i pritisnite **Sljedeći**.
 
-3. If you use more than one insulin in **AAPS**, the **Select Insulin** step is shown. It shows the **Currently active** insulin. If you filled the pod with a different insulin, press **Change** and select it. **AAPS** applies a **Profile Switch** with this insulin when the activation is finished. Press **Next**.
+3. Ako u **AAPS-u** koristite više od jednog inzulina, prikazuje se korak **Odaberi inzulin**. Prikazuje **Trenutno aktivan** inzulin. Ako ste Pod napunili drugim inzulinom, pritisnite **Promijeni** i odaberite ga. **AAPS** primjenjuje **zamjenu profila** s ovim inzulinom kada je aktivacija završena. Pritisnite **Sljedeći**.
 
-   ![The Select Insulin step](../images/v4/Pumps/dash_wizard_select_insulin.png)
+   ![Korak Odaberi inzulin](../images/v4/Pumps/dash_wizard_select_insulin.png)
 
-4. On the **Initialize Pod** step, **AAPS** pairs with the new pod and primes it. You hear a click followed by a series of ticking sounds as the pod primes itself. When this has finished successfully, the **Next** button appears. Press **Next**.
+4. U koraku **Inicijaliziraj Pod** **AAPS** se uparuje s novim Pod-om i puni ga. Čut ćete klik, a zatim niz kucanja dok se Pod sam puni. Kada to uspješno završi, pojavljuje se gumb **Sljedeći**. Pritisnite **Sljedeći**.
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-   ***NOTE**: If an error message such as _Scan failed_ or _'Could not find an available pod for activation'_ appears (this can happen), do not panic. Press **Retry**. In most cases the activation then continues successfully.*
+   ***NAPOMENA**: Ako se pojavi poruka o pogrešci kao što je _Neuspješno skeniranje_ ili _'Could not find an available pod for activation'_ (nije pronađen dostupan Pod za aktivaciju; to se može dogoditi), nemojte paničariti. Pritisnite **Pokušaj ponovno**. U većini slučajeva aktivacija se zatim uspješno nastavlja.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-   If the pod has failed (for example because its activation time was exceeded), **Deactivate Pod** is shown instead of **Retry**. Use it and start again with a new pod.
+   Ako je Pod zakazao (na primjer jer je prekoračeno vrijeme za aktivaciju), umjesto **Pokušaj ponovno** prikazuje se **Deaktiviraj Pod**. Upotrijebite ga i počnite ispočetka s novim Pod-om.
 
-   If you press **Cancel** before the activation is finished, **AAPS** asks you to confirm that you want to exit. Press **OK** to leave the wizard, or **Cancel** to stay.
+   Ako pritisnete **Otkaži** prije završetka aktivacije, **AAPS** traži da potvrdite da želite izaći. Pritisnite **U redu** za izlaz iz čarobnjaka ili **Otkaži** da ostanete.
 
-   ![The Exit confirmation](../images/v4/Pumps/dash_wizard_exit_confirm.png)
+   ![Potvrda izlaza](../images/v4/Pumps/dash_wizard_exit_confirm.png)
 
-5. If you manage pump site rotation in **AAPS** (**Manage pump site rotation** in the [Site Rotation](#Aapsscreens-site-rotation) settings), the **Site location** step is shown. Select where you are going to place the pod on the body diagram and press **Next**, or press **Skip**.
+5. Ako u **AAPS-u** upravljate rotacijom mjesta pumpe (**Upravljaj rotacijom mjesta pumpe** u postavkama [Rotacija mjesta primjene](#Aapsscreens-site-rotation)), prikazuje se korak **Mjesto primjene**. Na crtežu tijela odaberite gdje ćete postaviti Pod i pritisnite **Sljedeći** ili pritisnite **Preskoči**.
 
-   ![The Site location step](../images/v4/Pumps/dash_wizard_site_location.png)
+   ![Korak Mjesto primjene](../images/v4/Pumps/dash_wizard_site_location.png)
 
-6. Next, prepare the infusion site for the new pod. Wash your hands to avoid any risk of infection. Clean the infusion site with soap and water or an alcohol wipe, and let the skin air dry completely before you continue. If the adhesive irritates your skin, consider using a barrier wipe or barrier spray.
+6. Zatim pripremite mjesto primjene za novi Pod. Operite ruke kako biste izbjegli rizik od infekcije. Očistite mjesto primjene sapunom i vodom ili alkoholnom maramicom i pustite da se koža potpuno osuši na zraku prije nego što nastavite. Ako vam ljepilo nadražuje kožu, razmislite o zaštitnoj maramici ili zaštitnom spreju.
 
-   On the **Attach Pod** step, remove the pod's blue plastic needle cap. If the cannula or anything else sticks out of the pod, or it looks unusual, **STOP**: press **Cancel** and start again with a new pod. If everything looks **OK**, take off the white paper backing from the adhesive and stick the pod to the chosen site on your body.
+   U koraku **Pričvrsti Pod** skinite plavu plastičnu kapicu igle Pod-a. Ako kanila ili nešto drugo viri iz Pod-a ili on izgleda neobično, **STANITE**: pritisnite **Otkaži** i počnite ispočetka s novim Pod-om. Ako sve izgleda **u redu**, skinite bijelu papirnatu zaštitu s ljepljivog dijela i zalijepite Pod na odabrano mjesto na tijelu.
 
-   When finished, press **Next**.
+   Kada završite, pritisnite **Sljedeći**.
 
    ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-7. A confirmation dialog appears: *When you press OK, the cannula will be inserted.* **Press OK ONLY if you are ready to insert the cannula!**
+7. Pojavljuje se dijalog za potvrdu: *Kada pritisnete U redu, kanila će biti umetnuta.* **Pritisnite U redu SAMO ako ste spremni za umetanje kanile!**
 
    ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-8. On the **Insert Cannula** step, **AAPS** sets your basal schedule and the pod inserts the cannula. This can take some time (1-2 minutes maximum). **Be patient!**
+8. U koraku **Umetni kanilu** **AAPS** postavlja vaš bazalni raspored, a Pod umeće kanilu. To može potrajati (najviše 1–2 minute). **Budite strpljivi!**
 
-   ***NOTE:** It is good practice to pinch the skin near the cannula insertion point before the cannula is inserted. This helps the needle go in smoothly and lowers your chance of occlusions (blockages).*
+   ***NAPOMENA:** Dobro je stisnuti kožu blizu mjesta umetanja kanile prije nego što se kanila umetne. To pomaže da igla glatko uđe i smanjuje rizik od začepljenja (okluzija).*
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-9. When the cannula has been inserted successfully, the **Next** button appears. Press **Next**.
+9. Kada je kanila uspješno umetnuta, pojavljuje se gumb **Sljedeći**. Pritisnite **Sljedeći**.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-10. The **Pod Activated** step is shown. Check that the cannula has been inserted correctly, and change the pod if you think it has not.
+10. Prikazuje se korak **Pod aktiviran**. Provjerite je li kanila ispravno umetnuta i zamijenite Pod ako mislite da nije.
 
-    Press **Finish**.
+    Pritisnite **Završi**.
 
-    Congratulations! You have now started a new pod session.
+    Čestitamo! Sada ste pokrenuli novu sesiju Pod-a.
 
     ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-11. You are back on the DASH pump screen. It now shows the information of your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. **Activate Pod** is replaced by **Deactivate Pod**: you cannot activate another pod without deactivating the active pod first.
+11. Vratili ste se na zaslon pumpe DASH. Sada prikazuje podatke vašeg aktivnog Pod-a, uključujući trenutnu bazalnu stopu, razinu spremnika, isporučeni inzulin, pogreške i upozorenja Pod-a. **Aktiviraj Pod** zamijenjen je gumbom **Deaktiviraj Pod**: ne možete aktivirati drugi Pod a da prvo ne deaktivirate aktivni Pod.
 
-    ***NOTE:** For more details on the information shown, see [The DASH pump screen](#omnipod-dash-tab).*
+    ***NAPOMENA:** Više pojedinosti o prikazanim podacima potražite u [Zaslon pumpe DASH](#omnipod-dash-tab).*
 
     ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-    ***NOTE:** It is good practice to export your settings AFTER activating the pod. Export your settings after each pod change and once a month. Copy the exported settings file to a cloud storage location (for example Google Drive) or somewhere off your phone in case you lose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
+    ***NAPOMENA:** Dobro je izvesti postavke NAKON aktivacije Pod-a. Izvezite svoje postavke nakon svake zamjene Pod-a i jednom mjesečno. Kopirajte izvezenu datoteku postavki u spremište u oblaku (na primjer Google Drive) ili negdje izvan telefona, za slučaj da izgubite telefon (pogledajte [**Izrada i vraćanje sigurnosnih kopija**](../Maintenance/ExportImportSettings.md)).*
 
-If an earlier activation stopped after the pod was primed, pressing **Activate Pod** continues from the **Attach Pod** step.
+Ako je ranija aktivacija stala nakon što je Pod napunjen, pritiskom na **Aktiviraj Pod** nastavlja se od koraka **Pričvrsti Pod**.
 
 (omnipod-dash-deactivate-pod)=
 
-## Deactivate Pod
+## Deaktiviraj Pod
 
-Under normal circumstances, a pod lasts three days (72 hours), plus a grace period of 8 hours after the pod expiry warning: 80 hours in total.
+U normalnim uvjetima Pod traje tri dana (72 sata), plus dodatno razdoblje od 8 sati nakon upozorenja o isteku Pod-a: ukupno 80 sati.
 
-To deactivate a pod (either because it expired or because it failed):
+Za deaktivaciju Pod-a (jer je istekao ili jer je zakazao):
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
+1. Otvorite zaslon pumpe DASH (**Upravljanje** > **Pumpa**) i pritisnite **Deaktiviraj Pod**.
 
-   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Gumb Deaktiviraj Pod na zaslonu pumpe DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-2. On the **Deactivate Pod** step, press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
+2. U koraku **Deaktiviraj Pod** pritisnite **Sljedeći**. Dijalog pita *Deaktivirani Pod ne može se ponovno koristiti. Deaktivirati ovaj Pod sada?* Pritisnite **U redu** za početak deaktivacije Pod-a ili **Otkaži** da ga zadržite. Deaktivacija obustavlja svu isporuku inzulina i ne može se poništiti.
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
-3. The **Deactivating Pod** step is shown while **AAPS** deactivates the pod. The pod beeps to confirm that deactivation was successful.
+3. Korak **Deaktiviranje Pod-a** prikazuje se dok **AAPS** deaktivira Pod. Pod se oglašava zvučnim signalom kako bi potvrdio da je deaktivacija uspjela.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the wizard shows its progress as a row of dots at the top instead of a progress bar.
+   Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 čarobnjak prikazuje napredak kao niz točkica na vrhu umjesto trake napretka.
    ```
 
-   When deactivation has finished successfully, the **Next** button appears. Press **Next**.
+   Kada deaktivacija uspješno završi, pojavljuje se gumb **Sljedeći**. Pritisnite **Sljedeći**.
 
    ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-   If deactivation fails, an error message and a **Discard Pod** button are shown. See [Discarding a pod](#omnipod-dash-discard-pod) below before you use it. You can also press **Cancel** and try **Deactivate Pod** again later.
+   Ako deaktivacija ne uspije, prikazuju se poruka o pogrešci i gumb **Odbaci Pod**. Prije nego što ga upotrijebite, pročitajte [Odbacivanje Pod-a](#omnipod-dash-discard-pod) u nastavku. Možete i pritisnuti **Otkaži** i kasnije ponovno pokušati **Deaktiviraj Pod**.
 
-4. The **Pod Deactivated** step is shown. Remove the pod from your body and press **Finish**.
+4. Prikazuje se korak **Pod deaktiviran**. Skinite Pod s tijela i pritisnite **Završi**.
 
    ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are back on the DASH pump screen. Check that the **Pod Status** field shows **No Active Pod** and that the **Activate Pod** button is shown again.
+5. Vratili ste se na zaslon pumpe DASH. Provjerite prikazuje li polje **Status Pod-a** vrijednost **Nema aktivnog Pod-a** i je li gumb **Aktiviraj Pod** ponovno prikazan.
 
-   ![The DASH pump screen showing No Active Pod](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+   ![Zaslon pumpe DASH koji prikazuje Nema aktivnog Pod-a](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 (omnipod-dash-discard-pod)=
 
-### Discarding a pod
+### Odbacivanje Pod-a
 
-Only discard a pod when all communication with it keeps failing. If **AAPS** can still communicate with the pod, use **Deactivate Pod** instead.
+Odbacite Pod samo kada sva komunikacija s njim stalno ne uspijeva. Ako **AAPS** još može komunicirati s Pod-om, umjesto toga koristite **Deaktiviraj Pod**.
 
-- **AAPS** asks you to confirm before it discards the pod.
-- After that, **AAPS** can no longer communicate with that pod.
-- **Insulin delivery has NOT been suspended**, because the pod was not deactivated properly. **Remove the pod from your body!**
-- The **Pod Discarded** step confirms that the pod state has been discarded. Press **Finish**. You can now activate a new pod.
+- **AAPS** traži da potvrdite prije nego što odbaci Pod.
+- Nakon toga **AAPS** više ne može komunicirati s tim Pod-om.
+- **Isporuka inzulina NIJE obustavljena** jer Pod nije ispravno deaktiviran. **Skinite Pod s tijela!**
+- Korak **Pod odbačen** potvrđuje da je stanje Pod-a odbačeno. Pritisnite **Završi**. Sada možete aktivirati novi Pod.
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-## Resuming Insulin Delivery
+## Nastavak isporuke inzulina
 
-**NOTE**: During **Profile Switches**, like when using the PDM, **AAPS** must suspend delivery on the pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, delivery can stay suspended. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
+**NAPOMENA**: Tijekom **zamjene profila**, kao i s PDM-om, **AAPS** mora obustaviti isporuku na Pod-u prije postavljanja novog bazalnog **Profila**. Ako komunikacija ne uspije između naredbi za obustavu i nastavak, isporuka može ostati obustavljena. Više pojedinosti pročitajte u [**Isporuka obustavljena**](#omnipod-dash-delivery-suspended) u odjeljku za rješavanje problema.
 
-When insulin delivery is suspended, you need to tell the pod to resume insulin delivery. When the command has been processed successfully, the pod delivers insulin again using the basal rate for the current time from your active basal **Profile**. The pod again accepts commands for bolus, **TBR** and **SMB**.
+Kada je isporuka inzulina obustavljena, morate reći Pod-u da nastavi isporuku inzulina. Kada je naredba uspješno obrađena, Pod ponovno isporučuje inzulin prema bazalnoj stopi za trenutno vrijeme iz vašeg aktivnog bazalnog **Profila**. Pod ponovno prihvaća naredbe za bolus, **TBR** i **SMB**.
 
-1. Open the DASH pump screen and check that the **Pod Status** field shows **Suspended**. Press **Resume Delivery** to tell the pod to resume normal insulin delivery.
+1. Otvorite zaslon pumpe DASH i provjerite prikazuje li polje **Status Pod-a** vrijednost **Suspendiran**. Pritisnite **Nastavi isporuku** kako biste rekli Pod-u da nastavi normalnu isporuku inzulina.
 
    ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
 
-2. When the command was successful, the **Pod Status** field shows **Running** and the **Resume Delivery** button disappears.
+2. Kada je naredba uspjela, polje **Status Pod-a** prikazuje **U tijeku**, a gumb **Nastavi isporuku** nestaje.
 
    ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
@@ -364,357 +364,357 @@ When insulin delivery is suspended, you need to tell the pod to resume insulin d
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshots above are from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the **Pod Status** field shows **Running** and the **Resume Delivery** button is gone.
+   Snimke zaslona iznad su iz starije verzije **AAPS-a**, koja je prikazivala dijalog za potvrdu. U **AAPS-u** 4 rezultat potvrđujete na zaslonu pumpe DASH: polje **Status Pod-a** prikazuje **U tijeku**, a gumba **Nastavi isporuku** više nema.
    ```
 
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to resume delivery*. Press **Refresh** and try again.
+   Ako naredba ne uspije, **AAPS** prikazuje dijalog upozorenja koji počinje s *Nastavak isporuke nije uspio*. Pritisnite **Osvježi** i pokušajte ponovno.
 
-   ![The Failed to resume delivery warning](../images/v4/Pumps/dash_resume_failed.png)
+   ![Upozorenje Nastavak isporuke nije uspio](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
-## Silencing Pod Alerts
+## Utišavanje upozorenja Pod-a
 
-This section explains how to stop the pod beeps when the pod approaches the end of its life. When these beeps start depends on the **Alerts** settings (see [Dash Settings](#omnipod-dash-settings)):
+Ovaj odjeljak objašnjava kako zaustaviti zvučne signale Pod-a kada se Pod približi kraju svog vijeka. Kada ti zvučni signali počinju, ovisi o postavkama **Upozorenja** (pogledajte [Postavke Dasha](#omnipod-dash-settings)):
 
-- **Reminder at hours before expiry (72 Hours):** how many hours before the 72-hour expiry the pod starts to beep.
-- **Alert at hours before shutdown (80 Hours):** how many hours before the 80-hour shutdown the pod beeps again.
+- **Podsjetnik ovoliko sati prije isteka (72 sata):** koliko sati prije isteka od 72 sata Pod počinje oglašavati zvučne signale.
+- **Upozorenje ovoliko sati prije gašenja (80 sati):** koliko sati prije gašenja nakon 80 sati se Pod ponovno oglašava.
 
-The maximum life of a pod is 80 hours (3 days 8 hours). However, the pod manufacturer recommends not going beyond 72 hours (3 days).
+Najdulji vijek Pod-a je 80 sati (3 dana i 8 sati). Međutim, proizvođač Pod-a preporučuje da se ne prelazi 72 sata (3 dana).
 
-***NOTE**: The **Silence Alerts** button is only shown on the DASH pump screen while the pod has an active alert, for example pod expiry or low reservoir. If the **Silence Alerts** button is not shown but you hear the pod beeping, press **Refresh**.*
+***NAPOMENA**: Gumb **Utišaj upozorenja** prikazuje se na zaslonu pumpe DASH samo dok Pod ima aktivno upozorenje, na primjer istek Pod-a ili nisku razinu spremnika. Ako gumb **Utišaj upozorenja** nije prikazan, a čujete zvučne signale Pod-a, pritisnite **Osvježi**.*
 
-1. When the reminder time is reached, the pod beeps to tell you that it will expire soon and that you need to change it. On the DASH pump screen, the **Pod Expires (1)** field shows the exact time the pod will expire (72 hours after activation). The text turns yellow 4 hours before this time. After it, **Pod Hard End** turns yellow and shows the time left until the pod stops delivering insulin. The **Active Pod Alerts (2)** field shows **Pod will expire soon**, and the **Silence Alerts (3)** button is shown.
+1. Kada dođe vrijeme podsjetnika, Pod se oglašava zvučnim signalima kako bi vam rekao da će uskoro isteći i da ga trebate zamijeniti. Na zaslonu pumpe DASH polje **Pod istječe (1)** prikazuje točno vrijeme isteka Pod-a (72 sata nakon aktivacije). Tekst postaje žut 4 sata prije tog vremena. Nakon toga **Konačni istek Pod-a** postaje žut i prikazuje preostalo vrijeme do trenutka kada Pod prestaje isporučivati inzulin. Polje **Aktivna upozorenja Pod-a (2)** prikazuje **Pod će uskoro isteći**, a prikazuje se i gumb **Utišaj upozorenja (3)**.
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Press **Silence Alerts**. **AAPS** sends the command to the pod to stop the expiry beeps.
+2. Pritisnite **Utišaj upozorenja**. **AAPS** šalje Pod-u naredbu da zaustavi zvučne signale isteka.
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version, where this screen was the **DASH** tab. In **AAPS** 4 the **Silence Alerts** button is on the DASH pump screen (**Manage** > **Pump**).
+   Snimka zaslona iznad je iz starije verzije **AAPS-a**, u kojoj je ovaj zaslon bio kartica **DASH**. U **AAPS-u** 4 gumb **Utišaj upozorenja** nalazi se na zaslonu pumpe DASH (**Upravljanje** > **Pumpa**).
    ```
 
-3. When the alerts have been silenced, the alert is no longer shown in the **Active Pod Alerts** field, the **Silence Alerts** button disappears, and the pod stops its expiry beeps.
+3. Kada su upozorenja utišana, upozorenje se više ne prikazuje u polju **Aktivna upozorenja Pod-a**, gumb **Utišaj upozorenja** nestaje, a Pod prestaje oglašavati zvučne signale isteka.
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the alert is gone from the **Active Pod Alerts** field.
+   Snimka zaslona iznad je iz starije verzije **AAPS-a**, koja je prikazivala dijalog za potvrdu. U **AAPS-u** 4 rezultat potvrđujete na zaslonu pumpe DASH: upozorenja više nema u polju **Aktivna upozorenja Pod-a**.
    ```
 
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to silence alerts*. Press **Refresh** and try again.
+   Ako naredba ne uspije, **AAPS** prikazuje dijalog upozorenja koji počinje s *Utišavanje upozorenja nije uspjelo*. Pritisnite **Osvježi** i pokušajte ponovno.
 
-The low reservoir alert works the same way. When the insulin left in the pod drops to the **Number of units** set in the **Alerts** settings, the pod beeps. The **Reservoir** field shows the amount left, the **Active Pod Alerts** field shows **Low Reservoir**, and the **Silence Alerts** button is shown. Press **Silence Alerts** to stop the beeps, and plan your next pod change.
+Upozorenje o niskoj razini spremnika radi na isti način. Kada količina inzulina u Pod-u padne na **Broj jedinica** postavljen u postavkama **Upozorenja**, Pod se oglašava zvučnim signalom. Polje **Spremnik** prikazuje preostalu količinu, polje **Aktivna upozorenja Pod-a** prikazuje **Niska razina spremnika**, a prikazuje se i gumb **Utišaj upozorenja**. Pritisnite **Utišaj upozorenja** kako biste zaustavili zvučne signale i isplanirajte sljedeću zamjenu Pod-a.
 
-![The DASH pump screen with a Low Reservoir alert](../images/v4/Pumps/dash_low_reservoir_alert.png)
+![Zaslon pumpe DASH s upozorenjem Niska razina spremnika](../images/v4/Pumps/dash_low_reservoir_alert.png)
 
 (omnipod-dash-view-pod-history)=
 
-## View Pod History
+## Pregled povijesti Pod-a
 
-This section explains how to look at the history of your active pod and filter it by type of action. The pod history shows the commands sent to your active pod and their results during its three-day (72 - 80 hours) life.
+Ovaj odjeljak objašnjava kako pregledati povijest aktivnog Pod-a i filtrirati je prema vrsti radnje. Povijest Pod-a prikazuje naredbe poslane vašem aktivnom Pod-u i njihove rezultate tijekom njegovog trodnevnog vijeka (72–80 sati).
 
-It is useful to check the boluses, TBRs and basal commands that were sent to the pod. The other categories help with troubleshooting and show the order of events that led up to a failure.
+Korisna je za provjeru bolusa, TBR-ova i bazalnih naredbi poslanih Pod-u. Ostale kategorije pomažu pri rješavanju problema i pokazuju redoslijed događaja koji su doveli do kvara.
 
 **NOTE:** **Only the last command can be uncertain**. New commands *are not sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. To 'fix' an uncertain command, press **Refresh** on the DASH pump screen.
 
-1. Open the DASH pump screen and press **Pod History**.
+1. Otvorite zaslon pumpe DASH i pritisnite **Povijest Pod-a**.
 
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 **Povijest Pod-a** je gumb izravno na zaslonu pumpe DASH, a ne u izborniku **Upravljanje Pod-om**.
    ```
 
-2. The **Pod History** screen opens with the **All** filter selected. It lists every command with its time and result, newest first, grouped by day. Use the filter buttons at the top (for example **Boluses** or **Basals**) to show only one type of command. Press the back arrow to return to the DASH pump screen.
+2. Zaslon **Povijest Pod-a** otvara se s odabranim filtrom **Svi**. Prikazuje svaku naredbu s vremenom i rezultatom, najnovije prve, grupirano po danima. Gumbima filtra na vrhu (na primjer **Bolusi** ili **Bazali**) prikažite samo jednu vrstu naredbi. Pritisnite strelicu natrag za povratak na zaslon pumpe DASH.
 
    ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The second screenshot above is from an earlier **AAPS** version, where you picked the type of command from a **Type** list. In **AAPS** 4 you use the filter buttons shown in the first screenshot.
+   Druga snimka zaslona iznad je iz starije verzije **AAPS-a**, u kojoj ste vrstu naredbe birali s popisa **Type** (vrsta). U **AAPS-u** 4 koristite gumbe filtra prikazane na prvoj snimci zaslona.
    ```
 
-   For boluses, the amount is followed by the bolus type when it is not a normal bolus, for example *0.05 U (SMB)* or *0.05 U (Basal correction)*. A basal correction is a very small bolus (one pod pulse, 0.05 U) that the driver sends by itself; you did not request it.
+   Za boluse, iza količine slijedi vrsta bolusa kada to nije normalni bolus, na primjer *0,05 J (SMB)* ili *0,05 J (Korekcija bazala)*. Korekcija bazala je vrlo mali bolus (jedan impuls Pod-a, 0,05 J) koji upravljački program šalje sam; vi ga niste zatražili.
 
    ```{admonition} Why basal corrections happen
    :class: note
-   The pod delivers basal insulin in pulses of 0.05 U, timed by an internal clock. Each time the basal rate changes (for example when the loop sets a new **TBR**), the pod restarts this clock, and the pulse it was counting towards is lost. Because the loop changes the basal rate often, especially overnight, the pod can end up delivering less basal insulin than expected.
+   Pod isporučuje bazalni inzulin u impulsima od 0,05 J, vremenski usklađenima prema unutarnjem satu. Svaki put kada se bazalna stopa promijeni (na primjer kada petlja postavi novi **TBR**), Pod ponovno pokreće taj sat i impuls do kojeg je brojao se gubi. Budući da petlja često mijenja bazalnu stopu, posebno tijekom noći, Pod na kraju može isporučiti manje bazalnog inzulina od očekivanog.
 
-   **AAPS** compares the basal insulin the pod reports as delivered with what it should have delivered. When the shortfall reaches half a pulse or more, the driver delivers one extra pulse as a basal correction, so you still get the basal insulin your profile and the loop asked for. No correction is sent while the pod is suspended, or while a zero **TBR** is running.
+   **AAPS** uspoređuje bazalni inzulin za koji Pod javlja da je isporučen s onim što je trebao isporučiti. Kada manjak dosegne pola impulsa ili više, upravljački program isporučuje jedan dodatni impuls kao korekciju bazala, tako da i dalje dobivate bazalni inzulin koji su tražili vaš profil i petlja. Korekcija se ne šalje dok je Pod suspendiran ili dok je aktivan nulti **TBR**.
    ```
 
 (omnipod-dash-settings)=
 
-## Dash Settings
+## Postavke Dasha
 
-There are two ways to open the Dash driver settings:
+Postavke upravljačkog programa za Dash mogu se otvoriti na dva načina:
 
-- Press the **Settings** (gear) icon in the top-right corner of the [DASH pump screen](#omnipod-dash-tab).
-- Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration** > **Pump**. On the **Omnipod Dash** card, press **Settings**.
+- Pritisnite ikonu **Postavke** (zupčanik) u gornjem desnom kutu [zaslona pumpe DASH](#omnipod-dash-tab).
+- Otvorite **izbornik** (☰) u gornjem lijevom kutu glavnog zaslona i odaberite **Konfiguracija** > **Pumpa**. Na kartici **Omnipod Dash** pritisnite **Postavke**.
 
-The settings are grouped into four expandable sections: **Confirmation Beeps**, **Alerts**, **Notifications** and **Advanced Settings**. Tap a section to open it:
+Postavke su grupirane u četiri odjeljka koji se mogu proširiti: **Potvrdni zvučni signali**, **Upozorenja**, **Obavijesti** i **Napredne postavke**. Dodirnite odjeljak da biste ga otvorili:
 
-![The Dash settings](../images/v4/Pumps/dash_settings.png)
+![Postavke Dasha](../images/v4/Pumps/dash_settings.png)
 
-Most settings are on/off switches.
+Većina postavki su prekidači za uključivanje/isključivanje.
 
-### Confirmation Beeps
+### Potvrdni zvučni signali
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-Confirmation beeps from the pod for bolus, basal, SMB and TBR delivery and changes.
+Potvrdni zvučni signali Pod-a za isporuku i promjene bolusa, bazala, SMB-a i TBR-a.
 
-**Bolus beeps enabled:**    The pod beeps when a bolus is delivered. On by default.
+**Zvučni signali za bolus omogućeni:**    Pod se oglašava zvučnim signalom kada se isporuči bolus. Zadano uključeno.
 
-**Basal beeps enabled:**    The pod beeps when a new basal rate is set, or when the active basal rate is canceled or changed. Off by default.
+**Zvučni signali za bazal omogućeni:**    Pod se oglašava zvučnim signalom kada se postavi nova bazalna stopa ili kada se aktivna bazalna stopa otkaže ili promijeni. Zadano isključeno.
 
-**SMB beeps enabled:**  The pod beeps when an SMB is delivered. On by default.
+**Zvučni signali za SMB omogućeni:**  Pod se oglašava zvučnim signalom kada se isporuči SMB. Zadano uključeno.
 
-**TBR beeps enabled:**  The pod beeps when a TBR is set or canceled. Off by default.
+**Zvučni signali za TBR omogućeni:**  Pod se oglašava zvučnim signalom kada se TBR postavi ili otkaže. Zadano isključeno.
 
-### Alerts
+### Upozorenja
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 these settings are in the expandable **Alerts** section.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 ove postavke nalaze se u odjeljku **Upozorenja** koji se može proširiti.
 ```
 
-Pod alerts for pod expiry, shutdown and low reservoir. When you change these settings while a pod is active, **AAPS** sends the new alert settings to the pod.
+Upozorenja Pod-a za istek Pod-a, gašenje i nisku razinu spremnika. Kada promijenite ove postavke dok je Pod aktivan, **AAPS** šalje nove postavke upozorenja Pod-u.
 
-***NOTE:** An **AAPS** notification is ALWAYS shown for any alert once **AAPS** has communicated with the pod after the alert was triggered. Dismissing the notification does NOT stop the pod alert. To stop the alert, open the DASH pump screen and press **Silence Alerts**.*
+***NAPOMENA:** Obavijest **AAPS-a** UVIJEK se prikazuje za svako upozorenje čim **AAPS** komunicira s Pod-om nakon što je upozorenje pokrenuto. Odbacivanje obavijesti NE zaustavlja upozorenje Pod-a. Da biste zaustavili upozorenje, otvorite zaslon pumpe DASH i pritisnite **Utišaj upozorenja**.*
 
-**Expiration reminder enabled:**    When this is on, the pod beeps when the reminder time is reached. On by default.
+**Podsjetnik o isteku omogućen:**    Kada je ovo uključeno, Pod se oglašava zvučnim signalom kada dođe vrijeme podsjetnika. Zadano uključeno.
 
-**Reminder at hours before expiry (72 Hours):** How many hours before the 72-hour pod expiry the reminder starts (1 to 24 hours; default 4).
+**Podsjetnik ovoliko sati prije isteka (72 sata):** Koliko sati prije isteka Pod-a nakon 72 sata počinje podsjetnik (1 do 24 sata; zadano 4).
 
-**Expiration alert enabled:**   When this is on, the pod beeps when the alert time is reached, and again 1 hour before shutdown. On by default.
+**Upozorenje o isteku omogućeno:**   Kada je ovo uključeno, Pod se oglašava zvučnim signalom kada dođe vrijeme upozorenja i ponovno 1 sat prije gašenja. Zadano uključeno.
 
-**Alert at hours before shutdown (80 Hours):**  How many hours before the 80-hour pod shutdown the alert starts (1 to 8 hours; default 8).
+**Upozorenje ovoliko sati prije gašenja (80 sati):**  Koliko sati prije gašenja Pod-a nakon 80 sati počinje upozorenje (1 do 8 sati; zadano 8).
 
-**Low reservoir alert enabled:**    The pod alerts you when the insulin left in the reservoir drops to the value in **Number of units**. On by default.
+**Omogućeno upozorenje o niskoj razini spremnika:**    Pod vas upozorava kada količina inzulina u spremniku padne na vrijednost u **Broj jedinica**. Zadano uključeno.
 
-**Number of units:**    The number of units at which the low reservoir alert is triggered (5 to 50 units; default 20).
+**Broj jedinica:**    Broj jedinica pri kojem se pokreće upozorenje o niskoj razini spremnika (5 do 50 jedinica; zadano 20).
 
-### Notifications
+### Obavijesti
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-Choose whether **AAPS** plays a sound with its notifications when it is uncertain whether a TBR, SMB or bolus was delivered, and when delivery is suspended.
+Odaberite hoće li **AAPS** uz svoje obavijesti reproducirati zvuk kada nije siguran je li TBR, SMB ili bolus isporučen te kada je isporuka obustavljena.
 
-***NOTE:** These are phone notifications only; the pod itself does not beep.*
+***NAPOMENA:** To su samo obavijesti na telefonu; sam Pod se ne oglašava.*
 
-**Sound for uncertain TBR notifications enabled:**  Plays a sound with the notification when **AAPS** is uncertain whether a TBR was set.
+**Omogućen zvuk za obavijesti o nesigurnom TBR-u:**  Reproducira zvuk uz obavijest kada **AAPS** nije siguran je li TBR postavljen.
 
-**Sound for uncertain SMB notifications enabled:**  Plays a sound with the notification when **AAPS** is uncertain whether an SMB was delivered.
+**Omogućen zvuk za obavijesti o nesigurnom SMB-u:**  Reproducira zvuk uz obavijest kada **AAPS** nije siguran je li SMB isporučen.
 
-**Sound for uncertain bolus notifications enabled:**    Plays a sound with the notification when **AAPS** is uncertain whether a bolus was delivered.
+**Omogućen zvuk za obavijesti o nesigurnom bolusu:**    Reproducira zvuk uz obavijest kada **AAPS** nije siguran je li bolus isporučen.
 
-**Sound when delivery suspended notification enabled:**     Plays a sound with the notification when insulin delivery is suspended.
+**Omogućen zvuk za obavijest o obustavi isporuke:**     Reproducira zvuk uz obavijest kada je isporuka inzulina obustavljena.
 
 (omnipod-dash-advanced-settings)=
 
-### Advanced Settings
+### Napredne postavke
 
-![The Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+![Odjeljak Napredne postavke](../images/v4/Pumps/dash_settings_advanced.png)
 
-**Bluetooth bonding:**  Bonds the pod with the phone over Bluetooth. Try it only if the pod cannot keep a stable connection, for example on Android 15 (see [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints)). When it is on, the phone shows pairing requests that you must accept. Leave it off if the pod connects fine. It has no effect below Android 15. Off by default.
+**Trajno Bluetooth uparivanje (bonding):**  Trajno uparuje Pod s telefonom putem Bluetootha. Pokušajte to samo ako Pod ne može održati stabilnu vezu, na primjer na Androidu 15 (pogledajte [Poznata ograničenja i problemi Omnipoda DASH u AAPS-u](#omnipod-dash-constraints)). Kada je uključeno, telefon prikazuje zahtjeve za uparivanje koje morate prihvatiti. Ostavite isključeno ako se Pod dobro spaja. Nema učinka ispod Androida 15. Zadano isključeno.
 
-## Insulin and cannula age
+## Starost inzulina i kanile
 
-The [status row](#screens-sensor-level-battery) on the main screen shows the age of your insulin and cannula. With Omnipod, these work a little differently than with tube-based pumps.
+[Redak statusa](#screens-sensor-level-battery) na glavnom zaslonu prikazuje starost vašeg inzulina i kanile. S Omnipodom to radi malo drugačije nego s pumpama s cijevi.
 
-**AAPS** records a cannula change and an insulin change automatically each time you activate a pod. This resets the **Insulin** and **Cannula** ages to zero after every pod change. You do not need to record them yourself with **Prime/Fill**. This is because the pod inserts the cannula directly into the skin where it is attached: Omnipod does not use a tube.
+**AAPS** automatski bilježi promjenu kanile i promjenu inzulina svaki put kada aktivirate Pod. Time se starost za **Inzulin** i **Kanila** vraća na nulu nakon svake zamjene Pod-a. Ne morate ih sami bilježiti pomoću **Punjenje**. To je zato što Pod umeće kanilu izravno u kožu na mjestu gdje je pričvršćen: Omnipod ne koristi cijev.
 
-**Pump battery** age is not reported: the battery and the insulin reservoir are built into each pod, and the battery always lasts longer than the pod itself (maximum 80 hours).
+Starost **Baterija pumpe** ne prikazuje se: baterija i spremnik inzulina ugrađeni su u svaki Pod, a baterija uvijek traje dulje od samog Pod-a (najviše 80 sati).
 
 ![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, where these ages were shown in the **Careportal** section of the **Actions** tab. In **AAPS** 4 they are shown in the status row on the main screen.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**, u kojoj je ta starost bila prikazana u odjeljku **Careportal** na kartici **Radnje**. U **AAPS-u** 4 prikazuje se u retku statusa na glavnom zaslonu.
 ```
 
-### Level
+### Razina
 
-**Insulin Level**
+**Razina inzulina**
 
-The insulin level shown is the amount reported by the pod. However, the pod only reports the actual reservoir level when it is below 50 units. Until then, *Over 50 U left* is shown. The amount reported is not exact: when the pod reports 'empty', in most cases the reservoir still has a few units of insulin left.
+Prikazana razina inzulina je količina koju javlja Pod. Međutim, Pod javlja stvarnu razinu spremnika tek kada je ispod 50 jedinica. Do tada se prikazuje *Preostalo više od 50 J*. Javljena količina nije točna: kada Pod javi „prazno“, u spremniku je u većini slučajeva još nekoliko jedinica inzulina.
 
-The DASH pump screen shows the level as follows:
+Zaslon pumpe DASH prikazuje razinu ovako:
 
-  * **Over 50 U left** - The pod reports more than 50 units in the reservoir.
-  * **Below 50 units** - The exact amount of insulin left in the reservoir, as reported by the pod.
+  * **Preostalo više od 50 J** – Pod javlja više od 50 jedinica u spremniku.
+  * **Ispod 50 jedinica** – Točna količina inzulina preostala u spremniku, kako je javlja Pod.
 
-Additional note:
-  * **SMS** - Returns the value, or 50+U when over 50 units, in SMS responses.
-  * **Nightscout** - Uploads a value of 50 when over 50 units to Nightscout (version 14.07 and older). Newer versions report a value of 50+ when over 50 units.
+Dodatna napomena:
+  * **SMS** – U SMS odgovorima vraća vrijednost ili 50+U kada je više od 50 jedinica.
+  * **Nightscout** – Kada je više od 50 jedinica, u Nightscout šalje vrijednost 50 (verzija 14.07 i starije). Novije verzije javljaju vrijednost 50+ kada je više od 50 jedinica.
 
 (omnipod-dash-troubleshooting)=
 
-## Troubleshooting
+## Rješavanje problema
 
-This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+Ovaj odjeljak opisuje česte poznate probleme i rješenja pri korištenju Omnipoda DASH s AAPS-om. U dokumentaciji postoji i odjeljak [Rješavanje problema](../GettingHelp/GeneralTroubleshooting.md) koji biste trebali pročitati jer pokriva teme važne i za neke probleme s Pod-om.
 
 ---
 
 (omnipod-dash-bluetooth-related-issues)=
 
-## Bluetooth related issues
+## Problemi s Bluetoothom
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Za poznate probleme s Bluetooth vezama, prekidima veze s pumpom/Pod-ovima ili problemima s aktivacijom i vezom pogledajte [Problemi s Bluetoothom](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (omnipod-dash-delivery-suspended)=
 
-### Delivery suspended
+### Isporuka obustavljena
 
-  - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
-  - During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - **AAPS** will try to set the new basal profile every 15 minutes.
-     - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume Delivery**](#omnipod-dash-resuming-insulin-delivery) button is shown on the DASH pump screen if you want to resume delivery manually.
-     - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
-  - For unconfirmed commands, press **Refresh** on the DASH pump screen to confirm or deny them.
+  - Gumba za suspendiranje više nema. Ako želite „suspendirati“ Pod, možete postaviti nulti **TBR** na x minuta.
+  - Tijekom **zamjene profila** DASH mora obustaviti isporuku prije postavljanja novog bazalnog **Profila**. Ako komunikacija ne uspije između dviju naredbi, isporuka može ostati obustavljena. Kada se to dogodi:
+     - Neće biti isporuke inzulina, to uključuje bazal, SMB, ručne boluse itd.
+     - Može se pojaviti obavijest da jedna od naredbi nije potvrđena: to ovisi o tome kada je došlo do pogreške.
+     - **AAPS** će svakih 15 minuta pokušati postaviti novi bazalni profil.
+     - **AAPS** će svakih 15 minuta prikazati obavijest da je isporuka obustavljena, ako je isporuka i dalje obustavljena (nastavak isporuke nije uspio).
+     - Gumb [**Nastavi isporuku**](#omnipod-dash-resuming-insulin-delivery) prikazuje se na zaslonu pumpe DASH ako želite ručno nastaviti isporuku.
+     - Ako **AAPS** sam ne uspije nastaviti isporuku (to se događa ako je Pod nedostupan, zvuk je isključen itd.), Pod će se početi oglašavati 4 puta svake minute tijekom 3 minute, a zatim ponovno svakih 15 minuta ako je isporuka obustavljena dulje od 20 minuta.
+  - Za nepotvrđene naredbe pritisnite **Osvježi** na zaslonu pumpe DASH kako biste ih potvrdili ili odbili.
 
-*****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
+*****NAPOMENA:** Kada čujete zvučne signale Pod-a, nemojte pretpostaviti da će se isporuka nastaviti bez provjere na telefonu, isporuka može ostati obustavljena, ***zato morate provjeriti!******
 
 ---
 (omnipod-dash-pod-failures)=
 
-### Pod Failures
+### Kvarovi Pod-a
 
-- Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
-- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
-- A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+- Pod-ovi povremeno zakažu zbog raznih problema, uključujući hardverske probleme samog Pod-a.
+- Najbolje je ne otvarati zahtjeve za podršku ili zamjenu kod tvrtke Insulet jer AAPS nije odobreni način korištenja Pod-ova.
+- Popis kodova kvarova možete [**pronaći ovdje**](https://github.com/openaps/openomni/wiki/Fault-event-codes) kao pomoć pri utvrđivanju uzroka.
 
-When a pod fails, it stops delivering insulin and beeps continuously. **AAPS** shows a notification on the main screen with the fault code and name, and the *Ref:* code, for example *Pod Fault: 020 ALARM_OCCLUDED*. Press **Dismiss** to close the notification. This does not stop the pod beeping.
+Kada Pod zakaže, prestaje isporučivati inzulin i neprekidno se oglašava zvučnim signalom. **AAPS** prikazuje obavijest na glavnom zaslonu s kodom i nazivom kvara te kodom *Ref:*, na primjer *Kvar Pod-a: 020 ALARM_OCCLUDED*. Pritisnite **Odbaci** kako biste zatvorili obavijest. To ne zaustavlja zvučne signale Pod-a.
 
-![A pod fault notification](../images/v4/Pumps/dash_pod_fault_notification.png)
+![Obavijest o kvaru Pod-a](../images/v4/Pumps/dash_pod_fault_notification.png)
 
-On the DASH pump screen, the **Pod Status** field shows **ALARM**, the **Errors** field shows the pod fault, and the **PDM Notification** field explains it, for example *Occlusion Detected. Insulin delivery stopped. Change Pod now. Check your BG*.
+Na zaslonu pumpe DASH polje **Status Pod-a** prikazuje **ALARM**, polje **Greške** prikazuje kvar Pod-a, a polje **PDM obavijest** ga objašnjava, na primjer *Otkriveno začepljenje. Isporuka inzulina je zaustavljena. Odmah promijenite Pod. Provjerite GUK*.
 
-![The DASH pump screen after a pod fault](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
+![Zaslon pumpe DASH nakon kvara Pod-a](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
 
-A failed pod cannot be used again. Check your blood glucose, then [deactivate the pod](#omnipod-dash-deactivate-pod) and activate a new one.
-
----
-### Preventing error 49 pod failures
-
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. It can happen, for example, after application crashes, when running a development version or after a re-installation.
+Pod koji je zakazao ne može se ponovno koristiti. Provjerite glukozu u krvi, zatim [deaktivirajte Pod](#omnipod-dash-deactivate-pod) i aktivirajte novi.
 
 ---
+### Sprječavanje kvarova Pod-a s pogreškom 49
 
-### Pump Unreachable Alerts
+Ovaj kvar povezan je s pogrešnim stanjem Pod-a za neku naredbu ili s pogreškom tijekom naredbe za isporuku inzulina. To je kada se upravljački program i Pod ne slažu o stvarnom stanju. Pod (zbog ugrađene sigurnosne mjere) tada reagira nepopravljivim kodom pogreške 49 (0x31) i završi kao takozvani „screamer“: dugi neugodni zvučni signal koji se može zaustaviti samo probijanjem rupe na odgovarajućem mjestu na stražnjoj strani Pod-a. Točan uzrok „kvara Pod-a 49“ često je teško otkriti. It can happen, for example, after application crashes, when running a development version or after a re-installation.
 
-When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by pressing the **Settings** (gear) icon on the top right of the main screen, then selecting **Local Alerts** ➜ **Pump unreachable threshold**. Recommended value is alerting after **120** minutes.
+---
+
+### Upozorenja „Pumpa nedostupna“
+
+Kada se s Pod-om ne može uspostaviti komunikacija tijekom unaprijed postavljenog vremena, pojavit će se upozorenje „Pumpa nedostupna“. Upozorenja „Pumpa nedostupna“ mogu se postaviti pritiskom na ikonu **Postavke** (zupčanik) u gornjem desnom kutu glavnog zaslona, a zatim odabirom **Lokalna upozorenja** ➜ **Prag nedostupnosti pumpe**. Preporučena vrijednost je upozorenje nakon **120** minuta.
 
 ---
 (omnipod-dash-export-import)=
-### Export and import settings
+### Izvoz i uvoz postavki
 
-Exporting **AAPS** settings lets you restore all your settings and Objectives, for example after reinstalling **AAPS** or on a new phone. **Export your settings right after each Pod activation** and copy the file to a safe place off your phone (for example Google Drive), so the active Pod can be restored too. See [Creating and restoring back-ups](#ExportImportSettings-Settings-Export).
+Izvoz postavki **AAPS-a** omogućuje vam vraćanje svih postavki i ciljeva, na primjer nakon ponovne instalacije **AAPS-a** ili na novom telefonu. **Izvezite svoje postavke odmah nakon svake aktivacije Pod-a** i kopirajte datoteku na sigurno mjesto izvan telefona (na primjer Google Drive), kako bi se mogao vratiti i aktivni Pod. Pogledajte [Izrada i vraćanje sigurnosnih kopija](#ExportImportSettings-Settings-Export).
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only on a new phone, with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+Na telefonu koji već upravlja Pod-om ostavite **Zamijeni i postavke pumpe** neoznačeno: sesija Pod-a se zadržava i uvoze se samo ostale postavke. Označite to samo na novom telefonu, s datotekom izvezenom tijekom Pod-a koji sada nosite. Pogledajte [Pumpe bez katetera](#ExportImportSettings-tubeless-pumps).
 ```
 
-If the imported settings contain a Pod that is no longer active, see the next section.
+Ako uvezene postavke sadrže Pod koji više nije aktivan, pogledajte sljedeći odjeljak.
 
 ---
-### Importing settings that contain Pod state from an inactive Pod
+### Uvoz postavki koje sadrže stanje neaktivnog Pod-a
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You cannot activate a new Pod in this situation.
+Kada uvezete postavke koje sadrže podatke za Pod koji više nije aktivan, AAPS će se pokušati spojiti s njim, što naravno neće uspjeti. U ovoj situaciji ne možete aktivirati novi Pod.
 
-To remove the old pod session:
-1. On the DASH pump screen, press **Deactivate Pod**. The deactivation will most likely fail.
-2. When it fails, press **Discard Pod** and confirm (see [Discarding a pod](#omnipod-dash-discard-pod)).
-3. Once the old pod is removed, you can activate a new pod.
+Za uklanjanje stare sesije Pod-a:
+1. Na zaslonu pumpe DASH pritisnite **Deaktiviraj Pod**. Deaktivacija najvjerojatnije neće uspjeti.
+2. Kada ne uspije, pritisnite **Odbaci Pod** i potvrdite (pogledajte [Odbacivanje Pod-a](#omnipod-dash-discard-pod)).
+3. Kada je stari Pod uklonjen, možete aktivirati novi Pod.
 
 ### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
-If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration.
+Ako dobijete ovu pogrešku pri pokušaju inicijalizacije novog Pod-a, **AAPS** ne uspijeva jer u konfiguraciji još ima spremljene postavke starog Pod-a.
 
 ![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
 
-This can happen if you restore from a backup, or a pod deactivation fails.
+To se može dogoditi ako vratite postavke iz sigurnosne kopije ili ako deaktivacija Pod-a ne uspije.
 
-To resolve it, press **Cancel** to leave the activation. On the DASH pump screen, press **Discard Pod** if it is shown. Otherwise press **Deactivate Pod**, and when the deactivation fails, press **Discard Pod** (see [Discarding a pod](#omnipod-dash-discard-pod)).
+Da biste to riješili, pritisnite **Otkaži** kako biste izašli iz aktivacije. Na zaslonu pumpe DASH pritisnite **Odbaci Pod** ako je prikazan. Inače pritisnite **Deaktiviraj Pod**, a kada deaktivacija ne uspije, pritisnite **Odbaci Pod** (pogledajte [Odbacivanje Pod-a](#omnipod-dash-discard-pod)).
 
-You should now be able to Activate a new pod.
-
----
-### Reinstalling AAPS
-
-When uninstalling **AAPS** you will lose all your settings, objectives and the current Pod session. **To restore them make sure you have a recent exported settings file available!**
-
-When on an active Pod, use an export made during the current Pod session (see [Export and import settings](#omnipod-dash-export-import)).
-
-1. Export your settings and store a copy in a safe place (e.g Google Drive).
-2. Uninstall **AAPS** and restart your phone.
-3. Install the new version of **AAPS**.
-4. Import your settings.
-5. Verify all preferences (optionally import settings again).
-6. Activate a new pod.
-7. When done: Export current settings.
+Sada biste trebali moći aktivirati novi Pod.
 
 ---
-### Updating AAPS to a newer version
+### Ponovna instalacija AAPS-a
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod session.
+Kada deinstalirate **AAPS**, izgubit ćete sve svoje postavke, ciljeve i trenutnu sesiju Pod-a. **Da biste ih vratili, pobrinite se da imate nedavno izvezenu datoteku postavki!**
 
-1. Export your settings.
-2. Install the new **AAPS** version.
-3. Verify the installation was successful
-4. RESUME the Pod or activate a new pod.
-5. When done: Export current settings.
+Kada imate aktivan Pod, koristite izvoz napravljen tijekom trenutne sesije Pod-a (pogledajte [Izvoz i uvoz postavki](#omnipod-dash-export-import)).
+
+1. Izvezite svoje postavke i spremite kopiju na sigurno mjesto (npr. Google Drive).
+2. Deinstalirajte **AAPS** i ponovno pokrenite telefon.
+3. Instalirajte novu verziju **AAPS-a**.
+4. Uvezite svoje postavke.
+5. Provjerite sve postavke (po želji ponovno uvezite postavke).
+6. Aktivirajte novi Pod.
+7. Kada završite: izvezite trenutne postavke.
 
 ---
-### Omnipod driver alerts
+### Ažuriranje AAPS-a na noviju verziju
 
-The Omnipod Dash driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.
+U većini slučajeva deinstalacija nije potrebna. Možete napraviti instalaciju „preko postojeće“ tako da pokrenete instalaciju nove verzije. To je moguće i tijekom aktivne sesije Pod-a.
 
-A summary of the main alerts that you may encounter is listed below:
+1. Izvezite svoje postavke.
+2. Instalirajte novu verziju **AAPS-a**.
+3. Provjerite je li instalacija uspjela
+4. NASTAVITE isporuku na Pod-u ili aktivirajte novi Pod.
+5. Kada završite: izvezite trenutne postavke.
 
-- *Pod Fault: XXX NAME*, followed by *Ref: ...*: the pod has failed and stopped delivering insulin. Change the pod. See [Pod Failures](#omnipod-dash-pod-failures).
-- *No Active Pod*: no pod session was found. This notification keeps coming back until you activate a new pod. Once a pod is activated, it disappears automatically.
-- *Insulin delivery suspended*: the pod has suspended insulin delivery. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
-- *Setting basal profile might have failed. Delivery might be suspended! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
-- *Unable to verify whether SMB (X U) succeeded. Refresh pod status to confirm or deny this command.* **AAPS** could not confirm that the **SMB** was delivered. Press **Refresh** on the DASH pump screen and check the **Last bolus** field.
-- *Bolus delivery status uncertain. Refresh pod status to confirm or deny.* The same for a normal bolus: press **Refresh** on the DASH pump screen.
-- *Timezone on pod is different from the timezone on phone. Basal rate is incorrect. Switch profile to fix* See the DST and timezone note in [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints).
+---
+### Upozorenja upravljačkog programa za Omnipod
+
+Upravljački program za Omnipod Dash prikazuje razna posebna upozorenja na **glavnom zaslonu**; većina ih je informativna i mogu se odbaciti, dok neka od korisnika traže radnju kako bi se riješio uzrok upozorenja.
+
+Sažetak glavnih upozorenja na koja možete naići nalazi se u nastavku:
+
+- *Kvar Pod-a: XXX NAZIV*, nakon čega slijedi *Ref: ...*: Pod je zakazao i prestao isporučivati inzulin. Zamijenite Pod. Pogledajte [Kvarovi Pod-a](#omnipod-dash-pod-failures).
+- *Nema aktivnog Pod-a*: nije pronađena sesija Pod-a. Ova se obavijest stalno vraća dok ne aktivirate novi Pod. Kada se Pod aktivira, automatski nestaje.
+- *Isporuka inzulina je obustavljena*: Pod je obustavio isporuku inzulina. Pogledajte [Nastavak isporuke inzulina](#omnipod-dash-resuming-insulin-delivery).
+- *Postavljanje bazalnog profila možda nije uspjelo. Isporuka je možda obustavljena! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
+- *Unable to verify whether SMB (X U) succeeded. Osvježite status Pod-a za potvrdu ili odbijanje ove naredbe.* **AAPS** nije mogao potvrditi da je **SMB** isporučen. Pritisnite **Osvježi** na zaslonu pumpe DASH i provjerite polje **Zadnji bolus**.
+- *Status isporuke bolusa nije pouzdan. Osvježite status Pod-a za potvrdu ili odbijanje bolusa.* Isto vrijedi za normalni bolus: pritisnite **Osvježi** na zaslonu pumpe DASH.
+- *Vremenska zona na Pod-u se razlikuje od vremenske zone na telefonu. Bazalna stopa je netočna. Promijenite profil za ispravak* Pogledajte napomenu o ljetnom računanju vremena i vremenskoj zoni u [Poznata ograničenja i problemi Omnipoda DASH u AAPS-u](#omnipod-dash-constraints).
 
 (omnipod-dash-where-to-get-help-for-dash)=
 
-## Where to get help
+## Gdje dobiti pomoć
 
-All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
+Sav razvoj za DASH radi zajednica na **volonterskoj** osnovi; imajte to na umu i slijedite ove smjernice prije nego što zatražite pomoć:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw). There are also numerous Facebook and other groups you can ask in too (see [**Getting Help**](../GettingHelp/WhereCanIGetHelp.md))
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Razina 0:** Pročitajte odgovarajući dio ove dokumentacije kako biste razumjeli kako bi trebala raditi funkcija s kojom imate poteškoća.
+-  **Razina 1:** Ako i dalje imate probleme koje ne možete riješiti uz pomoć ovog dokumenta, idite na kanal *#AAPS* na **Discordu** putem [ove poveznice za pozivnicu](https://discord.gg/4fQUWHZ4Mw). Postoje i brojne grupe na Facebooku i drugdje u kojima također možete pitati (pogledajte [**Gdje mogu dobiti pomoć?**](../GettingHelp/WhereCanIGetHelp.md))
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. Ako nije, otvorite [novi issue](https://github.com/nightscout/AndroidAPS/issues) i priložite [svoje datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
+-  **Budite strpljivi – većina članova naše zajednice su dobronamjerni volonteri, a rješavanje problema često traži vrijeme i strpljenje i od korisnika i od programera.**
 
-When requesting help come prepared with the following information to help those in the community with your specific questions and problems:
-- Android phone make and model
-- Android OS version (e.g 15 or 16)
-  - Did you recently upgrade your Android OS version?
-- The version of **AAPS** you are running
-- Plain english description of the problem you are facing considering some of the following things
-   - Was it working before now?
-   - When did it work or not work?
-   - Did you make any changes to configuration or profile settings?
-   - Did you pair a new Bluetooth device?
-   - Did you upgrade or install a new app?
-   - How long was it working before it stopped working?
+Kada tražite pomoć, pripremite sljedeće podatke kako biste članovima zajednice pomogli s vašim konkretnim pitanjima i problemima:
+- Proizvođač i model Android telefona
+- Verzija Android OS-a (npr. 15 ili 16)
+  - Jeste li nedavno nadogradili verziju Android OS-a?
+- Verzija **AAPS-a** koju koristite
+- Jednostavan opis problema koji imate, uzimajući u obzir neke od sljedećih stvari
+   - Je li dosad radilo?
+   - Kada je radilo, a kada nije?
+   - Jeste li mijenjali konfiguraciju ili postavke profila?
+   - Jeste li uparili novi Bluetooth uređaj?
+   - Jeste li nadogradili ili instalirali neku novu aplikaciju?
+   - Koliko je dugo radilo prije nego što je prestalo raditi?
