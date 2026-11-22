@@ -56,19 +56,20 @@ Nebyl vytvořen ze šablony. Smažte ho (**Settings** → dole na stránce → *
 You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-Kroky sestavení se aktualizují za vás: při každém sestavení váš repozitář spustí verzi, kterou vydali vývojáři AAPS v nightscout/aaps-builder, a ve vašem repozitáři se nic nezmění. Svůj soubor workflow nahradíte jen tehdy, když to oznámí stránka [Aktualizace a změny dokumentace](../Maintenance/DocumentationUpdate.md) (například kvůli nové variantě sestavení), nebo jednou, pokud byl váš repozitář vytvořen starší verzí této stránky nebo ze staré šablony. Váš secret `KEYSTORE_SET` zůstává beze změny.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Váš secret `KEYSTORE_SET` zůstává beze změny.
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Otevřít nejnovější workflow</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   Na počítači klikněte na **ikonu kopírování** („Copy raw file“) vpravo nahoře u souboru. Na telefonu místo toho otevřete <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">verzi jako prostý text</a>, podržte prst na textu → **Vybrat vše** → **Kopírovat**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Otevřít můj soubor workflow</a>
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Otevře `.github/workflows/build.yml` v <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Nahraďte celý text zkopírovaným workflow (na telefonu: podržte prst → **Vybrat vše** → **Vložit**) a potom dvakrát klikněte na **Commit changes…**. První řádek souboru ukazuje jeho verzi.
-```
+
+</div>
 
 (aaps-builder-setup-step2)=
 
