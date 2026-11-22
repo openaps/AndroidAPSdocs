@@ -37,11 +37,11 @@ Er zijn drie instellingen:
 
 ![EOPatch2-instellingen](../images/v4/Pumps/eopatch_settings.png)
 
-### Laag reservoir waarschuwing
+### Low Reservoir Alerts
 
 Er verschijnt een waarschuwing als de insuline in de patch tot deze hoeveelheid of minder daalt. Je kunt dit instellen van 10 tot 50 E, in stappen van 5 E. De standaardwaarde is 10 E.
 
-### Patch houdbaarheid herinnering
+### Patch Expiration Reminder
 
 Herinnert je eraan hoeveel tijd er nog is voordat de huidige patch verloopt. Je kunt dit instellen van 1 tot 24 uur, in stappen van 1 uur. De standaardwaarde is 4 uur.
 
@@ -261,7 +261,7 @@ De verschillende waarschuwingen worden hieronder uitgelegd.
 | Waarschuwing                    | Uitleg                                                                                                                                   |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Einde van insuline onderbreking | De onderbrekingstijd die je hebt gekozen is voorbij. Druk op de melding op **Hervat pomp** om de insulinetoediening opnieuw te starten.  |
-| Laag reservoir                  | De insuline in de patch is minder dan de hoeveelheid die is ingesteld bij **Laag reservoir waarschuwing**.                               |
+| Laag reservoir                  | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                       |
 | Patch levensduur verlopen       | De gebruiksperiode van de patch is voorbij.                                                                                              |
 | Patch vervalt binnenkort        | De patch moet binnen 1 uur worden verwijderd.                                                                                            |
 | Onvolledige Patch activatie     | Het activeren van de patch is na het koppelen meer dan 3 minuten onderbroken. Open het pompscherm en maak het activeren van de patch af. |
