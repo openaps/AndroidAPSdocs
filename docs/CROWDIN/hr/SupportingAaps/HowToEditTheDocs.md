@@ -1,222 +1,222 @@
-# How to edit the docs
+# Kako uređivati dokumentaciju
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Ovaj opis odnosi se samo na uređivanje dokumentacije na engleskom jeziku. Sve nove informacije moraju se najprije dodati na engleskom jeziku. Ako želite prevoditi na druge jezike (hvala vam), koristite [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
 
-## General
+## Općenito
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+Za sva pitanja, povratne informacije ili nove ideje možete se javiti timu za dokumentaciju putem [Discorda](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+U nekom trenutku netko će vam predložiti da napravite pull request (PR). Tako se vaše izmjene u dokumentaciji stvarno prenose na web stranice AAPS-a, koje se čuvaju na GitHubu. Napraviti PR zapravo nije teško, a to je odličan način da doprinesete. Ovu dokumentaciju sada čitate zato što su ljudi poput vas radili PR-ove. Ne brinite da ćete pogriješiti ili nekako urediti pogrešne dokumente. Vaše izmjene pregledavaju se prije nego što se spoje u „službeni“ repozitorij dokumentacije AAPS-a. Nikakvom slučajnom pogreškom u ovom postupku ne možete pokvariti izvorne dokumente. Opći postupak je:
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- Uredite postojeći sadržaj kako biste promijenili ili poboljšali kod ili dokumentaciju.
+- Još jednom provjerite izgledaju li vaše izmjene dobro.
+- Zapišite nekoliko bilješki o tome što ste promijenili, kako bi drugi razumjeli izmjene.
+- Napravite pull request kojim tražite od administratora da prihvate vaše izmjene.
+- Oni će ih pregledati i zatim (1) spojiti vaše izmjene, (2) odgovoriti vam komentarom o vašim izmjenama ili (3) započeti novi dokument s vašim izmjenama.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Napomena: ako lakše učite gledajući, [ovdje](https://youtu.be/4b6tsL0_kzg) postoji YouTube video koji prikazuje postupak izrade PR-a.)
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+U našem primjeru napravit ćemo izmjenu u AndroidAPSdocs. To možete učiniti na bilo kojem Windows računalu, Macu itd. (na bilo kojem računalu s pristupom internetu).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Otvorite <https://github.com/openaps/AndroidAPSdocs> i kliknite Fork u gornjem desnom kutu kako biste napravili vlastitu kopiju repozitorija.
 
-![Fork repo](../images/docs_pr_fork_repository.png)
+![Fork repozitorija](../images/docs_pr_fork_repository.png)
 
-2. Go to any page and navigate to the page you want to edit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Otvorite bilo koju stranicu i dođite do stranice koju želite urediti. Možete kliknuti poveznicu „Edit in GitHub“ u gornjem desnom kutu. To je moguće samo za stranice na engleskom jeziku. 
 
-![edit doc](../images/docs_pr_edit_on_github.png)
+![uređivanje dokumenta](../images/docs_pr_edit_on_github.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Ili kliknite ikonu olovke koja se pojavljuje u gornjoj traci sadržaja stranice koju želite urediti. Za to morate već biti prijavljeni u svoj GitHub račun (ako ga nemate, lako ga je otvoriti).
 
 ![RTD io](../images/docs_pr_pencil_icon.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Bilo koja od opcija u koraku 2 stvorit će novu granu u VAŠEM repozitoriju, u kojoj će se spremiti vaše izmjene. Napravite izmjene u datoteci.
 
-We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Za stranice dokumentacije koristimo Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
 
-![Edit branch](../images/docs_pr_edit_file.png)
+![Uređivanje grane](../images/docs_pr_edit_file.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. Radili ste na kartici „<>Edit file“. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Ako vidite da je potrebno još nešto poboljšati, vratite se na karticu za uređivanje i napravite dodatne izmjene. 
 
-![preview mode](../images/docs_pr_preview_changes.png)
+![način pregleda](../images/docs_pr_preview_changes.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. Kada završite s izmjenama, pomaknite se na dno stranice. U okviru na dnu upišite svoje komentare u tekstno polje „Add an optional extended description...“. Zadani naslov sadrži naziv datoteke. Pokušajte dodati rečenicu koja objašnjava **razlog** izmjene. Kada navedete razlog, recenzenti lakše razumiju što želite postići tim PR-om.
 
-![commit comments](../images/docs_pr_commit_description.png)
+![komentari uz commit](../images/docs_pr_commit_description.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. Kliknite zeleni gumb „Propose file changes“ ili „Commit changes“. Na stranici koja se pojavi kliknite „Create Pull Request“, a zatim na sljedećoj stranici ponovno kliknite „Create Pull Request“.
 
-![create pull request](../images/docs_pr_create_pull_request.png)
+![izrada pull requesta](../images/docs_pr_create_pull_request.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. Time je otvaranje pull requesta (PR-a) završeno. GitHub dodjeljuje PR-u broj, koji se nalazi iza naslova i znaka #. Vratite se na ovu stranicu kako biste provjerili povratne informacije (ili, ako vam GitHub šalje obavijesti e-poštom, dobit ćete e-poruke o svakoj aktivnosti na PR-u). Izmjena će sada biti na popisu PR-ova koje će tim pregledati i možda dati povratne informacije prije nego što je doda u glavnu dokumentaciju AAPS-a! Ako želite pratiti napredak PR-a, kliknite ikonu zvona u gornjem desnom kutu svog GitHub računa i vidjet ćete sve svoje PR-ove.
 
-![PR tracking](../images/docs_pr_tracking.png)
+![Praćenje PR-a](../images/docs_pr_tracking.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+P.S.: Vaš fork i grana i dalje će ostati na vašem osobnom GitHub računu. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Ako za buduće izmjene slijedite ovaj postupak, izmjene će uvijek započeti od ažurirane verzije repozitorija AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Budući da ljudi često zaborave ažurirati svoje repozitorije, preporučujemo da koristite gore opisani postupak za PR dok se ne naviknete na izvođenje „compare“ (usporedbe).
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Sintaksa koda
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Za stranice dokumentacije koristimo Markdown. Datoteke imaju nastavak „.md“.
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown je vrlo jednostavan jezik za oblikovanje teksta koji odvaja sadržaj teksta od njegova oblikovanja.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Autor samo, npr., označi naslov kao naslov razine 1, a Markdown procesor tijekom obrade izradi potreban HTML kod kako bi se naslov prikazao u HTML-u.
 
-The idea behind this is that
+Ideja iza toga je da
 
-- the writer should think about the text and not the formatting first,
+- autor najprije treba razmišljati o tekstu, a ne o oblikovanju,
 - the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
-- you can generate several output formats from one markdown file.
+- iz jedne Markdown datoteke možete izraditi nekoliko izlaznih formata.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown nije 100 % utvrđen standard, a mi se trudimo ostati što bliže standardu kako bismo
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- ostanemo fleksibilni i možemo promijeniti Markdown alate kada je potrebno ili kada nas na to prisili daljnji razvoj Markdown alata i Markdown SaaS usluga te
+- mogli koristiti usluge prevođenja za prijevod s engleskog na ciljni jezik, poput francuskog ili njemačkog. One mogu raditi s Markdownom, ali ne i sa složenim kodovima za oblikovanje, jer ne mogu odvojiti sadržaj od izgleda, što bi moglo biti kobno.
 
-### Headlines
+### Naslovi
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Naslov 1: `# headline`
+- Naslov 2: `## headline`
+- Naslov 3: `### headline`
+- Naslov 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Pokušavamo izbjeći daljnje razine naslova.
 
-### Text format
+### Oblikovanje teksta
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **podebljano**: `**text**`
+- *kurziv*: `*text*`
+- ***podebljani kurziv***: `***text***`
 
-### Ordered list
+### Numerirani popis
 
-    1. first
-    1. second
-    1. third
+    1. prvi
+    1. drugi
+    1. treći
     
 
-1. first
-2. second
-3. third
+1. prvi
+2. drugi
+3. treći
 
-### Unordered list
+### Nenumerirani popis
 
-    - one element
-    - another element
-    - and another element
+    - jedan element
+    - drugi element
+    - i još jedan element
     
 
-- one element
-- another element
-- and another element
+- jedan element
+- drugi element
+- i još jedan element
 
-### Multi level list
+### Popis s više razina
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Popise možete umetati u popise tako da sljedeću razinu uvučete za 4 razmaka više udesno od prethodne.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. prvi
+    1. drugi
+    1. treći
+      1. jedan element
+      1. drugi element
+      1. i još jedan element
+    1. četiri
+    1. pet
+    1. šest
     
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. prvi
+2. drugi
+3. treći 
+    1. jedan element
+    2. drugi element
+    3. i još jedan element
+4. četiri
+5. pet
+6. šest
 
-### Images
+### Slike
 
-To include images you use this markdown syntax.
+Za umetanje slika koristite ovu Markdown sintaksu.
 
-- images: `![alt text](../images/file.png)`
+- slike: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Slika treba biti u formatu PNG ili JPEG.
 
-Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Image names should conform to one of the following naming rules. U primjeru koristim png kao nastavak. Ako koristite JPEG, umjesto toga koristite jpeg kao nastavak.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
+- `filename-image-xx.png` gdje je xx jedinstveni dvoznamenkasti broj za slike u ovoj datoteci.
 - `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Slike se nalaze u mapi images za engleski jezik, a Crowdin ih automatski prenosi u ostale jezike. Za to ne morate ništa učiniti!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Slike trenutačno ne prevodimo: slike trebaju sadržavati **što manje teksta** kako bi bile razumljive i čitateljima koji ne govore engleski.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Koristite razumnu veličinu slika, koje moraju biti čitljive na računalu, tabletu i mobitelu.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Snimke zaslona web stranica trebaju biti široke najviše **1050 piksela**.
+- Dijagrami tijeka procesa trebaju biti široki najviše **1050 piksela**.
+- Snimke zaslona iz aplikacije trebaju biti široke najviše **500 piksela**. Ne stavljajte ih jednu pokraj druge ako nije potrebno.
+- Snimke zaslona sa sata (**Wear OS**) trebaju biti široke najviše **360 piksela**. Nikada ne povećavajte manju snimku zaslona.
 
-### Links
+### Poveznice
 
-#### External links
+#### Vanjske poveznice
 
-External links are links to external web sites.
+Vanjske poveznice su poveznice na vanjske web stranice.
 
-- external link: `[alt text](www.url.tld)`
+- vanjska poveznica: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Unutarnje poveznice na početak md datoteke
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Unutarnje poveznice na stranice su poveznice na početak md datoteke koja se nalazi na našem poslužitelju.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- unutarnja poveznica na .md stranicu: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Unutarnje poveznice na imenovane reference u tekstu
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Unutarnje poveznice na imenovane reference u tekstu su poveznice na bilo koje mjesto u md datoteci koja se nalazi na našem poslužitelju, a na kojem je postavljena referenca na koju se povezuje.
 
-Add a named reference at the location in the target md file you want to jump to.
+Dodajte imenovanu referencu na mjestu u ciljnoj md datoteci na koje želite skočiti.
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Imenovana referenca mora biti jedinstvena u svim md datotekama AndroidAPSDocs, a ne samo u md datoteci u kojoj se nalazi!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Zato je dobra praksa započeti nazivom datoteke, a zatim dodati naziv reference koji odaberete.
 
-Use only lowercase letters and hyphenate words.
+Koristite samo mala slova i riječi spajajte crticom.
 
-Then link this reference in the text you are writing with the following kind of link.
+Zatim tu referencu povežite u tekstu koji pišete pomoću sljedeće vrste poveznice.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Unutarnje poveznice na imenovane reference u tekstu: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Napomene, upozorenja, sklopive napomene
 
-You can add notes and warning boxes to documentation.
+U dokumentaciju možete dodati okvire s napomenama i upozorenjima.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Koristite ih pažljivo, jer dokumentacija treba biti što lakša za čitanje.
 
-#### Notes
+#### Napomene
 
-    ```{admonition} Note headline
+    ```{admonition} Naslov napomene
     :class: note
-    This is a note.
+    Ovo je napomena.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Naslov napomene :class: note Ovo je napomena.
 
-    <br />#### Warnings
+    <br />#### Upozorenja
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Upozorenje
     :class: warning
-    This is a warning.
+    Ovo je upozorenje.
     
 
     ```{admonition} Warning headline
@@ -224,342 +224,342 @@ Furthermore you can add collapsing notes for detailed information, so that users
     This is a warning.
     ```
     
-    #### Collapsing Notes
+    #### Sklopive napomene
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} dodatno detaljno štivo za zainteresirane čitatelje
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Ova napomena je sklopljena,
+    što znači da ovdje možete dodati dulji sadržaj,
+    a da on ne zauzima previše mjesta na stranici.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} dodatno detaljno štivo za zainteresirane čitatelje :class: dropdown Ova napomena je sklopljena, što znači da ovdje možete dodati dulji sadržaj, a da on ne zauzima previše mjesta na stranici.
 
 ```
 
-## Tables
+## Tablice
 
 Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
-## Style Guide
+## Vodič za stil
 
-### Contents
+### Sadržaj
 
-1. English language writing tips
+1. Savjeti za pisanje na engleskom jeziku
 
-2. AAPS-specific writing notes
+2. Napomene o pisanju specifične za AAPS
 
-3. Useful references
+3. Korisni izvori
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Slika](../images/styleguide01.png) 1\. Savjeti za pisanje na engleskom jeziku
 
-#### Use language that is appropriate for the reader
+#### Koristite jezik prilagođen čitatelju
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Gdje god je moguće, koristite jednostavan engleski jezik. To pomaže čitateljima kojima engleski nije materinji jezik, a olakšava i prevođenje dokumenata AAPS-a na druge jezike. Pišite kao da razgovarate s korisnikom; zamislite da sjedite za stolom nasuprot osobe za koju pišete. Zapamtite: većina korisnika AAPS-a nema iskustva s programiranjem. I sam dijabetes ima puno stručnih izraza i kratica. Imajte na umu da je nekim ljudima dijabetes možda tek nedavno dijagnosticiran, da možda nemaju toliko iskustva s dijabetesom kao vi ili da su prošli drukčiju edukaciju o dijabetesu. Ako koristite skraćenicu ili kraticu, kod prvog korištenja napišite je u cijelosti, a odmah iza toga u zagradi navedite kraticu, npr. „super mikro bolus (SMB)“. Također dodajte poveznicu na pojmovnik. Stručni izrazi koje čitatelj možda ne poznaje također se mogu dodati u zagradama.
 
 Instead of: *“What causes high postprandial BG peaks in closed loop?”*
 
 Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
-##### Use plain words that everyone can understand
+##### Koristite jednostavne riječi koje svi razumiju
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Abecedni popis zamjenskih riječi (A–Ž) koji vam pomaže da pišete razumljivije pronaći ćete ovdje:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Privatnost i licence:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Posebno kada snimate video ili snimke zaslona, pazite da ne otkrijete svoje privatne podatke (API ključ, lozinke). Pazite da YouTube sadržaj nije javno naveden (neka bude „unlisted“), tako da se može pogledati samo putem poveznice iz dokumentacije. Ne skrećite pozornost na materijale koji krše autorska prava (BYODA itd.).
 
-#### Keep sentences short, get to the point
+#### Pišite kratke rečenice i prijeđite na stvar
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Jasan tekst treba imati prosječnu duljinu rečenice od 15 do 20 riječi.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- To ne znači da sve rečenice trebaju biti iste duljine. Budite sažeti. Unesite raznolikost u tekst tako da kombinirate kratke rečenice (poput prethodne) s duljima (poput ove).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- Držite se jedne glavne misli u rečenici, uz možda još jednu povezanu misao.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Možda ćete i dalje ponekad napisati dugu rečenicu, posebno kada objašnjavate nešto složeno. Ali većina dugih rečenica može se na neki način podijeliti.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Uklonite slabe riječi: „you can“, „there is/are/were“, „in order to“.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Ključne riječi stavite blizu početka naslova, rečenica i odlomaka.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Budite slikoviti! Gdje god je moguće, dodajte kratak dijagram, snimku zaslona ili video.
 
-#### Don't be afraid to give instructions
+#### Ne bojte se davati upute
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Naredbe su najbrži način davanja uputa, ali autori se ponekad boje davati naredbe pa pišu „trebali biste to učiniti“ umjesto samo „učinite to“. Možda se ljudi boje da naredbe zvuče previše grubo. To često možete riješiti tako da ispred stavite riječ „molimo“. Ipak, ako se nešto mora učiniti, bolje je ne pisati „molimo“, jer to čitatelju daje mogućnost da odbije.
 
 Instead of: *“You should just think of it as a complete statement.”*
 
-Use: *“Think of it as a complete statement.”*
+Koristite: *„Shvatite to kao potpunu tvrdnju.“*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Uglavnom koristite glagole u aktivu, a ne u pasivu
 
-Example of an **active verb**:
+Primjer **glagola u aktivu**:
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *„Pumpa (subjekt) isporučuje (glagol) inzulin (objekt).“*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+„isporučuje“ je ovdje glagol u aktivu. Rečenica kaže tko isporučuje prije nego što kaže što se isporučuje.
 
-Example of a **passive verb**:
+Primjer **glagola u pasivu**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object).”*
 
-*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* is a passive verb here. Subjekt i objekt zamijenili su mjesta u usporedbi s rečenicom u aktivu. Rečenicu smo morali produljiti tako da smo dodali „je“ i „od“. Razmislite i o tome da rečenicu započnete glagolom u aktivu.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+Umjesto: *„Svoju pumpu možete povezati s telefonom putem izbornika pumpe u AAPS-u, a dostupan vam je i niz pumpi s kojima se možete povezati.“*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Koristite: *„Povežite željenu pumpu s telefonom putem izbornika pumpe u AAPS-u.“*
 
-Passive verbs can cause problems:
+Glagoli u pasivu mogu stvoriti probleme:
 
-- They can be confusing.
+- Mogu zbunjivati.
 
-- They often make writing more long-winded.
+- Tekst često čine razvučenijim.
 
-- They make writing less lively.
+- Tekst čine manje živim.
 
-##### Good uses of passives
+##### Kada je pasiv dobar izbor
 
-There are times when it might be appropriate to use a passive.
+Ponekad je pasiv prikladan.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Da nešto zvuči manje neprijateljski – „ovaj račun nije plaćen“ (pasiv) zvuči blaže od „niste platili ovaj račun“ (aktiv).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Da izbjegnete okrivljavanje – „pogreška je napravljena“ (pasiv) umjesto „Vi ste pogriješili“ (aktiv).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Kada ne znate tko ili što je izvršitelj radnje – „engleska reprezentacija je izabrana“.
 
-- If it simply sounds better.
+- Ako jednostavno bolje zvuči.
 
-#### Avoid nominalisations
+#### Izbjegavajte nominalizacije
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Nominalizacija je naziv za nešto što nije fizički predmet, npr. proces, tehniku ili osjećaj. Nominalizacije nastaju od glagola.
 
-For example:
+Na primjer:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Glagol     | Nominalizacija |
+| ---------- | -------------- |
+| dovršiti   | dovršenje      |
+| uvesti     | uvođenje       |
+| osigurati  | osiguravanje   |
+| ne uspjeti | neuspjeh       |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Često se koriste **umjesto** glagola od kojih su nastale, ali mogu zvučati kao da se zapravo ništa ne događa. Previše nominalizacija može tekst učiniti vrlo dosadnim i teškim za čitanje.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+Umjesto: *„Implementacija metode izvršena je od strane tima.“*
 
-Use: *“A team has implemented the method.”*
+Koristite: *„Tim je implementirao metodu.“*
 
-#### Use lists where appropriate
+#### Koristite popise gdje je to prikladno
 
-Lists are excellent for splitting information up. There are two main types of list:
+Popisi su odlični za podjelu informacija. Postoje dvije glavne vrste popisa:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Neprekinuta rečenica u kojoj je nekoliko navedenih točaka istaknuto na početku, u sredini ili na kraju.
 
-- Separate bullet points with an introductory statement.
+- Zasebne grafičke oznake s uvodnom rečenicom.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+U gornjem popisu s grafičkim oznakama svaka točka je potpuna rečenica, pa svaka počinje velikim slovom i završava točkom. Koristite grafičke oznake umjesto brojeva ili slova, jer one usmjeravaju pozornost na svaku točku, a ne daju dodatne informacije koje treba upamtiti.
 
-#### Mythbusting
+#### Razbijanje mitova
 
-- You can start a sentence with **and, but, because, so or however**.
+- Rečenicu možete započeti s **and, but, because, so ili however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Infinitiv možete razdvojiti (split infinitive). Dakle, možete reći **„to boldly go“**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Rečenicu možete završiti prijedlogom. Zapravo, to je nešto **we should stand up for**.
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- I **vi** možete upotrijebiti istu **riječ** dvaput u rečenici ako **vi** ne možete pronaći bolju **riječ**.
 
-#### Optimizing writing style by purpose
+#### Prilagodba stila pisanja svrsi
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Kako bi dokumentacija bila jasna i kratka, različite dijelove dokumentacije pišemo različitim stilovima.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Stil „objašnjenja“ koristi se za dijelove s uvodom, pozadinom i razvojem znanja.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+Stil „vodiča s uputama“ (s minimalnim objašnjenjima) koristi se za izradu i konfiguraciju AAPS-a te za neke dijelove o rješavanju problema.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Tutorial pomaže učeniku da stekne osnovne vještine. Korisnik će **učiti kroz rad**.
 
-![Image](../images/styleguide02.png)
+![Slika](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Slika](../images/styleguide03.png) Tutoriali (npr. kako naučiti dijete da istuče snijeg od bjelanjaka)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- pripovjedač se izravno obraća čitatelju: U ovom tutorialu **vi** ćete (mi) se u rijetkim slučajevima može koristiti za osjećaj „u ovome smo zajedno“
 
-- Future Tense -> to show the final target
+- Futur -> za prikaz konačnog cilja
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Imperativ -> za izvođenje zadataka -> Konkretni koraci – izbjegavajte apstraktne pojmove
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Prošlo vrijeme -> za prikaz izvršenih zadataka -> Brzi i odmah vidljivi rezultati
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Minimalna objašnjenja -> samo ono što je nužno za izvršenje zadatka – **što i zašto**
 
-- Ignore options/alternatives/…. No ambiguity
+- Zanemarite opcije/alternative/…. Bez dvosmislenosti
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Prijelazi između koraka: završite korak rečenicom koja logično vodi do sljedećeg koraka. Primjer: *Sada ste instalirali klijent Let’s Encrypt, ali prije dobivanja certifikata morate provjeriti jesu li otvoreni svi potrebni portovi. Za to ćete u sljedećem koraku ažurirati postavke vatrozida.*
 
-- **Tutorial** Title (Level 1 heading)
+- Naslov **tutoriala** (naslov razine 1)
 
-- Introduction (no heading)
+- Uvod (bez naslova)
 
-- Prerequisites (Level 2 heading)
+- Preduvjeti (naslov razine 2)
 
-- Steps:
+- Koraci:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Korak 1 – Izvođenje prve stvari (naslov razine 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Korak 2 – Izvođenje sljedeće stvari (naslov razine 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Korak n – Izvođenje posljednje stvari (naslov razine 2)
 
-- Conclusion (Level 2 heading)
+- Zaključak (naslov razine 2)
     
-    - **The Language of Tutorials**
+    - **Jezik tutoriala**
         
-        *In this tutorial, you will…*
+        *U ovom tutorialu vi ćete…*
         
-        Describe what the learner will accomplish (note - not: “you will learn…”).
+        Opišite što će učenik postići (napomena – ne: „naučit ćete…“).
         
-        *First, do x. Now, do y. Now that you have done y, do z.*
+        *Najprije učinite x. Sada učinite y. Sada kada ste učinili y, učinite z.*
         
-        No room for ambiguity or doubt.
+        Bez mjesta za dvosmislenost ili sumnju.
         
-        *We must always do x before we do y because… (see Explanation for more details).*
+        *Uvijek moramo učiniti x prije y jer… (više detalja potražite u Objašnjenju).*
         
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
+        Dajte minimalno objašnjenje radnji što jednostavnijim jezikom. Dodajte poveznicu na detaljnije objašnjenje.
         
-        *The output should look something like this…*
+        *Rezultat bi trebao izgledati otprilike ovako…*
         
-        Give your learner clear expectations.
+        Dajte učeniku jasna očekivanja.
         
-        *Notice that… Remember that…*
+        *Primijetite da… Zapamtite da…*
         
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
+        Dajte učeniku puno znakova koji mu pomažu potvrditi da je na pravom putu i snaći se.
         
-        *You have built a secure, three-layer hylomorphic stasis engine…*
+        *Izgradili ste siguran, troslojni hilomorfni stazni motor…*
         
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
+        Opišite (i umjereno pohvalite) ono što je učenik postigao (napomena – ne: „naučili ste…“)
 
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Slika](../images/styleguide05.png) Vodiči s uputama (npr. recept)
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+Svrha vodiča s uputama je pomoći korisniku koji već ima znanje da ispravno izvede određeni zadatak.
 
-- HOW-to
+- KAKO
 
 - narrator directly talks to the reader: In this guide **you** will
 
-- Future Tense -> to show the final target
+- Futur -> za prikaz konačnog cilja
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- Uvjetni imperativ -> da dobijete X, učinite Y -> Konkretni koraci – izbjegavajte apstraktne pojmove
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- Minimalna objašnjenja -> samo ono što je nužno za izvršenje zadatka -> **što i zašto**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- Zanemarite opcije/alternative/…. Bez dvosmislenosti, ali možete dodati poveznicu na referentni unos ili objašnjenje
 
-- **How-to**: Title (Level 1 heading)
+- **Kako**: naslov (naslov razine 1)
 
-- Introduction paragraph
+- Uvodni odlomak
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Neobavezni preduvjeti (odlomak ili naslov razine 2 ako ih je više od 1)
 
-- Steps:
+- Koraci:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Korak 1 – Izvođenje prve stvari (naslov razine 2)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Korak 2 – Izvođenje sljedeće stvari (naslov razine 2)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Korak n – Izvođenje posljednje stvari (naslov razine 2)
 
-- Conclusion paragraph
+- Zaključni odlomak
     
-    - **The Language of How-To Guides**
+    - **Jezik vodiča s uputama**
         
-        *This guide shows you how to…*
+        *Ovaj vodič pokazuje vam kako…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Jasno opišite problem ili zadatak za koji vodič pokazuje korisniku kako ga riješiti.
         
-        *If you want x, do y. To achieve w, do z.*
+        *Ako želite x, učinite y. Da biste postigli w, učinite z.*
         
-        Use conditional imperatives.
+        Koristite uvjetni imperativ.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Potpuni popis opcija potražite u referentnom vodiču za x.*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Ne zatrpavajte svoj praktični vodič svim mogućim stvarima koje korisnik može učiniti u vezi s x.
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Slika](../images/styleguide07.png) Objašnjenje (npr. znanstveni razlog zašto se bjelanjci stvrdnu kada ih tučete)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Objašnjenje pojašnjava, produbljuje i proširuje čitateljevo razumijevanje teme.
 
-- WHY
+- ZAŠTO
 
-- Start with **About**
+- Započnite s **O temi**
 
-- Provide context, link ALL relevant references
+- Dajte kontekst, dodajte poveznice na SVE važne izvore
 
-- Discuss options/alternatives
+- Raspravite o opcijama/alternativama
 
-- Don’t instruct or provide reference (link to them)
+- Ne dajte upute i ne pišite referentni sadržaj (dodajte poveznicu na njih)
 
-- State the unknown/moving targets etc…
+- Navedite nepoznanice/ciljeve koji se mijenjaju itd.…
 
-- **About** Title (Level 1 heading)
+- **O temi**: naslov (naslov razine 1)
 
-- Introduction (no heading)
+- Uvod (bez naslova)
 
-- Optional Prerequisites (Level 2 heading)
+- Neobavezni preduvjeti (naslov razine 2)
 
-- Subtopic 1 (level 2 heading)
+- Podtema 1 (naslov razine 2)
 
-- Conclusion (Level 2 heading)
+- Zaključak (naslov razine 2)
     
-    - **The Language of Explanation**
+    - **Jezik objašnjenja**
     
-    *The reason for x is because historically, y…*
+    *Razlog za x je to što je povijesno y…*
     
-    Explain.
+    Objasnite.
     
-    *W is better than z, because…*
+    *W je bolji od z jer…*
     
     Offer judgements and even opinions where appropriate.
     
-    *An x in system y is analogous to a w in system z. However…*
+    *X u sustavu y analogan je w u sustavu z. Međutim…*
     
-    Provide context that helps the reader.
+    Dajte kontekst koji pomaže čitatelju.
     
-    *Some users prefer w (because z). This can be a good approach, but…*
+    *Neki korisnici više vole w (jer z). To može biti dobar pristup, ali…*
     
-    Weigh up alternatives.
+    Usporedite alternative.
     
-    *An x interacts with a y as follows:…*
+    *X djeluje s y na sljedeći način:…*
     
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    Otkrijte unutarnje tajne mehanizma kako biste pomogli razumjeti zašto nešto radi to što radi.
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. Napomene o pisanju i ažuriranju specifične za AAPS
 
-#### Author & Editor
+#### Autor i urednik
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+Pisanje ili ažuriranje dokumentacije AAPS-a zamislite kao postupak od dvije faze. Može ih izvesti ista osoba u različito vrijeme ili više osoba.
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+**Autor (npr. vi!)** piše ili uređuje dio dokumentacije sažetim, razgovornim tonom, a zatim ga predaje uredniku.
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+**Urednik (npr. drugi korisnik AAPS-a ili osoba koja primi pull request)** provjerava poštuje li se vodič za stil, uređuje dio da bude jasan i pristupačan te uklanja što više riječi (posebno u dijelovima s tutorialima i uputama). Može pomoći da tekst pročitate naglas.
 
-#### General AAPS points
+#### Općenito o AAPS-u
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Za vrijednosti glukoze svaki put navedite i mg/dL i mmol/L (razmislite o tome i za snimke zaslona, ako je moguće).
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Radi dosljednosti pišite „AAPS“, a ne „Android APS“.
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Jasno navedite verziju Android Studija/AAPS-a za koju pišete ili iz koje su snimke zaslona.
 
-### 3\. Useful References
+### 3\. Korisni izvori
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 
