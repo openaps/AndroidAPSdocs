@@ -9,7 +9,7 @@ Izradili ste AAPS s **AAPS Builderom**? Ova stranica vam ne treba: pogledajte [A
 **AAPS** nije dostupan za preuzimanje zbog propisa o medicinskim uređajima. Zakonito je izraditi aplikaciju za vlastitu upotrebu, ali kopiju ne smijete dati drugima! Pojedinosti pogledajte na stranici [Česta pitanja korisnika petlje](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Zatim umjesto ovog vodiča slijedite [postupak izrade **AAPS-a** u pregledniku](../SettingUpAaps/BrowserBuild.md). Umjesto izrade novog spremišta ključeva morate odabrati ono koje ste kopirali sa svog računala.
+Ako želite prvi put ažurirati **AAPS** putem preglednika: kopirajte sigurnosnu kopiju datoteke spremišta ključeva na svoj Google Drive. Zatim umjesto ovog vodiča slijedite [postupak izrade **AAPS-a** u pregledniku](../SettingUpAaps/BrowserBuild.md). Umjesto izrade novog spremišta ključeva morate odabrati ono koje ste kopirali sa svog računala.
 Taj korak je obavezan samo prvi put, a za sljedeća ažuriranja možete slijediti ovaj vodič.
 ```
 
@@ -24,7 +24,7 @@ Taj korak je obavezan samo prvi put, a za sljedeća ažuriranja možete slijedit
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Ako imate problema, pogledajte posebnu stranicu [Izrada u pregledniku: rješavanje problema](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Izvezite svoje postavke
 
@@ -57,7 +57,7 @@ Napomena: ako ste greškom promijenili svoju kopiju AndroidAPS-a, vidjet ćete o
 
 ![Odbacivanje neželjenih promjena](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Odlično.
+Sada ste sinkronizirali (ažurirali) svoju kopiju s najnovijim izdanjem **AAPS-a**. Odlično.
 
 ![Repozitorij je sinkroniziran](../images/update/CI/GitHubUpdate5.png)
 
@@ -73,17 +73,17 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Ostavite granu postavljenu na master. U **Select AAPS Version** provjerite je li odabrana verzija **4.0.0**, najnovija verzija na vrhu popisa. Ako vaš fork nije ažuran, unaprijed odabrana verzija je starija: ako pokrenete workflow s obrascem kakav se otvori, ponovno ćete izraditi tu stariju verziju i vaša aplikacija neće biti ažurirana. Odaberite [varijantu](#browserbuild-variant) (fullRelease), a zatim dodirnite Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Popis verzija dio je workflowa u vašem forku. Ako **4.0.0** nedostaje, vaš fork još nije sinkroniziran: vratite se na [Ažurirajte svoj GitHub repozitorij](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Vidjet ćete poruku „Workflow run was successfully requested“. Osvježite stranicu u pregledniku i moći ćete pratiti napredak izrade. Kada radnja završi, radnja AAPS CI prikazat će zelenu kvačicu. You have successfully built the updated version of **AAPS**. To znači da se APK za glavni uređaj i APK za Wear sada spremaju izravno na vaš Google Drive (kao niže). APK AAPSClienta možete preuzeti s Github > nightscout > AndroidAPS [ovdje](https://github.com/nightscout/AndroidAPS/releases)
+6. Vidjet ćete poruku „Workflow run was successfully requested“. Osvježite stranicu u pregledniku i moći ćete pratiti napredak izrade. Kada radnja završi, radnja AAPS CI prikazat će zelenu kvačicu. Uspješno ste izradili ažuriranu verziju **AAPS-a**. To znači da se APK za glavni uređaj i APK za Wear sada spremaju izravno na vaš Google Drive (kao niže). APK AAPSClienta možete preuzeti s Github > nightscout > AndroidAPS [ovdje](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Praćenje workflowa](../images/update/CI/GitHubActions4.png)
@@ -110,6 +110,6 @@ Ako nešto pođe po zlu, ne paničarite.
 
 Duboko udahnite!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Zatim provjerite je li vaš problem već opisan: pogledajte [Rješavanje problema s AAPS Builderom](#aaps-builder-troubleshooting) ako izrađujete s **AAPS Builderom**, inače [Izrada u pregledniku: rješavanje problema](#aaps-ci-troubleshooting).
 
 Ako trebate dodatnu pomoć, obratite se drugim korisnicima **AAPS-a** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) ili [Discordu](https://discord.gg/4fQUWHZ4Mw).
