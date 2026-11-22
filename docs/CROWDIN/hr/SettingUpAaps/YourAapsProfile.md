@@ -1,355 +1,355 @@
-# Your AAPS profile
+# Vaš AAPS profil
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
-* [glucose targets](#profile-glucose-targets),
-* [basal rates](#your-aaps-profile-basal-rates) (BR),
-* [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
-* [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR).
+Vaš **AAPS profil** skup je četiriju ključnih parametara koji određuju kako **AAPS** treba isporučivati inzulin prema razini glukoze iz senzora. To su glavni parametri na kojima se temelji **AAPS**. Kako napredujete kroz **Ciljeve**, otključat ćete dodatne parametre koje možete mijenjati (npr. postavke SMB-a), ali učinak tih funkcija ovisi o tome je li vaš osnovni **Profil** ispravan. **Profil** sadrži:
+* [ciljne vrijednosti glukoze](#profile-glucose-targets),
+* [bazalne stope](#your-aaps-profile-basal-rates) (BR),
+* [faktore osjetljivosti na inzulin](#your-aaps-profile-insulin-sensitivity-factor) (ISF) i
+* [omjere inzulina i ugljikohidrata](#your-aaps-profile-insulin-to-carbs-ratio) (IC ili ICR).
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
+**Trajanje djelovanja inzulina (DIA)** više nije dio vašeg **Profila**. Umjesto toga postavlja se za svaki inzulin – pogledajte [Upravljanje → Postavke inzulina](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+Kao dio upravljanja **AAPS-om**, korisnici trebaju stalno procjenjivati i pažljivo provjeravati točnost postavki svog **Profila**. Preporučuje se podešavati postavke redoslijedom kojim su ovdje navedene. Nastojte ispraviti jednu postavku prije nego promijenite drugu. Radite u malim koracima umjesto velikih promjena odjednom. Ne zaboravite aktivirati novi profil nakon svake promjene. Redovito [radite sigurnosnu kopiju postavki svog **Profila**](#YourAapsProfile_Profile-backup) izvozom postavki.
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+Postavke vašeg **Profila** međusobno djeluju – možete imati „pogrešne“ postavke koje u nekim okolnostima dobro rade zajedno, a u drugima ne. Na primjer, ako se previsok bazal slučajno poklopi s previsokim **CR**. To znači da postavke trebate razmatrati pojedinačno i provjeriti da dobro rade zajedno u različitim okolnostima.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+Za smjernice možete koristiti [Autotune](https://autotuneweb.azurewebsites.net/), ali ga ne slijedite slijepo: možda neće dobro raditi za vas ili u svim okolnostima.
 
 ```{admonition} Your diabetes may vary
 :class: note
-**Profiles** vary significantly from person-to-person.
+**Profili** se jako razlikuju od osobe do osobe.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Za bazalne stope (BR), faktore osjetljivosti na inzulin (ISF) i omjere inzulina i ugljikohidrata (IC ili ICR) apsolutne vrijednosti i trendovi potrebe za inzulinom jako se razlikuju od osobe do osobe, ovisno o vašoj biologiji, spolu, dobi, tjelesnoj kondiciji itd., kao i o kratkoročnim čimbenicima poput bolesti i nedavne tjelovježbe. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+Zadnja četiri parametra (ciljne vrijednosti glukoze, bazalne stope, faktori osjetljivosti na inzulin i omjeri inzulina i ugljikohidrata) mogu se postaviti na različite vrijednosti, po potrebi svaki sat, tijekom 24 sata.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![Promjena bazala po satima](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+Ispod su prikazane snimke zaslona **AAPS-a** s _primjerom_ profila. Imajte na umu da primjer profila ispod ima mnogo vremenskih točaka. Kada počnete koristiti **AAPS**, vaš će profil vjerojatno biti mnogo jednostavniji.
 
-![Example active profile](../images/v4/Profiles/Profile-Example-Active.png)
+![Primjer aktivnog profila](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Ciljne vrijednosti glukoze
 
-### Description
+### Opis
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+Vaša **ciljna vrijednost GUK-a** osnovna je vrijednost i svi izračuni **AAPS-a** temelje se na njoj. Razlikuje se od ciljnog raspona u kojem obično želite držati vrijednosti GUK-a. Ciljna vrijednost koristi se u izračunima **AAPS-a**: ako **AAPS** predvidi da će vaš **GUK** završiti izvan ciljnog raspona, poduzet će radnju da vas vrati u taj raspon.
 
-The targets can be defined within those boundaries :
+Ciljne vrijednosti mogu se postaviti unutar ovih granica:
 
-|         | _Low_ target           | _High_ target            |
-| ------- | ---------------------- | ------------------------ |
-| Minimum | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Maximum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|          | _Niski_ cilj            | _Visoki_ cilj             |
+| -------- | ----------------------- | ------------------------- |
+| Minimum  | 4,4 mmol/L ili 80 mg/dL | 5 mmol/L ili 90 mg/dL     |
+| Maksimum | 10 mmol/L ili 180 mg/dL | 11,1 mmol/L ili 200 mg/dL |
 
-### Impact
+### Učinak
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+Ako je ciljna vrijednost u vašem **Profilu** vrlo široka (recimo 3 ili više mmol/L [50 mg/dL ili više]), **AAPS** će često malo djelovati. Razlog je to što se predviđa da će razina **GUK-a** biti negdje u tom širokom rasponu, pa **AAPS** vjerojatno neće postavljati privremene bazale.
 
-### How to set it
+### Kako postaviti
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+**Slika ispod** pokazuje primjer kako se ciljna vrijednost može postaviti u profilu **AAPS-a**.
 
-![Target](../images/v4/Profiles/Profile_Target.png)
+![Cilj](../images/v4/Profiles/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+Ciljne vrijednosti **GUK-a** postavljaju se prema vašim osobnim željama i potrebama. Na primjer, ako se brinete zbog hipoglikemija noću, možete postaviti malo višu ciljnu vrijednost od 117 mg/dL (6,5 mmol/L) od 21 do 7 sati. Ako želite biti sigurni da ujutro imate dovoljno aktivnog inzulina (IOB) prije bolusa za doručak, možete postaviti nižu ciljnu vrijednost od 81 mg/dL (4,5 mmol/L) od 7 do 8 sati.
 
-When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+U [otvorenoj petlji](#KeyAapsFeatures-OpenLoop), posebno dok prolazite kroz [prve ciljeve](../SettingUpAaps/CompletingTheObjectives.md), širok ciljni raspon može biti dobar izbor dok učite kako se **AAPS** ponaša i podešavate svoj **Profil**.<br/> U [zatvorenoj petlji](#KeyAapsFeatures-ClosedLoop) (od **[Cilja 6](#objectives-objective6)**) preporučuje se smanjivati raspon dok ne dobijete jednu ciljnu vrijednost za svako doba dana (_niski_ cilj = _visoki_ cilj), kako bi **AAPS** brzo reagirao na promjene **GUK-a**.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Bazalne stope
 
-### Description
+### Opis
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Vaša bazalna stopa inzulina (jedinice/sat) daje pozadinski inzulin i održava razinu glukoze stabilnom kada nema hrane ni tjelesne aktivnosti.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Inzulinska pumpa svakih nekoliko minuta isporučuje male količine brzodjelujućeg inzulina, kako jetra ne bi otpuštala previše glukoze i kako bi glukoza ušla u stanice tijela. Bazalni inzulin obično čini između 40 i 50 % vaše ukupne dnevne doze (TDD), ovisno o prehrani, i obično prati cirkadijalni ritam, s jednim vrhom i jednim padom potrebe za inzulinom tijekom 24 sata. Za više informacija vrlo je korisno 6. poglavlje knjige [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) autora Garyja Scheinera.
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
+Većina edukatora za dijabetes tipa 1 (i osoba s dijabetesom tipa 1!) slaže se da najprije trebate ispraviti bazalne stope, a tek onda pokušati optimizirati ISF i ICR.
 
-### Impact
+### Učinak
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Točne bazalne stope omogućuju vam da se probudite u rasponu i da preskočite obroke – ili jedete – ranije ili kasnije tijekom dana, bez visokih ili niskih vrijednosti.
 
-Too high basal rate can lead to low BGs. And vice versa.
+Previsoka bazalna stopa može dovesti do niskih vrijednosti GUK-a. I obrnuto.
 
-**AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
+**AAPS** se „ravna“ prema zadanoj bazalnoj stopi. Ako je bazalna stopa previsoka, „nulti privremeni bazal“ računat će se kao veći negativni aktivni inzulin (IOB) nego što bi trebao. Zbog toga će **AAPS** poslije davati više korekcija nego što bi trebao, kako bi IOB na kraju vratio na nulu.
 
-So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
+Dakle, previsoka bazalna stopa stvorit će niske vrijednosti **GUK-a** i uz zadanu stopu, ali i nekoliko sati kasnije, dok **AAPS** korigira prema cilju.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Suprotno tome, preniska bazalna stopa može dovesti do visokih vrijednosti GUK-a i do toga da se razina ne spusti do cilja.
 
-### How to set it
+### Kako postaviti
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+**Slika ispod** pokazuje primjer kako se bazalne stope mogu postaviti u profilu **AAPS-a**.
 
-![Basal rates](../images/v4/Profiles/Profile_BasalRates.png)
+![Bazalne stope](../images/v4/Profiles/Profile_BasalRates.png)
 
 Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
+Postoje metode testiranja bazala koje obično uključuju praćenje bazalnih stopa i potrebe za inzulinom tijekom <u>povremenog</u> posta u razdoblju od 24 sata. Iako bazalne stope trebate testirati za cijeli dan, ne preporučuje se postiti 24 sata zaredom. Razlog je to što tijelo tada pokreće mehanizme, npr. hormone, kako bi to nadoknadilo. Preporučeni način je postiti 3 različita dana po 8 sati.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+Preporučena metoda je suspendirati petlju (radi sigurnosti možete AAPS postaviti na [**LGS**](#KeyAapsFeatures-LGS) kako biste izbjegli niske vrijednosti, kao kod ispunjavanja [cilja 6](#objectives-objective6)), čime se vraća vaša zadana pozadinska bazalna stopa. Pratite kako se mijenja vaš **GUK**: ako pada, bazalna stopa je previsoka. I obrnuto.<br/> Druga metoda (može biti zahtjevnija) je ostaviti petlju da radi i pratiti kako se mijenja **IOB**. Ako je **IOB** negativan, vaša je bazalna stopa previsoka. I obrnuto. Imajte na umu da se ova metoda oslanja na **ISF** za korekciju **GUK-a**, pa za uspjeh ovisi o tome jesu li i druge varijable postavljene razumno dobro.<br/> Drugi način podešavanja bazalnih stopa je praćenje rada petlje tijekom noći, kada su svi aktivni ugljikohidrati (COB) apsorbirani. Ova je metoda posebno korisna za djecu, kada je post težak ili se potreba za inzulinom često mijenja. [Dr. Saleh Adi iz Tidepoola](https://www.youtube.com/watch?v=-fpWnGRhLSo) pokazuje korisne načine analize noćnih linija GUK-a kako biste optimizirali bazalne stope.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+Pogledajte [ovdje](../GettingHelp/ProfileTuning.md) kako podesiti bazalni profil analizom obrazaca u zatvorenoj petlji.
 
-When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
+Kada mijenjate postavke na temelju rezultata testa bazala, promjene u **Profilu** treba napraviti 1 do 2 sata (ovisno o vrsti inzulina) prije porasta/pada. Ponavljajte test po potrebi dok ne budete zadovoljni postavkama **bazalnih stopa**.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### Poruka: „Bazalna stopa nije kompatibilna s trenutnom pumpom“
 
-Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+Svaka pumpa ima granice: najnižu i najvišu bazalnu stopu koju može isporučiti, a kod nekih pumpi (na primjer Dana, Accu-Chek Combo, Medtronic i Diaconn G8) bazalne stope mogu se mijenjati samo na puni sat. **AAPS** provjerava vaš profil prema pumpi koju koristite, i to **nakon** primjene postotka koji odaberete.
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+Ako je neka bazalna stopa izvan tih granica, zaslon **Aktiviraj** prikazuje ovu poruku, a gumb **Aktiviraj** ostaje siv:
 
-![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+![Zaslon Aktiviraj s porukom "Bazalna stopa nije kompatibilna s trenutnom pumpom"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+Na primjer, uz bazalnu stopu od 0,10 J/h noću i postotak profila od 35 %, **AAPS** bi morao isporučiti 0,035 J/h. To je manje nego što pumpa Dana može isporučiti (0,04 J/h).
 
-To solve it, either:
+Rješenje je jedno od ovoga:
 
-* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
-* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+* odaberite drugi postotak: **viši** ako bazalna stopa postane preniska, **niži** ako bazalna stopa postane previsoka, ili
+* [uredite profil](#your-aaps-profile-create-and-edit-profiles) i promijenite bazalnu stopu.
 
-The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+Uređivač profila dopušta početak bazalnih stopa samo na puni sat. Bazalna stopa koja počinje npr. u 06:30 može doći samo iz starijeg profila, na primjer nakon prelaska na pumpu koja to ne podržava.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Faktor osjetljivosti na inzulin (ISF)
 
-### Description
+### Opis
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Faktor osjetljivosti na inzulin (ponekad se zove korekcijski faktor) pokazuje koliko će 1 jedinica inzulina sniziti vašu razinu glukoze u krvi.
 
-**In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
+**U jedinicama mg/dL:** Ako imate **ISF** 40, svaka jedinica inzulina snizit će vaš GUK za oko 40 mg/dL (na primjer, GUK će pasti sa 140 mg/dL na 100 mg/dL).
 
-**In mmol/L units:** If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
+**U jedinicama mmol/L:** Ako imate **ISF** 1,5, svaka jedinica inzulina snizit će vaš GUK za oko 1,5 mmol/L (na primjer s 8 mmol/L na 6,5 mmol/L).
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Iz ovih primjera vidite da što je vrijednost **ISF** _manja_, to ste manje osjetljivi na inzulin. Dakle, ako smanjite ISF s 40 na 35 (mg/dL) ili s 1,5 na 1,3 (mmol/L), to se često zove jačanje vašeg **ISF-a**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
 
-### Impact
+### Učinak
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
+A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. To dovodi do agresivnije / jače korekcije petlje s **više inzulina**. Ako je vaš **ISF** prejak (mala vrijednost), to može dovesti do niskog **GUK-a**.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
+A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. To dovodi do manje agresivne / slabije korekcije petlje s **manje inzulina**. Ako je vaš **ISF** preslab (velika vrijednost), to može dovesti do visokog **GUK-a**.
 
 **Example:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
 * So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
-* If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
-* If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
+* Ako je `ISF = 30` -> `90 / 30 = 3` ili `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 jedinice inzulina
+* Ako je `ISF = 45` -> `90 / 45 = 2` ili `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 jedinice inzulina
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+Prenizak **ISF** (dakle agresivniji, što nije rijetko) može dovesti do „prekomjernih korekcija“, jer **AAPS** izračuna da korisniku za korekciju visokog **GUK-a** treba više inzulina nego što je stvarno potrebno. To može dovesti do vrijednosti GUK-a poput „tobogana“ (posebno natašte), kao na slici ispod. U tom slučaju vrijednost **ISF** treba povećati kako bi **AAPS** bio manje agresivan. Tako će **AAPS** isporučivati manje korekcijske doze i izbjeći prekomjernu korekciju visokog **GUK-a** koja završava niskim **GUK-om**.
 
-![ISF too low](../images/v4/Profiles/isf.jpg)
+![Prenizak ISF](../images/v4/Profiles/isf.jpg)
 
-Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
+Suprotno tome, previsoko postavljen **ISF** može dovesti do nedovoljnih korekcija, pa vaš **GUK** ostaje iznad cilja – to se posebno vidi tijekom noći.
 
-### How to set it
+### Kako postaviti
 
-See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
+Na **slici ispod** pogledajte primjer kako se vrijednosti ISF-a mogu postaviti u profilu **AAPS-a**.
 
-![Profile ISF](../images/v4/Profiles/Profile_ISF.png)
+![ISF u profilu](../images/v4/Profiles/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Osnovna polazna točka za određivanje dnevnog ISF-a je vaša ukupna dnevna doza (TDD), uz pravilo 1700 (94). Više detalja nalazi se u 7. poglavlju knjige [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) autora Garyja Scheinera.
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (ako mjerite u mg/dL) ili 94 (mmol/L) / TDD = približni ISF.<br/><br/>Primjer: TDD = 40 J<br/>Približni ISF (mg/dL) = 1700/40 = 43<br/>Približni ISF (mmol/L) = 94/40 = 2,4 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                          |
 
-Assuming your basal levels are correct, you can test this by suspending the loop, checking **IOB** is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+Ako su vaše bazalne stope ispravne, to možete testirati tako da suspendirate petlju, provjerite je li **IOB** nula i uzmete nekoliko tableta glukoze kako biste došli do stabilne „visoke“ razine.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+Zatim uzmite procijenjenu količinu inzulina (prema trenutnom 1/ISF) kako biste došli do ciljne vrijednosti GUK-a.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+Budite oprezni jer je ova vrijednost vrlo često postavljena prenisko. Prenisko znači da će 1 J sniziti GUK brže nego što se očekuje.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Omjer inzulina i ugljikohidrata (ICR)
 
-### Description
+### Opis
 
-The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+**ICR** pokazuje koliko grama ugljikohidrata pokriva jedna jedinica inzulina.
 
-Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
+Neki umjesto **ICR** koriste i kraticu **I:C** ili govore o omjeru ugljikohidrata: **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Na primjer, omjer inzulina i ugljikohidrata 1 prema 10 (1:10) znači da uzimate 1 J inzulina za svakih 10 grama pojedenih ugljikohidrata. Za obrok od 25 g ugljikohidrata trebalo bi 2,5 J inzulina.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Ako je vaš **ICR** slabiji (viša vrijednost), recimo 1:20, za pokrivanje 10 g ugljikohidrata trebali biste samo 0,5 J inzulina. Za obrok od 25 g ugljikohidrata trebalo bi 25/20 = 1,25 J inzulina.
 
-It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
+Uobičajeno je imati različit **ICR** u različito doba dana zbog razine hormona i tjelesne aktivnosti. Mnogi imaju najniži/najjači **ICR** oko doručka, jer su tada obično otporniji na inzulin. Tako, na primjer, **ICR** jednog odraslog korisnika može biti 1:8 za doručak, 1:10 za ručak i 1:10 za večeru, ali ti obrasci nisu univerzalni, a neki su ljudi otporniji na inzulin u vrijeme večere pa im tada treba jači/manji **ICR**.
 
-> **NOTE:**
+> **NAPOMENA:**
 > 
-> In some European countries bread units were used for determination of how much insulin is needed for food. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> U nekim europskim zemljama koristile su se krušne jedinice za određivanje koliko je inzulina potrebno za hranu. Na početku je 1 krušna jedinica bila jednaka 12 g ugljikohidrata, a kasnije su neki prešli na 10 g ugljikohidrata.
 > 
-> In this model the amount of carbs was fixed and the amount of insulin was variable. ("How much insulin is needed to cover one bread unit?")
+> U tom modelu količina ugljikohidrata bila je fiksna, a količina inzulina promjenjiva. („Koliko je inzulina potrebno za jednu krušnu jedinicu?“)
 > 
-> When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
+> Kod korištenja **ICR** količina inzulina je fiksna, a količina ugljikohidrata promjenjiva. („Koliko grama ugljikohidrata pokriva jedna jedinica inzulina?“)
 > 
 > Example:
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Faktor krušne jedinice (KJ = 12 g ugljikohidrata): 2,4 J/KJ -> Trebate 2,4 jedinice inzulina kada pojedete jednu krušnu jedinicu.
 > 
-> Corresponding **ICR**: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
+> Odgovarajući **ICR**: 12 g / 2,4 J = 5,0 g/J -> 5,0 g ugljikohidrata može se pokriti jednom jedinicom inzulina.
 > 
-> BU factor 2,4 U / 12g   ===>   IC = 12g / 2,4 U = 5,0 g/U
+> Faktor KJ 2,4 J / 12 g   ===>   IC = 12 g / 2,4 J = 5,0 g/J
 > 
 > Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Učinak
 
-A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
+**Niži / jači ICR** znači manje hrane po jedinici, tj. za fiksnu količinu ugljikohidrata dobivate više inzulina. Može se zvati i „agresivniji“. Ako je vaš IC prejak, dobivate previše inzulina, a to može dovesti do niskih vrijednosti **GUK-a**.
 
-A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
+**Viši / slabiji ICR** = više hrane po jedinici, tj. za fiksnu količinu ugljikohidrata dobivate manje inzulina. Može se zvati i „manje agresivan“. Ako je vaš IC preslab, dobivate manje inzulina nego što vam treba, a to može dovesti do visokih vrijednosti **GUK-a**.
 
-### How to set it
+### Kako postaviti
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**Slika ispod** pokazuje primjer korisnikovog **ICR** i kako se može postaviti u **profilu AAPS-a**. Kod unosa ovih vrijednosti unosimo zadnji dio omjera, pa se omjer inzulina i ugljikohidrata 1:3,5 unosi jednostavno kao „3,5“.
 
-![Profile ICR](../images/v4/Profiles/Profile_ICR.png)
+![ICR u profilu](../images/v4/Profiles/Profile_ICR.png)
 
-If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
+Ako nakon što je obrok probavljen i **IOB** se vratio na nulu, vaš **GUK** ostane viši nego prije jela, vjerojatno je vaš **ICR** preslab (_tj._ broj je previsok i treba ga postupno smanjivati). Suprotno tome, ako je vaš **GUK** niži nego prije jela, **ICR** je prejak (_tj._ broj je premalen i treba ga postupno povećavati).
 
-Assuming your basal rates are correct, you can test by checking if **IOB** is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food you normally eat at that time of day and count its carbs precisely.
+Ako su vaše bazalne stope ispravne, možete testirati tako da provjerite je li **IOB** nula i jeste li u rasponu, pojedete točno poznatu količinu ugljikohidrata i uzmete procijenjenu količinu inzulina prema trenutnom omjeru inzulina i ugljikohidrata. Najbolje je jesti hranu koju inače jedete u to doba dana i precizno izbrojati njezine ugljikohidrate.
 
-## Common questions related to the Profile
+## Česta pitanja o profilu
 
 ```{contents} Common questions related to the Profile
 :depth: 1
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Zašto je važno dobro postaviti profil
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**Zašto je važno dobro postaviti postavke profila? Zar se petlja ne može jednostavno pobrinuti za to?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+Hibridna zatvorena petlja _može_ pokušati prilagoditi isporuku inzulina kako bi smanjila lošu kontrolu glikemije koja nastaje zbog netočnih vrijednosti **Profila**. To može učiniti, na primjer, tako da zadrži isporuku inzulina ako vam prijeti hipo. Ipak, možete postići mnogo bolju kontrolu glikemije ako su postavke vašeg **Profila** već što bliže onome što vašem tijelu treba. To je jedan od razloga zašto **AAPS** koristi ciljeve u koracima za prijelaz s otvorene petlje na hibridnu zatvorenu petlju. Osim toga, bit će trenutaka kada morate otvoriti petlju (zagrijavanje senzora, kvar senzora _itd._), ponekad usred noći, i tada želite da su vam postavke ispravne.
 
-If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
+Ako s **AAPS-om** počinjete nakon korištenja drugog sustava pumpe s otvorenom ili zatvorenom petljom, već ćete imati razumnu predodžbu o vrijednostima za bazalne stope (**BR**), faktore osjetljivosti na inzulin (**ISF**) i omjere inzulina i ugljikohidrata (**ICR**).
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+Ako s injekcija (MDI) prelazite na **AAPS**, dobro je najprije pročitati kako prijeći s MDI na pumpu te prijelaz pažljivo planirati i provesti uz savjet vašeg dijabetološkog tima. Vrlo su korisne knjige ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) autora Johna Walsha & Ruth Roberts i [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) autora Garyja Scheinera.
 
-### What causes high postprandial peaks in closed loop?
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
+### Što uzrokuje visoke vrhove nakon obroka u zatvorenoj petlji?
+Prije svega provjerite bazalnu stopu i napravite test bazalne stope bez ugljikohidrata. Ako je ispravan, a vaš **GUK** pada do ciljne vrijednosti nakon što su ugljikohidrati potpuno apsorbirani, pokušajte u **AAPS-u** neko vrijeme prije obroka postaviti privremeni cilj „Prije obroka“ ili sa svojim endokrinologom razmislite o odgovarajućem vremenu za bolus prije obroka. <br/> Ako je vaš **GUK** previsok nakon obroka i još uvijek previsok nakon što su ugljikohidrati potpuno apsorbirani, sa svojim endokrinologom razmislite o smanjenju **ICR**. Ako je vaš **GUK** previsok dok ima **COB**, a prenizak nakon što su ugljikohidrati potpuno apsorbirani, sa svojim endokrinologom razmislite o povećanju **ICR** i o odgovarajućem vremenu za bolus prije obroka.
 
-### I'm stuck high and the loop does not bring me down
-The possible reasons for **AAPS** not giving enough insulin are:
-* **ISF** is not strong enough
-* Basal rate might not be strong enough
-* A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
-* Automation has been set up and has overridden **AAPS**.
+### GUK mi ostaje visok i petlja ga ne spušta
+Mogući razlozi zašto **AAPS** ne daje dovoljno inzulina su:
+* **ISF** nije dovoljno jak
+* Bazalna stopa možda nije dovoljno jaka
+* Možda se uključila sigurnosna postavka, npr. **maxIOB**. Ili je **SMB** u ovo vrijeme onemogućen, ovisno o vašim postavkama.
+* Postavljena je automatizacija koja je nadjačala **AAPS**.
 
-See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
+Pogledajte i [Podešavanje profila u AAPS-u](../GettingHelp/ProfileTuning.md).
 
-### I have negative IOB, is this an issue ?
-Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
+### Imam negativan IOB, je li to problem?
+Negativan **IOB** znači da je apsolutna količina inzulina (bazal + bolus) u vašem tijelu manja od bazala. Zbog toga će **AAPS** poslati više inzulina čim **GUK** počne rasti, jer smatra da inzulina nedostaje, što poslije može dovesti do niskog **GUK-a**.
 
-Here are some reasons why you may have negative IOB, and what action to take:
-* a too strong basal: tweak your **Profile**
-* too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
-* physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
+Evo nekih razloga zašto možete imati negativan IOB i što učiniti:
+* prejak bazal: podesite svoj **Profil**
+* previše bolusa za prethodni obrok: podesite svoj **Profil** ili provjerite dajete li bolus u pravo vrijeme.
+* DIA za vašu vrstu inzulina postavljen je prekratko, pa se inzulin gomila: podesite ga u [Upravljanje → Postavke inzulina](#Config-Builder-insulin-dia)
+* tjelesna aktivnost: sljedeći put tijekom aktivnosti razmislite o nižem [postotku profila](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md), zbog veće osjetljivosti.
 
-## Manage your Profiles
+## Upravljanje profilima
 
 ```{contents} Operations that you can perform on your **Profiles** in **AAPS**
 :depth: 1
 :local: true
 ```
 (your-aaps-profile-create-and-edit-profiles)=
-### Create and edit Profiles
+### Izrada i uređivanje profila
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
+U **AAPS-u** v4 vaši se profili nalaze na zaslonu **Upravljanje** (donja navigacija) → **Profil**, prikazani kao vrtuljak kartica koje se listaju povlačenjem, s trakom radnji (**➕ Dodaj**, **✏️ Uredi**, **⧉ Kloniraj**, **🗑️ Izbriši**, **▶ Aktiviraj**). Za upravljanje profilom i njegovo aktiviranje pogledajte [Upravljanje profilima i njihovo aktiviranje](#ProfileSwitch-manage-v4). Dolazite iz **AAPS-a** v3, gdje su profili imali svoju karticu? Pogledajte [Što se promijenilo u AAPS-u v4](#v4changes-manage).
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+Dodirom na **✏️ Uredi** otvara se uređivač. Postavite **naziv** i **jedinice** profila, a zatim pomoću kartica ispunite četiri rasporeda:
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
-- **BAS** — basal rates
-- **TARG** — target range
+- **IC** — omjer inzulina i ugljikohidrata (g/J)
+- **ISF** — faktor osjetljivosti na inzulin
+- **BAZ** — bazalne stope
+- **CILJ** — ciljni raspon
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
+![Uređivač profila — kartice IC / ISF / BAZ / CILJ](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+Svaki raspored je popis **vremenskih blokova**: dodajte blok, postavite vrijeme početka i vrijednost, a zatim dodirnite **Spremi**.
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
+Ako mijenjate svoj **Profil**, provjerite uređujete li ispravan **Profil**: kartica profila koji se koristi označena je s **AKTIVAN**, ali kartica odabrana na zaslonu može biti neka druga.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
-### Build a Profile from scratch for a kid
+### Izrada profila od početka za dijete
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+[Pomoćnik profila](#aaps-screens-profile-helper) (izbornik ☰ → **Pomoćnik profila**) može vam pomoći izraditi profil za dijete (do 18 godina).
 
-**Important note:**
+**Važna napomena:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Pomoćnik profila namijenjen je kao pomoć pri pronalaženju početnog profila za vaše dijete. Iako se temelji na skupovima podataka dviju različitih bolnica, uvijek se posavjetujte sa svojim medicinskim timom prije korištenja novog profila!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Pomoćnik profila nudi skupove podataka dviju različitih bolnica za djecu, kako biste pronašli početni profil za svoje dijete do 18 godina.
 
-![Profile Helper Kids 1](../images/v4/Profiles/ProfileHelperKids1.png)
+![Pomoćnik profila za djecu 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change to the **Profile 2** tab.
-5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparison** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
+1. Provjerite jeste li na kartici **Profil 1**.
+2. U **Vrsta profila** provjerite je li odabran „Zadani profil“.
+3. Prilagodite zadani profil (temeljen na skupu podataka bolnice) unosom dobi djeteta i ukupnog TDD-a **ili** težine.
+4. Prijeđite na karticu **Profil 2**.
+5. Pritisnite **Vrsta profila** i odaberite „DPV zadani profil“.
+6. Prilagodite DPV zadani profil (temeljen na skupu podataka druge bolnice) unosom dobi djeteta, ukupnog TDD-a i postotka bazala. Imajte na umu da skup podataka DPV daje samo **bazalne stope**, pa su IC i ISF za ovaj profil prikazani kao nula.
+7. Open the **Comparison** tab. Prikazat će se usporedba dvaju prilagođenih profila (pogledajte snimku zaslona ispod).
+8. Ako želite početi podešavati svoj profil na temelju jednog od ovih prijedloga, koristite gumb **Kloniraj** na dnu usporedbe.
 
-![Profile Helper Kids 2](../images/v4/Profiles/ProfileHelperKids2.png)
+![Pomoćnik profila za djecu 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
-### Switch Profile
+### Zamjena profila
 
-See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Pogledajte [Zamjena profila i postotak profila](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 (your-aaps-profile-clone-profile-switch)=
-### Clone a Profile switch to a new Profile
+### Kloniranje zamjene profila u novi profil
 
-![Profile Switch](../images/Maintenance/TreatmentsView4.png)
+![Zamjena profila](../images/Maintenance/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
+[Povijest tretmana](#aaps-screens-treatments) prikazuje sve prošle **Zamjene profila**. Na kartici **Zamjena profila** možete koristiti prošlu **Zamjenu profila** kao osnovu za izradu novog **Profila**. U tom slučaju vremenski pomak i postotak primijenit će se na novi lokalni profil. Koristite gumb **Kloniraj** prikazan u retku **2**.
 
-You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
+Sada možete otići na [zaslon Profil](#your-aaps-profile-create-and-edit-profiles) (**Upravljanje → Profil**) i urediti novo izrađeni Profil.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Sigurnosna kopija profila
 
-Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
+Budući da su osnovna postavka vašeg sustava petlje, vaši su **Profili** vrlo osjetljivi i nešto što zaista ne želite izgubiti.
 
-* Your **Profiles** are stored in the **AAPS** database.
-* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+* Vaši **Profili** spremljeni su u bazi podataka **AAPS-a**.
+* Kada je postavljen **NSClientV3** (pogledajte [Sinkronizacija](#SetupWizard-synchronization-with-the-reporting-server-and-more)), vaši se **Profili** također automatski prenose u Nightscout.
+* Također su dio [izvezenih postavki](../Maintenance/ExportImportSettings.md). Zato sigurnosnu kopiju čuvajte na sigurnom mjestu.
 
-### Editing Profiles from Nightscout
+### Uređivanje profila iz Nightscouta
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
+Ako je omogućeno, promjene **Profila** napravljene izravno u Nightscoutu mogu se primiti u **AAPS-u**. Postavka se zove „**Primaj spremište profila iz NS-a**“ i dio je opcija **Prihvaćanje podataka iz Nightscouta** (prihvaćanje podataka iz Nightscouta prema zadanim je postavkama isključeno, pogledajte [korak Upravljanje s klijenta u čarobnjaku za postavljanje](../SettingUpAaps/SetupWizard.md)); brzo je možete pronaći pomoću **trake za pretraživanje** na glavnom zaslonu. Dok je upravljanje s klijenta uključeno, ta je postavka skrivena i **AAPS** ne prima promjene profila iz Nightscouta ([zaštićeni način rada](#client-master-control-hardened-mode)); umjesto toga uredite profil na uparenom klijentu ili ga jednom učitajte pomoću **Potpuna sinkronizacija**.
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+To može biti korisno kada namjeravate napraviti velike promjene opsežnijeg **Profila**. Lakše ih je unijeti putem web sučelja, _npr._ za ručno kopiranje podataka iz tablice.
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Za to je, međutim, važno u uređivaču Nightscouta klonirati cijeli **zapis u bazi podataka** koji se sastoji od nekoliko profila (plava strelica na snimci zaslona ispod). Novi zapisi u bazi podataka tada nose trenutni datum. Nakon spremanja promijenjeni/novi **Profil** može se aktivirati u **AAPS-u** uobičajenom [zamjenom profila](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Clone database records](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
+![Kloniranje zapisa u bazi podataka](../images/v4/Profiles/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
-### Compare two Profiles
+### Usporedba dvaju profila
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+[Pomoćnik profila](#aaps-screens-profile-helper) (izbornik ☰ → **Pomoćnik profila**) možete koristiti i za usporedbu dvaju različitih profila ili zamjena profila (postotak jednog od vaših profila koji je ranije korišten u [zamjeni profila](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
-![Profile Helper 1](../images/v4/Profiles/ProfileHelper1.png)
+![Pomoćnik profila 1](../images/v4/Profiles/ProfileHelper1.png)
 
-1. Make sure you are on the **Profile 1** tab.
-2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
-3. Choose the **Profile** you want to compare from.
-4. Change to the **Profile 2** tab.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
-6. Choose the **Profile Switch** you want to compare to.
-7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
+1. Provjerite jeste li na kartici **Profil 1**.
+2. U **Vrsta profila** odaberite „Dostupan profil“ kako biste birali između svih spremljenih **Profila**.
+3. Odaberite **Profil** iz kojeg želite usporediti.
+4. Prijeđite na karticu **Profil 2**.
+5. U **Vrsta profila** odaberite „Zamjena profila“ kako biste birali iz povijesti svih svojih **Zamjena profila**.
+6. Odaberite **Zamjenu profila** s kojom želite usporediti.
+7. Open the **Comparison** tab. Prikazat će se usporedba dvaju profila (pogledajte snimku zaslona ispod).
 
-![Profile Helper 2](../images/v4/Profiles/ProfileHelper2.png)
+![Pomoćnik profila 2](../images/v4/Profiles/ProfileHelper2.png)
