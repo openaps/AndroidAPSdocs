@@ -67,6 +67,8 @@ xDrip은 ESEL처럼 제조사 앱의 알림을 읽을 수 있습니다. 백필�
 
 **AAPS**는 중간에 다른 앱 없이, 공식 Eversense 앱이 올린 알림에서 혈당값을 직접 읽을 수 있습니다. 백필을 사용할 수 없습니다.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - [**구성 → 혈당 출처**](#Config-Builder-bg-source)에서 **알림 읽기**를 선택하고, 요청이 나오면 **AAPS**에 알림 접근 권한을 허용하십시오.
 - Eversense 앱의 알림에 현재 혈당값이 표시되는지 확인하십시오.
 
