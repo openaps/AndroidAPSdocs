@@ -129,9 +129,9 @@
 
 ![비교 연산자](../images/Automations/automation_comparison_operators.png)
 
-**예 1:** **"보다 작은"** "-0.1mmol/L" (또는 "-2mg/dL") 조건을 만들면:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-**-0.1 (-2)보다 확실히 작은** 모든 숫자에서 **자동화**를 실행합니다. 여기에는 -0.2, -0.3, -0.4 (-4, -6, -8) 같은 숫자가 포함됩니다. -0.1 (-2) 자체는 이 조건에 **포함되지 않는다는** 것을 기억하십시오. ("-0.1mmol/L (-2 mg/dL)과 같거나 작은" 조건이라면 -0.1 mmol/L 또는 -2 mg/dL도 _포함됩니다_).
+**-0.1 (-2)보다 확실히 작은** 모든 숫자에서 **자동화**를 실행합니다. 여기에는 -0.2, -0.3, -0.4 (-4, -6, -8) 같은 숫자가 포함됩니다. -0.1 (-2) 자체는 이 조건에 **포함되지 않는다는** 것을 기억하십시오. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **예 2:** "보다 큰" -0.1mmol/L (-2mg/dL) 조건을 만들면:
 
@@ -306,7 +306,7 @@ none
 (automations-low-glucose-temp-target)=
 ### 저혈당 임시 목표
 
-이 **자동화**는 **혈당**이 특정 기준값 아래로 떨어지면 자동으로 **임시 목표**를 실행합니다. 여기서는 혈당이 70 mg/dL보다 낮으면 110 mg/dL 목표를 30분 동안 시작합니다:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![예: 저혈당 규칙](../images/Automations/automation_example_low_glucose_rule.png)
 
