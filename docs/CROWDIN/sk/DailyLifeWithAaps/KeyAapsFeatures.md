@@ -18,7 +18,7 @@ Ako zvoliť režim okruhu a čo znamenajú ďalšie ikony na obrázku (4 až 6),
 
 Návrhy sa nevykonajú automaticky (ako pri uzavretom okruhu). Návrhy musí používateľ zadať manuálne do pumpy (ak sa používa virtuálna pumpa) alebo pomocou tlačidla, ak je **AAPS** pripojený k reálnej pumpe.
 
-Keď má **AAPS** návrh, v spodnej navigácii hlavnej obrazovky sa zobrazí položka **Okruh** s odznakom. Ťuknite na ňu, prečítajte si návrh („Prijať nový dočasný bazál“) s dávkou, trvaním a dôvodom a potom stlačte **Vykonať**, aby sa vykonal:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Ťuknite na ňu, prečítajte si návrh („Prijať nový dočasný bazál“) s dávkou, trvaním a dôvodom a potom stlačte **Vykonať**, aby sa vykonal:
 
 ![Návrh otvoreného okruhu s tlačidlom Vykonať](../images/screens/loop_tab.png)
 
