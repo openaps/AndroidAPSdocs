@@ -121,6 +121,8 @@ Tryck på **Kassera pod** på pumpskärmen och bekräfta. Insulinleveransen stop
 
 När ett kritiskt larm har stoppat podden, erbjuder larmet i stället **Inaktivera pod**. Om du trycker på den kasseras podden på samma sätt.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Larm och aviseringar
