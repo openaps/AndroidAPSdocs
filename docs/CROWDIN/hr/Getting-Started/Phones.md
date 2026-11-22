@@ -30,7 +30,7 @@ Dokument je samo za čitanje. Pomoću CTRL-F možete pretraživati tekst u Googl
 
 Da biste zabilježili svoj test neke kombinacije uređaja, ispunite ovaj [obrazac](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Nakon što ispunite obrazac, tablica se automatski ažurira svakih 5 minuta.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the page on [how to get help](../GettingHelp/WhereCanIGetHelp.md).
+Za sve probleme s tablicom obratite se osobi koja je održava, *@theodoor5137*, na Discordu ili pogledajte stranicu [Gdje mogu dobiti pomoć?](../GettingHelp/WhereCanIGetHelp.md).
 
 ## Nisam pronašao svoj telefon
 
