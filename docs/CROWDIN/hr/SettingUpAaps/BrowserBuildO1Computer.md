@@ -17,7 +17,7 @@ Koristite računalo (podržani su Windows/Mac/Linux)
 
 Otvorite web-stranicu [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple Web Server<br/> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.<br/> If your browser asks whether to open the store app, allow it.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
+Instalirajte Simple Web Server<br/> Ako koristite Windows ili Mac, možete ga instalirati iz trgovine Microsoft Store ili Mac App Store.<br/> Ako vas preglednik pita želite li otvoriti aplikaciju trgovine, dopustite to.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)<br/>
 
 Primjer na Macu:
 
@@ -31,7 +31,7 @@ Primjer na Macu:
 
 - Ako vidite ovaj zaslon, poslužitelj je pokrenut.<br/><br/> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)<br/><br/>
 
-- Ne zatvarajte Simple Web Server. Please switch to your browser and open<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
+- Ne zatvarajte Simple Web Server. Prebacite se u preglednik i otvorite<br/> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)<br/><br/>
 
 - Za sljedeće korake pogledajte videozapis ispod, od 1 minute i 37 sekundi.
 
