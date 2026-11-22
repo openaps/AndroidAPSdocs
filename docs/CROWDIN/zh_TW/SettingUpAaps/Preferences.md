@@ -31,6 +31,7 @@
 - 預設情況下，**AAPS** 會使用手機的語系（建議設定）。
 
 - 如果您想讓 **AAPS** 使用不同於手機的語系，請在此選擇。在 Android 13 及更新版本中，**AAPS** 會在 Android 中註冊為獨立的應用程式語系，因此所有畫面、主畫面和小工具都會使用該語系，數字的顯示方式也會隨之變更。
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - 變更語系後，**AAPS** 的文字會立即切換為新的語系。如果部分文字仍顯示舊語系，請重新啟動 **AAPS**。
 - Android 12 不會顯示這項設定：**AAPS** 一律使用手機的語系。
@@ -86,6 +87,10 @@
 
 ![設定 > 保護](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### 主密碼
 
@@ -110,9 +115,9 @@
 
 ### 應用程式保護
 
-如果應用程式受到保護，您必須輸入密碼或使用手機的生物辨識驗證才能開啟 **AAPS**；超過[保護逾時](#Preferences-password-and-pin-retention)時間後重新開啟應用程式時，也必須再次驗證。
+如果應用程式受到保護，您必須輸入密碼或使用手機的生物辨識驗證才能開啟 **AAPS**；超過[保護逾時](#Preferences-password-and-pin-retention)時間後重新開啟應用程式時，也必須再次驗證。 Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS**如果輸入錯誤密碼將立即關閉，但如果先前成功打開，將仍會在背景運行。
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### 注射保護
 
