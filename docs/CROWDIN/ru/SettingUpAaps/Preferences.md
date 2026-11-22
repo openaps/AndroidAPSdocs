@@ -31,6 +31,7 @@
 - По умолчанию **AAPS** использует язык телефона (рекомендуется).
 
 - Если вы хотите, чтобы язык **AAPS** отличался от языка телефона, выберите его здесь. В Android 13 и новее **AAPS** регистрирует его в Android как собственный язык приложения, поэтому все его экраны, главный экран, виджеты и формат чисел следуют ему.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Когда вы меняете язык, тексты **AAPS** сразу переключаются на новый язык. Если некоторые тексты все еще на старом языке, перезапустите **AAPS**.
 - В Android 12 эта настройка не показана: **AAPS** всегда использует язык телефона.
@@ -86,6 +87,10 @@
 
 ![Настройки > Защита](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Master password
 
@@ -110,9 +115,9 @@
 
 ### Application protection
 
-Если приложение защищено, для открытия **AAPS** нужно ввести пароль или использовать биометрическую аутентификацию телефона, а также снова, когда вы возвращаетесь в приложение после окончания [тайм-аута защиты](#Preferences-password-and-pin-retention).
+Если приложение защищено, для открытия **AAPS** нужно ввести пароль или использовать биометрическую аутентификацию телефона, а также снова, когда вы возвращаетесь в приложение после окончания [тайм-аута защиты](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** сразу закроется, если ввести неверный пароль, но продолжит работать в фоне, если до этого был успешно открыт.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Bolus protection
 
