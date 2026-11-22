@@ -57,7 +57,7 @@ Radnje koje se mogu pokrenuti s klijenta: **bolus**, **ugljikohidrati / eUH**, *
 - **Glavni uređaj** koristi uobičajenu verziju `full` aplikacije **AAPS** i spojen je na vašu pumpu.
 - **Glavni uređaj** koristi **NSClientV3** s vašim Nightscoutom i prikazuje *povezano*. Dajte mu **administratorski token** vašeg Nightscouta: s njim glavni uređaj može za svakog klijenta izraditi vlastiti token i prikazati ga klijentu kao QR kod.
 - **Klijent** koristi **[AAPSClient](AapsClient.md)** (ili **AAPSClient2** / **AAPSClient3** za dodatne pacijente – pogledajte [O aplikacijama AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)). Mora koristiti **isti** Nightscout. Ako ga postavite QR kodom glavnog uređaja, klijent dobiva adresu Nightscouta i token od glavnog uređaja; inače najprije sami postavite **NSClientV3** na njemu.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. Dok je upravljanje s klijenta uključeno, **AAPS** drži WebSockets uključenima, na glavnom uređaju i na uparenim klijentima. Your Nightscout host must support websockets.
+- Websockets su **obavezni** za daljinsko upravljanje s **AAPSClienta**, na oba telefona. Naredba vrijedi samo nekoliko sekundi: bez WebSocketsa ne uspije, umjesto da stigne prekasno. Dok je upravljanje s klijenta uključeno, **AAPS** drži WebSockets uključenima, na glavnom uređaju i na uparenim klijentima. Vaš Nightscout poslužitelj mora podržavati WebSockets.
 ```
 
 Uparivanje i sinkronizacija dvije su različite stvari:
@@ -107,7 +107,7 @@ Svatko tko vidi QR kod može čitati vaš Nightscout, a kod koji uparuje sadrži
 
 #### S PIN-om
 
-Dodirnite **U redu**: glavni uređaj prikazuje 8-znamenkasti **PIN za uparivanje**, u dvije skupine po četiri znamenke (na primjer `1234 5678`). Ovaj PIN je **jednokratan** i **istječe nakon otprilike dvije minute**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Dodirnite **U redu**: glavni uređaj prikazuje 8-znamenkasti **PIN za uparivanje**, u dvije skupine po četiri znamenke (na primjer `1234 5678`). Ovaj PIN je **jednokratan** i **istječe nakon otprilike dvije minute**. Kao i kod QR koda, glavni uređaj odbija naziv klijenta koji je već na njegovom popisu: svaki klijent dobiva vlastiti Nightscout token pod svojim nazivom.
 
 ![Zaslon za uparivanje na glavnom uređaju s jednokratnim PIN-om (ovdje prikazani PIN je istekao)](../images/v4/ClientMaster/pairing_pin_master.png)
 
@@ -134,7 +134,7 @@ Usmjerite kameru prema kodu. Klijent prikazuje što kod radi – adresu Nightsco
 
 ```{admonition} Scanning is available on Android
 :class: note
-A computer without camera: use the PIN there.
+Računalo bez kamere: ondje koristite PIN.
 ```
 
 #### Unos PIN-a
@@ -303,7 +303,7 @@ Unutar postavki ista mala **ikona mobitela** označava pojedine postavke koje se
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Budući da je glavni uređaj nadležan za spremljenu vrijednost, za uređivanje stavke konfiguracije kojom upravlja glavni uređaj ili dvosmjerne postavke s klijenta glavni uređaj mora biti **dostupan**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Budući da je glavni uređaj nadležan za spremljenu vrijednost, za uređivanje stavke konfiguracije kojom upravlja glavni uređaj ili dvosmjerne postavke s klijenta glavni uređaj mora biti **dostupan**. Kada je glavni uređaj izvan mreže, te su kontrole na klijentu onemogućene (pogledajte [Kada je glavni uređaj izvan mreže](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
@@ -338,9 +338,9 @@ Za probleme s Nightscoutom / sinkronizacijom najprije pogledajte [Rješavanje pr
 
 ### Pairing
 
-**The QR code options cannot be chosen in the New client dialog**
+**Opcije s QR kodom ne mogu se odabrati u dijalogu Novi klijent**
 
-The dialog says why:
+Dijalog objašnjava zašto:
 
 - *Nije administratorski token*: dajte glavnom uređaju administratorski token vašeg Nightscouta ili dodajte klijenta pomoću **PIN-a**.
 - *Nije povezano*: pričekajte dok glavni uređaj ne prikaže *povezano* u **NSClientV3**.
@@ -353,25 +353,25 @@ Jedan od vaših vlastitih Nightscout tokena zove se `aaps-` i ovaj naziv. Odaber
 
 Odaberite drugi naziv ili najprije uklonite tog klijenta.
 
-**The client says "This code is from another AAPS version"**
+**Klijent kaže „Ovaj kod je iz druge verzije AAPS-a“**
 
 Glavni uređaj i klijent moraju imati **istu** verziju **AAPS-a**. Ažurirajte stariji.
 
-**The client says "This code has expired"**
+**Klijent kaže „Ovaj kod je istekao“**
 
 Kod koji uparuje vrijedi oko dvije minute. Ponovno dodajte klijenta na glavnom uređaju da biste dobili novi kod.
 
-**The client says "This phone is paired already"**
+**Klijent kaže „Ovaj telefon je već uparen“**
 
 Najprije ga rasparite (**Upravljanje → Upari s glavnim uređajem → Raspari**), zatim ponovno skenirajte. Kod **samo Nightscout** radi i na uparenom telefonu.
 
-**Pairing is cancelled with "The pairing secret could not be stored"**
+**Uparivanje je otkazano porukom „Tajni ključ za uparivanje nije bilo moguće spremiti“**
 
-Ništa nije promijenjeno. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Ništa nije promijenjeno. Ponovno pokrenite uparivanje. Ako i dalje ne uspijeva, ponovno pokrenite **AAPSClient** i pokušajte još jednom.
 
-**The client says it is not paired**
+**Klijent kaže da nije uparen**
 
-Ponovno se uparite putem **Upravljanje → Upari s glavnim uređajem**. Check that the client is **Active** in the master's **Authorized clients** list.
+Ponovno se uparite putem **Upravljanje → Upari s glavnim uređajem**. Provjerite je li klijent **Aktivan** na popisu **Ovlašteni klijenti** na glavnom uređaju.
 
 **Nakon uparivanja ništa se ne događa**
 
@@ -379,37 +379,37 @@ Provjerite je li **Dopusti upravljanje s klijenta** UKLJUČENO na glavnom uređa
 
 ### Naredbe
 
-**The client says the master is offline, or commands fail**
+**Klijent kaže da je glavni uređaj izvan mreže ili naredbe ne uspijevaju**
 
-Check that:
+Provjerite:
 
-- the master phone is awake and **AAPS** is running,
-- both phones are connected in **NSClientV3**, to the same Nightscout site,
-- **websockets** are enabled on both phones.
+- je li telefon glavnog uređaja budan i radi li **AAPS**,
+- jesu li oba telefona povezana u **NSClientV3**, na istu Nightscout stranicu,
+- jesu li **WebSockets** omogućeni na oba telefona.
 
-Websockets are **mandatory** for remote control from **AAPSClient**. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+WebSockets su **obavezni** za daljinsko upravljanje iz **AAPSClienta**. Ako se WebSocket veza stalno prekida, daljinsko upravljanje ne radi. Pogledajte [Rješavanje problema s NSClientom](../GettingHelp/TroubleshootingNsClient.md).
 
-**A command is rejected by the master**
+**Glavni uređaj odbija naredbu**
 
-The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
+Glavni uređaj ponovno provjerava svaku naredbu prema svom trenutnom stanju: na primjer, odabrani profil više ne postoji ili vrsta pumpe ne odgovara. Provjerite na glavnom uređaju.
 
 **Tretmani uneseni na Nightscout web stranici ne primjenjuju se**
 
-This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
+To je očekivano u [zaštićenom načinu rada](#client-master-control-hardened-mode). Umjesto toga unesite ih na uparenom klijentu.
 
-### Nightscout tokens and settings
+### Nightscout tokeni i postavke
 
-**The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
+**Klijent kaže „Glavni uređaj je to odbio: ovaj telefon piše u Nightscout s drugim tokenom, a ne sa svojim“**
 
 Klijent je prije koristio vlastiti Nightscout token, a sada zapisuje drugim, na primjer nakon što je token upisan u njegove postavke Nightscouta. Uklonite klijenta na glavnom uređaju i ponovno ga dodajte (pogledajte [Vlastiti Nightscout token klijenta](#client-master-control-own-token)).
 
-**The client's card shows "Uses the Nightscout token …" in red**
+**Kartica klijenta crvenom bojom prikazuje „Koristi Nightscout token …“**
 
-Klijent i dalje zapisuje tokenom koji ima više prava nego što mu treba. The master sends the client its own token after pairing, but only if the master has an admin token. Provjerite token glavnog uređaja ili ponovno postavite klijenta QR kodom.
+Klijent i dalje zapisuje tokenom koji ima više prava nego što mu treba. Glavni uređaj nakon uparivanja šalje klijentu njegov vlastiti token, ali samo ako glavni uređaj ima administratorski token. Provjerite token glavnog uređaja ili ponovno postavite klijenta QR kodom.
 
-**The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
+**Dnevnik NSClienta na klijentu prikazuje „✕ SETTINGS … refused“, a njegove postavke više ne slijede glavni uređaj**
 
-Netko drugi je zapisao dokument s postavkama glavnog uređaja ili glavni uređaj ima novi ključ (na primjer nakon što su mu podaci obrisani). A paired client takes the new key by itself the next time it connects to Nightscout. Telefonu koji samo čita Nightscout ponovno treba QR kod glavnog uređaja (**Samo čitanje Nightscouta → prikaži kod**).
+Netko drugi je zapisao dokument s postavkama glavnog uređaja ili glavni uređaj ima novi ključ (na primjer nakon što su mu podaci obrisani). Upareni klijent sam preuzima novi ključ sljedeći put kada se spoji na Nightscout. Telefonu koji samo čita Nightscout ponovno treba QR kod glavnog uređaja (**Samo čitanje Nightscouta → prikaži kod**).
 
 **Klijent više ne može čitati Nightscout**
 
