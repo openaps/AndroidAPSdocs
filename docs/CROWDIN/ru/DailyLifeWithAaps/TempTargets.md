@@ -8,26 +8,26 @@
 
 Временные цели можно задать в таких границах:
 
-|          | Временная цель         |
-| -------- | ---------------------- |
-| Минимум  | 4 mmol/L or 72 mg/dL   |
-| Максимум | 10 mmol/L or 180 mg/dL |
+|          | Временная цель           |
+| -------- | ------------------------ |
+| Минимум  | 4 ммоль/л или 72 мг/дл   |
+| Максимум | 10 ммоль/л или 180 мг/дл |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS** имеет три встроенные предустановки **временной цели**: для физической нагрузки (**Нагрузка**), для еды (**Ожидаемый прием пищи**) и для прогнозируемой гипогликемии (**Гипо**). Они находятся на экране **Временная цель** (**Управление** → **Временная цель**), который также можно открыть простым нажатием на **плашку цели** на главном экране.
 
 Пользователи должны иметь реалистичные ожидания при выборе **Временной цели** в **AAPS**. Успех достижения желаемого целевого показателя **ГК** будет зависеть от множества факторов: точности настроек **AAPS**, общего контроля уровня **ГК**, **количества активного инсулина IOB**, параметра чувствительности к инсулину, резистентности к инсулину, интенсивности нагрузок и т. д.
 
 Для достижения желаемого значения **ГК** может потребоваться около 30 минут или больше с момента активации **Временной Цели**. **AAPS** не в состоянии достичь целевой **ГК** немедленно, и пользователи должны помнить об этом при выборе **Временной цели**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+В разделах ниже кратко описаны функции **Временной цели Нагрузка**, **Временной цели Ожидаемый прием пищи** и **Временной цели Гипо**. Показанные значения – это заводские значения по умолчанию: вы можете [настроить каждую предустановку](#TempTargets-change-preset-defaults) под свои потребности.
 
 ### ВЦ - Нагрузка
 
 ![ВЦ Нагрузка](../images/v4/TempTarget/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**Целевая ГК (предустановка по умолчанию, можно изменить)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS будет стремиться к 140 мг/дл или 7,8 ммоль/л в течение 1 ч 30 мин
 
 **Другие соображения, которые пользователи могут учесть при выборе**:
 
@@ -42,15 +42,15 @@ AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
 
 - *выбрать* эту **ВЦ** за 1-2 часа до планируемой нагрузки, чтобы обеспечить уменьшение активного инсулина IOB (правильное время для этой ВЦ индивидуально); и
 - *выбрать* временный Профиль (пониженный) на время запланированного мероприятия для обеспечения понижения активного инсулина **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *убедиться*, что **ВЦ** будет *отключена* незадолго до нагрузки, потому что **IOB** уже уменьшен, а у некоторых пользователей после нагрузки **ГК** быстро растет.
 
 ### ВЦ - Ожидаемый прием пищи
 
-![TT Eating soon](../images/v4/TempTarget/TempTarget1.png)
+![ВЦ Ожидаемый прием пищи](../images/v4/TempTarget/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**Целевая ГК (предустановка по умолчанию, можно изменить)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS будет стремиться к 90 мг/дл или 5,0 ммоль/л в течение 45 минут
 
 **Другие соображения, которые пользователи могут учесть при выборе**:
 
@@ -65,9 +65,9 @@ AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
 
 ![TT Hypo](../images/v4/TempTarget/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**Целевая ГК (предустановка по умолчанию, можно изменить)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS будет стремиться к 160 мг/дл или 8,9 ммоль/л в течение 1 часа
 
 **Другие соображения, которые пользователи могут учесть при выборе**:
 
@@ -78,67 +78,67 @@ AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## Установка временных целей и управление ими (Управление → Временная цель)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+В **AAPS** v4 вы управляете **предустановками** ВЦ и запускаете временную цель с экрана **Управление** (нижняя панель навигации) → **Временная цель** (*«Управление и установка временных целей»*).
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![Экран «Временная цель» – карусель предустановок, редактор и панель действий](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+Экран состоит из трех частей:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **Карусель предустановок** (вверху) – листайте свои предустановки ВЦ. На каждой карточке показаны **название**, **цель** и **продолжительность** предустановки; текущая работающая ВЦ выделена.
+2. **Редактор** (в середине) – **Временная цель** и **Продолжительность**, которые будут фактически применены, а также дата и время **Активации**.
+3. **Панель действий** (внизу) – кнопки **➕ добавить**, **‘️ удалить** и **▶ активировать**.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+Выбор карточки предустановки загружает ее **цель** и **продолжительность** в редактор.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} Встроенные и собственные предустановки :class: note Встроенные предустановки – **Ожидаемый прием пищи**, **Нагрузка** и **Гипо** – есть всегда, и их **нельзя удалить** (но можно изменить их значения и сохранить). Все предустановки, которые вы создаете сами, являются **собственными**, их можно свободно редактировать или удалять.
 
-    <br />### Activating a temporary target
+    <br />### Активация временной цели
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    Пролистайте до нужной предустановки (ее значения загрузятся в редактор), при необходимости измените **цель**/**продолжительность** в редакторе, затем нажмите **▶ Активировать**. Перед запуском появится подтверждение с точной целью, продолжительностью и причиной:
     
     ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    После подтверждения временная цель начинается сразу (или в выбранное время **Активации**) и действует заданную **продолжительность**.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} Изменение чисел действует один раз – предустановка не меняется
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    **Цель** и **продолжительность** в редакторе – это значения, которые **Активировать** применит *прямо сейчас*. Если вы их измените, это изменение **временное**: оно действует только для этой активации и **не меняет сохраненную предустановку**. Так можно «подправить и активировать» разовую ВЦ (например, сегодня активировать *Нагрузку* с немного другой целью), не меняя предустановку навсегда.
     
 
-### Saving changes to a preset
+### Сохранение изменений в предустановке
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+Если вы *хотите* сохранить измененное значение, нажмите **Сохранить**: когда значения в редакторе отличаются от выбранной предустановки, на верхней панели инструментов появляется значок **Сохранить**. Нажатие на него записывает текущие **цель** и **продолжительность** (и название, для собственных предустановок) в выбранную предустановку. Для встроенных предустановок на панели действий также появляется кнопка **Вернуть значения по умолчанию** (↺): она возвращает значения предустановки по умолчанию.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![Экран «Временная цель» со значком «Сохранить» и кнопкой «Вернуть значения по умолчанию»](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+Итак, простое правило:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **Активировать** → использовать числа **один раз** (предустановка не меняется).
+- **Сохранить** → сделать числа **новыми значениями по умолчанию** предустановки.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+Чтобы вернуть встроенную предустановку к заводскому виду, выберите ее и нажмите кнопку **↺ Вернуть** – она появляется на панели действий только для **встроенной** предустановки, значения которой сейчас отличаются от заводских, и восстанавливает исходные **цель** и **продолжительность** этой предустановки.
 
-### Adding and removing presets
+### Добавление и удаление предустановок
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ Добавить** – создать **новую собственную предустановку** из текущих значений редактора. Новая карточка появится в карусели.
+- **‘️ Удалить** – удалить выбранную **собственную** предустановку. Встроенные предустановки (*Ожидаемый прием пищи*, *Нагрузка*, *Гипо*) удалить нельзя.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Когда у вас есть хотя бы две **собственные** предустановки, можно также изменить их порядок в карусели: нажмите значок **Изменить порядок** (⇅) на верхней панели, перемещайте центральную карточку **кнопками ◀ / ▶**, затем подтвердите нажатием **✓**. Встроенные предустановки остаются на своих местах – перемещать можно только собственные предустановки. (Элементы управления выглядят так же, как при [изменении порядка профилей](ProfileSwitch-ProfilePercentage.md).)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+Ваши предустановки входят в синхронизируемую конфигурацию, поэтому они общие для основного телефона и сопряженных клиентов.
 
-### Other ways to set a temporary target
+### Другие способы установить временную цель
 
-A temporary target can also be set without opening this screen:
+Временную цель можно установить и без открытия этого экрана:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- **переключателями ВЦ в диалоге «Углеводы»** – см. [ниже](#TempTargets-carbs-dialog),
+- **кнопкой предустановки на [панели быстрого запуска](QuickLaunch.md)** – категория *Предустановки временных целей* в *Настроить быстрый запуск* дает кнопку для каждой вашей предустановки, которая срабатывает одним нажатием,
+- со **смарт-часов Wear OS** (пункт меню / плитка **Временная цель**),
+- с сопряженного **клиента** – см. [Управление «основной телефон ↔ клиент» (подписанное удаленное управление)](../RemoteFeatures/ClientMasterControl.md),
+- как часть **[сценария](Scenes.md)** (действие *Временная цель*), или
+- правилом **Автоматизации** (*Начать врем цель* / *Остановить врем цель*).
 
 * * *
 
@@ -146,42 +146,42 @@ A temporary target can also be set without opening this screen:
 
 ## Как выбрать временную цель?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+Самый быстрый способ – нажать на **плашку цели** на главном экране (она показывает ваш текущий целевой диапазон):
 
-![Target chip on the main screen](../images/v4/TempTarget/TempTarget6.png)
+![Плашка цели на главном экране](../images/v4/TempTarget/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+Откроется экран **Временная цель**, описанный выше: пролистайте до предустановки и нажмите **▶ Активировать**. Этот же экран доступен через **Управление** → **Временная цель**.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= При вводе углеводов не нужно открывать экран **Временная цель**: в **диалоге «Углеводы»** (**Терапия** → **Углеводы**) вверху есть переключатели **Включить ВЦ Гипо**, **Включить ВЦ Ожидаемый прием пищи** и **Включить ВЦ Нагрузка**. Включите один из них, и соответствующая предустановка будет активирована вместе с вводом углеводов:
 
-![TT toggles in the Carbs dialog](../images/v4/TempTarget/TempTarget5.png)
+![Переключатели ВЦ в диалоге «Углеводы»](../images/v4/TempTarget/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} Автоматическая ВЦ Гипо
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    Если вы открываете **диалог «Углеводы»**, когда ваша глюкоза ниже 72 мг/дл (4 ммоль/л), **AAPS** сам заранее включает переключатель **Включить ВЦ Гипо** (если только уже не работает более высокая временная цель с более долгим оставшимся временем).
 
 (TempTargets-change-preset-defaults)=
 
 ## Как изменить временную цель по умолчанию и переопределить её своими собственными значениями?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+**Цель** и **продолжительность** каждой предустановки редактируются прямо на экране **Временная цель** – отдельного пункта в настройках для этого больше нет:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. Откройте экран **Временная цель** (нажмите на плашку цели или **Управление** → **Временная цель**).
+2. Пролистайте до предустановки, которую хотите изменить.
+3. Измените **Временная цель** и/или **Продолжительность** в редакторе.
+4. Нажмите значок **Сохранить**, который появится на верхней панели инструментов.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/v4/TempTarget/TempTarget7.png)
+![Редактирование предустановки – значок «Сохранить» на панели инструментов, «Вернуть» на панели действий](../images/v4/TempTarget/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+Пока значения в редакторе отличаются от заводских значений встроенной предустановки, на панели действий также появляется кнопка **↺ Вернуть** – нажмите ее, чтобы восстановить исходные цель и продолжительность предустановки.
 
 ## Как отменить временную цель?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+Пока работает временная цель, плашка цели на главном экране показывает цель и оставшееся время. Нажмите на нее – на экране **Временная цель** работающая предустановка отмечена как **АКТИВНЫЙ**, а в конце нижней панели инструментов, слева от кнопки **▶ Активировать**, появляется красная кнопка **✗ Отмена**. Нажмите ее и подтвердите:
 
-![Cancelling a running temp target](../images/v4/TempTarget/TempTarget9.png)
+![Отмена работающей временной цели](../images/v4/TempTarget/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+Работающую временную цель можно также остановить со **смарт-часов Wear OS**, с сопряженного **клиента** или правилом **Автоматизации** (*Остановить врем цель*).
 
 (TempTargets-hypo-temp-target)=
 
@@ -191,13 +191,13 @@ A running temporary target can also be stopped from a **Wear OS watch**, from a 
 
 Иногда, при потреблении углеводов на купирование гипогликемии, может быстро повыситься **ГК** пользователя, и **AAPS** скорректирует быстрорастущую **ГК**, включив **SMB**.
 
-Некоторые пользователи не хотят, чтобы во время **Временной цели Гипо** подавались **SMB**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+Некоторые пользователи не хотят, чтобы во время **Временной цели Гипо** подавались **SMB**. Для этого отключите *«Включить SMB при высокой временной цели»* в **Настройки** → **OpenAPS SMB** (см. ниже):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Расширенная настройка, цель 9: пользователь может включить *«Высокая временная цель повышает чувствительность»* для **временных целей** 100 мг/дл (5,6 ммоль/л) или выше в OpenAPS SMB, тогда **AAPS** будет более чувствительным.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Расширенная настройка, цель 9: пользователь может отключить *«Включить SMB при высокой временной цели»*, тогда даже если у **AAPS** COB > 0, включены «Включить SMB при низкой временной цели» или «Всегда включать супер микро болюс SMB» и активен OpenAPS SMB, **AAPS** не будет подавать SMB, пока активны высокие временные цели.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+Примечание: если вы открываете **диалог «Углеводы»**, когда ваша глюкоза крови ниже 72 мг/дл или 4 ммоль/л, **AAPS** автоматически заранее включает переключатель **Включить ВЦ Гипо**.
 
 (TempTargets-activity-temp-target) =
 
@@ -207,30 +207,30 @@ Note: if you open the **Carbs dialog** while your blood glucose is less than 72 
 
 Чтобы упростить управление временной целью **Нагрузка**, пользователь может настроить цель по умолчанию **Временная Цель Нагрузка** для повышения уровня **ГК** за счет снижения использования инсулина, чтобы замедлить падение **ГК** и избежать гипогликемии.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Все люди разные, когда речь идет о достижении стабильного контроля уровня глюкозы во время тренировки. См. также [Раздел Спорт](#FAQ-sports) в Часто задаваемых вопросах.
+Новым пользователям **AAPS** может понадобиться поэкспериментировать и подобрать под себя настройки по умолчанию для **Временной цели Нагрузка**, чтобы эта функция работала для них наилучшим образом. Все люди разные, когда речь идет о достижении стабильного контроля уровня глюкозы во время тренировки. См. также [Раздел Спорт](#FAQ-sports) в Часто задаваемых вопросах.
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Некоторые пользователи также предпочитают активировать **Смену профиля** (уменьшение профиля < 100%, чтобы **AAPS** подавал меньше инсулина) до и во время **Временной цели Нагрузка**. Можно запустить и то и другое за один шаг: нажмите на название профиля на главном экране, нажмите круглую кнопку **▶**, задайте **В процентах** меньше 100% и **Продолжительность**, затем включите **Временная цель / Нагрузка**. См. [Изменение процента профиля](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. В этом случае **AAPS** будет более чувствительным.
+Расширенная настройка, цель 9: пользователи могут включить *«Высокая временная цель повышает чувствительность»* для **временных целей** 100 мг/дл (5,6 ммоль/л) или выше в OpenAPS **SMB**. Цель 99 мг/дл (5,5 ммоль/л) – это обычная цель, ни высокая, ни низкая. В этом случае **AAPS** будет более чувствительным.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+Кроме того, если *«Включить SMB при высокой временной цели»* отключено, **AAPS** не будет подавать **SMB**, даже при COB > 0, включенных *«Включить SMB при низкой временной цели»* или *«Всегда включать супер микро болюс SMB»* и активном OpenAPS **SMB**.
 
 (TempTargets-eating-soon-temp-target)=
 
 ## Временная цель Ожидаемый прием пищи
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Временная цель Ожидаемый прием пищи** помогает плавно снизить **ГК** и обеспечить достаточно **IOB** перед едой.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+Это может быть важным инструментом для пользователей, которые не делают предварительный болюс, однако эффективность **Временной цели Ожидаемый прием пищи** зависит от ряда факторов, в том числе: от настроек пользователя, от того, придерживается ли он низкоуглеводной диеты, и от того, использует ли он быстрый инсулин (например, Fiasp или Lyumjev), чтобы не делать предварительный болюс. Обычно, пока у пользователей нет опыта работы с **AAPS**, им следует делать предварительный болюс при использовании **Временной цели Ожидаемый прием пищи**, особенно если они едят много углеводов.
 
 Подробнее о режиме «Ожидаемый прием пищи» можно прочитать в статье [Как пользоваться режимом «Ожидаемый прием пищи»](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) или [здесь](https://diyps.org/tag/eating-soon-mode/).
 
-В настройках OpenAps SMB, дополнительно, [по достижении цели 9](#objectives-objective9) если включен режим *'Низкая ВЦ снижает чувствительность'*, **AAPS** работает немного более агрессивно. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+В настройках OpenAps SMB, дополнительно, [по достижении цели 9](#objectives-objective9) если включен режим *'Низкая ВЦ снижает чувствительность'*, **AAPS** работает немного более агрессивно. Для этой опции **временная цель** должна быть 98 мг/дл (5,4 ммоль/л) или ниже.
 
 ## Как отключить SMB во время активной временной цели?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+Для этого откройте **Настройки** → **OpenAPS SMB** и отключите *«Включить SMB при высокой временной цели»*.
 
-![Enable SMB with high temp target preference](../images/v4/TempTarget/TempTargetSMB.png)
+![Настройка «Включить SMB при высокой временной цели»](../images/v4/TempTarget/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+Так **AAPS** не будет подавать **SMB**, даже при COB > 0, включенных *«Включить SMB при низкой временной цели»* или *«Всегда включать супер микро болюс SMB»* и активном OpenAPS SMB.
