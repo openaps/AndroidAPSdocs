@@ -55,14 +55,14 @@ Tyto autentizační aplikace vytvářejí časově omezené jednorázové šesti
 
 V telefonu přejděte do **Aplikace > AAPS > Oprávnění**. Ujistěte se, že **SMS** a **Telefon** jsou povoleny.
 
-![obrázek](../images/remote-control-08.png)
+![obrázek](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Android může blokovat oprávnění **SMS** pro aplikace, které nebyly nainstalovány z obchodu s aplikacemi, jako je **AAPS**. Pokud tuto zprávu uvidíte při udělování oprávnění **SMS**, otevřete v telefonu **Nastavení > Aplikace > AAPS**, klepněte na nabídku **⋮** (vpravo nahoře) a vyberte **Povolit omezená nastavení**. Potom oprávnění **SMS** udělte znovu.
 ```
 
-![Aplikace nemá povolen přístup k SMS](../images/sms_permission_restricted.png)
+![Aplikace nemá povolen přístup k SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Synchronizace data a času
 
@@ -82,7 +82,7 @@ Otevřete nastavení **SMS komunikátoru**.
 
 Zapněte **Povolit vzdálené příkazy přes SMS**. Možnosti **Další povinný PIN na konci tokenu** a **Nastavení Authenticatoru** se zobrazí, až když je tato volba zapnutá:
 
-![Nastavení SMS komunikátoru](../images/sms_communicator_settings.png)
+![Nastavení SMS komunikátoru](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Povolená telefonní čísla
@@ -97,7 +97,7 @@ Pamatujte, že znak „+“ před číslem může, ale nemusí být potřeba, po
 
 Pokud chcete přidat více telefonních čísel, oddělte je středníky, **BEZ mezery mezi čísly** (to je velmi důležité!). Vyberte **OK**:
 
-![Povolená telefonní čísla](../images/sms_allowed_numbers.png)
+![Povolená telefonní čísla](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Minimální vzdálenost vzdáleného bolusu
 
@@ -115,7 +115,7 @@ Požadavky na PIN jsou:
 
 Aby byl PIN bezpečnější, nepoužívejte mnohokrát stejnou číslici (_např._ 111111) ani řadu po sobě jdoucích číslic (_např._ 123456).
 
-![Další povinný PIN na konci tokenu](../images/sms_pin.png)
+![Další povinný PIN na konci tokenu](../images/remote_control_and_following/sms_pin.png)
 
 #### Nastavení Authenticatoru
 
@@ -123,7 +123,7 @@ Aby byl PIN bezpečnější, nepoužívejte mnohokrát stejnou číslici (_např
 * Na _telefonu pečovatele_ otevřete nainstalovanou autentizační aplikaci, nastavte nové připojení a
 * Telefonem pečovatele naskenujte QR kód zobrazený pod **Naskenujte kód pro nastavení AAPS OTP kódů**.
 
-![Nastavení Authenticatoru pomocí QR kódu](../images/sms_authenticator_setup.png)
+![Nastavení Authenticatoru pomocí QR kódu](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * V části **Otestujte jednorázové heslo** zadejte do pole **Kód k ověření** jednorázový kód z autentizační aplikace v telefonu pečovatele a za ním váš PIN:
 
@@ -134,7 +134,7 @@ Příklad:
 
 Pokud je kód správný, červený text „NESPRÁVNÝ PIN“ se automaticky změní na zelený „OK“. **Není tu žádné tlačítko, které byste stiskli!** Tím je postup hotový, po zadání kódu není potřeba stisknout žádné tlačítko „OK“:
 
-![Test jednorázového hesla a reset Authenticatorů](../images/sms_authenticator_test.png)
+![Test jednorázového hesla a reset Authenticatorů](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Nyní byste měli mít nastaveny SMS příkazy.
 
@@ -146,7 +146,7 @@ Pokud chcete odebrat nastavené autentizační aplikace, použijte tlačítko **
 
 1)  Abyste ověřili, že je vše správně nastaveno, otestujte spojení: z telefonu pečovatele pošlete na telefon s **AAPS** SMS se zprávou „bg“. Odpověď by se měla podobat té, která je zde zobrazena:
 
-![obrázek](../images/remote-control-06.png)
+![obrázek](../images/remote_control_and_following/remote-control-06.png)
 
 Pokud nedostanete žádnou odpověď, podívejte se níže do části [Řešení problémů](#SMSCommands-troubleshooting).
 
@@ -154,7 +154,7 @@ Pokud nedostanete žádnou odpověď, podívejte se níže do části [Řešení
 
 Když posíláte SMS příkaz poprvé, zkuste to v blízkosti telefonu s **AAPS**, abyste viděli, jak to funguje:
 
-![obrázek](../images/remote-control-16.png)
+![obrázek](../images/remote_control_and_following/remote-control-16.png)
 
 Telefon pečovatele dostane od **AAPS** odpověď v SMS, která potvrdí, zda byl vzdálený SMS příkaz úspěšně proveden.
 
@@ -182,7 +182,7 @@ Abyste se vyhnuli hypoglykémii, je dobré začít opatrně a podat **méně inz
 
 Příkazy musí být odeslány v angličtině, odpověď bude ve vašem jazyce, pokud je řetězec odpovědi již [přeložen](#translations-translate-strings-for-AAPS-app). Příkazy nerozlišují velká a malá písmena, můžete psát malými i velkými písmeny.
 
-![Příklad SMS příkazů](../images/SMSCommands.png)
+![Příklad SMS příkazů](../images/remote_control_and_following/SMSCommands.png)
 
 V **tabulkách SMS příkazů** níže jsou uvedeny všechny možné SMS příkazy. Pro snazší pochopení jsou uvedeny _příklady hodnot_. Příkazy mají stejný rozsah možných hodnot (cíle, procento profilu atd.), jaký je povolen v samotné aplikaci **AAPS**.
 
@@ -191,11 +191,11 @@ V **tabulkách SMS příkazů** níže jsou uvedeny všechny možné SMS příka
 
 Některé SMS příkazy dávají okamžitou odpověď a některé SMS příkazy vyžadují silné **ověření** přes autentizační aplikaci. Jednoduchý dotaz jako „**BG**“ (který žádá o aktuální glykémii) se rychle napíše, nepotřebuje ověření a vrátí informace o stavu **AAPS**, jak je vidět níže:
 
-![obrázek](../images/remote-control-06.png)
+![obrázek](../images/remote_control_and_following/remote-control-06.png)
 
 Příkazy, které potřebují vyšší zabezpečení, vyžadují zadání kódu, například:
 
-![Ověřená SMS](../images/remote-control-07.png)
+![Ověřená SMS](../images/remote_control_and_following/remote-control-07.png)
 
 Sloupec *Ověření* v tabulkách níže ukazuje, zda je pro daný příkaz takové silné ověření potřeba.
 
@@ -210,7 +210,7 @@ Sloupec *Ověření* v tabulkách níže ukazuje, zda je pro daný příkaz tako
 
 | Příkaz               | Ověření | Funkce a *odpověď*                                                                                     |
 | -------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| PUMPA                | Ne      | PoslSpojPřed: 1min<br/>DočBazál: 0,00U/h @11:38 5/30min<br/>IOB: 0,5U Reserv: 34U Bat: 100 |
+| PUMP                 | Ne      | PoslSpojPřed: 1min<br/>DočBazál: 0,00U/h @11:38 5/30min<br/>IOB: 0,5U Reserv: 34U Bat: 100 |
 | PUMP DISCONNECT *30* | Ano     | Odpojí pumpu na *30* minut                                                                             |
 | PUMP CONNECT         | Ano     | Pumpa znovu připojena                                                                                  |
 
@@ -311,12 +311,12 @@ Může jít o jeden z těchto důvodů:
 ### Žádná odpověď na SMS příkazy
 
 Na telefonu pečovatele a/nebo na telefonu s **AAPS** zkuste vypnout tyto možnosti:
-* **Odesílat jako chatovou zprávu** (Send as chat message) ![Zakázat SMS jako chat zprávu](../images/SMSdisableChat.png)
+* **Odesílat jako chatovou zprávu** (Send as chat message) ![Zakázat SMS jako chat zprávu](../images/remote_control_and_following/SMSdisableChat.png)
 * Pokud používáte aplikaci Android Messages nebo Google Zprávy, vypněte zprávy RCS:
   - Otevřete příslušnou SMS konverzaci v aplikaci Zprávy
   - Vyberte nabídku možností (tři tečky) v pravém horním rohu
   - Vyberte „Podrobnosti“
-  - Zapněte „Odesílat pouze zprávy SMS a MMS“ (Only send SMS and MMS messages) ![Vypnutí RCS jako chatové zprávy](../images/SMSdisableRCS.png)
+  - Zapněte „Odesílat pouze zprávy SMS a MMS“ (Only send SMS and MMS messages) ![Vypnutí RCS jako chatové zprávy](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Chyby při provádění příkazů
 
@@ -331,7 +331,7 @@ Příkaz nemusí být úspěšný z několika možných důvodů:
 
 Časté chyby ukazují tyto příklady:
 
-![obrázek](../images/remote-control-17.png)
+![obrázek](../images/remote_control_and_following/remote-control-17.png)
 
 ### Jak mohu zastavit příkaz, který už byl ověřen?
 
