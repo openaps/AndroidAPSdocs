@@ -67,6 +67,8 @@ xDrip može čitati obavijesti aplikacije proizvođača, kao i ESEL. Nadopuna po
 
 **AAPS** može čitati vrijednosti glukoze izravno iz obavijesti službene aplikacije Eversense, bez ikakve druge aplikacije između. Nadopuna podataka koji nedostaju nije dostupna.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Odaberite **Čitač obavijesti** u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source) i dopustite **AAPS-u** pristup obavijestima kad se to zatraži.
 - Provjerite prikazuje li aplikacija Eversense trenutačnu vrijednost glukoze u svojoj obavijesti.
 
