@@ -1,22 +1,22 @@
-# Change language and version
+# Смена языка и версии
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Документация, которую вы сейчас читаете, доступна на нескольких языках и относится к определенной версии **AAPS**. И язык, и версию можно изменить в меню в правом нижнем углу экрана.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Нажмите на полосу в правом нижнем углу экрана, чтобы открыть меню выбора языка и версии.
 ```
 
 ![Открыть меню языка](../images/documentation_language_menu.png)
 
 ## Изменение языка
 
-In the menu, select the language you want to read the documentation in.
+В меню выберите язык, на котором вы хотите читать документацию.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Присоединяйтесь к переводчикам и корректорам на [Crowdin](https://crowdin.com/project/androidapsdocs) и помогите перевести документацию на ваш язык.
 
 ## Изменение версии
 
-Номер версии отображается в правом нижнем углу экрана. To switch to a different version, click on the current version and select the version you need.
+Номер версии отображается в правом нижнем углу экрана. Чтобы перейти на другую версию, нажмите на текущую версию и выберите нужную.
 
 ```{warning}
 При смене языка и/или версии, вы можете получить 404 - Страница не найдена, если язык или версия не существует. Это часто происходит при смене версии, но не должно происходить при изменении языка: страница будет отображаться на английском языке, если еще не переведена.
