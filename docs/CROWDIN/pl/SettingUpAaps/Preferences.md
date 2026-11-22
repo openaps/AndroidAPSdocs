@@ -31,6 +31,7 @@ W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do 
 - Domyślnie **AAPS** używa języka telefonu (zalecane).
 
 - Jeśli chcesz używać **AAPS** w innym języku niż język telefonu, wybierz go tutaj. W Androidzie 13 i nowszym **AAPS** zapisuje ten wybór w Androidzie jako własny język aplikacji, więc wszystkie jego ekrany, ekran główny, widżety i sposób zapisu liczb używają tego języka.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Gdy zmienisz język, teksty **AAPS** od razu przełączą się na nowy język. Jeśli niektóre teksty są nadal w starym języku, uruchom ponownie **AAPS**.
 - W Androidzie 12 to ustawienie nie jest widoczne: **AAPS** zawsze używa języka telefonu.
@@ -86,6 +87,10 @@ Wybierz jasny motyw, ciemny motyw lub ustawienie systemowe telefonu.
 
 ![Ustawienia > Ochrona](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Hasło główne
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### Ochrona aplikacji
 
-Jeśli aplikacja jest chroniona, musisz wpisać hasło lub użyć uwierzytelniania biometrycznego telefonu, aby otworzyć **AAPS**, a także ponownie, gdy wracasz do aplikacji po upływie [czasu ochrony](#Preferences-password-and-pin-retention).
+Jeśli aplikacja jest chroniona, musisz wpisać hasło lub użyć uwierzytelniania biometrycznego telefonu, aby otworzyć **AAPS**, a także ponownie, gdy wracasz do aplikacji po upływie [czasu ochrony](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-Po wpisaniu złego hasła **AAPS** od razu się zamknie – ale nadal będzie działać w tle, jeśli wcześniej zostało poprawnie otwarte.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Ochrona Bolusa
 
