@@ -1,21 +1,21 @@
-Both keystore options (Option 1 and Option 2) use the same preparation file. Download it:
+Оба варианта хранилища ключей (Вариант 1 и Вариант 2) используют один и тот же файл подготовки. Скачайте его:
 
 - [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. If you open this page from within an app (via a web view), the HTML file may not download. Вместо этого скопируйте адрес и откройте его в браузере:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+Или откройте страницу последнего выпуска:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2. Backup copy hosted on this site:
- - If the external link is also unavailable, you can use this backup file to download.
+2. Резервная копия на этом сайте:
+ - Если и внешняя ссылка недоступна, файл можно скачать отсюда.
 <!--crowdin:disable-->
 
 ```{eval-rst}
