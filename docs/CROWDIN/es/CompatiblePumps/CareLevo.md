@@ -121,6 +121,8 @@ Pulsa **Descartar parche** en la pantalla de la bomba y confirma. La administrac
 
 Cuando una alarma crítica ha detenido el parche, la alarma ofrece en su lugar **Desactivar parche**. Al pulsarlo, el parche se descarta de la misma forma.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarmas y notificaciones
