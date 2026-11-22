@@ -12,8 +12,8 @@ Libre2 OOP (pronađite ga [ovdje](#Libre2_OOP2)) stvara ista očitanja GUK-a kao
 
 Postoji nekoliko dobrih razloga za korištenje Bluetooth odašiljača:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Možete odabrati različite strategije kalibracije OOP2 (1): vrijednosti čitača uz „no calibration“, kalibraciju senzora kao kod Libre 1 uz „calibrate based on raw“ ili kalibraciju vrijednosti sličnih čitaču uz „calibrate based on glucose“.  
+  OOP1 ostavite isključen (2).
 
     → Hamburger Menu → Settings → Less common settings → Other misc. options
 
@@ -30,9 +30,9 @@ Napomena: odašiljač se može koristiti usporedo s aplikacijom LibreLink, a da 
 
 ![xDrip: pokretanje odašiljača Libre & senzora 3](../images/xDrip_Libre_Transmitter03.png)
 
-Time se fizički ne pokreće nijedan senzor Libre2 niti se s njim na bilo koji način komunicira. Time se xDripu samo javlja da novi senzor isporučuje vrijednosti GUK-a. If available, enter two blood-measured values for the initial calibration. Sada bi se vrijednosti GUK-a trebale prikazivati u xDripu svakih 5 minuta. Propuštene vrijednosti, npr. zato što ste bili predaleko od telefona, neće se naknadno popuniti.
+Time se fizički ne pokreće nijedan senzor Libre2 niti se s njim na bilo koji način komunicira. Time se xDripu samo javlja da novi senzor isporučuje vrijednosti GUK-a. Ako je moguće, unesite dvije vrijednosti izmjerene iz krvi za početnu kalibraciju. Sada bi se vrijednosti GUK-a trebale prikazivati u xDripu svakih 5 minuta. Propuštene vrijednosti, npr. zato što ste bili predaleko od telefona, neće se naknadno popuniti.
 
-Nakon promjene senzora xDrip će automatski prepoznati novi senzor i izbrisati sve podatke o kalibraciji. You may check your blood glucose after activation and make a new initial calibration.
+Nakon promjene senzora xDrip će automatski prepoznati novi senzor i izbrisati sve podatke o kalibraciji. Nakon aktivacije možete provjeriti GUK i napraviti novu početnu kalibraciju.
 
 ### Konfiguracija AAPS-a (samo za korištenje petlje)
 
@@ -40,7 +40,7 @@ Nakon promjene senzora xDrip će automatski prepoznati novi senzor i izbrisati s
 
 ![Konfiguracija > Izvor GUK-a s odabranim xDrip+ GUK](../images/v4/Configuration/configuration_bg_source.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described on [xDrip settings page](#xdrip-identify-receiver).
+-   Ako AAPS ne prima vrijednosti GUK-a kada je telefon u načinu rada u zrakoplovu, koristite 'Identify receiver' kako je opisano na stranici [Postavke xDripa](#xdrip-identify-receiver).
 
 ## 2. Koristite izravnu vezu u xDripu
 
@@ -67,7 +67,7 @@ Tehnički, trenutna vrijednost GUK-a šalje se u xDrip svake minute. Filtar pond
 
 To je obavezno za korištenje petlje. Krivulje izgledaju glatko, a rezultati petlje su odlični. Sirove vrijednosti na kojima se temelje alarmi malo više skaču, ali odgovaraju vrijednostima koje prikazuje i čitač. Osim toga, sirove vrijednosti mogu se prikazati na grafu u xDripu, kako biste mogli na vrijeme reagirati na brze promjene. Uključite Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" i "show Sensors Infos". Tada se sirove vrijednosti dodatno prikazuju kao male bijele točke, a dodatni podaci o senzoru dostupni su u izborniku sustava.
 
-Sirove vrijednosti vrlo su korisne kada se GUK brzo mijenja. Even if the dots are jumpier you would detect the tendency much better than using the smoothed line to make proper therapy decisions.
+Sirove vrijednosti vrlo su korisne kada se GUK brzo mijenja. Iako točke više skaču, trend ćete prepoznati mnogo bolje nego iz zaglađene linije, pa možete donositi ispravne odluke o terapiji.
 
 → Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
 
@@ -77,7 +77,7 @@ Sirove vrijednosti vrlo su korisne kada se GUK brzo mijenja. Even if the dots ar
 
 #### Kalibracija
 
-You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 mmol/L to +1.1 mmol/L\]** (intercept). Nagib se ne može mijenjati. Provjerite mjerenjem iz prsta nakon postavljanja novog senzora i imajte na umu da u prvih 12 sati nakon umetanja možda neće biti točan. Budući da mogu postojati velike razlike u odnosu na mjerenja iz krvi, provjeravajte svaka 24 sata i po potrebi kalibrirajte. Ako je senzor nakon nekoliko dana potpuno netočan, treba ga zamijeniti.
+Libre2 možete kalibrirati **s pomakom od -40 mg/dL do +20 mg/dL \[-2,2 mmol/L do +1,1 mmol/L\]** (odsječak). Nagib se ne može mijenjati. Provjerite mjerenjem iz prsta nakon postavljanja novog senzora i imajte na umu da u prvih 12 sati nakon umetanja možda neće biti točan. Budući da mogu postojati velike razlike u odnosu na mjerenja iz krvi, provjeravajte svaka 24 sata i po potrebi kalibrirajte. Ako je senzor nakon nekoliko dana potpuno netočan, treba ga zamijeniti.
 
 ## 3. Koristite Diabox
 
