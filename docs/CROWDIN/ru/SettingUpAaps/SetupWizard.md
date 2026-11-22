@@ -182,7 +182,7 @@ Android требует специального разрешения для ув
 
 Этот экран показывается, только если **AAPS** находит ранее экспортированные настройки в папке **AAPS** («Найдены сохраненные параметры»), например, когда вы переустанавливаете приложение или переходите на новый телефон.
 
-- Чтобы восстановить прежнюю конфигурацию, нажмите «**Импортировать настройки**» — см. [Создание и восстановление резервных копий](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Чтобы начать с новой конфигурации, нажмите «**Далее**» и продолжайте работу с Мастером.
 
 ![Выполните импорт настроек](../images/setup-wizard/Wizard-ImportSettings.png)
