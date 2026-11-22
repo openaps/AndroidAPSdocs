@@ -73,7 +73,7 @@ El **Perfil ambulatori de glucosa** (**AGP**) mostra com es mou normalment la vo
 
 - **El gràfic**: un dia, de mitjanit a mitjanit. La línia és la **Mediana** (la meitat de les vostres lectures a aquella hora eren més baixes i l'altra meitat més altes). Al voltant, una franja conté la meitat central de les vostres lectures (**25–75%**) i una franja més ampla en conté la majoria (**10–90%**). Una franja estreta vol dir que la vostra glucèmia és semblant d'un dia a l'altre a aquella hora. Les línies discontínues marquen el vostre **Límit BAIX**, 140 mg/dl (7,8 mmol/l) i el vostre **Límit ALT**.
 - **Resum glucèmic**: el temps dins del vostre rang, dins del rang estret (70–140 mg/dl o 3,9–7,8 mmol/l), per sobre i per sota del vostre rang, i després la vostra glucèmia **Mitjana** i **Mediana**. El vostre rang és el **Límit BAIX** i el **Límit ALT** definits a [Rang de visualització](#Preferences-range-for-visualization).
-- **eA1c** i **GMI**: dues estimacions de l'HbA1c calculades a partir de les vostres lectures del CGM. Com l'HbA1c de més amunt, poden no coincidir amb les vostres anàlisis d'HbA1c en sang.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Com l'HbA1c de més amunt, poden no coincidir amb les vostres anàlisis d'HbA1c en sang.
 - **SD** (desviació estàndard) i **CV** (coeficient de variació): quant varia la vostra glucèmia. Un valor més baix vol dir una glucèmia més estable.
 - **Dies**: quants dies de dades del CGM s'han fet servir.
 
