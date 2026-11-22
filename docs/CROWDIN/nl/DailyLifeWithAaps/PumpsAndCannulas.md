@@ -4,7 +4,7 @@
 
 De werkwijze hieronder is alleen voor pompen met slang. Ze geldt niet voor patchpompen zoals Omnipod, Medtrum Nano, Accu-Chek Solo enz. Dit wordt soms een "setwissel" genoemd. Een "volledige" setwissel is inclusief het insulinereservoir en de canule, een "gedeeltelijke" setwissel is alleen de canule wisselen.
 
-Patchpompen vullen en ontluchten zichzelf in hun eigen activatiewizard, en hun canule zit al in het lichaam. **AAPS** biedt voor deze pompen geen ontluchten aan: **Prime/Vul** staat niet in het menu **Beheren** en niet in QuickLaunch. Zie de pagina van je pomp in [Compatibele pompen](../Getting-Started/CompatiblePumps.md).
+Patchpompen vullen en ontluchten zichzelf in hun eigen activatiewizard, en hun canule zit al in het lichaam. **AAPS** biedt voor deze pompen geen ontluchten aan: **Prime/Vul** staat niet in het menu **Beheren** en niet in QuickLaunch. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Zie de pagina van je pomp in [Compatibele pompen](../Getting-Started/CompatiblePumps.md).
 
 Een ampul/reservoir fysiek wisselen kan niet via **AAPS** en moet direct op de pomp gebeuren. Als dit klaar is, moet je het met de hand vastleggen in **AAPS**.
 
@@ -31,6 +31,7 @@ Een ampul/reservoir fysiek wisselen kan niet via **AAPS** en moet direct op de p
 * Je kunt de standaard hoeveelheden voor het ontluchten instellen/aanpassen in de instellingen voor **Prime/Vul** — typ "prime" in de zoekbalk op het hoofdscherm om ze te openen (zie [Instellingen](../SettingUpAaps/Preferences.md)). Kijk in de bijsluiter in de doos met canules hoeveel eenheden (afhankelijk van de lengte van de naald en van de slang) je nodig hebt om je canule te ontluchten.
 
 * Insuline die met de ontluchtfunctie is gegeven, telt **AAPS** niet mee bij het berekenen van de actieve insuline (IOB). In de [Behandelingen geschiedenis](#aaps-screens-treatments) staat ze als "Prime".
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * Insuline die als bolus vanaf de pomp is gegeven terwijl de pomp was afgekoppeld, telt **AAPS** ook niet mee. Heb je toevallig een bolus direct op de pomp gegeven terwijl **AAPS** was afgekoppeld, dan kun je deze insuline na het weer aankoppelen vastleggen (zonder hem als bolus te geven) in het venster **Insuline** (zie [Gegeven insuline vastleggen zonder echt een bolus te geven](#pumps-cannulas-announce-insulin) hieronder).
 
