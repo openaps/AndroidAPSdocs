@@ -16,6 +16,8 @@
 
 ![依類別分組的全域搜尋結果](../images/v4/Search/search_results.png)
 
+While the box is empty, **AAPS** shows your **Recent searches**, newest first (up to ten). Tap one to run that search again, or tap the **✕** at the end of a row to remove only that search from the list. A search is added to the list when you open one of its results, so half-typed words are not kept. The list is stored on this phone only: it is not included in a settings export and is not sent to **AAPSClient**.
+
 點選 **✕** 清除搜尋欄位，或按裝置上的 **返回** 按鈕關閉搜尋。
 
 ---
