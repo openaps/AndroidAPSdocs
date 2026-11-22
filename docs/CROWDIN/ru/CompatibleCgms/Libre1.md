@@ -15,11 +15,11 @@
 
 ## 1. Using xDrip
 
--   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   xDrip поддерживает Miaomiao, Bubble, Blucon, Atom и LibreAlarm.
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
--   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
+-   Следуйте инструкциям по настройке на [странице настроек xDrip](../CompatibleCgms/xDrip.md).
 -    Вам также нужен OOP2 для Libre 1 США (и Libre 2 EU).
--   Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Выберите xDrip в [**Конфигурация → Источник ГК**](#Config-Builder-bg-source).
 
 ## 2. Использование Diabox
 
@@ -28,4 +28,4 @@
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Выберите xDrip в [**Конфигурация → Источник ГК**](#Config-Builder-bg-source).
