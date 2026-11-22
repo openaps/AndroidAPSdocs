@@ -56,19 +56,20 @@ No s'ha creat a partir de la plantilla. Elimineu-lo (**Settings** → part de ba
 Ja teniu el vostre repositori: tanqueu la pestanya de GitHub i continueu amb aquesta pàgina. Si la vostra clau ja hi és, continueu amb el [pas 4](#aaps-builder-setup-step4). Vegeu la [resolució de problemes](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-Els passos de compilació s'actualitzen per a vosaltres: a cada compilació, el vostre repositori executa la versió publicada pels desenvolupadors d'AAPS a nightscout/aaps-builder, i al vostre repositori no canvia res. Només heu de substituir el vostre fitxer de workflow quan ho anunciï [Actualitzacions i canvis de la documentació](../Maintenance/DocumentationUpdate.md) (per exemple, per a una variant de compilació nova), o una vegada si el vostre repositori es va fer amb una versió anterior d'aquesta pàgina o amb la plantilla antiga. El vostre secret `KEYSTORE_SET` es queda tal com és.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. El vostre secret `KEYSTORE_SET` es queda tal com és.
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Obrir el workflow més recent</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   En un ordinador, feu clic a la **icona de copiar** («Copy raw file») a dalt a la dreta del fitxer. En un telèfon, obriu en canvi la <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">versió de text pla</a>, mantingueu premut el text → **Select all** → **Copy**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Obrir el meu fitxer de workflow</a>
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Obre `.github/workflows/build.yml` a <code class="aapsb-repoUrl"></code>. Toqueu el menú **⋯** a dalt a la dreta del fitxer i després **Edit file… In place** (en un ordinador, feu clic al llapis).
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Toqueu el menú **⋯** a dalt a la dreta del fitxer i després **Edit file… In place** (en un ordinador, feu clic al llapis).
 3. Substituïu tot el text pel workflow copiat (en un telèfon: mantingueu premut → **Select all** → **Paste**) i després feu clic dues vegades a **Commit changes…**. La primera línia del fitxer mostra la seva versió.
-```
+
+</div>
 
 (aaps-builder-setup-step2)=
 
