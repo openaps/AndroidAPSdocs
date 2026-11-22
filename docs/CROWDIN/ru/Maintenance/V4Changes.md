@@ -111,6 +111,8 @@
 
 При обновлении **AAPS** сохраняет инсулин и DIA, которые уже были записаны в ваших переключениях профиля в v3. Если находятся старые записи, где инсулин известен, а DIA нет, для них используется DIA по умолчанию, и один раз показывается сообщение, например *В старых записях не было длительности действия инсулина, поэтому для Lyumjev использовано 9,0 ч. Проверьте настройки инсулина — уже перенесенные записи потом не обновляются.* Увидев это сообщение, проверьте настройки инсулина.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 Чтобы изменить DIA или пик, добавьте новый инсулин кнопкой **+**, настройте его, сохраните и нажмите **▶ Активировать**. См. [Смена используемого инсулина](#Config-Builder-insulin-change-active).
