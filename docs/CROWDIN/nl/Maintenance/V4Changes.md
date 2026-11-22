@@ -111,6 +111,8 @@ In **AAPS** v4 is de insuline die als **ACTIEF** is gemarkeerd in **Beheren → 
 
 Bij het bijwerken houdt **AAPS** de insuline en DIA die je profiel wissels uit v3 al hadden opgeslagen. Vindt het oudere records waarvan de insuline bekend is maar de DIA niet, dan gebruikt het voor die records een standaard-DIA en toont het één keer een melding, bijvoorbeeld *Oudere records hadden geen insuline duur, dus 9,0 uur werd gebruikt voor Lyumjev. Controleer je insuline-instellingen - al gemigreerde records worden niet achteraf bijgewerkt.* Controleer je insuline-instellingen als je deze melding ziet.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 Wil je de DIA of piek aanpassen? Voeg dan een nieuwe insuline toe met **+**, pas die aan, sla die op en activeer die met **▶ Activeer**. Zie [De insuline in gebruik wijzigen](#Config-Builder-insulin-change-active).
