@@ -31,6 +31,7 @@
 - By default **AAPS** follows the language of the phone (recommended).
 
 - If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Όταν αλλάζετε τη γλώσσα, τα κείμενα του **AAPS** αλλάζουν αμέσως στη νέα γλώσσα. Αν κάποια κείμενα εμφανίζονται ακόμη στην παλιά γλώσσα, επανεκκινήστε το **AAPS**.
 - On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
@@ -86,6 +87,10 @@
 
 ![Ρυθμίσεις > Προστασία](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Κύριος κωδικός
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### Προστασία εφαρμογής
 
-Αν η εφαρμογή είναι προστατευμένη, πρέπει να δώσετε τον κωδικό ή να χρησιμοποιήσετε τη βιομετρική πιστοποίηση του τηλεφώνου για να ανοίξετε το **AAPS**, και ξανά όταν επιστρέφετε σε αυτό μετά τον [χρόνο λήξης προστασίας](#Preferences-password-and-pin-retention).
+Αν η εφαρμογή είναι προστατευμένη, πρέπει να δώσετε τον κωδικό ή να χρησιμοποιήσετε τη βιομετρική πιστοποίηση του τηλεφώνου για να ανοίξετε το **AAPS**, και ξανά όταν επιστρέφετε σε αυτό μετά τον [χρόνο λήξης προστασίας](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-Το **AAPS** θα κλείσει αμέσως αν δοθεί λάθος κωδικός – αλλά θα συνεχίσει να λειτουργεί στο παρασκήνιο αν είχε ανοίξει πριν με επιτυχία.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Προστασία Bolus
 
