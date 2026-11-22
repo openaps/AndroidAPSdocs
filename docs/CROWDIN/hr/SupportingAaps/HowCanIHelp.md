@@ -2,19 +2,19 @@
 
 ## AAPS u potpunosti radi na dobrovoljnom radu i nema plaćenih zaposlenika.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Razvojni programeri besplatno daruju svoje slobodno vrijeme, ali nije pošteno očekivati da imaju i dodatne troškove kako bi nešto tako sjajno ostalo otvorenog koda i besplatno za sve.
+Razvojni programeri su roditelji, njegovatelji, bliski ljudi i osobe s dijabetesom koji zajedno razvijaju i poboljšavaju rješenje za vrlo čestu potrebu. Razvojni programeri besplatno daruju svoje slobodno vrijeme, ali nije pošteno očekivati da imaju i dodatne troškove kako bi nešto tako sjajno ostalo otvorenog koda i besplatno za sve.
 
 *Da bi potpuno testirali novi sustav, razvojni programeri trebaju rezervni telefon i rezervnu pumpu, jer se sustav ne smije koristiti na čovjeku dok nije stabilan. Noviji modeli trebaju testiranje čim postanu dostupni. Dio doniranog novca potreban je i za troškove slanja te opreme razvojnim programerima u različite zemlje. Ponekad je lijepo pomoći i s troškovima da razvojni programeri izađu iz svojih zamračenih soba i upoznaju se na konferencijama i događanjima, gdje mogu razmjenjivati kreativne i analitičke ideje.*
 
 (donate-to-aaps)=
 
-### How can I donate?
+### Kako mogu donirati?
 
-You can support **AAPS** in several ways:
+**AAPS** možete podržati na nekoliko načina:
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation:** donirajte na [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** pomozite financirati rad na certificiranju AAPS-a kao medicinskog uređaja na [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** pošaljite na ovu adresu **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
 ## Znam pisati kod! Kako mogu sudjelovati?
 
@@ -33,7 +33,7 @@ Ako nešto prevodite prvi put, počnite s prijevodom tekstova aplikacije, jer je
 
 Možete istodobno ili kasnije početi prevoditi i dokumentaciju.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+Stanje prijevoda aplikacije i dokumentacije za pojedine jezike možete provjeriti [ovdje](StateOfTranslations.md).
 
 * Ako želite prevesti **aplikaciju** na druge jezike (hvala vam), koristite [Crowdin](https://crowdin.com/project/androidaps).
 * Ako želite prevesti **dokumentaciju** na druge jezike (hvala vam), koristite [Crowdin](https://crowdin.com/project/androidapsdocs). 
