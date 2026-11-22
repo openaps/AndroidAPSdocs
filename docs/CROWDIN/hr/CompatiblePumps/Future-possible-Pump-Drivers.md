@@ -14,6 +14,8 @@ Omnipod 5 ([početna stranica](https://www.omnipod.com/))
 
 ![Upravljački program za Omnipod 5 u razvoju](../images/future-pumps/omnipod5-driver.png)
 
+See [Omnipod 5](../CompatiblePumps/Omnipod5.md) for how the driver in development works.
+
 Tandem: t:Mobi ([početna stranica](https://www.tandemdiabetes.com/))
 
 ![Upravljački program za Tandem t:Mobi u razvoju](../images/future-pumps/tandem-mobi-driver.png)
