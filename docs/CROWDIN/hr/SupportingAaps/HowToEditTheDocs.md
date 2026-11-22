@@ -2,7 +2,7 @@
 
 **Ovaj opis odnosi se samo na uređivanje dokumentacije na engleskom jeziku. Sve nove informacije moraju se najprije dodati na engleskom jeziku. Ako želite prevoditi na druge jezike (hvala vam), koristite [Crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Savjete o oblikovanju teksta (naslov, podebljano...) i postavljanju poveznica potražite u odjeljku [„Sintaksa koda“](#edit-the-docs-code-syntax) na ovoj stranici.
 
 ## Općenito
 
@@ -34,11 +34,11 @@ Ili kliknite ikonu olovke koja se pojavljuje u gornjoj traci sadržaja stranice 
 
 3. Bilo koja od opcija u koraku 2 stvorit će novu granu u VAŠEM repozitoriju, u kojoj će se spremiti vaše izmjene. Napravite izmjene u datoteci.
 
-Za stranice dokumentacije koristimo Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Za stranice dokumentacije koristimo Markdown. Datoteke imaju nastavak „.md“. Specifikacija Markdowna nije utvrđena, a za naše Markdown datoteke trenutačno koristimo myst_parser. Pazite da koristite ispravnu sintaksu, kako je [opisano niže](#edit-the-docs-code-syntax).
 
 ![Uređivanje grane](../images/docs_pr_edit_file.png)
 
-4. Radili ste na kartici „<>Edit file“. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Ako vidite da je potrebno još nešto poboljšati, vratite se na karticu za uređivanje i napravite dodatne izmjene. 
+4. Radili ste na kartici „<>Edit file“. Odaberite karticu „Preview changes“ da svježim okom provjerite izgleda li sve što ste promijenili onako kako ste htjeli (provjerite i tipfelere). Ako vidite da je potrebno još nešto poboljšati, vratite se na karticu za uređivanje i napravite dodatne izmjene. 
 
 ![način pregleda](../images/docs_pr_preview_changes.png)
 
@@ -54,7 +54,7 @@ Za stranice dokumentacije koristimo Markdown. The files have the suffix ".md". T
 
 ![Praćenje PR-a](../images/docs_pr_tracking.png)
 
-P.S.: Vaš fork i grana i dalje će ostati na vašem osobnom GitHub računu. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Ako za buduće izmjene slijedite ovaj postupak, izmjene će uvijek započeti od ažurirane verzije repozitorija AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Budući da ljudi često zaborave ažurirati svoje repozitorije, preporučujemo da koristite gore opisani postupak za PR dok se ne naviknete na izvođenje „compare“ (usporedbe).
+P.S.: Vaš fork i grana i dalje će ostati na vašem osobnom GitHub računu. Kada dobijete obavijest da je vaš PR spojen, možete izbrisati svoju granu ako vam više ne treba (u području obavijesti iz koraka 7 bit će poveznica za brisanje grane kada se PR zatvori ili spoji). Ako za buduće izmjene slijedite ovaj postupak, izmjene će uvijek započeti od ažurirane verzije repozitorija AndroidAPSdocs. Ako PR odlučite započeti na drugi način (npr. uređivanjem od grane master u svom forku), najprije morate provjeriti je li vaš repozitorij ažuran tako da napravite „compare“ (usporedbu) i spojite sve promjene koje su se dogodile otkad ste zadnji put ažurirali svoj fork. Budući da ljudi često zaborave ažurirati svoje repozitorije, preporučujemo da koristite gore opisani postupak za PR dok se ne naviknete na izvođenje „compare“ (usporedbe).
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Autor samo, npr., označi naslov kao naslov razine 1, a Markdown procesor tijeko
 Ideja iza toga je da
 
 - autor najprije treba razmišljati o tekstu, a ne o oblikovanju,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- Markdown tekst može se razmjenjivati između različitih Markdown alata, umjesto da ovisi npr. o vlasničkim alatima poput Microsoft Worda, i
 - iz jedne Markdown datoteke možete izraditi nekoliko izlaznih formata.
 
 Markdown nije 100 % utvrđen standard, a mi se trudimo ostati što bliže standardu kako bismo
@@ -147,10 +147,10 @@ Za umetanje slika koristite ovu Markdown sintaksu.
 
 Slika treba biti u formatu PNG ili JPEG.
 
-Image names should conform to one of the following naming rules. U primjeru koristim png kao nastavak. Ako koristite JPEG, umjesto toga koristite jpeg kao nastavak.
+Nazivi slika trebaju slijediti jedno od sljedećih pravila imenovanja. U primjeru koristim png kao nastavak. Ako koristite JPEG, umjesto toga koristite jpeg kao nastavak.
 
 - `filename-image-xx.png` gdje je xx jedinstveni dvoznamenkasti broj za slike u ovoj datoteci.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png` gdje je xx smislen naziv koji odabere autor md datoteke.
 
 Slike se nalaze u mapi images za engleski jezik, a Crowdin ih automatski prenosi u ostale jezike. Za to ne morate ništa učiniti!
 
@@ -199,7 +199,7 @@ Zatim tu referencu povežite u tekstu koji pišete pomoću sljedeće vrste povez
 
 U dokumentaciju možete dodati okvire s napomenama i upozorenjima.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Koristite ih pažljivo, jer dokumentacija treba biti što lakša za čitanje.
+Osim toga, možete dodati sklopive napomene s detaljnim informacijama, tako da korisnike koje detalji ne zanimaju to ne odbije od čitanja teksta. Koristite ih pažljivo, jer dokumentacija treba biti što lakša za čitanje.
 
 #### Napomene
 
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     Ovo je upozorenje.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Naslov upozorenja
     :class: warning
-    This is a warning.
+    Ovo je upozorenje.
     ```
     
     #### Sklopive napomene
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Tablice
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Izbjegavajte tablice s dugim tekstovima, jer je sadržaj teško postaviti u Markdownu, obično ne stanu u širinu zaslona mobitela i vjerojatno se nakon prijevoda neće jednako prikazivati.
 
 ## Vodič za stil
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 Gdje god je moguće, koristite jednostavan engleski jezik. To pomaže čitateljima kojima engleski nije materinji jezik, a olakšava i prevođenje dokumenata AAPS-a na druge jezike. Pišite kao da razgovarate s korisnikom; zamislite da sjedite za stolom nasuprot osobe za koju pišete. Zapamtite: većina korisnika AAPS-a nema iskustva s programiranjem. I sam dijabetes ima puno stručnih izraza i kratica. Imajte na umu da je nekim ljudima dijabetes možda tek nedavno dijagnosticiran, da možda nemaju toliko iskustva s dijabetesom kao vi ili da su prošli drukčiju edukaciju o dijabetesu. Ako koristite skraćenicu ili kraticu, kod prvog korištenja napišite je u cijelosti, a odmah iza toga u zagradi navedite kraticu, npr. „super mikro bolus (SMB)“. Također dodajte poveznicu na pojmovnik. Stručni izrazi koje čitatelj možda ne poznaje također se mogu dodati u zagradama.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Umjesto: *„Što uzrokuje visoke postprandijalne vrhove GUK-a u zatvorenoj petlji?“*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Koristite: *„Što uzrokuje visok vrh GUK-a **nakon ručka** (postprandijalno) u zatvorenoj petlji?“*
 
 ##### Koristite jednostavne riječi koje svi razumiju
 
@@ -296,7 +296,7 @@ Posebno kada snimate video ili snimke zaslona, pazite da ne otkrijete svoje priv
 
 Naredbe su najbrži način davanja uputa, ali autori se ponekad boje davati naredbe pa pišu „trebali biste to učiniti“ umjesto samo „učinite to“. Možda se ljudi boje da naredbe zvuče previše grubo. To često možete riješiti tako da ispred stavite riječ „molimo“. Ipak, ako se nešto mora učiniti, bolje je ne pisati „molimo“, jer to čitatelju daje mogućnost da odbije.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Umjesto: *„Trebali biste to jednostavno shvatiti kao potpunu tvrdnju.“*
 
 Koristite: *„Shvatite to kao potpunu tvrdnju.“*
 
@@ -310,9 +310,9 @@ Primjer **glagola u aktivu**:
 
 Primjer **glagola u pasivu**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *„Inzulin (subjekt) je isporučen (glagol) od pumpe (objekt).“*
 
-*“delivered”* is a passive verb here. Subjekt i objekt zamijenili su mjesta u usporedbi s rečenicom u aktivu. Rečenicu smo morali produljiti tako da smo dodali „je“ i „od“. Razmislite i o tome da rečenicu započnete glagolom u aktivu.
+*„isporučen“* je ovdje glagol u pasivu. Subjekt i objekt zamijenili su mjesta u usporedbi s rečenicom u aktivu. Rečenicu smo morali produljiti tako da smo dodali „je“ i „od“. Razmislite i o tome da rečenicu započnete glagolom u aktivu.
 
 Umjesto: *„Svoju pumpu možete povezati s telefonom putem izbornika pumpe u AAPS-u, a dostupan vam je i niz pumpi s kojima se možete povezati.“*
 
@@ -453,7 +453,7 @@ Svrha vodiča s uputama je pomoći korisniku koji već ima znanje da ispravno iz
 
 - KAKO
 
-- narrator directly talks to the reader: In this guide **you** will
+- pripovjedač se izravno obraća čitatelju: U ovom vodiču **vi** ćete
 
 - Futur -> za prikaz konačnog cilja
 
@@ -527,7 +527,7 @@ Objašnjenje pojašnjava, produbljuje i proširuje čitateljevo razumijevanje te
     
     *W je bolji od z jer…*
     
-    Offer judgements and even opinions where appropriate.
+    Gdje je prikladno, iznesite procjene, pa čak i mišljenja.
     
     *X u sustavu y analogan je w u sustavu z. Međutim…*
     
