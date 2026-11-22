@@ -1,6 +1,6 @@
 # Как переводить строки приложения AAPS и документации
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
+* Для строк, которые используются в приложении, перейдите по ссылке <https://crowdin.com/project/androidaps> и войдите с помощью вашей учетной записи GitHub
 * Для перевода статей документации перейдите по ссылке <https://crowdin.com/project/androidapsdocs> и залогиньтесь, используя вашу учетную запись GitHub
 
 * Запросите участие в команде составителей документации. Для этого кликните по флагу желаемого языка, а затем нажмите кнопку "Join" ("Присоединиться") в правом верхнем углу следующей страницы. Пожалуйста, укажите свой язык, сообщите немного информации о себе, своем опыте с AAPS, о том, какую роль хотите получить - переводчика (translator) или корректора (proofreader) (указывайте корректора только если вы имеете опыт в переводах + опытный пользователь AAPS).
@@ -63,8 +63,8 @@
     
         1. Ваш перевод. Вы можете скопировать текст из поля выше или выбрать один из предложенных ниже.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Нажмите кнопку "save" ("Сохранить") чтобы сохранить свое предложение перевода. It will then be passed to a proofreader for final check.
+        1. Это предложения для перевода. Здесь, например, видно, насколько хорошо, по мнению Crowdin, подходит предложение, или что строка уже была переведена раньше и появилась снова только потому, что текст был перемещен, а не изменен.
+        1. Нажмите кнопку "save" ("Сохранить") чтобы сохранить свое предложение перевода. Затем перевод будет передан корректору для окончательной проверки.
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
@@ -72,7 +72,7 @@
     
         1. перевод не будет проверен корректором
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. не завершится синхронизация между Crowdin и GitHub (раз в час), после которой создается PR для GitHub.
     
         1. PR в Github не будет одобрен.
     
@@ -83,11 +83,11 @@
     ```{admonition} Ссылки больше не переводятся
     :class: note
     
-    Ссылки больше не переводятся. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Ссылки больше не переводятся. Раньше здесь был раздел на эту тему, но его больше нет: после перехода на Markdown и myst_parser мы явно создаем метки в английском тексте, и они автоматически передаются в другие языки.
     
     
 
-Вы переводите текст ссылки, отображаемый пользователю. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Вы переводите текст ссылки, отображаемый пользователю. Будьте внимательны и **не** удаляйте ссылку, которая обозначена парой тегов `<0></0>` (или с другими номерами, если в одном абзаце несколько ссылок).
 
 Корректорам следует обращать особое внимание вопросу правильности ссылок!
 
@@ -101,4 +101,4 @@
     
     ![одобрить текст](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Для ускорения процесса вы можете проинформировать команду о появлении нового перевода.
+* Когда корректор одобряет перевод, он будет добавлен в следующую сборку документации. Сборка выполняется по необходимости, без точного расписания, но примерно раз в неделю, кроме периода праздников. Для ускорения процесса вы можете проинформировать команду о появлении нового перевода.
