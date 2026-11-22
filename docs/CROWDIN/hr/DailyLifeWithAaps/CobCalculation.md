@@ -2,7 +2,7 @@
 
 ## Kako AAPS izračunava vrijednost COB-a?
 
-Kada korisnik unese ugljikohidrate kao dio unosa obroka ili kao korekciju ugljikohidratima, **AAPS** ih dodaje trenutnim aktivnim ugljikohidratima (**COB**). **AAPS** zatim izračunava apsorpciju korisnikovih ugljikohidrata na temelju uočenih odstupanja korisnikovih vrijednosti **GUK-a**. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). To nije postavka u korisnikovom **Profilu**, nego je izračunava **AAPS** prema postavkama **ISF/I:C**. Određuje koliko mg/dL 1 g ugljikohidrata podiže korisnikov **GUK**.
+Kada korisnik unese ugljikohidrate kao dio unosa obroka ili kao korekciju ugljikohidratima, **AAPS** ih dodaje trenutnim aktivnim ugljikohidratima (**COB**). **AAPS** zatim izračunava apsorpciju korisnikovih ugljikohidrata na temelju uočenih odstupanja korisnikovih vrijednosti **GUK-a**. Brzina apsorpcije ovisi o faktoru osjetljivosti na ugljikohidrate (**CSF**). To nije postavka u korisnikovom **Profilu**, nego je izračunava **AAPS** prema postavkama **ISF/I:C**. Određuje koliko mg/dL 1 g ugljikohidrata podiže korisnikov **GUK**.
 
 ## Faktor osjetljivosti na ugljikohidrate
 
@@ -12,13 +12,13 @@ Formula koju koristi **AAPS** je:
 
 Učinak na korisnikov **Profil**:
 
-- _increase_ **IC** - by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
+- _povećanje_ **IC-a** – povećava ugljikohidrate apsorbirane svakih 5 minuta i tako skraćuje ukupno vrijeme apsorpcije;
 
 - _povećanje_ **ISF-a** – smanjuje ugljikohidrate apsorbirane svakih 5 minuta i tako produljuje ukupno vrijeme apsorpcije; i
 
-- _change_ **Profile Percentage** - increase/decrease both values thus has no impact on carbs absorption time.
+- _promjena_ vrijednosti **Postotak profila** – povećava/smanjuje obje vrijednosti i zato ne utječe na vrijeme apsorpcije ugljikohidrata.
 
-For example, if the user’s **Profile** **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. Za svakih 20 mg/dL porasta korisnikovog **GUK-a** **AAPS** će izračunati 1 g ugljikohidrata kao apsorbiran. Pozitivni **aktivni inzulin (IOB)** također utječe na izračun **COB-a**. Dakle, ako **AAPS** predviđa da će korisnikov **GUK** pasti za 20 mg/dL zbog **aktivnog inzulina (IOB)**, a on umjesto toga ostane ravan, **AAPS** će također izračunati 1 g ugljikohidrata kao apsorbiran.
+Na primjer, ako je u korisnikovom **Profilu** **ISF** 100, a **I:C** 5, korisnikov faktor osjetljivosti na ugljikohidrate bio bi 20. Za svakih 20 mg/dL porasta korisnikovog **GUK-a** **AAPS** će izračunati 1 g ugljikohidrata kao apsorbiran. Pozitivni **aktivni inzulin (IOB)** također utječe na izračun **COB-a**. Dakle, ako **AAPS** predviđa da će korisnikov **GUK** pasti za 20 mg/dL zbog **aktivnog inzulina (IOB)**, a on umjesto toga ostane ravan, **AAPS** će također izračunati 1 g ugljikohidrata kao apsorbiran.
 
 Ugljikohidrati se apsorbiraju i metodama opisanima niže, ovisno o tome koji je algoritam osjetljivosti odabran u korisnikovom **AAPS-u**.
 
@@ -47,7 +47,7 @@ Ako se umjesto vrijednosti izračunate iz odstupanja **GUK-a** koristi minimalna
 (CobCalculation-detection-of-wrong-cob-values)=
 ## Otkrivanje pogrešnih vrijednosti COB-a
 
-**AAPS** will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. U tom slučaju korisnik nakon korištenja bolus kalkulatora dobiva dodatnu napomenu na zaslonu potvrde.
+**AAPS** će upozoriti korisnika ako se sprema dati bolus s **COB-om** iz prethodnog obroka, a algoritam procijeni da trenutni izračun **COB-a** nije točan. U tom slučaju korisnik nakon korištenja bolus kalkulatora dobiva dodatnu napomenu na zaslonu potvrde.
 
 ### Kako AAPS otkriva pogrešne vrijednosti COB-a?
 
@@ -62,7 +62,7 @@ Na snimci zaslona iznad 66 % vremena apsorpcija ugljikohidrata izračunata je po
 - Razmislite o otkazivanju tretmana – pritisnite „Otkaži“ umjesto „U redu“.
 - Ponovno izračunajte nadolazeći obrok bolus kalkulatorom, bez kvačice kod **COB**.
 - Ako trebate korekcijski bolus, unesite ga ručno.
-- Be careful not to overdose or stack insulin!
+- Pazite da ne predozirate inzulin i da ne gomilate doze inzulina!
 
 
 ### Zašto algoritam ne otkriva COB ispravno?
@@ -87,7 +87,7 @@ Zaslon **Povijest tretmana** može se koristiti za ispravak pogrešnog unosa ugl
 ![Brisanje unosa ugljikohidrata iz Povijesti tretmana](../images/treatments_history_delete_carbs.png)
 
 1. Provjerite i zapamtite trenutne **COB** i **IOB** na glavnom zaslonu **AAPS-a**.
-2. Otvorite **Povijest tretmana** (bočni izbornik → *Povijest tretmana*), karticu **Ugljikohidrati i bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
+2. Otvorite **Povijest tretmana** (bočni izbornik → *Povijest tretmana*), karticu **Ugljikohidrati i bolus**. Ovisno o pumpi, ugljikohidrati se mogu prikazati zajedno s inzulinom u jednom retku ili kao zaseban unos (npr. kod Dana RS).
 3. **Dugo pritisnite** pogrešan unos ugljikohidrata – popis prelazi u **način odabira** s potvrdnim okvirom u svakom retku, a unos je označen kvačicom (oznaka **1** iznad). Označite kvačicom i sve ostale unose koje također želite ukloniti.
 4. Dodirnite ikonu **🗑 Izbriši** u gornjoj traci (oznaka **2**) i potvrdite – dijalog potvrde točno navodi što će biti uklonjeno.
 5. Provjerite jesu li ugljikohidrati uspješno uklonjeni tako da ponovno provjerite **COB** na glavnom zaslonu **AAPS-a**.
