@@ -73,7 +73,7 @@ HbA1c: procjena glikiranog hemoglobina, na temelju prosjeka mjerenja CGM-a. Ovo 
 
 - **Graf**: jedan dan od ponoći do ponoći. Linija je **Medijan** (polovica vaših očitanja u tom satu bila je niža, polovica viša). Oko nje jedan pojas obuhvaća srednju polovicu vaših očitanja (**25–75%**), a širi pojas većinu njih (**10–90%**). Uzak pojas znači da je vaša glukoza u tom satu slična iz dana u dan. Isprekidane linije označavaju vašu **Oznaku NISKO**, 140 mg/dL (7,8 mmol/L) i vašu **Oznaku VISOKO**.
 - **Glikemijski pregled**: vrijeme provedeno u vašem rasponu, u uskom rasponu (70–140 mg/dL ili 3,9–7,8 mmol/L), iznad i ispod vašeg raspona, zatim **Prosjek** i **Medijan** vaše glukoze. Vaš raspon čine **Oznaka NISKO** i **Oznaka VISOKO** postavljene u [Raspon za prikaz](#Preferences-range-for-visualization).
-- **eA1c** i **GMI**: dvije procjene HbA1c izračunate iz vaših očitanja CGM-a. Kao i gornji HbA1c, možda se neće podudarati s vašim nalazima HbA1c iz krvi.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Kao i gornji HbA1c, možda se neće podudarati s vašim nalazima HbA1c iz krvi.
 - **SD** (standardna devijacija) i **CV** (koeficijent varijacije): koliko se vaša glukoza mijenja. Niža vrijednost znači stabilniju glukozu.
 - **Dani**: koliko je dana podataka CGM-a korišteno.
 
