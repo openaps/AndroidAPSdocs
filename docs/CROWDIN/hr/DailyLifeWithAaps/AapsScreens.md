@@ -1,4 +1,4 @@
-# AAPS screens
+# Zasloni AAPS-a
 
 ```{contents}
 :backlinks: entry
@@ -7,304 +7,304 @@
 
 (the-homescreen)= (AapsScreens-the-homescreen)=
 
-## The main screen
+## Glavni zaslon
 
-![Main screen](../images/main/Home_Homescreen.png)
+![Glavni zaslon](../images/main/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Ovo je prvi zaslon koji vidite kada otvorite **AAPS** i sadrži većinu informacija koje trebate svaki dan.
 
-### Section A - Top bar
+### Odjeljak A - Gornja traka
 
-* The **menu** (☰) on the left opens the navigation drawer with **Treatments history**, **History browser**, **Statistics**, **Profile helper**, **Maintenance**, **Setup Wizard**, **Configuration** and more.
-* The **search bar** finds settings, dialogs and documentation — just start typing (see [Global search](../DailyLifeWithAaps/GlobalSearch.md)).
-* The **Settings** (gear) icon on the right opens all [settings](../SettingUpAaps/Preferences.md).
+* **Izbornik** (☰) lijevo otvara bočni izbornik s opcijama **Povijest tretmana**, **Preglednik povijesti**, **Statistika**, **Pomoćnik profila**, **Održavanje**, **Čarobnjak za postavljanje**, **Konfiguracija** i drugima.
+* **Traka za pretraživanje** pronalazi postavke, dijaloge i dokumentaciju — samo počnite tipkati (pogledajte [Globalno pretraživanje](../DailyLifeWithAaps/GlobalSearch.md)).
+* Ikona **Postavke** (zupčanik) desno otvara sve [postavke](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
-### Section B - Status block
+### Odjeljak B - Blok statusa
 
-#### Current blood glucose
+#### Trenutna glukoza u krvi
 
-The latest blood glucose reading from your CGM is shown in the big circle on the left, together with the difference to the previous reading (delta) and the age of the reading.
+Zadnje očitanje glukoze u krvi s vašeg CGM-a prikazuje se u velikom krugu lijevo, zajedno s razlikom prema prethodnom očitanju (delta) i starošću očitanja.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+Boja vrijednosti GUK-a pokazuje odnos prema zadanom [rasponu](#Preferences-range-for-visualization).
 
-* green = in range
-* red = below range
-* yellow = above range
+* zeleno = u rasponu
+* crveno = ispod raspona
+* žuto = iznad raspona
 
-![BG circle in range, green](../images/main/Home_Delta.png) ![BG circle above range, yellow](../images/main/Home_Delta_high.png) ![BG circle below range, red](../images/main/Home_Delta_low.png)
+![Krug GUK-a u rasponu, zelen](../images/main/Home_Delta.png) ![Krug GUK-a iznad raspona, žut](../images/main/Home_Delta_high.png) ![Krug GUK-a ispod raspona, crven](../images/main/Home_Delta_low.png)
 
 (loop-status)= (AapsScreens-loop-status)=
 
-#### Loop status
+#### Status petlje
 
-![Loop status](../images/main/main_loop_status.png)
+![Status petlje](../images/main/main_loop_status.png)
 
-Next to the BG circle, an icon shows the running mode of the loop (from top to bottom in the picture):
+Pokraj kruga GUK-a ikona prikazuje način rada petlje (odozgo prema dolje na slici):
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
-4. Red circle with cross = loop disabled (not working permanently)
-5. Red pause icon = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown next to the icon
-6. Grey circle with plug = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown next to the icon
+1. Zeleni krug = [zatvorena petlja](#KeyAapsFeatures-ClosedLoop), petlja radi
+2. Ljubičasti krug s točkastom linijom = [zaštita od niske razine glukoze (LGS)](#KeyAapsFeatures-LGS)
+3. Plavi krug s točkastom linijom = [otvorena petlja](#KeyAapsFeatures-OpenLoop)
+4. Crveni krug s križićem = petlja onemogućena (trajno ne radi)
+5. Crvena ikona pauze = petlja suspendirana (privremeno pauzirana, ali bazalni inzulin se daje) - preostalo vrijeme prikazuje se pokraj ikone
+6. Sivi krug s utikačem = pumpa odspojena (privremeno se uopće ne daje inzulin) - preostalo vrijeme prikazuje se pokraj ikone
 
-Press the icon to open the Loop dialog. The dialog's content depends on the current state:
+Pritisnite ikonu da otvorite dijalog petlje. Sadržaj dijaloga ovisi o trenutnom stanju:
 
-* While the loop is **running** (closed, open or LGS), you can switch the running mode (Closed Loop, Low Glucose Suspend, Open Loop or Disable loop), **suspend** the loop or **disconnect** the pump for a chosen duration.
-* While the loop is **disabled**, you can re-enable it by selecting a running mode, or disconnect the pump.
-* While the loop is **suspended**, you can **resume** it, disconnect the pump, or pick a new duration under **Suspend loop** to extend the suspension.
-* While the pump is **disconnected**, you can **reconnect** the pump, or pick a new duration under **Disconnect pump** to extend the disconnection.
+* Dok petlja **radi** (zatvorena, otvorena ili LGS), možete promijeniti način rada (Zatvorena petlja, Zaštita od niske razine glukoze, Otvorena petlja ili Onemogući petlju), **suspendirati** petlju ili **odspojiti** pumpu na odabrano trajanje.
+* Dok je petlja **onemogućena**, možete je ponovno omogućiti odabirom načina rada ili odspojiti pumpu.
+* Dok je petlja **suspendirana**, možete je **nastaviti**, odspojiti pumpu ili odabrati novo trajanje pod **Suspendiraj petlju** da produljite suspenziju.
+* Dok je pumpa **odspojena**, možete **ponovno spojiti** pumpu ili odabrati novo trajanje pod **Odspoji pumpu** da produljite odspajanje.
 
-When you extend a suspension or a disconnection, the new duration **starts from now**: it replaces the remaining time, it is not added to it. You do not have to resume or reconnect first.
+Kada produljite suspenziju ili odspajanje, novo trajanje **počinje od sada**: ono zamjenjuje preostalo vrijeme, ne dodaje mu se. Ne morate prvo nastaviti petlju ili ponovno spojiti pumpu.
 
-The dialog while the loop is running in closed loop:
+Dijalog dok petlja radi kao zatvorena petlja:
 
-![Loop dialog in closed loop](../images/loop/loop_dialog_closed_loop.png)
+![Dijalog petlje u zatvorenoj petlji](../images/loop/loop_dialog_closed_loop.png)
 
-The dialog while the loop is suspended, with **Resume** and the durations to extend the suspension:
+Dijalog dok je petlja suspendirana, s gumbom **Nastavi** i trajanjima za produljenje suspenzije:
 
-![Loop dialog while the loop is suspended](../images/loop/loop_dialog_suspended.png)
+![Dijalog petlje dok je petlja suspendirana](../images/loop/loop_dialog_suspended.png)
 
-The dialog while the pump is disconnected, with **Reconnect Pump** and the durations to extend the disconnection:
+Dijalog dok je pumpa odspojena, s gumbom **Ponovno spoji pumpu** i trajanjima za produljenje odspajanja:
 
-![Loop dialog while the pump is disconnected](../images/loop/loop_dialog_disconnected.png)
+![Dijalog petlje dok je pumpa odspojena](../images/loop/loop_dialog_disconnected.png)
 
-The dialog in Low Glucose Suspend, in open loop and while the loop is disabled only differs in the running modes it offers:
+Dijalog u načinu Zaštita od niske razine glukoze, u otvorenoj petlji i dok je petlja onemogućena razlikuje se samo po načinima rada koje nudi:
 
-![Loop dialog in Low Glucose Suspend](../images/loop/loop_dialog_lgs.png)
+![Dijalog petlje u načinu Zaštita od niske razine glukoze](../images/loop/loop_dialog_lgs.png)
 
-![Loop dialog in open loop](../images/loop/loop_dialog_open_loop.png)
+![Dijalog petlje u otvorenoj petlji](../images/loop/loop_dialog_open_loop.png)
 
-![Loop dialog while the loop is disabled](../images/loop/loop_dialog_disabled.png)
+![Dijalog petlje dok je petlja onemogućena](../images/loop/loop_dialog_disabled.png)
 
-This is how the main screen looks in each mode. The color band at the top of the graph changes at the time of the switch.
+Ovako izgleda glavni zaslon u svakom načinu rada. Traka u boji na vrhu grafa mijenja se u trenutku promjene.
 
-Low Glucose Suspend:
+Zaštita od niske razine glukoze:
 
-![Main screen in Low Glucose Suspend](../images/main/main_screen_loop_lgs.png)
+![Glavni zaslon u načinu Zaštita od niske razine glukoze](../images/main/main_screen_loop_lgs.png)
 
-Open loop:
+Otvorena petlja:
 
-![Main screen in open loop](../images/main/main_screen_loop_open.png)
+![Glavni zaslon u otvorenoj petlji](../images/main/main_screen_loop_open.png)
 
-Loop disabled:
+Petlja onemogućena:
 
-![Main screen with the loop disabled](../images/main/main_screen_loop_disabled.png)
+![Glavni zaslon s onemogućenom petljom](../images/main/main_screen_loop_disabled.png)
 
-Loop suspended — the remaining time is shown next to the icon:
+Petlja suspendirana — preostalo vrijeme prikazuje se pokraj ikone:
 
-![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
+![Glavni zaslon sa suspendiranom petljom](../images/main/main_screen_loop_suspended.png)
 
-Pump disconnected — the remaining time is shown next to the icon. The treatment buttons stay in the QuickLaunch toolbar, so you can still record insulin given with a pen or carbs:
+Pumpa odspojena — preostalo vrijeme prikazuje se pokraj ikone. Gumbi za tretmane ostaju na alatnoj traci Brzo pokretanje, pa i dalje možete zabilježiti inzulin dan inzulinskom olovkom ili ugljikohidrate:
 
-![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
+![Glavni zaslon s odspojenom pumpom](../images/main/main_screen_pump_disconnected.png)
 
-A validation is required after each selection.
+Nakon svakog odabira potrebna je potvrda.
 
-```{admonition} Alarm: the pump did not accept the zero temp basal :class: warning While the pump is disconnected, **AAPS** keeps a zero temporary basal on the pump and sets it again if it is missing. If this still fails after 10 minutes, **AAPS** raises an urgent alarm: *"The pump did not accept the zero temp basal. It may still be giving basal insulin. Check the pump."* The alarm repeats every 15 minutes until the zero temporary basal is set or the disconnection ends. If you see it, check your pump: it may be delivering basal insulin although **AAPS** shows it as disconnected.
+```{admonition} Alarm: pumpa nije prihvatila nulti privremeni bazal :class: warning Dok je pumpa odspojena, **AAPS** održava nulti privremeni bazal na pumpi i ponovno ga postavlja ako nedostaje. Ako to i nakon 10 minuta ne uspije, **AAPS** pokreće hitni alarm: *„Pumpa nije prihvatila nulti privremeni bazal. Možda još uvijek daje bazalni inzulin. Provjerite pumpu.“* Alarm se ponavlja svakih 15 minuta dok se nulti privremeni bazal ne postavi ili dok odspajanje ne završi. Ako ga vidite, provjerite pumpu: možda daje bazalni inzulin iako je **AAPS** prikazuje kao odspojenu.
 
-    <br />Note: the modes offered depend on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) — Closed Loop and LGS only become available as you complete them.
+    <br />Napomena: ponuđeni načini rada ovise o vašem napretku u [ciljevima](../SettingUpAaps/CompletingTheObjectives.md) — Zatvorena petlja i LGS postaju dostupni tek kada ih ispunite.
     
     (aaps-screens-bg-warning-sign)=
-    #### BG warning sign
+    #### Znak upozorenja za GUK
     
-    If **AAPS** detects a problem with the BG readings it receives, a shortcut to your BG source (named after it, for example **xDrip+ BG**) appears in the bottom bar of the main screen, with a red warning badge. Tap it to open the [BG source screen](#aaps-screens-bg-source).
+    Ako **AAPS** otkrije problem s očitanjima GUK-a koja prima, na donjoj traci glavnog zaslona pojavljuje se prečac do vašeg izvora GUK-a (nazvan po njemu, na primjer **xDrip+ BG**) s crvenom oznakom upozorenja. Dodirnite ga da otvorite [zaslon izvora GUK-a](#aaps-screens-bg-source).
     
-    ##### Duplicate BG data
+    ##### Dvostruki podaci GUK-a
     
-    The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which prevents the loop from doing its work right. **AAPS** cannot calculate your BG trend reliably from duplicated readings, so it stops correcting.
+    Crveni znak upozorenja znači da morate odmah reagirati: primate **dvostruke podatke GUK-a**, što sprječava petlju da ispravno radi. **AAPS** ne može pouzdano izračunati trend GUK-a iz dvostrukih očitanja, pa prestaje s korekcijama.
     
-    If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode: the loop icon turns purple.
+    Ako je vaša petlja bila zatvorena, **AAPS** je prebacuje u način [Zaštita od niske razine glukoze (LGS)](#KeyAapsFeatures-LGS): ikona petlje postaje ljubičasta.
     
-      ![Duplicate BG data: LGS loop icon and the BG source shortcut with a red warning badge](../images/bg_warn_red.png)
+      ![Dvostruki podaci GUK-a: ikona petlje LGS i prečac izvora GUK-a s crvenom oznakom upozorenja](../images/bg_warn_red.png)
     
-    Press the loop icon: the **Constraints** card at the top tells you why: "BgQualityCheck: LGS mode due to doubled values in BG source".
+    Pritisnite ikonu petlje: kartica **Ograničenja** na vrhu kaže zašto: „BgQualityCheck: Način LGS zbog dvostrukih vrijednosti u izvoru GUK-a“.
     
-      ![Running mode dialog: LGS due to doubled values](../images/main/bg_doubled_constraint.png)
+      ![Dijalog načina rada: LGS zbog dvostrukih vrijednosti](../images/main/bg_doubled_constraint.png)
     
-    ```{admonition} Your loop is running in Low Glucose Suspend
+    ```{admonition} Vaša petlja radi u načinu Zaštita od niske razine glukoze
     :class: note
-    Your loop keeps running, but only to protect you against lows: **AAPS** can still reduce or suspend your basal, and it will not give any correction insulin until you solve this issue !
+    Vaša petlja i dalje radi, ali samo da vas zaštiti od niskih vrijednosti: **AAPS** i dalje može smanjiti ili zaustaviti vaš bazal, ali neće dati nikakav korekcijski inzulin dok ne riješite ovaj problem!
     
 
-You need to find out why you get duplicate BGs:
+Morate otkriti zašto dobivate dvostruke vrijednosti GUK-a:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
+* Je li Dexcom bridge omogućen na vašoj Nightscout stranici? Onemogućite bridge: otvorite administracijsku ploču svoje Nightscout instance, uredite varijablu "enable" i uklonite iz nje dio "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Šalje li više izvora vaš GUK u Nightscout? Ako koristite aplikaciju BYODA, omogućite slanje podataka u **AAPS**, ali ga ne omogućujte u xDripu, ako ga koristite.
+* Imate li pratitelje koji primaju vaš GUK, ali ga ponovno šalju na vašu Nightscout stranicu?
+* Posljednja mogućnost: u [postavkama NSClienta](#Preferences-nsclient) odaberite postavke sinkronizacije i onemogućite opciju „Primaj CGM podatke iz NS-a“.
 
-To remove the warning immediately and get your loop correcting again, delete the duplicate entries from the BG source screen: tap the shortcut in the bottom bar. The duplicate reading is highlighted in red. Long press a reading to start selecting, tick the duplicates and tap the trash icon at the top right.
+Da odmah uklonite upozorenje i da petlja ponovno radi korekcije, izbrišite dvostruke unose na zaslonu izvora GUK-a: dodirnite prečac na donjoj traci. Dvostruko očitanje označeno je crvenom bojom. Dugo pritisnite očitanje da započnete odabir, označite duplikate i dodirnite ikonu koša za smeće gore desno.
 
-![BG source screen: duplicates selected for deletion](../images/main/bg_source_delete_duplicates.png)
+![Zaslon izvora GUK-a: duplikati odabrani za brisanje](../images/main/bg_source_delete_duplicates.png)
 
-However, when there are a lot of duplicates, it might be easier to
+Međutim, kada ima puno duplikata, možda će biti lakše
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [napravite sigurnosnu kopiju postavki](../Maintenance/ExportImportSettings.md),
+* resetirajte bazu podataka u izborniku Održavanje i
+* ponovno [uvezite svoje postavke](../Maintenance/ExportImportSettings.md)
 
-    {admonition} Switch back to Closed Loop yourself
+    {admonition} Sami se vratite na zatvorenu petlju
     :class: important
-    **AAPS** does not return to **Closed Loop** on its own once the duplicates are gone. Press the loop icon on the main screen and select **Closed Loop** again.
+    **AAPS** se ne vraća sam na **Zatvorenu petlju** kada duplikati nestanu. Pritisnite ikonu petlje na glavnom zaslonu i ponovno odaberite **Zatvorena petlja**.
 
-##### Flat BG data
+##### Ravni podaci GUK-a
 
-With some BG sources (Libre 1, AiDEX, Glutec, Medtronic and sources that do not report their sensor type), **AAPS** also checks for readings that do not change: if your BG has changed by less than 2 mg/dL (0.1 mmol/L) for 45 minutes, the data is considered wrong. The BG source shortcut then shows a red flat-trend badge, and the loop stops any high temporary basal and gives no correction insulin until the readings change again. Check your sensor and the app that sends the readings.
+Kod nekih izvora GUK-a (Libre 1, AiDEX, Glutec, Medtronic i izvori koji ne javljaju vrstu senzora) **AAPS** provjerava i očitanja koja se ne mijenjaju: ako se vaš GUK 45 minuta promijenio za manje od 2 mg/dL (0,1 mmol/L), podaci se smatraju pogrešnima. Prečac izvora GUK-a tada prikazuje crvenu oznaku ravnog trenda, a petlja zaustavlja svaki visoki privremeni bazal i ne daje korekcijski inzulin dok se očitanja ponovno ne počnu mijenjati. Provjerite senzor i aplikaciju koja šalje očitanja.
 
-##### Irregular BG data
+##### Nepravilni podaci GUK-a
 
-When readings arrive at irregular intervals or some are missing, **AAPS** recalculates 5-minute values from the readings it has. This happens for example after a sensor change, or with Libre sensors, whose timing slips a minute or two every few hours. The loop keeps working and you do not have to take any action. **AAPS** 4 no longer shows a yellow warning sign for this.
+Kada očitanja stižu u nepravilnim razmacima ili neka nedostaju, **AAPS** ponovno izračunava vrijednosti za svakih 5 minuta iz očitanja koja ima. To se događa, na primjer, nakon promjene senzora ili kod senzora Libre, čije se vrijeme svakih nekoliko sati pomakne za minutu ili dvije. Petlja nastavlja raditi i ne morate ništa poduzeti. **AAPS** 4 za to više ne prikazuje žuti znak upozorenja.
 
-#### Current Profile
+#### Trenutni profil
 
-The current profile is displayed next to the star icon.
+Trenutni profil prikazuje se pokraj ikone zvjezdice.
 
-Tap the profile name to open the [Profile screen](#aaps-screens-profile), where you can view the profile details and [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Dodirnite naziv profila da otvorite [zaslon Profil](#aaps-screens-profile), gdje možete vidjeti detalje profila i [mijenjati profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Step by step: [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Da **promijenite postotak profila** (i njegovo trajanje), dodirnite naziv profila, a zatim dodirnite okrugli gumb **▶** (Aktiviraj) dolje desno na zaslonu Profil. U **AAPS-u** 3.x ovaj zaslon otvarao se dugim pritiskom na naziv profila; u **AAPS-u** 4 dugi pritisak ne radi ništa. Korak po korak: [Promjena postotka profila](#ProfileSwitch-change-percentage).
 
-![Profile with an active profile switch](../images/main/main_profile_switch.png)
+![Profil s aktivnom zamjenom profila](../images/main/main_profile_switch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a specific percentage of 90% and a remaining duration of 9 minutes — the profile name turns yellow while a temporary profile switch is running.
-3. Profile switch with a time shift of 1 hour and a remaining duration of 9 minutes.
+1. Uobičajeni prikaz s aktivacijom standardnog profila.
+2. Zamjena profila s određenim postotkom od 90 % i preostalim trajanjem od 9 minuta — naziv profila postaje žut dok traje privremena zamjena profila.
+3. Zamjena profila s vremenskim pomakom od 1 sata i preostalim trajanjem od 9 minuta.
 
-#### Target
+#### Cilj
 
-![Temp target remaining duration](../images/main/main_temp_target.png)
+![Preostalo trajanje privremenog cilja](../images/main/main_temp_target.png)
 
-The current target blood glucose level is displayed below the profile name.
+Trenutna ciljna razina glukoze u krvi prikazuje se ispod naziva profila.
 
-Short press the target to open the **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)** screen.
+Kratko pritisnite cilj da otvorite zaslon **[Privremeni cilj](../DailyLifeWithAaps/TempTargets.md)**.
 
-1. Regular display: the target range defined in your profile.
-2. If a temp target is set, the target turns yellow/orange with the icon of the used preset, and the remaining time in minutes is shown in brackets.
+1. Uobičajeni prikaz: ciljni raspon zadan u vašem profilu.
+2. Ako je postavljen privremeni cilj, cilj postaje žut/narančast s ikonom korištenog predloška, a preostalo vrijeme u minutama prikazuje se u zagradama.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
-#### Visualization of Dynamic target adjustment
+#### Prikaz dinamičke prilagodbe cilja
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+Kada koristite [algoritam SMB](#Config-Builder-aps) i funkciju [Autosens](#Open-APS-features-autosens), **AAPS** može dinamički prilagoditi vaš cilj na temelju osjetljivosti.
 
-Enable either one or both of the following options in [OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+Omogućite jednu ili obje sljedeće opcije u [postavkama OpenAPS SMB](#Preferences-openaps-smb-settings):
 
-* "Sensitivity raises target" and/or
-* "Resistance lowers target"
+* „Osjetljivost podiže cilj“ i/ili
+* „Rezistencija snižava cilj“
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile, and the displayed target changes color to indicate the adjustment.
+Ako **AAPS** otkrije rezistenciju ili osjetljivost, cilj će se promijeniti u odnosu na onaj zadan u profilu, a prikazani cilj promijenit će boju da pokaže prilagodbu.
 
 (aaps-screens-iob-cob-basal-sens)=
 
-#### IOB, COB, basal and sensitivity
+#### Aktivni inzulin (IOB), aktivni ugljikohidrati (COB), bazal i osjetljivost
 
-![IOB, COB, basal and sensitivity](../images/main/main_iob_cob_basal_sensitivity.png)
+![Aktivni inzulin (IOB), aktivni ugljikohidrati (COB), bazal i osjetljivost](../images/main/main_iob_cob_basal_sensitivity.png)
 
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-    The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-    * IOB may be negative if there have recently been periods of reduced basal.
-    * Press the chip to see the split of bolus and basal insulin (first dialog in the picture — here with a negative IOB after a period of reduced basal)
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
-3. The teal button on the right reflects the **current basal delivery**: a flat line when the profile basal is running, a changed icon while a temporary basal rate is active
-4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). When the loop changes your ISF, the row also shows the profile ISF, an arrow and the ISF the loop uses now, for example "80% 2.0 ↗ 2.5". Press it to see the Autosens value and the effective ISF (second dialog in the picture). If the loop works with a different value than the last Autosens result (for example because a temp target changes your sensitivity), the dialog also shows that value as **Autosens in algorithm**. When Autosens is off, the loop keeps your profile ISF and no effective ISF is shown.
+1. **Štrcaljka**: aktivni inzulin (IOB) - količina inzulina koji još djeluje u vašem tijelu  
+    Vrijednost aktivnog inzulina bila bi nula kada bi radio samo vaš standardni bazal i kada ne bi bilo preostalog inzulina od prethodnih bolusa. 
+    * Aktivni inzulin može biti negativan ako je nedavno bilo razdoblja smanjenog bazala.
+    * Pritisnite čip da vidite podjelu na bolusni i bazalni inzulin (prvi dijalog na slici — ovdje s negativnim aktivnim inzulinom nakon razdoblja smanjenog bazala)
+2. **Zrno**: [aktivni ugljikohidrati (COB)](../DailyLifeWithAaps/CobCalculation.md) - još neapsorbirani ugljikohidrati koje ste prije pojeli
+3. Tirkizni gumb desno prikazuje **trenutnu isporuku bazala**: ravna linija kada radi bazal iz profila, promijenjena ikona dok je aktivna privremena bazalna stopa
+4. **Redak postotka** prikazuje trenutnu osjetljivost ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). Kada petlja promijeni vaš ISF, redak prikazuje i ISF iz profila, strelicu i ISF koji petlja sada koristi, na primjer „80% 2.0 ↗ 2.5“. Pritisnite ga da vidite vrijednost Autosensa i efektivni ISF (drugi dijalog na slici). Ako petlja radi s drugom vrijednošću od zadnjeg rezultata Autosensa (na primjer zato što privremeni cilj mijenja vašu osjetljivost), dijalog prikazuje i tu vrijednost kao **Autosens u algoritmu**. Kada je Autosens isključen, petlja zadržava ISF iz vašeg profila i ne prikazuje se efektivni ISF.
 
-The IOB dialog, opened by pressing the IOB chip:
+Dijalog aktivnog inzulina, otvoren pritiskom na čip aktivnog inzulina:
 
-![IOB dialog with bolus IOB and basal IOB](../images/main/main_chip_iob.png)
+![Dijalog aktivnog inzulina s bolusnim i bazalnim aktivnim inzulinom](../images/main/main_chip_iob.png)
 
-Press the teal button to see the temporary basal rate that is running, when it started and how long it has been running:
+Pritisnite tirkizni gumb da vidite privremenu bazalnu stopu koja radi, kada je počela i koliko dugo već radi:
 
-![Temp basal dialog](../images/main/main_chip_temp_basal.png)
+![Dijalog privremenog bazala](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 
-#### Carbs required
+#### Potrebni ugljikohidrati
 
-![Carbs required shown in the COB chip](../images/main/main_screen_carbs_required.png)
+![Potrebni ugljikohidrati prikazani u čipu aktivnih ugljikohidrata](../images/main/main_screen_carbs_required.png)
 
-Carbs suggestions are given when the reference design detects that it requires carbs.
+Prijedlozi za ugljikohidrate prikazuju se kada referentni dizajn otkrije da su potrebni ugljikohidrati.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+To je situacija kada algoritam oref misli da vas ne može spasiti nultim privremenim bazalom i trebate ugljikohidrate da to popravite.
 
-The carb notifications are much more sophisticated than the bolus calculator ones. You might see a carbs suggestion while the bolus calculator does not show missing carbs.
+Obavijesti o potrebnim ugljikohidratima puno su naprednije od onih iz bolus kalkulatora. Možda ćete vidjeti prijedlog za ugljikohidrate dok bolus kalkulator ne prikazuje nedostajuće ugljikohidrate.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Obavijesti o potrebnim ugljikohidratima mogu se po želji slati u Nightscout. Tada se prikazuje i šalje objava.
 
-### Section C - Status row
+### Odjeljak C - Redak statusa
 
-![Status row](../images/main/main_status_row.png)
+![Redak statusa](../images/main/main_status_row.png)
 
-The status row gives a visual warning for
+Redak statusa daje vizualno upozorenje za
 
-* Cannula age
-* Insulin age (days reservoir is used) and reservoir level (units)
-* Sensor age
-* Pump battery age and level (%)
+* Starost kanile
+* Starost inzulina (koliko dana se spremnik koristi) i razinu u spremniku (jedinice)
+* Starost senzora
+* Starost i razinu baterije pumpe (%)
 
-If threshold warning is exceeded, values will be shown in yellow.
+Ako je prijeđen prag upozorenja, vrijednosti se prikazuju žutom bojom.
 
-If threshold critical is exceeded, values will be shown in red.
+Ako je prijeđen kritični prag, vrijednosti se prikazuju crvenom bojom.
 
 The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
 
-Thresholds can be changed via the small **Settings** icon shown when the status row is **expanded** (chevron on the right) — see [Status lights](#Preferences-status-lights).
+Pragovi se mogu promijeniti preko male ikone **Postavke** koja se prikazuje kada je redak statusa **proširen** (strelica desno) — pogledajte [Statusna svjetla](#Preferences-status-lights).
 
-The expanded status panel also has a button at the end of some rows to record a change, which resets the corresponding age: **Add** on the **Sensor** row records a sensor insertion. If your pump supports it, **Prime/Fill** appears on the **Cannula** (or **Patch pump**) and **Insulin** rows, and **Add** on the **Pump battery** row.
+Prošireni panel statusa ima i gumb na kraju nekih redaka za bilježenje promjene, koji resetira odgovarajuću starost: **Dodaj** u retku **Senzor** bilježi umetanje senzora. Ako vaša pumpa to podržava, **Punjenje** se pojavljuje u retcima **Kanila** (ili **Pumpa bez katetera**) i **Inzulin**, a **Dodaj** u retku **Baterija pumpe**.
 
-![Expanded status panel with Prime/Fill on the Cannula and Insulin rows and Add on the Sensor and Pump battery rows](../images/main/main_status_row_expanded.png)
+![Prošireni panel statusa s gumbom Punjenje u retcima Kanila i Inzulin te gumbom Dodaj u retcima Senzor i Baterija pumpe](../images/main/main_status_row_expanded.png)
 
-Depending on the pump you use, you may not have all of these icons.
+Ovisno o pumpi koju koristite, možda nećete imati sve ove ikone.
 
 (screens-sensor-level-battery)=
 
-#### Sensor level (battery)
+#### Razina senzora (baterija)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send battery level information to xDrip.)
+Radi za CGM s dodatnim odašiljačem, kao što je MiaoMiao 2. (Tehnički, senzor mora slati podatke o razini baterije u xDrip.)
 
-Thresholds can be set in [Status lights](#Preferences-status-lights).
+Pragovi se mogu postaviti u [Statusnim svjetlima](#Preferences-status-lights).
 
 (aaps-screens-main-graph)=
 
-### Section D - Main graph
+### Odjeljak D - Glavni graf
 
-![Main graph](../images/main/main_graph.png)
+![Glavni graf](../images/main/main_graph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+Graf prikazuje vašu glukozu u krvi (GUK) kako je očitana s vašeg uređaja za mjerenje glukoze (CGM).
 
-Use scroll and pinch-zoom gestures on the graph to change the visible time frame.
+Pomicanjem i zumiranjem s dva prsta na grafu mijenjate prikazano vremensko razdoblje.
 
-The green area reflects your target range.
+Zeleno područje prikazuje vaš ciljni raspon.
 
-This information is also shown on this graph :
+Ova informacija prikazuje se i na ovom grafu:
 
-* Manual boluses: blue triangle just above the BG curve, pointing down at the reading of that moment, with the insulin amount
-* Carbs entries: orange triangle just below the BG curve, pointing up at the reading, with the carb amount. A meal entered with its bolus looks like one marker, split by the reading.
-* The triangles come in three sizes (small, medium, large), following the amount compared with the largest of the day. If there is no BG reading at that time (sensor gap), the triangle is drawn at the bottom of the graph.
-* BG checks and calibrations: drawn at their own measured value, so you can compare them with the sensor curve
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star icons at the top of the graph
-* Loop status: color band at the top of the graph when the [running mode](#AapsScreens-loop-status) is anything else than closed loop: blue = open loop, purple = LGS, red = loop disabled, yellow = loop suspended, grey = pump disconnected, orange = superbolus (in the screenshot: purple, then yellow). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
-* [SMBs](#Open-APS-features-super-micro-bolus-smb) are not drawn on the BG graph (there would be one every few minutes): they are shown on the [IOB graph](#aaps-screens-iob).
+* Ručni bolusi: plavi trokut tik iznad krivulje GUK-a, okrenut prema dolje na očitanje iz tog trenutka, s količinom inzulina
+* Unosi ugljikohidrata: narančasti trokut tik ispod krivulje GUK-a, okrenut prema gore na očitanje, s količinom ugljikohidrata. Obrok unesen s bolusom izgleda kao jedna oznaka koju očitanje dijeli na dva dijela.
+* Trokuti dolaze u tri veličine (mala, srednja, velika), ovisno o količini u usporedbi s najvećom u tom danu. Ako u to vrijeme nema očitanja GUK-a (prekid senzora), trokut se crta na dnu grafa.
+* Provjere GUK-a i kalibracije: crtaju se na vlastitoj izmjerenoj vrijednosti, pa ih možete usporediti s krivuljom senzora
+* Cilj kako je zadan u profilu ili promijenjen privremenim ciljem: zelena linija
+* Zamjene profila: ikone zvjezdice na vrhu grafa
+* Status petlje: traka u boji na vrhu grafa kada je [način rada](#AapsScreens-loop-status) bilo što osim zatvorene petlje: plava = otvorena petlja, ljubičasta = LGS, crvena = petlja onemogućena, žuta = petlja suspendirana, siva = pumpa odspojena, narančasta = superbolus (na snimci zaslona: ljubičasta, zatim žuta). Povijest ovih promjena navedena je u [Načinu rada](#AapsScreens-running-mode)
+* [SMB-ovi](#Open-APS-features-super-micro-bolus-smb) se ne crtaju na grafu GUK-a (bio bi jedan svakih nekoliko minuta): prikazuju se na [grafu aktivnog inzulina](#aaps-screens-iob).
 
-Tap a **BG check** in the graph to see its value, and its note if you wrote one.
+Dodirnite **provjeru GUK-a** na grafu da vidite njezinu vrijednost i bilješku, ako ste je napisali.
 
 (aaps-screens-graph-press-and-hold)=
 
-#### See the values at a given time
+#### Prikaz vrijednosti u određenom trenutku
 
-**Press and hold** the BG graph for a moment to see the values at one reading. A dot marks the nearest reading, a dashed line is drawn at that time in all the graphs, and a pop-up at the top of the graph shows:
+**Pritisnite i držite** graf GUK-a na trenutak da vidite vrijednosti za jedno očitanje. Točka označava najbliže očitanje, isprekidana linija crta se u tom trenutku na svim grafovima, a skočni prozor na vrhu grafa prikazuje:
 
-* the time and the BG value
-* IOB, COB (only when it is above 0 g) and the basal rate at that time — the basal icon shows whether a temporary basal rate was running, as on the main screen
-* any bolus, SMB or carbs at that time, with the same triangles as in the graphs
+* vrijeme i vrijednost GUK-a
+* aktivni inzulin, aktivne ugljikohidrate (samo kada su iznad 0 g) i bazalnu stopu u tom trenutku — ikona bazala pokazuje je li radila privremena bazalna stopa, kao na glavnom zaslonu
+* svaki bolus, SMB ili ugljikohidrate u tom trenutku, s istim trokutima kao na grafovima
 
-Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
+Držite prst na zaslonu i pomičite ga lijevo ili desno da prijeđete s jednog očitanja na sljedeće. Kod svakog očitanja osjetit ćete lagani otkucaj, a graf se za to vrijeme ne pomiče. Skočni prozor ostaje 2 sekunde nakon što podignete prst.
 
-This works the same way on the [additional graphs](#aaps-screens-additional-graphs) below the BG graph (IOB, COB...): press and hold any of them.
+Isto radi i na [dodatnim grafovima](#aaps-screens-additional-graphs) ispod grafa GUK-a (aktivni inzulin, aktivni ugljikohidrati...): pritisnite i držite bilo koji od njih.
 
-![Press and hold the BG graph: the pop-up shows time, BG, IOB and basal](../images/main/graph_press_and_hold.png)
+![Pritisnite i držite graf GUK-a: skočni prozor prikazuje vrijeme, GUK, aktivni inzulin i bazal](../images/main/graph_press_and_hold.png)
 
 (aaps-screens-graph-clock-change)=
 
@@ -316,309 +316,309 @@ When the clock of the phone jumped, at a daylight saving change or in a new time
 
 (AapsScreens-activate-optional-information)=
 
-#### Activate optional information
+#### Aktivirajte dodatne informacije
 
-Press the **pencil** icon in the top-right corner of the graph to open the graph settings:
+Pritisnite ikonu **olovke** u gornjem desnom kutu grafa da otvorite postavke grafa:
 
-![Main graph setting](../images/main/main_graph_settings.png)
+![Postavka glavnog grafa](../images/main/main_graph_settings.png)
 
-* **Graph height** adjusts how tall the graph is drawn.
-* **ACT** overlays the insulin activity curve: a solid yellow-green line <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (not to be confused with the dotted yellow UAM prediction)
-* **PRED** overlays the [prediction lines](#aaps-screens-prediction-lines) (see below)
+* **Visina grafa** određuje koliko je graf visok.
+* **AKT** prikazuje krivulju aktivnosti inzulina preko grafa: puna žutozelena linija <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (ne smije se zamijeniti s točkastim žutim predviđanjem UAM)
+* **PRED** prikazuje [linije predviđanja](#aaps-screens-prediction-lines) preko grafa (pogledajte niže)
 
 (aaps-screens-prediction-lines)=
 
-#### Prediction lines
+#### Linije predviđanja
 
-When **PRED** is on, AAPS draws its predictions as **dotted lines** to the right of the "now" line. Each prediction has its own color. The dark theme uses lighter shades of the same colors, and a line inside the green target range can look slightly greener.
+Kada je **PRED** uključen, AAPS crta svoja predviđanja kao **točkaste linije** desno od linije „sada“. Svako predviđanje ima svoju boju. Tamna tema koristi svjetlije nijanse istih boja, a linija unutar zelenog ciljnog raspona može izgledati malo zelenije.
 
-| Line                   | Light theme                                                                                                                       | Dark theme                                                                                                                         | What it predicts            |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| **IOB** (blue)         | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | insulin only                |
-| **COB** (orange)       | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | carbs on board              |
-| **UAM** (yellow)       | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | unannounced meal            |
-| **ZT** (cyan)          | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | zero-temp (insulin stopped) |
-| **aCOB** (pale orange) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | older AMA algorithm only    |
+| Linija                       | Svijetla tema                                                                                                                     | Tamna tema                                                                                                                         | Što predviđa                                 |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **IOB** (plava)              | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | samo inzulin                                 |
+| **COB** (narančasta)         | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | aktivni ugljikohidrati                       |
+| **UAM** (žuta)               | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | nenajavljeni obrok                           |
+| **ZT** (cijan)               | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | nulti privremeni bazal (inzulin zaustavljen) |
+| **aCOB** (blijedonarančasta) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | samo stariji algoritam AMA                   |
 
-When two predictions give the same values, their dots overlap and you only see one of the colors (for example, UAM on top of IOB when BG is flat).
+Kada dva predviđanja daju iste vrijednosti, njihove se točke preklapaju i vidite samo jednu od boja (na primjer, UAM preko IOB kada je GUK ravan).
 
 * **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
     
-    This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
+    Ova linija predviđanja pokazuje kamo će ići vaš GUK (ne kamo će ići sami aktivni ugljikohidrati!) na temelju trenutnih postavki **profila**, uz pretpostavku da odstupanja zbog apsorpcije ugljikohidrata ostanu ista. Ova linija se prikazuje samo ako postoje poznati aktivni ugljikohidrati (COB).
 
-* **IOB** line (blue): insulin on board (blue is used throughout AAPS for IOB and insulin)
+* Linija **IOB** (plava): aktivni inzulin (plava se u cijelom AAPS-u koristi za aktivni inzulin i inzulin)
     
-    This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+    Ova linija predviđanja pokazuje što bi se dogodilo samo pod utjecajem inzulina. Na primjer, ako ste dali nešto inzulina, a zatim niste pojeli nikakve ugljikohidrate.
 
-* **ZT** line (cyan): zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* Linija **ZT** (cijan): nulti privremeni bazal (predviđeni GUK kada bi se postavila privremena bazalna stopa od 0 %)
     
-    This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR). The line stops once it rises above your target.
+    Ova linija predviđanja pokazuje kako bi se promijenila putanja GUK-a kada bi pumpa zaustavila svu isporuku inzulina (privremeni bazal 0 %). Linija prestaje kada se podigne iznad vašeg cilja.
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+    *Ova linija se prikazuje samo kada se koristi algoritam [SMB](#Config-Builder-aps).*
 
-* **UAM** line (yellow): [unannounced meals](#SensitivityDetectionAndCob-sensitivity-oref1)
+* Linija **UAM** (žuta): [nenajavljeni obroci](#SensitivityDetectionAndCob-sensitivity-oref1)
     
-    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+    Nenajavljeni obroci znače da je otkriven značajan porast razine glukoze zbog obroka, adrenalina ili drugih utjecaja. Linija predviđanja slična je **narančastoj liniji aktivnih ugljikohidrata (COB)**, ali pretpostavlja da će se odstupanja smanjivati stalnom brzinom (nastavljanjem trenutne brzine smanjenja).
     
-    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used, **Enable UAM** is on in the OpenAPS SMB settings, and BG is rising more than insulin alone explains.*
+    *Ova linija se prikazuje samo kada se koristi algoritam [SMB](#Config-Builder-aps), kada je **Omogući UAM** uključeno u postavkama OpenAPS SMB i kada GUK raste više nego što to objašnjava sam inzulin.*
 
-* **aCOB** line (pale, see-through orange): accelerated carbohydrate absorption
+* Linija **aCOB** (blijeda, prozirna narančasta): ubrzana apsorpcija ugljikohidrata
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Deprecated and of limited usefulness.
+    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Zastarjelo i ograničene korisnosti.
     
-    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+    *Ova linija se prikazuje samo kada se koristi stariji algoritam [AMA](#Config-Builder-aps).*
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Vaša stvarna krivulja glukoze obično završi u sredini ovih linija ili blizu one čije pretpostavke najviše odgovaraju vašoj situaciji.
 
 (aaps-screens-how-predictions-become-a-dosing-decision)=
 
-#### How AAPS turns predictions into a dosing decision
+#### Kako AAPS pretvara predviđanja u odluku o doziranju
 
-AAPS doesn't dose insulin based on your current BG alone — every loop cycle (roughly every 5 minutes) it looks at all of the prediction lines above together and works out the safest course of action.
+AAPS ne dozira inzulin samo na temelju vašeg trenutnog GUK-a — u svakom ciklusu petlje (otprilike svakih 5 minuta) gleda sve gornje linije predviđanja zajedno i izračunava najsigurniji postupak.
 
-The core rule is **safety first**: if *any* prediction line, in any time frame, dips below your low safety threshold, AAPS issues a zero-temp (0% temporary basal rate) and withholds further insulin, even if your current BG is high. Only once every prediction line stays above that threshold will AAPS consider giving more insulin.
+Osnovno pravilo je **sigurnost na prvom mjestu**: ako *bilo koja* linija predviđanja, u bilo kojem vremenskom razdoblju, padne ispod vašeg niskog sigurnosnog praga, AAPS postavlja nulti privremeni bazal (privremena bazalna stopa 0 %) i ne daje više inzulina, čak i ako je vaš trenutni GUK visok. Tek kada sve linije predviđanja ostanu iznad tog praga, AAPS će razmotriti davanje dodatnog inzulina.
 
-When it is safe to give more insulin, AAPS looks at where BG is ultimately predicted to end up (the **eventual BG**) across the blended predictions, and works out how much correction is needed to bring that eventual BG back to target — delivered either as an increased temporary basal rate, or (if the oref1/[SMB](#Open-APS-features-super-micro-bolus-smb) algorithm is enabled) as a small immediate bolus. If BG is high now but is already trending down enough on its own, AAPS will hold off, or may even reduce the basal rate, rather than add insulin that would only push a later low even lower.
+Kada je sigurno dati više inzulina, AAPS gleda gdje će GUK na kraju završiti prema predviđanju (**konačni GUK**) u kombiniranim predviđanjima i izračunava koliko je korekcije potrebno da se taj konačni GUK vrati na cilj — isporučeno ili kao povećana privremena bazalna stopa ili (ako je omogućen algoritam oref1/[SMB](#Open-APS-features-super-micro-bolus-smb)) kao mali trenutni bolus. Ako je GUK sada visok, ali već sam dovoljno pada, AAPS će pričekati ili čak smanjiti bazalnu stopu, umjesto da doda inzulin koji bi kasniju nisku vrijednost učinio još nižom.
 
-For worked examples of this decision logic with real screenshots, see the [dosing scenarios in the Clinician's guide](#clinicianguide-dosing-scenarios) — they were written for a clinician audience but apply to any AAPS user.
+Za primjere ove logike odlučivanja sa stvarnim snimkama zaslona pogledajte [scenarije doziranja u vodiču za zdravstvene djelatnike](#clinicianguide-dosing-scenarios) — napisani su za zdravstvene djelatnike, ali vrijede za svakog korisnika AAPS-a.
 
-*For the full technical treatment of how these predictions and the resulting dosing decision are calculated, see [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
+*Za potpuno tehničko objašnjenje kako se izračunavaju ova predviđanja i odluka o doziranju pogledajte [dokumentaciju OpenAPS-a o determine-basal](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
 
-#### Basals
+#### Bazali
 
-A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+**Puna plava** linija prikazuje isporuku bazala vaše pumpe i stvarnu isporuku kroz vrijeme.
 
-The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
+**Točkasta plava** linija prikazuje kolika bi bila bazalna stopa da nema privremenih prilagodbi bazala (TBR).
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+Kada se daje standardna bazalna stopa, područje ispod krivulje prikazuje se tamnoplavom bojom. Kada je bazalna stopa privremeno prilagođena (povećana ili smanjena), područje ispod krivulje prikazuje se svijetloplavom bojom.
 
-#### Activity
+#### Aktivnost
 
-The **thin yellow** line shows the activity of Insulin.
+**Tanka žuta** linija prikazuje aktivnost inzulina.
 
-It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+Temelji se na očekivanom padu GUK-a zbog inzulina u vašem tijelu, kad ne bi bilo drugih čimbenika (npr. ugljikohidrata).
 
 (AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-### Section E - Additional graphs
+### Odjeljak E - Dodatni grafovi
 
-You can activate additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Ispod glavnog grafa možete aktivirati dodatne grafove. U [jednostavnom načinu rada](#preferences-simple-mode) dodatni grafovi su unaprijed postavljeni i ne mogu se mijenjati. Isključite **Jednostavni način rada** ako želite sami postaviti konfiguraciju dodatnih grafova.
 
-The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. A sideways drag on an additional graph also scrolls all the graphs. They have no time labels of their own — read the time on the BG graph.
+Dodatni grafovi prate glavni graf: kada pomičete ili zumirate graf GUK-a, oni se pomiču s njim. Povlačenje u stranu na dodatnom grafu također pomiče sve grafove. Nemaju vlastite vremenske oznake — vrijeme očitajte na grafu GUK-a.
 
-To configure an additional graph, press the **pencil** icon in its top-right corner:
+Da konfigurirate dodatni graf, pritisnite ikonu **olovke** u njegovom gornjem desnom kutu:
 
-![Additional graph settings](../images/main/main_additional_graph_settings.png)
+![Dodatne postavke grafova](../images/main/main_additional_graph_settings.png)
 
-Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
+Odaberite čipove za podatke koje želite vidjeti na ovom grafu; gumb **Ukloni** briše graf.
 
-To create one more graph, press **Add graph** below the last graph and select its chips in the same way:
+Da napravite još jedan graf, pritisnite **Dodaj graf** ispod zadnjeg grafa i na isti način odaberite njegove čipove:
 
-![Add graph](../images/main/graph_add.png)
+![Dodaj graf](../images/main/graph_add.png)
 
-The new graph is added below the others — here a second additional graph with **SENS%** and **DEV**:
+Novi graf dodaje se ispod ostalih — ovdje drugi dodatni graf sa **SENS%** i **DEV**:
 
-![Main screen with a second additional graph](../images/main/main_screen_additional_graph.png)
+![Glavni zaslon s drugim dodatnim grafom](../images/main/main_screen_additional_graph.png)
 
-Most users find the following configuration of additional graphs to be adequate :
+Većini korisnika dovoljna je sljedeća konfiguracija dodatnih grafova:
 
 * Graph 1 with IOB, BAS
 * Graph 2 with COB, Sensitivity change
 * Graph 3 with Deviations and BGI.
 
-#### Absolute insulin (ABS)
+#### Apsolutni inzulin (ABS)
 
-Active insulin including boluses **and basal**.
+Aktivni inzulin, uključujući boluse **i bazal**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Aktivni inzulin (IOB)
 
-Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+Prikazuje aktivni inzulin (= inzulin koji još djeluje u vašem tijelu). Uključuje inzulin iz bolusa i privremenog bazala (**ali ne uključuje bazalne stope postavljene u vašem profilu**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Da nije bilo [SMB-ova](#Open-APS-features-super-micro-bolus-smb), bolusa i privremenih bazala tijekom vremena DIA, ovo bi bila nula.
 
-SMBs are shown on this graph as blue triangles, in three sizes following the amount compared with the largest SMB of the day.
+SMB-ovi se na ovom grafu prikazuju kao plavi trokuti, u tri veličine ovisno o količini u usporedbi s najvećim SMB-om u tom danu.
 
-IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+Aktivni inzulin može biti negativan ako nemate preostalog bolusa i dulje vrijeme imate nulti ili niski privremeni bazal.
 
-Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin-dia).
+Smanjivanje ovisi o vašim [postavkama DIA i vrste inzulina](#Config-Builder-insulin-dia).
 
-#### Carbs On Board (COB)
+#### Aktivni ugljikohidrati (COB)
 
-Shows the carbs you have on board (= active, not yet decayed carbs in your body).
+Prikazuje aktivne ugljikohidrate (= ugljikohidrate u vašem tijelu koji još nisu apsorbirani).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Smanjivanje ovisi o [odstupanjima koja algoritam otkrije](../DailyLifeWithAaps/CobCalculation.md).
 
-If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
+Ako otkrije veću apsorpciju ugljikohidrata od očekivane, dat će se inzulin i to će povećati aktivni inzulin (više ili manje, ovisno o vašim sigurnosnim postavkama).
 
-#### Sensitivity change (SENS%)
+#### Promjena osjetljivosti (SENS%)
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Prikazuje osjetljivost koju je otkrio [Autosens](#Open-APS-features-autosens).
 
-Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+Osjetljivost je izračun osjetljivosti na inzulin kao posljedica tjelovježbe, hormona itd.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Napomena: morate biti u [Cilju 8](#objectives-objective8) da bi detekcija osjetljivosti/[Autosens](#Open-APS-features-autosens) mogla automatski prilagođavati količinu isporučenog inzulina. Dok ne dođete do tog cilja, linija na grafu prikazuje se samo kao informacija.
 
-### Variable sensitivity (VSENS)
+### Promjenjiva osjetljivost (VSENS)
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Prikazuje osjetljivost koju izračunava [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Ima vrijednosti samo ako koristite ovu značajku.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate (HR) & Steps
+#### Otkucaji srca (HR) i koraci
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Ovi podaci mogu biti dostupni kada koristite [pametni sat s Wear OS-om](../WearOS/WearOsSmartwatch.md). Omogućite ih u aplikaciji **AAPS** za Wear OS i dajte dopuštenje za zdravstvene podatke.
 
 Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
 
-#### Deviations (DEV)
+#### Odstupanja (DEV)
 
-* **Grey** bars show a deviation due to carbs.
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **Sivi** stupci prikazuju odstupanje zbog ugljikohidrata.
+* **Zeleni** stupci pokazuju da je GUK viši nego što je algoritam očekivao. Zeleni stupci koriste se za povećanje rezistencije u [Autosensu](#Open-APS-features-autosens).
+* **Crveni** stupci pokazuju da je GUK niži nego što je algoritam očekivao. Crveni stupci koriste se za povećanje osjetljivosti u [Autosensu](#Open-APS-features-autosens).
+* **Žuti** stupci prikazuju odstupanje zbog UAM-a.
+* **Crni** stupci prikazuju mala odstupanja koja se ne uzimaju u obzir za osjetljivost
 
-#### Blood Glucose Impact (-BGI)
+#### Utjecaj na glukozu u krvi (-BGI)
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Ova linija pokazuje koliko bi GUK „trebao“ rasti ili padati samo na temelju aktivnosti inzulina.
 
-![Deviations and BGI](../images/main/graph_dev_bgi.png)
+![Odstupanja i BGI](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are well above the BGI line: BG rises more than insulin activity alone explains (for example after carbs). At the time marked **2**, the Deviation bars are below zero (red): BG is lower than the algorithm expected.
+Dobro je ovu liniju prikazati zajedno sa stupcima odstupanja. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Usporedba linije BGI i stupaca odstupanja još je jedan način da razumijete kako se **GUK** mijenja. Ovdje su, u trenutku označenom s **1**, stupci odstupanja znatno iznad linije BGI: GUK raste više nego što objašnjava sama aktivnost inzulina (na primjer nakon ugljikohidrata). U trenutku označenom s **2** stupci odstupanja su ispod nule (crveni): GUK je niži nego što je algoritam očekivao.
 
-### Section F - QuickLaunch toolbar
+### Odjeljak F - Alatna traka Brzo pokretanje
 
-![QuickLaunch toolbar](../images/main/main_quicklaunch_toolbar.png)
+![Alatna traka Brzo pokretanje](../images/main/main_quicklaunch_toolbar.png)
 
-The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
+Plutajuća alatna traka na dnu zaslona sadrži vaše radnje za **[Brzo pokretanje](../DailyLifeWithAaps/QuickLaunch.md)**. Mali **zupčanik** otvara konfiguraciju Brzog pokretanja, gdje birate koji se gumbi prikazuju (tretmani, unosi Careportala, CGM radnje, zasloni s ploče **Upravljanje**, gumbi [Brzog kalkulatora](../DailyLifeWithAaps/QuickWizards.md), [scene](../DailyLifeWithAaps/Scenes.md) i drugo).
 
-A typical configuration is shown above: **Insulin**, **Carbs** and the **Bolus wizard**.
+Uobičajena konfiguracija prikazana je gore: **Inzulin**, **UH** i **Bolus kalkulator**.
 
-While the pump is **disconnected**, the treatment buttons stay in the toolbar, for example to record insulin given with a pen (see [Insulin](#aaps-screens-buttons-insulin) below). The same actions are also available in the [Treatments sheet](#aaps-screens-treatments-sheet) of the bottom navigation.
+Dok je pumpa **odspojena**, gumbi za tretmane ostaju na alatnoj traci, na primjer za bilježenje inzulina danog inzulinskom olovkom (pogledajte [Inzulin](#aaps-screens-buttons-insulin) niže). Iste radnje dostupne su i na [ploči Tretmani](#aaps-screens-treatments-sheet) u donjoj navigaciji.
 
 (aaps-screens-buttons-insulin)=
 
-#### Insulin
+#### Inzulin
 
-![Insulin dialog](../images/v4/Screens/insulin_dialog.png)
+![Dijalog Inzulin](../images/v4/Screens/insulin_dialog.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Za davanje određene količine inzulina bez korištenja [bolus kalkulatora](#aaps-screens-bolus-wizard).
 
-By enabling **Start Eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Ako omogućite **Pokreni privremeni cilj Prije obroka**, možete automatski pokrenuti svoj [privremeni cilj Prije obroka](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". An additional **Time** row, set to **Now**, lets you record an insulin injection made in the past: use **-** / **+** to change it, or tap the chevron to type the minutes or pick a date and time.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Dodatni redak **Vrijeme**, postavljen na **Sada**, omogućuje vam da zabilježite injekciju inzulina danu u prošlosti: koristite **-** / **+** da ga promijenite ili dodirnite strelicu da upišete minute ili odaberete datum i vrijeme.
 
-![The Time row, folded](../images/v4/Screens/insulin_dialog_record_only_time.png) ![The Time row, opened with the chevron](../images/v4/Screens/insulin_dialog_time_open.png)
+![Redak Vrijeme, sklopljen](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Redak Vrijeme, otvoren strelicom](../images/v4/Screens/insulin_dialog_time_open.png)
 
-You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin quantity. The increment values can be changed in the [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result).
+Gumbima **+0.5 / +1.0 / +2.0** možete brzo povećati količinu inzulina. Vrijednosti povećanja mogu se promijeniti u [postavkama bolus kalkulatora](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-The insulin dialog can be used when the pump is suspended or disconnected as well, e.g. to record insulin injected with a pen. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+Dijalog Inzulin može se koristiti i kada je pumpa suspendirana ili odspojena, npr. za bilježenje inzulina danog inzulinskom olovkom. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
-![Insulin dialog with pump disconnected](../images/main/insulin_dialog_pump_disconnected.png)
+![Dijalog Inzulin s odspojenom pumpom](../images/main/insulin_dialog_pump_disconnected.png)
 
-#### Carbs
+#### Ugljikohidrati
 
-![Carbs dialog](../images/v4/Screens/carbs_dialog.png)
+![Dijalog Ugljikohidrati](../images/v4/Screens/carbs_dialog.png)
 
-To record carbs without bolusing.
+Za bilježenje ugljikohidrata bez bolusa.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) (Hypo, Eating soon, Activity) can be started directly with the switches on top.
+Određeni [unaprijed postavljeni privremeni ciljevi](#TempTargets-hypo-temp-target) (Hipo, Prije obroka, Aktivnost) mogu se pokrenuti izravno prekidačima na vrhu.
 
-**Carb time**: When will you / have you been eating carbs.
+**Vrijeme ugljikohidrata**: kada ćete jesti ili kada ste jeli ugljikohidrate.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). This row is folded, so that you do not type the grams into it by mistake: use **-** / **+** to change it, or tap the chevron to open it and type a value.
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Ovaj redak je sklopljen da u njega greškom ne upišete grame: koristite **-** / **+** da ga promijenite ili dodirnite strelicu da ga otvorite i upišete vrijednost.
 
-You can use the **+5 / +10 / +20** buttons to quickly increase the carb amount.
+Gumbima **+5 / +10 / +20** možete brzo povećati količinu ugljikohidrata.
 
-#### Quick Wizard
+#### Brzi kalkulator
 
-Easily enter amount of carbs and set calculation basics with a single pre-configured button.
+Jednostavno unesite količinu ugljikohidrata i postavite osnove izračuna jednim unaprijed konfiguriranim gumbom.
 
-Details are set up in [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md).
+Detalji se postavljaju u [Brzom kalkulatoru](../DailyLifeWithAaps/QuickWizards.md).
 
 (aaps-screens-treatments-sheet)=
 
-### Section G - Bottom navigation
+### Odjeljak G - Donja navigacija
 
-The bottom navigation bar gives access to:
+Donja navigacijska traka daje pristup sljedećem:
 
-* **Treatments** — a quick-actions sheet with your treatment actions:
+* **Tretmani** — ploča brzih radnji s vašim radnjama za tretmane:
     
-    ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
+    ![Ploča Tretmani](../images/v4/Screens/treatments_sheet.png)
 
-* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now. The **pencil** at the top of the sheet opens **Manage → Scenes**.
+* **Scene** — prikazuje se samo kada imate barem jednu [scenu](../DailyLifeWithAaps/Scenes.md) ili pravilo **Automatizacije** označeno kao **Radnja korisnika**. Otvara ploču s koje ih možete pokrenuti; oznaka pokazuje koliko ih upravo sada možete pokrenuti. **Olovka** na vrhu ploče otvara **Upravljanje → Scene**.
 
-* **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin settings, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump and Authorized clients. Below them are device and basal actions such as Sensor Insert and Temp Basal. Some items only appear when they apply to your setup — for example Prime/Fill and battery change depend on your pump, and Temp Basal, Extended Bolus and the Careportal entries are hidden in [Simple Mode](#preferences-simple-mode):
+* **Upravljanje** — središte za sve čime upravljate u **AAPS-u**: Profil, Postavke inzulina, Privremeni cilj, Brzi kalkulator, Scene, Automatizacija, Hrana, Rotacija mjesta primjene, Pumpa i Ovlašteni klijenti. Ispod njih su radnje za uređaje i bazal, kao što su Umetanje senzora i Privremeni bazal. Neke se stavke pojavljuju samo kada vrijede za vašu postavu — na primjer, Punjenje i zamjena baterije ovise o vašoj pumpi, a Privremeni bazal, Produženi bolus i unosi Careportala skriveni su u [jednostavnom načinu rada](#preferences-simple-mode):
     
-    ![Manage sheet](../images/v4/Screens/manage_sheet.png)
+    ![Ploča Upravljanje](../images/v4/Screens/manage_sheet.png)
 
-* **Objectives** — your progress through the [Objectives](../SettingUpAaps/CompletingTheObjectives.md); a badge shows how many are completed. This item disappears once all objectives are finished, and is not present on **AAPSClient**.
+* **Ciljevi** — vaš napredak kroz [ciljeve](../SettingUpAaps/CompletingTheObjectives.md); oznaka pokazuje koliko ih je ispunjeno. Ova stavka nestaje kada su svi ciljevi ispunjeni i ne postoji u **AAPSClientu**.
 
 (aaps-screens-notifications)=
 
-#### Notifications
+#### Obavijesti
 
-A **notification bubble** may appear above the bottom bar, on the right. It collects the active notifications of **AAPS**; the small number shows how many there are. Its color follows the most important one: red for an urgent message, green for a simple information.
+Iznad donje trake, desno, može se pojaviti **oblačić obavijesti**. Skuplja aktivne obavijesti **AAPS-a**; mali broj pokazuje koliko ih ima. Njegova boja prati najvažniju obavijest: crvena za hitnu poruku, zelena za jednostavnu informaciju.
 
-![Main screen with the notification bubble](../images/main/main_screen_notification_bubble.png)
+![Glavni zaslon s oblačićem obavijesti](../images/main/main_screen_notification_bubble.png)
 
-Tap the bubble to open the **Notification** panel. Each message shows the time it was raised. Press **Dismiss** below a message to remove it; some messages have another button instead, to take you to the setting that needs your attention.
+Dodirnite oblačić da otvorite panel **Obavijest**. Svaka poruka prikazuje vrijeme kada je nastala. Pritisnite **Odbaci** ispod poruke da je uklonite; neke poruke umjesto toga imaju drugi gumb koji vas vodi do postavke koja traži vašu pažnju.
 
-![Notification panel with one message and its Dismiss button](../images/main/notification_panel.png)
+![Panel obavijesti s jednom porukom i njezinim gumbom Odbaci](../images/main/notification_panel.png)
 
-![Notification panel](../images/main/main_notification_panel.png)
+![Panel obavijesti](../images/main/main_notification_panel.png)
 
 (bolus-wizard)= (aaps-screens-bolus-wizard)=
 
-## Bolus Wizard
+## Bolus kalkulator
 
-![Bolus wizard](../images/v4/Screens/bolus_wizard.png)
+![Bolus kalkulator](../images/v4/Screens/bolus_wizard.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Kada želite dati bolus za obrok, obično ćete ga dati odavde.
 
-### Section I
+### Odjeljak I
 
-The **Calculation** header shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+Zaglavlje **Izračun** prikazuje izračunati bolus. Ako aktivni inzulin već premašuje izračunati bolus, prikazat će se samo količina ugljikohidrata koja je još potrebna.
 
-The bolus calculator can be used whatever your current **BG**, including when it is too high or too low. If **BG** is above target, a correction is added to the meal bolus. If **BG** is below target, the bolus is reduced and, if the insulin already on board is more than needed, the calculator tells you how many carbs are still required instead of proposing insulin.
+Bolus kalkulator može se koristiti bez obzira na vaš trenutni **GUK**, i kada je previsok ili prenizak. Ako je **GUK** iznad cilja, bolusu za obrok dodaje se korekcija. Ako je **GUK** ispod cilja, bolus se smanjuje, a ako je aktivnog inzulina već više nego što je potrebno, kalkulator vam umjesto prijedloga inzulina kaže koliko je ugljikohidrata još potrebno.
 
-The icon row below the header shows which inputs enter the calculation (BG, trend, IOB, temporary target, COB). Pressing an icon enables / disables this entry from the calculation; the **(i)** icon shows the detailed numbers behind the calculation.
+Redak ikona ispod zaglavlja pokazuje koji ulazni podaci ulaze u izračun (GUK, trend, aktivni inzulin, privremeni cilj, aktivni ugljikohidrati). Pritiskom na ikonu uključujete / isključujete taj podatak iz izračuna; ikona **(i)** prikazuje detaljne brojeve iza izračuna.
 
-#### Combinations of COB and IOB and what they mean
+#### Kombinacije aktivnih ugljikohidrata (COB) i aktivnog inzulina (IOB) i što znače
 
-* For safety reasons, the IOB input cannot be disabled when COB is enabled as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you enable COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you enable IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
-* For safety reasons, a **temporary target** is only included in the calculation if you enable its input manually.
+* Iz sigurnosnih razloga aktivni inzulin ne može se isključiti kada su uključeni aktivni ugljikohidrati, jer biste riskirali previše inzulina ako **AAPS** ne uzima u obzir ono što je već dano.
+* Ako uključite aktivne ugljikohidrate i aktivni inzulin, uzimaju se u obzir neapsorbirani ugljikohidrati koji još nisu pokriveni inzulinom + sav inzulin koji je isporučen kao privremeni bazal ili SMB.
+* Ako uključite aktivni inzulin bez aktivnih ugljikohidrata, **AAPS** uzima u obzir već isporučeni inzulin, ali ga neće oduzeti od ugljikohidrata koji se još trebaju apsorbirati. To dovodi do obavijesti o „nedostajućim ugljikohidratima“.
+* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Na taj način dodaju se samo novi ugljikohidrati, jer glavni obrok neće nužno biti apsorbiran, pa aktivni inzulin neće točno odgovarati aktivnim ugljikohidratima ubrzo nakon bolusa za obrok.
+* Iz sigurnosnih razloga **privremeni cilj** uključuje se u izračun samo ako ručno uključite njegov ulazni podatak.
 
 (AapsScreens-section-j)=
 
-### Section J - Entry fields
+### Odjeljak J - Polja za unos
 
-In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the **+** buttons below it add carbs quickly. **AAPS** only works with grams: if you count in bread units or exchanges (*e.g.* DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
+U polje **UH** upisujete procjenu količine ugljikohidrata, **u gramima**, za koju želite dati bolus; gumbi **+** ispod njega brzo dodaju ugljikohidrate. **AAPS** radi samo s gramima: ako brojite u krušnim jedinicama ili zamjenama (*npr.* DAFNE zamjene „CHO“), pretvorite ih u grame prije unosa. Pogledajte [napomenu o krušnim jedinicama](#your-aaps-profile-insulin-to-carbs-ratio) na stranici o profilu.
 
-#### Carbs type: bread, cake or pizza
+#### Vrsta ugljikohidrata: kruh, kolač ili pizza
 
-Below the **Carbs** field, the **Bread**, **Cake** and **Pizza** buttons tell **AAPS** how fast the meal is absorbed. With **Cake** and **Pizza**, the bolus covers only a part of the carbs now and the rest is added later as eCarbs. See [Carbs type: bread, cake or pizza](#AapsScreens-carbs-type) on the Extended carbs page for the percentages and timing.
+Ispod polja **UH** gumbi **Kruh**, **Kolač** i **Pizza** govore **AAPS-u** koliko se brzo obrok apsorbira. S **Kolačem** i **Pizzom** bolus sada pokriva samo dio ugljikohidrata, a ostatak se dodaje kasnije kao e-ugljikohidrati. Postotke i vrijeme pogledajte u odjeljku [Vrsta ugljikohidrata: kruh, kolač ili pizza](#AapsScreens-carbs-type) na stranici o produženim ugljikohidratima.
 
-The **Correction** row is if you want to modify the end dosage for some reason.
+Redak **Korekcija** služi ako iz nekog razloga želite promijeniti konačnu dozu.
 
-Only the **Carbs** field is always open. The other rows (**Correction**, **Carb time**, **BG** and **Use percentage**) are folded: they show their value with **-** / **+** buttons, so you can change it in small steps. Tap the chevron to open a row and type a value, and tap it again to close the row. This avoids typing grams into the **Correction** field by mistake.
+Samo je polje **UH** uvijek otvoreno. Ostali retci (**Korekcija**, **Vrijeme UH**, **GUK** i **Koristi postotak**) su sklopljeni: prikazuju svoju vrijednost s gumbima **-** / **+**, pa je možete mijenjati u malim koracima. Dodirnite strelicu da otvorite redak i upišete vrijednost, a ponovno je dodirnite da zatvorite redak. Tako izbjegavate da greškom upišete grame u polje **Korekcija**.
 
-![Folded rows in the bolus wizard](../images/v4/Screens/bolus_wizard_bottom.png)
+![Sklopljeni retci u bolus kalkulatoru](../images/v4/Screens/bolus_wizard_bottom.png)
 
-Tap anywhere on the **Profile** row to open the list of your profiles, then tap a name to use that profile for this calculation.
+Dodirnite bilo gdje na retku **Profil** da otvorite popis svojih profila, a zatim dodirnite naziv da koristite taj profil za ovaj izračun.
 
-![The list of profiles in the bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
+![Popis profila u bolus kalkulatoru](../images/v4/Screens/bolus_wizard_profile_list.png)
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+Polje **Vrijeme ugljikohidrata** služi za bolus unaprijed (pre-bolus): tako sustavu kažete da će ugljikohidrati stići s odgodom. U ovo polje možete upisati negativan broj ako dajete bolus za ugljikohidrate koje ste već pojeli.
 
-**Set alarm** (eating reminder): when a carb time in the future is entered, a "**Set alarm**" switch appears so that you are reminded at the given time, when to eat the carbs you have input into **AAPS**:
+**Postavi alarm** (podsjetnik za jelo): kada se unese vrijeme ugljikohidrata u budućnosti, pojavljuje se prekidač „**Postavi alarm**“ da vas u zadano vrijeme podsjeti kada trebate pojesti ugljikohidrate koje ste unijeli u **AAPS**:
 
-![Set alarm for future carbs](../images/v4/Screens/bolus_wizard_set_alarm.png)
+![Postavljanje alarma za buduće ugljikohidrate](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
 The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
 
@@ -626,165 +626,165 @@ The reminder starts when the bolus has been delivered. While it runs, a **Time t
 
 ![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
 
-The **BG** field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. When the reading is recent, the **BG** row stays folded. The field follows new readings while the wizard is open, until you change it yourself.
+Polje **GUK** obično je već popunjeno zadnjim očitanjem s vašeg CGM-a. Ako nemate CGM koji radi, polje će biti prazno. Kada je očitanje novo, redak **GUK** ostaje sklopljen. The field follows new readings while the wizard is open, until you change it yourself.
 
-The result button at the bottom shows the proposed bolus; pressing it asks for confirmation before any insulin is delivered. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Gumb s rezultatom na dnu prikazuje predloženi bolus; kada ga pritisnete, traži se potvrda prije nego što se isporuči ikakav inzulin. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
 
-Good to know:
+Dobro je znati:
 
-* If the calculated bolus is above your **[Maximum bolus](#Preferences-maximum-bolus)**, it is reduced to the max bolus, and the confirmation shows the warning "Bolus constraint applied". A [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) is refused instead.
+* Ako je izračunati bolus veći od vašeg **[maksimalnog bolusa](#Preferences-maximum-bolus)**, smanjuje se na maksimalni bolus, a potvrda prikazuje upozorenje „Primijenjeno ograničenje bolusa“. [Brzi kalkulator](../DailyLifeWithAaps/QuickWizards.md) se umjesto toga odbija.
 * When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
-* A bolus you give by hand has priority over an [SMB](#Open-APS-features-super-micro-bolus-smb) that is waiting to be delivered: the SMB is dropped and the loop calculates again. If an SMB is being delivered right now, your bolus is refused with the message "An SMB is being delivered right now. Try again when it has finished." No insulin is given, and carbs entered with that bolus are not saved: wait a moment and enter them again.
+* Bolus koji date ručno ima prednost pred [SMB-om](#Open-APS-features-super-micro-bolus-smb) koji čeka na isporuku: SMB se odbacuje, a petlja ponovno računa. Ako se SMB upravo isporučuje, vaš bolus se odbija s porukom „Isporuka SMB-a u tijeku. Pokušajte ponovno kada završi.“ Inzulin se ne daje, a ugljikohidrati uneseni s tim bolusom ne spremaju se: pričekajte trenutak i ponovno ih unesite.
 
 (AapsScreens-wrong-cob-detection)=
 
-#### Wrong COB detection
+#### Pogrešno otkrivanje aktivnih ugljikohidrata (COB)
 
-![Slow carb absorption](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
+![Spora apsorpcija ugljikohidrata](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Ako nakon korištenja bolus kalkulatora vidite gornje upozorenje, **AAPS** je otkrio da izračunata vrijednost aktivnih ugljikohidrata možda nije točna. Dakle, ako želite ponovno dati bolus nakon prethodnog obroka s aktivnim ugljikohidratima, pazite na predoziranje!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Za detalje pogledajte savjete na [stranici o izračunu aktivnih ugljikohidrata (COB)](#CobCalculation-detection-of-wrong-cob-values).
 
-Looking for the **Actions** tab of **AAPS** 3.x? Its functions moved to the main screen, the **Manage** sheet and the QuickLaunch toolbar: see [Where did the Actions tab go?](#screens-action-tab).
+Tražite karticu **Radnje** iz **AAPS-a** 3.x? Njezine funkcije premještene su na glavni zaslon, ploču **Upravljanje** i alatnu traku Brzo pokretanje: pogledajte [Gdje je nestala kartica Radnje?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-## Careportal entries
+## Unosi Careportala
 
-The ages and levels shown in the [status row](#screens-sensor-level-battery) (sensor, insulin, cannula, pump battery) are based on careportal entries: **Prime/Fill** (records pump site and insulin cartridge changes), **Sensor Insert** and **Pump Battery Change**.
+Starosti i razine prikazane u [retku statusa](#screens-sensor-level-battery) (senzor, inzulin, kanila, baterija pumpe) temelje se na unosima Careportala: **Punjenje** (bilježi promjenu mjesta primjene pumpe i zamjenu spremnika inzulina), **Umetanje senzora** i **Zamjena baterije pumpe**.
 
-You can record them from the expanded status panel on the main screen, from the **Manage** sheet, or with [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
+Možete ih zabilježiti iz proširenog panela statusa na glavnom zaslonu, s ploče **Upravljanje** ili gumbima [Brzog pokretanja](../DailyLifeWithAaps/QuickLaunch.md).
 
-**Prime/Fill** records a pump site change and/or an insulin cartridge change, and can deliver a prime amount:
+**Punjenje** bilježi promjenu mjesta primjene pumpe i/ili zamjenu spremnika inzulina te može isporučiti količinu za punjenje:
 
-![Prime/Fill dialog](../images/dialogs/prime_fill.png)
+![Dijalog Punjenje](../images/dialogs/prime_fill.png)
 
-**Sensor Insert** and **Pump Battery Change** only ask for the time of the event:
+**Umetanje senzora** i **Zamjena baterije pumpe** traže samo vrijeme događaja:
 
-![Sensor Insert dialog](../images/dialogs/sensor_insert.png)
+![Dijalog Umetanje senzora](../images/dialogs/sensor_insert.png)
 
-![Pump Battery Change dialog](../images/dialogs/pump_battery_change.png) Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
+![Dijalog Zamjena baterije pumpe](../images/dialogs/pump_battery_change.png) Unosi Tjelovježba, Objava, Pitanje i Bilješka odgovaraju Careportalu u Nightscoutu i posebni su oblici bilješki.
 
-In the **Manage** sheet, scroll down and press **Careportal** to show these entries: **BG Check**, **Note**, **Exercise**, **Question** and **Announcement**.
+Na ploči **Upravljanje** pomaknite se prema dolje i pritisnite **Careportal** da prikažete ove unose: **Provjera GUK-a**, **Bilješka**, **Tjelovježba**, **Pitanje** i **Objava**.
 
-![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
+![Odjeljak Careportal na ploči Upravljanje](../images/v4/Screens/manage_sheet_careportal.png)
 
-**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Meter**.
+**Provjera GUK-a**, **Pitanje** i **Objava** omogućuju unos vrijednosti glukoze (s aparatića, senzora ili drugog izvora), bilješke i vremena događaja. U unosima **Pitanje** i **Objava** redak glukoze je sklopljen i pokraj vrijednosti prikazuje vrstu mjerenja: ako promijenite vrijednost, vrsta se mijenja iz **Senzor** u **Aparatić**.
 
-![Question with the folded glucose row](../images/dialogs/careportal_question.png)
+![Pitanje sa sklopljenim retkom glukoze](../images/dialogs/careportal_question.png)
 
-![BG Check dialog](../images/dialogs/careportal_bg_check.png)
+![Dijalog Provjera GUK-a](../images/dialogs/careportal_bg_check.png)
 
-**Note** and **Exercise** let you enter a duration (a folded row: use **-** / **+**, or tap the chevron to type it), a note and the time of the event:
+**Bilješka** i **Tjelovježba** omogućuju unos trajanja (sklopljeni redak: koristite **-** / **+** ili dodirnite strelicu da ga upišete), bilješke i vremena događaja:
 
-![Exercise dialog](../images/dialogs/careportal_exercise.png)
+![Dijalog Tjelovježba](../images/dialogs/careportal_exercise.png)
 
-In all these dialogs (**Prime/Fill**, **Sensor Insert**, **Pump Battery Change** and the careportal entries), the time of the event uses the same **Time** row as the [insulin dialog](#aaps-screens-buttons-insulin) and the bolus wizard: use **-** / **+** to move the time in 5-minute steps (up to one week back and 12 hours ahead), or tap the chevron to pick any date and time.
+U svim ovim dijalozima (**Punjenje**, **Umetanje senzora**, **Zamjena baterije pumpe** i unosi Careportala) vrijeme događaja koristi isti redak **Vrijeme** kao [dijalog Inzulin](#aaps-screens-buttons-insulin) i bolus kalkulator: koristite **-** / **+** da pomaknete vrijeme u koracima od 5 minuta (do jednog tjedna unatrag i 12 sati unaprijed) ili dodirnite strelicu da odaberete bilo koji datum i vrijeme.
 
-## Site Rotation
+## Rotacija mjesta primjene
 
-**Manage → Site Rotation** records where each cannula and sensor was placed on a body map, so you can rotate your sites: see [Site Rotation](#Aapsscreens-site-rotation) on the Pumps and cannulas page.
+**Upravljanje → Rotacija mjesta primjene** bilježi gdje je svaka kanila i svaki senzor postavljen na karti tijela, tako da možete mijenjati mjesta: pogledajte [Rotacija mjesta primjene](#Aapsscreens-site-rotation) na stranici Pumpe i kanile.
 
-**TDD** (total daily dose) and the basal/bolus ratio rule of thumb are explained with the [Statistics Insulin tab](#reviewing-tdd).
+**TDD** (ukupna dnevna doza) i okvirno pravilo omjera bazala i bolusa objašnjeni su uz [karticu Inzulin u Statistici](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 
-## Insulin
+## Inzulin
 
-![Insulin screen](../images/manage/insulin_profile.png)
+![Zaslon Inzulin](../images/manage/insulin_profile.png)
 
-**Manage → Insulin settings** shows and manages your insulin configurations. Each configuration is shown on a card with its **peak time** and **[DIA](#Config-Builder-insulin-dia)**; the one in use is marked **ACTIVE**. Below the card you see the activity curve. You can edit the nickname, peak and DIA of any configuration except the active one: to change the insulin you are using, [add a new configuration and activate it](#Config-Builder-insulin-change-active).
+**Upravljanje → Postavke inzulina** prikazuje vaše konfiguracije inzulina i upravlja njima. Svaka konfiguracija prikazuje se na kartici sa svojim **vremenom vrha djelovanja** i **[DIA](#Config-Builder-insulin-dia)**; ona koja se koristi označena je kao **AKTIVAN**. Ispod kartice vidite krivulju aktivnosti. Možete urediti nadimak, vrh djelovanja i DIA bilo koje konfiguracije osim aktivne: da promijenite inzulin koji koristite, [dodajte novu konfiguraciju i aktivirajte je](#Config-Builder-insulin-change-active).
 
-See [Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
+Pogledajte [Trajanje djelovanja inzulina](#Config-Builder-insulin-dia) da saznate više o tome što je to i kako ga postaviti.
 
-## Pump Status
+## Status pumpe
 
-![Virtual Pump status screen](../images/v4/Pumps/virtual_pump_screen.png)
+![Zaslon statusa virtualne pumpe](../images/v4/Pumps/virtual_pump_screen.png)
 
-**Manage → Pump** (or **Configuration → Pump → Open plugin**) shows the status of your pump: last connection, base basal rate, battery, reservoir...
+**Upravljanje → Pumpa** (ili **Konfiguracija → Pumpa → Otvori dodatak**) prikazuje status vaše pumpe: zadnju vezu, osnovnu bazalnu stopu, bateriju, spremnik...
 
-* Displayed information depends on your pump model.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+* Prikazane informacije ovise o modelu vaše pumpe.
+* Pogledajte [stranicu o pumpama](../Getting-Started/CompatiblePumps.md) za više detalja.
 
-## Loop, AMA / SMB
+## Petlja, AMA / SMB
 
-**Configuration → Loop → Open plugin** (and **Configuration → APS → Open plugin**) show details about the algorithm's calculations and why **AAPS** acts the way it does: last run, the resulting request, and the constraints. The **Loop** screen lists only the constraints that actually limited the delivered temp basal rate or SMB (and why closed loop is not allowed, if that is the case); the **APS** screen lists every constraint that went into the calculation.
+**Konfiguracija → Petlja → Otvori dodatak** (i **Konfiguracija → APS → Otvori dodatak**) prikazuju detalje o izračunima algoritma i zašto **AAPS** radi to što radi: zadnje pokretanje, nastali zahtjev i ograničenja. Zaslon **Petlja** navodi samo ograničenja koja su stvarno ograničila isporučenu privremenu bazalnu stopu ili SMB (i zašto zatvorena petlja nije dopuštena, ako je tako); zaslon **APS** navodi sva ograničenja koja su ušla u izračun.
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+Izračuni se pokreću svaki put kada sustav dobije novo očitanje s CGM-a.
 
-For more details see the [APS section of the Configuration page](#Config-Builder-aps).
+Za više detalja pogledajte [odjeljak APS na stranici Konfiguracija](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## Profil
 
-![Profile](../images/screens/Screenshots_Profile.png)
+![Profil](../images/screens/Screenshots_Profile.png)
 
-**Manage → Profile** (or a tap on the profile name on the main screen) opens the Profile screen: your profiles as a swipeable card carousel, with buttons to add, edit, clone, delete and **activate** a profile.
+**Upravljanje → Profil** (ili dodir na naziv profila na glavnom zaslonu) otvara zaslon Profil: vaši profili kao vrtuljak kartica koje možete listati, s gumbima za dodavanje, uređivanje, kloniranje, brisanje i **aktiviranje** profila.
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+Profil sadrži podatke o vašim osobnim postavkama za dijabetes. Za više informacija pogledajte detaljnu stranicu **[Profil](../SettingUpAaps/YourAapsProfile.md)**.
 
-## Automation
+## Automatizacija
 
-![Automation](../images/v4/Screens/automation_overview.png)
+![Automatizacija](../images/v4/Screens/automation_overview.png)
 
-**Manage → Automation** lists your automation rules. See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+**Upravljanje → Automatizacija** prikazuje popis vaših pravila automatizacije. Pogledajte posebnu stranicu [ovdje](../DailyLifeWithAaps/Automations.md).
 
 ## NSClient
 
 ![NSClient](../images/screens/Screenshots_NSClient.png)
 
-**Configuration → Communication → NSClientV3 → Open plugin** displays the status of the connection with your Nightscout site: URL, websocket status, queue and a log of the synchronization activity.
+**Konfiguracija → Komunikacija → NSClientV3 → Otvori dodatak** prikazuje status veze s vašom Nightscout stranicom: URL, status websocketa, red čekanja i dnevnik aktivnosti sinkronizacije.
 
-Settings can be changed in [NSClient settings](#Preferences-nsclient).
+Postavke se mogu promijeniti u [postavkama NSClienta](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Za rješavanje problema pogledajte ovu [stranicu](../GettingHelp/TroubleshootingNsClient.md).
 
 (aaps-screens-bg-source)=
 
-## BG Source - xDrip, BYODA...
+## Izvor GUK-a - xDrip, BYODA...
 
-![BG Source screen](../images/screens/Screenshots_BGSource.png)
+![Zaslon Izvor GUK-a](../images/screens/Screenshots_BGSource.png)
 
-**Configuration → BG Source → Open plugin** shows the history of CGM readings and offers the option to remove readings in case of failure (i.e. compression low) or duplicate readings.
+**Konfiguracija → Izvor GUK-a → Otvori dodatak** prikazuje povijest očitanja CGM-a i nudi mogućnost uklanjanja očitanja u slučaju kvara (npr. lažno niske vrijednosti zbog pritiska na senzor) ili dvostrukih očitanja.
 
-## Treatments history
+## Povijest tretmana
 
-Open the **menu** (☰) and select **Treatments history** to view, check and correct everything **AAPS** has recorded: carbs and boluses, temp basals, temporary targets, profile switches, careportal entries, loop mode changes and user entries. See [Treatments history](#aaps-screens-treatments) on the Reviewing your data page.
+Otvorite **izbornik** (☰) i odaberite **Povijest tretmana** da pregledate, provjerite i ispravite sve što je **AAPS** zabilježio: ugljikohidrate i boluse, privremene bazale, privremene ciljeve, zamjene profila, unose Careportala, promjene načina rada petlje i korisničke unose. Pogledajte [Povijest tretmana](#aaps-screens-treatments) na stranici Pregled vaših podataka.
 
-## History Browser
+## Preglednik povijesti
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Preglednik povijesti](../images/v4/Screens/history_browser.png)
 
-Open the **menu** (☰) and select **History browser**.
+Otvorite **izbornik** (☰) i odaberite **Preglednik povijesti**.
 
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
+Omogućuje vam da se vratite kroz povijest **AAPS-a**. Pogledajte posebnu stranicu [Pregled vaših podataka > Preglednik povijesti](../Maintenance/Reviewing.md).
 
 (aaps-screens-statistics)=
 
-## Statistics
+## Statistika
 
-![Statistics](../images/v4/Screens/statistics.png)
+![Statistika](../images/v4/Screens/statistics.png)
 
-Open the **menu** (☰) and select **Statistics**.
+Otvorite **izbornik** (☰) i odaberite **Statistika**.
 
-Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Daje vam statistiku o ukupnoj dnevnoj dozi, vremenu u rasponu, vašem profilu glukoze kroz dan (AGP) i obrascu vašeg inzulinskog ciklusa, na četiri kartice. Pogledajte posebnu stranicu [Pregled vaših podataka > Statistika](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Pomoćnik profila
 
-Open the **menu** (☰) and select **Profile helper**.
+Otvorite **izbornik** (☰) i odaberite **Pomoćnik profila**.
 
-![Profile helper](../images/screens/profile_helper.png)
+![Pomoćnik profila](../images/screens/profile_helper.png)
 
-The Profile helper lets you compare profiles and generate starting profiles for children. See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) — sections [Build a Profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid) and [Compare two Profiles](#your-aaps-profile-compare-profiles).
+Pomoćnik profila omogućuje vam usporedbu profila i izradu početnih profila za djecu. Pogledajte [Vaš AAPS profil](../SettingUpAaps/YourAapsProfile.md) — odjeljke [Izrada profila za dijete od početka](#your-aaps-profile-profile-from-scratch-for-a-kid) i [Usporedba dvaju profila](#your-aaps-profile-compare-profiles).
 
 (aaps-screens-widgets)=
 
-## Home screen widgets
+## Widgeti na početnom zaslonu
 
-**AAPS** provides five widgets that you can add to your phone's home screen, to see your data without opening the app. See the dedicated page [Home screen widgets](../DailyLifeWithAaps/Widgets.md).
+**AAPS** nudi pet widgeta koje možete dodati na početni zaslon telefona da vidite svoje podatke bez otvaranja aplikacije. Pogledajte posebnu stranicu [Widgeti na početnom zaslonu](../DailyLifeWithAaps/Widgets.md).
 
-![AAPS widgets on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![Widgeti AAPS-a na početnom zaslonu](../images/widgets/home_widgets_full_circle_small.png)
