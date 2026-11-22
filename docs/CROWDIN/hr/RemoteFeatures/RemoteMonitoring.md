@@ -1,35 +1,35 @@
-# Remote monitoring
+# Daljinski nadzor
 
-![Monitoring children](../images/remote_control_and_following/KidsMonitoring.png)
+![Nadzor djece](../images/remote_control_and_following/KidsMonitoring.png)
 
-__AAPS__ offers several features for remote monitoring of type 1 diabetic children, and also facilitates remote commands which send instructions to __AAPS__ remotely. Similarly, __AAPSClient__ can also be used for remote monitoring to follow your partner's or friend's __AAPS__.
+__AAPS__ nudi nekoliko značajki za daljinski nadzor djece s dijabetesom tipa 1, a omogućuje i daljinske naredbe koje na daljinu šalju upute __AAPS-u__. Isto tako se __AAPSClient__ može koristiti za daljinski nadzor, da pratite __AAPS__ svojeg partnera ili prijatelja.
 
-## Functions
+## Funkcije
 
-- Kid's pump is controlled by kid's phone using __AAPS__.
-- Caregivers can remotely follow viewing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient apk** on their Android phone (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). Settings amended in __AAPS__ will synchronize with __AAPSClient__ and vice versa.
+- Pumpom djeteta upravlja djetetov telefon s __AAPS-om__.
+- Njegovatelji mogu na daljinu pratiti sve važne podatke, kao što su razine glukoze, aktivni ugljikohidrati, aktivni inzulin itd., pomoću **AAPSClient apk** na svojem Android telefonu (verzija **AAPSClienta** za iPhone je u razvoju, vidi [Aplikacija AAPSClient](AapsClient.md)). Postavke promijenjene u __AAPS-u__ sinkronizirat će se s __AAPSClientom__ i obrnuto.
 - Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
-- Remote control of __AAPS__ using [SMS Commands](../RemoteFeatures/SMSCommands.md) is secured by two-factor authentication.
-- Remote control through __AAPSClient__ uses the signed command channel introduced in **AAPS** 4: the client must first be **paired** with the master (with a QR code or a PIN), and every command is confirmed and executed by the master. Each caregiver's phone can get its own [role](#client-master-control-roles), from read-only to full control — see [Master ↔ Client control](#client-master-control).
+- Daljinsko upravljanje __AAPS-om__ putem [SMS naredbi](../RemoteFeatures/SMSCommands.md) zaštićeno je dvofaktorskom autentifikacijom.
+- Daljinsko upravljanje putem __AAPSClienta__ koristi potpisani kanal za naredbe uveden u **AAPS-u** 4: klijent se najprije mora **upariti** s glavnim uređajem (QR kodom ili PIN-om), a svaku naredbu potvrđuje i izvršava glavni uređaj. Svaki telefon njegovatelja može dobiti svoju [ulogu](#client-master-control-roles), od samo čitanja do potpunog upravljanja – vidi [Upravljanje glavni uređaj ↔ klijent](#client-master-control).
 
-## Tools and apps for remote monitoring
+## Alati i aplikacije za daljinski nadzor
 
-- [Nightscout](https://nightscout.github.io/) in web browser (mainly data display).
-- [__AAPSClient__](AapsClient.md) is a stripped down version of __AAPS__ capable of following the master __AAPS__ and, once **paired**, sending remote commands: carbs, __Temp Targets__, __Profile Switches__ and even boluses (see [Master ↔ Client control](#client-master-control)). There are 3 apps: [AAPSClient, AAPSClient2 & AAPSClient3 to download](https://github.com/nightscout/AndroidAPS/releases/), so a caregiver can follow up to three different persons from the same phone (e.g. two children with type 1, each with their own Nightscout account and master __AAPS__).
-- Dexcom follow if you are using original Dexcom app (BG values only).
-- [xDrip](../CompatibleCgms/xDrip.md) in follower mode (mainly BG values and **alarms**).
-- [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**).
-- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+- [Nightscout](https://nightscout.github.io/) u web pregledniku (uglavnom prikaz podataka).
+- [__AAPSClient__](AapsClient.md) je smanjena verzija __AAPS-a__ koja može pratiti glavni __AAPS__ i, kada je **uparena**, slati daljinske naredbe: ugljikohidrate, __privremene ciljeve__, __zamjene profila__, pa čak i boluse (vidi [Upravljanje glavni uređaj ↔ klijent](#client-master-control)). Postoje 3 aplikacije: [AAPSClient, AAPSClient2 i AAPSClient3 za preuzimanje](https://github.com/nightscout/AndroidAPS/releases/), tako da njegovatelj s istog telefona može pratiti do tri različite osobe (npr. dvoje djece s tipom 1, svako sa svojim Nightscout računom i glavnim __AAPS-om__).
+- Dexcom Follow ako koristite originalnu aplikaciju Dexcom (samo vrijednosti GUK-a).
+- [xDrip](../CompatibleCgms/xDrip.md) u načinu pratitelja (uglavnom vrijednosti GUK-a i **alarmi**).
+- [Sugarmate](https://sugarmate.io/) ili [Spike](https://spike-app.com/) na iOS-u (uglavnom vrijednosti GUK-a i **alarmi**).
+- Nekim korisnicima za napredno rješavanje problema na daljinu pomaže alat za potpuni udaljeni pristup kao što je [TeamViewer](https://www.teamviewer.com/).
 
-## Smartwatch options
+## Mogućnosti s pametnim satom
 
-A smartwatch can be a very useful tool in helping manage __AAPS__ with T1D kids. A couple of different options are possible:
+Pametni sat može biti vrlo koristan alat za upravljanje __AAPS-om__ kod djece s dijabetesom tipa 1. Moguće je nekoliko različitih opcija:
 
-- Option 1 - If __AAPSClient__ is installed on the caregiver's phone, the [AAPSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the caregiver's phone. This will show current __BG__, loop status and bolus history, and allow carb entry, __Temp Targets__ and __Profile__ changes. If the client is **paired** with the master, the watch can also start a **bolus**: the command is relayed through the client to the master, which confirms and delivers it (see [Master ↔ Client control](#client-master-control)).
-- Option 2 - The [AAPS WearOS app](../WearOS/WearOsSmartwatch.md) can also be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the caregiver. This includes all the functions listed above as well as the ability to bolus insulin directly, without the need to remove the kid's phone from their person.
-- Option 3 - Display only: a watch that **AAPS** does not support directly (Xiaomi, Amazfit, or a Wear OS watch showing a complication) can display glucose, IOB, COB and loop status through a companion app such as WatchDrip+ or GlucoDataHandler, fed by the **External Companion Apps** plugin of the **AAPS** or **AAPSClient** phone it is connected to. See [External Companion Apps](#watches-external-companion-apps).
+- Opcija 1 – Ako je __AAPSClient__ instaliran na telefonu njegovatelja, [aplikacija AAPSClient za WearOS](https://github.com/nightscout/AndroidAPS/releases/) može se instalirati na kompatibilni pametni sat spojen s telefonom njegovatelja. Sat će prikazati trenutni __GUK__, status petlje i povijest bolusa te omogućiti unos ugljikohidrata, __privremene ciljeve__ i promjene __profila__. Ako je klijent **uparen** s glavnim uređajem, sat može pokrenuti i **bolus**: naredba ide preko klijenta do glavnog uređaja, koji je potvrđuje i isporučuje (vidi [Upravljanje glavni uređaj ↔ klijent](#client-master-control)).
+- Opcija 2 – [Aplikacija AAPS za WearOS](../WearOS/WearOsSmartwatch.md) također se može izraditi i instalirati na kompatibilni pametni sat koji je spojen s djetetovim telefonom, ali ga nosi njegovatelj. To uključuje sve gore navedene funkcije, a uz to i mogućnost izravnog davanja bolusa inzulina, bez potrebe da se djetetu uzme telefon.
+- Opcija 3 – Samo prikaz: sat koji **AAPS** ne podržava izravno (Xiaomi, Amazfit ili Wear OS sat koji prikazuje komplikaciju) može prikazivati glukozu, aktivni inzulin (IOB), aktivne ugljikohidrate (COB) i status petlje putem prateće aplikacije kao što su WatchDrip+ ili GlucoDataHandler, koja dobiva podatke od dodatka **Vanjske prateće aplikacije** na telefonu s **AAPS-om** ili **AAPSClientom** s kojim je sat povezan. Vidi [Vanjske prateće aplikacije](#watches-external-companion-apps).
 
-## Things to consider
+## Na što treba misliti
 
-- Consider time gap between master and follower due to time for up and download as well as the fact that __AAPS__ master phone will only upload after loop run.
-- What is your emergency plan for when remote control does not work (_e.g._ network problems or lost Bluetooth connection)? Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
+- Imajte na umu vremenski razmak između glavnog uređaja i pratitelja zbog vremena za slanje i preuzimanje podataka, kao i to da glavni telefon s __AAPS-om__ šalje podatke tek nakon izvođenja petlje.
+- Koji je vaš plan za hitne slučajeve kada daljinsko upravljanje ne radi (_npr._ problemi s mrežom ili izgubljena Bluetooth veza)? Uvijek razmislite što će se dogoditi s **AAPS-om** ako odjednom ne možete poslati novu naredbu. **AAPS** prepisuje bazal, ISF i ICR u pumpi vrijednostima iz trenutnog profila. Ako prelazite na jači inzulinski profil, koristite samo privremene zamjene profila (_tj._ s postavljenim trajanjem), za slučaj da se daljinska veza prekine. Tada će se pumpa vratiti na izvorni profil kada vrijeme istekne.
