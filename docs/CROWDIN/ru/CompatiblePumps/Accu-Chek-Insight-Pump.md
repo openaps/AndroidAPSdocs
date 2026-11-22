@@ -2,140 +2,140 @@
 
 **Это программное обеспечение - часть алгоритма самостоятельно настраиваемой ИПЖ; она не является коммерческим продуктом, но требует, чтобы вы прочитали, узнали и поняли, как ей пользоваться. Она не будет управлять диабетом за вас, но позволит улучшить компенсацию диабета и качество жизни, если вы готовы уделить ей нужное время. Не торопитесь, дайте себе время на изучение. Только вы несете ответственность за то, что делаете с этой системой.**
 
-```{admonition} Accu-Chek Insight is being phased out :class: note
+```{admonition} Accu-Chek Insight уходит с рынка :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche уходит с рынка инсулиновых помп, чтобы сосредоточить свои продукты для диабета на CGM Accu-Chek SmartGuide. Компания сообщила о прекращении продаж помп Accu-Chek Combo и Accu-Chek Insight; выпуск оставшейся микропомпы Accu-Chek Solo тоже постепенно прекращается (последние поставки в Германии — в конце 2025 года). Изменения вводятся по регионам, начиная с Германии; ожидается, что затем последуют другие европейские рынки. Поддержка Insight уже отмечена как завершенная (см. [Помпы, которые больше не продаются](./Future-possible-Pump-Drivers.md)). Если вы пользуетесь этой помпой, заранее спланируйте переход на поддерживаемую помпу.
 
     <br />```{note}
-    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
+    До того как в **AAPS** появился собственный драйвер Insight, помпой Insight управляли через отдельное приложение [SightRemote](https://github.com/TebbeUbben/SightRemote). SightRemote больше не нужен и не поддерживается: если он у вас еще установлен с тех времен, удалите его и пользуйтесь актуальной версией **AAPS**.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} Содержание :depth: 1 :local: true
 
-    <br />## Pump capabilities with AAPS
+    <br />## Возможности помпы с AAPS
     
-    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+    * Связывается с **AAPS** через встроенный Bluetooth телефона, без дополнительного устройства связи.
     * Automatic DST and timezone handling.
     
-    ## Hardware and software requirements
+    ## Требования к оборудованию и программному обеспечению
     
-    * A Roche Accu-Chek Insight pump (any firmware, they all work)
+    * Помпа Roche Accu-Chek Insight (любая прошивка, все работают)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Примечание: AAPS всегда записывает данные в **первый профиль базальной скорости в помпе**.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * Телефон Android с Android 12 или новее (см. [Телефоны](../Getting-Started/Phones.md))
+    * Приложение AAPS, установленное на телефоне
     
-    ## Setup
+    ## Настройка
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * Помпа Insight должна быть подключена только к одному устройству одновременно. Если вы раньше пользовались пультом Insight (глюкометром), удалите глюкометр из списка сопряженных устройств помпы: **Меню** > **Настройки** > **Связь** > **Удалить устройство**.
     
-       ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+       ![Снимок экрана: удаление глюкометра Insight](../images/Insight_RemoveMeter.png)
     
-    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    * В [Конфигурация > Помпа](#Config-Builder-pump) выберите карточку **Accu-Chek Insight**. Активной может быть только одна помпа.
     
-       ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+       ![Конфигурация > Помпа с модулем Accu-Chek Insight](../images/v4/Configuration/configuration_pump_list_1.png)
     
-       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+       Когда модуль выбран, на карточке **Accu-Chek Insight** появляются две кнопки: **Настройки** и **Открыть модуль**:
     
-       ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+       ![Модуль Accu-Chek Insight выбран в Конфигурация > Помпа](../images/v4/Pumps/accu_chek_insight_enabled.png)
     
-       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+       **Настройки** открывает настройки драйвера Accu-Chek Insight (см. [Настройки в AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       **Открыть модуль** (или **Управление → Помпа**) открывает экран помпы Accu-Chek Insight. До сопряжения с помпой он выглядит так:
     
-       ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+       ![Экран помпы Accu-Chek Insight до сопряжения](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
     (accu-chek-insight-pairing)=
-    ### Pairing
+    ### Сопряжение
     
-    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * На экране помпы нажмите **Сопряжение с Insight**. Откроется мастер сопряжения и начнет искать Bluetooth-устройства поблизости (верхняя часть рисунка ниже).
+    * На помпе Insight откройте **Меню** > **Настройки** > **Связь** > **Добавить устройство**. Помпа покажет следующий экран (нижняя часть рисунка ниже) с серийным номером помпы.
     
-       ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+       ![Снимок экрана: сопряжение Insight 1](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * Вернитесь к телефону и нажмите на серийный номер помпы в списке Bluetooth-устройств. Если Android попросит подтвердить сопряжение, нажмите **Подключить** (Pair).
     
-       ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+       ![Снимок экрана: сопряжение Insight 2](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * Помпа и телефон покажут код. Проверьте, что коды на обоих устройствах совпадают. Подтвердите на помпе и нажмите **Да** на телефоне. (Нажмите **Нет**, если коды не совпадают.)
     
-       ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+       ![Снимок экрана: сопряжение Insight 3](../images/Insight_Pairing3.png)
     
-    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    * Телефон покажет **Сопряжение выполнено**. Нажмите **Выйти**, чтобы вернуться на экран помпы.
     
-       ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+       ![Снимок экрана: сопряжение Insight 4](../images/Insight_Pairing4.png)
     
-    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    * Чтобы проверить, что всё в порядке, посмотрите на экран помпы (**Управление → Помпа**). После сопряжения на нем видна информация о помпе, например **Серийный номер**, **Дата изготовления**, **Версия ПО** и **Адрес Bluetooth**.
     
-       ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+       ![Снимок экрана: информация о сопряжении Insight](../images/Insight_PairingInformation.png)
     
-       ```{admonition} Older screenshot
+       ```{admonition} Старый снимок экрана
        :class: note
-       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       Кроме верхней части первого рисунка, снимки экрана сопряжения выше сделаны в более ранней версии **AAPS** и в **AAPS** 4 могут выглядеть иначе.
        ```
     
-    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    * Чтобы удалить сопряжение, нажмите **Разъединение** на экране помпы и подтвердите **Сбросить информацию о сопряжении?**. После этого снова появится кнопка **Сопряжение с Insight**.
     
-    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    Примечание: постоянного соединения между помпой и телефоном нет. **AAPS** подключается только при необходимости (например, чтобы установить временную базальную скорость, ввести болюс или прочитать историю помпы). Иначе батареи телефона и помпы разряжались бы слишком быстро.
     
     (Accu-Chek-Insight-Pump-settings-in-aaps)=
-    ## Settings in AAPS
+    ## Настройки в AAPS
     
-    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    Откройте настройки кнопкой **Настройки** на карточке **Accu-Chek Insight** в **Конфигурация** > **Помпа** или значком шестеренки в правом верхнем углу экрана помпы.
     
-    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Настройки драйвера Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    В настройках Insight в **AAPS** можно включить следующие параметры:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
+    * **Отслеживать замену резервуара**: автоматически записывает замену картриджа с инсулином, когда вы меняете картридж в помпе.
     
-    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    * **Журнал замены трубки катетера**: добавляет запись в базу данных **AAPS**, когда вы запускаете на помпе программу «заполнение трубки».
     
-    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    * **Журнал изменений места установки**: добавляет запись в базу данных **AAPS**, когда вы запускаете на помпе программу «заполнение канюли». **Примечание: смена места катетера также сбрасывает Autosens.**
     
-    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    * **Журнал замен батареи**: записывает замену батареи, когда вы вставляете в помпу новую батарею.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **Журнал изменений режима работы**: добавляет запись в базу данных **AAPS** каждый раз, когда вы запускаете, останавливаете или приостанавливаете помпу.
     
-    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    * **Журнал оповещений**: добавляет запись в базу данных **AAPS** каждый раз, когда помпа выдает оповещение (кроме напоминаний, а также отмены болюса и временного базала: они не записываются).
     
-    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    * **Включить эмуляцию TBR**: помпа Insight может устанавливать временную базальную скорость (TBR) только до 250%. Чтобы обойти это ограничение, при запросе TBR больше 250% эмуляция TBR дает помпе команду подать дополнительный инсулин пролонгированным болюсом.
     
-      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+      **Примечание: используйте только один пролонгированный болюс за раз. Несколько пролонгированных болюсов одновременно могут вызвать ошибки.**
     
-    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    * **Отключение вибраций при ручном болюсе**: помпа Insight не вибрирует, когда подает ручной болюс (или пролонгированный болюс). Доступно только для Insight с прошивкой 3.x.
     
-    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    * **Отключение вибрации при автоматическом болюсе**: помпа Insight не вибрирует, когда подает автоматический болюс (SMB или временный базал с эмуляцией TBR). Доступно только для Insight с прошивкой 3.x.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. Можно выбрать от 0 до 20 секунд. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. длительности восстановления = 5 и макс. recovery duration = 20
-        <br><br>no connection -> wait <b>5</b> sec.
-          <br>  retry -> no connection -> wait <b>6</b> sec.
-          <br>  retry -> no connection -> wait <b>7</b> sec.
-          <br>  retry -> no connection -> wait <b>8</b> sec.
+    * **Мин. продолжительность восстановления [s]** и **Макс. продолжительность восстановления [s]**: сколько **AAPS** ждет перед новой попыткой после неудачной попытки соединения. Можно выбрать от 0 до 20 секунд. Если есть проблемы с соединением, выберите более долгое время ожидания.
+        <br><br>Example for min. длительности восстановления = 5 и макс. длительности восстановления = 20
+        <br><br>нет соединения -> ждать <b>5</b> сек.
+          <br>  повтор -> нет соединения -> ждать <b>6</b> сек.
+          <br>  повтор -> нет соединения -> ждать <b>7</b> сек.
+          <br>  повтор -> нет соединения -> ждать <b>8</b> сек.
           <br>...
-          <br>retry -> no connection -> wait <b>20</b> sec.
-          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>повтор -> нет соединения -> ждать <b>20</b> сек.
+          <br>повтор -> нет соединения -> ждать <b>20</b> сек.
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **Задержка разъединения [s]**: сколько секунд **AAPS** ждет перед отключением от помпы после завершения операции. You can choose from 0 to 15 seconds. Значение по умолчанию — 5 секунд.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    За периоды, когда помпа была остановлена, **AAPS** записывает временную базальную скорость 0%.
     
-    ### The pump screen
+    ### Экран помпы
     
-    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    Экран помпы Accu-Chek Insight (**Управление → Помпа**) показывает текущее состояние помпы, например **Статус**, **Прошлое соединение**, **Режим работы**, **батарея**, **Уровень резервуара**, суммарные суточные дозы за сегодня (**Суммарный суточный болюс TDD**, **Суммарный суточный Базал TDD**), базальные скорости и последний болюс. После сопряжения на нем есть такие кнопки:
     
-    * **Refresh**: refreshes the pump status.
-    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
-    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    * **Обновить**: обновляет состояние помпы.
+    * **Включить уведомление об окончании временной скорости базала TBR (настройка помпы)** / **Отключить уведомление об окончании временной скорости базала TBR (настройка помпы)**: стандартная помпа Insight подает сигнал, когда TBR заканчивается. Эта кнопка включает или выключает этот сигнал без программы для настройки помпы.
+    * **Разъединение**: удаляет сопряжение с помпой (см. [Сопряжение](#accu-chek-insight-pairing)).
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![Снимок экрана: статус Insight](../images/Insight_Status2.png)
     
-    ```{admonition} Older screenshot
+    ```{admonition} Старый снимок экрана
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    Снимок экрана выше сделан в более ранней версии **AAPS**. В **AAPS** 4 экран помпы выглядит иначе, и на нем также есть кнопка **Разъединение**.
     
 
 ## Настройки помпы
@@ -162,7 +162,7 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 
 ## Замена батареи
 
-Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Пользователи, сообщающие об этом, используют литиевые батареи Energizer.
+При работе в цикле батарея Insight работает от 10 до 14 дней, максимум 20 дней. Пользователи, сообщающие об этом, используют литиевые батареи Energizer.
 
 В помпе Insight есть небольшой внутренний аккумулятор для поддержания таких важных функций, как часы, которые продолжают работать при замене батарей помпы. Если смена батареи занимает слишком много времени, то в этой внутренней батарее может кончиться заряд, время на часах будет сброшено, и вам будет предложено ввести новое время и дату после установки новой батарейки. Если это произойдет, все записи в AAPS до замены батареи больше не будут включены в расчеты, так как правильное время не может быть определено.
 
@@ -176,11 +176,11 @@ Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days
 
 ### Таймаут
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+Иногда помпа Insight не отвечает, пока **AAPS** устанавливает соединение. Тогда **AAPS** показывает уведомление «Тайм-аут сопряжения - сбросьте bluetooth».
 
 ![Сброс Bluetooth помпы Insight](../images/Insight_ResetBT.png)
 
-If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
+В этом случае выключите Bluetooth на помпе И на телефоне примерно на 10 секунд, затем снова включите.
 
 ## Пересечение часовых поясов с помпой Insight
 
@@ -188,10 +188,10 @@ If this happens, turn off Bluetooth on the pump AND on the phone for about 10 se
 
 ## Куда обращаться за помощью
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Драйвер Insight разрабатывает сообщество на **добровольной** основе. Прежде чем просить о помощи:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Прочитайте** нужный раздел этой документации, чтобы убедиться, как должна работать функция.
+2. **Спросите** в канале *#AAPS* на [Discord](https://discord.gg/4fQUWHZ4Mw) или в одном из других [каналов сообщества](../GettingHelp/WhereCanIGetHelp.md).
+3. **Сообщите об ошибке**: сначала поищите среди [существующих issues](https://github.com/nightscout/AndroidAPS/issues); если вашей проблемы там нет, откройте [новый issue](https://github.com/nightscout/AndroidAPS/issues) и приложите [файлы журналов](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Когда просите о помощи, укажите марку и модель телефона, версию Android, версию **AAPS** и простое понятное описание проблемы (что изменилось, когда всё работало в последний раз).
