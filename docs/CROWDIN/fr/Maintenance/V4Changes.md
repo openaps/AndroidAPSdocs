@@ -111,6 +111,8 @@ Dans **AAPS** v4, l'insuline marquée **ACTIF** dans **Gestion → Paramètres I
 
 Lors de la mise à jour, **AAPS** garde l'insuline et la DAI déjà enregistrées par vos changements de profil de la v3. S'il trouve des enregistrements plus anciens dont l'insuline est connue mais pas la DAI, il utilise pour eux une DAI par défaut et affiche un message une seule fois, par exemple *Les enregistrements plus anciens n'avaient pas de durée d'insuline, donc 9,0 heures a été utilisé pour Lyumjev. Vérifiez vos paramètres d'insuline — les enregistrements déjà migrés ne sont pas mis à jour par la suite.* Si vous voyez ce message, vérifiez vos paramètres d'insuline.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 Pour changer la DAI ou le pic, ajoutez une nouvelle insuline avec **+**, ajustez-la, enregistrez-la, puis activez-la avec **▶ Activer**. Voir [Changer l'insuline utilisée](#Config-Builder-insulin-change-active).
