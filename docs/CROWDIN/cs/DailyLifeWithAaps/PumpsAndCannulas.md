@@ -4,7 +4,7 @@
 
 Uvedený postup platí pouze pro pumpy připojené kanylou a neplatí pro náplasťové pumpy jako Omnipod, Medtrum Nano, Accu-Check Solo apod. Tento postup se někdy nazývá „výměna setu“. „Úplná“ výměna setu zahrnuje zásobník inzulínu i kanylu, „částečná“ výměna setu znamená výměnu jen kanyly.
 
-Patch pumpy se plní a doplňují samy ve svém vlastním průvodci aktivací a jejich kanyla už je v těle. **AAPS** pro ně plnění nenabízí: **Plnění/doplňování** se nezobrazuje v panelu **Spravovat** ani v Rychlém spuštění. Podívejte se na stránku své pumpy v části [Kompatibilní pumpy](../Getting-Started/CompatiblePumps.md).
+Patch pumpy se plní a doplňují samy ve svém vlastním průvodci aktivací a jejich kanyla už je v těle. **AAPS** pro ně plnění nenabízí: **Plnění/doplňování** se nezobrazuje v panelu **Spravovat** ani v Rychlém spuštění. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Podívejte se na stránku své pumpy v části [Kompatibilní pumpy](../Getting-Started/CompatiblePumps.md).
 
 Fyzickou výměnu zásobníku nelze provést přes **AAPS**, musí se udělat přímo na pumpě. Po dokončení je nutné ji v **AAPS** ručně zaznamenat.
 
@@ -31,6 +31,7 @@ Fyzickou výměnu zásobníku nelze provést přes **AAPS**, musí se udělat p�
 * Výchozí množství pro plnění můžete nastavit/upravit v nastavení **Plnění/doplňování** – napište „prime“ do vyhledávacího pole na hlavní obrazovce a nastavení se otevře (viz [Předvolby](../SettingUpAaps/Preferences.md)). Podívejte se do příbalového letáku vaší kanyly a ověřte, kolika jednotkami inzulínu (v závislosti na délce jehly a hadičky) je třeba pro doplnění vaší kanyly.
 
 * Inzulín vydaný funkcí plnění **AAPS** nezapočítává do aktivního inzulínu (IOB) a v [Historii ošetření](#aaps-screens-treatments) je označen jako „Prime“.
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * Ani inzulín nabolusovaný z pumpy během odpojení pumpy nebude **AAPS** brát v úvahu. Pokud náhodou dáte bolus přímo z pumpy, zatímco je **AAPS** odpojený, můžete po opětovném připojení pumpy tento inzulín oznámit (bez vydání bolusu) v dialogu **Inzulín** (viz [Oznámení vydaného inzulínu bez skutečného bolusu](#pumps-cannulas-announce-insulin) níže).
 
