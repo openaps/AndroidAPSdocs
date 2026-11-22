@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Upravljanje glavni uređaj ↔ klijent (potpisano daljinsko upravljanje)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+Od verzije 4 **AAPS-a** telefon pratitelja s aplikacijom **AAPSClient** može mnogo više od toga da samo *najavi* tretmane putem Nightscouta: kada je **uparen** s glavnim telefonom, može slati **potpisane naredbe** koje glavni telefon (**glavni uređaj**) provjerava, potvrđuje i izvršava – uključujući isporuku **bolusa inzulina** na pumpi glavnog uređaja.
 
-This page explains how it works, and how to set it up and use it.
+Ova stranica objašnjava kako to radi te kako to postaviti i koristiti.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Glavni uređaj** = glavni telefon s **AAPS-om** koji upravlja pumpom i pokreće petlju (aplikacija `full`).
+- **Klijent** = telefon s aplikacijom **AAPSClient**, bez pumpe, koji prati glavni uređaj i sada njime može i *upravljati*.
+- Oba telefona moraju biti spojena na **isti Nightscout**. Sva komunikacija i dalje ide preko Nightscouta – izravna veza između telefona nije potrebna.
 ```
 
 ---
 
-## How it works
+## Kako to radi
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+U **AAPS-u** v3 **AAPSClient** je mogao u Nightscout zapisivati samo nepotpisane tretmane iz Careportala i nije mogao isporučiti bolus. Daljinsko upravljanje sada traži jednokratno [uparivanje](#client_master_master_setup). Pogledajte i [Što se promijenilo u AAPS-u v4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4 koristi poseban kanal **Client-Control**. On i dalje ide preko vaše Nightscout stranice (u kolekciji `settings`), ali svaka poruka je **kriptografski potpisana** tajnim ključem koji znaju samo ta dva telefona. Tajni ključ predaje se jednom, tijekom **uparivanja**, i odmah nakon toga zamjenjuje se novim, tako da nikada ne putuje kao čisti tekst.
 
-The guiding principle is **the master is in charge**:
+Glavno načelo je **glavni uređaj odlučuje**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. Klijent šalje *namjeru* („bolus 2 J“, „pokreni scenu Vježbanje“, „postavi ovaj privremeni cilj“…).
+2. **Glavni uređaj** ponovno izračunava i **ograničava** radnju prema **vlastitim** trenutnim podacima (profil, aktivni inzulin, aktivni ugljikohidrati, trenutni privremeni cilj, pumpa) i **sam piše točnu potvrdu** koju će korisnik vidjeti.
+3. Klijent (ili sat) prikazuje tekst potvrde **glavnog uređaja** – nikada ne sastavlja vlastiti.
+4. Nakon potvrde glavni uređaj **izvršava radnju jednom** i javlja rezultat klijentu.
 
-What this means for you:
+Što to znači za vas:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **Potpisane naredbe**: naredbe mogu slati samo klijenti koje ste uparili (svaki klijent ima vlastiti tajni ključ za uparivanje i potpis). Stare ili ponovno poslane naredbe se odbijaju.
+- **Uloga za svakog klijenta**: vi odlučujete što svaki klijent smije raditi, od *Samo čitanje* do *Admin* – pogledajte [Uloge klijenata](#client-master-control-roles).
+- **Bolus inzulina s klijenta**: glavni uređaj ga isporučuje na svojoj pumpi, a klijent prikazuje napredak isporuke.
+- **Glavni uređaj odlučuje**: svaku radnju ograničava prema vlastitim ograničenjima i piše potvrdu koja se prikazuje na klijentu.
+- **Samo upareni klijenti mijenjaju terapiju**: dok je upravljanje s klijenta uključeno, glavni uređaj više ne prihvaća tretmane ni promjene upisane izravno u Nightscout – pogledajte [Zaštićeni način rada](#client-master-control-hardened-mode).
+- **Svaki klijent dobiva vlastiti Nightscout token** samo s pravima koja klijentu trebaju – pogledajte [Vlastiti Nightscout token klijenta](#client-master-control-own-token).
+- **Glavni uređaj nije dostupan**: radnje su blokirane uz jasnu poruku.
+- **Opoziv klijenta** traži jedan dodir (za svakog klijenta), a prekidačem na glavnom uređaju možete zaustaviti sve klijente.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Radnje koje se mogu pokrenuti s klijenta: **bolus**, **ugljikohidrati / eUH**, **privremeni cilj** (postavljanje i otkazivanje), **zamjena profila**, promjena **petlje / načina rada**, **privremeni bazal** (postavljanje i otkazivanje), **produženi bolus** (postavljanje i otkazivanje), **odabir inzulina** i **[scene](../DailyLifeWithAaps/Scenes.md)**. Dio **postavki** koje vrijede u oba smjera također se usklađuje između glavnog uređaja i klijenata.
 
 ---
 
-## Roles and prerequisites
+## Uloge i preduvjeti
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients. Your Nightscout host must support websockets.
+- **Glavni uređaj** koristi uobičajenu verziju `full` aplikacije **AAPS** i spojen je na vašu pumpu.
+- **Glavni uređaj** koristi **NSClientV3** s vašim Nightscoutom i prikazuje *povezano*. Dajte mu **administratorski token** vašeg Nightscouta: s njim glavni uređaj može za svakog klijenta izraditi vlastiti token i prikazati ga klijentu kao QR kod.
+- **Klijent** koristi **[AAPSClient](AapsClient.md)** (ili **AAPSClient2** / **AAPSClient3** za dodatne pacijente – pogledajte [O aplikacijama AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)). Mora koristiti **isti** Nightscout. Ako ga postavite QR kodom glavnog uređaja, klijent dobiva adresu Nightscouta i token od glavnog uređaja; inače najprije sami postavite **NSClientV3** na njemu.
+- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. A command is only valid for a few seconds: without websockets it fails instead of arriving late. Dok je upravljanje s klijenta uključeno, **AAPS** drži WebSockets uključenima, na glavnom uređaju i na uparenim klijentima. Your Nightscout host must support websockets.
 ```
 
-Pairing and synchronization are two different things:
+Uparivanje i sinkronizacija dvije su različite stvari:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- **Sinkronizacija** (podaci: GUK, tretmani, profil) postavlja se kao i prije – pogledajte [Sinkronizacija](#RemoteControl_aapsclient). QR kod glavnog uređaja može to učiniti umjesto vas na klijentu.
+- **Uparivanje** (upravljanje: ovdje opisani kanal potpisanih naredbi) je novi korak u nastavku.
 
 ---
 
-## Setting it up
+## Postavljanje
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. Na glavnom uređaju – omogućite upravljanje i dodajte klijenta
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+Na glavnom uređaju otvorite zaslon **Upravljanje** i odaberite **Ovlašteni klijenti**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+Uključite **Dopusti upravljanje s klijenta** (prema zadanim postavkama je **isključeno**). To je glavni prekidač za isključivanje: kada je isključen, nijedan klijent ne može slati naredbe, ali upareni klijenti ostaju spremljeni, pa ga kasnije možete ponovno uključiti. Njegovim uključivanjem uključuje se i [zaštićeni način rada](#client-master-control-hardened-mode), prikazan kao „*Zaštićeni način rada uključen*“ sa znakom **(i)** koji ga objašnjava. U [jednostavnom načinu rada](#preferences-simple-mode) upravljanje s klijenta je uvijek uključeno, pa se prekidač ne prikazuje.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![Zaslon Ovlašteni klijenti na glavnom uređaju](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Dodirnite gumb **+** (dolje desno) da biste dodali klijenta. U dijalogu **Novi klijent**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Unesite **naziv uređaja** kako biste ga prepoznali na popisu.
+2. Odaberite **kako se telefon postavlja** (pogledajte tablicu u nastavku).
+3. Odaberite njegovu **[ulogu](#client-master-control-roles)**. Ništa nije unaprijed odabrano: prava uloga ovisi o tome tko koristi telefon.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![Dijalog Novi klijent na glavnom uređaju: naziv uređaja, način postavljanja telefona i njegova uloga](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Način                               | Što novi telefon dobiva                                                        | Koristite ga kada                                                                                     |
+| ----------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| **QR kod: Nightscout i uparivanje** | adresu Nightscouta, vlastiti Nightscout token i uparivanje, jednim skeniranjem | novi telefon ima kameru: najbrži način, ništa ne treba upisivati                                      |
+| **QR kod: samo Nightscout**         | adresu Nightscouta i vlastiti Nightscout token, bez uparivanja                 | telefon treba samo **prikazivati** podatke i nikada ne slati naredbe                                  |
+| **PIN**                             | samo uparivanje; zadržava postavke Nightscouta koje već ima                    | telefon nema kameru (ili glavni uređaj ne može izrađivati tokene); mora već biti spojen na Nightscout |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+Dva načina s QR kodom trebaju **administratorski token** u postavkama **NSClientV3** na glavnom uređaju, jer glavni uređaj izrađuje token klijenta u Nightscoutu. Bez njega se opcije s QR kodom prikazuju, ali se ne mogu odabrati, a dijalog objašnjava zašto; **PIN** uvijek radi.
 
-#### With a QR code
+#### S QR kodom
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+Dodirnite **U redu**: glavni uređaj izrađuje Nightscout token klijenta i prikazuje **QR kod**. Kod koji ujedno uparuje vrijedi oko **dvije minute**; zaslon odbrojava i sam se zatvara kada se klijent upari. Skenirajte ga na novom telefonu kako je opisano u odjeljku [Na klijentu](#client_master_client_setup).
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+Svatko tko vidi QR kod može čitati vaš Nightscout, a kod koji uparuje sadrži i uparivanje. Pokažite ga samo novom telefonu. **AAPS** blokira snimke zaslona dok je kod na zaslonu.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![Zaslon s QR kodom na glavnom uređaju s odbrojavanjem (kod je zamućen)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### S PIN-om
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
+Dodirnite **U redu**: glavni uređaj prikazuje 8-znamenkasti **PIN za uparivanje**, u dvije skupine po četiri znamenke (na primjer `1234 5678`). Ovaj PIN je **jednokratan** i **istječe nakon otprilike dvije minute**. As with the QR code, the master refuses a client name that is already in its list: each client gets its own Nightscout token under its name.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![Zaslon za uparivanje na glavnom uređaju s jednokratnim PIN-om (ovdje prikazani PIN je istekao)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+PIN štiti tajni ključ za uparivanje koji se razmjenjuje putem Nightscouta. Podijelite ga samo s uređajem koji uparujete, nemojte ga javno objavljivati i pustite da istekne ako ga ne koristite. Novi PIN uvijek možete napraviti ponovnim dodirom na **+**.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. Na klijentu – uparivanje s glavnim uređajem
 
-#### Scanning the QR code
+#### Skeniranje QR koda
 
-You can scan the master's QR code in two places:
+QR kod glavnog uređaja možete skenirati na dva mjesta:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- u **čarobnjaku za postavljanje** klijenta, u koraku „**Postavljanje s glavnog uređaja**“, koji dolazi prije koraka za Nightscout. Jedno skeniranje tada postavlja Nightscout, a s kodom koji uparuje i uparivanje, pa je postavljanje gotovo: čarobnjak se zatvara i otvara se početni zaslon;
+- bilo kada kasnije putem **Upravljanje → Upari s glavnim uređajem → Skeniraj QR kod**.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+Prvi put **AAPSClient** traži dopuštenje za **kameru**. Ako ga odbijete, zaslon kaže da je kamera potrebna, a možete je dopustiti gumbom **Pokušaj ponovno** ili se umjesto toga upariti PIN-om.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+Usmjerite kameru prema kodu. Klijent prikazuje što kod radi – adresu Nightscouta i, za kod koji uparuje, glavni uređaj s kojim se uparuje – i pita „**Koristiti ovaj kod?**“. Dodirnite **Koristi**: klijent uključuje **NSClientV3**, zamjenjuje svoju adresu Nightscouta i token onima iz koda i uključuje WebSockets. Kod koji uparuje ujedno i uparuje telefon; telefon se javlja glavnom uređaju čim se spoji na Nightscout.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![Korak čarobnjaka Postavljanje s glavnog uređaja na klijentu](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
 A computer without camera: use the PIN there.
 ```
 
-#### Entering the PIN
+#### Unos PIN-a
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+Na klijentu otvorite **Upravljanje → Upari s glavnim uređajem** (ili korak čarobnjaka **Upari s glavnim uređajem**, nakon koraka za Nightscout), **unesite 8-znamenkasti PIN** prikazan na glavnom uređaju i dodirnite **Upari**. Klijent pomoću PIN-a sigurno preuzima ponudu za uparivanje putem Nightscouta, zatim pita „**Upariti s ovim glavnim uređajem?**“ i prikazuje identifikator glavnog uređaja. Dodirnite **Upari** za potvrdu (snimku zaslona pogledajte u odjeljku [Uparivanje s glavnim uređajem](#aapsclient-pairing-with-the-master)).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![Zaslon Upari s glavnim uređajem na klijentu prije uparivanja – ovdje unesite PIN](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### Nakon uparivanja
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+Kada je klijent uparen, šalje glavnom uređaju poruku **Hello** i pojavljuje se na popisu **Ovlašteni klijenti** na glavnom uređaju kao **Aktivan**, s vremenom *„zadnji put viđen“*. Klijent zna svoju [ulogu](#client-master-control-roles) iz uparivanja, pa odmah prikazuje prave gumbe. Uparivanje napravljeno u čarobnjaku za postavljanje završava čarobnjak. U istom koraku dva telefona zamjenjuju tajni ključ za uparivanje novim koji nikada nije putovao (pogledajte [Sigurnosne napomene](#client-master-control-security)), a klijent postavljen PIN-om dobiva vlastiti Nightscout token (pogledajte [Vlastiti Nightscout token klijenta](#client-master-control-own-token)). Klijent može biti uparen samo s **jednim** glavnim uređajem u isto vrijeme; za uparivanje s drugim glavnim uređajem najprije odaberite **Raspari**.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![Zaslon Upari s glavnim uređajem na klijentu (već uparen)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. Upravljanje klijentima
 
-From the master's **Authorized clients** screen you can, at any time:
+Na zaslonu **Ovlašteni klijenti** na glavnom uređaju možete u bilo kojem trenutku:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- **Promijeniti ulogu** klijenta pomoću reda od četiri gumba ispod njegova naziva. Nova uloga vrijedi odmah, bez ponovnog uparivanja.
+- **Vidjeti kojim Nightscout tokenom** klijent zapisuje: „*Vlastiti Nightscout token*“ je ono što želite. Crveni redak „*Koristi Nightscout token …, koji ima više prava nego što klijentu treba*“ znači da klijent još koristi token s više prava, obično vaš administratorski token – pogledajte [Vlastiti Nightscout token klijenta](#client-master-control-own-token).
+- **Opozvati** pojedinog klijenta – dodirnite ikonu **koša za smeće** pokraj njega. Klijent više ne može slati naredbe dok se ponovno ne upari. Briše se i njegov vlastiti Nightscout token, pa više ne može ni čitati vaš Nightscout.
+- **Zaustaviti svako upravljanje** bez gubitka uparivanja – isključite **Dopusti upravljanje s klijenta**.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+Telefoni postavljeni s **QR kod: samo Nightscout** navedeni su ispod klijenata, pod „**Samo čitanje Nightscouta**“. Za svaki od njih možete ponovno prikazati QR kod (da biste ponovno postavili isti telefon) ili izbrisati njegov token, čime prestaje njegov pristup vašem Nightscoutu.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![Ovlašteni klijenti s jednim uparenim klijentom (gumbi uloga, vlastiti Nightscout token) i jednim telefonom pod Samo čitanje Nightscouta](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## Uloge klijenata
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+Svaki upareni klijent ima **ulogu**. Glavni uređaj je provjerava za svaku naredbu, a klijent prikazuje samo ono što njegova uloga dopušta. Nova uloga vrijedi odmah, bez ponovnog uparivanja. Uloge se nadograđuju jedna na drugu: svaka može sve što može i ona prije nje.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| Uloga            | Klijent smije                                                                                                                                                                                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Samo čitanje** | samo prikazivati podatke. Ostaje uparen, pa je spreman kada mu date višu ulogu.                                                                                                                                                                         |
+| **Obroci**       | dati bolus, koristiti bolus kalkulator i Brzi kalkulator, unositi ugljikohidrate i zaustaviti bolus koji je u tijeku. Ugljikohidrati uneseni ovdje mogu navesti petlju da da više inzulina.                                                             |
+| **Njegovatelj**  | raditi sve što korisnik radi u **AAPS-u**: privremene ciljeve, zamjene profila i inzulina, način rada petlje, privremeni bazal, produženi bolus, scene, događaje u Careportalu, kalibracije i brisanje zapisa. Ne može mijenjati postavke ni predloške. |
+| **Admin**        | raditi sve, uključujući postavke i predloške (Brzi kalkulator, predlošci privremenih ciljeva, scene, profili, automatizacija, inzulin).                                                                                                                 |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+Znak **(i)** na vrhu zaslona **Ovlašteni klijenti** prikazuje isto objašnjenje. Na klijentu **Upravljanje → Upari s glavnim uređajem** prikazuje vlastitu ulogu telefona.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## Zaštićeni način rada
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+Kada je **Dopusti upravljanje s klijenta** uključeno, glavni uređaj je u **zaštićenom načinu rada**: prihvaća promjene samo od uparenih klijenata. **Ne** prihvaća tretmane, privremene ciljeve, promjene profila, promjene načina rada ni brisanja napravljena izravno u Nightscoutu, na primjer na Nightscout web stranici ili u drugim aplikacijama.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- Postavke za prihvaćanje podataka iz Nightscouta (**NSClientV3 → Sinkronizacija**) skrivene su dok je zaštićeni način rada uključen; **AAPS** ih koristi kao da su isključene.
+- Glavni uređaj i dalje **prenosi** sve svoje podatke u Nightscout, uključujući GUK, i drži **WebSockets** uključenima.
+- Ako glavni uređaj dobiva **GUK iz Nightscouta**, i dalje ga uzima odande.
+- Za učitavanje povijesti na **novi** glavni uređaj koristite **Potpuna sinkronizacija** u **NSClientV3**: ona preuzima sve što je u Nightscoutu, uključujući profile.
+- [SMS naredbe](SMSCommands.md) nisu pogođene.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+Upareni klijent slijedi zaštićeni način rada glavnog uređaja: drži WebSockets uključenima, a iste postavke Nightscouta i na njemu su skrivene. Neupareni klijent zadržava vlastite postavke.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+[Jednostavni način rada](#preferences-simple-mode) uvijek uključuje zaštićeni način rada. Da biste ga isključili, izađite iz jednostavnog načina rada i isključite **Dopusti upravljanje s klijenta** na glavnom uređaju.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+Sve što upareni klijent pošalje potpisano je, a glavni uređaj to provjerava i potvrđuje. Tretman upisan na Nightscout web stranici nije: dodati ga može bilo tko s pravom pisanja u vaš Nightscout. U zaštićenom načinu rada samo potpisane naredbe mogu promijeniti ono što glavni uređaj radi.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## Vlastiti Nightscout token klijenta
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+Klijentu ne treba administratorski token. On samo čita vaš Nightscout i preko njega šalje naredbe glavnom uređaju; sam ništa ne prenosi. Zato glavni uređaj svakom klijentu daje vlastiti Nightscout token, samo s ovim pravima:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- čitanje svega,
+- pisanje u kolekciju `settings`, kanal prema glavnom uređaju,
+- odgoda alarma u Nightscoutu.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+Token pripada Nightscout ulozi pod nazivom **`aaps-client`**, koju glavni uređaj izrađuje prvi put kada mu zatreba. Ulogu i tokene (s nazivom `aaps-` i nazivom klijenta) možete vidjeti u **Admin tools** vaše Nightscout stranice. Ako se uloga ondje promijeni, glavni uređaj je vraća sljedeći put kada izrađuje token ili kada otvorite **Ovlašteni klijenti**.
 
-How a client gets its token:
+Kako klijent dobiva svoj token:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **Postavljen QR kodom**: token je u kodu.
+- **Uparen PIN-om** (ili uparen prije nego što je ovo postojalo): nakon uparivanja glavni uređaj šalje klijentu njegov vlastiti token kroz upareni kanal, šifrirano. Klijent najprije provjeri radi li prijava s tim tokenom, a zatim ga koristi umjesto tokena koji je imao. Za to je potreban administratorski token na glavnom uređaju; bez njega klijent zadržava svoj token, a njegova kartica na glavnom uređaju prikazuje crveni redak.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**Klijent zadržava vlastiti token.** Kada glavni uređaj jednom vidi da klijent zapisuje vlastitim tokenom, od tada prihvaća naredbe tog klijenta samo s tim tokenom. Naredba zapisana drugim tokenom (na primjer administratorskim tokenom kasnije upisanim u klijent ili tokenom drugog klijenta) se odbija, iako je klijent uparen, a klijent kaže „*Glavni uređaj je to odbio: ovaj telefon piše u Nightscout s drugim tokenom, a ne sa svojim*“. Njegova kartica na glavnom uređaju to prikazuje crvenom bojom. Klijent se i dalje prikazuje kao dostupan, pa možete vidjeti što nije u redu. Da biste to riješili, uklonite klijenta na glavnom uređaju i ponovno ga dodajte.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+Glavni uređaj nikada ne briše ni ne mijenja Nightscout token koji nije sam izradio (token s drugim ulogama osim `aaps-client`): ti tokeni su vaši. Vlastiti token klijenta briše kada uklonite klijenta.
 
 ---
 
-## Using remote control
+## Korištenje daljinskog upravljanja
 
-### Triggering an action from the client
+### Pokretanje radnje s klijenta
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+Koristite klijent točno kao i sam telefon: otvorite **UH**, **Inzulin**, **Privremeni cilj**, **Profil**, **Scene**, izbornik **Upravljanje** itd. i unesite vrijednosti.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+Kada potvrdite, klijent nakratko prikazuje **„Kontaktiranje glavnog uređaja…“**, **glavni uređaj** izračunava i ograničava radnju, a klijent zatim prikazuje **potvrdu samog glavnog uređaja** – točno one retke, vrijednosti i boje koje bi glavni uređaj prikazao na svom zaslonu. Pregledajte ih i dodirnite **U redu** za nastavak.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![Potvrda scene koju je napisao glavni uređaj, prikazana na klijentu](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+Isto vrijedi i za jednostavan unos ugljikohidrata – količina prikazana za potvrdu je ona koju je izračunao glavni uređaj:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![Potvrda ugljikohidrata koju je napisao glavni uređaj](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+Nakon što potvrdite, glavni uređaj jednom izvršava radnju, a rezultat se prikazuje na klijentu.
 
-### Insulin bolus from a client
+### Bolus inzulina s klijenta
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+To je glavna nova mogućnost u v4. Bolus pokrenut na klijentu **isporučuje glavni uređaj na svojoj pumpi**; glavni uređaj ga ograničava prema vlastitim ograničenjima, a klijent prikazuje **napredak isporuke uživo** dok traje (i alarm ako pumpa javi grešku).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+Klijent nikada sam ne odlučuje o isporučenoj količini. Glavni uređaj je ponovno izračunava i ograničava, vi potvrđujete količinu koju je napisao glavni uređaj i tek se tada isporučuje.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### Kada je glavni uređaj izvan mreže
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+Ako glavni uređaj nije dostupan (telefon mu je isključen ili u stanju mirovanja, nije spojen na Nightscout ili WebSockets ne rade), radnje upravljanja na klijentu **blokirane su prije nego što se išta pošalje** i dobivate jasnu poruku. Ništa se ne primijeni napola.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![Poruka na klijentu kada je glavni uređaj izvan mreže](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+Klijent automatski ponovno provjerava dostupnost i ponovno omogućuje upravljanje čim je glavni uređaj ponovno na mreži.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### Wear OS (sat) na klijentu
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+Sat uparen s telefonom **klijenta** prosljeđuje svoje radnje preko klijenta glavnom uređaju (sat → klijent → glavni uređaj). Sat prikazuje retke potvrde **glavnog uređaja** i stvarni rezultat, kao i telefon. Postavljanje sata se nije promijenilo – pogledajte [Postavljanje AAPS-a na vaš Wear OS sat](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,70 +271,70 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## Promjena konfiguracije i postavki
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+Uparivanje ne služi samo za prosljeđivanje pojedinačnih radnji – ono također usklađuje **konfiguraciju** i mnoge **postavke** između glavnog uređaja i njegovih klijenata.
 
-### Configuration (which plugins are active)
+### Konfiguracija (koji su dodaci aktivni)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+Aktivni **dodaci** (APS algoritam, osjetljivost, zaglađivanje, …) odabiru se na **glavnom uređaju** i **preslikavaju** na svakog uparenog klijenta. Na klijentu su ti odabiri označeni malom **ikonom mobitela** na zaslonu [Konfiguracija](#configuration_sync_icon) – promijenite ih na glavnom uređaju i klijenti automatski slijede, i obrnuto.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+Na klijentu se ikona mobitela pojavljuje kod *Zaglađivanje*, *Kalibracija*, *Detekcija osjetljivosti* i *APS* (sinkronizirano s glavnog uređaja), ali ne kod *Komunikacija*:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![Popis konfiguracije na klijentu – ikona mobitela označava kategorije sinkronizirane s glavnim uređajem](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+Podaci o vezi koji su jedinstveni za svaki uređaj – prije svega **URL Nightscouta / pristupni token u NSClientu** – *ne* sinkroniziraju se. Svaki telefon ima svoje; na klijentu dolaze iz QR koda glavnog uređaja ili ih postavljate sami.
 
-### Profiles
+### Profili
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+Vaš **popis profila** također se usklađuje između glavnog uređaja i njegovih uparenih klijenata. Na uparenom klijentu **Upravljanje → Profil** prikazuje iste profile kao glavni uređaj; profil možete **urediti** ili **aktivirati**, a – kao i svaka druga naredba – promjena se šalje **glavnom uređaju**, ondje se primjenjuje i sinkronizira natrag.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+Kada prvi put aktivirate profil na novo instaliranom klijentu, klijent može prikazati „*Još nijedan inzulin nije u upotrebi*“ i zatražiti da **odaberete inzulin**. Odaberite inzulin koji je aktivan na glavnom uređaju (prikazuje ga **Upravljanje → Postavke inzulina** na glavnom uređaju).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+Na klijentu koji **nije uparen** zaslon Profil je i dalje dostupan, ali **samo za pregled**: klijent prikazuje profile koje prima putem Nightscouta (trebaju mu za vlastite izračune), ali nema gumba za uređivanje ni aktiviranje – nema glavnog uređaja kojem bi se promjena poslala.
 
-### Preferences
+### Postavke
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+Dio **postavki** je **dvosmjeran**: možete ih promijeniti na **glavnom uređaju ili na uparenom klijentu**, a promjena se sinkronizira na drugu stranu. Kada takvu postavku promijenite na klijentu, ona se šalje glavnom uređaju potpisanim kanalom, ondje se primjenjuje, a važeća vrijednost se vraća – tako da je ono što vidite na klijentu uvijek ono što je glavni uređaj spremio. Ako se ista postavka promijeni na dva uređaja gotovo u isto vrijeme, **vrijedi najnovija promjena**. Kod postavke s klizačem nova vrijednost se šalje kada podignete prst.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+Unutar postavki ista mala **ikona mobitela** označava pojedine postavke koje se sinkroniziraju. U primjeru ispod *Granično vrijeme apsorpcije* se sinkronizira (ikona mobitela), dok su postavke bez ikone lokalne za uređaj:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![Postavke dodatka – ikona mobitela označava sinkronizirane postavke](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Budući da je glavni uređaj nadležan za spremljenu vrijednost, za uređivanje stavke konfiguracije kojom upravlja glavni uređaj ili dvosmjerne postavke s klijenta glavni uređaj mora biti **dostupan**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## Sigurnosne napomene
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **Tajni ključ za uparivanje**: glavni uređaj ga jednom predaje klijentu – zaštićen PIN-om u Nightscout dokumentu ili unutar QR koda – i oba ga spremaju šifrirano.
+- **Novi tajni ključ odmah nakon uparivanja**: prva poruka klijenta nakon uparivanja pokreće razmjenu ključeva, a od tada oba telefona koriste tajni ključ koji nikada nije putovao. Tajni ključ koji je netko možda vidio (fotografirani QR kod, ponuda s PIN-om pročitana iz Nightscouta) nakon toga je beskoristan. Telefoni upareni prije nego što je ovo postojalo to jednom učine nakon ažuriranja.
+- **Svaka naredba je potpisana** (HMAC). Glavni uređaj odbija sve čiji potpis ne odgovara uparenom klijentu.
+- **Ponovno slanje je spriječeno** brojačem koji samo raste, zasebnim za svakog klijenta, a svaka naredba **istječe** nakon kratkog vremena.
+- **Najmanja prava u Nightscoutu**: svaki klijent ima [vlastiti Nightscout token](#client-master-control-own-token), koji može samo čitati i pisati u kanal za upravljanje s klijenta. Kada ga klijent jednom upotrijebi, glavni uređaj prihvaća njegove naredbe samo s tim tokenom. Uklanjanje klijenta briše taj token.
+- **Samo potpisane promjene**: u [zaštićenom načinu rada](#client-master-control-hardened-mode) glavni uređaj zanemaruje promjene terapije upisane izravno u Nightscout.
+- **Glavni uređaj potpisuje ono što dijeli**: postavke, popis klijenata i znak „glavni uređaj radi“ koje glavni uređaj stavlja u Nightscout za svoje klijente nose potpis glavnog uređaja. Klijent ih prihvaća samo ako je potpis od glavnog uređaja, pa ih token drugog klijenta ne može promijeniti. Klijent saznaje ključ glavnog uređaja kada se upari, a telefon koji samo čita Nightscout saznaje ga iz QR koda. Odbijeni dokument prikazuje se u dnevniku NSClienta kao „*✕ SETTINGS … refused*“.
+- **Vi zadržavate kontrolu**: dajte svakom klijentu [ulogu](#client-master-control-roles) koja mu treba, opozovite klijenta jednim dodirom ili sve onemogućite prekidačem **Dopusti upravljanje s klijenta**.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+Ako se klijent vrati iz sigurnosne kopije koja njegov brojač naredbi vraća unatrag, glavni uređaj će njegove sljedeće naredbe odbiti kao ponovno poslane. Da biste to riješili, jednostavno **rasparite i ponovno uparite** klijenta.
 ```
 
 ---
 
 (client-master-control-troubleshooting)=
 
-## Troubleshooting
+## Rješavanje problema
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Za probleme s Nightscoutom / sinkronizacijom najprije pogledajte [Rješavanje problema s NSClientom](../GettingHelp/TroubleshootingNsClient.md).
 
 ### Pairing
 
@@ -342,42 +342,42 @@ For Nightscout / synchronization problems first see [Troubleshooting NSClient](.
 
 The dialog says why:
 
-- *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**.
-- *Not connected*: wait until the master shows *connected* in **NSClientV3**.
+- *Nije administratorski token*: dajte glavnom uređaju administratorski token vašeg Nightscouta ili dodajte klijenta pomoću **PIN-a**.
+- *Nije povezano*: pričekajte dok glavni uređaj ne prikaže *povezano* u **NSClientV3**.
 
-**"Nightscout has a token with this name and other rights"**
+**„Nightscout ima token s ovim nazivom i drugim pravima“**
 
-One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.
+Jedan od vaših vlastitih Nightscout tokena zove se `aaps-` i ovaj naziv. Odaberite drugi naziv za klijenta.
 
-**"A client with this name is in the list already"**
+**„Klijent s ovim nazivom već je na popisu“**
 
-Choose another name, or remove that client first.
+Odaberite drugi naziv ili najprije uklonite tog klijenta.
 
 **The client says "This code is from another AAPS version"**
 
-Master and client must run the **same** version of **AAPS**. Update the older one.
+Glavni uređaj i klijent moraju imati **istu** verziju **AAPS-a**. Ažurirajte stariji.
 
 **The client says "This code has expired"**
 
-A code that pairs works for about two minutes. Add the client again on the master to get a new code.
+Kod koji uparuje vrijedi oko dvije minute. Ponovno dodajte klijenta na glavnom uređaju da biste dobili novi kod.
 
 **The client says "This phone is paired already"**
 
-Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.
+Najprije ga rasparite (**Upravljanje → Upari s glavnim uređajem → Raspari**), zatim ponovno skenirajte. Kod **samo Nightscout** radi i na uparenom telefonu.
 
 **Pairing is cancelled with "The pairing secret could not be stored"**
 
-Nothing was changed. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
+Ništa nije promijenjeno. Start the pairing again. If it keeps failing, restart **AAPSClient** and try once more.
 
 **The client says it is not paired**
 
-Pair again from **Manage → Pair with master**. Check that the client is **Active** in the master's **Authorized clients** list.
+Ponovno se uparite putem **Upravljanje → Upari s glavnim uređajem**. Check that the client is **Active** in the master's **Authorized clients** list.
 
-**Nothing happens after pairing**
+**Nakon uparivanja ništa se ne događa**
 
-Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.
+Provjerite je li **Dopusti upravljanje s klijenta** UKLJUČENO na glavnom uređaju i je li glavni uređaj spojen na Nightscout.
 
-### Commands
+### Naredbe
 
 **The client says the master is offline, or commands fail**
 
@@ -393,7 +393,7 @@ Websockets are **mandatory** for remote control from **AAPSClient**. If the webs
 
 The master checks every command again against its current state: for example, the chosen profile no longer exists, or the pump type does not match. Check on the master.
 
-**Treatments entered on the Nightscout website are not applied**
+**Tretmani uneseni na Nightscout web stranici ne primjenjuju se**
 
 This is expected in [hardened mode](#client-master-control-hardened-mode). Enter them on a paired client instead.
 
@@ -401,19 +401,19 @@ This is expected in [hardened mode](#client-master-control-hardened-mode). Enter
 
 **The client says "The master refused it: this phone writes to Nightscout with another token than its own"**
 
-The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).
+Klijent je prije koristio vlastiti Nightscout token, a sada zapisuje drugim, na primjer nakon što je token upisan u njegove postavke Nightscouta. Uklonite klijenta na glavnom uređaju i ponovno ga dodajte (pogledajte [Vlastiti Nightscout token klijenta](#client-master-control-own-token)).
 
 **The client's card shows "Uses the Nightscout token …" in red**
 
-The client still writes with a token that has more rights than it needs. The master sends the client its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.
+Klijent i dalje zapisuje tokenom koji ima više prava nego što mu treba. The master sends the client its own token after pairing, but only if the master has an admin token. Provjerite token glavnog uređaja ili ponovno postavite klijenta QR kodom.
 
 **The NSClient log on the client shows "✕ SETTINGS … refused" and its settings no longer follow the master**
 
-Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes the new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**).
+Netko drugi je zapisao dokument s postavkama glavnog uređaja ili glavni uređaj ima novi ključ (na primjer nakon što su mu podaci obrisani). A paired client takes the new key by itself the next time it connects to Nightscout. Telefonu koji samo čita Nightscout ponovno treba QR kod glavnog uređaja (**Samo čitanje Nightscouta → prikaži kod**).
 
-**A client can no longer read Nightscout**
+**Klijent više ne može čitati Nightscout**
 
-Its token was deleted, for example because the client was removed on the master. Add it again.
+Njegov token je izbrisan, na primjer zato što je klijent uklonjen na glavnom uređaju. Ponovno ga dodajte.
 
 ---
 
