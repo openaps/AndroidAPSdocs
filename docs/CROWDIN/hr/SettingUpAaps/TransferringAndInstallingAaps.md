@@ -1,274 +1,274 @@
-# Transferring and Installing AAPS on your smartphone
+# Prijenos i instalacija AAPS-a na vaš pametni telefon
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+U prethodnom odjeljku, [Izrada **AAPS-a**](../SettingUpAaps/BuildingAaps.md), izradili ste aplikaciju **AAPS** (to je .apk datoteka) na računalu.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+Sljedeći koraci su **prijenos** APK datoteke **AAPS-a** (i drugih aplikacija koje bi vam mogle trebati, npr. BYODA, xDrip ili druga aplikacija za primanje podataka CGM-a) na vaš Android pametni telefon, a zatim **instalacija** aplikacije (ili aplikacija). Nakon instalacije **AAPS-a** na pametni telefon moći ćete prijeći na [**konfiguraciju petlje AAPS-a**](../SettingUpAaps/SetupWizard.md).
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+Ova stranica također objašnjava [provjeru Android razvojnih programera](#android-developer-verification), promjenu koju Google uvodi od rujna 2026. i koja utječe na instalaciju aplikacija koje ste sami izradili, te [besplatne načine instalacije](#android-developer-verification-free-methods) koji i nakon te promjene nastavljaju raditi.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## Instalacija AAPS-a dodirom na APK datoteku
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+Danas **AAPS** instalirate tako da APK datoteku prenesete na telefon i otvorite je („dodirnete“). Postoji nekoliko načina za prijenos APK datoteke **AAPS-a** s računala na pametni telefon. Ovdje objašnjavamo dva različita načina:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Opcija 1 – Koristite svoj Google Drive (Gdrive)
+* Opcija 2 – Koristite USB kabel
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Imajte na umu da prijenos e-poštom može stvarati probleme i ne preporučuje se.
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+Google od rujna 2026. postupno uvodi [provjeru Android razvojnih programera](#android-developer-verification) (najprije u Brazilu, Indoneziji, Singapuru i Tajlandu; u cijelom svijetu 2027.). Ondje gdje se provjera primjenjuje, instalacija APK datoteke dodirom na datoteku – kako je opisano u obje opcije ispod – je blokirana. U tom slučaju koristite jedan od [besplatnih načina instalacije](#android-developer-verification-free-methods) niže na ovoj stranici.
 ```
 
-### Option 1. Use Google drive to transfer files
+### Opcija 1. Prijenos datoteka putem Google Drivea
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+U web pregledniku otvorite [Google.com](https://www.google.com/) i prijavite se na svoj Google račun.
 
-On the right upper side select the Drive app in the Google menu.
+Gore desno u Google izborniku odaberite aplikaciju Drive.
 
-![Start Drive App](../images/install/GoogleDriveInWebbrowser.png)
+![Pokretanje aplikacije Drive](../images/install/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+Kliknite **New** (Novo) gore lijevo (ili desnom tipkom miša kliknite prazno mjesto ispod svojih datoteka i mapa) i odaberite **File upload** (Prijenos datoteke).
 
-![Upload apk file with Google Drive App](../images/install/GoogleDriveUploadFile.png)
+![Prijenos apk datoteke u aplikaciju Google Drive](../images/install/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Apk datoteka sada bi trebala biti prenesena na Google Drive.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Pokretanje instalacije apk datoteke iz aplikacije Google Drive
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Prijeđite na mobitel i pokrenite aplikaciju Google Drive. To je unaprijed instalirana aplikacija. Nalazi se tamo gdje su ostale Google aplikacije, a možete je pronaći i pretraživanjem po nazivu aplikacije.
 
-![start the Google Drive app](../images/install/GoogleDriveMobileAPPLaunch.png)
+![pokretanje aplikacije Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+Pokrenite instalaciju apk datoteke tako da na mobitelu u aplikaciji Google Drive dodirnete naziv datoteke.
 
-![launch the apk installation](../images/install/GoogleDriveMobileUploadedAPK.png)
+![pokretanje instalacije apk datoteke](../images/install/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+Ako dobijete sigurnosnu obavijest da trenutačno nije dopušteno instalirati aplikacije iz Google Drivea, dodirnite „Postavke“ i dopustite to samo na kratko vrijeme. Nakon toga to ponovno zabranite, jer je stalno uključena opcija sigurnosni rizik.
 
-![Security Notice Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
+![Sigurnosna obavijest Google Drivea](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
+![Sigurnosna obavijest Google Drivea](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+Kada instalacija završi, ovaj je korak gotov.
 
-You should see the **AAPS** icon and be able to open the app.
+Trebali biste vidjeti ikonu **AAPS-a** i moći otvoriti aplikaciju.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**VAŽNA SIGURNOSNA NAPOMENA**
+Jeste li se sjetili ponovno zabraniti instalaciju iz Google Drivea?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Nastavite s [konfiguracijom petlje AAPS-a](../SettingUpAaps/SetupWizard.md).
 
-### Option 2. Use a USB cable to transfer files
+### Opcija 2. Prijenos datoteka USB kabelom
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+Drugi način prijenosa apk datoteke AAPS-a je [USB kabelom](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Prenesite datoteku s njezine lokacije na računalu u mapu „Preuzimanja“ (Downloads) na telefonu.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Na telefonu ćete morati dopustiti instalaciju iz nepoznatih izvora. Upute kako to učiniti možete pronaći na internetu (_npr._ [ovdje](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ili [ovdje](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+Kada povlačenjem prenesete datoteku, na telefonu otvorite mapu „Preuzimanja“ (Downloads) i dodirnite apk datoteku AAPS-a:
 
-![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+![Apk datoteka u mapi Preuzimanja](../images/install/install_01_downloads_apk.png)
 
-The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+Prvi put će vam Android javiti da telefon ne smije instalirati nepoznate aplikacije iz ovog izvora. Dodirnite „**Postavke**“:
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![Sigurnosna obavijest za nepoznate aplikacije](../images/install/install_02_unknown_apps_notice.png)
 
-Enable "**Allow from this source**", then go back:
+Uključite „**Dopusti iz ovog izvora**“, a zatim se vratite:
 
-![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+![Uključeno „Dopusti iz ovog izvora“](../images/install/install_04_unknown_apps_allowed.png)
 
-Press the apk file again and select "**Install**":
+Ponovno dodirnite apk datoteku i odaberite „**Instaliraj**“:
 
-![Install prompt](../images/install/install_05_install_prompt.png)
+![Upit za instalaciju](../images/install/install_05_install_prompt.png)
 
-When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+Kada instalacija završi, dodirnite „**Otvori**“ za pokretanje **AAPS-a** ili „**Gotovo**“ ako ga želite otvoriti kasnije:
 
-![App installed](../images/install/install_07_app_installed.png)
+![Aplikacija je instalirana](../images/install/install_07_app_installed.png)
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+**VAŽNA SIGURNOSNA NAPOMENA**
+Nakon instalacije ne zaboravite ponovno isključiti „Dopusti iz ovog izvora“, jer je stalno uključena opcija sigurnosni rizik.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Nastavite s [konfiguracijom petlje AAPS-a](../SettingUpAaps/SetupWizard.md).
 
 (transferring-installing-play-protect-warning)=
-## Google Play Protect warning
+## Upozorenje Google Play zaštite
 
-When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+Kada instalirate **AAPS**, Google Play zaštita može vas upozoriti da aplikacija nije sigurna, da je izrađena za stariju verziju Androida i da ne sadrži najnovije zaštite privatnosti.
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Upozorenje Google Play zaštite](../images/troubleshooting/InstallGPP.png)
 
-This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+To je očekivano za aplikaciju koju ste sami izradili. Dodirnite **Više pojedinosti** (More details), a zatim **Ipak instaliraj** (Install anyway).
 
-If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+Ako je instalacija **blokirana** s porukom o neprovjerenom razvojnom programeru (a ne samo upozorenjem), pogledajte [Provjera Android razvojnih programera](#android-developer-verification) niže.
 
 (android-developer-verification)=
 
-## Android developer verification
+## Provjera Android razvojnih programera
 
-Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
+Google uvodi **provjeru Android razvojnih programera**: na većini Android telefona aplikacije će se moći instalirati samo ako ih je kod Googlea registrirao provjereni razvojni programer. To vrijedi i za aplikacije instalirane iz APK datoteke („sideloading“) – a upravo tako instalirate aplikaciju **AAPS** koju ste sami izradili.
 
-### What is changing
+### Što se mijenja
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+Kada instalirate **AAPS** na telefon s Googleovim uslugama („certificirani“ Android uređaj – gotovo svaki telefon koji se prodaje s Trgovinom Play), Android će provjeriti dolazi li aplikacija od razvojnog programera registriranog kod Googlea. Ako ne dolazi, uobičajena instalacija dodirom na APK datoteku je blokirana.
 
-**The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
+**Provjera se obavlja kada se aplikacija instalira ili ažurira.** Ona ne uklanja aplikacije koje su već instalirane i rade.
 
-Google is rolling this out gradually:
+Google ovo uvodi postupno:
 
-| When               | What happens                                                                                                                              |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
-| 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
+| Kada            | Što se događa                                                                                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kolovoz 2026.   | Besplatni računi razvojnih programera za „ograničenu distribuciju“ otvoreni su u cijelom svijetu, a „napredni postupak“ (advanced flow) počinje se postupno uvoditi na telefone |
+| 30. rujna 2026. | Provjera se primjenjuje u **Brazilu, Indoneziji, Singapuru i Tajlandu** za aplikacije instalirane iz Google Playa i nekoliko drugih trgovina aplikacija                         |
+| 2027.           | Primjena se proširuje na **ostatak svijeta** i na **sve instalacije**, uključujući APK datoteke                                                                                 |
 
-Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
+Pojedinosti Google objavljuje na stranicama [Android developer verification](https://developer.android.com/developer-verification), uključujući [česta pitanja (FAQ)](https://developer.android.com/developer-verification/guides/faq). Google još može promijeniti datume i pojedinosti; ova će se stranica ažurirati kako uvođenje bude napredovalo.
 
-### Does this affect me?
+### Utječe li ovo na mene?
 
-- **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
-- **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
-- **If you live anywhere else:** nothing changes for you before 2027, and doing nothing for now is a legitimate choice. But set up one of the [free installation methods](#android-developer-verification-free-methods) below while nothing is broken: discovering the block on the day an update is refused, with the [advanced flow's](#android-developer-verification-advanced-flow) 24-hour wait ahead of you, is the wrong moment.
-- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
+- **Na izradu AAPS-a ovo uopće ne utječe.** [Izrada u pregledniku](#browser-build), [izrada s Android Studiom](ComputerBuild.md) i [izrada iz naredbenog retka](CLIBuild.md) rade točno kao i prije, a vaše se spremište ključeva ne mijenja.
+- **Vaš trenutačni AAPS nastavlja raditi.** Provjera se obavlja samo pri instalaciji ili ažuriranju aplikacije.
+- **Ako živite u Brazilu, Indoneziji, Singapuru ili Tajlandu:** od 30. rujna 2026. provjera se primjenjuje na aplikacije instalirane iz Google Playa i nekoliko drugih trgovina aplikacija. Google navodi da izravna instalacija APK datoteke nije obuhvaćena ovim prvim korakom, pa bi se **AAPS** i dalje trebao instalirati kao i obično. Ipak, već sada pripremite jedan od [besplatnih načina instalacije](#android-developer-verification-free-methods) opisanih ispod, kako vas ne bi iznenadilo ako se to promijeni.
+- **Ako živite bilo gdje drugdje:** za vas se do 2027. ništa ne mijenja, i da zasad ne poduzmete ništa, sasvim je opravdan izbor. Ipak, postavite jedan od [besplatnih načina instalacije](#android-developer-verification-free-methods) opisanih ispod dok još sve radi: dan kada je ažuriranje odbijeno, a pred vama je 24-satno čekanje [naprednog postupka](#android-developer-verification-advanced-flow), pogrešan je trenutak da otkrijete blokadu.
+- **Stari telefoni:** provjera se primjenjuje na telefone s Androidom 7 ili novijim, a to znači na svaki telefon na kojem može raditi **AAPS**.
 
 (android-developer-verification-free-methods)=
 
-## Free ways to install AAPS
+## Besplatni načini instalacije AAPS-a
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+**Ne** morate Googleu ništa platiti da biste nastavili koristiti **AAPS**. Postoji nekoliko besplatnih načina; odaberite onaj koji odgovara vašoj situaciji.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
-- You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
+- Imate **računalo** (bez obzira na to kako ste izradili **AAPS**): koristite [ADB](#android-developer-verification-adb) ili, ako želite izbjeći naredbeni redak, [web instalacijski program](#android-developer-verification-web). Oba načina izuzeta su od provjere, nemaju ograničenja i ne trebaju Google račun.
+- **Uopće nemate računalo**: koristite [napredni postupak](#android-developer-verification-advanced-flow) na svom telefonu.
+- Želite se registrirati kod Googlea kako bi uobičajena instalacija „dodirom na APK“ i dalje radila: postoji [besplatni račun za ograničenu distribuciju](#android-developer-verification-limited-account), ali s **AAPS-om** još nije testiran.
 ```
 
 (android-developer-verification-adb)=
 
-### Option 1: Install with ADB (computer needed)
+### Opcija 1: Instalacija pomoću ADB-a (potrebno je računalo)
 
-ADB (Android Debug Bridge) is Google's official tool for installing apps from a computer onto a phone with a USB cable. Google has confirmed that **apps installed with ADB do not require verification** — there is no waiting period, no device limit and no registration.
+ADB (Android Debug Bridge) je Googleov službeni alat za instalaciju aplikacija s računala na telefon putem USB kabela. Google je potvrdio da **aplikacije instalirane pomoću ADB-a ne trebaju provjeru** – nema razdoblja čekanja, nema ograničenja broja uređaja i nema registracije.
 
-One-time preparation:
+Jednokratna priprema:
 
-1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
-1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
-   - If you use **Android Studio**, ADB is already installed with it.
-   - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
+1. Na telefonu omogućite skrivene opcije za razvojne programere: idite na **Postavke** > **O telefonu** (na nekim telefonima **Informacije o softveru**) i sedam puta dodirnite **Broj međuverzije**, dok telefon ne potvrdi da ste razvojni programer.
+1. Vratite se u glavne **Postavke**, otvorite novu stavku **Opcije za razvojne programere** i uključite **Otklanjanje pogrešaka putem USB-a**.
+1. Na računalu provjerite je li ADB dostupan:
+   - Ako koristite **Android Studio**, ADB je već instaliran s njim.
+   - Inače preuzmite Googleove besplatne [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) i raspakirajte mapu. Instalacija nije potrebna; ADB je program `adb` u toj mapi.
 
-Installing (and later updating) **AAPS**:
+Instalacija (i kasnije ažuriranje) **AAPS-a**:
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
-1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
-1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
+1. Spojite telefon s računalom USB kabelom. APK datoteku ne morate najprije prenijeti na telefon: ADB je šalje izravno s računala.
+1. Na telefonu prihvatite upit **Dopustiti otklanjanje pogrešaka putem USB-a?** (samo prvi put).
+1. Na računalu otvorite terminal (naredbeni redak) u mapi u kojoj su ADB i APK datoteka **AAPS-a** i pokrenite:
 
    ```
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   Zamijenite `app-full-release.apk` stvarnim nazivom svoje APK datoteke. Opcija `-r` ažurira već instalirani **AAPS** i zadržava sve njegove podatke i postavke.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. Pričekajte dok se ne prikaže `Success`. **AAPS** je sada instaliran na vašem telefonu.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+Ista se naredba koristi za svako buduće ažuriranje. [Stranice o Wear OS-u](../WearOS/WearOsSmartwatch.md) već na isti način koriste ADB za instalaciju aplikacije za sat.
 
-If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
+Ako ne želite koristiti kabel: na Androidu 11 i novijem **bežično otklanjanje pogrešaka** (također u **Opcijama za razvojne programere**) može isto obaviti putem Wi-Fi-ja, nakon jednokratnog uparivanja s kodom koji se prikaže na telefonu.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### Opcija 2: Instalacija s web stranice (računalo, bez naredbenog retka)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+Ako naredbeni redak nije za vas, web stranica može učiniti točno ono što radi ADB, izravno iz vašeg preglednika. Budući da s telefonom komunicira istim mehanizmom kao ADB, ima **isto izuzeće od provjere** – ali ništa ne trebate preuzimati, nema mape za raspakiravanje ni naredbe za upisivanje.
 
-This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
+To je najlakši put ako ste koristili [izradu u pregledniku](#browser-build) i nikada niste otvorili naredbeni redak.
 
-1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. Na telefonu uključite **Otklanjanje pogrešaka putem USB-a** (koraci 1 i 2 [načina s ADB-om](#android-developer-verification-adb) iznad – jednokratno postavljanje).
+1. U pregledniku otvorite **[web instalacijski program za AAPS](#web-installer)**.
+1. Spojite telefon USB kabelom i slijedite upute na stranici: spojite se, odaberite svoju APK datoteku i instalirajte.
 
-Three things to know:
+Tri stvari koje trebate znati:
 
-- It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
-- Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- Radi samo u preglednicima **Chrome, Edge ili Opera**. Firefox i Safari ne mogu komunicirati s USB uređajima.
+- ADB vezu telefona u jednom trenutku može koristiti samo jedan program, zato prije spajanja **zatvorite Android Studio** (ili bilo što drugo što koristi ADB).
+- Web stranica spojena na ovaj način dobiva potpunu kontrolu nad vašim telefonom. **Koristite samo gore navedenu adresu** iz dokumentacije **AAPS-a** – nikada stranicu za instalaciju pronađenu putem tražilice. Web instalacijski program za **AAPS** radi u potpunosti u vašem pregledniku: vaša se APK datoteka nikamo ne prenosi.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
-The web installer also works from **Chrome on another Android phone** with a USB-C to USB-C cable — so a parent can install **AAPS** onto a child's phone with no computer in the house.
+Web instalacijski program radi i iz **Chromea na drugom Android telefonu** s kabelom USB-C na USB-C – tako roditelj može instalirati **AAPS** na djetetov telefon i kada u kući nema računala.
 ```
 
 (android-developer-verification-advanced-flow)=
 
-### Option 3: The "advanced flow" on your phone (no computer needed)
+### Opcija 3: „Napredni postupak“ na vašem telefonu (nije potrebno računalo)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
+Google nudi izlaz za iskusne korisnike koji razumiju rizike instalacije neprovjerenih aplikacija. Zove se **napredni postupak** (advanced flow). Google ga je počeo uvoditi na telefone u kolovozu 2026., prije početka primjene provjere, pa ga možete postaviti već sada. To je jednokratno postavljanje na samom telefonu, a za dovršetak **treba 24 sata**:
 
-1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
-1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
-1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
-1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. Omogućite skrivene opcije za razvojne programere (pogledajte korak 1 načina s ADB-om iznad), a zatim otvorite **Postavke** > **Opcije za razvojne programere** > **Aplikacije neprovjerenih razvojnih programera** (Apps from unverified developers).
+1. Uključite **Dopusti aplikacije neprovjerenih razvojnih programera** (Allow apps from unverified developers). Telefon traži vaše zaključavanje zaslona kako bi potvrdio da ste to vi.
+1. Telefon pita traži li vas netko da uključite ovu postavku i objašnjava da banke, državne agencije ili policija to od vas nikada ne bi tražili. Pročitajte upozorenje i potvrdite da vas nitko ne pritišće niti vas vodi (to je zaštita od prevaranata).
+1. **Ponovno pokrenite telefon.** Time počinje jednokratno **razdoblje čekanja od 24 sata**.
+1. Nakon 24 sata vratite se na **Postavke** > **Opcije za razvojne programere** > **Aplikacije neprovjerenih razvojnih programera** kako biste dovršili postavljanje.
+1. Odaberite želite li dopustiti neprovjerene aplikacije na **7 dana** ili **neograničeno**. Za **AAPS** odaberite **neograničeno**, inače će vaše sljedeće ažuriranje biti blokirano kada prođe 7 dana.
 
-After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+Nakon ovog postavljanja instalacija ili ažuriranje APK datoteke **AAPS-a** radi kao danas, uz jedno dodatno upozorenje da je aplikacija od neprovjerenog razvojnog programera – dodirnite **Ipak instaliraj**.
 
-Good to know:
+Dobro je znati:
 
-- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
-- Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
-- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
+- **Opcije za razvojne programere** poslije možete ponovno isključiti: napredni postupak ostaje omogućen. Google aplikacijama (npr. bankovnim aplikacijama) ne daje nikakav način da otkriju je li napredni postupak omogućen.
+- Ako isključite napredni postupak, instalacija **ili ažuriranje** **AAPS-a** ponovno je blokirano (vaš instalirani **AAPS** nastavlja raditi). Imate 10 minuta da ga ponovno uključite; nakon toga razdoblje čekanja od 24 sata počinje ispočetka.
+- Promjena sata na telefonu ne skraćuje razdoblje čekanja, a ADB ga ne može preskočiti.
+- Google navodi da vaš izbor prati vaš Google račun i na drugim uređajima, pa novi telefon ne bi trebao značiti novo čekanje od 24 sata.
+- Ako u opcijama za razvojne programere ne možete pronaći **Aplikacije neprovjerenih razvojnih programera**, vaš telefon još nije dobio ovu značajku. Isporučuje je sistemska komponenta **Android Developer Verifier**, koju Google postupno uvodi putem Trgovine Play. Možete to ubrzati tako da u Trgovini Play otvorite **Android Developer Verifier**.
 
 ```{note}
-Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
+Google ovo opisuje kao prvu verziju i još može promijeniti zaslone i korake; ovaj će se odjeljak ažurirati sa snimkama zaslona kada konačna verzija bude dostupna.
 ```
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### Opcija 4: Registracija kod Googlea (besplatni račun za ograničenu distribuciju)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
+Google nudi **besplatnu** vrstu računa razvojnog programera za hobiste i osobnu upotrebu, koja se zove **račun za ograničenu distribuciju** (limited distribution account) i otvorena je za sve od kolovoza 2026.:
 
-- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
-- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
-- A limited distribution account can later be upgraded to a full account, but not the other way round.
+- **Bez službene identifikacijske isprave** i **bez naknade** (za razliku od plaćenog računa razvojnog programera, koji nije potreban za osobnu upotrebu **AAPS-a**). Trebate Google račun s potvrdom u dva koraka, Google profil za plaćanja s vašim službenim imenom i adresom te adresu e-pošte za kontakt.
+- Naziv paketa svoje aplikacije registrirate u Googleovoj konzoli Android Developer Console i autorizirate telefone na koje se smije instalirati, do **20 uređaja**, putem povezivanja QR kodom ili poveznicom između telefona i konzole.
+- Nakon registracije uobičajena instalacija (dodirom na APK datoteku) ponovno radi na autoriziranim telefonima, bez ADB-a i bez naprednog postupka.
+- Račun za ograničenu distribuciju kasnije se može nadograditi u puni račun, ali ne i obrnuto.
 
 ```{warning}
-Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
+Google nije objasnio kako registracija radi kada mnogo ljudi izrađuje istu aplikaciju otvorenog koda: svaki **AAPS** koji je netko sam izradio koristi isti naziv paketa (`info.nightscout.androidaps`) s drugim ključem za potpisivanje, a Googleova česta pitanja navode da se naziv paketa koji već koriste drugi ne može jednostavno preuzeti i da zahtijeva dodatnu provjeru. Ishod takve provjere nije poznat, a plaćeni račun razvojnog programera (25 USD i službena identifikacijska isprava) ovdje ne pomaže: plaćanje uklanja samo ograničenje od 20 uređaja, a ne provjeru naziva paketa.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+Zbog toga se upute korak po korak još ne mogu napisati. Ovaj će se odjeljak dovršiti kada se registracija testira s **AAPS-om**. U međuvremenu su ADB, web instalacijski program i napredni postupak opisani iznad pouzdane alternative.
 ```
 
-## What does not change
+## Što se ne mijenja
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- Samostalna izrada **AAPS-a** bilo kojim od tri [načina izrade](BuildingAaps.md).
+- Vaš GitHub račun, vaš repozitorij za izradu (AAPS Builder) ili fork te vaše spremište ključeva.
+- Vaša instalirana aplikacija **AAPS**, vaše postavke i vaši [ciljevi](CompletingTheObjectives.md).
+- Telefoni bez Googleovih usluga i [instalacije pomoću ADB-a](#android-developer-verification-adb) općenito.
 
-## Where to get help
+## Gdje dobiti pomoć
 
-1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
-3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+1. **Pročitajte** Googleova [česta pitanja o provjeri razvojnih programera](https://developer.android.com/developer-verification/guides/faq) za pitanja o samoj provjeri.
+2. **Pitajte** na kanalu *#AAPS* na [Discordu](https://discord.gg/4fQUWHZ4Mw) ili na nekom od drugih [kanala zajednice](../GettingHelp/WhereCanIGetHelp.md) ako je instalacija blokirana.
+3. Kada tražite pomoć, navedite proizvođača i model telefona, verziju Androida, svoju zemlju i točnu poruku koja se prikaže kada instalacija ne uspije.
 
 ```{toctree}
 :hidden:
 
-AAPS web installer <WebInstaller.md>
+Web instalacijski program za AAPS <WebInstaller.md>
 ```
