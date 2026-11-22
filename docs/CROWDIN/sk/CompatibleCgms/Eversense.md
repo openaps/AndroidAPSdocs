@@ -67,6 +67,8 @@ xDrip vie čítať notifikácie z aplikácie výrobcu, podobne ako ESEL. Doplnen
 
 **AAPS** vie čítať hodnoty glykémie priamo z notifikácií oficiálnej aplikácie Eversense, bez akejkoľvek inej aplikácie medzi nimi. Doplnenie chýbajúcich dát nie je dostupné.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Vyberte **Čítačka notifikácií** v [**Konfigurácia → Zdroj glykémie**](#Config-Builder-bg-source) a keď sa vás aplikácia opýta, povoľte **AAPS** prístup k notifikáciám.
 - Uistite sa, že aplikácia Eversense zobrazuje aktuálnu hodnotu glykémie vo svojej notifikácii.
 
