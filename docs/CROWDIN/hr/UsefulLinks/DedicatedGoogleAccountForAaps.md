@@ -7,7 +7,7 @@ Ako ne želite postaviti zaseban Gmail račun za **AAPS**, možete odmah prijeć
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
+- Zaseban prostor na Google Driveu znači da nećete riskirati popunjavanje svog osobnog Google Drivea s **Izvezi postavke**.
 - Svaka verzija **AAPS-a** (i pomoćnih aplikacija kao što su xDrip, BYODA itd.) bit će spremljena na jednom mjestu koje ne ovisi o hardveru vašeg računala. Ako vam računalo ili telefon bude ukraden, izgubljen ili pokvaren, i dalje ćete imati pristup.
 - Ujednačeno postavljanje olakšava podršku na internetu među korisnicima sa sličnom strukturom mapa.
 - Ovisno o postavljanju (pogledajte niže), imat ćete zaseban identitet kao pseudonim za komunikaciju unutar zajednice, što može zaštititi vašu privatnost. 
@@ -45,13 +45,13 @@ Kliknite [ovdje](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDE
  Ovo su koraci prikazani u videozapisu:
 
 U ovom primjeru: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- Vaš postojeći „_svakodnevni_“ Google račun je <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Vaš novi „_AAPS_“ Gmail račun bit će: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### Idite na <https://myaccount.google.com> 
 
- Ako ste već prijavljeni u Google, ovo će vas odvesti na stranicu **My Account** (moj račun) vašeg „svakodnevnog“ računa. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Ako ste već prijavljeni u Google, ovo će vas odvesti na stranicu **My Account** (moj račun) vašeg „svakodnevnog“ računa. (1) Kliknite sliku profila gore desno na stranici (u ovom slučaju jednostavno ![](../images/Building-the-App/building_0002.png)) (2) odaberite „_add another account_“ (dodaj još jedan račun).
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail će prikazati naziv računa. Tražit će od vas da prihvatite Gmailove uvj
 
 ### Prilagodite prikaz novog profila
 
-Sada biste trebali biti na Gmailovoj stranici MyAccount koja prikazuje vaš novi račun e-pošte za **AAPS**. Slika profila prema zadanim postavkama bit će prvo slovo vašeg imena. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Sada biste trebali biti na Gmailovoj stranici MyAccount koja prikazuje vaš novi račun e-pošte za **AAPS**. Slika profila prema zadanim postavkama bit će prvo slovo vašeg imena. Promijenite je u nešto jedinstveno da izbjegnete zabunu… u ovom primjeru Donald.Muck.AAPS zamijenio je ![](../images/Building-the-App/building_0002.png) s ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Ovaj dio može biti malo zbunjujući, jer ćete se morati prebacivati između ob
 2. Desnom tipkom miša kliknite logotip preglednika na programskoj traci
 3. U izborniku odaberite „New Window“ (novi prozor)... i podesite ga tako da zauzima samo donju polovicu zaslona.
 
-U svakom prozoru preglednika otvorite <https://gmail.com>. Neka vaš osobni račun bude gore, a novi zasebni račun za **AAPS** dolje; lako ga prepoznate po slici profila u gornjem desnom kutu. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+U svakom prozoru preglednika otvorite <https://gmail.com>. Neka vaš osobni račun bude gore, a novi zasebni račun za **AAPS** dolje; lako ga prepoznate po slici profila u gornjem desnom kutu. Po potrebi uvijek možete promijeniti račun tako da kliknete sliku profila i odaberete pravi račun.
 
 ![](../images/Building-the-App/building_0009.png)
 
