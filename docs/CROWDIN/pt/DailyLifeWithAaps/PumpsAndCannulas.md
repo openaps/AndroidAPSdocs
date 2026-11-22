@@ -4,7 +4,7 @@
 
 O procedimento descrito abaixo é só para bombas com tubo. Não se aplica a bombas patch como Omnipod, Medtrum Nano, Accu-Chek Solo, etc. Este procedimento é por vezes chamado «mudança do conjunto»: uma mudança «completa» inclui o reservatório de insulina e a cânula, e uma mudança «parcial» refere-se apenas à mudança da cânula.
 
-As bombas patch enchem-se e purgam-se no seu próprio assistente de ativação, e a sua cânula já está no corpo. O **AAPS** não oferece uma purga para elas: **Purgar/Preencher** não aparece no painel **Gerir** nem no QuickLaunch. Consulte a página da sua bomba em [Bombas compatíveis](../Getting-Started/CompatiblePumps.md).
+As bombas patch enchem-se e purgam-se no seu próprio assistente de ativação, e a sua cânula já está no corpo. O **AAPS** não oferece uma purga para elas: **Purgar/Preencher** não aparece no painel **Gerir** nem no QuickLaunch. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Consulte a página da sua bomba em [Bombas compatíveis](../Getting-Started/CompatiblePumps.md).
 
 A mudança física do cartucho/reservatório não pode ser feita através do **AAPS** e tem de ser feita diretamente na bomba. Depois de concluída, tem de ser registada manualmente no **AAPS**.
 
@@ -31,6 +31,7 @@ A mudança física do cartucho/reservatório não pode ser feita através do **A
 * Pode definir/ajustar as quantidades de purga predefinidas nas definições de **Purgar/Preencher** — escreva "prime" na barra de pesquisa do ecrã principal para as abrir (ver [Definições](../SettingUpAaps/Preferences.md)). Veja no folheto de instruções da caixa das cânulas quantas unidades (conforme o comprimento da agulha e do tubo) deve purgar para a sua cânula.
 
 * A insulina administrada com a função de purga não é tida em conta pelo **AAPS** no cálculo da insulina ativa (IA), e fica marcada no [Histórico de tratamentos](#aaps-screens-treatments) como "Purga".
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * A insulina administrada em bólus pela bomba enquanto a bomba está desligada também não é tida em conta pelo **AAPS**. Se administrar um bólus diretamente na bomba enquanto o **AAPS** está desligado, depois de voltar a ligar a bomba pode registar esta insulina (sem a administrar) na janela **Insulina** (ver [Registar insulina já administrada sem dar um bólus](#pumps-cannulas-announce-insulin) abaixo).
 
