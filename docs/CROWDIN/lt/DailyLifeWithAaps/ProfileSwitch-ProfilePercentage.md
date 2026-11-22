@@ -60,7 +60,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 ![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. Kaip redaktoriuje užpildyti keturis tvarkaraščius (IA / JIF / BAZ / TIKSLAS), žr. [Profilių kūrimas ir redagavimas](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Kaip redaktoriuje užpildyti keturis tvarkaraščius (IA / JIF / BAZ / TIKSLAS), žr. [Profilių kūrimas ir redagavimas](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Patvirtinkite *Klonuoti profilį „Normal“?*. Karuselės gale bus pridėtas ir pasirinktas naujas profilis *Normal kopija*. Jį galite redaguoti mygtuku **✏️ Redaguoti** (ten taip pat galite pakeisti jo pavadinimą). Tai nėra tas pats, kas ankstesnio **profilio keitimo** klonavimas iš terapijos istorijos: tada sukuriamas naujas profilis, *kuriam jau pritaikytas procentas ir laiko perstūmimas*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
 
