@@ -6,7 +6,7 @@
 Ovo je **Korak 2** [izrade u pregledniku](BrowserBuild.md). Najprije završite [Izrada u pregledniku – Korak 1: Izradite svoj GitHub fork](BrowserBuildFork.md).
 ```
 
-AAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. Ovo je najvažnija odluka u cijelom postupku, jer o njoj ovisi hoćete li kasnije moći **ažurirati** AAPS bez ponovne instalacije.
+AAPS mora biti potpisan privatnim ključevima spremljenima u **Java KeyStore (JKS)** (spremište ključeva). Ovo je najvažnija odluka u cijelom postupku, jer o njoj ovisi hoćete li kasnije moći **ažurirati** AAPS bez ponovne instalacije.
 
 ```{note}
 U sljedećim koracima spremit ćete privatne podatke (svoje spremište ključeva, a kasnije i pristup Google Driveu) u GitHub kao **tajne** (secrets). Tajna je jednostavno šifrirana vrijednost koju može pročitati samo vaša vlastita izrada – nitko drugi je ne može vidjeti, čak ni ljudi koji gledaju vaš fork. Tako vaša izrada ostaje vaša.
@@ -74,7 +74,7 @@ Prije korištenja ovog načina izvoza provjerite jeste li završili postavke spr
 
 2. **Pokrenite workflow za izvoz:**
    - Idite na karticu **Actions** u svom repozitoriju
-   - Select **CI Keystore Export**
+   - Odaberite **CI Keystore Export**
    - Kliknite **Run workflow**
    - Izvezena ZIP datoteka spremišta ključeva bit će spremljena na vaš Google Drive
 
