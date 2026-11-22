@@ -281,7 +281,7 @@ Para desativar um pod (porque ele expirou ou porque falhou):
 
 O processo abaixo mostra como suspender e retomar a administração de insulina.
 
-*OBSERVAÇÃO - se você não vê um botão **Suspender***, é porque ele fica escondido por padrão. Ative **Mostrar o botão Suspender administração na tela da bomba** nas [configurações do Omnipod](#OmnipodEros-omnipod-settings), em **Outro**.
+*OBSERVAÇÃO - se você não vê um botão **Suspender***, é porque ele fica escondido por padrão. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspender a administração de insulina
 
@@ -591,7 +591,7 @@ Os botões na parte de baixo da tela da bomba mudam conforme a situação. Os bo
   A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, este é um botão com texto chamado **Configurar a hora** na tela da bomba Omnipod.
   ```
 
-- **Suspender:** Suspende a administração de insulina no pod ativo. Mostrado só se estiver ativado nas configurações (**Mostrar o botão Suspender administração na tela da bomba**).
+- **Suspender:** Suspende a administração de insulina no pod ativo. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Notificações do AAPS e alertas sonoros do telefone quando não há certeza se 
 
 Configurações avançadas para ajudar na depuração.
 
-- **Mostrar o botão Suspender administração na tela da bomba:** Oculta ou mostra o botão **Suspender** na tela da bomba do Omnipod.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Mostrar botão Registro de pulsos no menu de gerenciamento do Pod:** Esta configuração ainda aparece na lista, mas a versão atual da tela da bomba não tem o botão **Registro de pulsos**.
 
 - **Mostrar botão Estatísticas do RileyLink no menu de gerenciamento do Pod:** Esconde ou mostra o botão **Estatísticas do RileyLink** na tela da bomba Omnipod.
