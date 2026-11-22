@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Hrana (vaša baza podataka o hrani)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+Baza podataka **Hrana** vaš je osobni popis spremljenih namirnica. Svaki unos sprema **ugljikohidrate** namirnice (i po želji masti, proteine, energiju i kategoriju). Tako namirnice koje često jedete možete držati na jednom mjestu i pokrenuti bolus iz spremljene namirnice s već upisanim ugljikohidratima.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Otvaranje baze podataka o hrani
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Otvorite zaslon **Upravljanje** (donja navigacija) i odaberite **Hrana** (*„Upravljajte unosima u bazi hrane“*). U **AAPS-u** v4 Hrana **više nije dodatak** — ništa ne treba omogućiti; to je samostalan zaslon koji otvarate s [ploče Upravljanje](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Popis hrane
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Vaše namirnice prikazane su na popisu koji se može pomicati. Svaki redak prikazuje **naziv** namirnice, njezinu **porciju / jedinicu / kategoriju** i njezine **ugljikohidrate**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Popis baze podataka o hrani, s pretraživanjem i gumbom za dodavanje](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Traži** (gore) — filtrira popis po **nazivu** (ne razlikuje velika i mala slova).
+- **Filtar kategorija** — oznake (chipovi) omogućuju sužavanje popisa na jednu **kategoriju**; kada odaberete kategoriju, za nju se pojavljuju oznake **podkategorija**. (Ponovno dodirnite odabranu oznaku kako biste je poništili.)
+- **➕** (dolje desno) — dodaje novu namirnicu (pogledajte ispod).
+- Dodirnite redak kako biste **uredili** tu namirnicu.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Ako popis (ili trenutačni filtar) nema unosa, zaslon prikazuje **Nema podataka**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Dodavanje i uređivanje namirnice
+
+Dodirnite **➕** za dodavanje ili dodirnite postojeći redak za uređivanje. Uređivač se otvara kao ploča na dnu zaslona (**Dodaj hranu** / **Uredi hranu**):
+
+![Uređivač hrane — naziv, kategorija, porcija, ugljikohidrati i makronutrijenti](../images/v4/Food/food_editor.png)
+
+Polja su:
+
+- **Naziv** — obavezno (bez njega ne možete spremiti).
+- **Kategorija** i **Podkategorija** — neobavezno, služe za grupiranje/filtriranje namirnica.
+- **Porcija** i **Jedinica** — uobičajena veličina obroka; **Jedinica** je prema zadanim postavkama **g**.
+- **Ugljikohidrati (g)** — količina ugljikohidrata u namirnici.
+- **Masti (g)**, **Proteini (g)**, **Energija (kJ)** — neobavezne prehrambene vrijednosti.
+
+Dodirnite **Spremi** za spremanje ili **Otkaži** za odbacivanje. Kod uređivanja postojeće namirnice uređivač ima i gumb **Izbriši**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Brisanje namirnice prikazuje poruku **„Hrana je izbrisana“** s radnjom **Poništi**, pa slučajno brisanje lako možete vratiti.
 ```
 
 ---
 
-## Using a food for a bolus
+## Korištenje namirnice za bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Svaki redak namirnice ima gumb **kalkulatora**. Dodir na njega otvara **bolus kalkulator** s već upisanim **ugljikohidratima** te namirnice i **nazivom** namirnice kao bilješkom tretmana — tako samo potvrdite i isporučite, bez ponovnog upisivanja ugljikohidrata.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Spremljeni broj **ugljikohidrata** namirnice prenosi se izravno u kalkulator — **AAPS** ga ne množi s porcijom ni s količinom koju ste pojeli. Ako imate drugu količinu, prilagodite ugljikohidrate u kalkulatoru prije potvrde. (*Unutar* bolus kalkulatora ili dijaloga za ugljikohidrate nema izbora hrane; počinjete ovdje, od retka namirnice.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Odakle dolaze namirnice (sinkronizacija s Nightscoutom)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Baza podataka o hrani dijeli se putem **Nightscouta**, ali **samo u jednom smjeru**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Preuzimanje:** **AAPS** **čita** namirnice iz **baze podataka o hrani** na vašoj Nightscout stranici i održava lokalni popis usklađenim s njom. To se radi kao dio sinkronizacije NSClienta, pa upareni **klijent/pratitelj** također dobije iste namirnice.
+- **Prijenos:** **AAPS** **ne** šalje namirnice **u** Nightscout — NSClient ne podržava prijenos unosa hrane. Namirnice koje izradite ili uredite **unutar AAPS-a** zato ostaju **na tom uređaju** i ne prenose se u Nightscout ni na vaše druge uređaje.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Budući da se hrana **samo preuzima**, jedan zajednički popis hrane za vaš telefon, vašeg pratitelja/[klijenta](../RemoteFeatures/ClientMasterControl.md) i ostatak vašeg sustava održavate u **Nightscoutu** (u njegovom ugrađenom uređivaču hrane). **AAPS** će te unose preuzeti. Namirnica dodana samo u **AAPS-u** lokalna je za taj uređaj — i tamo ostaje: preuzimanje povezuje unose iz Nightscouta prema njihovom Nightscout ID-u, pa njih dodaje i ažurira, ali nikada ne prepisuje i ne uklanja namirnicu koju ste izradili lokalno (namirnica se uklanja samo kada se njezina kopija izbriše u Nightscoutu).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Imajte na umu da baza podataka o hrani **nije** ni dio potpisanog kanala za upravljanje glavni uređaj ↔ klijent — prenosi se isključivo kao podaci Nightscouta.
 ```
 
 ---
 
-## Not on the watch
+## Nije dostupno na satu
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+Baza podataka o hrani je značajka **telefona** — na **Wear OS satu** nema preglednika hrane, pločice ni izbornika.
 
 ---
 
