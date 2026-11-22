@@ -121,6 +121,8 @@ Pompos ekrane paspauskite **Pašalinti pompą** ir patvirtinkite. Insulino tieki
 
 Kai pompą sustabdė kritinis aliarmas, aliarme vietoj to rodomas mygtukas **Išjungti pompą**. Jį paspaudus pompa pašalinama taip pat.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Aliarmai ir pranešimai
