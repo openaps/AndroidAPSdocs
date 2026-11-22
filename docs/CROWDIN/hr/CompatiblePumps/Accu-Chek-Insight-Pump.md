@@ -84,11 +84,11 @@ Roche se povlači s tržišta inzulinskih pumpi kako bi se u području dijabetes
     
     Postavke otvorite gumbom **Postavke** na kartici **Accu-Chek Insight** u **Konfiguracija** > **Pumpa** ili ikonom zupčanika u gornjem desnom kutu zaslona pumpe.
     
-    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Postavke upravljačkog programa Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    U postavkama Insighta u **AAPS-u** možete uključiti sljedeće opcije:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you change the cartridge in the pump.
+    * **Bilježi promjene spremnika**: automatski bilježi promjenu spremnika s inzulinom kada promijenite spremnik u pumpi.
     
     * **Bilježi promjene cijevi**: dodaje bilješku u bazu podataka **AAPS-a** kada na pumpi pokrenete program „tube filling” (punjenje cijevi).
     
@@ -162,7 +162,7 @@ Verziju firmwarea možete pronaći u izborniku.
 
 ## Zamjena baterije
 
-Battery life for Insight when looping ranges from 10 to 14 days, maximum 20 days. Korisnik koji je to prijavio koristi litijske baterije Energizer.
+Trajanje baterije Insighta pri korištenju petlje je od 10 do 14 dana, najviše 20 dana. Korisnik koji je to prijavio koristi litijske baterije Energizer.
 
 Pumpa Insight ima malu unutarnju bateriju koja održava važne funkcije, npr. sat, dok mijenjate izmjenjivu bateriju. Ako zamjena baterije traje predugo, ta se unutarnja baterija može isprazniti. Tada se sat resetira i nakon umetanja nove baterije morate ponovno unijeti vrijeme i datum. Ako se to dogodi, svi unosi u AAPS-u prije zamjene baterije više se neće uzimati u izračune, jer se točno vrijeme ne može ispravno odrediti.
 
