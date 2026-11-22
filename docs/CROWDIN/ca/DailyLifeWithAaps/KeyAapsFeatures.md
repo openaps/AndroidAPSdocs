@@ -18,7 +18,7 @@ Vegeu [Pantalles d'AAPS > La pantalla principal > Estat del llaç](#AapsScreens-
 
 Les recomanacions no s'executen automàticament (com en el llaç tancat). L'usuari ha d'aplicar les recomanacions manualment a la bomba (si fa servir la bomba virtual) o amb un botó si **AAPS** està connectat a una bomba real.
 
-Quan **AAPS** té una recomanació, apareix una entrada **Llaç** amb una insígnia a la navegació inferior de la pantalla principal. Premeu-la per llegir la recomanació («Acceptar la nova basal temporal») amb la taxa, la durada i el motiu, i després premeu **Executar** per aplicar-la:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Premeu-la per llegir la recomanació («Acceptar la nova basal temporal») amb la taxa, la durada i el motiu, i després premeu **Executar** per aplicar-la:
 
 ![Recomanació del llaç obert amb el botó Executar](../images/screens/loop_tab.png)
 
