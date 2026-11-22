@@ -18,7 +18,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
 
-כאשר ל-**AAPS** יש הצעה, מופיע פריט **לולאה** עם תג בסרגל הניווט התחתון של המסך הראשי. יש ללחוץ עליו כדי לקרוא את ההצעה ("לאשר בזאלי זמני חדש:") עם המינון, משך הזמן והסיבה, ואז ללחוץ על **לבצע** כדי לבצע אותה:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. יש ללחוץ עליו כדי לקרוא את ההצעה ("לאשר בזאלי זמני חדש:") עם המינון, משך הזמן והסיבה, ואז ללחוץ על **לבצע** כדי לבצע אותה:
 
 ![הצעה בלולאה פתוחה עם הלחצן לבצע](../images/screens/loop_tab.png)
 
