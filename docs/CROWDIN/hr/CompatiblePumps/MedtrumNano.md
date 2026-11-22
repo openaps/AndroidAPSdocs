@@ -1,406 +1,406 @@
 (medtrum-nano-300u)=
 # Medtrum Nano 200U / 300U
 
-These instructions are for configuring the Medtrum insulin pump.
+Ove upute služe za postavljanje Medtrum inzulinske pumpe.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
-* All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+## Mogućnosti pumpe s AAPS-om
+* Podržane su sve funkcije petlje (SMB, TBR itd.)
+* Automatska promjena ljetnog/zimskog vremena i vremenske zone
+* Upravljački program u AAPS-u ne podržava produženi bolus
 
-## Hardware and software requirements
-* **Compatible Medtrum pumpbase and reservoir patches**
-    - Currently supported:
-        - Medtrum TouchCare Nano 200U with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
-* **Compatible Android phone** with a BLE Bluetooth connection
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
+## Zahtjevi za hardver i softver
+* **Kompatibilne baze pumpe Medtrum i patchevi sa spremnikom**
+    - Trenutačno podržano:
+        - Medtrum TouchCare Nano 200U s bazama pumpe ref: **MD0201** i **MD8201**.
+        - Medtrum TouchCare 300U s bazom pumpe ref: **MD8301**.
+        - Ako imate model koji nije podržan, a spremni ste donirati uređaj ili pomoći u testiranju, javite nam se na Discordu [ovdje](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+* **AAPS izrađen i instaliran** prema uputama [Izrada AAPS-a](../SettingUpAaps/BuildingAaps.md).
+* **Kompatibilan Android telefon** s BLE Bluetooth vezom
+    - Pogledajte [Bilješke o izdanju](../Maintenance/ReleaseNotes.md) AAPS-a
 
-## Before you begin
+## Prije nego što počnete
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**SIGURNOST NA PRVOM MJESTU** Ne radite ovaj postupak u situaciji u kojoj ne možete ispraviti pogrešku (dodatni patchevi, inzulin i uređaji za upravljanje pumpom su obavezni).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**PDM i aplikacija Medtrum neće raditi s pumpom koju je aktivirao AAPS.** Možda ste prije slali naredbe pumpi s PDM-a ili iz aplikacije Medtrum. Iz sigurnosnih razloga aktiviranu pumpu možete koristiti samo s uređajem ili aplikacijom kojom ste je aktivirali.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+*To NE znači da trebate baciti svoj PDM. Preporučujemo da ga čuvate na sigurnom mjestu kao rezervu za hitne slučajeve, na primjer ako izgubite telefon ili AAPS ne radi ispravno.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Vaša pumpa neće prestati isporučivati inzulin kada nije spojena s AAPS-om** Zadane bazalne stope programirane su na pumpi prema trenutačno aktivnom profilu. Dok AAPS radi, šalje naredbe za privremenu bazalnu stopu koje traju najviše 120 minuta. Ako pumpa iz nekog razloga ne primi nove naredbe (na primjer jer je veza prekinuta zbog udaljenosti između pumpe i telefona), pumpa se vraća na zadanu bazalnu stopu programiranu na pumpi kada privremena bazalna stopa završi.
 
-**The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**Profil u AAPS-u ne podržava bazalne stope koje počinju na pola sata** Ako ste novi u AAPS-u i prvi put postavljate profil bazalnih stopa, imajte na umu da bazalne stope koje počinju na pola sata nisu podržane. Profil bazalnih stopa morate prilagoditi tako da svaka stopa počinje na puni sat. Na primjer, ako imate bazalnu stopu od 1,1 jedinice koja počinje u 09:30 i traje 2 sata, do 11:30, to neće raditi. Ovu bazalnu stopu od 1,1 jedinice morate promijeniti na vremenski raspon od 9:00 do 11:00 ili od 10:00 do 12:00. Iako sama Medtrum pumpa podržava korake od 30 minuta u bazalnom profilu, algoritmi AAPS-a ih trenutačno ne mogu uzeti u obzir.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. The minimum profile basal rate is 0.05 U/h.
+**Bazalne stope profila od 0 J/h NISU podržane u AAPS-u** Medtrum pumpa podržava nultu bazalnu stopu, ali AAPS koristi višekratnike bazalne stope profila za automatske tretmane i zato ne može raditi s nultom bazalnom stopom. Najmanja bazalna stopa profila je 0,05 J/h.
 
-A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+Privremenu nultu bazalnu stopu možete postići funkcijom „Odspoji pumpu“ ili kombinacijom Onemogući petlju/privremeni bazal ili Suspendiraj petlju/privremeni bazal.
 
-## Setup
+## Postavljanje
 
 ```{caution}
-When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app.
+Kada aktivirate pumpu s **AAPS-om**, **MORATE** isključiti svaki drugi uređaj koji može komunicirati s bazom pumpe Medtrum, na primjer aktivni PDM ili aplikaciju Medtrum.
 ```
 
-### Step 1: Select Medtrum pump
+### Korak 1: Odaberite pumpu Medtrum
 
-#### Option 1: New installations
+#### Opcija 1: Nove instalacije
 
-If you are installing **AAPS** for the first time, the **Setup Wizard** guides you through the setup. Select **Medtrum** when you reach the **Pump** step.
+Ako **AAPS** instalirate prvi put, **Čarobnjak za postavljanje** vodi vas kroz postavljanje. Odaberite **Medtrum** kada dođete do koraka **Pumpa**.
 
-If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, after setting up **AAPS** (see option 2).
+Ako niste sigurni, možete odabrati i **Virtualna pumpa**, a **Medtrum** odabrati kasnije, nakon postavljanja **AAPS-a** (pogledajte opciju 2).
 
-![Setup Wizard pump step](../images/setup-wizard/Wizard-Pump.png)
+![Korak pumpe u čarobnjaku za postavljanje](../images/setup-wizard/Wizard-Pump.png)
 
-#### Option 2: The Configuration screen
+#### Opcija 2: Zaslon Konfiguracija
 
-On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
+Na postojećoj instalaciji pumpu **Medtrum** možete odabrati u [Konfiguracija > Pumpa](#Config-Builder-pump):
 
-Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Only one pump can be active at a time.
+Otvorite **izbornik** (☰) gore lijevo, dodirnite **Konfiguracija** > **Pumpa** i odaberite karticu **Medtrum**. Samo jedna pumpa može biti aktivna u isto vrijeme.
 
-![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_4.png)
+![Konfiguracija > Pumpa s dodatkom Medtrum](../images/v4/Configuration/configuration_pump_list_4.png)
 
-Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **Open plugin**:
+Kada je odabrana, kartica **Medtrum** prikazuje dva gumba, **Postavke** i **Otvori dodatak**:
 
-![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
+![Dodatak Medtrum odabran u Konfiguracija > Pumpa](../images/v4/Pumps/medtrum_enabled.png)
 
-**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. You use it to change patches and to see the pump status. Before a patch is activated it looks like this:
+**Otvori dodatak** (ili **Upravljanje → Pumpa**) otvara zaslon pumpe Medtrum. Na njemu mijenjate pumpe i vidite status pumpe. Prije aktivacije pumpe izgleda ovako:
 
-![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
+![Zaslon pumpe Medtrum prije uparivanja](../images/v4/Pumps/medtrum_pump_screen.png)
 
 (medtrum-step-2)=
-### Step 2: Change Medtrum settings
+### Korak 2: Promijenite postavke Medtruma
 
-Tap **Settings** on the **Medtrum** card in **Configuration** > **Pump**. You can also tap the gear icon in the top-right corner of the Medtrum pump screen. This opens the **Medtrum pump settings**:
+Dodirnite **Postavke** na kartici **Medtrum** u **Konfiguracija** > **Pumpa**. Možete dodirnuti i ikonu zupčanika u gornjem desnom kutu zaslona pumpe Medtrum. Time se otvaraju **Postavke Medtrum pumpe**:
 
-![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
+![Postavke upravljačkog programa Medtrum](../images/v4/Pumps/medtrum_settings.png)
 
 ```{note}
-There is no **Serial Number** setting any more. **AAPS** finds your pump base with a Bluetooth scan the first time you activate a patch (see [Step 3](#medtrum-activate-patch)), and remembers its serial number. To use a different pump base, see [Unpair](#medtrum-unpair).
+Postavka **Serijski broj** više ne postoji. **AAPS** pronalazi vašu bazu pumpe Bluetooth skeniranjem kada prvi put aktivirate patch (pogledajte [Korak 3](#medtrum-activate-patch)) i pamti njezin serijski broj. Ako želite koristiti drugu bazu pumpe, pogledajte [Raspari](#medtrum-unpair).
 ```
 
-#### Alarm Settings
+#### Postavke alarma
 
-***Default: Beep.***
+***Zadano: Zvučni signal.***
 
-This setting changes the way that the pump alerts you when there is a warning or error.
+Ova postavka mijenja način na koji vas pumpa upozorava na upozorenje ili pogrešku.
 
-- **Beep**: the patch beeps on alarms and warnings.
-- **Silent**: the patch does not alert you on alarms and warnings.
+- **Zvučni signal**: pumpa daje zvučni signal kod alarma i upozorenja.
+- **Tiho**: pumpa vas ne upozorava kod alarma i upozorenja.
 
-Note: In silent mode **AAPS** still sounds the alarm, depending on your phone's volume settings. If you do not respond to the alarm, the patch eventually beeps.
+Napomena: u tihom načinu **AAPS** i dalje oglašava alarm, ovisno o postavkama glasnoće na telefonu. Ako ne reagirate na alarm, pumpa na kraju ipak daje zvučni signal.
 
-#### Notification on pump warning
+#### Obavijest o upozorenju pumpe
 
-***Default: Enabled.***
+***Zadano: omogućeno.***
 
-This setting changes the way **AAPS** shows notifications for non-critical pump warnings. When enabled, a notification is shown on the phone when a pump warning occurs, including:
-- Low battery
-- Low reservoir (20 units)
-- Patch expires soon
+Ova postavka mijenja način na koji **AAPS** prikazuje obavijesti za nekritična upozorenja pumpe. Kada je omogućeno, telefon prikazuje obavijest kada se pojavi upozorenje pumpe, na primjer:
+- Slaba baterija
+- Nizak spremnik (20 jedinica)
+- Pumpa uskoro istječe
 
-We recommend leaving this enabled when the pump alarms are set to **Silent**. In either case these warnings are also shown on the Medtrum pump screen under [Active alarms](#medtrum-active-alarms).
+Preporučujemo da ovo ostavite omogućeno kada su alarmi pumpe postavljeni na **Tiho**. U oba slučaja ova se upozorenja prikazuju i na zaslonu pumpe Medtrum pod [Aktivni alarmi](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
-#### Patch Expiration
+#### Istek pumpe
 
-***Default: Enabled.***
+***Zadano: omogućeno.***
 
-This setting changes the behavior of the patch. When enabled, the patch expires after 3 days and gives an audible warning if you have sound enabled. After 3 days and 8 hours the patch stops working.
+Ova postavka mijenja ponašanje pumpe. Kada je omogućeno, pumpa istječe nakon 3 dana i daje zvučno upozorenje ako imate uključen zvuk. Nakon 3 dana i 8 sati pumpa prestaje raditi.
 
-If this setting is disabled, the patch does not warn you before it stops. With recent pump base firmware, a patch runs for 5 days at most.
+Ako je ova postavka onemogućena, pumpa vas ne upozorava prije nego što prestane raditi. S novijim firmwareom baze pumpe patch radi najviše 5 dana.
 
-#### Pump expiry warning [hours]
+#### Upozorenje o isteku pumpe [sati]
 
-***Default: 72 hours.***
+***Zadano: 72 sata.***
 
-This setting changes the time of the expiration warning. When [Patch Expiration](#medtrum-patch-expiration) is enabled, **AAPS** shows a notification this many hours after activation.
+Ova postavka mijenja vrijeme upozorenja o isteku. Kada je [Istek pumpe](#medtrum-patch-expiration) omogućen, **AAPS** prikazuje obavijest toliko sati nakon aktivacije.
 
-#### Hourly Maximum Insulin [Units]
+#### Maksimalni inzulin po satu [J]
 
-***Default: 25U.***
+***Zadano: 25 J.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+Ova postavka mijenja najveću količinu inzulina koja se može isporučiti u jednom satu. Ako se ova granica prekorači, pumpa se suspendira i daje alarm. Alarm možete resetirati gumbom **Resetiraj alarme** na zaslonu pumpe, pogledajte [Resetiraj alarme](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Postavite razumnu vrijednost prema svojim potrebama za inzulinom.
 
-#### Daily Maximum Insulin [Units]
+#### Maksimalni dnevni inzulin [J]
 
-***Default: 80U.***
+***Zadano: 80 J.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+Ova postavka mijenja najveću količinu inzulina koja se može isporučiti u jednom danu. Ako se ova granica prekorači, pumpa se suspendira i daje alarm. Alarm možete resetirati gumbom **Resetiraj alarme** na zaslonu pumpe, pogledajte [Resetiraj alarme](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Postavite razumnu vrijednost prema svojim potrebama za inzulinom.
 
-#### Scan on connection error
+#### Skeniraj pri pogrešci veze
 
-***Default: Off.***
+***Zadano: isključeno.***
 
-Located under **Advanced Settings**.
+Nalazi se pod **Napredne postavke**.
 
-Only enable this if you have connection problems. When enabled, the driver scans for the pump again before trying to reconnect to it. Make sure the Location permission for **AAPS** is set to "Allow all the time".
+Omogućite ovo samo ako imate problema s vezom. Kada je omogućeno, upravljački program ponovno traži pumpu prije nego što se pokuša ponovno spojiti na nju. Provjerite je li dopuštenje za lokaciju za **AAPS** postavljeno na „Dopusti cijelo vrijeme“.
 
-### Step 2b: AAPS alert settings
+### Korak 2b: postavke upozorenja u AAPS-u
 
-These settings are not part of the Medtrum driver. Open them from the **Settings** (gear) icon in the top-right corner of the main screen. See [Settings](../SettingUpAaps/Preferences.md) for more.
+Ove postavke nisu dio upravljačkog programa Medtrum. Otvorite ih ikonom **Postavke** (zupčanik) u gornjem desnom kutu glavnog zaslona. Više pogledajte u [Postavke](../SettingUpAaps/Preferences.md).
 
 #### BT Watchdog
 
-Open **Settings** > **Pump**:
+Otvorite **Postavke** > **Pumpa**:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Postavke > Pumpa](../images/preferences/settings_pump.png)
 
-**BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
+**BT Watchdog** isključuje Bluetooth na telefonu na jednu sekundu ako se **AAPS** ne može spojiti na pumpu. To može pomoći na nekim telefonima na kojima se Bluetooth zamrzava.
 
-Enable this setting if you often have connection problems with your pump.
+Omogućite ovu postavku ako često imate problema s vezom s pumpom.
 
-#### Local alerts
+#### Lokalna upozorenja
 
-Open **Settings** > **Local alerts**:
+Otvorite **Postavke** > **Lokalna upozorenja**:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Postavke > Lokalna upozorenja](../images/preferences/settings_local_alerts.png)
 
-##### Alert if pump is unreachable
+##### Upozori ako je pumpa nedostupna
 
-***Default: Enabled.***
+***Zadano: omogućeno.***
 
-This setting is forced on when the Medtrum driver is enabled. It alerts you when the pump is unreachable. This can happen when the pump is out of range, or when it is not responding because of a faulty patch or pump base, for example when water leaks between the pump base and the patch.
+Ova je postavka uvijek uključena kada je upravljački program Medtrum omogućen. Upozorava vas kada je pumpa nedostupna. To se može dogoditi kada je pumpa izvan dometa ili kada ne odgovara zbog neispravnog patcha ili baze pumpe, na primjer kada voda uđe između baze pumpe i patcha.
 
-For safety reasons this setting cannot be disabled.
+Iz sigurnosnih razloga ova se postavka ne može isključiti.
 
-##### Pump unreachable threshold
+##### Prag nedostupnosti pumpe
 
-***Default: 30 min.***
+***Zadano: 30 min.***
 
-This setting changes how long **AAPS** waits before alerting you that the pump is unreachable.
+Ova postavka mijenja koliko dugo **AAPS** čeka prije nego što vas upozori da je pumpa nedostupna.
 
-You can change this setting when using the Medtrum pump, but we recommend keeping it at 30 minutes for safety reasons.
+Ovu postavku možete promijeniti kada koristite pumpu Medtrum, ali iz sigurnosnih razloga preporučujemo da ostane na 30 minuta.
 
 (medtrum-activate-patch)=
-### Step 3: Activate patch
+### Korak 3: Aktivirajte pumpu
 
-**Before you continue:**
-- Have your Medtrum pump base and a new reservoir patch ready.
-- Turn off other devices that can talk to the Medtrum pump (PDM and Medtrum app).
-- Ideally, make sure **AAPS** is set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). If no profile is active, the activation starts with a **Profile required** step where you choose the profile to activate.
+**Prije nego što nastavite:**
+- Pripremite bazu pumpe Medtrum i novi patch sa spremnikom.
+- Isključite druge uređaje koji mogu komunicirati s pumpom Medtrum (PDM i aplikaciju Medtrum).
+- Najbolje je da je **AAPS** postavljen i da je [profil aktiviran](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Ako nijedan profil nije aktivan, aktivacija počinje korakom **Potreban je profil** u kojem odabirete profil koji želite aktivirati.
 
-#### Start the activation
+#### Pokretanje aktivacije
 
-Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**. If you have set up [settings protection](#Preferences-protection), you must enter your password or PIN first.
+Otvorite [zaslon pumpe Medtrum](#nano-overview) (**Upravljanje → Pumpa**) i dodirnite **Zamijeni pumpu**. Ako ste postavili [zaštitu postavki](#Preferences-protection), najprije morate unijeti lozinku ili PIN.
 
-If a patch is already active, you are asked to deactivate it first, see [Deactivate patch](#nano-deactivate-patch).
+Ako je pumpa već aktivna, najprije je morate deaktivirati, pogledajte [Deaktiviraj pumpu](#nano-deactivate-patch).
 
-The activation is a step-by-step wizard. Follow the prompts to fill and activate a new patch. Tap **Cancel** at any step to stop.
+Aktivacija je čarobnjak korak po korak. Slijedite upute na zaslonu da napunite i aktivirate novu pumpu. Dodirnite **Otkaži** u bilo kojem koraku da biste prekinuli.
 
 ```{important}
-Only put the patch on your body and insert the cannula when the wizard tells you to (after priming is complete).
+Pumpu zalijepite na tijelo i umetnite kanilu tek kada vam to čarobnjak kaže (nakon što je punjenje završeno).
 ```
 
-The first steps you see depend on your setup:
+Prvi koraci koje vidite ovise o vašim postavkama:
 
-1. **Profile required**: only if no profile is active. Select the profile to apply, then continue.
-2. **Find Pump**: only the first time, or after you used [Unpair](#medtrum-unpair). Connect the pump base to a fresh patch to power it on. **AAPS** scans for nearby Medtrum pump bases (their names start with `MT`). Tap yours in the list. **AAPS** saves its serial number, then goes straight to filling the patch.
+1. **Potreban je profil**: samo ako nijedan profil nije aktivan. Odaberite profil koji želite primijeniti i nastavite.
+2. **Pronađi pumpu**: samo prvi put ili nakon što ste koristili [Raspari](#medtrum-unpair). Spojite bazu pumpe na novi patch da biste je uključili. **AAPS** traži baze pumpe Medtrum u blizini (njihovi nazivi počinju s `MT`). Dodirnite svoju na popisu. **AAPS** sprema njezin serijski broj i zatim odmah prelazi na punjenje patcha.
 
-   ![Find Pump step scanning for a Medtrum pump base](../images/medtrum/activation/FindPump.png)
+   ![Korak Pronađi pumpu traži bazu pumpe Medtrum](../images/medtrum/activation/FindPump.png)
 
-3. **Activate Patch**: only when **AAPS** already knows your pump base. The screen says "No active patch. Press **Next** to begin the activation process." Make sure the pump base is **not** connected to the patch yet, then tap **Next**.
+3. **Aktiviraj pumpu**: samo kada **AAPS** već poznaje vašu bazu pumpe. Na zaslonu piše „Nema aktivne pumpe. Pritisnite **Sljedeći** za početak aktivacije.“ Provjerite da baza pumpe još **nije** spojena na patch, a zatim dodirnite **Sljedeći**.
 
-![Start Activation](../images/medtrum/activation/StartActivation.png)
+![Početak aktivacije](../images/medtrum/activation/StartActivation.png)
 
-#### Connect and fill the patch
+#### Spoji i napuni
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![Punjenje pumpe](../images/medtrum/activation/FillPatch.png)
 
-Connect the pump base to the patch, remove the residual air and fill the patch with insulin. A minimum of 70 units is needed for activation. The screen shows the reservoir level. Do not attach the patch to your body yet.
+Spojite bazu pumpe na patch, uklonite zaostali zrak i napunite patch inzulinom. Za aktivaciju je potrebno najmanje 70 jedinica. Zaslon prikazuje razinu u spremniku. Još ne lijepite pumpu na tijelo.
 
-When the patch is detected and filled, the **Next** button appears. Tap it.
+Kada je patch prepoznat i napunjen, pojavljuje se gumb **Sljedeći**. Dodirnite ga.
 
-#### Select insulin
+#### Odaberi inzulin
 
-This step only appears if you have more than one insulin set up in **AAPS**. Select the insulin you are filling the patch with. **AAPS** applies a profile switch with this insulin after activation.
+Ovaj se korak pojavljuje samo ako u **AAPS-u** imate postavljeno više od jednog inzulina. Odaberite inzulin kojim punite pumpu. **AAPS** nakon aktivacije primjenjuje zamjenu profila s ovim inzulinom.
 
-#### Prime the patch
+#### Punjenje igle
 
-![Half press](../images/medtrum/activation/HalfPress.png)
+![Pritisak do pola](../images/medtrum/activation/HalfPress.png)
 
-Do **not** remove the safety lock. Half-press the needle button on the patch, then tap **Next** to start priming.
+**Nemojte** uklanjati sigurnosnu blokadu. Pritisnite gumb igle na pumpi do pola, a zatim dodirnite **Sljedeći** za početak punjenja.
 
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
+![Punjenje u tijeku](../images/medtrum/activation/PrimeProgress.png)
 
-Wait for priming to complete.
+Pričekajte da punjenje završi.
 
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
+![Punjenje završeno](../images/medtrum/activation/PrimeComplete.png)
 
-When priming is complete, tap **Next** to continue.
+Kada je punjenje završeno, dodirnite **Sljedeći** za nastavak.
 
-#### Site Rotation
+#### Rotacija mjesta primjene
 
-This step only appears if you manage pump sites with [Site Rotation](#Aapsscreens-site-rotation) (setting **Manage pump site rotation**). Choose where you place the patch on your body, or skip this step.
+Ovaj se korak pojavljuje samo ako upravljate mjestima pumpe pomoću [Rotacija mjesta primjene](#Aapsscreens-site-rotation) (postavka **Upravljaj rotacijom mjesta pumpe**). Odaberite gdje na tijelu postavljate pumpu ili preskočite ovaj korak.
 
-#### Attach patch
+#### Zalijepi pumpu
 
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
+![Zalijepi pumpu](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin and remove the stickers. Remove the safety lock, attach the patch to your body, and press the needle button to insert the cannula.
+Očistite kožu i uklonite naljepnice. Uklonite sigurnosnu blokadu, zalijepite pumpu na tijelo i pritisnite gumb igle da umetnete kanilu.
 
-Tap **Next** to activate the patch.
+Dodirnite **Sljedeći** da aktivirate pumpu.
 
-#### Activate patch
+#### Aktiviraj pumpu
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+![Aktiviraj pumpu](../images/medtrum/activation/ActivatePatch.png)
 
-**AAPS** activates the pump and sets the initial basal rate. Please wait. When activation is complete, the following screen appears:
+**AAPS** aktivira pumpu i postavlja početnu bazalnu stopu. Pričekajte. Kada je aktivacija završena, pojavljuje se sljedeći zaslon:
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+![Aktivacija završena](../images/medtrum/activation/ActivationComplete.png)
 
 ```{admonition} Older screenshot
 :class: note
-Apart from **Find Pump**, the activation screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Osim koraka **Pronađi pumpu**, gornje snimke zaslona aktivacije su iz starije verzije **AAPS-a** i u **AAPS-u** 4 mogu izgledati drukčije.
 ```
 
-It shows how many units are left in the patch. Tap **OK** to return to the pump screen.
+Prikazuje koliko je jedinica ostalo u pumpi. Dodirnite **U redu** za povratak na zaslon pumpe.
 
 ```{tip}
-After a new activation, [export your settings](../Maintenance/ExportImportSettings.md). This lets you recover this patch session later, for example on a new phone.
+Nakon nove aktivacije [izvezite svoje postavke](../Maintenance/ExportImportSettings.md). Tako kasnije možete vratiti ovu sesiju pumpe, na primjer na novom telefonu.
 ```
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### Deaktiviraj pumpu
 
-To deactivate the active patch, open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
+Da biste deaktivirali aktivnu pumpu, otvorite [zaslon pumpe Medtrum](#nano-overview) (**Upravljanje → Pumpa**) i dodirnite **Zamijeni pumpu**.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Deaktiviraj pumpu](../images/medtrum/activation/DeactivatePatch.png)
 
-You are asked to confirm that you want to deactivate the current patch. **This cannot be undone.** Tap **Next** to deactivate, or **Cancel** to return to the pump screen.
+Od vas se traži da potvrdite da želite deaktivirati trenutnu pumpu. **Ovo se ne može poništiti.** Dodirnite **Sljedeći** za deaktivaciju ili **Otkaži** za povratak na zaslon pumpe.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Deaktivacija u tijeku](../images/medtrum/activation/DeactivateProgress.png)
 
-If **AAPS** cannot deactivate the patch (for example because the pump base has already been removed from the patch), tap **Discard** to forget the current patch session. You can then activate a new patch.
+Ako **AAPS** ne može deaktivirati patch (na primjer jer je baza pumpe već odvojena od patcha), dodirnite **Odbaci** da zaboravite trenutnu sesiju pumpe. Zatim možete aktivirati novu pumpu.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Pumpa deaktivirana](../images/medtrum/activation/DeactivateComplete.png)
 
-When deactivation is complete, retract the needle and remove the patch from your body. Remove the pump base and dispose of the used patch. Tap **OK** to return to the pump screen, or **Next** to start activating a new patch.
+Kada je deaktivacija završena, izvucite iglu i skinite pumpu s tijela. Odvojite bazu pumpe i zbrinite iskorišteni patch. Dodirnite **U redu** za povratak na zaslon pumpe ili **Sljedeći** za početak aktivacije nove pumpe.
 
 (nano-resume-interrupted-activation)=
 
-### Resume interrupted activation
+### Nastavak prekinute aktivacije
 
-If a patch activation is interrupted, for example because the phone battery runs out, you can resume it. Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
+Ako se aktivacija pumpe prekine, na primjer jer se baterija telefona ispraznila, možete je nastaviti. Otvorite [zaslon pumpe Medtrum](#nano-overview) (**Upravljanje → Pumpa**) i dodirnite **Zamijeni pumpu**.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Nastavak prekinute aktivacije](../images/medtrum/activation/ActivationInProgress.png)
 
-Tap **Next** to resume the activation. Tap **Discard** to reset the activation status, so you can activate a new patch.
+Dodirnite **Sljedeći** za nastavak aktivacije. Dodirnite **Odbaci** za resetiranje statusa aktivacije, kako biste mogli aktivirati novu pumpu.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Čitanje statusa aktivacije](../images/medtrum/activation/ReadingActivationStatus.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots in **Deactivate patch** and **Resume interrupted activation** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Snimke zaslona u **Deaktiviraj pumpu** i **Nastavak prekinute aktivacije** su iz starije verzije **AAPS-a** i u **AAPS-u** 4 mogu izgledati drukčije.
 ```
 
-The driver reads the activation status from the pump. If this works, the wizard continues at the step where it stopped.
+Upravljački program čita status aktivacije s pumpe. Ako to uspije, čarobnjak nastavlja od koraka na kojem je stao.
 
 (nano-overview)=
 
-## Pump screen
+## Zaslon pumpe
 
-The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
+Zaslon pumpe Medtrum (**Upravljanje → Pumpa**) prikazuje trenutni status Medtrum pumpe. Na njemu su i gumbi za zamjenu pumpe, resetiranje alarma i osvježavanje statusa. Traka na vrhu prikazuje važna stanja, na primjer **Pumpa nije aktivirana** ili **Pumpa je suspendirana**.
 
-![Medtrum pump screen with an active patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
+![Zaslon pumpe Medtrum s aktivnom pumpom](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-The screen can show these rows. Some rows only appear when they have a value.
+Zaslon može prikazivati ove retke. Neki se reci prikazuju samo kada imaju vrijednost.
 
-- **Last connection**: how long ago **AAPS** last connected to the pump.
-- **Last bolus**: the last bolus that was delivered.
-- **Battery**: the current battery voltage of the patch.
-- **Reservoir**: the current reservoir level.
-- **Serial number**: the serial number of your pump base.
-- **Pump state**: the current state of the pump. For example **Active** (the patch is activated and running normally) or **Stopped** (the patch is not activated).
-- **Base basal rate**: the basal rate from your profile that is running now.
-- **Temp basal**: the temporary basal rate, if one is running.
-- **Active bolus**: the bolus that is being delivered right now.
-- **Active alarms**: see [below](#medtrum-active-alarms).
-- **Pump type**: the model of your pump base.
-- **FW version**: the firmware version of the pump base.
-- **Patch no**: the sequence number of the activated patch. It goes up by one every time you activate a new patch.
-- **Activation**: the date and time the patch was activated, and how long ago that was.
-- **Patch expires**: the date and time when the patch expires. Shows **Not enabled** if [Patch Expiration](#medtrum-patch-expiration) is off.
+- **Zadnja uspostava veze**: prije koliko se vremena **AAPS** zadnji put spojio na pumpu.
+- **Zadnji bolus**: zadnji isporučeni bolus.
+- **Baterija**: trenutni napon baterije pumpe.
+- **Spremnik**: trenutna razina u spremniku.
+- **Serijski broj**: serijski broj vaše baze pumpe.
+- **Status pumpe**: trenutno stanje pumpe. Na primjer **Aktivno** (pumpa je aktivirana i radi normalno) ili **Zaustavljeno** (pumpa nije aktivirana).
+- **Osnovna bazalna stopa**: bazalna stopa iz vašeg profila koja sada radi.
+- **Privremeni bazal**: privremena bazalna stopa, ako je jedna aktivna.
+- **Aktivni bolus**: bolus koji se upravo isporučuje.
+- **Aktivni alarmi**: pogledajte [niže](#medtrum-active-alarms).
+- **Vrsta pumpe**: model vaše baze pumpe.
+- **Verzija FW-a**: verzija firmwarea baze pumpe.
+- **Broj pumpe**: redni broj aktivirane pumpe. Povećava se za jedan svaki put kada aktivirate novu pumpu.
+- **Aktivacija**: datum i vrijeme aktivacije pumpe i prije koliko je vremena to bilo.
+- **Pumpa istječe**: datum i vrijeme kada pumpa istječe. Prikazuje **Nije omogućeno** ako je [Istek pumpe](#medtrum-patch-expiration) isključen.
 
 (medtrum-active-alarms)=
-### Active alarms
+### Aktivni alarmi
 
-This row shows any alarms that are active right now, for example a low reservoir or an expiring patch.
+Ovaj redak prikazuje sve alarme koji su trenutačno aktivni, na primjer nizak spremnik ili pumpu koja uskoro istječe.
 
-### Refresh
+### Osvježi
 
-This button refreshes the status of the patch. It is only available when a patch is active and **AAPS** is not connected to the pump at that moment.
+Ovaj gumb osvježava status pumpe. Dostupan je samo kada je pumpa aktivna i **AAPS** u tom trenutku nije spojen na pumpu.
 
-### Change Patch
+### Zamijeni pumpu
 
-This button starts the wizard to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
+Ovaj gumb pokreće čarobnjak za zamjenu pumpe. Više informacija pogledajte u [Aktivirajte pumpu](#medtrum-activate-patch).
 
 (medtrum-unpair)=
-### Unpair
+### Raspari
 
-This button only appears when **AAPS** knows a pump base. It clears the stored pump base serial number and disconnects. The next time you activate a patch, **AAPS** scans for a pump base again (the **Find Pump** step). Use this if you switch to a different pump base. Only do this when no patch is active.
+Ovaj se gumb prikazuje samo kada **AAPS** poznaje bazu pumpe. Briše spremljeni serijski broj baze pumpe i prekida vezu. Kada sljedeći put aktivirate patch, **AAPS** ponovno traži bazu pumpe (korak **Pronađi pumpu**). Koristite ovo ako prelazite na drugu bazu pumpe. Učinite to samo kada nijedna pumpa nije aktivna.
 
 (nano-reset-alarms)=
 
-### Reset alarms
+### Resetiraj alarme
 
-The **Reset alarms** button only appears on the pump screen when the patch has suspended itself, for example after a maximum daily insulin alarm. Tap it to reset the alarms and resume insulin delivery.
+Gumb **Resetiraj alarme** prikazuje se na zaslonu pumpe samo kada se pumpa sama suspendirala, na primjer nakon alarma za maksimalni dnevni inzulin. Dodirnite ga da resetirate alarme i nastavite isporuku inzulina.
 
-![Reset alarms](../images/medtrum/ResetAlarms.png)
+![Resetiraj alarme](../images/medtrum/ResetAlarms.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different, but the **Reset alarms** button works the same way.
+Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 zaslon pumpe izgleda drukčije, ali gumb **Resetiraj alarme** radi na isti način.
 ```
 
-## Switching phone, export/import settings
+## Promjena telefona, izvoz/uvoz postavki
 
-When you switch to a new phone, do the following:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone.
-* Transfer the settings file from the old phone to the new phone, and import it into **AAPS**. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
+Kada prelazite na novi telefon, učinite sljedeće:
+* [Izvezite postavke](../Maintenance/ExportImportSettings.md) na starom telefonu.
+* Prenesite datoteku postavki sa starog telefona na novi i uvezite je u **AAPS**. Na zaslonu za uvoz označite **Zamijeni i postavke pumpe**, inače se sesija pumpe ne prenosi na novi telefon.
 
-The imported settings file must be from the patch session you are using now, otherwise the patch will not connect (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+Uvezena datoteka postavki mora biti iz sesije pumpe koju sada koristite, inače se pumpa neće spojiti (pogledajte [Pumpe bez katetera](#ExportImportSettings-tubeless-pumps)).
 
-After a settings import, the driver syncs the history with the pump. This can take a while, depending on the age of the settings file. The progress ("Syncing records, ... left") is shown on the main screen:
+Nakon uvoza postavki upravljački program sinkronizira povijest s pumpom. To može potrajati, ovisno o starosti datoteke postavki. Napredak („Sinkronizacija zapisa, preostalo ...“) prikazuje se na glavnom zaslonu:
 
-![Sync progress](../images/medtrum/SyncProgress.png)
+![Napredak sinkronizacije](../images/medtrum/SyncProgress.png)
 
 (medtrum-nano-troubleshooting)=
 
-## Troubleshooting
+## Rješavanje problema
 
-### Connection issues
+### Problemi s vezom
 
-If you have connection timeouts or other connection problems:
-- In the Android app settings for **AAPS**, set the Location permission to "Allow all the time".
-- Try enabling **Scan on connection error** (Medtrum settings > **Advanced Settings**) and **BT Watchdog** (**Settings** > **Pump**), see [Step 2](#medtrum-step-2).
+Ako imate prekide veze zbog isteka vremena ili druge probleme s vezom:
+- U Androidovim postavkama aplikacije **AAPS** postavite dopuštenje za lokaciju na „Dopusti cijelo vrijeme“.
+- Pokušajte omogućiti **Skeniraj pri pogrešci veze** (postavke Medtruma > **Napredne postavke**) i **BT Watchdog** (**Postavke** > **Pumpa**), pogledajte [Korak 2](#medtrum-step-2).
 
-### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+### Problemi s Bluetoothom
+Za poznate probleme s Bluetooth vezama, prekidima veze s pumpom/Pod-ovima ili problemima s aktivacijom i vezom pogledajte [Problemi s Bluetoothom](../GettingHelp/BluetoothTroubleshooting.md)
 
-### Activation interrupted
+### Aktivacija prekinuta
 
-If the activation is interrupted, for example by an empty phone battery or a phone crash, you can resume it. Tap **Change Patch** on the pump screen and follow the steps in [Resume interrupted activation](#nano-resume-interrupted-activation).
+Ako se aktivacija prekine, na primjer zbog prazne baterije telefona ili rušenja telefona, možete je nastaviti. Dodirnite **Zamijeni pumpu** na zaslonu pumpe i slijedite korake u [Nastavak prekinute aktivacije](#nano-resume-interrupted-activation).
 
-### Preventing patch faults
+### Kako spriječiti kvarove pumpe
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+Pumpa može javiti različite pogreške. Da biste spriječili česte pogreške:
+- Provjerite je li baza pumpe dobro smještena u patch i da se ne vide razmaci.
+- Kada punite pumpu, ne pritišćite klip prejako. Ne pokušavajte napuniti pumpu iznad najveće količine za vaš model.
 
-## Where to get help
+## Gdje dobiti pomoć
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Sav razvoj upravljačkog programa za Medtrum radi zajednica **dobrovoljno**. Molimo vas da to imate na umu i da slijedite ove smjernice prije nego što zatražite pomoć:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Razina 0:** Pročitajte odgovarajući dio ove dokumentacije kako biste razumjeli kako bi trebala raditi funkcija s kojom imate poteškoća.
+-  **Razina 1:** Ako i dalje imate probleme koje ne možete riješiti uz ovaj dokument, otvorite kanal *#Medtrum* na **Discordu** preko [ove pozivnice](https://discord.gg/4fQUWHZ4Mw).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues). If it exists, please confirm/comment/add information on your problem. Ako nije, otvorite [novi issue](https://github.com/nightscout/AndroidAPS/issues) i priložite [svoje datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
+-  **Budite strpljivi – većina članova naše zajednice su dobronamjerni volonteri, a rješavanje problema često traži vrijeme i strpljenje i od korisnika i od programera.**
