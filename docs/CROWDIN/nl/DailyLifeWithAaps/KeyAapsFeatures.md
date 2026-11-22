@@ -18,7 +18,7 @@ Zie [AAPS-schermen > Het hoofdscherm > Loopstatus](#AapsScreens-loop-status) voo
 
 De voorstellen worden niet automatisch uitgevoerd (zoals in de gesloten loop). De gebruiker moet de voorstellen zelf in de pomp invoeren (bij een virtuele pomp), of met een knop uitvoeren als **AAPS** met een echte pomp is verbonden.
 
-Als **AAPS** een voorstel heeft, verschijnt er onderaan het hoofdscherm in de navigatie een item **Loop** met een badge. Druk erop om het voorstel ("Accepteer nieuw tijdelijk basaal") te lezen, met de hoeveelheid, de duur en de reden. Druk dan op **Uitvoeren** om het uit te voeren:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Druk erop om het voorstel ("Accepteer nieuw tijdelijk basaal") te lezen, met de hoeveelheid, de duur en de reden. Druk dan op **Uitvoeren** om het uit te voeren:
 
 ![Voorstel in de open loop met de knop Uitvoeren](../images/screens/loop_tab.png)
 
