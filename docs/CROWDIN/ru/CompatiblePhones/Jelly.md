@@ -10,16 +10,16 @@
 **Преимущества**
 
 * Он действительно маленький.
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* Даже если вы скажете людям, они могут не считать его обычным смартфоном и легче примут его как исключение там, где телефоны обычно запрещены.
 
 **Недостатки**
 
-* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
+* Рекомендуется только для опытных пользователей ИПЖ. Некоторые настройки найти непросто: нужно по опыту работы с AAPS на большом телефоне Android знать, как и где что находится. Некоторые кнопки AAPS маленькие, и на них трудно нажать: нужно точное касание, а не толстые пальцы.
 * Может использоваться только как телефон для APS. Лучше иметь обычный смартфон в кармане. 
 
 ### Оптимизация срока службы батареи
 
-The Jelly comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip, OOP2, Juggluco, etc...).
+В Jelly есть сильные функции оптимизации, которые **нужно** отключить для AAPS (и других самостоятельно собранных приложений DIY, таких как BYODA, xDrip, OOP2, Juggluco и т. д.).
 
 ![](../images/Jelly_Settings1.png)
 
@@ -33,7 +33,7 @@ The Jelly comes with strong optimization features that **must** be disabled for 
 
 ### Оптимизация срока службы батареи
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+Чтобы ничто не мешало работе **AAPS**, в Jelly Star нужно отключить ограничения в разделе «Использование батареи»: выберите «Без ограничений» для **AAPS** (и для других **самостоятельно собранных приложений DIY**, таких как BYODA, xDrip, OOP2, Juggluco и т. д.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
@@ -41,8 +41,8 @@ To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be di
 
 Не забудьте отключить Google Play Protect.
 
-### Remote Connection for Wear apk
+### Удаленное подключение для Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Для некоторых смарт-часов, например Samsung Galaxy, в приложении Galaxy Wearable нужно **включить** «Удаленное подключение» (Remote connection) в разделе «Дополнительные функции» (Advanced features), чтобы использовать Jelly, **Wear.apk** и **AAPS** удаленно через Wi-Fi.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, «Дополнительные функции», «Удаленное подключение» включено](../images/wearos/galaxy_wearable_remote_connection.png)
