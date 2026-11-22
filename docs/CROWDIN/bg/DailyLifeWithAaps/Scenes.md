@@ -124,7 +124,7 @@
 
 ![Диалог „Край на сценарий“](../images/v4/Scenes/scene_end_dialog.png)
 
-Прекратяването на сценарий **връща** промените, които той е направил (например смяната на профил и временната цел, които е стартирал). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Прекратяването на сценарий **връща** промените, които той е направил (например смяната на профил и временната цел, които е стартирал). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Докато сценарият е активен, профилът и целта на главния екран имат малка икона на сценарий, ако сценарият ги е задал. Листът **Сценарии** в долната навигация остава достъпен, за да стартирате друг сценарий:
 
