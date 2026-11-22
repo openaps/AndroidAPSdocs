@@ -1,22 +1,22 @@
 # Вероятные будущие драйверы для помп
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Это список некоторых помп на рынке, статус их поддержки в других системах замкнутого цикла и их статус в AAPS. В конце есть информация о том, что нужно помпе, чтобы ее можно было использовать в замкнутом цикле.
 
-    {contents} Table of contents
+    {contents} Содержание
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Помпы на этапе интеграции в AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Скоро:** драйверы для этих помп находятся в разработке и уже работают в тестовых сборках.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([Домашняя страница](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Драйвер Omnipod 5 в разработке](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([Домашняя страница](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Драйвер Tandem t:Mobi в разработке](../images/future-pumps/tandem-mobi-driver.png)
 
 ## Помпы, способные к работе в качестве компонента ИПЖ
 
@@ -26,35 +26,35 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Требования к оборудованию для AAPS:** Никаких. Похоже, у нее есть Bluetooth.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([Домашняя страница](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Статус для цикла:** возможный кандидат для замкнутого цикла в будущем. Есть надежда, что t:slim X3 позволит полностью управлять помпой с телефона, и тогда AAPS сможет ее поддерживать, но сроки и функции пока неизвестны.
 
-**Требования к оборудованию для AAPS:** Никаких. It is expected to be Bluetooth enabled.
+**Требования к оборудованию для AAPS:** Никаких. Ожидается, что у нее будет Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Комментарии:** еще не выпущена. Похоже, в планах Tandem t:slim X3 снова и снова отходит на второй план в пользу t:Mobi (включая версию без трубки) и Sigi (их патч-помпы).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([Домашняя страница](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Статус для цикла:** кандидат для замкнутого цикла.
 
-**Требования к оборудованию для AAPS:** Никаких. It is Bluetooth enabled.
+**Требования к оборудованию для AAPS:** Никаких. У нее есть Bluetooth.
 
 ### Инсулиновая помпа Willсare ([ Домашняя страница ](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Статус для цикла:** пока помпа не является кандидатом для замкнутого цикла, но сотрудники компании связались с нами и заинтересованы в том, чтобы сделать ее пригодной для цикла (похоже, ей не хватает только команд получения/установки профиля).
 
 **Требования к оборудованию для AAPS:** Никаких. Похоже, у нее есть Bluetooth.
 
 ** Комментарии: ** Поскольку компания заинтересована в интеграции с AAPS, они могут сами предпринять необходимые действия.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([Домашняя страница](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Статус для цикла:** кандидат для замкнутого цикла. Сообщество выполнило обратную разработку протокола Bluetooth этой помпы, поэтому связь с ней в принципе возможна.
 
-**Требования к оборудованию для AAPS:** Никаких. It is Bluetooth enabled.
+**Требования к оборудованию для AAPS:** Никаких. У нее есть Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Комментарии:** Ypsopump защищает свою связь по Bluetooth сложным шифрованием стороннего поставщика. Работа с ним технически сложна, поэтому создать и поддерживать надежный драйвер трудно. Готового к работе драйвера AAPS пока нет.
 
 ## Помпы, снятые с производства (компании больше не работают)
 
@@ -76,7 +76,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Tandem: t:slim X2 ([Домашняя страница](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Комментарии:** протокол Bluetooth Tandem прошел обратную разработку, но на t:slim X2 можно вводить только болюсы – подачей базала управлять нельзя, – поэтому ее нельзя безопасно использовать в замкнутом цикле. Вряд ли это изменится, если только Tandem не разрешит полностью управлять X2 с телефона. Скорее это появится в t:slim X3.
 
 ### Accu-Chek Solo
 
