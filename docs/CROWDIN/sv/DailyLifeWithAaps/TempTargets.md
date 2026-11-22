@@ -36,7 +36,7 @@ Beroende på **BG**-nivån kommer **AAPS** att ”minska” insulinet för att n
 I läget sluten loop gäller för **SMB**:
 
 - SMB *kan* vara inaktiverat (beskrivs mer nedan); och/eller
-- basal kan ges om **AAPS** har negativ **IOB** eller <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Användare kan också vilja tänka på att:
 
@@ -74,7 +74,7 @@ AAPS siktar på att nå 160 mg/dl eller 8,9 mmol/l under 1 timme
 I läget sluten loop gäller för **SMB**:
 
 - SMB *kan* vara inaktiverat (beskrivs mer nedan); och/eller
-- basal kan ges om **AAPS** har negativ **IOB** eller <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Skärmen har tre delar:
 
 1. **Karusell med förinställningar** (högst upp) – svep mellan dina förinställningar för TT. Varje kort visar förinställningens **namn**, **målvärde** och **varaktighet**; det TT som körs just nu är markerat.
 2. **Redigerare** (i mitten) – **Tillfälligt målvärde** och **Varaktighet** som faktiskt kommer att användas, plus datum/tid för **Aktivering**.
-3. **Åtgärdsfält** (längst ner) – **➕ lägg till**, **‘️ radera** och knappen **▶ aktivera**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 När du väljer ett kort för en förinställning läses dess **målvärde** och **varaktighet** in i redigeraren.
 
@@ -123,7 +123,7 @@ För att återställa en inbyggd förinställning till hur den var från början
 ### Lägga till och ta bort förinställningar
 
 - **➕ Lägg till** – skapa en **ny egen förinställning** från de aktuella värdena i redigeraren. Det nya kortet visas i karusellen.
-- **‘️ Radera** – ta bort den valda **egna** förinställningen. Inbyggda förinställningar (*Äta snart*, *Träning*, *Hypo*) kan inte raderas.
+- **Delete** — remove the selected **custom** preset. Inbyggda förinställningar (*Äta snart*, *Träning*, *Hypo*) kan inte raderas.
 
 När du har minst två **egna** förinställningar kan du också ändra deras ordning i karusellen: tryck på ikonen **Ändra ordning** (⇅) i det övre fältet, flytta kortet i mitten med **◀ / ▶ flyttknapparna** och bekräfta sedan med **✓**. De inbyggda förinställningarna har kvar sina platser – bara egna förinställningar kan flyttas. (Knapparna ser likadana ut som när du [ändrar ordning på profiler](ProfileSwitch-ProfilePercentage.md).)
 
