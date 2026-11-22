@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# Opcija 1 – Izradite novo spremište ključeva
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Ovo je dio [Izrada u pregledniku – Korak 2: Izradite spremište ključeva za potpisivanje](BrowserBuildKeystore.md) na stranici [Izrada u pregledniku](BrowserBuild.md). Provjerite jeste li pročitali [odluku između opcije 1 i opcije 2](#aaps-ci-preparation).
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+Opcija 1 izrađuje za vas potpuno novo spremište ključeva za potpisivanje. Prikladna je za korisnike koji izrađuju prvi put, koji nemaju JKS ili koji su zaboravili lozinku ili alias.
 
-## Choose your device
+## Odaberite svoj uređaj
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Izrađujete s **Android telefona**? Umjesto toga koristite [AAPS Builder](BrowserBuildAapsBuilder.md): ne treba mu pripremna datoteka.
 ```
 
-Follow the page that matches the device you are building from:
+Slijedite stranicu za uređaj s kojeg izrađujete:
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[Računalo](BrowserBuildO1Computer.md)** – Windows, Mac ili Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Uređaj možete promijeniti u bilo kojem trenutku – samo otvorite odgovarajuću stranicu.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+Računalo <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```
