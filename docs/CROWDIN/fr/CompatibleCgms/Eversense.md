@@ -67,6 +67,8 @@ xDrip peut lire les notifications de l'application du fabricant, comme le fait E
 
 **AAPS** peut lire les valeurs de glycémie directement dans les notifications de l'application Eversense officielle, sans autre application entre les deux. Pas de complément des données manquantes (backfill).
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Sélectionnez **Lecteur de notifications** dans [**Configuration → Source GLY**](#Config-Builder-bg-source) et autorisez **AAPS** à accéder aux notifications quand il le demande.
 - Vérifiez que l'application Eversense affiche la valeur de glycémie actuelle dans sa notification.
 
