@@ -1,62 +1,62 @@
-# Setting up the Reporting Server
+# Postavljanje poslužitelja za izvješća
 
-There are currently two reporting servers available for use with **AAPS**:
+Trenutno su s **AAPS-om** dostupna dva poslužitelja za izvješća:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
 
-![Reporting Servers](../images/Building-the-App/ReportingServer.png)
+![Poslužitelji za izvješća](../images/Building-the-App/ReportingServer.png)
 
-We recommend using Nightscout.
+Preporučujemo korištenje Nightscouta.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout je web aplikacija koja može bilježiti i prikazivati vaše CGM podatke i podatke **AAPS-a** te izrađuje izvješća. To je moćna platforma koja je već mnogo godina integrirana u **AAPS**. Korisnicima i njegovateljima omogućuje praćenje podataka o dijabetesu pacijenta gotovo u stvarnom vremenu (između primanja i prikaza podataka može proći samo nekoliko sekundi, ako sve uključene komponente imaju dovoljno dobru internetsku vezu). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
 
-Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
+Nightscout je softver otvorenog koda. Svatko može izraditi i voditi Nightscout poslužitelj, koristeći besplatne ili plaćene usluge.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Više informacija možete naći na [web stranici projekta Nightscout](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### Opcija 1 – Sami postavite svoj Nightscout poslužitelj
 
-Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+Za izradu vašeg Nightscout poslužitelja za izvješća može biti potrebna jedna ili više web aplikacija koje treba održavati. Da bi usluga bila potpuno besplatna, možda ćete morati premjestiti svoju Nightscout stranicu i podatke ako i kada pružatelji usluga ukinu besplatnu razinu.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+Opis kako postaviti Nightscout, s prednostima i nedostacima različitih načina rada i procjenom troškova, možete naći [ovdje](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
-### Option 2 - Pay for a hosted Nightscout service
+### Opcija 2 – Platite uslugu na kojoj se Nightscout vodi za vas
 
-There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure.
+Postoje i ponude različitih pružatelja usluga koji za mjesečnu naknadu vode Nightscout za vas. Troškovi su prihvatljivi, a prednost takve usluge je da ne morate znati puno o informatici niti imati vlastitu infrastrukturu.
 
 
-Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
+Postojeći korisnici Nightscouta mogu s vremena na vrijeme ponovno razmisliti gdje i kako se vodi njihov Nightscout poslužitelj i prijeći na drugu opciju ako im više odgovara.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Neke usluge na kojima se vodi Nightscout navedene su [ovdje](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
-### Further configuration of Nightscout
+### Daljnja konfiguracija Nightscouta
 
-Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
+Kada vaša Nightscout instanca radi, pogledajte [stranicu o konfiguraciji Nightscouta](../SettingUpAaps/Nightscout.md) za dodatne napomene.
 
 (SettingUpTheReportingServer-tidepool)=
 ## Tidepool
 
-Tidepool has been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool je dostupan u **AAPS-u** od verzije 3.2, koja je izašla krajem 2023.
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger
 As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+S druge strane, Tidepool može biti odlično rješenje za dijeljenje izvješća s endokrinologom pacijenta ako Nightscout nije prihvaćeno rješenje.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Tidepool je projekt [otvorenog koda](https://github.com/tidepool-org). Nudi besplatan račun na poslužiteljima Tidepoola.
 
-More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
+Više informacija o postavljanju Tidepoola s AAPS-om [ovdje](../SettingUpAaps/Tidepool.md).
 
 ```{admonition} **AAPS** has the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+**Ne** trebate koristiti aplikaciju za prijenos u Tidepool: **AAPS** će za vas prenijeti glukozu u krvi, tretmane i bazal. Trebate samo osobni račun na Tidepoolu. Ne prenosite svoje podatke zasebnim alatom Tidepool uploader jer će to dovesti do dvostrukih vrijednosti.  
 ```
 
-## Next step
+## Sljedeći korak
 
-Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
+Kada postavite svoj poslužitelj za izvješća, možete konfigurirati **AAPS** na svom telefonu pomoću [čarobnjaka za postavljanje AAPS-a](./SetupWizard.md), koji će također povezati **AAPS** s vašim poslužiteljem za izvješća.
