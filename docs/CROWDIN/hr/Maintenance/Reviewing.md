@@ -54,7 +54,7 @@ Niže je dostupna statistika vremena u uskom rasponu (TITR) 70–140 mg/dL ili 3
 
 **Razgovarajte o ciljevima sa svojim endokrinologom**
 
-Vaš dijabetes može biti drukčiji. O svim predloženim ciljevima razgovarajte sa svojim endokrinologom ili medicinskim timom. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress.
+Vaš dijabetes može biti drukčiji. O svim predloženim ciljevima razgovarajte sa svojim endokrinologom ili medicinskim timom. Ako se pravilno koristi, statistika AAPS-a može biti učinkovit alat za praćenje trendova __GUK-a__ i napretka.
 
 ![Statistika](../images/Maintenance/statistics3.png)
 
@@ -117,7 +117,7 @@ Na kraju svakog retka male ikone pokazuju odakle podaci dolaze ili kamo su posla
 ![UH i bolus](../images/Maintenance/TreatmentsView1.png)
 
 Na ovoj kartici možete pregledati dnevnik bolusa i ugljikohidrata. Svaki bolus (redak **1**) pokazuje preostali povezani aktivni inzulin pored količine inzulina. Izvor bolusa može biti:
-* Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
+* Obrok (ručno unesen gumbima Inzulin, Brzi kalkulator ili Bolus kalkulator)
 * SMB, kada se koristi funkcija SMB
 
 Unosi ugljikohidrata (redak **2**) prikazuju se s količinom u gramima.
@@ -147,9 +147,9 @@ Ovdje se prikazuju **privremeni bazali** koje je postavila petlja. Ako unos još
 * Pozitivan aktivni inzulin ako je privremeni bazal bio viši od bazala postavljenog u profilu
 * Negativan aktivni inzulin kod nultog privremenog bazala (kao u retku **1**) ili ako je privremeni bazal bio niži od bazala postavljenog u profilu
 
-Deleting the entries only affects your reports in Nightscout and will probably distort your real IOB - it is not recommended.
+Brisanje unosa utječe samo na vaša izvješća u Nightscoutu i vjerojatno će iskriviti vaš stvarni aktivni inzulin - ne preporučuje se.
 
-On the left of a line, a red S means “Suspend”: it happens when basal is not currently delivered. To je normalna situacija, na primjer tijekom zamjene Pod-a.
+Crveno S lijevo u retku znači „Suspend“ (obustava): pojavljuje se kada se bazal trenutačno ne isporučuje. To je normalna situacija, na primjer tijekom zamjene Pod-a.
 
 ### Privremeni cilj
 
@@ -178,7 +178,7 @@ Ova kartica prikazuje sve bilješke i unose Careportala zapisane u Nightscoutu.
 
 ![Način rada](../images/Maintenance/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
+Ova kartica prikazuje povijest promjena [statusa petlje](#AapsScreens-loop-status): otvorena, zatvorena, LGS, suspendirano, odspojeno.
 
 ### Unos korisnika
 
