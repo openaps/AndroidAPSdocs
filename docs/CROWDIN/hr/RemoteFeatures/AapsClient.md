@@ -1,12 +1,12 @@
 (aapsclient-app)=
-# The AAPSClient app
+# Aplikacija AAPSClient
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** je pomoćna aplikacija **AAPS-a**: prateća aplikacija za drugi telefon – obično telefon njegovatelja – koja **prati** osobu koja koristi **AAPS**. Od verzije 4 **AAPS-a** njegovatelj može i **daljinski upravljati** petljom putem potpisanih naredbi. Oba telefona komuniciraju preko vaše stranice **Nightscout**; izravna veza između telefona nije potrebna.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+- **Klijent** = telefon na kojem radi **AAPSClient**.
+- **Glavni uređaj** = glavni telefon s **AAPS-om** koji upravlja pumpom i pokreće petlju.
 ```
 
 ```{admonition} Which devices can run AAPSClient?
@@ -19,33 +19,33 @@ From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on W
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Što AAPSClient jest (a što nije)
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+**AAPSClient** izgleda i radi slično kao **AAPS**, ali **nema vlastitu petlju**:
 
-- It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
-- The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
+- Ne sadrži **APS algoritam**, nema **Ciljeve** i **nema upravljačke programe pumpi** – nikada sam ne dozira inzulin.
+- Ni dodaci koje koristi samo glavna aplikacija (**SMS Communicator**, **Tidepool**, **Open Humans**) nisu uključeni.
+- Što *jest* uključeno: sinkronizacija **NSClientV3**, dodaci za izvor GUK-a, slanje podataka u **xDrip+** te konektori za **Wear OS** / **Garmin** – sve što je potrebno za praćenje i prosljeđivanje naredbi. Sat **Garmin** spojen na klijent može prikazivati podatke, ali ugljikohidrati koje pošalje ne unose se i ne može spojiti ni odspojiti pumpu: klijent prikazuje poruku, a vi ih umjesto toga unesete u **AAPS**.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
+Sve što pokrenete iz **AAPSClienta** provjerava, ograničava, potvrđuje i **izvršava glavni uređaj** (telefon s pumpom). Zasebna stranica [Upravljanje glavni uređaj ↔ klijent](ClientMasterControl.md) objašnjava kako to radi: kako upariti dva telefona, kako glavni uređaj piše tekst potvrde koji vidite, kako se isporučuje bolus pokrenut na klijentu i što se događa kada glavni uređaj nije na mreži.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Verzije: AAPSClient, AAPSClient2 i AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+Na isti telefon pratitelja mogu se jedna uz drugu instalirati do tri klijentske aplikacije, a svaka prati **drugu** osobu: **AAPSClient** (ikona žute sove), **AAPSClient2** (plava sova) i – novo u verziji 4 **AAPS-a** – **AAPSClient3** (zelena sova). Funkcionalno su jednake. Razlikuju se samo naziv i boja (ikona aplikacije, pozadina widgeta i odjeljak statusa na početnom zaslonu), tako da ih možete razlikovati. Svaka je aplikacija uparena sa svojim glavnim uređajem. Pojedinosti potražite u odjeljku [O AAPSClientu, AAPSClientu2 i AAPSClientu3](#remotecontrol-aapsclient-versions).
 
 (aapsclient-platforms)=
-## Getting the app
+## Preuzimanje aplikacije
 
 All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
 
-| Device                  | File to download                    | Notes                                                                                                                                                                                        |
+| Device                  | File to download                    | Napomene                                                                                                                                                                                     |
 | ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
 | Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
 | Windows computer        | `AAPSClient-x.y.z.msi`              | Open the file to install.                                                                                                                                                                    |
 | Mac                     | `AAPSClient-x.y.z.dmg`              | See the note on macOS below the table.                                                                                                                                                       |
 | Linux (Debian, Ubuntu)  | `aapsclient_x.y.z_amd64.deb`        | Install it with your package manager.                                                                                                                                                        |
-| iPhone                  | none                                | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
+| iPhone                  | nema                                | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
 
 **Following two people?** Each file above also exists as *aapsclient2* / *AAPSClient2*. It is a second client app that installs next to the first one, so one device can follow two people (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** is not in the release assets: build it yourself ([build variants](#browserbuild-variant)).
 
@@ -69,82 +69,82 @@ There is no **AAPSClient** in the App Store and no ready-made file to download, 
 
 The iPhone version pairs with the master like the others. Unlike the computer versions, the iPhone can scan the master's QR code with its camera.
 
-## First start: a shorter Setup Wizard
+## Prvo pokretanje: kraći čarobnjak za postavljanje
 
-On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
+Pri prvom pokretanju **AAPSClient** pokreće isti **Čarobnjak za postavljanje** koji poznajete iz **AAPS-a**, ali s mnogo manje koraka – na uređaju pratitelja nema postavljanja profila, inzulina, pumpe, APS-a ni ciljeva:
 
-1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
+1. **Dobrodošli**, **licencni ugovor**, **dopuštenja** i **glavna lozinka** – isto kao u glavnoj aplikaciji, pogledajte [Čarobnjak za postavljanje AAPS-a](../SettingUpAaps/SetupWizard.md).
+2. Klijent **ne** traži **jedinice** ni **donju/gornju granicu**: preuzima ih s glavnog telefona čim se spoji na Nightscout. Kasnije ih možete vidjeti u **Postavkama**, gdje mala **ikona telefona** pokazuje da su [sinkronizirane s glavnim telefonom](#client-master-config-prefs). Mogu se uređivati samo dok je glavni uređaj dostupan.
+3. **Postavljanje s glavnog uređaja** – na glavnom uređaju otvorite **Upravljanje → Ovlašteni klijenti**, dodajte ovaj telefon s **QR kodom** i ovdje dodirnite **Skeniraj QR kod**. Jedno skeniranje postavlja Nightscout s vlastitim tokenom ovog telefona i, ako kod služi za uparivanje, ujedno uparuje telefon. Telefon kao naziv svoje instance preuzima i ime s kojim je dodan na glavnom uređaju (slova s dijakritičkim znakovima postaju obična slova, „Miloš“ postaje „Milos“). **Nakon skeniranja postavljanje je završeno**: čarobnjak se zatvara, jer bi sljedeći koraci samo prikazali ono što je kod već napravio. Bez QR koda preskočite ovaj korak. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
 
-   ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![Korak Postavljanje s glavnog uređaja s gumbom Skeniraj QR kod](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+4. **Komunikacija** – popis dodataka nudi samo ono što treba pratitelju (NSClientV3, xDrip+, Wear, Vanjske prateće aplikacije, Garmin). Ako niste skenirali QR kod, omogućite **NSClientV3** i unesite **isti Nightscout URL** kao na glavnom telefonu te pristupni token, s omogućenim **websocketima** – točno kako je opisano u odjeljku [Sinkronizacija](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
-   ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+   ![Korak Komunikacija na klijentu](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Upari s glavnim uređajem** – ovaj korak postoji **samo** na klijentu. On povezuje ovaj uređaj s glavnim uređajem preko sigurnog kanala za naredbe, s PIN-om, i preuzima ime s kojim je telefon dodan na glavnom uređaju, kao i QR kod. **Nakon uparivanja postavljanje je završeno.** Možete ga i preskočiti i upariti bilo kada kasnije putem **Upravljanje → Upari s glavnim uređajem**.
 
-   ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+   ![Korak Upari s glavnim uređajem u čarobnjaku klijenta](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Tko koristi ovaj telefon?** – samo ako niste uparili u čarobnjaku: ime osobe koja koristi ovaj telefon. Po njemu se ova instanca razlikuje u izvješćima i sinkronizaciji.
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Uparivanje s glavnim uređajem
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+Na **glavnom uređaju** otvorite **Upravljanje → Ovlašteni klijenti** i dodajte klijenta. Postoje dva načina uparivanja:
 
-- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
-- **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
+- **S QR kodom** (najbrže, ako telefon ima kameru): skenirajte kod u koraku čarobnjaka „**Postavljanje s glavnog uređaja**“ ili putem **Upravljanje → Upari s glavnim uređajem → Skeniraj QR kod** i potvrdite s „**Koristi**“. Time se postavlja i Nightscout.
+- **S PIN-om**: na **klijentu** otvorite gore opisani korak čarobnjaka (ili **Upravljanje → Upari s glavnim uređajem**), upišite jednokratni PIN prikazan na glavnom uređaju i pritisnite „**Upari**“. Klijent zatim pokazuje kojem će uređaju vjerovati – potvrdite s „**Upari**“:
 
-![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
+![Potvrda na klijentu prije završetka uparivanja](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Ako uparivanje uspije iz čarobnjaka, postavljanje se završava i otvara se početni zaslon. Na glavnom uređaju klijent se prikazuje kao **Aktivan** na popisu [Ovlašteni klijenti](#client_master_master_setup). Nakon toga **Upravljanje → Upari s glavnim uređajem** prikazuje „*Već upareno*“, ulogu telefona i je li uključen zaštićeni način rada:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Upravljanje → Upari s glavnim uređajem na uparenom klijentu: Već upareno, Uloga: Njegovatelj, zaštićeni način rada uključen](../images/v4/ClientMaster/pair_with_master_client.png) Cijeli postupak uparivanja, sigurnosni detalji i rješavanje problema nalaze se na stranici [Upravljanje glavni uređaj ↔ klijent](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
+Nakon uparivanja klijent od glavnog uređaja dobiva vlastiti Nightscout token (ako glavni uređaj ima administratorski token), samo s pravima koja klijentu trebaju, i prestaje koristiti token koji ste možda unijeli. **AAPSClient** nikada sam ne zapisuje tretmane ni GUK u Nightscout: sve što radi šalje se glavnom uređaju, koji to zapisuje. Pogledajte [Vlastiti Nightscout token klijenta](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+Glavni uređaj određuje što ovaj telefon smije raditi putem njegove **[uloge](#client-master-control-roles)** (Samo čitanje, Obroci, Njegovatelj ili Admin). **Upravljanje → Upari s glavnim uređajem** prikazuje ulogu telefona.
 
-## The home screen
+## Početni zaslon
 
-The client's home screen mirrors the followed loop:
+Početni zaslon klijenta prikazuje istu petlju koju prati:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Početni zaslon AAPSClienta](../images/v4/AapsClient/aapsclient_home.png)
 
-- **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
-- The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- **GUK, grafovi, aktivni inzulin / aktivni ugljikohidrati i profil** dolaze iz Nightscouta, točno onako kako ih je glavni uređaj prenio.
+- Prikazani **status petlje** je status **glavnog uređaja** (klijent nema vlastitu petlju). Dok klijent ne primi način rada glavnog uređaja iz Nightscouta, oznaka načina rada prikazuje **upitnik** (nepoznato).
+- **Kartica statusa** prikazuje spremnik i bateriju **praćene pumpe** i bateriju uređaja koji prenosi podatke, preuzete iz statusa uređaja u Nightscoutu – klijent nema pumpu, pa nigdje u aplikaciji nema lokalnog statusa pumpe ni upravljanja pumpom.
+- Donja traka nudi **Tretmani**, **Scene** i **Upravljanje** kada je klijent uparen (prije uparivanja samo **Upravljanje**) – nema kartica za pumpu ni ciljeve.
 
-## Treatments and actions
+## Tretmani i radnje
 
-Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
+Sve pod **Upravljanje** radi kao u glavnoj aplikaciji, uz jednu važnu razliku: na klijentu su radnje koje bi promijenile terapiju (bolus, ugljikohidrati, privremeni ciljevi, scene…) **skrivene dok uređaj nije uparen**, a nakon uparivanja **prosljeđuju se glavnom uređaju** na potvrdu i izvršenje – pogledajte [Korištenje daljinskog upravljanja](#client-master-control).
 
-The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
+Iznimka je stavka **Profil**: prikazuje se i na **neuparenom** klijentu, ali se otvara **samo za pregled** – klijent prikazuje profile koje prima putem Nightscouta (trebaju mu za vlastite izračune), bez gumba za uređivanje ili aktiviranje. Kada je klijent **uparen**, popis profila sinkronizira se s glavnim uređajem i profile možete uređivati i aktivirati s klijenta kao i svaku drugu daljinsku radnju.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+Na **neuparenom** klijentu **Upravljanje** nudi samo **Profil** i **Upari s glavnim uređajem**:
 
-![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
+![Zaslon Upravljanje na neuparenom klijentu: samo Profil i Upari s glavnim uređajem](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+Crveni natpis „*Glavni uređaj nije dostupan. Uređivanje je onemogućeno dok se veza ponovno ne uspostavi.*“ pojavljuje se i na neuparenom klijentu. To je očekivano: još nema glavnog uređaja do kojeg se može doći. Natpis nestaje kada je klijent uparen i glavni uređaj na mreži.
 
-Once the client is paired, the therapy actions appear:
+Kada je klijent uparen, pojavljuju se radnje terapije:
 
-![The Manage screen on a paired client, including the Pair with master entry](../images/v4/AapsClient/aapsclient_manage.png)
+![Zaslon Upravljanje na uparenom klijentu, uključujući stavku Upari s glavnim uređajem](../images/v4/AapsClient/aapsclient_manage.png)
 
-There is **no Pump entry** — a client has no pump.
+**Nema stavke Pumpa** – klijent nema pumpu.
 
-If the master is not reachable, the same banner appears on a paired client: the therapy actions are greyed out, and anything you try is blocked before it is sent. The client notices that the master is offline when you try an action, and re-enables the actions once the master is back online.
+Ako glavni uređaj nije dostupan, isti se natpis pojavljuje i na uparenom klijentu: radnje terapije su zasivljene, a sve što pokušate blokira se prije slanja. Klijent primijeti da glavni uređaj nije na mreži kada pokušate neku radnju i ponovno omogućuje radnje kada se glavni uređaj vrati na mrežu.
 
-![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
+![Zaslon Upravljanje na uparenom klijentu dok glavni uređaj nije na mreži: radnje su zasivljene ispod natpisa](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Postavke sinkronizirane s glavnim uređajem
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+Aktivna **konfiguracija** dodataka i mnoge **postavke** usklađuju se između glavnog uređaja i njegovih uparenih klijenata; sinkronizirane stavke označene su malom **ikonom telefona** i onemogućene su (uz natpis „*Glavni uređaj nije dostupan*“) dok glavni uređaj nije dostupan. To je opisano u odjeljku [Promjena konfiguracije i postavki](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## AAPSClient na pametnom satu
 
-A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
+Sat s Wear OS-om može se upariti s telefonom **klijenta**; njegove se radnje preko klijenta prosljeđuju glavnom uređaju. Pogledajte [Postavljanje AAPS-a na vaš Wear OS sat](../WearOS/WearOsSmartwatch.md) i [opcije pametnog sata u odjeljku Daljinsko upravljanje](#RemoteControl_smartwatches).
