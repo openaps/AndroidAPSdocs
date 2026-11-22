@@ -1,4 +1,4 @@
-# Making changes to your AAPS configuration
+# Promjene konfiguracije AAPS-a
 
 Nakon što ste dovršili **[Čarobnjak za postavljanje](../SettingUpAaps/SetupWizard.md)**, ne morate ponovno pokretati cijeli čarobnjak ako želite promijeniti samo dijelove konfiguracije **AAPS-a**.
 
