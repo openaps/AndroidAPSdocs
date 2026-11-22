@@ -281,7 +281,7 @@ Aby dezaktywować Poda (po utracie ważności albo po awarii Poda):
 
 Poniżej opisujemy, jak wstrzymać i wznowić podawanie insuliny.
 
-*UWAGA - jeśli nie widzisz przycisku **Wstrzymaj***, to jest on domyślnie ukryty. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*UWAGA - jeśli nie widzisz przycisku **Wstrzymaj***, to jest on domyślnie ukryty. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Wstrzymywanie podawania insuliny
 
@@ -591,7 +591,7 @@ Przyciski na dole ekranu pompy zmieniają się zależnie od sytuacji. Przyciski,
   Zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**. W **AAPS** 4 jest to przycisk tekstowy **Ustaw czas** na ekranie pompy Omnipod.
   ```
 
-- **Wstrzymaj:** wstrzymuje podawanie insuliny przez aktywnego Poda. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
+- **Wstrzymaj:** wstrzymuje podawanie insuliny przez aktywnego Poda. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Pokazuje powiadomienia AAPS i sygnały dźwiękowe w telefonie, gdy nie wiadomo,
 
 Ustawienia zaawansowane pomocne przy szukaniu błędów.
 
-- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Pokaż przycisk Pulse Log w menu zarządzania Podem:** to ustawienie nadal jest na liście, ale obecna wersja ekranu pompy nie ma przycisku **Pulse Log**.
 
 - **Pokaż przycisk Statystyki RileyLink w menu zarządzania Podem:** ukrywa lub pokazuje przycisk **Statystyki RileyLink** na ekranie pompy Omnipod.
