@@ -124,7 +124,7 @@ Una escena sin seguimiento solo te pide confirmar:
 
 ![Diálogo Finalizar escena](../images/v4/Scenes/scene_end_dialog.png)
 
-Finalizar una escena **deshace** los cambios que hizo (por ejemplo, el cambio de perfil y el objetivo temporal que inició). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Finalizar una escena **deshace** los cambios que hizo (por ejemplo, el cambio de perfil y el objetivo temporal que inició). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Mientras una escena está activa, el perfil y el objetivo en la pantalla principal llevan un pequeño icono de escena cuando los puso la escena. El panel **Escenas** de la navegación inferior sigue disponible para iniciar otra escena:
 
