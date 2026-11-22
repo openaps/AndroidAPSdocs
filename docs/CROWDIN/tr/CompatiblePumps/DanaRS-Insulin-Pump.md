@@ -38,7 +38,7 @@
 
 * Pompa ekranında **Eşleştirme** düğmesine dokunun. **AAPS** yakındaki pompaları tarar.
 
-* Listede pompanızın kaydına dokunun.
+* Tap the entry for your pump in the list. If your phone still has an old Bluetooth pairing with this pump (for example after the pump was unpaired on the pump itself, or paired with another phone), **AAPS** removes it first and starts a new pairing. You do not need to remove the pump in the Android Bluetooth settings.
     
     ![Taramada bulunan bir Dana pompasını listeleyen eşleştirme ekranı](../images/DanaRS_i_Pairing.png)
 
