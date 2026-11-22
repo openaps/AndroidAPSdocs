@@ -124,7 +124,7 @@
 
 ![「結束場景」對話方塊](../images/v4/Scenes/scene_end_dialog.png)
 
-結束場景時，系統會**還原**場景所做的變更（例如切換設定檔和啟動臨時目標）。 The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+結束場景時，系統會**還原**場景所做的變更（例如切換設定檔和啟動臨時目標）。 The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 場景啟動期間，如果場景設定了主畫面上的設定檔和目標，兩者旁邊都會顯示小型場景圖示。您仍可使用底部導覽列中的 **場景**面板來啟動其他場景：
 
