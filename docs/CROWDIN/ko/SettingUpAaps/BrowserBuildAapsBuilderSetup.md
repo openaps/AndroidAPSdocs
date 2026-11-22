@@ -56,19 +56,20 @@ Your repository (내 저장소): <code class="aapsb-repoUrl"></code>
 You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-빌드 단계는 자동으로 업데이트됩니다: 빌드할 때마다 저장소는 AAPS 개발자가 nightscout/aaps-builder에 공개한 버전을 실행하며, 저장소의 내용은 바뀌지 않습니다. 워크플로 파일은 [문서 업데이트 및 변경 사항](../Maintenance/DocumentationUpdate.md)에서 알릴 때(예: 새 빌드 변형이 추가될 때)만 바꾸면 됩니다. 저장소를 이 페이지의 이전 버전이나 이전 템플릿으로 만든 경우에는 한 번 바꾸십시오. `KEYSTORE_SET` secret은 그대로 유지됩니다.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. `KEYSTORE_SET` secret은 그대로 유지됩니다.
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow (최신 워크플로 열기)</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   컴퓨터에서는 파일 오른쪽 위의 **copy icon**(복사 아이콘, "Copy raw file")을 클릭하십시오. 휴대폰에서는 대신 <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">일반 텍스트 버전</a>을 열고, 텍스트를 길게 누른 다음 → **Select all**(모두 선택) → **Copy**(복사)를 누르십시오.
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
    Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. 전체 텍스트를 복사한 워크플로로 바꾸고(휴대폰에서는: 길게 누르기 → **Select all** → **Paste**(붙여넣기)), **Commit changes…**(변경 사항 커밋)를 두 번 클릭하십시오. 파일의 첫 줄에 버전이 표시됩니다.
-```
+
+</div>
 
 (aaps-builder-setup-step2)=
 
