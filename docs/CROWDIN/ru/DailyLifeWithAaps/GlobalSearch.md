@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Глобальный поиск
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+В **AAPS** v4 вверху главного экрана есть поле **глобального поиска**. Введите слово, и поиск сразу проверит все приложение — модули, диалоги, экраны настроек, отдельные параметры — а если вы в сети, то и **документацию AndroidAPS**. Это самый быстрый способ перейти к настройке или экрану, не вспоминая, где они находятся.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## Как открыть поиск
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+Нажмите на поле **🔍 Поиск** вверху **главного экрана** (рядом с меню ☰). Начните вводить текст, и результаты появятся по ходу ввода (после короткой паузы), сгруппированные по категориям:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Результаты глобального поиска, сгруппированные по категориям](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+Очистите поле кнопкой **✕** или закройте поиск кнопкой **Назад** на устройстве.
 
 ---
 
-## What search covers
+## Поиск на английском *или* на вашем языке
 
-Results are grouped into these categories:
+Это важно знать: поиск ищет совпадения **и** в тексте на **выбранном вами языке**, **и** в исходном **английском** тексте.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- Если ваше приложение, например, на немецком или чешском языке, вы можете ввести **переведенное** слово **или** **английское** слово — в обоих случаях настройка найдется.
+- Выше всего ставится совпадение в **переведенном** заголовке, затем в **английском** заголовке, затем в переведенных и английских **описаниях**.
+- Поиск не учитывает **надстрочные знаки (диакритику)** (поэтому *ů* совпадает с *u*, *é* совпадает с *e*) и **не различает заглавные и строчные буквы**.
+
+Поэтому руководство или сообщение на форуме на английском языке все равно приведет вас к нужной настройке, даже если телефон показывает все в переводе.
+
+---
+
+## Что охватывает поиск
+
+Результаты группируются по следующим категориям:
+
+- **Модули** — все модули, видимые в вашей сборке (те же, что перечислены в разделе [Конфигурация](../SettingUpAaps/ConfigBuilder.md)). В каждой строке модуля есть его **переключатель включения**, поэтому вы можете включить или отключить модуль прямо из результатов — нажатие на строку отключенного (переключаемого) модуля включает его.
+- **Диалоги** — экраны терапии/действий и управления (Мастер болюса, Инсулин, Пролонгированный болюс, Калибровка, Временная цель, Профиль, …). Экраны, которые не относятся к вашей сборке, не показываются (например, *Сопряжение с основным телефоном* на основном телефоне, *Авторизованные клиенты* на клиенте).
+- **Категории настроек** — **экраны** и подэкраны настроек, как встроенные (Общее, Внешний вид, Защита, Оповещения, Обслуживание, …), так и от модулей, а также небольшие группы настроек, доступные из диалогов (кнопки заполнения, шаги кнопок инсулина/углеводов, пороги индикаторов состояния, настройки мастера, …).
+- **Настройки** — каждый **отдельный параметр**, у которого есть название. Они отфильтрованы по вашей сборке/режиму, поэтому вы видите только настройки, которые действительно применимы (APS / NSClient / управление помпой).
+- **Документация** — страницы онлайн-**документации AndroidAPS** (см. ниже).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+Параметр, модуль которого сейчас **отключен**, все равно показывается — **серым** и без возможности нажать — с примечанием *«Модуль … отключен»*. Так вы видите, что настройка существует и какой модуль нужно включить, чтобы до нее добраться.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![Серая настройка отключенного модуля](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## Результаты из документации (онлайн)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+Пока идет локальный поиск, **AAPS** параллельно отправляет запрос в официальную **документацию AndroidAPS** (размещенную на ReadTheDocs). Подходящие страницы появляются внизу в группе **Документация**, каждая со значком 📖, названием раздела и коротким фрагментом текста:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![Результаты из документации (wiki) с фрагментами текста](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- Если документация переведена на язык вашего приложения, **AAPS** одновременно ищет в переведенных и в английских страницах. Сначала идут страницы на вашем языке, затем английские страницы, которые еще не были найдены.
+- Нажатие на результат из документации открывает эту страницу в вашем **браузере**.
+- Для поиска в документации нужен **интернет** — без подключения вы увидите вместо результатов примечание *«Для поиска в документации нужно подключение к интернету»*, а локальные результаты (в приложении) по-прежнему работают как обычно.
 
 ---
 
-## Power-user shortcuts
+## Как открыть результат
 
-Two special queries list a whole category at once:
+Нажмите на результат, чтобы сразу перейти к нему:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **Модуль** → открывает этот модуль.
+- **Диалог** → открывает этот экран или диалог.
+- **Категория настроек** → открывает этот экран настроек.
+- **Параметр** → открывает настройку **на ее месте** (переходит к ней на ее экране).
+- **Документация** → открывает страницу в вашем браузере.
+
+Открытие настроек и защищенных действий по-прежнему учитывает вашу **[защиту](#Preferences-protection)** (PIN/пароль), точно так же, как если бы вы перешли туда вручную. После действия с результатом можно нажать **Назад**, чтобы вернуться к результатам поиска.
+
+---
+
+## Быстрые приемы для опытных пользователей
+
+Два специальных запроса сразу показывают всю категорию:
+
+- `%PLUGINS%` — показать **все** модули.
+- `%DIALOGS%` — показать **все** диалоги/экраны действий.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+Поисковый индекс создается при первом поиске и потом хранится наготове. Он автоматически создается заново, когда вы **включаете/отключаете модуль** или **меняете язык приложения**, поэтому результаты всегда соответствуют вашей текущей настройке.
 ```
 
 ---
