@@ -19,7 +19,7 @@ Korisnici trebaju imati realna očekivanja o rezultatima koji se mogu postići k
 
 **Privremenom cilju** može trebati približno 30 minuta ili više da postigne željeni cilj **GUK-a**. **AAPS** ne može odmah postići cilj **GUK-a** i korisnici to trebaju imati na umu kada odabiru **privremeni cilj**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Prikazane vrijednosti su tvorničke zadane vrijednosti – [svaki predložak možete prilagoditi](#TempTargets-change-preset-defaults) svojim potrebama.
+Odjeljci ispod sažimaju značajke **privremenog cilja Aktivnost**, **privremenog cilja Prije obroka** i **privremenog cilja Hipo**. Prikazane vrijednosti su tvorničke zadane vrijednosti – [svaki predložak možete prilagoditi](#TempTargets-change-preset-defaults) svojim potrebama.
 
 ### TT – Aktivnost
 
@@ -42,7 +42,7 @@ Korisnici mogu razmotriti i:
 
 - *odabir* ovog **TT-a** 1–2 sata prije planirane tjelovježbe kako bi se osigurao manji aktivni inzulin (pravo vrijeme za ovaj TT razlikuje se od osobe do osobe); i
 - *odabir* privremenog profila (smanjenje) za vrijeme planirane aktivnosti, kako bi se osigurao manji **aktivni inzulin**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *osiguravanje* da se **TT** *isključi* kratko prije tjelovježbe, jer je **aktivni inzulin** već smanjen, a kod nekih korisnika **GUK** nakon tjelovježbe brzo raste.
 
 ### TT – Prije obroka
 
@@ -96,11 +96,11 @@ Odabirom kartice predloška njezin se **cilj** i **trajanje** učitavaju u uređ
 
     <br />### Aktiviranje privremenog cilja
     
-    Prijeđite prstom do željenog predloška (njegove se vrijednosti učitaju u uređivač), po želji u uređivaču prilagodite **cilj**/**trajanje**, a zatim dodirnite **▶ Aktiviraj**. A confirmation shows the exact target, duration and reason before anything starts:
+    Prijeđite prstom do željenog predloška (njegove se vrijednosti učitaju u uređivač), po želji u uređivaču prilagodite **cilj**/**trajanje**, a zatim dodirnite **▶ Aktiviraj**. Prije nego što išta započne, potvrda prikazuje točan cilj, trajanje i razlog:
     
     ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    Nakon što potvrdite, privremeni cilj počinje odmah (ili u odabrano vrijeme **Aktivacija**) i traje postavljeno **trajanje**.
     
     ```{admonition} Promjena brojeva vrijedi samo jednom – ne mijenja predložak
     :class: important
@@ -193,9 +193,9 @@ Ponekad, nakon što se pojedu ugljikohidrati za liječenje hipoglikemije, korisn
 
 Neki korisnici žele izbjeći davanje **SMB-ova** tijekom **privremenog cilja Hipo**. To se postiže isključivanjem *'Omogući SMB s visokim privremenim ciljem'* u **Postavke** → **OpenAPS SMB** (pogledajte niže):
 
-- Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Napredno, Cilj 9: korisnik može uključiti *„Visoki privremeni cilj povećava osjetljivost“* za **privremene ciljeve** od 100 mg/dL (5,6 mmol/L) ili više u OpenAPS SMB, tada će **AAPS** biti osjetljiviji.
 
-- Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Napredno, Cilj 9: korisnik može isključiti *„Omogući SMB s visokim privremenim ciljem“*, tako da čak i kada **AAPS** ima COB > 0, kada je uključeno „Omogući SMB s niskim privremenim ciljem“ ili „Uvijek omogući SMB“ i OpenAPS SMB aktivan, **AAPS** neće davati SMB-ove dok su aktivni visoki privremeni ciljevi.
 
 Napomena: ako otvorite **dijalog UH** dok vam je glukoza u krvi niža od 72 mg/dL ili 4 mmol/L, **AAPS** automatski unaprijed odabere prekidač **Pokreni Hipo TT**.
 
@@ -209,7 +209,7 @@ Kako bi pojednostavio **privremeni cilj Aktivnost**, korisnik može konfigurirat
 
 Novi korisnici **AAPS-a** možda će morati eksperimentirati i prilagoditi zadane postavke **privremenog cilja Aktivnost** kako bi im ova značajka radila najbolje. Svatko je drukčiji kada je riječ o postizanju stabilne kontrole GUK-a tijekom tjelovježbe. Pogledajte i [odjeljak o sportu u čestim pitanjima](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Oboje možete pokrenuti u jednom koraku: dodirnite naziv profila na glavnom zaslonu, dodirnite okrugli gumb **▶**, postavite **Postotak** ispod 100 % i **Trajanje**, a zatim uključite **Privremeni cilj / Aktivnost**. Pogledajte [Promjena postotka profila](#ProfileSwitch-change-percentage).
+Neki korisnici prije i tijekom **privremenog cilja Aktivnost** radije aktiviraju i **zamjenu profila** (smanjenje profila < 100 %, kako bi **AAPS** isporučivao manje inzulina). Oboje možete pokrenuti u jednom koraku: dodirnite naziv profila na glavnom zaslonu, dodirnite okrugli gumb **▶**, postavite **Postotak** ispod 100 % i **Trajanje**, a zatim uključite **Privremeni cilj / Aktivnost**. Pogledajte [Promjena postotka profila](#ProfileSwitch-change-percentage).
 
 Napredno, Cilj 9: korisnici mogu uključiti *'Visoki privremeni cilj povećava osjetljivost'* za **privremene ciljeve** od 100 mg/dL (5,6 mmol/L) ili više u OpenAPS **SMB**. Cilj od 99 mg/dL (5,5 mmol/L) je normalan cilj, ni visok ni nizak. Tada je **AAPS** osjetljiviji.
 
@@ -219,9 +219,9 @@ Osim toga, ako je *'Omogući SMB s visokim privremenim ciljem'* isključeno, **A
 
 ## Privremeni cilj Prije obroka
 
-**Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Privremeni cilj Prije obroka** može pomoći da se **GUK** blago spusti i da prije jela bude dovoljno **aktivnog inzulina**.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
+To može biti važan alat za korisnike koji ne daju bolus unaprijed (pre-bolus). Ipak, učinkovitost **privremenog cilja Prije obroka** ovisi o nizu čimbenika, uključujući: korisnikove postavke, jede li korisnik hranu s malo ugljikohidrata i koristi li brzodjelujući inzulin (npr. Fiasp ili Lyumjev) kako ne bi morao davati bolus unaprijed. Dok korisnici ne steknu iskustvo s **AAPS-om**, obično trebaju računati na davanje bolusa unaprijed kada koriste **privremeni cilj Prije obroka**, osobito ako jedu hranu s puno ugljikohidrata.
 
 Više o „načinu Prije obroka“ (Eating soon mode) možete pročitati u članku ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ili [ovdje](https://diyps.org/tag/eating-soon-mode/).
 
