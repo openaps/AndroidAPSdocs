@@ -12,7 +12,7 @@
 
 ### Сборка через браузер (рекомендуется)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Вы можете собрать приложение в веб-браузере с помощью GitHub Actions. С телефона Android вас проведет по всем шагам [страница настройки AAPS Builder](#aaps-builder), а каждую сборку вы запускаете сами. С компьютера или iPhone вы также можете собрать приложение через fork и сохранить его в своем Google Диске.
 
 **[Follow these instructions.](./BrowserBuild.md)**
 
@@ -35,16 +35,16 @@ You can build the app in a web browser using GitHub Actions. From an Android pho
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Если сборка не удалась
 
-Each build method has its own troubleshooting section:
+Для каждого способа сборки есть свой раздел устранения неполадок:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Устранение неполадок AAPS Builder](#aaps-builder-troubleshooting)
+* **Сборка через браузер** с компьютера или iPhone: [Сборка через браузер: устранение неполадок](#aaps-ci-troubleshooting)
+* **Android Studio**: [Устранение неполадок Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Потеряли хранилище ключей или его пароль? См. [Переустановка AAPS с новым хранилищем ключей](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Если приложение собрано, но не устанавливается на телефон, см. [Перенос и установка AAPS на смартфон](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Если вашей проблемы нет в списке, см. [Где получить помощь?](../GettingHelp/WhereCanIGetHelp.md)
