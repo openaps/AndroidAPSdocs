@@ -1,6 +1,6 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
 
-# Troubleshooting Android Studio
+# Rješavanje problema s Android Studiom
 
 ```{contents} List of common issues
 :depth: 2
@@ -8,119 +8,119 @@
 ```
 
 (troubleshooting_androidstudio-lost-keystore)=
-## Lost keystore
-If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+## Izgubljeno spremište ključeva
+Ako ste izgubili spremište ključeva ili njegovu lozinku, APK potpisan novim spremištem ključeva ne može ažurirati vaš trenutni **AAPS**: morate ga deinstalirati i ponovno instalirati. Pogledajte [Ponovna instalacija AAPS-a s novim spremištem ključeva](#reinstall-aaps).
 
-## Gradle Sync failed
-Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+## Gradle Sync nije uspio
+Gradle Sync može ne uspjeti iz raznih razloga. Kada dobijete poruku „gradle sync failed“, otvorite karticu „Build“ (1) na dnu Android Studija i provjerite koja je poruka o pogrešci (2) prikazana.
 
-![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Gradle nije uspio](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 ```{contents} Likely reasons for gradle sync failures are:
 :depth: 1
 :local: true
 ```
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Važno*: Nakon što slijedite upute za svoj problem, morate ponovno pokrenuti [Gradle Sync](#gradle-resync).
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Uncommitted changes
+### Nepotvrđene promjene (uncommitted changes)
 
-If you receive a failure message like this one:
+Ako dobijete poruku o pogrešci poput ove:
 
-![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle – nepotvrđene promjene](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
 There are uncommitted changes.
-Clone sources again as described in wiki and do not allow gradle update
+Ponovno klonirajte izvorni kod kako je opisano u wikiju i ne dopustite ažuriranje Gradlea
 ```
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
+#### Korak 1 – Provjerite instalaciju Gita
+  * Otvorite karticu Terminal (1) na dnu Android Studija, kopirajte sljedeći tekst i zalijepite ga ili upišite u terminal (2).
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Gradle – verzija Gita](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between Git and version!
+    Napomena: između „git“ i „version“ nalaze se razmak i dvije crtice!
 
-  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * Morate dobiti poruku o tome koja je verzija Gita instalirana, kao što vidite na gornjoj snimci zaslona. U tom slučaju idite na [Korak 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
   * In case you get a message saying
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    vaša instalacija Gita nije ispravna.
 
-  * [Check git installation](#BuildingAaps-steps-for-installing-git)
+  * [Provjera instalacije Gita](#BuildingAaps-steps-for-installing-git)
 
   * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
   * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
 
-  * Search your computer for a file "git.exe".
+  * Na računalu potražite datoteku „git.exe“.
 
-    Note for yourself, which directory it is saved in.
+    Zapišite si u kojoj je mapi spremljena.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Dodajte mapu u kojoj ste pronašli svoju instalaciju Gita.
 
-  * Save and close.
+  * Spremite i zatvorite.
 
-  * Restart Android Studio.
+  * Ponovno pokrenite Android Studio.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### Step 2: Check for uncommitted changes.
+#### Korak 2: Provjerite postoje li nepotvrđene promjene.
 
-  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
+  * U Android Studiju otvorite karticu „Commit“ (1) na lijevoj strani. ![Kartica Commit: nepotvrđene promjene](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Vidjet ćete ili „Changes“ (u starijim verzijama Android Studija „Default changeset“) (2) ili „Unversioned Files“ (3):
 
-    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * Kod „Changes“ ste vjerojatno ažurirali „Gradle“ ili greškom promijenili sadržaj nekih datoteka.
 
-    * Right click on "Changes" and select "Rollback…" (1)
+    * Desnom tipkom miša kliknite na „Changes“ i odaberite „Rollback…“ (1)
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Kartica Commit: poništavanje promjena (Rollback)](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * Datoteke se ponovno preuzimaju s Git poslužitelja. Ako na kartici Commit nema drugih promjena, idite na [Korak 3](#gradle-resync).
 
-  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
+  * Ako vidite „Unversioned Files“, možda ste greškom spremili datoteke u mapu izvornog koda. Možda su to važne datoteke, npr. vaša datoteka spremišta ključeva, koje treba premjestiti negdje drugdje. Ako ne znate što su te datoteke i niste ih sami izradili, možete ih izbrisati.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a safe place.
+    * Pomoću uobičajenog preglednika datoteka na računalu premjestite tu datoteku (ili je izrežite i zalijepite) na sigurno mjesto.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the **AAPS** directory anymore.
+    * Vratite se u Android Studio i kliknite gumb Refresh (4) na kartici Commit da provjerite da datoteka više nije spremljena u mapi **AAPS-a**.
 
-      If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
+      Ako na kartici Commit nema drugih promjena, idite na [Korak 3](#gradle-resync).
 
 
-#### Step 3: Resync Gradle (again)
+#### Korak 3: Ponovno sinkronizirajte Gradle
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Slijedite upute u odjeljku [Ponovna sinkronizacija Gradlea](#gradle-resync).
 
-### Git Pull Failed - Please tell me who you are
+### Git Pull Failed – Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Ako vidite ovu poruku, Git traži da se predstavite.
 
-![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+![Identifikacija u Gitu](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+Otvorite terminal i upišite sljedeće dvije naredbe, jednu za drugom.
 
 ```
 git config --global user.name "Your name here"
 git config --global user.email your.email@here.com
 ```
 
-Your name needs to be written between quotation marks.
+Vaše ime mora biti napisano između navodnika.
 
-![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
+![Rješenje za identifikaciju u Gitu](../images/studioTroubleshooting/164_Git_Identify2.png)
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
-### Incompatible Gradle JVM
+### Nekompatibilni Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+![Nekompatibilni Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
 ```
 Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
@@ -133,7 +133,7 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+Ili:
 
 ```
 Cause: error: invalid source release: 21
@@ -141,139 +141,139 @@ Cause: error: invalid source release: 21
 
 If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
 
-1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
+1.  U [tablici zahtjeva](#Building-APK-recommended-specification-of-computer-for-building-apk-file) provjerite koja vam je verzija JVM-a potrebna za verziju **AAPS-a** koju izrađujete i zapišite je.
 
-2. Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+2. Otvorite prikaz Gradle klikom na slona (1) na desnoj strani Android Studija, otvorite postavke (2) i odaberite **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![Otvaranje postavki Gradlea](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select **Download JDK** (2).
+3.  U polju **Gradle JDK** provjerite je li odabrana odgovarajuća verzija (1). Ako nije, kliknite na polje i pogledajte je li već dostupna na popisu. Primjer u nastavku pokazuje da je JVM 21 označen kao „jbr-21“. Ako ga pronađete, samo ga odaberite i gotovi ste. Ako nije dostupna, odaberite **Download JDK** (2).
 
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![Odabir opcije Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. Click **Download** (4).
+4. U polju Version (1) odaberite JDK potreban za vašu verziju **AAPS-a** (onu koju ste zapisali kada ste provjerili tablicu zahtjeva). U polju Vendor (2) odaberite bilo kojeg proizvođača. Location (3): ne mijenjajte. Kliknite **Download** (4).
 
-![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+![Odabir JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
-5.  Close the **Settings** dialog with **OK**.
-6. You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+5.  Zatvorite dijalog **Settings** s **OK**.
+6. Sada morate ponovno pokrenuti Gradle Sync. Slijedite upute u odjeljku [Ponovna sinkronizacija Gradlea](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
-### Incompatible version of Android Gradle plugin
+### Nekompatibilna verzija dodatka Android Gradle
 
-  If you experience the following error message
+  Ako dobijete sljedeću poruku o pogrešci
 
 `The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![Nekompatibilna verzija dodatka Android Gradle](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  Koristite zastarjelu verziju Android Studija. U izborniku idite na Help > Check for updates i instalirajte sva pronađena ažuriranja Android Studija i njegovih dodataka.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
-### Could not resolve/No cached version
+### Could not resolve / No cached version
 
-  You might get this error message:
+  Možda ćete dobiti ovu poruku o pogrešci:
 
 ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * Na desnoj strani otvorite karticu Gradle (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    Provjerite da gumb prikazan pod (2) *NIJE* odabran.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Gradle izvanmrežni način rada](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Sada morate pokrenuti [ponovnu sinkronizaciju Gradlea](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
+  Ako vidite poruku o pogrešci kao što je ova u nastavku, vjerojatno koristite 32-bitni sustav Windows 10. Android Studio 3.5.1 i noviji to ne podržavaju i, nažalost, programeri **AAPS-a** tu ne mogu ništa učiniti!
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Na internetu postoje informacije o tome kako utvrditi imate li 32-bitni ili 64-bitni operacijski sustav – npr. [ova stranica](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
+  ![Snimka zaslona: Unable to start daemon process](../images/studioTroubleshooting/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
-### Gradle Resync
+### Ponovna sinkronizacija Gradlea
 
-  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Ako i dalje vidite poruku da gradle sync nije uspio, sada kliknite poveznicu **Try again** (1). ![Gradle Sync nije uspio](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  If you don't see the message anymore, you can still trigger this manually:
+  Ako više ne vidite poruku, sinkronizaciju i dalje možete pokrenuti ručno:
 
-  * Open the Gradle tab (1) on the right border of Android Studio.
+  * Otvorite karticu Gradle (1) na desnom rubu Android Studija.
 
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+    ![Ponovno učitavanje Gradlea](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AAPS (2)
+  * Desnom tipkom miša kliknite na AAPS (2)
 
-  * Click on "Reload Gradle Project" (3)
+  * Kliknite na „Reload Gradle Project“ (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## Generate Signed APK uspješno je izradio 0 varijanti izrade (build variants)
 
 When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+![APK izrađen s 0 varijanti izrade](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory for your selected "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
-
-
-## App was created with compiler/kotlin warnings
-
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
-
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
-
-Your apk was built successfully and can be transferred to your phone!
+To je lažno upozorenje. Provjerite mapu koju ste odabrali kao „Destination folder“ za izradu (korak [Generate Signed APK](#Building-APK-generate-signed-apk)) i tamo ćete pronaći izrađeni APK!
 
 
-## No CGM data is received by AAPS
+## Aplikacija je izrađena s upozorenjima prevoditelja/Kotlina
 
-* If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+Ako je izrada uspješno završena, ali dobivate upozorenja prevoditelja (compiler) ili Kotlina (označena žutim ili plavim uskličnikom), ta upozorenja možete jednostavno zanemariti.
 
-* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
+ ![Gradle je završio s upozorenjima](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+
+Vaš APK je uspješno izrađen i može se prenijeti na telefon!
 
 
-## Apk not installed
+## AAPS ne prima podatke CGM-a
+
+* Ako koristite zakrpanu (patched) aplikaciju Dexcom G6: ta je aplikacija zastarjela. Umjesto toga koristite aplikaciju [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+
+* Ako koristite xDrip: identificirajte prijamnik kako je opisano na stranici [Postavke xDripa](#xdrip-identify-receiver).
+
+
+## APK nije instaliran
 
 ![phone app not installed](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
-* If "App not installed" is displayed on your phone follow these steps:
+* Provjerite jeste li datoteku „app-full-release.apk“ prenijeli na telefon.
+* Ova pogreška obično znači da je novi APK potpisan drugim spremištem ključeva nego vaš instalirani **AAPS**. Ako još imate svoje prethodno spremište ključeva, odaberite ga i ponovno pokrenite izradu. Inače pogledajte [Ponovna instalacija AAPS-a s novim spremištem ključeva](#reinstall-aaps).
+* Ako se na telefonu prikaže „Aplikacija nije instalirana“, slijedite ove korake:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
-2. Uninstall **AAPS** on your phone.
-3. Enable airplane mode & turn off Bluetooth.
-4. Install new version (“app-full-release.apk”)
-5. [Import settings](../Maintenance/ExportImportSettings.md)
-6. Turn Bluetooth back on and disable airplane mode
+1. [Izvezite postavke](../Maintenance/ExportImportSettings.md) (u verziji AAPS-a koja je već instalirana na vašem telefonu)
+2. Deinstalirajte **AAPS** s telefona.
+3. Uključite način rada u zrakoplovu i isključite Bluetooth.
+4. Instalirajte novu verziju („app-full-release.apk“)
+5. [Uvezite postavke](../Maintenance/ExportImportSettings.md)
+6. Ponovno uključite Bluetooth i isključite način rada u zrakoplovu
 
-## Apk installed but old version
+## APK je instaliran, ali je verzija stara
 
 If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
-## None of the above worked
+## Ništa od navedenoga nije pomoglo
 
-If none of the above tips helped you might consider building the apk from scratch:
+Ako vam nijedan od gornjih savjeta nije pomogao, možete razmisliti o izradi APK-a ispočetka:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [Izvezite postavke](../Maintenance/ExportImportSettings.md) (u verziji AAPS-a koja je već instalirana na vašem telefonu)
 
-2. Have your key password and key store password ready.
+2. Pripremite lozinku ključa i lozinku spremišta ključeva.
 
-    Or you just use a new keystore.
+    Ili jednostavno koristite novo spremište ključeva.
 
-3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
+3. Izradite APK ispočetka kako je opisano [ovdje](#Building-APK-download-AAPS-code).
 
-4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+4. Kada uspješno izradite APK, izbrišite postojeći APK na telefonu, prenesite novi APK na telefon i instalirajte ga.
+5. Ponovno [uvezite postavke](../Maintenance/ExportImportSettings.md) da vratite svoje ciljeve i postavke.
+6. Provjerite opcije optimizacije baterije i ponovno ih isključite.
 
-## Worst case scenario
+## Najgori slučaj
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+Ako navedeno ne riješi vaš problem s izradom, možete pokušati potpuno deinstalirati Android Studio i sve ponovno izraditi ispočetka.  Nekim korisnicima to riješi problem s izradom.  Kada brišete Android Studio, nemojte brisati korisničke postavke Androida i **obavezno deinstalirajte sve datoteke povezane s Android Studiom.** Ako Android Studio ne uklonite potpuno, sa svim skrivenim datotekama, deinstalacija može izazvati nove probleme umjesto da riješi postojeće. Upute za potpuno uklanjanje možete pronaći na internetu, npr.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+Instalirajte Android Studio ispočetka kako je opisano [ovdje](#Building-APK-install-android-studio).
