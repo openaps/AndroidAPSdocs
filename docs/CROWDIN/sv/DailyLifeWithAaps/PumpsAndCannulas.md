@@ -4,7 +4,7 @@
 
 Stegen nedan gäller bara pumpar med slang och inte pod-pumpar som Omnipod, Medtrum Nano, Accu-Chek Solo osv. Detta kallas ibland för ett ”setbyte”. Ett ”fullständigt” setbyte omfattar både insulinreservoaren och kanylen, och ett ”partiellt” setbyte betyder att bara kanylen byts.
 
-Pod-pumpar fyller och förfyller sig själva i sin egen aktiveringsguide, och deras kanyl sitter redan i kroppen. **AAPS** erbjuder ingen förfyllning för dem: **Förfyllning** visas inte i panelen **Hantera** eller i Snabbstart. Se sidan om din pump under [Kompatibla pumpar](../Getting-Started/CompatiblePumps.md).
+Pod-pumpar fyller och förfyller sig själva i sin egen aktiveringsguide, och deras kanyl sitter redan i kroppen. **AAPS** erbjuder ingen förfyllning för dem: **Förfyllning** visas inte i panelen **Hantera** eller i Snabbstart. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Se sidan om din pump under [Kompatibla pumpar](../Getting-Started/CompatiblePumps.md).
 
 Du kan inte byta reservoar/ampull i **AAPS**. Det måste du göra direkt på pumpen. När bytet är klart måste du logga det manuellt i **AAPS**.
 
@@ -31,6 +31,7 @@ Du kan inte byta reservoar/ampull i **AAPS**. Det måste du göra direkt på pum
 * Du kan ställa in/ändra standardmängderna för förfyllning i inställningarna för **Förfyllning**. Skriv ”prime” i sökfältet på huvudskärmen för att öppna dem (se [Inställningar](../SettingUpAaps/Preferences.md)). Läs i bruksanvisningen i kanylförpackningen hur många enheter som ska användas för att förfylla din kanyl (det beror på nålens och slangens längd).
 
 * Insulin som levereras med förfyllningsfunktionen räknas inte med av **AAPS** när aktivt insulin (IOB) beräknas, och det markeras som ”Förfyllning” i [Behandlingshistorik](#aaps-screens-treatments).
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * Insulin som ges som bolus från pumpen medan pumpen är frånkopplad räknas inte heller med av **AAPS**. Om du råkar ge en bolus direkt från pumpen medan **AAPS** är frånkopplad kan du, när du har anslutit pumpen igen, registrera detta insulin (utan att ge det som bolus) i dialogrutan **Insulin** (se [Registrera levererat insulin utan att ge bolus](#pumps-cannulas-announce-insulin) nedan).
 
