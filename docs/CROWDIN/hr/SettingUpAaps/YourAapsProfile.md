@@ -21,7 +21,7 @@ Za smjernice možete koristiti [Autotune](https://autotuneweb.azurewebsites.net/
 :class: note
 **Profili** se jako razlikuju od osobe do osobe.
 
-Za bazalne stope (BR), faktore osjetljivosti na inzulin (ISF) i omjere inzulina i ugljikohidrata (IC ili ICR) apsolutne vrijednosti i trendovi potrebe za inzulinom jako se razlikuju od osobe do osobe, ovisno o vašoj biologiji, spolu, dobi, tjelesnoj kondiciji itd., kao i o kratkoročnim čimbenicima poput bolesti i nedavne tjelovježbe. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Za bazalne stope (BR), faktore osjetljivosti na inzulin (ISF) i omjere inzulina i ugljikohidrata (IC ili ICR) apsolutne vrijednosti i trendovi potrebe za inzulinom jako se razlikuju od osobe do osobe, ovisno o vašoj biologiji, spolu, dobi, tjelesnoj kondiciji itd., kao i o kratkoročnim čimbenicima poput bolesti i nedavne tjelovježbe. Za više savjeta o tome izvrsno je štivo knjiga [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) autora Adama Browna.
 
 ```
 
@@ -91,7 +91,7 @@ Suprotno tome, preniska bazalna stopa može dovesti do visokih vrijednosti GUK-a
 
 ![Bazalne stope](../images/v4/Profiles/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Ispravne bazalne stope postavljaju se metodom pokušaja i pogrešaka, i to treba raditi uz savjet vašeg dijabetološkog tima.
 
 Postoje metode testiranja bazala koje obično uključuju praćenje bazalnih stopa i potrebe za inzulinom tijekom <u>povremenog</u> posta u razdoblju od 24 sata. Iako bazalne stope trebate testirati za cijeli dan, ne preporučuje se postiti 24 sata zaredom. Razlog je to što tijelo tada pokreće mehanizme, npr. hormone, kako bi to nadoknadilo. Preporučeni način je postiti 3 različita dana po 8 sati.
 
@@ -131,17 +131,17 @@ Faktor osjetljivosti na inzulin (ponekad se zove korekcijski faktor) pokazuje ko
 
 **U jedinicama mmol/L:** Ako imate **ISF** 1,5, svaka jedinica inzulina snizit će vaš GUK za oko 1,5 mmol/L (na primjer s 8 mmol/L na 6,5 mmol/L).
 
-Iz ovih primjera vidite da što je vrijednost **ISF** _manja_, to ste manje osjetljivi na inzulin. Dakle, ako smanjite ISF s 40 na 35 (mg/dL) ili s 1,5 na 1,3 (mmol/L), to se često zove jačanje vašeg **ISF-a**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Iz ovih primjera vidite da što je vrijednost **ISF** _manja_, to ste manje osjetljivi na inzulin. Dakle, ako smanjite ISF s 40 na 35 (mg/dL) ili s 1,5 na 1,3 (mmol/L), to se često zove jačanje vašeg **ISF-a**. Suprotno tome, povećanje vrijednosti **ISF** s 40 na 45 (mg/dL) ili s 1,5 na 1,8 (mmol/L) slabi vaš **ISF**.
 
 ### Učinak
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. To dovodi do agresivnije / jače korekcije petlje s **više inzulina**. Ako je vaš **ISF** prejak (mala vrijednost), to može dovesti do niskog **GUK-a**.
+**Niži / jači ISF** (npr. 40 umjesto 50) znači da inzulin po jedinici manje snižava vaš **GUK**. To dovodi do agresivnije / jače korekcije petlje s **više inzulina**. Ako je vaš **ISF** prejak (mala vrijednost), to može dovesti do niskog **GUK-a**.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. To dovodi do manje agresivne / slabije korekcije petlje s **manje inzulina**. Ako je vaš **ISF** preslab (velika vrijednost), to može dovesti do visokog **GUK-a**.
+**Viši / slabiji ISF** (npr. 45 umjesto 35) znači da inzulin po jedinici više snižava vaš **GUK**. To dovodi do manje agresivne / slabije korekcije petlje s **manje inzulina**. Ako je vaš **ISF** preslab (velika vrijednost), to može dovesti do visokog **GUK-a**.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+**Primjer:**
+* **GUK** je 190 mg/dL (10,5 mmol/L), a ciljna vrijednost 100 mg/dL (5,6 mmol/L).
+* Dakle, trebate korekciju od `190 - 100 = 90 mg/dL` ili `10.5 - 5.6 = 4.9 mmol/L`
 * Ako je `ISF = 30` -> `90 / 30 = 3` ili `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 jedinice inzulina
 * Ako je `ISF = 45` -> `90 / 45 = 2` ili `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 jedinice inzulina
 
@@ -193,7 +193,7 @@ Uobičajeno je imati različit **ICR** u različito doba dana zbog razine hormon
 > 
 > Kod korištenja **ICR** količina inzulina je fiksna, a količina ugljikohidrata promjenjiva. („Koliko grama ugljikohidrata pokriva jedna jedinica inzulina?“)
 > 
-> Example:
+> Primjer:
 > 
 > Faktor krušne jedinice (KJ = 12 g ugljikohidrata): 2,4 J/KJ -> Trebate 2,4 jedinice inzulina kada pojedete jednu krušnu jedinicu.
 > 
@@ -201,7 +201,7 @@ Uobičajeno je imati različit **ICR** u različito doba dana zbog razine hormon
 > 
 > Faktor KJ 2,4 J / 12 g   ===>   IC = 12 g / 2,4 J = 5,0 g/J
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Tablice za pretvorbu dostupne su na internetu, npr. [ovdje](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Učinak
 
@@ -300,7 +300,7 @@ Pomoćnik profila nudi skupove podataka dviju različitih bolnica za djecu, kako
 4. Prijeđite na karticu **Profil 2**.
 5. Pritisnite **Vrsta profila** i odaberite „DPV zadani profil“.
 6. Prilagodite DPV zadani profil (temeljen na skupu podataka druge bolnice) unosom dobi djeteta, ukupnog TDD-a i postotka bazala. Imajte na umu da skup podataka DPV daje samo **bazalne stope**, pa su IC i ISF za ovaj profil prikazani kao nula.
-7. Open the **Comparison** tab. Prikazat će se usporedba dvaju prilagođenih profila (pogledajte snimku zaslona ispod).
+7. Otvorite karticu **Usporedba**. Prikazat će se usporedba dvaju prilagođenih profila (pogledajte snimku zaslona ispod).
 8. Ako želite početi podešavati svoj profil na temelju jednog od ovih prijedloga, koristite gumb **Kloniraj** na dnu usporedbe.
 
 ![Pomoćnik profila za djecu 2](../images/v4/Profiles/ProfileHelperKids2.png)
@@ -350,6 +350,6 @@ Za to je, međutim, važno u uređivaču Nightscouta klonirati cijeli **zapis u 
 4. Prijeđite na karticu **Profil 2**.
 5. U **Vrsta profila** odaberite „Zamjena profila“ kako biste birali iz povijesti svih svojih **Zamjena profila**.
 6. Odaberite **Zamjenu profila** s kojom želite usporediti.
-7. Open the **Comparison** tab. Prikazat će se usporedba dvaju profila (pogledajte snimku zaslona ispod).
+7. Otvorite karticu **Usporedba**. Prikazat će se usporedba dvaju profila (pogledajte snimku zaslona ispod).
 
 ![Pomoćnik profila 2](../images/v4/Profiles/ProfileHelper2.png)
