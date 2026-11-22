@@ -124,7 +124,7 @@ Devam senaryosu olmayan bir senaryo yalnızca onay ister:
 
 ![Senaryoyu sonlandır iletişim kutusu](../images/v4/Scenes/scene_end_dialog.png)
 
-Bir senaryoyu sonlandırmak, senaryonun yaptığı değişiklikleri **geri alır** (örneğin başlattığı profil değişimini ve geçici hedefi). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Bir senaryoyu sonlandırmak, senaryonun yaptığı değişiklikleri **geri alır** (örneğin başlattığı profil değişimini ve geçici hedefi). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Bir senaryo etkinken, ana ekrandaki profil ve hedef, onları senaryo ayarladıysa küçük bir senaryo simgesi taşır. Alt gezinme çubuğunun **Senaryolar** paneli, başka bir senaryo başlatmak için kullanılabilir kalır:
 
