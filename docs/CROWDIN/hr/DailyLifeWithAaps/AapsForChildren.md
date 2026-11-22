@@ -1,31 +1,31 @@
-# AAPS for children
+# AAPS za djecu
 
-**AAPS** can be used successfully with type 1 kids as well. However, there are some things to consider.
+**AAPS** se može uspješno koristiti i kod djece s dijabetesom tipa 1. Ipak, treba uzeti u obzir neke stvari.
 
-## Things to consider
+## Na što treba misliti
 
-### Initial Profile
+### Početni profil
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, ISF, I:C...) and [insulin type](#Config-Builder-insulin-dia) (DIA) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, ISF and DIA. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.
+Postavljanje ispravnog [**profila**](../SettingUpAaps/YourAapsProfile.md) (bazalna stopa, ISF, IC...) i [vrste inzulina](#Config-Builder-insulin-dia) (DIA) može biti teško kod djece s tipom 1, posebno kad je u igri hormon rasta. Uzmite si vremena za testiranje i budite sigurni da ste zadovoljni djetetovim bazalom, IC-om, ISF-om i DIA-om. Testirajte ih u stvarnom životu dok je dijete pored vas, prije nego što počnete s daljinskim nadzorom i daljinskim liječenjem. Vikendi ili školski praznici mogu biti dobro vrijeme za to.
 
-### Monitor and adjust your child’s Profile where necessary
+### Pratite i po potrebi prilagodite djetetov profil
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+Kako dijete raste, bit će potrebne prilagodbe **profila**, kako bi odgovarale zahtjevima i potrebama djetetova tijela. Međutim, taj problem postoji kod sve djece s tipom 1, uključujući i onu koja koriste druge pumpe ili injekcije.
 
-### Keeping the phone in range
+### Telefon u dometu
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good Bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+Razmislite kako ćete djetetov telefon držati u dometu njegove pumpe i **CGM-a**. To može biti teško kod djece koja su premlada da bi bila odgovorna za telefon. Treba odabrati telefon za **AAPS** s dobrim dometom Bluetooth veze i naći udoban način na koji dijete može nositi pumpu i telefon. Postoje mnoga rješenja, npr. pojasevi za inzulinsku pumpu s mjestom i za telefon ili remenje koje se nosi kao ruksak.
 
-### How to protect your child’s AAPS from being misused?
+### Kako zaštititi djetetov AAPS od zlouporabe?
 
-There are several protection settings available in **AAPS** to prevent the child or a stranger from misusing **AAPS**. See [Settings → Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+U **AAPS-u** postoji nekoliko postavki zaštite koje sprječavaju da dijete ili netko stran zloupotrijebi **AAPS**. Pogledajte [Postavke → Zaštita](#Preferences-protection) da biste dodali zaštitu lozinkom ili biometrijom za boluse, promjene postavki ili čak za sam **AAPS**.
 
-## Remote monitoring and remote control
+## Daljinski nadzor i daljinsko upravljanje
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+Daljinski nadzor je ključna funkcija kad se **AAPS** koristi za djecu. Pogledajte poseban odjeljak [Daljinski nadzor](../RemoteFeatures/RemoteMonitoring.md) da biste istražili moguće opcije.
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.
+Daljinski nadzor i liječenje mogu biti od velike koristi roditeljima djeteta s tipom 1, posebno kad dijete ide u vrtić i osnovnu školu. No pobrinite se da učitelji i odgajatelji znaju djetetov plan liječenja.
 
-Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher "follow" phone.
+Razradite kako će se daljinsko upravljanje uklopiti u postojeći plan i kako će ga poboljšati. Mnogim roditeljima pomaže zaseban kanal komunikacije s osobama koje čuvaju dijete, na primjer jeftin mali telefon za učitelja kojim „prati“ dijete.
 
-Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+Primjeri planova skrbi u školi mogu se naći u [odjeljku s datotekama grupe AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) na Facebooku. 
