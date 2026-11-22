@@ -111,6 +111,8 @@ V **AAPS** v4 je inzulín označený ako **AKTÍVNY** v **Spravovať → Nastave
 
 Pri aktualizácii **AAPS** ponechá inzulín a DIA, ktoré už boli uložené v prepnutiach profilu z v3. Ak nájde staršie záznamy, pri ktorých je inzulín známy, ale DIA nie, použije pre ne predvolenú DIA a raz zobrazí správu, napríklad *Staršie záznamy neobsahovali dobu účinku inzulínu, preto sa pre inzulín Lyumjev použila hodnota 9,0 hodín. Skontrolujte nastavenia inzulínu — už migrované záznamy sa dodatočne neaktualizujú.* Keď túto správu uvidíte, skontrolujte nastavenia inzulínu.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 Ak chcete zmeniť DIA alebo vrchol, pridajte nový inzulín tlačidlom **+**, upravte ho, uložte ho a **▶ Aktivujte** ho. Pozrite [Zmena používaného inzulínu](#Config-Builder-insulin-change-active).
