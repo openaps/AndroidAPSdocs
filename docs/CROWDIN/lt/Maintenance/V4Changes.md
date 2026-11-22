@@ -111,6 +111,8 @@ Jei jums nereikia apsaugoti nustatymų, nustatymų apsaugą galite išjungti ski
 
 Kai atnaujinate programėlę, **AAPS** išsaugo insuliną ir IVT, kuriuos jau įrašė jūsų v3 profilio keitimai. Jei randa senesnių įrašų, kuriuose insulinas žinomas, bet IVT ne, jiems naudoja numatytąją IVT ir vieną kartą parodo pranešimą, pavyzdžiui, *Senesniuose įrašuose nebuvo nurodyta insulino veikimo trukmė, todėl 9,0 val. trukmė buvo pritaikyta Lyumjev. Patikrinkite insulino nustatymus – jau perkelti įrašai vėliau neatnaujinami.* Pamatę šį pranešimą, patikrinkite insulino nustatymus.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 Norėdami pakeisti IVT arba piką, pridėkite naują insuliną mygtuku **+**, nustatykite jį, išsaugokite ir **▶ Aktyvuokite**. Žr. [Naudojamo insulino keitimas](#Config-Builder-insulin-change-active).
