@@ -182,7 +182,7 @@ Kada završite, pritisnite „**SLJEDEĆI**“ za prijelaz na sljedeći zaslon.
 
 Ovaj se zaslon prikazuje samo kada **AAPS** u mapi **AAPS** pronađe ranije izvezene postavke („Pronađene su spremljene postavke“), na primjer kada ponovno instalirate aplikaciju ili prelazite na novi telefon.
 
-- Za vraćanje prethodne konfiguracije pritisnite „**Uvezi postavke**“ — pogledajte [Izrada i vraćanje sigurnosnih kopija](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Za početak s novom konfiguracijom pritisnite „**SLJEDEĆI**“ i nastavite s Čarobnjakom.
 
 ![Uvezite postavke](../images/setup-wizard/Wizard-ImportSettings.png)
