@@ -6,7 +6,7 @@ Svaka verzija AAPS-a može imati datum završetka. Nakon tog datuma AAPS može [
 
 ## Kako koristiti ovu stranicu
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. Tamo ćete vidjeti svoju verziju AAPS-a.
+1. U AAPS-u otvorite **izbornik** (☰) gore lijevo i odaberite **O aplikaciji**. Tamo ćete vidjeti svoju verziju AAPS-a.
 2. Pronađite istu verziju u prvoj tablici ispod. Pročitajte datum završetka pokraj nje. Datumi su napisani kao **godina-mjesec-dan**. Na primjer, `2026-10-30` znači 30. listopada 2026.
 3. Prije ažuriranja pročitajte [Bilješke o izdanju](ReleaseNotes.md) i [vodič za ažuriranje](UpdateToNewVersion.md). Verzija koju možete koristiti ovisi i o verziji Androida na vašem telefonu.
 
@@ -30,7 +30,7 @@ Tablica ne prikazuje datum završetka za svaku verziju AAPS-a. Ako vaše verzije
 
 Android svakoj verziji sustava daje **razinu API-ja**. To je broj koji koriste aplikacije. Na primjer, razina API-ja 30 je Android 11. Tablica ispod koristi razine API-ja iz podataka o verzijama AAPS-a. Verzija AAPS-a u svakom retku je vrijednost navedena za prikazanu razinu API-ja. Ovo nije potpuni popis verzija koje možete instalirati.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Za odabir verzije AAPS-a za vaš telefon koristite [upute o verzijama Androida u Bilješkama o izdanju](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     const label = list => list.length === 1 ? list[0]
-      : list.length === 2 ? `${list[0]} and ${list[1]}`
-      : `${list[0]} to ${list[list.length - 1]}`;
+      : list.length === 2 ? `${list[0]} i ${list[1]}`
+      : `${list[0]} do ${list[list.length - 1]}`;
     showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Pokušajte ponovno kasnije.';
+    status.textContent = 'Nije moguće učitati podatke o verzijama AAPS-a. Pokušajte ponovno kasnije.';
   }
 });
 </script>
