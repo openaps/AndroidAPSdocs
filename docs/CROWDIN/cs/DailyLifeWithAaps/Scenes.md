@@ -45,7 +45,7 @@ Novou scénu vytvoříte klepnutím na tlačítko **+**.
 
 ### Začít ze šablony
 
-Scénu **vytvoříte** klepnutím na tlačítko **+** na obrazovce Scény. Prvním krokem je **Začít ze šablony**: vyberte hotovou scénu pro běžnou situaci – *Cvičení*, *Nemoc*, *Nemoc — zvracení*, *Spánek*, *Noc po cvičení*, *Před jídlem*, *Alkohol*, *Řízení*, *Koupání*, *Luteální fáze*, *Horké počasí*, *Lékařský zákrok* – nebo začněte *Prázdnou* scénou. Každá šablona **předvyplní doporučené akce** a vše můžete upravit v dalších krocích.
+Scénu **vytvoříte** klepnutím na tlačítko **+** na obrazovce Scény. Prvním krokem je **Začít ze šablony**: vyberte hotovou scénu pro běžnou situaci – *Cvičení*, *Nemoc*, *Nemoc — zvracení*, *Spánek*, *Noc po cvičení*, *Před jídlem*, *Alkohol*, *Řízení*, *Koupání*, *Luteální fáze*, *Horké počasí*, *Lékařský zákrok* – nebo začněte *Prázdnou* scénou. Každá šablona **předvyplní doporučené akce** a vše můžete upravit v dalších krocích. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![„Začít ze šablony“ – výběr počátečního bodu](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Scéna bez navazující scény vás jen požádá o potvrzení:
 
 ![Dialog Ukončit scénu](../images/v4/Scenes/scene_end_dialog.png)
 
-Ukončení scény **vrátí** změny, které provedla (například přepnutí profilu a dočasný cíl, které spustila).
+Ukončení scény **vrátí** změny, které provedla (například přepnutí profilu a dočasný cíl, které spustila). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Když je scéna aktivní, mají profil a cíl na hlavní obrazovce malou ikonu scény, pokud je nastavila scéna. Panel **Scény** ve spodní navigaci zůstává dostupný, abyste mohli spustit jinou scénu:
 
