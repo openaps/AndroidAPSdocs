@@ -121,6 +121,8 @@ Na zaslonu pumpe pritisnite **Odbaci pumpu** i potvrdite. Isporuka inzulina se z
 
 Kada je kritični alarm zaustavio pumpu, alarm umjesto toga nudi **Deaktiviraj pumpu**. Pritiskom na taj gumb pumpa se odbacuje na isti način.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarmi i obavijesti
