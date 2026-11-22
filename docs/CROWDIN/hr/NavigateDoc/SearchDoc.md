@@ -1,25 +1,25 @@
-# Search the documentation
+# Pretraživanje dokumentacije
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+Dokumentacija sadrži mnogo informacija. Ako tražite određenu temu, pojam ili postavku, pretraživanje je često brže od pregledavanja izbornika.
 
-## How to search
+## Kako pretraživati
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Okvir za pretraživanje nalazi se na vrhu navigacijske ploče na lijevoj strani zaslona.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+Na manjim zaslonima (npr. na telefonu) navigacijska ploča je skrivena. Dodirnite ikonu izbornika (☰) u gornjem lijevom kutu da biste je otvorili i prikazali okvir za pretraživanje.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Upišite jednu ili više ključnih riječi u okvir za pretraživanje.
+2. Pritisnite `Enter` ili dodirnite ikonu pretraživanja.
+3. Otvara se stranica s rezultatima i popisom svih stranica na kojima se pojavljuju vaše ključne riječi. Kliknite rezultat da biste otišli na odgovarajuću stranicu.
 
-## Tips for better results
+## Savjeti za bolje rezultate
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Koristite određene pojmove (na primjer `temp target` ili `autosens`) umjesto cijelih rečenica.
+- Pretraživanje s više ključnih riječi vraća stranice koje sadrže te riječi. Počnite općenito, a zatim dodajte ključne riječi da biste suzili rezultate.
+- Pretraživanje obuhvaća samo jezik i verziju dokumentacije koju trenutačno čitate. Ako nešto ne možete pronaći, prebacite se na englesku verziju, koja je najpotpunija (pogledajte [Promjena jezika i verzije](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+Indeks pretraživanja izrađuje se automatski. Za sadržaj koji je dodan vrlo nedavno može proći neko vrijeme dok ga pretraživanje ne pronađe.
 ```
