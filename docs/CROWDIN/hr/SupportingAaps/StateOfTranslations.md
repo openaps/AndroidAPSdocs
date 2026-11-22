@@ -1,16 +1,16 @@
-# State of translation for the app and the documentation
+# Stanje prijevoda aplikacije i dokumentacije
 
 Stanje se ažurira jednom na sat i prikazuje samo stanje u Crowdinu.
 
 ```{tip}
-Be careful the percentage of proofreading is always lower than or equal to the percentage of translations but Crowdin shows it on top of the translations.
+Pazite: postotak lekture uvijek je manji od postotka prijevoda ili jednak njemu, ali ga Crowdin prikazuje iznad prijevoda.
 Bolje je gledati samo postotak prijevoda da biste vidjeli ima li još posla.
 ```
 
 ```{admonition} needed time for final publication
 Nakon prijevoda u Crowdinu svaki je dan zakazana sinkronizacija s GitHubom koja prenosi prijevode na GitHub kao zahtjev za povlačenje (PR).
 
-The acceptance of the PR is a manual task which will be done as fast as possible.
+Prihvaćanje PR-a radi se ručno i obavit će se što je brže moguće.
 ```
 
 ## stanje prijevoda aplikacije
