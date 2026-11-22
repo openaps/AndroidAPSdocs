@@ -36,7 +36,7 @@ Afhængigt af **BS**-niveauet vil **AAPS** »sænke« insulinforbruget for at n�
 I lukket loop gælder for **SMB**:
 
 - *kan blive* deaktiveret (se mere nedenfor), og/eller
-- basal kan blive aktiveret, hvis **AAPS** har negativ **IOB**, eller <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Brugerne kan også overveje:
 
@@ -74,7 +74,7 @@ AAPS vil forsøge at nå 160 mg/dl eller 8,9 mmol/l i 1 time
 I lukket loop gælder for **SMB**:
 
 - *kan blive* deaktiveret (se mere nedenfor), og/eller
-- basal kan blive aktiveret, hvis **AAPS** har negativ **IOB**, eller <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Skærmen har tre dele:
 
 1. **Karrusel med forvalg** (øverst) – stryg gennem dine forvalg for TT. Hvert kort viser forvalgets **navn**, **mål** og **varighed**; den TT, der kører lige nu, er fremhævet.
 2. **Editor** (i midten) – værdierne **Midlertidigt mål** og **Varighed**, der faktisk bliver brugt, samt dato/tid for **Aktivering**.
-3. **Handlingslinje** (nederst) – knapperne **➕ tilføj**, **‘️ slet** og **▶ aktiver**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Når du vælger et kort med et forvalg, bliver dets **mål** og **varighed** indlæst i editoren.
 
@@ -123,7 +123,7 @@ Hvis du vil sætte et indbygget forvalg tilbage til, som det var fra start, så 
 ### Tilføj og fjern forvalg
 
 - **➕ Tilføj** – opret et **nyt eget forvalg** ud fra de aktuelle værdier i editoren. Det nye kort vises i karrusellen.
-- **‘️ Slet** – fjern det valgte **egne** forvalg. Indbyggede forvalg (*Spiser snart*, *Aktivitet*, *Hypo*) kan ikke slettes.
+- **Delete** — remove the selected **custom** preset. Indbyggede forvalg (*Spiser snart*, *Aktivitet*, *Hypo*) kan ikke slettes.
 
 Når du har mindst to **egne** forvalg, kan du også ændre deres rækkefølge i karrusellen: Tryk på ikonet **Skift rækkefølge** (⇅) i den øverste linje, flyt kortet i midten med **flytteknapperne ◀ / ▶**, og bekræft derefter med **✓**. De indbyggede forvalg bliver på deres pladser – kun egne forvalg kan flyttes. (Knapperne ser ud på samme måde som ved [ændring af profilernes rækkefølge](ProfileSwitch-ProfilePercentage.md).)
 
