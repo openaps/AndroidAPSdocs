@@ -36,7 +36,7 @@ AAPS, 1 sa 30 dk boyunca 140 mg/dL veya 7,8 mmol/L değerine ulaşmayı hedefler
 Kapalı döngü modunda **SMB**:
 
 - devre dışı bırakılmış *olabilir* (aşağıda daha ayrıntılı anlatılıyor); ve/veya
-- **AAPS** negatif **AİNS** durumundaysa bazal etkinleştirilebilir veya <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Kullanıcılar şunları da düşünebilir:
 
@@ -74,7 +74,7 @@ AAPS, 1 saat boyunca 160 mg/dL veya 8,9 mmol/L değerine ulaşmayı hedefler
 Kapalı döngü modunda **SMB**:
 
 - devre dışı bırakılmış *olabilir* (aşağıda daha ayrıntılı anlatılıyor); ve/veya
-- **AAPS** negatif **AİNS** durumundaysa bazal etkinleştirilebilir veya <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Ekranın üç bölümü vardır:
 
 1. **Ön ayar karuseli** (üstte) — GH ön ayarlarınız arasında kaydırın. Her kart ön ayarın **adını**, **hedefini** ve **süresini** gösterir; o anda çalışan GH vurgulanır.
 2. **Düzenleyici** (ortada) — gerçekten uygulanacak **Geçici hedef** ve **Süre**, ayrıca bir **Etkinleştirme** tarihi/saati.
-3. **Eylem çubuğu** (altta) — **➕ ekle**, **‘️ sil** ve **▶ etkinleştir** düğmesi.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Bir ön ayar kartını seçmek, onun **hedefini** ve **süresini** düzenleyiciye yükler.
 
@@ -123,7 +123,7 @@ Yerleşik bir ön ayarı ilk hâline döndürmek için onu seçin ve **↺ Varsa
 ### Ön ayar ekleme ve kaldırma
 
 - **➕ Ekle** — mevcut düzenleyici değerlerinden **yeni bir özel ön ayar** oluşturur. Yeni kart karuselde görünür.
-- **‘️ Sil** — seçili **özel** ön ayarı kaldırır. Yerleşik ön ayarlar (*Yakında Yenecek*, *Aktivite*, *Hipo*) silinemez.
+- **Delete** — remove the selected **custom** preset. Yerleşik ön ayarlar (*Yakında Yenecek*, *Aktivite*, *Hipo*) silinemez.
 
 En az iki **özel** ön ayarınız olduğunda karuseldeki sıralarını da değiştirebilirsiniz: üst çubuktaki **Yeniden sırala** simgesine (⇅) dokunun, ortadaki kartı **◀ / ▶ taşıma düğmeleriyle** adım adım taşıyın, sonra **✓** ile onaylayın. Yerleşik ön ayarlar yerlerini korur — yalnızca özel ön ayarlar taşınabilir. (Kontroller [profilleri yeniden sıralama](ProfileSwitch-ProfilePercentage.md) ile aynı görünür.)
 
