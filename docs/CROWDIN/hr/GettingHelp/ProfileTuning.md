@@ -1,142 +1,142 @@
-# Tweaking the AAPS' Profile
+# Podešavanje profila u AAPS-u
 
 ```{admonition} This is NOT a medical advice
 :class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+Za podršku i savjete o liječenju dijabetesa molimo surađujte sa svojim zdravstvenim timom.</br>
+Ovaj vodič koristite tek kada ste [ispravno postavili svoj **Profil**](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md) i prošli sve ciljeve **AAPS**-a.
 ```
 
-This guide explains the logic of the OpenAPS algorithm results with a given __Profile__, and provides information about which values in **AAPS** may be adjusted when certain situations or patterns are observed. The suggestions about basal testing below may diverge from what your care team advises.
+Ovaj vodič objašnjava logiku rezultata algoritma OpenAPS s danim __Profilom__ i daje informacije o tome koje se vrijednosti u **AAPS**-u mogu prilagoditi kada uočite određene situacije ili obrasce. Prijedlozi o testiranju bazala u nastavku mogu se razlikovati od savjeta vašeg zdravstvenog tima.
 
-Using **closed loop** may make basal testing easier and may significantly reduce the hypo risk if your __Profile__ basal is too strong.
+Korištenje **zatvorene petlje** može olakšati testiranje bazala i znatno smanjiti rizik od hipoglikemije ako je bazal u vašem __Profilu__ prejak.
 
-## Changing profile's settings, how to proceed
+## Kako postupiti pri promjeni postavki profila
 
-1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice may make the adjusting process problematic and less likely to get a well tuned __Profile__
-2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
-3. Keep an eye out for patterns with **AAPS** that happen around the same time (almost) everyday.
-4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
-5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. E.g. increase your basal by 10% around 1PM.
-7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
-8. Repeat this pattern, observe, decide, tweak again if needed
+1. Provjerite jeste li pročitali i razumjeli preporučene postavke i savjete __AAPS__-a u nastavku. Ako ne slijedite ovaj savjet, prilagođavanje može biti problematično i manje je vjerojatno da ćete dobiti dobro podešen __Profil__
+2. Pažljivo promatrajte i uspoređujte, **tijekom nekoliko dana**, što se događa s vašim __GUK__-om i __aktivnim inzulinom (IOB)__.
+3. Pratite obrasce u **AAPS**-u koji se događaju (gotovo) svaki dan u isto vrijeme.
+4. Važno je to raditi tijekom nekoliko dana. Odluke o prilagodbi __Profila__ donesene na temelju podataka iz samo jednog dana obično daju loše rezultate.
+5. Tek kada uočite obrazac koji se ponavlja, npr. u 13 sati vidite skok __GUK__-a ili negativnu vrijednost __aktivnog inzulina (IOB)__, počnite raditi male promjene svog __Profila__.
+6. Važno je mijenjati samo jednu stvar odjednom. Npr. povećajte bazal za 10 % oko 13 sati.
+7. Nakon svake promjene važno je sljedećih nekoliko dana pratiti njezin utjecaj na vaš __GUK__ i __aktivni inzulin (IOB)__.
+8. Ponavljajte ovaj postupak: promatrajte, odlučite, ponovno prilagodite ako je potrebno
 
-Don't rush, go slow!
+Ne žurite, idite polako!
 
-## Recommended settings and advice while tweaking basal
+## Preporučene postavke i savjeti pri podešavanju bazala
 
-- Do all testing with [closed loop enabled](#AapsScreens-loop-status).
-- **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
-- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
-- Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
+- Sva testiranja radite s [omogućenom zatvorenom petljom](#AapsScreens-loop-status).
+- **<u>ISKLJUČITE</u> sve [automatizacije](../DailyLifeWithAaps/Automations.md)**
+- **<u>ISKLJUČITE</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** kako ne bi pokušavali prilagoditi vaš profil.
+- Tijekom testiranja ne radite ručne radnje (ručni bolus, privremeni ciljevi itd.): pustite sustav da koristi samo postavke **Profila**.
+- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Kada tražite savjet, uvijek ih uključite na svoje snimke zaslona.
 - COB=0[*](#profiletuning-cob-zero)
 
-Other considerations that should ideally be avoided, as they influence the data and can lead to poor conclusions:
-- No physical activities.
-- No stress.
-- No illness.
-- No extreme weather like high or low temperatures.
-- No failed pump or CGM sessions.
-- No unannounced carbs.
+Ostale stvari koje bi idealno trebalo izbjegavati, jer utječu na podatke i mogu dovesti do pogrešnih zaključaka:
+- Bez tjelesne aktivnosti.
+- Bez stresa.
+- Bez bolesti.
+- Bez ekstremnog vremena, kao što su vrlo visoke ili niske temperature.
+- Bez neuspjelih sesija pumpe ili CGM-a.
+- Bez nenajavljenih ugljikohidrata.
 
-Also note:
-- If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your **ISF** (**ISF** is only used when you are higher than your **BG** target).
-- You need to check the actual **IOB** but also the **IOB** chart, to observe how the **IOB** evolved during the past few hours.
+Imajte na umu i:
+- Ako je vaš [profil bazalne stope](#your-aaps-profile-basal-rates) ispravan, kada ste na cilju s COB=0[*](#profiletuning-cob-zero) i IOB=0, stalno ćete ostati na cilju bez obzira na vaš **ISF** (**ISF** se koristi samo kada ste iznad ciljne vrijednosti **GUK**-a).
+- Morate provjeriti trenutni **aktivni inzulin (IOB)**, ali i graf **aktivnog inzulina (IOB)**, da vidite kako se **aktivni inzulin (IOB)** mijenjao tijekom proteklih nekoliko sati.
 
 (profiletuning-cob-zero)=
 
 ***COB = 0**
 
-Meaning that the meal is digested, and there are no more carbs in your body.
+To znači da je obrok probavljen i da u tijelu više nema ugljikohidrata.
 
-**AAPS** might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
+**AAPS** može pokazivati [COB=0 iako još imate ugljikohidrata u tijelu](../DailyLifeWithAaps/CobCalculation.md).
 
-## [Profile](../SettingUpAaps/YourAapsProfile.md) definitions
+## Definicije [Profila](../SettingUpAaps/YourAapsProfile.md)
 
-A too **strong Profile** indicates some combination of the following:
+Prejak **Profil** znači neku kombinaciju sljedećeg:
 
-- [ISF](#your-aaps-profile-insulin-sensitivity-factor) number is too small.
-- The [basal](#your-aaps-profile-basal-rates) number is too big.
-- [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small.
+- Broj [ISF](#your-aaps-profile-insulin-sensitivity-factor) je premalen.
+- Broj [bazala](#your-aaps-profile-basal-rates) je prevelik.
+- Broj [I:C](#your-aaps-profile-insulin-to-carbs-ratio) je premalen.
 
-## IOB Observations
+## Opažanja aktivnog inzulina (IOB)
 
-*Note: you can also use Loopalyzer IOB graph in Nightscout reports to view IOB on several days.*
+*Napomena: za pregled aktivnog inzulina (IOB) kroz nekoliko dana možete koristiti i graf IOB u izvješću Loopalyzer u Nightscoutu.*
 
-If you observe the following patterns after a few days, consider the following changes:
+Ako nakon nekoliko dana uočite sljedeće obrasce, razmislite o ovim promjenama:
 
-### IOB positive
+### Pozitivan IOB
 
-- **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
+- Bazal u **Profilu** možda nije dovoljno jak (razlog mogu biti i stvari kao što su nenajavljena hrana, bolest, loša apsorpcija na mjestu primjene itd.)
 
-![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
+![Pozitivan IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### IOB negative
+### Negativan IOB
 
-- Default basal too strong.
-- May be the effect from past exercise/physical activity.
+- Zadani bazal je prejak.
+- Možda je to učinak ranije tjelovježbe/tjelesne aktivnosti.
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
+![Negativan IOB](../images/troubleshooting/profiletuning/NegativeInsulin.png)
 
-- Previous meal: too much bolus (which resulted in a very long zero temp basal)
+- Prethodni obrok: previše bolusa (što je dovelo do vrlo dugog nultog privremenog bazala)
 
-![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
+![Negativan IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
-## BG Target Observations
+## Opažanja ciljne vrijednosti GUK-a
 
-### Stuck High
+### Zaglavljen visoko
 
-- __ISF's__ number is high and not strong enough (calculated insulin is too weak)
+- Broj __ISF__-a je visok i nije dovoljno jak (izračunani inzulin je preslab)
 
-![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
+![Zaglavljen visoko](../images/troubleshooting/profiletuning/StuckHigh.png)
 
-- __Profile__ basal might not be strong enough (**SMBs** do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the **APS** plugin screen (**Configuration → APS → Open plugin**); see [SMB](#Open-APS-features-super-micro-bolus-smb).
-- Technical issue: site absorption, infusion set, ...
+- Bazal u __Profilu__ možda nije dovoljno jak (**SMB**-ovi nemaju dovoljno „bazalne zalihe“ za korištenje)
+- Možda se uključila sigurnosna granica ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) i ograničava davanje inzulina. Provjerite na zaslonu dodatka **APS** (**Konfiguracija → APS → Otvori dodatak**); pogledajte [SMB](#Open-APS-features-super-micro-bolus-smb).
+- Tehnički problem: apsorpcija na mjestu primjene, infuzijski set, ...
 
-### Stuck Low
+### Zaglavljen nisko
 
-- __ISF__ too strong and the number needs to be raised higher
-- __Profile__ basal too strong (if also negative IOB)
+- __ISF__ je prejak i broj treba povećati
+- Bazal u __Profilu__ je prejak (ako je i IOB negativan)
 
-### Rollercoaster (ups and downs)
+### Tobogan (usponi i padovi)
 
-- **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
+- **ISF** prejak? Pogledajte svoj [AAPS profil](#your-aaps-profile-insulin-sensitivity-factor)
 
-![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
+![Tobogan](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## BG After Meals Observations
+## Opažanja GUK-a nakon obroka
 
-### Fast rise and BG going high
+### Brz porast i GUK ide visoko
 
-- Food contains fast carbs (like fruit juice).
-- Consider doing a pre-bolus or a slightly earlier pre-bolus.
-- Bolus (IC or injected %) not strong enough.
+- Hrana sadrži brze ugljikohidrate (kao što je voćni sok).
+- Razmislite o predbolusu ili malo ranijem predbolusu.
+- Bolus (IC ili ubrizgani %) nije dovoljno jak.
 
-![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
+![Porast visoko](../images/troubleshooting/profiletuning/FastRise.png)
 
-### Fast rise and then BG going low
+### Brz porast, a zatim GUK ide nisko
 
-- Consider doing a pre-bolus, your **Profile** might be too aggressive (over correction of the raise)
-- Bolus too strong.
+- Razmislite o predbolusu; vaš **Profil** je možda preagresivan (prevelika korekcija porasta)
+- Bolus je prejak.
 
 
 
-## [How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)
+## [Kako izračunati svoj I:C](#your-aaps-profile-insulin-to-carbs-ratio)
 
-1. First, you need the correct default basal settings in your **Profile**.
-2. Start on target, better without negative IOB.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Don't forget to eat the carbs ;)
-4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin. *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
-5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your **Profile's** settings.
-6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
+1. Najprije su vam potrebne ispravne zadane postavke bazala u vašem **Profilu**.
+2. Počnite na cilju, po mogućnosti bez negativnog IOB-a.
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Vrlo točno izmjerite poznatu količinu ugljikohidrata i zabilježite vrijeme početka i početni IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Ne zaboravite pojesti ugljikohidrate ;)
+4. Nakon nekoliko sati, kada je COB=0[*](#profiletuning-cob-zero) i ponovno ste na cilju, zabilježite vrijeme završetka i završni IOB, provjerite ukupno dani inzulin kao i prije i nazovite ga završni inzulin. *NAPOMENA: Trajanje NIJE važno, samo neka je dulje od vašeg probavljanja*
+5. Od razlike između početne i završne količine inzulina oduzmite/dodajte razliku završni IOB – početni IOB. Zatim oduzmite bazalni inzulin izračunat iz postavki vašeg **Profila**.
+6. Ako je __GUK__ u ciljnom rasponu, dobit ćete ukupni inzulin potreban da se vaši ugljikohidrati „probave“. Izračunajte svoj **I:C**.
 
-### Explanations for the I:C calculations
+### Objašnjenja za izračun I:C
 
-- With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
-- You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.
-- If the time frame is too short, there will be carbs undigested, thus your "insulin needed for the carbs" will be wrong.
-- If the time frame is too long, nothing bad will happen. You'll use all your carbs and you'll get more basal. At the end, you'll subtract the basal from the total insulin used, the extended time frame (with more basal use) will not affect the result.
+- S **Profilom** koji ima ispravnu zadanu bazalnu stopu trebali biste u bilo kojem razdoblju ostati na cilju i imati IOB blizu 0. Dobivate samo bazal iz **Profila**.
+- Tome dodajete ugljikohidrate i bolus. Pričekajte da tijelo probavi sve ugljikohidrate i da se vratite na ciljnu vrijednost **GUK**-a. Vaša potrošnja inzulina bit će zbroj bazala + inzulina potrebnog za ugljikohidrate. Izračunate inzulin korišten za bazal (pomoću svog **Profila**), a višak je inzulin korišten za probavljanje ugljikohidrata.
+- Ako je razdoblje prekratko, dio ugljikohidrata neće biti probavljen, pa će vaš „inzulin potreban za ugljikohidrate“ biti pogrešan.
+- Ako je razdoblje predugo, ništa loše se neće dogoditi. Iskoristit ćete sve ugljikohidrate i dobit ćete više bazala. Na kraju ćete od ukupno korištenog inzulina oduzeti bazal, pa produljeno razdoblje (s više bazala) neće utjecati na rezultat.
 
-Originally written up by @Robby (Discord) on tips and tricks to help tune your **AAPS Profile**, reviewed and edited by the community (thank you!).
+Izvorno napisao @Robby (Discord) kao savjete i trikove za podešavanje vašeg **AAPS profila**, a zajednica ga je pregledala i uredila (hvala!).
