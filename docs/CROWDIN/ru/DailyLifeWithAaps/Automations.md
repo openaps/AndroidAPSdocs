@@ -129,9 +129,9 @@ There are a wide range of Automation options, and users are encouraged to study 
 
 ![Операторы сравнения](../images/Automations/automation_comparison_operators.png)
 
-**Пример 1:** Условие **«меньше чем»** «-0,1 ммоль/л» (или «-2 мг/дл»):
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Запустит **автоматизацию** для любого числа, которое **строго меньше, чем** -0,1 (-2). Сюда входят такие числа, как -0,2, -0,3, -0,4 (-4, -6, -8) и так далее. Помните, что само -0,1 (-2) **не** включено в это условие. (Условие «равно или меньше чем -0,1 ммоль/л (-2 мг/дл)» _включало бы_ -0,1 ммоль/л или -2 мг/дл).
+Запустит **автоматизацию** для любого числа, которое **строго меньше, чем** -0,1 (-2). Сюда входят такие числа, как -0,2, -0,3, -0,4 (-4, -6, -8) и так далее. Помните, что само -0,1 (-2) **не** включено в это условие. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Пример 2:** Условие «больше чем» -0,1 ммоль/л (-2 мг/дл):
 
@@ -306,7 +306,7 @@ There are a wide range of Automation options, and users are encouraged to study 
 (automations-low-glucose-temp-target)=
 ### Временная цель при низкой ГК
 
-Эта **Автоматизация** автоматически включает **Временную цель**, когда **ГК** опускается ниже заданного порога: здесь, когда глюкоза меньше 70 мг/дл, включается цель 110 мг/дл на 30 минут:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Пример: правило при низкой глюкозе](../images/Automations/automation_example_low_glucose_rule.png)
 
