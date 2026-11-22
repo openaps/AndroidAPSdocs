@@ -10,11 +10,11 @@
 **Prednosti**
 
 * Stvarno je malen.
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* Čak i ako ljudima kažete, oni ga možda neće smatrati običnim pametnim telefonom pa će ga lakše prihvatiti kao iznimku kada telefoni inače nisu dopušteni.
 
 **Nedostaci**
 
-* Recommended only for experienced loopers. Some settings are not easy to recognize: you have to know from experience with a big Android AAPS phone how and where things are located. Some AAPS buttons are small and hard to tap: you need a precise touch, not stubby fingers.
+* Preporučuje se samo iskusnim korisnicima petlje. Neke postavke nije lako prepoznati: iz iskustva s velikim Android telefonom za AAPS morate znati kako se i gdje nalaze pojedine stvari. Neki gumbi u AAPS-u mali su i teško ih je dodirnuti: potreban je precizan dodir, ne debeli prsti.
 * Može se koristiti samo kao telefon za petlju. Bolje je imati i običan pametni telefon u džepu. 
 
 ### Optimizacija trajanja baterije
@@ -33,7 +33,7 @@ Za senzore Libre možete uključiti NFC.
 
 ### Optimizacija trajanja baterije
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+Da Jelly Star ne bi ometao **AAPS**, isključite ograničenje u „Upotreba baterije“ tako da za **AAPS** odaberete „Neograničeno“ (i za druge **DIY aplikacije** kao što su BYODA, xDrip, OOP2, Juggluco itd.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
@@ -43,6 +43,6 @@ Ne zaboravite isključiti Google Play zaštitu.
 
 ### Daljinska veza za Wear APK
 
-For certain smart watches, like the Samsung Galaxy, 'Remote connection' under Advanced features in the Galaxy Wearable app must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Za neke pametne satove, kao što je Samsung Galaxy, „Daljinska veza“ (Remote connection) pod Napredne značajke u aplikaciji Galaxy Wearable mora biti **uključena** da biste Jelly, **Wear.apk** i **AAPS** koristili na daljinu putem Wi-Fi mreže.
 
 ![Galaxy Wearable, Napredne značajke, Daljinska veza uključena](../images/wearos/galaxy_wearable_remote_connection.png)
