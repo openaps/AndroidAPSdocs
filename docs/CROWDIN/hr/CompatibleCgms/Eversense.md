@@ -1,17 +1,17 @@
 # Eversense
 
-There are four different methods to access the readings from Eversense:
+Postoje četiri različita načina za pristup očitanjima Eversensea:
 
 - ESEL u načinu companion
 - ESEL u zakrpanom načinu (patched)
-- xDrip companion app
-- Notification Reader (built into **AAPS**)
+- xDrip kao pomoćna aplikacija (companion)
+- Čitač obavijesti (ugrađen u **AAPS**)
 
 ## ESEL
 
 Nabavite i instalirajte [aplikaciju ESEL](https://github.com/BernhardRo/Esel/tree/master/apk) prema ovim [uputama](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
+- U ESEL-u otvorite izbornik s tri točke (⋮) gore desno i odaberite **Settings** (dostupno i iz izbornika ☰). U postavkama:
   - Omogućite „Send to AAPS and xDrip“
   - **Onemogućite** „Send to Nightscout“
   - Budući da podaci GUK-a iz Eversensea mogu imati šum, preporučuje se u ESEL-u omogućiti „Smooth Data“.
@@ -29,7 +29,7 @@ Nabavite i instalirajte [aplikaciju ESEL](https://github.com/BernhardRo/Esel/tre
    - Onemogućite postavku „Get data from patched Eversense App“
    - Za nadopunu podataka koji nedostaju: omogućite „Fill missing data from eversensedms.com“
    - Kao adresu e-pošte i lozinku unesite svoje podatke za prijavu na Eversense
-3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+3. Postavite „MM640g“ kao izvor GUK-a u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
 ### Zakrpana aplikacija Eversense
 
@@ -49,26 +49,26 @@ Nabavite i instalirajte [aplikaciju ESEL](https://github.com/BernhardRo/Esel/tre
 
 ![ESEL Broadcast](../images/ESELpatch.png)
 
-If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+Ako ESEL pokrećete s novom instalacijom Eversensea prvi put, može proći do 15 min dok se prve vrijednosti ne pojave u xDripu!
 
-4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
+4. Postavite „MM640g“ kao izvor GUK-a u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
 ## xDrip
 
-xDrip can read notifications from the vendor app, like ESEL does. Nadopuna podataka koji nedostaju nije dostupna.
+xDrip može čitati obavijesti aplikacije proizvođača, kao i ESEL. Nadopuna podataka koji nedostaju nije dostupna.
 
-- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip “Companion App” must be selected.
+- Preuzmite i instalirajte xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Kao izvor podataka u xDripu mora biti odabrano „Companion App“.
 - Odaberite xDrip u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 - Prilagodite postavke xDripa prema objašnjenjima na stranici [Postavke xDripa](../CompatibleCgms/xDrip.md).
 - Omogućite [eksponencijalno zaglađivanje](../CompatibleCgms/SmoothingBloodGlucoseData.md) u AAPS-u.
 
 ## Čitač obavijesti
 
-**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. Nadopuna podataka koji nedostaju nije dostupna.
+**AAPS** može čitati vrijednosti glukoze izravno iz obavijesti službene aplikacije Eversense, bez ikakve druge aplikacije između. Nadopuna podataka koji nedostaju nije dostupna.
 
-- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
-- Make sure the Eversense app shows the current glucose value in its notification.
+- Odaberite **Čitač obavijesti** u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source) i dopustite **AAPS-u** pristup obavijestima kad se to zatraži.
+- Provjerite prikazuje li aplikacija Eversense trenutačnu vrijednost glukoze u svojoj obavijesti.
 
 ```{warning}
 Očitanja GUK-a ne stižu uvijek svakih 5 minuta i mogu se pojaviti duplikati.
