@@ -1,19 +1,19 @@
 # Syai X1
 
 
-## Using X1 And Syai Tag app
+## Korištenje X1 i aplikacije Syai Tag
 
--   Install the apk from <https://play.google.com/store/apps/details?id=com.syai.tag>.
+-   Instalirajte APK s <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   Pokrenite senzor X1
 
 - Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
-Enable broadcast in the Syai app:
+Omogućite emitiranje (broadcast) u aplikaciji Syai:
 
-1. Select Profile
+1. Odaberite Profile
 2. Syai Health Ecosystem
-3. Tap Connect Now with AAPS, accept the third party data transfer agreement
-4. Enable share data with AAPS
+3. Dodirnite Connect Now with AAPS i prihvatite ugovor o prijenosu podataka trećoj strani
+4. Omogućite dijeljenje podataka s AAPS-om (Enable share data with AAPS)
 
 ![Syai](../images/Syai.png)
