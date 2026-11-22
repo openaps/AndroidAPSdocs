@@ -45,7 +45,7 @@ Dotknij przycisku **+**, aby utworzyć nową scenę.
 
 ### Zacznij od szablonu
 
-Aby **utworzyć** scenę, dotknij przycisku **+** na ekranie Sceny. Pierwszy krok to **Zacznij od szablonu**: wybierz gotową scenę dla częstej sytuacji — *Ćwiczenia*, *Choroba*, *Choroba — wymioty*, *Sen*, *Noc po treningu*, *Przed posiłkiem*, *Alkohol*, *Prowadzenie pojazdu*, *Kąpiel*, *Faza lutealna*, *Upał*, *Zabieg medyczny* — albo zacznij od sceny *Pusta*. Każdy szablon **wstępnie wypełnia zalecane akcje**, a w kolejnych krokach możesz wszystko zmienić.
+Aby **utworzyć** scenę, dotknij przycisku **+** na ekranie Sceny. Pierwszy krok to **Zacznij od szablonu**: wybierz gotową scenę dla częstej sytuacji — *Ćwiczenia*, *Choroba*, *Choroba — wymioty*, *Sen*, *Noc po treningu*, *Przed posiłkiem*, *Alkohol*, *Prowadzenie pojazdu*, *Kąpiel*, *Faza lutealna*, *Upał*, *Zabieg medyczny* — albo zacznij od sceny *Pusta*. Każdy szablon **wstępnie wypełnia zalecane akcje**, a w kolejnych krokach możesz wszystko zmienić. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![„Zacznij od szablonu” — wybierz punkt startowy](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Scena bez następnej sceny prosi tylko o potwierdzenie:
 
 ![Okno Zakończ scenę](../images/v4/Scenes/scene_end_dialog.png)
 
-Zakończenie sceny **cofa** zmiany, które zrobiła (na przykład zmianę profilu i cel tymczasowy, które uruchomiła).
+Zakończenie sceny **cofa** zmiany, które zrobiła (na przykład zmianę profilu i cel tymczasowy, które uruchomiła). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Gdy scena jest aktywna, profil i cel na ekranie głównym mają małą ikonę sceny, jeśli ustawiła je scena. Panel **Sceny** na dolnym pasku nawigacji jest nadal dostępny, aby uruchomić inną scenę:
 
