@@ -182,7 +182,7 @@ Als je klaar bent, druk je op "**VOLGENDE**" om naar het volgende scherm te gaan
 
 Dit scherm wordt alleen getoond als **AAPS** eerder geëxporteerde instellingen vindt in de **AAPS**-map ("Opgeslagen instellingen gevonden"), bijvoorbeeld als je de app opnieuw installeert of naar een nieuwe telefoon overstapt.
 
-- Om je vorige configuratie terug te zetten, druk je op "**Importeer instellingen**" — zie [Instellingen exporteren & importeren](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Om met een nieuwe configuratie te beginnen, druk je op "**VOLGENDE**" en ga je verder met de wizard.
 
 ![Importeer instellingen](../images/setup-wizard/Wizard-ImportSettings.png)
