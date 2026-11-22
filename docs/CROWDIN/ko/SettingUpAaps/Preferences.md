@@ -31,6 +31,7 @@
 - 기본적으로 **AAPS**는 휴대폰의 언어를 따릅니다(권장).
 
 - **AAPS**를 휴대폰과 다른 언어로 사용하려면 여기에서 선택하십시오. Android 13 이상에서는 **AAPS**가 이 언어를 Android에 자체 앱 언어로 등록하므로, 모든 화면, 메인 화면, 위젯과 숫자 표기 방식이 이 언어를 따릅니다.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - 언어를 바꾸면 **AAPS**의 텍스트가 바로 새 언어로 바뀝니다. 일부 텍스트가 여전히 이전 언어로 보이면 **AAPS**를 다시 시작하십시오.
 - Android 12에서는 이 설정이 표시되지 않습니다: **AAPS**는 항상 휴대폰의 언어를 사용합니다.
@@ -86,6 +87,10 @@
 
 ![설정 > 보안](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Master password
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### 애플리케이션 보안
 
-앱이 보호되어 있으면 **AAPS**를 열 때 비밀번호를 입력하거나 휴대폰의 생체 인증을 사용해야 하며, [보안 시간 제한](#Preferences-password-and-pin-retention)이 지난 후 다시 돌아올 때도 마찬가지입니다.
+앱이 보호되어 있으면 **AAPS**를 열 때 비밀번호를 입력하거나 휴대폰의 생체 인증을 사용해야 하며, [보안 시간 제한](#Preferences-password-and-pin-retention)이 지난 후 다시 돌아올 때도 마찬가지입니다. Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-잘못된 비밀번호를 입력하면 **AAPS**는 즉시 종료됩니다. 하지만 이전에 정상적으로 열었다면 백그라운드에서는 계속 실행됩니다.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### 볼러스 보안
 
