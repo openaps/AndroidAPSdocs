@@ -36,6 +36,6 @@ Juggluco može slati vrijednosti GUK-a u xDrip, a xDrip ih zatim šalje u AAPS.
 
 U Jugglucu uključite Patched Libre (ne uključujte xDrip broadcast), potvrdite i spremite podatke o paketu dexdrip. U AAPS-u odaberite xDrip kao izvor GUK-a.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
+Ako je potrebno, u AAPS-u primijenite dovoljno [zaglađivanja](./SmoothingBloodGlucoseData.md). Sa senzorom Libre 2/2+/3/3+ xDrip od očitanja svake minute izračuna prosjek za očitanja svakih 5 minuta i [također ih zagladi](#libre2-value-smoothing-raw-values).
 
 ![Juggluco prema xDripu](../images/juggluco/Juggluco-xDrip+.png)
