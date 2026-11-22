@@ -45,7 +45,7 @@ Tik op de knop **+** om een nieuwe scène te maken.
 
 ### Begin met een sjabloon
 
-Om een scène te **maken**, tik je op de knop **+** in het scherm Scènes. De eerste stap is **Aanmaken op basis van een sjabloon**: kies een kant-en-klare scène voor een veelvoorkomende situatie — *Beweging/sport*, *Ziektedag*, *Ziektedag - overgeven*, *Slaap*, *Nacht na beweging/sport*, *Voor de maaltijd*, *Alcohol*, *Autorijden*, *Baden*, *Luteale fase*, *Warm Weer*, *Medische Procedure* — of begin met een *Blanco* scène. Elk sjabloon **vult de aanbevolen acties alvast in**. Je kunt alles aanpassen in de volgende stappen.
+Om een scène te **maken**, tik je op de knop **+** in het scherm Scènes. De eerste stap is **Aanmaken op basis van een sjabloon**: kies een kant-en-klare scène voor een veelvoorkomende situatie — *Beweging/sport*, *Ziektedag*, *Ziektedag - overgeven*, *Slaap*, *Nacht na beweging/sport*, *Voor de maaltijd*, *Alcohol*, *Autorijden*, *Baden*, *Luteale fase*, *Warm Weer*, *Medische Procedure* — of begin met een *Blanco* scène. Elk sjabloon **vult de aanbevolen acties alvast in**. Je kunt alles aanpassen in de volgende stappen. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![“Aanmaken op basis van een sjabloon” — kies een beginpunt](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Bij een scène zonder vervolg hoef je alleen te bevestigen:
 
 ![Venster Beëindig scène](../images/v4/Scenes/scene_end_dialog.png)
 
-Als je een scène beëindigt, worden de wijzigingen die hij heeft gedaan **teruggedraaid** (bijvoorbeeld de profielwissel en het tijdelijk streefdoel die hij heeft gestart).
+Als je een scène beëindigt, worden de wijzigingen die hij heeft gedaan **teruggedraaid** (bijvoorbeeld de profielwissel en het tijdelijk streefdoel die hij heeft gestart). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Zolang een scène actief is, hebben het profiel en het streefdoel op het hoofdscherm een klein scènepictogram als de scène ze heeft ingesteld. Het scherm **Scènes** van de navigatie onderaan blijft beschikbaar om een andere scène te starten:
 
