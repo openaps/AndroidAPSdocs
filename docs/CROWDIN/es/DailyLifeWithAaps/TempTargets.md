@@ -36,7 +36,7 @@ Según el nivel de **glucosa**, **AAPS** «reducirá» el uso de insulina para a
 En modo de lazo cerrado, **SMB**:
 
 - *puede* desactivarse (se explica más abajo); y/o
-- la basal puede activarse si **AAPS** tiene **IOB** negativa, o <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Los usuarios también pueden considerar:
 
@@ -74,7 +74,7 @@ AAPS intentará llegar a 160 mg/dl o 8,9 mmol/l durante 1 hora
 En modo de lazo cerrado, **SMB**:
 
 - *puede* desactivarse (se explica más abajo); y/o
-- la basal puede activarse si **AAPS** tiene **IOB** negativa, o <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ La pantalla tiene tres partes:
 
 1. **Carrusel de preajustes** (arriba) — desliza para pasar por tus preajustes de OT. Cada tarjeta muestra el **nombre**, el **objetivo** y la **duración** del preajuste; el OT que está en marcha se resalta.
 2. **Editor** (en el centro) — el **Objetivo temporal** y la **Duración** que se aplicarán de verdad, además de una fecha/hora de **Activación**.
-3. **Barra de acciones** (abajo) — **➕ añadir**, **‘️ borrar** y el botón **▶ activar**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Al elegir una tarjeta de preajuste, su **objetivo** y su **duración** se cargan en el editor.
 
@@ -123,7 +123,7 @@ Para devolver un preajuste incluido a su estado de fábrica, elígelo y toca el 
 ### Añadir y eliminar preajustes
 
 - **➕ Añadir** — crea un **nuevo preajuste propio** con los valores actuales del editor. La nueva tarjeta aparece en el carrusel.
-- **‘️ Borrar** — elimina el preajuste **propio** elegido. Los preajustes incluidos (*Comiendo Pronto*, *Actividad*, *Hipo*) no se pueden borrar.
+- **Delete** — remove the selected **custom** preset. Los preajustes incluidos (*Comiendo Pronto*, *Actividad*, *Hipo*) no se pueden borrar.
 
 Cuando tienes al menos dos preajustes **propios**, también puedes cambiar su orden en el carrusel: toca el icono **Reordenar** (⇅) en la barra superior, mueve la tarjeta central con los **botones de mover ◀ / ▶** y confirma con **✓**. Los preajustes incluidos mantienen su lugar — solo se pueden mover los preajustes propios. (Los controles son iguales que al [reordenar perfiles](ProfileSwitch-ProfilePercentage.md).)
 
