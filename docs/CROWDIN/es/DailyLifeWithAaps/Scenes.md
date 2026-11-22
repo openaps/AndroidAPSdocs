@@ -45,7 +45,7 @@ Toca el botón **+** para crear una nueva escena.
 
 ### Empezar desde una plantilla
 
-Para **crear** una escena, toca el botón **+** en la pantalla Escenas. El primer paso es **Empezar desde plantilla**: elige una escena preparada para una situación común — *Ejercicio*, *Día de enfermedad*, *Día de enfermedad — Vómitos*, *Dormir*, *Noche tras ejercicio*, *Antes de comer*, *Alcohol*, *Conducción*, *Baño | Ducha*, *Fase lútea*, *Clima cálido*, *Procedimiento médico* — o empieza desde una escena *Vacío | En blanco*. Cada plantilla **rellena las acciones recomendadas** y puedes ajustarlo todo en los pasos siguientes.
+Para **crear** una escena, toca el botón **+** en la pantalla Escenas. El primer paso es **Empezar desde plantilla**: elige una escena preparada para una situación común — *Ejercicio*, *Día de enfermedad*, *Día de enfermedad — Vómitos*, *Dormir*, *Noche tras ejercicio*, *Antes de comer*, *Alcohol*, *Conducción*, *Baño | Ducha*, *Fase lútea*, *Clima cálido*, *Procedimiento médico* — o empieza desde una escena *Vacío | En blanco*. Cada plantilla **rellena las acciones recomendadas** y puedes ajustarlo todo en los pasos siguientes. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![«Empezar desde plantilla» — elige un punto de partida](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Una escena sin seguimiento solo te pide confirmar:
 
 ![Diálogo Finalizar escena](../images/v4/Scenes/scene_end_dialog.png)
 
-Finalizar una escena **deshace** los cambios que hizo (por ejemplo, el cambio de perfil y el objetivo temporal que inició).
+Finalizar una escena **deshace** los cambios que hizo (por ejemplo, el cambio de perfil y el objetivo temporal que inició). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Mientras una escena está activa, el perfil y el objetivo en la pantalla principal llevan un pequeño icono de escena cuando los puso la escena. El panel **Escenas** de la navegación inferior sigue disponible para iniciar otra escena:
 
