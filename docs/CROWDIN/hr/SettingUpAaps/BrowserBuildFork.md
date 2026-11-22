@@ -1,54 +1,54 @@
 (github-fork)=
 
-# Browser build – Step 1: Create your GitHub fork
+# Izrada u pregledniku – Korak 1: Izradite svoj GitHub fork
 
 ```{note}
-This is **Step 1** of the [Browser build](BrowserBuild.md).
+Ovo je **Korak 1** postupka [Izrada u pregledniku](BrowserBuild.md).
 ```
 
-You will need to store your personal Android Java Key and Google Drive information as secrets in GitHub (later in the process, we will explain how).
+Svoj osobni Android Java ključ i podatke za Google Drive morat ćete spremiti kao tajne (secrets) na GitHubu (kasnije u postupku objasnit ćemo kako).
 
-Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
+Budući da se to ne može napraviti unutar javnog repozitorija AndroidAPS-a, morate izraditi svoju osobnu kopiju izvornog koda (koja se zove fork).
 
-## GitHub account
+## GitHub račun
 
-You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
-You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
+Ako ga još nemate, morate [izraditi GitHub račun](https://github.com/signup).  
+Možete se registrirati svojom adresom e-pošte ili putem Googlea. Slijedite postupak registracije i potvrde.
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+Kada imate račun, [prijavite se na GitHub](https://github.com/login).
 
-## Fork AndroidAPS
+## Fork AndroidAPS-a
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+Otvorite službeni repozitorij AndroidAPS-a putem [ove poveznice](https://github.com/nightscout/AndroidAPS).
 
-Tap on the fork icon. This will create a copy inside your own account.
+Dodirnite ikonu fork. Time će se izraditi kopija unutar vašeg vlastitog računa.
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-Scroll down the next screen and tap **Create Fork**.
+Pomaknite se prema dolje na sljedećem zaslonu i dodirnite **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the master branch only" if you will want to build developer versions or customizations.*
+*Napomena: možete **isključiti** „Copy the master branch only“ ako želite izrađivati razvojne verzije ili prilagodbe.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?<br/><br/>
+Ne možete napraviti fork i vidite ovo?<br/><br/>
 **`No available destinations to fork this repository.`**<br/><br/>
 ![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)<br/><br/>
-This means you already have an existing fork of AndroidAPS.<br/>
-Make sure it's up to date and continue to Preparation Steps.
+To znači da već imate postojeći fork AndroidAPS-a.<br/>
+Provjerite je li ažuran i nastavite s pripremnim koracima.
 ```
 
 ```{warning}
-**Never delete your fork without having done a backup of your secrets!**
+**Nikada ne brišite svoj fork ako prije toga niste napravili sigurnosnu kopiju svojih tajni!**
 ```
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+GitHub sada prikazuje vašu osobnu kopiju AndroidAPS-a. Ostavite ovu karticu web preglednika otvorenom.
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
 ----
 
-**Next: [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) →**
+**Sljedeće: [Korak 2 – Izradite spremište ključeva za potpisivanje](BrowserBuildKeystore.md) →**
