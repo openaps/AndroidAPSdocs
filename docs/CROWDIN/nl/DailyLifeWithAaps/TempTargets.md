@@ -36,7 +36,7 @@ Afhankelijk van de **BG** zal **AAPS** "minder" insuline geven om het **BG**-str
 In gesloten loop wordt **SMB**:
 
 - *mogelijk* uitgeschakeld (zie verder hieronder); en/of
-- kan de basaal worden aangezet als **AAPS** een negatieve **IOB** heeft, of <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Gebruikers kunnen ook overwegen:
 
@@ -74,7 +74,7 @@ AAPS probeert 1 uur lang 160 mg/dl of 8,9 mmol/l te bereiken
 In gesloten loop wordt **SMB**:
 
 - *mogelijk* uitgeschakeld (zie verder hieronder); en/of
-- kan de basaal worden aangezet als **AAPS** een negatieve **IOB** heeft, of <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Het scherm heeft drie delen:
 
 1. **Carrousel met voorinstellingen** (boven) — veeg door je TT-voorinstellingen. Elke kaart toont de **naam**, het **streefdoel** en de **tijdsduur** van de voorinstelling; het TT dat nu loopt, is gemarkeerd.
 2. **Editor** (midden) — het **Tijdelijk streefdoel** en de **Tijdsduur** die echt worden gebruikt, plus een datum/tijd voor **Activatie**.
-3. **Actiebalk** (onder) — **➕ toevoegen**, **‘️ verwijderen** en de knop **▶ activeren**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Als je een kaart met een voorinstelling kiest, worden het **streefdoel** en de **tijdsduur** ervan in de editor geladen.
 
@@ -123,7 +123,7 @@ Om een ingebouwde voorinstelling terug te zetten zoals hij bij installatie was, 
 ### Voorinstellingen toevoegen en verwijderen
 
 - **➕ Toevoegen** — maak een **nieuwe eigen voorinstelling** met de huidige waarden uit de editor. De nieuwe kaart verschijnt in de carrousel.
-- **‘️ Verwijderen** — verwijder de gekozen **eigen** voorinstelling. Ingebouwde voorinstellingen (*Eet Binnenkort*, *Activiteit*, *Hypo*) kunnen niet worden verwijderd.
+- **Delete** — remove the selected **custom** preset. Ingebouwde voorinstellingen (*Eet Binnenkort*, *Activiteit*, *Hypo*) kunnen niet worden verwijderd.
 
 Als je minstens twee **eigen** voorinstellingen hebt, kun je ook hun volgorde in de carrousel veranderen: tik op het pictogram **Herschikken** (⇅) in de bovenste balk, verplaats de middelste kaart met de **◀ / ▶ verplaatsknoppen** en bevestig met **✓**. De ingebouwde voorinstellingen houden hun plaats — alleen eigen voorinstellingen kunnen worden verplaatst. (De knoppen zien er hetzelfde uit als bij [het herschikken van profielen](ProfileSwitch-ProfilePercentage.md).)
 
