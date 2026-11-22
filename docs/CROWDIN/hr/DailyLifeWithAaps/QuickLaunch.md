@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# Brzo pokretanje (alatna traka brzih radnji u Pregledu)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+**Brzo pokretanje** je mala **alatna traka brzih radnji** na dnu zaslona Pregled u **AAPS-u**, odmah iznad donje navigacije. To je red gumba koje možete prilagoditi i koji rade jednim dodirom: vi odlučujete koje su radnje u njemu i kojim redom, pa su stvari koje najčešće radite uvijek na jedan dodir na glavnom zaslonu.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![Alatna traka Brzo pokretanje na zaslonu Pregled](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## Korištenje alatne trake
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+Alatna traka nalazi se na zaslonu **Pregled**, između grafova i donje navigacije:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![Alatna traka Brzo pokretanje na svom mjestu na zaslonu Pregled](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- **Dodirnite** ikonu da pokrenete njezinu radnju – točno kao da ste je otvorili s njezina uobičajenog zaslona (bolus ili tretman i dalje najprije prikazuje uobičajenu potvrdu).
+- **Dugo pritisnite** ikonu da vidite **opis** s nazivom radnje i kratkim objašnjenjem.
+- Ako dodate **više gumba nego što stane** na zaslon, dodatni gumbi prelaze u **izbornik s dodatnim stavkama** (gumb **⋮** na kraju alatne trake).
+- Svaka ikona zadržava **boju** svoje radnje (npr. inzulin, ugljikohidrati, privremeni cilj), pa je lako prepoznate na prvi pogled.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+Posljednji gumb je uvijek **Postavi brzo pokretanje** (zupčanik **⚙️**). Ne može se ukloniti, pa uvijek možete doći do zaslona postavki izravno s alatne trake. Prema zadanim postavkama alatna traka ima samo dva gumba – **Bolus kalkulator** i ovaj zupčanik.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## Postavljanje brzog pokretanja
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Dodirnite zupčanik **⚙️** na alatnoj traci (ili otvorite **[Konfiguracija](../SettingUpAaps/ConfigBuilder.md) → … → Postavi brzo pokretanje**) da otvorite zaslon **Postavi brzo pokretanje** (*„Prilagodite gumbe za brze radnje na pregledu“*).
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![Postavi brzo pokretanje – Odabrane radnje, zatim katalog radnji koje možete dodati](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+Zaslon ima dva dijela:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **Odabrane radnje** (na vrhu) – gumbi koji su sada na vašoj alatnoj traci, redom kao na alatnoj traci.
+- **Katalog** ispod toga – sve radnje koje možete dodati, grupirane po kategorijama. Svaka stavka kataloga ima gumb **➕** za dodavanje.
 
-### Selected actions — reorder, edit, remove
+### Odabrane radnje – promjena redoslijeda, uređivanje, uklanjanje
 
-Each selected action has:
+Svaka odabrana radnja ima:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- **⠿ ručku za povlačenje** – pritisnite i povucite da **promijenite redoslijed** gumba (redoslijed ovdje je redoslijed na alatnoj traci),
+- gumb **−** – **uklanja** radnju s alatne trake,
+- i, samo za prečac **Profil**, gumb **✏️** za uređivanje postotka/trajanja (pogledajte [Prečaci profila](#profile-shortcuts)).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+Promjene vrijede **odmah** – nema posebnog gumba *Spremi*. Dodana radnja ide na kraj alatne trake; odatle joj možete promijeniti mjesto.
 
 ---
 
-## The action categories
+## Kategorije radnji
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+Katalog grupira sve što možete dodati u sljedeće kategorije, ovim redom. Kategorije u kojima nema ničega (npr. nemate nijednu scenu) jednostavno se ne prikazuju.
 
-### Treatment
+### Tretman
 
-The everyday treatment and CGM dialogs:
+Svakodnevni dijalozi za tretmane i CGM:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **Inzulin** – ručno isporučite bolus.
+- **UH** – zabilježite ugljikohidrate bez inzulina.
+- **Bolus kalkulator** – otvorite bolus kalkulator.
+- **Tretman** – zabilježite inzulin i ugljikohidrate zajedno.
+- **CGM** – otvorite svoju CGM aplikaciju (npr. xDrip).
+- **Kalibracija** – kalibrirajte CGM senzor.
 
-### Care Portal
+### Careportal
 
-The care-portal events and device-maintenance records:
+Događaji Careportala i zapisi o održavanju uređaja:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **Provjera GUK-a**, **Bilješka**, **Tjelovježba**, **Pitanje**, **Objava**,
+- **Umetanje senzora**, **Zamjena baterije pumpe**, **Promjena mjesta primjene pumpe**, **Punjenje**, **Rotacija mjesta primjene**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+**Punjenje** i **Zamjena baterije pumpe** nude se samo ako ih vaša pumpa koristi. Pumpe bez katetera, na primjer, pune spremnik i mijenjaju bateriju u svojim koracima aktivacije, pa se te stavke za njih ne prikazuju (isto kao na ploči **Upravljanje**).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![Kategorija Careportal u katalogu](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+To su iste stavke do kojih inače dolazite preko ploča **[Tretmani](#v4changes-treatments)** i **[Upravljanje](#v4changes-manage)** – Brzo pokretanje samo stavlja one koje koristite na zaslon Pregled.
 
-### Manage
+### Upravljanje
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+Zasloni s ploče **[Upravljanje](#v4changes-manage)**, istim redom, pa onaj koji najčešće koristite možete otvoriti s alatne trake:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **Profil**, **Postavke inzulina** (upravljanje konfiguracijama inzulina i njihova aktivacija – namjerno se zove drukčije od gumba **Inzulin**, jer taj gumb isporučuje bolus), **Privremeni cilj**, **Brzi kalkulator**, **Scene**, **Automatizacija**, **Hrana**,
+- **Način rada** – zatvorite ili otvorite petlju, suspendirajte je ili odspojite pumpu,
+- **Ovlašteni klijenti** – samo na glavnom uređaju ili na uparenom klijentu.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+Ovi gumbi otvaraju zaslon; sami ništa ne pokreću. Da biste scenu ili brzi kalkulator pokrenuli jednim dodirom, dodajte ih iz kategorije **Scene** ili **Brzi kalkulator** niže.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![Kategorija Upravljanje u katalogu](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![Kategorija Upravljanje, nastavak](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
-### Quick Wizard
+### Brzi kalkulator
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+Svaki vaš predložak **[Brzog kalkulatora](QuickWizards.md)** možete dodati kao gumb, pa je obrok koji se ponavlja na jedan dodir od zaslona Pregled. Gumb nosi naziv predloška i prikazuje količinu ugljikohidrata/inzulina; dodir na njega pokreće Brzi kalkulator s uobičajenom potvrdom.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+Brzi kalkulatori koji su postavljeni da se prikazuju samo na satu ne nude se. Gumb Brzog kalkulatora na alatnoj traci slijedi ista pravila kao na ploči **Tretmani**: skriven je izvan svog [valjanog vremenskog raspona](#quickwizard_validity) i kratko vrijeme nakon korištenja. Ostaje u postavkama vaše alatne trake i vraća se kada se Brzi kalkulator ponovno može koristiti.
 
-### Scenes
+### Scene
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+Svaku omogućenu **[scenu](Scenes.md)** možete dodati kao gumb. Dodir na nju traži potvrdu, a zatim aktivira scenu (isti skup radnji koji biste dobili sa zaslona Scene). Ova kategorija prikazuje se samo ako imate barem jednu scenu.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+Opis i katalog prikazuju isti sažetak kao **Upravljanje → Scene**, na primjer *„3 radnje, 2 h → Hlađenje“*, gdje je naziv iza strelice sljedeća scena.
 
-### Automation
+### Automatizacija
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+Vaša pravila automatizacije s **korisničkom radnjom** (ona koja pokrećete ručno) možete dodati kao gumbe. Dodir na jedan od njih traži potvrdu, a zatim izvršava radnje tog pravila.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+Automatizacija se izvršava na **glavnom uređaju**, pa se prečaci automatizacije nude i pokreću samo na glavnom uređaju. Nisu dostupni na uparenom **[klijentu](../RemoteFeatures/ClientMasterControl.md)**.
 ```
 
-### Temp Target Presets
+### Predlošci privremenih ciljeva
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+Svaki vaš predložak **[privremenog cilja](TempTargets.md)** možete dodati kao gumb (prikazuju se njegov naziv, ciljna vrijednost i trajanje, na primjer *„Prije obroka – 5,0 mmol/L, 45 min“*). Dodir na njega traži potvrdu, a zatim pokreće taj privremeni cilj.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![Dinamičke kategorije – Brzi kalkulator i Predlošci privremenih ciljeva (Scene i Automatizacija pojavljuju se kada ih imate)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
-### Profile
+### Profil
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+Svaki **[profil](ProfileSwitch-ProfilePercentage.md)** možete dodati kao **prečac** koji jednim dodirom izvodi **zamjenu profila**. Za razliku od većine prečaca, prečac profila ima vlastiti **postotak** i **trajanje**, koje postavljate nakon dodavanja gumbom **✏️**:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **Postotak** (30–250 %, u koracima od 5 %) – mijenja jačinu profila kada se primijeni. 100 % koristi profil bez promjene.
+- **Trajanje** (0–10080 min, to je do 7 dana, u koracima od 10 min) – koliko dugo traje zamjena. **0 = Trajno** (dok ponovno ne zamijenite profil).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![Prečaci profila i kategorije dodataka u katalogu](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+Tako možete imati više gumba za **isti** profil s različitom jačinom – na primjer *„Profil 100 %“* i *„Profil 70 % na 2 h“* – i primijeniti bilo koji jednim dodirom. (Isti profil možete dodati više puta s različitim postavkama.)
 
-### Plugins
+### Dodaci
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![Prečaci dodataka u katalogu](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+Na kraju, svaki **omogućeni dodatak** koji ima vlastiti zaslon možete dodati kao prečac koji ga izravno otvara. Oni su grupirani po vrsti dodatka – **Pumpa**, **Izvor GUK-a**, **APS**, **Petlja**, **Detekcija osjetljivosti**, **Zaglađivanje**, **Kalibracija**, **Ograničenja**, **Komunikacija** i **Općenito** – pa možete, na primjer, sa zaslona Pregled otići izravno na zaslon pumpe ili petlje.
 
 ---
 
-## QuickLaunch and Master/Client
+## Brzo pokretanje i glavni uređaj/klijent
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+Za razliku od većine vaših postavki, **alatna traka Brzo pokretanje postavlja se za svaki uređaj posebno** – sprema se **lokalno i ne sinkronizira se** između glavnog uređaja i uparenih klijenata, pa svaki uređaj ima svoj skup gumba. (Ona *jest* uključena u **sigurnosnu kopiju/izvoz** postavki, pa je vraćanje kopije vraća na istom uređaju.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+Što svaki uređaj može staviti na svoju alatnu traku ipak ovisi o tome što ima: brzi kalkulatori, scene, predlošci privremenih ciljeva i profili sinkroniziraju se, pa katalog na klijentu nudi iste stavke – samo ih birate za svaki uređaj posebno. Nekoliko detalja koje trebate znati:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- Gumbi čiji cilj više ne postoji (izbrisani brzi kalkulator, scena ili predložak, onemogućeno pravilo) **automatski se preskaču**.
+- Prečaci **automatizacije** nude se i pokreću samo na **glavnom uređaju** (automatizacija se izvršava na glavnom uređaju). Gumbi za scene, brze kalkulatore, privremene ciljeve i profile dostupni su na klijentu.
+- Kada na klijentu dodirnete gumb koji se mora izvršiti na glavnom uređaju (bolus, privremeni cilj, zamjena profila ili scena), **glavni uređaj** ga izvršava i izdaje potvrdu. Pogledajte [Upravljanje glavni uređaj ↔ klijent (potpisano daljinsko upravljanje)](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 
