@@ -17,7 +17,7 @@ Fizička zamjena uloška/spremnika ne može se obaviti putem **AAPS**-a, nego se
 
 3. Napunite cijev i kanilu: to možete učiniti izravno na pumpi. Svakako uklonite sve mjehuriće zraka iz cijevi.
 
-4. Pričvrstite novu kanilu na tijelo. Kada umetnete kanilu i izvadite iglu, u spojenoj kanili ostaje mali zračni prostor koji također treba napuniti. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Sada pritisnite zadanu količinu za punjenje kanile (obično oko 0,3 J, ali provjerite je li ta vrijednost točna za vašu kanilu) i odaberite **U redu**. Pročitajte sažetak i potvrdite punjenje dodirom na **U redu**.
+4. Pričvrstite novu kanilu na tijelo. Kada umetnete kanilu i izvadite iglu, u spojenoj kanili ostaje mali zračni prostor koji također treba napuniti. Da biste to zabilježili u **AAPS**-u i napunili mjesto: otvorite **Punjenje** (u proširenoj statusnoj ploči na glavnom zaslonu, na ploči **Upravljanje** ili kao gumb [Brzo pokretanje](QuickLaunch.md)) i označite **Zabilježi promjenu mjesta primjene** i/ili **Zabilježi zamjenu spremnika inzulina**, ovisno o tome što ste promijenili. Sada pritisnite zadanu količinu za punjenje kanile (obično oko 0,3 J, ali provjerite je li ta vrijednost točna za vašu kanilu) i odaberite **U redu**. Pročitajte sažetak i potvrdite punjenje dodirom na **U redu**.
 
    ![Punjenje na ploči Upravljanje kod pumpe s cijevi](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -57,7 +57,7 @@ Dok je pumpa odspojena, ne dobivate inzulin, pa biste se trebali ponovno spojiti
 (pumps-cannulas-announce-insulin)=
 ## Kako zabilježiti isporučeni inzulin bez stvarnog davanja bolusa
 
-To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only (not delivered by pump)**. Redak **Vrijeme** (postavljen na **Sada**) zatim vam omogućuje da upišete stvarno vrijeme injekcije: možete ga zanemariti ako je injekcija dana nedavno. Ako je bolus dan prije nekog vremena, pomoću **-** pomaknite vrijeme unatrag (_npr._ -30 min) ili otvorite redak strelicom i odaberite točan datum i vrijeme. **AAPS** će tada uzeti u obzir trajanje djelovanja inzulina i prema tome izračunati preostali inzulin koji je još u tijelu.
+Da biste zabilježili inzulin isporučen iz pumpe dok je **AAPS** bio odspojen ili inzulin iz injekcija penom: otvorite [dijalog Inzulin](#aaps-screens-buttons-insulin) (**Tretmani** u donjoj navigaciji ili gumb za brzo pokretanje), upišite količinu u jedinicama i uključite **Bolus će biti samo zabilježen (neće biti isporučen putem pumpe)**. Redak **Vrijeme** (postavljen na **Sada**) zatim vam omogućuje da upišete stvarno vrijeme injekcije: možete ga zanemariti ako je injekcija dana nedavno. Ako je bolus dan prije nekog vremena, pomoću **-** pomaknite vrijeme unatrag (_npr._ -30 min) ili otvorite redak strelicom i odaberite točan datum i vrijeme. **AAPS** će tada uzeti u obzir trajanje djelovanja inzulina i prema tome izračunati preostali inzulin koji je još u tijelu.
 
 Ako **AAPS** koristite kao njegovatelj, pumpu možete vrlo lako daljinski odspojiti (i ponovno spojiti) putem [SMS naredbe](../RemoteFeatures/SMSCommands.md), s naredbama kao što su „pump disconnect 120“ i „pump connect 120“. Trajanje daljinskog odspajanja može biti od 1 do 120 min (u ovom primjeru je 120 minuta). To je vrlo korisno ako vam telefon s **AAPS**-om nije lako dostupan, npr. kada je zakopan u pojasu za pumpu na djetetu koje trči prema bazenu, ili ga tinejdžer pažljivo čuva (ili koristi).
 
@@ -80,7 +80,7 @@ Koja vam strategija više odgovara vrlo je osobno, a najbolje ćete to otkriti i
 **Upravljanje → Rotacija mjesta primjene** otvara dijalog Rotacija mjesta primjene u načinu prikaza:
 
 - S dva gumba na vrhu (ikona kanile i ikona senzora) možete prikazati samo mjesta kanile, samo mjesta senzora ili oboje
-- All Cannula change and Sensor change events from the past 45 days are available.
+- Dostupni su svi događaji promjene kanile i promjene senzora iz zadnjih 45 dana.
 - Kliknite na područje mjesta ili na jedan unos u popisu ispod kako biste filtrirali popis samo na unose u odabranom području. Odabrano područje bit će istaknuto svijetlozelenom bojom.
 - Dodirnite ikonu **olovke** pokraj unosa da otvorite prikaz za uređivanje i promijenite mjesto primjene, strelicu ili bilješku
 
@@ -92,7 +92,7 @@ Koja vam strategija više odgovara vrlo je osobno, a najbolje ćete to otkriti i
 
 ![Dijalog Korisnički profil za rotaciju mjesta](../images/SiteRotation/Type.png)
 
-*Note: this setting decides whether the Site Rotation dialog (Edit mode) opens automatically when a new entry is made with the "Prime/Fill" button or the "Sensor Insert" button.*
+*Napomena: ova postavka određuje otvara li se dijalog Rotacija mjesta primjene (način uređivanja) automatski kada se napravi novi unos gumbom „Punjenje“ ili gumbom „Umetanje senzora“.*
 
 - Za promjenu mjesta primjene obavljenu izravno na pumpi morate otvoriti način prikaza i urediti novi unos kako biste odabrali lokaciju i strelicu
 
@@ -100,7 +100,7 @@ Način uređivanja omogućuje vam da odaberete lokaciju, strelicu i bilješku za
 
 - Unos koji uređujete prikazan je ispod slika tijela, s ikonom svoje vrste (kanila ili senzor)
 - Prednji i stražnji prikaz prikazani su jedan pokraj drugog: dodirnite područje na koje ste ga postavili
-- Once a site is selected (highlighted in green), the list below shows all entries made in this site in the past 45 days.
+- Kada odaberete mjesto (istaknuto zelenom bojom), popis ispod prikazuje sve unose na tom mjestu u zadnjih 45 dana.
 
 ![Način uređivanja](../images/SiteRotation/EditMode.png)
 
