@@ -60,7 +60,7 @@ Když běží dočasné přepnutí, karta **AKTIVNÍ** ukazuje jeho procento a p
 
 ![Obrazovka Profil – karusel profilů, podrobnosti a panel akcí](../images/v4/Profiles/profile_manage.png)
 
-Tlačítka dole pracují s **vybraným** profilem: **➕ Přidat**, **✏️ Upravit**, **⧉ Klonovat** a **‘️ Smazat**, a vpravo kulaté tlačítko **▶ Aktivovat**. Jak vyplnit čtyři rozpisy v editoru (I:C / ISF / BAS / CÍL), najdete v části [Vytvoření a úprava profilů](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Jak vyplnit čtyři rozpisy v editoru (I:C / ISF / BAS / CÍL), najdete v části [Vytvoření a úprava profilů](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Klonovat** používá ikonu dvou čtverečků, která často znamená *kopírovat*, ale nic se nevkládá: kopie vznikne v jednom kroku. Potvrďte *Klonovat profil "Normal"?* a na konec karuselu se přidá nový profil s názvem *Normal copy*. Je vybraný a připravený k **✏️ úpravě** (kde ho můžete také přejmenovat). Není to totéž jako klonování dřívějšího **přepnutí profilu** z historie ošetření, které vytvoří nový profil *s použitým procentem a posunem času*. Viz [Uložení přepnutí profilu pro pozdější použití](#ProfileSwitch-keep-for-later).
 
