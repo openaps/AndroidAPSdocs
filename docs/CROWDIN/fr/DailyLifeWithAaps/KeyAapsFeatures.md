@@ -18,7 +18,7 @@ Voir [Écrans AAPS > L'écran principal > État de la boucle](#AapsScreens-loop-
 
 Les suggestions ne sont pas exécutées automatiquement (comme en boucle fermée). L'utilisateur doit appliquer les suggestions à la main dans la pompe (avec une pompe virtuelle) ou avec un bouton si **AAPS** est connecté à une vraie pompe.
 
-Quand **AAPS** a une suggestion, une entrée **Boucle** avec un badge apparaît dans la barre de navigation en bas de l'écran principal. Appuyez dessus pour lire la suggestion (« Accepter nouveau Basal Temp ») avec son débit, sa durée et sa raison, puis appuyez sur **Effectuer** pour l'appliquer :
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Appuyez dessus pour lire la suggestion (« Accepter nouveau Basal Temp ») avec son débit, sa durée et sa raison, puis appuyez sur **Effectuer** pour l'appliquer :
 
 ![Suggestion en boucle ouverte avec le bouton Effectuer](../images/screens/loop_tab.png)
 
