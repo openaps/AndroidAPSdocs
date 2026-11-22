@@ -32,7 +32,7 @@ To oštećenje može uključivati **gubitak vida i trajnu neuropatiju (bol)**. T
 
 #### Koliko brzo mogu sniziti HbA1c bez rizika od trajnog oštećenja?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. Predložili su da **„sniženje vrijednosti HbA1c u bilo kojem razdoblju od 6 mjeseci treba biti manje od 2 %, kako bi se spriječilo napredovanje retinopatije.... Prebrzo sniženje na početku kontrole glikemije moglo bi uzrokovati teško ili prolazno pogoršanje napredovanja retinopatije.“**
+Jedna retrospektivna [studija](https://pubmed.ncbi.nlm.nih.gov/1464975/) 76 pacijenata pokazala je da se rizik napredovanja retinopatije povećao 1,6 puta, 2,4 puta i 3,8 puta ako je HbA1c pao za 1 %, 2 % odnosno 3 % tijekom 6 mjeseci. Predložili su da **„sniženje vrijednosti HbA1c u bilo kojem razdoblju od 6 mjeseci treba biti manje od 2 %, kako bi se spriječilo napredovanje retinopatije.... Prebrzo sniženje na početku kontrole glikemije moglo bi uzrokovati teško ili prolazno pogoršanje napredovanja retinopatije.“**
 
 Napomena: Ako koristite druge jedinice za HbA1c (mmol/mol umjesto %), kliknite [ovdje](https://www.diabetes.co.uk/hba1c-units-converter.html) za kalkulator HbA1c.
 
@@ -51,9 +51,9 @@ Općenito je poznato da osobe s _novootkrivenim_ dijabetesom tipa 1 (koje pri di
 :class: danger
 SGLT-2 inhibitori, koji se zovu i glifozini, sprječavaju ponovnu apsorpciju glukoze u bubrezima. Glifozini snižavaju šećer u krvi u količini koja se ne može izračunati, pa ih NE SMIJETE uzimati dok koristite sustav zatvorene petlje kao što je AAPS! Postojao bi velik rizik od ketoacidoze i/ili hipoglikemije! Kombinacija ovog lijeka sa sustavom koji smanjuje bazalne stope kako bi podigao GUK posebno je opasna. 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45 g of carbs. Problem je u tome što inhibitori, a AAPS to ne zna, uzrokuju da tijelo izbaci dio ugljikohidrata. Tako u tijelu ostaje previše inzulina u odnosu na apsorbirane ugljikohidrate, što dovodi do hipoglikemije.
+Ukratko:
+- **Primjer 1: rizik od hipoglikemije**
+>Za ručak pomoću **AAPS-a** date bolus za 45 g ugljikohidrata. Problem je u tome što inhibitori, a AAPS to ne zna, uzrokuju da tijelo izbaci dio ugljikohidrata. Tako u tijelu ostaje previše inzulina u odnosu na apsorbirane ugljikohidrate, što dovodi do hipoglikemije.
 
 - **Primjer 2: rizik od ketoacidoze**
 >Inhibitori u pozadini izbacuju dio ugljikohidrata, pa vam GUK pada. **AAPS** će automatski dati pumpi naredbu da smanji isporuku inzulina, uključujući bazal. S vremenom vam GUK može ostati ispod ciljne vrijednosti, sve dok tijelo nema dovoljno bazalnog inzulina da iskoristi ugljikohidrate, što dovodi do ketoacidoze. Obično se ketoacidoza kod osoba s T1D-om razvija jer pumpa zakaže, što bi pokrenulo upozorenja na telefonu i bilo bi vidljivo po visokoj vrijednosti GUK-a. Kod glifozina je opasnost u tome što AAPS ne bi dao nikakva upozorenja, jer pumpa i dalje radi, a GUK možda ostaje unutar cilja.
@@ -80,7 +80,7 @@ U prvim fazama početka s **AAPS-om** možete imati poteškoća da sve komponent
 
 #### Vrijeme izrade aplikacije i put do potpune petlje
 
-The time to build the **AAPS** app depends on your level of expertise and technical ability. Neiskusnim korisnicima izrada **AAPS-a** obično traje do pola dana ili cijeli dan (uz pomoć zajednice). S novijim verzijama **AAPS-a** postupak će biti znatno brži, jer ćete imati više iskustva.
+Vrijeme izrade aplikacije **AAPS** ovisi o vašem znanju i tehničkim sposobnostima. Neiskusnim korisnicima izrada **AAPS-a** obično traje do pola dana ili cijeli dan (uz pomoć zajednice). S novijim verzijama **AAPS-a** postupak će biti znatno brži, jer ćete imati više iskustva.
 
 Nekoliko dijelova ove dokumentacije pomaže vam kroz postupak izrade:
 
@@ -123,7 +123,7 @@ Slobodno se obratite zajednici AAPS-a ako u nešto niste sigurni – ne postoji 
 
 
 
-#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
+#### [Gdje mogu dobiti pomoć](../GettingHelp/WhereCanIGetHelp.md)?
 
 Ovaj odjeljak daje novim korisnicima poveznice na izvore pomoći, uključujući podršku zajednice novih i iskusnih korisnika koji mogu odgovoriti na pitanja i riješiti uobičajene probleme s AAPS-om.
 
@@ -173,12 +173,12 @@ Ovo je približan vremenski okvir:
 | Konfiguracija GitHuba za izradu u pregledniku                           |          1–4 sata           |
 | Postavljanje poslužitelja za izvješća                                   |            1 sat            |
 | Instalacija aplikacije za CGM (xDrip, BYODA, …)                         |            1 sat            |
-| Configuring CGM → xDrip → AAPS initially                                |            1 sat            |
+| Prva konfiguracija CGM → xDrip → AAPS                                   |            1 sat            |
 | Prva konfiguracija AAPS → pumpa                                         |            1 sat            |
 | Konfiguracija AAPS → Nightscout/Tidepool (samo za izvješća)             |            1 sat            |
-| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers               |            1 sat            |
+| Neobavezno: konfiguracija Nightscout ↔ **AAPS** i NS pratitelji         |            1 sat            |
 | Cilj 1: Postavljanje prikaza i praćenja                                 |            1 sat            |
-| Cilj 2: Naučite kako kontrolirati AAPS                                  |           2 hours           |
+| Cilj 2: Naučite kako kontrolirati AAPS                                  |           2 sata            |
 | Cilj 3: Dokažite svoje znanje                                           |         Do 14 dana          |
 | Cilj 4: Početak s otvorenom petljom                                     |       Najmanje 7 dana       |
 | Cilj 5: Razumijevanje otvorene petlje                                   |           7 dana            |
