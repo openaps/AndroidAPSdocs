@@ -31,6 +31,7 @@ No **AAPS** v4, as preferências estão no ecrã **Definições**. Há três cam
 - Por predefinição, o **AAPS** segue o idioma do telefone (recomendado).
 
 - Se quiser o **AAPS** num idioma diferente do telefone, escolha-o aqui. No Android 13 e mais recente, o **AAPS** regista-o no Android como o idioma da própria app, por isso todos os seus ecrãs, o ecrã principal, os widgets e a forma de escrever os números seguem esse idioma.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Quando muda o idioma, os textos do **AAPS** passam logo para o novo idioma. Se alguns textos ainda aparecerem no idioma antigo, reinicie o **AAPS**.
 - No Android 12 esta definição não aparece: o **AAPS** usa sempre o idioma do telefone.
@@ -86,6 +87,10 @@ Escolha entre o tema claro, o tema escuro ou seguir a definição de sistema do 
 
 ![Definições > Proteção](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Senha Mestre
 
@@ -110,9 +115,9 @@ Se se esqueceu da sua senha mestre, veja [Como repor a senha mestre?](#FAQ-reset
 
 ### Proteção da aplicação
 
-Se a app estiver protegida, tem de introduzir a senha ou usar a autenticação biométrica do telefone para abrir o **AAPS**, e outra vez quando voltar à app depois do [tempo limite da proteção](#Preferences-password-and-pin-retention).
+Se a app estiver protegida, tem de introduzir a senha ou usar a autenticação biométrica do telefone para abrir o **AAPS**, e outra vez quando voltar à app depois do [tempo limite da proteção](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-O **AAPS** fecha logo se for introduzida uma senha errada - mas continua a funcionar em segundo plano se tiver sido aberto antes com sucesso.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Proteção do bólus
 
