@@ -124,7 +124,7 @@ Scéna bez nadväzujúcej scény sa iba spýta na potvrdenie:
 
 ![Dialógové okno Ukončiť scénu](../images/v4/Scenes/scene_end_dialog.png)
 
-Ukončenie scény **vráti späť** zmeny, ktoré urobila (napríklad prepnutie profilu a dočasný cieľ, ktoré spustila). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Ukončenie scény **vráti späť** zmeny, ktoré urobila (napríklad prepnutie profilu a dočasný cieľ, ktoré spustila). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Kým je scéna aktívna, profil a cieľ na hlavnej obrazovke majú malú ikonu scény, ak ich nastavila scéna. Panel **Scény** na spodnej navigačnej lište zostáva dostupný na spustenie inej scény:
 
