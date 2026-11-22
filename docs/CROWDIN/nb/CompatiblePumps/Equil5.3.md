@@ -43,7 +43,7 @@ Når den er valgt, viser **Equil**-kortet to knapper, **Innstillinger** og **Åp
 ![Innstillinger for Equil-driveren](../images/v4/Pumps/equil_settings.png)
 
 * **Alarm for lavt batteri**: varsler deg når pumpebatteriet er lavt.
-* **Alarm for lavt legemiddellager**: varsler deg når det er lite insulin igjen i reservoaret.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Varseltone**: hvordan pumpen varsler deg: **Demp lyd**, **Kun vibrering**, **Kun lyd** eller **Vibrering og lyd**.
 * **Bolushastighet**: hvor raskt en bolus gis: **1,5 E/min (standard)**, **3 E/min**, **6 E/min** eller **12 E/min**. En raskere bolus kan gi flere okklusjonsalarmer.
 
