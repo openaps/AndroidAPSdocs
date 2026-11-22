@@ -10,7 +10,7 @@ Kada se **AAPS** instalira prvi put, svaki cilj morate ispuniti prije prelaska n
 
 **Ciljevi 1 do 8** vode vas od postavljanja **AAPS-a** na pametnom telefonu do „osnovne” hibridne zatvorene petlje. Za to vam treba oko 6 tjedana. Do **Cilja 5** možete doći s virtualnom pumpom (a inzulin u međuvremenu primati na neki drugi način). **Ciljevi 9 i 10** služe za testiranje naprednijih funkcija **AAPS-a** radi bolje kontrole dijabetesa. Za njih će vam trebati do 3 mjeseca, možda i duže. Više detalja o procjeni potrebnog vremena nalazi se ovdje: [Koliko će to trajati?](#preparing-how-long-will-it-take)
 
-As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
+Osim napredovanja kroz **ciljeve**, po potrebi možete i ukloniti napredak i [vratiti se na raniji cilj](#CompletingTheObjectives-go-back-in-objectives).
 
 ## Napravite sigurnosnu kopiju postavki
 
@@ -39,7 +39,7 @@ Ako nemate sigurnosnu kopiju postavki, a nešto se dogodi s vašim pametnim tele
 - Ako koristite Tidepool:
   - Slijedite upute na stranici [Tidepool](../SettingUpAaps/Tidepool.md) kako bi **Tidepool** mogao primati i prikazivati podatke **AAPS-a**.
 
-Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+Napomena: *Možda ćete morati pričekati sljedeće očitanje glukoze sa senzora prije nego što ga **AAPS** prepozna.*
 
 (objectives-objective2)=
 ## Cilj 2: Naučite kako kontrolirati AAPS
@@ -51,7 +51,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 Zadaci za ispunjenje **Cilja 2** su:
 - Postavite **profil** na 90 % na 10 min.
   - _Savjet_: dodirnite naziv profila na glavnom zaslonu da otvorite zaslon **Profil**, zatim koristite gumb **Aktiviraj** (▶) i postavite postotak i trajanje. Više informacija u [Zamjena profila i postotak profila](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Napomena_: **AAPS** ne prihvaća bazalne stope niže od 0,05 J/h. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Nakon ovog zadatka vratite se na svoj uobičajeni **profil**.
+  - _Napomena_: **AAPS** ne prihvaća bazalne stope niže od 0,05 J/h. Ako vaš **profil** ima stope od 0,05 J/h ili niže, prije ovog zadatka morate napraviti privremeni **profil** s višim bazalnim stopama. Nakon ovog zadatka vratite se na svoj uobičajeni **profil**.
 - Simulirajte „tuširanje” tako da u **AAPS-u** [odspojite pumpu](#AapsScreens-loop-status) na 1 h.
   - _Savjet_: pritisnite ikonu petlje na glavnom zaslonu da otvorite dijalog petlje, zatim odaberite trajanje pod **Odspoji pumpu**.
 - Završite „tuširanje” tako da ponovno spojite pumpu.
@@ -94,7 +94,7 @@ Najkraće vrijeme za ovaj cilj: **7 dana**. To je obavezno vrijeme čekanja. Ne 
 - Koristite [**privremene ciljeve**](../DailyLifeWithAaps/TempTargets.md) kada je potrebno. Nakon liječenja hipoglikemije koristite unaprijed postavljeni privremeni cilj „Hipo” kako sustav ne bi previše korigirao pri ponovnom porastu.
 - Ako ste u ovom trenutku još u [jednostavnom načinu rada](#preferences-simple-mode), sada je vjerojatno dobro vrijeme da ga isključite.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Uz to, najmanji postotak za preporučene promjene bazalne stope možete promijeniti postavkom „**Minimalna promjena u otvorenoj petlji**” u **Postavke → Petlja**. Što je vrijednost viša, to ćete dobiti manje obavijesti o promjenama.
+Kako biste u otvorenoj petlji dobivali manje predloženih promjena bazalne stope, i dalje možete koristiti savjete opisane u [**Cilju 3**](#objectives-objective3). Uz to, najmanji postotak za preporučene promjene bazalne stope možete promijeniti postavkom „**Minimalna promjena u otvorenoj petlji**” u **Postavke → Petlja**. Što je vrijednost viša, to ćete dobiti manje obavijesti o promjenama.
 
 ![Minimalna promjena zahtjeva u otvorenoj petlji](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
@@ -110,7 +110,7 @@ U **Cilju 5** počet ćete razumijevati kako nastaju preporuke za privremeni baz
 
 Procijenjeno vrijeme za ovaj cilj: **7 dana**.
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Ovu vrijednost možete postaviti u [Postavke → OpenAPS SMB](#Preferences-openaps-smb-settings). U [jednostavnom načinu rada](#preferences-simple-mode) **AAPS** ovu vrijednost postavlja automatski i ne trebate je mijenjati. Ako još koristite virtualnu pumpu, ovu sigurnosnu postavku postavite i u **AAPS-u** i u svojoj inzulinskoj pumpi.
+U ovom **cilju** trebate odrediti i postaviti vrijednost „Maksimalna bazalna stopa” (max-basal), kako je opisano u [Funkcije OpenAPS-a](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Ovu vrijednost možete postaviti u [Postavke → OpenAPS SMB](#Preferences-openaps-smb-settings). U [jednostavnom načinu rada](#preferences-simple-mode) **AAPS** ovu vrijednost postavlja automatski i ne trebate je mijenjati. Ako još koristite virtualnu pumpu, ovu sigurnosnu postavku postavite i u **AAPS-u** i u svojoj inzulinskoj pumpi.
 
 Možda ćete htjeti postaviti [cilj GUK-a u **profilu**](#profile-glucose-targets) više nego inače, dok se ne naviknete na izračune i postavke **AAPS-a**. Možete isprobati da **cilj GUK-a** u svom **profilu** postavite u uži raspon (npr. širine 1 mmol/L ili manje [20 mg/dL ili manje]) i pratiti što se događa.
 
@@ -119,7 +119,7 @@ Možda ćete htjeti postaviti [cilj GUK-a u **profilu**](#profile-glucose-target
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Ako koristite otvorenu petlju s virtualnom pumpom, **ovdje stanite**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+Ako koristite otvorenu petlju s virtualnom pumpom, **ovdje stanite**. **Provjeri** dodirnite na kraju ovog **cilja** tek kada prijeđete na „pravu” pumpu koja isporučuje inzulin.
 
 ```
 
@@ -167,14 +167,14 @@ Najkraće vrijeme za ovaj cilj: **1 dan**. To je obavezno vrijeme čekanja. Ne m
 
 - Odaberite **Zatvorena petlja**: pritisnite [ikonu petlje](#AapsScreens-loop-status) na glavnom zaslonu i kao način rada odaberite **Zatvorena petlja**. Ostanite u **zatvorenoj petlji** 1 dan.
 
-- Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Polako povećavajte „Maks. aktivni inzulin (IOB) za SMB” (u OpenAPS-u se zove „max-iob”) iznad 0, dok ne nađete postavke koje vam najbolje odgovaraju.
 
 Zadana preporuka za ovu postavku je „**prosječni bolus za obrok + 3x maksimalni dnevni bazal**”, gdje je „maksimalni dnevni bazal” najveća vrijednost po satu u bilo kojem vremenskom odsječku dana.
 
 ![maksimalni dnevni bazal](../images/MaxDailyBasal2.png)
 
 Ovu preporuku shvatite kao početnu točku. Ako koristite ovo pravilo, ali AAPS isporučuje previše inzulina kada glukoza raste, možda trebate:
-* lower the "Max IOB for SMB" value;
+* smanjiti vrijednost „Maks. aktivni inzulin (IOB) za SMB”;
 * provjeriti postavke **profila**, i mijenjati samo jednu stvar odjednom.
 
 Ako ste jako otporni na inzulin, možete umjesto toga vrlo oprezno povećati vrijednost **maxIOB**.
@@ -202,7 +202,7 @@ U **Cilju 9** upoznat ćete i koristiti **„Super Micro Bolus (SMB)”** kao je
 Najkraće vrijeme za ovaj cilj: **28 dana**. To je obavezno vrijeme čekanja. Ne možete prijeći na sljedeći cilj dok to vrijeme ne prođe.
 
 - [Odjeljak o SMB-u u ovoj dokumentaciji](#Open-APS-features-super-micro-bolus-smb) i [opis oref1 u dokumentaciji openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) morate pročitati da biste razumjeli **SMB** i pojam **nultog privremenog bazala** (zero-temping).
-- Nakon toga možete [povećati maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) kako bi **SMB-ovi** radili učinkovitije. maxIOB sada uključuje sav **aktivni inzulin**, ne samo nakupljeni bazal. Ova granica pauzira **SMB-ove** dok aktivni inzulin ne padne ispod te vrijednosti (_npr._ **maxIOB** je postavljen na 7 J, a za obrok se da bolus od 8 J: SMB-ovi će se pauzirati i neće se davati dok **aktivni inzulin** ne padne ispod 7 J). Dobar početak je postaviti **maxIOB** = **prosječni bolus za obrok + 3x maksimalni dnevni bazal**, gdje je „maksimalni dnevni bazal” najveća vrijednost po satu u bilo kojem vremenskom odsječku dana. See [objective 7](#objectives-objective7) as reference.
+- Nakon toga možete [povećati maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) kako bi **SMB-ovi** radili učinkovitije. maxIOB sada uključuje sav **aktivni inzulin**, ne samo nakupljeni bazal. Ova granica pauzira **SMB-ove** dok aktivni inzulin ne padne ispod te vrijednosti (_npr._ **maxIOB** je postavljen na 7 J, a za obrok se da bolus od 8 J: SMB-ovi će se pauzirati i neće se davati dok **aktivni inzulin** ne padne ispod 7 J). Dobar početak je postaviti **maxIOB** = **prosječni bolus za obrok + 3x maksimalni dnevni bazal**, gdje je „maksimalni dnevni bazal” najveća vrijednost po satu u bilo kojem vremenskom odsječku dana. Kao referencu pogledajte [cilj 7](#objectives-objective7).
 - Procijenite brzinu apsorpcije ugljikohidrata i razmislite o promjeni parametra „min_5m_carbimpact” u [Postavke → Postavke apsorpcije → min_5m_carbimpact](#Preferences-min_5m_carbimpact) ako vam se čini prespora ili prebrza.
 
 (objectives-objective10)=
