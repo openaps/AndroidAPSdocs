@@ -67,6 +67,8 @@ xDrip pot llegir les notificacions de l'aplicació del fabricant, igual que ESEL
 
 **AAPS** pot llegir els valors de glucèmia directament de les notificacions de l'aplicació oficial d'Eversense, sense cap altra aplicació entremig. No es poden recuperar les dades que falten.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Seleccioneu **Lector de notificacions** a [**Configurador → Origen glucèmia**](#Config-Builder-bg-source) i doneu a **AAPS** accés a les notificacions quan ho demani.
 - Assegureu-vos que l'aplicació Eversense mostra el valor de glucèmia actual a la seva notificació.
 
