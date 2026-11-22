@@ -37,11 +37,11 @@ There are three settings:
 
 ![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
 
-### 储药器药量低警告
+### Low Reservoir Alerts
 
 A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
 
-### 敷贴更换提醒
+### Patch Expiration Reminder
 
 Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
 
@@ -261,7 +261,7 @@ The different warnings are explained below.
 | 警告        | 说明                                                                                                                            |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | 胰岛素暂停结束   | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| 储药量低      | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
+| 储药量低      | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                            |
 | 贴片泵使用期限届满 | The patch's usage period is over.                                                                                             |
 | 贴片泵即将到期   | The patch must be discarded in 1 hour.                                                                                        |
 | 贴片泵启动未完成  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
