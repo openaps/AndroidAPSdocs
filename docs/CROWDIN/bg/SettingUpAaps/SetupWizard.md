@@ -182,7 +182,7 @@ Android изисква специално разрешение за прилож
 
 Този екран се показва само когато **AAPS** намери по-рано експортирани настройки в директорията на **AAPS** („Открити са предишни настройки“), например когато инсталирате приложението отново или минавате на нов телефон.
 
-- За да възстановите предишната си конфигурация, натиснете „**Импорт настройки**“ – вижте [Експорт и импорт на настройките](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - За да започнете с нова конфигурация, натиснете „**Следващ**“ и продължете със съветника.
 
 ![Импорт настройки](../images/setup-wizard/Wizard-ImportSettings.png)
