@@ -86,7 +86,7 @@ Nedostaci (prema iskustvu korisnika)
 
 * Potreban je Android 5.0 ili noviji.
 
-* It has a dark UI, large readings and buttons, designed for usage at night.
+* Ima tamno sučelje, velike brojeve i gumbe, napravljeno za korištenje noću.
 
 ### xDrip (Android)
 
@@ -114,7 +114,7 @@ Ako vaš izvor podataka za **AAPS** nije xDrip, ali xDrip može prikazati podatk
 
 ![slika](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift je nastao prijenosom izvorne aplikacije xDrip na iOS i razvio se u „xDrip for iOS“, koji se piše kao **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ Ako želite, zatim možete postati „releaser“ (izdavač) i [podijeliti osobn
 * Apple iPad (potreban je sustav verzije 13.0 ili noviji)
 * Google Android (spremite web-aplikaciju na početni zaslon)
 
-Korisnici Sugarmatea javljaju da se u SAD-u može koristiti s Apple CarPlayem za prikaz vrijednosti glukoze tijekom vožnje. Još nije poznato je li to moguće i u zemljama izvan SAD-a. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Korisnici Sugarmatea javljaju da se u SAD-u može koristiti s Apple CarPlayem za prikaz vrijednosti glukoze tijekom vožnje. Još nije poznato je li to moguće i u zemljama izvan SAD-a. Ako znate više o tome, dodajte pojedinosti ovdje u dokumentaciju putem [pull requesta](../SupportingAaps/HowToEditTheDocs.md), što je brzo i jednostavno.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -200,7 +200,7 @@ SugarPixel je uređaj za dodatni prikaz glukoze i sustav upozorenja za kontinuir
 ![Praćenje putem uređaja Nightscout Clock](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * Sat podržava jedinice mmol/L i mg/dL te ima zvučne alarme.
-* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Dostupno je nekoliko prikaza, pregled se nalazi na [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
 * Postavljanje i konfiguracija uređaja traže samo nekoliko jednostavnih koraka. Nakon postavljanja za rad su mu potrebni samo napajanje i Wi-Fi.
 * Uređaj Ulanzi TC001 znatno je jeftiniji od SugarPixela.
 * Softver i upute za instalaciju nalaze se na [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
