@@ -73,7 +73,7 @@ Het **Ambulant Glucose Profiel** (**AGP**) laat zien hoe je glucose meestal verl
 
 - **De grafiek**: één dag, van middernacht tot middernacht. De lijn is de **Mediaan** (de helft van je metingen op dat uur was lager, de helft was hoger). Daaromheen bevat één band de middelste helft van je metingen (**25–75%**) en een bredere band de meeste metingen (**10–90%**). Een smalle band betekent dat je glucose op dat uur van dag tot dag ongeveer gelijk is. Stippellijnen tonen je **LAAG grens**, 140 mg/dl (7,8 mmol/l) en je **HOOG grens**.
 - **Glycemisch overzicht**: de tijd binnen je bereik, binnen het nauwe bereik (70–140 mg/dl of 3,9–7,8 mmol/l), boven je bereik en eronder, daarna je **Gemiddeld** en **Mediaan** glucose. Je bereik is de **LAAG grens** en **HOOG grens** die zijn ingesteld bij [Bereik voor visualisatie](#Preferences-range-for-visualization).
-- **eA1c** en **GMI**: twee schattingen van de HbA1c, berekend uit je CGM-metingen. Net als de HbA1c hierboven kunnen ze afwijken van je HbA1c-bloedtesten.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Net als de HbA1c hierboven kunnen ze afwijken van je HbA1c-bloedtesten.
 - **SD** (standaarddeviatie) en **CV** (variatiecoëfficiënt): hoeveel je glucose schommelt. Een lagere waarde betekent een stabielere glucose.
 - **Dagen**: hoeveel dagen met CGM-gegevens zijn gebruikt.
 
@@ -114,7 +114,7 @@ Aan het einde van elke regel tonen kleine pictogrammen waar de gegevens vandaan 
 (screens-bolus-carbs)=
 ### Koolhydraten en bolus
 
-![Koolhydraten & bolus](../images/TreatmentsView1.png)
+![Koolhydraten & bolus](../images/Maintenance/TreatmentsView1.png)
 
 Op dit tabblad zie je het logboek van bolussen en koolhydraten. Bij elke bolus (regel **1**) staat de resterende IOB van die bolus naast de hoeveelheid insuline. De bolus kan komen van:
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ De Behandelingen geschiedenis kun je gebruiken om verkeerd ingevoerde koolhydrat
 
 ### Tijdelijk basaal
 
-![Tijdelijk basaal](../images/TreatmentsView2.png)
+![Tijdelijk basaal](../images/Maintenance/TreatmentsView2.png)
 
 De **tijdelijke basaalstanden** die de loop heeft ingesteld, worden hier getoond. Als een invoer nog invloed heeft op de IOB, staat die informatie naast de basaalstand (regel **1**). Dit kan zijn:
 * Positieve IOB als de tijdelijke basaal hoger was dan die in het profiel
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Tijdelijk streefdoel
 
-![Tijdelijk streefdoel](../images/TreatmentsView3.png)
+![Tijdelijk streefdoel](../images/Maintenance/TreatmentsView3.png)
 
 Hier zie je de geschiedenis van tijdelijke streefdoelen.
 
 ### Profiel wissel
 
-![Profiel wissel](../images/TreatmentsView4.png)
+![Profiel wissel](../images/Maintenance/TreatmentsView4.png)
 
 Hier zie je de geschiedenis van profielwissels. Je kunt bij elke profielwissel meerdere regels zien: regel **1**, opgeslagen in zowel NS als de pompgeschiedenis, is de echte wissel. Regel **2**, opgeslagen in Nightscout maar niet in de pompgeschiedenis, is het verzoek voor een profielwissel door de gebruiker.
 
@@ -169,14 +169,14 @@ Met de knop **Dupliceren** in regel **2** kun je een kopie maken van een **Profi
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Dit tabblad toont alle notities en careportal-invoer die in Nightscout zijn opgeslagen.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Bedrijfsmodus
 
-![Bedrijfsmodus](../images/TreatmentsView6.png)
+![Bedrijfsmodus](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
