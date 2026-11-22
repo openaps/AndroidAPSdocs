@@ -121,6 +121,8 @@ Pompa ekranında **Patch'i Çıkar** düğmesine basın ve onaylayın. İnsülin
 
 Kritik bir alarm Patch'i durdurduğunda, alarm bunun yerine **Patch'i Devre Dışı Bırak** seçeneğini sunar. Buna basmak Patch'i aynı şekilde çıkarır.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarmlar ve bildirimler
