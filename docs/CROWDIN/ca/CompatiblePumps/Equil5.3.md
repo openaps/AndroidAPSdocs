@@ -10,7 +10,8 @@ Aquestes instruccions serveixen per configurar la bomba d'insulina Equil.
 ## Capacitats de la bomba amb AAPS
 
 * Bomba patch sense tub que es comunica amb **AAPS** pel Bluetooth propi del telèfon, sense cap dispositiu de comunicació addicional.
-* **AAPS** tracta l'Equil com una bomba patch amb un reservori de 200 U: la pantalla principal mostra els indicadors d'estat de bomba patch, i **Encebar** i **Canvi de pila de la bomba** no s'ofereixen. L'ompliment, l'encebament i el canvi de pila es fan als assistents de la bomba.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Mentre la bomba està suspesa o aturada, **AAPS** registra una basal temporal de 0 U/h, de manera que no es compta cap insulina basal a l'IOB.
 * Els canvis d'horari d'estiu i de fus horari s'han de fer a mà.
 
