@@ -37,11 +37,11 @@ Jsou zde tři nastavení:
 
 ![Nastavení EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Nízký stav zásobníku
+### Low Reservoir Alerts
 
 Varování se zobrazí, když množství inzulínu v patchi klesne na tuto hodnotu nebo níže. Můžete nastavit hodnotu od 10 do 50 U, v krocích po 5 U. Výchozí hodnota je 10 U.
 
-### Připomenutí expirace pumpy
+### Patch Expiration Reminder
 
 Připomene vám, kolik času zbývá do konce platnosti aktuálního patche. Můžete nastavit hodnotu od 1 do 24 hodin, v krocích po 1 hodině. Výchozí hodnota je 4 hodiny.
 
@@ -261,7 +261,7 @@ Jednotlivá varování jsou vysvětlena níže.
 | Varování                    | Vysvětlení                                                                                                              |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | Konec pozastavení inzulínu  | Zvolená doba pozastavení skončila. Stisknutím **Obnovit pumpu** v oznámení znovu spustíte výdej inzulínu.               |
-| Nízký stav zásobníku        | Množství inzulínu v patchi je nižší než hodnota nastavená v **Nízký stav zásobníku**.                                   |
+| Nízký stav zásobníku        | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                      |
 | Platnost patche vypršela    | Doba používání patche skončila.                                                                                         |
 | Platnost patche brzy vyprší | Patch musíte zahodit do 1 hodiny.                                                                                       |
 | Neúplná aktivace patche     | Aktivace patche byla po spárování přerušena na déle než 3 minuty. Otevřete obrazovku pumpy a dokončete aktivaci patche. |
