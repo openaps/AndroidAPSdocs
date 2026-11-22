@@ -38,7 +38,7 @@
 
 * במסך המשאבה, יש ללחוץ על **צימוד**. **AAPS** סורק ומחפש משאבות קרובות.
 
-* יש ללחוץ על השורה של המשאבה שלכם ברשימה.
+* Tap the entry for your pump in the list. If your phone still has an old Bluetooth pairing with this pump (for example after the pump was unpaired on the pump itself, or paired with another phone), **AAPS** removes it first and starts a new pairing. You do not need to remove the pump in the Android Bluetooth settings.
     
     ![מסך הצימוד מציג משאבת Dana שנמצאה בסריקה](../images/DanaRS_i_Pairing.png)
 
