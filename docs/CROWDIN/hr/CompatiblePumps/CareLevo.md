@@ -1,37 +1,37 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+CareLevo je pumpa bez katetera (patch pumpa) koju proizvodi tvrtka CareMedi. Svaka pumpa sadrži do 300 J inzulina i nosi se do 7 dana (168 sati). S **AAPS-om** komunicira putem Bluetootha vašeg telefona, bez dodatnog uređaja.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+Upravljački program CareLevo je nov u **AAPS-u**. Pročitajte cijelu ovu stranicu prije nego što aktivirate svoju prvu pumpu i držite pri ruci upute za uporabu same pumpe.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+Najmanja doza koju pumpa može isporučiti je 0,05 J. U **Profilu** postavite bazalne stope na najmanje 0,05 J/h u koracima od 0,05 J/h, inače se inzulin koji **Profil** očekuje i inzulin koji pumpa isporuči malo razlikuju. **AAPS** koristi bazalne stope koje je pumpa prihvatila.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Mogućnosti pumpe s AAPS-om
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Komunicira s **AAPS-om** preko ugrađenog Bluetootha vašeg telefona, bez dodatnog komunikacijskog uređaja.
+* Bolus u koracima od 0,05 J.
+* Bazalne stope od 0,05 J/h do 15 J/h u koracima od 0,05 J/h, s bazalnim odsječcima od 30 minuta.
+* Privremene bazalne stope postavljene kao apsolutna stopa, do 12 sati.
+* Produženi bolus do 8 sati.
+* Promjene ljetnog računanja vremena i vremenske zone morate obaviti ručno. Pumpa vas obavještava kada se promijeni vremenska zona.
 
-## Pump Setup
+## Postavljanje pumpe
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Otvorite **izbornik** (☰) u gornjem lijevom kutu glavnog zaslona **AAPS-a** i odaberite **Konfiguracija**.
+1. U odjeljku Pumpa odaberite **Carelevo**.
+1. Pritisnite tipku Natrag za povratak na glavni zaslon.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![Dodatak Carelevo odabran u Konfiguracija > Pumpa](../images/v4/Pumps/carelevo_enabled.png)
 
-## Settings
+## Postavke
 
 Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
 
@@ -49,7 +49,7 @@ The patch notifies you when it has been worn for the chosen number of hours, so 
 
 ### Patch Info Alarm
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+Kad je ovo uključeno, Patch se oglasi zvučnim signalom kad bolus, produženi bolus ili privremeni bazal započne i kad završi. Zadano je isključeno.
 
 ## The pump screen
 
@@ -84,7 +84,7 @@ Fill the patch with 50 to 300 U, considering how long you will wear it. Press **
 1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
 1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
 
-### Safety check
+### Sigurnosna provjera
 
 Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
 
@@ -111,7 +111,7 @@ If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't b
 
 If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
 
-## Suspending and resuming insulin delivery
+## Obustava i nastavak isporuke inzulina
 
 Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
 
@@ -138,7 +138,7 @@ Insulin delivery has stopped. Act now:
 * **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
 * **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
 
-### Alerts
+### Upozorenja
 
 Insulin delivery continues, but something needs your attention:
 
@@ -157,6 +157,6 @@ For information only: **Low Insulin**, **Patch Usage Time Notification** (the ti
 
 The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
 
-## Where to get help
+## Gdje dobiti pomoć
 
 Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
