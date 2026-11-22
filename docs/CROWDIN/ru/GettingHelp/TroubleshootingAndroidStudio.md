@@ -9,7 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Потеряно хранилище ключей
-If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Если вы потеряли хранилище ключей или его пароль, apk, подписанный новым хранилищем ключей, не сможет обновить ваш текущий **AAPS**: его нужно удалить и установить заново. См. [Переустановка AAPS с новым хранилищем ключей](#reinstall-aaps).
 
 ## Ошибка синхронизации Gradle
 Синхронизация Gradle может завершиться ошибкой по разным причинам. Если вы получили сообщение «gradle sync failed», откройте вкладку «Build» (1) внизу Android Studio и посмотрите, какое сообщение об ошибке (2) там показано.
@@ -38,7 +38,7 @@ There are uncommitted changes.
 ```
 
 #### Шаг 1 - Проверьте установку git
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
+  * Откройте вкладку терминала (1) внизу Android Studio, скопируйте следующий текст и вставьте его в терминал (или введите вручную) (2).
     ```
     версия git
     ```
@@ -49,7 +49,7 @@ There are uncommitted changes.
 
   * Вы должны получить сообщение о том, какая версия Git установлена, как на снимке экрана выше. В этом случае перейдите к [шагу 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get a message saying
+  * Если вы получили сообщение
     ```
     Git: команда не найдена
     ```
@@ -57,15 +57,15 @@ There are uncommitted changes.
 
   * [Проверьте установку git](#BuildingAaps-steps-for-installing-git)
 
-  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Если у вас Windows и Git был только что установлен, перезагрузите компьютер, чтобы после установки Git стал доступен везде
 
-  * If Git is installed, you have restarted (if on Windows), and Git still cannot be found:
+  * Если Git установлен, вы перезагрузили компьютер (если у вас Windows), а Git все равно не находится:
 
   * Выполните поиск в компьютере файла "git.exe".
 
     Запишите себе, в какой папке он сохранен.
 
-  * Go to the Environment variables in Windows, select the variable "PATH" and click edit. Добавьте папку, в которой вы нашли установленный Git.
+  * Откройте переменные среды в Windows, выберите переменную «PATH» и нажмите «Изменить». Добавьте папку, в которой вы нашли установленный Git.
 
   * Сохраните и закройте.
 
@@ -75,11 +75,11 @@ There are uncommitted changes.
 #### Шаг 2: Проверьте незафиксированные изменения.
 
   * В Android Studio откройте вкладку «Commit» (1) слева. ![Вкладка Commit: Незафиксированные изменения](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
+  * Вы увидите либо «Changes» (в старых версиях Android Studio — «Default changeset») (2), либо «Unversioned Files» (3):
 
-    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * Если это «Changes», вы, вероятно, обновили Gradle или по ошибке изменили содержимое каких-то файлов.
 
-    * Right click on "Changes" and select "Rollback…" (1)
+    * Щелкните правой кнопкой мыши по «Changes» и выберите «Rollback…» (1)
 
       ![Вкладка Commit: Откат изменений](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
@@ -139,7 +139,7 @@ Or:
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try to rebuild:
+Если вы видите это сообщение об ошибке, нужно скачать правильную версию JVM, прежде чем пробовать собрать снова:
 
 1.  Посмотрите в [таблице требований](#Building-APK-recommended-specification-of-computer-for-building-apk-file), какая версия JVM нужна для версии **AAPS**, которую вы собираете, и запишите ее.
 
@@ -147,12 +147,12 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ![Откройте настройки Gradle](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  В поле **Gradle JDK** проверьте, выбрана ли подходящая версия (1). Если нет, нажмите на поле и посмотрите, есть ли она уже в списке. В примере ниже JVM 21 обозначена как «jbr-21». Если вы ее нашли, просто выберите ее, и все готово. If not available, then select **Download JDK** (2).
+3.  В поле **Gradle JDK** проверьте, выбрана ли подходящая версия (1). Если нет, нажмите на поле и посмотрите, есть ли она уже в списке. В примере ниже JVM 21 обозначена как «jbr-21». Если вы ее нашли, просто выберите ее, и все готово. Если ее нет, выберите **Download JDK** (2).
 
 
 ![Выберите Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. В поле Version (1) выберите JDK, который нужен для вашей версии **AAPS** (тот, который вы записали, когда смотрели таблицу требований). В поле Vendor (2) выберите любого поставщика. Location (3): не меняйте. Click **Download** (4).
+4. В поле Version (1) выберите JDK, который нужен для вашей версии **AAPS** (тот, который вы записали, когда смотрели таблицу требований). В поле Vendor (2) выберите любого поставщика. Location (3): не меняйте. Нажмите **Download** (4).
 
 ![Выберите JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -197,7 +197,7 @@ If you experience the above error message, you need to download a correct JVM ve
 (gradle-resync)=
 ### Повторная синхронизация Gradle
 
-  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Сбой режима проверки синхронизации Gradle](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Если вы все еще видите сообщение о том, что синхронизация gradle не удалась, выберите ссылку **Try again** (1). ![Сбой режима проверки синхронизации Gradle](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   Если вы больше не видите это сообщение, синхронизацию все равно можно запустить вручную:
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generate Signed APK успешно сгенерировано с 0 вариантами сборки
 
-When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
+При создании подписанного apk вы можете получить уведомление, что создание прошло успешно, но было создано «0 build variants»:
 
 ![APK создан с 0 вариантами сборки](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -232,27 +232,27 @@ When you generate the signed apk, you might get the notification that generation
 
 * Если вы используете пропатченное приложение Dexcom G6: это приложение устарело. Вместо него используйте приложение [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
-* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
+* Если вы используете xDrip: настройте определение получателя, как описано на [странице настроек xDrip](#xdrip-identify-receiver).
 
 
 ## Apk не устанавливается
 
-![phone app not installed](../images/studioTroubleshooting/Update_AppNotInstalled.png)
+![приложение не установлено на телефоне](../images/studioTroubleshooting/Update_AppNotInstalled.png)
 
 * Убедитесь, что вы передали файл «app-full-release.apk» на телефон.
-* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+* Обычно эта ошибка значит, что новый apk подписан другим хранилищем ключей, чем установленный **AAPS**. Если у вас еще есть прежнее хранилище ключей, выберите его и соберите apk снова. Иначе см. [Переустановка AAPS с новым хранилищем ключей](#reinstall-aaps).
 * Если на телефоне появилось сообщение "приложение не установлено", то выполните следующее:
 
 1. [Экспорт настроек](../Maintenance/ExportImportSettings.md) (в версии AAPS, которая уже установлена на телефоне)
 2. Удалите **AAPS** с телефона.
-3. Enable airplane mode & turn off Bluetooth.
+3. Включите режим полета и выключите Bluetooth.
 4. Установите новую версию («app-full-release.apk»)
 5. [Выполните импорт настроек](../Maintenance/ExportImportSettings.md)
-6. Turn Bluetooth back on and disable airplane mode
+6. Снова включите Bluetooth и выключите режим полета
 
 ## Apk установлен, но версия старая
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have forgotten to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Если вы успешно собрали приложение, перенесли его на телефон и установили, но номер версии остался прежним, возможно, вы забыли [обновить локальную копию](#Update-to-new-version-update-your-local-copy)
 
 ## Ничего из вышеперечисленного не сработало
 
