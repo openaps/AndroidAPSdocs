@@ -37,11 +37,11 @@ Hay tres ajustes:
 
 ![Ajustes de EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Alertas de reservorio bajo
+### Low Reservoir Alerts
 
 Aparece una advertencia cuando la insulina que queda en el parche baja a esta cantidad o menos. Puedes ponerlo entre 10 y 50 U, en pasos de 5 U. El valor predeterminado es 10 U.
 
-### Recordatorio de expiración del parche
+### Patch Expiration Reminder
 
 Te recuerda cuánto tiempo queda hasta que caduque el parche actual. Puedes ponerlo entre 1 y 24 horas, en pasos de 1 hora. El valor predeterminado es 4 horas.
 
@@ -261,7 +261,7 @@ Las distintas advertencias se explican a continuación.
 | Advertencia                           | Explicación                                                                                                                                               |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Fin de la suspensión de insulina      | El tiempo de suspensión que elegiste ha terminado. Pulsa **Reanudar bomba** en la notificación para reanudar la administración de insulina.               |
-| Reservorio bajo                       | La insulina que queda en el parche está por debajo de la cantidad fijada en **Alertas de reservorio bajo**.                                               |
+| Reservorio bajo                       | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                                        |
 | Expiración de la vida útil del parche | El periodo de uso del parche ha terminado.                                                                                                                |
 | El parche caducará pronto             | El parche debe descartarse en 1 hora.                                                                                                                     |
 | Activación incompleta del parche      | La activación del parche se interrumpió durante más de 3 minutos después del emparejamiento. Abre la pantalla de la bomba y termina de activar el parche. |
