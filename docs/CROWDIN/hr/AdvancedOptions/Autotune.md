@@ -2,7 +2,7 @@
 
 Dodatak Autotune je implementacija algoritma OpenAPS autotune unutar AAPS-a. Analizira vašu nedavnu povijest u AAPS-u i predlaže prilagodbe vaših bazalnih stopa, ISF-a i omjera ugljikohidrata.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+Dodatak Autotune dostupan je u izdanjima AAPS-a od verzije [3.4](#version3400), ali je zadano skriven.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Kako Autotune izračunava prilagodbe
@@ -27,7 +27,7 @@ Autotune se može pokrenuti na tri načina: ručno, jednokratno, iz samog dodatk
 
 Izradite praznu datoteku naziva `enable_autotune` u podmapi `extra` vaše [AAPS mape](#preferences-maintenance-settings) na telefonu.
 
-***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
+***NAPOMENA: u postavkama AAPS-a provjerite gdje je vaša AAPS mapa i jeste li datoteku stavili u pravu mapu. Nekoliko je korisnika stavilo datoteku u pogrešnu mapu.***
 
 ![Omogućavanje Autotunea](../images/Autotune/Autotune_0.png)
 
@@ -78,7 +78,7 @@ Dodirnite **Otvori dodatak** na kartici **Autotune** da otvorite zaslon Autotune
 
 - Ako vjerujete rezultatima (mali postotak promjene između ulaznog i izlaznog profila), možete kliknuti gumb „Aktiviraj profil“, a zatim kliknuti U redu za potvrdu.
 
-  - "Activate profile" will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - „Aktiviraj profil“ automatski će izraditi novi profil „Ugođen“ na popisu vaših profila (**Upravljanje → Profil**).
   - Ako već imate profil naziva „Ugođen“ u **Upravljanje → Profil**, taj će se profil prije aktiviranja ažurirati izračunatim profilom Autotunea
 
   ![Autotune: aktiviranje profila](../images/Autotune/Autotune_6.png)
@@ -97,11 +97,11 @@ Dodirnite **Otvori dodatak** na kartici **Autotune** da otvorite zaslon Autotune
 
 - Ako želite zamijeniti svoj ulazni profil rezultatom Autotunea, kliknite gumb „Ažuriraj ulazni profil“ i potvrdite skočni prozor s U redu
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
+  - Napomena: ako kliknete „Aktiviraj profil“ nakon „Ažuriraj ulazni profil“, aktivirat ćete svoj ažurirani profil, a ne zadani profil „Ugođen“.
 
   ![Autotune: ažuriranje ulaznog profila](../images/Autotune/Autotune_9.png)
 
-- Ako ste ažurirali svoj ulazni profil, gumb „Ažuriraj ulazni profil“ zamjenjuje se gumbom „Vrati ulazni profil“ (pogledajte snimku zaslona ispod). Tako odmah možete vidjeti uključuje li vaš trenutačni ulazni profil u **Upravljanje → Profil** već rezultat zadnjeg izvođenja ili ne. You also have the possibility to recover your input profile without autotune result with this button
+- Ako ste ažurirali svoj ulazni profil, gumb „Ažuriraj ulazni profil“ zamjenjuje se gumbom „Vrati ulazni profil“ (pogledajte snimku zaslona ispod). Tako odmah možete vidjeti uključuje li vaš trenutačni ulazni profil u **Upravljanje → Profil** već rezultat zadnjeg izvođenja ili ne. Ovim gumbom možete i vratiti svoj ulazni profil bez rezultata Autotunea
 
   ![Autotune: ažuriranje ulaznog profila](../images/Autotune/Autotune_10.png)
 
@@ -123,7 +123,7 @@ Značajka **Automatski zamijeni profil** dostupna je samo u razvojnom/inženjers
 - **Automatski zamijeni profil** (zadano isključeno): pogledajte [Pokretanje Autotunea pravilom automatizacije](#autotune-run-autotune-with-an-automation-rule) ispod. Ako ovu postavku uključite, ulazni profil automatski će se ažurirati ugođenim profilom i on će se aktivirati.
   - **Budite oprezni: nakon ažuriranja i aktiviranja ugođenog profila bez izmjena morate tijekom sljedećih nekoliko dana pratiti i provjeriti poboljšava li to vašu petlju**
 
-- **Categorize UAM as basal** (default Off): This setting is for the users using AAPS without any carbs entered (Full UAM). Kada je isključena, sprječava da se UAM svrstava u bazal.
+- **Svrstaj UAM u bazal** (zadano isključeno): ova je postavka za korisnike koji koriste AAPS bez unosa ugljikohidrata (potpuni UAM). Kada je isključena, sprječava da se UAM svrstava u bazal.
   - Napomena: ako tijekom jednog dana imate barem jedan sat otkrivene apsorpcije ugljikohidrata, svi podaci svrstani kao „UAM“ svrstat će se u bazal, bez obzira na ovu postavku (uključeno ili isključeno)
 - **Zadani broj dana za Autotune** (zadano 5): ovom postavkom možete odrediti zadanu vrijednost. Svaki put kada u dodatku Autotune odaberete novi profil, **Broj dana podataka** zamijenit će se ovom zadanom vrijednošću
 - **Koristi cirkadijalni IC/ISF** (zadano isključeno): pogledajte [Cirkadijalni profil IC-a ili ISF-a](#autotune-circadian-ic-or-isf-profile) ispod.
@@ -157,7 +157,7 @@ Značajka **Automatski zamijeni profil** dostupna je samo u razvojnom/inženjers
 
 - Ako dodirnete ikonu **oka** desno od polja **Broj dana podataka**, vidjet ćete odabir dana. Možete odrediti koji dani u tjednu ulaze u izračun Autotunea (na snimci zaslona ispod vidite primjer za „radne dane“, gdje su subota i nedjelja uklonjene iz izračuna Autotunea)
   - Ako je broj dana uključenih u izračun Autotunea manji od vrijednosti **Broj dana podataka**, desno od odabira dana vidjet ćete koliko će dana biti uključeno (10 dana u primjeru ispod)
-  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
+  - Ova postavka daje dobre rezultate samo ako broj preostalih dana nije premalen (na primjer ako podešavate poseban profil za dane vikenda i odabrane su samo subota i nedjelja, **Broj dana podataka** trebate postaviti na barem 21 ili 28 da bi u izračun Autotunea bilo uključeno 6 ili 8 dana)
 
   ![Zadani zaslon Autotunea](../images/Autotune/Autotune_14b.png)
 
@@ -188,7 +188,7 @@ Napomena: više informacija o tome kako postaviti pravilo automatizacije potraž
 
   ![Zadani zaslon Autotunea](../images/Autotune/Autotune_17.png)
 
-- Then you can select the **Run Autotune** action (in the **Loop & insulin** group)
+- Zatim možete odabrati radnju **Pokreni Autotune** (u skupini **Petlja i inzulin**)
 
   ![Zadani zaslon Autotunea](../images/Autotune/Autotune_18.png)
 
@@ -212,7 +212,7 @@ Autotune radi s podacima koji postoje u vašoj bazi podataka, pa ako ste upravo 
 
 Autotune je samo pomoć; važno je redovito provjeravati slažete li se s izračunatim profilom. Ako niste sigurni, promijenite postavke Autotunea (na primjer broj dana) ili kopirajte rezultate u lokalni profil i prilagodite profil prije nego što ga upotrijebite.
 
-Uvijek nekoliko dana ručno koristite Autotune i provjerite rezultate prije nego što ih primijenite. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile then you start to use Automation (Never before)
+Uvijek nekoliko dana ručno koristite Autotune i provjerite rezultate prije nego što ih primijenite. Automatizaciju počnite koristiti tek kada potpuno vjerujete rezultatima Autotunea i kada promjene između prethodnog i izračunatog profila postanu vrlo male (nikada prije)
 
 - Autotune kod nekih korisnika radi vrlo dobro, a kod drugih ne, zato **ako ne vjerujete rezultatu Autotunea, nemojte ga koristiti**
 
