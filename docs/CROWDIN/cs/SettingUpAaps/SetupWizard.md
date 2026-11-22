@@ -182,7 +182,7 @@ Až budete hotovi, stiskněte „**DALŠÍ**“ a přejděte na další obrazovk
 
 Tato obrazovka se zobrazí, jen když **AAPS** najde v adresáři **AAPS** dříve exportované nastavení („Nalezeno uložené nastavení“), například když aplikaci přeinstalujete nebo přecházíte na nový telefon.
 
-- Chcete-li obnovit předchozí konfiguraci, stiskněte „**Importovat nastavení**“ – viz [Vytváření a obnova záloh](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Chcete-li začít s novou konfigurací, stiskněte „**DALŠÍ**“ a pokračujte v Průvodci.
 
 ![Importujte nastavení](../images/setup-wizard/Wizard-ImportSettings.png)
