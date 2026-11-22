@@ -67,6 +67,8 @@ xDrip can read notifications from the vendor app, like ESEL does. Completarea da
 
 **AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. Completarea datelor lipsă (backfill) nu este disponibilă.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Selectați **Cititor notificări** în [**Configurație → Sursă glicemie**](#Config-Builder-bg-source) și acordați **AAPS** acces la notificări când vi se cere.
 - Make sure the Eversense app shows the current glucose value in its notification.
 
