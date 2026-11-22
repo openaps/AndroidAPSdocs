@@ -18,7 +18,7 @@ O **AAPS** avalia continuamente todos os dados disponíveis (IOB, COB, glicose..
 
 As sugestões não são executadas automaticamente (como no loop fechado). As sugestões precisam ser aplicadas pelo usuário manualmente na bomba (se usar a bomba virtual) ou com um botão, se o **AAPS** estiver conectado a uma bomba real.
 
-Quando o **AAPS** tem uma sugestão, aparece um item **Loop** com um selo na navegação inferior da tela principal. Toque nele para ler a sugestão ("Aceitar nova basal temporária") com a taxa, a duração e o motivo, e depois toque em **Executar** para aplicá-la:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Toque nele para ler a sugestão ("Aceitar nova basal temporária") com a taxa, a duração e o motivo, e depois toque em **Executar** para aplicá-la:
 
 ![Sugestão do loop aberto com o botão Executar](../images/screens/loop_tab.png)
 
