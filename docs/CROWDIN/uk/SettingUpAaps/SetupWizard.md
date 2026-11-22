@@ -182,7 +182,7 @@ Android вимагає для застосунків спеціальний до
 
 Цей екран показується лише тоді, коли **AAPS** знаходить у каталозі **AAPS** раніше експортовані налаштування («Знайдено збережені налаштування»), наприклад, коли ви перевстановлюєте застосунок або переходите на новий телефон.
 
-- Щоб відновити попередню конфігурацію, натисніть «**Імпорт налаштувань**» — див. [Створення та відновлення резервних копій](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Щоб почати з нової конфігурації, натисніть «**ДАЛІ**» і продовжуйте роботу з майстром.
 
 ![Імпортуйте налаштування](../images/setup-wizard/Wizard-ImportSettings.png)
