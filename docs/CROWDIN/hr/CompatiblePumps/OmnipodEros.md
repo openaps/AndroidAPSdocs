@@ -35,7 +35,7 @@ Ove su upute za konfiguriranje pumpe Omnipod generacije Eros (**NE Omnipod Dash*
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Uređaj za isporuku inzulina**
 
-> Component that will interpret commands received from the Pod communication device originating from your AAPS enabled phone.
+> Komponenta koja tumači naredbe primljene od uređaja za komunikaciju s Pod-om, a koje dolaze s vašeg telefona s AAPS-om.
 > 
 > > - Novi Omnipod Pod (generacija Eros - **NE DASH**)
 
@@ -47,7 +47,7 @@ Na ovoj stranici **RileyLink** znači bilo koji od gore navedenih uređaja za ko
 
 **SIGURNOST NA PRVOM MJESTU** - ne pokušavajte ovaj postupak u okruženju u kojem ne možete ispraviti pogrešku (rezervni Pod-ovi, inzulin, napunjen RileyLink i telefon su obavezni).
 
-**Vaš Omnipod PDM više neće raditi nakon što upravljački program Omnipod u AAPS-u aktivira vaš Pod**. Prije ste koristili Omnipod PDM za slanje naredbi svom Omnipod Eros Pod-u. Omnipod Eros Pod dopušta komunikaciju samo s jednim uređajem. Uređaj koji uspješno aktivira Pod od tog je trenutka jedini uređaj koji smije komunicirati s njim. To znači da nakon što aktivirate Omnipod Eros Pod s RileyLinkom putem upravljačkog programa Omnipod u AAPS-u, **više nećete moći koristiti svoj PDM s tim Pod-om**. Upravljački program Omnipod u AAPS-u s RileyLinkom sada je vaš PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies when AAPS is not working correctly.*
+**Vaš Omnipod PDM više neće raditi nakon što upravljački program Omnipod u AAPS-u aktivira vaš Pod**. Prije ste koristili Omnipod PDM za slanje naredbi svom Omnipod Eros Pod-u. Omnipod Eros Pod dopušta komunikaciju samo s jednim uređajem. Uređaj koji uspješno aktivira Pod od tog je trenutka jedini uređaj koji smije komunicirati s njim. To znači da nakon što aktivirate Omnipod Eros Pod s RileyLinkom putem upravljačkog programa Omnipod u AAPS-u, **više nećete moći koristiti svoj PDM s tim Pod-om**. Upravljački program Omnipod u AAPS-u s RileyLinkom sada je vaš PDM. *To NE znači da trebate baciti svoj PDM. Preporučujemo da ga zadržite kao rezervu i za hitne slučajeve kada AAPS ne radi ispravno.*
 
 **S Pod-om može istodobno komunicirati samo jedan RileyLink.** **AAPS** pamti jedan upareni RileyLink. Ako uparite drugi, on zamjenjuje prethodni.
 
@@ -281,7 +281,7 @@ Da biste deaktivirali Pod (zbog isteka ili zbog kvara Pod-a):
 
 Postupak u nastavku pokazuje kako obustaviti i nastaviti isporuku inzulina.
 
-*NAPOMENA - ako ne vidite gumb **Obustavi***, on je prema zadanim postavkama skriven. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NAPOMENA - ako ne vidite gumb **Obustavi***, on je prema zadanim postavkama skriven. Omogućite **Prikaži gumb za obustavu isporuke na kartici Omnipod** u [postavkama Omnipoda](#OmnipodEros-omnipod-settings) pod **Ostalo**.
 
 #### Obustava isporuke inzulina
 
@@ -591,7 +591,7 @@ Gumbi na dnu zaslona pumpe mijenjaju se ovisno o situaciji. Gumbi koji se trenut
   Gornja snimka zaslona je iz ranije verzije **AAPS-a**. U **AAPS-u** 4 ovo je tekstni gumb **Postavi vrijeme** na zaslonu pumpe Omnipod.
   ```
 
-- **Obustavi:** obustavlja isporuku inzulina na aktivnom Pod-u. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
+- **Obustavi:** obustavlja isporuku inzulina na aktivnom Pod-u. Prikazuje se samo ako je omogućeno u postavkama (**Prikaži gumb za obustavu isporuke na kartici Omnipod**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Daje obavijesti u AAPS-u i zvučna upozorenja na telefonu kada nije sigurno jesu
 
 Daje napredne postavke koje pomažu u otklanjanju pogrešaka.
 
-- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
+- **Prikaži gumb za obustavu isporuke na kartici Omnipod:** skriva ili prikazuje gumb **Obustavi** na kartici Omnipod.
 - **Prikaži gumb „Pulse zapis“ u izborniku Upravljanje Pod-om:** ova je postavka još uvijek na popisu, ali trenutačna verzija zaslona pumpe nema gumb **Pulse zapis**.
 
 - **Prikaži gumb „RileyLink statistika“ u izborniku Upravljanje Pod-om:** skriva ili prikazuje gumb **RileyLink statistika** na zaslonu pumpe Omnipod.
@@ -828,7 +828,7 @@ Postoji nekoliko stavki koje su specifične za to kako se Omnipod Pod razlikuje 
 
 Starost **inzulina** i **kanile** u [statusnom retku](#screens-sensor-level-battery) glavnog zaslona **vraća se** na 0 dana i 0 sati **nakon svake promjene Pod-a**. To je zbog načina na koji je pumpa Omnipod izrađena i kako radi. **Baterija pumpe** i **spremnik inzulina** nalaze se unutar svakog Pod-a. Budući da Pod umeće kanilu izravno u kožu na mjestu gdje je Pod postavljen, pumpe Omnipod ne koriste klasičnu cijev. *Zato se nakon promjene Pod-a starost svake od ovih vrijednosti automatski vraća na nulu.* **Starost baterije pumpe** se ne prikazuje jer baterija u Pod-u uvijek traje dulje od samog Pod-a (najviše 80 sati).
 
-![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
+![Prošireni statusni panel pumpe bez katetera: starost kanile i inzulina 0h nakon promjene Pod-a, bez retka za bateriju pumpe](../images/omnipod/Actions_Tab.png)
 
 ### Razine
 
@@ -896,7 +896,7 @@ Nije otkrivena aktivna sesija Pod-a. Ovo upozorenje možete privremeno odgoditi 
 
 Informativno upozorenje da je Pod suspendiran.
 
-#### Postavljanje bazalnog profila nije uspjelo. Isporuka je možda obustavljena! Please manually refresh the Pod status on the pump screen and resume delivery if needed.
+#### Postavljanje bazalnog profila nije uspjelo. Isporuka je možda obustavljena! Ručno osvježite status Pod-a na zaslonu pumpe i po potrebi nastavite isporuku.
 
 Informativno upozorenje da postavljanje bazalnog profila Pod-a nije uspjelo. Otvorite zaslon pumpe Omnipod i pritisnite **Osvježi**, a zatim po potrebi **Nastavi isporuku**.
 
