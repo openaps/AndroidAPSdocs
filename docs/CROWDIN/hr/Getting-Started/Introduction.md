@@ -42,7 +42,7 @@ Na tržište je stiglo i nekoliko komercijalnih sustava hibridne zatvorene petlj
 
 **Slika 1**. Osnovni prikaz sustava Android APS (sustav umjetne gušterače), AAPS.
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System (APS). Doze inzulina izračunava pomoću provjerenih algoritama [OpenAPS](https://openaps.org/) (skup pravila) koje je razvila zajednica T1D-a #WeAreNotWaiting.
+Android APS (**AAPS**) je sustav hibridne zatvorene petlje, ili sustav umjetne gušterače (APS). Doze inzulina izračunava pomoću provjerenih algoritama [OpenAPS](https://openaps.org/) (skup pravila) koje je razvila zajednica T1D-a #WeAreNotWaiting.
 
 Budući da OpenAPS radi samo s određenim starijim inzulinskim pumpama, **AAPS** (koji se može koristiti s više vrsta inzulinskih pumpi) prvi je put razvijen 2016. godine za člana obitelji s dijabetesom tipa 1. Od tih ranih dana tim dobrovoljnih programera i drugih entuzijasta, koji su povezani sa svijetom dijabetesa tipa 1, stalno razvija i poboljšava **AAPS**. Danas **AAPS** koriste mnoge tisuće ljudi diljem svijeta. To je vrlo prilagodljiv i svestran sustav, a budući da je otvorenog koda, lako radi i s mnogim drugim softverima i platformama za dijabetes otvorenog koda. Osnovne komponente sadašnjeg sustava **AAPS** prikazane su gore na **slici 1**.
 
@@ -54,7 +54,7 @@ Budući da OpenAPS radi samo s određenim starijim inzulinskim pumpama, **AAPS**
 
 Na **Android pametnom telefonu** uz **AAPS** mora biti instalirana još jedna aplikacija. Ova [dodatna aplikacija](../Getting-Started/CompatiblesCgms.md) prima podatke o glukozi sa senzora (**2**) putem Bluetootha i zatim ih unutar telefona šalje **aplikaciji AAPS**.
 
-**Aplikacija AAPS** koristi postupak donošenja odluka (**algoritam**) iz OpenAPS-a. Beginners start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Koji algoritam koristite (oref0 ili oref1) ovisi o tome koji najbolje odgovara vašoj situaciji.  U oba slučaja algoritam uzima u obzir više čimbenika i brzo radi izračune svaki put kada sa senzora stigne novo očitanje. Algoritam zatim putem Bluetootha šalje inzulinskoj pumpi (**3**) upute koliko inzulina treba isporučiti. Sve informacije mogu se putem mobilnih podataka ili Wi-Fi mreže poslati na internet (**4**). Ovi podaci se po želji mogu dijeliti i s pratiteljima i/ili prikupljati za analizu. Po želji možete s telefonom upariti i [pametni sat](../Getting-Started/Watches.md) (**5**) kako biste na brzinu vidjeli svoje podatke, a s nekim satovima i slati osnovne naredbe **AAPS-u**.
+**Aplikacija AAPS** koristi postupak donošenja odluka (**algoritam**) iz OpenAPS-a. Početnici počinju s osnovnim algoritmom **oref0**, ali kako napredujete s AAPS-om, možete prijeći na noviji algoritam **oref1**. Koji algoritam koristite (oref0 ili oref1) ovisi o tome koji najbolje odgovara vašoj situaciji.  U oba slučaja algoritam uzima u obzir više čimbenika i brzo radi izračune svaki put kada sa senzora stigne novo očitanje. Algoritam zatim putem Bluetootha šalje inzulinskoj pumpi (**3**) upute koliko inzulina treba isporučiti. Sve informacije mogu se putem mobilnih podataka ili Wi-Fi mreže poslati na internet (**4**). Ovi podaci se po želji mogu dijeliti i s pratiteljima i/ili prikupljati za analizu. Po želji možete s telefonom upariti i [pametni sat](../Getting-Started/Watches.md) (**5**) kako biste na brzinu vidjeli svoje podatke, a s nekim satovima i slati osnovne naredbe **AAPS-u**.
 
 ## Koje su prednosti sustava AAPS?
 
@@ -98,13 +98,13 @@ Korisnici mogu lako dodati ili ukloniti module ili funkcije, a **AAPS** se može
 
  a) Mogućnost da 30 minuta prije jela postavite niži cilj **GUK-a**; cilj možete postaviti čak na 72 mg/dL (4,0 mmol/L).
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in a 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Automatizacija će trajati prema planiranom vremenu koje postavite. Takva automatizacija može biti postavljena da bude aktivna samo određenim danima u tjednu, u određeno doba dana, pa čak i na određenim lokacijama.
+ b) Ako ste otporni na inzulin pa imate visok šećer u krvi, **AAPS** vam omogućuje da postavite pravilo **automatizacije** koje se aktivira kada GUK poraste iznad 8 mmol/L (144 mg/dL) i prebaci na (na primjer) profil od 120 % (što daje 20 % više bazala i jače druge čimbenike, u usporedbi s vašom uobičajenom postavkom **profila**). Automatizacija će trajati prema planiranom vremenu koje postavite. Takva automatizacija može biti postavljena da bude aktivna samo određenim danima u tjednu, u određeno doba dana, pa čak i na određenim lokacijama.
 
- c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin suspension for a set time period, directly via the phone.
+ c) Ako je vaše dijete bez najave na trampolinu, **AAPS** omogućuje da se isporuka inzulina obustavi na zadano vrijeme, izravno s telefona.
 
- d) After reconnecting a tubed pump which has been disconnected for swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Inzulin koji nije potreban možete poništiti tako da samo „otkažete“ propušteni bazal.
+ d) Nakon ponovnog spajanja pumpe s cijevi koja je bila odspojena zbog plivanja, **AAPS** će izračunati bazalni inzulin koji ste propustili dok je pumpa bila odspojena i pažljivo ga isporučiti, prema vašem trenutačnom GUK-u. Inzulin koji nije potreban možete poništiti tako da samo „otkažete“ propušteni bazal.
 
- e) **AAPS** vam omogućuje da postavite različite profile za različite situacije i da lako prelazite s jednog na drugi. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”) and unannounced meals (“**UAM**”)) can be set to only work during the daytime, if you are worried about night-time hypos.
+ e) **AAPS** vam omogućuje da postavite različite profile za različite situacije i da lako prelazite s jednog na drugi. Na primjer, značajke koje algoritmu omogućuju da brže snizi povišen GUK (kao što su supermikro bolusi („**SMB**“) i nenajavljeni obroci („**UAM**“)) mogu se postaviti tako da rade samo danju, ako se bojite noćnih hipoglikemija.
 
 Ovo su samo primjeri. Sve značajke zajedno daju veliku fleksibilnost u svakodnevnom životu, uključujući sport, bolest, hormonske cikluse _itd_. Na kraju, korisnik odlučuje kako će koristiti ovu fleksibilnost i ne postoji jedna automatizacija koja odgovara svima.
 
@@ -252,7 +252,7 @@ Ako smatrate da vas vaš tim ne podržava u korištenju petlje s **AAPS-om**, mo
 
 a) Sustav **AAPS** su osmislili pacijenti i njihovi njegovatelji. Osmišljen je prije svega za sigurnost, ali i na temelju dubokog iskustva pacijenata. Diljem svijeta postoji mnogo tisuća korisnika **AAPS-a**. Zato je vjerojatno da među pacijentima vaše klinike ima i drugih koji koriste petlju OS-AID (znala to klinika ili ne).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
+b) Nedavne stručno recenzirane smjernice objavljene u vodećem međunarodnom medicinskom časopisu [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) potvrdile su da su petlje OS-AID **sigurne** i **učinkovite u poboljšanju kontrole dijabetesa**, uključujući vrijeme u rasponu. U vodećim časopisima kao što je [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) redovito izlaze članci koji ističu napredak zajednice korisnika petlje OS-AID.
 
 c) Početak s **AAPS-om** znači _postupan_ prijelaz s „otvorene“ petlje s pumpom, preko suspenzije pri niskoj glukozi, do hibridne „zatvorene“ petlje, kroz ispunjavanje niza ciljeva. Zato postoji strukturirani program u kojem korisnik u svakoj fazi mora pokazati određenu razinu znanja i fino podesiti svoje osnovne postavke (bazal, ISF i IC) prije nego što može zatvoriti petlju.
 
@@ -264,7 +264,7 @@ f) Ako se vaš tim i dalje snažno protivi, dajte liječniku ispise referentnih 
 
 #### Podrška drugih liječnika za petlju OS-AID
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+Rad objavljen u časopisu [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (koji su zajedno vodili King’s i Guy’s and St Thomas’ NHS Foundation Trust te dr. Sufyan Hussain, konzultant dijabetolog i počasni viši predavač s King’sa u Londonu) donosi:
 
 a) **Uvjeravanje** stručnjaka da su sustavi umjetne gušterače OS-AID / otvorenog koda „sigurna i učinkovita mogućnost liječenja“ dijabetesa tipa 1, te smjernice za preporuke, razgovore, podršku i dokumentaciju;
 
@@ -295,7 +295,7 @@ Liječnicima (barem u Ujedinjenom Kraljevstvu) nije zabranjeno propisivati lijek
 3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
 5. [Stručno stajalište Berlinskog instituta za zdravlje (Berlin Institute of Health), 2022.](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (stajalište i vodič udruge Diabetes Canada) [_Canadian Journal of Diabetes_ (2023), _47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
 7.  Nizozemska (EN/NL) – za liječnike – [kako pomoći osobama koje koriste automatizirane sustave za isporuku inzulina otvorenog koda](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
 8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
@@ -379,7 +379,7 @@ ili:
 
 2) Pritisnite tipku Windows i u polje za pretraživanje upišite „Upravljačka ploča“ (Control Panel), otvorite tipkom Enter. Otvara se: „Sve stavke upravljačke ploče“.
 
-Press the letter E to get to “Ease of Access Centre”, open with Enter.
+Pritisnite slovo E da biste došli do „Centra za olakšani pristup“ i otvorite ga tipkom Enter.
 
 Zatim tipkom Enter otvorite „Korištenje računala bez zaslona“.
 
