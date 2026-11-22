@@ -193,6 +193,19 @@ If the file selected a pump that this version of **AAPS** does not have, **AAPS*
 
 **Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, open the **menu** (☰) in the top left > **Configuration** > **Pump** > switch to **Virtual Pump** > then switch back to your pump type
 
+(ExportImportSettings-import-from-aaps-3)=
+### Importing a settings file from AAPS 3.x
+
+You can import a settings file exported from **AAPS** 3.3 or 3.4 with the same steps. The file must be an encrypted export (protected with your master password).
+
+- In the file list, **AAPS** warns that the file comes from a different major version. This is expected: check your settings after the import.
+- Settings that were renamed in **AAPS** v4 are converted when you tap **OK**. Nothing is changed before that.
+- The number of settings shown in **Apply imported settings?** can be lower than the number of settings that are actually changed.
+- Your profiles, the plugins selected in **Configuration**, your objectives and the loop mode are imported. If you used the **Dynamic ISF** plugin, **AAPS** selects **SMB** and switches **Dynamic ISF** on.
+- Your insulin is not imported. After the import, check the insulin marked **ACTIVE** in **Manage → Insulin settings**, see [The insulin in use can't be edited](#v4changes-active-insulin).
+- A file from **AAPS** 3.3 still contains the old Tidepool login. It is removed, and you need to [log in to Tidepool](../SettingUpAaps/Tidepool.md) again.
+- Settings that belong to this phone, such as how far the sync with Nightscout, xDrip+ or Tidepool has got, are never imported. Settings that this version of **AAPS** doesn't know are skipped.
+
 ### Note for Dana RS users
 
 - If you ticked **Also replace pump settings**, the pump connection settings are imported too: **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.

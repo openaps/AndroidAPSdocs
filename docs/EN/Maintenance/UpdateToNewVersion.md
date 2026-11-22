@@ -10,7 +10,7 @@
 * The new version will also be announced on Facebook at the time of release.
 * Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
 * Updating from **AAPS** 3.x? Read [What changed in AAPS v4](V4Changes.md) first: it lists the features that moved, were renamed or were removed.
-* Do not forget to [export your settings](ExportImportSettings.md). When you import them again after the update, you choose whether the pump settings are replaced too.
+* Do not forget to [export your settings](ExportImportSettings.md). If you have to import them again after the update (for example after a reinstall with a new keystore), you choose whether the pump settings are replaced too.
 
 ## Update AAPS with browser build
 
@@ -35,7 +35,7 @@ These steps are the same for every build method. Check in the [Release Notes](..
 After you installed the new apk:
 
 - you can check the __AAPS__ version on your phone by opening the __menu__ (☰) on the top left and then __About__ (as per the screenshot below). The current __AAPS__ version can be viewed;
-- make sure you have imported your settings; and
+- if you had to uninstall **AAPS** first, make sure you have imported your settings; and
 - please check your __AAPS__ settings under __Settings__ and ensure these remain accurate.
 
 ![About dialog with the AAPS version installed](../images/update/about_dialog_version.png)
