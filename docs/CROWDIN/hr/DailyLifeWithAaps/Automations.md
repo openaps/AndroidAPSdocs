@@ -1,334 +1,334 @@
-# Automation
+# Automatizacija
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-## What is an Automation?
+## Što je automatizacija?
 
-"**Automation**" is a feature which can automate tasks in AAPS.
+„**Automatizacija**“ je značajka koja može automatski izvršavati zadatke u AAPS-u.
 
-Automation performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Automatizacija izvršava određene radnje na temelju jednog ili više uvjeta ili okidača. Okidači mogu biti i neredoviti događaji, kao što su niska ili visoka razina glukoze u krvi (GUK) ili zadana količina negativnog aktivnog inzulina (IOB). Automatizacija može obrađivati i događaje koji se ponavljaju, kao što su obroci ili vježbanje u određeno doba dana, ili situacije kada je korisnik na određenoj udaljenosti od GPS lokacije ili u području Wi-Fi SSID-a. Automatizacija može raditi sigurnosne kopije postavki AAPS-a prema rasporedu ili pri svakoj promjeni Pod-a.
 
-Automation rules are created and modified from the **Automation** screen (**Manage → Automation**). Each rule is defined by two properties:
+Pravila automatizacije izrađuju se i mijenjaju na zaslonu **Automatizacija** (**Upravljanje → Automatizacija**). Svako pravilo određuju dva svojstva:
 
-- One or more conditions or 'triggers' that start an action.
+- Jedan ili više uvjeta ili „okidača“ koji pokreću radnju.
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    Npr. određeni vremenski raspored, događaj ili vrijednost nekog svojstva u AAPS-u
 
-- One or more actions to perform.
+- Jedna ili više radnji koje treba izvršiti.
 
     Such as an alarm or setting a profile percentage or exporting the AAPS settings on Pod change.
 
 
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
+Opcija automatizacije ima mnogo i korisnicima se preporučuje da ih prouče u aplikaciji AAPS, u odjeljku Automatizacija. Primjere automatizacije drugih korisnika možete potražiti i u grupama korisnika AAPS-a na [**Facebooku**](https://www.facebook.com/groups/AndroidAPSUsers) i [**Discordu**](https://discord.gg/4fQUWHZ4Mw).
 
-## How Automation can help
+## Kako automatizacija može pomoći
 
-1. **Automate recurring tasks:** Automatically executing programmed actions without user interaction.
+1. **Automatizacija zadataka koji se ponavljaju:** programirane radnje izvršavaju se automatski, bez korisnikove interakcije.
 
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
+1. **Manji umor od donošenja odluka:** glavna korist **automatizacije** je to što korisnika oslobađa tereta ručnih intervencija u **AAPS-u**. [Istraživanje](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) procjenjuje da osobe s dijabetesom tipa 1 u prosjeku moraju donijeti 180 dodatnih odluka dnevno. **Automatizacija** može smanjiti mentalno opterećenje i osloboditi korisnikovu energiju za druge dijelove života.
 
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
+1. **Moguće bolja kontrola glikemije:** na primjer, **automatizacija** može osigurati da se **privremeni ciljevi** uvijek postave kada su potrebni, čak i u užurbanim danima ili kada nešto zaboravite. Na primjer, ako dijete s dijabetesom ima tjelesni odgoj u školi utorkom u 10 sati i četvrtkom u 14 sati i treba visoki privremeni cilj („TT“) 30 minuta prije sporta, **privremeni cilj** može se uključiti putem **automatizacije**.
 
-1. **Enabling AAPS to be highly customized** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
+1. **AAPS se može jako prilagoditi** tako da u određenim situacijama bude više ili manje agresivan, prema želji korisnika. Na primjer, pokretanje privremeno smanjenog postotka **profila** na zadano vrijeme ako se usred noći pojavi negativni **aktivni inzulin**, što pokazuje da je postojeći **profil** možda prejak.
 
-The example below illustrates how an **Automation** can enable steps to be eliminated.
+Primjer u nastavku pokazuje kako **automatizacija** može ukloniti neke korake.
 
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+Korisnik vježba svako jutro u 6 sati: mora se sjetiti da u 5 sati, prije vježbanja, u AAPS-u ručno postavi privremeni cilj „Aktivnost“.
 
 ![Manual actions without automation](../images/Automations/automation_concept_manual.png)
 
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+Korisnik je postavio **automatizaciju** koja u 5 sati pokreće privremeni cilj „Aktivnost“ kako bi njegov **GUK** i **aktivni inzulin** bili optimalni za vježbanje u 6 sati:
 
 ![Actions done by an automation](../images/Automations/automation_concept_automated.png)
 
-## Key considerations before starting with Automations
+## Važne stvari prije početka korištenja automatizacije
 
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
+1. Prije postavljanja nekih automatizacija trebali biste imati razumnu kontrolu **GUK-a** s **AAPS-om**. Automatizaciju ne treba koristiti za nadoknađivanje loše podešenih postavki bazala, **ISF-a** ili **CR-a** (više o tome niže). Nemojte postavljati automatsku **zamjenu profila** kako biste nadoknadili porast **GUK-a** zbog _npr._ hrane; to je bolje riješiti drugim strategijama (SMB-ovi itd.).
 
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
+1. Kao i svaka tehnologija, **CGM-ovi**, **pumpe** i telefoni mogu zakazati: tehnički problemi ili pogreške senzora mogu ometati radnje **automatizacije**, pa može biti potrebna ručna intervencija.
 
-1. **Requirements for Automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **Requirements for Automations are likely to change as routines change**. Kada prelazite između razdoblja posla, škole i praznika, postavite podsjetnik u kalendaru da provjerite koje su **automatizacije** trenutačno aktivne (lako ih je aktivirati i deaktivirati). Na primjer, ako idete na odmor i više vam ne treba automatizacija za školski sport ili svakodnevno vježbanje, ili trebate promijeniti vremena.
 
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
+1. **Automatizacije** mogu biti u sukobu jedna s drugom, pa je dobro svaku novu postavku **automatizacije** pažljivo provjeriti u sigurnom okruženju i razumjeti zašto se neka **automatizacija** pokrenula ili nije pokrenula onako kako ste očekivali.
 
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
+1. Ako koristite Autosens, pokušajte koristiti **privremene ciljeve** umjesto **zamjena profila**. **Privremeni ciljevi** ne vraćaju Autosens na 0. **Zamjene profila** resetiraju Autosens.
 
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/L for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/L for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
+1. Većinu **automatizacija** treba postaviti samo na **ograničeno trajanje**, nakon čega **AAPS** može ponovno procijeniti stanje i ponoviti **automatizaciju** ako je potrebno i ako je uvjet još uvijek ispunjen. Na primjer, „pokreni privremeni cilj od 7,0 mmol/L na 30 min“ ili „pokreni **profil** 110% na 10 min“ _i_ „pokreni privremeni cilj od 5,0 mmol/L na 10 min“. Korištenje **automatizacije** za trajne promjene (npr. jači postotak profila) nosi rizik od hipoglikemije.
 
-## When can I start using Automation?
+## Kada mogu početi koristiti automatizaciju?
 
-**Automations** can be started in **objective 10**.
+**Automatizaciju** možete početi koristiti u **Cilju 10**.
 
-## Where are Automations located in AAPS?
+## Gdje se u AAPS-u nalazi automatizacija?
 
-Open **Manage** in the bottom navigation of the main screen and select **Automation**.
+Otvorite **Upravljanje** u donjoj navigaciji glavnog zaslona i odaberite **Automatizacija**.
 
-## How can I set up an Automation?
+## Kako mogu postaviti automatizaciju?
 
-To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
+Da biste postavili **automatizaciju**, na zaslonu Automatizacija pritisnite gumb **+** i izradite „pravilo“:
 
-![Automation create](../images/Automations/automation_create.png)
+![Izrada automatizacije](../images/Automations/automation_create.png)
 
-* give your ‘rule’ a title (Task name);
-* press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
+* dajte „pravilu“ naslov (Naziv zadatka);
+* pritisnite „**UREDI**“ pod **Uvjet**. Na zaslonu **Uvjet** odaberite kako se okidači povezuju (**I**, **Ili**, **Isključivo ili**) i pritisnite „**Dodaj okidač**“:
 
-![Automation condition](../images/Automations/automation_trigger_editor.png)
+![Uvjet automatizacije](../images/Automations/automation_trigger_editor.png)
 
-* add at least one trigger:
+* dodajte barem jedan okidač:
 
-![Automation triggers](../images/Automations/automation_triggers.png)
+![Okidači automatizacije](../images/Automations/automation_triggers.png)
 
-* press "**ADD**" under **Action** and select one action:
+* pritisnite „**DODAJ**“ pod **Radnja** i odaberite jednu radnju:
 
-![Automation actions](../images/Automations/automation_actions.png)
+![Radnje automatizacije](../images/Automations/automation_actions.png)
 
-* save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
+* spremite pravilo gumbom **Spremi** i provjerite je li kućica lijevo od naziva pravila „označena“, kako bi **automatizacija** bila aktivna:
 
-![Automation activated](../images/Automations/automation_rule_activated.png)
+![Automatizacija aktivirana](../images/Automations/automation_rule_activated.png)
 
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
+Da biste deaktivirali pravilo **automatizacije**, odznačite kućicu lijevo od naziva **automatizacije**. Primjer u nastavku prikazuje **automatizaciju** koja je aktivirana („označeno“) ili deaktivirana („neoznačeno“):
 
 ![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+Kada postavljate **automatizaciju**, najprije je možete isprobati tako da pod „Radnje“ uključite opciju „Obavijest“. Tako će **AAPS** najprije prikazati obavijest umjesto da stvarno automatski izvrši radnju. Kada ste sigurni da se obavijest pojavila u pravo vrijeme i pod pravim uvjetima, pravilo **automatizacije** možete promijeniti tako da „Obavijest“ zamijenite „Radnjom“.
 
 ![Alert actions](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
 
-**Automations** are still active when the Loop is disabled!
+**Automatizacija** je aktivna i kada je petlja onemogućena!
 ```
 
 
-## When rules are checked
+## Kada se pravila provjeravaju
 
-**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Rules are also checked when the phone starts charging, when the network or location changes, and when a Bluetooth device connects. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
+**AAPS** provjerava sva pravila **automatizacije** svaki put kada obradi novo očitanje glukoze, pa se pravila procjenjuju u ritmu vašeg CGM-a, i kada je zaslon telefona isključen. Pravila se provjeravaju i kada se telefon počne puniti, kada se promijeni mreža ili lokacija te kada se poveže Bluetooth uređaj. Istodobno se izvodi samo jedna provjera, pa se pravilo čije radnje traju neko vrijeme (na primjer naredba pumpi) ne može izvršiti dvaput.
 
-## Safety limits
+## Sigurnosne granice
 
-There are safety limits set for **Automations**:
+Za **automatizaciju** postoje sigurnosne granice:
 
-* A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
-* The **Profile Percentage** has to be between 50% and 130%.
+* **Privremeni cilj** koji postavlja **automatizacija** mora biti između 72 i 180 mg/dL (ili 4 i 10 mmol/L).
+* **Postotak profila** mora biti između 50% i 130%.
 * There is a 5 minute time limit between executions of **Automation** (and first execution).
 
-## Correct use of negative values
+## Pravilna upotreba negativnih vrijednosti
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+Budite oprezni kada u **automatizaciji** odabirete negativnu vrijednost
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+Budite oprezni kada u „Uvjetu“ **automatizacije** odabirete „negativnu vrijednost“, npr. s „je manje od“. Na primjer:
 
 ![Comparison operators](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
+**Primjer 1:** uvjet **„je manje od“** „-0,1 mmol/L“ (ili „-2 mg/dL“) će:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
+Pokrenite **automatizaciju** za svaki broj koji je **strogo manji od** -0,1 (-2). To uključuje brojeve kao što su -0,2, -0,3, -0,4 (-4, -6, -8) i tako dalje. Imajte na umu da sam broj -0,1 (-2) **nije** uključen u ovaj uvjet. (Uvjet „je jednako ili manje od -0,1 mmol/L (-2 mg/dL)“ _uključio bi_ -0,1 mmol/L ili -2 mg/dL).
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
+**Primjer 2:** uvjet „je veće od“ -0,1 mmol/L (-2 mg/dL) će:
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/L (-2mg/dL). This includes numbers like 0, 0.2, 0.4mmol/L, (0, 4, 8mg/dL) and any other positive number.
+Pokrenuti **automatizaciju** za svaki broj koji je **veći od** -0,1 mmol/L (-2 mg/dL). To uključuje brojeve kao što su 0, 0,2, 0,4 mmol/L (0, 4, 8 mg/dL) i svaki drugi pozitivan broj.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+Kada odabirete te uvjete i vrijednosti, važno je pažljivo razmisliti što točno želite postići svojom **automatizacijom**.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## Okidači automatizacije
 
-![Automation Triggers](../images/Automations/automation_triggers.png)
+![Okidači automatizacije](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Pomaknite se prema dolje da vidite ostatak popisa:
 
-![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
+![Okidači automatizacije, nastavak](../images/Automations/automation_trigger_picker_2.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+Korisnik može odabrati različite „okidače“. Okidači su uvjeti koji moraju biti ispunjeni da bi se automatizacija izvršila. Popis u nastavku nije potpun:
 
-**Trigger:** connect conditions
+**Okidač:** povezivanje uvjeta
 
-**Options:**
+**Opcije:**
 
-Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+Više uvjeta može se povezati s
+* „I“
+* „Ili“
+* „Isključivo ili“ (to znači da će se radnja ili radnje izvršiti ako je ispunjen jedan – i samo jedan – od uvjeta)
 
-**Trigger:** time vs. recurring time
+**Okidač:** vrijeme i ponavljajuće vrijeme
 
-**Options:**
+**Opcije:**
 
-* time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+* vrijeme = jednokratni vremenski događaj
+* ponavljajuće vrijeme = nešto što se događa redovito (npr. jednom tjedno, svaki radni dan itd.)
 
-**Trigger:** location
+**Okidač:** lokacija
 
-**Options:**
+**Opcije:**
 
-* in [Settings > Automation](#preferences-maintenance-settings), the user can select their required location service.
+* u [Postavke > Automatizacija](#preferences-maintenance-settings) korisnik može odabrati potrebnu uslugu lokacije.
 
-**Trigger:** location service
+**Okidač:** usluga lokacije
 
-**Options:**
+**Opcije:**
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Koristi pasivnu lokaciju: **AAPS** uzima lokaciju samo kada je traže druge aplikacije.
+* Koristi mrežnu lokaciju: lokacija vaše Wi-Fi mreže.
+* Koristi GPS lokaciju (Pozor! To može jako trošiti bateriju!)
 
-**Triggers** : pump and sensor data
+**Okidači**: podaci pumpe i senzora
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* Okidač Starost kanile: dostupan za sve pumpe
+* Okidač Starost inzulina: dostupan za podržane pumpe
+* Okidač Starost baterije pumpe: dostupan za podržane pumpe
+* Okidač Starost senzora: uvijek dostupan
+* Okidač Aktivacija Pod-a: dostupan za pumpe bez katetera
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+Imajte na umu da se kod svih okidača vezanih uz starost usporedba „jednako“ teško može ispuniti, pa su u tom slučaju potrebna dva okidača koji čine raspon
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Okidač Razina spremnika: dostupan za sve pumpe; usporedba "NOT\_AVAILABLE" ne radi za ovaj okidač jer je vrijednost u **AAPS-u** uvijek popunjena
+* Okidač Razina baterije pumpe: dostupan za podržane pumpe; usporedba "NOT\_AVAILABLE" ne radi za ovaj okidač jer je vrijednost u **AAPS-u** uvijek popunjena
 
 (automations-automation-action)=
-## Action
+## Radnja
 
-![Automation Actions](../images/Automations/automation_actions.png)
+![Radnje automatizacije](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Pomaknite se prema dolje da vidite ostatak popisa:
 
-![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
+![Radnje automatizacije, nastavak](../images/Automations/automation_action_picker_2.png)
 
-**Actions:** start **Temp Target**
+**Radnje:** pokreni **privremeni cilj**
 
-**Options:**
+**Opcije:**
 
-* **BG** must be between 72 mg/dL and 180 mg/dL (4 mmol/L and 10 mmol/L)
-* **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
+* **GUK** mora biti između 72 mg/dL i 180 mg/dL (4 mmol/L i 10 mmol/L)
+* **TT** radi samo ako ne postoji prethodni privremeni cilj — **AAPS** to automatski dodaje u pravilo kao redak „**Preduvjeti: Privremeni cilj ne postoji**“
 
-**Actions:** stop **Temp Target**
+**Radnje:** zaustavi **privremeni cilj**
 
-**Options:**
+**Opcije:**
 
-none
+nema
 
-**Actions:** **Profile Percentage**
+**Radnje:** **Postotak profila**
 
-**Options:**
+**Opcije:**
 
-* **Profile** must be between 50% and 130%
-* works only if the previous Percentage is 100%
+* **Profil** mora biti između 50% i 130%
+* radi samo ako je prethodni postotak 100%
 
 **Actions:** **Change smoothing** (in the **Loop & insulin** group)
 
-**Options:**
+**Opcije:**
 
 * select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to. The list is the same as under **Configuration** > **Smoothing**, and the action does exactly what a change there does: the new method is saved, synced to paired clients, and the BG data is smoothed again right away.
-* runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
+* izvršava se samo ako ta metoda zaglađivanja već nije aktivna — **AAPS** to automatski dodaje u pravilo kao redak „**Preduvjeti: Zaglađivanje … nije aktivno**“. Kada je odabrano zaglađivanje aktivno, pravilo se tiho preskače.
 * Example: a new sensor is often noisy during its first day. Two rules with the **Sensor age** trigger give stronger filtering while the sensor settles, and lag-free smoothing after that:
   * **Sensor age** less than 24 h: **Change smoothing** to **Unscented Kalman Filter**
   * **Sensor age** more than 24 h: **Change smoothing** to **Average smoothing**
 
-**Actions:** **Note** (in the **Alerts** group of the list)
+**Radnje:** **Bilješka** (u skupini **Upozorenja** na popisu)
 
-**Options:**
+**Opcije:**
 
-* select the event to record: **Note**, **Exercise**, **Question**, **Announcement** or **Pump Site Change**, and an optional note. The name of the action changes to the event you select.
-* **Duration**: used for **Note**, **Exercise** and **Pump Site Change**. **Question** and **Announcement** have no duration: they record your current BG instead.
-* **Pump Site Change** resets the cannula age, as if you had recorded a site change by hand. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
+* odaberite događaj koji se bilježi: **Bilješka**, **Tjelovježba**, **Pitanje**, **Objava** ili **Promjena mjesta primjene pumpe**, i neobaveznu bilješku. Naziv radnje mijenja se u događaj koji odaberete.
+* **Trajanje**: koristi se za **Bilješka**, **Tjelovježba** i **Promjena mjesta primjene pumpe**. **Pitanje** i **Objava** nemaju trajanje: umjesto toga bilježe vaš trenutačni GUK.
+* **Promjena mjesta primjene pumpe** resetira starost kanile, kao da ste promjenu mjesta primjene zabilježili ručno. Primjer: neke pumpe (kao Combo) same bilježe zamjenu spremnika, ali ne i promjenu mjesta primjene. Ako uvijek mijenjate oboje zajedno, pravilo sa **Starost inzulina** manje od 1 sata i **Starost kanile** više od 24 sata može umjesto vas zabilježiti promjenu mjesta primjene.
 
-![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
+![Događaji radnje Bilješka](../images/Automations/automation_action_careportal_events.png) ![Radnja Bilješka postavljena na Promjena mjesta primjene pumpe](../images/Automations/automation_action_careportal_site_change.png)
 
 **Actions:** **Send SMS to all numbers** (in the **Alerts** group)
 
-**Options:**
+**Opcije:**
 
-* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
+* unesite tekst poruke. Šalje se na sve telefonske brojeve dopuštene u postavkama [SMS Communicatora](../RemoteFeatures/SMSCommands.md). Dodatak SMS Communicator mora biti omogućen.
 
-**Actions:** **Change profile to** (in the **Profile** group)
+**Radnje:** **Promijeni profil u** (u skupini **Profil**)
 
-**Options:**
+**Opcije:**
 
-* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
+* odaberite **profil** koji treba aktivirati. Aktivira se na 100%, bez vremenskog pomaka. Ako je taj profil već aktivan, radnja ne radi ništa.
 
-**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
+**Radnje:** **Omogući/onemogući SMB** (u skupini **Petlja i inzulin**)
 
-**Options:**
+**Opcije:**
 
-* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
+* odaberite **Uključeno** ili **Isključeno**. To mijenja postavku **Omogući SMB** u OpenAPS SMB, točno kao da ste je promijenili u **Postavkama**, i ostaje tako dok je vi ili neko drugo pravilo ne vratite.
 
 **Actions:** **Run Autotune** (in the **Loop & insulin** group)
 
-**Options:**
+**Opcije:**
 
-* select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
+* odaberite profil koji se podešava i broj dana: pogledajte [Pokretanje Autotunea pravilom automatizacije](#autotune-run-autotune-with-an-automation-rule).
 
-**Actions:** **Stop processing** (in the **Loop & insulin** group)
+**Radnje:** **Zaustavi obradu** (u skupini **Petlja i inzulin**)
 
-**Options:**
+**Opcije:**
 
-* none. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+* nema. While the conditions of a rule with this action are true, **AAPS** does not check the rules below it in the list. As soon as its conditions are false again, the rules below are checked as usual. Dodajte je pravilu koje mora imati prednost pred pravilima ispod njega (pogledajte [redoslijed automatizacija](#Automations-the-order-of-the-automations-in-the-list-matters)).
 
-**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+**Radnje:** **Pokreni scenu**, **Omogući scenu**, **Onemogući scenu** (u skupini **Scene**)
 
-**Options:**
+**Opcije:**
 
-* select the [scene](Scenes.md) to run, enable or disable.
+* odaberite [scenu](Scenes.md) koju želite pokrenuti, omogućiti ili onemogućiti.
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+Kada je „Radnja“ dodana, zadane vrijednosti morate promijeniti u željeni broj tako da ih kliknete i podesite.
 
 ![Temp target action values](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## Redoslijed **automatizacija** na popisu je važan
+ **AAPS** izvršava izrađena pravila redoslijedom prioriteta, počevši od vrha popisa **automatizacije**. For example, if the ‘Low’ **Automation** is the most important **Automation**, above all other rules, then this **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
 ![List of automation rules](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the **Automations** by moving the rules up or down.
+Da biste promijenili prioritet pravila **automatizacije**, dodirnite i držite ručku **=** na desnoj strani pravila. Reorder the **Automations** by moving the rules up or down.
 
 ![Reorder automation rules](../images/Automations/automation_rule_reorder.png)
 
-## How to delete Automation rules
+## Kako izbrisati pravila automatizacije
 
-To delete an **Automation** rule click on the trash icon.
+Da biste izbrisali pravilo **automatizacije**, kliknite ikonu kante za smeće.
 
 ![Delete automation rules](../images/Automations/automation_rule_delete.png)
 
-## Examples of Automations
+## Primjeri automatizacije
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+U nastavku su primjeri **automatizacije**. Further discussion on **Automations** and how users have individualised their **Automation** can be found in Facebook discussions groups or on Discord. Primjere u nastavku ne biste trebali preuzimati ako dobro ne razumijete kako će **automatizacija** raditi.
 
 (automations-low-glucose-temp-target)=
-### Low Glucose Temp Target
+### Privremeni cilj kod niske glukoze
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+Ova **automatizacija** automatski pokreće **privremeni cilj** kada **GUK** padne ispod određenog praga — ovdje, kada je glukoza manja od 70 mg/dL, pokreće se cilj od 110 mg/dL na 30 minuta:
 
 ![Example: low glucose rule](../images/Automations/automation_example_low_glucose_rule.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### Privremeni cilj za vrijeme ručka (s „Lokacijom“)
 
 ![Example: lunch rule](../images/Automations/automation_example_lunch_rule.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will not activate.
+Ova **automatizacija** izrađena je za korisnika koji svaki radni dan ruča na poslu otprilike u isto vrijeme, ali pokreće se samo ako se korisnik nalazi na zadanoj „lokaciji“.  Dakle, ako korisnik jednog dana nije na poslu, ova se **automatizacija** neće aktivirati.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
+Ova **automatizacija** u 13:00 postavlja niski **privremeni cilj** (Prije obroka) kako bi GUK spustila na 90 mg/dL (ili 5 mmol/L) kao pripremu za ručak.
 
-The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
+„Okidač“ lokacija ima naziv, položaj (dodirnite **Odaberi na karti** ili koristite svoju trenutačnu lokaciju) i polumjer u metrima, a pokreće se kada ste unutar (ili izvan) područja:
 
 ![Example: lunch rule with location condition](../images/Automations/automation_example_lunch_location_condition.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+Zbog veze „I“ **automatizacija** se izvršava samo u „odabrano vrijeme“ i ako je korisnik na odabranoj lokaciji.
 
-The **Automation** will not be triggered on any other time at this location or at this time outside the 50-metre radius around the chosen position.
+**Automatizacija** se neće pokrenuti ni u jedno drugo vrijeme na ovoj lokaciji, niti u ovo vrijeme izvan polumjera od 50 metara oko odabranog položaja.
 
-### Wi-Fi SSID Location Automation
+### Automatizacija s lokacijom prema Wi-Fi SSID-u
 
-Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
+Wi-Fi SSID dobra je opcija za pokretanje **automatizacije** dok ste u dometu određene Wi-Fi mreže (u usporedbi s GPS-om): prilično je precizan, troši manje baterije i radi u zatvorenim prostorima gdje GPS i druge usluge lokacije možda nisu dostupne.
 
 Here is another example of setting up a **Temp Target** for work days only before breakfast (1).
 
@@ -337,74 +337,74 @@ The **Automation** will trigger at 05:30am only on Monday-Friday (2)
 and while being connected to a home Wi-Fi network (3).
 
 
-It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
+Zatim će postaviti **privremeni cilj** od 75 mg/dL na 30 minuta (4). Jedna od prednosti uključivanja lokacije je da se pravilo neće pokrenuti ako je korisnik, na primjer, na putovanju ili godišnjem odmoru.
 
-![Wi-Fi rule: task name (1), weekday time condition (2) and Wi-Fi SSID condition (3)](../images/Automations/automation_example_wifi_rule.png)
+![Wi-Fi pravilo: naziv zadatka (1), uvjet vremena radnim danima (2) i uvjet Wi-Fi SSID (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
+Pomaknite se prema dolje da biste vidjeli radnju: **privremeni cilj** od 75 mg/dL na 30 minuta (4).
 
-![Wi-Fi rule action: Start temp target of 75 mg/dL for 30 minutes (4)](../images/Automations/automation_example_wifi_action.png)
+![Radnja Wi-Fi pravila: pokreni privremeni cilj od 75 mg/dL na 30 minuta (4)](../images/Automations/automation_example_wifi_action.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+Ovo je snimka zaslona s pojedinostima o okidačima **automatizacije**:
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+1) Pod glavnim „I“ (oba uvjeta moraju biti ispunjena za pokretanje) 1) Ponavljajuće vrijeme = P,U,S,Č,P u 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
 ![Example: WiFi condition](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
-## Automating Preference Settings Export
+## Automatski izvoz postavki
 
-### Unattended Exports: scheduled (daily)
+### Izvoz bez nadzora: po rasporedu (dnevno)
 
-Screenshots detailing the Automation triggers:
+Snimke zaslona s pojedinostima o okidačima automatizacije:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Uvjet: Ponavljajuće vrijeme = P,U,S,Č,P u 8:00 1) Radnja: Izvoz postavki (za „Tekst u tretmanima“ unesite „Dnevno“)
 
-![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
+![Izvoz po rasporedu](../images/Automations/automation_settings_export_daily.png)
 
-Note: Export execution will be logged on Careportal
+Napomena: izvršenje izvoza bit će zabilježeno u Careportalu
 
-### Unattended Exports: Pod Activation (patch pump only)
+### Izvoz bez nadzora: Aktivacija Pod-a (samo pumpe bez katetera)
 
-Screenshots detailing the Automation triggers:
+Snimke zaslona s pojedinostima o okidačima automatizacije:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Uvjet: Aktivacija Pod-a 1) Radnja: Izvoz postavki (za „Tekst u tretmanima“ unesite „Aktivacija Pod-a: izvoz postavki“)
 
-![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
+![Izvoz pri aktivaciji Pod-a](../images/Automations/automation_settings_export_pod_activation.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Napomena: izvršenje izvoza bit će zabilježeno u Careportalu. Napomena: automatizacija se **uopće** neće pokrenuti ako prije toga niste barem jednom ručno izvezli postavke. Za pravilno uključivanje izvoza postavki bez nadzora pogledajte [Postavke → Održavanje](#preferences-maintenance-settings).
 
 
-## Automation Logs
+## Dnevnik automatizacije
 
-**AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
+**AAPS** prikazuje dnevnik zadnjih događaja **automatizacije** na dnu zaslona **Automatizacija**, ispod pravila. Pomoću njega provjerite jesu li se vaša pravila pokrenula kada ste očekivali.
 
-In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose Temp Target](#automations-low-glucose-temp-target) above) is enabled. The log (2) shows that at 03:09 PM, glucose fell below 70 mg/dL and the rule triggered:
-* the action was "Start temp target: 110mg/dL@30 min": a **Temp Target** of 110 mg/dL for 30 minutes;
-* **OK** at the end means that the action was carried out successfully.
+U primjeru u nastavku omogućeno je pravilo **Low glucose temp target** (1) (pogledajte [Privremeni cilj kod niske glukoze](#automations-low-glucose-temp-target) gore). Dnevnik (2) pokazuje da je u 15:09 glukoza pala ispod 70 mg/dL i da se pravilo pokrenulo:
+* radnja je bila "Pokreni privremeni cilj: 110mg/dL@30 min": **privremeni cilj** od 110 mg/dL na 30 minuta;
+* **OK** na kraju znači da je radnja uspješno izvršena.
 
-![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
+![Zaslon Automatizacija: omogućeno pravilo (1) i njegov unos u dnevniku (2)](../images/Automations/automation_example_log.png)
 
 (automations-troubleshooting)=
 
-## Troubleshooting
+## Rješavanje problema
 
-* Problem: __My automations are not being triggered by AAPS?__
+* Problem: __AAPS ne pokreće moje automatizacije?__
 
-Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
+Provjerite je li kućica lijevo od naziva **automatizacije** „označena“, kako bi pravilo bilo aktivno:
 
 ![Automation rules switched on and off](../images/Automations/automation_rule_activated_deactivated.png)
 
-* Problem: __My automations are being triggered in the wrong order.__
+* Problem: __Moje automatizacije pokreću se pogrešnim redoslijedom.__
 
-Check your rule prioritization order as discussed above here.
+Provjerite redoslijed prioriteta svojih pravila, kako je opisano gore.
 
-* Problem: __A condition shows "Unknown trigger … - never true".__
+* Problem: __Uvjet prikazuje "Nepoznati okidač … - nikada nije ispunjen".__
 
-The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Edit the rule and replace the trigger, or update **AAPS**.
+Pravilo sadrži okidač koji ova verzija **AAPS-a** ne može pročitati, na primjer nakon što ste se vratili na stariju verziju ili uvezli postavke iz novije verzije. Takav okidač nikada nije ispunjen, pa se pravilo ne izvršava. Ostaje nepromijenjen, kako bi ga novija verzija i dalje mogla koristiti. Uredite pravilo i zamijenite okidač ili ažurirajte **AAPS**.
 
-## Alternatives to Automations
+## Alternative automatizaciji
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+Napredni korisnici mogu automatizirati zadatke i na druge načine, pomoću IFTTT-a ili Android aplikacije drugog proizvođača pod nazivom Automate. 
