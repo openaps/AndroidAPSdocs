@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Globalno pretraživanje
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 ima polje za **globalno pretraživanje** na vrhu glavnog zaslona. Upišite riječ i ono pretražuje cijelu aplikaciju odjednom — dodatke, dijaloge, zaslone postavki, pojedinačne postavke — a ako ste na mreži, i **dokumentaciju AndroidAPS-a**. To je najbrži način da dođete do postavke ili zaslona, a da ne morate pamtiti gdje se nalaze.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## Otvaranje pretraživanja
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+Dodirnite polje **🔍 Traži** na vrhu zaslona **Pregled** (pokraj izbornika ☰). Počnite tipkati i rezultati se pojavljuju dok tipkate (nakon kratke stanke), grupirani po kategorijama:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Rezultati globalnog pretraživanja, grupirani po kategorijama](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+Polje obrišite tipkom **✕** ili zatvorite pretraživanje tipkom **Natrag** na uređaju.
 
 ---
 
-## What search covers
+## Pretražujte na engleskom *ili* na svom jeziku
 
-Results are grouped into these categories:
+Ovo je važno znati: pretraživanje uspoređuje **oboje**, tekst na **odabranom jeziku** **i** izvorni **engleski** tekst.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- Ako je vaša aplikacija, na primjer, na njemačkom ili češkom, možete upisati **prevedenu** riječ **ili** **englesku** riječ — obje pronalaze postavku.
+- Podudaranje u **prevedenom** naslovu ima najviši rang, zatim u **engleskom** naslovu, a zatim u prevedenim i engleskim **opisima**.
+- Pretraživanje zanemaruje **naglaske i dijakritičke znakove** (tako *č* odgovara *c*, a *ž* odgovara *z*) i **ne razlikuje velika i mala slova**.
+
+To znači da vas vodič ili objava na forumu napisana na engleskom i dalje vodi do prave postavke, čak i kada vaš telefon sve prikazuje prevedeno.
+
+---
+
+## Što pretraživanje obuhvaća
+
+Rezultati su grupirani u ove kategorije:
+
+- **Dodaci** — svi dodaci vidljivi u vašoj verziji aplikacije (isti oni koji su navedeni pod [Konfiguracija](../SettingUpAaps/ConfigBuilder.md)). Svaki redak dodatka ima svoj **prekidač za uključivanje**, pa dodatak možete omogućiti ili onemogućiti izravno iz rezultata — dodir na redak onemogućenog dodatka (koji se može uključiti) omogućuje ga.
+- **Dijalozi** — zasloni za tretmane i radnje te zasloni za upravljanje (Bolus kalkulator, Inzulin, Produženi bolus, Kalibracija, Privremeni cilj, Profil, …). Zasloni koji se ne odnose na vašu verziju izostavljeni su (na primjer *Upari s glavnim uređajem* na glavnom uređaju, *Ovlašteni klijenti* na klijentu).
+- **Kategorije postavki** — **zasloni** postavki i njihovi podzasloni, ugrađeni (Općenito, Izgled, Zaštita, Upozorenja, Održavanje, …) i oni iz dodataka, te male grupe postavki do kojih se dolazi iz dijaloga (tipke za punjenje, koraci tipki za inzulin i ugljikohidrate, pragovi statusnih svjetala, postavke kalkulatora, …).
+- **Postavke** — svaka **pojedinačna postavka** koja ima naslov. One su filtrirane prema vašoj verziji i načinu rada, pa vidite samo postavke koje se stvarno primjenjuju (APS / NSClient / upravljanje pumpom).
+- **Dokumentacija** — stranice iz online **dokumentacije AndroidAPS-a** (vidi niže).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+Postavka čiji je dodatak trenutno **onemogućen** i dalje se prikazuje — **zasivljena** i ne može se dodirnuti — s napomenom *„Dodatak … je onemogućen“*, tako da znate da postavka postoji i koji dodatak trebate omogućiti da biste do nje došli.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![Zasivljena postavka iz onemogućenog dodatka](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## Rezultati iz dokumentacije (online)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+Dok traje lokalno pretraživanje, **AAPS** istovremeno pretražuje i službenu **dokumentaciju AndroidAPS-a** (smještenu na ReadTheDocs). Pronađene stranice pojavljuju se u grupi **Dokumentacija** na dnu, svaka s ikonom 📖, naslovom odjeljka i kratkim isječkom teksta:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![Rezultati iz dokumentacije (wiki) s isječcima teksta](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](#Preferences-protection)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- Ako je dokumentacija prevedena na jezik vaše aplikacije, **AAPS** istovremeno pretražuje prevedene i engleske stranice. Najprije dolaze stranice na vašem jeziku, a zatim engleske stranice koje još nisu pronađene.
+- Dodir na rezultat iz dokumentacije otvara tu stranicu u vašem **pregledniku**.
+- Za pretraživanje dokumentacije potreban je **internet** — kada niste na mreži, umjesto rezultata dobivate napomenu *„Za pretraživanje dokumentacije potrebna je internetska veza“*, a lokalni rezultati (u aplikaciji) i dalje rade normalno.
 
 ---
 
-## Power-user shortcuts
+## Otvaranje rezultata
 
-Two special queries list a whole category at once:
+Dodirnite rezultat da biste izravno otišli na njega:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **Dodatak** → otvara taj dodatak.
+- **Dijalog** → otvara taj zaslon ili dijalog.
+- **Kategorija postavki** → otvara taj zaslon postavki.
+- **Postavka** → otvara postavku **na njezinom mjestu** (skoči na nju unutar njezina zaslona).
+- **Dokumentacija** → otvara stranicu u vašem pregledniku.
+
+Otvaranje postavki i zaštićenih radnji i dalje poštuje vašu **[zaštitu](#Preferences-protection)** (PIN/lozinka), točno kao da ste tamo došli ručno. Nakon što nešto napravite s rezultatom, možete pritisnuti **Natrag** da biste se vratili na rezultate pretraživanja.
+
+---
+
+## Prečaci za napredne korisnike
+
+Dva posebna upita prikazuju cijelu kategoriju odjednom:
+
+- `%PLUGINS%` — prikaži **sve** dodatke.
+- `%DIALOGS%` — prikaži **sve** dijaloge i zaslone radnji.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+Indeks pretraživanja izrađuje se kada prvi put pretražujete i nakon toga ostaje spreman. Automatski se ponovno izrađuje kada **omogućite ili onemogućite dodatak** ili **promijenite jezik aplikacije**, tako da rezultati uvijek odgovaraju vašim trenutnim postavkama.
 ```
 
 ---
