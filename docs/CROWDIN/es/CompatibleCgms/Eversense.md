@@ -67,6 +67,8 @@ xDrip puede leer las notificaciones de la app del fabricante, igual que ESEL. No
 
 **AAPS** puede leer los valores de glucosa directamente de las notificaciones de la app oficial de Eversense, sin ninguna otra app en medio. No hay relleno de datos que faltan (backfilling).
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - Selecciona **Lector de notificaciones** en [**Configuración → Fuente de glucosa**](#Config-Builder-bg-source) y da a **AAPS** acceso a las notificaciones cuando lo pida.
 - Asegúrate de que la app de Eversense muestre el valor de glucosa actual en su notificación.
 
