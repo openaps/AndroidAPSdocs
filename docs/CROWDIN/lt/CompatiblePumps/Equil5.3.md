@@ -43,7 +43,7 @@ Equil nustatymus atidarykite mygtuku **Parametrai** **Equil** kortelėje arba kr
 ![Equil tvarkyklės nustatymai](../images/v4/Pumps/equil_settings.png)
 
 * **Senkančios baterijos aliarmas**: įspėja, kai pompos baterija senka.
-* **Mažo insulino likučio aliarmas**: įspėja, kai rezervuare lieka mažai insulino.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **Perspėjimo tonas**: kaip pompa jus perspėja: **Nutildyti**, **Tik vibravimas**, **Tik garsas** arba **Vibracija ir garsas**.
 * **Boluso greitis**: kaip greitai suleidžiamas bolusas: **1,5 V/min (standartinis)**, **3 V/min**, **6 V/min** arba **12 V/min**. Greitesni bolusai gali sukelti daugiau užsikimšimo aliarmų.
 
