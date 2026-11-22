@@ -9,7 +9,7 @@ Glavna prednost potpuno zatvorene petlje **FCL** (Full Closed Loop) je to što m
 
 Iako se **hibridna zatvorena petlja** („HCL“) temelji na algoritmu, korisnik i dalje mora ručno davati boluse prije obroka. Zbog toga petlja može privremeno prekinuti isporuku (nulti privremeni bazal) kako bi spriječila isporuku previše inzulina.
 
-U **FCL**-u bolus prema veličini obroka više nije potreban: prepustite to algoritmu!  **AAPS** can handle meals without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** omogućuje **AAPS**-u da bolje podnese netočno unesene ugljikohidrate tako što je agresivniji.
+U **FCL**-u bolus prema veličini obroka više nije potreban: prepustite to algoritmu!  **AAPS** može upravljati obrocima bez ikakvog bolusa i bez unosa ugljikohidrata, u načinu koji se zove „nenajavljeni obroci“ **(„UAM“)**. **UAM** omogućuje **AAPS**-u da bolje podnese netočno unesene ugljikohidrate tako što je agresivniji.
 
 ## Što očekivati?
 
@@ -31,14 +31,14 @@ Za uspjeh s **FCL**-om korisnik mora:
 **FCL** nije za svakoga:
 
 - Neki korisnici **FCL**-a postižu TIR (70–180) oko 90 % i HbA1c ispod 6 %, ali drugi korisnici više vole strožu kontrolu. Posebno, smanjenje vrijednosti iznad 140 mg/dL kod prehrane s brzim ugljikohidratima vjerojatno zahtijeva bolus prije obroka.
-- Podešavanje **AAPS**-a može biti zahtjevno. It is not for those users who feel overwhelmed by AAPS.  Trebat ćete nekoliko tjedana da prilagodite i fino podesite svoj **FCL**. Uloženo vrijeme može donijeti bolje rezultate i bolju kontrolu **GUK**-a.
+- Podešavanje **AAPS**-a može biti zahtjevno. Nije za korisnike koje AAPS opterećuje.  Trebat ćete nekoliko tjedana da prilagodite i fino podesite svoj **FCL**. Uloženo vrijeme može donijeti bolje rezultate i bolju kontrolu **GUK**-a.
 - Upravljanje obrocima može postati lakše, ali tjelovježba u **FCL**-u i dalje može biti zahtjevna. Većina nas želi ograničiti međuobroke uz sport kako bi kontrolirala tjelesnu težinu.
 - Još uvijek postoje teškoće s postavljanjem **FCL**-a za djecu (vidi niže).
 
 
 ## Dobro podešena hibridna zatvorena petlja
 
-It is advisable to first establish a well-tuned **HCL** before considering the transition to **FCL**.  Uspjeh s **FCL**-om zahtijeva vrlo osobno, individualno podešavanje korisnikovih postavki kako bi **AAPS** mogao davati inzulin na način vrlo sličan VAŠOJ uspješnoj hibridnoj zatvorenoj petlji.
+Preporučuje se najprije postići dobro podešenu **HCL** prije nego što razmislite o prijelazu na **FCL**.  Uspjeh s **FCL**-om zahtijeva vrlo osobno, individualno podešavanje korisnikovih postavki kako bi **AAPS** mogao davati inzulin na način vrlo sličan VAŠOJ uspješnoj hibridnoj zatvorenoj petlji.
 
 **FCL** zahtijeva da korisnik postavi i podesi svoje **automatizacije**. Ali korisnik mora sigurno razumjeti svoje potrebe za inzulinom prije nego što krene s **FCL**-om. Pogreške mogu biti prikrivene suprotnim pogreškama. Tako može nastati nestabilan **FCL** sustav koji je kasnije teško ispraviti. Trebali biste očekivati sličan %TIR s FCL-om kao što ga danas vidite u svojem **HCL**-u.
 
@@ -58,7 +58,7 @@ Izvor:
 
 IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly lower **BG** peaks than slower insulins;
+- dovesti do znatno nižih vrhova **GUK**-a nego sporiji inzulini;
 - podnijeti nekoliko minuta zakašnjeli prvi bolus za obrok, bez neprihvatljivo visokih vrhova; i
 - smanjiti učinak različitih količina ugljikohidrata (veličina obroka) na vrh **GUK**-a.
 
@@ -70,9 +70,9 @@ Ali Fiasp ili Lyumjev mogu dovesti do čestih začepljenja pumpe, čak i nakon o
 
 Potrebne su vrijednosti **GUK**-a i stabilna Bluetooth veza kako bi **AAPS** mogao optimalno raditi bez gubitka dragocjenog vremena. **FCL** zahtijeva tehnički stabilan sustav 24 sata dnevno, 7 dana u tjednu:
 
-- your **CGM’s performance**. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Isto tako, kalibracije **CGM**-a mogu dati skokovite rezultate.
+- **rad vašeg CGM-a**. Vaš CGM ne bi smio davati skokovite vrijednosti **GUK**-a koje bi **FCL** mogao pogrešno shvatiti kao znak početka obroka. Isto tako, kalibracije **CGM**-a mogu dati skokovite rezultate.
 - kako i gdje se radi zaglađivanje podataka **CGM**-a i što to može značiti za vaše podešavanje. Posebno kako je definirana delta i kako AAPS to prepoznaje kao znak početka obroka.
-- Bluetooth stability for the pump and CGM;
+- stabilnost Bluetootha za pumpu i CGM;
 - izbjegavanje (ili barem rano prepoznavanje) začepljenja pumpe;
 - protok podataka, aplikacije na telefonu i razlike između dana nošenja senzora;
 - sve komponente **AAPS**-a dobro napunjene i rezervni dijelovi uvijek blizu; i
@@ -88,12 +88,12 @@ Navedeno će se razlikovati ovisno o komponentama vašeg **AAPS** sustava i vaš
 
 ### Glikemijski indeks i učinak na glukozu u krvi
 
-The challenge for the **UAM** mode rises with rising 'Effect on Blood Glucose' ('EBG')
+Izazov za **UAM** način raste s rastućim „učinkom na glukozu u krvi“ („EBG“, Effect on Blood Glucose)
 
 - Počnite umjereno/nisko i podesite postavke svog **profila**. Tek tada „testirajte“ obroke s visokim **EBG**.
 - Razmislite o početnom bolusu < 50 % ako jedete hranu s vrlo visokim **EBG**.
 
-1) **Bez EBG**: npr. svježe meso, riba, jaja, slanina, ulja, sir. 2) **Nizak EBG**: npr. svježe povrće i bobičasto voće, gljive, orašasti plodovi, mlijeko, jogurt, svježi sir. 3) **Umjeren EBG**: npr. integralni kruh/tjestenina, krumpir, divlja riža, zob, sušeno voće. 4) **High EBG**: e.g. wheat breads, baguette, toast, waffles, cookies, mash potatoes, noodles, rice. 5) **Vrlo visok EBG**: npr. šećer, slatka pića, voćni sokovi, kukuruzne pahuljice, bomboni, slatkiši, čips, slani štapići.
+1) **Bez EBG**: npr. svježe meso, riba, jaja, slanina, ulja, sir. 2) **Nizak EBG**: npr. svježe povrće i bobičasto voće, gljive, orašasti plodovi, mlijeko, jogurt, svježi sir. 3) **Umjeren EBG**: npr. integralni kruh/tjestenina, krumpir, divlja riža, zob, sušeno voće. 4) **Visok EBG**: npr. pšenični kruh, baguette, tost, vafli, keksi, pire krumpir, tjestenina, riža. 5) **Vrlo visok EBG**: npr. šećer, slatka pića, voćni sokovi, kukuruzne pahuljice, bomboni, slatkiši, čips, slani štapići.
 
 ![Glikemijski indeks i učinak na glukozu u krvi](../images/fullClosedLoop01.png)
 
@@ -108,14 +108,14 @@ Kod tjelovježbe ili aktivnosti, s pumpom ili hibridnom zatvorenom petljom prepo
 
 S **FCL**-om je algoritam podešen tako da otkriva **UAM** i automatski isporučuje inzulin protiv porasta **GUK**-a.  Visok **privremeni cilj** i niži **postotak profila** (koji djeluju već oko početka obroka) treba postaviti dosta prije bilo kakve aktivnosti.
 
-Neobične ili neredovite tjelesne aktivnosti otežavaju **FCL**. Tjelovježbu treba planirati unaprijed (posebno ako želite smanjiti potrebu za ugljikohidratima/međuobrocima za spašavanje pri niskom GUK-u tijekom sporta). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with **Enable SMB with high temp target** switched off in **AAPS** **Settings**.
+Neobične ili neredovite tjelesne aktivnosti otežavaju **FCL**. Tjelovježbu treba planirati unaprijed (posebno ako želite smanjiti potrebu za ugljikohidratima/međuobrocima za spašavanje pri niskom GUK-u tijekom sporta). Nakon aktivnog dana preporučuje se postaviti niži  **postotak profila** za noć, nakon što je večera potpuno probavljena: u **automatizacijama** postavite povišeni (>100 mg/dL) cilj **GUK**-a,  a u **postavkama** **AAPS**-a isključite **Omogući SMB s visokim privremenim ciljem**.
 
 ## Prepreke za djecu
 
 **FCL** može djeci donijeti dodatne izazove, među njima:
 
-- Lyumjev or Fiasp may not be available or well tolerated.
-- Hourly basal rate may be very low, providing a poor basis for big **SMBs**.
+- Lyumjev ili Fiasp možda nisu dostupni ili se ne podnose dobro.
+- Bazalna stopa po satu može biti vrlo niska, što je loša osnova za velike **SMB**-ove.
 - Prehrana može biti bogata slatkim sastojcima. Zbog male količine krvi u malom tijelu postoji jaka sklonost vrlo visokim skokovima **GUK**-a.
 - Hormoni rasta i velike promjene osjetljivosti na inzulin otežavaju točno podešavanje **FCL**-a.
 
@@ -149,9 +149,9 @@ Postavke vašeg **AAPS-a** moraju biti dovoljno dobro postavljene za vašu (!) r
 
 Za uspješan **FCL** **ISF** je ključni parametar podešavanja. Kada koristite **AAPS** Master + **automatizacije**, **promjena profila na > 100 % mora se automatski pokrenuti pri prepoznavanju obroka** (preko delti glukoze) i dati pojačani **ISF**.
 
-**AAPS** Master allows up to 130% temporary **Profile** in **HCL** mode. **ISF** se pojačava u 3 koraka:
+**AAPS** Master u **HCL** načinu dopušta privremeni **profil** do 130 %. **ISF** se pojačava u 3 koraka:
 
-- Step 1 -  review the **ISF** applicable for this meal time hour within the **Profile**, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
+- Korak 1 – pregledajte **ISF** u **profilu** za sat ovog obroka i provjerite predlaže li npr. Autosens promjenu koja uzima u obzir trenutnu osjetljivost tijela na inzulin (zadnjih nekoliko sati).
 - Korak 2 – primijenite faktor (1/postotak profila, kako je postavljeno u **automatizaciji**) za pojačanje **ISF**-a.
 - Korak 3 – provjerite je li predloženi **ISF** unutar postavljenih sigurnosnih granica.
 
@@ -163,15 +163,15 @@ Kućice za označavanje na vrhu. Imate mogućnost:
 
 - Za svako pravilo **automatizacije** možete označiti kućicu Radnja korisnika => tada se definirane radnje neće izvršiti automatski kada su uvjeti ispunjeni. Umjesto toga, glavni zaslon **AAPS**-a upozorit će vas svaki put kada bi vaš **FCL** automatski dao **SMB**. Tada možete reći „da“ ili „ne“. To je vrlo korisno u fazi podešavanja.
 
-This feature can be useful for certain situations like “foot to floor” syndrome where there is a sudden rise in **BG** when getting up in the morning, but the user wants to prevent a fully automatic “breakfast started” response.
+Ova značajka može biti korisna u nekim situacijama, npr. kod sindroma „noga na pod“, kada **GUK** naglo poraste nakon jutarnjeg ustajanja, a korisnik želi spriječiti potpuno automatski odgovor „doručak je počeo“.
 
 Odjeljak ispod objašnjava kako spojiti uvjete **automatizacija** i kako postupiti u situacijama u kojima **AAPS** treba povećati (ili smanjiti) isporuku inzulina. Budući da se **ISF** ne može izravno podesiti, povećanje **postotka profila** iznad 100 % za naše potrebe ima isti učinak.
 
 ### Automatski veliki SMB-ovi pri porastu GUK-a
 
-The key to successful **FCL**: **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
+Ključ uspješnog **FCL**-a: **na početku porasta GUK-a zbog obroka petlja mora što brže dati vrlo velike automatske SMB-ove** kako bi „nadoknadila“ potrebni **aktivni inzulin (IOB)** (usporedite s bolusom koji obično dajete za sličan obrok u **HCL**-u!)
 
-To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might not be meal-related and which might be.
+Da biste to postigli, treba analizirati podatke iz **HCL**-a i odrediti koje **delte** vjerojatno nisu vezane uz obrok, a koje jesu.
 
 - Budući da **automatizaciju** možete definirati unutar unaprijed određenog vremenskog razdoblja, analizirati trebate samo to razdoblje.
 - Ako jedete vrlo različite obroke (npr. doručak s puno ugljikohidrata, a ručak s malo), možete napraviti dvije različite (skupine) **automatizacija** za svako vremensko razdoblje.
@@ -180,7 +180,7 @@ To achieve this, data from your **HCL** should be analyzed to determine which **
 - Ali možete koristiti i jednu od prosječnih delti. Usporedbom delti u uvjetima svojih **automatizacija** možete čak definirati radnje različite agresivnosti, ovisno o tome raste li **GUK** ubrzano ili ne.
 
 > ( delta – kratka prosj. delta )>n   je izraz koji se može koristiti za otkrivanje ubrzanja, kako bi se prvi **SMB** pokrenuo već pri prvom znaku porasta **GUK**-a. -                                                                             
-> Caution: not possible to use with poor or highly smoothened **CGM** values!
+> Oprez: nije moguće koristiti s lošim ili jako zaglađenim vrijednostima **CGM**-a!
 
 **CGM** s isprekidanim podacima stavlja korisnika u loš položaj jer, da bi bio na sigurnoj strani,  mora „s rezervom“ odrediti koja je delta sigurno znak da je obrok počeo. To znači:
 
@@ -203,9 +203,9 @@ Ove dvije (+ možda i treću) **automatizacije** morate „posložiti“ tako da
 
 Imajte na umu da se još u fazi porasta (!) mora spriječiti „prelijevanje“ aktivnog inzulina (**IOB**), kako kasni učinci **inzulina** („**rep**“ nakon 3–5 sati) ne bi bili veći od onoga što petlja može zakočiti nultim privremenim bazalom („oduzimanjem“ bazala radi smanjenja rizika od hipoglikemije).
 
-Kod velikih obroka **ponekad dođe do drugog porasta**. Do tada je obično i aktivni inzulin (IOB) malo pao, pa agresivnije automatizacije opet počnu djelovati. (Check that your iob condition in Automation #2 is not set too low for this to happen).
+Kod velikih obroka **ponekad dođe do drugog porasta**. Do tada je obično i aktivni inzulin (IOB) malo pao, pa agresivnije automatizacije opet počnu djelovati. (Provjerite da uvjet za IOB u automatizaciji #2 nije postavljen prenisko da bi se to dogodilo.)
 
-Ubrzo nakon nekoliko prvih **SMB**-ova dolazi **uravnotežena faza**, u kojoj umjerena isporuka inzulina treba pokriti dodatno apsorbirane ugljikohidrate. (Except in low carb meals, where the loop might see too weak of a **BG** rise, and go into zero-temping right away already now).
+Ubrzo nakon nekoliko prvih **SMB**-ova dolazi **uravnotežena faza**, u kojoj umjerena isporuka inzulina treba pokriti dodatno apsorbirane ugljikohidrate. (Osim kod obroka s malo ugljikohidrata, gdje petlja može vidjeti preslab porast **GUK**-a i odmah prijeći na nulti privremeni bazal.)
 
 Glavni zaslon **AAPS**-a (na kojem u potpunoj petlji s **UAM**-om vidite cob=0) u ovoj fazi može tražiti još potrebnih ugljikohidrata. U **UAM** načinu to samo znači da možete napraviti vrlo grubu provjeru vjerojatnosti: je li ta količina ugljikohidrata iz obroka prije otprilike sat vremena (o kojem petlji niste dali nikakav podatak) vjerojatno još neapsorbirana u vašem tijelu?
 
@@ -214,11 +214,11 @@ Glavni zaslon **AAPS**-a (na kojem u potpunoj petlji s **UAM**-om vidite cob=0) 
 
 Često **automatizacije** #1 i/ili #2 podignu aktivni inzulin (IOB) na razinu koja je obično dovoljna za **vaše** obroke. Za osobno podešavanje pogledajte u svojim **HCL** podacima najveće vrijednosti aktivnog inzulina (IOB) kod dobro vođenih obroka (često: vaš bolus za obrok) i iznad koje je vrijednosti na kraju došlo do hipoglikemije (ili potrebe za dodatnim ugljikohidratima).
 
-Razumne **granice aktivnog inzulina (IOB)** pri kojima biste trebali smanjiti agresivnost petlje možda nisu iste za svaki obrok. Ali posebno u prvom satu nakon početka obroka, koji je u **UAM** načinu vrlo važan. It will differ for each user. Kod nekih korisnika apsorbira se tek oko 30 g/sat, pa je moguće odrediti smislen **aktivni inzulin (IOB)** neovisno o točnom obroku.
+Razumne **granice aktivnog inzulina (IOB)** pri kojima biste trebali smanjiti agresivnost petlje možda nisu iste za svaki obrok. Ali posebno u prvom satu nakon početka obroka, koji je u **UAM** načinu vrlo važan. To je različito za svakog korisnika. Kod nekih korisnika apsorbira se tek oko 30 g/sat, pa je moguće odrediti smislen **aktivni inzulin (IOB)** neovisno o točnom obroku.
 
 Za posebne obroke, ili da je snizite ako slijedi sport, granicu **aktivnog inzulina (IOB)** možete brzo promijeniti u svojoj **automatizaciji**.
 
-Automation (#3), "iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
+Automatizacija (#3), „iobTH dosegnut => **SMB** isključen“, definirana je da završi (ili pauzira, dok ne dođe novi val porasta zbog ugljikohidrata) agresivno pojačavanje **SMB**-a.
 
 ![Automatizacija #3: IOB 5,5 ili više bez aktivnog privremenog cilja pokreće privremeni cilj od 111 mg/dL](../images/fullClosedLoop04.png)
 
@@ -233,7 +233,7 @@ Ona petlji kaže da iznad postavljene **granice aktivnog inzulina (IOB)** više 
 **Oprez: automatizacija #3 radi samo kada nema aktivnog privremenog cilja (TT).** Ako ste koristili EatingSoonTT, on mora do tada završiti, što bi obično trebalo biti 30–40 minuta nakon početka obroka.
 
 Jedan način je postaviti uvjet **automatizacije** koji završava EatingSoonTT koji je možda aktivan, uz uvjet **IOB**>65% * iobTH.
-> Načini rada s EatingSoonTT Neki korisnici petlje postave EatingSoonTT otprilike sat ili više prije početka obroka (pritiskom na gumb TT, ili automatski preko nižeg cilja **GUK**-a u **profilu** ako su vremena obroka prilično stalna), samo da bi osigurali nizak početni **GUK** i malo povećan  **aktivni inzulin (IOB)**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefer to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). Nizak **TT** je u ovoj fazi važan jer petlja svaki **SMB** računa kao (predviđena glukoza minus TT)/sens, pa niži TT daje veći insulinReq.
+> Načini rada s EatingSoonTT Neki korisnici petlje postave EatingSoonTT otprilike sat ili više prije početka obroka (pritiskom na gumb TT, ili automatski preko nižeg cilja **GUK**-a u **profilu** ako su vremena obroka prilično stalna), samo da bi osigurali nizak početni **GUK** i malo povećan  **aktivni inzulin (IOB)**. Ali, ako pretpostavimo da je **FCL** uvijek na putu prema cilju, to možda neće puno donijeti, pa ćete radije definirati **automatizaciju** koja postavlja EatingSoonTT kada prepozna početak obroka (delta glukoze, ili ubrzanje = delta > prosj. delta). Nizak **TT** je u ovoj fazi važan jer petlja svaki **SMB** računa kao (predviđena glukoza minus TT)/sens, pa niži TT daje veći insulinReq.
 
 Nakon prvih pojačanih **SMB**-ova, postavljeni iobTH i **automatizacija** #3 trebaju postići dobru ravnotežu: ograničiti vrh glukoze, ali i ne dovesti do hipoglikemije nakon obroka.
 
@@ -268,7 +268,7 @@ Općenito nema smisla stalno optimizirati postavke za jednu vrstu obroka. Kada i
 Da biste spriječili hipoglikemiju 3–5 sati nakon obroka, smanjite agresivnost prije nego što se nakupi previše aktivnog inzulina (IOB). Konkretni pristupi:
 
 - Budite sve blaži s **ISF**-om već tijekom porasta glukoze, kao u primjerima automatizacija #1 i #2.
-- Definirajte granicu aktivnog inzulina (IOB) od koje **AAPS** postaje znatno oprezniji (automatizacija #3, gore). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq. Carbs getting absorbed will provide a counter-movement towards lower iob.
+- Definirajte granicu aktivnog inzulina (IOB) od koje **AAPS** postaje znatno oprezniji (automatizacija #3, gore). Imajte na umu da se taj **IOB** može premašiti zadnjim **SMB**-om prije nego što je granica počela djelovati, a zatim i privremenim bazalima (TBR) ako petlja vidi insulinReq. Apsorpcija ugljikohidrata djelovat će u suprotnom smjeru, prema nižem IOB-u.
 - Granica aktivnog inzulina (IOB) može se razlikovati po obrocima: kloniranjem automatizacija lako možete napraviti razlike za vrijeme doručka, ručka i večere (ili čak za lokacije, npr. kantina na poslu ili kod svekrve itd.)
 > Unutar tih vremenskih razdoblja možete napraviti i daljnje razlike, postavljanjem različitih TT-ova za obroke s malo ugljikohidrata i za brze ugljikohidrate itd. Tako možete „kodirati“ različite vrste obroka koje se mogu pojaviti u to doba dana i pozvati ih **automatizacijama** posebno podešenima za njih. To vjerojatno nije potrebno, osim ako vam se prehrambene navike jako mijenjaju.
 
@@ -310,7 +310,7 @@ Na primjer, sasvim je moguće, bez dodatnih koraka nakon što su definirane **au
 - Obroci se ne prepoznaju dovoljno brzo
     - Provjerite (ne)stabilnost Bluetootha
     - Provjerite možete li postaviti manje delte za pokretanje prvog **SMB**-a
-    - Experiment with an aperitif, soup a couple of minutes before meal start
+    - Isprobajte aperitiv ili juhu nekoliko minuta prije početka obroka
 - SMB-ovi su preslabi
     - Provjerite redoslijed **automatizacija** (npr. velika delta prije male delte)
     - Provjerite (u stvarnom vremenu) na zaslonu dodatka **APS** ograničavaju li bazal po satu iz profila i postavljene minute (maks. 120) dopuštenu veličinu SMB-a
@@ -323,7 +323,7 @@ Na primjer, sasvim je moguće, bez dodatnih koraka nakon što su definirane **au
 
 - Obroci se prepoznaju pogrešno
     - Provjerite možete li postaviti veće delte za pokretanje prvog **SMB**-a
-    - Click “User action” in the related Automation, so in the future you can ad hoc decide to block execution of the Automation if not meal-related
+    - Označite „Radnja korisnika“ u odgovarajućoj automatizaciji, tako da ubuduće možete na licu mjesta odlučiti blokirati izvršavanje automatizacije ako nije vezana uz obrok
     - Da međuobroci ne bi pokretali **SMB**-ove kao za obrok, postavite TT>100 kada jedete međuobrok (kao što ionako radite pri sportu i kod međuobroka protiv hipoglikemije)
 - SMB-ovi ukupno isporučuju previše inzulina
     - Provjerite (u stvarnom vremenu) na zaslonu dodatka **APS** treba li **Maks. proširenje raspona SMB-a** postaviti manjim
@@ -332,8 +332,8 @@ Na primjer, sasvim je moguće, bez dodatnih koraka nakon što su definirane **au
 - Problemi s „repom“ inzulina nakon obroka
     - Možda ćete morati pojesti međuobrok (ako vidite predviđanje hipoglikemije) ili uzeti tablete glukoze (ako ste već u zoni hipoglikemije). Ali imajte na umu da su ugljikohidrati koje vam petlja u nekom trenutku može zatražiti vrlo vjerojatno pretjerani, jer petlja nema nikakav podatak o tome koliko ugljikohidrata ste unijeli i koliko ih (uključujući one iz masti i proteina) još čeka na apsorpciju (dok vi to možda možete procijeniti).
     - Korisno bi bilo znati nastaje li problem uglavnom već u fazi porasta GUK-a. Tada bi niži iobTH mogao biti jednostavno rješenje.
-    - Ako vam dodatni ugljikohidrati često trebaju, zapišite koliko je grama bilo potrebno (ne računajući ono što ste na kraju uzeli previše pa je opet trebalo dodatnog inzulina).  Zatim pomoću IC vrijednosti iz profila procijenite koliko je inzulina manje **SMB** trebao isporučiti i s tim podatkom nastavite podešavanje (**postotak profila** u **automatizacijama**, ili možda i postavljeni iobTH). This may relate to the **SMBs** given when glucose was high, or also to the **SMBs** during the **BG** rise.
-    - Moguće je da jednostavno morate prihvatiti više vrhove **GUK**-a kako ne biste pali u hipoglikemiju. Or change diet to something with lower amounts of carbs, and higher amount of protein and fats.
+    - Ako vam dodatni ugljikohidrati često trebaju, zapišite koliko je grama bilo potrebno (ne računajući ono što ste na kraju uzeli previše pa je opet trebalo dodatnog inzulina).  Zatim pomoću IC vrijednosti iz profila procijenite koliko je inzulina manje **SMB** trebao isporučiti i s tim podatkom nastavite podešavanje (**postotak profila** u **automatizacijama**, ili možda i postavljeni iobTH). To se može odnositi na **SMB**-ove dane pri visokoj glukozi, ali i na **SMB**-ove tijekom porasta **GUK**-a.
+    - Moguće je da jednostavno morate prihvatiti više vrhove **GUK**-a kako ne biste pali u hipoglikemiju. Ili promijenite prehranu: manje ugljikohidrata, a više proteina i masti.
 
 
 ### Više informacija
