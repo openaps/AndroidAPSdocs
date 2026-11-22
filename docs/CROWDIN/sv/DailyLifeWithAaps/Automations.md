@@ -129,9 +129,9 @@ Var försiktig när du väljer ett ‘negativt värde’ i ett ‘Villkor’, ti
 
 ![Jämförelseoperatorer](../images/Automations/automation_comparison_operators.png)
 
-**Exempel 1:** Ett villkor **"är mindre än"** "-0,1mmol/l" (eller "-2mg/dl") kommer att:
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Utlösa en **automatisering** för alla tal som är **strikt mindre än** -0,1 (-2). Det gäller tal som -0,2; -0,3; -0,4 (-4; -6; -8) och så vidare. Kom ihåg att -0,1 (-2) i sig **inte** ingår i detta villkor. (Villkoret "är samma eller mindre än -0,1mmol/l (-2 mg/dl)" _skulle_ inkludera -0,1 mmol/l eller -2 mg/dl).
+Utlösa en **automatisering** för alla tal som är **strikt mindre än** -0,1 (-2). Det gäller tal som -0,2; -0,3; -0,4 (-4; -6; -8) och så vidare. Kom ihåg att -0,1 (-2) i sig **inte** ingår i detta villkor. (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **Exempel 2:** Ett villkor "är större än" -0,1mmol/l (-2mg/dl) kommer att:
 
@@ -306,7 +306,7 @@ Nedan finns exempel på **automatiseringar**. Mer diskussion om **automatisering
 (automations-low-glucose-temp-target)=
 ### Tillfälligt målvärde vid lågt blodsocker
 
-Den här **automatiseringen** startar automatiskt ett **tillfälligt målvärde** när **BG** sjunker under en viss gräns — här startas ett målvärde på 110 mg/dl i 30 minuter när glukos är lägre än 70 mg/dl:
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Exempel: regel för lågt blodsocker](../images/Automations/automation_example_low_glucose_rule.png)
 
