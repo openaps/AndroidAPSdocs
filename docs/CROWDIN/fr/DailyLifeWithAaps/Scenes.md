@@ -45,7 +45,7 @@ Appuyez sur le bouton **+** pour créer un nouveau scénario.
 
 ### Créer à partir d'un modèle
 
-Pour **créer** un scénario, appuyez sur le bouton **+** de l'écran Scénarii. La première étape est **Créer à partir d'un modèle** : choisissez un scénario prêt à l'emploi pour une situation courante — *Exercice*, *Journée de maladie*, *Journée de maladie avec vomissements*, *Sommeil*, *Nuit après exercice*, *Pré-repas*, *Alcool*, *Conduite*, *Baignade*, *Phase lutéale*, *Météo chaude*, *Acte médical* — ou partez d'un scénario *Vide*. Chaque modèle **pré-remplit les actions recommandées** et vous pouvez tout ajuster dans les étapes suivantes.
+Pour **créer** un scénario, appuyez sur le bouton **+** de l'écran Scénarii. La première étape est **Créer à partir d'un modèle** : choisissez un scénario prêt à l'emploi pour une situation courante — *Exercice*, *Journée de maladie*, *Journée de maladie avec vomissements*, *Sommeil*, *Nuit après exercice*, *Pré-repas*, *Alcool*, *Conduite*, *Baignade*, *Phase lutéale*, *Météo chaude*, *Acte médical* — ou partez d'un scénario *Vide*. Chaque modèle **pré-remplit les actions recommandées** et vous pouvez tout ajuster dans les étapes suivantes. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![« Créer à partir d'un modèle » — choisir un point de départ](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Un scénario sans scénario suivant vous demande seulement de confirmer :
 
 ![Boîte de dialogue Terminer le scénario](../images/v4/Scenes/scene_end_dialog.png)
 
-Terminer un scénario **annule** les changements qu'il a faits (par exemple le changement de profil et la cible temporaire qu'il a lancés).
+Terminer un scénario **annule** les changements qu'il a faits (par exemple le changement de profil et la cible temporaire qu'il a lancés). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Pendant qu'un scénario est actif, le profil et la cible sur l'écran principal portent une petite icône de scénario quand c'est le scénario qui les a définis. Le panneau **Scénarii** de la barre de navigation en bas reste disponible pour démarrer un autre scénario :
 
