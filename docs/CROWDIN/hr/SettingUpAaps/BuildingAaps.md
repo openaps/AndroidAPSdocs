@@ -1,36 +1,36 @@
-# Building AAPS
+# Izrada AAPS-a
 
-## Build yourself instead of download
+## Izradite sami umjesto preuzimanja
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplikacija AAPS (APK datoteka) nije dostupna za preuzimanje zbog propisa o medicinskim uređajima. Zakonito je izraditi aplikaciju za vlastitu upotrebu, ali kopiju ne smijete dati drugima!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Pojedinosti pogledajte na stranici [Česta pitanja korisnika petlje](../UsefulLinks/FAQ.md).
 
 ---
 
-Three methods are available to build the AAPS app:
+Postoje tri načina izrade aplikacije AAPS:
 
-### Build with a browser (recommended)
+### Izrada u pregledniku (preporučeno)
 
 You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
+**[Slijedite ove upute.](./BrowserBuild.md)**
 
 ----
 
-### Build with Android Studio
+### Izrada s Android Studiom
 
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
+Aplikaciju možete izraditi na svom računalu pomoću Android Studija. Nekada je to bila jedina mogućnost izrade, danas Android Studio uglavnom koriste razvojni programeri koji žele mijenjati kod.
 
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Slijedite ove upute.](./ComputerBuild.md)**
 
 ----
 
-### Build using the command-line
+### Izrada iz naredbenog retka
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Ova je mogućnost namijenjena onima koji AAPS radije izrađuju lokalno iz naredbenog retka, bez instaliranja Android Studija.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Slijedite ove upute.](./CLIBuild.md)**
 
 ----
 
@@ -43,7 +43,7 @@ Each build method has its own troubleshooting section:
 * **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
 * **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Lost your keystore or its password? Pogledajte [Ponovna instalacija AAPS-a s novim spremištem ključeva](#reinstall-aaps).
 
 If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
 
