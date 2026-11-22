@@ -38,16 +38,16 @@ Glavne značajke **Omnipoda DASH** („DASH“):
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **A Compatible Android phone** with Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info). In addition, the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
+- **Kompatibilan Android telefon** s Bluetooth Low Energy (BLE) (više informacija pogledajte u [Telefoni](../Getting-Started/Phones.md)). Osim toga, sljedeće informacije pomoći će vam s drugim važnim stvarima za uspješnu aktivaciju i korištenje DASH-a na kompatibilnom telefonu:
     -  Upravljački program **AAPS** za Omnipod Dash spaja se s DASH Pod-om putem Bluetootha.  
       **AAPS** će automatski uspostaviti novu Bluetooth vezu s Pod-om svaki put kada treba poslati naredbu (npr. bolus), a nakon slanja naredbe Bluetooth veza se odmah prekida.
        - **NAPOMENA:**
          - Bluetooth vezu mogu prekinuti ili ometati drugi Bluetooth uređaji povezani s telefonom na kojem radi **AAPS**, npr. slušalice itd. Takvi uređaji na nekim modelima telefona mogu uzrokovati pogreške veze ili probleme pri aktivaciji Pod-a. Pri odabiru telefona za Omnipod DASH dobro je pogledati popis [testiranih hardverskih postava](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) s poznatim konfiguracijama koje rade.
-         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#omnipod-dash-troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
+         - Postoji niz poznatih problema s Bluetoothom koji mogu uzrokovati probleme pri aktivaciji Pod-a (savjete za druge probleme s Bluetoothom potražite u [Rješavanje problema](#omnipod-dash-troubleshooting)), posebno u odjeljku [Problemi povezani s Bluetoothom](#omnipod-dash-bluetooth-related-issues).
     - Telefon mora imati **Android 12 ili noviji**, a **AAPS** mora biti izrađen i instaliran prema uputama [**Izrada AAPS-a**](../SettingUpAaps/BuildingAaps.md). Uvijek koristite najnoviju objavljenu verziju.
 - Podržani [**kontinuirani monitor glukoze (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-Upute u nastavku objašnjavaju kako aktivirati novu sesiju Pod-a pomoću **AAPS-a**. You should wait for your current Pod to be close to expiry, as you will need to activate a new Pod with **AAPS**. Kada se Pod deaktivira, ne može se ponovno koristiti ni ponovno aktivirati, deaktivacija je konačna.
+Upute u nastavku objašnjavaju kako aktivirati novu sesiju Pod-a pomoću **AAPS-a**. Trebali biste pričekati da vaš trenutni Pod bude blizu isteka jer ćete morati aktivirati novi Pod s **AAPS-om**. Kada se Pod deaktivira, ne može se ponovno koristiti ni ponovno aktivirati, deaktivacija je konačna.
 
 ## Prije nego što počnete
 
@@ -420,7 +420,7 @@ Ovaj odjeljak objašnjava kako pregledati povijest aktivnog Pod-a i filtrirati j
 
 Korisna je za provjeru bolusa, TBR-ova i bazalnih naredbi poslanih Pod-u. Ostale kategorije pomažu pri rješavanju problema i pokazuju redoslijed događaja koji su doveli do kvara.
 
-**NOTE:** **Only the last command can be uncertain**. New commands *are not sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. To 'fix' an uncertain command, press **Refresh** on the DASH pump screen.
+**NAPOMENA:** **Samo zadnja naredba može biti nesigurna**. Nove naredbe *se ne šalju* dok **zadnja „nesigurna“ naredba ne postane „potvrđena“ ili „odbijena“**. Da biste „popravili“ nesigurnu naredbu, pritisnite **Osvježi** na zaslonu pumpe DASH.
 
 1. Otvorite zaslon pumpe DASH i pritisnite **Povijest Pod-a**.
 
@@ -611,7 +611,7 @@ Pod koji je zakazao ne može se ponovno koristiti. Provjerite glukozu u krvi, za
 ---
 ### Sprječavanje kvarova Pod-a s pogreškom 49
 
-Ovaj kvar povezan je s pogrešnim stanjem Pod-a za neku naredbu ili s pogreškom tijekom naredbe za isporuku inzulina. To je kada se upravljački program i Pod ne slažu o stvarnom stanju. Pod (zbog ugrađene sigurnosne mjere) tada reagira nepopravljivim kodom pogreške 49 (0x31) i završi kao takozvani „screamer“: dugi neugodni zvučni signal koji se može zaustaviti samo probijanjem rupe na odgovarajućem mjestu na stražnjoj strani Pod-a. Točan uzrok „kvara Pod-a 49“ često je teško otkriti. It can happen, for example, after application crashes, when running a development version or after a re-installation.
+Ovaj kvar povezan je s pogrešnim stanjem Pod-a za neku naredbu ili s pogreškom tijekom naredbe za isporuku inzulina. To je kada se upravljački program i Pod ne slažu o stvarnom stanju. Pod (zbog ugrađene sigurnosne mjere) tada reagira nepopravljivim kodom pogreške 49 (0x31) i završi kao takozvani „screamer“: dugi neugodni zvučni signal koji se može zaustaviti samo probijanjem rupe na odgovarajućem mjestu na stražnjoj strani Pod-a. Točan uzrok „kvara Pod-a 49“ često je teško otkriti. To se može dogoditi, na primjer, nakon rušenja aplikacije, pri korištenju razvojne verzije ili nakon ponovne instalacije.
 
 ---
 
@@ -642,7 +642,7 @@ Za uklanjanje stare sesije Pod-a:
 2. Kada ne uspije, pritisnite **Odbaci Pod** i potvrdite (pogledajte [Odbacivanje Pod-a](#omnipod-dash-discard-pod)).
 3. Kada je stari Pod uklonjen, možete aktivirati novi Pod.
 
-### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
+### Generička greška: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
 Ako dobijete ovu pogrešku pri pokušaju inicijalizacije novog Pod-a, **AAPS** ne uspijeva jer u konfiguraciji još ima spremljene postavke starog Pod-a.
 
@@ -690,8 +690,8 @@ Sažetak glavnih upozorenja na koja možete naići nalazi se u nastavku:
 - *Kvar Pod-a: XXX NAZIV*, nakon čega slijedi *Ref: ...*: Pod je zakazao i prestao isporučivati inzulin. Zamijenite Pod. Pogledajte [Kvarovi Pod-a](#omnipod-dash-pod-failures).
 - *Nema aktivnog Pod-a*: nije pronađena sesija Pod-a. Ova se obavijest stalno vraća dok ne aktivirate novi Pod. Kada se Pod aktivira, automatski nestaje.
 - *Isporuka inzulina je obustavljena*: Pod je obustavio isporuku inzulina. Pogledajte [Nastavak isporuke inzulina](#omnipod-dash-resuming-insulin-delivery).
-- *Postavljanje bazalnog profila možda nije uspjelo. Isporuka je možda obustavljena! Please manually refresh the Pod status on the pump screen and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen, and press **Resume Delivery** if it is shown.
-- *Unable to verify whether SMB (X U) succeeded. Osvježite status Pod-a za potvrdu ili odbijanje ove naredbe.* **AAPS** nije mogao potvrditi da je **SMB** isporučen. Pritisnite **Osvježi** na zaslonu pumpe DASH i provjerite polje **Zadnji bolus**.
+- *Postavljanje bazalnog profila možda nije uspjelo. Isporuka je možda obustavljena! Ručno osvježite status Pod-a na zaslonu pumpe i po potrebi nastavite isporuku.* Postavljanje bazalnog **Profila** na Pod-u možda nije uspjelo. Pritisnite **Osvježi** na zaslonu pumpe DASH i pritisnite **Nastavi isporuku** ako je prikazan.
+- *Nije moguće provjeriti je li SMB (X J) uspješno izvršen. Osvježite status Pod-a za potvrdu ili odbijanje ove naredbe.* **AAPS** nije mogao potvrditi da je **SMB** isporučen. Pritisnite **Osvježi** na zaslonu pumpe DASH i provjerite polje **Zadnji bolus**.
 - *Status isporuke bolusa nije pouzdan. Osvježite status Pod-a za potvrdu ili odbijanje bolusa.* Isto vrijedi za normalni bolus: pritisnite **Osvježi** na zaslonu pumpe DASH.
 - *Vremenska zona na Pod-u se razlikuje od vremenske zone na telefonu. Bazalna stopa je netočna. Promijenite profil za ispravak* Pogledajte napomenu o ljetnom računanju vremena i vremenskoj zoni u [Poznata ograničenja i problemi Omnipoda DASH u AAPS-u](#omnipod-dash-constraints).
 
@@ -703,7 +703,7 @@ Sav razvoj za DASH radi zajednica na **volonterskoj** osnovi; imajte to na umu i
 
 -  **Razina 0:** Pročitajte odgovarajući dio ove dokumentacije kako biste razumjeli kako bi trebala raditi funkcija s kojom imate poteškoća.
 -  **Razina 1:** Ako i dalje imate probleme koje ne možete riješiti uz pomoć ovog dokumenta, idite na kanal *#AAPS* na **Discordu** putem [ove poveznice za pozivnicu](https://discord.gg/4fQUWHZ4Mw). Postoje i brojne grupe na Facebooku i drugdje u kojima također možete pitati (pogledajte [**Gdje mogu dobiti pomoć?**](../GettingHelp/WhereCanIGetHelp.md))
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues). If it exists, please confirm/comment/add information on your problem. Ako nije, otvorite [novi issue](https://github.com/nightscout/AndroidAPS/issues) i priložite [svoje datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
+-  **Razina 2:** Pretražite postojeće prijave da vidite je li vaš problem već prijavljen na [Issues](https://github.com/nightscout/AndroidAPS/issues). Ako postoji, potvrdite ga, komentirajte ili dodajte informacije o svom problemu. Ako nije, otvorite [novi issue](https://github.com/nightscout/AndroidAPS/issues) i priložite [svoje datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
 -  **Budite strpljivi – većina članova naše zajednice su dobronamjerni volonteri, a rješavanje problema često traži vrijeme i strpljenje i od korisnika i od programera.**
 
 Kada tražite pomoć, pripremite sljedeće podatke kako biste članovima zajednice pomogli s vašim konkretnim pitanjima i problemima:
