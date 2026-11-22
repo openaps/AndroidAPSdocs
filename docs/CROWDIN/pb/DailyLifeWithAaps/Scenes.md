@@ -124,7 +124,7 @@ Um cenário sem cenário seguinte só pede que você confirme:
 
 ![Diálogo Encerrar cenário](../images/v4/Scenes/scene_end_dialog.png)
 
-Encerrar um cenário **desfaz** as mudanças que ele fez (por exemplo, a troca de perfil e o alvo temporário que ele iniciou). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Encerrar um cenário **desfaz** as mudanças que ele fez (por exemplo, a troca de perfil e o alvo temporário que ele iniciou). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Enquanto um cenário está ativo, o perfil e o alvo na tela principal mostram um pequeno ícone de cenário quando foi o cenário que os definiu. O painel **Cenários** da navegação inferior continua disponível para iniciar outro cenário:
 
