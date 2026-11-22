@@ -9,6 +9,7 @@ AAPS działa z wieloma pompami insulinowymi. Poniższa lista pokazuje obecnie ob
 
 ../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
 ../CompatiblePumps/Accu-Chek-Insight-Pump.md
+../CompatiblePumps/AP550-Insulin-Pump.md
 ../CompatiblePumps/CareLevo.md
 ../CompatiblePumps/DanaR-Insulin-Pump.md
 ../CompatiblePumps/DanaRS-Insulin-Pump.md
@@ -18,12 +19,14 @@ AAPS działa z wieloma pompami insulinowymi. Poniższa lista pokazuje obecnie ob
 ../CompatiblePumps/MedtronicPump.md
 ../CompatiblePumps/MedtrumNano.md
 ../CompatiblePumps/OmnipodDASH.md
+../CompatiblePumps/Omnipod5.md
 ../CompatiblePumps/OmnipodEros.md
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
 
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; zobacz też [Wskazówki dotyczące podstawowego użytkowania](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md) (Bluetooth)
 - [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
@@ -36,6 +39,7 @@ AAPS działa z wieloma pompami insulinowymi. Poniższa lista pokazuje obecnie ob
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
+- [Omnipod 5](../CompatiblePumps/Omnipod5.md) (Bluetooth; driver in development, test builds only)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (wymagane [dodatkowe urządzenie do komunikacji](#CompatiblePumps-additional-communication-device))
 
 ## Mojej pompy nie ma na liście
