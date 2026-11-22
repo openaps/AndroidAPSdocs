@@ -124,7 +124,7 @@ En scen utan uppföljningsscen ber dig bara att bekräfta:
 
 ![Dialogrutan Avsluta scen](../images/v4/Scenes/scene_end_dialog.png)
 
-När en scen avslutas **återställs** ändringarna som den gjorde (till exempel profilbytet och det tillfälliga målvärdet som den startade). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+När en scen avslutas **återställs** ändringarna som den gjorde (till exempel profilbytet och det tillfälliga målvärdet som den startade). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Medan en scen är aktiv visar profilen och målvärdet på huvudskärmen en liten scenikon om scenen har ställt in dem. Panelen **Scener** i den nedre navigeringen finns kvar, så att du kan starta en annan scen:
 
