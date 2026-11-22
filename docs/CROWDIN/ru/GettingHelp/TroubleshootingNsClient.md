@@ -8,11 +8,11 @@
 
 * Как обнаружить нестабильную связь?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Если вы видите много повторных попыток соединения, то это свидетельство проблем со связью.
+Откройте экран NSClient (**Конфигурация** > **Связь** > **NSClientV3** > **Открыть модуль**) и следите за полем **Статус** и журналом. Если websockets включены, статус должен оставаться «connected» (подключено), а сообщений о повторном подключении в журнале почти не должно быть. Если вы видите много повторных попыток соединения, то это свидетельство проблем со связью.
 
 * Перезапуск
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Сначала перезапустите Nightscout, а затем телефон, чтобы понять, остается ли проблема.
 
 Если Nightscout размещен на Heroku, вы можете перезапустить Nightscout так: зайдите в Heroku, нажмите на имя приложения, нажмите в меню «More», затем «Restart all dynos».
 
@@ -32,16 +32,16 @@ Android может перевести телефон в спящий режим.
 
 Для решения проблем подключения в Azure необходимо ВКЛЮЧИТЬ в настройках приложения HTTP протокол 2.0 и Websockets
 
-    {admonition} Remote control needs websockets
+    {admonition} Для удаленного управления нужны websockets
     :class: important
-    Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. If the websocket connection keeps dropping, remote control does not work. Data synchronization still works, but more slowly. Your Nightscout host must support websockets.
+    Websockets **обязательны** для удаленного управления из **AAPSClient**, на обоих телефонах. Если соединение websocket постоянно обрывается, удаленное управление не работает. Синхронизация данных при этом работает, но медленнее. Ваш хостинг Nightscout должен поддерживать websockets.
 
 * Нет данных ГК из Nightscout
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Если **AAPS** правильно подключается к Nightscout, но ГК показывается как N/A: в [настройках NSClientV3](#Preferences-nsclient) откройте **Синхронизация** и включите **Получать данные CGM из NS**. Эта опция скрыта, пока включено управление клиентом ([усиленный режим](#client-master-control-hardened-mode)); в этом случае проверьте, что в **Конфигурация** → **Источник ГК** выбран **ГК с клиента Nightscout**.
 
 * Если все еще приходят сообщения об ошибке...
 
-Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
+Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Следуйте этим инструкциям Nightscout, чтобы проверить размер базы данных и удалить лишние данные](https://nightscout.github.io/troubleshoot/troubleshoot/#database-full).
 
 Перед очисткой базы данных, если вы еще этого не сделали, подумайте о передаче своих данных AAPS в проект Open Humans (для исследований). Инструкции находятся на странице конфигурации [OpenHumans](../SupportingAaps/OpenHumans.md).
