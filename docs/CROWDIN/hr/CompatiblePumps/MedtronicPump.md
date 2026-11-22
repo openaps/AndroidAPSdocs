@@ -41,8 +41,8 @@ Usporedna tablica različitih uređaja kompatibilnih s RileyLinkom nalazi se na 
 Sljedeće postavke treba konfigurirati na pumpi kako bi AAPS mogao daljinski slati naredbe. Koraci potrebni za svaku promjenu na pumpi Medtronic 715 navedeni su u zagradama uz svaku postavku. Točni koraci mogu se razlikovati ovisno o tipu pumpe i/ili verziji firmwarea.
 
 - **Omogućite daljinski način rada na pumpi** (na pumpi pritisnite Act i idite na Utilities -> Remote Options, odaberite On, a na sljedećem zaslonu odaberite Add ID i dodajte bilo koji ID, na primjer 111111). Na popisu Remote ID mora biti barem jedan ID da bi pumpa prihvaćala daljinsku komunikaciju.
-- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. Najveća vrijednost koju pumpa dopušta je 34,9 jedinica na sat.
-- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. Najveća vrijednost koju pumpa dopušta je 25.
+- **Postavite Max Basal** (na pumpi pritisnite Act i idite na Basal, a zatim odaberite Max Basal Rate). Na primjer, ako ovu vrijednost postavite na četiri puta veću od vaše najveće standardne bazalne stope, omogućit ćete privremenu bazalnu stopu od 400 %. Najveća vrijednost koju pumpa dopušta je 34,9 jedinica na sat.
+- **Postavite Max Bolus** (na pumpi pritisnite Act i idite na Bolus, a zatim odaberite Max Bolus). To je najveći bolus koji će pumpa prihvatiti. Najveća vrijednost koju pumpa dopušta je 25.
 - **Postavite profil na Standard**. (Na pumpi pritisnite Act i idite na Basal, a zatim na Select Patterns.) Pumpi je potreban samo jedan profil, jer AAPS upravlja različitim profilima na vašem telefonu. Drugi uzorci (patterns) nisu potrebni.
 - **Postavite vrstu privremene bazalne stope** (na pumpi pritisnite Act i idite na Basal, a zatim na Temp Basal Type). Odaberite Absolute (ne Percent).
 
@@ -75,13 +75,13 @@ Kada postavljate AAPS za rad s vašom Medtronic pumpom, u **Postavkama** morate 
 
 - **Serijski broj pumpe**: nalazi se na stražnjoj strani pumpe i počinje sa SN. Unesite samo 6 prikazanih brojeva, bez slova (npr. 123456).
 - **Tip pumpe**: model pumpe koji koristite (npr. 522). 
-- **Frekventno područje pumpe**: postoje dvije mogućnosti, ovisno o tome gdje je vaša pumpa izvorno prodana. Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select: 
-    - for US & Canada, frequency used is 916 MHz
-    - for Worldwide, frequency used is 868 MHz
+- **Frekventno područje pumpe**: postoje dvije mogućnosti, ovisno o tome gdje je vaša pumpa izvorno prodana. Ako niste sigurni koju opciju odabrati, pogledajte [Česta pitanja](#MedtronicPump-faq): 
+    - za SAD i Kanadu koristi se frekvencija 916 MHz
+    - za ostatak svijeta koristi se frekvencija 868 MHz
 - **Maks. bazal na pumpi (J/h)**: mora odgovarati postavci na vašoj pumpi (vidi Konfiguracija pumpe iznad). I ovu postavku treba pažljivo odabrati, jer određuje koliko inzulina AAPS može isporučiti putem bazalne stope. Time se zapravo postavlja najveća privremena bazalna stopa. Na primjer, ako ovu vrijednost postavite na četiri puta veću od vaše najveće standardne bazalne stope, omogućit ćete privremenu bazalnu stopu od 400 %. Najveća vrijednost koju pumpa dopušta je 34,9 jedinica na sat.
 - **Maks. bolus na pumpi (J)** (u jednom satu): mora odgovarati postavci na vašoj pumpi (vidi Konfiguracija pumpe iznad). Ovu postavku treba dobro razmotriti, jer određuje koliko velik bolus AAPS uopće može zadati.
 - **Odgoda prije početka bolusa (s)**: broj sekundi od zadavanja bolusa do trenutka kada se naredba stvarno pošalje pumpi. U tom vremenu korisnik može otkazati bolus ako je naredba za bolus poslana greškom. Bolus koji je počeo, a pokrenut je putem AAPS-a, nije moguće otkazati. Bolus koji je već počeo može se otkazati samo tako da ručno obustavite pumpu, a zatim je ponovno pokrenete.
-- **Medtronic Encoding**: Determines where the Medtronic encoding is carried out (hardware or software). Preporučuje se odabrati hardversko kodiranje (tj. kodiranje obavlja uređaj kompatibilan s RileyLinkom), jer se tako šalje manje podataka. Odabir softverskog kodiranja (tj. kodiranje obavlja AAPS) može pomoći ako se veza često prekida. Ova će se postavka zanemariti ako uređaj RileyLink ima firmware verzije 0.x.
+- **Medtronic kodiranje**: određuje gdje se obavlja Medtronic kodiranje (hardverski ili softverski). Preporučuje se odabrati hardversko kodiranje (tj. kodiranje obavlja uređaj kompatibilan s RileyLinkom), jer se tako šalje manje podataka. Odabir softverskog kodiranja (tj. kodiranje obavlja AAPS) može pomoći ako se veza često prekida. Ova će se postavka zanemariti ako uređaj RileyLink ima firmware verzije 0.x.
 - **Vrsta baterije (Power View)**: da bi se točno odredila preostala razina baterije, odaberite vrstu AAA baterije koju koristite. Kada je odabrana vrijednost koja nije jednostavan prikaz, AAPS će prikazati izračunati preostali postotak baterije i napon. Dostupne su sljedeće mogućnosti:
     
     - Nije odabrano (jednostavan prikaz)
@@ -166,7 +166,7 @@ AAPS za sinkronizaciju koristi serijski broj, a serijski broj je vidljiv u NS-u.
 
 ### Korisnici OpenAPS-a
 
-Korisnici OpenAPS-a trebaju znati da AAPS s Medtronicom koristi potpuno drugačiji pristup od OpenAPS-a. Uz AAPS se s pumpom uglavnom komunicira putem vašeg telefona. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. To je vrlo različito od OpenAPS-a, gdje se barem dio bolusa obično isporučuje putem tipki za brzi bolus. Ako se pumpa koristi za ručnu isporuku bolusa, mogu nastati problemi ako AAPS u isto vrijeme pokuša isporučiti bolus. Postoje provjere koje pokušavaju spriječiti probleme u takvim slučajevima, ali to ipak treba izbjegavati kad god je moguće.
+Korisnici OpenAPS-a trebaju znati da AAPS s Medtronicom koristi potpuno drugačiji pristup od OpenAPS-a. Uz AAPS se s pumpom uglavnom komunicira putem vašeg telefona. U uobičajenom korištenju izbornik pumpe vjerojatno će vam trebati samo kod promjene spremnika. To je vrlo različito od OpenAPS-a, gdje se barem dio bolusa obično isporučuje putem tipki za brzi bolus. Ako se pumpa koristi za ručnu isporuku bolusa, mogu nastati problemi ako AAPS u isto vrijeme pokuša isporučiti bolus. Postoje provjere koje pokušavaju spriječiti probleme u takvim slučajevima, ali to ipak treba izbjegavati kad god je moguće.
 
 ### Zapisivanje u dnevnik
 
@@ -200,7 +200,7 @@ Kod GNARL potpuno podržava sve funkcije koje koristi upravljački program Medtr
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### What to do if I lose connection to RileyLink and/or pump?
+### Što učiniti ako izgubim vezu s RileyLinkom i/ili pumpom?
 
 Postoji više mogućnosti kojima možete pokušati riješiti probleme s vezom.
 
@@ -220,7 +220,7 @@ Na stražnjoj strani pumpe nalazi se redak s brojem modela i posebnim kodom od 3
 
 - NA – Sjeverna Amerika (kod odabira frekvencije morate odabrati „SAD & Kanada (916 MHz)“)
 - CA – Kanada (kod odabira frekvencije morate odabrati „SAD & Kanada (916 MHz)“)
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
+- WW – cijeli svijet (kod odabira frekvencije morate odabrati „Cijeli svijet (868 MHz)“)
 
 (MedtronicPump-pump-unreachable)=
 
@@ -229,7 +229,7 @@ Na stražnjoj strani pumpe nalazi se redak s brojem modela i posebnim kodom od 3
 Neke Medtronic pumpe nakon ažuriranja **AAPS**-a prijavljuju grešku „Pumpa nedostupna“. Da biste to popravili, promijenite vrstu kodiranja:
 
 1. Idite na **Konfiguracija** > **Pumpa** i dodirnite **Postavke** na kartici **Medtronic**.
-2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
+2. Postavite **Medtronic kodiranje** na **Hardversko 4b6b kodiranje**.
 
 ## Gdje dobiti pomoć
 
