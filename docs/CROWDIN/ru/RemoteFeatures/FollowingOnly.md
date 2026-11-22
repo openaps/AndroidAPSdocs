@@ -26,13 +26,13 @@
 
 * Многие опекуны знают Dexcom Follow и предпочитают его понятный интерфейс чему-то более сложному.
 
-* Dexcom Follow очень хорошо подходит для учителей, бабушек и дедушек и людей, которые очень мало знают о диабете и уровне сахара. It has customizable alerts (BG level, what sound to play etc.). Оповещения могут быть полностью выключены, что очень полезно, если сенсор еще прирабатывается и передает много заниженных значений.
+* Dexcom Follow очень хорошо подходит для учителей, бабушек и дедушек и людей, которые очень мало знают о диабете и уровне сахара. В нем есть настраиваемые оповещения (уровень ГК, какой звук воспроизводить и т. д.). Оповещения могут быть полностью выключены, что очень полезно, если сенсор еще прирабатывается и передает много заниженных значений.
 
 #### Setting up Dexcom Follow: how-to-guide
 
 Если для получения данных сенсора вы используете неофициальное приложение Dexcom BYODA, возможно, вы сможете отправлять приглашения фолловерам прямо из BYODA.
 
-Из сторонних приложений больше нельзя отправлять фолловерам Dexcom приглашения по электронной почте. In xDrip the invite request will just result in the message “invite not sent”.
+Из сторонних приложений больше нельзя отправлять фолловерам Dexcom приглашения по электронной почте. В xDrip запрос на приглашение просто выдаст сообщение «invite not sent» (приглашение не отправлено).
 
 Нужно установить официальное приложение Dexcom, отправить приглашение, а затем удалить официальное приложение.
 
@@ -42,7 +42,7 @@
 3) Пролистайте вводные меню. 4) В разделе код сенсора (sensor code) введите "no code". 5) В разделе «Transmitter SN» (номер трансмиттера) выберите «enter manually» (ввести вручную) и введите любой допустимый код трансмиттера (если знаете, используйте код одного из ваших старых трансмиттеров с истекшим сроком, чтобы он не мешал работе текущего трансмиттера; коды имеют определенный формат из цифр и букв: «NLNNNL», и допустимы только некоторые комбинации, поэтому проще всего взять код, о котором вы точно знаете, что он действителен). 6) Когда приложение начнет искать трансмиттер и сенсор, вы сможете пригласить фолловеров: нажмите три маленькие точки в левом верхнем углу приложения и добавьте нового фолловера. Это можно сделать и тогда, когда один из ваших фолловеров сменил телефон и ему нужно новое приглашение: здесь вы можете удалить его из списка фолловеров и снова отправить приглашение по электронной почте для нового телефона. 7) На телефоне фолловера установите Dexcom Follow, скачав его из App Store (iPhone) или Google Play (Android). Настройте приложение Dexcom Follow и вам будет предложено открыть электронную почту, найти приглашение и стать подписчиком.    
 8) Теперь можно удалить официальное приложение Dexcom G6.
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip, depending on which app you are using.
+Для Dexcom Follow данные сенсора затем экспортируются с телефона с **AAPS** напрямую из BYODA или из xDrip, в зависимости от того, каким приложением вы пользуетесь.
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
@@ -80,33 +80,33 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 * Приложение можно скачать из [Google Play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch), оно показывает данные ГК в реальном времени.
 
-* The user can be alerted with customized noisy low and high alarms set.
+* Пользователь может получать громкие настраиваемые сигналы тревоги о низкой и высокой ГК.
 
 * Данные ГК можно смотреть в ммоль/л или в мг/дл.
 
 * Нужен Android 5.0 или новее.
 
-* It has a dark UI, large readings and buttons, designed for usage at night.
+* У него темный интерфейс, крупные значения и кнопки, он создан для использования ночью.
 
 ### xDrip (Android)
 
-You can use xDrip as a follower.
+xDrip можно использовать как фолловер.
 
 #### С Nightscout
 
-Set xDrip as a Nightscout Follower. Вы будете получать ГК и терапию, но не базал.
+Настройте xDrip как фолловер Nightscout (Nightscout Follower). Вы будете получать ГК и терапию, но не базал.
 
 ![изображение](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip BG data source
+#### Без Nightscout – xDrip как источник данных ГК
 
-If your **AAPS** data source is xDrip (or if xDrip can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
+Если источник данных в **AAPS** — xDrip (или если xDrip может также получать ГК из другого приложения, например BYODA, Juggluco, ...), вы можете использовать его на основном телефоне, чтобы передавать данные фолловерам xDrip: ГК, терапию и базальные скорости.
 
 ![изображение](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip BG companion app
+#### Без Nightscout – xDrip с источником данных Companion App
 
-If your **AAPS** data source is not xDrip but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
+Если источник данных в **AAPS** не xDrip, но xDrip может показывать данные ГК из источника данных Companion App, вы можете использовать его на основном телефоне, чтобы передавать данные фолловерам xDrip: ГК, терапию и базальные скорости.
 
 ![изображение](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -114,7 +114,7 @@ If your **AAPS** data source is not xDrip but you can display BG data from the C
 
 ![изображение](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift was created from porting the original xDrip app to iOS and evolved into "xDrip for iOS", written as **xDrip4iOS**.
+xDripSwift появился при переносе исходного приложения xDrip на iOS и развился в «xDrip for iOS», которое пишется как **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
@@ -150,7 +150,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 * Apple iPad (нужна версия ПО 13.0 или новее)
 * Google Android (сохраните веб-приложение на главный экран)
 
-Пользователи Sugarmate сообщают что приложение совместимо с Apple CarPlay в США для отображения данных гликемии во время вождения. Пока еще не установлено, возможно ли это в странах за пределами США. If you know more about this, please add details in here to the documentation by completing a [pull request](../SupportingAaps/HowToEditTheDocs.md), which is quick and easy to do.
+Пользователи Sugarmate сообщают что приложение совместимо с Apple CarPlay в США для отображения данных гликемии во время вождения. Пока еще не установлено, возможно ли это в странах за пределами США. Если вы знаете об этом больше, добавьте подробности в документацию через [pull request](../SupportingAaps/HowToEditTheDocs.md) — это быстро и просто.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
@@ -181,16 +181,16 @@ M5Stack — это небольшая коробка, которую можно 
 
 ### SugarPixel
 
-SugarPixel — это устройство для системы вторичного оповещения об уровне глюкозы для приложений Dexcom или Nightscout на смартфоне пользователя. Устройство отображает показания уровня сахара в крови в режиме реального времени. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
+SugarPixel — это устройство для системы вторичного оповещения об уровне глюкозы для приложений Dexcom или Nightscout на смартфоне пользователя. Устройство отображает показания уровня сахара в крови в режиме реального времени. У этого аппаратного монитора CGM есть звуковые оповещения со случайными тонами (очень громкие), вибрация для людей с нарушением слуха, настраиваемые варианты отображения и встроенная поддержка нескольких фолловеров.
 
 ![изображение](../images/remote_control_and_following/following_sugarpixel.png)
 
 ![изображение](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
+* SugarPixel имеет несколько вариантов отображения в мг/дл и ммоль/л с цветовой кодировкой значений глюкозы, чтобы подойти под нужды пользователя.
 * Стандартный экран показывает ГК, стрелку тренда и дельту. Дельта - это изменение + или - от последнего показания.
-* SugarPixel can be customized for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s color face uses the entire display to show a single color representing the BG value. Это позволяет пользователю видеть значения ГК на расстоянии через окно, находясь в бассейне, во дворе или на веранде.
+* SugarPixel можно настроить для использования при низкой яркости с экраном «BG and Time» (ГК и время), чтобы видеть ГК и текущее время на прикроватной тумбочке.
+* Цветной экран SugarPixel использует весь дисплей, чтобы показать один цвет, который соответствует значению ГК. Это позволяет пользователю видеть значения ГК на расстоянии через окно, находясь в бассейне, во дворе или на веранде.
 * Экран Big BG (крупная ГК) удобен для тех, кто смотрит на него с прикроватной тумбочки и носит очки или контактные линзы.
 
 ### Nightscout Clock на Ulanzi TC001
@@ -200,7 +200,7 @@ SugarPixel — это устройство для системы вторичн�
 ![Слежение с Nightscout Clock](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * Часы поддерживают единицы ммоль/л и мг/дл и имеют звуковые сигналы тревоги.
-* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Доступно несколько вариантов экрана, обзор см. на [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
 * Установка и настройка устройства — это всего несколько простых шагов. После настройки для работы нужны только питание и Wi-Fi.
 * Устройство Ulanzi TC001 стоит значительно дешевле, чем SugarPixel.
 * Программу и инструкции по установке можно найти на [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
