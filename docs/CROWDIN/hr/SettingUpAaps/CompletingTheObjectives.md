@@ -1,250 +1,250 @@
-# Completing the Objectives
+# Ispunjavanje ciljeva
 
-**AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
+**AAPS** ima niz **ciljeva** koje treba ispuniti. Oni korisnika vode od osnovne otvorene petlje do hibridne zatvorene petlje i svih funkcija **AAPS-a**. Ispunjavanjem **ciljeva** trebate postići da ste:
 
-* Configured everything correctly in your **AAPS** setup;
-* Learned about the essential features of **AAPS**; and
-* A basic understanding of what your system can do, in order to help instill confidence when using **AAPS**.
+* sve ispravno postavili u svom **AAPS-u**;
+* naučili glavne funkcije **AAPS-a**; i
+* stekli osnovno razumijevanje onoga što vaš sustav može učiniti, kako biste s više povjerenja koristili **AAPS**.
 
-When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
+Kada se **AAPS** instalira prvi put, svaki cilj morate ispuniti prije prelaska na sljedeći. Nove funkcije postupno se otključavaju kako napredujete kroz svaki **cilj**.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+**Ciljevi 1 do 8** vode vas od postavljanja **AAPS-a** na pametnom telefonu do „osnovne” hibridne zatvorene petlje. Za to vam treba oko 6 tjedana. Do **Cilja 5** možete doći s virtualnom pumpom (a inzulin u međuvremenu primati na neki drugi način). **Ciljevi 9 i 10** služe za testiranje naprednijih funkcija **AAPS-a** radi bolje kontrole dijabetesa. Za njih će vam trebati do 3 mjeseca, možda i duže. Više detalja o procjeni potrebnog vremena nalazi se ovdje: [Koliko će to trajati?](#preparing-how-long-will-it-take)
 
 As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#CompletingTheObjectives-go-back-in-objectives).
 
-## Backup your settings
+## Napravite sigurnosnu kopiju postavki
 
 ```{admonition} Note
 :class: note
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+Nakon ispunjenja svakog **cilja** preporučuje se izvesti postavke **AAPS-a**!
 ```
 
-It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
+Snažno se preporučuje da nakon ispunjenja svakog cilja [izvezete postavke](../Maintenance/ExportImportSettings.md), kako ne biste izgubili napredak u **AAPS-u**. Izvozom nastaje **datoteka postavki** (.json) koju treba spremiti na jedno ili više sigurnih mjesta (npr. Google Drive, tvrdi disk, privitak e-pošte _itd._). Tako je sav napredak u **AAPS-u** spremljen. Ako izgubite telefon ili slučajno izbrišete napredak, json datoteku možete ponovno učitati u **AAPS** uvozom nedavne datoteke postavki. Sigurnosna kopija **datoteke postavki** potrebna je i kada iz bilo kojeg razloga trebate novi pametni telefon za **AAPS** (novi model, izgubljen ili pokvaren telefon _itd._)
 
-The **settings** file will save not only your progress through the **Objectives**, but also all your **AAPS** settings such as **max bolus** _etc._
+Datoteka **postavki** sprema ne samo vaš napredak kroz **ciljeve**, nego i sve postavke **AAPS-a**, npr. **maksimalni bolus** _itd._
 
-The **Objectives** will need to be restarted from the beginning should you fail to have a backup of your settings and anything happens to your **AAPS** smartphone. Progressing through the **Objectives** takes time, and having to re-complete them again because for example you lost your smartphone, is a situation to be best avoided.
+Ako nemate sigurnosnu kopiju postavki, a nešto se dogodi s vašim pametnim telefonom za **AAPS**, **ciljeve** ćete morati ponovno započeti od početka. Napredovanje kroz **ciljeve** traje dugo. Bolje je izbjeći situaciju u kojoj ih morate ponovno ispunjavati, na primjer jer ste izgubili pametni telefon.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## Cilj 1: Postavljanje prikaza i nadzora, analiza bazala i omjera
 
-**Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
+**Cilj 1** traži od korisnika da postavi osnovne tehničke postavke u **AAPS-u**. Ne možete napredovati dok ne završite ovaj korak.
 
-- Select the correct CGM/FGM in [Configuration → BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
-- Select the correct Pump in [Configuration → Pump](#Config-Builder-pump) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
-- If using Nightscout:
-  - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
-  - Note that the URL in **NSClientV3** must be **_without_ "/api/v1/"** at the end - see [Settings → NSClientV3](#Preferences-nsclient).
-- If using Tidepool:
-  - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
+- Odaberite ispravan CGM/FGM u [Konfiguracija → Izvor GUK-a](#Config-Builder-bg-source). Više informacija pogledajte u [Izvor GUK-a](../Getting-Started/CompatiblesCgms.md).
+- Odaberite ispravnu pumpu u [Konfiguracija → Pumpa](#Config-Builder-pump) kako bi vaša pumpa mogla komunicirati s **AAPS-om**. Odaberite **virtualnu pumpu** ako koristite model pumpe koji nema upravljački program za petlju u **AAPS-u** ili ako želite proći prve **ciljeve**, a inzulin primati drugim sustavom. Više informacija pogledajte u [inzulinska pumpa](../Getting-Started/CompatiblePumps.md).
+- Ako koristite Nightscout:
+  - Slijedite upute na stranici [Nightscout](../SettingUpAaps/Nightscout.md) kako bi **Nightscout** mogao primati i prikazivati podatke **AAPS-a**.
+  - Imajte na umu da URL u **NSClientV3** mora biti **_bez_ „/api/v1/”** na kraju – pogledajte [Postavke → NSClientV3](#Preferences-nsclient).
+- Ako koristite Tidepool:
+  - Slijedite upute na stranici [Tidepool](../SettingUpAaps/Tidepool.md) kako bi **Tidepool** mogao primati i prikazivati podatke **AAPS-a**.
 
 Note: *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
 
 (objectives-objective2)=
-## Objective 2: Learn how to control AAPS
+## Cilj 2: Naučite kako kontrolirati AAPS
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
+**Cilj 2** traži da obavite nekoliko „zadataka”, kao na snimci zaslona ispod. Svaki zadatak prikazuje svoj status (**1**): narančasto „**Nije još dovršeno**” mijenja se u „**Dovršeno, bravo!**” čim **AAPS** zabilježi radnju. Dodirnite **Savjet** (**2**) ispod zadatka da otvorite povezanu dokumentaciju, ako neku radnju još ne poznajete.
 
-![Screenshot objective 2](../images/objectives/Objective2_V2_5.png)
+![Snimka zaslona cilja 2](../images/objectives/Objective2_V2_5.png)
 
-Tasks to complete **Objective 2** are:
-- Set your **Profile** to 90% for a duration of 10 min.
-  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-  - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
-- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
-  - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
-- End "taking a shower" by reconnecting your pump.
-  - _Hint_: press the "disconnected"-icon to open the loop dialog again and choose **Reconnect Pump**.
-- Set a custom [**Temporary Target**](../DailyLifeWithAaps/TempTargets.md) with a duration of 10 min.
-  - _Hint_: press the target range on the main screen to bring up the temporary target screen.
-- Display the **Loop** plugin's content.
-  - _Hint_: open **Configuration → Loop** and tap "**Open plugin**".
-- Use scroll or zoom on the BG chart to look at larger or smaller time frames.
+Zadaci za ispunjenje **Cilja 2** su:
+- Postavite **profil** na 90 % na 10 min.
+  - _Savjet_: dodirnite naziv profila na glavnom zaslonu da otvorite zaslon **Profil**, zatim koristite gumb **Aktiviraj** (▶) i postavite postotak i trajanje. Više informacija u [Zamjena profila i postotak profila](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+  - _Napomena_: **AAPS** ne prihvaća bazalne stope niže od 0,05 J/h. If your **Profile** includes rates 0.05U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Nakon ovog zadatka vratite se na svoj uobičajeni **profil**.
+- Simulirajte „tuširanje” tako da u **AAPS-u** [odspojite pumpu](#AapsScreens-loop-status) na 1 h.
+  - _Savjet_: pritisnite ikonu petlje na glavnom zaslonu da otvorite dijalog petlje, zatim odaberite trajanje pod **Odspoji pumpu**.
+- Završite „tuširanje” tako da ponovno spojite pumpu.
+  - _Savjet_: pritisnite ikonu „odspojeno” da ponovno otvorite dijalog petlje i odaberite **Ponovno spoji pumpu**.
+- Postavite prilagođeni [**privremeni cilj**](../DailyLifeWithAaps/TempTargets.md) u trajanju od 10 min.
+  - _Savjet_: pritisnite ciljni raspon na glavnom zaslonu da otvorite zaslon privremenog cilja.
+- Prikažite sadržaj dodatka **Petlja**.
+  - _Savjet_: otvorite **Konfiguracija → Petlja** i dodirnite „**Otvori dodatak**”.
+- Pomičite ili zumirajte graf GUK-a da vidite duža ili kraća vremenska razdoblja.
 
 
 (objectives-objective3)=
-## Objective 3: Prove your knowledge
+## Cilj 3: Dokažite svoje znanje
 
-**Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
+**Cilj 3** traži od korisnika da položi ispit s višestrukim izborom koji provjerava vaše znanje o **AAPS-u**.
 
-Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
+Nekim korisnicima je **Cilj 3** najteži cilj. Uz pitanja čitajte i dokumentaciju **AAPS-a**. Ako i nakon proučavanja dokumentacije **AAPS-a** stvarno ne znate odgovor, potražite „Objective 3” u grupi na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) ili [Discordu](https://discord.gg/4fQUWHZ4Mw) (vaše je pitanje vjerojatno već postavljeno i grupa je na njega odgovorila). Te grupe mogu dati korisne savjete ili vas uputiti na odgovarajući dio dokumentacije **AAPS-a**.
 
-In the meantime :
-- To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dL or 5.0 - 8.5 mmol/L.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+U međuvremenu:
+- Kako biste u otvorenoj petlji dobivali manje obavijesti i odluka (privremene bazalne stope), postavite širok ciljni raspon u svom **profilu**, _npr._ 90 – 150 mg/dL ili 5,0 – 8,5 mmol/L.
+- Noću možete postaviti širu gornju granicu ili čak isključiti otvorenu petlju.
 
-To proceed with **Objective 3**, tap a question row to open it. Please read each question carefully and select your answer(s).
+Za nastavak **Cilja 3** dodirnite redak pitanja da ga otvorite. Pažljivo pročitajte svako pitanje i odaberite svoj odgovor (odgovore).
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+Kod svakog pitanja može biti točno više od jednog odgovora! Ako odaberete netočan odgovor, pitanje se zaključava na 1 sat. Tek nakon toga možete ponovno odgovoriti. Imajte na umu da se redoslijed odgovora pri sljedećem pokušaju može promijeniti. Tako ćete ih pažljivo pročitati i stvarno razumjeti je li svaki odgovor točan ili ne.
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
+S vremena na vrijeme u **AAPS** se dodaju nove funkcije zbog kojih ponekad treba dodati novo pitanje u **ciljeve**, osobito u **Cilj 3**. Zato će svako novo pitanje dodano u **Cilj 3** biti označeno kao „nedovršeno”, jer će **AAPS** tražiti da na njega odgovorite. Ne brinite: svaki **cilj** je neovisan, pa **nećete izgubiti postojeće funkcije AAPS-a**, ako ostali **ciljevi** ostanu ispunjeni.
 ```
 
-## Objective 4: Starting on an open loop
+## Cilj 4: Početak s otvorenom petljom
 
-The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, see the pump actions in the **Manage** sheet ([Where did the Actions tab go?](#screens-action-tab)).
+Svrha **Cilja 4** je shvatiti koliko često **AAPS** uspoređuje korisnikovu bazalnu stopu s razinom glukoze i preporučuje promjene privremene bazalne stope. U ovom **cilju** prvi put ćete uključiti otvorenu petlju, prihvatiti 20 predloženih promjena privremene bazalne stope i, ako je potrebno, ručno ih unijeti u pumpu. Vidjet ćete i učinak [**privremenih ciljeva**](../DailyLifeWithAaps/TempTargets.md). Ako još ne znate kako u **AAPS-u** postaviti promjenu privremene bazalne stope, pogledajte radnje za pumpu na ploči **Upravljanje** ([Gdje je nestala kartica Radnje?](#screens-action-tab)).
 
-The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
+Najkraće vrijeme za ovaj cilj: **7 dana**. To je obavezno vrijeme čekanja. Ne možete prijeći na sljedeći **cilj**, čak i ako ste već primijenili sve promjene bazalne stope.
 
-- Select Open Loop by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Open Loop** as running mode.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
-- Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
-- If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
+- Odaberite otvorenu petlju: pritisnite [ikonu petlje](#AapsScreens-loop-status) na glavnom zaslonu i kao način rada odaberite **Otvorena petlja**.
+- Ručno primijenite barem 20 prijedloga privremene bazalne stope tijekom 7 dana: unesite ih u svoju (fizičku) pumpu i u AAPS-u potvrdite da ste ih prihvatili. Provjerite prikazuju li se te promjene bazalne stope u **AAPS-u** i **Nightscoutu**.
+- Koristite [**privremene ciljeve**](../DailyLifeWithAaps/TempTargets.md) kada je potrebno. Nakon liječenja hipoglikemije koristite unaprijed postavljeni privremeni cilj „Hipo” kako sustav ne bi previše korigirao pri ponovnom porastu.
+- Ako ste u ovom trenutku još u [jednostavnom načinu rada](#preferences-simple-mode), sada je vjerojatno dobro vrijeme da ga isključite.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Uz to, najmanji postotak za preporučene promjene bazalne stope možete promijeniti postavkom „**Minimalna promjena u otvorenoj petlji**” u **Postavke → Petlja**. Što je vrijednost viša, to ćete dobiti manje obavijesti o promjenama.
 
-![Open Loop minimal request change](../images/objectives/OpenLoop_MinimalRequestChange2.png)
+![Minimalna promjena zahtjeva u otvorenoj petlji](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
 
-You don't need to action each and every system recommendation!
+Ne morate primijeniti baš svaku preporuku sustava!
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## Cilj 5: Razumijevanje otvorene petlje i njezinih preporuka za privremeni bazal
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at the detailed calculations shown on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**).
+U **Cilju 5** počet ćete razumijevati kako nastaju preporuke za privremeni bazal. To uključuje [logiku određivanja bazala](#aaps-screens-how-predictions-become-a-dosing-decision), analizu učinka praćenjem [linija predviđanja u **Pregledu AAPS-a**](#aaps-screens-prediction-lines) (ili u Nightscoutu) i pregled detaljnih izračuna na zaslonu dodatka **OpenAPS SMB** (**Konfiguracija → APS → Otvori dodatak**).
 
-Estimated time to complete this objective: **7 days**.
+Procijenjeno vrijeme za ovaj cilj: **7 dana**.
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Settings → OpenAPS SMB](#Preferences-openaps-smb-settings). In [simple mode](#preferences-simple-mode), **AAPS** sets this value automatically and you don't need to change it. If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
+This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Ovu vrijednost možete postaviti u [Postavke → OpenAPS SMB](#Preferences-openaps-smb-settings). U [jednostavnom načinu rada](#preferences-simple-mode) **AAPS** ovu vrijednost postavlja automatski i ne trebate je mijenjati. Ako još koristite virtualnu pumpu, ovu sigurnosnu postavku postavite i u **AAPS-u** i u svojoj inzulinskoj pumpi.
 
-You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/L [20 mg/dL or less] wide) and observe the resulting behavior.
+Možda ćete htjeti postaviti [cilj GUK-a u **profilu**](#profile-glucose-targets) više nego inače, dok se ne naviknete na izračune i postavke **AAPS-a**. Možete isprobati da **cilj GUK-a** u svom **profilu** postavite u uži raspon (npr. širine 1 mmol/L ili manje [20 mg/dL ili manje]) i pratiti što se događa.
 
-![Stop sign](../images/sign_stop.png)
+![Znak stop](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump **stop here**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
+Ako koristite otvorenu petlju s virtualnom pumpom, **ovdje stanite**. Only tap **Verify** at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
-![blank](../images/blank.png)
+![prazno](../images/blank.png)
 
 (objectives-objective6)=
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## Cilj 6: Prvo zatvaranje petlje sa zaštitom od niske razine glukoze
 
-![Warning sign](../images/sign_warning.png)
+![Znak upozorenja](../images/sign_warning.png)
 ```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+Visoke vrijednosti GUK-a i dalje morate korigirati sami (ručno, korekcijama pumpom ili penom)!
 ```
 
-As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
+U **Cilju 6** zatvorit ćete petlju i uključiti njezin način **Zaštita od niske razine glukoze** (LGS), dok je [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) postavljen na nulu. Za ispunjenje ovog **cilja** morate ostati 5 dana u načinu LGS. To vrijeme iskoristite da provjerite jesu li postavke **profila** točne i ne pokreću li se LGS događaji prečesto.
 
-Minimal time to complete this objective: **5 days**. This is a mandatory wait time. You cannot proceed to the next **Objective** before this time is up.
+Najkraće vrijeme za ovaj cilj: **5 dana**. To je obavezno vrijeme čekanja. Ne možete prijeći na sljedeći **cilj** dok to vrijeme ne prođe.
 
-It is crucial that your current **Profile** (basal, ISF, IC) have been well tested before you close your loop in **LGS** mode. Incorrect **Profile** settings might force you into hypo situations which have to be treated manually. An accurate **Profile** will help reduce the need for low glucose treatments during the 5 days period.
+Vrlo je važno da je vaš trenutni **profil** (bazal, ISF, IC) dobro testiran prije nego što zatvorite petlju u načinu **LGS**. Netočne postavke **profila** mogu dovesti do hipoglikemija koje morate liječiti ručno. Točan **profil** smanjit će potrebu za liječenjem niske glukoze tijekom tih 5 dana.
 
-**If you still observe frequent or severe low glucose episodes consider refining your [insulin type's DIA](#Config-Builder-insulin-dia), basal, ISF and carb ratios.** Please refer to the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group which has much discussion on this.
+**Ako i dalje imate česte ili teške epizode niske glukoze, razmislite o doradi [DIA za vaš tip inzulina](#Config-Builder-insulin-dia), bazala, ISF-a i omjera ugljikohidrata.** Pogledajte grupu na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) ili [Discordu](https://discord.gg/4fQUWHZ4Mw), gdje se o tome mnogo raspravlja.
 
 
-During **Objective 6**, **AAPS** will override the maxIOB setting to zero. **This override will end when moving to Objective 7.**
+Tijekom **Cilja 6** **AAPS** će postavku maxIOB prisilno postaviti na nulu. **To prestaje kada prijeđete na Cilj 7.**
 
-This means that when you are on **Objective 6**, if sensor glucose levels are dropping, **AAPS** will reduce your basal insulin delivery for you. But, if sensor glucose levels are rising, **AAPS** will increase the basal rate above your **Profile** value only if **basal IOB** is negative as a result of a previous **LGS**. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+To znači da u **Cilju 6**, kada razina glukoze sa senzora pada, **AAPS** smanjuje isporuku bazalnog inzulina umjesto vas. No ako razina glukoze sa senzora raste, **AAPS** će povećati bazalnu stopu iznad vrijednosti iz **profila** samo ako je **bazalni aktivni inzulin** negativan zbog prethodnog **LGS-a**. Inače **AAPS** neće povećati bazal iznad trenutne vrijednosti iz profila, čak i ako razina glukoze raste. Ovaj oprez služi tome da izbjegnete hipoglikemije dok učite koristiti **AAPS**.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**Zbog toga visoke vrijednosti glukoze morate korigirati ručnim korekcijskim bolusima inzulina.**
 
-- If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
+- Ako je vaš aktivni inzulin negativan (pogledajte snimku zaslona ispod), u **Cilju 6** može se pokrenuti privremena bazalna stopa (TBR) > 100 %.
 
-![Example negative IOB](../images/objectives/Objective6_negIOB.png)
+![Primjer negativnog aktivnog inzulina](../images/objectives/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- Postavite ciljni raspon malo više nego inače, radi sigurnosti i dodatne zaštite.
+- Uključite način „Zaštita od niske razine glukoze”: pritisnite ikonu petlje na glavnom zaslonu i kao način rada odaberite **Zaštita od niske razine glukoze**.
+- Aktivne privremene bazale pratite preko tirkiznog teksta bazala na zaslonu PREGLED ili tirkizne krivulje bazala na grafu PREGLED.
+- Nakon liječenih hipoglikemija možete privremeno imati skokove, jer se bazal pri ponovnom porastu ne može povećati.
 
 (objectives-objective7)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## Cilj 7: Podešavanje zatvorene petlje, povećanje maxIOB iznad 0 i postupno spuštanje ciljeva GUK-a
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values. In [simple mode](#preferences-simple-mode), **AAPS** sets maxIOB automatically and you don't need to change it.
+Za ispunjenje **Cilja 7** morate zatvoriti petlju i povećati [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** je u **Cilju 6** automatski postavljen na nulu zbog načina zaštite od niske razine glukoze. To više nije slučaj. **AAPS** će početi koristiti vašu postavljenu vrijednost maxIOB za korekciju visokih vrijednosti glukoze. U [jednostavnom načinu rada](#preferences-simple-mode) **AAPS** maxIOB postavlja automatski i ne trebate ga mijenjati.
 
-Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Najkraće vrijeme za ovaj cilj: **1 dan**. To je obavezno vrijeme čekanja. Ne možete prijeći na sljedeći **cilj** dok to vrijeme ne prođe.
 
-- Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. Stay in **Closed Loop** over a period of 1 day.
+- Odaberite **Zatvorena petlja**: pritisnite [ikonu petlje](#AapsScreens-loop-status) na glavnom zaslonu i kao način rada odaberite **Zatvorena petlja**. Ostanite u **zatvorenoj petlji** 1 dan.
 
 - Slowly raise your 'Max IOB for SMB' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
-The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
+Zadana preporuka za ovu postavku je „**prosječni bolus za obrok + 3x maksimalni dnevni bazal**”, gdje je „maksimalni dnevni bazal” najveća vrijednost po satu u bilo kojem vremenskom odsječku dana.
 
-![max daily basal](../images/MaxDailyBasal2.png)
+![maksimalni dnevni bazal](../images/MaxDailyBasal2.png)
 
-This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
+Ovu preporuku shvatite kao početnu točku. Ako koristite ovo pravilo, ali AAPS isporučuje previše inzulina kada glukoza raste, možda trebate:
 * lower the "Max IOB for SMB" value;
-* review your **Profile** settings, only making one adjustment at a time.
+* provjeriti postavke **profila**, i mijenjati samo jednu stvar odjednom.
 
-Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
+Ako ste jako otporni na inzulin, možete umjesto toga vrlo oprezno povećati vrijednost **maxIOB**.
 
-Once confident on how much **maxIOB** suits your looping patterns, lower your **BG targets** to your desired level.
+Kada budete sigurni koliki **maxIOB** odgovara vašem načinu korištenja petlje, spustite svoje **ciljeve GUK-a** na željenu razinu.
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## Cilj 8: Prilagodba bazala i omjera po potrebi, zatim uključivanje Autosensa
 
-As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
+U ovom **cilju** ponovno ćete provjeriti kako radi vaš **profil** i koristiti funkciju [Autosens](#Open-APS-features-autosens) kao pokazatelj pogrešnih postavki.
 
-Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Najkraće vrijeme za ovaj cilj: **7 dana**. To je obavezno vrijeme čekanja. Ne možete prijeći na sljedeći **cilj** dok to vrijeme ne prođe.
 
-Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days (in [simple mode](#preferences-simple-mode) it is enabled by default) and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**) which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+Uključite [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) na 7 dana (u [jednostavnom načinu rada](#preferences-simple-mode) uključen je prema zadanim postavkama) i pratite [bijelu liniju na grafu u **Pregledu**](#AapsScreens-section-g-additional-graphs) koja pokazuje kako vaša osjetljivost na inzulin raste ili pada zbog tjelovježbe, hormona itd. Pratite zaslon dodatka **OpenAPS SMB** (**Konfiguracija → APS → Otvori dodatak**) koji pokazuje kako **AAPS** u skladu s tim prilagođava osjetljivost, bazale i ciljeve.
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs).
+Sada je dobro vrijeme da provjerite postavke za [Detekcija osjetljivosti](#Config-Builder-sensitivity-detection). Svoju osjetljivost možete vidjeti na glavnom zaslonu u [dodatnom grafu](#AapsScreens-section-g-additional-graphs).
 
-Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustments) as a one off to check your basals remain accurate or do a traditional basal test.
+Uz to, možete jednom upotrijebiti [Autotune](#autotune-how-autotune-calculates-adjustments) da provjerite jesu li vam bazali i dalje točni, ili napraviti klasični test bazala.
 
 (objectives-objective9)=
-## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+## Cilj 9: Uključivanje dodatnih funkcija oref1 za dnevnu upotrebu, npr. super mikro bolusa (SMB)
 
-In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+U **Cilju 9** upoznat ćete i koristiti **„Super Micro Bolus (SMB)”** kao jednu od glavnih funkcija. Nakon obaveznog čitanja dobro ćete razumjeti što su SMB-ovi, kako rade i zašto se bazal nakon SMB-a privremeno postavlja na nulu (nulti privremeni bazal).
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Najkraće vrijeme za ovaj cilj: **28 dana**. To je obavezno vrijeme čekanja. Ne možete prijeći na sljedeći cilj dok to vrijeme ne prođe.
 
-- The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
-- Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objectives-objective7) as reference.
-- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
+- [Odjeljak o SMB-u u ovoj dokumentaciji](#Open-APS-features-super-micro-bolus-smb) i [opis oref1 u dokumentaciji openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) morate pročitati da biste razumjeli **SMB** i pojam **nultog privremenog bazala** (zero-temping).
+- Nakon toga možete [povećati maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) kako bi **SMB-ovi** radili učinkovitije. maxIOB sada uključuje sav **aktivni inzulin**, ne samo nakupljeni bazal. Ova granica pauzira **SMB-ove** dok aktivni inzulin ne padne ispod te vrijednosti (_npr._ **maxIOB** je postavljen na 7 J, a za obrok se da bolus od 8 J: SMB-ovi će se pauzirati i neće se davati dok **aktivni inzulin** ne padne ispod 7 J). Dobar početak je postaviti **maxIOB** = **prosječni bolus za obrok + 3x maksimalni dnevni bazal**, gdje je „maksimalni dnevni bazal” najveća vrijednost po satu u bilo kojem vremenskom odsječku dana. See [objective 7](#objectives-objective7) as reference.
+- Procijenite brzinu apsorpcije ugljikohidrata i razmislite o promjeni parametra „min_5m_carbimpact” u [Postavke → Postavke apsorpcije → min_5m_carbimpact](#Preferences-min_5m_carbimpact) ako vam se čini prespora ili prebrza.
 
 (objectives-objective10)=
-## Objective 10: Automation
+## Cilj 10: Automatizacija
 
-**Automations** become available when **Objective 10** is started.
+**Automatizacija** postaje dostupna kada započnete **Cilj 10**.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Najkraće vrijeme za ovaj cilj: **28 dana**. To je obavezno vrijeme čekanja. Ne možete prijeći na sljedeći cilj dok to vrijeme ne prođe.
 
-Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
+Najprije pročitajte stranicu dokumentacije [Automatizacija](../DailyLifeWithAaps/Automations.md).
 
-Set up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Open **Manage → Automation** and tap the **+** button (**Add rule**).
-- Enter a **Task name**, for example "My first automation notification".
-- Under **Condition**, tap "**EDIT**".
-  - Tap "**Add trigger**" and select "**Time**". **AAPS** creates an entry for today at the current time.
-  - Change the time so that it triggers in a few minutes.
-  - Tap the **Save** icon (top right) to go back to the rule.
-- Under **Action**, tap "**ADD**" and select "**Notification**".
-  - Enter a message in the action card, for example "My first automation".
-- Tap the **Save** icon (top right) and make sure the rule is **Enabled**.
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+Postavite najjednostavnije pravilo automatizacije, na primjer da za nekoliko minuta pokrene obavijest na Androidu:
+- Otvorite **Upravljanje → Automatizacija** i dodirnite gumb **+** (**Dodaj pravilo**).
+- Upišite **Naziv zadatka**, na primjer „Moja prva obavijest automatizacije”.
+- Pod **Uvjet** dodirnite „**UREDI**”.
+  - Dodirnite „**Dodaj okidač**” i odaberite „**Vrijeme**”. **AAPS** stvara unos za danas s trenutnim vremenom.
+  - Promijenite vrijeme tako da se okine za nekoliko minuta.
+  - Dodirnite ikonu **Spremi** (gore desno) za povratak na pravilo.
+- Pod **Radnja** dodirnite „**DODAJ**” i odaberite „**Obavijest**”.
+  - Upišite poruku u karticu radnje, na primjer „Moja prva automatizacija”.
+- Dodirnite ikonu **Spremi** (gore desno) i provjerite je li pravilo **Omogućeno**.
+- Pričekajte da vrijeme pokrene obavijest (ovisno o telefonu, može kasniti nekoliko minuta)
 
-You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
+Zatim možete isprobati postavljanje korisnije **automatizacije**. Stranica dokumentacije daje nekoliko primjera, a u grupi na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) možete potražiti snimke zaslona „Automation”. U zajednici na [Discordu](https://discord.gg/4fQUWHZ4Mw) postoji i poseban kanal za to.
 
-For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+Na primjer, ako svako jutro u isto vrijeme prije škole ili posla jedete isti doručak, možete napraviti **automatizaciju** npr. „cilj-prije-doručka” koja 30 minuta prije doručka postavlja malo niži **privremeni cilj**. U tom slučaju vaš će uvjet vjerojatno biti „Ponavljajuće vrijeme”, u kojem odaberete određene dane u tjednu (ponedjeljak, utorak, srijeda, četvrtak, petak) i određeno vrijeme (06:30). Radnja će biti „Pokreni privremeni cilj” s ciljnom vrijednošću nižom od uobičajene i trajanjem od 30 minuta.
 
-## When all objectives are completed
+## Kada su svi ciljevi ispunjeni
 
-Once you have accomplished all the **Objectives**, the list shows each of them with a tick and the date it was accomplished. The **Objectives** item disappears from the bottom navigation; you can still open the list with **Configuration → Constraints → Objectives → Open plugin**.
+Kada ispunite sve **ciljeve**, popis prikazuje svaki od njih s kvačicom i datumom ispunjenja. Stavka **Ciljevi** nestaje s donje navigacije; popis i dalje možete otvoriti preko **Konfiguracija → Ograničenja → Ciljevi → Otvori dodatak**.
 
-![All objectives accomplished](../images/objectives/objectives_completed.png)
+![Svi ciljevi ispunjeni](../images/objectives/objectives_completed.png)
 
-Press "**More**" under an objective to see its tasks again:
+Pritisnite „**Više**” ispod cilja da ponovno vidite njegove zadatke:
 
-![Details of an accomplished objective](../images/objectives/objective_1_details.png)
+![Detalji ispunjenog cilja](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Go back in objectives
+## Povratak na ranije ciljeve
 
-If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
+Ako se iz bilo kojeg razloga želite vratiti na ranije **ciljeve**, otvorite završeni **cilj** s „**Više**” i dodirnite „**Poništi završetak**”:
 
-![Go back in objectives](../images/objectives/Objective_ClearFinished.png)
+![Povratak na ranije ciljeve](../images/objectives/Objective_ClearFinished.png)
 
-In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
+Na isti način **cilj** na kojem trenutno radite možete ponovno započeti s „**Poništi početak**”.
