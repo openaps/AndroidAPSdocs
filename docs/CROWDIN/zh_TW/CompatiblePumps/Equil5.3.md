@@ -43,7 +43,7 @@
 ![Equil 驅動程式設定](../images/v4/Pumps/equil_settings.png)
 
 * **電池電量不足警示**：幫浦電池電量不足時發出警示。
-* **藥量不足警示**：儲液槽中的胰島素不足時發出警示。
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **警示音效**：設定幫浦發出警示的方式：**靜音**、**僅震動**、**僅音效**或 **震動和音效**。
 * **注射速度**：設定注射速度：**1.5 U/min（標準）**、**3 U/min**、**6 U/min**或 **12 U/min**。較快的注射速率可能會觸發更多阻塞警報。
 
