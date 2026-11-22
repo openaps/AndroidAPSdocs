@@ -1,197 +1,197 @@
-# Smartwatches and AAPS
+# Pametni satovi i AAPS
 
-Various smartwatches can be used to display some of the information available in **AAPS** or perform remote actions.
+Razni pametni satovi mogu prikazivati neke podatke dostupne u **AAPS-u** ili izvoditi radnje na daljinu.
 
-Having a smartwatch directly control **AAPS** (pump and sensor) is achieved using full Android watches (that are considered like small [smartphones](./Phones.md)).
+Izravno upravljanje **AAPS-om** (pumpom i senzorom) sa sata moguće je s potpunim Android satovima (koji se smatraju malim [pametnim telefonima](./Phones.md)).
 
-Some smartwatches can allow you to enter treatments, or more, but with the phone itself still managing **AAPS**.
+Neki pametni satovi omogućuju unos tretmana ili više od toga, ali **AAPS-om** i dalje upravlja sam telefon.
 
-Smartwatches are becoming increasingly used with **AAPS** _both_ for adults with diabetes and carers/parents of children with diabetes.
+Pametni satovi sve se više koriste s **AAPS-om**, _i_ kod odraslih s dijabetesom i kod njegovatelja/roditelja djece s dijabetesom.
 
-## General advantages of using smartwatches with **AAPS**
+## Opće prednosti korištenja pametnih satova s **AAPS-om**
 
 
-Smartwatches - depending on the model - can be used in many different ways with **AAPS**. They can be used to fully or partly control **AAPS**, or simply to remotely check glucose levels, insulin-on-board, and other parameters.
+Pametni satovi se, ovisno o modelu, mogu koristiti s **AAPS-om** na mnogo različitih načina. Mogu se koristiti za potpuno ili djelomično upravljanje **AAPS-om** ili samo za provjeru razine glukoze, aktivnog inzulina i drugih vrijednosti na daljinu.
 
-Integrating a smartwatch with **AAPS** can be useful in many situations, including driving a car or (motor) bike and during exercise. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking at a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling the user to keep their **AAPS** phone stored out of sight (like inside a bag), while still using the smartwatch for remote control.
+Povezivanje pametnog sata s **AAPS-om** može biti korisno u mnogim situacijama, uključujući vožnju automobila ili (motora) bicikla te tijekom tjelovježbe. Neki smatraju da je pogled na sat (na sastanku, zabavi, za stolom i sl.) diskretniji od gledanja u telefon. Sa sigurnosnog stajališta, pametni sat može biti koristan i u pokretu: korisnik može držati telefon s **AAPS-om** skriven (npr. u torbi), a sat i dalje koristiti za daljinsko upravljanje.
 
-## Specific advantages for parents/carers using **AAPS**
+## Posebne prednosti za roditelje/njegovatelje koji koriste **AAPS**
 
-For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
+For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. To može biti korisno, na primjer, ako je telefon s **AAPS-om** skriven u pojasu za pumpu.
 
-A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for remote control or [following only](../RemoteFeatures/FollowingOnly.md).
+Pametni sat može se koristiti _uz_ opcije za daljinsko upravljanje ili [Praćenje AAPS-a (bez interakcije sa sustavom AAPS)](../RemoteFeatures/FollowingOnly.md) putem TELEFONA, ili _umjesto_ njih.
 
-Additionally, unlike parent/caregiver follower phones (which rely on the mobile network or Wi-Fi connection), Bluetooth connected smartwatches can be useful in remote locations, like a cave, in a boat, or half-way up a mountain. If both devices (**AAPS** phone and smartwatch) are on the same Wi-Fi network, they can also use Wi-Fi.
+Osim toga, za razliku od telefona pratitelja koje koriste roditelji/njegovatelji (a koji ovise o mobilnoj mreži ili Wi-Fi vezi), pametni satovi povezani Bluetoothom mogu biti korisni na udaljenim mjestima, kao što su špilja, brod ili pola puta do vrha planine. Ako su oba uređaja (telefon s **AAPS-om** i pametni sat) na istoj Wi-Fi mreži, mogu koristiti i Wi-Fi.
 
-## Different types of Smartwatch-AAPS interactions
+## Različite vrste interakcije pametnog sata i AAPS-a
 
-There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
+Trenutno postoji pet glavnih načina na koje se pametni satovi koriste zajedno s **AAPS-om**. Prikazani su u tablici ispod: 
 
-| Watch Setup         | Features                                       | Requirements                                                                                                                                                                                                                                                                                                        |
-| ------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standalone          | AAPS without a phone                           | Full Android smartwatch (check min Android)</br> Running **app-fullRelease**                                                                                                                                                                                                                                        |
-| Full remote control | Most AAPS functions                            | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease**                                                                                                                                                                                                                                      |
-| Remote control      | AAPSClient functions                           | Android **Wear OS** watch (check Android/API)</br>Running **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                           |
-| Remote control      | Some AAPSClient functions                      | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below.                                                                                                                                                                                                                     |
-| Display             | Glucose, trend, IOB, COB, loop and pump status | Many smartwatches, through a companion app on the **AAPS** phone fed by the [External Companion Apps](#watches-external-companion-apps) broadcast: [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>See below. |
+| Postavljanje sata             | Značajke                                                                                   | Preduvjeti                                                                                                                                                                                                                                                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Samostalno                    | AAPS bez telefona                                                                          | Potpuni Android pametni sat (provjerite min. verziju Androida)</br> Pokreće **app-fullRelease**                                                                                                                                                                                                                                        |
+| Potpuno daljinsko upravljanje | Većina funkcija AAPS-a                                                                     | Android sat s **Wear OS-om** (provjerite Android/API)</br>Pokreće **wear-fullRelease**                                                                                                                                                                                                                                                 |
+| Daljinsko upravljanje         | Funkcije AAPSClienta                                                                       | Android sat s **Wear OS-om** (provjerite Android/API)</br>Pokreće **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                                      |
+| Daljinsko upravljanje         | Neke funkcije AAPSClienta                                                                  | Satovi Garmin</br>(samo starije postavke sa Samsung Tizenom i Fitbitom, ne preporučuje se)</br>Pogledajte ispod.                                                                                                                                                                                                                       |
+| Prikaz                        | Glukoza, trend, aktivni inzulin (IOB), aktivni ugljikohidrati (COB), status petlje i pumpe | Mnogi pametni satovi, putem prateće aplikacije na telefonu s **AAPS-om** koja prima emitiranje [Vanjske prateće aplikacije](#watches-external-companion-apps): [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>Pogledajte ispod. |
 
-## Before you buy a smartwatch…
+## Prije nego što kupite pametni sat…
 
-The exact model of smartwatch you buy depends on the desired function(s). You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list of tested phones that also contains some smartwatches.
+Točan model pametnog sata koji ćete kupiti ovisi o funkcijama koje želite. Korisne podatke možete naći na [stranici Telefoni](#Phones-list-of-tested-phones), uključujući popis testiranih telefona koji sadrži i neke pametne satove.
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. The different options summarized in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
+Popularne marke satova su Samsung Galaxy, Garmin, Fossil i Mi Band. Različite opcije sažete u gornjoj tablici detaljnije su objašnjene u nastavku, kako biste lakše odlučili koji je pametni sat pravi za vašu situaciju.
 
-If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone.
+Ako pametni sat povezujete s **AAPS-om** na telefonu s namjerom da s **AAPS-om** radite na daljinu, trebate provjeriti jesu li ta dva uređaja međusobno kompatibilna, posebno ako imate stariji ili neuobičajen telefon.
 
-In general, if you only want to follow glucose numbers and not interact with **AAPS**, there are a wider range of affordable and simpler watches you can use.
+Općenito, ako želite samo pratiti vrijednosti glukoze, a ne raditi s **AAPS-om**, postoji širi izbor povoljnijih i jednostavnijih satova koje možete koristiti.
 
-The best way to choose a smartwatch is to search for "watch" posts on either Discord or Facebook **AAPS** groups. Have a read of others' experiences, and post any specific questions if your query isn't answered by older posts.
+Najbolji način za odabir pametnog sata je pretražiti objave o satovima („watch”) u **AAPS** grupama na Discordu ili Facebooku. Pročitajte iskustva drugih i postavite konkretna pitanja ako starije objave ne odgovaraju na vaše pitanje.
 
-## Full Android
+## Potpuni Android
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
+Zvuči privlačno, zar ne? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. Postoji malo pametnih satova s prihvatljivim sučeljem koji uz to dobro rade za samostalno korištenje **AAPS-a** i vaše CGM aplikacije. Popularni modeli su LEMFO LEM 15 Pro i 16. Na sat trebate instalirati „full” apk **AAPS-a** (apk koji se obično instalira na pametni telefon), a ne „wear” apk **AAPS-a**.
 
-While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
+Iako ne postoji jasna specifikacija po kojoj biste znali hoće li sat dobro raditi za samostalno korištenje **AAPS-a**, pomoći će sljedeći parametri:
 
-1)  Android 12 or newer. 2)  Being able to take the watchface off “square” mode to make text larger and easier to read. 3)  Very good battery life. 4)  Good Bluetooth range.
+1)  Android 12 ili noviji. 2)  Mogućnost isključivanja „kvadratnog” načina Watchfacea, kako bi tekst bio veći i lakši za čitanje. 3)  Vrlo dobro trajanje baterije. 4)  Dobar domet Bluetootha.
 
-Most of the frustrations of standalone **AAPS** watches come from interacting with a tiny screen, and the fact that the current AAPS full app interface has not been designed for a watch. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Većina frustracija sa samostalnim **AAPS** satovima dolazi od rada na malom zaslonu i od toga što trenutno sučelje potpune aplikacije AAPS nije dizajnirano za sat. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
 
-Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
+Dodatni izazovi su to što je teško postići dovoljno trajanje baterije, a satovi s dovoljno jakom baterijom često su glomazni i debeli. Korisnici navode borbu s operativnim sustavom i postavkama za uštedu energije, teškoće s pokretanjem senzora na satu, slab domet Bluetootha (za održavanje veze i sa senzorom i s pumpom) i upitnu vodootpornost. Primjeri su prikazani na fotografijama ispod.
 
-![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
+![slika](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
 ## Wear OS
 
-**AAPS** code contains an app extension that can be installed on [**Wear OS** smartwatches](https://wearos.google.com/#oem-carousel).
+Kôd **AAPS-a** sadrži proširenje aplikacije koje se može instalirati na [pametne satove s **Wear OS-om**](https://wearos.google.com/#oem-carousel).
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfiguracija > Komunikacija s uključenim dodatkom Wear](../images/v4/Configuration/configuration_communication_wear.png)
 
-Verify your smartwatch satisfies **AAPS** [prerequisites](#maintenance-android-version-aaps-version).
+Provjerite zadovoljava li vaš pametni sat [preduvjete](#maintenance-android-version-aaps-version) **AAPS-a**.
 
-### What _is_ Wear OS?
+### Što _je_ Wear OS?
 
-The first three smartwatch options require the smartwatch to have **Wear OS** installed.
+Prve tri opcije zahtijevaju da pametni sat ima instaliran **Wear OS**.
 
-**Wear OS** is the operating system which runs on some modern Android smartwatches. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer**. Each Wear OS release follows the Android version it is based on: **Wear OS 3** is Android 11 (API level 30), **Wear OS 4** is Android 13 (API level 33), **Wear OS 5** is Android 14 (API level 34) and **Wear OS 6** is Android 16 (API level 36). Watches on Wear OS 2 cannot run **AAPS**.
+**Wear OS** je operativni sustav koji radi na nekim modernim Android pametnim satovima. Ako opis pametnog sata navodi samo _kompatibilnost_ s Androidom i iOS-om, to ne znači da sat pokreće Wear OS. To može biti neki drugi operativni sustav proizvođača koji nije kompatibilan s **AAPS-om**. Za instalaciju i korištenje bilo koje verzije **AAPS-a** ili **AAPSClienta** pametni sat mora imati **Wear OS 3.0, 3.2 ili 3.5** (Android 11, API razina 30) **ili noviji**. Svako izdanje Wear OS-a prati verziju Androida na kojoj se temelji: **Wear OS 3** je Android 11 (API razina 30), **Wear OS 4** je Android 13 (API razina 33), **Wear OS 5** je Android 14 (API razina 34), a **Wear OS 6** je Android 16 (API razina 36). Satovi s Wear OS-om 2 ne mogu pokretati **AAPS**.
 
-If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which can be selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watchface in addition to the time.
+Ako instalirate **AAPS** wear.apk na sat s **Wear OS-om**, možete odabrati jedan od niza različitih prilagođenih **AAPS** Watchfacea. Umjesto toga, možete koristiti i standardni Watchface za pametni telefon, s podacima iz **AAPS-a** prikazanima u malim pločicama koje se zovu „komplikacije”. Komplikacija je svaki element koji se uz vrijeme prikazuje na Watchfaceu.
 
 ```{note}
-Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (the higher the Wear OS version, the more severe), although **complications** keep working. Before buying or updating a watch, read [Wear OS watch face changes](#wearos-watchface-changes).
+Novije promjene u **Wear OS-u** postupno kvare prilagođene **AAPS** Watchface (što je verzija Wear OS-a viša, to je gore), ali **komplikacije** i dalje rade. Prije kupnje ili ažuriranja sata pročitajte [Promjene Watchfacea u Wear OS-u](#wearos-watchface-changes).
 ```
 
 
-### What could my smartwatch look like?
+### Kako bi moj pametni sat mogao izgledati?
 
-After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
+Nakon [instalacije **AAPS-a** na vaš sat](../WearOS/WearOsSmartwatch.md) automatski ćete moći odabrati željeni Watchface među ovim Watchfaceima namijenjenima **AAPS-u**. Na većini satova samo dugo pritisnite početni zaslon dok se zaslon ne smanji, a zatim prijeđite prstom udesno za odabir drugog zaslona:
 
-![image](../images/watches/watchfaces_aaps_selection.png)
+![slika](../images/watches/watchfaces_aaps_selection.png)
 
-These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
+Ovo su osnovni zasloni ugrađeni u **AAPS**; postoji još [Watchfacea](#WearOS_changing-to-AAPS-watchface), a možete koristiti i [komplikacije](#Watchfaces-complications).
 
-### How would I operate a Wear OS watch from day-to-day?
+### Kako svakodnevno koristiti sat s Wear OS-om?
 
-Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customized watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Više pojedinosti o Watchfaceima i svakodnevnom korištenju, uključujući kako izraditi (i podijeliti) vlastiti prilagođeni Watchface, naći ćete u odjeljku [Postavljanje AAPS-a na vaš Wear OS sat](../WearOS/WearOsSmartwatch.md).
 
 (Watchfaces-tizen)= (watches-external-companion-apps)=
 
-## External Companion Apps
+## Vanjske prateće aplikacije
 
-**AAPS** can broadcast its status to other apps installed on the same phone: glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Several watch companion apps read this broadcast and display the data on watches that **AAPS** does not support directly. To send the data, enable **External Companion Apps** in **Configuration** > **Communication** (see [External Companion Apps](#external-companion-apps) on the Configuration page). The broadcast is sent with each new reading and cannot be requested: a refresh button in the companion app has no effect on **AAPS**.
+**AAPS** može emitirati svoje stanje drugim aplikacijama instaliranima na istom telefonu: glukozu i trend, aktivni inzulin (IOB), aktivne ugljikohidrate (COB), bazal i privremeni bazal, naziv profila, status petlje, bateriju telefona i pumpe, razinu u spremniku i napredak bolusa. Nekoliko pratećih aplikacija za satove čita to emitiranje i prikazuje podatke na satovima koje **AAPS** ne podržava izravno. Za slanje podataka omogućite **Vanjske prateće aplikacije** u **Konfiguracija** > **Komunikacija** (pogledajte [Vanjske prateće aplikacije](#external-companion-apps) na stranici Konfiguracija (Config Builder)). Emitiranje se šalje sa svakim novim očitanjem i ne može se zatražiti: gumb za osvježavanje u pratećoj aplikaciji nema učinka na **AAPS**.
 
-![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
+![Konfiguracija > Komunikacija: kartica Vanjske prateće aplikacije](../images/v4/Configuration/configuration_external_companion_apps.png)
 
-Companion apps known to use this broadcast:
+Prateće aplikacije za koje se zna da koriste ovo emitiranje:
 
-- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi and Amazfit watches, see [Xiaomi and Amazfit watches](#watches-xiaomi-amazfit) below.
-- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS watches, as a complication or a widget. It is a useful fallback on Wear OS versions where the **AAPS** watchfaces are unreliable, see [Set up AAPS on your Wear OS watch](../WearOS/WearOsSmartwatch.md). Its companion app GlucoDataAuto shows the same data in a car with Android Auto.
-- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen watches, and its later Wear OS port. In earlier **AAPS** versions the plugin was named **Samsung Tizen** after this app.
+- [WatchDrip+](https://bigdigital.home.blog/) za satove Xiaomi i Amazfit, pogledajte [Satovi Xiaomi i Amazfit](#watches-xiaomi-amazfit) ispod.
+- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) za satove s Wear OS-om, kao komplikacija ili widget. To je korisna zamjena na verzijama Wear OS-a na kojima **AAPS** Watchface ne radi pouzdano, pogledajte [Postavljanje AAPS-a na vaš Wear OS sat](../WearOS/WearOsSmartwatch.md). Njegova prateća aplikacija GlucoDataAuto prikazuje iste podatke u automobilu s Android Autom.
+- [Aplikacija G-Watch](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) za satove Samsung Tizen i njezina kasnija verzija za Wear OS. U ranijim verzijama **AAPS-a** dodatak se po ovoj aplikaciji zvao **Samsung Tizen**.
 
 ```{warning}
-The **G-Watch app** and its **Wear OS** port are no longer maintained, and Samsung has moved its smartwatches from Tizen to Wear OS. G-Watch is only relevant for existing, older setups and is not recommended for a new installation. Check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for the latest news.
+**Aplikacija G-Watch** i njezina verzija za **Wear OS** više se ne održavaju, a Samsung je svoje pametne satove prebacio s Tizena na Wear OS. G-Watch je važan samo za postojeće, starije postavke i ne preporučuje se za novu instalaciju. Najnovije vijesti potražite u posebnoj [Facebook grupi](https://www.facebook.com/groups/gwatchapp).
 ```
 
 (Watchfaces-garmin)=
 
 ## Garmin
 
-There are some watch faces for Garmin that integrate with [AAPS](https://apps.garmin.com/search?keywords=androidaps), on the Garmin ConnectIQ store.
+U trgovini Garmin ConnectIQ postoje neki Watchfacei za Garmin koji se povezuju s [AAPS-om](https://apps.garmin.com/search?keywords=androidaps).
 
-![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
+![Konfiguracija > Komunikacija: kartica Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/watches/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) izravno se povezuje s **AAPS-om**. Uz očitanja glukoze prikazuje podatke o statusu petlje (aktivni inzulin, privremeni bazal) i šalje očitanja otkucaja srca u **AAPS**. Dostupan je u trgovini ConnectIQ; omogućite dodatak **Garmin** u **Konfiguracija → Komunikacija**. ![Watchface AAPS Glucose Watch s numeriranim poljima](../images/watches/Garmin_WF-annotated.png)
 
-1. Highest and lowest glucose values on the graph
-2. Glucose change per minute
-3. Insulin on board (IOB)
-4. Time since the last glucose reading (minutes:seconds)
-5. Temporary basal rate, as a percentage of the profile basal rate
-6. Glucose graph of the last 2 hours
-7. Current glucose value
+1. Najviša i najniža vrijednost glukoze na grafu
+2. Promjena glukoze po minuti
+3. Aktivni inzulin (IOB)
+4. Vrijeme od posljednjeg očitanja glukoze (minute:sekunde)
+5. Privremena bazalna stopa, kao postotak bazalne stope iz profila
+6. Graf glukoze za posljednja 2 sata
+7. Trenutna vrijednost glukoze
 
 
 
 ## Fitbit
 
 ```{warning}
-Google is moving Fitbit into Google Health and is removing third-party apps and watch faces from Fitbit watches in the EU. Fitbit watchfaces are therefore **no longer a recommended option**, and buying a Fitbit for use with **AAPS** is not recommended.
+Google premješta Fitbit u Google Health i uklanja aplikacije i Watchface drugih proizvođača sa satova Fitbit u EU. Zato Fitbit Watchfacei **više nisu preporučena opcija**, a kupnja Fitbita za korištenje s **AAPS-om** se ne preporučuje.
 ```
 
-For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github.io/nightscout/wearable/#fitbit) list some monitoring-only options, such as [Glance](https://glancewatchface.com/). These are third-party watchfaces too, so the same EU restriction applies.
+Za postojeće satove Fitbit, [stranice Nightscouta](https://nightscout.github.io/nightscout/wearable/#fitbit) navode neke opcije samo za praćenje, kao što je [Glance](https://glancewatchface.com/). I to su Watchfacei drugih proizvođača, pa vrijedi isto ograničenje u EU.
 
-## Following only
+## Samo praćenje
 
-These smartwatches will reflect some **AAPS** information, some will require other apps.
+Ovi pametni satovi prikazuju neke podatke iz **AAPS-a**; za neke su potrebne druge aplikacije.
 
-There are a wide range of affordable smartwatches which can provide display only. If you are using Nightscout, then a good overview of all the options is [here](https://nightscout.github.io/nightscout/wearable/#)
+Postoji širok izbor povoljnih pametnih satova koji mogu služiti samo za prikaz. Ako koristite Nightscout, dobar pregled svih opcija nalazi se [ovdje](https://nightscout.github.io/nightscout/wearable/#)
 
-Here below some of the follow-only watch options popular with **AAPS** users:
+U nastavku su neki satovi samo za praćenje koji su popularni među korisnicima **AAPS-a**:
 
 (watches-xiaomi-amazfit)=
-### Xiaomi and Amazfit watches
+### Satovi Xiaomi i Amazfit
 
-**WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
+**WatchDrip+** je prateća aplikacija koju razvija zajednica i koja prikazuje podatke o glukozi i petlji na raznim modelima pametnih satova, uglavnom marki Xiaomi (_npr._ Mi Band) i Amazfit:
 
-![image](../images/watches/watch_watchdrip_plus.png)
+![slika](../images/watches/watch_watchdrip_plus.png)
 
-Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
+Od verzije 0.5 **WatchDrip+** čita podatke izravno iz **AAPS-a**, bez xDrip+ kao posrednika. Na telefonu s **AAPS-om**:
 
-1. Enable **External Companion Apps** in **Configuration** > **Communication**, see [above](#watches-external-companion-apps). It provides the current glucose, delta, trend arrow, IOB and pump status.
-2. Enable the **xDrip** plugin in **Configuration** > **Communication** and turn on **Send status to xDrip+** in its settings. It provides the IOB/COB status line, and the glucose graph on the watch fills in after a few readings.
-3. If xDrip+ is installed on the phone, disable its **Broadcast Service API** (xDrip+ > Settings > Inter-app settings) so that the watch does not receive the data twice. If xDrip+ was only relaying data to the watch, you can uninstall it.
+1. Omogućite **Vanjske prateće aplikacije** u **Konfiguracija** > **Komunikacija**, pogledajte [gore](#watches-external-companion-apps). To daje trenutnu glukozu, deltu, strelicu trenda, aktivni inzulin (IOB) i status pumpe.
+2. Omogućite dodatak **xDrip** u **Konfiguracija** > **Komunikacija** i u njegovim postavkama uključite **Šalji status u xDrip+**. To daje statusnu liniju s IOB/COB, a graf glukoze na satu popunjava se nakon nekoliko očitanja.
+3. Ako je xDrip+ instaliran na telefonu, isključite njegov **Broadcast Service API** (xDrip+ > Settings > Inter-app settings), kako sat ne bi dvaput primao podatke. Ako je xDrip+ samo prosljeđivao podatke na sat, možete ga deinstalirati.
 
-The refresh button of WatchDrip+ has no effect with **AAPS**: the data arrives with each new reading.
-
-
-You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable. They are a popular option especially for kids and those with smaller wrists to wear.
-
-### Pebble watch
-
-![image](../images/watches/watch_pebble.png)
-
-![image](../images/watches/watch_pebble_watchface.png)
+Gumb za osvježavanje u WatchDrip+ nema učinka s **AAPS-om**: podaci stižu sa svakim novim očitanjem.
 
 
-Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
+Više o njima, uključujući kako ih postaviti, možete pročitati na [web-stranici WatchDrip+](https://bigdigital.home.blog/). Prednost ovih satova je to što su mali i relativno povoljni. Popularni su posebno za djecu i osobe s tanjim zapešćem.
 
-### [Bluejay watches](https://bluejay.website/)
+### Sat Pebble
+
+![slika](../images/watches/watch_pebble.png)
+
+![slika](../images/watches/watch_pebble_watchface.png)
 
 
-![BlueJay U3 watch](../images/watches/bluejay_u3.png)
+Satovi Pebble ([više se ne proizvode](https://en.wikipedia.org/wiki/Pebble_(watch))) prodavali su se od 2013. do 2016. i možda se još mogu nabaviti rabljeni. Fitbit je preuzeo imovinu Pebblea. Korisnici Pebblea mogu koristiti Watchface Urchin za prikaz podataka iz Nightscouta. Mogući prikazani podaci uključuju aktivni inzulin (IOB), trenutno aktivnu stopu privremenog bazala i predviđanja. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
+
+### [Satovi Bluejay](https://bluejay.website/)
 
 
-These are unique pieces of technology which can receive glucose data **directly** from the Dexcom transmitter. It is not widely known that Dexcom G6/G7 transmitters actually broadcast the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS** is using the phone channel, then the Bluejay watches can use the medical channel.
+![Sat BlueJay U3](../images/watches/bluejay_u3.png)
 
-The key advantage is that the watch is independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
 
-The original **Bluejay GTS** is discontinued and cannot read the Dexcom G7. The later models (U1, then the current **U3**, sold as early access at the time of writing) are full Android watches running xDrip, which collect from the Dexcom G6 and G7 directly. The vendor describes the watch as a research tool, not for medical use. Reported disadvantages are that it does not always pick up a reading every 5 minutes and that the battery needs frequent charging. Check the [Bluejay website](https://bluejay.website/) for the current model and availability.
+To su jedinstveni uređaji koji mogu primati podatke o glukozi **izravno** s Dexcom odašiljača. Nije široko poznato da Dexcom G6/G7 odašiljači zapravo emitiraju trenutne podatke o glukozi na _dva_ odvojena kanala: kanal za telefon i medicinski kanal. Satovi Bluejay mogu se postaviti da primaju podatke o glukozi na bilo kojem kanalu, pa ako **AAPS** koristi kanal za telefon, satovi Bluejay mogu koristiti medicinski kanal.
 
-### Apple watch
+Glavna prednost je to što sat ne ovisi ni o telefonu ni o sustavu petlje. Tako, na primjer, ako na plaži ili u zabavnom parku odspojite pumpu i telefon s **AAPS-om** i niste u dometu telefona s **AAPS-om**, i dalje možete dobivati očitanja s Dexcoma izravno na sat Bluejay.
 
-Check [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#).
+Izvorni **Bluejay GTS** više se ne proizvodi i ne može čitati Dexcom G7. Kasniji modeli (U1, a zatim trenutni **U3**, koji se u vrijeme pisanja prodaje kao rani pristup) potpuni su Android satovi s xDripom, koji podatke prikupljaju izravno s Dexcoma G6 i G7. Proizvođač opisuje sat kao istraživački alat, a ne za medicinsku upotrebu. Navedeni nedostaci su to što sat ne dobije uvijek očitanje svakih 5 minuta i što se baterija mora često puniti. Trenutni model i dostupnost provjerite na [web-stranici Bluejay](https://bluejay.website/).
 
-The Apple watch now supports G7 direct connection and can be used simultaneously with **AAPS**.
+### Apple Watch
+
+Pogledajte [Nightscout na vašem satu](https://nightscout.github.io/nightscout/wearable/#).
+
+Apple Watch sada podržava izravnu vezu s G7 i može se koristiti istodobno s **AAPS-om**.
 
