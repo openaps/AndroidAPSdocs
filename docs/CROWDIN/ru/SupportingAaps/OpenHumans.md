@@ -2,7 +2,7 @@
 
 ## Поделитесь своими данными с исследователями
 
-Вы можете помочь науке, поделившись данными с исследовательскими проектами! This helps scientists to pay it forward, develop new scientific ideas and make open source closed loop systems better known. AAPS готов к синхронизации данных с [Open Humans](https://www.openhumans.org), платформой, позволяющей подключаться, загружать и хранить ваши персональные данные – такие, как генетика, активность и данные о здоровье.
+Вы можете помочь науке, поделившись данными с исследовательскими проектами! Это помогает ученым передавать знания дальше, развивать новые научные идеи и делать системы замкнутого цикла с открытым кодом более известными. AAPS готов к синхронизации данных с [Open Humans](https://www.openhumans.org), платформой, позволяющей подключаться, загружать и хранить ваши персональные данные – такие, как генетика, активность и данные о здоровье.
 
 Вы сохраняете полный контроль над тем, что происходит с вашими данными и какие проекты вы хотите поддержать, предоставляя им доступ к вашим данным. В зависимости от проекта, к которому вы присоединились, данные оцениваются и используются разными способами.
 
@@ -25,45 +25,45 @@
 ## Настройка
 
 1. Если это еще не сделано, создайте свой аккаунт на [Open Humans](https://www.openhumans.org). Можете для этого использовать существующие учетные записи Google или Facebook, если хотите.
-2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
+2. Включите модуль **Open Humans** в [**Конфигурация** > **Связь**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
+![Open Humans включен в «Конфигурация > Связь»](../images/OHUploader1.png)
 
-3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+3. Нажмите **Настройки** на карточке **Open Humans**. Можно разрешить загрузку только тогда, когда телефон подключен к Wi-Fi (**Только по WiFi**) и/или заряжается (**Только при зарядке**).
 
-![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+![Настройки Open Humans: «Только по WiFi» и «Только при зарядке»](../images/OHUploader_settings.png)
 
-4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+4. Нажмите **Открыть модуль** на карточке **Open Humans**, затем нажмите **Настройки**.
 
-![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+![Экран модуля Open Humans с кнопкой «Настройки»](../images/OHUploader_setup.png)
 
-5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
-6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+5. На экране **Добро пожаловать в Open Humans** нажмите **Далее**. Внимательно прочитайте экран **Согласие**: на нем показаны условия пользования, а также какие данные загружаются и какие не загружаются.
+6. Включите **Я понимаю и соглашаюсь.** (1) и нажмите **Войти в Open Humans** (2).
 
-![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+![Экраны «Добро пожаловать в Open Humans» и «Согласие» в AAPS](../images/OHUploader2.png)
 
 7. Откроется сайт Open Humans. Войдите под своей учетной записью.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
-9. Click **Authorize project** (2).
+8. Решите, хотите ли вы скрыть свое участие в AAPS Uploader в публичном профиле Open Humans (1).
+9. Нажмите **Authorize project** (2) (авторизовать проект).
 
-![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
+![Вход и авторизация проекта на сайте Open Humans](../images/OHUploader_web.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
+На снимках экрана выше показана более ранняя версия сайта Open Humans со старым названием проекта **AndroidAPS Uploader**. Шаги остаются теми же.
 ```
 
-10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
-11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
-12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
-13. Tap **Logout** if you want to stop uploading data to Open Humans.
+10. Когда вы вернетесь в **AAPS**, на экране **Финальные настройки** вас спросят, хотите ли вы продолжить. Нажмите **Продолжить**.
+11. Дождитесь надписи **Готово!**, затем нажмите **Закрыть**. С этого момента телефон время от времени загружает данные в фоновом режиме.
+12. Теперь на экране модуля **Open Humans** показан ваш **Идентификатор участника проекта**. Нажмите **Выгрузить (передать данные) сейчас**, если хотите сразу начать загрузку.
+13. Нажмите **Выход из системы**, если хотите прекратить загрузку данных в Open Humans.
 14. Уведомление Android сообщит о работающей загрузке.
 
 ![завершение настройки Open Humans](../images/OHUploader3.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+Скриншот выше сделан в более ранней версии **AAPS**. В **AAPS** 4 экраны подтверждения называются **Финальные настройки** и **Готово!**, размера очереди больше нет, а кнопки называются **Выгрузить (передать данные) сейчас** и **Выход из системы**.
 ```
 
 15. Управлять своими данными теперь можно, войдя на сайт [Open Humans](https://www.openhumans.org).
@@ -76,7 +76,7 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the conf
 
 "ОТКРЫТЫЙ" проект объединяет международный и межсекторальный консорциум пациентов, медиков, ученых в области социальных наук, компьютерщиков и организации по защите прав пациентов для изучения различных аспектов систем искусственной поджелудочной железы (DIY APS), число которых постоянно растет. Подробности - на их [сайте](https://www.open-diabetes.eu/).
 
-In September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. [Инструкция](https://open-diabetes.eu/en/open-survey/survey-tutorials/) по предоставлению своих данных Открытому проекту доступна на их сайте наряду с самим исследованием.
+В сентябре 2020 года проект 'OPEN' запустил [опрос](https://survey.open-diabetes.eu/), в котором также можно пожертвовать данные, загруженные в Open Humans. [Инструкция](https://open-diabetes.eu/en/open-survey/survey-tutorials/) по предоставлению своих данных Открытому проекту доступна на их сайте наряду с самим исследованием.
 
 ### [Общие Данные OpenAPS](https://www.openhumans.org/activity/openaps-data-commons/)
 
@@ -98,7 +98,7 @@ In September 2020 the 'OPEN' project launched a [survey](https://survey.open-dia
 
 ## Конфиденциальность данных
 
-Open Humans заботятся о защите конфиденциальности и назначают числовой идентификатор для каждого проекта. This allows projects to recognize but not identify you. Идентификатор приложения, который загружает AAPS, устроен так же и нужен только для управления данными. Больше информации можно найти здесь:
+Open Humans заботятся о защите конфиденциальности и назначают числовой идентификатор для каждого проекта. Так проекты могут узнавать вас, но не могут установить вашу личность. Идентификатор приложения, который загружает AAPS, устроен так же и нужен только для управления данными. Больше информации можно найти здесь:
 
 - [Политика использования данных Open Humans](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
