@@ -281,7 +281,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 Ниже показано, как приостановить и возобновить подачу инсулина.
 
-*ПРИМЕЧАНИЕ: если вы не видите кнопку **Останов***, значит, она скрыта (так по умолчанию). Включите **Показывать кнопку Приостановить подачу на вкладке Omnipod** в [настройках Omnipod](#OmnipodEros-omnipod-settings) в разделе **Другое**.
+*ПРИМЕЧАНИЕ: если вы не видите кнопку **Останов***, значит, она скрыта (так по умолчанию). Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Приостановка подачи инсулина
 
@@ -591,7 +591,7 @@ To deactivate a pod (either from expiration or from a pod failure):
   Снимок экрана выше сделан в более ранней версии **AAPS**. В **AAPS** 4 это текстовая кнопка **Установить время** на экране помпы Omnipod.
   ```
 
-- **Останов:** приостанавливает подачу инсулина на активном Pod. Показывается, только если включено в настройках (**Показывать кнопку Приостановить подачу на вкладке Omnipod**).
+- **Останов:** приостанавливает подачу инсулина на активном Pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![останов](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 Предоставляет расширенные настройки для содействия отладке.
 
-- **Показывать кнопку Приостановить подачу на вкладке Omnipod:** скрыть или показать кнопку **Останов** на вкладке Omnipod.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Показывать кнопку Pulse Log в меню управления Pod:** этот параметр еще есть в списке, но в текущей версии экрана помпы нет кнопки **Журнал Pulse**.
 
 - **Показывать кнопку статуса RileyLink в меню управления подом:** скрыть или показать кнопку **Статистика RileyLink** на экране помпы Omnipod.
