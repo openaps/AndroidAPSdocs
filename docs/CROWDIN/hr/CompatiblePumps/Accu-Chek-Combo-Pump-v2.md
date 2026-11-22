@@ -40,8 +40,8 @@ Imajte na umu sljedeća ograničenja:
 * Privremene bazalne stope ograničene su na 500 % trenutačne bazalne stope. **AAPS** uzima to ograničenje u obzir.
 * Petlja je onemogućena ako trenutačno aktivni profil na pumpi nije profil br. 1. To traje dok se profil br. 1 ne postavi kao aktivni. Kada se to učini, AAPS će pri sljedećem spajanju (samo od sebe nakon nekog vremena ili zato što ste dodirnuli **Osvježi** na zaslonu pumpe Accu-Chek Combo) primijetiti da je profil br. 1 trenutačni i ponovno omogućiti petlju.
 * Ako petlja zatraži otkazivanje privremenog bazala (TBR) koji je u tijeku, Combo će umjesto toga postaviti TBR od 90 % ili 110 % na 15 minuta. To je zato što stvarno otkazivanje TBR-a na pumpi izaziva upozorenje s mnogo vibracija, a te se vibracije ne mogu isključiti.
-* Stabilnost Bluetooth veze razlikuje se od telefona do telefona, što uzrokuje upozorenja „pumpa nedostupna“, kada se veza s pumpom više ne uspostavlja. If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
+* Stabilnost Bluetooth veze razlikuje se od telefona do telefona, što uzrokuje upozorenja „pumpa nedostupna“, kada se veza s pumpom više ne uspostavlja. Ako se ta pogreška pojavi, provjerite je li Bluetooth omogućen i dodirnite **Osvježi** na zaslonu pumpe (**Upravljanje** > **Pumpa**) kako biste vidjeli je li uzrok bio privremeni problem. Ako se veza i dalje ne uspostavi, ponovno pokrenite telefon, što bi obično trebalo riješiti problem.
+* Postoji i drugi problem kod kojeg ponovno pokretanje ne pomaže, nego treba pritisnuti tipku na pumpi (čime se resetira Bluetooth sustav pumpe) prije nego što pumpa ponovno prihvati veze s telefona.
 * Postavljanje TBR-a na samoj pumpi treba izbjegavati jer petlja preuzima upravljanje TBR-ovima. Otkrivanje novog TBR-a na pumpi može trajati do 20 minuta, a učinak TBR-a uračunava se tek od trenutka kada je otkriven. U najgorem slučaju to može biti 20 minuta TBR-a koji nije uračunat u aktivni inzulin (IOB).
 
 Upravljački program trenutačno podržava sljedeće jezike na pumpi Combo. (To nije povezano s jezikom u AAPS-u – to je jezik koji se prikazuje na LCD zaslonu same pumpe Combo.)
@@ -213,7 +213,7 @@ Ova automatska otkrivanja mogu se isključiti u [postavkama](#combov2-preference
 (combov2-alerts)=
 ## Upozorenja i pogreške te kako se obrađuju
 
-Combo prikazuje upozorenja kao zaslone daljinskog terminala. Warnings are shown with a "Wx" code (x is a digit), along with a short description. Jedan primjer je „W7“, „TBR OVER“. Pogreške su slične, ali se umjesto toga prikazuju s kodom „Ex“.
+Combo prikazuje upozorenja kao zaslone daljinskog terminala. Upozorenja se prikazuju s kodom „Wx“ (x je znamenka) i kratkim opisom. Jedan primjer je „W7“, „TBR OVER“. Pogreške su slične, ali se umjesto toga prikazuju s kodom „Ex“.
 
 Neka upozorenja upravljački program automatski zatvara. To su:
 
@@ -223,7 +223,7 @@ Neka upozorenja upravljački program automatski zatvara. To su:
 
 Ostala upozorenja se _ne_ zatvaraju automatski. Također, pogreške se _nikada_ ne zatvaraju automatski. Oba se slučaja obrađuju na isti način: upravljački program prikazuje dijalog upozorenja preko sučelja AAPS-a i prekida izvršavanje svake naredbe koja je u tijeku. Upravljački program tada prelazi u stanje „Greška“ (vidi [Sadržaj zaslona pumpe Accu-Chek Combo iznad](#combov2-tab-contents)). U tom stanju nije moguće izvršiti nijednu naredbu. Korisnik mora riješiti pogrešku na pumpi; na primjer, pogreška začepljenja može zahtijevati zamjenu kanile. Kada korisnik riješi pogrešku, normalan rad može se nastaviti dodirom na **Osvježi** na zaslonu pumpe Accu-Chek Combo. Upravljački program se tada spaja na Combo i ažurira njegov status, provjerava prikazuje li se još pogreška na zaslonu itd. Osim toga, upravljački program nakon nekog vremena sam osvježava status pumpe, pa ručno pritiskanje tog gumba nije obavezno.
 
-Davanje bolusa je poseban slučaj. Bolus se izvodi u načinu naredbi pumpe Combo, koji tijekom bolusa ne javlja da se pojavilo upozorenje. Zbog toga upravljački program ne može automatski zatvoriti upozorenja _tijekom_ bolusa. To nažalost znači da će pumpa pištati dok bolus ne završi. Najčešće upozorenje tijekom bolusa obično je W1 „reservoir low“ (skoro prazan spremnik). **Don't** dismiss Combo warnings on the pump itself manually during a bolus. Riskirate prekid bolusa. Upravljački program će obraditi upozorenje kada bolus završi.
+Davanje bolusa je poseban slučaj. Bolus se izvodi u načinu naredbi pumpe Combo, koji tijekom bolusa ne javlja da se pojavilo upozorenje. Zbog toga upravljački program ne može automatski zatvoriti upozorenja _tijekom_ bolusa. To nažalost znači da će pumpa pištati dok bolus ne završi. Najčešće upozorenje tijekom bolusa obično je W1 „reservoir low“ (skoro prazan spremnik). **Nemojte** ručno zatvarati upozorenja pumpe Combo na samoj pumpi tijekom bolusa. Riskirate prekid bolusa. Upravljački program će obraditi upozorenje kada bolus završi.
 
 Upozorenja koja se dogode dok upravljački program nije spojen na Combo upravljački program neće primijetiti. Combo ne može sam poslati upozorenje telefonu; vezu uvijek mora pokrenuti telefon. Zbog toga će upozorenje ostati sve dok se upravljački program ne spoji na pumpu. Možete dodirnuti **Osvježi** na zaslonu pumpe kako biste pokrenuli spajanje i omogućili upravljačkom programu da odmah obradi upozorenje (umjesto da čekate da AAPS sam odluči pokrenuti spajanje).
 
@@ -251,8 +251,8 @@ Upravljački program se trudi spojiti na Combo i koristi nekoliko trikova za naj
 
 ### Kako osigurati nesmetan rad
 
-* Uvijek **nosite pametni telefon sa sobom**, a noću ga ostavite pokraj kreveta. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
-* Uvijek pazite da je baterija pumpe što punija. See the battery section for tips regarding the battery.
+* Uvijek **nosite pametni telefon sa sobom**, a noću ga ostavite pokraj kreveta. Budući da pumpa dok spavate može biti iza ili ispod vašeg tijela, najbolje je telefon postaviti na višu poziciju (na policu ili dasku).
+* Uvijek pazite da je baterija pumpe što punija. Savjete o bateriji potražite u odjeljku o bateriji.
 * Kad god je moguće, upravljajte pumpom samo putem aplikacije AAPS. Da biste to olakšali, aktivirajte zaključavanje tipki na pumpi pod **PUMP SETTINGS / KEY LOCK / ON**. Tipke pumpe trebate koristiti samo pri zamjeni baterije ili spremnika.
 
 ![Zaključavanje tipki](../images/combo/combo-tips-keylock.png)
@@ -287,13 +287,13 @@ Upravljački program se trudi spojiti na Combo i koristi nekoliko trikova za naj
 * Nakon alarma **low battery** (slaba baterija) bateriju treba što prije zamijeniti, kako bi uvijek bilo dovoljno energije za pouzdanu Bluetooth komunikaciju s pametnim telefonom, čak i ako je telefon na većoj udaljenosti od pumpe.
 * Čak i nakon alarma **low battery** baterija se može koristiti još prilično dugo. Ipak, preporučuje se da nakon alarma „low battery“ uvijek imate novu bateriju sa sobom.
 * Prije zamjene baterije dodirnite simbol **Petlja** na glavnom zaslonu i odaberite **Suspendiraj petlju** na 1 sat.
-* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
+* Pričekajte da telefon komunicira s pumpom i da logotip Bluetootha na pumpi nestane.
 
 ![Bluetooth omogućen](../images/combo/combo-tips-compo.png)
 
 * Otključajte tipke na pumpi, stavite pumpu u način zaustavljanja (stop), potvrdite eventualno otkazani privremeni bazal i brzo zamijenite bateriju.
 * Nakon zamjene baterije ne trebate ponovno namještati sat pumpe: AAPS automatski ažurira datum i vrijeme na pumpi.
-* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
+* Zatim vratite pumpu u način rada (run) i odaberite **Nastavi** dodirom na ikonu **Petlja suspendirana** na glavnom zaslonu.
 * AAPS će ponovno postaviti potrebni privremeni bazal kada stigne sljedeća vrijednost GUK-a.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
@@ -314,9 +314,9 @@ Ako vaša baterija traje znatno kraće od gore navedenih raspona, provjerite slj
 
 ### Produženi bolus, višefazni bolus
 Algoritam OpenAPS ne podržava istodobni produženi bolus ili višefazni bolus. No sličan tretman može se postići sljedećim alternativama:
-* Koristite **e-ugljikohidrate** pri unosu ugljikohidrata ili u bolus kalkulatoru tako da unesete ugljikohidrate cijelog obroka i trajanje u kojem očekujete da će ugljikohidrati stići u krv kao glukoza. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. Za pristup sličan višefaznom bolusu možete i kombinirati manji odmah dani bolus s e-ugljikohidratima.
-* Before eating, set a temporary **Eating Soon** target of 80 mg/dL (4.4 mmol/L) for several hours (press the target on the main screen, or **Manage** > **Temp Target**). Trajanje treba temeljiti na razdoblju koje biste odabrali za produženi bolus. Tako će vaš cilj biti niži nego inače, pa će se isporučiti više inzulina.
-* Zatim otvorite **Bolus kalkulator** i unesite sve ugljikohidrate obroka, ali nemojte izravno primijeniti vrijednosti koje predloži. Ako treba dati bolus sličan višefaznom, smanjite dozu inzulina. Ovisno o obroku, algoritam sada mora isporučiti dodatne SMB-ove ili više privremene bazalne stope kako bi se suprotstavio porastu GUK-a. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+* Koristite **e-ugljikohidrate** pri unosu ugljikohidrata ili u bolus kalkulatoru tako da unesete ugljikohidrate cijelog obroka i trajanje u kojem očekujete da će ugljikohidrati stići u krv kao glukoza. Sustav će tada izračunati male količine ugljikohidrata ravnomjerno raspoređene kroz cijelo trajanje, zbog čega će algoritam davati odgovarajuće doze inzulina, a pritom stalno provjeravati ukupni porast/pad razine glukoze u krvi. Za pristup sličan višefaznom bolusu možete i kombinirati manji odmah dani bolus s e-ugljikohidratima.
+* Prije jela postavite privremeni cilj **Prije obroka** od 80 mg/dL (4,4 mmol/L) na nekoliko sati (dodirnite cilj na glavnom zaslonu ili **Upravljanje** > **Privremeni cilj**). Trajanje treba temeljiti na razdoblju koje biste odabrali za produženi bolus. Tako će vaš cilj biti niži nego inače, pa će se isporučiti više inzulina.
+* Zatim otvorite **Bolus kalkulator** i unesite sve ugljikohidrate obroka, ali nemojte izravno primijeniti vrijednosti koje predloži. Ako treba dati bolus sličan višefaznom, smanjite dozu inzulina. Ovisno o obroku, algoritam sada mora isporučiti dodatne SMB-ove ili više privremene bazalne stope kako bi se suprotstavio porastu GUK-a. Ovdje treba vrlo pažljivo isprobavati sigurnosna ograničenja bazalne stope (maks. J/h, maksimalni bazalni aktivni inzulin) i, ako je potrebno, privremeno ih promijeniti.
 
 * Ne koristite produženi ili višefazni bolus izravno na pumpi. Upravljački program ih ne podržava (vidi [Prije nego što počnete](#combov2-before-you-begin)); ako se ipak na pumpi da višefazni bolus, **AAPS** ga iz povijesti pumpe bilježi kao normalni bolus plus produženi bolus, tako da se uračunava u aktivni inzulin (IOB). Produženi bolus ne radi u okruženju zatvorene petlje (pojedinosti potražite na [ovoj stranici](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)).
 
