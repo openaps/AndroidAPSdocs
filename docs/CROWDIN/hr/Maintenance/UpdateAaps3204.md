@@ -16,7 +16,7 @@ Pojedinosti pogledajte na stranici [Česta pitanja korisnika petlje](../UsefulLi
 | ----------------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
 | [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | do verzije Meerkat                                       | 8.2    | 17  |
 
-„Preporučena verzija“ dolazi s odgovarajućom verzijom JVM-a. Preporučena verzija je ujedno i najniža verzija koju možete koristiti za izradu **AAPS-a**. Na verziji starijoj od „preporučene“ **NEĆETE** moći izraditi aplikaciju. Ako koristite drugu verziju, mogu se pojaviti problemi povezani s verzijom JVM-a. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. Ako vaša trenutna verzija Android Studija nije navedena u tablici, najprije je morate ažurirati.
+„Preporučena verzija“ dolazi s odgovarajućom verzijom JVM-a. Preporučena verzija je ujedno i najniža verzija koju možete koristiti za izradu **AAPS-a**. Na verziji starijoj od „preporučene“ **NEĆETE** moći izraditi aplikaciju. Ako koristite drugu verziju, mogu se pojaviti problemi povezani s verzijom JVM-a. Za pomoć pri rješavanju ovih problema pogledajte stranicu [Rješavanje problema s Android Studiom](#incompatible-gradle-jvm). Ako vaša trenutna verzija Android Studija nije navedena u tablici, najprije je morate ažurirati.
 
 Verzija Gradlea vezana je uz izvorni kôd, pa ćete pri preuzimanju / ažuriranju izvornog kôda uvijek dobiti ispravnu verziju Gradlea. Ovdje je navedena samo radi informacije, ne morate ništa poduzimati.
 
@@ -125,7 +125,7 @@ Ako se ne sjećate kako se to radi, pogledajte stranicu [Izrada i vraćanje sigu
 * Pričekajte dok traje preuzimanje; to ćete vidjeti kao informaciju u donjoj traci. Kada završi, vidjet ćete poruku o uspjehu.
 
   ```{note}
-  Ažurirane datoteke mogu se razlikovati! This is not an indication of a problem.
+  Ažurirane datoteke mogu se razlikovati! To nije znak problema.
   ```
 
 
@@ -153,7 +153,7 @@ Ako se ne sjećate kako se to radi, pogledajte stranicu [Izrada i vraćanje sigu
 
 ![Otvaranje postavki Gradlea](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
+- U polju **Gradle JDK** (1) provjerite je li odabrana odgovarajuća verzija: **jbr-17**. Ako nije, kliknite polje i pogledajte je li već dostupna na popisu. Ako je nema na popisu (snimka zaslona ispod prikazuje računalo na kojem je dostupna samo **jbr-21**), odaberite **Download JDK...** (2).
 
 ![Odabir opcije Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
