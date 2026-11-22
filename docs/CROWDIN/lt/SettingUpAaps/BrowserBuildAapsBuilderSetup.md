@@ -56,19 +56,20 @@ Ji sukurta ne iš šablono. Ištrinkite ją (**Settings** → puslapio apačia �
 You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-Kūrimo žingsniai atnaujinami už jus: kiekvieno kūrimo metu jūsų saugykla paleidžia versiją, kurią AAPS kūrėjai išleido saugykloje nightscout/aaps-builder, o jūsų saugykloje niekas nesikeičia. Savo darbo eigos failą keičiate tik tada, kai tai paskelbiama puslapyje [Dokumentacijos atnaujinimai ir pakeitimai](../Maintenance/DocumentationUpdate.md) (pavyzdžiui, dėl naujo kūrimo varianto), arba vieną kartą, jei jūsų saugykla buvo sukurta su ankstesne šio puslapio versija arba iš seno šablono. Jūsų slaptoji reikšmė `KEYSTORE_SET` lieka tokia pati.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Jūsų slaptoji reikšmė `KEYSTORE_SET` lieka tokia pati.
 
 1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   Kompiuteryje spauskite **kopijavimo piktogramą** („Copy raw file“) failo viršuje dešinėje. Telefone vietoj to atidarykite <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">paprasto teksto versiją</a>, palaikykite paspaudę tekstą → **Select all** → **Copy**.
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
 2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
    Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
 3. Pakeiskite visą tekstą nukopijuota darbo eiga (telefone: palaikykite paspaudę → **Select all** → **Paste**), tada du kartus spauskite **Commit changes…**. Pirmoje failo eilutėje rodoma jo versija.
-```
+
+</div>
 
 (aaps-builder-setup-step2)=
 
