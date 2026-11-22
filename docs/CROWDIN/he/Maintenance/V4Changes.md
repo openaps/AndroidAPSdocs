@@ -111,6 +111,8 @@
 
 בשדרוג, **AAPS** שומר את האינסולין ואת ה-DIA שכבר נשמרו בהחלפות הפרופיל שלכם מ-v3. אם הוא מוצא רשומות ישנות יותר שבהן האינסולין ידוע אבל ה-DIA לא ידוע, הוא משתמש עבורן ב-DIA ברירת מחדל ומציג הודעה פעם אחת, למשל *בנתונים ישנים יותר לא נרשם משך פעולת אינסולין, לכן נרשמו 9.0 שעות עבור ליומג'ב. יש לבדוק את הגדרות האינסולין שלכם — נתונים שכבר הועברו לא מתעדכנים לאחר מכן.* כשההודעה מופיעה, יש לבדוק את הגדרות האינסולין.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 כדי לשנות את ה-DIA או את השיא, יש להוסיף אינסולין חדש עם **+**, לשנות אותו, לשמור אותו וללחוץ על **▶ הפעלה**. ראו [שינוי האינסולין שבשימוש](#Config-Builder-insulin-change-active).
