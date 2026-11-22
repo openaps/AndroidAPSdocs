@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# Scene (predlošci za situacije)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+**Scena** je imenovani predložak koji primjenjuje **skup radnji odjednom** — na primjer predložak *Spavanje*, *Tjelovježba* ili *Dan bolesti* koji jednim dodirom mijenja vaš profil, postavlja privremeni cilj, uključuje ili isključuje SMB i dodaje Careportal bilješku, po želji na zadano vrijeme.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,172 +10,172 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## Što je scena
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+Umjesto da svaki put kada se ponovi ista situacija ručno mijenjate više stvari, jednom ih postavite kao scenu i aktivirate je jednim dodirom. Scena može sadržavati bilo koju od ovih radnji:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **Zamjena profila** — zamijenite profil i/ili ga promijenite postotkom (npr. 70 %).
+- **Privremeni cilj** — postavite privremeni cilj (npr. *Aktivnost*, *Prije obroka* ili vlastitu vrijednost).
+- **SMB uključen/isključen** — omogućite ili onemogućite super mikro boluse dok je scena aktivna.
+- **Način rada petlje** — promijenite način rada (npr. u oprezniji način).
+- **Careportal bilješka** — zabilježite događaj (npr. *Tjelovježba*, *Bolest*) kako bi se prikazao na grafu i u Nightscoutu.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+Scena ima i **trajanje** — zadano vrijeme (minute/sati/dani) ili *Neograničeno (ručni završetak)* — i **završnu radnju** koja se izvodi kada scena završi: **obavijest** ili **povezivanje** s drugom scenom (na primjer *Dan bolesti → Tjelovježba*).
 
 ---
 
-## Creating or editing a scene
+## Upravljanje scenama
 
-### Start from a template
+Otvorite **Upravljanje → Scene** da biste vidjeli, izradili, uredili, omogućili/onemogućili scene i promijenili im redoslijed.
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![Zaslon za upravljanje scenama](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+Svaka kartica scene prikazuje:
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- **potvrdni okvir** za omogućavanje/onemogućavanje scene,
+- **ikonu** i **naziv**,
+- sažetak — *„N radnji, trajanje“* i **→ povezanu scenu** ako je scena povezana s drugom,
+- i tri gumba: **▶ aktiviraj**, **✏️ uredi**, **🗑️ izbriši**.
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+Dodirnite gumb **+** za izradu nove scene.
 
 ---
 
-## Activating a scene
+## Izrada ili uređivanje scene
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### Počnite od predloška
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+Za **izradu** scene dodirnite gumb **+** na zaslonu Scene. Prvi korak je **Počni od predloška**: odaberite gotovu scenu za čestu situaciju — *Tjelovježba*, *Dan bolesti*, *Dan bolesti — povraćanje*, *Spavanje*, *Noć nakon tjelovježbe*, *Prije obroka*, *Alkohol*, *Vožnja*, *Kupanje*, *Lutealna faza*, *Vruće vrijeme*, *Medicinski zahvat* — ili počnite od scene *Prazno*. Svaki predložak **unaprijed popunjava preporučene radnje**, a sve možete prilagoditi u sljedećim koracima.
 
-If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+![„Počni od predloška“ — odaberite početnu točku](../images/v4/Scenes/templates_picker.png)
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+Nakon što odaberete predložak, objašnjava se njegova svrha — *kada* i *zašto* ga koristiti — prije nego što nastavite:
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+![Objašnjenje predloška](../images/v4/Scenes/template_explanation.png)
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+### Prođite kroz radnje korak po korak
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+Ostatak uređivača je kratki čarobnjak **korak po korak**. Svaki korak je jedna vrsta radnje s prekidačem *„Uključi u scenu: …“* — uključite ga samo za radnje koje ova scena treba izvesti, a ostale ostavite isključene.
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+![Uređivač scene — korak Zamjena profila](../images/v4/Scenes/scene_editor.png)
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+Prođite kroz korake gumbima **Sljedeći**/**Natrag**: *Zamjena profila*, *Privremeni cilj*, *SMB*, *Način rada*, *Careportal bilješka*, zatim **trajanje**, **završna radnja** (obavijest ili povezivanje s drugom scenom) i na kraju **naziv i ikona** scene. Kada završite, spremite scenu. (Za **uređivanje** postojeće scene dodirnite njezin gumb **✏️** — odmah dolazite do ovih koraka.)
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+Svaki korak počinje kratkim objašnjenjem što radnja radi. Koraci izgledaju ovako, ovdje s predloškom *Tjelovježba*:
 
-The scene's actions stay in effect until:
+**Privremeni cilj** — odaberite jedan od svojih predložaka privremenog cilja:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+![Korak Privremeni cilj](../images/v4/Scenes/scene_editor_step3.png)
 
-A scene without follow-up only asks you to confirm:
+**SMB** — omogućite ili onemogućite SMB dok je scena aktivna:
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+![Korak SMB](../images/v4/Scenes/scene_editor_step4.png)
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+**Način rada** — po želji promijenite način rada petlje:
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+![Korak Način rada](../images/v4/Scenes/scene_editor_step5.png)
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+**Careportal** — vrsta događaja i bilješka koja se bilježi:
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+![Korak Careportal](../images/v4/Scenes/scene_editor_step6.png)
 
----
+**Trajanje** — koliko dugo scena ostaje aktivna; 0 znači dok je sami ne završite:
 
-## Triggering scenes from Automation
+![Korak Trajanje](../images/v4/Scenes/scene_editor_step7.png)
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+**Sljedeća scena** — po želji scena koja se pokreće kada ova završi:
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+![Korak Sljedeća scena](../images/v4/Scenes/scene_editor_followup.png)
 
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
+**Scena** — naziv i ikona. Pritisnite **Završi** za spremanje:
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+![Korak naziva i ikone](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Scenes with Master/Client and a watch
+## Aktiviranje scene
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+Scenu aktivirajte s popisa **Scene** (gumb **▶**) ili preko stavke **Scene** u donjoj navigacijskoj traci. U ploči **Scene** donje navigacijske trake svaka scena prikazuje isti sažetak kao na popisu Scene, a **olovka** na vrhu ploče otvara **Upravljanje → Scene** za izradu ili uređivanje scena.
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+![Ploča Scene u donjoj navigacijskoj traci](../images/v4/Scenes/scenes_sheet.png)
+
+Ako je uključena [zaštita bolusa](#Preferences-protection), **AAPS** je traži prije pokretanja ili završetka scene. Za promjenu scene umjesto toga potrebna je [zaštita postavki](#Preferences-settings-protection).
+
+Prije nego što se išta primijeni, dobivate **potvrdu** s točnim popisom onoga što će scena napraviti, tako da je možete provjeriti:
+
+![Potvrda aktivacije scene s popisom uključenih radnji](../images/v4/Scenes/scene_confirmation.png)
+
+Ako je scena povezana s drugom, potvrda završava sa **→** i nazivom te sljedeće scene, isto kao na popisu Scene.
+
+Kada scenu pokrenete preko stavke **Scene** u donjoj navigacijskoj traci, potvrda je jednostavniji dijaloški okvir s istim popisom radnji. Pritisnite **U redu** za aktivaciju:
+
+![Potvrda scene pokrenute iz donje navigacijske trake](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
+Nakon potvrde radnje se primjenjuju, a **aktivna scena** prikazuje se na vrhu Pregleda s gumbom **Završi scenu**. Ako je scena povezana s drugom, traka navodi i naziv sljedeće scene:
+
+![Traka aktivne scene u Pregledu, s gumbom Završi scenu](../images/v4/Scenes/scene_active_banner.png)
+
+Radnje scene ostaju na snazi dok:
+
+- ne istekne njezino **trajanje** (izvodi se **završna radnja** — obavijest ili prelazak na sljedeću scenu) ili
+- ne dodirnete **Završi scenu** da biste je ručno završili. Ako je scena povezana s drugom, imate dvije mogućnosti: **Preskoči na** sljedeću scenu (aktivna scena završava, a sljedeća počinje odmah) ili **Završi scenu** (aktivna scena završava, a sljedeća se ne pokreće).
+
+Scena bez sljedeće scene samo traži potvrdu:
+
+![Dijaloški okvir Završi scenu](../images/v4/Scenes/scene_end_dialog.png)
+
+Završetak scene **poništava** promjene koje je napravila (na primjer zamjenu profila i privremeni cilj koje je pokrenula).
+
+Dok je scena aktivna, profil i cilj na glavnom zaslonu imaju malu ikonu scene ako ih je postavila scena. Ploča **Scene** u donjoj navigacijskoj traci ostaje dostupna za pokretanje druge scene:
+
+![Ploča Scene dok je scena aktivna](../images/v4/Scenes/scenes_sheet_active.png)
+
+Kada trajanje istekne samo od sebe, promjene se odmah poništavaju, a traka se mijenja u **Scena završena** s gumbom **Odbaci**. Odbacivanje samo uklanja traku sa zaslona — sama scena je već završila, pa pravila automatizacije i povezana scena nastavljaju bez čekanja na to.
+
+---
+
+## Pokretanje scena iz automatizacije
+
+Scenu ne morate pokretati ručno — **Automatizacija** to može učiniti umjesto vas. Kada pravilu automatizacije dodajete radnju (**Upravljanje → Automatizacija**), izbornik radnji ima kategoriju **Scene**:
+
+- **Pokreni scenu** — aktivira scenu kada se aktiviraju okidači pravila (na primjer u zadano vrijeme, kada negdje stignete ili kada glukoza prijeđe neku granicu).
+- **Omogući scenu** / **Onemogući scenu** — scena postaje dostupna (ili nedostupna), ali se ne aktivira.
+
+![Radnje „Scene“ u izborniku radnji automatizacije](../images/v4/Scenes/automation_scene_action.png)
+
+Automatizacija može i **reagirati na** scenu: popis okidača sadrži okidač **Scena**, pa se pravilo može izvoditi samo dok je određena scena aktivna. Zajedno sa **završnom radnjom** scene (poništavanje, obavijest ili povezivanje s drugom scenom) scene se tako mogu automatski pokretati, nastavljati jedna na drugu i završavati.
+
+---
+
+## Scene s glavnim uređajem/klijentom i satom
+
+**Trenutno aktivna scena sinkronizira se** na svim vašim uparenim uređajima — aktivirajte je na jednom telefonu i prikazat će se i na ostalima.
+
+Upareni **klijent** (**AAPSClient**) također može aktivirati ili završiti scenu: zahtjev se šalje **glavnom uređaju**, koji izrađuje potvrdu i primjenjuje scenu na svoje stanje. Kako to radi, pogledajte na stranici [Upravljanje glavni uređaj ↔ klijent (potpisano daljinsko upravljanje)](../RemoteFeatures/ClientMasterControl.md).
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### S Wear OS sata
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+Scene su dostupne na **Wear OS satu** kao **pločica Scena**. Prijeđite prstom do pločice **Scena** u nizu pločica na satu (ako je još nema, najprije je dodajte s popisa pločica) i dodirnite scenu koju želite pokrenuti:
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![Pločica Scena na Wear OS satu](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+Pločica ima četiri mjesta. Prema zadanim postavkama svako se mjesto **automatski** popunjava sljedećom od vaših omogućenih scena, redoslijedom kao na telefonu. Ako želite sami birati, **dugo pritisnite pločicu** i otvorite njezine postavke: za svako od četiri mjesta možete ostaviti **Automatski**, prikvačiti **određenu scenu** ili odabrati **Nijedan** da mjesto ostane prazno. Mjesto prikvačeno za scenu koja je u međuvremenu izbrisana ili onemogućena prikazuje **Nedostupno** — odaberite drugu scenu za to mjesto.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+Sat zatim prikazuje potvrdu — dodirnite **✓** za aktivaciju ili prijeđite prstom natrag za odustajanje:
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![Potvrda scene na satu](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+Isto kao kod klijenta, **glavni uređaj izrađuje potvrdu i pokreće scenu**; sat samo prosljeđuje zahtjev (preko telefona klijenta, ako je sat uparen s klijentom).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+Dok scena radi — ili se njezina traka **Scena završena** još prikazuje na telefonu — pločica prikazuje gumb **Završi** s nazivom scene ispod njega. Dodirnite ga da biste sa zapešća završili aktivnu scenu ili uklonili preostalu traku.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+Ako je aktivna scena povezana s drugom, pločica prikazuje i gumb **Preskoči** s nazivom sljedeće scene ispod njega. To su iste dvije mogućnosti kao na telefonu:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **Završi** — aktivna scena završava. Potvrda vam govori da se sljedeća scena neće pokrenuti.
+- **Preskoči** — aktivna scena završava, a sljedeća scena počinje odmah. Potvrda navodi obje scene.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+[Zaslon Status petlje](#WearOsSmartwatch-loop-status) na satu također prikazuje aktivnu scenu, preostalo vrijeme i sljedeću scenu.
 
 ---
 
