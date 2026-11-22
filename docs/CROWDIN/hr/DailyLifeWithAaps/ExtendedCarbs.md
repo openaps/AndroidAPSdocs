@@ -9,7 +9,7 @@ Ipak, potreba da se riješe takvi obroci i dalje postoji. Zato AAPS podržava ta
 
 eUH su ugljikohidrati raspodijeljeni na nekoliko sati. Za uobičajene obroke s više ugljikohidrata nego masti/proteina obično je dovoljno unijeti ugljikohidrate odmah (i po potrebi smanjiti početni bolus) kako bi se spriječila prerana isporuka inzulina.  No za obroke koji se sporije apsorbiraju, kod kojih unos svih ugljikohidrata odmah daje previše aktivnog inzulina od SMB-a, eUH se mogu koristiti da se točnije simulira kako se ugljikohidrati (i svi ekvivalenti ugljikohidrata koje unesete za druge makronutrijente) apsorbiraju i utječu na GUK. S tim podacima petlja može postupnije davati SMB-ove za te ugljikohidrate, što se može smatrati dinamičkim produženim bolusom (ovo bi trebalo raditi i bez SMB-ova, ali je vjerojatno manje učinkovito).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Napomena:** eUH nisu ograničeni na masne obroke / obroke bogate proteinima: mogu pomoći i u svakoj situaciji u kojoj nešto podiže GUK, npr. drugi lijekovi kao što su kortikosteroidi.
 
 ## Kako se koriste eUH
 
@@ -26,7 +26,7 @@ eUH na glavnom zaslonu: broj u zagradama u polju **Aktivni UGH** pokazuje ugljik
 
 U [bolus kalkulatoru](#aaps-screens-bolus-wizard) tri gumba ispod polja **UH** omogućuju vam da odaberete koliko se brzo vaš obrok apsorbira. Odaberite jedan prije nego što potvrdite. Ovisno o vrsti, **AAPS** dio unesenih ugljikohidrata uzima kao obične ugljikohidrate, a kasnije dodaje [produžene ugljikohidrate („eUH“)](#Extended-Carbs-extended-carbs-ecarbs) za spore, bogate obroke. Pritisnite ikonu **(i)** pokraj gumba da vidite tipičnu hranu za odabranu vrstu i što ona čini s vašim ugljikohidratima.
 
-| Vrsta             | Typical foods (examples from the app)                                                                           | Ugljikohidrati sada, korišteni za bolus | Dodani eUH                                                |
+| Vrsta             | Tipična hrana (primjeri iz aplikacije)                                                                          | Ugljikohidrati sada, korišteni za bolus | Dodani eUH                                                |
 | ----------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------- | --------------------------------------------------------- |
 | **Kruh** (zadano) | Kruh, slana peciva, jogurt, voće, krumpir, riža, zobena kaša, povrće                                            | 100 %                                   | Bez                                                       |
 | **Kolač**         | Knedle, tjestenina, azijska jela bogata ugljikohidratima i mastima, slatka i dizana peciva, žitarice, med, džem | 90 %                                    | 20 %, počinje 60 minuta kasnije, raspodijeljeno na 2 sata |
@@ -60,9 +60,9 @@ Za brži početak *bolus kalkulator* može dodati eUH umjesto vas: odaberite [vr
 **Važne napomene:** Naravno, morat ćete isprobati koje vrijednosti odgovaraju vama. Također možete pažljivo prilagoditi postavku *Maks. minuta bazala za ograničenje SMB-a* kako bi algoritam bio više ili manje agresivan. Kod obroka s malo ugljikohidrata, a puno masti/proteina, može biti dovoljno koristiti samo eUH bez ručnih bolusa (pogledajte gore navedeni blog). Kada se stvore eUH, stvara se i bilješka u Careportalu koja bilježi sve unose, kako biste lakše isprobavali i poboljšavali unose.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended boluses and why they don't work in a closed-loop environment
+## Produženi bolusi i zašto ne rade u zatvorenoj petlji
 
-Kao što je gore spomenuto, produženi ili viševalni bolusi zapravo ne rade u zatvorenoj petlji. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Kao što je gore spomenuto, produženi ili viševalni bolusi zapravo ne rade u zatvorenoj petlji. [Pogledajte u nastavku](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) za pojedinosti
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Produženi bolus i prelazak na otvorenu petlju - samo za pumpe Dana i Insight
