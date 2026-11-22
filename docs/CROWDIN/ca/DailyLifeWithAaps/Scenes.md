@@ -124,7 +124,7 @@ Una escena sense escena següent només us demana que confirmeu:
 
 ![Diàleg Finalitzar escena](../images/v4/Scenes/scene_end_dialog.png)
 
-Finalitzar una escena **desfà** els canvis que ha fet (per exemple el canvi de perfil i l'objectiu temporal que ha iniciat). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+Finalitzar una escena **desfà** els canvis que ha fet (per exemple el canvi de perfil i l'objectiu temporal que ha iniciat). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Mentre una escena està activa, el perfil i l'objectiu de la pantalla principal porten una petita icona d'escena quan els ha posat l'escena. El full **Escenes** de la navegació inferior continua disponible per iniciar una altra escena:
 
