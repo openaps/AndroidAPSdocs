@@ -60,7 +60,7 @@ Quando uma troca temporária está ativa, o cartão **ATIVO** mostra a porcentag
 
 ![A tela Perfil: carrossel de perfis, detalhes e barra de ações](../images/v4/Profiles/profile_manage.png)
 
-Os botões na parte de baixo agem sobre o perfil **selecionado**: **➕ Adicionar**, **✏️ Editar**, **⧉ Clonar** e **‘️ Excluir**, e o botão redondo **▶ Ativar** à direita. Para saber como preencher os quatro horários no editor (IC / ISF / BAS / ALV), veja [Criar e editar perfis](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Para saber como preencher os quatro horários no editor (IC / ISF / BAS / ALV), veja [Criar e editar perfis](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Clonar** usa o ícone de dois quadrados, muitas vezes usado para *copiar*, mas não há nada para colar: ele cria a cópia em um passo. Confirme *Clonar perfil "Normal"?* e um novo perfil chamado *Cópia de Normal* é adicionado no fim do carrossel e selecionado, pronto para **✏️ Editar** (onde você também pode mudar o nome). Isto não é o mesmo que clonar uma **Troca de Perfil** antiga no Histórico de tratamentos, que cria um novo perfil *com a porcentagem e o deslocamento de tempo aplicados*. Veja [Guardar uma troca de perfil para usar depois](#ProfileSwitch-keep-for-later).
 
