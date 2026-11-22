@@ -39,7 +39,7 @@ Ako nijedna poveznica ne riješi vaš problem, pogledajte [Gdje mogu dobiti pomo
 * [Profil: „Bazalna stopa nije kompatibilna s trenutnom pumpom“](#your-aaps-profile-basal-not-compatible)
 * [Pumpa: „Podaci dolaze s druge pumpe“](#config-builder-wrong-pump-data)
 * [Nightscout klijent](TroubleshootingNsClient.md)
-* **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
+* **„Postavke AAPS-a ne mogu se pročitati“** pri pokretanju: postavke su šifrirane ključem koji Android čuva za **AAPS**, a taj ih ključ više ne može otvoriti, na primjer nakon što je spremište ključeva na telefonu resetirano. Dok je ovaj zaslon prikazan, **AAPS** ne radi i ne upravlja pumpom. Dodirnite **Pokušaj ponovno**: zatvara se i ponovno pokreće **AAPS**. Ako to ne pomogne, ponovno pokrenite telefon. **Počni ispočetka** koristite samo kada ništa drugo ne pomaže: datoteka s nečitljivim postavkama stavlja se na stranu (preimenuje se i čuva) i **AAPS** se pokreće s praznim postavkama. Zatim uvezite svoj zadnji [izvoz postavki](../Maintenance/ExportImportSettings.md).
 
 ### Korištenje
 
