@@ -1,66 +1,66 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs (and the notes you add to your treatments) and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool je alat treće strane koji prikuplja podatke o GUK-u, inzulinu i ugljikohidratima (i bilješke koje dodate svojim tretmanima). Pomoću njega te podatke možete analizirati i dijeliti sa svojim kliničkim timom. Od verzije AAPS-a 3.2 može se koristiti umjesto Nightscouta za ispunjavanje dijela Cilja 1. Može se koristiti i zajedno s Nightscoutom, kao druga platforma za izvješća koja se dobro uklapa u kliničku praksu. To može biti dobar izbor za djecu koja koriste AAPS i žele mogućnosti daljinskog nadzora i upravljanja koje nudi Nightscout, ali i platformu za izvješća koja je bliža njihovom kliničkom timu.
 
-It is important to understand that Tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone, you must set up Nightscout as well.
+Važno je razumjeti da je Tidepool samo za izvješća. To NIJE aplikacija za praćenje u stvarnom vremenu. Ako trebate pratitelje osim glavnog AAPS telefona, morate postaviti i Nightscout.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
-
-
-## Step 1 - Set up a Tidepool account
-
-- Navigate to [tidepool.org](https://www.tidepool.org/)
-
-- Select “Personal Sign Up” or “Sign Up”
-
-- Create and document an email and password
-
-- Select “Personal Account” and click “Continue”
-
-- Complete the patient information section and accept the terms of use
-
-- Verify your email address via the instructions received to your email
+Napomena: organizacija Tidepool izbacila je na tržište proizvod iOS Loop s odobrenjem FDA. Taj projekt nema nikakve veze s njihovom platformom za izvješća o podacima ni s AAPS-om.
 
 
-## Step 2 - Connect AAPS to Tidepool
+## Korak 1 - Otvorite Tidepool račun
 
-- Open the **menu** (☰) in the top-left corner of the main screen and select "**Configuration**"
+- Idite na [tidepool.org](https://www.tidepool.org/)
 
-- Open the "**Communication**" category and enable "**Tidepool**":
+- Odaberite „Personal Sign Up“ ili „Sign Up“
 
-![Enable Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+- Izradite e-adresu i lozinku i zapišite ih
 
-- Tap "**Open plugin**" underneath Tidepool, then tap the **Login** icon (an arrow going into a door) in the top-right corner
+- Odaberite „Personal Account“ i kliknite „Continue“
 
-- A browser window opens on the Tidepool login page. Log in with the email address and password you created in Step 1 above:
+- Ispunite odjeljak s podacima o pacijentu i prihvatite uvjete korištenja
 
-![Tidepool login page](../images/v4/Tidepool/tidepool_login.png)
+- Potvrdite svoju e-adresu prema uputama koje ste primili e-poštom
 
-- After a successful login the browser closes and the Tidepool screen shows the status "**Connected**"; the log below documents the data uploads. If the login fails, confirm your credentials are correct and that you have verified your email address with Tidepool.
 
-![Tidepool connected](../images/v4/Tidepool/tidepool_status.png)
+## Korak 2 - Spojite AAPS s Tidepoolom
 
-- In the "**Settings**" of the Tidepool plugin, open "**Connection settings**". By default "**Use Nightscout connection settings**" is on, so Tidepool uploads under the same conditions you set for Nightscout. Turn it off if you want separate conditions for Tidepool, for example to upload to Tidepool only on Wi-Fi and while charging, while Nightscout also uses mobile data.
+- Otvorite **izbornik** (☰) u gornjem lijevom kutu glavnog zaslona i odaberite „**Konfiguracija**“
 
-![Connection settings with Use Nightscout connection settings on](../images/v4/Tidepool/tidepool_connection_settings.png) ![Separate connection settings for Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+- Otvorite kategoriju „**Komunikacija**“ i omogućite „**Tidepool**“:
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+![Omogućite Tidepool](../images/v4/Tidepool/tidepool_enable.png)
+
+- Dodirnite „**Otvori dodatak**“ ispod Tidepoola, zatim dodirnite ikonu **Prijava** (strelica koja ulazi u vrata) u gornjem desnom kutu
+
+- Otvara se prozor preglednika sa stranicom za prijavu u Tidepool. Prijavite se e-adresom i lozinkom koje ste izradili u koraku 1 gore:
+
+![Stranica za prijavu u Tidepool](../images/v4/Tidepool/tidepool_login.png)
+
+- Nakon uspješne prijave preglednik se zatvara i zaslon Tidepool prikazuje status „**Povezano**“; dnevnik ispod bilježi prijenose podataka. Ako prijava ne uspije, provjerite jesu li vaši podaci za prijavu točni i jeste li potvrdili svoju e-adresu kod Tidepoola.
+
+![Tidepool je povezan](../images/v4/Tidepool/tidepool_status.png)
+
+- U „**Postavkama**“ dodatka Tidepool otvorite „**Postavke veze**“. Prema zadanim postavkama „**Koristi postavke veze Nightscouta**“ je uključeno, pa Tidepool prenosi podatke pod istim uvjetima koje ste postavili za Nightscout. Isključite to ako želite zasebne uvjete za Tidepool, na primjer da se u Tidepool prenosi samo putem Wi-Fi-ja i tijekom punjenja, dok Nightscout koristi i mobilne podatke.
+
+![Postavke veze s uključenom opcijom Koristi postavke veze Nightscouta](../images/v4/Tidepool/tidepool_connection_settings.png) ![Zasebne postavke veze za Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+
+Za dodatnu pomoć o tome kako koristiti svoje podatke nakon što su preneseni u Tidepool posjetite: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
 
 (tidepool-menu)=
-## The Tidepool buttons
+## Gumbi za Tidepool
 
-In the top-right corner of the Tidepool screen:
+U gornjem desnom kutu zaslona Tidepool:
 
-- The **Login** or **Logout** icon — connect to or disconnect from your Tidepool account. Only one of them is shown: **Login** while you are logged out, **Logout** while you are logged in. **AAPS** asks you to confirm before it logs you out.
-- The gear icon — the Tidepool settings.
+- Ikona **Prijava** ili **Odjava** — spajanje na vaš Tidepool račun ili odspajanje s njega. Prikazuje se samo jedna od njih: **Prijava** dok ste odjavljeni, **Odjava** dok ste prijavljeni. **AAPS** traži potvrdu prije nego što vas odjavi.
+- Ikona zupčanika — postavke Tidepoola.
 
-The buttons at the bottom of the Tidepool screen:
+Gumbi na dnu zaslona Tidepool:
 
-- "**Upload now**" — upload new data straight away instead of waiting for the next automatic upload.
-- "**Full synchronization**" — upload all data stored in **AAPS** again.
-- "**Purge all data**" — delete **all** data that **AAPS** has uploaded to your Tidepool account. This cannot be undone. Use it only to remove wrong or duplicate data, then run "**Full synchronization**" to upload your data again.
-- "**Clear log**" — empty the log shown on the Tidepool screen.
+- „**Pošalji sada**“ — odmah prenosi nove podatke, umjesto čekanja na sljedeći automatski prijenos.
+- „**Potpuna sinkronizacija**“ — ponovno prenosi sve podatke spremljene u **AAPS-u**.
+- „**Izbriši sve podatke**“ — briše **sve** podatke koje je **AAPS** prenio na vaš Tidepool račun. To se ne može poništiti. Koristite to samo za uklanjanje pogrešnih ili dvostrukih podataka, a zatim pokrenite „**Potpuna sinkronizacija**“ kako biste ponovno prenijeli svoje podatke.
+- „**Očisti dnevnik**“ — prazni dnevnik prikazan na zaslonu Tidepool.
 
-![The Tidepool screen and its buttons](../images/v4/Tidepool/tidepool_menu.png)
+![Zaslon Tidepool i njegovi gumbi](../images/v4/Tidepool/tidepool_menu.png)
 
-In Tidepool, the data uploaded by **AAPS** 4 is shown under the device name **AAPS**. See [What changed in AAPS v4](#v4changes-tidepool) if you used Tidepool with an older version. 
+U Tidepoolu se podaci koje je prenio **AAPS** 4 prikazuju pod nazivom uređaja **AAPS**. Ako ste Tidepool koristili sa starijom verzijom, pogledajte [Što se promijenilo u AAPS-u v4](#v4changes-tidepool). 
