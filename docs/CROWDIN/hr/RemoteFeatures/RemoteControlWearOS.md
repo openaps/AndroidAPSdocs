@@ -287,7 +287,7 @@ Ako je **AAPS** morao ograničiti dozu, na primjer zato što je izračunati bolu
     | --- | --- | --- | --- | --- | --- |
     | ![Dijalog Tretman, stranica inzulina](../images/wearos/dialogs/dialog_treatment.png) | ![Dijalog Inzulin](../images/wearos/dialogs/dialog_insulin.png) | ![Dijalog UH](../images/wearos/dialogs/dialog_carbs.png) | ![Dijalog eUH](../images/wearos/dialogs/dialog_ecarbs.png) | ![Dijalog Privremeni cilj, stranica trajanja](../images/wearos/dialogs/dialog_temp_target.png) | ![Dijalog Zamjena profila](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] U izborniku sata **Postavke** > **Sučelje** uključite **Postotak kalkulatora** da bi se u bolus kalkulatoru prikazao unos postotka. The default percentage comes from the phone's ["Bolus percentage"](#Preferences-deliver-this-part-of-bolus-wizard-result). Ostale postavke kalkulatora su one na telefonu u **Postavke** > **Postavke bolus kalkulatora**.
+    [1] U izborniku sata **Postavke** > **Sučelje** uključite **Postotak kalkulatora** da bi se u bolus kalkulatoru prikazao unos postotka. Zadani postotak dolazi iz postavke telefona [„Postotak bolusa“](#Preferences-deliver-this-part-of-bolus-wizard-result). Ostale postavke kalkulatora su one na telefonu u **Postavke** > **Postavke bolus kalkulatora**.
     
     [2] U izborniku sata **Postavke** > **Sučelje** uključite **Vrsta obroka u kalkulatoru** da bi se prikazala stranica **Vrsta obroka**, na kojoj birate **Kruh**, **Kolač** ili **Pizza** kako biste ugljikohidrate sporog obroka podijelili na ugljikohidrate sada i eUH kasnije. Pogledajte [Odabir vrste obroka](#WearOsSmartwatch-wizard-meal-type).
     
@@ -309,13 +309,13 @@ Ako je **AAPS** morao ograničiti dozu, na primjer zato što je izračunati bolu
     
     Stavke [Brzog kalkulatora](#quickwizards) s telefona koje imaju uključeno **Prikaži na satu**, unutar svojih sati valjanosti. Stavka s ugljikohidratima prikazuje svoje ugljikohidrate u g, stavka s inzulinom svoju fiksnu dozu u J. Dodir pokreće stavku nakon potvrde na satu. Na satu nema ništa za postaviti: stavke uredite na telefonu i uključite **Prikaži na satu** pod **Odabir uređaja** za svaku stavku koju želite na pločici. Izvan sati valjanosti svih vaših stavki pločica prikazuje **Konfiguracija nije dostupna**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/wearos/quickwizard_watch_phone.png)
+    ![Stavka Brzog kalkulatora s uključenim Prikaži na satu i pločica na kojoj se pojavljuje](../images/wearos/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Pločica Scena
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![Pločica Scena](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. U postavkama pločice svako od četiriju mjesta postavlja se na **Automatski**, **Nijedan** ili na jednu scenu. Mjesto postavljeno na **Automatski** uzima sljedeću scenu s popisa na telefonu koju nije zauzelo nijedno drugo mjesto. Mjesto postavljeno na scenu koja više ne postoji na telefonu prikazuje **Nedostupno**.
+    [Scene](#scenes-from-watch) s telefona. U postavkama pločice svako od četiriju mjesta postavlja se na **Automatski**, **Nijedan** ili na jednu scenu. Mjesto postavljeno na **Automatski** uzima sljedeću scenu s popisa na telefonu koju nije zauzelo nijedno drugo mjesto. Mjesto postavljeno na scenu koja više ne postoji na telefonu prikazuje **Nedostupno**.
     
     ![Postavke pločice Scena, četiri mjesta postavljena na Automatski](../images/wearos/tiles/tile_settings_scene.png)
     
@@ -357,21 +357,21 @@ Ako je **AAPS** morao ograničiti dozu, na primjer zato što je izračunati bolu
     
     Pojednostavljeno sučelje dostupno je za Watchfaceove Digital Style i prilagođene Watchfaceove. Pojednostavljeno sučelje nije obavezno i postavlja se u postavkama Watchfacea (dugo pritisnite Watchface i dodirnite „uredi“ ili ikonu zupčanika). Odaberite postavku „Pojednostavi korisničko sučelje“ i postavite je na „Tijekom punjenja“ ili „Stalno uključen zaslon i punjenje“.
     
-    Opcije za razvojne programere u Androidu omogućuju da sat ostane budan tijekom punjenja. Kako biste omogućili opcije za razvojne programere, pogledajte [službenu dokumentaciju](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options.
+    Opcije za razvojne programere u Androidu omogućuju da sat ostane budan tijekom punjenja. Kako biste omogućili opcije za razvojne programere, pogledajte [službenu dokumentaciju](https://developer.android.com/training/wearables/get-started/debugging). U opcijama za razvojne programere uključite „Ne isključuj zaslon“ (Stay awake when charging).
     
     Napomena: ne podnose svi zasloni dobro stalno uključen prikaz. To može uzrokovati trajno urezivanje slike (burn-in), osobito na starijim OLED zaslonima. Satovi obično zatamnjuju zaslon kako bi spriječili urezivanje slike; savjet potražite u korisničkom priručniku, kod proizvođača ili na internetu.
     
-    ![Watchface Nightstand](../images/wearos/Watchface_nightstand.jpg)
+    ![Watchface za noćni ormarić](../images/wearos/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/wearos/Watchface_simplified_ui.png)
+    ![Pojednostavljeno sučelje](../images/wearos/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Alarmi telefona na satu
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![Alarm telefona na satu](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. Sat vibrira, i ponovno svakih pola minute tijekom pet minuta, dok ne odgovorite. Obavijest prikazuje naslov i tekst alarma, s istim odgovorima kao podsjetnik [Vrijeme za jelo](#WearOsSmartwatch-wizard-carb-time):
+    Sat prikazuje alarme telefona, tako da vidite zašto telefon zvoni i možete odgovoriti sa zapešća. Sat vibrira, i ponovno svakih pola minute tijekom pet minuta, dok ne odgovorite. Obavijest prikazuje naslov i tekst alarma, s istim odgovorima kao podsjetnik [Vrijeme za jelo](#WearOsSmartwatch-wizard-carb-time):
     
     * **Utišaj** ili povlačenje u stranu: alarm prestaje, a zaslon alarma na telefonu se zatvara.
     * **Utišaj 5 min**: alarm prestaje i ponovno zvoni nakon pet minuta, na telefonu i na satu.
@@ -385,7 +385,7 @@ Ako je **AAPS** morao ograničiti dozu, na primjer zato što je izračunati bolu
     
     ## Prečac za odgodu upozorenja
     
-    Sat sam [prikazuje alarm](#WearOsSmartwatch-phone-alarms); prečac je drugi način da ga utišate, jednim pritiskom. Moguće je izraditi prečac za odgodu upozorenja/alarma AAPS-a. Isključivanje zvuka putem sata praktično je i brže jer ne morate posegnuti za telefonom. Note: you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. Ako vaš sat ima dva gumba, jednu tipku možete dodijeliti programu `AAPS Snooze Alert`.
+    Sat sam [prikazuje alarm](#WearOsSmartwatch-phone-alarms); prečac je drugi način da ga utišate, jednim pritiskom. Moguće je izraditi prečac za odgodu upozorenja/alarma AAPS-a. Isključivanje zvuka putem sata praktično je i brže jer ne morate posegnuti za telefonom. Napomena: i dalje morate provjeriti poruku alarma na telefonu i postupiti u skladu s njom, ali to možete učiniti kasnije. Ako vaš sat ima dva gumba, jednu tipku možete dodijeliti programu `AAPS Snooze Alert`.
     
     Da biste povezali gumb na satu Samsung Watch 4, idite na `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
@@ -400,7 +400,7 @@ Ako je **AAPS** morao ograničiti dozu, na primjer zato što je izračunati bolu
     
     Satovi s Wear OS-om uređaji su s vrlo ograničenom energijom. Veličina kućišta sata ograničava kapacitet ugrađene baterije. Unatoč nedavnom napretku hardvera i softvera, satove s Wear OS-om i dalje treba puniti svaki dan.
     
-    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    Ako baterija traje kraće od jednog dana (od jutra do večeri), evo nekoliko savjeta za rješavanje problema.
     
     Glavni potrošači baterije su:
     
@@ -435,7 +435,7 @@ Ako je **AAPS** morao ograničiti dozu, na primjer zato što je izračunati bolu
     
     Ako želite izraditi vlastiti Watchface, slijedite [ove upute](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into GitHub. Pri spajanju zahtjeva za povlačenje (pull request) tim za dokumentaciju izdvojit će datoteku CustomWatchface.png i dodati joj naziv Zip-datoteke kao prefiks.
+    Kada izradite prilagođeni Watchface, svoj prilagođeni Watchface za **AAPS** možete podijeliti s drugima: Zip-datoteku možete prenijeti u mapu „ExchangeSiteCustomWatchfaces“ putem zahtjeva za povlačenje (Pull Request) na GitHubu. Pri spajanju zahtjeva za povlačenje (pull request) tim za dokumentaciju izdvojit će datoteku CustomWatchface.png i dodati joj naziv Zip-datoteke kao prefiks.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
