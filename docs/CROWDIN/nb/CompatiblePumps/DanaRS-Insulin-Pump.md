@@ -38,7 +38,7 @@
 
 * På pumpeskjermen trykker du på **Sammenkobling**. **AAPS** søker etter pumper i nærheten.
 
-* Trykk på oppføringen for pumpen din i listen.
+* Tap the entry for your pump in the list. If your phone still has an old Bluetooth pairing with this pump (for example after the pump was unpaired on the pump itself, or paired with another phone), **AAPS** removes it first and starts a new pairing. You do not need to remove the pump in the Android Bluetooth settings.
     
     ![Sammenkoblingsskjermen med en Dana-pumpe som søket fant](../images/DanaRS_i_Pairing.png)
 
