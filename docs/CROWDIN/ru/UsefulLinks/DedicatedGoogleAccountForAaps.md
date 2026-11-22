@@ -7,8 +7,8 @@
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
 
-- Dedicated Google Drive space means you will not risk filling up your personal Google Drive limit with **Export settings**.
-- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. Если ваш ПК или телефон украдут, вы его потеряете или он сломается, доступ у вас все равно останется.
+- Отдельное место на Google Диске означает, что **Экспорт настроек** не заполнит лимит вашего личного Google Диска.
+- Каждая версия **AAPS** (и вспомогательных приложений, таких как xDrip, BYODA и др.) будет храниться в одном месте, которое не зависит от вашего компьютера. Если ваш ПК или телефон украдут, вы его потеряете или он сломается, доступ у вас все равно останется.
 - By harmonizing the setup, it will make online support simpler across users with similar folder structure.
 - В зависимости от настройки (см. ниже) у вас будет отдельное имя (псевдоним) для общения в сообществе, которое может защитить вашу личную информацию. 
 - Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
@@ -23,7 +23,7 @@
 
 Требования:
 
-* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. Оба компонента должны иметь все последние обновления безопасности, доступ в интернет и права администратора, так как некоторые шаги требуют загрузки и установки программ.
+* У вас есть ПК с Windows (Windows 10 или новее) и телефон Android (Android 12 или новее), на котором будет работать приложение **AAPS**. Оба компонента должны иметь все последние обновления безопасности, доступ в интернет и права администратора, так как некоторые шаги требуют загрузки и установки программ.
 * На телефоне Android уже настроен ваш личный «повседневный» адрес электронной почты, например учетная запись Gmail.
 
 ```{admonition} Things to consider when setting up your new account
@@ -39,19 +39,19 @@
 
 ```{admonition} Video Walkthrough!
 :class: note
-Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+Нажмите [здесь](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>), чтобы посмотреть видео о том, как создать отдельную учетную запись Google.
 ```
 
  В этом видео показаны шаги:
 
 В этом примере: 
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
+- Ваша существующая «_повседневная_» учетная запись Google – <donald.muck42@gmail.com>; ![](../images/Building-the-App/building_0002.png)
 - Ваша новая учетная запись Gmail для «_AAPS_» будет: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 
-### Go to <https://myaccount.google.com> 
+### Перейдите на <https://myaccount.google.com> 
 
- Если вы уже вошли в Google, вы попадете на страницу **My Account** своей «повседневной» учетной записи. (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)) (2) select “_add another account_”.
+ Если вы уже вошли в Google, вы попадете на страницу **My Account** своей «повседневной» учетной записи. (1) Нажмите вверху справа на изображение своего профиля (в этом случае это просто ![](../images/Building-the-App/building_0002.png)) (2) выберите «_add another account_» (добавить аккаунт).
 
 ![](../images/Building-the-App/building_0005.png)
 
@@ -87,7 +87,7 @@ Gmail покажет имя аккаунта. Вас попросят приня
 
 ### Настройте отображение нового профиля
 
-Теперь вы должны быть на странице MyAccount в Gmail, где показана ваша новая учетная запись электронной почты для **AAPS**. По умолчанию изображение профиля будет установлено на первую букву вашего имени. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png).
+Теперь вы должны быть на странице MyAccount в Gmail, где показана ваша новая учетная запись электронной почты для **AAPS**. По умолчанию изображение профиля будет установлено на первую букву вашего имени. Измените его на что-то уникальное, чтобы не путаться… в этом примере Donald.Muck.AAPS заменил ![](../images/Building-the-App/building_0002.png) на ![](../images/Building-the-App/building_0003.png).
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -101,7 +101,7 @@ Gmail покажет имя аккаунта. Вас попросят приня
 2. Нажмите правой кнопкой мыши на значок браузера на панели задач
 3. В меню выберите «New Window» (новое окно)... и расположите его так, чтобы оно занимало только нижнюю половину экрана.
 
-Откройте <https://gmail.com> в каждом окне браузера. Убедитесь, что ваша личная учетная запись открыта вверху, а новая учетная запись для **AAPS** – внизу, и ее легко узнать по изображению профиля в правом верхнем углу. If needed, you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Откройте <https://gmail.com> в каждом окне браузера. Убедитесь, что ваша личная учетная запись открыта вверху, а новая учетная запись для **AAPS** – внизу, и ее легко узнать по изображению профиля в правом верхнем углу. При необходимости вы всегда можете переключить учетную запись: нажмите на изображение профиля и выберите нужную.
 
 ![](../images/Building-the-App/building_0009.png)
 
