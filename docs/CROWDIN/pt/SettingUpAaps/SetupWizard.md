@@ -182,7 +182,7 @@ Quando terminar, toque em "**SEGUINTE**" para ir para o ecrã seguinte.
 
 Este ecrã só é mostrado quando o **AAPS** encontra definições exportadas antes na pasta do **AAPS** ("Definições armazenadas encontradas"), por exemplo quando reinstala a app ou muda para um telefone novo.
 
-- Para restaurar a sua configuração anterior, toque em "**Importar definições**" — consulte [Criar e restaurar cópias de segurança](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Para começar com uma configuração nova, toque em "**SEGUINTE**" e continue com o assistente.
 
 ![Importar definições](../images/setup-wizard/Wizard-ImportSettings.png)
