@@ -41,7 +41,7 @@ Wear apk odgovara [varijanti](#browserbuild-variant) koju ste odabrali za izradu
 
 Gdje pronaći Wear apk:
 
-- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Preuzmite ga na telefon na kojem radi **AAPS** ako aplikaciju za sat instalirate s telefona (Wear Installer 2 ili Easy Fire Tools), ili na računalo ako koristite ADB.
+- **AAPS Builder**: na stranici izrade pomaknite se dolje do **Artifacts** i preuzmite `aaps-wear-….apk` pokraj aplikacije za telefon, kako je prikazano u odjeljku [Korak 5 – Instalirajte aplikaciju na telefon](#aaps-builder-step5). Preuzmite ga na telefon na kojem radi **AAPS** ako aplikaciju za sat instalirate s telefona (Wear Installer 2 ili Easy Fire Tools), ili na računalo ako koristite ADB.
 
   ![Artifacts s aplikacijama za telefon i sat](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
