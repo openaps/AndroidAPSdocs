@@ -27,7 +27,7 @@ Ako ste vi (ili vaš pratitelj s **AAPSClientom**) još sinkronizirali sa starim
 - Unesite svoj **Nightscout URL** i **pristupni token** (NSClientV3 koristi pristupni token, *ne* staru API tajnu – pogledajte [izrada tokena](https://nightscout.github.io/nightscout/security/#create-a-token)).
 - Vaša Nightscout stranica mora podržavati **API v3** (Nightscout 15 ili noviji).
 - Ako koristite **websockets**, uključite ih ili isključite na **oba** uređaja, na glavnom uređaju i kod pratitelja – nikada samo na jednom.
-- Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Websockets su **obavezni** za daljinsko upravljanje s **AAPSClienta**, na oba telefona.
 ```
 
 To mijenja samo način na koji aplikacija komunicira s Nightscoutom; vaši podaci na Nightscoutu ostaju isti.
