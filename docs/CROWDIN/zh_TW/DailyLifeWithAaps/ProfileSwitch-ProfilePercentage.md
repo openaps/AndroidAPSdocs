@@ -60,7 +60,7 @@
 
 ![設定檔畫面 — 設定檔輪播、詳細資料和操作列](../images/v4/Profiles/profile_manage.png)
 
-畫面底部的按鈕會對**選取的**設定檔執行操作：**➕ 新增**、**✏️ 編輯**、**⧉ 複製**和**🗑️ 刪除**；右側則是圓形的**▶ 啟用**按鈕。如需了解如何在編輯器中填寫四個時程表（IC／ISF／BAS／TARG），請參閱[建立及編輯設定檔](#your-aaps-profile-create-and-edit-profiles)。
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. 如需了解如何在編輯器中填寫四個時程表（IC／ISF／BAS／TARG），請參閱[建立及編輯設定檔](#your-aaps-profile-create-and-edit-profiles)。
 
 **⧉ 複製**使用常見的雙方塊複製圖示，但不需要貼上；點選後就會立即建立副本。確認是否要*複製設定檔「Normal」*後，新的設定檔「Normal copy」就會新增至輪播末端並自動選取，供你**✏️ 編輯**（也可以重新命名）。這和從治療記錄中複製過去的**設定檔切換**不同；複製過去的設定檔切換會建立一個**已套用百分比和時間偏移**的新設定檔。請參閱[保留設定檔切換供日後使用](#ProfileSwitch-keep-for-later)。
 
