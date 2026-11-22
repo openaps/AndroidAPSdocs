@@ -4,7 +4,7 @@
 
 Postupak opisan u nastavku vrijedi samo za pumpe s cijevi. Ne vrijedi za pumpe bez katetera kao što su Omnipod, Medtrum Nano, Accu-Chek Solo itd. Ovaj postupak se ponekad naziva „promjena seta“. „Potpuna“ promjena seta uključuje spremnik inzulina i kanilu, a „djelomična“ promjena seta znači promjenu samo kanile.
 
-Pumpe bez katetera same se pune u svom čarobnjaku za aktivaciju, a njihova kanila je već u tijelu. **AAPS** za njih ne nudi punjenje: **Punjenje** se ne prikazuje na ploči **Upravljanje** ni u brzom pokretanju. Pogledajte stranicu svoje pumpe u [Kompatibilne pumpe](../Getting-Started/CompatiblePumps.md).
+Pumpe bez katetera same se pune u svom čarobnjaku za aktivaciju, a njihova kanila je već u tijelu. **AAPS** za njih ne nudi punjenje: **Punjenje** se ne prikazuje na ploči **Upravljanje** ni u brzom pokretanju. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Pogledajte stranicu svoje pumpe u [Kompatibilne pumpe](../Getting-Started/CompatiblePumps.md).
 
 Fizička zamjena uloška/spremnika ne može se obaviti putem **AAPS**-a, nego se mora obaviti izravno na pumpi. Nakon toga te promjene morate ručno zabilježiti u **AAPS**-u.
 
@@ -31,6 +31,7 @@ Fizička zamjena uloška/spremnika ne može se obaviti putem **AAPS**-a, nego se
 * Zadane količine za punjenje možete postaviti/prilagoditi u postavkama **Punjenje** — upišite „prime“ u traku za pretraživanje na glavnom zaslonu da ih otvorite (pogledajte [Postavke](../SettingUpAaps/Preferences.md)). U uputama u kutiji s kanilama pogledajte koliko jedinica (ovisno o duljini igle i duljini cijevi) treba upotrijebiti za punjenje vaše kanile.
 
 * Inzulin isporučen funkcijom punjenja **AAPS** ne uzima u obzir pri izračunu aktivnog inzulina (IOB), a u [Povijesti tretmana](#aaps-screens-treatments) označen je kao „Punjenje katetera“.
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * **AAPS** također ne uzima u obzir inzulin koji je dan bolusom iz pumpe dok je pumpa bila odspojena. Ako date bolus izravno iz pumpe dok je **AAPS** odspojen, nakon ponovnog spajanja pumpe možete taj inzulin zabilježiti (bez davanja bolusa) u dijalogu **Inzulin** (pogledajte [Kako zabilježiti isporučeni inzulin bez stvarnog davanja bolusa](#pumps-cannulas-announce-insulin) u nastavku).
 
