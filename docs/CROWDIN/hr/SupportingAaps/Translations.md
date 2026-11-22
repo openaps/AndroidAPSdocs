@@ -1,6 +1,6 @@
 # Kako prevesti tekstove aplikacije AAPS ili dokumentacije
 
-* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
+* Za tekstove koji se koriste u aplikaciji idite na <https://crowdin.com/project/androidaps> i prijavite se svojim GitHub računom
 * Za dokumentaciju posjetite <https://crowdin.com/project/androidapsdocs> i prijavite se svojim GitHub računom
 
 * Pošaljite zahtjev za pridruživanje timu za dokumentaciju. Za to kliknite zastavu željenog jezika, a zatim gumb „Join“ u gornjem desnom kutu sljedeće stranice. Navedite jezik, napišite nešto o sebi i svom iskustvu s AAPS-om te želite li biti prevoditelj ili lektor (samo osobe vješte u prevođenju + napredni korisnici AAPS-a).
@@ -63,8 +63,8 @@ Odobrenje se radi ručno. Kao neprofitna organizacija ne jamčimo rokove (SLA), 
     
         1. Ovo je prijevod koji pripremate. Možete kopirati tekst odozgo ili odabrati jedan od prijedloga ispod.
     
-        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
-        1. Pritisnite gumb „save“ kako biste spremili prijedlog prijevoda. It will then be passed to a proofreader for final check.
+        1. Ovo su prijedlozi za prijevod. Posebno možete vidjeti koliko Crowdin ocjenjuje da prijedlog odgovara, ili je li tekst već bio preveden i vratio se samo zato što je premješten, a ne promijenjen.
+        1. Pritisnite gumb „save“ kako biste spremili prijedlog prijevoda. Zatim će se proslijediti lektoru na završnu provjeru.
     
     ![Prevođenje dokumentacije](../images/translation_WikiTranslate.png)
     
@@ -72,7 +72,7 @@ Odobrenje se radi ručno. Kao neprofitna organizacija ne jamčimo rokove (SLA), 
     
         1. prijevod je lektoriran
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates a PR for GitHub.
+        1. sinkronizacija između Crowdina i GitHuba je završena (jednom na sat) i ona izradi PR za GitHub.
     
         1. PR na GitHubu je odobren.
     
@@ -83,11 +83,11 @@ Odobrenje se radi ručno. Kao neprofitna organizacija ne jamčimo rokove (SLA), 
     ```{admonition} Poveznice se više ne prevode
     :class: note
     
-    Poveznice se više ne prevode. In the past we had a topic here but this is gone as through migration to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Poveznice se više ne prevode. Ovdje je prije bila tema o tome, ali više je nema: s prelaskom na Markdown i myst_parser u engleskom tekstu izričito izrađujemo oznake (labels) i one se u pozadini prenose u druge jezike.
     
     
 
-Prevodite tekst koji predstavlja poveznicu. Please be careful **not** to remove the link, which is represented by a pair of `<0></0>` tags (or other numbers, if there are more links in one paragraph).
+Prevodite tekst koji predstavlja poveznicu. Pazite da **ne** uklonite poveznicu, koja je prikazana parom oznaka `<0></0>` (ili drugim brojevima, ako je u odlomku više poveznica).
 
 Lektori na to moraju posebno paziti!
 
@@ -101,4 +101,4 @@ Lektori na to moraju posebno paziti!
     
     ![odobravanje teksta](../images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Kako biste ubrzali postupak, možete obavijestiti tim za dokumentaciju o novim prijevodima.
+* Kada lektor odobri prijevod, on će biti dodan u sljedeću izradu dokumentacije. Ona se radi po potrebi, bez stalnog rasporeda, ali otprilike jednom tjedno, osim tijekom praznika. Kako biste ubrzali postupak, možete obavijestiti tim za dokumentaciju o novim prijevodima.
