@@ -131,7 +131,7 @@ Nakon svakog odabira potrebna je potvrda.
 
 Morate otkriti zašto dobivate dvostruke vrijednosti GUK-a:
 
-* Je li Dexcom bridge omogućen na vašoj Nightscout stranici? Onemogućite bridge: otvorite administracijsku ploču svoje Nightscout instance, uredite varijablu "enable" i uklonite iz nje dio "bridge". (For Heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Je li Dexcom bridge omogućen na vašoj Nightscout stranici? Onemogućite bridge: otvorite administracijsku ploču svoje Nightscout instance, uredite varijablu "enable" i uklonite iz nje dio "bridge". (Za Heroku [detalji se mogu naći ovdje](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Šalje li više izvora vaš GUK u Nightscout? Ako koristite aplikaciju BYODA, omogućite slanje podataka u **AAPS**, ali ga ne omogućujte u xDripu, ako ga koristite.
 * Imate li pratitelje koji primaju vaš GUK, ali ga ponovno šalju na vašu Nightscout stranicu?
 * Posljednja mogućnost: u [postavkama NSClienta](#Preferences-nsclient) odaberite postavke sinkronizacije i onemogućite opciju „Primaj CGM podatke iz NS-a“.
@@ -247,7 +247,7 @@ Ako je prijeđen prag upozorenja, vrijednosti se prikazuju žutom bojom.
 
 Ako je prijeđen kritični prag, vrijednosti se prikazuju crvenom bojom.
 
-The age is always shown in its short form, whatever the screen size: *4h* on the first day, *3d4h* later.
+Starost se uvijek prikazuje u kratkom obliku, bez obzira na veličinu zaslona: *4h* prvog dana, *3d4h* kasnije.
 
 Pragovi se mogu promijeniti preko male ikone **Postavke** koja se prikazuje kada je redak statusa **proširen** (strelica desno) — pogledajte [Statusna svjetla](#Preferences-status-lights).
 
@@ -308,11 +308,11 @@ Isto radi i na [dodatnim grafovima](#aaps-screens-additional-graphs) ispod grafa
 
 (aaps-screens-graph-clock-change)=
 
-#### Clock changes
+#### Promjene sata
 
-When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
+Kada je sat telefona skočio, kod promjene ljetnog računanja vremena ili u novoj vremenskoj zoni, isprekidana okomita linija označava taj trenutak na grafu GUK-a, s malom ikonom sata na dnu. Ista isprekidana linija prolazi kroz [dodatne grafove](#aaps-screens-additional-graphs) ispod.
 
-![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+![Oznaka promjene sata: isprekidana linija s ikonom sata, pokraj linije „sada“](../images/main/graph_clock_change.png)
 
 (AapsScreens-activate-optional-information)=
 
@@ -342,7 +342,7 @@ Kada je **PRED** uključen, AAPS crta svoja predviđanja kao **točkaste linije*
 
 Kada dva predviđanja daju iste vrijednosti, njihove se točke preklapaju i vidite samo jednu od boja (na primjer, UAM preko IOB kada je GUK ravan).
 
-* **COB** line (orange): [carbs on board](CobCalculation.md) (orange is used throughout AAPS for COB and carbs)
+* Linija **COB** (narančasta): [aktivni ugljikohidrati](CobCalculation.md) (narančasta se u cijelom AAPS-u koristi za aktivne ugljikohidrate i ugljikohidrate)
     
     Ova linija predviđanja pokazuje kamo će ići vaš GUK (ne kamo će ići sami aktivni ugljikohidrati!) na temelju trenutnih postavki **profila**, uz pretpostavku da odstupanja zbog apsorpcije ugljikohidrata ostanu ista. Ova linija se prikazuje samo ako postoje poznati aktivni ugljikohidrati (COB).
 
@@ -364,7 +364,7 @@ Kada dva predviđanja daju iste vrijednosti, njihove se točke preklapaju i vidi
 
 * Linija **aCOB** (blijeda, prozirna narančasta): ubrzana apsorpcija ugljikohidrata
     
-    Similar to COB, but assuming a static 10 mg/dL/5m (0.555 mmol/L/5m) carb absorption rate. Zastarjelo i ograničene korisnosti.
+    Slično kao COB, ali uz pretpostavku stalne brzine apsorpcije ugljikohidrata od 10 mg/dL/5m (0,555 mmol/L/5m). Zastarjelo i ograničene korisnosti.
     
     *Ova linija se prikazuje samo kada se koristi stariji algoritam [AMA](#Config-Builder-aps).*
 
@@ -422,9 +422,9 @@ Novi graf dodaje se ispod ostalih — ovdje drugi dodatni graf sa **SENS%** i **
 
 Većini korisnika dovoljna je sljedeća konfiguracija dodatnih grafova:
 
-* Graph 1 with IOB, BAS
-* Graph 2 with COB, Sensitivity change
-* Graph 3 with Deviations and BGI.
+* Graf 1 s aktivnim inzulinom (IOB) i bazalom (BAS)
+* Graf 2 s aktivnim ugljikohidratima (COB) i promjenom osjetljivosti
+* Graf 3 s odstupanjima i BGI.
 
 #### Apsolutni inzulin (ABS)
 
@@ -470,7 +470,7 @@ Prikazuje osjetljivost koju izračunava [DynamicISF](../DailyLifeWithAaps/Dynami
 
 Ovi podaci mogu biti dostupni kada koristite [pametni sat s Wear OS-om](../WearOS/WearOsSmartwatch.md). Omogućite ih u aplikaciji **AAPS** za Wear OS i dajte dopuštenje za zdravstvene podatke.
 
-Steps are drawn as columns, and the heart rate as a curved line that breaks where the watch sent no data.
+Koraci se crtaju kao stupci, a otkucaji srca kao zakrivljena linija koja se prekida gdje sat nije poslao podatke.
 
 #### Odstupanja (DEV)
 
@@ -486,7 +486,7 @@ Ova linija pokazuje koliko bi GUK „trebao“ rasti ili padati samo na temelju 
 
 ![Odstupanja i BGI](../images/main/graph_dev_bgi.png)
 
-Dobro je ovu liniju prikazati zajedno sa stupcima odstupanja. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Usporedba linije BGI i stupaca odstupanja još je jedan način da razumijete kako se **GUK** mijenja. Ovdje su, u trenutku označenom s **1**, stupci odstupanja znatno iznad linije BGI: GUK raste više nego što objašnjava sama aktivnost inzulina (na primjer nakon ugljikohidrata). U trenutku označenom s **2** stupci odstupanja su ispod nule (crveni): GUK je niži nego što je algoritam očekivao.
+Dobro je ovu liniju prikazati zajedno sa stupcima odstupanja. Imaju istu ljestvicu, ali drugačiju od ostalih dodatnih podataka, pa ih je dobro prikazati na zasebnom grafu, kao što je prikazano gore. Usporedba linije BGI i stupaca odstupanja još je jedan način da razumijete kako se **GUK** mijenja. Ovdje su, u trenutku označenom s **1**, stupci odstupanja znatno iznad linije BGI: GUK raste više nego što objašnjava sama aktivnost inzulina (na primjer nakon ugljikohidrata). U trenutku označenom s **2** stupci odstupanja su ispod nule (crveni): GUK je niži nego što je algoritam očekivao.
 
 ### Odjeljak F - Alatna traka Brzo pokretanje
 
@@ -508,13 +508,13 @@ Za davanje određene količine inzulina bez korištenja [bolus kalkulatora](#aap
 
 Ako omogućite **Pokreni privremeni cilj Prije obroka**, možete automatski pokrenuti svoj [privremeni cilj Prije obroka](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only (not delivered by pump)**". Dodatni redak **Vrijeme**, postavljen na **Sada**, omogućuje vam da zabilježite injekciju inzulina danu u prošlosti: koristite **-** / **+** da ga promijenite ili dodirnite strelicu da upišete minute ili odaberete datum i vrijeme.
+Ako ne želite dati bolus putem pumpe, nego samo zabilježiti količinu inzulina (npr. inzulin dan inzulinskom olovkom), omogućite „**Bolus će biti samo zabilježen (neće biti isporučen putem pumpe)**“. Dodatni redak **Vrijeme**, postavljen na **Sada**, omogućuje vam da zabilježite injekciju inzulina danu u prošlosti: koristite **-** / **+** da ga promijenite ili dodirnite strelicu da upišete minute ili odaberete datum i vrijeme.
 
 ![Redak Vrijeme, sklopljen](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Redak Vrijeme, otvoren strelicom](../images/v4/Screens/insulin_dialog_time_open.png)
 
 Gumbima **+0.5 / +1.0 / +2.0** možete brzo povećati količinu inzulina. Vrijednosti povećanja mogu se promijeniti u [postavkama bolus kalkulatora](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-Dijalog Inzulin može se koristiti i kada je pumpa suspendirana ili odspojena, npr. za bilježenje inzulina danog inzulinskom olovkom. In this case, "**Bolus will be recorded only (not delivered by pump)**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
+Dijalog Inzulin može se koristiti i kada je pumpa suspendirana ili odspojena, npr. za bilježenje inzulina danog inzulinskom olovkom. U tom slučaju opcija „**Bolus će biti samo zabilježen (neće biti isporučen putem pumpe)**“ je prisilno uključena (prikazana crvenom bojom), a pojavljuju se dodatna polja za odabir vrste inzulina i pomaka **Vrijeme** za injekciju danu u prošlosti:
 
 ![Dijalog Inzulin s odspojenom pumpom](../images/main/insulin_dialog_pump_disconnected.png)
 
@@ -528,7 +528,7 @@ Određeni [unaprijed postavljeni privremeni ciljevi](#TempTargets-hypo-temp-targ
 
 **Vrijeme ugljikohidrata**: kada ćete jesti ili kada ste jeli ugljikohidrate.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs.md). Ovaj redak je sklopljen da u njega greškom ne upišete grame: koristite **-** / **+** da ga promijenite ili dodirnite strelicu da ga otvorite i upišete vrijednost.
+**Trajanje**: koristi se za [„produžene ugljikohidrate“](ExtendedCarbs.md). Ovaj redak je sklopljen da u njega greškom ne upišete grame: koristite **-** / **+** da ga promijenite ili dodirnite strelicu da ga otvorite i upišete vrijednost.
 
 Gumbima **+5 / +10 / +20** možete brzo povećati količinu ugljikohidrata.
 
@@ -591,7 +591,7 @@ Redak ikona ispod zaglavlja pokazuje koji ulazni podaci ulaze u izračun (GUK, t
 * Iz sigurnosnih razloga aktivni inzulin ne može se isključiti kada su uključeni aktivni ugljikohidrati, jer biste riskirali previše inzulina ako **AAPS** ne uzima u obzir ono što je već dano.
 * Ako uključite aktivne ugljikohidrate i aktivni inzulin, uzimaju se u obzir neapsorbirani ugljikohidrati koji još nisu pokriveni inzulinom + sav inzulin koji je isporučen kao privremeni bazal ili SMB.
 * Ako uključite aktivni inzulin bez aktivnih ugljikohidrata, **AAPS** uzima u obzir već isporučeni inzulin, ali ga neće oduzeti od ugljikohidrata koji se još trebaju apsorbirati. To dovodi do obavijesti o „nedostajućim ugljikohidratima“.
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Na taj način dodaju se samo novi ugljikohidrati, jer glavni obrok neće nužno biti apsorbiran, pa aktivni inzulin neće točno odgovarati aktivnim ugljikohidratima ubrzo nakon bolusa za obrok.
+* Ako dajete bolus za **dodatnu hranu** ubrzo nakon bolusa za obrok (npr. dodatni desert), može biti korisno **isključiti sve ulazne podatke**. Na taj način dodaju se samo novi ugljikohidrati, jer glavni obrok neće nužno biti apsorbiran, pa aktivni inzulin neće točno odgovarati aktivnim ugljikohidratima ubrzo nakon bolusa za obrok.
 * Iz sigurnosnih razloga **privremeni cilj** uključuje se u izračun samo ako ručno uključite njegov ulazni podatak.
 
 (AapsScreens-section-j)=
@@ -620,20 +620,20 @@ Polje **Vrijeme ugljikohidrata** služi za bolus unaprijed (pre-bolus): tako sus
 
 ![Postavljanje alarma za buduće ugljikohidrate](../images/v4/Screens/bolus_wizard_set_alarm.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+Podsjetnik počinje kada je bolus isporučen. Dok traje, traka **Vrijeme za jelo** na glavnom zaslonu odbrojava vrijeme, s gumbima **Zaustavi** i **+5 min**. **+5 min** pomiče kraj čekanja pet minuta kasnije, a traka prikazuje ukupno čekanje. Kada dođe vrijeme, podsjetnik zvoni vlastitim zvukom, kao blaga kuhinjska štoperica. Osim gumba **Utišaj alarm** (zaslon ostaje otvoren) i **Utišaj i zatvori**, zaslon alarma nudi **+5 min**, što pokreće novo čekanje od pet minuta. Kada je zazvonio, na traci piše *Vrijeme je isteklo*, s gumbima **+5 min** i **Odbaci**; **Utišaj i zatvori** uklanja i traku. Traka i alarm prikazuju se i u **AAPSClientu** te na [satu](#WearOsSmartwatch-wizard-carb-time). Podsjetnik ne stvara štopericu u aplikaciji Sat na vašem telefonu. Ako Android ne dopušta **AAPS-u** postavljanje alarma, kalkulator vas traži da u postavkama Androida za **AAPS** dopustite *Alarmi i podsjetnici*. Zvono se ne nudi za vrijeme ugljikohidrata u prošlosti.
 
-![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+![Traka Vrijeme za jelo na glavnom zaslonu, s gumbima +5 min i Zaustavi](../images/main/main_eat_reminder_bar.png)
 
-![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
+![Zaslon alarma Vrijeme za jelo: +5 min, Utišaj alarm, Utišaj i zatvori](../images/main/eat_reminder_alarm.png)
 
-Polje **GUK** obično je već popunjeno zadnjim očitanjem s vašeg CGM-a. Ako nemate CGM koji radi, polje će biti prazno. Kada je očitanje novo, redak **GUK** ostaje sklopljen. The field follows new readings while the wizard is open, until you change it yourself.
+Polje **GUK** obično je već popunjeno zadnjim očitanjem s vašeg CGM-a. Ako nemate CGM koji radi, polje će biti prazno. Kada je očitanje novo, redak **GUK** ostaje sklopljen. Polje prati nova očitanja dok je kalkulator otvoren, sve dok ga sami ne promijenite.
 
-Gumb s rezultatom na dnu prikazuje predloženi bolus; kada ga pritisnete, traži se potvrda prije nego što se isporuči ikakav inzulin. While the confirmation is waiting, the loop gives no SMB, so the bolus you confirm is still right. If an SMB is being delivered at that moment, **OK** waits until it has finished.
+Gumb s rezultatom na dnu prikazuje predloženi bolus; kada ga pritisnete, traži se potvrda prije nego što se isporuči ikakav inzulin. Dok potvrda čeka, petlja ne daje SMB, pa je bolus koji potvrdite i dalje točan. Ako se u tom trenutku isporučuje SMB, **U redu** čeka dok on ne završi.
 
 Dobro je znati:
 
 * Ako je izračunati bolus veći od vašeg **[maksimalnog bolusa](#Preferences-maximum-bolus)**, smanjuje se na maksimalni bolus, a potvrda prikazuje upozorenje „Primijenjeno ograničenje bolusa“. [Brzi kalkulator](../DailyLifeWithAaps/QuickWizards.md) se umjesto toga odbija.
-* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only (not delivered by pump)**" warning stays at the top of the dialog, also when you scroll.
+* Kada se bolus samo bilježi (na primjer dok je pumpa odspojena), upozorenje „**Bolus će biti samo zabilježen (neće biti isporučen putem pumpe)**“ ostaje na vrhu dijaloga, i kada se pomičete.
 * Bolus koji date ručno ima prednost pred [SMB-om](#Open-APS-features-super-micro-bolus-smb) koji čeka na isporuku: SMB se odbacuje, a petlja ponovno računa. Ako se SMB upravo isporučuje, vaš bolus se odbija s porukom „Isporuka SMB-a u tijeku. Pokušajte ponovno kada završi.“ Inzulin se ne daje, a ugljikohidrati uneseni s tim bolusom ne spremaju se: pričekajte trenutak i ponovno ih unesite.
 
 (AapsScreens-wrong-cob-detection)=
