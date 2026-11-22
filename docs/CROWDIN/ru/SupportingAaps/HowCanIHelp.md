@@ -2,19 +2,19 @@
 
 ## AAPS развивается на полностью добровольной основе и труд участвующих в проекте людей не оплачивается.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Разработчики безвозмездно выделяют свое свободное время, но несправедливо ожидать, что они будут нести дополнительные расходы, когда делают что-то такое удивительное с открытым исходным кодом и бесплатно для всех.
+Разработчики – это родители, опекуны, близкие люди и люди с диабетом, которые вместе разрабатывают и улучшают решение для очень распространенной потребности. Разработчики безвозмездно выделяют свое свободное время, но несправедливо ожидать, что они будут нести дополнительные расходы, когда делают что-то такое удивительное с открытым исходным кодом и бесплатно для всех.
 
 *Для полного тестирования новой техники необходимо иметь дополнительный телефон и запасную помпу, так как людям нельзя пользоваться системой пока она не будет стабильной. Новые модели нуждаются в тестировании по мере появления. Некоторые из жертвуемых денег необходимы для расходов на доставку этих устройств разработчикам в разных странах. Иногда полезно сделать пожертвование, чтобы разработчики могли оставить свои темные комнаты и встретиться друг с другом на конференциях и мероприятиях, где они смогут дать своим творческим и аналитическим мозгам столкнуться.*
 
 (donate-to-aaps)=
 
-### How can I donate?
+### Как сделать пожертвование?
 
-You can support **AAPS** in several ways:
+Вы можете поддержать **AAPS** несколькими способами:
 
-* **Nightscout Foundation:** donate at [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
-* **Ko-fi:** help fund the effort to get AAPS certified as a medical device at [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
-* **Bitcoin:** send to this address **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
+* **Nightscout Foundation:** пожертвование на сайте [donate.nightscoutfoundation.org](https://donate.nightscoutfoundation.org/).
+* **Ko-fi:** помогите профинансировать сертификацию AAPS как медицинского изделия на [ko-fi.com/diabetesone](https://ko-fi.com/diabetesone).
+* **Bitcoin:** отправьте на этот адрес **3KawK8aQe48478s6fxJ8Ms6VTWkwjgr9f2**
 
 ## Я могу написать код! Как принять участие?
 
@@ -33,7 +33,7 @@ You can support **AAPS** in several ways:
 
 Вы можете приступить к переводу документации параллельно или позднее.
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations.md).
+Состояние перевода приложения и документации для разных языков можно посмотреть [здесь](StateOfTranslations.md).
 
 * Если вы хотите перевести **приложение** на другие языки (спасибо), воспользуйтесь [crowdin](https://crowdin.com/project/androidaps).
 * Если вы хотите перевести **документацию** на другие языки (спасибо), воспользуйтесь [crowdin](https://crowdin.com/project/androidapsdocs). 
