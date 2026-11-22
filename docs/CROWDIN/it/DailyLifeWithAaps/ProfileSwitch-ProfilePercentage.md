@@ -60,7 +60,7 @@ When a temporary switch is running, the **ACTIVE** card shows its percentage and
 
 ![La schermata Profilo: carosello dei profili, dettagli e barra delle azioni](../images/v4/Profiles/profile_manage.png)
 
-I pulsanti in basso agiscono sul profilo **selezionato**: **➕ Aggiungi**, **✏️ Modifica**, **⧉ Clona** e **‘️ Cancella**, e il pulsante rotondo **▶ Attiva** a destra. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
 
