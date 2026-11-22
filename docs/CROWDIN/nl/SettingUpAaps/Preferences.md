@@ -31,6 +31,7 @@ In **AAPS** v4 vind je de voorkeuren op het scherm **Instellingen**. Er zijn dri
 - By default **AAPS** follows the language of the phone (recommended).
 
 - If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Als je de taal verandert, worden de teksten van **AAPS** meteen in de nieuwe taal getoond. Zie je nog teksten in de oude taal? Start **AAPS** dan opnieuw.
 - On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
@@ -86,6 +87,10 @@ Kies tussen het lichte thema, het donkere thema of de systeeminstelling van je t
 
 ![Instellingen > Beveiliging](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Hoofdwachtwoord
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### App beveiliging
 
-Als de app beveiligd is, moet je het wachtwoord invoeren of de biometrische verificatie van je telefoon gebruiken om **AAPS** te openen. Dat moet opnieuw als je terugkomt na de [time-out van de beveiliging](#Preferences-password-and-pin-retention).
+Als de app beveiligd is, moet je het wachtwoord invoeren of de biometrische verificatie van je telefoon gebruiken om **AAPS** te openen. Dat moet opnieuw als je terugkomt na de [time-out van de beveiliging](#Preferences-password-and-pin-retention). Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** sluit meteen af als een verkeerd wachtwoord wordt ingevoerd - maar blijft op de achtergrond draaien als het eerder met succes was geopend.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Bolus beveiliging
 
