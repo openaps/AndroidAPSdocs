@@ -10,7 +10,8 @@ De här instruktionerna beskriver hur du ställer in insulinpumpen Equil.
 ## Pumpens funktioner med AAPS
 
 * Slanglös pod-pump som kommunicerar med **AAPS** via telefonens inbyggda Bluetooth, utan någon extra kommunikationsenhet.
-* **AAPS** behandlar Equil som en pod-pump med en reservoar på 200 U: huvudskärmen visar statuslamporna för pod-pumpar, och **Förfyllning** och **Byte av pumpbatteri** erbjuds inte. Påfyllning, förfyllning och batteribyte görs i pumpens guider.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * Medan pumpen är pausad eller stoppad registrerar **AAPS** en tillfällig basal på 0 U/h. Därför räknas inget basalinsulin in i IOB.
 * Byte till/från sommartid och byte av tidszon måste du göra manuellt.
 
