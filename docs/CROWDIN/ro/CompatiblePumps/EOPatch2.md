@@ -37,11 +37,11 @@ Există trei setări:
 
 ![Setările EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Alerte rezervor aproape gol
+### Low Reservoir Alerts
 
 A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
 
-### Memento de expirare plasture
+### Patch Expiration Reminder
 
 Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. Valoarea implicită este 4 ore.
 
@@ -261,7 +261,7 @@ The different warnings are explained below.
 | Atenție                                       | Explicație                                                                                                                                |
 | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Sfârșit suspendare insulină                   | The suspend time you chose is over. Apăsați **Reluați pompa** pe notificare pentru a reporni administrarea insulinei.                     |
-| Rezervor pe terminate                         | Insulina rămasă în plasture este sub cantitatea setată în **Alerte rezervor aproape gol**.                                                |
+| Rezervor pe terminate                         | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                        |
 | Durata de funcționare a plasturelui a expirat | The patch's usage period is over.                                                                                                         |
 | Plasturele va expira în curând                | Plasturele trebuie eliminat în 1 oră.                                                                                                     |
 | Activare plasture incompletă                  | Activarea plasturelui a fost întreruptă mai mult de 3 minute după asociere. Deschideți ecranul pompei și terminați activarea plasturelui. |
