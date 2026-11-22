@@ -111,6 +111,8 @@ W **AAPS** v4 insulina oznaczona jako **AKTYWNY** w **Zarządzaj → Ustawienia 
 
 Po aktualizacji **AAPS** zachowuje insulinę i DIA, które zapisały już Twoje zmiany profilu z v3. Jeśli znajdzie starsze wpisy ze znaną insuliną, ale bez DIA, użyje dla nich domyślnego DIA i raz pokaże komunikat, na przykład *Starsze wpisy nie miały czasu aktywności insuliny (DIA), więc dla Lyumjev zastosowano 9,0 godziny. Sprawdź ustawienia insuliny - wpisy, które zostały już zmigrowane, nie są później aktualizowane.* Gdy zobaczysz ten komunikat, sprawdź swoje ustawienia insuliny.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 Aby zmienić DIA lub szczyt, dodaj nową insulinę przyciskiem **+**, dostosuj ją, zapisz i **▶ Aktywuj**. Zobacz [Zmiana używanej insuliny](#Config-Builder-insulin-change-active).
