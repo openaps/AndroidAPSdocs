@@ -45,7 +45,7 @@ Tryk på knappen **+** for at oprette en ny scene.
 
 ### Start fra en skabelon
 
-For at **oprette** en scene skal du trykke på knappen **+** på skærmen Scener. Det første trin er **Start fra skabelon**: vælg en færdig scene til en almindelig situation — *Motion*, *Sygedag*, *Sygedag — opkast*, *Søvn*, *Nat efter motion*, *Før måltid*, *Alkohol*, *Bilkørsel*, *Badning*, *Lutealfase*, *Varmt vejr*, *Medicinsk indgreb* — eller start fra en *Tom* scene. Hver skabelon **udfylder de anbefalede handlinger på forhånd**, og du kan justere alt i de følgende trin.
+For at **oprette** en scene skal du trykke på knappen **+** på skærmen Scener. Det første trin er **Start fra skabelon**: vælg en færdig scene til en almindelig situation — *Motion*, *Sygedag*, *Sygedag — opkast*, *Søvn*, *Nat efter motion*, *Før måltid*, *Alkohol*, *Bilkørsel*, *Badning*, *Lutealfase*, *Varmt vejr*, *Medicinsk indgreb* — eller start fra en *Tom* scene. Hver skabelon **udfylder de anbefalede handlinger på forhånd**, og du kan justere alt i de følgende trin. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![»Start fra skabelon« — vælg et udgangspunkt](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ En scene uden opfølgende scene beder dig kun om at bekræfte:
 
 ![Dialogen Afslut scene](../images/v4/Scenes/scene_end_dialog.png)
 
-Når en scene afsluttes, bliver de ændringer, den har lavet, **fortrudt** (f.eks. det profilskift og det midlertidige mål, som scenen startede).
+Når en scene afsluttes, bliver de ændringer, den har lavet, **fortrudt** (f.eks. det profilskift og det midlertidige mål, som scenen startede). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Mens en scene er aktiv, har profilen og målet på hovedskærmen et lille sceneikon, når det er scenen, der har sat dem. Arket **Scener** i den nederste navigation er stadig tilgængeligt, så du kan starte en anden scene:
 
