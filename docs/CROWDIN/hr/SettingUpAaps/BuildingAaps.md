@@ -12,7 +12,7 @@ Postoje tri načina izrade aplikacije AAPS:
 
 ### Izrada u pregledniku (preporučeno)
 
-You can build the app in a web browser using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Aplikaciju možete izraditi u web pregledniku pomoću GitHub Actions. Na Android telefonu kroz postupak vas vodi stranica postavki [AAPS Buildera](#aaps-builder), a svaku izradu pokrećete sami. S računala ili iPhonea možete izraditi aplikaciju i pomoću forka te je spremiti na svoj Google Drive.
 
 **[Slijedite ove upute.](./BrowserBuild.md)**
 
@@ -35,16 +35,16 @@ Ova je mogućnost namijenjena onima koji AAPS radije izrađuju lokalno iz naredb
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Ako izrada ne uspije
 
-Each build method has its own troubleshooting section:
+Svaki način izrade ima svoj odjeljak za rješavanje problema:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Rješavanje problema s AAPS Builderom](#aaps-builder-troubleshooting)
+* **Izrada u pregledniku** s računala ili iPhonea: [Izrada u pregledniku: rješavanje problema](#aaps-ci-troubleshooting)
+* **Android Studio**: [Rješavanje problema s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? Pogledajte [Ponovna instalacija AAPS-a s novim spremištem ključeva](#reinstall-aaps).
+Izgubili ste spremište ključeva ili njegovu lozinku? Pogledajte [Ponovna instalacija AAPS-a s novim spremištem ključeva](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Ako je aplikacija izrađena, ali se ne instalira na vaš telefon, pogledajte [Prijenos i instalacija AAPS-a na vaš pametni telefon](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Ako vaš problem nije naveden, pogledajte [Gdje mogu dobiti pomoć?](../GettingHelp/WhereCanIGetHelp.md).
