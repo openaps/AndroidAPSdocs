@@ -37,7 +37,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
   ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
 * On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
-* Tap the entry for your pump in the list.
+* Tap the entry for your pump in the list. If your phone still has an old Bluetooth pairing with this pump (for example after the pump was unpaired on the pump itself, or paired with another phone), **AAPS** removes it first and starts a new pairing. You do not need to remove the pump in the Android Bluetooth settings.
 
   ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
 
