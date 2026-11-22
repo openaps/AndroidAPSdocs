@@ -1,22 +1,22 @@
 (github-build-apk)=
 
-# Browser build – Step 4: Build the APK
+# Сборка через браузер – Шаг 4: Соберите APK
 
 ```{note}
-This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md).
+Это **шаг 4** раздела [Сборка через браузер](BrowserBuild.md). Сначала выполните [Шаг 3 – Дайте доступ к Google Диску](BrowserBuildGoogleDrive.md).
 ```
 
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## GitHub Actions AAPS-CI для сборки APK AAPS
+ - Подходит для обычных пользователей.
 
 ```{tab-set}
 
-:::{tab-item} Wiki
-### Run the Workflow to Build the Signed APK
+:::{tab-item} Вики
+### Запустите workflow, чтобы собрать подписанный APK
 
 1. В своей копии AndroidAPS на GitHub выберите Actions.
 2. Разверните All Workflows.
-3. Select AAPS-CI
+3. Выберите AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
@@ -24,25 +24,25 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
+5. Оставьте в **Use workflow from** ветку master. В **Select AAPS Version** выберите версию **AAPS**, которую хотите собрать (обычно самую новую). Выберите [вариант](#browserbuild-variant) (fullRelease) и нажмите Run workflow.
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Вы увидите сообщение Workflow run was successfully requested. Обновите страницу браузера, и вы сможете следить за ходом сборки. Когда действие завершится, у действия AAPS CI появится зеленая галочка. You have successfully built the updated version of Android APS.
+6. Вы увидите сообщение Workflow run was successfully requested. Обновите страницу браузера, и вы сможете следить за ходом сборки. Когда действие завершится, у действия AAPS CI появится зеленая галочка. Вы успешно собрали обновленную версию Android APS.
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
-### Install the AAPS APK
+### Установите APK AAPS
 
-1. Open your Google Drive
+1. Откройте ваш Google Диск
 2. Откройте папку AAPS, выберите папку новой версии: в ней будут версии и для телефона, и для Android Wear.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
-:::  
+:::
 
-:::{tab-item} Video
+:::{tab-item} Видео
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
@@ -58,37 +58,37 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ```
 
-## Build Version selection
+## Выбор версии для сборки
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**Способом через браузер можно собрать только версии AAPS 3.3.2.1 и выше.**
 
-Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+Нажмите **Select AAPS Version** и выберите версию для сборки. Самая новая версия находится вверху списка.
 
-![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+![Список Select AAPS Version](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
-## Build Variants selection
+## Выбор варианта сборки
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*Примечание: приложения для Android и для Android Wear будут собраны автоматически.*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-    - pumpcontrolRelease: To replace your pump app/controller
+  - Выберите нужный вариант:
+    - fullRelease: для обычного использования помпы со всеми функциями.
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): для опекунов (нужен [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` собирает **AAPSClient3**, доступный начиная с версии **AAPS** 4.0 (см. [Об AAPSClient, AAPSClient2 и AAPSClient3](#remotecontrol-aapsclient-versions)).
+    - pumpcontrolRelease: чтобы заменить приложение/пульт вашей помпы
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Варианты, которые заканчиваются на «Debug», означают, что APK будет собран в режиме отладки. Это полезно разработчикам для поиска неполадок.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Когда сборка пройдет успешно, файл apk сохранится на ваш Google Диск. Продолжите с раздела [Перенос и установка AAPS на смартфон](TransferringAndInstallingAaps.md).
 
 ```{note}
 С сентября 2026 года [проверка разработчиков Android](#android-developer-verification) от Google может, в зависимости от вашей страны, блокировать установку APK нажатием на файл. Бесплатные обходные пути описаны на той странице.
 ```
 
-If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
+Если сборка не удалась, сначала [выясните по журналу сборки, что пошло не так](#aaps-ci-read-the-logs), затем смотрите [Сборка через браузер: устранение неполадок](../GettingHelp/BrowserBuildTroubleshooting.md). Чтобы включить в сборку определенный коммит, смотрите [cherry-pick коммита](#github-cherry-pick).
