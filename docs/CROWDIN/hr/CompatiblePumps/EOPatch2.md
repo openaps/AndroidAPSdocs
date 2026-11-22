@@ -1,278 +1,278 @@
 # EOPatch2
 
-The patch needs rapid-acting U-100 insulin, such as NovoRapid or Humalog. Use the rapid-acting insulin your doctor has prescribed for you.
+Patch treba brzodjelujući inzulin U-100, na primjer NovoRapid ili Humalog. Koristite brzodjelujući inzulin koji vam je propisao liječnik.
 
-The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise **AAPS** rounds each rate to the nearest 0.05 U/hr (never down to 0) and uses the rates the patch really gives, so the total insulin per day differs slightly from your **Profile**. In the same way, boluses must be at least 0.05 U.
+Najmanja doza koju Patch može isporučiti je 0,05 J. Postavite svaku bazalnu stopu u svom **profilu** na najmanje 0,05 J/h, u koracima od 0,05 J/h. Inače **AAPS** zaokružuje svaku stopu na najbližih 0,05 J/h (nikad na 0) i koristi stope koje Patch stvarno isporučuje, pa se ukupni inzulin po danu malo razlikuje od vašeg **profila**. Isto tako, bolusi moraju biti najmanje 0,05 J.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Mogućnosti pumpe s AAPS-om
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Komunicira s **AAPS-om** preko ugrađenog Bluetootha vašeg telefona, bez dodatnog komunikacijskog uređaja.
+* Promjene ljetnog računanja vremena i vremenske zone morate obaviti ručno.
 
-## Pump setup
+## Postavljanje pumpe
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. In the **Pump** section, select **EOPatch2**.
-1. Press the Back key to return to the main screen.
+1. Otvorite **izbornik** (☰) u gornjem lijevom kutu glavnog zaslona **AAPS-a** i odaberite **Konfiguracija**.
+1. U odjeljku **Pumpa** odaberite **EOPatch2**.
+1. Pritisnite tipku Natrag za povratak na glavni zaslon.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png) ![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Izbornik sa stavkom Konfiguracija](../images/v4/Configuration/configuration_menu.png) ![Konfiguracija > Pumpa s dodatkom EOPatch2](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
+Kad je odabran, kartica **EOPatch2** prikazuje dva gumba, **Postavke** i **Otvori dodatak**:
 
-![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
+![Dodatak EOPatch2 odabran u Konfiguracija > Pumpa](../images/v4/Pumps/eopatch2_enabled.png)
 
-## Settings
+## Postavke
 
-Open the EOPatch2 settings in one of two ways:
+Postavke EOPatch2 otvorite na jedan od dva načina:
 
-* press **Settings** on the **EOPatch2** card in **Configuration**, or
-* open the pump screen (**Manage** → **Pump**) and press the gear icon in the top-right corner.
+* pritisnite **Postavke** na kartici **EOPatch2** u **Konfiguraciji** ili
+* otvorite zaslon pumpe (**Upravljanje** → **Pumpa**) i pritisnite ikonu zupčanika u gornjem desnom kutu.
 
-There are three settings:
+Postoje tri postavke:
 
-![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
+![Postavke EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Low reservoir Alerts
+### Upozorenja o niskoj razini spremnika
 
-A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
+Upozorenje se pojavi kad količina inzulina preostala u Patch-u padne na ovu vrijednost ili manje. Možete je postaviti od 10 do 50 J, u koracima od 5 J. Zadana vrijednost je 10 J.
 
-### Patch expiration Reminder
+### Podsjetnik o isteku Patch-a
 
-Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
+Podsjeća vas koliko je vremena ostalo do isteka trenutnog Patch-a. Možete ga postaviti od 1 do 24 sata, u koracima od 1 sata. Zadana vrijednost je 4 sata.
 
-### Patch buzzer Reminders
+### Zvučni podsjetnici Patch-a
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. It has no effect on your normal basal. The default is off.
+Kad je ovo uključeno, Patch se oglasi zvučnim signalom kad bolus, produženi bolus ili privremeni bazal započne i kad završi. Nema utjecaja na vaš normalni bazal. Zadano je isključeno.
 
-## Activating a new patch
+## Aktivacija novog Patch-a
 
-### Open the activation wizard
+### Otvorite čarobnjak za aktivaciju
 
-Open the pump screen with **Manage** → **Pump** (or press **Open plugin** on the **EOPatch2** card in **Configuration**). When no patch is active, the screen shows **Not activated** and an **Activate Patch** button at the bottom.
+Otvorite zaslon pumpe putem **Upravljanje** → **Pumpa** (ili pritisnite **Otvori dodatak** na kartici **EOPatch2** u **Konfiguraciji**). Kad nijedan Patch nije aktivan, zaslon prikazuje **Nije aktivirano** i gumb **Aktiviraj Patch** pri dnu.
 
-Press **Activate Patch** to start the wizard.
+Pritisnite **Aktiviraj Patch** za pokretanje čarobnjaka.
 
-![The EOPatch2 pump screen with the Activate Patch button](../images/v4/Pumps/eopatch_pump_screen.png)
+![Zaslon pumpe EOPatch2 s gumbom Aktiviraj Patch](../images/v4/Pumps/eopatch_pump_screen.png)
 
-The wizard guides you through each step. The row of dots at the top shows how far along you are.
+Čarobnjak vas vodi kroz svaki korak. Red točaka na vrhu pokazuje koliko ste daleko stigli.
 
 ```{note}
-If you have never activated a **Profile** in **AAPS**, the wizard first shows a **Profile required** page. Select the profile to use and press **Activate profile**.
+Ako u **AAPS-u** nikad niste aktivirali **profil**, čarobnjak prvo prikazuje stranicu **Potreban je profil**. Odaberite profil koji želite koristiti i pritisnite **Aktiviraj profil**.
 ```
 
-### Filling Insulin
+### Punjenje inzulina
 
-Insert the syringe needle into the insulin fill port on the patch. Slowly push the plunger to fill the patch. Once there is more than 80 U in the patch, it beeps once and starts up (boots).
+Uvedite iglu štrcaljke u otvor za punjenje inzulina na Patch-u. Polako gurajte klip da napunite Patch. Kad u Patch-u bude više od 80 J, oglasi se jednim zvučnim signalom i pokrene se (podigne sustav).
 
-When you hear the beep, press **Start pairing**.
+Kad čujete zvučni signal, pritisnite **Pokreni uparivanje**.
 
-![The Filling Insulin step with the Start pairing button](../images/v4/Pumps/eopatch_activate_filling.png)
+![Korak Punjenje inzulina s gumbom Pokreni uparivanje](../images/v4/Pumps/eopatch_activate_filling.png)
 
 ```{warning}
-- Do not turn the needle action lever until the wizard tells you to. Turning it too early can cause serious problems during filling or the safety check.
-- The patch holds 80 to 200 U. If you put in less than 80 U, the patch does not work.
-- Take the insulin out of the refrigerator 15 to 30 minutes before filling, so it reaches room temperature. The insulin must be at least 10°C.
+- Ne okrećite ručicu za iglu dok vam čarobnjak to ne kaže. Ako je okrenete prerano, to može uzrokovati ozbiljne probleme tijekom punjenja ili sigurnosne provjere.
+- Patch prima od 80 do 200 J. Ako stavite manje od 80 J, Patch ne radi.
+- Izvadite inzulin iz hladnjaka 15 do 30 minuta prije punjenja, da dosegne sobnu temperaturu. Inzulin mora imati najmanje 10 °C.
 ```
 
-### Patch pairing
+### Uparivanje Patch-a
 
-**AAPS** now tries to pair with the patch automatically. During pairing, two Android Bluetooth pairing requests appear. Press **OK** on the first one. Press **OK** again on the second one, which shows a passkey.
+**AAPS** sada automatski pokušava upariti se s Patch-om. Tijekom uparivanja pojave se dva Androidova zahtjeva za Bluetooth uparivanje. Na prvom pritisnite **U redu**. Ponovno pritisnite **U redu** na drugom, koji prikazuje pristupni ključ.
 
 ```{warning}
-- Keep the patch and your phone within 30 cm of each other while pairing.
-- After the patch has booted, it beeps every 3 minutes until pairing is complete.
-- You must finish activating the patch within 60 minutes of it booting. If you cannot, discard the patch.
+- Tijekom uparivanja držite Patch i telefon na udaljenosti do 30 cm jedno od drugog.
+- Nakon što se Patch pokrene, oglašava se zvučnim signalom svake 3 minute dok uparivanje ne završi.
+- Aktivaciju Patch-a morate završiti u roku od 60 minuta od njegova pokretanja. Ako ne uspijete, odbacite Patch.
 ```
 
-![Patch pairing step](../images/EOPatch/eopatch_pairing.png) ![First Bluetooth pairing request](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/eopatch_bluetooth_passkey.png)
+![Korak Uparivanje Patch-a](../images/EOPatch/eopatch_pairing.png) ![Prvi zahtjev za Bluetooth uparivanje](../images/EOPatch/eopatch_bluetooth_pairing_request.png) ![Drugi zahtjev za Bluetooth uparivanje s pristupnim ključem](../images/EOPatch/eopatch_bluetooth_passkey.png)
 
 ```{admonition} Older screenshot
 :class: note
-The two Bluetooth pairing screenshots are from an earlier **AAPS** version: the **AAPS** screen behind the Android pairing request looks different in **AAPS** 4.
+Dvije snimke zaslona Bluetooth uparivanja potječu iz starije verzije **AAPS-a**: zaslon **AAPS-a** iza Androidova zahtjeva za uparivanje izgleda drugačije u **AAPS-u** 4.
 ```
 
-### Select insulin
+### Odaberi inzulin
 
-Select the insulin you filled the patch with and press **Next**. **AAPS** applies a profile switch with this insulin after activation.
+Odaberite inzulin kojim ste napunili Patch i pritisnite **Sljedeći**. **AAPS** nakon aktivacije primjenjuje zamjenu profila s ovim inzulinom.
 
-### Prepare for attaching the Patch
+### Priprema za lijepljenje Patch-a
 
-Remove the adhesive tape from the patch, then press **Next**.
+Uklonite ljepljivu traku s Patch-a, zatim pritisnite **Sljedeći**.
 
-If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
+Ako igla viri ili ako je Patch mokar, prljav ili mu je ljepljiva traka presavijena, umjesto toga pritisnite **Odbaci** i koristite novi Patch.
 
-![Prepare for attaching the Patch step](../images/EOPatch/eopatch_prepare_attaching.png)
+![Korak Priprema za lijepljenje Patch-a](../images/EOPatch/eopatch_prepare_attaching.png)
 
-### Site location
+### Mjesto primjene
 
-This step only appears if **Manage pump site rotation** is turned on in the site rotation settings. Tap the place on the body diagram where you will attach the patch and press **Next**, or press **Skip**.
+Ovaj se korak pojavi samo ako je u postavkama rotacije mjesta uključeno **Upravljaj rotacijom mjesta pumpe**. Dodirnite mjesto na crtežu tijela gdje ćete zalijepiti Patch i pritisnite **Sljedeći** ili pritisnite **Preskoči**.
 
-### Attaching the Patch
+### Lijepljenje Patch-a
 
-Insulin should go into a spot with fatty tissue under the skin, but few nerves or blood vessels. The abdomen, arm or thigh are good choices. Clean and dry the site, then attach the patch to your skin.
+Inzulin treba ići na mjesto s masnim tkivom pod kožom, ali s malo živaca i krvnih žila. Trbuh, nadlaktica ili bedro dobar su izbor. Očistite i osušite mjesto, zatim zalijepite Patch na kožu.
 
-Check the infusion site, then press **Start safety check**.
+Provjerite mjesto infuzije, zatim pritisnite **Pokreni sigurnosnu provjeru**.
 
 ```{warning}
-- Press down the edges of the patch tape evenly, so the whole patch sticks firmly to your skin.
-- If the patch does not stick completely, air can get between the patch and your skin. This weakens the adhesive and the water resistance of the patch.
+- Ravnomjerno pritisnite rubove ljepljive trake Patch-a, tako da cijeli Patch čvrsto prianja uz kožu.
+- Ako Patch ne prianja potpuno, zrak može ući između Patch-a i kože. To slabi ljepilo i vodootpornost Patch-a.
 ```
 
-![Attaching the Patch step](../images/EOPatch/eopatch_attaching.png)
+![Korak Lijepljenje Patch-a](../images/EOPatch/eopatch_attaching.png)
 
-### Safety check
+### Sigurnosna provjera
 
-The safety check takes about 30 seconds. When it is finished, the patch beeps once. If it fails, press **Retry**.
+Sigurnosna provjera traje oko 30 sekundi. Kad završi, Patch se oglasi jednim zvučnim signalom. Ako ne uspije, pritisnite **Pokušaj ponovno**.
 
 ```{warning}
-For safe use, do not turn the needle action lever until the safety check is complete.
+Radi sigurne upotrebe ne okrećite ručicu za iglu dok sigurnosna provjera ne završi.
 ```
 
-![Attaching the Patch step with the Start safety check button](../images/EOPatch/eopatch_start_safety_check.png) ![Safety check in progress](../images/EOPatch/eopatch_safety_check_in_progress.png)
+![Korak Lijepljenje Patch-a s gumbom Pokreni sigurnosnu provjeru](../images/EOPatch/eopatch_start_safety_check.png) ![Sigurnosna provjera u tijeku](../images/EOPatch/eopatch_safety_check_in_progress.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Snimke zaslona od **Priprema za lijepljenje Patch-a** do **Sigurnosna provjera** potječu iz starije verzije **AAPS-a** i u **AAPS-u** 4 mogu izgledati drugačije.
 ```
 
-### Inserting the needle
+### Umetanje igle
 
-Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Press **Next**.
+Čvrsto držite Patch. Okrenite ručicu za iglu prema gore za više od 100° da umetnete iglu. Patch se oglasi jednim zvučnim signalom kad je igla pravilno umetnuta. Zatim nastavite okretati ručicu do kraja da je uklonite. Pritisnite **Sljedeći**.
 
 ```{caution}
-If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
+Ako prijeđete na sljedeći korak, a niste čuli zvučni signal, pojavi se **Greška umetanja igle**. Provjerite zvučni signal i pritisnite **Pokušaj ponovno**. Ako greška ostane, pritisnite **Odbaci** da deaktivirate Patch.
 ```
 
-### Patch activation completed
+### Aktivacija Patch-a je završena
 
-The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
+Zadnja stranica potvrđuje da je Patch aktivan i da će vas podsjetiti kad se približi vrijeme njegova isteka. Pritisnite **Završi** za povratak na zaslon pumpe.
 
-## Discarding the patch
+## Odbacivanje Patch-a
 
-Replace the patch when it is low on insulin, when it expires, or if it is faulty. We recommend using each patch for no more than 84 hours after it boots.
+Zamijenite Patch kad mu ponestaje inzulina, kad istekne ili ako je neispravan. Preporučujemo da svaki Patch koristite najviše 84 sata nakon njegova pokretanja.
 
-1. Open the pump screen (**Manage** → **Pump**). While a patch is active, press **Discard Patch**.
-1. The **Discard Patch** page shows the time left and the insulin left in the patch. Press **Discard Patch**.
-1. A dialog asks you to confirm. Press **Discard Patch** again.
-1. When the patch has been deactivated, the wizard shows **Discarding the patch is completed.** Remove the patch from your body and press **Confirm**.
+1. Otvorite zaslon pumpe (**Upravljanje** → **Pumpa**). Dok je Patch aktivan, pritisnite **Odbaci Patch**.
+1. Stranica **Odbaci Patch** prikazuje preostalo vrijeme i preostali inzulin u Patch-u. Pritisnite **Odbaci Patch**.
+1. Dijalog traži da potvrdite. Ponovno pritisnite **Odbaci Patch**.
+1. Kad je Patch deaktiviran, čarobnjak prikazuje **Odbacivanje Patch-a je završeno.** Uklonite Patch s tijela i pritisnite **Potvrdi**.
 
-After that, the wizard continues straight on to activating a new patch (see above). Press the back arrow if you want to stop here.
+Nakon toga čarobnjak odmah nastavlja s aktivacijom novog Patch-a (pogledajte gore). Pritisnite strelicu natrag ako ovdje želite stati.
 
-While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
+Dok nijedan Patch nije aktivan, **AAPS** prikazuje pumpu kao suspendiranu i bilježi privremeni bazal od 0 J/h, tako da se bazalni inzulin ne broji u aktivni inzulin (IOB) dok se ne aktivira sljedeći Patch.
 
-![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/eopatch_pump_screen_discard.png) ![Discard Patch page](../images/EOPatch/eopatch_discard_patch.png) ![Discard Patch confirmation dialog](../images/EOPatch/eopatch_discard_confirm.png) ![Discarding the patch is completed](../images/EOPatch/eopatch_discard_completed.png)
+![Zaslon pumpe EOPatch2 s gumbom DISCARD/CHANGE PATCH](../images/EOPatch/eopatch_pump_screen_discard.png) ![Stranica Odbaci Patch](../images/EOPatch/eopatch_discard_patch.png) ![Dijalog za potvrdu Odbaci Patch](../images/EOPatch/eopatch_discard_confirm.png) ![Odbacivanje Patch-a je završeno](../images/EOPatch/eopatch_discard_completed.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Discard Patch**.
+Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 zaslon pumpe otvarate putem **Upravljanje** → **Pumpa**, a gumb na njemu zove se **Odbaci Patch**.
 ```
 
 ```{admonition} If the patch does not respond
 :class: warning
-If **AAPS** cannot reach the patch, it may show a page about turning off the patch's alarm by hand: remove the patch from your body, peel off the adhesive tape, and use a clip to press firmly into the hole next to the insulin fill port.
+Ako **AAPS** ne može doći do Patch-a, može prikazati stranicu o ručnom isključivanju alarma Patch-a: uklonite Patch s tijela, odlijepite ljepljivu traku i spajalicom čvrsto pritisnite u rupu pokraj otvora za punjenje inzulina.
 
-The **Discard Patch** page also has a **Force Reset** button. It only clears the patch from **AAPS**, without sending any command to the patch. The patch keeps delivering insulin until its battery runs out or you turn it off by hand. Use it only if a normal discard fails, and remove the patch from your body.
+Stranica **Odbaci Patch** ima i gumb **Prisilno resetiraj**. On samo briše Patch iz **AAPS-a**, bez slanja ikakve naredbe Patch-u. Patch nastavlja isporučivati inzulin dok mu se baterija ne isprazni ili dok ga ručno ne isključite. Koristite ga samo ako normalno odbacivanje ne uspije i uklonite Patch s tijela.
 ```
 
-## Suspending and resuming insulin delivery
+## Obustava i nastavak isporuke inzulina
 
-Suspending insulin delivery also cancels any extended bolus and temporary basal. When you resume, these are **not** restarted. While insulin delivery is suspended, the patch beeps every 15 minutes.
+Obustava isporuke inzulina također otkazuje svaki produženi bolus i privremeni bazal. Kad nastavite, oni se **ne** pokreću ponovno. Dok je isporuka inzulina obustavljena, Patch se oglašava zvučnim signalom svakih 15 minuta.
 
-### Suspending insulin delivery
+### Obustava isporuke inzulina
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Suspend pump**.
-1. A dialog explains what will be suspended. Press **Confirm**.
-1. In the **Basal Suspending Time** dialog, choose how long to suspend: 30 min, 1 hr, 1 hr 30 min or 2 hr. Press **Confirm**.
+1. Otvorite zaslon pumpe (**Upravljanje** → **Pumpa**) i pritisnite **Suspendiraj pumpu**.
+1. Dijalog objašnjava što će biti obustavljeno. Pritisnite **Potvrdi**.
+1. U dijalogu **Vrijeme obustave bazala** odaberite koliko dugo obustaviti: 30 min, 1 h, 1 h 30 min ili 2 h. Pritisnite **Potvrdi**.
 
-Insulin delivery is suspended for the time you chose.
+Isporuka inzulina obustavljena je na vrijeme koje ste odabrali.
 
-![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Suspend confirmation dialog](../images/EOPatch/eopatch_suspend_confirm.png) ![Basal Suspending Time dialog](../images/EOPatch/eopatch_suspend_duration.png)
+![Zaslon pumpe EOPatch2 s gumbom SUSPEND](../images/EOPatch/eopatch_pump_screen_suspend.png) ![Dijalog za potvrdu obustave](../images/EOPatch/eopatch_suspend_confirm.png) ![Dijalog Vrijeme obustave bazala](../images/EOPatch/eopatch_suspend_duration.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Suspend pump**.
+Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 zaslon pumpe otvarate putem **Upravljanje** → **Pumpa**, a gumb na njemu zove se **Suspendiraj pumpu**.
 ```
 
-### Resuming insulin delivery
+### Nastavak isporuke inzulina
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Resume pump**.
-1. In the **Resume insulin delivery** dialog, press **Confirm**.
+1. Otvorite zaslon pumpe (**Upravljanje** → **Pumpa**) i pritisnite **Nastavi rad pumpe**.
+1. U dijalogu **Nastavi isporuku inzulina** pritisnite **Potvrdi**.
 
-![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/eopatch_pump_screen_resume.png) ![Resume insulin delivery dialog](../images/EOPatch/eopatch_resume_confirm.png)
+![Zaslon pumpe EOPatch2 s gumbom RESUME](../images/EOPatch/eopatch_pump_screen_resume.png) ![Dijalog Nastavi isporuku inzulina](../images/EOPatch/eopatch_resume_confirm.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Resume pump**.
+Gornje snimke zaslona su iz ranije verzije **AAPS-a**. U **AAPS-u** 4 zaslon pumpe otvarate putem **Upravljanje** → **Pumpa**, a gumb na njemu zove se **Nastavi rad pumpe**.
 ```
 
 ```{warning}
-When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning. Insulin delivery does **not** restart until you confirm it. If you do not, you could develop hyperglycemia.
+Kad vrijeme obustave završi, **AAPS** prikazuje upozorenje **Kraj obustave inzulina**. Isporuka inzulina se **ne** nastavlja dok to ne potvrdite. Ako to ne učinite, mogli biste razviti hiperglikemiju.
 ```
 
 (eopatch2-alarms-and-warnings)=
 
-## Alarms and warnings
+## Alarmi i upozorenja
 
-### Alarms
+### Alarmi
 
-Alarms are for urgent, top-priority situations and need your action straight away. **AAPS** sounds an alarm that keeps going until you acknowledge it, and shows the message as a notification on the **Overview** screen. An alarm means there is a problem with the patch in use. In many cases the patch has to be discarded and replaced with a new one.
+Alarmi su za hitne situacije najvišeg prioriteta i traže da odmah nešto poduzmete. **AAPS** oglašava alarm koji traje dok ga ne potvrdite i prikazuje poruku kao obavijest na zaslonu **Pregled**. Alarm znači da postoji problem s Patch-om koji koristite. U mnogim slučajevima Patch treba odbaciti i zamijeniti novim.
 
-When you press **Confirm** on the notification, **AAPS** handles the alarm. For most alarms, this deactivates the patch. For an **Inappropriate temperature** alarm, the button is **Retry**.
+Kad na obavijesti pritisnete **Potvrdi**, **AAPS** obrađuje alarm. Kod većine alarma to deaktivira Patch. Kod alarma **Neodgovarajuća temperatura** gumb je **Pokušaj ponovno**.
 
-![EOPatch2 alarm](../images/EOPatch/eopatch_alarm.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
-
-```{admonition} Older screenshot
-:class: note
-The alarm screenshots are from an earlier **AAPS** version and may look different in **AAPS** 4.
-```
-
-The different alarms are explained below.
-
-| Alarm                      | Explanation                                                                                                                                                    |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | The patch has run out of insulin.                                                                                                                              |
-| Patch expired              | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
-| Occlusion                  | The patch's insulin path seems to be blocked.                                                                                                                  |
-| Power on self-test failure | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| Inappropriate temperature  | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
-| Needle insertion Error     | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
-| Patch battery Error        | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
-| Patch activation Error     | The patch was not fully activated within 60 minutes of booting.                                                                                                |
-| Patch Error                | The patch found an unexpected error while being activated or used.                                                                                             |
-
-### Warnings
-
-Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
-
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/eopatch_warning_overview.png)
+![Alarm EOPatch2](../images/EOPatch/eopatch_alarm.png) ![Alarm EOPatch2 nakon deaktivacije Patch-a](../images/EOPatch/eopatch_alarm_patch_deactivated.png)
 
 ```{admonition} Older screenshot
 :class: note
-This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning appears on the main screen, which looks different.
+Snimke zaslona alarma potječu iz starije verzije **AAPS-a** i u **AAPS-u** 4 mogu izgledati drugačije.
 ```
 
-The different warnings are explained below.
+Različiti alarmi objašnjeni su u nastavku.
 
-| Warning                      | Explanation                                                                                                                   |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| Low reservoir                | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| Patch operating life expired | The patch's usage period is over.                                                                                             |
-| Patch will expire soon       | The patch must be discarded in 1 hour.                                                                                        |
-| Incomplete Patch activation  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| Patch battery low            | The patch's battery is low.                                                                                                   |
+| Alarm                                        | Objašnjenje                                                                                                                                               |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Prazan spremnik                              | Patch-u je ponestalo inzulina.                                                                                                                            |
+| Patch je istekao                             | Vrijeme upotrebe Patch-a je isteklo i on više ne može isporučivati inzulin.                                                                               |
+| Začepljenje                                  | Čini se da je put inzulina u Patch-u začepljen.                                                                                                           |
+| Samotestiranje pri uključivanju nije uspjelo | Patch je pronašao neočekivanu pogrešku tijekom samotestiranja nakon pokretanja.                                                                           |
+| Neodgovarajuća temperatura                   | Patch je izvan svoje normalne radne temperature dok ga aktivirate ili koristite. Premjestite Patch na mjesto s odgovarajućom temperaturom (4,4 do 37 °C). |
+| Greška umetanja igle                         | Igla nije pravilno umetnuta tijekom aktivacije. Provjerite jesu li rub Patch-a za umetanje igle i ručica za iglu u ravnoj liniji.                         |
+| Greška baterije Patch-a                      | Unutarnja baterija Patch-a uskoro će se isprazniti i Patch će se isključiti.                                                                              |
+| Greška aktivacije Patch-a                    | Patch nije potpuno aktiviran u roku od 60 minuta od pokretanja.                                                                                           |
+| Greška Patch-a                               | Patch je pronašao neočekivanu pogrešku tijekom aktivacije ili upotrebe.                                                                                   |
 
-## Where to get help
+### Upozorenja
 
-Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Upozorenja su za situacije srednjeg ili niskog prioriteta. Upozorenje se pojavi kao obavijest na zaslonu **Pregled**.
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+![Upozorenje EOPatch2 prikazano na zaslonu Pregled](../images/EOPatch/eopatch_warning_overview.png)
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+```{admonition} Older screenshot
+:class: note
+Ova snimka zaslona potječe iz starije verzije **AAPS-a**: u **AAPS-u** 4 upozorenje se pojavi na glavnom zaslonu, koji izgleda drugačije.
+```
+
+Različita upozorenja objašnjena su u nastavku.
+
+| Upozorenje                     | Objašnjenje                                                                                                                           |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Kraj obustave inzulina         | Vrijeme obustave koje ste odabrali je isteklo. Pritisnite **Nastavi rad pumpe** na obavijesti da ponovno pokrenete isporuku inzulina. |
+| Niska razina u spremniku       | Preostali inzulin u Patch-u manji je od količine postavljene u **Upozorenja o niskoj razini spremnika**.                              |
+| Radni vijek Patch-a je istekao | Razdoblje upotrebe Patch-a je isteklo.                                                                                                |
+| Patch uskoro istječe           | Patch se mora odbaciti za 1 sat.                                                                                                      |
+| Nedovršena aktivacija Patch-a  | Aktivacija Patch-a prekinuta je na više od 3 minute nakon uparivanja. Otvorite zaslon pumpe i dovršite aktivaciju Patch-a.            |
+| Slaba baterija Patch-a         | Baterija Patch-a je slaba.                                                                                                            |
+
+## Gdje dobiti pomoć
+
+Razvoj upravljačkog programa EOPatch2 provodi zajednica na **dobrovoljnoj** osnovi. Prije nego što zatražite pomoć:
+
+1. **Pročitajte** odgovarajući odjeljak ove dokumentacije kako biste provjerili kako bi funkcija trebala raditi.
+2. **Pitajte** na kanalu *#AAPS* na [Discordu](https://discord.gg/4fQUWHZ4Mw) ili na jednom od drugih [kanala zajednice](../GettingHelp/WhereCanIGetHelp.md).
+3. **Prijavite grešku**: najprije pretražite [postojeće prijave](https://github.com/nightscout/AndroidAPS/issues); ako vaše nema na popisu, otvorite [novu prijavu](https://github.com/nightscout/AndroidAPS/issues) i priložite svoje [datoteke dnevnika](../GettingHelp/AccessingLogFiles.md).
+
+Kada tražite pomoć, navedite proizvođača i model telefona, verziju Androida, verziju **AAPS-a** i jednostavan opis problema na engleskom (što se promijenilo, kada je zadnji put radilo).
