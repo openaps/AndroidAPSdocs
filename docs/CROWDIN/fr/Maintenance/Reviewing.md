@@ -73,7 +73,7 @@ Le **profil glycémique ambulatoire** (**AGP**) montre comment votre glycémie �
 
 - **Le graphique** : une journée, de minuit à minuit. La ligne est la **Médiane** (la moitié de vos mesures à cette heure étaient plus basses, l'autre moitié plus hautes). Autour d'elle, une bande contient la moitié centrale de vos mesures (**25–75%**) et une bande plus large la plupart d'entre elles (**10–90%**). Une bande étroite signifie que votre glycémie est semblable d'un jour à l'autre à cette heure. Des lignes pointillées marquent votre **Ligne BASSE**, 140 mg/dl (7,8 mmol/l) et votre **Ligne HAUTE**.
 - **Aperçu glycémique** : le temps passé dans votre plage, dans la plage étroite (70–140 mg/dl ou 3,9–7,8 mmol/l), au-dessus de votre plage et en dessous, puis votre glycémie **Moyenne** et **Médiane**. Votre plage est définie par la **Ligne BASSE** et la **Ligne HAUTE** réglées dans [Fourchette de visualisation](#Preferences-range-for-visualization).
-- **eA1c** et **GMI** : deux estimations de l'HbA1c calculées à partir de vos mesures du MGC. Comme l'HbA1c ci-dessus, elles peuvent ne pas correspondre à vos analyses de sang de l'HbA1c.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Comme l'HbA1c ci-dessus, elles peuvent ne pas correspondre à vos analyses de sang de l'HbA1c.
 - **SD** (écart type) et **CV** (coefficient de variation) : combien votre glycémie varie. Une valeur plus basse signifie une glycémie plus stable.
 - **Jours** : le nombre de jours de données MGC utilisés.
 
@@ -114,7 +114,7 @@ Ouvrez le **menu** (☰) en haut à gauche de l'écran principal et choisissez *
 (screens-bolus-carbs)=
 ### Glucides et bolus
 
-![Glucides et bolus](../images/TreatmentsView1.png)
+![Glucides et bolus](../images/Maintenance/TreatmentsView1.png)
 
 Dans cet onglet, vous pouvez voir le journal des bolus et des glucides. Chaque bolus (ligne **1**) affiche l'IA restante associée à côté de la quantité d'insuline. L'origine du bolus peut être :
 * Meal (manually entered through the Insulin, Quick Wizard or Bolus Wizard buttons)
@@ -141,7 +141,7 @@ L'historique des traitements peut servir à corriger des saisies de glucides fau
 
 ### Basale Temp
 
-![Basal Temp](../images/TreatmentsView2.png)
+![Basal Temp](../images/Maintenance/TreatmentsView2.png)
 
 Les **débits basaux temporaires** appliqués par la boucle sont affichés ici. Quand une entrée a encore un effet sur l'IA, l'information est affichée à côté du débit (ligne **1**). Il peut s'agir de :
 * IA positive si le débit basal temporaire était plus élevé que celui défini dans le profil
@@ -153,13 +153,13 @@ On the left of a line, a red S means “Suspend”: it happens when basal is not
 
 ### Cible Temp
 
-![Cible Temp](../images/TreatmentsView3.png)
+![Cible Temp](../images/Maintenance/TreatmentsView3.png)
 
 L'historique des cibles temporaires est visible ici.
 
 ### Changement de profil
 
-![Changement de profil](../images/TreatmentsView4.png)
+![Changement de profil](../images/Maintenance/TreatmentsView4.png)
 
 L'historique des changements de profil est visible ici. Vous pouvez voir plusieurs entrées à chaque changement de profil : la ligne **1**, enregistrée à la fois dans NS et dans l'historique de la pompe, correspond au changement réel. La ligne **2**, enregistrée dans Nightscout mais pas dans l'historique de la pompe, correspond à la demande de changement de profil faite par l'utilisateur.
 
@@ -169,14 +169,14 @@ Vous pouvez utiliser le bouton **Dupliquer** affiché sur la ligne **2** pour fa
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Cet onglet montre toutes les notes et saisies du careportal enregistrées dans Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Mode de fonctionnement
 
-![Mode de fonctionnement](../images/TreatmentsView6.png)
+![Mode de fonctionnement](../images/Maintenance/TreatmentsView6.png)
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes: open, closed, LGS, suspend, disconnect.
 
