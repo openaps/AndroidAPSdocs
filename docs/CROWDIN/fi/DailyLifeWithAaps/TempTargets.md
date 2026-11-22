@@ -36,7 +36,7 @@ Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to re
 In closed loop mode, **SMB**:
 
 - *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Users may also wish to consider:
 
@@ -74,7 +74,7 @@ AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
 In closed loop mode, **SMB**:
 
 - *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ The screen has three parts:
 
 1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
 2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Selecting a preset card loads its **target** and **duration** into the editor.
 
@@ -123,7 +123,7 @@ To put a built-in preset back the way it shipped, select it and tap the **↺ Re
 ### Adding and removing presets
 
 - **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
 
 Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
 
