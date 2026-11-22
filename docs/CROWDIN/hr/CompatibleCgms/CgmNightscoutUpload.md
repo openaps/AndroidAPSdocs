@@ -1,10 +1,10 @@
-# Other CGM uploaded to Nightscout
+# Drugi CGM koji šalje podatke u Nightscout
 
-Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
+Koristite ovu opciju ako imate neki drugi CGM koji može slati vaše podatke GUK-a **samo** u [Nightscout](https://nightscout.github.io/).
 
 ```{important}
 Ovaj izvor podataka neće raditi kada niste na mreži, kada imate problema s mrežom ili kada vaša Nightscout stranica ne radi. Koristite s oprezom.
 ```
 
--   Set up **NSClientV3** (**Configuration → Communication**) with your Nightscout site information.
--   Select NSClient BG in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Postavite **NSClientV3** (**Konfiguracija → Komunikacija**) s podacima vaše Nightscout stranice.
+-   Odaberite NSClient GUK u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
