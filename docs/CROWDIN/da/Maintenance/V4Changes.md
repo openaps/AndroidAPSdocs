@@ -111,6 +111,8 @@ I **AAPS** v4 er den insulin, der er markeret **AKTIV** i **Administrer → Insu
 
 Når du opgraderer, beholder **AAPS** den insulin og DIA, som dine profilskift i v3 allerede har gemt. Hvis den finder ældre registreringer, hvor insulinen er kendt, men DIA ikke er, bruger den en standard-DIA til dem og viser én gang en besked, for eksempel *Ældre registreringer havde ingen insulinvarighed, så 9,0 timer blev brugt for Lyumjev. Tjek dine insulinindstillinger — allerede migrerede registreringer bliver ikke opdateret bagefter.* Tjek dine insulinindstillinger, når du ser den.
 
+When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+
 ```{admonition} What you need to do
 :class: important
 For at ændre DIA eller spids skal du tilføje en ny insulin med **+**, justere den, gemme den og **▶ Aktivere** den. Se [Skift af den insulin, der er i brug](#Config-Builder-insulin-change-active).
