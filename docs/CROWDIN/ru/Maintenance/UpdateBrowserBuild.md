@@ -1,7 +1,7 @@
-# Update with a browser (fork)
+# Обновление через браузер (fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Вы собрали AAPS с помощью **AAPS Builder**? Эта страница вам не нужна: см. [Обновление AAPS с AAPS Builder](#aaps-builder-updates).
 ```
 
 ## Постройте сами вместо скачивания
@@ -9,12 +9,12 @@ You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AA
 **AAPS** is not available to download, due to regulations concerning medical devices. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! Подробности смотрите на странице [Часто задаваемые вопросы по работе ИПЖ](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to upgrade **AAPS** with a browser for the first time: copy your back-up keystore file to your Google Drive. Затем следуйте инструкции [Сборка **AAPS** через браузер](../SettingUpAaps/BrowserBuild.md) вместо этого руководства. Вместо создания нового хранилища ключей выберите то, которое вы скопировали с компьютера.
+Если вы впервые обновляете **AAPS** через браузер: скопируйте резервную копию файла хранилища ключей на свой Google Диск. Затем следуйте инструкции [Сборка **AAPS** через браузер](../SettingUpAaps/BrowserBuild.md) вместо этого руководства. Вместо создания нового хранилища ключей выберите то, которое вы скопировали с компьютера.
 Это нужно сделать только в первый раз; при следующих обновлениях вы сможете следовать этому руководству.
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Переходите на AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) — более простая сборка через браузер: не нужно синхронизировать fork, а приложение вы скачиваете прямо с GitHub. Переходить не обязательно: это руководство продолжает работать. Если переходите, сначала получите копию хранилища ключей из своего fork, как описано в разделе [Переход с прежней сборки через браузер](#aaps-builder-from-fork). Иначе новая сборка не сможет обновить AAPS на вашем телефоне.
 ```
 
 ## Обзор: обновление AAPS до новой версии через браузер
@@ -24,7 +24,7 @@ In case you want to upgrade **AAPS** with a browser for the first time: copy you
 :local: true
 ```
 
-In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Если возникли проблемы, см. отдельную страницу [Сборка через браузер: устранение неполадок](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Export your settings
 
@@ -57,7 +57,7 @@ In case you experience problems, see separate page for [browser build troublesho
 
 ![Отмена случайных изменений](../images/update/CI/GitHubUpdate4.png)
 
-You have now synchronized (updated) your own copy with the latest release of **AAPS**. Отлично.
+Теперь вы синхронизировали (обновили) свою копию с последним выпуском **AAPS**. Отлично.
 
 ![Репозиторий синхронизирован](../images/update/CI/GitHubUpdate5.png)
 
@@ -73,17 +73,17 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master. In **Select AAPS Version**, check that **4.0.0**, the newest version at the top of the list, is selected. If your fork is not up to date, the preselected version is an older one: if you run the workflow with the form as it opens, you rebuild that older version and your app is not updated. Choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Оставьте ветку master. В **Select AAPS Version** проверьте, что выбрана **4.0.0** — самая новая версия вверху списка. Если ваш fork не обновлен, заранее выбрана более старая версия: если запустить workflow с формой как есть, вы снова соберете эту старую версию, и приложение не обновится. Выберите [вариант](#browserbuild-variant) (fullRelease), а затем нажмите Run workflow.
 
    ```{note}
-   The list of versions is part of the workflow in your fork. If **4.0.0** is missing, your fork is not synchronized yet: go back to [Update your GitHub repository](#Update-to-new-version-update-your-repo).
+   Список версий — часть workflow в вашем fork. Если **4.0.0** нет в списке, ваш fork еще не синхронизирован: вернитесь к разделу [Обновите свой репозиторий GitHub](#Update-to-new-version-update-your-repo).
    ```
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. Вы увидите сообщение Workflow run was successfully requested. Обновите страницу браузера, и вы сможете следить за ходом сборки. Когда действие завершится, у действия AAPS CI появится зеленая галочка. You have successfully built the updated version of **AAPS**. Это значит, что APK основного приложения и APK для Wear теперь сохраняются прямо на ваш Google Диск (как описано ниже). APK AAPSClient можно скачать с Github > nightscout > AndroidAPS [здесь](https://github.com/nightscout/AndroidAPS/releases)
+6. Вы увидите сообщение Workflow run was successfully requested. Обновите страницу браузера, и вы сможете следить за ходом сборки. Когда действие завершится, у действия AAPS CI появится зеленая галочка. Вы успешно собрали обновленную версию **AAPS**. Это значит, что APK основного приложения и APK для Wear теперь сохраняются прямо на ваш Google Диск (как описано ниже). APK AAPSClient можно скачать с Github > nightscout > AndroidAPS [здесь](https://github.com/nightscout/AndroidAPS/releases)
 
 
 ![Отслеживание workflow](../images/update/CI/GitHubActions4.png)
@@ -110,6 +110,6 @@ You have now synchronized (updated) your own copy with the latest release of **A
 
 Выдохните!
 
-Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
+Затем проверьте, не описана ли уже ваша проблема: см. [Устранение неполадок AAPS Builder](#aaps-builder-troubleshooting), если вы собираете с **AAPS Builder**, иначе — [Сборка через браузер: устранение неполадок](#aaps-ci-troubleshooting).
 
 Если нужна дополнительная помощь, обратитесь к другим пользователям **AAPS** в [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) или [Discord](https://discord.gg/4fQUWHZ4Mw).
