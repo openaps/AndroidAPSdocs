@@ -131,9 +131,9 @@
 
 ![比較運算子](../images/Automations/automation_comparison_operators.png)
 
-**範例 1：**建立條件「**小於**」「-0.1 mmol/L」（或「-2 mg/dL」）會：
+**Example 1:** Creating a Condition **"is less than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-對於任何小於 -0.1（-2）的數字觸發**自動化**。這包括像 -0.2、-0.3、-0.4（-4、-6、-8）等數字。請記住，-0.1（-2）本身**並不**包含在此條件內。（條件「小於或等於 -0.1 mmol/L（-2 mg/dL）」_則會_包含 -0.1 mmol/L 或 -2 mg/dL。）
+對於任何小於 -0.1（-2）的數字觸發**自動化**。這包括像 -0.2、-0.3、-0.4（-4、-6、-8）等數字。請記住，-0.1（-2）本身**並不**包含在此條件內。 (The condition "is equal or less than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL).
 
 **範例 2：**建立條件「大於」-0.1 mmol/L（-2 mg/dL）會：
 
@@ -308,7 +308,7 @@
 (automations-low-glucose-temp-target)=
 ### 低血糖臨時目標
 
-此**自動化**會在**臨時目標**低於特定門檻時自動啟動；例如，當血糖低於 70 mg/dL 時，啟動 110 mg/dL 的目標並持續 30 分鐘：
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is less than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![範例：低血糖規則](../images/Automations/automation_example_low_glucose_rule.png)
 
