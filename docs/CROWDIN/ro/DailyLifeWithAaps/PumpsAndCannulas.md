@@ -4,7 +4,7 @@
 
 Procedura descrisă mai jos este numai pentru pompe cu fir și nu se aplică pentru pompe plasture cum ar fi Omnipod, Medtrum Nano, Accu-Chek Solo șamd. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
 
-Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. Consultați pagina pompei dumneavoastră în [Pompele compatibile](../Getting-Started/CompatiblePumps.md).
+Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Consultați pagina pompei dumneavoastră în [Pompele compatibile](../Getting-Started/CompatiblePumps.md).
 
 Modificările cartușului fizic/rezervorului nu pot fi efectuate prin intermediul **AAPS** și trebuie efectuate direct prin intermediul pompei. Acestea trebuie să fie înregistrate manual în **AAPS**, odată terminate.
 
@@ -31,6 +31,7 @@ Modificările cartușului fizic/rezervorului nu pot fi efectuate prin intermediu
 * You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). Vedeți instrucțiunile din cutia canulei pentru câte unități (în funcție de lungimea acului și lungimea tubului) ar trebui să fie amorsate pentru canulă.
 
 * Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
 
