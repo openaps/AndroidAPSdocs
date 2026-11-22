@@ -1,152 +1,152 @@
 (generaltroubleshooting)=
 
-# Troubleshooting
+# Rješavanje problema
 
-**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
+**Počnite ovdje kada nešto ne radi.** Podaci o rješavanju problema nalaze se na mnogo stranica u dokumentaciji. Ova stranica ih okuplja: to je jedan zbirni popis poveznica, poredanih po temama, koji vam pomaže riješiti najčešće probleme.
 
-If you do not find your answer below, also check:
+Ako ispod ne nađete odgovor, pogledajte i:
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
-* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+* [Česta pitanja korisnika petlje](../UsefulLinks/FAQ.md) za odgovore na česta pitanja i
+* [Podešavanje profila u AAPS-u](ProfileTuning.md) ako vaša petlja radi, ali kontrolu glukoze treba poboljšati.
 
 ```{admonition} Still stuck?
 :class: tip
-If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+Ako nijedna poveznica ne riješi vaš problem, pogledajte [Gdje mogu dobiti pomoć?](WhereCanIGetHelp.md) kako biste pitali zajednicu (Facebook, Discord) ili pošaljite svoje [datoteke dnevnika](AccessingLogFiles.md) razvojnim programerima.
 ```
 
 ---
 
 (generaltroubleshooting-aaps-app)=
 
-## AAPS app
+## Aplikacija AAPS
 
-### Building & updating
+### Izrada i ažuriranje
 
-* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+* Ako izrada ne uspije, pogledajte [Ako izrada ne uspije](#building-aaps-troubleshooting): tamo je odjeljak za rješavanje problema za svaki način izrade:
   * [AAPS Builder](#aaps-builder-troubleshooting)
-  * [Browser build](#aaps-ci-troubleshooting)
+  * [Izrada u pregledniku](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* Izgubljeno ili novo spremište ključeva: [Ponovna instalacija AAPS-a](#reinstall-aaps)
+* Ažuriranje **AAPS-a**: [s AAPS Builderom](#aaps-builder-updates), [izradom u pregledniku (fork)](#update-browser-build-troubleshooting), [s Android Studiom](#update-computer-build-troubleshooting)
 
-### Installing
+### Instalacija
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
-* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [Upozorenje Google Play zaštite](#transferring-installing-play-protect-warning): aplikacija je prijavljena kao nesigurna.
+* Instalacija je **blokirana** s porukom o neprovjerenom razvojnom programeru: pogledajte [Provjera Android razvojnih programera](#android-developer-verification) za besplatne načine instalacije.
 
-### Settings
+### Postavke
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
-* [Nightscout Client](TroubleshootingNsClient.md)
+* [Profil: „Bazalna stopa nije kompatibilna s trenutnom pumpom“](#your-aaps-profile-basal-not-compatible)
+* [Pumpa: „Podaci dolaze s druge pumpe“](#config-builder-wrong-pump-data)
+* [Nightscout klijent](TroubleshootingNsClient.md)
 * **"AAPS settings cannot be read"** at start: the settings are encrypted with a key that Android keeps for **AAPS**, and that key does not open them any more, for example after the key store of the phone was reset. While this screen is shown, **AAPS** is not running and does not control the pump. Tap **Retry**: it closes and restarts **AAPS**. If that does not help, restart the phone. Use **Start fresh** only when nothing else helps: it sets the unreadable settings file aside (it is renamed and kept) and starts **AAPS** with empty settings. Then import your last [settings export](../Maintenance/ExportImportSettings.md).
 
-### Usage
+### Korištenje
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
-* [Full closed loop](#full-closed-loop-troubleshooting)
+* [Pogrešne vrijednosti ugljikohidrata (spora apsorpcija ugljikohidrata)](#CobCalculation-detection-of-wrong-cob-values)
+* [Automatizacija](#automations-troubleshooting)
+* [Potpuno zatvorena petlja](#full-closed-loop-troubleshooting)
 
 ---
 
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Problemi s Bluetoothom
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Za poznate probleme s Bluetooth vezama, prekidima veze s pumpom/Pod-ovima ili problemima s aktivacijom i vezom pogledajte [Problemi s Bluetoothom](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Problemi povezani s Androidom
 
-### Battery optimization
+### Optimizacija baterije
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** vam može pomoći pronaći prave postavke za vaš telefon: otvorite **izbornik** (☰) > **O aplikaciji** i dodirnite **Don't kill my app?**. Otvorit će se upute za proizvođača vašeg telefona na stranici [Don't kill my app](https://dontkillmyapp.com/). [Čarobnjak za postavljanje](#setup-wizard-bluetooth-battery-optimisation) također traži da isključite optimizaciju baterije za **AAPS** i Bluetooth.
 
-Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
+Android ima postavke za uštedu baterije koje su uključene prema zadanim postavkama. Te postavke automatski suspendiraju/pauziraju aplikacije koje nisu potrebne za rad sustava, kako bi se smanjila potrošnja baterije aplikacija koje ne moraju stalno raditi.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
+Ako je optimizacija uključena, vrlo vjerojatno će uzrokovati probleme za **AAPS** i druge pomoćne aplikacije poput **xDripa**.
 
-It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
+Važno je isključiti optimizaciju baterije kako bi **AAPS** i druge pomoćne aplikacije stalno ostale aktivne.
 
-Depending on your phone model and make there may be more than one location and setting which needs to have this disabled.
+Ovisno o modelu i proizvođaču vašeg telefona, ova se postavka možda mora isključiti na više mjesta.
 
-***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
+***NAPOMENA:** Slijedite korake ispod kako biste isključili optimizaciju baterije za uslugu Bluetooth ako vaš telefon ima tu opciju. Isti koraci služe i za isključivanje za **AAPS** i druge aplikacije, ali snimke zaslona prikazuju samo kako to učiniti za uslugu Bluetooth.*
 
-#### Pixel phones (stock Android)
+#### Pixel telefoni (izvorni Android)
 
-* Go to the Android settings, select "Apps".
+* Idite na Android postavke, odaberite „Aplikacije“.
 
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+  ![Android postavke¦Aplikacije](../images/troubleshooting/pixel/01_androidsettings.png)
 
-* Select "See all apps"
+* Odaberite „Prikaži sve aplikacije“
 
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+  ![Prikaži sve aplikacije](../images/troubleshooting/pixel/02_apps.png)
 
-* On the menu on the right, select "Show system" apps.
+* U izborniku desno odaberite „Prikaži sustavske“ aplikacije (Show system).
 
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+  ![Prikaži sustavske aplikacije](../images/troubleshooting/pixel/03_allapps.png)
 
-* Now search and select the app "Bluetooth".
+* Sada potražite i odaberite aplikaciju „Bluetooth“.
 
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
+  ![Aplikacija Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
+* Kliknite „Potrošnja baterije aplikacije“ i odaberite „Neograničeno“ (na nekim starijim verzijama Androida „Nije optimizirano“).
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+  ![Optimizacija baterije za BT](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### Samsung phones
+#### Samsung telefoni
 
-* Go to the android settings, select "Apps"
+* Idite na Android postavke, odaberite „Aplikacije“
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+* Na ikoni koja bi trebala mijenjati način sortiranja (1) odaberite „Prikaži sustavske aplikacije“ (2).
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  ![Filtar aplikacija](../images/troubleshooting/samsung/Samsung01_Apps.png)
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Prikaži sustavske aplikacije](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* Sada potražite aplikaciju Bluetooth i odaberite je da vidite njezine postavke.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Aplikacija Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
-* Select "battery".
+* Odaberite „Baterija“.
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Baterija](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
+* Postavite je na „Neograničeno“ (na nekim starijim verzijama Androida „Nije optimizirano“).
 
-  ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Neograničeno](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### Huawei phones
+#### Huawei telefoni
 
-See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+Pogledajte ovaj vodič za [Huawei: Bluetooth i optimizacija baterije](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-cgm)=
 
-## Continuous Glucose Monitor (CGM)
+## Kontinuirani monitor glukoze (CGM)
 
-Useful links to known issues and steps to resolve for CGMs.
+Korisne poveznice na poznate probleme i korake za njihovo rješavanje za CGM-ove.
 
-* [General](#general-cgm-troubleshooting)
+* [Općenito](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [Libre 2 s Minimal Looperom](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
-* [xDrip - no CGM data](#xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - nema podataka s CGM-a](#xdrip-identify-receiver)
+* [xDrip - rješavanje problema s Dexcomom](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ---
 
 (generaltroubleshooting-pumps)=
 
-## Pumps
+## Pumpe
 
-Useful links to known issues and steps to resolve for Pumps
+Korisne poveznice na poznate probleme i korake za njihovo rješavanje za pumpe
 
 * [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
@@ -163,34 +163,34 @@ Useful links to known issues and steps to resolve for Pumps
 
 (generaltroubleshooting-phones)=
 
-## Phones
+## Telefoni
 
-Useful links to known issues and steps to resolve for Phones
+Korisne poveznice na poznate probleme i korake za njihovo rješavanje za telefone
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
+* [Popis testiranih telefona i postava uređaja](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Huawei: Bluetooth i optimizacija baterije](../CompatiblePhones/Huawei.md)
 
 ---
 
 (generaltroubleshooting-remote-control)=
 
-## Remote control
+## Daljinsko upravljanje
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
-* [SMS commands](#SMSCommands-troubleshooting)
+* [AAPSClient i daljinsko upravljanje (uparivanje, naredbe ne stižu)](#client-master-control-troubleshooting)
+* [Problemi s „pristupnim tokenom za Nightscout“](#remotecontrol-nightscout-access-token)
+* [SMS naredbe](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
 ---
 
 (generaltroubleshooting-smartwatches)=
 
-## Smartwatches
+## Pametni satovi
 
-Useful links to known issues and steps to resolve for Smartwatches
+Korisne poveznice na poznate probleme i korake za njihovo rješavanje za pametne satove
 
-* [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [Rješavanje problema s aplikacijom za sat (Wear)](#Watchfaces-troubleshooting-the-wear-app)
+* [Sat i telefon ne komuniciraju](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
-* [Building the Wear app](#building-aaps-wear-os-troubleshooting)
+* [Izrada aplikacije za sat (Wear)](#building-aaps-wear-os-troubleshooting)
