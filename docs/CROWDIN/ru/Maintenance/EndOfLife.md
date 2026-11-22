@@ -6,7 +6,7 @@
 
 ## Как пользоваться этой страницей
 
-1. In AAPS, open the **menu** (☰) at the top left and choose **About**. Там вы увидите вашу версию AAPS.
+1. В AAPS откройте **меню** (☰) слева вверху и выберите **О программе**. Там вы увидите вашу версию AAPS.
 2. Найдите эту же версию в первой таблице ниже. Посмотрите дату окончания поддержки рядом с ней. Даты записаны в формате **год-месяц-день**. Например, `2026-10-30` означает 30 октября 2026 года.
 3. Перед обновлением прочитайте [Примечания к изменениям в версиях](ReleaseNotes.md) и инструкцию [Обновление до новой версии или ветки](UpdateToNewVersion.md). Какую версию вы можете использовать, зависит также от версии Android на вашем телефоне.
 
@@ -30,7 +30,7 @@
 
 Android присваивает каждой версии системы **уровень API** — это число, которое используют приложения. Например, уровень API 30 — это Android 11. В таблице ниже используются уровни API из данных о версиях AAPS. Версия AAPS в каждой строке — это значение, указанное для показанного уровня API. Это не полный список версий, которые можно установить.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version).
+Чтобы выбрать версию AAPS для вашего телефона, используйте [рекомендации по версиям Android в Примечаниях к изменениям в версиях](#maintenance-android-version-aaps-version).
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
     const label = list => list.length === 1 ? list[0]
-      : list.length === 2 ? `${list[0]} and ${list[1]}`
-      : `${list[0]} to ${list[list.length - 1]}`;
+      : list.length === 2 ? `${list[0]} и ${list[1]}`
+      : `${list[0]} – ${list[list.length - 1]}`;
     showRows('aaps-eol-versions', groups.reverse().map(g => [label(g.versions), g.endDate]));
     showRows('aaps-eol-android', android.map(entry => [
       entry.minAndroid === entry.maxAndroid
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]));
     status.remove();
   } catch {
-    status.textContent = 'Could not load AAPS version data. Повторите попытку позже.';
+    status.textContent = 'Не удалось загрузить данные о версиях AAPS. Повторите попытку позже.';
   }
 });
 </script>
