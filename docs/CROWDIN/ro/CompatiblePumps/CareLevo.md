@@ -121,6 +121,8 @@ Apăsați **Eliminați plasturele** pe ecranul pompei și confirmați. Administr
 
 When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Apăsarea lui elimină plasturele în același mod.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarme și notificări
