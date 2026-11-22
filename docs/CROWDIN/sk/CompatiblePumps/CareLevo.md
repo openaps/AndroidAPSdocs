@@ -121,6 +121,8 @@ Na obrazovke pumpy stlačte **Zahodiť náplasťovú pumpu** a potvrďte. Podáv
 
 Keď náplasťovú pumpu zastavil kritický alarm, alarm ponúkne namiesto toho **Deaktivovať náplasťovú pumpu**. Jeho stlačením sa náplasťová pumpa zahodí rovnakým spôsobom.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarmy a oznámenia
