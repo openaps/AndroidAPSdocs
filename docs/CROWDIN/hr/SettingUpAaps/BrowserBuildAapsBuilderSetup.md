@@ -12,7 +12,7 @@ Gumbi ispod otvaraju GitHub u novoj kartici Chromea. Za povratak na ovu stranicu
 
 ## Korak 1 – Izradite svoj privatni repozitorij za izradu
 
-This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. Samo ga vi možete vidjeti, kao i aplikacije koje izrađuje. **Ne** trebate izraditi fork AndroidAPS-a: izvorni kod AAPS-a preuzima se iz službenog repozitorija AndroidAPS pri svakoj izradi.
+Time se u vašem GitHub računu izrađuje vaša vlastita privatna kopija AAPS Buildera: repozitorij u kojem je workflow za izradu već spreman. Samo ga vi možete vidjeti, kao i aplikacije koje izrađuje. **Ne** trebate izraditi fork AndroidAPS-a: izvorni kod AAPS-a preuzima se iz službenog repozitorija AndroidAPS pri svakoj izradi.
 
 <label class="aapsb-label" for="aapsb-user">Vaše GitHub korisničko ime</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
@@ -26,53 +26,53 @@ Najprije se u ovom pregledniku prijavite na github.com (nemate račun? izradite 
 Zadržite predloženi naziv. Već ste izradili repozitorij s drugim nazivom? Ovdje upišite točno taj naziv.
 
 ```{note}
-**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+**Već imate repozitorij AAPS Buildera** (izrađen ranijom verzijom ove stranice)? Nemojte izrađivati novi: ovdje upišite točno njegov naziv, preskočite gumb ispod i jednom ažurirajte njegov workflow: pogledajte **Ažuriranje vaše kopije** na kraju ovog koraka. Vaše tajne ostaju kakve jesu.
 
-If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+Ako ipak želite novi repozitorij, odaberite naziv koji još nemate, na primjer `my-aaps-2`, i u koraku 2 koristite isto spremište ključeva.
 
-Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+Nemojte upisati naziv svog forka AndroidAPS-a: fork je javan i već se izrađuje vlastitim workflowom **AAPS CI**.
 ```
 
 Vaš repozitorij:<code class="aapsb-repoUrl"></code>
 
-Check this name before you use the buttons below: the page remembers the name from your last visit.
+Provjerite ovaj naziv prije nego što upotrijebite gumbe ispod: stranica pamti naziv iz vašeg zadnjeg posjeta.
 
 <a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">Izradi moj privatni repozitorij</a>
 
-On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
+Na GitHub stranici koja se otvori sve je već ispunjeno: predložak `nightscout/aaps-builder`, vaš račun kao vlasnik, naziv vašeg repozitorija i **Private**. Ništa ne mijenjajte i ostavite **Include all branches** neoznačeno.
 
 1. Kliknite zeleni gumb **Create repository**.
-2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. Vratite se na ovu stranicu za korak 2.
+2. GitHub prikazuje vaš novi repozitorij s mapom `.github` i datotekom `README.md`: u njima je workflow za izradu. Vratite se na ovu stranicu za korak 2.
 
 ```{admonition} Your new repository is empty (no files)?
 :class: warning
 
-It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+Nije izrađen iz predloška. Izbrišite ga (**Settings** → dno stranice → **Delete this repository**), a zatim ponovno dodirnite **Izradi moj privatni repozitorij**.
 ```
 
 ```{admonition} GitHub says "my-aaps already exists in this account"?
 :class: tip
 
-You already have your repository: close the GitHub tab and go on with this page. If your key is already in it, continue with [step 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
+Repozitorij već imate: zatvorite karticu GitHuba i nastavite s ovom stranicom. Ako je vaš ključ već u njemu, nastavite s [korakom 4](#aaps-builder-setup-step4). Pogledajte [rješavanje problema](#aaps-builder-ts-repo-exists).
 ```
 
 ```{admonition} Updating your copy (existing AAPS Builder repository)
 :class: dropdown
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+Koraci izrade ažuriraju se umjesto vas: pri svakoj izradi vaš repozitorij pokreće verziju koju su AAPS programeri objavili u nightscout/aaps-builder, a u vašem se repozitoriju ništa ne mijenja. Datoteku workflowa zamjenjujete samo kada to najavi [Ažuriranja i promjene dokumentacije](../Maintenance/DocumentationUpdate.md) (na primjer za novu varijantu izrade) ili jednom ako je vaš repozitorij izrađen ranijom verzijom ove stranice ili iz starog predloška. Vaša tajna `KEYSTORE_SET` ostaje kakva jest.
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Otvori najnoviji workflow</a>
 
-   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+   Na računalu kliknite **ikonu za kopiranje** („Copy raw file“) gore desno iznad datoteke. Na telefonu umjesto toga otvorite <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">verziju s običnim tekstom</a>, pritisnite i držite tekst → **Odaberi sve** → **Kopiraj**.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Otvori moju datoteku workflowa</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Tap the **⋯** menu at the top right of the file, then **Edit file… In place** (on a computer, click the pencil).
-3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
+   Otvara `.github/workflows/build.yml` u <code class="aapsb-repoUrl"></code>. Dodirnite izbornik **⋯** gore desno iznad datoteke, a zatim **Edit file… In place** (na računalu kliknite olovku).
+3. Zamijenite cijeli tekst kopiranim workflowom (na telefonu: pritisnite i držite → **Odaberi sve** → **Zalijepi**), a zatim dvaput kliknite **Commit changes…**. Prvi redak datoteke prikazuje njezinu verziju.
 ```
 
 (aaps-builder-setup-step2)=
 
-## Step 2 – Your signing key
+## Korak 2 – Vaš ključ za potpisivanje
 
 Aplikacija mora biti potpisana vašim vlastitim ključem. Uvijek koristite isti ključ, inače za ažuriranje morate deinstalirati AAPS (i izgubiti njegove postavke). Odaberite jednu od dvije kartice.
 
@@ -133,37 +133,37 @@ Sve tri trebat će vam ako ikada budete izrađivali AAPS na drugi način, npr. s
 
 `````
 (aaps-builder-setup-step3)=
-## Step 3 – Give the key to your repository
-<span id="aapsb-s3wait">Finish step 2 first.</span>
+## Korak 3 – Dajte ključ svom repozitoriju
+<span id="aapsb-s3wait">Najprije završite korak 2.</span>
 
 <div id="aapsb-s3ready" hidden>
   1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Otvori stranicu s tajnama</a> Otvara: <code class="aapsb-repoUrl"></code> Dobivate „Page not found“ (404)? Najprije provjerite jeste li u ovom pregledniku prijavljeni na github.com: GitHub prikazuje 404 za privatne repozitorije kada niste prijavljeni. Inače se vaše korisničko ime ili naziv repozitorija iz koraka 1 ne podudaraju s vašim repozitorijem: provjerite ih na github.com i upišite ih u koraku 1. 2. Dodirnite „Kopiraj naziv“, a zatim ga zalijepite u malo polje „Name“: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Kopiraj naziv</button> 3. Dodirnite „Kopiraj tajnu“, a zatim zalijepite dugi kod u veliko polje „Secret“: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Kopiraj tajnu</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Tajna je vrlo dugi kod (tisuće znakova), a NE riječ KEYSTORE_SET. Najprije kopirajte i zalijepite naziv, a zatim dugi kod. 4. Dodirnite „Add secret“. Gotovo, ovo više nikada ne morate raditi.
 </div>
 (aaps-builder-setup-step4)=
-## Step 4 – Build the app
+## Korak 4 – Izradite aplikaciju
 
 1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">Otvori stranicu za izradu</a>
 
    Otvara: <code class="aapsb-repoUrl"></code>
 
    Dobivate „Page not found“ (404)? Najprije provjerite jeste li u ovom pregledniku prijavljeni na github.com: GitHub prikazuje 404 za privatne repozitorije kada niste prijavljeni. Inače se vaše korisničko ime ili naziv repozitorija iz koraka 1 ne podudaraju s vašim repozitorijem: provjerite ih na github.com i upišite ih u koraku 1. Umjesto toga otvorila se aplikacija GitHub? Dodirnite „RUN WORKFLOW“, provjerite verziju i varijantu i ponovno dodirnite „RUN WORKFLOW“. Ako aplikacija i dalje prikazuje „Nothing to see here“, povucite popis prema dolje da vidite svoju izradu.
-2. If asked, click the green button to enable workflows.
-The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
-3. Kliknite „Run workflow“, a zatim zeleni gumb „Run workflow“. „latest“ izrađuje najnoviju verziju AAPS-a. ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
+2. Ako se zatraži, kliknite zeleni gumb da omogućite workflowe.
+Popis workflowa prikazuje dva unosa: koristite „Build AAPS“. Zanemarite „AAPS Builder“: on sadrži korake izrade i nema gumb „Run workflow“.
+3. Kliknite „Run workflow“, a zatim zeleni gumb „Run workflow“. „latest“ izrađuje najnoviju verziju AAPS-a. ***savjet:*** *drugu verziju možete izraditi tako da umjesto „latest“ upišete naziv njezine [oznake (tag)](https://github.com/nightscout/AndroidAPS/tags)*
 4. Pričekajte oko 15–30 minuta. Zelena kvačica znači da je izrada gotova.
 Želite li e-mail kada je izrada gotova? GitHub vam šalje e-mail samo kada izrada ne uspije. Da biste ga dobili i kada uspije: na github.com otvorite svoju profilnu sliku → Settings → Notifications → System → Actions i uklonite kvačicu s „Only notify for failed workflows“.
 
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
-2. The file is there, but GitHub shows "This workflow does not exist": see [troubleshooting](#aaps-builder-ts-workflow-not-found).
+1. Otvorite svoj repozitorij i provjerite ima li mapu `.github` s datotekom `workflows/build.yml`. Ako je repozitorij prazan, nije izrađen iz predloška: izbrišite ga (**Settings** → dno stranice → **Delete this repository**) i ponovno napravite [korak 1](#aaps-builder-setup-step1) s gumbom.
+2. Datoteka postoji, ali GitHub prikazuje „This workflow does not exist“: pogledajte [rješavanje problema](#aaps-builder-ts-workflow-not-found).
 3. Otvorite karticu Actions. Ako piše da su workflowi onemogućeni, kliknite zeleni gumb da ih omogućite. Zatim na popisu kliknite „Build AAPS“.
 ```
 
 (aaps-builder-setup-step5)=
 
-## Step 5 – Install on your phone
+## Korak 5 – Instalirajte na telefon
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
@@ -190,31 +190,31 @@ The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder"
 
 APK nije prikazan pod „Code“ u vašem repozitoriju, nego samo na stranici izrade. Čuva se 14 dana.
 
-Nova verzija AAPS-a? Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). Vaš repozitorij nikada ništa ne izrađuje sam.
+Nova verzija AAPS-a? Napravite sigurnosnu kopiju postavki, a zatim je izradite u [koraku 4](#aaps-builder-setup-step4). Vaš repozitorij nikada ništa ne izrađuje sam.
 
 (aaps-builder-setup-step6)=
 
-## Step 6 – Optional: get the app in Google Drive
+## Korak 6 – Neobavezno: aplikacija na Google Driveu
 
-Želite li da se APK pojavi na vašem Google Driveu (gdje se čuva zauvijek)? Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
+Želite li da se APK pojavi na vašem Google Driveu (gdje se čuva zauvijek)? Dodajte još jednu tajnu, GDRIVE_OAUTH2. Ova stranica je dobiva od Googlea umjesto vas. AAPS tada na vašem Google Driveu može vidjeti i mijenjati samo datoteke koje sam izradi, ništa drugo.
 
-1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
+1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Poveži Google Drive</a>
 
-   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
-2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
+   Google se otvara u novoj kartici. Odaberite svoj Google račun i dopustite AAPS-u da vidi i mijenja datoteke koje sam izradi. Ako Google kaže da aplikacija nije potvrđena, dodirnite „Advanced“, a zatim „Go to …“.
+2. Zatim nova kartica prikazuje pogrešku kao **„This site can't be reached“** ili **„127.0.0.1 refused to connect“**. **To je očekivano.** Googleov odgovor nalazi se u adresi te kartice.
 
-   Tap the address bar of that tab, then the copy icon next to the address (on a computer: select the whole address and copy it). It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
-3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+   Dodirnite adresnu traku te kartice, a zatim ikonu za kopiranje pokraj adrese (na računalu: označite cijelu adresu i kopirajte je). Adresa počinje s `http://127.0.0.1:47913/`. Vratite se na ovu stranicu u roku od nekoliko minuta: odgovor vrijedi samo kratko.
+3. <label class="aapsb-label" for="aapsb-googleUrl">Ovdje zalijepite kopiranu adresu</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Dohvati GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
 
 <div id="aapsb-gdriveReady" hidden>
 
-4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Otvori stranicu s tajnama</a>
 
-   Opens: <code class="aapsb-repoUrl"></code>
+   Otvara: <code class="aapsb-repoUrl"></code>
 
-   Getting "Page not found" (404)? Najprije provjerite jeste li u ovom pregledniku prijavljeni na github.com: GitHub prikazuje 404 za privatne repozitorije kada niste prijavljeni. Inače se vaše korisničko ime ili naziv repozitorija iz koraka 1 ne podudaraju s vašim repozitorijem: provjerite ih na github.com i upišite ih u koraku 1.
-5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+   Dobivate „Page not found“ (404)? Najprije provjerite jeste li u ovom pregledniku prijavljeni na github.com: GitHub prikazuje 404 za privatne repozitorije kada niste prijavljeni. Inače se vaše korisničko ime ili naziv repozitorija iz koraka 1 ne podudaraju s vašim repozitorijem: provjerite ih na github.com i upišite ih u koraku 1.
+5. Dodirnite „Kopiraj naziv“, a zatim ga zalijepite u malo polje „Name“: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Kopiraj naziv</button>
+6. Dodirnite „Kopiraj tajnu“, a zatim zalijepite kod u veliko polje „Secret“: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Kopiraj tajnu</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
 7. Dodirnite „Add secret“.
 
 </div>
@@ -222,7 +222,7 @@ Nova verzija AAPS-a? Back up your settings, then build it with [step 4](#aaps-bu
 ```{admonition} Already have a GDRIVE_OAUTH2 value?
 :class: dropdown
 
-A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+Radi i vrijednost sa stranice za pripremu AAPS-a druge metode izrade u pregledniku: otvorite stranicu s tajnama, dodajte naziv `GDRIVE_OAUTH2` i zalijepite svoju vrijednost. Pogledajte [Spremanje izrada na Google Drive](#aaps-builder-google-drive).
 ```
 
 Pri sljedećoj izradi APK datoteke spremaju se i na Google Drive, u mapu AAPS/&lt;version&gt;.
@@ -231,39 +231,39 @@ Ako ne izrađujete 6 mjeseci ili promijenite lozinku za Google, Google prekida p
 
 ----
 
-Sve na ovoj stranici radi u vašem pregledniku. Vaš ključ i lozinke nikada se nikamo ne šalju, osim tamo gdje ih sami zalijepite. GitHubu se šalje samo vaše GitHub korisničko ime, kako bi se provjerilo postoji li. In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
+Sve na ovoj stranici radi u vašem pregledniku. Vaš ključ i lozinke nikada se nikamo ne šalju, osim tamo gdje ih sami zalijepite. GitHubu se šalje samo vaše GitHub korisničko ime, kako bi se provjerilo postoji li. U koraku 6 Googleov odgovor šalje se samo Googleu, kako bi se dobio GDRIVE_OAUTH2. Workflow za izradu održavaju AAPS programeri u [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), a temelji se na AAPS Builderu (AGPL-3.0).
 
 <div id="aapsb-msgs" hidden>
 
 - <span data-aapsb-msg="copied">Dugi kod je kopiran: zalijepite ga u veliko polje „Secret“, a zatim dodirnite „Add secret“.</span>
 - <span data-aapsb-msg="copiedName">Naziv je kopiran: zalijepite ga u malo polje „Name“.</span>
 - <span data-aapsb-msg="userOk">✓ GitHub korisnik pronađen.</span>
-- <span data-aapsb-msg="userBad">✗ Ne postoji GitHub korisnik s tim imenom. Use your username (shown in your GitHub profile), not your e-mail.</span>
-- <span data-aapsb-msg="copiedShort">Copied ✓</span>
-- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
-- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
-- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
-- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
-- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
-- <span data-aapsb-msg="errAlias">Alias not found in the keystore. Dostupno: {aliases}</span>
+- <span data-aapsb-msg="userBad">✗ Ne postoji GitHub korisnik s tim imenom. Upišite svoje korisničko ime (prikazano je u vašem GitHub profilu), a ne e-mail adresu.</span>
+- <span data-aapsb-msg="copiedShort">Kopirano ✓</span>
+- <span data-aapsb-msg="needUser">Najprije u koraku 1 upišite svoje GitHub korisničko ime.</span>
+- <span data-aapsb-msg="errPipe">Lozinke i alias ne smiju sadržavati znak |</span>
+- <span data-aapsb-msg="errNoFile">Odaberite datoteku spremišta ključeva.</span>
+- <span data-aapsb-msg="errEmpty">Upišite lozinku i alias.</span>
+- <span data-aapsb-msg="errPass">Pogrešna lozinka spremišta ključeva.</span>
+- <span data-aapsb-msg="errKeyPass">Pogrešna lozinka ključa.</span>
+- <span data-aapsb-msg="errAlias">Alias nije pronađen u spremištu ključeva. Dostupno: {aliases}</span>
 - <span data-aapsb-msg="errFormat">Ovo ne izgleda kao datoteka spremišta ključeva.</span>
-- <span data-aapsb-msg="okHave">Spremište ključeva je u redu! Continue with step 3.</span>
-- <span data-aapsb-msg="okHaveUnchecked">Keystore read. Lozinka će se provjeriti kada pokrenete izradu. Continue with step 3.</span>
-- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
-- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # – bez razmaka, bez slova s dijakritičkim znakovima i bez |</span>
+- <span data-aapsb-msg="okHave">Spremište ključeva je u redu! Nastavite s korakom 3.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Spremište ključeva je pročitano. Lozinka će se provjeriti kada pokrenete izradu. Nastavite s korakom 3.</span>
+- <span data-aapsb-msg="errShort">Lozinka mora imati najmanje 8 znakova.</span>
+- <span data-aapsb-msg="errAscii">Koristite samo a–z, A–Z, 0–9 i simbole kao što su ! ? # – bez razmaka, bez slova s dijakritičkim znakovima i bez |</span>
 - <span data-aapsb-msg="errMatch">Lozinke se ne podudaraju.</span>
 - <span data-aapsb-msg="working">Izrađujem ključ…</span>
-- <span data-aapsb-msg="okNew">Ključ je izrađen. Download the backup below, then continue with step 3.</span>
-- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
-- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
-- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
-- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
-- <span data-aapsb-msg="gWorking">Asking Google…</span>
-- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
-- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
-- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
+- <span data-aapsb-msg="okNew">Ključ je izrađen. Preuzmite sigurnosnu kopiju ispod, a zatim nastavite s korakom 3.</span>
+- <span data-aapsb-msg="gNoUrl">Najprije zalijepite cijelu adresu Googleove kartice.</span>
+- <span data-aapsb-msg="gNoCode">U ovoj adresi nema odgovora od Googlea. Kopirajte cijelu adresu kartice koja prikazuje pogrešku, počevši s http://127.0.0.1:47913/</span>
+- <span data-aapsb-msg="gDenied">Pristup Googleu nije dopušten. Ponovno dodirnite „Poveži Google Drive“ i dopustite pristup.</span>
+- <span data-aapsb-msg="gOldUrl">Ova adresa pripada starijem pokušaju. Ponovno dodirnite „Poveži Google Drive“ i upotrijebite novu adresu.</span>
+- <span data-aapsb-msg="gWorking">Pitam Google…</span>
+- <span data-aapsb-msg="gFailed">Google to nije prihvatio ({error}). Odgovor vrijedi samo nekoliko minuta i samo jednom: ponovno dodirnite „Poveži Google Drive“.</span>
+- <span data-aapsb-msg="gNoRefresh">Google nije poslao dugoročni pristup. Ponovno dodirnite „Poveži Google Drive“.</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 je spreman. Dodajte ga kao tajnu ispod.</span>
+- <span data-aapsb-msg="gCopied">Kod je kopiran: zalijepite ga u veliko polje „Secret“, a zatim dodirnite „Add secret“.</span>
 
 </div>
 
