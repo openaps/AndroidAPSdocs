@@ -313,6 +313,7 @@ Quan seleccioneu una altra bomba, **AAPS** us demana que confirmeu el canvi:
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Bomba virtual: llaç obert, **AAPS** només fa suggeriments
   - quan feu els primers passos amb **AAPS**, durant els primers [objectius](../SettingUpAaps/CompletingTheObjectives.md)
   - per a bombes que encara no tenen cap controlador
