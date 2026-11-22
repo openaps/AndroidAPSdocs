@@ -7,8 +7,8 @@
 
 Postoje četiri vrlo učinkovita alata za daljinsko upravljanje **AAPS**-om:
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower device is an Android phone or tablet, or a Windows, Mac or Linux computer; on an iPhone you [build the app yourself](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
-4) [Smartwatches](#RemoteControl_smartwatches) (Android)
+1) [SMS naredbe](#RemoteControl_SMS-Commands) (telefon pratitelja može biti Android ili iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (uređaj pratitelja je Android telefon ili tablet ili računalo sa sustavom Windows, Mac ili Linux; na iPhoneu [aplikaciju izrađujete sami](#aapsclient-iphone)) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS ili drugo računalo/uređaj), uglavnom za praćenje: pogledajte napomenu o [upravljanju s klijenta](#client-master-control) u tom odjeljku.  
+4) [Pametni satovi](#RemoteControl_smartwatches) (Android)
 
 Prva tri alata uglavnom su prikladna za njegovatelje/roditelje, a pametni satovi vrlo su korisni za njegovatelje/roditelje **i** za odrasle osobe s dijabetesom.
 
@@ -42,11 +42,11 @@ Kako biste lakše razlikovali aplikacije, neki elementi imaju različitu boju: �
 
 **AAPSClient** se može instalirati na jedan telefon ili na više telefona pratitelja (npr. telefon pratitelja roditelja 1 i telefon pratitelja roditelja 2), tako da oba njegovatelja dobiju pristup i mogu daljinski upravljati pacijentovim telefonom s **AAPS**-om.
 
-To download **AAPSClient**, navigate to the [GitHub repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Da biste preuzeli **AAPSClient**, idite u [GitHub repozitorij](https://github.com/nightscout/AndroidAPS/releases/) i kliknite na datoteku **“app-AAPSClient-release_x.x.x.x”** (verzija može biti novija od one prikazane na snimci zaslona u nastavku):
 
 ![slika](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Zatim na računalu idite u _preuzimanja_. On Windows, _downloads_ will show in the right hand ribbon:
+Zatim na računalu idite u _preuzimanja_. U Windowsima će se _preuzimanja_ prikazati na traci s desne strane:
 
 ![slika](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
@@ -56,13 +56,13 @@ Kada se datoteka preuzme, kliknite _prikaži u mapi_ da je pronađete.
 
 prenijeti na telefon pratitelja USB kabelom; ili povući u mapu na Google Driveu i zatim dodati na telefon pratitelja klikom na datoteku „app-AAPSClient-release“.
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the GitHub repository as described above. Razlog je to što na isti telefon ne možete instalirati i **AAPS** i **AAPSClient** ako su potpisani različitim ključem. <br/> Da biste sami izradili **AAPSClient**, slijedite isti postupak kao za [uobičajenu izradu AAPS-a](../SettingUpAaps/BuildingAaps.md). Na stranici **Generate signed App Bundle or APK** odaberite **aapsclientRelease** umjesto **fullRelease**.
+Ako trebate **AAPS** za sebe i **AAPSClient** za praćenje nekoga drugog, morat ćete sami izraditi **AAPSClient** umjesto da ga preuzmete iz GitHub repozitorija kako je gore opisano. Razlog je to što na isti telefon ne možete instalirati i **AAPS** i **AAPSClient** ako su potpisani različitim ključem. <br/> Da biste sami izradili **AAPSClient**, slijedite isti postupak kao za [uobičajenu izradu AAPS-a](../SettingUpAaps/BuildingAaps.md). Na stranici **Generate signed App Bundle or APK** odaberite **aapsclientRelease** umjesto **fullRelease**.
 
 Isto pravilo vrijedi kada na jedan telefon pratitelja instalirate nekoliko klijentskih aplikacija (**AAPSClient**, **AAPSClient2**, **AAPSClient3**): sve moraju biti potpisane **istim ključem**. Inače Android odbija instalirati drugu aplikaciju (greška `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
 ### Sinkronizacija: postavljanje AAPSClienta i AAPS-a
 
-Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). Primjer u nastavku prikazuje postavljanje sinkronizacije s NSClientV3 i Nightscoutom 15; u __AAPS__-u su dostupni i drugi izvori podataka (npr. xDrip).
+Kada je __AAPSClient__ apk instaliran na telefon pratitelja, provjerite je li **NSClientV3** postavljen na isti način na oba telefona za Nightscout 15 (pogledajte [napomene o ažuriranju](../Maintenance/UpdateToNewVersion.md)). Primjer u nastavku prikazuje postavljanje sinkronizacije s NSClientV3 i Nightscoutom 15; u __AAPS__-u su dostupni i drugi izvori podataka (npr. xDrip).
 
 U **Konfiguracija** > **Komunikacija** korisnik sinkronizira svoje podatke s Nightscoutom putem __NSClientV3__ (koristeći v3 API), postavljenog na isti način i za __AAPS__ i za telefon pratitelja.
 
@@ -74,9 +74,9 @@ Korisnik mora osigurati da su telefoni s AAPS-om i s AAPS Clientom __oba__ sinkr
 
 - U istim postavkama upišite svoj **Nightscout pristupni token**. Slijedite upute [ovdje](https://nightscout.github.io/nightscout/security/#create-a-token). Na telefonu s **AAPS**-om koristite **administratorski token**: pomoću njega **AAPS** izrađuje zaseban token za svaki telefon pratitelja.
 
-- Enable **Use websockets** on **both** phones. Websockets are **mandatory** for remote control from **AAPSClient**, on both phones. Without them, **AAPSClient** can follow **AAPS** but cannot control it. Na oba telefona WebSockets također ubrzavaju sinkronizaciju, uz malo veću potrošnju baterije.
+- Uključite **Koristi WebSockets** na **oba** telefona. Websocketi su **obavezni** za daljinsko upravljanje iz **AAPSClienta**, na oba telefona. Bez njih **AAPSClient** može pratiti **AAPS**, ali njime ne može upravljati. Na oba telefona WebSockets također ubrzavaju sinkronizaciju, uz malo veću potrošnju baterije.
 
-  Your Nightscout host must support websockets. If the websocket connection keeps dropping, remote control does not work. See [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+  Vaš Nightscout poslužitelj mora podržavati WebSockets. Ako se WebSocket veza stalno prekida, daljinsko upravljanje ne radi. Pogledajte [Rješavanje problema s NSClientom](../GettingHelp/TroubleshootingNsClient.md).
 
 ![Postavke > NSClientV3 s Nightscout URL, Nightscout pristupni token i Koristi WebSockets](../images/preferences/settings_nsclient.png)
 
@@ -130,7 +130,7 @@ Pametni sat može biti vrlo koristan alat za upravljanje **AAPS**-om kod djece. 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-Osim što je Nightscout poslužitelj „u oblaku“, postoji i posebna aplikacija **Nightscout** koju možete preuzeti izravno iz App Storea na svom iPhoneu. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#RemoteControl_aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+Osim što je Nightscout poslužitelj „u oblaku“, postoji i posebna aplikacija **Nightscout** koju možete preuzeti izravno iz App Storea na svom iPhoneu. Ako imate Android telefon pratitelja, ne postoji posebna aplikacija Nightscout i bolje je koristiti [**AAPSClient**](#RemoteControl_aapsclient), ili, ako želite samo pratiti, a ne slati tretmane, možete preuzeti i instalirati aplikaciju [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) iz Trgovine Play.
 
 Kada instalirate aplikaciju **Nightscout** na iPhone, otvorite je i slijedite upute za postavljanje te upišite adresu svog Nightscouta (pogledajte dolje lijevo). Oblik adrese može se razlikovati, ovisno o tome gdje je vaš Nightscout smješten. (_npr._ http://youraddresshere.herokuapp.com). Zatim upišite svoju Nightscout API tajnu (pogledajte dolje desno). Ako aplikacija ne zatraži API lozinku, morate je upisati klikom na lokot na vrhu aplikacije:
 
@@ -179,7 +179,7 @@ Detaljnije o izborniku gore lijevo u aplikaciji Nightscout:
 3. Hamburger – za postavke
 4. Careportal – zabilježi tretman (pogledajte [u nastavku](#RemoteControl_nightscout-treatments) kada ih **AAPS** primjenjuje)
 
-![Nightscout top bar](../images/remote_control_and_following/remote-control-29.png)
+![Gornja traka Nightscouta](../images/remote_control_and_following/remote-control-29.png)
 
 U sivim karticama na ovom zaslonu nalazi se mnogo informacija o statusu sustava **AAPS** (a još više informacija vidjet ćete ako dodirnete karticu):
 
@@ -204,7 +204,7 @@ Pritisnite „refresh“ na dnu stranice da zatvorite skočni prozor.
 (RemoteControl_nightscout-treatments)=
 ### Slanje tretmana u AAPS putem aplikacije Nightscout
 
-In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed by the client, then checked and confirmed by the **AAPS** phone. Dok je upravljanje s klijenta uključeno, telefon s **AAPS**-om je u [zaštićenom načinu rada](#client-master-control-hardened-mode): tretmani, privremeni ciljevi i zamjene profila uneseni na web stranici Nightscouta ili u aplikaciji Nightscout **ne** primjenjuju se. Aplikacija Nightscout tada služi samo za praćenje.
+U **AAPS**-u 4 podržani način daljinskog upravljanja **AAPS**-om je **upareni AAPSClient**, pogledajte [Upravljanje glavni uređaj ↔ klijent](#client-master-control): svaki klijent ima [ulogu](#client-master-control-roles) koja ograničava što smije raditi, a svaku naredbu klijent potpisuje, a zatim je telefon s **AAPS**-om provjerava i potvrđuje. Dok je upravljanje s klijenta uključeno, telefon s **AAPS**-om je u [zaštićenom načinu rada](#client-master-control-hardened-mode): tretmani, privremeni ciljevi i zamjene profila uneseni na web stranici Nightscouta ili u aplikaciji Nightscout **ne** primjenjuju se. Aplikacija Nightscout tada služi samo za praćenje.
 
 ```{admonition} Only when client control is off
 :class: warning
@@ -279,15 +279,15 @@ a)  naredbe putem **AAPSClienta** ili **SMS**-a ne mogu raditi; ili
 
 b)  korisnik ne želi upisivati kod za provjeru autentičnosti (kao što je potrebno za SMS naredbe).
 
-Pametni sat treba **Wear OS 3 ili noviji** da bi mogao upravljati **AAPS**-om. Provjerite tehničke specifikacije sata i pogledajte stranicu [Pametni satovi i AAPS](../Getting-Started/Watches.md). Search, or ask in the **AAPS** Facebook/Discord groups if unsure.
+Pametni sat treba **Wear OS 3 ili noviji** da bi mogao upravljati **AAPS**-om. Provjerite tehničke specifikacije sata i pogledajte stranicu [Pametni satovi i AAPS](../Getting-Started/Watches.md). Ako niste sigurni, pretražite ili pitajte u Facebook/Discord grupama **AAPS**.
 
-Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. Sat [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) također je popularan izbor. Ako imate iskustva s postavljanjem nekog drugog pametnog sata i mislite da bi to bilo korisno drugima, dodajte to na ove stranice ([uredite dokumentaciju](../SupportingAaps/HowToEditTheDocs.md)) kako biste svoja saznanja podijelili s cijelom zajednicom **AAPS**.
+U nastavku su posebne upute za postavljanje **AAPS**-a na popularni sat Samsung Galaxy Watch 4 (40 mm). Sat [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) također je popularan izbor. Ako imate iskustva s postavljanjem nekog drugog pametnog sata i mislite da bi to bilo korisno drugima, dodajte to na ove stranice ([uredite dokumentaciju](../SupportingAaps/HowToEditTheDocs.md)) kako biste svoja saznanja podijelili s cijelom zajednicom **AAPS**.
 
 ### Opcija 3) AAPSClient na satu, za daljinsko upravljanje **AAPS**-om na telefonu
 
 ![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
+Softver za sat, **AAPSClient** Wear apk, možete preuzeti izravno s [GitHuba](https://github.com/nightscout/AndroidAPS/releases/).
 
 Da biste preuzeli softver, kliknite na aplikaciju za sat koja odgovara klijentskoj aplikaciji na telefonu: **wear-aapsclient-release_**_verzija_ ide s **AAPSClient**, **wear-aapsclient2-release_**_verzija_ ide s **AAPSClient2** (pogledajte [O aplikacijama AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)):
 
