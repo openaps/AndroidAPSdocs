@@ -182,7 +182,7 @@ Când ați terminat, apăsați „**URMĂTOR**” pentru a trece la ecranul urm�
 
 This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - To start with a new configuration, press "**NEXT**" and continue with the Wizard.
 
 ![Importați setările](../images/setup-wizard/Wizard-ImportSettings.png)
