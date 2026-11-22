@@ -1,6 +1,6 @@
 # Ваш профиль AAPS
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. Это основные параметры, на которых построена работа **AAPS**. По мере прохождения **Целей** вам станут доступны дополнительные параметры (например, настройки SMB), но эти функции работают хорошо, только если ваш **Профиль** настроен правильно. **Профиль** включает:
+Ваш **профиль AAPS** — это набор из четырех ключевых параметров, которые определяют, как **AAPS** должен подавать инсулин в ответ на уровень глюкозы по сенсору. Это основные параметры, на которых построена работа **AAPS**. По мере прохождения **Целей** вам станут доступны дополнительные параметры (например, настройки SMB), но эти функции работают хорошо, только если ваш **Профиль** настроен правильно. **Профиль** включает:
 * [целевые значения ГК](#profile-glucose-targets),
 * [базальные скорости](#your-aaps-profile-basal-rates) (BR),
 * [факторы чувствительности к инсулину](#your-aaps-profile-insulin-sensitivity-factor) (ISF) и
@@ -8,10 +8,10 @@ Your **AAPS Profile** is a set of four key parameters which define how **AAPS** 
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
+**Время действия инсулина (DIA)** больше не входит в ваш **Профиль**. Теперь оно задается для каждого инсулина — см. [Управление → Настройки инсулина](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. Рекомендуется настраивать параметры в том порядке, в каком они описаны здесь. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Не забудьте активировать новый профиль после каждого изменения. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+При работе с **AAPS** пользователям нужно постоянно оценивать и внимательно проверять точность настроек своего **Профиля**. Рекомендуется настраивать параметры в том порядке, в каком они описаны здесь. Старайтесь выверить одну настройку прежде чем переходить к другой. Двигайтесь небольшими шагами, не вносите большие изменения сразу. Не забудьте активировать новый профиль после каждого изменения. Регулярно [делайте резервную копию настроек **Профиля**](#YourAapsProfile_Profile-backup) с помощью экспорта настроек.
 
 Настройки вашего **Профиля** влияют друг на друга: у вас могут быть «неправильные» настройки, которые хорошо работают вместе в одних условиях, но не работают в других. Например, если слишком высокий базал совпадает по времени со слишком высоким **CR**. Поэтому нужно рассматривать каждую настройку отдельно и проверять, что они хорошо работают вместе в разных условиях.
 
@@ -19,9 +19,9 @@ As part of **AAPS**’ management, users should continually assess and scrutiniz
 
 ```{admonition} Your diabetes may vary
 :class: note
-**Profiles** vary significantly from person-to-person.
+**Профили** у разных людей сильно отличаются.
 
-Для базальных скоростей (BR), факторов чувствительности к инсулину (ISF) и углеводных коэффициентов (IC или ICR) абсолютные значения и изменения потребности в инсулине сильно отличаются у разных людей. Они зависят от вашего организма, пола, возраста, физической формы и т. д., а также от краткосрочных факторов, например болезни или недавней физической нагрузки. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Для базальных скоростей (BR), факторов чувствительности к инсулину (ISF) и углеводных коэффициентов (IC или ICR) абсолютные значения и изменения потребности в инсулине сильно отличаются у разных людей. Они зависят от вашего организма, пола, возраста, физической формы и т. д., а также от краткосрочных факторов, например болезни или недавней физической нагрузки. Подробнее об этом можно прочитать в отличной книге [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) Адама Брауна (Adam Brown).
 
 ```
 
@@ -31,7 +31,7 @@ As part of **AAPS**’ management, users should continually assess and scrutiniz
 
 Ниже показаны снимки экрана **AAPS** с _примером_ профиля. Обратите внимание: пример профиля ниже содержит много временных точек. Когда вы только начинаете пользоваться **AAPS**, ваш профиль, скорее всего, будет гораздо проще.
 
-![Example active profile](../images/v4/Profiles/Profile-Example-Active.png)
+![Пример активного профиля](../images/v4/Profiles/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Glucose targets
@@ -42,14 +42,14 @@ As part of **AAPS**’ management, users should continually assess and scrutiniz
 
 Целевые значения можно задать в этих пределах:
 
-|          | _Нижняя_ цель          | _Верхняя_ цель           |
-| -------- | ---------------------- | ------------------------ |
-| Минимум  | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Максимум | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|          | _Нижняя_ цель            | _Верхняя_ цель             |
+| -------- | ------------------------ | -------------------------- |
+| Минимум  | 4,4 ммоль/л или 80 мг/дл | 5 ммоль/л или 90 мг/дл     |
+| Максимум | 10 ммоль/л или 180 мг/дл | 11,1 ммоль/л или 200 мг/дл |
 
 ### Impact
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. Причина в том, что прогноз **ГК** будет где-то в этом широком диапазоне, поэтому **AAPS** вряд ли будет устанавливать временный базал.
+Если цель в вашем **Профиле** очень широкая (например, 3 ммоль/л или больше [50 мг/дл или больше]), **AAPS** часто будет мало что делать. Причина в том, что прогноз **ГК** будет где-то в этом широком диапазоне, поэтому **AAPS** вряд ли будет устанавливать временный базал.
 
 ### Как настроить
 
@@ -71,7 +71,7 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL 
 
 Инсулиновая помпа подает небольшое количество быстродействующего инсулина каждые несколько минут, не позволяя печени выделять слишком много глюкозы, и давая возможность глюкозе перемещаться в клетки организма. Базальный инсулин обычно составляет от 40 до 50% суточной дозы (TDD), в зависимости от диеты, и обычно следует суточному ритму, с одним пиком и одной долиной потребности в инсулине в течение 24 часов. Подробнее об этом очень полезно прочитать в главе 6 книги [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) Гэри Шайнера (Gary Scheiner).
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
+Большинство специалистов по обучению при диабете 1 типа (и людей с диабетом 1 типа!) согласны, что сначала нужно правильно настроить базальные скорости, а уже потом оптимизировать ISF и ICR.
 
 ### Impact
 
@@ -91,9 +91,9 @@ Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you
 
 ![Базальные скорости](../images/v4/Profiles/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Правильные базальные скорости подбирают методом проб и ошибок, и делать это нужно вместе с вашей медицинской командой.
 
-Есть методы проверки базала, при которых обычно наблюдают за базальными скоростями и потребностью в инсулине во время <u>прерывистого</u> голодания в течение 24 часов. Хотя базальные скорости нужно проверить для всего дня, не рекомендуется голодать 24 часа подряд. Причина в том, что организм запускает механизмы компенсации, например гормоны. A recommended way is to fast over 3 different days for a period of 8 hours.
+Есть методы проверки базала, при которых обычно наблюдают за базальными скоростями и потребностью в инсулине во время <u>прерывистого</u> голодания в течение 24 часов. Хотя базальные скорости нужно проверить для всего дня, не рекомендуется голодать 24 часа подряд. Причина в том, что организм запускает механизмы компенсации, например гормоны. Рекомендуемый способ — голодать в течение 8 часов в 3 разных дня.
 
 Рекомендуемый способ — приостановить цикл (для безопасности можно перевести AAPS в режим [**LGS**](#KeyAapsFeatures-LGS), чтобы избежать гипо, как при прохождении [цели 6](#objectives-objective6)). Тогда будет подаваться ваша фоновая базальная скорость по умолчанию. Следите, как меняется ваша **ГК**: если она падает, базальная скорость слишком высокая. И наоборот.<br/> Другой способ (он может быть сложнее) — оставить цикл работать и смотреть, как меняется **IOB**. Если **IOB** отрицательный, ваша базальная скорость слишком высокая. И наоборот. Учтите, что этот способ опирается на **ISF** для коррекции **ГК**, поэтому он сработает, только если другие параметры тоже настроены достаточно хорошо.<br/> Еще один способ настроить базальные скорости — наблюдать за работой цикла ночью, когда все COB уже усвоились. Этот способ особенно полезен для детей, когда голодать трудно или потребность в инсулине часто меняется. [Доктор Салех Ади (Dr Saleh Adi) из Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) показывает полезные способы анализа ночных графиков ГК для оптимизации базальных скоростей.
 
@@ -102,22 +102,22 @@ Setting your basal rates right is done by trial and error, and should be done in
 Если вы меняете **Профиль** по результатам теста базала, изменения нужно делать за 1–2 часа (зависит от типа инсулина) до подъема/падения. Повторяйте тест, пока не будете уверены в настройках ваших **базальных скоростей**.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Message: "Basal rate is not compatible with the current pump"
+#### Сообщение «Базальная скорость несовместима с текущей помпой»
 
-Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+У каждой помпы есть ограничения: самая низкая и самая высокая базальная скорость, которую она может подавать, а у некоторых помп (например, Dana, Accu-Chek Combo, Medtronic и Diaconn G8) базальная скорость может меняться только в начале часа. **AAPS** проверяет ваш профиль на совместимость с вашей помпой **после** применения выбранного вами процента.
 
-If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+Если базальная скорость выходит за эти пределы, экран **Активировать** показывает это сообщение, а кнопка **Активировать** остается серой:
 
-![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+![Экран «Активировать» с сообщением "Базальная скорость несовместима с текущей помпой"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
-For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+Например, при базальной скорости 0,10 ед/ч ночью и проценте профиля 35% **AAPS** пришлось бы подавать 0,035 ед/ч. Это меньше, чем может подать помпа Dana (0,04 ед/ч).
 
-To solve it, either:
+Чтобы решить проблему, сделайте одно из двух:
 
-* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
-* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+* выберите другой процент: **больший**, если базальная скорость становится слишком низкой, или **меньший**, если базальная скорость становится слишком высокой, или
+* [отредактируйте профиль](#your-aaps-profile-create-and-edit-profiles) и измените базальную скорость.
 
-The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+Редактор профиля позволяет начинать базальные скорости только в начале часа. Базальная скорость, которая начинается, например, в 06:30, может быть только из старого профиля, например после перехода на помпу, которая этого не поддерживает.
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
@@ -131,17 +131,17 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 **В ммоль/л:** Если ваш **ISF** равен 1,5, каждая единица инсулина снизит ГК примерно на 1,5 ммоль/л (например, с 8 ммоль/л до 6,5 ммоль/л).
 
-Из этих примеров видно: чем _меньше_ значение **ISF**, тем меньше ваша чувствительность к инсулину. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Из этих примеров видно: чем _меньше_ значение **ISF**, тем меньше ваша чувствительность к инсулину. Поэтому, если вы уменьшаете ISF с 40 до 35 (мг/дл) или с 1,5 до 1,3 (ммоль/л), это часто называют усилением **ISF**. И наоборот, увеличение значения **ISF** с 40 до 45 (мг/дл) или с 1,5 до 1,8 (ммоль/л) — это ослабление **ISF**.
 
 ### Impact
 
-A **lower / stronger ISF** (e.g. 40 instead of 50) means insulin drops your **BG** less per unit. Это приводит к более агрессивной / сильной коррекции со стороны цикла с **большим количеством инсулина**. Если ваш **ISF** слишком сильный (маленькое значение), это может привести к низкой **ГК**.
+**Более низкий / сильный ISF** (например, 40 вместо 50) означает, что одна единица инсулина снижает вашу **ГК** меньше. Это приводит к более агрессивной / сильной коррекции со стороны цикла с **большим количеством инсулина**. Если ваш **ISF** слишком сильный (маленькое значение), это может привести к низкой **ГК**.
 
-A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. Если ваш **ISF** слишком слабый (большое значение), это может привести к высокой **ГК**.
+**Более высокий / слабый ISF** (например, 45 вместо 35) означает, что одна единица инсулина снижает вашу **ГК** больше. This leads to a less aggressive / weaker correction from the loop with **less insulin**. Если ваш **ISF** слишком слабый (большое значение), это может привести к высокой **ГК**.
 
 **Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+* **ГК** равна 190 мг/дл (10,5 ммоль/л), цель — 100 мг/дл (5,6 ммоль/л).
+* Значит, нужна коррекция на `190 - 100 = 90 mg/dL` или `10.5 - 5.6 = 4.9 mmol/L`
 * Если `ISF = 30` -> `90 / 30 = 3` или `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 единицы инсулина
 * Если `ISF = 45` -> `90 / 45 = 2` или `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 единицы инсулина
 
@@ -159,9 +159,9 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 Основной отправной точкой для определения ISF в дневное время является суммарная суточная доза (TDD) и правило 1700 (94). Подробнее об этом написано в главе 7 книги [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) Гэри Шайнера (Gary Scheiner).
 
-| 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                                 |
+| 1700 (для мг/дл) или 94 (для ммоль/л) / TDD = примерный ISF.<br/><br/>Пример: TDD = 40 ед<br/>Примерный ISF (мг/дл) = 1700/40 = 43<br/>Примерный ISF (ммоль/л) = 94/40 = 2,4 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                      |
 
 Если ваш базал настроен правильно, это можно проверить так: приостановите цикл, убедитесь, что **IOB** равен нулю, и примите несколько таблеток глюкозы, чтобы получить стабильно «высокий» уровень.
 
@@ -201,7 +201,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 > 
 > Коэффициент ХЕ 2,4 ед / 12 г   ===>   IC = 12 г / 2,4 ед = 5,0 г/ед
 > 
-> Conversion tables are available online, e.g. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Таблицы пересчета есть в интернете, например [здесь](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
 ### Impact
 
@@ -211,7 +211,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 ### Как настроить
 
-**На рисунке ниже** показан пример **ICR** пользователя и то, как его можно задать в **профиле AAPS**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+**На рисунке ниже** показан пример **ICR** пользователя и то, как его можно задать в **профиле AAPS**. При вводе этих значений мы вводим вторую часть соотношения, поэтому углеводный коэффициент 1:3,5 вводится просто как «3,5».
 
 ![ICR в профиле](../images/v4/Profiles/Profile_ICR.png)
 
@@ -230,7 +230,7 @@ A **higher / weaker ISF** (e.g. 45 instead of 35) means insulin drops your **BG*
 
 **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. Например, он может не подавать инсулин, если вам грозит гипо. Однако контроль гликемии будет гораздо лучше, если настройки вашего **Профиля** уже как можно ближе к тому, что нужно вашему организму. Это одна из причин, почему в **AAPS** есть цели, которые проходят по шагам: от открытого цикла к гибридному замкнутому циклу. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+Гибридный замкнутый цикл _может_ пытаться корректировать подачу инсулина, чтобы уменьшить плохой контроль гликемии из-за неправильных значений **Профиля**. Например, он может не подавать инсулин, если вам грозит гипо. Однако контроль гликемии будет гораздо лучше, если настройки вашего **Профиля** уже как можно ближе к тому, что нужно вашему организму. Это одна из причин, почему в **AAPS** есть цели, которые проходят по шагам: от открытого цикла к гибридному замкнутому циклу. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
 
 Если вы начинаете с **AAPS** после другой помповой системы с открытым или замкнутым циклом, вы уже примерно знаете, какие значения использовать для базальных скоростей (**BR**), факторов чувствительности к инсулину (**ISF**) и углеводных коэффициентов (**ICR**).
 
@@ -242,11 +242,11 @@ A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minim
 ### У меня держится высокая ГК, и цикл ее не снижает
 Возможные причины, почему **AAPS** дает недостаточно инсулина:
 * **ISF** недостаточно сильный
-* Basal rate might not be strong enough
+* Базальная скорость может быть недостаточно сильной
 * Может сработать настройка безопасности, например **maxIOB**. Или **SMB** в это время отключены, в зависимости от ваших настроек.
 * Настроена автоматизация, и она переопределила действия **AAPS**.
 
-See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
+См. также [Настройка профиля AAPS](../GettingHelp/ProfileTuning.md).
 
 ### У меня отрицательный IOB, это проблема?
 Отрицательный **IOB** означает, что абсолютное количество инсулина (базал + болюс) в организме меньше, чем базал. Из-за этого **AAPS** будет подавать больше инсулина, как только **ГК** начнет расти, потому что считает, что инсулина не хватает. Это может привести к низкой **ГК** позже.
@@ -254,7 +254,7 @@ See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
 Вот некоторые причины отрицательного IOB и что делать:
 * слишком сильный базал: подправьте ваш **Профиль**
 * слишком большой болюс на предыдущую еду: подправьте ваш **Профиль** или проверьте, вовремя ли вы делаете болюс.
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
+* DIA для вашего типа инсулина задано слишком коротким, и инсулин накапливается: измените его в разделе [Управление → Настройки инсулина](#Config-Builder-insulin-dia)
 * физическая нагрузка: в следующий раз подумайте о том, чтобы во время нагрузки использовать меньший [процент профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md), чтобы учесть повышенную чувствительность.
 
 ## Управление профилями
@@ -266,25 +266,25 @@ See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
 (your-aaps-profile-create-and-edit-profiles)=
 ### Создание и редактирование профилей
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
+В **AAPS** v4 ваши профили находятся на экране **Управление** (нижняя панель навигации) → **Профиль**. Они показаны как карусель карточек, которые можно пролистывать, с панелью действий (**➕ Добавить**, **✏️ Редактировать**, **⧉ Клонировать**, **🗑️ Удалить**, **▶ Активировать**). Как управлять профилем и активировать его, см. [Управление профилями и их активация](#ProfileSwitch-manage-v4). Переходите с **AAPS** v3, где у профилей была своя вкладка? См. [Что изменилось в AAPS v4](#v4changes-manage).
 
-Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+Нажатие **✏️ Редактировать** открывает редактор. Задайте **название** профиля и **единицы**, затем заполните четыре расписания на вкладках:
 
-- **IC** — insulin-to-carb ratio (g/U)
-- **ISF** — insulin sensitivity factor
-- **BAS** — basal rates
-- **TARG** — target range
+- **IC** — углеводный коэффициент (г/ед)
+- **ISF** — фактор чувствительности к инсулину
+- **БАЗА** — базальные скорости
+- **ЦЕЛЬ** — целевой диапазон
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
+![Редактор профиля — вкладки IC / ISF / БАЗА / ЦЕЛЬ](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+Каждое расписание — это список **временных блоков**: добавьте блок, задайте время начала и значение, затем нажмите **Сохранить**.
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
+Если вы меняете свой **Профиль**, убедитесь, что редактируете нужный **Профиль**: карточка используемого профиля отмечена **АКТИВНЫЙ**, но на экране может быть выбрана другая карточка.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
 ### Создание профиля с нуля для ребенка
 
-The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
+[Помощник профиля](#aaps-screens-profile-helper) (меню ☰ → **Помощник профиля**) может помочь создать профиль для ребенка (до 18 лет).
 
 **Важное примечание:**
 
@@ -294,14 +294,14 @@ The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helpe
 
 ![Помощник профиля для детей 1](../images/v4/Profiles/ProfileHelperKids1.png)
 
-1. Make sure you are on the **Profile 1** tab.
+1. Убедитесь, что вы на вкладке **Профиль 1**.
 2. В поле **Тип профиля** убедитесь, что выбран «Профиль по умолчанию».
 3. Отрегулируйте профиль по умолчанию (на основе набора данных госпиталей), указав возраст ребенка либо суточную дозировку инсулина TDD **либо** вес.
-4. Change to the **Profile 2** tab.
+4. Перейдите на вкладку **Профиль 2**.
 5. Нажмите **Тип профиля** и выберите «Профиль по умолчанию DPV».
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
-7. Open the **Comparison** tab. Будет показано сравнение двух настроенных профилей (см. снимок экрана ниже).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
+6. Настройте профиль по умолчанию DPV (на основе данных другой больницы): введите возраст ребенка, суточную дозу инсулина TDD и процент базала. Обратите внимание: данные DPV дают только **базальные скорости**, поэтому IC и ISF для этого профиля показаны как ноль.
+7. Откройте вкладку **Сравнение**. Будет показано сравнение двух настроенных профилей (см. снимок экрана ниже).
+8. Если вы хотите начать настройку своего профиля на основе одного из этих предложений, используйте кнопку **Клонировать** под сравнением.
 
 ![Помощник профиля для детей 2](../images/v4/Profiles/ProfileHelperKids2.png)
 
@@ -314,9 +314,9 @@ The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helpe
 
 ![Переключение профиля](../images/Maintenance/TreatmentsView4.png)
 
-The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
+[История терапии](#aaps-screens-treatments) показывает все прошлые **переключения профиля**. На вкладке **Смена профиля** можно использовать прошлое **переключение профиля** как основу для нового **Профиля**. In this case, timeshift and percentage will be applied to the new local profile. Используйте кнопку **Клонировать** в строке **2**.
 
-You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
+Теперь можно перейти на [экран профиля](#your-aaps-profile-create-and-edit-profiles) (**Управление → Профиль**) и отредактировать новый профиль.
 
 (YourAapsProfile_Profile-backup)=
 ### Резервная копия профиля
@@ -324,12 +324,12 @@ You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profil
 **Профили** — это основная настройка вашей системы замкнутого цикла, они очень важны, и вы точно не захотите их потерять.
 
 * Ваши **Профили** хранятся в базе данных **AAPS**.
-* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
+* Если настроен **NSClientV3** (см. [Синхронизация](#SetupWizard-synchronization-with-the-reporting-server-and-more)), ваши **Профили** также автоматически загружаются в Nightscout.
 * Они также входят в [экспорт настроек](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
 ### Редактирование профилей в Nightscout
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
+Если эта функция включена, изменения **Профиля**, сделанные прямо в Nightscout, могут приниматься в **AAPS**. Эта настройка называется «**Получать хранилище профилей из NS**» и входит в параметры **Прием данных из Nightscout** (прием данных из Nightscout по умолчанию выключен, см. [шаг «Управление с клиента» в Мастере установки AAPS](../SettingUpAaps/SetupWizard.md)); ее можно быстро найти с помощью **строки поиска** на главном экране. Пока управление с клиента включено, эта настройка скрыта, и **AAPS** не принимает изменения профиля из Nightscout ([защищенный режим](#client-master-control-hardened-mode)); вместо этого отредактируйте профиль на сопряженном клиенте или загрузите его один раз с помощью **Полная синхронизация**.
 
 Это может быть полезно, если вы собираетесь сделать большие изменения в объемном **Профиле**. Их проще вводить через веб-интерфейс, _например_, чтобы вручную скопировать данные из таблицы.
 
@@ -340,16 +340,16 @@ If enabled, **Profile** changes made directly in Nightscout can be received in *
 (your-aaps-profile-compare-profiles)=
 ### Сравнение двух профилей
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+Также можно использовать [Помощник профиля](#aaps-screens-profile-helper) (меню ☰ → **Помощник профиля**), чтобы сравнить два разных профиля или переключения профиля (процент одного из ваших профилей, который раньше использовался в [переключении профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)).
 
 ![Помощник профиля 1](../images/v4/Profiles/ProfileHelper1.png)
 
-1. Make sure you are on the **Profile 1** tab.
+1. Убедитесь, что вы на вкладке **Профиль 1**.
 2. В поле **Тип профиля** выберите «Доступный профиль», чтобы выбирать среди всех сохраненных **Профилей**.
 3. Выберите **Профиль**, который вы хотите сравнить.
-4. Change to the **Profile 2** tab.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
+4. Перейдите на вкладку **Профиль 2**.
+5. В поле **Тип профиля** выберите «Смена профиля», чтобы выбирать в истории всех ваших **переключений профиля**.
 6. Выберите **Переключение профиля**, с которым вы хотите сравнить.
-7. Open the **Comparison** tab. Comparison of the two profiles will be displayed (see screenshot below).
+7. Откройте вкладку **Сравнение**. Будет показано сравнение двух профилей (см. снимок экрана ниже).
 
 ![Помощник профиля 2](../images/v4/Profiles/ProfileHelper2.png)
