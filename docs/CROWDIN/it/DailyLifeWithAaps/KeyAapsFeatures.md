@@ -18,7 +18,7 @@ See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for
 
 I suggerimenti non vengono eseguiti in automatico (come nel loop chiuso). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
 
-When **AAPS** has a suggestion, a **Loop** entry with a badge appears in the bottom navigation of the main screen. Premila per leggere il suggerimento ("Accetta nuova basale temporanea") con velocità, durata e motivo, poi premi **Esegui** per applicarlo:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Premila per leggere il suggerimento ("Accetta nuova basale temporanea") con velocità, durata e motivo, poi premi **Esegui** per applicarlo:
 
 ![Suggerimento del loop aperto con il pulsante Esegui](../images/screens/loop_tab.png)
 
