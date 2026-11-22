@@ -1,5 +1,5 @@
 
-# Release notes
+# Bilješke o izdanju
 
 ```{toctree}
 :hidden:
@@ -9,47 +9,47 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. Odjeljak za rješavanje problema na stranici s uputama za ažuriranje također obrađuje najčešće poteškoće pri ažuriranju **AAPS-a**.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
-See [What changed in AAPS v4](V4Changes.md) for the notable behavioral changes — features that have moved, been renamed, or been removed.
+Za važne promjene u ponašanju – značajke koje su premještene, preimenovane ili uklonjene – pogledajte [Što se promijenilo u AAPS-u v4](V4Changes.md).
 ```
 
-You will receive a notification like this when a new update is available:
+Kada je dostupno novo ažuriranje, primit ćete ovakvu obavijest:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+![Informacije o ažuriranju](../images/AAPS_LoopDisable90days.png)
 
-If you do not update until expiration date **AAPS** will switch to Open Loop.
+Ako ne ažurirate do datuma isteka, **AAPS** će se prebaciti na otvorenu petlju.
 
-See [End of life](EndOfLife.md) for AAPS version end dates.
+Datume kraja podrške za verzije AAPS-a pogledajte u [Kraj podrške](EndOfLife.md).
 
-**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
+**Ne zanemarujte obavijest.** Nove verzije **AAPS-a** donose važne sigurnosne ispravke. Zato svaki korisnik **AAPS-a** mora što prije ažurirati na najnoviju verziju. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Hvala na razumijevanju.
 
 (maintenance-android-version-aaps-version)=
 
-## Android version and AAPS version
+## Verzija Androida i verzija AAPS-a
 
-If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
+Ako vaš pametni telefon koristi verziju Androida stariju od Androida 12, nećete moći koristiti AAPS v3.4 i novije jer on zahtijeva najmanje Android 12.
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+Kako bi korisnici sa starijim Androidom mogli koristiti stariju verziju AAPS-a, objavljene su nove verzije koje mijenjaju samo provjeru verzije. Nisu uključena nikakva druga poboljšanja.
 
-Find your Android version in the table below and use the matching **AAPS** version. The code is downloaded from <https://github.com/nightscout/AndroidAPS> using the branch shown.
+U tablici niže pronađite svoju verziju Androida i koristite odgovarajuću verziju **AAPS-a**. Kôd se preuzima s <https://github.com/nightscout/AndroidAPS> iz prikazane grane.
 
-| Your Android version | AAPS version to use | Branch to download                                               |
-| -------------------- | ------------------- | ---------------------------------------------------------------- |
-| Android 12 and up    | Latest version      | [master](https://github.com/nightscout/AndroidAPS) (default)     |
-| Android 11           | **3.3.2.1**         | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
-| Android 9, 10        | **3.2.0.4**         | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
-| Android 8            | **2.8.2.1**         | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
-| Android 7            | **2.6.2**           | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
+| Vaša verzija Androida | Verzija AAPS-a za korištenje | Grana za preuzimanje                                             |
+| --------------------- | ---------------------------- | ---------------------------------------------------------------- |
+| Android 12 i noviji   | Najnovija verzija            | [master](https://github.com/nightscout/AndroidAPS) (zadano)      |
+| Android 11            | **3.3.2.1**                  | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
+| Android 9, 10         | **3.2.0.4**                  | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
+| Android 8             | **2.8.2.1**                  | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
+| Android 7             | **2.6.2**                    | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
 
-## WearOS version
+## Verzija za Wear OS
 
-- AAPS requires WearOS 3.0, 3.2 or 3.5 (Android 11, API level 30) or newer. WearOS 2 watches are not supported.
+- AAPS zahtijeva Wear OS 3.0, 3.2 ili 3.5 (Android 11, razina API-ja 30) ili noviji. Satovi s Wear OS-om 2 nisu podržani.
 
 ```{tip}
-WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
+Wear OS 5, razina API-ja 34 (Android 14) ima [ograničenja](#BuildingAapsWearOs-WearOS5).
 ```
 
 Versions with a heading are the latest release for each Android version (see the table above). The other releases follow in between, with their notes or a link to them on GitHub.
@@ -64,59 +64,59 @@ Release date: 31-10-2026
 
 **New features**
 
-- New user interface: phone app rebuilt in Jetpack Compose @MilosKozak
-- [Global search](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
-- Kotlin Multiplatform migration, client for Windows, Mac, Linux desktop and iOS @MilosKozak
-- [Scenes](../DailyLifeWithAaps/Scenes.md): save a set of actions and run them together @MilosKozak
-- [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md): send commands from a client phone to the master @MilosKozak
-  - [Client roles](#client-master-control-roles): Read-only, Meals, Caregiver or Admin for each client @MilosKozak
-  - [Hardened mode](#client-master-control-hardened-mode): with client control on, the master takes changes only from paired clients @MilosKozak
-  - Pairing with a QR code that also sets up Nightscout on the client, or with a PIN; the pairing secret is replaced right after pairing @MilosKozak
-  - [Own Nightscout token](#client-master-control-own-token) for each client, with only the rights a client needs @MilosKozak
-- [Insulin concentration](../AdvancedOptions/InsulinConcentration.md) support (U200, U500) across pumps, wizard and profiles @Philoul @MilosKozak
-- Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
-- Calibration plugin @MilosKozak
-- [Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
+- Novo korisničko sučelje: aplikacija za telefon iznova izrađena u Jetpack Composeu @MilosKozak
+- [Globalno pretraživanje](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
+- Prelazak na Kotlin Multiplatform, klijent za Windows, Mac, Linux (stolna računala) i iOS @MilosKozak
+- [Scene](../DailyLifeWithAaps/Scenes.md): spremite skup radnji i pokrenite ih zajedno @MilosKozak
+- [Upravljanje glavni uređaj ↔ klijent](../RemoteFeatures/ClientMasterControl.md): slanje naredbi s telefona klijenta na glavni uređaj @MilosKozak
+  - [Uloge klijenta](#client-master-control-roles): Samo čitanje, Obroci, Njegovatelj ili Admin za svakog klijenta @MilosKozak
+  - [Zaštićeni način rada](#client-master-control-hardened-mode): kada je upravljanje s klijenta uključeno, glavni uređaj prihvaća promjene samo od uparenih klijenata @MilosKozak
+  - Uparivanje putem QR koda koji na klijentu postavlja i Nightscout, ili putem PIN-a; tajni ključ za uparivanje zamjenjuje se odmah nakon uparivanja @MilosKozak
+  - [Vlastiti Nightscout token](#client-master-control-own-token) za svakog klijenta, samo s pravima koja klijent treba @MilosKozak
+- Podrška za [koncentraciju inzulina](../AdvancedOptions/InsulinConcentration.md) (U200, U500) u pumpama, kalkulatoru i profilima @Philoul @MilosKozak
+- Upravljanje inzulinom: katalog inzulina, nadimci, odabir u profilu i kalkulatoru @Philoul
+- Dodatak za kalibraciju @MilosKozak
+- [Zaglađivanje](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
 - New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
-- [Site rotation](#Aapsscreens-site-rotation): track and rotate infusion sites @Philoul @MilosKozak
-- [Autotune](../AdvancedOptions/Autotune.md) rework @Philoul
-- New [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
-- Accessibility: the phone app works with a screen reader - named controls, spoken status, graph descriptions and headings to skim @MilosKozak
-- [Settings import](../Maintenance/ExportImportSettings.md): can keep the pump settings @MilosKozak
-- Persistent notification uses Android live updates, with Samsung Now bar support and the delta @premnirmal
-- BG graph: [press and hold](#aaps-screens-graph-press-and-hold) to see the values at a reading, on every graph of the overview @t1dude @olorinmaia
-- Performance improvements @MilosKozak
-- Automatic e-carbs in Bolus wizard @MilosKozak
+- [Rotacija mjesta primjene](#Aapsscreens-site-rotation): praćenje i izmjenjivanje mjesta infuzije @Philoul @MilosKozak
+- Prerada dodatka [Autotune](../AdvancedOptions/Autotune.md) @Philoul
+- Novi [widgeti](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
+- Pristupačnost: aplikacija za telefon radi s čitačem zaslona – imenovane kontrole, izgovoreni status, opisi grafova i naslovi za brzo pregledavanje @MilosKozak
+- [Uvoz postavki](../Maintenance/ExportImportSettings.md): može zadržati postavke pumpe @MilosKozak
+- Trajna obavijest koristi Android live updates (ažuriranja uživo), s podrškom za Samsung Now bar i deltu @premnirmal
+- GUK graf: [pritisnite i držite](#aaps-screens-graph-press-and-hold) za prikaz vrijednosti na nekom očitanju, na svakom grafu u Pregledu @t1dude @olorinmaia
+- Poboljšanja performansi @MilosKozak
+- Automatski e-ugljikohidrati u bolus kalkulatoru @MilosKozak
 
 **New devices**
 
-- **CareLevo**: new [pump driver](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
-- **Dana-i2**: support @MilosKozak
-- **Instara**: new CGM source @leohunt
+- **CareLevo**: novi [upravljački program pumpe](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
+- **Dana-i2**: podrška @MilosKozak
+- **Instara**: novi izvor CGM-a @leohunt
 
 **Pump Driver Improvements**
 
-- Pump overview screens rebuilt for Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn and Equil @MilosKozak
+- Zasloni pregleda pumpe iznova izrađeni za Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn i Equil @MilosKozak
 - **Omnipod DASH**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
-- **Omnipod**: hard-end date for Dash & Eros @mcnelson
-- **DanaR, RS**: pump emulator for testing @MilosKozak
-- **Equil**: pump emulator for testing @MilosKozak
-- Many pump and loop fixes @MilosKozak and others
+- **Omnipod**: čvrsti datum završetka za Dash i Eros @mcnelson
+- **DanaR, RS**: emulator pumpe za testiranje @MilosKozak
+- **Equil**: emulator pumpe za testiranje @MilosKozak
+- Mnogi ispravci pumpi i petlje @MilosKozak i drugi
 
 **Wear OS**
 
-- [Watch app](../WearOS/WearOsSmartwatch.md) rebuilt in Compose, new tiles and complications, automatic watch face install (Watch Face Push) on Wear OS 6+ @olorinmaia @Philoul
-- CustomWatchface available for WearOS 6.0 (GW7, GW8, GW9...) with a WFF dedicated watchface @Philoul @olorinmaia
-- CustomWatchface can now include 5 Complication slots you can customize (new feature only available for older watches) @Philoul
-- New [WFF watchface based on AAPS complications](#wearos-complications-watchface-setup) @olorinmaia
-- Corrections in Bolus wizard and Quick wizard result @olorinmaia
-- New BG graph and Running mode activity in main menu @olorinmaia
-- Bolus wizard: [meal type](#WearOsSmartwatch-wizard-meal-type) page that splits the carbs like the phone wizard, and [carb time](#WearOsSmartwatch-wizard-carb-time) with the *time to eat* reminder on the watch @olorinmaia
-- [Phone alarms on the watch](#WearOsSmartwatch-phone-alarms): the watch shows the alarm and offers Silence and Mute 5 min @olorinmaia
+- [Aplikacija za sat](../WearOS/WearOsSmartwatch.md) iznova izrađena u Composeu, nove pločice i komplikacije, automatska instalacija Watchfacea (Watch Face Push) na Wear OS 6+ @olorinmaia @Philoul
+- CustomWatchface dostupan za Wear OS 6.0 (GW7, GW8, GW9...) s posebnim WFF Watchfaceom @Philoul @olorinmaia
+- CustomWatchface sada može sadržavati 5 mjesta za komplikacije koja možete prilagoditi (nova značajka dostupna samo za starije satove) @Philoul
+- Novi [WFF Watchface temeljen na komplikacijama AAPS-a](#wearos-complications-watchface-setup) @olorinmaia
+- Ispravci u rezultatu bolus kalkulatora i brzog kalkulatora @olorinmaia
+- Novi GUK graf i aktivnost Način rada u glavnom izborniku @olorinmaia
+- Bolus kalkulator: stranica [vrsta obroka](#WearOsSmartwatch-wizard-meal-type) koja dijeli ugljikohidrate kao kalkulator na telefonu, i [vrijeme ugljikohidrata](#WearOsSmartwatch-wizard-carb-time) s podsjetnikom *vrijeme za jelo* na satu @olorinmaia
+- [Alarmi telefona na satu](#WearOsSmartwatch-phone-alarms): sat prikazuje alarm i nudi „Utišaj“ i „Utišaj 5 min“ @olorinmaia
 
 **Build**
 
-- CI workflows for tag/branch builds, JDK version mapping @Angus-repo
+- CI workflowi za izradu iz oznake (tag) ili grane, mapiranje verzija JDK-a @Angus-repo
 
 **Contributors**
 
@@ -130,7 +130,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 ## Version 3.4.2.6
 
-- Equil: improve stability @MilosKozak
+- Equil: poboljšana stabilnost @MilosKozak
 
 ---
 
@@ -306,7 +306,7 @@ Release date: 31-12-2025
 
 * various improvements @MilosKozak @Philoul @olorinmaia
 
-**Automation**
+**Automatizacija**
 
 * New SMB control action - enable/disable SMB via automation @MilosKozak
 
@@ -323,45 +323,45 @@ Release date: 31-12-2025
 
 (version3321)=
 
-## Version 3.3.2.1
+## Verzija 3.3.2.1
 
-Release date: 13-08-2025
+Datum izdanja: 13-08-2025
 
-- Fixed Omnipod Bluetooth connection on Android 16
-- CI process (Browser build)
-- Fix mmol-mgdl conversion
-- Fix wrong time selection in dialogs in some timezones
-- Fix reading keys in simple mode
-- Fix missed predictions on wear
-- Improved ConfigBuilder
-- Improved NSCv3 full sync
+- Ispravljena Bluetooth veza s Omnipodom na Androidu 16
+- CI proces (izrada u pregledniku)
+- Ispravak pretvorbe mmol-mg/dL
+- Ispravak pogrešnog odabira vremena u dijalozima u nekim vremenskim zonama
+- Ispravak čitanja ključeva u jednostavnom načinu rada
+- Ispravak nedostajućih predviđanja na satu
+- Poboljšana Konfiguracija (ConfigBuilder)
+- Poboljšana potpuna sinkronizacija NSCv3
 
 ---
 
 (version3300)=
 
-**Version 3.3.2.0**
+**Verzija 3.3.2.0**
 
-Release date: 27-03-2025
+Datum izdanja: 27-03-2025
 
-**How to upgrade**
+**Kako ažurirati**
 
-* [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* Za izradu ove verzije potrebna je [verzija Android Studija pod nazivom „Meerkat“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) ili novija. Ako ste već izradili verziju 3.3.x, morate ponovno ažurirati Android Studio.
 
 (version-enforcement)=
 
 **Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
 
-*  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
-*  After expiration LGS mode is enforced
-*  You'll receive warning/notifications less often:
-   - 28+ days remaining: every 7 days
-   - 27-14 days remaining: every 3 days
-   - then once a day
-   - Notification will be generated after noon to not bother you during nights
-* There are only 2 kinds of notification
-   - New version available (has no effect on AAPS)
-   - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
+*  Nema isteka kada je uređaj izvan mreže (ako nema veze s internetom). To znači da više nema razdoblja odgode od 60 i 90 dana.
+*  Nakon isteka nameće se način LGS
+*  Upozorenja/obavijesti primat ćete rjeđe:
+   - Preostalo 28 ili više dana: svakih 7 dana
+   - Preostalo 27–14 dana: svaka 3 dana
+   - zatim jednom dnevno
+   - Obavijest se stvara poslije podneva kako vas ne bi ometala noću
+* Postoje samo 2 vrste obavijesti
+   - Dostupna je nova verzija (nema utjecaja na AAPS)
+   - Aplikacija istječe na neki datum u budućnosti (još nema utjecaja na AAPS) / je istekla (AAPS će prijeći u način LGS)
 
 **News**
 
@@ -409,7 +409,7 @@ Release date: 21-01-2025
 
 Release date: 15-01-2025
 
-**How to upgrade**
+**Kako ažurirati**
 
 * [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
@@ -469,7 +469,7 @@ Release date: 29-12-2024
 * New **Automation** triggers
 * Unattended settings exports
 
-**How to upgrade**
+**Kako ažurirati**
 
 * Before upgrading:
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
@@ -526,7 +526,7 @@ Release date: 29-12-2024
 * Fixed bug in TDD calculation @MilosKozak
 * SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
 
-**Smartwatches**
+**Pametni satovi**
 
 * wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
 * Watch tiles from Automation actions @Philoul
@@ -551,18 +551,18 @@ Release date: 29-12-2024
 
 (version3204)=
 
-## [Version 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
+## [Verzija 3.2.0.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.2.0.4)
 
-Release date: 27-02-2024
+Datum izdanja: 27-02-2024
 
-This version is the last one supporting Android 10. If you cannot upgrade to Android 11, [update AAPS to 3.2.0.4](#update-aaps-3204).
+Ovo je posljednja verzija koja podržava Android 10. Ako ne možete nadograditi na Android 11, [ažurirajte AAPS na 3.2.0.4](#update-aaps-3204).
 
-**Changes**
+**Promjene**
 
-- xDrip G7 support
-- Medtrum fixes
-- Automation icon fix
-- Passing objective 1 fix
+- Podrška za xDrip G7
+- Ispravci za Medtrum
+- Ispravak ikone automatizacije
+- Ispravak prolaska cilja 1
 
 ---
 
@@ -583,7 +583,7 @@ Release date: 23-10-2023
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
-**Changes**
+**Promjene**
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 pump driver (no need of Ruffy) @dv1
@@ -649,7 +649,7 @@ RECOMMENDED SETTING
 
 Release date: 19-07-2022
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0)
+[Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0)
 
 ---
 
@@ -657,7 +657,7 @@ Release date: 19-07-2022
 
 Release date: 31-01-2022
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/3.0.0)
+[Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/3.0.0)
 
 ---
 
@@ -671,11 +671,11 @@ This version is the last one supporting Android 8. [Release notes](https://githu
 
 ---
 
-**Version 2.8.2**
+**Verzija 2.8.2**
 
-Release date: 23-01-2021
+Datum izdanja: 23-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2)
+[Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2)
 
 ---
 
@@ -685,7 +685,7 @@ Release date: 23-01-2021
 
 Release date: 12-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.1.1)
+[Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.1.1)
 
 ---
 
@@ -695,7 +695,7 @@ Release date: 12-01-2021
 
 Release date: 01-01-2021
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
+[Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ---
 
@@ -705,7 +705,7 @@ Release date: 01-01-2021
 
 Release date: 24-09-2020
 
-[Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
+[Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ---
 
@@ -715,7 +715,7 @@ Release date: 24-09-2020
 
 Release date: 04-05-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2614)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2614)
 
 ---
 
@@ -723,7 +723,7 @@ Release date: 04-05-2020
 
 Release date: 03-05-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2613)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2613)
 
 ---
 
@@ -731,7 +731,7 @@ Release date: 03-05-2020
 
 Release date: 19-04-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2612)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2612)
 
 ---
 
@@ -739,7 +739,7 @@ Release date: 19-04-2020
 
 Release date: 06-04-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2611)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2611)
 
 ---
 
@@ -747,7 +747,7 @@ Release date: 06-04-2020
 
 Release date: 21-03-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-261)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-261)
 
 ---
 
@@ -757,7 +757,7 @@ Release date: 21-03-2020
 
 Release date: 29-02-2020
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)
 
 ---
 
@@ -765,7 +765,7 @@ Release date: 29-02-2020
 
 Release date: 31-10-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-251)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-251)
 
 ---
 
@@ -775,7 +775,7 @@ Release date: 31-10-2019
 
 Release date: 26-10-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)
 
 ---
 
@@ -783,7 +783,7 @@ Release date: 26-10-2019
 
 Release date: 25-04-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-23)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-23)
 
 ---
 
@@ -791,7 +791,7 @@ Release date: 25-04-2019
 
 Release date: 07-04-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-222)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-222)
 
 ---
 
@@ -799,7 +799,7 @@ Release date: 07-04-2019
 
 Release date: 29-03-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-22)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-22)
 
 ---
 
@@ -807,7 +807,7 @@ Release date: 29-03-2019
 
 Release date: 03-03-2019
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-21)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-21)
 
 ---
 
@@ -815,18 +815,18 @@ Release date: 03-03-2019
 
 Release date: 03-11-2018
 
-[Release notes](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-20)
+[Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-20)
 
 ---
 
-**Version 1.0**
+**Verzija 1.0**
 
 ```{admonition} First version of **AAPS**
 :class: note
 
-The first test version started in 2015 and the first release was in 2016.
+Prva testna verzija pokrenuta je 2015., a prvo izdanje bilo je 2016.
 
-The exact chronology of these releases is not available at the moment but as this question has been asked several times we document it here.
+Točna kronologija tih izdanja trenutno nije dostupna, ali kako je to pitanje postavljeno nekoliko puta, ovdje ga dokumentiramo.
 
 ```
 ![AAPS 1.0](../images/update/AAPS1.0.png)
