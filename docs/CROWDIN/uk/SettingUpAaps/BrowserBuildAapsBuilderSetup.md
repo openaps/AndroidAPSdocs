@@ -56,19 +56,20 @@
 У вас уже є репозиторій: закрийте вкладку GitHub і продовжуйте на цій сторінці. Якщо ваш ключ уже в ньому, продовжуйте з [кроку 4](#aaps-builder-setup-step4). See [troubleshooting](#aaps-builder-ts-repo-exists).
 ```
 
-```{admonition} Updating your copy (existing AAPS Builder repository)
-:class: dropdown
+<div class="admonition dropdown">
+<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
 
-Кроки збірки оновлюються для вас: під час кожної збірки ваш репозиторій запускає версію, яку випустили розробники AAPS у nightscout/aaps-builder, і у вашому репозиторії нічого не змінюється. Замінювати файл робочого процесу потрібно лише тоді, коли про це повідомляє сторінка [Оновлення та зміни документації](../Maintenance/DocumentationUpdate.md) (наприклад, для нового варіанта збірки), або один раз, якщо ваш репозиторій створено попередньою версією цієї сторінки чи зі старого шаблону. Ваш секрет `KEYSTORE_SET` залишається без змін.
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Ваш секрет `KEYSTORE_SET` залишається без змін.
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Відкрити найновіший робочий процес</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
 
-   На комп’ютері натисніть **значок копіювання** ("Copy raw file") угорі праворуч від файлу. На телефоні натомість відкрийте <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">текстову версію</a>, натисніть і утримуйте текст → **Select all** (Вибрати все) → **Copy** (Копіювати).
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Відкрити мій файл робочого процесу</a>
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
 
-   Відкриває `.github/workflows/build.yml` у <code class="aapsb-repoUrl"></code>. Натисніть меню **⋯** угорі праворуч від файлу, потім **Edit file… In place** (на комп’ютері натисніть олівець).
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. Натисніть меню **⋯** угорі праворуч від файлу, потім **Edit file… In place** (на комп’ютері натисніть олівець).
 3. Замініть увесь текст скопійованим робочим процесом (на телефоні: натисніть і утримуйте → **Select all** → **Paste**), потім двічі натисніть **Commit changes…**. Перший рядок файлу показує його версію.
-```
+
+</div>
 
 (aaps-builder-setup-step2)=
 
