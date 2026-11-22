@@ -7,7 +7,7 @@
 
 -   Pokrenite senzor X1
 
-- Select **Syai/Ottai** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Odaberite **Syai/Ottai** u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
 Omogućite emitiranje (broadcast) u aplikaciji Syai:
 
