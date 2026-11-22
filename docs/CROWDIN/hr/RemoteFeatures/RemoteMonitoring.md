@@ -8,7 +8,7 @@ __AAPS__ nudi nekoliko značajki za daljinski nadzor djece s dijabetesom tipa 1,
 
 - Pumpom djeteta upravlja djetetov telefon s __AAPS-om__.
 - Njegovatelji mogu na daljinu pratiti sve važne podatke, kao što su razine glukoze, aktivni ugljikohidrati, aktivni inzulin itd., pomoću **AAPSClient apk** na svojem Android telefonu (verzija **AAPSClienta** za iPhone je u razvoju, vidi [Aplikacija AAPSClient](AapsClient.md)). Postavke promijenjene u __AAPS-u__ sinkronizirat će se s __AAPSClientom__ i obrnuto.
-- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xDrip companion mode is set up.
+- Njegovatelji mogu primati alarme pomoću **aplikacije xDrip u načinu pratitelja** na svojem Android telefonu ako je postavljen xDrip companion način rada.
 - Daljinsko upravljanje __AAPS-om__ putem [SMS naredbi](../RemoteFeatures/SMSCommands.md) zaštićeno je dvofaktorskom autentifikacijom.
 - Daljinsko upravljanje putem __AAPSClienta__ koristi potpisani kanal za naredbe uveden u **AAPS-u** 4: klijent se najprije mora **upariti** s glavnim uređajem (QR kodom ili PIN-om), a svaku naredbu potvrđuje i izvršava glavni uređaj. Svaki telefon njegovatelja može dobiti svoju [ulogu](#client-master-control-roles), od samo čitanja do potpunog upravljanja – vidi [Upravljanje glavni uređaj ↔ klijent](#client-master-control).
 
