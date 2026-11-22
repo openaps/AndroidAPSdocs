@@ -73,7 +73,7 @@ HbA1c: et skøn over det resulterende glykerede hæmoglobin, baseret på gennems
 
 - **Grafen**: én dag fra midnat til midnat. Linjen er **Median** (halvdelen af dine målinger på det tidspunkt var lavere, halvdelen var højere). Omkring den viser ét bånd den midterste halvdel af dine målinger (**25–75%**), og et bredere bånd viser de fleste af dem (**10–90%**). Et smalt bånd betyder, at dit blodsukker ligner sig fra dag til dag på det tidspunkt. Stiplede linjer markerer din **LAV værdi**, 140 mg/dl (7,8 mmol/l) og din **HØJ værdi**.
 - **Glykæmisk oversigt**: tiden i dit område, i det snævre område (70–140 mg/dl eller 3,9–7,8 mmol/l), over dit område og under det, derefter dit **Gennemsnit** og **Median** for blodsukkeret. Dit område er den **LAV værdi** og **HØJ værdi**, som er sat i [Område for visualisering](#Preferences-range-for-visualization).
-- **eA1c** og **GMI**: to skøn over HbA1c, beregnet ud fra dine CGM-målinger. Ligesom HbA1c ovenfor passer de måske ikke med dine HbA1c-blodprøver.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Ligesom HbA1c ovenfor passer de måske ikke med dine HbA1c-blodprøver.
 - **SD** (standardafvigelse) og **CV** (variationskoefficient): hvor meget dit blodsukker svinger. En lavere værdi betyder et mere stabilt blodsukker.
 - **Dage**: hvor mange dage med CGM-data der blev brugt.
 
