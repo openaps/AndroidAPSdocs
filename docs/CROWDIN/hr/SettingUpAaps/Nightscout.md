@@ -2,72 +2,72 @@
 
 (Nightscout-security-considerations)=
 
-## Security considerations
+## Sigurnosna razmatranja
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Nightscout je poslužitelj za izvješća i nadzor za **AAPS**: **AAPS** u njega prenosi vaše podatke, a vi ili osobe koje se brinu o vama gledate ih na web stranici Nightscouta ili u aplikacijama za praćenje. Na njemu su vaši medicinski podaci, profili i tretmani, zato je dobro razmisliti o zaštiti vaše Nightscout stranice.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+U **AAPS**-u 4 daljinsko upravljanje ne ide preko web stranice Nightscouta. Dok je upravljanje s klijenta uključeno ([zaštićeni način rada](#client-master-control-hardened-mode)), **AAPS** **ne primjenjuje** tretmane ni ciljeve koji su upisani izravno u Nightscout. Daljinske naredbe umjesto toga dolaze s uparenog **AAPSClienta** – pogledajte [Upravljanje glavni uređaj ↔ klijent](#client-master-control).
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Budite iznimno oprezni ako Nightscout koristite kao izvor podataka o GUK-u za AAPS.
 
-### Nightscout settings
+### Postavke Nightscouta
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+Možete zabraniti javni pristup svojoj Nightscout stranici pomoću [uloga za autentifikaciju](https://nightscout.github.io/nightscout/security): svoj URL dijelite samo s tokenom `readable`, nikada s tokenom `admin`.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Nightscout `API_SECRET` je glavna lozinka vaše stranice: nemojte je javno dijeliti.
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### Postavke AAPS-a
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+Prihvaćanje podataka iz Nightscouta (promjene profila, tretmani, ...) nije obavezno i zadano je isključeno. Dolje opisani prekidači skriveni su dok je uključeno upravljanje s klijenta (zaštićeni način rada) i u [jednostavnom načinu rada](#preferences-simple-mode).
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* Postavkama **Sinkronizacija** dodatka NSClientV3 pristupate na jedan od ovih načina: 1) **Postavke** (ikona zupčanika na glavnom zaslonu) -> **NSClientV3** -> **Sinkronizacija**, ili 2) **Konfiguracija** (izbornik ☰) -> **Komunikacija** -> „**Postavke**“ ispod NSClientV3.
+* Uključite „Prenesi podatke u NS“.
+* „Prenesi podatke o GUK-u u NS“ nalazi se u postavkama vašeg izvora GUK-a (**Konfiguracija → Izvor GUK-a → Postavke**). Uključite tu opciju, osim ako je vaš izvor podataka o GUK-u za AAPS Nightscout: u tom slučaju je **nemojte** uključiti.
+* Nemojte uključiti „Primaj CGM podatke iz NS-a“, osim ako je Nightscout vaš izvor podataka o GUK-u.
 
-#### Do not sync from Nightscout
+#### Bez sinkronizacije iz Nightscouta
 
 Keeping all the "Receive … from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
-![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
+![Samo prijenos u Nightscout](../images/preferences/settings_nsclient_sync.png)
 
-#### Accept changes from Nightscout
+#### Prihvaćanje promjena iz Nightscouta
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Ako uključite ove opcije, možete mijenjati postavke AAPS-a putem Nightscouta, npr. mijenjati i zamijeniti profile, postavljati privremene ciljeve i dodavati ugljikohidrate koje će AAPS uzeti u obzir. Prikazuju se samo kada su upravljanje s klijenta i jednostavni način rada isključeni.  
+Imajte na umu da će se tretmani inzulinom koristiti samo za izračune, kao „Ne daj bolus, samo zabilježi“.
 
-![Nightscout receive options enabled](../images/NSsafety3.png)
+![Uključene opcije primanja iz Nightscouta](../images/NSsafety3.png)
 
-### Further security settings
+### Dodatne sigurnosne postavke
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+Redovito ažurirajte telefon, kako je opisano u odjeljku [Sigurnost na prvom mjestu](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
-## Manual Nightscout setup
+## Ručno postavljanje Nightscouta
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Pretpostavlja se da već imate Nightscout stranicu. Ako nemate, posjetite stranicu [Nightscout](http://nightscout.github.io/nightscout/new_user/) za potpune upute o postavljanju. Upute u nastavku su postavke koje također morate dodati na svoju Nightscout stranicu. Vaša Nightscout stranica mora biti barem verzije 15, zato provjerite koristite li [najnoviju verziju](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), inače ćete dobiti poruku o pogrešci u aplikaciji AAPS.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Uredite svoje varijable](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
-* Add or edit the variables as follows:
+* Dodajte ili uredite varijable ovako:
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Možete postaviti razne alarme za [nadzor pumpe](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), a posebno se preporučuje alarm za postotak baterije: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Spremite promjene. Vaša Nightscout stranica sada bi trebala moći prikazati oznake (pills). Prikaz možete zadano uključiti tako da ih dodate u `SHOW_PLUGINS`.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
-  ![Nightscout Pills](../images/nightscout1.png)
+  ![Oznake (pills) u Nightscoutu](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Nightscout kao plaćena usluga SaaS (Software as a Service, softver kao usluga)
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Varijable postavite u web sučelju pružatelja usluge. Ako je potrebno, obratite se službi za podršku pružatelja usluge.
