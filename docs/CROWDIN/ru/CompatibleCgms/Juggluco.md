@@ -8,7 +8,7 @@
 
 ### Отключите выгрузку в Nightscout
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Не разрешайте другим приложениям загружать данные (ГК и терапию) в Nightscout.
 
 Отключите в Juggluco любой активный загрузчик в Nightscout.
 
@@ -22,7 +22,7 @@ Juggluco может передавать гликемию непосредств
 
 При использовании датчика Libre 2/2+/3/3+ гликемия будет отправляться в AAPS ежеминутно, однако это не приведет к ежеминутным же расчетам.
 
-В Juggluco поставьте галочку у xDrip broadcast (не ставьте у Patched Libre), проставьте галочку у пакета androidaps и сохраните выбор. Select the xDrip BG data source in AAPS.
+В Juggluco поставьте галочку у xDrip broadcast (не ставьте у Patched Libre), проставьте галочку у пакета androidaps и сохраните выбор. Выберите в AAPS источник ГК xDrip.
 
 Примените достаточное [сглаживание](./SmoothingBloodGlucoseData.md) в AAPS.
 
@@ -32,10 +32,10 @@ Juggluco может передавать гликемию непосредств
 
 ## Juggluco to xDrip
 
-Juggluco can send blood glucose to xDrip which will then send them to AAPS.
+Juggluco может передавать гликемию в xDrip, а xDrip затем передает ее в AAPS.
 
-В Juggluco поставьте галочку у Patched Libre (не ставьте у xDrip broadcast), проставьте галочку у пакета dexdrip и сохраните выбор. Select the xDrip BG data source in AAPS.
+В Juggluco поставьте галочку у Patched Libre (не ставьте у xDrip broadcast), проставьте галочку у пакета dexdrip и сохраните выбор. Выберите в AAPS источник ГК xDrip.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary. When using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute readings to 5-minute readings and [also smooth](#libre2-value-smoothing-raw-values) them.
+При необходимости примените достаточное [сглаживание](./SmoothingBloodGlucoseData.md) в AAPS. При использовании сенсора Libre 2/2+/3/3+ xDrip усредняет ежеминутные значения до 5-минутных и [также сглаживает](#libre2-value-smoothing-raw-values) их.
 
 ![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
