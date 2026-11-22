@@ -73,7 +73,7 @@ O **Perfil de glicose ambulatório** (**AGP**) mostra como a sua glicose costuma
 
 - **O gráfico**: um dia, da meia-noite à meia-noite. A linha é a **Mediana** (metade das suas leituras a essa hora foram mais baixas, metade foram mais altas). À volta dela, uma faixa contém a metade central das suas leituras (**25–75%**) e uma faixa mais larga contém a maior parte delas (**10–90%**). Uma faixa estreita significa que a sua glicose é parecida de dia para dia a essa hora. Linhas tracejadas marcam a sua **Marca BAIXA**, 140 mg/dl (7,8 mmol/l) e a sua **Marca ALTA**.
 - **Visão geral glicémica**: o tempo passado no seu intervalo, no intervalo apertado (70–140 mg/dl ou 3,9–7,8 mmol/l), acima e abaixo do seu intervalo, e depois a sua glicose **Média** e **Mediana**. O seu intervalo é definido pela **Marca BAIXA** e pela **Marca ALTA** em [Intervalo para visualização](#Preferences-range-for-visualization).
-- **eA1c** e **GMI**: duas estimativas da HbA1c calculadas a partir das suas leituras do CGM. Tal como a HbA1c acima, podem não coincidir com as suas análises de HbA1c ao sangue.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Tal como a HbA1c acima, podem não coincidir com as suas análises de HbA1c ao sangue.
 - **DP** (desvio padrão) e **CV** (coeficiente de variação): quanto a sua glicose varia. Um valor mais baixo significa uma glicose mais estável.
 - **Dias**: quantos dias de dados do CGM foram usados.
 
