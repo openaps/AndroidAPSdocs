@@ -73,7 +73,7 @@ HbA1c: en uppskattning av det glykerade hemoglobinet, baserad på medelvärdet a
 
 - **Diagrammet**: ett dygn från midnatt till midnatt. Linjen är **Medianvärde** (hälften av dina värden vid den timmen var lägre, hälften var högre). Runt linjen visar ett band den mittersta hälften av dina värden (**25–75%**) och ett bredare band de flesta av dem (**10–90%**). Ett smalt band betyder att ditt glukos är ungefär detsamma från dag till dag vid den timmen. Streckade linjer visar din **LÅG-markering**, 140 mg/dl (7,8 mmol/l) och din **HÖG-markering**.
 - **Glykemisk översikt**: tiden inom ditt målområde, inom det snäva målområdet (70–140 mg/dl eller 3,9–7,8 mmol/l), över ditt målområde och under det, sedan ditt **Medelvärde** och **Medianvärde** för glukos. Ditt målområde är **LÅG-markering** och **HÖG-markering** som ställs in i [Gränsvärden för visualisering](#Preferences-range-for-visualization).
-- **eA1c** och **GMI**: två uppskattningar av HbA1c som beräknas från dina CGM-värden. Precis som HbA1c ovan stämmer de kanske inte med HbA1c från dina blodprov.
+- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Precis som HbA1c ovan stämmer de kanske inte med HbA1c från dina blodprov.
 - **SD** (standardavvikelse) och **CV** (variationskoefficient): hur mycket ditt glukos varierar. Ett lägre värde betyder jämnare glukos.
 - **Dagar**: hur många dagar med CGM-data som användes.
 
@@ -114,7 +114,7 @@ I slutet av varje rad visar små ikoner varifrån data kommer eller vart de har 
 (screens-bolus-carbs)=
 ### Kolhydrater och bolus
 
-![Kolhydrater och bolus](../images/TreatmentsView1.png)
+![Kolhydrater och bolus](../images/Maintenance/TreatmentsView1.png)
 
 På den här fliken ser du loggen över bolusar och kolhydrater. Varje bolus (rad **1**) visar kvarvarande IOB för bolusen bredvid insulinmängden. Bolusen kan komma från:
 * Måltid (angiven manuellt med knapparna Insulin, Snabbknapp eller Kalkylator)
@@ -141,7 +141,7 @@ Behandlingshistoriken kan användas för att rätta felaktiga kolhydratposter (_
 
 ### Tillfällig basal
 
-![Tillfällig basal](../images/TreatmentsView2.png)
+![Tillfällig basal](../images/Maintenance/TreatmentsView2.png)
 
 De **tillfälliga basaler** som loopen har satt visas här. När en post fortfarande påverkar IOB visas informationen bredvid dosen (rad **1**). Det kan vara:
 * Positiv IOB om den tillfälliga basalen var högre än den som är inställd i profilen
@@ -153,13 +153,13 @@ Till vänster på en rad betyder ett rött S ”Suspend” (pausad): det händer
 
 ### Tillfälligt målvärde
 
-![Tillfälligt målvärde](../images/TreatmentsView3.png)
+![Tillfälligt målvärde](../images/Maintenance/TreatmentsView3.png)
 
 Här ser du historiken över tillfälliga målvärden.
 
 ### Profilbyte
 
-![Profilbyte](../images/TreatmentsView4.png)
+![Profilbyte](../images/Maintenance/TreatmentsView4.png)
 
 Här ser du historiken över profilbyten. Du kan se flera poster varje gång du byter profil: rad **1**, som sparas både i NS och i pumphistoriken, motsvarar själva bytet. Rad **2**, som sparas i Nightscout men inte i pumphistoriken, motsvarar användarens begäran om ett profilbyte.
 
@@ -169,14 +169,14 @@ Du kan använda knappen **Klona** på rad **2** för att göra en kopia av ett *
 
 ### Careportal
 
-![Careportal](../images/TreatmentsView5.png)
+![Careportal](../images/Maintenance/TreatmentsView5.png)
 
 Den här fliken visar alla anteckningar och Careportal-poster som har sparats i Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
 ### Körläge
 
-![Körläge](../images/TreatmentsView6.png)
+![Körläge](../images/Maintenance/TreatmentsView6.png)
 
 Den här fliken visar historiken över ändringar av [loopstatus](#AapsScreens-loop-status): öppen, sluten, LGS, pausad, frånkopplad.
 
