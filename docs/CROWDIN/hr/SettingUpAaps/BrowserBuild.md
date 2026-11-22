@@ -1,77 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Izrada u pregledniku
 
-Building AAPS with GitHub Actions.
+Izrada AAPS-a pomoću GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Najniža podržana verzija AAPS-a je 3.3.2.1.**
 
-## Build yourself instead of download
+## Izradite sami umjesto preuzimanja
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplikacija AAPS (APK datoteka) nije dostupna za preuzimanje zbog propisa o medicinskim uređajima. Zakonito je izraditi aplikaciju za vlastitu upotrebu, ali kopiju ne smijete dati drugima!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Pojedinosti pogledajte na stranici [Česta pitanja korisnika petlje](../UsefulLinks/FAQ.md).
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Odaberite način izrade
 
-Pick the method that matches the device you build from:
+Odaberite način koji odgovara uređaju s kojeg izrađujete:
 
-### On an Android phone: AAPS Builder (recommended)
+### Na Android telefonu: AAPS Builder (preporučeno)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+Stranica postavki vodi vas kroz izradu vlastitog privatnog repozitorija za izradu na GitHubu. Ništa ne treba instalirati, nema datoteke za pripremu, a svaku izradu pokrećete sami. Aplikaciju preuzimate izravno s GitHuba. Google Drive nije obavezan.
 
-This also works from a computer browser.
+To radi i iz preglednika na računalu.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Izrada u pregledniku s AAPS Builderom](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### Na računalu ili iPhoneu / iPadu: fork i datoteka za pripremu
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. Follow the four steps below.
+Napravite kopiju (fork) izvornog koda AAPS-a na GitHubu, izradite spremište ključeva pomoću datoteke za pripremu, a izrađena aplikacija sprema se na vaš Google Drive. Slijedite četiri koraka ispod.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Već izrađujete s forkom?** Nastavite ga ažurirati kako je opisano u [Ažuriranje putem preglednika (fork)](../Maintenance/UpdateBrowserBuild.md) ili prijeđite na AAPS Builder. Da prijeđete, najprije uzmite kopiju svog spremišta ključeva iz svog forka: pogledajte [Prelazak s prethodne izrade u pregledniku (fork)](#aaps-builder-from-fork).
 ```
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+U pregledniku ćete morati koristiti više kartica i prelaziti s jedne na drugu. Primjer za Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
 ```{note}
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Morat ćete prelaziti s kartice na karticu: počnite sa svim karticama zatvorenima da se ne izgubite kad prelazite s jedne na drugu.
 ```
 
-#### What you'll need
+#### Što vam treba
 
-- A **Google account**, so the built app can be saved to your Google Drive.
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- **Google račun**, da se izrađena aplikacija može spremiti na vaš Google Drive.
+- **GitHub račun** (besplatan) – izradit ćete ga u Koraku 1.
+- **Web preglednik** koji može držati otvoreno više kartica odjednom (ispod se pretpostavlja Chrome).
+- Mali **pomoćni program za pokretanje datoteke za pripremu**. Koji vam treba ovisi o uređaju s kojeg izrađujete – sada ne trebate ništa instalirati, Korak 2 vodi vas kroz to za vaš uređaj:
+  - **Računalo (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** nije potrebna dodatna aplikacija – koristite ugrađenu aplikaciju Datoteke i preglednik.
 
-#### The steps
+#### Koraci
 
-The browser build is a series of choices. Follow these steps in order:
+Izrada u pregledniku je niz odluka. Slijedite ove korake redom:
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+1. **[Izradite svoj GitHub fork](BrowserBuildFork.md)** – napravite svoju osobnu kopiju izvornog koda AAPS-a.
+2. **[Izradite spremište ključeva za potpisivanje](BrowserBuildKeystore.md)** – ključna odluka: izradite novo spremište ključeva (Opcija 1) ili prenesite postojeće (Opcija 2), a zatim slijedite stranicu za svoj uređaj.
+3. **[Autorizirajte Google Drive](BrowserBuildGoogleDrive.md)** – dopustite GitHubu da izrađenu aplikaciju spremi na vaš Google Drive.
+4. **[Izradite APK](BrowserBuildAPK.md)** – pokrenite GitHub Actions workflow i odaberite verziju i varijantu.
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Ako imate problema, pogledajte **[Izrada u pregledniku: rješavanje problema](../GettingHelp/BrowserBuildTroubleshooting.md)**. Za neobavezne radnje s forkom pogledajte [izvoz spremišta ključeva](#ci-keystore-export) ili [cherry-pick commita](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Počnite s [Korakom 1 – Izradite svoj GitHub fork](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Korak 1: Izradite svoj GitHub fork <BrowserBuildFork.md>
+Korak 2: Izradite spremište ključeva za potpisivanje <BrowserBuildKeystore.md>
+Korak 3: Autorizirajte Google Drive <BrowserBuildGoogleDrive.md>
+Korak 4: Izradite APK <BrowserBuildAPK.md>
 ```
