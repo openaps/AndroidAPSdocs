@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Продукты (ваша база продуктов)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+База **Продукты** – это ваш личный список сохраненных продуктов. Каждая запись хранит **углеводы** продукта (и, если нужно, жиры, белки, энергию и категорию). Так продукты, которые вы часто едите, собраны в одном месте, и вы можете начать болюс с сохраненного продукта, где углеводы уже заполнены.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Как открыть базу продуктов
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Откройте экран **Управление** (нижняя навигация) и выберите **Продукты** (*«Управление записями базы продуктов»*). В **AAPS** v4 Продукты **больше не модуль** – включать ничего не нужно. Это отдельный экран, который открывается с [панели «Управление»](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Список продуктов
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Ваши продукты показаны в виде прокручиваемого списка. В каждой строке показаны **название** продукта, его **порция / единица / категория** и его **углеводы**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Список базы продуктов с поиском и кнопкой добавления](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Поиск** (вверху) – фильтр списка по **названию** (без учета регистра).
+- **Фильтр категорий** – с помощью кнопок-фильтров можно оставить в списке только одну **категорию**. Когда категория выбрана, появляются кнопки ее **подкатегорий**. (Нажмите на выбранную кнопку еще раз, чтобы снять фильтр.)
+- **➕** (внизу справа) – добавить новый продукт (см. ниже).
+- Нажмите на строку, чтобы **редактировать** этот продукт.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Если в списке (или в текущем фильтре) нет записей, на экране показано **Нет данных**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Добавление и редактирование продукта
+
+Нажмите **➕**, чтобы добавить продукт, или нажмите на строку, чтобы его редактировать. Редактор открывается в нижней панели (**Добавить продукт** / **Редактировать продукт**):
+
+![Редактор продукта – название, категория, порция, углеводы и другие питательные вещества](../images/v4/Food/food_editor.png)
+
+Поля:
+
+- **Название** – обязательно (без него сохранить нельзя).
+- **Категория** и **Подкатегория** – необязательно, служат для группировки и фильтрации продуктов.
+- **Порция** и **Единица** – обычный размер порции. По умолчанию **Единица** – **g**.
+- **Углеводы (г)** – количество углеводов в продукте.
+- **Жиры (г)**, **Белки (г)**, **Энергия (кДж)** – необязательные данные о пищевой ценности.
+
+Нажмите **Сохранить**, чтобы сохранить продукт, или **Отменить**, чтобы отказаться от изменений. При редактировании существующего продукта в редакторе есть еще кнопка **Удалить**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+После удаления продукта появляется сообщение **«Продукт удален»** с действием **Отменить**, поэтому случайное удаление легко вернуть.
 ```
 
 ---
 
-## Using a food for a bolus
+## Как использовать продукт для болюса
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+В каждой строке продукта есть кнопка **калькулятора**. Нажатие на нее открывает **мастер болюса**, где уже заполнены **углеводы** этого продукта, а **название** продукта добавлено как примечание к терапии. Вам остается только подтвердить и ввести болюс, не набирая углеводы заново.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Сохраненное число **углеводов** продукта передается в мастер без изменений – **AAPS** не умножает его на порцию или на то, сколько вы съели. Если количество другое, измените углеводы в мастере перед подтверждением. (*Внутри* мастера болюса или диалога углеводов выбора продукта нет. Вы начинаете с этой строки продукта.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Откуда берутся продукты (синхронизация с Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+База продуктов передается через **Nightscout**, но **только в одну сторону**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Скачивание:** **AAPS** **читает** продукты из **базы продуктов** вашего сайта Nightscout и синхронизирует с ней локальный список. Это происходит при синхронизации клиента NS, поэтому подключенный **клиент/фолловер** тоже получает те же продукты.
+- **Загрузка:** **AAPS** **не** отправляет продукты **в** Nightscout – NSClient не поддерживает загрузку записей о продуктах. Поэтому продукты, которые вы создаете или меняете **в AAPS**, остаются **на этом устройстве** и не передаются в Nightscout или на ваши другие устройства.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Продукты только **скачиваются**. Поэтому, чтобы один список продуктов был на телефоне, у фолловера/[клиента](../RemoteFeatures/ClientMasterControl.md) и в остальной системе, ведите его в **Nightscout** (во встроенном редакторе продуктов). **AAPS** скачает эти записи. Продукт, добавленный только в **AAPS**, есть только на этом устройстве – и там остается: при скачивании записи сравниваются по их Nightscout ID, поэтому скачивание добавляет и обновляет эти записи, но никогда не перезаписывает и не удаляет продукт, созданный локально (продукт удаляется, только когда его копию удаляют в Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Обратите внимание: база продуктов также **не** входит в подписанный канал управления «основной телефон ↔ клиент» – она передается только как данные Nightscout.
 ```
 
 ---
 
-## Not on the watch
+## Нет на часах
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+База продуктов – это функция **телефона**. На **часах Wear OS** нет просмотра продуктов, плитки или меню.
 
 ---
 
