@@ -124,7 +124,7 @@
 
 ![החלון סיום תרחיש](../images/v4/Scenes/scene_end_dialog.png)
 
-סיום של תרחיש **מבטל** את השינויים שהוא עשה (למשל את החלפת הפרופיל ואת היעד הזמני שהוא הפעיל). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+סיום של תרחיש **מבטל** את השינויים שהוא עשה (למשל את החלפת הפרופיל ואת היעד הזמני שהוא הפעיל). The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 כל עוד תרחיש פעיל, ליד הפרופיל והיעד במסך הראשי מוצג סמל תרחיש קטן, אם התרחיש הגדיר אותם. החלון **תרחישים** של סרגל הניווט התחתון נשאר זמין כדי להפעיל תרחיש אחר:
 
