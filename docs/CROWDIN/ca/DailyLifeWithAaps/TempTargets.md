@@ -36,7 +36,7 @@ Segons la **glucèmia**, **AAPS** «reduirà» la insulina per arribar a l'objec
 En mode de llaç tancat, els **SMB**:
 
 - *es poden* desactivar (vegeu més avall); i/o
-- la basal es pot activar si **AAPS** té **IOB** negativa, o <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 Els usuaris també poden considerar:
 
@@ -74,7 +74,7 @@ AAPS intentarà arribar a 160 mg/dl o 8,9 mmol/l durant 1 hora
 En mode de llaç tancat, els **SMB**:
 
 - *es poden* desactivar (vegeu més avall); i/o
-- la basal es pot activar si **AAPS** té **IOB** negativa, o <0.
+- basal may be activated if **AAPS** is in negative **IOB** or < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ La pantalla té tres parts:
 
 1. **Carrusel de predefinits** (a dalt): feu lliscar per veure els vostres OT predefinits. Cada targeta mostra el **nom**, l'**objectiu** i la **durada** del predefinit; l'OT que està en marxa queda destacat.
 2. **Editor** (al mig): l'**Objectiu temporal** i la **Durada** que s'aplicaran realment, i també una data/hora d'**Activació**.
-3. **Barra d'accions** (a baix): els botons **➕ afegir**, **‘️ eliminar** i **▶ activar**.
+3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
 
 Quan seleccioneu una targeta de predefinit, el seu **objectiu** i la seva **durada** es carreguen a l'editor.
 
@@ -123,7 +123,7 @@ Per tornar un predefinit de sèrie als valors originals, seleccioneu-lo i toqueu
 ### Afegir i eliminar predefinits
 
 - **➕ Afegir**: crea un **predefinit personalitzat nou** amb els valors actuals de l'editor. La targeta nova apareix al carrusel.
-- **‘️ Eliminar**: elimina el predefinit **personalitzat** seleccionat. Els predefinits de sèrie (*Menjar aviat*, *Activitat (esport)*, *Hipo*) no es poden eliminar.
+- **Delete** — remove the selected **custom** preset. Els predefinits de sèrie (*Menjar aviat*, *Activitat (esport)*, *Hipo*) no es poden eliminar.
 
 Quan tingueu almenys dos predefinits **personalitzats**, també en podeu canviar l'ordre al carrusel: toqueu la icona **Reordenar** (⇅) a la barra superior, moveu la targeta del centre amb els **botons ◀ / ▶** i confirmeu amb **✓**. Els predefinits de sèrie no canvien de lloc: només es poden moure els predefinits personalitzats. (Els controls són els mateixos que per [reordenar perfils](ProfileSwitch-ProfilePercentage.md).)
 
