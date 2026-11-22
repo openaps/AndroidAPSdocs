@@ -28,12 +28,12 @@ U **AAPS**-u v4 postavke se nalaze na zaslonu **Postavke**. Do njih vode tri put
 
 **Jezik**
 
-- By default **AAPS** follows the language of the phone (recommended).
+- **AAPS** zadano koristi jezik telefona (preporučeno).
 
-- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
+- Ako želite **AAPS** na drugom jeziku od jezika telefona, odaberite ga ovdje. Na Androidu 13 i novijim **AAPS** ga u Androidu registrira kao vlastiti jezik aplikacije, pa ga slijede svi njegovi zasloni, glavni zaslon, widgeti i način pisanja brojeva.
 
 - Kada promijenite jezik, tekstovi **AAPS**-a odmah se prebace na novi jezik. Ako su neki tekstovi i dalje na starom jeziku, ponovno pokrenite **AAPS**.
-- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
+- Na Androidu 12 ova se postavka ne prikazuje: **AAPS** uvijek koristi jezik telefona.
 - Postavka je skrivena u [jednostavnom načinu rada](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Jednostavni način rada**
@@ -91,7 +91,7 @@ Odaberite svijetlu temu, tamnu temu ili praćenje postavke sustava telefona.
 
 Obavezno da biste mogli [izvoziti postavke](../Maintenance/ExportImportSettings.md), jer su od verzije 2.7 šifrirane.
 
-If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
+Ako ste zaboravili glavnu lozinku, pogledajte [Kako resetirati glavnu lozinku?](#FAQ-reset-master-password)
 
 **Biometrijska zaštita možda neće raditi na telefonima OnePlus. To je poznat problem OnePlusa na nekim telefonima.**
 
@@ -138,7 +138,7 @@ Ako je aplikacija zaštićena, morate unijeti lozinku ili koristiti biometrijsku
 
 - Sigurnosne granice postavljaju se prema dobi koju odaberete u ovoj postavci.
 - Ako počnete dosezati ove čvrste granice (npr. maksimalni bolus), vrijeme je da se pomaknete jedan korak više.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
+- Loša je ideja odabrati dob veću od stvarne, jer to može dovesti do predoziranja ako u dijaloški okvir za inzulin unesete pogrešnu vrijednost (npr. ako izostavite decimalni zarez).
 - Ako želite znati stvarne brojeve za ove fiksne sigurnosne granice, pomaknite se do značajke algoritma koju koristite na [ovoj stranici](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
@@ -277,7 +277,7 @@ Ovisno o vašim postavkama u [Konfiguracija > APS](../SettingUpAaps/ConfigBuilde
 - [Advanced Meal Assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stanje algoritma iz 2017.
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnoviji algoritam, preporučen za početnike
 
-As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
+Od [**AAPS** verzije 3.3](#version3300) značajka [Dinamički ISF (DynISF)](../DailyLifeWithAaps/DynamicISF.md) premještena je u OpenAPS SMB.
 
 ### OpenAPS AMA
 
@@ -366,15 +366,15 @@ Dodatak NSClient (u izborniku konfiguracije prikazan kao **NSClientV3**) sinkron
 ```{admonition} Data uploaders
 :class: warning
 
-Kada koristite NSClientV3, svi programi koji prenose podatke moraju koristiti Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Kada koristite NSClientV3, svi programi koji prenose podatke moraju koristiti Nightscout API v3. Ako neki drugi program za prijenos (npr. vaša CGM aplikacija) ne podržava API v3, **pustite AAPS da prenosi sve podatke** (GUK, tretmane, ...) u Nightscout i isključite taj program za prijenos.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- Postavite svoj *Nightscout URL* (npr. <https://yoursitename.yourplatform.dom>).
 - **Provjerite da URL NEMA /api/v1/ na kraju.**
 - U Nightscoutu izradite *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (za API V3 potreban je [Nightscout 15](https://nightscout.github.io/update/update/)) i unesite ga u **Nightscout pristupni token** (ne vašu API tajnu!). Na **AAPSClientu** umjesto toga možete skenirati QR kod glavnog telefona, čime se postavlja vlastiti token klijenta. Klijent uparen PIN-om dobiva vlastiti token od glavnog telefona nakon uparivanja. Pogledajte [Vlastiti Nightscout token klijenta](#client-master-control-own-token).
 - Ovo omogućuje čitanje i pisanje podataka između web stranice Nightscouta i **AAPS**-a.
 - Ako ste zapeli na Cilju 1, ovdje dobro provjerite ima li pogrešaka u pisanju.
-- Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+- Ostavite „Koristi WebSockets“ uključeno (preporučeno). Websocketi su **obavezni** za daljinsko upravljanje iz **AAPSClienta**, na oba telefona.
 
 (Preferences-nsclient-synchronization)=
 ### Sinkronizacija
@@ -413,7 +413,7 @@ Prekidač „**Dopusti upravljanje s klijenta**“ više nije u ovim postavkama:
 - Za brisanje svih SSID-ova upišite razmak u polje.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClientV3)
+### Napredne postavke (NSClientV3)
 
 ![Napredne postavke NSClienta](../images/preferences/settings_nsclient_advanced.png)
 
@@ -472,21 +472,21 @@ Odaberite koja će se usluga lokacije koristiti:
 
 Postavke su same po sebi razumljive.
 
-**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+**Zaobiđi način rada Ne ometaj** (zadano uključeno): alarmi **AAPS**-a zvone čak i kada je telefon utišan ili u načinu rada Ne ometaj. Isključite ovo ako **AAPS** treba poštovati te načine rada: alarmi tada ne zvone, a u načinu rada Ne ometaj samo vibriraju, na telefonu i na satu. Prijedlozi petlje koji stignu za vrijeme načina rada Ne ometaj prikazuju se bez zvuka.
 
-When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
+Kada se alarm oglasi, zaslon alarma nudi **Isključi zvuk na 5 minuta**, **Utišaj alarm** (zaslon ostaje otvoren, pa možete pročitati poruku) i **Utišaj i zatvori**. Ako obavijest o alarmu povučete s ploče obavijesti, alarm se utišava. Kada kasnije otvorite **AAPS**, alarm na koji niste odgovorili ponovno se prikazuje.
 
 (preferences-alarm-sound-volume-vibration)=
-### Alarm sound, volume and vibration
+### Zvuk, glasnoća i vibracija alarma
 
-- **Sound**: the **AAPS** alarm sounds are built in and cannot be changed.
-- **Volume**: **AAPS** has no volume setting of its own. With **Override Do Not Disturb mode** on, the alarms follow the phone's alarm volume. With it off, they follow the notification volume.
-- **Gradually increase notification volume** (on by default): the alarm starts quietly and gets louder. Turn it off to ring at full volume right away.
-- **Vibration**: in the phone's settings, go to **Apps** > **AAPS** > **Notifications**. The **AAPS alarms** list appears there after the first alarm. Tap an alarm to turn its **Vibration** on or off. Keep these alarms turned on.
+- **Zvuk**: zvukovi alarma **AAPS**-a ugrađeni su i ne mogu se promijeniti.
+- **Glasnoća**: **AAPS** nema vlastitu postavku glasnoće. Kada je **Zaobiđi način rada Ne ometaj** uključeno, alarmi slijede glasnoću alarma telefona. Kada je isključeno, slijede glasnoću obavijesti.
+- **Postupno pojačavaj glasnoću obavijesti** (zadano uključeno): alarm počinje tiho i postaje sve glasniji. Isključite ovo da alarm odmah zvoni punom glasnoćom.
+- **Vibracija**: u postavkama telefona idite na **Aplikacije** > **AAPS** > **Obavijesti**. Popis **AAPS alarmi** pojavi se ondje nakon prvog alarma. Dodirnite alarm da uključite ili isključite njegovu **Vibraciju**. Ove alarme ostavite uključenima.
 
-![AAPS alarms in the phone's notification settings](../images/preferences/settings_alarm_channels.png) ![Vibration setting of one AAPS alarm](../images/preferences/settings_alarm_channel.png)
+![AAPS alarmi u postavkama obavijesti telefona](../images/preferences/settings_alarm_channels.png) ![Postavka vibracije jednog AAPS alarma](../images/preferences/settings_alarm_channel.png)
 
-- Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
+- Alarmi za glukozu (visoka, niska, nema podataka) dolaze iz vaše CGM aplikacije ili Nightscouta: ondje postavite njihov zvuk i vibraciju.
 
 (preferences-maintenance-settings)=
 ## Postavke održavanja
@@ -503,7 +503,7 @@ When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence a
 
 Možete pomoći u daljnjem razvoju **AAPS**-a tako da programerima šaljete izvješća o rušenju.
 
-**Izvoz postavki bez nadzora**<br/> Ako uključite ovu značajku, dopuštate **AAPS**-u da izvozi postavke bez sudjelovanja korisnika. For this the master password is securely stored on your phone (only) at the next manual export. Spremljena lozinka koristit će se najviše 4 tjedna. Nakon 4 tjedna dobit ćete obavijest da lozinka uskoro istječe. Tijekom prijelaznog razdoblja od 1 tjedna lozinku tada možete obnoviti ručnim izvozom postavki iz izbornika održavanja.
+**Izvoz postavki bez nadzora**<br/> Ako uključite ovu značajku, dopuštate **AAPS**-u da izvozi postavke bez sudjelovanja korisnika. Za to se glavna lozinka sigurno sprema na vaš telefon (samo tamo) pri sljedećem ručnom izvozu. Spremljena lozinka koristit će se najviše 4 tjedna. Nakon 4 tjedna dobit ćete obavijest da lozinka uskoro istječe. Tijekom prijelaznog razdoblja od 1 tjedna lozinku tada možete obnoviti ručnim izvozom postavki iz izbornika održavanja.
 
 Kada prođe prijelazno razdoblje od 1 tjedna, spremljena lozinka istječe i svaki automatski izvoz postavki prekida se uz obavijest korisniku, koja traži da ponovno unese lozinku. [(**Automatski izvozi postavki**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) bilježe se u popise „Careportal“ i „Unos korisnika“ **AAPS**-a pod Tretmanima.
 
