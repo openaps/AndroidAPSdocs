@@ -1,22 +1,22 @@
-# Where can I get help?
+# Где получить помощь?
 
-## I'm stuck; what should I do? К кому обратиться?
+## Ничего не получается: что делать? К кому обратиться?
 
-This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
+Этот проект держится на работе добровольцев, поэтому для любых запросов о помощи есть несколько правил. Они помогают не тратить зря время тех, кто бескорыстно помогает другим:
 
-* level 1: Read the docs (i.e. this Wiki) - there is now a search function to help you!
+* Уровень 1: прочитайте документацию (т. е. эту Wiki) — в ней теперь есть поиск, который вам поможет!
 * Уровень 2: поищите в группе Facebook; если ответа там еще нет, задайте вопрос в [группе Facebook пользователей AndroidAPS](https://www.facebook.com/groups/1900195340201874/)
-* level 3: If Facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Одинаковые сообщения, опубликованные сразу в обоих каналах, будут игнорироваться или удаляться, чтобы не было повторных ответов. Не забывайте, что большинство разработчиков находятся в Европе, поэтому ответ может прийти не сразу; возможно, придется подождать несколько часов, особенно в выходные и праздники.
+* Уровень 3: если в Facebook ответа нет, спросите в [Discord](https://discord.gg/4fQUWHZ4Mw). Одинаковые сообщения, опубликованные сразу в обоих каналах, будут игнорироваться или удаляться, чтобы не было повторных ответов. Не забывайте, что большинство разработчиков находятся в Европе, поэтому ответ может прийти не сразу; возможно, придется подождать несколько часов, особенно в выходные и праздники.
 * Уровень 4: создайте [issue](https://github.com/nightscout/AndroidAPS/issues) и приложите [файлы журналов](../GettingHelp/AccessingLogFiles.md)
 * Уровень 5: напишите на *developers@aaps.app* (только если речь идет о личных данных, которые нельзя публиковать в открытом канале, и ваша проблема не решилась на других уровнях)
 
-For support on CGM sources please use the Facebook groups or Discord channels for that specific system (e.g. [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+За поддержкой по источникам CGM обращайтесь в группы Facebook или каналы Discord этой системы (например, [xDrip](https://www.facebook.com/groups/xDripG5/), [загрузчик для серии 600](https://www.facebook.com/groups/NightscoutForMedtronic/)), а за поддержкой по Nightscout — в [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/): там пользователи разбираются лучше, чем люди здесь, которые используют разные системы.
 
 ## Обязательно вступите в группу пользователей AndroidAPS в Facebook или Discord!
 
 Вступите в основную [группу AndroidAPS в Facebook](https://www.facebook.com/groups/1900195340201874/) и/или [AndroidAPS в Discord](https://discord.gg/4fQUWHZ4Mw). Здесь можно задавать любые вопросы об алгоритме, о проблемах настройки Android Studio и сборки APK, об использовании приложения и о том, как получить от него наибольшую пользу. Есть также группа для пользователей помпы Combo — [AAPSCombo](https://www.facebook.com/groups/127507891261169/): у этой помпы немного особая настройка.
 
-Please note that Facebook has recently removed external links shared within the **AAPS** Facebook group and this includes current and historic posts which contain external links to the **AAPS** Notes / Read the docs. For new users who are working through the Objectives and reviewing historic **AAPS** Facebook posts please search key terms as discussed within the **AAPS** notes for further assistance.
+Обратите внимание: Facebook недавно удалил внешние ссылки, опубликованные в группе Facebook **AAPS**. Это касается и новых, и старых сообщений со ссылками на заметки **AAPS** / Read the docs. Новым пользователям, которые проходят Цели и просматривают старые сообщения **AAPS** в Facebook: для дополнительной помощи ищите по ключевым словам, которые описаны в заметках **AAPS**.
 
 ## Другие ресурсы на английском языке
 
@@ -58,7 +58,7 @@ Please note that Facebook has recently removed external links shared within the 
 
 ### Польша
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): польское сообщество AAPS и группа поддержки при диабете
 
 ### Швеция
 
