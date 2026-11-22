@@ -45,7 +45,7 @@ Toqueu el botó **+** per crear una escena nova.
 
 ### Partir d'una plantilla
 
-Per **crear** una escena, toqueu el botó **+** a la pantalla Escenes. El primer pas és **Partir d'una plantilla**: trieu una escena preparada per a una situació habitual (*Esport*, *Dia de malaltia*, *Dia de malaltia — Vòmits*, *Dormir*, *Nit després de l'esport*, *Abans de menjar*, *Alcohol*, *Conduir*, *Bany*, *Fase lútia*, *Temps calorós*, *Procediment mèdic*) o comenceu amb una escena *En blanc*. Cada plantilla **omple per endavant les accions recomanades**, i ho podeu ajustar tot als passos següents.
+Per **crear** una escena, toqueu el botó **+** a la pantalla Escenes. El primer pas és **Partir d'una plantilla**: trieu una escena preparada per a una situació habitual (*Esport*, *Dia de malaltia*, *Dia de malaltia — Vòmits*, *Dormir*, *Nit després de l'esport*, *Abans de menjar*, *Alcohol*, *Conduir*, *Bany*, *Fase lútia*, *Temps calorós*, *Procediment mèdic*) o comenceu amb una escena *En blanc*. Cada plantilla **omple per endavant les accions recomanades**, i ho podeu ajustar tot als passos següents. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![«Partir d'una plantilla»: trieu un punt de partida](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Una escena sense escena següent només us demana que confirmeu:
 
 ![Diàleg Finalitzar escena](../images/v4/Scenes/scene_end_dialog.png)
 
-Finalitzar una escena **desfà** els canvis que ha fet (per exemple el canvi de perfil i l'objectiu temporal que ha iniciat).
+Finalitzar una escena **desfà** els canvis que ha fet (per exemple el canvi de perfil i l'objectiu temporal que ha iniciat). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Mentre una escena està activa, el perfil i l'objectiu de la pantalla principal porten una petita icona d'escena quan els ha posat l'escena. El full **Escenes** de la navegació inferior continua disponible per iniciar una altra escena:
 
