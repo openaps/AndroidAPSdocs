@@ -11,7 +11,7 @@
 
 ```{admonition} Which devices can run AAPSClient?
 :class: note
-From **AAPS** version 4, **AAPSClient** runs on Android phones and tablets, on Wear OS watches and on computers (Windows, Mac and Linux). On an iPhone there is no ready-made download: you build the app yourself. See the [table of downloads by device](#aapsclient-platforms).
+Od verzije 4 **AAPS-a** **AAPSClient** radi na Android telefonima i tabletima, na satovima s Wear OS-om i na računalima (Windows, Mac i Linux). Za iPhone ne postoji gotova datoteka za preuzimanje: aplikaciju izrađujete sami. Pogledajte [tablicu preuzimanja po uređajima](#aapsclient-platforms).
 ```
 
 ```{contents} Table of contents
@@ -36,38 +36,38 @@ Na isti telefon pratitelja mogu se jedna uz drugu instalirati do tri klijentske 
 (aapsclient-platforms)=
 ## Preuzimanje aplikacije
 
-All the ready-made files are in the *Assets* list of the latest release on [GitHub](https://github.com/nightscout/AndroidAPS/releases/) (click *Assets* at the bottom of the release to expand it). In the table, *x.y.z* stands for the version number. Choose the file that matches your device:
+Sve gotove datoteke nalaze se na popisu *Assets* najnovijeg izdanja na [GitHubu](https://github.com/nightscout/AndroidAPS/releases/) (kliknite *Assets* na dnu izdanja da ga proširite). U tablici *x.y.z* označava broj verzije. Odaberite datoteku koja odgovara vašem uređaju:
 
-| Device                  | File to download                    | Napomene                                                                                                                                                                                     |
-| ----------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Android phone or tablet | `app-aapsclient-release_x.y.z.apk`  | Install it like the main app: see [Download and installation of AAPSClient](#RemoteControl_aapsclient) and [Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md). |
-| Wear OS watch           | `wear-aapsclient-release_x.y.z.apk` | Goes with the AAPSClient app on the phone. See [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md).                                                                                          |
-| Windows computer        | `AAPSClient-x.y.z.msi`              | Open the file to install.                                                                                                                                                                    |
-| Mac                     | `AAPSClient-x.y.z.dmg`              | See the note on macOS below the table.                                                                                                                                                       |
-| Linux (Debian, Ubuntu)  | `aapsclient_x.y.z_amd64.deb`        | Install it with your package manager.                                                                                                                                                        |
-| iPhone                  | nema                                | There is no App Store version and no download. You build the app yourself, see [AAPSClient on an iPhone](#aapsclient-iphone).                                                                |
+| Device                       | Datoteka za preuzimanje             | Napomene                                                                                                                                                                                                                          |
+| ---------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Android telefon ili tablet   | `app-aapsclient-release_x.y.z.apk`  | Instalirajte je kao glavnu aplikaciju: pogledajte [Preuzimanje i instalacija AAPSClienta](#RemoteControl_aapsclient) i [Prijenos i instalacija AAPS-a na vaš pametni telefon](../SettingUpAaps/TransferringAndInstallingAaps.md). |
+| Sat s Wear OS-om             | `wear-aapsclient-release_x.y.z.apk` | Ide uz aplikaciju AAPSClient na telefonu. Pogledajte [Postavljanje AAPS-a na vaš Wear OS sat](../WearOS/WearOsSmartwatch.md).                                                                                                     |
+| Računalo sa sustavom Windows | `AAPSClient-x.y.z.msi`              | Otvorite datoteku za instalaciju.                                                                                                                                                                                                 |
+| Mac                          | `AAPSClient-x.y.z.dmg`              | Pogledajte napomenu o macOS-u ispod tablice.                                                                                                                                                                                      |
+| Linux (Debian, Ubuntu)       | `aapsclient_x.y.z_amd64.deb`        | Instalirajte je pomoću svog upravitelja paketa.                                                                                                                                                                                   |
+| iPhone                       | nema                                | Ne postoji verzija u App Storeu ni datoteka za preuzimanje. Aplikaciju izrađujete sami, pogledajte [AAPSClient na iPhoneu](#aapsclient-iphone).                                                                                   |
 
-**Following two people?** Each file above also exists as *aapsclient2* / *AAPSClient2*. It is a second client app that installs next to the first one, so one device can follow two people (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). **AAPSClient3** is not in the release assets: build it yourself ([build variants](#browserbuild-variant)).
+**Pratite dvije osobe?** Svaka gore navedena datoteka postoji i kao *aapsclient2* / *AAPSClient2*. To je druga klijentska aplikacija koja se instalira pored prve, tako da jedan uređaj može pratiti dvije osobe (pogledajte [O AAPSClientu, AAPSClientu2 i AAPSClientu3](#remotecontrol-aapsclient-versions)). **AAPSClient3** nije među datotekama izdanja: izradite ga sami ([varijante izrade](#browserbuild-variant)).
 
-**Files to ignore:** the *pumpcontrol* files (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) are not a client. Leave them out.
+**Datoteke koje treba zanemariti:** datoteke *pumpcontrol* (`app-pumpcontrol-release_…`, `wear-pumpcontrol-release_…`) nisu klijent. Ne preuzimajte ih.
 
-**Mac: the first start.** The app is not notarized by Apple, so macOS blocks it the first time you open it. Click *Done*, then open *System Settings → Privacy & Security*, scroll down and click *Open Anyway*.
+**Mac: prvo pokretanje.** Apple nije ovjerio (notarizirao) aplikaciju, pa je macOS blokira kada je prvi put otvorite. Kliknite *Gotovo* (Done), zatim otvorite *Postavke sustava → Privatnost i sigurnost* (System Settings → Privacy & Security), pomaknite se prema dolje i kliknite *Svejedno otvori* (Open Anyway).
 
-**Computer: how to connect.** A computer has no camera, so the QR code cannot be scanned. Set up **Nightscout** in the client, then on the master add the client with a **PIN** and type the 8-digit PIN in the client (**Pair with master**). See [Pairing with the master](#aapsclient-pairing-with-the-master).
+**Računalo: kako se povezati.** Računalo nema kameru, pa se QR kod ne može skenirati. Postavite **Nightscout** u klijentu, zatim na glavnom uređaju dodajte klijenta s **PIN-om** i upišite 8-znamenkasti PIN u klijent (**Upari s glavnim uređajem**). Pogledajte [Uparivanje s glavnim uređajem](#aapsclient-pairing-with-the-master).
 
-**Same version everywhere.** The master and all its clients must run the same **AAPS** version. When you update the master, update the clients too.
+**Ista verzija posvuda.** Na glavnom uređaju i na svim njegovim klijentima mora raditi ista verzija **AAPS-a**. Kada ažurirate glavni uređaj, ažurirajte i klijente.
 
 (aapsclient-iphone)=
-### AAPSClient on an iPhone
+### AAPSClient na iPhoneu
 
-There is no **AAPSClient** in the App Store and no ready-made file to download, so you build the app yourself:
+**AAPSClient** ne postoji u App Storeu i nema gotove datoteke za preuzimanje, pa aplikaciju izrađujete sami:
 
-- You need a Mac with **Xcode** and an Apple developer account.
-- The project is the `ios` folder of the [AndroidAPS repository on GitHub](https://github.com/nightscout/AndroidAPS/tree/master/ios).
-- A build for a real iPhone is signed with your own Apple developer team. A build for the iPhone simulator does not need one.
-- There is no step-by-step guide yet. This page will be updated when there is one.
+- Trebate Mac s **Xcodeom** i Apple račun za razvojne programere.
+- Projekt je mapa `ios` u [repozitoriju AndroidAPS na GitHubu](https://github.com/nightscout/AndroidAPS/tree/master/ios).
+- Izrada za pravi iPhone potpisuje se vašim vlastitim Apple razvojnim timom. Izradi za iPhone simulator on nije potreban.
+- Još ne postoji vodič korak po korak. Ova će se stranica ažurirati kada bude dostupan.
 
-The iPhone version pairs with the master like the others. Unlike the computer versions, the iPhone can scan the master's QR code with its camera.
+Verzija za iPhone uparuje se s glavnim uređajem kao i ostale. Za razliku od verzija za računalo, iPhone može kamerom skenirati QR kod glavnog uređaja.
 
 ## Prvo pokretanje: kraći čarobnjak za postavljanje
 
@@ -75,11 +75,11 @@ Pri prvom pokretanju **AAPSClient** pokreće isti **Čarobnjak za postavljanje**
 
 1. **Dobrodošli**, **licencni ugovor**, **dopuštenja** i **glavna lozinka** – isto kao u glavnoj aplikaciji, pogledajte [Čarobnjak za postavljanje AAPS-a](../SettingUpAaps/SetupWizard.md).
 2. Klijent **ne** traži **jedinice** ni **donju/gornju granicu**: preuzima ih s glavnog telefona čim se spoji na Nightscout. Kasnije ih možete vidjeti u **Postavkama**, gdje mala **ikona telefona** pokazuje da su [sinkronizirane s glavnim telefonom](#client-master-config-prefs). Mogu se uređivati samo dok je glavni uređaj dostupan.
-3. **Postavljanje s glavnog uređaja** – na glavnom uređaju otvorite **Upravljanje → Ovlašteni klijenti**, dodajte ovaj telefon s **QR kodom** i ovdje dodirnite **Skeniraj QR kod**. Jedno skeniranje postavlja Nightscout s vlastitim tokenom ovog telefona i, ako kod služi za uparivanje, ujedno uparuje telefon. Telefon kao naziv svoje instance preuzima i ime s kojim je dodan na glavnom uređaju (slova s dijakritičkim znakovima postaju obična slova, „Miloš“ postaje „Milos“). **Nakon skeniranja postavljanje je završeno**: čarobnjak se zatvara, jer bi sljedeći koraci samo prikazali ono što je kod već napravio. Bez QR koda preskočite ovaj korak. (Not on a computer: it has no camera, see [Getting the app](#aapsclient-platforms).)
+3. **Postavljanje s glavnog uređaja** – na glavnom uređaju otvorite **Upravljanje → Ovlašteni klijenti**, dodajte ovaj telefon s **QR kodom** i ovdje dodirnite **Skeniraj QR kod**. Jedno skeniranje postavlja Nightscout s vlastitim tokenom ovog telefona i, ako kod služi za uparivanje, ujedno uparuje telefon. Telefon kao naziv svoje instance preuzima i ime s kojim je dodan na glavnom uređaju (slova s dijakritičkim znakovima postaju obična slova, „Miloš“ postaje „Milos“). **Nakon skeniranja postavljanje je završeno**: čarobnjak se zatvara, jer bi sljedeći koraci samo prikazali ono što je kod već napravio. Bez QR koda preskočite ovaj korak. (Ne na računalu: ono nema kameru, pogledajte [Preuzimanje aplikacije](#aapsclient-platforms).)
 
    ![Korak Postavljanje s glavnog uređaja s gumbom Skeniraj QR kod](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Komunikacija** – popis dodataka nudi samo ono što treba pratitelju (NSClientV3, xDrip+, Wear, Vanjske prateće aplikacije, Garmin). Ako niste skenirali QR kod, omogućite **NSClientV3** i unesite **isti Nightscout URL** kao na glavnom telefonu te pristupni token, s omogućenim **websocketima** – točno kako je opisano u odjeljku [Sinkronizacija](#RemoteControl_aapsclient). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
+4. **Komunikacija** – popis dodataka nudi samo ono što treba pratitelju (NSClientV3, xDrip+, Wear, Vanjske prateće aplikacije, Garmin). Ako niste skenirali QR kod, omogućite **NSClientV3** i unesite **isti Nightscout URL** kao na glavnom telefonu te pristupni token, s omogućenim **websocketima** – točno kako je opisano u odjeljku [Sinkronizacija](#RemoteControl_aapsclient). Websocketi su **obavezni** za daljinsko upravljanje iz **AAPSClienta**, na oba telefona.
 
    ![Korak Komunikacija na klijentu](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
