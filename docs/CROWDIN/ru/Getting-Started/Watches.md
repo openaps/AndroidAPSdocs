@@ -13,61 +13,61 @@
 
 Смарт-часы - в зависимости от модели - могут найти различное применение с **AAPS**. С их помощью можно полностью или частично контролировать работу **AAPS**, а также проверять уровни гликемии, количество активного инсулина и другие параметры.
 
-Интеграция смарт-часов с **AAPS** может быть полезна во многих ситуациях, включая вождение автомобиля, мотоцикла, велосипеда, во время занятий спортом и т. п. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking at a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling the user to keep their **AAPS** phone stored out of sight (like inside a bag), while still using the smartwatch for remote control.
+Интеграция смарт-часов с **AAPS** может быть полезна во многих ситуациях, включая вождение автомобиля, мотоцикла, велосипеда, во время занятий спортом и т. п. Некоторые считают, что взглянуть на часы (на встрече, вечеринке, за обеденным столом и т. д.) менее заметно, чем смотреть в телефон. С точки зрения безопасности смарт-часы также удобны в дороге: телефон **AAPS** можно хранить вне поля зрения (например, в сумке), а смарт-часы использовать для удаленного управления.
 
 ## Конкретные преимущества **AAPS** для родителей/опекунов
 
-For a child - if their **AAPS** phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS** phone. Это может пригодиться, например, если телефон **AAPS** скрыт в поясе для помпы.
+Если телефон **AAPS** ребенка находится рядом, опекун может с помощью смарт-часов следить за данными или вносить изменения, не используя телефон **AAPS**. Это может пригодиться, например, если телефон **AAPS** скрыт в поясе для помпы.
 
 Смарт-часы можно использовать _вместе_ с вариантами на основе ТЕЛЕФОНА для удаленного управления или _вместо_ них, а также для слежения (см. [Слежение за работой AAPS (без взаимодействия с системой)](../RemoteFeatures/FollowingOnly.md)).
 
-Кроме того, в отличие от телефонов фолловеров у родителей или опекунов (которым нужна мобильная сеть или Wi-Fi), смарт-часы, подключенные по Bluetooth, могут быть полезны в удаленных местах: в пещере, в лодке или на полпути к вершине горы. If both devices (**AAPS** phone and smartwatch) are on the same Wi-Fi network, they can also use Wi-Fi.
+Кроме того, в отличие от телефонов фолловеров у родителей или опекунов (которым нужна мобильная сеть или Wi-Fi), смарт-часы, подключенные по Bluetooth, могут быть полезны в удаленных местах: в пещере, в лодке или на полпути к вершине горы. Если оба устройства (телефон **AAPS** и смарт-часы) подключены к одной сети Wi-Fi, они могут также использовать Wi-Fi.
 
 ## Различные типы взаимодействия смарт-часов и AAPS
 
 В настоящее время существует пять основных способов использования смарт-часов в связке с **AAPS**. Эти данные приводятся ниже в таблице: 
 
-| Настройка часов             | Функции                                        | Что потребуется:                                                                                                                                                                                                                                                                                                    |
-| --------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Автономно                   | AAPS без телефона                              | Полноценные смарт-часы на Android (проверьте минимальную версию Android)</br> с **app-fullRelease**                                                                                                                                                                                                                 |
-| Полное удаленное управление | Большинство функций AAPS                       | Часы на Android **Wear OS** (проверьте версию Android/API)</br>с **wear-fullRelease**                                                                                                                                                                                                                               |
-| Удаленное управление        | Функции AAPSClient                             | Часы на Android **Wear OS** (проверьте версию Android/API)</br>с **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                    |
-| Удаленное управление        | Часть функций AAPSClient                       | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below.                                                                                                                                                                                                                     |
-| Только отображение          | Glucose, trend, IOB, COB, loop and pump status | Many smartwatches, through a companion app on the **AAPS** phone fed by the [External Companion Apps](#watches-external-companion-apps) broadcast: [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>See below. |
+| Настройка часов             | Функции                                      | Что потребуется:                                                                                                                                                                                                                                                                                                                               |
+| --------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Автономно                   | AAPS без телефона                            | Полноценные смарт-часы на Android (проверьте минимальную версию Android)</br> с **app-fullRelease**                                                                                                                                                                                                                                            |
+| Полное удаленное управление | Большинство функций AAPS                     | Часы на Android **Wear OS** (проверьте версию Android/API)</br>с **wear-fullRelease**                                                                                                                                                                                                                                                          |
+| Удаленное управление        | Функции AAPSClient                           | Часы на Android **Wear OS** (проверьте версию Android/API)</br>с **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                                               |
+| Удаленное управление        | Часть функций AAPSClient                     | Часы Garmin</br>(только старые настройки Samsung Tizen и Fitbit, не рекомендуется)</br>См. ниже.                                                                                                                                                                                                                                               |
+| Только отображение          | ГК, тренд, IOB, COB, состояние цикла и помпы | Многие смарт-часы через приложение-компаньон на телефоне **AAPS**, которое получает данные через трансляцию [Внешние приложения-компаньоны](#watches-external-companion-apps): [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>См. ниже. |
 
 ## Перед тем как купить смарт-часы…
 
-Модель, которую вы покупаете, зависит от желаемых функций. You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list of tested phones that also contains some smartwatches.
+Модель, которую вы покупаете, зависит от желаемых функций. Полезную информацию можно найти на странице [Телефоны](#Phones-list-of-tested-phones), в том числе список проверенных телефонов, в котором есть и некоторые смарт-часы.
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. Разные варианты из таблицы выше подробнее описаны ниже, чтобы помочь вам решить, какие смарт-часы подходят для вашей ситуации.
+Популярные марки часов: Samsung Galaxy, Garmin, Fossil и Mi Band. Разные варианты из таблицы выше подробнее описаны ниже, чтобы помочь вам решить, какие смарт-часы подходят для вашей ситуации.
 
 Если вы интегрируете смарт-часы с телефоном **AAPS** чтобы удаленно взаимодействовать с **AAPS**, нужно учитывать, совместимы ли оба устройства друг с другом, особенно если у вас устаревший или необычный телефон.
 
 В общем, если вы хотите только следить за гликемией и не взаимодействовать с **AAPS**, то имеется большой выбор доступных и простых смарт-часов.
 
-Лучший способ выбрать смарт-часы – поискать посты о часах («watch») в группах **AAPS** в Discord или Facebook. Have a read of others' experiences, and post any specific questions if your query isn't answered by older posts.
+Лучший способ выбрать смарт-часы – поискать посты о часах («watch») в группах **AAPS** в Discord или Facebook. Почитайте об опыте других и задайте свои вопросы, если в старых постах нет ответа.
 
 ## Полноценные часы на Android
 
-Похоже на привлекательный вариант? However, at present, only a few enthusiasts are experimenting with **AAPS** on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. На них потребуется установить "полноценное" приложение **AAPS** (которое обычно устанавливается на телефон), а не приложение  **AAPS** "wear".
+Похоже на привлекательный вариант? Однако сейчас **AAPS** на автономных часах пробуют лишь немногие энтузиасты. Смарт-часов с удобным интерфейсом, которые к тому же хорошо работают с автономным **AAPS** и вашим приложением CGM, немного. Популярные модели: LEMFO LEM 15 Pro и 16. На них потребуется установить "полноценное" приложение **AAPS** (которое обычно устанавливается на телефон), а не приложение  **AAPS** "wear".
 
 Пока нет четкой спецификации, которая поможет узнать, будут ли часы самостоятельно работать с **AAPS**, но ориентиром будут следующие параметры:
 
 1)  Android 12 or newer. 2) Возможность выключать "квадратный" режим для увеличения и упрощения чтения текста. 3) Очень хороший срок службы батареи. 4) Хороший радиус действия Bluetooth.
 
-Большинство разочарований от автономных часов с **AAPS** происходит от взаимодействия с крошечным экраном, и то, что текущий полный интерфейс AAPS не был разработан для часов. You may prefer to use a stylus to edit **AAPS** settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Большинство разочарований от автономных часов с **AAPS** происходит от взаимодействия с крошечным экраном, и то, что текущий полный интерфейс AAPS не был разработан для часов. Из-за маленького экрана для изменения настроек **AAPS** на часах может быть удобнее стилус, и некоторые кнопки AAPS могут быть не видны на экране часов.
 
 Дополнительные проблемы заключаются в том, что трудно получить хороший срок службы батареи, а часы с хорошей батареей часто громоздкие и толстые. Пользователи сообщают о борьбе с операционной системой и настройками энергосбережения, о трудностях с запуском сенсоров на часах, о малом радиусе действия Bluetooth (для поддержания связи и с сенсором, и с помпой) и о сомнительной водонепроницаемости. Примеры показаны на фото ниже.
 
 ![изображение](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Если вы хотите настроить автономные часы, для получения дополнительной информации почитайте посты и комментарии в группе **AAPS** в Facebook (хорошие слова для поиска – «standalone» и «Lemfo») и в Discord.
 
 ## Wear OS
 
 Код **AAPS** содержит дополнительное приложение, которое можно установить на [смарт-часы с **Wear OS**](https://wearos.google.com/#oem-carousel).
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Конфигурация > Связь с включенным модулем «Смарт-часы Wear»](../images/v4/Configuration/configuration_communication_wear.png)
 
 Убедитесь, что ваши смарт-часы соответствуют [требованиям](#maintenance-android-version-aaps-version) **AAPS**.
 
@@ -75,12 +75,12 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 Первые три варианта требуют, чтобы на смарт-часах была установлена операционная система **Wear OS**.
 
-**Wear OS** - это операционная система некоторых современных смарт-часов Android. Если в описании смарт-часов указывается только _совместимость_ с Android и iOS - это не означает, что они работают под управлением Wear OS. Это может быть какая-то другая специальная операционная система, не совместимая с **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer**. Each Wear OS release follows the Android version it is based on: **Wear OS 3** is Android 11 (API level 30), **Wear OS 4** is Android 13 (API level 33), **Wear OS 5** is Android 14 (API level 34) and **Wear OS 6** is Android 16 (API level 36). Watches on Wear OS 2 cannot run **AAPS**.
+**Wear OS** - это операционная система некоторых современных смарт-часов Android. Если в описании смарт-часов указывается только _совместимость_ с Android и iOS - это не означает, что они работают под управлением Wear OS. Это может быть какая-то другая специальная операционная система, не совместимая с **AAPS**. Чтобы на смарт-часы можно было установить и использовать любую версию **AAPS** или **AAPSClient**, на них должна работать **Wear OS 3.0, 3.2 или 3.5** (Android 11, уровень API 30) **или новее**. Каждая версия Wear OS соответствует версии Android, на которой она основана: **Wear OS 3** – это Android 11 (уровень API 30), **Wear OS 4** – Android 13 (уровень API 33), **Wear OS 5** – Android 14 (уровень API 34), а **Wear OS 6** – Android 16 (уровень API 36). На часах с Wear OS 2 **AAPS** работать не может.
 
 Если вы установите **AAPS** wear.apk на часы с **Wear OS**, можно выбрать один из разных циферблатов **AAPS**. Также можно использовать стандартный циферблат часов, на котором информация **AAPS** показана в маленьких плитках, которые называются «дополнения». Дополнение – это любой элемент, который показан на циферблате кроме времени.
 
 ```{note}
-Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (the higher the Wear OS version, the more severe), although **complications** keep working. Before buying or updating a watch, read [Wear OS watch face changes](#wearos-watchface-changes).
+Последние изменения в **Wear OS** постепенно нарушают работу собственных циферблатов **AAPS** (чем выше версия Wear OS, тем сильнее), но **дополнения** продолжают работать. Прежде чем покупать или обновлять часы, прочитайте раздел [Изменения циферблатов в Wear OS](#wearos-watchface-changes).
 ```
 
 
@@ -98,38 +98,38 @@ Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (t
 
 (Watchfaces-tizen)= (watches-external-companion-apps)=
 
-## External Companion Apps
+## Внешние приложения-компаньоны
 
-**AAPS** can broadcast its status to other apps installed on the same phone: glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Several watch companion apps read this broadcast and display the data on watches that **AAPS** does not support directly. To send the data, enable **External Companion Apps** in **Configuration** > **Communication** (see [External Companion Apps](#external-companion-apps) on the Configuration page). The broadcast is sent with each new reading and cannot be requested: a refresh button in the companion app has no effect on **AAPS**.
+**AAPS** может транслировать свое состояние другим приложениям, установленным на том же телефоне: ГК и тренд, IOB, COB, базал и временный базал, название профиля, состояние цикла, заряд батареи телефона и помпы, уровень инсулина в резервуаре и ход болюса. Несколько приложений-компаньонов для часов читают эту трансляцию и показывают данные на часах, которые **AAPS** не поддерживает напрямую. Чтобы отправлять данные, включите **Внешние приложения-компаньоны** в разделе **Конфигурация** > **Связь** (см. [Внешние приложения-компаньоны](#external-companion-apps) на странице «Конфигурация»). Трансляция отправляется с каждым новым показанием, и запросить ее нельзя: кнопка обновления в приложении-компаньоне никак не влияет на **AAPS**.
 
-![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
+![Конфигурация > Связь: карточка «Внешние приложения-компаньоны»](../images/v4/Configuration/configuration_external_companion_apps.png)
 
-Companion apps known to use this broadcast:
+Приложения-компаньоны, которые используют эту трансляцию:
 
-- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi and Amazfit watches, see [Xiaomi and Amazfit watches](#watches-xiaomi-amazfit) below.
-- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS watches, as a complication or a widget. It is a useful fallback on Wear OS versions where the **AAPS** watchfaces are unreliable, see [Set up AAPS on your Wear OS watch](../WearOS/WearOsSmartwatch.md). Its companion app GlucoDataAuto shows the same data in a car with Android Auto.
-- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen watches, and its later Wear OS port. In earlier **AAPS** versions the plugin was named **Samsung Tizen** after this app.
+- [WatchDrip+](https://bigdigital.home.blog/) для часов Xiaomi и Amazfit, см. [Часы Xiaomi и Amazfit](#watches-xiaomi-amazfit) ниже.
+- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) для часов Wear OS, как дополнение или виджет. Это полезный запасной вариант для версий Wear OS, на которых циферблаты **AAPS** работают ненадежно, см. [Настройка AAPS на часах Wear OS](../WearOS/WearOsSmartwatch.md). Его приложение-компаньон GlucoDataAuto показывает те же данные в машине с Android Auto.
+- [Приложение G-Watch](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) для часов Samsung Tizen и его более поздняя версия для Wear OS. В более ранних версиях **AAPS** этот модуль назывался **Samsung Tizen** по названию этого приложения.
 
 ```{warning}
-The **G-Watch app** and its **Wear OS** port are no longer maintained, and Samsung has moved its smartwatches from Tizen to Wear OS. G-Watch is only relevant for existing, older setups and is not recommended for a new installation. Check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for the latest news.
+**Приложение G-Watch** и его версия для **Wear OS** больше не поддерживаются, а Samsung перевела свои смарт-часы с Tizen на Wear OS. G-Watch имеет смысл только для существующих старых настроек и не рекомендуется для новой установки. Последние новости смотрите в специальной [группе Facebook](https://www.facebook.com/groups/gwatchapp).
 ```
 
 (Watchfaces-garmin)=
 
 ## Garmin
 
-There are some watch faces for Garmin that integrate with [AAPS](https://apps.garmin.com/search?keywords=androidaps), on the Garmin ConnectIQ store.
+В магазине Garmin ConnectIQ есть несколько циферблатов для Garmin, которые работают с [AAPS](https://apps.garmin.com/search?keywords=androidaps).
 
-![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
+![Конфигурация > Связь: карточка Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) работает напрямую с **AAPS**. Он показывает данные о состоянии цикла (активный инсулин, временный базал) вместе с показаниями ГК и отправляет в **AAPS** данные о пульсе. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/watches/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) работает напрямую с **AAPS**. Он показывает данные о состоянии цикла (активный инсулин, временный базал) вместе с показаниями ГК и отправляет в **AAPS** данные о пульсе. Он доступен в магазине ConnectIQ; включите модуль **Garmin** в разделе **Конфигурация → Связь**. ![Циферблат AAPS Glucose Watch с пронумерованными полями](../images/watches/Garmin_WF-annotated.png)
 
-1. Highest and lowest glucose values on the graph
-2. Glucose change per minute
+1. Самое высокое и самое низкое значения ГК на графике
+2. Изменение ГК за минуту
 3. Insulin on board (IOB)
-4. Time since the last glucose reading (minutes:seconds)
-5. Temporary basal rate, as a percentage of the profile basal rate
-6. Glucose graph of the last 2 hours
+4. Время с последнего показания ГК (минуты:секунды)
+5. Временный базал в процентах от базальной скорости профиля
+6. График ГК за последние 2 часа
 7. Текущее значение глюкозы
 
 
@@ -137,10 +137,10 @@ There are some watch faces for Garmin that integrate with [AAPS](https://apps.ga
 ## Fitbit
 
 ```{warning}
-Google is moving Fitbit into Google Health and is removing third-party apps and watch faces from Fitbit watches in the EU. Fitbit watchfaces are therefore **no longer a recommended option**, and buying a Fitbit for use with **AAPS** is not recommended.
+Google переводит Fitbit в Google Health и удаляет сторонние приложения и циферблаты с часов Fitbit в ЕС. Поэтому циферблаты Fitbit **больше не рекомендуются**, и покупать Fitbit для использования с **AAPS** не рекомендуется.
 ```
 
-For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github.io/nightscout/wearable/#fitbit) list some monitoring-only options, such as [Glance](https://glancewatchface.com/). These are third-party watchfaces too, so the same EU restriction applies.
+Для уже имеющихся часов Fitbit на [страницах Nightscout](https://nightscout.github.io/nightscout/wearable/#fitbit) перечислены некоторые варианты только для мониторинга, например [Glance](https://glancewatchface.com/). Это тоже сторонние циферблаты, поэтому то же ограничение в ЕС действует и для них.
 
 ## Только слежение
 
@@ -153,20 +153,20 @@ For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github
 (watches-xiaomi-amazfit)=
 ### Часы Xiaomi и Amazfit
 
-**WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
+**WatchDrip+** – это приложение-компаньон, созданное сообществом, которое показывает данные ГК и цикла на разных моделях смарт-часов, в основном марок Xiaomi (_например_, Mi Band) и Amazfit:
 
 ![изображение](../images/watches/watch_watchdrip_plus.png)
 
-Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
+Начиная с версии 0.5 **WatchDrip+** читает данные напрямую из **AAPS**, без xDrip+ в качестве посредника. На телефоне **AAPS**:
 
-1. Enable **External Companion Apps** in **Configuration** > **Communication**, see [above](#watches-external-companion-apps). It provides the current glucose, delta, trend arrow, IOB and pump status.
-2. Enable the **xDrip** plugin in **Configuration** > **Communication** and turn on **Send status to xDrip+** in its settings. It provides the IOB/COB status line, and the glucose graph on the watch fills in after a few readings.
-3. If xDrip+ is installed on the phone, disable its **Broadcast Service API** (xDrip+ > Settings > Inter-app settings) so that the watch does not receive the data twice. If xDrip+ was only relaying data to the watch, you can uninstall it.
+1. Включите **Внешние приложения-компаньоны** в разделе **Конфигурация** > **Связь**, см. [выше](#watches-external-companion-apps). Так передаются текущая ГК, дельта, стрелка тренда, IOB и состояние помпы.
+2. Включите модуль **xDrip** в разделе **Конфигурация** > **Связь** и в его настройках включите **Отправлять статус в xDrip+**. Так передается строка состояния IOB/COB, а график ГК на часах заполняется после нескольких показаний.
+3. Если на телефоне установлен xDrip+, отключите в нем **Broadcast Service API** (xDrip+ > Settings > Inter-app settings), чтобы часы не получали данные дважды. Если xDrip+ только передавал данные на часы, его можно удалить.
 
-The refresh button of WatchDrip+ has no effect with **AAPS**: the data arrives with each new reading.
+Кнопка обновления в WatchDrip+ не действует с **AAPS**: данные приходят с каждым новым показанием.
 
 
-You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). Преимущество этих часов в том, что они маленькие и относительно недорогие. Они особенно популярны как часы для детей и людей с небольшими запястьями.
+Подробнее о них, в том числе о настройке, можно прочитать на [сайте WatchDrip+](https://bigdigital.home.blog/). Преимущество этих часов в том, что они маленькие и относительно недорогие. Они особенно популярны как часы для детей и людей с небольшими запястьями.
 
 ### Часы Pebble
 
@@ -175,19 +175,19 @@ You can read more about them, including how to set them up, on the [WatchDrip+ w
 ![изображение](../images/watches/watch_pebble_watchface.png)
 
 
-Часы Pebble ([сейчас сняты с производства](https://en.wikipedia.org/wiki/Pebble_(watch))) продавались с 2013 по 2016 год, и их еще можно найти б/у. Активы Pebble перешли к Fitbit. Пользователи Pebble могут пользоваться циферблатом Urchin для просмотра данных Nightscout. Отображаемые данные включают активный инсулин IOB, действующий временный базал и прогнозирование. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
+Часы Pebble ([сейчас сняты с производства](https://en.wikipedia.org/wiki/Pebble_(watch))) продавались с 2013 по 2016 год, и их еще можно найти б/у. Активы Pebble перешли к Fitbit. Пользователи Pebble могут пользоваться циферблатом Urchin для просмотра данных Nightscout. Отображаемые данные включают активный инсулин IOB, действующий временный базал и прогнозирование. Если вы используете открытый цикл, можно с помощью IFTTT создать апплет: если от **AAPS** пришло уведомление, отправить SMS или уведомление Pushover.
 
 ### [Часы Bluejay](https://bluejay.website/)
 
 
-![BlueJay U3 watch](../images/watches/bluejay_u3.png)
+![Часы BlueJay U3](../images/watches/bluejay_u3.png)
 
 
-Это уникальные устройства, которые могут получать данные ГК **напрямую** от трансмиттера Dexcom. It is not widely known that Dexcom G6/G7 transmitters actually broadcast the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS** is using the phone channel, then the Bluejay watches can use the medical channel.
+Это уникальные устройства, которые могут получать данные ГК **напрямую** от трансмиттера Dexcom. Мало кто знает, что трансмиттеры Dexcom G6/G7 на самом деле передают текущие данные ГК по _двум_ отдельным каналам: каналу для телефона и медицинскому каналу. Часы Bluejay можно настроить на прием данных ГК по любому из каналов, поэтому если **AAPS** использует канал для телефона, часы Bluejay могут использовать медицинский канал.
 
-The key advantage is that the watch is independent of both the phone and the looping system. Например, если вы отключили помпу и оставили телефон **AAPS** на пляже или в парке развлечений и находитесь вне зоны действия телефона **AAPS**, вы все равно можете получать показания Dexcom прямо на часы Bluejay.
+Главное преимущество в том, что часы не зависят ни от телефона, ни от системы замкнутого цикла. Например, если вы отключили помпу и оставили телефон **AAPS** на пляже или в парке развлечений и находитесь вне зоны действия телефона **AAPS**, вы все равно можете получать показания Dexcom прямо на часы Bluejay.
 
-The original **Bluejay GTS** is discontinued and cannot read the Dexcom G7. The later models (U1, then the current **U3**, sold as early access at the time of writing) are full Android watches running xDrip, which collect from the Dexcom G6 and G7 directly. The vendor describes the watch as a research tool, not for medical use. Reported disadvantages are that it does not always pick up a reading every 5 minutes and that the battery needs frequent charging. Check the [Bluejay website](https://bluejay.website/) for the current model and availability.
+Первая модель **Bluejay GTS** снята с производства и не может читать данные Dexcom G7. Более поздние модели (U1, затем текущая **U3**, которая на момент написания продается в раннем доступе) – это полноценные часы на Android с xDrip, которые получают данные от Dexcom G6 и G7 напрямую. Производитель описывает часы как инструмент для исследований, а не медицинское изделие. Среди недостатков пользователи называют то, что часы не всегда получают показание каждые 5 минут и что батарею нужно часто заряжать. Текущую модель и наличие уточняйте на [сайте Bluejay](https://bluejay.website/).
 
 ### Apple Watch
 
