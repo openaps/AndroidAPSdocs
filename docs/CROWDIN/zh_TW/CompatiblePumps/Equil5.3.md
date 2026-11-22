@@ -10,7 +10,8 @@
 ## 幫浦與AAPS的功能
 
 * 無導管貼片式幫浦，可透過手機內建的藍牙與 **AAPS** 通訊，不需要額外的通訊裝置。
-* **AAPS** 將 Equil 視為儲液槽容量為 200 U 的貼片式幫浦：主畫面會顯示貼片式幫浦的狀態燈號，且不提供 **預充／填充**和 **更換幫浦電池**功能。填充、預充和更換電池都要在幫浦嚮導中完成。
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
+* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
 * 幫浦暫停或停止時，**AAPS** 會記錄一筆 0 U/h 的臨時基礎率，因此不會將基礎胰島素計入活性胰島素。
 * 夏令時間和時區變更必須手動處理。
 
