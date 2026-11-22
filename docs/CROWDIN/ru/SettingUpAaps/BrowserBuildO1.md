@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# Вариант 1 – Создать новое хранилище ключей
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation).
+Это часть раздела [Сборка через браузер – Шаг 2: Создайте хранилище ключей для подписи](BrowserBuildKeystore.md) страницы [Сборка через браузер](BrowserBuild.md). Убедитесь, что вы прочитали раздел [Вариант 1 или Вариант 2: что выбрать](#aaps-ci-preparation).
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+Вариант 1 создает для вас совершенно новое хранилище ключей для подписи. Он подходит тем, кто собирает приложение впервые, у кого нет файла JKS или кто забыл пароль или псевдоним (alias).
 
-## Choose your device
+## Выберите устройство
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Собираете на **телефоне Android**? Тогда используйте [AAPS Builder](BrowserBuildAapsBuilder.md): ему не нужен файл подготовки.
 ```
 
-Follow the page that matches the device you are building from:
+Откройте страницу для того устройства, на котором вы собираете приложение:
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[Компьютер](BrowserBuildO1Computer.md)** – Windows, Mac или Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Устройство можно сменить в любой момент – просто откройте нужную страницу.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
-iPhone / iPad <BrowserBuildO1iPhone.md>
+Вариант 1 · Компьютер – Создать новое хранилище ключей <BrowserBuildO1Computer.md>
+Вариант 1 · iPhone / iPad – Создать новое хранилище ключей <BrowserBuildO1iPhone.md>
 ```
