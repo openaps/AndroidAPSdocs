@@ -42,7 +42,7 @@ Da biste to izbjegli, postoje dvije mogućnosti:
 
 * Isključite „Automatski datum i vrijeme“ u postavkama telefona (ručna promjena vremenske zone)
 
-When you get off the plane:
+Kada izađete iz zrakoplova:
 
 * isključite pumpu
 * promijenite vremensku zonu na telefonu
@@ -62,7 +62,7 @@ Insight također bilježi u povijest u kojem je trenutku vrijeme promijenjeno te
 
 To može uzrokovati netočnosti u **TDD** vrijednostima. No to ne bi trebao biti problem.
 
-Zato korisnik Insighta ne mora brinuti o promjenama vremenske zone i vremena. Postoji jedna iznimka od tog pravila: pumpa Insight ima malu unutarnju bateriju koja napaja sat itd. dok mijenjate „pravu“ bateriju. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. U tom slučaju AAPS u izračunu preskače sve unose prije zamjene baterije, jer se točno vrijeme ne može pouzdano odrediti.
+Zato korisnik Insighta ne mora brinuti o promjenama vremenske zone i vremena. Postoji jedna iznimka od tog pravila: pumpa Insight ima malu unutarnju bateriju koja napaja sat itd. dok mijenjate „pravu“ bateriju. Ako zamjena baterije traje predugo, ta unutarnja baterija se isprazni, sat se resetira i nakon umetanja nove baterije morate unijeti vrijeme i datum. U tom slučaju AAPS u izračunu preskače sve unose prije zamjene baterije, jer se točno vrijeme ne može pouzdano odrediti.
 
 ## Promjena vremenske zone za Accu-Chek Combo
 
@@ -76,7 +76,7 @@ Upravljački program automatski usklađuje vrijeme pumpe s vremenom telefona.
 
 Promjene vremenske zone ne mijenjaju povijest, može biti pogođen samo TDD. Ručna promjena vremena na telefonu može uzrokovati probleme s poviješću i **aktivnim inzulinom (IOB)**. Ako vrijeme mijenjate ručno, dobro provjerite **aktivni inzulin (IOB)**.
 
-When the time zone or time changes running **TBRs** are stopped.
+Kada se promijeni vremenska zona ili vrijeme, aktivni **privremeni bazali (TBR)** se zaustavljaju.
 
 (time-adjustment-daylight-savings-time-dst)=
 
@@ -108,8 +108,8 @@ Ako dajete bolus kalkulatorom **AAPS**-a, molimo ne koristite podatke **Aktivni 
 
 ### Ljetno računanje vremena za Omnipod Dash
 
-* Either allow **AAPS** to temporarily default to background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day before DST is due to take place to avoid overnight disruption. NAPOMENA: OVA OPCIJA MOŽE UZROKOVATI PRERANI ISTEK VAŠEG POD-A. AKO ODABERETE ZNAČAJKU OPISANU U NASTAVKU, IMAJTE PRIBOR SA SOBOM.
+* Ili dopustite da se **AAPS** nakon promjene na ljetno računanje vremena privremeno vrati na pozadinski bazal, kako je gore objašnjeno.
+* U suprotnom, ako ne želite da se **AAPS** preko noći privremeno vrati na pozadinski bazal, možete promijeniti vremensku zonu dan prije promjene na ljetno računanje vremena, kako biste izbjegli smetnje tijekom noći. NAPOMENA: OVA OPCIJA MOŽE UZROKOVATI PRERANI ISTEK VAŠEG POD-A. AKO ODABERETE ZNAČAJKU OPISANU U NASTAVKU, IMAJTE PRIBOR SA SOBOM.
 
 #### Što napraviti prije promjene sata
 
@@ -129,6 +129,6 @@ Ako dajete bolus kalkulatorom **AAPS**-a, molimo ne koristite podatke **Aktivni 
 
 3. U **AAPS**-u osvježite pumpu i prijeđite na željeni **Profil**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA or the maximum carb absorption time (**Absorption max time**), whichever is longer.
+4. Provjerite **aktivni inzulin (IOB)** i **aktivne ugljikohidrate (COB)** u **AAPS**-u i ako nisu točni, onemogućite **Petlju** barem za jedan DIA ili za maksimalno vrijeme apsorpcije ugljikohidrata (**Maks. vrijeme apsorpcije**), ovisno o tome što je dulje.
 
 5. Što napraviti nakon promjene sata. Dobro vrijeme za povratak na lokalnu vremensku zonu je kada imate malo **aktivnog inzulina (IOB)**. Na primjer, sat vremena prije obroka kao što je doručak. Idealno bi i **aktivni ugljikohidrati (COB)** i **aktivni inzulin (IOB)** trebali biti blizu nule.
