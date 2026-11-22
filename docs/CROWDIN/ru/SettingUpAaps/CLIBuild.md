@@ -3,7 +3,7 @@
 ```{admonition} For users familiar with the command-line and git
 :class: note
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+Самый простой способ собрать AAPS – [Сборка через браузер](./BrowserBuild.md).
 ```
 
 Проверено на Fedora и Debian Linux, на других системах все должно работать с минимальными изменениями.
@@ -33,7 +33,7 @@ keytool -genkeypair -v \
 
 ### 2. Скомпилируйте APK-файл AAPS
 
-Клонируйте [git-репозиторий](https://github.com/nightscout/AndroidAPS), если вы еще этого не сделали. AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
+Клонируйте [git-репозиторий](https://github.com/nightscout/AndroidAPS), если вы еще этого не сделали. Последняя стабильная версия AAPS находится в ветке master; убедитесь, что вы на той ветке или теге, которые хотите собрать.
 
 Выполните `./gradlew :app:assembleFullRelease` в папке репозитория. Команда сама скачает Gradle и зависимости, а затем скомпилирует код. Если сборка прошла успешно, у вас появится неподписанный APK-файл `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Также в `$ANDROID_HOME` должна быть установлена программа `apksigner`. Снова обновите переменную `PATH`.
 
