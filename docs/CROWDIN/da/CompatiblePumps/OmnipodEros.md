@@ -281,7 +281,7 @@ Sådan deaktiverer du en pod (enten fordi den er udløbet, eller fordi den har f
 
 Processen nedenfor viser, hvordan du suspenderer og genoptager insulintilførslen.
 
-*BEMÆRK - hvis du ikke ser en knap **Suspender***, er den skjult som standard. Aktiver **Vis knappen Pause tilførsel på pumpeskærmen** i [Omnipod-indstillingerne](#OmnipodEros-omnipod-settings) under **Andet**.
+*BEMÆRK - hvis du ikke ser en knap **Suspender***, er den skjult som standard. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspendering af insulintilførsel
 
@@ -591,7 +591,7 @@ Knapperne nederst på pumpeskærmen skifter efter situationen. Knapper, som ikke
   Skærmbilledet ovenfor er fra en tidligere version af **AAPS**. I **AAPS** 4 er dette en tekstknap med navnet **Sæt tid** på Omnipod-pumpeskærmen.
   ```
 
-- **Suspender:** Suspenderer insulintilførslen på den aktive pod. Vises kun, hvis det er aktiveret i indstillingerne (**Vis knappen Pause tilførsel på pumpeskærmen**).
+- **Suspender:** Suspenderer insulintilførslen på den aktive pod. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Giver AAPS-notifikationer og hørbare alarmer på telefonen, når det er usikker
 
 Giver avancerede indstillinger til hjælp ved fejlsøgning.
 
-- **Vis knappen Pause tilførsel på pumpeskærmen:** Skjul eller vis knappen **Suspender** på Omnipod-fanen.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Vis knappen Pulslog i menuen til Pod-administration:** Denne indstilling vises stadig, men den nuværende version af pumpeskærmen har ingen knap **Puls Log**.
 
 - **Vis knappen RileyLink-statistik i menuen til Pod-administration:** Skjul eller vis knappen **RileyLink-statistik** på Omnipod-pumpeskærmen.
