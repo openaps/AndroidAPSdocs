@@ -55,14 +55,14 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Στο τηλέφωνό σας, πηγαίνετε στις **Εφαρμογές > AAPS > Άδειες**. Βεβαιωθείτε ότι επιτρέπονται τα **SMS** και το **Τηλέφωνο**.
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ```{admonition} "App was denied access to SMS"
 :class: tip
 Το Android μπορεί να μπλοκάρει την άδεια **SMS** για εφαρμογές που δεν εγκαταστάθηκαν από κατάστημα εφαρμογών, όπως το **AAPS**. Αν δείτε αυτό το μήνυμα όταν δίνετε την άδεια **SMS**, ανοίξτε στο τηλέφωνο **Ρυθμίσεις > Εφαρμογές > AAPS**, πατήστε το μενού **⋮** (πάνω δεξιά) και επιλέξτε **Allow restricted settings** (Να επιτρέπονται οι περιορισμένες ρυθμίσεις). Μετά δώστε ξανά την άδεια **SMS**.
 ```
 
-![Δεν δόθηκε στην εφαρμογή πρόσβαση στα SMS](../images/sms_permission_restricted.png)
+![Δεν δόθηκε στην εφαρμογή πρόσβαση στα SMS](../images/remote_control_and_following/sms_permission_restricted.png)
 
 ### Συγχρονισμός ημερομηνίας και ώρας
 
@@ -82,7 +82,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Ενεργοποιήστε το **Να επιτρέπονται απομακρυσμένες εντολές μέσω SMS**. Οι επιλογές **Πρόσθετο υποχρεωτικό PIN στο τέλος του token** και **Ρύθμιση ελέγχου ταυτότητας** εμφανίζονται μόνο αφού το ενεργοποιήσετε:
 
-![Ρυθμίσεις της Επικοινωνίας με SMS](../images/sms_communicator_settings.png)
+![Ρυθμίσεις της Επικοινωνίας με SMS](../images/remote_control_and_following/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Επιτρεπόμενοι αριθμοί τηλεφώνου
@@ -97,7 +97,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Αν έχετε περισσότερους από έναν αριθμούς, χωρίστε τους με τον χαρακτήρα «;» (semicolon), **ΧΩΡΙΣ κενό μεταξύ των αριθμών** (αυτό είναι πολύ σημαντικό!). Επιλέξτε **OK**:
 
-![Επιτρεπόμενοι αριθμοί τηλεφώνου](../images/sms_allowed_numbers.png)
+![Επιτρεπόμενοι αριθμοί τηλεφώνου](../images/remote_control_and_following/sms_allowed_numbers.png)
 
 #### Ελάχιστη απόσταση απομακρυσμένου bolus
 
@@ -115,7 +115,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Για ασφαλέστερο PIN, μη χρησιμοποιείτε το ίδιο ψηφίο πολλές φορές (_π.χ._ 111111) ή μια σειρά (_π.χ._ 123456).
 
-![Πρόσθετο υποχρεωτικό PIN στο τέλος του token](../images/sms_pin.png)
+![Πρόσθετο υποχρεωτικό PIN στο τέλος του token](../images/remote_control_and_following/sms_pin.png)
 
 #### Ρύθμιση ελέγχου ταυτότητας
 
@@ -123,7 +123,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 * Ανοίξτε την εγκατεστημένη εφαρμογή ελέγχου ταυτότητας στο _τηλέφωνο του φροντιστή_, δημιουργήστε μια νέα σύνδεση και
 * Με το τηλέφωνο του φροντιστή σαρώστε τον κωδικό QR που εμφανίζεται κάτω από το **Σαρώστε τον κωδικό για να ρυθμίσετε τους κωδικούς OTP του AAPS**.
 
-![Ρύθμιση ελέγχου ταυτότητας με κωδικό QR](../images/sms_authenticator_setup.png)
+![Ρύθμιση ελέγχου ταυτότητας με κωδικό QR](../images/remote_control_and_following/sms_authenticator_setup.png)
 
 * Κάτω από το **Δοκιμάστε τον Κωδικό μίας Χρήσης**, εισαγάγετε στο **Κωδικός για έλεγχο** τον κωδικό μίας χρήσης από την εφαρμογή ελέγχου ταυτότητας του τηλεφώνου του φροντιστή, και αμέσως μετά το PIN σας:
 
@@ -134,7 +134,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Αν η καταχώριση είναι σωστή, το κόκκινο κείμενο «ΛΑΘΟΣ PIN» θα αλλάξει αυτόματα σε πράσινο «OK». **Δεν υπάρχει κουμπί για να πατήσετε!** Η διαδικασία έχει πλέον ολοκληρωθεί· δεν υπάρχει κουμπί «OK» που πρέπει να πατήσετε μετά την εισαγωγή του κωδικού:
 
-![Δοκιμή κωδικού μίας χρήσης και επαναφορά επαληθευτών](../images/sms_authenticator_test.png)
+![Δοκιμή κωδικού μίας χρήσης και επαναφορά επαληθευτών](../images/remote_control_and_following/sms_authenticator_test.png)
 
 Οι εντολές SMS είναι πλέον ρυθμισμένες.
 
@@ -146,7 +146,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 1)  Για να ελέγξετε ότι τα έχετε ρυθμίσει όλα σωστά, δοκιμάστε τη σύνδεση στέλνοντας «bg» ως SMS από το τηλέφωνο του φροντιστή στο τηλέφωνο του **AAPS**. Θα πρέπει να λάβετε μια απάντηση παρόμοια με αυτή εδώ:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Αν δεν λάβετε καμία απάντηση, δείτε την ενότητα [Αντιμετώπιση προβλημάτων](#SMSCommands-troubleshooting) παρακάτω.
 
@@ -154,7 +154,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Όταν στέλνετε μια εντολή SMS για πρώτη φορά, δοκιμάστε την κοντά στο τηλέφωνο του **AAPS**, για να δείτε πώς λειτουργεί:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 Το τηλέφωνο του φροντιστή θα λάβει SMS απάντησης από το **AAPS** που επιβεβαιώνει αν η απομακρυσμένη εντολή SMS εκτελέστηκε με επιτυχία.
 
@@ -182,7 +182,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Οι εντολές πρέπει να στέλνονται στα αγγλικά· η απάντηση θα είναι στη γλώσσα σας, αν το κείμενο της απάντησης έχει ήδη [μεταφραστεί](#translations-translate-strings-for-AAPS-app). Οι εντολές δεν κάνουν διάκριση πεζών-κεφαλαίων· μπορείτε να χρησιμοποιείτε πεζά ή κεφαλαία.
 
-![Παράδειγμα εντολών SMS](../images/SMSCommands.png)
+![Παράδειγμα εντολών SMS](../images/remote_control_and_following/SMSCommands.png)
 
 Οι **Πίνακες εντολών SMS** παρακάτω δείχνουν όλες τις δυνατές εντολές SMS. Δίνονται _παραδείγματα τιμών_ για να γίνουν πιο κατανοητές. Οι εντολές έχουν το ίδιο εύρος δυνατών τιμών (στόχοι, ποσοστό προφίλ κ.λπ.) που επιτρέπεται και στην ίδια την εφαρμογή **AAPS**.
 
@@ -191,11 +191,11 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Κάποιες εντολές SMS δίνουν άμεση απάντηση, και κάποιες εντολές SMS χρειάζονται ισχυρό **έλεγχο ταυτότητας** μέσω της εφαρμογής ελέγχου ταυτότητας. Ένα απλό ερώτημα όπως το «**BG**» (που ζητά ενημέρωση για την τρέχουσα γλυκόζη) γράφεται γρήγορα, δεν χρειάζεται έλεγχο ταυτότητας και επιστρέφει τις πληροφορίες κατάστασης του **AAPS** που φαίνονται παρακάτω:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Οι εντολές που χρειάζονται περισσότερη ασφάλεια απαιτούν να εισαγάγετε έναν κωδικό, για παράδειγμα:
 
-![SMS με έλεγχο ταυτότητας](../images/remote-control-07.png)
+![SMS με έλεγχο ταυτότητας](../images/remote_control_and_following/remote-control-07.png)
 
 Η στήλη *Έλεγχος* στους παρακάτω πίνακες δείχνει αν χρειάζεται τέτοιος ισχυρός έλεγχος ταυτότητας για κάθε εντολή.
 
@@ -311,12 +311,12 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 ### Καμία απολύτως απάντηση στις εντολές SMS
 
 Στο τηλέφωνο του φροντιστή και/ή στο τηλέφωνο του **AAPS**, δοκιμάστε να απενεργοποιήσετε τις παρακάτω επιλογές:
-* **Αποστολή ως μήνυμα συνομιλίας** ![Απενεργοποιήστε την αποστολή SMS ως μήνυμα συνομιλίας](../images/SMSdisableChat.png)
+* **Αποστολή ως μήνυμα συνομιλίας** ![Απενεργοποιήστε την αποστολή SMS ως μήνυμα συνομιλίας](../images/remote_control_and_following/SMSdisableChat.png)
 * Αν χρησιμοποιείτε την εφαρμογή Android Messages ή Google Messages, απενεργοποιήστε τα μηνύματα RCS:
   - ανοίξτε τη συγκεκριμένη συνομιλία SMS στα Μηνύματα
   - Επιλέξτε το μενού επιλογών (τρεις τελείες) πάνω δεξιά
   - επιλέξτε «Λεπτομέρειες»
-  - Ενεργοποιήστε το «Only send SMS and MMS messages» (μόνο αποστολή μηνυμάτων SMS και MMS) ![Απενεργοποιήστε το RCS ως μήνυμα συνομιλίας](../images/SMSdisableRCS.png)
+  - Ενεργοποιήστε το «Only send SMS and MMS messages» (μόνο αποστολή μηνυμάτων SMS και MMS) ![Απενεργοποιήστε το RCS ως μήνυμα συνομιλίας](../images/remote_control_and_following/SMSdisableRCS.png)
 
 ### Σφάλματα κατά την εκτέλεση εντολών
 
@@ -331,7 +331,7 @@ The default minimum time delay between bolus commands is 15 minutes, counted fro
 
 Τα συνηθισμένα σφάλματα φαίνονται στα παρακάτω παραδείγματα:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### Πώς μπορώ να σταματήσω μια εντολή αφού έχει περάσει τον έλεγχο ταυτότητας;
 
