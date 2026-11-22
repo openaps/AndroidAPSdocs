@@ -1,236 +1,236 @@
-# Temp-Targets
+# Privremeni ciljevi
 
-## What are Temp-Targets and where can I set and configure them?
+## Što su privremeni ciljevi i gdje ih mogu postaviti i konfigurirati?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**Privremeni cilj** (kratko **TT**) je značajka **AAPS-a** koja korisniku omogućuje da za planirane aktivnosti promijeni svoj [ciljni raspon **GUK-a**](#profile-glucose-targets). **AAPS** to postiže tako da mijenja količinu inzulina koju korisnik dobiva.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Ciljna vrijednost glukoze, osobito ako je samo kratkoročna (traje manje od 4 sata), ne mora biti *stvarna vrijednost* koju očekujete ili želite postići. Ona je dobar način da **AAPS-u** kažete da bude više ili manje agresivan, a da vam razina glukoze i dalje ostane u rasponu.
 
-Temporary targets can be defined within those boundaries :
+Privremeni ciljevi mogu se postaviti unutar ovih granica:
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|          | Privremeni cilj         |
+| -------- | ----------------------- |
+| Minimum  | 4 mmol/L ili 72 mg/dL   |
+| Maksimum | 10 mmol/L ili 180 mg/dL |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS** ima tri ugrađena predloška **privremenog cilja**: za tjelovježbu (**Aktivnost**), za obroke (**Prije obroka**) i za predviđenu hipoglikemiju (**Hipo**). Nalaze se na zaslonu **Privremeni cilj** (**Upravljanje** → **Privremeni cilj**), koji možete otvoriti i jednostavnim dodirom na **oznaku cilja** na glavnom zaslonu.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Korisnici trebaju imati realna očekivanja o rezultatima koji se mogu postići kada u **AAPS-u** odaberu **privremeni cilj**. Uspjeh u postizanju željenog cilja **GUK-a** ovisi o više čimbenika, kao što su: pouzdanost korisnikovih postavki **AAPS-a**, opća kontrola **GUK-a**, **aktivni inzulin**, osjetljivost na inzulin, otpornost na inzulin, razina napora tijekom tjelovježbe i slično.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+**Privremenom cilju** može trebati približno 30 minuta ili više da postigne željeni cilj **GUK-a**. **AAPS** ne može odmah postići cilj **GUK-a** i korisnici to trebaju imati na umu kada odabiru **privremeni cilj**.
 
-The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+The sections below summarize the features of **Temp-Target Activity**, **Temp-Target Eating soon** and **Temp-Target Hypo**. Prikazane vrijednosti su tvorničke zadane vrijednosti – [svaki predložak možete prilagoditi](#TempTargets-change-preset-defaults) svojim potrebama.
 
-### TT - Activity
+### TT – Aktivnost
 
-![TT Activity](../images/v4/TempTarget/TempTarget2.png)
+![TT Aktivnost](../images/v4/TempTarget/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**Cilj GUK-a (zadani predložak, može se prilagoditi)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS će nastojati postići 140 mg/dL ili 7,8 mmol/L tijekom 1 h 30 min
 
-**Other considerations users may wish to factor in when selecting**:
+**Ostalo što korisnici mogu uzeti u obzir pri odabiru**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Ovisno o razini **GUK-a**, **AAPS** će „smanjiti“ isporuku inzulina kako bi postigao cilj **GUK-a**. Ako cilj **GUK-a** nije u rasponu (tj. viši je od cilja **GUK-a** odabranog u korisnikovom **profilu**), **AAPS** može ostaviti bazal uključen.
 
-In closed loop mode, **SMB**:
+U načinu zatvorene petlje **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *može biti* isključen (objašnjeno niže); i/ili
+- bazal se može uključiti ako **AAPS** ima negativan **aktivni inzulin** ili <0.
 
-Users may also wish to consider:
+Korisnici mogu razmotriti i:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
+- *odabir* ovog **TT-a** 1–2 sata prije planirane tjelovježbe kako bi se osigurao manji aktivni inzulin (pravo vrijeme za ovaj TT razlikuje se od osobe do osobe); i
+- *odabir* privremenog profila (smanjenje) za vrijeme planirane aktivnosti, kako bi se osigurao manji **aktivni inzulin**;
 - *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
 
-### TT - Eating soon
+### TT – Prije obroka
 
-![TT Eating soon](../images/v4/TempTarget/TempTarget1.png)
+![TT Prije obroka](../images/v4/TempTarget/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**Cilj GUK-a (zadani predložak, može se prilagoditi)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS će nastojati postići 90 mg/dL ili 5,0 mmol/L tijekom 45 minuta
 
-**Other considerations users may wish to factor in when selecting**:
+**Ostalo što korisnici mogu uzeti u obzir pri odabiru**:
 
-In closed loop mode, **SMB**:
+U načinu zatvorene petlje **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- ostat će uključen; i/ili
+- bazal se također može uključiti, ovisno o postavkama korisnikovog **profila**.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Ovisno o razini **GUK-a**, **AAPS** će „povećati“ isporuku inzulina unutar korisnikovih parametara postavki **AAPS-a** kako bi postigao željeni cilj **GUK-a**.
 
-### TT - Hypo
+### TT – Hipo
 
-![TT Hypo](../images/v4/TempTarget/TempTarget3.png)
+![TT Hipo](../images/v4/TempTarget/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**Cilj GUK-a (zadani predložak, može se prilagoditi)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS će nastojati postići 160 mg/dL ili 8,9 mmol/L tijekom 1 sata
 
-**Other considerations users may wish to factor in when selecting**:
+**Ostalo što korisnici mogu uzeti u obzir pri odabiru**:
 
-In closed loop mode, **SMB**:
+U načinu zatvorene petlje **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *može biti* isključen (objašnjeno niže); i/ili
+- bazal se može uključiti ako **AAPS** ima negativan **aktivni inzulin** ili <0.
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## Postavljanje i upravljanje privremenim ciljevima (Upravljanje → Privremeni cilj)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+U **AAPS-u** v4 svojim **predlošcima** TT-a upravljate i privremeni cilj pokrećete sa zaslona **Upravljanje** (donja navigacija) → **Privremeni cilj** (*„Upravljajte privremenim ciljevima i postavite ih“*).
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![Zaslon Privremeni cilj – vrtuljak predložaka, uređivač i traka radnji](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+Zaslon ima tri dijela:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **Vrtuljak predložaka** (gore) – prelistajte svoje predloške TT-a prelaskom prsta. Svaka kartica prikazuje **naziv**, **cilj** i **trajanje** predloška; TT koji je trenutačno aktivan je istaknut.
+2. **Uređivač** (sredina) – **Privremeni cilj** i **Trajanje** koji će se stvarno primijeniti, te datum/vrijeme **Aktivacija**.
+3. **Traka radnji** (dolje) – gumbi **➕ dodaj**, **‘️ izbriši** i **▶ aktiviraj**.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+Odabirom kartice predloška njezin se **cilj** i **trajanje** učitavaju u uređivač.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} Ugrađeni i prilagođeni predlošci :class: note Ugrađeni predlošci – **Prije obroka**, **Aktivnost** i **Hipo** – uvijek postoje i **ne mogu se izbrisati** (no njihove vrijednosti možete promijeniti i spremiti). Svi predlošci koje sami izradite su **prilagođeni** i možete ih slobodno uređivati ili brisati.
 
-    <br />### Activating a temporary target
+    <br />### Aktiviranje privremenog cilja
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    Prijeđite prstom do željenog predloška (njegove se vrijednosti učitaju u uređivač), po želji u uređivaču prilagodite **cilj**/**trajanje**, a zatim dodirnite **▶ Aktiviraj**. A confirmation shows the exact target, duration and reason before anything starts:
     
     ![Activation confirmation](../images/v4/TempTarget/TempTarget8.png)
     
     After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} Promjena brojeva vrijedi samo jednom – ne mijenja predložak
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    **Cilj** i **trajanje** u uređivaču su vrijednosti koje će **Aktiviraj** koristiti *upravo sada*. Ako ih promijenite, ta je promjena **privremena**: vrijedi samo za ovu aktivaciju i **ne mijenja spremljeni predložak**. Tako možete „prilagoditi i aktivirati“ jednokratni TT (na primjer, danas aktivirati *Aktivnost* s malo drukčijim ciljem), a da trajno ne promijenite predložak.
     
 
-### Saving changes to a preset
+### Spremanje promjena u predložak
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+Ako *ipak* želite zadržati promijenjenu vrijednost, **spremite** je: kada se uređivač razlikuje od odabranog predloška, na gornjoj alatnoj traci pojavi se ikona **Spremi**. Dodirom na nju trenutačni **cilj** i **trajanje** (te naziv, kod prilagođenih predložaka) spremaju se natrag u odabrani predložak. Kod ugrađenih predložaka na traci radnji pojavljuje se i gumb **Vrati zadane vrijednosti** (↺): on vraća zadane vrijednosti predloška.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![Zaslon Privremeni cilj s ikonom Spremi i gumbom Vrati zadane vrijednosti](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+Osnovno pravilo je dakle:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **Aktiviraj** → brojeve upotrijebite **jednom** (predložak se ne mijenja).
+- **Spremi** → brojevi postaju **nove zadane vrijednosti** predloška.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+Kako biste ugrađeni predložak vratili na tvorničke vrijednosti, odaberite ga i dodirnite gumb **↺ Vrati** – on se na traci radnji pojavljuje samo za **ugrađeni** predložak čije se vrijednosti trenutačno razlikuju od tvorničkih, a vraća izvorni **cilj** i **trajanje** tog predloška.
 
-### Adding and removing presets
+### Dodavanje i uklanjanje predložaka
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ Dodaj** – izradite **novi prilagođeni predložak** iz trenutačnih vrijednosti u uređivaču. Nova kartica pojavi se u vrtuljku.
+- **‘️ Izbriši** – uklonite odabrani **prilagođeni** predložak. Ugrađeni predlošci (*Prije obroka*, *Aktivnost*, *Hipo*) ne mogu se izbrisati.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Kada imate barem dva **prilagođena** predloška, možete promijeniti i njihov redoslijed u vrtuljku: dodirnite ikonu **Promijeni redoslijed** (⇅) na gornjoj traci, pomičite središnju karticu **gumbima za pomicanje ◀ / ▶**, a zatim potvrdite s **✓**. Ugrađeni predlošci ostaju na svojim mjestima – pomicati se mogu samo prilagođeni predlošci. (Kontrole izgledaju isto kao kod [promjene redoslijeda profila](ProfileSwitch-ProfilePercentage.md).)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+Vaši predlošci dio su sinkronizirane konfiguracije, pa ih dijele vaš glavni uređaj i upareni klijenti.
 
-### Other ways to set a temporary target
+### Drugi načini postavljanja privremenog cilja
 
-A temporary target can also be set without opening this screen:
+Privremeni cilj može se postaviti i bez otvaranja ovog zaslona:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- **prekidačima TT-a u dijalogu UH** – pogledajte [niže](#TempTargets-carbs-dialog),
+- **gumbom predloška na alatnoj traci [Brzo pokretanje](QuickLaunch.md)** – kategorija *Predlošci privremenih ciljeva* u *Postavi brzo pokretanje* nudi gumb za jedan dodir za svaki vaš predložak,
+- sa **sata s Wear OS-om** (stavka izbornika / pločica **Privremeni cilj**),
+- s uparenog **klijenta** – pogledajte [Upravljanje glavni uređaj ↔ klijent (potpisano daljinsko upravljanje)](../RemoteFeatures/ClientMasterControl.md),
+- kao dio **[scene](Scenes.md)** (radnja *Privremeni cilj*) ili
+- pravilom **automatizacije** (*Pokreni privremeni cilj* / *Zaustavi privremeni cilj*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Gdje mogu odabrati privremeni cilj?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+Najbrži način je dodirnuti **oznaku cilja** na glavnom zaslonu (prikazuje vaš trenutačni ciljni raspon):
 
-![Target chip on the main screen](../images/v4/TempTarget/TempTarget6.png)
+![Oznaka cilja na glavnom zaslonu](../images/v4/TempTarget/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+Time se otvara gore opisani zaslon **Privremeni cilj** – prijeđite prstom do predloška i dodirnite **▶ Aktiviraj**. Isti je zaslon dostupan i putem **Upravljanje** → **Privremeni cilj**.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= Kada unosite ugljikohidrate, zaslon **Privremeni cilj** uopće ne trebate otvarati: **dijalog UH** (**Tretmani** → **UH**) na vrhu ima prekidače **Pokreni Hipo TT**, **Pokreni TT Prije obroka** i **Pokreni TT Aktivnost**. Uključite jedan od njih i odgovarajući predložak aktivirat će se zajedno s unosom ugljikohidrata:
 
-![TT toggles in the Carbs dialog](../images/v4/TempTarget/TempTarget5.png)
+![Prekidači TT-a u dijalogu UH](../images/v4/TempTarget/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} Automatski Hipo TT
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    Ako otvorite **dijalog UH** dok vam je glukoza ispod 72 mg/dL (4 mmol/L), **AAPS** za vas unaprijed odabere prekidač **Pokreni Hipo TT** (osim ako je već aktivan viši privremeni cilj s duljim preostalim trajanjem).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Gdje mogu promijeniti zadani privremeni cilj i zamijeniti ga vlastitim postavkama?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+**Cilj** i **trajanje** svakog predloška uređuju se izravno na zaslonu **Privremeni cilj** – za to više ne postoji posebna stavka u postavkama:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. Otvorite zaslon **Privremeni cilj** (dodirnite oznaku cilja ili **Upravljanje** → **Privremeni cilj**).
+2. Prijeđite prstom do predloška koji želite promijeniti.
+3. U uređivaču prilagodite **Privremeni cilj** i/ili **Trajanje**.
+4. Dodirnite ikonu **Spremi** koja se pojavi na gornjoj alatnoj traci.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/v4/TempTarget/TempTarget7.png)
+![Uređivanje predloška – ikona Spremi na alatnoj traci, Vrati na traci radnji](../images/v4/TempTarget/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+Dok se uređivač razlikuje od tvorničkih vrijednosti ugrađenog predloška, na traci radnji pojavljuje se i gumb **↺ Vrati** – dodirnite ga kako biste vratili izvorni cilj i trajanje predloška.
 
-## How do I cancel a Temp-Target?
+## Kako mogu otkazati privremeni cilj?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+Dok je privremeni cilj aktivan, oznaka cilja na glavnom zaslonu prikazuje cilj i njegovo preostalo vrijeme. Dodirnite je – na zaslonu **Privremeni cilj** aktivni predložak istaknut je kao **AKTIVAN**, a na kraju alatne trake na dnu, odmah lijevo od gumba **▶ Aktiviraj**, pojavi se crveni gumb **✗ Otkaži**. Dodirnite ga i potvrdite:
 
-![Cancelling a running temp target](../images/v4/TempTarget/TempTarget9.png)
+![Otkazivanje aktivnog privremenog cilja](../images/v4/TempTarget/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+Aktivni privremeni cilj može se zaustaviti i sa **sata s Wear OS-om**, s uparenog **klijenta** ili pravilom **automatizacije** (*Zaustavi privremeni cilj*).
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## Privremeni cilj Hipo
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**Privremeni cilj Hipo** omogućuje **AAPS-u** da smanjenjem isporuke inzulina spriječi nisku razinu šećera u krvi kod korisnika. Ako korisnik predviđa da će mu **GUK** pasti nisko: **AAPS** bi to obično trebao riješiti, ali mnogo ovisi o stabilnosti korisnikovih postavki **AAPS-a**. **Privremeni cilj Hipo** omogućuje korisniku da preduhitri predviđeni pad i javi **AAPS-u** da smanji inzulin.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Ponekad, nakon što se pojedu ugljikohidrati za liječenje hipoglikemije, korisnikov **GUK** može brzo porasti, a **AAPS** će taj brzi rast **GUK-a** ispravljati uključivanjem **SMB-ova**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+Neki korisnici žele izbjeći davanje **SMB-ova** tijekom **privremenog cilja Hipo**. To se postiže isključivanjem *'Omogući SMB s visokim privremenim ciljem'* u **Postavke** → **OpenAPS SMB** (pogledajte niže):
 
 - Advanced, objective 9: the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
 - Advanced, objective 9: the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+Napomena: ako otvorite **dijalog UH** dok vam je glukoza u krvi niža od 72 mg/dL ili 4 mmol/L, **AAPS** automatski unaprijed odabere prekidač **Pokreni Hipo TT**.
 
 (TempTargets-activity-temp-target)=
 
-## Activity Temp-Target
+## Privremeni cilj Aktivnost
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Prije i tijekom tjelovježbe korisniku može trebati viši cilj kako bi se spriječila hipoglikemija tijekom aktivnosti.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Kako bi pojednostavio **privremeni cilj Aktivnost**, korisnik može konfigurirati zadani **privremeni cilj – Aktivnost** koji podiže razinu **GUK-a** smanjenjem isporuke inzulina, kako bi se usporio pad **GUK-a** i izbjegla hipoglikemija.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+Novi korisnici **AAPS-a** možda će morati eksperimentirati i prilagoditi zadane postavke **privremenog cilja Aktivnost** kako bi im ova značajka radila najbolje. Svatko je drukčiji kada je riječ o postizanju stabilne kontrole GUK-a tijekom tjelovježbe. Pogledajte i [odjeljak o sportu u čestim pitanjima](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Oboje možete pokrenuti u jednom koraku: dodirnite naziv profila na glavnom zaslonu, dodirnite okrugli gumb **▶**, postavite **Postotak** ispod 100 % i **Trajanje**, a zatim uključite **Privremeni cilj / Aktivnost**. Pogledajte [Promjena postotka profila](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+Napredno, Cilj 9: korisnici mogu uključiti *'Visoki privremeni cilj povećava osjetljivost'* za **privremene ciljeve** od 100 mg/dL (5,6 mmol/L) ili više u OpenAPS **SMB**. Cilj od 99 mg/dL (5,5 mmol/L) je normalan cilj, ni visok ni nizak. Tada je **AAPS** osjetljiviji.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+Osim toga, ako je *'Omogući SMB s visokim privremenim ciljem'* isključeno, **AAPS** neće isporučivati **SMB-ove**, čak ni kada je COB > 0, kada je uključeno *'Omogući SMB s niskim privremenim ciljem'* ili *'Uvijek omogući SMB'* i kada je OpenAPS **SMB** aktivan.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Eating soon Temp-Target
+## Privremeni cilj Prije obroka
 
 **Temp-Target Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
 
 This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target Eating soon** and this is particularly so, if eating a high carb diet.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Više o „načinu Prije obroka“ (Eating soon mode) možete pročitati u članku ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) ili [ovdje](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+Napredno, [Cilj 9](#objectives-objective9): ako koristite OpenAPS SMB i imate uključeno *'Niski privremeni cilj smanjuje osjetljivost'*, **AAPS** radi malo agresivnije. Za ovu opciju **privremeni cilj** mora biti 98 mg/dL (5,4 mmol/L) ili niži.
 
-## How do I turn off SMB during Temp-Targets?
+## Kako mogu isključiti SMB tijekom privremenih ciljeva?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+Za to otvorite **Postavke** → **OpenAPS SMB** i isključite *'Omogući SMB s visokim privremenim ciljem'*.
 
-![Enable SMB with high temp target preference](../images/v4/TempTarget/TempTargetSMB.png)
+![Postavka Omogući SMB s visokim privremenim ciljem](../images/v4/TempTarget/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+Time ćete osigurati da **AAPS** ne daje **SMB-ove**, čak ni kada je COB > 0, kada je uključeno *'Omogući SMB s niskim privremenim ciljem'* ili *'Uvijek omogući SMB'* i kada je OpenAPS SMB aktivan.
