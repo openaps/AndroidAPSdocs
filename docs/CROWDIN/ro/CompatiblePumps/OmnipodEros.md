@@ -281,7 +281,7 @@ Pentru a dezactiva o pompă (fie de la expirare, fie de la o defecțiune de pomp
 
 The process below shows you how to suspend and resume insulin delivery.
 
-*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button in Omnipod tab** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*NOTE - if you do not see a **Suspend** button*, it is hidden by default. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
 
 #### Suspendarea administrării insulinei
 
@@ -591,7 +591,7 @@ Butoanele din partea de jos a ecranului pompei se schimbă în funcție de situa
   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 this is a text button named **Set time** on the Omnipod pump screen.
   ```
 
-- **Suspendați:** Suspendă administrarea insulinei pe pompa activă. Only shown if enabled in the settings (**Show Suspend Delivery button in Omnipod tab**).
+- **Suspendați:** Suspendă administrarea insulinei pe pompa activă. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
 
   ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Oferă notificări AAPS și alerte sonore de telefon atunci când nu este sigur 
 
 Oferă setări avansate pentru a ajuta depanarea.
 
-- **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button in the Omnipod tab.
+- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
 
 - **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
