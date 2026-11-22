@@ -1,16 +1,16 @@
-# Settings
+# Postavke
 
-In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
+U **AAPS**-u v4 postavke se nalaze na zaslonu **Postavke**. Do njih vode tri puta – pojedinosti pogledajte na stranici [Promjene konfiguracije AAPS-a](../SettingUpAaps/ChangeAapsConfiguration.md):
 
-1. Tap the **Settings** (gear) icon in the top-right corner of the main screen: all settings, grouped into expandable sections.
-2. In **Configuration**, tap "**Settings**" underneath an active plugin: only that plugin's settings.
-3. Use the **search bar** on top of the main screen: just start typing part of the text you are looking for. This finds individual settings (even those not visible in the Settings screen), dialogs and documentation.
+1. Dodirnite ikonu **Postavke** (zupčanik) u gornjem desnom kutu glavnog zaslona: sve postavke, grupirane u odjeljke koji se mogu proširiti.
+2. U **Konfiguraciji** dodirnite „**Postavke**“ ispod aktivnog dodatka: samo postavke tog dodatka.
+3. Koristite **traku za pretraživanje** na vrhu glavnog zaslona: samo počnite upisivati dio teksta koji tražite. Tako pronalazite pojedinačne postavke (čak i one koje nisu vidljive na zaslonu Postavke), dijaloške okvire i dokumentaciju.
 
-![Search results for "target"](../images/preferences/settings_search.png)
+![Rezultati pretraživanja za "target"](../images/preferences/settings_search.png)
 
-- **Sections** are opened and closed by tapping them. The sections you see depend on the plugins you have enabled and on [Simple mode](#preferences-simple-mode).
+- **Odjeljci** se otvaraju i zatvaraju dodirom. Odjeljci koje vidite ovise o dodacima koje ste omogućili i o [jednostavnom načinu rada](#preferences-simple-mode).
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Zaslon Postavke s odjeljcima koji se mogu proširiti](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -18,459 +18,459 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 ```
 
 (Preferences-general)=
-## General
+## Općenito
 
-![Settings > General](../images/preferences/settings_general.png)
+![Postavke > Općenito](../images/preferences/settings_general.png)
 
-**Units**
+**Jedinice**
 
-- Set units to mmol/L or mg/dL depending on your preferences.
+- Postavite jedinice na mmol/L ili mg/dL, prema svojim željama.
 
-**Language**
+**Jezik**
 
 - By default **AAPS** follows the language of the phone (recommended).
 
 - If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
-- When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
+- Kada promijenite jezik, tekstovi **AAPS**-a odmah se prebace na novi jezik. Ako su neki tekstovi i dalje na starom jeziku, ponovno pokrenite **AAPS**.
 - On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Postavka je skrivena u [jednostavnom načinu rada](#preferences-simple-mode).
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **Jednostavni način rada**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+**Jednostavni način rada** zadano je uključen kada prvi put instalirate **AAPS**. U **jednostavnom načinu rada** skriven je velik broj postavki, a postavke su zamijenjene unaprijed zadanim vrijednostima. Jednostavni način rada trebali biste isključiti kada se upoznate s korisničkim sučeljem i postavkama **AAPS**-a.
 
-**Insulin concentration support**
+**Podrška za koncentraciju inzulina**
 
-- Enables support for different insulin concentrations (U50, U200, ...). Only enable this if you really use a concentration other than U100, and read the warnings carefully.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Omogućuje podršku za različite koncentracije inzulina (U50, U200, ...). Uključite ovo samo ako stvarno koristite koncentraciju različitu od U100 i pažljivo pročitajte upozorenja.
+- Postavka je skrivena u [jednostavnom načinu rada](#preferences-simple-mode).
 
-**Keep screen on**
+**Drži zaslon uključenim**
 
-- Forces Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+- Prisiljava Android da zaslon stalno drži uključenim. To je korisno za prezentacije i sl. Ali troši mnogo energije baterije. Zato se preporučuje spojiti pametni telefon na kabel punjača.
 
-**Instance name**
+**Naziv instance**
 
-- The name of the person using this phone. It tells this **AAPS** instance apart in reports and synchronization, for example if two children with type 1 diabetes in your family use **AAPS**.
-- Used in the names of exported settings files.
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- Ime osobe koja koristi ovaj telefon. Po njemu se ova instanca **AAPS**-a razlikuje u izvješćima i sinkronizaciji, npr. ako **AAPS** koriste dvoje djece s dijabetesom tipa 1 u vašoj obitelji.
+- Koristi se u nazivima datoteka izvezenih postavki.
+- Prikazuje se na [Dual Watchfaceu](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Skin
+### Izgled (skin)
 
-The skin selection from **AAPS** 3.x (Original, Low resolution, Large display...) no longer exists in **AAPS** 4. The new interface adapts to your screen automatically, and the color scheme can be changed in [Appearance](#preferences-appearance).
+Izbor izgleda (skin) iz **AAPS**-a 3.x (Original, Low resolution, Large display...) više ne postoji u **AAPS**-u 4. Novo sučelje automatski se prilagođava vašem zaslonu, a shemu boja možete promijeniti u odjeljku [Izgled](#preferences-appearance).
 
 (preferences-appearance)=
-## Appearance
+## Izgled
 
-![Settings > Appearance](../images/preferences/settings_appearance.png)
+![Postavke > Izgled](../images/preferences/settings_appearance.png)
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Raspon za prikaz
 
-Choose the high and low marks for the BG-graph on **AAPS** main screen and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
+Odaberite gornju i donju granicu za GUK graf na glavnom zaslonu **AAPS**-a i na pametnom satu. To služi samo za prikaz, a nije ciljni raspon za vaš GUK. Primjer: 70 – 180 mg/dL ili 3,9 – 10 mmol/L
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes in dialogs
+### Prikaži bilješke u dijaloškim okvirima
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Omogućuje dodavanje kratkih bilješki uz tretmane (bolus kalkulator, ugljikohidrati, inzulin...)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Postavka je skrivena u [jednostavnom načinu rada](#preferences-simple-mode).
 
-### App Color Scheme
+### Shema boja aplikacije
 
-Choose between the light theme, the dark theme, or following the phone's system setting.
+Odaberite svijetlu temu, tamnu temu ili praćenje postavke sustava telefona.
 
 (Preferences-protection)=
-## Protection
+## Zaštita
 
-![Settings > Protection](../images/preferences/settings_protection.png)
+![Postavke > Zaštita](../images/preferences/settings_protection.png)
 
 (Preferences-master-password)=
-### Master password
+### Glavna lozinka
 
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+Obavezno da biste mogli [izvoziti postavke](../Maintenance/ExportImportSettings.md), jer su od verzije 2.7 šifrirane.
 
 If you forgot your master password, see [How to reset the master password?](#FAQ-reset-master-password)
 
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+**Biometrijska zaštita možda neće raditi na telefonima OnePlus. To je poznat problem OnePlusa na nekim telefonima.**
 
-![Set master password](../images/preferences/master_password_dialog.png)
+![Postavite glavnu lozinku](../images/preferences/master_password_dialog.png)
 
 (Preferences-settings-protection)=
-### Settings protection
+### Zaštita postavki
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
+- Zaštitite svoje postavke lozinkom ili biometrijskom provjerom autentičnosti telefona (npr. kada [dijete koristi **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Ako uključite ovu značajku, svaki put kada želite otvoriti bilo koji prikaz povezan s postavkama, morat ćete potvrditi autentičnost.
 
-- The management screens (**Profile**, **Insulin settings**, **Temp Target**, **QuickWizard**) then open **read-only**. You can still activate or use an entry, but adding, editing, cloning and deleting are hidden until you unlock your settings. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+- Zasloni za upravljanje (**Profil**, **Postavke inzulina**, **Privremeni cilj**, **Brzi kalkulator**) tada se otvaraju **samo za čitanje**. I dalje možete aktivirati ili koristiti stavku, ali dodavanje, uređivanje, kloniranje i brisanje skriveni su dok ne otključate postavke. Pogledajte [Zaštita postavki sada zaključava i zaslone za upravljanje](#v4changes-read-only-management).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
+- Prilagođenu lozinku trebate koristiti ako glavnu lozinku želite koristiti samo za zaštitu [izvezenih postavki](../Maintenance/ExportImportSettings.md), a za uređivanje postavki drugu lozinku.
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- Ako koristite prilagođenu lozinku, kliknite na redak „Lozinka za postavke“ i postavite lozinku kako je opisano [gore](#Preferences-master-password).
 
-### Application protection
+### Zaštita aplikacije
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
+Ako je aplikacija zaštićena, morate unijeti lozinku ili koristiti biometrijsku provjeru autentičnosti telefona da otvorite **AAPS**, i ponovno kada se vratite u aplikaciju nakon [vremena isteka zaštite](#Preferences-password-and-pin-retention).
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+**AAPS** će se odmah zatvoriti ako se unese pogrešna lozinka – ali će i dalje raditi u pozadini ako je prije bio uspješno otvoren.
 
-### Bolus protection
+### Zaštita bolusa
 
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- Zaštita bolusa može biti korisna ako **AAPS** koristi malo dijete, a vi [dajete bolus putem SMS-a](../RemoteFeatures/SMSCommands.md).
 
-- **Bolus protection** can only be selected once **Settings protection** (Level 2) is set.
+- **Zaštita bolusa** može se odabrati tek kada je postavljena **Zaštita postavki** (razina 2).
 
-- In the example below, bolus protection uses the **Master password**: **AAPS** asks for it before opening a treatment dialog such as **Insulin**. With **Biometric**, if biometric authentication does not work, you can enter the master password instead.
+- U primjeru ispod zaštita bolusa koristi **Glavnu lozinku**: **AAPS** je traži prije nego što otvori dijaloški okvir za tretman, npr. **Inzulin**. Uz **Biometriju**, ako biometrijska provjera autentičnosti ne radi, umjesto nje možete unijeti glavnu lozinku.
 
-![Authentication required prompt asking for the master password](../images/preferences/bolus_protection_prompt.png)
+![Upit „Potrebna je provjera autentičnosti“ koji traži glavnu lozinku](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
-### Password and PIN retention
+### Zadržavanje lozinke i PIN-a
 
-**Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.
+**Vrijeme isteka zaštite** određuje koliko dugo (u sekundama) postavke ili funkcije bolusa ostaju otključane nakon što uspješno unesete lozinku.
 
-## Treatment safety
+## Sigurnost tretmana
 
-![Settings > Safety](../images/preferences/settings_safety.png)
+![Postavke > Sigurnost](../images/preferences/settings_safety.png)
 
 (preferences-patient-type)=
-### Patient age
+### Dob pacijenta
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
+- Sigurnosne granice postavljaju se prema dobi koju odaberete u ovoj postavci.
+- Ako počnete dosezati ove čvrste granice (npr. maksimalni bolus), vrijeme je da se pomaknete jedan korak više.
 - It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal separator, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- Ako želite znati stvarne brojeve za ove fiksne sigurnosne granice, pomaknite se do značajke algoritma koju koristite na [ovoj stranici](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
-### Maximum bolus
+### Maksimalni bolus
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Određuje najveću količinu inzulina za bolus, u jedinicama inzulina, koju **AAPS** smije isporučiti odjednom.
+- Ova postavka postoji kao sigurnosna granica, da se spriječi isporuka golemog bolusa zbog slučajnog unosa ili pogreške korisnika.
+- Preporučuje se postaviti razumnu vrijednost koja otprilike odgovara najvećoj količini inzulina za bolus koja vam ikada može zatrebati za obrok ili korekcijsku dozu.
+- Ovo ograničenje primjenjuje se i na rezultate bolus kalkulatora.
 
-### Maximum carbs allowed
+### Maksimalno dopušteni ugljikohidrati
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Određuje najveću količinu ugljikohidrata, u gramima, za koju bolus kalkulator **AAPS**-a smije izračunati dozu.
+- Ova postavka postoji kao sigurnosna granica, da se spriječi isporuka golemog bolusa zbog slučajnog unosa ili pogreške korisnika.
+- Preporučuje se postaviti razumnu vrijednost koja otprilike odgovara najvećoj količini ugljikohidrata koja vam ikada može zatrebati za obrok.
 
-## BG source
+## Izvor GUK-a
 
-The settings of your selected [BG source](#Config-Builder-bg-source) appear as their own section. For example with **xDrip+ BG**:
+Postavke vašeg odabranog [izvora GUK-a](#Config-Builder-bg-source) prikazuju se kao zaseban odjeljak. Na primjer, s **xDrip+ BG**:
 
-![Settings > xDrip+ BG](../images/preferences/settings_xdrip.png)
+![Postavke > xDrip+ BG](../images/preferences/settings_xdrip.png)
 
-- **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
-- **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
+- **Prenesi podatke o GUK-u u NS**: **AAPS** prenosi primljene vrijednosti GUK-a u Nightscout. Uključite ovo samo ako ih sama CGM aplikacija već ne prenosi.
+- **Zabilježi promjenu senzora**: automatski stvori događaj terapije „promjena senzora“ kada se umetne senzor.
 
-## The main screen
+## Glavni zaslon
 
-In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
+U **AAPS**-u 3.x ove su postavke bile grupirane u odjeljku „Pregled“ (Overview). U **AAPS**-u 4 postavljaju se izravno iz elemenata glavnog zaslona kojima pripadaju.
 
 (Preferences-buttons)=
-### QuickLaunch buttons
+### Gumbi za brzo pokretanje
 
-Define which action buttons are visible on the main screen: tap the small **gear** at the bottom center of the main screen ("Configure QuickLaunch") and **Add** the actions you want quick access to (treatments, CGM actions, careportal entries...).
+Odredite koji su gumbi za radnje vidljivi na glavnom zaslonu: dodirnite mali **zupčanik** na dnu glavnog zaslona, u sredini („Postavi brzo pokretanje“) i gumbom **Dodaj** dodajte radnje kojima želite brzo pristupiti (tretmani, CGM radnje, unosi Careportala...).
 
-![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
+![Postavi brzo pokretanje](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
-### Quick Wizard
+### Brzi kalkulator
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Useful for standard meals frequently eaten.
+Izradite prilagođene gumbe za određene standardne obroke ili međuobroke, koji će se prikazivati na glavnom zaslonu. Korisno za standardne obroke koje često jedete.
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your main screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
+Za svaki gumb određujete ugljikohidrate i način izračuna bolusa. Zatim odredite u kojem će vremenskom razdoblju gumb biti vidljiv na glavnom zaslonu – samo jedan gumb po razdoblju. Gumb neće biti vidljiv izvan zadanog vremenskog raspona ili ako imate dovoljno aktivnog inzulina (IOB) da pokrije ugljikohidrate zadane u gumbu brzog kalkulatora. Ako za različite obroke zadate različita vremena, na glavnom zaslonu uvijek ćete imati odgovarajući gumb za standardni obrok, ovisno o dobu dana.
 
-To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
+Za upravljanje predlošcima brzog kalkulatora upišite „QuickWizard“ u traku za pretraživanje na glavnom zaslonu i otvorite **Brzi kalkulator – Upravljajte predlošcima brzog kalkulatora**.
 
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+Ako kliknete gumb brzog kalkulatora, **AAPS** će izračunati i predložiti bolus za te ugljikohidrate na temelju vaših trenutnih omjera (uzimajući u obzir vrijednost glukoze u krvi ili aktivni inzulin, ako je tako postavljeno).
 
-The proposal has to be confirmed before insulin is delivered.
+Prijedlog se mora potvrditi prije nego što se isporuči inzulin.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Zadani privremeni ciljevi
 
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
+[Privremeni ciljevi (TT)](../DailyLifeWithAaps/TempTargets.md) omogućuju vam da na određeno vrijeme promijenite ciljnu vrijednost glukoze u krvi. Uz zadane privremene ciljeve lako možete promijeniti cilj za aktivnost, prije obroka itd.
 
-Tap the **target range** on the main screen to open the **Temp Target** screen. Swipe through the preset cards (Eating Soon, Activity, Hypo) and change the target and the duration of each preset under **Preset Settings**. Preset values are:
+Dodirnite **ciljni raspon** na glavnom zaslonu da otvorite zaslon **Privremeni cilj**. Listajte kartice predložaka (Prije obroka, Aktivnost, Hipo) i promijenite cilj i trajanje svakog predloška u **Postavkama predložaka**. Zadane vrijednosti su:
 
-* Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
-* Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
+* Prije obroka: cilj 90 mg/dL / 5,0 mmol/L, trajanje 45 min
+* Aktivnost: cilj 140 mg/dL / 7,8 mmol/L, trajanje 90 min
+* Hipo: cilj 160 mg/dL / 8,9 mmol/L, trajanje 60 min
 
-![Temp Target presets](../images/preferences/temp_target_presets.png)
+![Predlošci privremenih ciljeva](../images/preferences/temp_target_presets.png)
 
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
+Saznajte kako [ovdje aktivirati privremene ciljeve](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Standardne količine inzulina za punjenje
 
-If you want to fill the tube or prime the cannula through **AAPS** you can do this with the **Prime/Fill** buttons in the expanded status panel of the main screen.
+Ako želite napuniti cijev ili kanilu putem **AAPS**-a, to možete učiniti gumbima **Punjenje** na proširenoj ploči statusa na glavnom zaslonu.
 
-The default amounts of the three fill buttons can be defined in the **Prime/Fill** settings, depending on the length of your catheter. Type "prime" in the main screen search bar to open them.
+Zadane količine za tri gumba za punjenje možete odrediti u postavkama **Punjenje**, ovisno o duljini vašeg katetera. Da ih otvorite, upišite „prime“ u traku za pretraživanje na glavnom zaslonu.
 
-![Prime/Fill standard amounts](../images/preferences/settings_prime_fill.png)
+![Standardne količine za punjenje](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
-### Status lights
+### Statusna svjetla
 
-Status lights give a visual warning for:
+Statusna svjetla daju vizualno upozorenje za:
 
-- Sensor age
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
-- Pump battery age
-- Pump battery level (%)
+- Starost senzora
+- Starost inzulina (koliko dana se spremnik koristi)
+- Razina spremnika (jedinice)
+- Starost kanile
+- Starost baterije pumpe
+- Razina baterije pumpe (%)
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+Ako se prijeđe prag upozorenja, vrijednosti će se prikazati žutom bojom. Ako se prijeđe kritični prag, vrijednosti će se prikazati crvenom bojom.
 
-To change the thresholds, expand the status panel on the main screen (chevron on the right of the status row) and tap the small **Settings** icon next to "Status":
+Da promijenite pragove, proširite ploču statusa na glavnom zaslonu (strelica desno od retka statusa) i dodirnite malu ikonu **Postavke** pokraj „Status“:
 
-![Status lights](../images/preferences/status_lights.png)
+![Statusna svjetla](../images/preferences/status_lights.png)
 
-Tap an item (**Cannula**, **Insulin**, **Sensor** or **Pump battery**) to open its warning and critical thresholds:
+Dodirnite stavku (**Kanila**, **Inzulin**, **Senzor** ili **Baterija pumpe**) da otvorite njezin prag upozorenja i kritični prag:
 
-![Status lights thresholds for the cannula](../images/preferences/status_lights_cannula.png)
+![Pragovi statusnih svjetala za kanilu](../images/preferences/status_lights_cannula.png)
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+Zadnja opcija omogućuje vam da uvezete te postavke iz Nightscouta, ako su tamo zadane. Više informacija potražite u [dokumentaciji Nightscouta](https://nightscout.github.io/nightscout/setup_variables/#age-pills).
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Bolus wizard settings
+### Postavke bolus kalkulatora
 
-Type "bolus" in the main screen search bar to open the **Bolus wizard** settings:
+Upišite „bolus“ u traku za pretraživanje na glavnom zaslonu da otvorite postavke **Bolus kalkulatora**:
 
-![Bolus wizard settings](../images/preferences/settings_bolus_wizard.png)
+![Postavke bolus kalkulatora](../images/preferences/settings_bolus_wizard.png)
 
-**Bolus percentage** sets the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+**Postotak bolusa** postavlja [zadani postotak](#AapsScreens-section-j) izračunatog bolusa kada koristite bolus kalkulator.
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+Zadano je 100 %: bez korekcije. Čak i ako ovdje postavite drugu vrijednost, i dalje je možete promijeniti svaki put kada koristite bolus kalkulator. Ako je ova postavka 75 %, a trebali biste dati bolus od 10 J, bolus kalkulator predložit će bolus za obrok od samo 7,5 jedinica.
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+Kada koriste [SMB](#objectives-objective9), mnogi ne daju bolus za obrok od 100 % potrebnog inzulina, nego samo dio (npr. 75 %), a ostatak prepuste SMB-u s UAM-om (otkrivanje nenajavljenih obroka). Vrijednost manja od 100 % ovdje može biti korisna:
+* za osobe sa sporom probavom: ako se cijeli bolus da unaprijed, može doći do hipoglikemije jer inzulin djeluje brže od probave.
+* da se **AAPS**-u ostavi više prostora da sam reagira na **porast GUK-a**. U oba slučaja **AAPS** će nadoknaditi dio bolusa koji nedostaje SMB-ovima, ako i kada to ocijeni prikladnim.
 
-**Use bolus advisor**
+**Koristi savjetnik za bolus**
 
-When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
+Kada je ovo uključeno i koristite bolus kalkulator dok ste u hiperglikemiji, dobit ćete upozorenje s pitanjem želite li dati bolus unaprijed i jesti kasnije, kada se vaš **GUK** vrati u raspon.
 
 (Preferences-advanced-settings-overview)=
 ### Superbolus
 
-The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 4.
+Opcija Superbolus iz **AAPS**-a 3.x nije dostupna kao postavka u **AAPS**-u 4.
 
-## Loop
+## Petlja
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Za promjenu načina rada petlje sada pogledajte [Zasloni AAPS-a > Glavni zaslon > Status petlje](#AapsScreens-loop-status).
 
 (Preferences-minimal-request-change)=
-### Open mode minimum change
+### Minimalna promjena u otvorenoj petlji
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting. This defines the relative change required to trigger a notification.
+Kada koristite **otvorenu petlju**, dobit ćete obavijest svaki put kada **AAPS** preporuči promjenu bazalne stope. Da smanjite broj obavijesti, možete koristiti [širi ciljni raspon GUK-a](#profile-glucose-targets) ili povećati postotak u postavci „**Minimalna promjena u otvorenoj petlji**“. Ovo određuje relativnu promjenu koja je potrebna da se pokrene obavijest.
 
-![Settings > Loop](../images/preferences/settings_loop.png)
+![Postavke > Petlja](../images/preferences/settings_loop.png)
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Advanced Meal Assist (AMA) ili Super Micro Bolus (SMB)
 
-Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Ovisno o vašim postavkama u [Konfiguracija > APS](../SettingUpAaps/ConfigBuilder.md), možete birati između dva algoritma:
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced Meal Assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stanje algoritma iz 2017.
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnoviji algoritam, preporučen za početnike
 
 As of [**AAPS** version 3.3](#version3300), the [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved into OpenAPS SMB.
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Sve postavke za OpenAPS AMA opisane su u posebnom odjeljku [Glavne značajke AAPS-a > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Sve postavke za OpenAPS SMB opisane su u posebnom odjeljku [Glavne značajke AAPS-a > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-The list of settings you see depends on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) and on [Simple mode](#preferences-simple-mode). On a new installation only **Use dynamic sensitivity** is shown. Once the objectives are completed, the section looks like this:
+Popis postavki koji vidite ovisi o vašem napretku u [ispunjavanju ciljeva](../SettingUpAaps/CompletingTheObjectives.md) i o [jednostavnom načinu rada](#preferences-simple-mode). Na novoj instalaciji prikazuje se samo **Koristi dinamičku osjetljivost**. Kada su ciljevi ispunjeni, odjeljak izgleda ovako:
 
-![Settings > OpenAPS SMB, first part](../images/preferences/settings_openaps_smb_1.png)
+![Postavke > OpenAPS SMB, prvi dio](../images/preferences/settings_openaps_smb_1.png)
 
-![Settings > OpenAPS SMB, SMB options](../images/preferences/settings_openaps_smb_2.png)
+![Postavke > OpenAPS SMB, opcije SMB-a](../images/preferences/settings_openaps_smb_2.png)
 
-![Settings > OpenAPS SMB, UAM and carbs required](../images/preferences/settings_openaps_smb_3.png)
+![Postavke > OpenAPS SMB, UAM i potrebni ugljikohidrati](../images/preferences/settings_openaps_smb_3.png)
 
-**Advanced Settings** at the bottom of the section holds values that you normally do not have to change:
+**Napredne postavke** na dnu odjeljka sadrže vrijednosti koje obično ne trebate mijenjati:
 
-![Settings > OpenAPS SMB > Advanced Settings](../images/preferences/settings_openaps_smb_advanced.png)
+![Postavke > OpenAPS SMB > Napredne postavke](../images/preferences/settings_openaps_smb_advanced.png)
 
-![Settings > OpenAPS SMB > Advanced Settings, continued](../images/preferences/settings_openaps_smb_advanced_2.png)
+![Postavke > OpenAPS SMB > Napredne postavke, nastavak](../images/preferences/settings_openaps_smb_advanced_2.png)
 
-## Absorption settings
+## Postavke apsorpcije
 
-![Settings > Absorption settings](../images/preferences/settings_absorption.png)
+![Postavke > Postavke apsorpcije](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
-### SMB min 5m carbs impact (min_5m_carbimpact)
+### SMB min. utjecaj ugljikohidrata u 5 min (min_5m_carbimpact)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Postavka je skrivena u [jednostavnom načinu rada](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+Algoritam koristi BGI (blood glucose impact, utjecaj na glukozu u krvi) da odredi kada se [ugljikohidrati apsorbiraju](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+Kada se apsorpcija ugljikohidrata ne može dinamički izračunati iz reakcija vaše krvi, **AAPS** za vaše ugljikohidrate koristi zadano opadanje. U osnovi, to je sigurnosna zaštita. Ova vrijednost koristi se samo za vrijeme praznina u očitanjima **CGM**-a ili kada tjelesna aktivnost „potroši“ sav porast glukoze u krvi zbog kojeg bi **AAPS** inače smanjivao aktivne ugljikohidrate (COB).
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behavior, some carbs are absorbed/decayed. Big change=many carbs etc.
+Jednostavno rečeno: algoritam „zna“ kako bi se vaš GUK *trebao* ponašati pod utjecajem trenutne doze inzulina itd. Kad god postoji pozitivno odstupanje od očekivanog ponašanja, dio ugljikohidrata se apsorbira/smanji. Velika promjena = mnogo ugljikohidrata itd.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For the full parameter reference see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+Vrijednost min_5m_carbimpact određuje zadani utjecaj apsorpcije ugljikohidrata za svakih 5 minuta. Potpuni opis parametra potražite u [dokumentaciji OpenAPS-a o postavkama i sigurnosnim postavkama](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 3, for SMB it's 8.
+Standardna vrijednost za AMA je 3, a za SMB 8.
 
-The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
+Graf aktivnih ugljikohidrata (COB) na glavnom zaslonu pokazuje kada se koristi min_5m_carbimpact: narančaste točke prikazuju se uz vrh krivulje COB.
 
-![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
+![Graf aktivnih ugljikohidrata (COB)](../images/main/cob_graph_min_5m_carbimpact.png)
 
-### Absorption cutoff
+### Granično vrijeme apsorpcije
 
-Time at which any meal is considered absorbed; remaining carbs will be cut off. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Vrijeme nakon kojeg se svaki obrok smatra apsorbiranim; preostali ugljikohidrati bit će odbačeni. Ako često jedete obroke s mnogo masti ili proteina, morat ćete povećati vrijeme apsorpcije obroka.
 
-### Advanced settings - autosens ratio
+### Napredne postavke – omjer Autosensa
 
-![Absorption advanced settings](../images/preferences/settings_absorption_advanced.png)
+![Napredne postavke apsorpcije](../images/preferences/settings_absorption_advanced.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Odredite min. i maks. omjer [Autosensa](#Open-APS-features-autosens).
+- Standardne vrijednosti (maks. 1,2 i min. 0,7) obično ne treba mijenjati.
 
-## Pump
+## Pumpa
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Postavke > Pumpa](../images/preferences/settings_pump.png)
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off Bluetooth for one second if no connection to the pump is possible. This may help on some phones where the Bluetooth stack freezes.
+Ako je potrebno, uključite BT Watchdog (npr. za pumpe Dana). Isključuje Bluetooth na jednu sekundu ako se ne može uspostaviti veza s pumpom. To može pomoći na nekim telefonima na kojima se Bluetooth sustav zaledi.
 
-## Pump settings
+## Postavke pumpe
 
-The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+Opcije ovdje ovise o tome koji ste upravljački program pumpe odabrali u [Konfiguracija > Pumpa](#Config-Builder-pump). Uparite i postavite pumpu prema [uputama za svoju pumpu](../Getting-Started/CompatiblePumps.md).
 
-For example with the **Virtual Pump**, the section is called **Virtual pump settings**. You choose the **Pump type** the virtual pump imitates, and whether its status is uploaded to Nightscout:
+Na primjer, uz **Virtualnu pumpu** odjeljak se zove **Postavke virtualne pumpe**. Odabirete **Vrstu pumpe** koju virtualna pumpa oponaša i hoće li se njezin status prenositi u Nightscout:
 
-![Settings > Virtual pump settings](../images/preferences/settings_virtual_pump.png)
+![Postavke > Postavke virtualne pumpe](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Više informacija na posebnoj stranici [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
 ## NSClientV3
 
-![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
+![Postavke > NSClientV3](../images/preferences/settings_nsclient.png)
 
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. It uses the Nightscout API v3.
+Dodatak NSClient (u izborniku konfiguracije prikazan kao **NSClientV3**) sinkronizira vaše podatke s Nightscoutom. Koristi Nightscout API v3.
 
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Kada koristite NSClientV3, svi programi koji prenose podatke moraju koristiti Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
 ```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+- **Provjerite da URL NEMA /api/v1/ na kraju.**
+- U Nightscoutu izradite *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (za API V3 potreban je [Nightscout 15](https://nightscout.github.io/update/update/)) i unesite ga u **Nightscout pristupni token** (ne vašu API tajnu!). Na **AAPSClientu** umjesto toga možete skenirati QR kod glavnog telefona, čime se postavlja vlastiti token klijenta. Klijent uparen PIN-om dobiva vlastiti token od glavnog telefona nakon uparivanja. Pogledajte [Vlastiti Nightscout token klijenta](#client-master-control-own-token).
+- Ovo omogućuje čitanje i pisanje podataka između web stranice Nightscouta i **AAPS**-a.
+- Ako ste zapeli na Cilju 1, ovdje dobro provjerite ima li pogrešaka u pisanju.
 - Leave "Use websockets" enabled (recommended). Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Sinkronizacija
 
-![Synchronization options](../images/preferences/settings_nsclient_sync.png)
+![Opcije sinkronizacije](../images/preferences/settings_nsclient_sync.png)
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Izbor sinkronizacije ovisi o tome kako želite koristiti **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+Možete odabrati koje podatke želite [prenositi u Nightscout ili preuzimati iz njega](#Nightscout-aaps-settings).
 
-While client control is on (always in Simple Mode), these settings are hidden: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode), takes no changes made directly in Nightscout and uploads all its data.
+Dok je upravljanje s klijenta uključeno (uvijek u jednostavnom načinu rada), ove su postavke skrivene: **AAPS** je tada u [zaštićenom načinu rada](#client-master-control-hardened-mode), ne prihvaća promjene napravljene izravno u Nightscoutu i prenosi sve svoje podatke.
 
-### Alarm options
+### Mogućnosti alarma
 
-![Alarm options](../images/preferences/settings_nsclient_alarms.png)
+![Mogućnosti alarma](../images/preferences/settings_nsclient_alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip or BYODA) then use those alarms instead of Nightscout Alarms.
-- NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+- U mogućnostima alarma možete odabrati koje će Nightscout alarme aplikacija koristiti. **AAPS** će se oglasiti alarmom kada se pokrene alarm u Nightscoutu.
+- Da bi se alarmi oglasili, morate postaviti vrijednosti alarma Urgent High, High, Low i Urgent Low u svojim [Nightscout varijablama](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Radit će samo dok imate vezu s Nightscoutom i namijenjeni su roditeljima / osobama koje se brinu o korisniku.
+- Ako imate izvor **CGM**-a na telefonu (npr. xDrip ili BYODA), koristite te alarme umjesto alarma Nightscouta.
+- NS najave prikazat će [najave](https://nightscout.github.io/nightscout/discover/#announcement) iz Nightscouta u obavijestima **AAPS**-a.
+- Možete promijeniti prag alarma zastarjelih podataka i hitnog alarma zastarjelih podataka, koji se oglase kada se iz Nightscouta neko vrijeme ne prime podaci.
 
-### Remote control
+### Daljinsko upravljanje
 
-The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
+Prekidač „**Dopusti upravljanje s klijenta**“ više nije u ovim postavkama: nalazi se na vrhu **Upravljanje → Ovlašteni klijenti**, gdje se upravlja uparenim klijentima. Pogledajte posebnu stranicu [Upravljanje glavni uređaj ↔ klijent (potpisano daljinsko upravljanje)](../RemoteFeatures/ClientMasterControl.md), uključujući [zaštićeni način rada](#client-master-control-hardened-mode), koji ovaj prekidač uključuje.
 
-### Connection settings
+### Postavke veze
 
-![NSClient connection settings](../images/preferences/settings_nsclient_connection.png)
+![Postavke veze NSClienta](../images/preferences/settings_nsclient_connection.png)
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Postavke veze određuju kada će veza s Nightscoutom biti omogućena.
+- Ograničite prijenos u Nightscout samo na Wi-Fi ili čak samo na određene Wi-Fi SSID-ove.
+- Ako želite koristiti samo određenu Wi-Fi mrežu, možete upisati njezin Wi-Fi SSID.
+- Više SSID-ova možete odvojiti točkom sa zarezom.
+- Za brisanje svih SSID-ova upišite razmak u polje.
 
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClientV3)
 
-![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
+![Napredne postavke NSClienta](../images/preferences/settings_nsclient_advanced.png)
 
-Options in advanced settings are self-explanatory.
+Opcije u naprednim postavkama same su po sebi razumljive.
 
 ## SMS Communicator
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Više informacija na posebnoj stranici [SMS naredbe](../RemoteFeatures/SMSCommands.md).
 
 (preferences-wear)=
 ## Wear
 
-This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) and [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md) pages.
+Ovaj odjeljak prikazuje se kada je dodatak **Wear** omogućen u [Konfiguracija > Komunikacija](#Config-Builder-wear). Više informacija na posebnim stranicama [Postavljanje AAPS-a na vaš Wear OS sat](../WearOS/WearOsSmartwatch.md) i [Upravljanje AAPS-om putem pametnog sata s Wear OS-om](../RemoteFeatures/RemoteControlWearOS.md).
 
-![Settings > Wear](../images/preferences/settings_wear.png)
+![Postavke > Wear](../images/preferences/settings_wear.png)
 
-- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data: the phone refuses any command from the watch, and tapping a complication that would open a control screen opens the **AAPS** menu on the watch instead.
+- **Upravljanje sa sata**: dopušta slanje tretmana i drugih radnji sa sata. Bez toga sat samo prikazuje podatke: telefon odbija svaku naredbu sa sata, a dodir na komplikaciju koja bi otvorila zaslon za upravljanje umjesto toga otvara izbornik **AAPS**-a na satu.
 
-**Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
+**Postavke kalkulatora na satu** određuju koji su izračuni uključeni u rezultat bolus kalkulatora na satu. Na satu unosite samo ugljikohidrate; ovi prekidači zamjenjuju odabire koje biste napravili u bolus kalkulatoru na telefonu:
 
-- **Include BG in wizard**: add a correction for the difference between your current glucose and your target.
-- **Include temp target in wizard**: use the running temp target instead of the profile target for this correction.
-- **Include trend in wizard**: take the current glucose trend into account.
-- **Include COB in wizard**: add insulin for the carbs that are still on board.
-- **Include IOB in wizard**: subtract the insulin that is still on board.
+- **Uključi GUK u kalkulator**: dodaje korekciju za razliku između vaše trenutne glukoze i vašeg cilja.
+- **Uključi privremeni cilj u kalkulator**: za ovu korekciju koristi aktivni privremeni cilj umjesto cilja iz profila.
+- **Uključi trend u kalkulator**: uzima u obzir trenutni trend glukoze.
+- **Uključi aktivne ugljikohidrate (COB) u kalkulator**: dodaje inzulin za ugljikohidrate koji su još aktivni.
+- **Uključi aktivni inzulin (IOB) u kalkulator**: oduzima inzulin koji je još aktivan.
 
-![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
+![Postavke > Wear > Postavke kalkulatora na satu](../images/preferences/settings_wear_wear_wizard.png)
 
-**Custom Watchface Settings** contains **Authorize custom watchfaces**. A custom watchface file can include values for some watch settings. When this switch is on, loading such a watchface is allowed to change those settings on the watch; when it is off, the watchface is loaded but the settings stay as they are:
+**Postavke prilagođenog Watchfacea** sadrže **Dopusti prilagođene Watchface**. Datoteka prilagođenog Watchfacea može sadržavati vrijednosti za neke postavke sata. Kada je ovaj prekidač uključen, učitavanje takvog Watchfacea smije promijeniti te postavke na satu; kada je isključen, Watchface se učita, ali postavke ostaju kakve jesu:
 
-![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
+![Postavke > Wear > Postavke prilagođenog Watchfacea](../images/preferences/settings_wear_custom_watchface.png)
 
-**General Settings** contains **Notify on SMB**, to get a notification on the watch each time an SMB is delivered:
+**Opće postavke** sadrže **Obavijesti pri SMB-u**, da na satu dobijete obavijest svaki put kada se isporuči SMB:
 
-![Settings > Wear > General Settings](../images/preferences/settings_wear_general.png)
+![Postavke > Wear > Opće postavke](../images/preferences/settings_wear_general.png)
 
 ## Autotune
 
-This section is shown when the **Autotune** plugin is enabled in [Configuration > General](#Config-Builder-autotune). The settings are described on the dedicated [Autotune](../AdvancedOptions/Autotune.md) page.
+Ovaj odjeljak prikazuje se kada je dodatak **Autotune** omogućen u [Konfiguracija > Općenito](#Config-Builder-autotune). Postavke su opisane na posebnoj stranici [Kako koristiti dodatak Autotune](../AdvancedOptions/Autotune.md).
 
-![Settings > Autotune](../images/preferences/settings_autotune.png)
+![Postavke > Autotune](../images/preferences/settings_autotune.png)
 
-## Automation
+## Automatizacija
 
-![Settings > Automation](../images/preferences/settings_automation.png)
+![Postavke > Automatizacija](../images/preferences/settings_automation.png)
 
-Select which location service shall be used:
+Odaberite koja će se usluga lokacije koristiti:
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Koristi pasivnu lokaciju: **AAPS** uzima lokaciju samo kada je traže druge aplikacije
+- Koristi mrežnu lokaciju: lokacija vaše Wi-Fi mreže
+- Koristi GPS lokaciju (Pozor! Može jako trošiti bateriju!)
 
-## Local alerts
+## Lokalna upozorenja
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Postavke > Lokalna upozorenja](../images/preferences/settings_local_alerts.png)
 
-Settings should be self-explanatory.
+Postavke su same po sebi razumljive.
 
 **Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
 
@@ -489,92 +489,92 @@ When an alarm rings, the alarm screen offers **Mute for 5 minutes**, **Silence a
 - Glucose alarms (high, low, no data) come from your CGM app or Nightscout: set their sound and vibration there.
 
 (preferences-maintenance-settings)=
-## Maintenance settings
+## Postavke održavanja
 
-![Settings > Maintenance](../images/preferences/settings_maintenance.png)
+![Postavke > Održavanje](../images/preferences/settings_maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**Primatelj e-pošte**: standardni primatelj dnevnika je <logs@aaps.app>.
 
-**Number of logs to send**: how many of the most recent log files are attached when you send logs.
+**Broj dnevnika za slanje**: koliko se najnovijih datoteka dnevnika priloži kada šaljete dnevnike.
 
-**Data Choices**
+**Postavke podataka**
 
-![Data choices](../images/preferences/settings_data_choices.png)
+![Postavke podataka](../images/preferences/settings_data_choices.png)
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+Možete pomoći u daljnjem razvoju **AAPS**-a tako da programerima šaljete izvješća o rušenju.
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manual export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**Izvoz postavki bez nadzora**<br/> Ako uključite ovu značajku, dopuštate **AAPS**-u da izvozi postavke bez sudjelovanja korisnika. For this the master password is securely stored on your phone (only) at the next manual export. Spremljena lozinka koristit će se najviše 4 tjedna. Nakon 4 tjedna dobit ćete obavijest da lozinka uskoro istječe. Tijekom prijelaznog razdoblja od 1 tjedna lozinku tada možete obnoviti ručnim izvozom postavki iz izbornika održavanja.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password. [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+Kada prođe prijelazno razdoblje od 1 tjedna, spremljena lozinka istječe i svaki automatski izvoz postavki prekida se uz obavijest korisniku, koja traži da ponovno unese lozinku. [(**Automatski izvozi postavki**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) bilježe se u popise „Careportal“ i „Unos korisnika“ **AAPS**-a pod Tretmanima.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Kada uključite ovu opciju, svakako ručno izvezite postavke; tada ćete morati unijeti lozinku, kako bi je **AAPS** mogao spremiti.
 
-### Log files
+### Datoteke dnevnika
 
-AAPS will save logs for troubleshooting.
+AAPS će spremati dnevnike za rješavanje problema.
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+Nemojte isključiti ovu značajku: pomoći će da se shvate razlozi ako nešto pođe po zlu.
 
-If you need to send the logs to the developers, make sure you accurately describe the issue in the email. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Ako dnevnike trebate poslati programerima, u e-poruci točno opišite problem. Bolje je dnevnike slati samo kada se to od vas zatraži, nakon [prijave problema na GitHubu](https://github.com/nightscout/AndroidAPS/issues).
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Dnevnike AAPS-a pronaći ćete u memoriji telefona -> Android -> data -> info.nightscout.androidaps -> files.
 
-Log handling (log settings, sending and deleting logs) and file management are found on the **Maintenance** screen, opened from the **menu** (☰) in the top-left corner of the main screen:
+Rad s dnevnicima (postavke dnevnika, slanje i brisanje dnevnika) i upravljanje datotekama nalaze se na zaslonu **Održavanje**, koji se otvara iz **izbornika** (☰) u gornjem lijevom kutu glavnog zaslona:
 
-![Maintenance screen](../images/preferences/maintenance_file_management.png)
+![Zaslon Održavanje](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### Postavljanje lokalne mape AAPS-a
 
-The **Maintenance** screen also includes the **AAPS directory**. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Once a directory is chosen, its path (for example `Documents/AAPS`) is shown below **AAPS directory**, so you can always see where your files are saved.
+Zaslon **Održavanje** sadrži i **AAPS mapu**. Ova postavka omogućuje korisniku da odabere mapu na telefonu u kojoj će **AAPS** spremati postavke, dnevnike i druge datoteke. Kada je mapa odabrana, njezina putanja (npr. `Documents/AAPS`) prikazuje se ispod **AAPS mapa**, pa uvijek možete vidjeti gdje se spremaju vaše datoteke.
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+Toplo se preporučuje koristiti mapu izravno u glavnoj razini memorije telefona. Zadana je mapa AAPS.
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+![Lokacija lokalne mape](../images/preferences/maintenance_settings_directory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+Ako odaberete podmapu mape AAPS, vidjet ćete poruku o pogrešci. Dodirnite „U redu“ i pokušajte ponovno te odaberite ispravnu mapu (jednu razinu više). Nemojte odabrati „Odbaci“ ako ne znate točno što radite.
 
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+![Lokacija lokalne mape](../images/preferences/maintenance_settings_wrongdirectory.png)
 
-Android can silently take the directory permission away, for example after you reinstall **AAPS** or clear its storage. When that happens, **AAPS** shows a persistent **Access to the AAPS directory was lost** notification and local settings export stops working until you come back here and select the directory again. Do this promptly, otherwise your backups on the phone are no longer refreshed.
+Android može bez upozorenja oduzeti dopuštenje za mapu, npr. nakon što ponovno instalirate **AAPS** ili obrišete njegovu pohranu. Kada se to dogodi, **AAPS** prikazuje trajnu obavijest **Pristup AAPS mapi je izgubljen**, a lokalni izvoz postavki ne radi dok se ne vratite ovdje i ponovno odaberete mapu. Učinite to odmah, inače se vaše sigurnosne kopije na telefonu više ne osvježavaju.
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### Postavljanje mape u oblaku
 
-You can export your settings, logs and CSV data to a cloud service.
+Svoje postavke, dnevnike i CSV podatke možete izvoziti u uslugu u oblaku.
 
-1. Open the **menu** (☰), select **Maintenance** and tap **Cloud Directory** (under **File management**).
+1. Otvorite **izbornik** (☰), odaberite **Održavanje** i dodirnite **Mapa u oblaku** (pod **Upravljanje datotekama**).
 
-   ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
+   ![Mapa u oblaku u izborniku Održavanje](../images/preferences/maintenance_settings_cloud.png)
 
-2. In **Select Storage Type**, select **Google Drive**.
+2. U **Odaberi vrstu pohrane** odaberite **Google disk**.
 
-   ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
+   ![Dijaloški okvir Odaberi vrstu pohrane](../images/preferences/maintenance_cloud_select_storage.png)
 
-3. A Google sign-in page opens. Choose the Google account that will hold your backups (you can use a [dedicated Google account](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
+3. Otvara se Googleova stranica za prijavu. Odaberite Google račun na kojem će biti vaše sigurnosne kopije (možete koristiti [zaseban Google račun](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
 
-   ![Google sign-in page: choose an account](../images/preferences/maintenance_cloud_google_account.png)
+   ![Googleova stranica za prijavu: odaberite račun](../images/preferences/maintenance_cloud_google_account.png)
 
-4. Check that the account is the right one and tap **Continue** to give **AAPS** access. If you set up the cloud directory before, the page says that **AAPS** already has some access.
+4. Provjerite je li račun ispravan i dodirnite **Continue** da **AAPS**-u date pristup. Ako ste mapu u oblaku već prije postavili, stranica kaže da **AAPS** već ima određeni pristup.
 
-   ![Google page asking to give AAPS access, with the Continue button](../images/preferences/maintenance_cloud_google_access.png)
+   ![Googleova stranica koja traži da AAPS-u date pristup, s gumbom Continue](../images/preferences/maintenance_cloud_google_access.png)
 
-5. Back in **AAPS**, the message **Cloud storage authentication successful** appears at the bottom of the main screen:
+5. Natrag u **AAPS**-u, na dnu glavnog zaslona pojavi se poruka **Prijava u pohranu u oblaku je uspjela**:
 
-   ![Cloud storage authentication successful message](../images/preferences/maintenance_cloud_auth_success.png)
+   ![Poruka Prijava u pohranu u oblaku je uspjela](../images/preferences/maintenance_cloud_auth_success.png)
 
-   In the **Maintenance** menu, **Cloud Directory** now has a green dot, and the **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** are available.
+   U izborniku **Održavanje** **Mapa u oblaku** sada ima zelenu točku, a dostupni su gumbi **Oblak** pokraj **Pošalji dnevnike**, **Izvezi postavke**, **Uvezi postavke** i **Izvoz korisničkih unosa u Excel (csv)**.
 
-   ![Maintenance menu with cloud storage set up: Cloud buttons available and the clear icon on Cloud Directory](../images/preferences/maintenance_settings_cloud_ready.png)
+   ![Izbornik Održavanje s postavljenom pohranom u oblaku: dostupni gumbi Oblak i ikona za brisanje na Mapi u oblaku](../images/preferences/maintenance_settings_cloud_ready.png)
 
-To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the end of the **Cloud Directory** row in the **Maintenance** menu (it is shown once a cloud service is set up) and confirm **Clear Cloud Settings**. This switches back to local storage and clears the authorization.
+Da prestanete izvoziti u oblak, dodirnite ikonu **✕** (**Obriši postavke**) na kraju retka **Mapa u oblaku** u izborniku **Održavanje** (prikazuje se kada je usluga u oblaku postavljena) i potvrdite **Obriši postavke oblaka**. Time se vraćate na lokalnu pohranu i briše se ovlaštenje.
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+Zajednici možete pomoći tako da svoje podatke donirate istraživačkim projektima! Pojedinosti su opisane na stranici [Open Humans Uploader](../SupportingAaps/OpenHumans.md).
 
-In **Settings → Open Humans**, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+U **Postavke → Open Humans** možete odrediti kada će se podaci prenositi
+- samo kada je spojen na Wi-Fi
+- samo tijekom punjenja
