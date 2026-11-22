@@ -1,95 +1,95 @@
-# Building the Wear AAPS app
+# Izrada aplikacije AAPS za Wear OS
 
-The **AAPS** app for a Wear OS smartwatch (the **Wear apk**, `aaps-wear-….apk`) is a separate installation file from the **AAPS** phone app. You need both: the phone app runs the loop, the watch app shows its data and can send commands to it. The watch app is installed from the phone, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+**AAPS** aplikacija za pametni sat s Wear OS-om (**Wear apk**, `aaps-wear-….apk`) je posebna instalacijska datoteka, odvojena od **AAPS** aplikacije za telefon. Trebate obje: aplikacija na telefonu pokreće petlju, a aplikacija na satu prikazuje njezine podatke i može joj slati naredbe. Aplikacija za sat instalira se s telefona, pogledajte [Postavljanje AAPS-a na vaš Wear OS sat](WearOsSmartwatch.md).
 
-The two apps only work together when they match:
+Dvije aplikacije rade zajedno samo ako se podudaraju:
 
-- **Same AAPS version** on the phone and on the watch.
-- **Same keystore** used to sign both apps.
+- **Ista verzija AAPS-a** na telefonu i na satu.
+- **Isto spremište ključeva** korišteno za potpisivanje obje aplikacije.
 
-The simplest way to guarantee this is to build both apps **at the same time**, in the same build. The browser build does this for you: every build produces the phone apk and the Wear apk together. With Android Studio or the command line, you build the Wear apk as a second step right after the phone apk.
+Najjednostavniji način da to osigurate je izraditi obje aplikacije **u isto vrijeme**, u istoj izradi. Izrada u pregledniku to radi za vas: svaka izrada daje apk za telefon i Wear apk zajedno. S Android Studiom ili iz naredbenog retka Wear apk izrađujete kao drugi korak, odmah nakon apk-a za telefon.
 
 ```{note}
-Already using **AAPS** on your phone but no Wear apk from the same build? Build both apps again, with the same keystore, and reinstall the phone app too. A Wear apk built months later, or with a different Android Studio version, is unlikely to be compatible with the phone app.
+Već koristite **AAPS** na telefonu, ali nemate Wear apk iz iste izrade? Ponovno izradite obje aplikacije s istim spremištem ključeva i ponovno instalirajte i aplikaciju za telefon. Wear apk izrađen mjesecima kasnije ili s drugom verzijom Android Studija vjerojatno neće biti kompatibilan s aplikacijom za telefon.
 ```
 
-## Supported Wear OS versions
+## Podržane verzije Wear OS-a
 
-**AAPS** runs on watches with **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer** (Wear OS 4, 5 and 6). Watches with Wear OS 2 are not supported.
+**AAPS** radi na satovima s **Wear OS-om 3.0, 3.2 ili 3.5** (Android 11, razina API-ja 30) **ili novijim** (Wear OS 4, 5 i 6). Satovi s Wear OS-om 2 nisu podržani.
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 30 to 33 (Wear OS 3.0, 3.2, 3.5 and 4).<br>
-Newer Wear OS versions progressively break the AAPS watchfaces — see [Wear OS watch face changes](#wearos-watchface-changes) and the [Wear OS 5 limitations](#BuildingAapsWearOs-WearOS5).
+AAPS Watchfaceovi dostupni su za pametne satove s Wear OS-om s razinom API-ja od 30 do 33 (Wear OS 3.0, 3.2, 3.5 i 4).<br>
+Novije verzije Wear OS-a postupno onemogućuju AAPS Watchfaceove – pogledajte [Promjene Watchfaceova u Wear OS-u](#wearos-watchface-changes) i [Ograničenja Wear OS-a 5](#BuildingAapsWearOs-WearOS5).
 ```
 
 (building-aaps-wear-os-method)=
 
-## Get the Wear apk with your build method
+## Nabavite Wear apk svojim načinom izrade
 
-Follow the section for the method you use to [build AAPS](../SettingUpAaps/BuildingAaps.md).
+Slijedite odjeljak za način koji koristite za [izradu AAPS-a](../SettingUpAaps/BuildingAaps.md).
 
 (building-aaps-wear-os-browser)=
 
-### Browser build (recommended)
+### Izrada u pregledniku (preporučeno)
 
-**Nothing extra to do.** Every browser build produces two files from the same source and the same keystore:
+**Ne trebate ništa dodatno raditi.** Svaka izrada u pregledniku daje dvije datoteke iz istog izvornog koda i s istim spremištem ključeva:
 
-- `aaps-….apk`: the phone app.
-- `aaps-wear-….apk`: the watch app.
+- `aaps-….apk`: aplikacija za telefon.
+- `aaps-wear-….apk`: aplikacija za sat.
 
-The Wear apk follows the [variant](#browserbuild-variant) you selected for the build: `fullRelease` gives the **AAPS Wear** app, `aapsclientRelease` the **AAPSClient Wear** app, `pumpcontrolRelease` the **PumpControl Wear** app. Each Wear app only talks to its matching phone app.
+Wear apk odgovara [varijanti](#browserbuild-variant) koju ste odabrali za izradu: `fullRelease` daje aplikaciju **AAPS Wear**, `aapsclientRelease` aplikaciju **AAPSClient Wear**, a `pumpcontrolRelease` aplikaciju **PumpControl Wear**. Svaka Wear aplikacija komunicira samo s odgovarajućom aplikacijom na telefonu.
 
-Where to find the Wear apk:
+Gdje pronaći Wear apk:
 
-- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Download it on the phone that runs **AAPS** if you install the watch app from the phone (Wear Installer 2 or Easy Fire Tools), or on your computer if you use ADB.
+- **AAPS Builder**: on the build page, scroll down to **Artifacts** and download `aaps-wear-….apk` next to the phone app, as shown in [Step 5 – Install the app on your phone](#aaps-builder-step5). Preuzmite ga na telefon na kojem radi **AAPS** ako aplikaciju za sat instalirate s telefona (Wear Installer 2 ili Easy Fire Tools), ili na računalo ako koristite ADB.
 
-  ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+  ![Artifacts s aplikacijama za telefon i sat](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-- **Fork with Google Drive**: open your Google Drive, folder `AAPS`, then the folder of the version you built. It contains the phone apk and the Wear apk, see [Step 4 – Build the APK](#github-build-apk).
+- **Fork s Google Driveom**: otvorite svoj Google Drive, mapu `AAPS`, a zatim mapu verzije koju ste izradili. U njoj su apk za telefon i Wear apk, pogledajte [Korak 4 – Izradite APK](#github-build-apk).
 
-  ![Google Drive Location](../images/update/CI/GitHubActions5.png)
+  ![Lokacija na Google Driveu](../images/update/CI/GitHubActions5.png)
 
-Keep the Wear apk together with the phone apk in your backups. With **AAPS Builder**, the files stay on the build page for 14 days only.
+Wear apk čuvajte zajedno s apk-om za telefon u svojim sigurnosnim kopijama. S **AAPS Builderom** datoteke ostaju na stranici izrade samo 14 dana.
 
-Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Sljedeće: instalirajte Wear apk na sat, pogledajte [Postavljanje AAPS-a na vaš Wear OS sat](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-android-studio)=
 
 ### Android Studio
 
-The Wear apk is built like the phone apk, as a second signed build. Do it right after the phone apk, with the same Android Studio version and the same keystore.
+Wear apk izrađuje se kao i apk za telefon, kao druga potpisana izrada. Napravite to odmah nakon apk-a za telefon, s istom verzijom Android Studija i istim spremištem ključeva.
 
-- Follow the instructions for [Android Studio Build](../SettingUpAaps/ComputerBuild.md).
-- When you reach [module selection](#Building-APK-wearapk) in "Build the AAPS signed apk", make sure to select **`AndroidAPS.wear`**.
+- Slijedite upute za [Izradu s Android Studiom](../SettingUpAaps/ComputerBuild.md).
+- Kada dođete do [odabira modula](#Building-APK-wearapk) u koraku „Izradite potpisani AAPS apk“, obavezno odaberite **`AndroidAPS.wear`**.
 
-![Wear module](../images/Building-the-App/wear_build1.png)
+![Modul Wear](../images/Building-the-App/wear_build1.png)
 
-Select "**fullRelease**" to generate the **AAPS** Wear apk file.
+Odaberite „**fullRelease**“ da biste izradili **AAPS** Wear apk datoteku.
 
-![Wear module](../images/Building-the-App/wear_build2.png)
+![Modul Wear](../images/Building-the-App/wear_build2.png)
 
-If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+Ako želite, umjesto toga možete u padajućem izborniku odabrati **„pumpcontrolRelease“**. Tada možete samo daljinski upravljati pumpom, ali bez petlje.
 
-Next: install the Wear apk on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Sljedeće: instalirajte Wear apk na sat, pogledajte [Postavljanje AAPS-a na vaš Wear OS sat](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-troubleshooting)=
 
-#### Troubleshooting the Android Studio build
+#### Rješavanje problema s izradom u Android Studiju
 
-In the process of building the full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](#troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+Tijekom izrade pune aplikacije **AAPS** (i zapravo svake potpisane aplikacije) Android Studio izradi .json datoteku u istoj mapi. To zatim uzrokuje greške zbog [nepotvrđenih promjena (uncommitted changes)](#troubleshooting_androidstudio-uncommitted-changes) kada pokušate izraditi sljedeću potpisanu aplikaciju, na primjer **AAPS** Wear aplikaciju. Najbrže rješenje je otići u mapu u kojoj je izrađena puna aplikacija AAPS. Vaša mapa je vjerojatno nešto poput:
 
 `C:\Users\Your Name\AndroidStudioProjects\AndroidAPS\app\full\release.`
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](../GettingHelp/TroubleshootingAndroidStudio.md) will help you to identify the specific file causing the issue, which could also be your keystore file.
+Izbrišite nepotrebnu .json datoteku ili je premjestite iz mape. Zatim ponovno pokušajte izraditi **AAPS** Wear aplikaciju. Ako to ne pomogne, detaljniji [vodič za rješavanje problema](../GettingHelp/TroubleshootingAndroidStudio.md) pomoći će vam pronaći datoteku koja uzrokuje problem. To može biti i vaša datoteka spremišta ključeva.
 
 (building-aaps-wear-os-cli)=
 
-### Command line
+### Naredbeni redak
 
-Follow [Build instructions for the command-line](../SettingUpAaps/CLIBuild.md) and repeat the compile and sign steps for the `wear` module, with the same keystore:
+Slijedite [Upute za izradu iz naredbenog retka](../SettingUpAaps/CLIBuild.md) i ponovite korake prevođenja i potpisivanja za modul `wear`, s istim spremištem ključeva:
 
 ```sh
 ./gradlew :wear:assembleFullRelease
 ```
 
-The unsigned Wear apk is written under `wear/build/outputs/apk/full/release/`. Sign it with `apksigner` exactly like the phone apk, then install it on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+Nepotpisani Wear apk sprema se u `wear/build/outputs/apk/full/release/`. Potpišite ga s `apksigner` točno kao apk za telefon, a zatim ga instalirajte na sat, pogledajte [Postavljanje AAPS-a na vaš Wear OS sat](WearOsSmartwatch.md).
