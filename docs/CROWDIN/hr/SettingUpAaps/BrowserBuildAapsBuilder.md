@@ -1,9 +1,9 @@
 (aaps-builder)=
 
-# Browser build with AAPS Builder
+# Izrada u pregledniku s AAPS Builderom
 
 ```{note}
-This is the recommended way to build AAPS from an **Android phone**. It also works from any computer browser. For the other ways to build from a computer or an iPhone, see the [Browser build](BrowserBuild.md) overview.
+Ovo je preporučeni način izrade AAPS-a s **Android telefona**. Radi i iz bilo kojeg preglednika na računalu. Druge načine izrade s računala ili iPhonea pogledajte u pregledu [Izrada u pregledniku](BrowserBuild.md).
 ```
 
 ```{contents} In this page
@@ -11,9 +11,9 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 :depth: 2
 ```
 
-**AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
+**AAPS Builder** izrađuje aplikaciju AAPS umjesto vas na GitHubu, besplatnoj web stranici za smještaj koda. Na telefon ne trebate ništa instalirati niti otvarati pripremnu datoteku.
 
-A setup page walks you through it. It takes about 10 minutes the first time:
+A setup page walks you through it. Prvi put to traje oko 10 minuta:
 
 1. Create your own **private copy** of AAPS Builder in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm. The build workflow, the file that tells GitHub how to build AAPS, is already in it.
 2. Create or upload your **signing key** (the keystore).
@@ -21,104 +21,104 @@ A setup page walks you through it. It takes about 10 minutes the first time:
 4. **Build** the app. One build takes 15 to 30 minutes.
 5. **Download and install** the app on your phone.
 
-You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build. You also do **not** need Google Drive: you download the app directly from GitHub.
+**Ne** trebate izraditi fork AndroidAPS-a: izvorni kod AAPS-a preuzima se iz službenog repozitorija AndroidAPS pri svakoj izradi. **Ne** trebate ni Google Drive: aplikaciju preuzimate izravno s GitHuba.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+The build workflow is maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository, and your repository is a copy of it. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml) in your copy is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, so improvements reach you without any change to your repository. You can read both files. Pri izradi workflow preuzima samo službeni izvorni kod AAPS-a i GitHubove vlastite alate za izradu. Vaše spremište ključeva nikada ne napušta vaš preglednik i vaš privatni repozitorij.
 ```
 
 (aaps-builder-before-you-start)=
 
-## Before you start
+## Prije nego počnete
 
-You will need:
+Trebat će vam:
 
-- A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
-- A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
-- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
-- Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
+- **GitHub račun** (besplatan). Ako ga nemate, najprije ga izradite na [github.com](https://github.com/signup).
+- **Web preglednik**: Chrome na telefonu ili bilo koji preglednik na računalu. Prije početka se u tom pregledniku prijavite na github.com.
+- **Imate aplikaciju GitHub na telefonu?** Možete je zadržati. Neki gumbi stranice postavki tada otvaraju aplikaciju umjesto Chromea. Building works in the app, but the app **cannot download** the finished AAPS: [step 5](#aaps-builder-step5) shows how to switch to Chrome for the download.
+- Vaše **postojeće spremište ključeva** (datoteka `.jks`), njegova lozinka i alias, ako ste AAPS već izradili i želite ga ažurirati bez ponovne instalacije.
 
 ```{warning}
-**Your build repository must stay private.** Everything a build produces is visible to anyone who can see the repository. The setup page creates a private repository for you. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
+**Vaš repozitorij za izradu mora ostati privatan.** Sve što izrada proizvede vidljivo je svakome tko može vidjeti repozitorij. Stranica postavki izradit će privatni repozitorij za vas. Never change it to public, and don't **fork** AAPS Builder instead: a fork is always public.
 
-A private repository gets 2000 free GitHub Actions minutes per month, which is enough for several builds.
+Privatni repozitorij dobiva 2000 besplatnih minuta GitHub Actions mjesečno, što je dovoljno za nekoliko izrada.
 ```
 
 ```{warning}
-**New key or existing key: this decides whether you can update AAPS.**
+**Novi ključ ili postojeći ključ: o tome ovisi možete li ažurirati AAPS.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+- **Već imate AAPS na telefonu, izrađen sa spremištem ključeva koje još imate**: na stranici postavki odaberite **Već imam spremište ključeva** i prenesite ga. Vaša sljedeća izrada ažurirat će postojeći AAPS. Jeste li AAPS izradili prethodnom izradom u pregledniku (vlastiti fork)? Vaše spremište ključeva nalazi se u vašem forku: [najprije napravite njegovu kopiju](#aaps-builder-from-fork).
+- **AAPS izrađujete prvi put ili ste izgubili spremište ključeva ili njegovu lozinku**: odaberite **Izradi novi ključ**. Aplikacija potpisana novim ključem **ne može ažurirati** AAPS potpisan drugim ključem. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
+Nakon toga uvijek koristite isti ključ. Kada izradite novi ključ, preuzmite sigurnosnu kopiju koju stranica nudi i spremite je s lozinkom i aliasom (`key0`) na sigurno mjesto izvan telefona.
 ```
 
 (aaps-builder-from-fork)=
 
-## Coming from the previous browser build (fork)
+## Prelazak s prethodne izrade u pregledniku (fork)
 
-Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+Preskočite ovaj odjeljak ako AAPS nikada niste izradili prethodnom metodom izrade u pregledniku (vlastita kopija ili fork AndroidAPS-a na GitHubu, s pripremnom datotekom i Google Driveom).
 
-Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
+Vaše spremište ključeva spremljeno je kao tajne u vašem forku. GitHub nikada više ne prikazuje tajnu pa je ne možete kopirati u novi repozitorij. Get a copy of your keystore first, then use it in [step 2](#aaps-builder-step2) with **I already have a keystore**.
 
 ```{warning}
-Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+Ne odabirite **Izradi novi ključ**. AAPS izrađen novim ključem ne može ažurirati AAPS na vašem telefonu.
 ```
 
-Which case is yours?
+Koji je vaš slučaj?
 
-- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 2.
-- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+- **Koristili ste Opciju 2** (prenijeli ste vlastito spremište ključeva iz Android Studija) i još imate datoteku `.jks`, njezine lozinke i alias: ovdje ne trebate ništa raditi. Use that file in step 2.
+- **Koristili ste Opciju 1** (pripremna datoteka izradila je vaš ključ) ili više nemate datoteku spremišta ključeva: izvezite je iz svog forka kako je opisano u nastavku.
 
-To export your keystore from your fork:
+Izvoz spremišta ključeva iz vašeg forka:
 
-1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
-2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
-3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
-4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
-   - `keystore.jks`: your keystore,
-   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
-5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+1. U svom forku otvorite **Settings** → **Secrets and variables** → **Actions** i dodajte tajnu s nazivom `ZIP_PASSWORD`. Odaberite lozinku samo s engleskim slovima i brojkama. Ona štiti datoteku koju ćete izraditi.
+2. Otvorite karticu **Actions** svog forka, dodirnite **CI Keystore Export**, a zatim **Run workflow**. Više detalja: [Izvoz spremišta ključeva](#ci-keystore-export).
+3. Kada pokretanje ima zelenu kvačicu, otvorite svoj Google Drive: datoteka `keystore.zip` nalazi se u mapi **AAPS** → **KeyStore**. Ako pokretanje ne uspije u koraku Google Drive, pristup vašeg forka Google Driveu je istekao: pogledajte [Istekao je Google refresh token](#aaps-ci-google-token-expired).
+4. Preuzmite `keystore.zip` i otvorite ga sa svojom lozinkom `ZIP_PASSWORD`: na računalu ili na telefonu s aplikacijom za upravljanje datotekama koja može otvoriti ZIP datoteke zaštićene lozinkom. Sadrži:
+   - `keystore.jks`: vaše spremište ključeva,
+   - `keyStoreInfo.txt`: vaše vrijednosti `KEYSTORE_PASSWORD`, `KEY_PASSWORD` i `ALIAS` (obično `key0`).
+5. Kopirajte `keystore.jks` na telefon (ili na Google Drive da ga ondje možete odabrati).
 
 In [step 2](#aaps-builder-step2) of the setup page:
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose `keystore.jks`.
-3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
-4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
-5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+1. Dodirnite **Već imam spremište ključeva**.
+2. U polju **Datoteka spremišta ključeva** odaberite `keystore.jks`.
+3. U polje **Lozinka spremišta ključeva** upišite `KEYSTORE_PASSWORD` iz `keyStoreInfo.txt`.
+4. U polju **Alias ključa** odaberite ili upišite `ALIAS` iz `keyStoreInfo.txt`.
+5. Ako se `KEY_PASSWORD` razlikuje od `KEYSTORE_PASSWORD`, uklonite kvačicu s **Lozinka ključa ista je kao lozinka spremišta ključeva** i upišite `KEY_PASSWORD`.
 
-Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+Čuvajte `keystore.zip` i njegov `ZIP_PASSWORD` na sigurnom mjestu izvan telefona: to je sigurnosna kopija vašeg ključa.
 
-To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+To also save the builds of AAPS Builder in Google Drive, do [step 6](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. Svoj fork možete zadržati dok AAPS izrađen AAPS Builderom ne bude instaliran na vašem telefonu.
 
-## Open the setup page
+## Otvorite stranicu postavki
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ [Otvorite stranicu postavki AAPS Buildera](#aaps-builder-setup)**
 
 The setup page is part of this documentation, in your language. Keep this page open in another tab as well: the sections below explain each step of the setup page in more detail, with screenshots.
 
-The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+Stranica postavki otvara svaku GitHub stranicu u novoj kartici Chromea. Da se vratite na stranicu postavki, dodirnite gumb kartica pokraj Chromeove adresne trake (kvadrat s brojem) i odaberite stranicu postavki AAPS Buildera.
 
 ![Tab switcher](../images/Building-the-App/CI/AapsBuilder36_TabSwitcher.png)
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+Stranica postavki radi u potpunosti u vašem pregledniku: vaš ključ i lozinke nikamo se ne šalju, osim u GitHub tajnu u koju ih sami zalijepite. GitHubu se šalje samo vaše GitHub korisničko ime, kako bi se provjerilo postoji li. Pamti vaše GitHub korisničko ime i naziv repozitorija pa joj se možete vratiti u bilo kojem trenutku da ponovno otvorite stranicu s tajnama ili svoje izrade.
 
-![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
+![Stranica postavki AAPS Buildera](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
 (aaps-builder-step1)=
 
-## Step 1 – Create your private build repository
+## Korak 1 – Izradite svoj privatni repozitorij za izradu
 
-This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Only you can see it and the apps it builds.
+This step creates your own private copy of AAPS Builder in your GitHub account, with the build workflow already in it. Samo ga vi možete vidjeti, kao i aplikacije koje izrađuje.
 
-1. Make sure you are logged in to github.com in this browser.
+1. Provjerite jeste li u ovom pregledniku prijavljeni na github.com.
 
-2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
+2. U polje **Vaše GitHub korisničko ime** upišite svoje GitHub korisničko ime, a ne e-mail adresu. Stranica ga provjerava na GitHubu: **✓ GitHub korisnik pronađen** znači da je ispravno.
 
-3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+3. U polju **Naziv vašeg repozitorija** ostavite predloženi naziv `my-aaps`. Ako ste repozitorij već izradili s drugim nazivom, upišite točno taj naziv.
 
    ```{note}
    **Already have an AAPS Builder repository** (made with an earlier version of the setup page)? Don't create a new one: type its exact name, skip **Create my private repository**, and update its workflow once as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
@@ -126,17 +126,17 @@ This step creates your own private copy of AAPS Builder in your GitHub account, 
    Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
    ```
 
-   ![Setup page step 1 filled in](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
+   ![Popunjen korak 1 stranice postavki](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
+4. Provjerite redak **Vaš repozitorij:** prikazuje `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
 
-5. Tap **Create my private repository**.
+5. Dodirnite **Izradi moj privatni repozitorij**.
 
    ![The repository line and the Create my private repository button](../images/Building-the-App/CI/AapsBuilder33_Step1Button.png)
 
 6. GitHub opens **Create a new repository** in a new tab. Everything is already filled in: under **Start with a template**, the template `nightscout/aaps-builder` with **Include all branches** off, and under **General**, your account as **Owner** and the name you chose.
 
-   ![GitHub Create a new repository page](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
+   ![GitHub stranica Create a new repository](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
    Don't change anything.
 
@@ -144,7 +144,7 @@ This step creates your own private copy of AAPS Builder in your GitHub account, 
 
    ![Visibility Private and the Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
+   GitHub shows your new repository: it contains a folder `.github` (with the build workflow) and a file `README.md`. **Vratite se na karticu sa stranicom postavki** za korak 2: dodirnite gumb kartica pokraj Chromeove adresne trake i odaberite stranicu postavki.
 
    ![New repository](../images/Building-the-App/CI/AapsBuilder35_RepoCreated.png)
 
@@ -160,164 +160,164 @@ GitHub says **my-aaps already exists in this account**? You already have your re
 
 ## Step 2 – Your signing key
 
-The app must be signed with your own key. Choose one of the two tabs. Read the [new key or existing key warning](#aaps-builder-before-you-start) first.
+Aplikacija mora biti potpisana vašim vlastitim ključem. Odaberite jednu od dvije kartice. Najprije pročitajte [upozorenje o novom ili postojećem ključu](#aaps-builder-before-you-start).
 
 ![Setup page step 2: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
-### I already have a keystore
+### Već imam spremište ključeva
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
-3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
-5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
-6. Tap **Check and continue**.
+1. Dodirnite **Već imam spremište ključeva**.
+2. U polju **Datoteka spremišta ključeva** odaberite svoju datoteku `.jks` (ili `.keystore`, `.p12`, `.pfx`). Na telefonu najprije kopirajte datoteku na telefon ili na Google Drive.
+3. U polje **Lozinka spremišta ključeva** upišite lozinku spremišta ključeva.
+4. U polju **Alias ključa** odaberite svoj alias s popisa ili ga upišite ako popisa nema. Za spremišta ključeva izrađena u Android Studiju to je obično `key0`.
+5. Ako se lozinka ključa razlikuje od lozinke spremišta ključeva, uklonite kvačicu s **Lozinka ključa ista je kao lozinka spremišta ključeva** i upišite lozinku ključa.
+6. Dodirnite **Provjeri i nastavi**.
 
-The page checks the password and the alias on your device. **Keystore OK! Continue with step 3.** means everything is right. If it says the password will be checked when you build, continue anyway: the build tells you if something is wrong.
+Stranica provjerava lozinku i alias na vašem uređaju. **Spremište ključeva je u redu! Continue with step 3.** means everything is right. Ako piše da će se lozinka provjeriti pri izradi, svejedno nastavite: izrada će vam reći ako nešto nije u redu.
 
-### Create a new key
+### Izradi novi ključ
 
-1. Tap **Create a new key**.
+1. Dodirnite **Izradi novi ključ**.
 
-2. Choose a password and type it twice. Rules: at least 8 characters, only the letters a–z and A–Z, the digits 0–9 and symbols such as `! ? #`. No spaces, no accented letters, and not the `|` character.
+2. Odaberite lozinku i upišite je dvaput. Pravila: najmanje 8 znakova, samo slova a–z i A–Z, znamenke 0–9 i simboli kao što su `! ? #`. Bez razmaka, bez slova s dijakritičkim znakovima (npr. č, ć, š, ž) i bez znaka `|`.
 
-3. Tap **Create key**. It takes a few seconds before **Key created** appears.
+3. Dodirnite **Izradi ključ**. Potrebno je nekoliko sekundi dok se ne pojavi **Ključ je izrađen**.
 
-   ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
+   ![Obrazac za novi ključ s dvaput upisanom lozinkom](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+4. Dodirnite **Preuzmi sigurnosnu kopiju (aaps-keystore.jks)**. Ako Chrome pita **Download file again?**, na telefonu je već starija sigurnosna kopija s istim nazivom: dodirnite **Download again**. Chrome tada sprema novi ključ kao `aaps-keystore (1).jks`: to je datoteka koja pripada ovom ključu. Čuvajte je i ne zamijenite je sa starijom.
 
-   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+   Čuvajte ovo troje zajedno, na sigurnom mjestu izvan telefona (na primjer u vlastitoj pohrani u oblaku):
 
-   - the file `aaps-keystore.jks`,
-   - your password,
-   - the alias of the key: **`key0`**.
+   - datoteku `aaps-keystore.jks`,
+   - svoju lozinku,
+   - alias ključa: **`key0`**.
 
-   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
+   Sve troje trebat će vam ako AAPS ikada budete izrađivali na drugi način, na primjer s Android Studiom. Ključevi izrađeni ranijom verzijom stranice postavki imaju alias `aaps`.
 
-   ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
+   ![Ključ je izrađen i okvir za sigurnosnu kopiju](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
 (aaps-builder-step3)=
 
 ## Step 3 – Give the key to your repository
 
-Step 3 unlocks when step 2 is done. Your key, its passwords and its alias are packed into one value, the `KEYSTORE_SET` secret.
+Step 3 unlocks when step 2 is done. Vaš ključ, njegove lozinke i alias spakirani su u jednu vrijednost, tajnu `KEYSTORE_SET`.
 
-1. Tap **Open the secrets page**.
+1. Dodirnite **Otvori stranicu s tajnama**.
 
 ![Setup page step 3](../images/Building-the-App/CI/AapsBuilder43_Step4.png)
 
-2. GitHub opens the **New secret** page of your repository. On a phone, it is below the settings menu: scroll down.
+2. GitHub otvara stranicu **New secret** (nova tajna) vašeg repozitorija. Na telefonu se nalazi ispod izbornika postavki: pomaknite se prema dolje.
 
-![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
+![GitHub obrazac New secret](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
+3. Prijeđite na karticu sa stranicom postavki i dodirnite **Kopiraj naziv**. Vratite se na karticu GitHuba i zalijepite ga u malo polje **Name**. Naziv je `KEYSTORE_SET`.
 
-4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
+4. Prijeđite na karticu sa stranicom postavki i dodirnite **Kopiraj tajnu**. Vratite se na karticu GitHuba i zalijepite je u veliki okvir **Secret** (na telefonu dugim pritiskom). Tajna je vrlo dug kod, s tisućama znakova: stranica postavki prikazuje njezine prve znakove pokraj gumba. Ondje ne lijepite riječ `KEYSTORE_SET`.
 
-5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
+5. Dodirnite **Add secret**. `KEYSTORE_SET` sada se prikazuje pod **Repository secrets**.
 
-![Repository secrets list with KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
+![Popis Repository secrets s KEYSTORE_SET](../images/Building-the-App/CI/AapsBuilder13_SecretList.png)
 
-You only need to do this once.
+To trebate učiniti samo jednom.
 
 ```{tip}
-GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+GitHub prikazuje **Page not found** (404)? Najprije provjerite jeste li u ovom pregledniku prijavljeni na github.com: GitHub prikazuje 404 za privatne repozitorije kada niste prijavljeni. Inače se korisničko ime ili naziv repozitorija u koraku 1 ne podudara s vašim repozitorijem. Provjerite naziv na github.com, ispravite ga u koraku 1 i ponovno dodirnite gumb.
 ```
 
 (aaps-builder-step4)=
 
 ## Step 4 – Build the app
 
-1. On the setup page, tap **Open the build page**. GitHub opens the **Build AAPS** page of your repository.
+1. Na stranici postavki dodirnite **Otvori stranicu za izradu**. GitHub otvara stranicu **Build AAPS** vašeg repozitorija.
 
-   ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
+   ![GitHub stranica Build AAPS s gumbom Run workflow](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
+   Ako se umjesto toga otvori **aplikacija GitHub**: dodirnite **RUN WORKFLOW**, provjerite verziju i varijantu i ponovno dodirnite **RUN WORKFLOW**. Aplikacija možda i dalje prikazuje **Nothing to see here**: povucite popis prema dolje da ga osvježite i vidite svoju izradu. Zatim nastavite s korakom 4 u nastavku.
 
 2. If GitHub asks, tap the green button to enable workflows.
 
    The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
 
-3. Tap **Run workflow**. A small form opens:
+3. Dodirnite **Run workflow**. Otvara se mali obrazac:
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
-   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-   - Tap the green **Run workflow** button.
+   - **Variant**: za normalnu upotrebu s pumpom ostavite `fullRelease`. Ostale varijante objašnjene su u odjeljku [varijante izrade](#browserbuild-variant). `aapsclient3Release` izrađuje **AAPSClient3**, dostupan od verzije 4.0 **AAPS-a** (pogledajte [O AAPSClientu, AAPSClientu2 i AAPSClientu3](#remotecontrol-aapsclient-versions)).
+   - Dodirnite zeleni gumb **Run workflow**.
 
-   ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
+   ![Obrazac Run workflow s latest i fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
 
-4. The build starts and shows **In progress**, with two parts: **AAPS / Check**, then **AAPS / Build AAPS**.
+4. Izrada počinje i prikazuje **In progress**, s dva dijela: **AAPS / Check**, a zatim **AAPS / Build AAPS**.
 
-   ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
+   ![Izrada je u tijeku](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
-5. Wait 15 to 30 minutes. A green check means the build is done. A red cross means it failed: open the build to read the message, then see [troubleshooting](#aaps-builder-troubleshooting).
+5. Pričekajte 15 do 30 minuta. Zelena kvačica znači da je izrada gotova. Crveni križić znači da izrada nije uspjela: otvorite izradu da pročitate poruku, a zatim pogledajte [rješavanje problema](#aaps-builder-troubleshooting).
 
-   ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+   ![Završena izrada sa zelenom kvačicom](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
 
    ```{tip}
-   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   **E-mail kada je izrada gotova:** GitHub vam šalje e-mail samo kada izrada ne uspije. Da dobijete e-mail i kada uspije: na github.com otvorite svoju profilnu sliku → **Settings** → **Notifications** → **System** → **Actions** i uklonite kvačicu s **Only notify for failed workflows**.
    ```
 
-If there is no **Build AAPS** or **Run workflow** button:
+Ako nema gumba **Build AAPS** ili **Run workflow**:
 
 - Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-step1) again with the button.
 - The file is there, but GitHub shows **This workflow does not exist**: see [troubleshooting](#aaps-builder-ts-workflow-not-found).
-- Open the **Actions** tab. If it says workflows are disabled, tap the green button to enable them, then tap **Build AAPS** in the list.
+- Otvorite karticu **Actions**. Ako piše da su workflowi onemogućeni, dodirnite zeleni gumb da ih omogućite, a zatim na popisu dodirnite **Build AAPS**.
 
 (aaps-builder-step5)=
 
 ## Step 5 – Install the app on your phone
 
 ```{warning}
-**Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
+**Prije svakog ažuriranja** [izvezite svoje postavke](#ExportImportSettings-Automating-Settings-Export) u AAPS-u i kopirajte datoteku **izvan telefona** (Google Drive, Dropbox…). Ondje čuvajte i nekoliko starijih izvoza i APK datoteka, da se uvijek možete vratiti.
 ```
 
-1. On your phone, open the setup page in **Chrome**. Log in to github.com if asked.
-2. Tap **Open my builds**, then the newest build with a green check.
+1. Na telefonu otvorite stranicu postavki u **Chromeu**. Ako se to zatraži, prijavite se na github.com.
+2. Dodirnite **Otvori moje izrade**, a zatim najnoviju izradu sa zelenom kvačicom.
 
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). The build opens in Chrome: continue with the next step there.
+   Aplikacija GitHub ne može preuzimati izrade. U aplikaciji otvorite najnoviju izradu, a zatim dodirnite **Artifacts ↗** ili dodirnite ikonu za dijeljenje na vrhu i odaberite **Chrome** (ili **Copy link**, a zatim zalijepite poveznicu u Chromeovu adresnu traku). Izrada se otvara u Chromeu: ondje nastavite sa sljedećim korakom.
 
-   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
+   Da GitHub poveznice prestanu otvarati aplikaciju: Android **Postavke** → **Aplikacije** → **GitHub** → **Zadano otvaranje** (Open by default) → isključite **Otvaranje podržanih veza** (Open supported links).
    ```
 
-   ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
+   ![Završena izrada: status Success i 2 artefakta](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
 
-3. Scroll down to the build summary and tap the **Download AAPS** link.
+3. Pomaknite se prema dolje do sažetka izrade i dodirnite poveznicu **Download AAPS**.
 
-   ![Build summary with the Download AAPS link](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
+   ![Sažetak izrade s poveznicom Download AAPS](../images/Building-the-App/CI/AapsBuilder51_DownloadLink.png)
 
    ```{tip}
-   Scroll with your finger on the text, not on the diagram of the build steps: the diagram moves instead of the page.
+   Pomičite prstom po tekstu, a ne po dijagramu koraka izrade: inače se pomiče dijagram umjesto stranice.
    ```
 
-   You can also scroll further down to **Artifacts** and tap the download icon next to `aaps-….apk`.
+   Možete se pomaknuti i dalje prema dolje do **Artifacts** i dodirnuti ikonu za preuzimanje pokraj `aaps-….apk`.
 
-   ![Artifacts with the phone and watch apps](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
+   ![Artifacts s aplikacijama za telefon i sat](../images/Building-the-App/CI/AapsBuilder52_Artifacts.png)
 
-4. When the download is done, open Chrome's menu **⋮** → **Downloads**, tap `aaps-….apk` and choose **Install**. If asked, allow installing apps from this source.
+4. Kada je preuzimanje gotovo, otvorite Chromeov izbornik **⋮** → **Downloads**, dodirnite `aaps-….apk` i odaberite **Instaliraj**. Ako se to zatraži, dopustite instaliranje aplikacija iz ovog izvora.
 
-   ![Chrome Downloads with the AAPS APK](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
+   ![Chrome Downloads s APK datotekom AAPS-a](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
 
-`aaps-wear-….apk` is the smartwatch app. Skip it if you don't use one.
+`aaps-wear-….apk` je aplikacija za pametni sat. Preskočite je ako ne koristite sat.
 
-The app is kept on the build page for **14 days**. It is not shown under **Code** in your repository. Copy it somewhere safe, off your phone, together with your settings exports.
+Aplikacija se čuva na stranici izrade **14 dana**. Ne prikazuje se pod **Code** u vašem repozitoriju. Kopirajte je na sigurno mjesto izvan telefona, zajedno s izvozima postavki.
 
-For more ways to install the app, see [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Druge načine instalacije aplikacije pogledajte u [Prijenos i instalacija AAPS-a na vaš pametni telefon](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Od rujna 2026. Googleova [provjera Android razvojnih programera](#android-developer-verification) može, ovisno o vašoj zemlji, blokirati instalaciju APK datoteke dodirom na datoteku. Besplatna zaobilazna rješenja objašnjena su na toj stranici.
 ```
 
 (aaps-builder-google-drive)=
 
 ## Step 6 (optional) – Also save the app in Google Drive
 
-You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
+Svaku izradu možete spremati i na svoj Google Drive, u mapu `AAPS/<version>`. Ovo nije obavezno: aplikacija je uvijek dostupna na stranici izrade.
 
-It needs one more secret, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
+Za to treba još jedna tajna, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
 
 1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
 
@@ -339,24 +339,24 @@ It needs one more secret, `GDRIVE_OAUTH2`. Step 6 of the setup page gets it from
 
    ![GDRIVE_OAUTH2 is ready](../images/Building-the-App/CI/AapsBuilder68_Ready.png)
 
-5. Tap **Open the secrets page**. Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
+5. Dodirnite **Otvori stranicu s tajnama**. Dodirnite **Kopiraj naziv**, a zatim ga zalijepite u malo polje **Name** (naziv je `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
 
    ![Add the secret](../images/Building-the-App/CI/AapsBuilder69_AddSecret.png)
 
-From the next build, the APKs are also saved in Google Drive.
+Od sljedeće izrade APK datoteke spremaju se i na Google Drive.
 
 Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
 
-Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
+Google prekida pristup ako ne izrađujete 6 mjeseci ili ako promijenite lozinku za Google. Izrada će vam to tada javiti: ponovite ove korake. Pogledajte [Istekao je Google refresh token](#aaps-ci-google-token-expired).
 
 (aaps-builder-updates)=
 
-## Updating AAPS
+## Ažuriranje AAPS-a
 
-Your repository never builds anything by itself: you decide when to build, which version and which variant. When a new AAPS version is released:
+Vaš repozitorij nikada ništa ne izrađuje sam: vi odlučujete kada izraditi, koju verziju i koju varijantu. Kada izađe nova verzija AAPS-a:
 
 1. [Back up your settings](#aaps-builder-step5) as explained in step 5.
-2. Build the new version as in [step 4](#aaps-builder-step4). Keep `latest`, or type the release number.
+2. Build the new version as in [step 4](#aaps-builder-step4). Ostavite `latest` ili upišite broj izdanja.
 3. Download and install it as in [step 5](#aaps-builder-step5).
 
 **Updates of the build steps** reach you by themselves: at every build, your repository runs the build steps released by the AAPS developers in nightscout/aaps-builder. Nothing changes in your repository, and there is no automatic build.
@@ -370,7 +370,7 @@ Your repository never builds anything by itself: you decide when to build, which
 
 The first line of the file shows its version.
 
-## Troubleshooting
+## Rješavanje problema
 
 Something went wrong? See [AAPS Builder troubleshooting](#aaps-builder-troubleshooting).
 
