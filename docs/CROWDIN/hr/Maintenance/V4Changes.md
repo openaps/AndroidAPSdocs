@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# Što se promijenilo u AAPS-u v4
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+Ova stranica skuplja važne **promjene u ponašanju** između **AAPS-a** v3 i v4 – stvari koje rade drukčije, koje su premještene ili uklonjene – kako bi postojeći korisnici znali što ih čeka nakon ažuriranja. Pogledajte i [Bilješke o izdanju](ReleaseNotes.md) i [upute za ažuriranje](UpdateToNewVersion.md).
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,161 +10,161 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1 je uklonjen
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+**AAPS** v3 imao je **dva** dodatka za sinkronizaciju s Nightscoutom:
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient** – stari klijent (stari Nightscout REST / socket.io API, zvan i *„v1“*) i
+- **NSClientV3** – klijent za noviji Nightscout **API v3**.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+U **AAPS-u** v4 stari dodatak **NSClient (v1)** je **uklonjen**. Za sinkronizaciju s Nightscoutom ostaje samo **NSClientV3**.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+Ako ste vi (ili vaš pratitelj s **AAPSClientom**) još sinkronizirali sa starim dodatkom **NSClient (v1)**, prijeđite na **NSClientV3** prije ili nakon ažuriranja:
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- Otvorite **[Konfiguracija](../SettingUpAaps/ConfigBuilder.md) → Komunikacija → NSClientV3**.
+- Unesite svoj **Nightscout URL** i **pristupni token** (NSClientV3 koristi pristupni token, *ne* staru API tajnu – pogledajte [izrada tokena](https://nightscout.github.io/nightscout/security/#create-a-token)).
+- Vaša Nightscout stranica mora podržavati **API v3** (Nightscout 15 ili noviji).
+- Ako koristite **websockets**, uključite ih ili isključite na **oba** uređaja, na glavnom uređaju i kod pratitelja – nikada samo na jednom.
 - Websockets are **mandatory** for remote control from **AAPSClient**, on both phones.
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+To mijenja samo način na koji aplikacija komunicira s Nightscoutom; vaši podaci na Nightscoutu ostaju isti.
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## Donja navigacija: Tretmani, Scene i Upravljanje
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+U **AAPS-u** v3 kretali ste se kroz aplikaciju pomoću niza **kartica** (Pregled, Radnje, Tretmani, …), a nekoliko značajki bili su **dodaci** koje ste omogućili u Config Builderu (**Radnje**, **Automatizacija**, **Hrana**, …).
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+U **AAPS-u** v4 kartica više nema, a nema ni potvrdnog okvira s okom u Config Builderu koji je prikazivao dodatak kao karticu. Glavni zaslon je **Pregled**, a **donja navigacija** daje vam tri ploče. **Radnje, Automatizacija i Hrana više nisu dodaci** – u [Konfiguraciji](../SettingUpAaps/ConfigBuilder.md) (preimenovani Config Builder) nema ništa za omogućiti; njihove funkcije sada su na ovim pločama.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### Tretmani – unos i isporuka
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+Ploča **Tretmani** služi za bilježenje ili isporuku tretmana: **Bolus kalkulator**, **Inzulin** (ručni bolus), **UH**, **Tretman** (inzulin i ugljikohidrati zajedno), **Kalibracija**, **CGM** (otvara vašu CGM aplikaciju, ako je postavljena) i vaši **[Brzi kalkulatori](../DailyLifeWithAaps/QuickWizards.md)**.
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![Donja ploča Tretmani](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+Na **Wear OS satu** iste tretmane unosite iz **izbornika AAPS** na satu (Bolus kalkulator / Kalkulator, eUH, Tretman, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![Radnje za tretmane u izborniku AAPS na satu](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### Scene
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+Vaši predlošci za situacije – pogledajte [Scene](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Manage — manage and activate
+### Upravljanje – uređivanje i aktiviranje
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+Ploča **Upravljanje** služi za uređivanje i aktiviranje svega ostalog: **[Profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Postavke inzulina** (vaše konfiguracije inzulina), **[Privremeni cilj](../DailyLifeWithAaps/TempTargets.md)**, predlošci **[Brzi kalkulator](../DailyLifeWithAaps/QuickWizards.md)**, **[Scene](../DailyLifeWithAaps/Scenes.md)**, **Automatizacija**, **Hrana**, **Rotacija mjesta primjene**, **Pumpa**, **[Ovlašteni klijenti](../RemoteFeatures/ClientMasterControl.md)** – te radnje pumpe koje su prije bile na kartici *Radnje* (**Produženi bolus**, **Otkaži privremeni bazal**, **Punjenje**, **Umetanje senzora**, **Zamjena baterije pumpe**).
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![Donja ploča Upravljanje](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+Sva vaša postojeća pravila automatizacije i unosi hrane ostaju sačuvani; promijenio se samo način na koji dolazite do ovih značajki.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### Gdje je nestala kartica Radnje?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x imao je karticu „Radnje“. U **AAPS-u** 4 njezine funkcije nalaze se na drugim mjestima:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **Zamjena profila** i **postotak profila**: dodirnite [naziv profila](#aaps-screens-profile--target) na glavnom zaslonu ili **Upravljanje → Profil**. Pogledajte [Promjena postotka profila](#ProfileSwitch-change-percentage).
+* **Privremeni cilj**: dodirnite [cilj](#aaps-screens-profile--target) na glavnom zaslonu ili **Upravljanje → Privremeni cilj**.
+* **Punjenje**, **Umetanje senzora**, **Provjera GUK-a** i ostali unosi Careportala: na proširenoj [ploči statusa](#aaps-screens-careportal), u **Upravljanju** ili kao gumbi [Brzog pokretanja](../DailyLifeWithAaps/QuickLaunch.md).
+* **Preglednik povijesti**, **Statistika** (TDD): u **izborniku** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+U **AAPS-u** v3 dugi pritisak na naziv profila otvarao je dijalog za zamjenu profila (postotak, trajanje, privremeni cilj Aktivnost). U **AAPS-u** v4 **dodirnite** naziv profila (ili **Upravljanje → Profil**), zatim dodirnite okrugli gumb **▶** dolje desno kako biste otvorili iste postavke. Pogledajte [Promjena postotka profila](#ProfileSwitch-change-percentage).
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## Zaštita postavki sada zaključava i zaslone za upravljanje
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+U **AAPS-u** v3 [Zaštita postavki](#Preferences-settings-protection) tražila je lozinku samo kada ste otvorili postavke. Profile ste i dalje mogli dodavati ili uređivati na kartici **Lokalni profil** bez lozinke.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+U **AAPS-u** v4 Zaštita postavki pokriva i uređivanje na zaslonima za upravljanje: **Profil**, **Postavke inzulina**, **Privremeni cilj** i **Brzi kalkulator**. Ako su vaše postavke zaključane, ovi zasloni otvaraju se **samo za čitanje**:
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- Možete pregledavati unose i aktivirati ih (**▶ Aktiviraj**) ili koristiti.
+- Gumbi **Dodaj / Uredi / Kloniraj / Izbriši** su **skriveni**. Samo **✏️ olovka** na gornjoj traci pokazuje da možete otključati uređivanje.
 
-![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+![Zaslon Profil samo za čitanje – dolje samo Aktiviraj, olovka na gornjoj traci](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+Za dodavanje, uređivanje, kloniranje ili brisanje unosa dodirnite **✏️ olovku** na gornjoj traci i unesite lozinku za postavke (ili koristite biometriju). Gumbi se pojavljuju.
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+Ako ne trebate zaštitu postavki, možete isključiti Zaštitu postavki u **Postavke → Zaštita**.
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## Inzulin koji se koristi ne može se uređivati
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+U **AAPS-u** v3 mogli ste u bilo kojem trenutku promijeniti DIA inzulina koji ste koristili.
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+U **AAPS-u** v4 inzulin označen kao **AKTIVAN** u **Upravljanje → Postavke inzulina** je zasivljen: ne možete ga uređivati ni brisati.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+Kada nadogradite, **AAPS** zadržava inzulin i DIA koje su vaše zamjene profila iz v3 već spremile. Ako pronađe starije zapise kojima je inzulin poznat, ali DIA nije, za njih koristi zadani DIA i jednom prikaže poruku, na primjer *Stariji zapisi nisu imali trajanje djelovanja inzulina, pa je za Lyumjev korišteno 9,0 sati. Provjerite postavke inzulina – već preneseni zapisi kasnije se ne ažuriraju.* Kada vidite tu poruku, provjerite postavke inzulina.
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+Za promjenu DIA ili vrha djelovanja dodajte novi inzulin pomoću **+**, prilagodite ga, spremite ga i aktivirajte ga (**▶ Aktiviraj**). Pogledajte [Promjena inzulina koji se koristi](#Config-Builder-insulin-change-active).
 ```
 
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## Daljinsko upravljanje s AAPSClientom zahtijeva uparivanje
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+U **AAPS-u** v3 **AAPSClient** je upravljao **AAPS-om** tako da je zapisivao tretmane Careportala u Nightscout i nije mogao isporučiti bolus.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+U **AAPS-u** v4 klijent i glavni telefon **uparuju se** jednom, a svaka naredba je potpisana. Glavni telefon provjerava i potvrđuje svaku naredbu, a klijent sada može isporučiti i bolus.
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- Svaki klijent ima **[ulogu](#client-master-control-roles)** koja ograničava što smije raditi.
+- Dok je upravljanje s klijenta uključeno, glavni telefon je u **[zaštićenom načinu rada](#client-master-control-hardened-mode)**: tretmani i promjene upisani izravno u Nightscout (web stranica, druge aplikacije) više se ne primjenjuju.
+- Svaki klijent dobiva **[vlastiti Nightscout token](#client-master-control-own-token)** sa samo onim pravima koja mu trebaju.
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+Uparite svaki **AAPSClient** s glavnim telefonom: pogledajte [Upravljanje glavni uređaj ↔ klijent](#client-master-control). S administratorskim tokenom na glavnom telefonu glavni telefon prikazuje QR kod koji jednim skeniranjem postavlja i uparuje klijenta. Ako ste tretmane prije unosili na web stranici Nightscouta, sada ih unosite na uparenom klijentu.
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## Dvostruki podaci GUK-a sada prebacuju petlju u Zaštitu od niske razine glukoze
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+Kada **AAPS** dvaput primi isto očitanje GUK-a (crvena oznaka upozorenja na prečacu izvora GUK-a u donjoj traci), ne može pouzdano izračunati vaš trend, pa prestaje davati korekcijski inzulin.
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+U **AAPS-u** v3 to se događalo tiho u pozadini: vaša petlja i dalje je bila prikazana kao **Zatvorena petlja**, iako više nije mogla korigirati.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+U **AAPS-u** v4 ta je promjena vidljiva. Zatvorena petlja prebacuje se u način **Zaštita od niske razine glukoze**, a dijalog petlje kaže vam zašto: *„Način LGS zbog dvostrukih vrijednosti u izvoru GUK-a“*. **AAPS** i dalje može smanjiti ili zaustaviti vaš bazal kako bi vas zaštitio od niskog GUK-a.
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+Pronađite i uklonite dvostruka očitanja – pogledajte [Znak upozorenja GUK-a](#aaps-screens-bg-warning-sign).
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+Kada ih više nema, **AAPS** ostaje u načinu **Zaštita od niske razine glukoze**. Ne vraća se sam u način **Zatvorena petlja**: pritisnite i držite ikonu petlje i ponovno odaberite **Zatvorena petlja**.
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: podaci se sada prikazuju pod nazivom uređaja AAPS
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+U **AAPS-u** v3 podaci preneseni u [Tidepool](../SettingUpAaps/Tidepool.md) prikazivali su se u Tidepoolu pod drugim nazivom uređaja.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+U **AAPS-u** v4 podaci se prikazuju pod nazivom uređaja **AAPS**. Nakon ažuriranja **AAPS** započinje novi skup podataka u Tidepoolu. Vaši stariji podaci ostaju u Tidepoolu pod starim nazivom uređaja.
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+Obično ništa: novi podaci jednostavno se pojavljuju pod **AAPS**.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+**Nemojte** pokretati „**Potpuna sinkronizacija**“ dok su stari podaci još u Tidepoolu: isti podaci tada bi bili tamo dvaput. Ako želite sve svoje podatke pod novim nazivom, najprije upotrijebite gumb „**Izbriši sve podatke**“ na [zaslonu Tidepool](#tidepool-menu) (on briše i stare podatke koje je prenio **AAPS**), a zatim pokrenite „**Potpuna sinkronizacija**“. Samo podaci koji su još spremljeni u **AAPS-u** na vašem telefonu mogu se ponovno prenijeti.
 ```
 
 ---
