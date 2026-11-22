@@ -182,7 +182,7 @@ Når du er færdig, så tryk på »**NÆSTE**« for at gå til næste skærm.
 
 Denne skærm vises kun, når **AAPS** finder indstillinger, som tidligere er eksporteret til **AAPS**-mappen (»Gemte indstillinger fundet«), for eksempel når du geninstallerer appen eller skifter til en ny telefon.
 
-- For at gendanne din tidligere konfiguration skal du trykke på »**Importer indstillinger**« — se [Oprettelse og gendannelse af sikkerhedskopier](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - For at starte med en ny konfiguration skal du trykke på »**NÆSTE**« og fortsætte med guiden.
 
 ![Importer indstillinger](../images/setup-wizard/Wizard-ImportSettings.png)
