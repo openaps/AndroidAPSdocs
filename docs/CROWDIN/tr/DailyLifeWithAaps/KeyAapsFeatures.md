@@ -18,7 +18,7 @@ Döngü modunu nasıl seçeceğiniz ve resimdeki diğer simgeler (4 ile 6 arası
 
 Öneriler (kapalı döngüde olduğu gibi) otomatik olarak uygulanmaz. Öneriler, kullanıcı tarafından elle pompaya girilmeli (sanal pompa kullanılıyorsa) veya **AAPS** gerçek bir pompaya bağlıysa bir düğme ile uygulanmalıdır.
 
-**AAPS**'in bir önerisi olduğunda, ana ekranın alt gezinme çubuğunda rozetli bir **Döngü** girdisi görünür. Öneriyi ("Yeni geçici bazalı kabul et") oranı, süresi ve sebebiyle okumak için buna basın, sonra öneriyi uygulamak için **Uygula**'ya basın:
+When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Öneriyi ("Yeni geçici bazalı kabul et") oranı, süresi ve sebebiyle okumak için buna basın, sonra öneriyi uygulamak için **Uygula**'ya basın:
 
 ![Uygula düğmesiyle açık döngü önerisi](../images/screens/loop_tab.png)
 
