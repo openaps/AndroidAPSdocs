@@ -60,7 +60,7 @@ När ett tillfälligt profilbyte pågår visar kortet **AKTIV** dess procent och
 
 ![Skärmen Profil – profilkarusell, detaljer och åtgärdsfält](../images/v4/Profiles/profile_manage.png)
 
-Knapparna längst ner gäller den **valda** profilen: **➕ Lägg till**, **✏️ Redigera**, **⧉ Klona** och **‘️ Radera**, och den runda knappen **▶ Aktivera** till höger. Hur du fyller i de fyra schemana i redigeraren (IC / ISF / BAS / TARG) beskrivs i [Skapa och redigera profiler](#your-aaps-profile-create-and-edit-profiles).
+The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Hur du fyller i de fyra schemana i redigeraren (IC / ISF / BAS / TARG) beskrivs i [Skapa och redigera profiler](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Klona** använder ikonen med två rutor som ofta betyder *kopiera*, men det finns inget att klistra in: den skapar kopian i ett enda steg. Bekräfta *Klona profil "Normal"?* så läggs en ny profil med namnet *Normal kopia* till sist i karusellen och väljs, redo för **✏️ Redigera** (där du också kan byta namn på den). Det är inte samma sak som att klona ett tidigare **Profilbyte** från behandlingshistoriken, vilket skapar en ny profil *där procenten och tidsförskjutningen redan är inräknade*. Se [Spara ett profilbyte för senare användning](#ProfileSwitch-keep-for-later).
 
