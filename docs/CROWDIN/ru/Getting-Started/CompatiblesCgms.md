@@ -2,7 +2,7 @@
 
 В этом разделе представлен краткий обзор всех **CGM/FGM**, совместимых с **AAPS**.
 
-*Tip*: If you can display your glucose data in xDrip app, you can choose xDrip as **BG** source in **AAPS**.
+*Совет*: если ваши данные глюкозы показываются в приложении xDrip, вы можете выбрать xDrip как источник **ГК** в **AAPS**.
 
 <!-- List of hidden pages to avoid overcrowding the table of contents -->
 
@@ -30,31 +30,31 @@
 
 * [Общие рекомендации](../CompatibleCgms/GeneralCGMRecommendation.md)
 * [Сглаживание данных](../CompatibleCgms/SmoothingBloodGlucoseData.md)
-* [xDrip Settings](../CompatibleCgms/xDrip.md)
-* [Nightscout как источник ГК](../CompatibleCgms/CgmNightscoutUpload.md): Хотя использовать Nightscout в качестве источника ГК для замкнутого цикла возможно, **этот метод использовать не рекомендуется** из-за того, что он полагается на стабильность мобильного интернета или Wi-Fi. Это означает, что данные с вашего **НМГ** будут приниматься **AAPS** только лишь при наличии соединения с вашим сайтом Nightscout. For a more reliable setup, using a CGM with local broadcast from the receiver (as listed below) to **AAPS** is a much better option.
+* [Настройки xDrip](../CompatibleCgms/xDrip.md)
+* [Nightscout как источник ГК](../CompatibleCgms/CgmNightscoutUpload.md): Хотя использовать Nightscout в качестве источника ГК для замкнутого цикла возможно, **этот метод использовать не рекомендуется** из-за того, что он полагается на стабильность мобильного интернета или Wi-Fi. Это означает, что данные с вашего **НМГ** будут приниматься **AAPS** только лишь при наличии соединения с вашим сайтом Nightscout. Для более надежной работы гораздо лучше использовать CGM, который передает данные от приемника прямо в **AAPS** на телефоне (см. список ниже).
 
-| CGM /  НМГ                                                                                             | Available [BG Sources](#Config-Builder-bg-source)                                                                                             |
-| ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                                             | BYODA, [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) or [Notification Reader](#DexcomG7-notification-reader) |
-| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                                           | [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) or [Notification Reader](#DexcomG7-notification-reader)        |
-| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                                                          | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG7-notification-reader)                                                   |
-| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                                             | BYODA, [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader)                                            |
-| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                                            | [xDrip](../CompatibleCgms/xDrip.md) or [Notification Reader](#DexcomG6-notification-reader)                                                   |
-| [Libre 3/3+](../CompatibleCgms/Libre3.md)                                                              | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip)                                                                             |
-| [Libre 2/2+](../CompatibleCgms/Libre2.md)                                                              | [xDrip](../CompatibleCgms/xDrip.md) (EU only) or [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip)                            |
-| [Libre 1](../CompatibleCgms/Libre1.md)                                                                 | [xDrip](../CompatibleCgms/xDrip.md) (Diabox sends its readings through the xDrip source), Glimp or Tomato (MiaoMiao). Нужен трансмиттер       |
-| [Eversense](../CompatibleCgms/Eversense.md)                                                            | [xDrip](../CompatibleCgms/xDrip.md), ESEL/Eversense patched App or Notification Reader                                                        |
-| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)                                                  | [xDrip](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App                                                                  |
-| [Poctech](../CompatibleCgms/PocTech.md)                                                                | Приложение PocTech                                                                                                                            |
-| Glunovo                                                                                                | Приложение Glunovo                                                                                                                            |
-| Intelligo                                                                                              | Приложение Intelligo                                                                                                                          |
-| [Ottai](../CompatibleCgms/OttaiM8.md), [Syai](../CompatibleCgms/SyaiTagX1.md)                          | Syai/Ottai (with the Ottai or Syai Tag app)                                                                                                   |
-| Sibionics CGM                                                                                          | [Juggluco](../CompatibleCgms/Juggluco.md) or SI App (with the patched SI App or the Sibionics App)                                            |
-| Sinocare                                                                                               | Sino App (with the patched Sino App)                                                                                                          |
-| MicroTech (Aidex, LinX, LinX Vista, Equil G. Smart 2, Diaexpert 2)                                     | MicroTech CGM App                                                                                                                             |
-| Instara                                                                                                | Instara (with the Instara App)                                                                                                                |
-| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide                            | xDrip Companion App or [Juggluco](../CompatibleCgms/Juggluco.md)                                                                              |
-| Any CGM whose official app shows the glucose value in a notification (Dexcom, Medtronic, Eversense, …) | Notification Reader                                                                                                                           |
+| CGM /  НМГ                                                                                                             | Available [BG Sources](#Config-Builder-bg-source)                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                                                             | BYODA, [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) или [Чтение уведомлений](#DexcomG7-notification-reader) |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                                                           | [xDrip](../CompatibleCgms/xDrip.md), [Juggluco](../CompatibleCgms/Juggluco.md) или [Чтение уведомлений](#DexcomG7-notification-reader)        |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                                                                          | [xDrip](../CompatibleCgms/xDrip.md) или [Чтение уведомлений](#DexcomG7-notification-reader)                                                   |
+| [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                                                             | BYODA, [xDrip](../CompatibleCgms/xDrip.md) или [Чтение уведомлений](#DexcomG6-notification-reader)                                            |
+| [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                                                            | [xDrip](../CompatibleCgms/xDrip.md) или [Чтение уведомлений](#DexcomG6-notification-reader)                                                   |
+| [Libre 3/3+](../CompatibleCgms/Libre3.md)                                                                              | [Juggluco](../CompatibleCgms/Juggluco.md) (с xDrip или без него)                                                                              |
+| [Libre 2/2+](../CompatibleCgms/Libre2.md)                                                                              | [xDrip](../CompatibleCgms/xDrip.md) (только ЕС) или [Juggluco](../CompatibleCgms/Juggluco.md) (с xDrip или без него)                          |
+| [Libre 1](../CompatibleCgms/Libre1.md)                                                                                 | [xDrip](../CompatibleCgms/xDrip.md) (Diabox отправляет свои значения через источник xDrip), Glimp или Tomato (MiaoMiao). Нужен трансмиттер    |
+| [Eversense](../CompatibleCgms/Eversense.md)                                                                            | [xDrip](../CompatibleCgms/xDrip.md), пропатченное приложение ESEL/Eversense или Чтение уведомлений                                            |
+| [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)                                                                  | [xDrip](../CompatibleCgms/xDrip.md) или MM640g + приложение 600SeriesAndroidUploader                                                          |
+| [Poctech](../CompatibleCgms/PocTech.md)                                                                                | Приложение PocTech                                                                                                                            |
+| Glunovo                                                                                                                | Приложение Glunovo                                                                                                                            |
+| Intelligo                                                                                                              | Приложение Intelligo                                                                                                                          |
+| [Ottai](../CompatibleCgms/OttaiM8.md), [Syai](../CompatibleCgms/SyaiTagX1.md)                                          | Syai/Ottai (с приложением Ottai или Syai Tag)                                                                                                 |
+| Sibionics CGM                                                                                                          | [Juggluco](../CompatibleCgms/Juggluco.md) или SI App (с пропатченным SI App или приложением Sibionics)                                        |
+| Sinocare                                                                                                               | Sino App (с пропатченным Sino App)                                                                                                            |
+| MicroTech (Aidex, LinX, LinX Vista, Equil G. Smart 2, Diaexpert 2)                                                     | Приложение MicroTech CGM                                                                                                                      |
+| Instara                                                                                                                | Instara (с приложением Instara)                                                                                                               |
+| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide                                            | Приложение xDrip Companion или [Juggluco](../CompatibleCgms/Juggluco.md)                                                                      |
+| Любой CGM, официальное приложение которого показывает значение глюкозы в уведомлении (Dexcom, Medtronic, Eversense, …) | Чтение уведомлений                                                                                                                            |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -66,28 +66,28 @@
 
 Надежные источники данных позволяют подавать **SMB** всегда.
 
-**AAPS** checks the sensor named in the latest **BG** reading it received, whichever **BG** source delivered it. After you change your **BG** source, the **SMB** "always" settings appear only once the first reading from the new source has arrived.
+**AAPS** проверяет сенсор, указанный в последнем полученном значении **ГК**, от какого бы источника **ГК** оно ни пришло. После смены источника **ГК** настройки «всегда» для **SMB** появляются только тогда, когда придет первое значение от нового источника.
 
-| Сенсор          |                                                                              Приложение CGM                                                                              |
-| --------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G6       |                             BYODA, xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader))                              |
-| Dexcom G7       | BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader)) |
-| Dexcom ONE+     |    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** without xDrip), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader))     |
-| Dexcom ONE      |                                 xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG6-notification-reader))                                 |
-| Dexcom Stelo    |                                 xDrip (**Direct, Native**), <br/>Dexcom app ([Notification Reader](#DexcomG7-notification-reader))                                 |
-| Libre 2/2+ (EU) |                                  xDrip (OOP2), <br/>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                                  |
-| Libre 2/2+/3/3+ |                                              Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                                               |
-| Syai, Ottai     |                      Syai or Ottai app (**Syai/Ottai** source or **Notification Reader**), <br/>Juggluco (**xDrip broadcast** without xDrip)                       |
+| Сенсор          |                                                                               Приложение CGM                                                                               |
+| --------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6       |                           BYODA, xDrip (**Direct, Native**), <br/>приложение Dexcom ([Чтение уведомлений](#DexcomG6-notification-reader))                            |
+| Dexcom G7       | BYODA, xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** без xDrip), <br/>приложение Dexcom ([Чтение уведомлений](#DexcomG7-notification-reader)) |
+| Dexcom ONE+     |    xDrip (**Direct, Native**), <br/>Juggluco (**xDrip broadcast** без xDrip), <br/>приложение Dexcom ([Чтение уведомлений](#DexcomG7-notification-reader))     |
+| Dexcom ONE      |                               xDrip (**Direct, Native**), <br/>приложение Dexcom ([Чтение уведомлений](#DexcomG6-notification-reader))                               |
+| Dexcom Stelo    |                               xDrip (**Direct, Native**), <br/>приложение Dexcom ([Чтение уведомлений](#DexcomG7-notification-reader))                               |
+| Libre 2/2+ (EU) |                                      xDrip (OOP2), <br/>Juggluco (**xDrip broadcast** без xDrip или **Patched Libre** с xDrip)                                       |
+| Libre 2/2+/3/3+ |                                                   Juggluco (**xDrip broadcast** без xDrip или **Patched Libre** с xDrip)                                                   |
+| Syai, Ottai     |                    Приложение Syai или Ottai (источник **Syai/Ottai** или **Чтение уведомлений**), <br/>Juggluco (**xDrip broadcast** без xDrip)                     |
 
-**Note: xDrip Companion apps, Medtronic, Eversense and all other sensors are not trusted data sources.**
+**Примечание: приложения xDrip Companion, Medtronic, Eversense и все остальные сенсоры не являются надежными источниками данных.**
 
 ```{admonition} Online BG sources are not recommended for closed looping
 :class: warning
-Some sources that need an internet connection can also be trusted:
-- xDrip **Dexcom Share follower** (any Dexcom sensor)
-- the **Nightscout** BG source (**AAPSClient**, or **AAPS** following your Nightscout site), when the uploader names one of the sensors above
+Некоторые источники, которым нужно подключение к интернету, тоже могут быть надежными:
+- xDrip **Dexcom Share follower** (любой сенсор Dexcom)
+- источник ГК **Nightscout** (**AAPSClient** или **AAPS**, который следит за вашим сайтом Nightscout), если загрузчик указывает один из сенсоров выше
 
-These sources are **not recommended** for a closed loop. When your phone or the CGM uploader loses its connection, **AAPS** receives no **BG** readings and cannot loop. Readings also arrive late, after the delay of the cloud service. Use a CGM app that sends its readings to **AAPS** directly on the phone (as listed in the table above) whenever possible.
+Эти источники **не рекомендуются** для замкнутого цикла. Когда ваш телефон или загрузчик CGM теряет соединение, **AAPS** не получает значений **ГК** и не может работать в цикле. Кроме того, значения приходят с опозданием, после задержки облачного сервиса. По возможности используйте приложение CGM, которое отправляет значения в **AAPS** прямо на телефоне (как указано в таблице выше).
 
-Other follower modes (xDrip Nightscout or Web follower, CareLink follower, Juggluco Nightscout) are never trusted.
+Другие режимы фолловера (xDrip Nightscout или Web follower, CareLink follower, Juggluco Nightscout) никогда не считаются надежными.
 ```
