@@ -43,7 +43,7 @@ Obriu la configuració d'Equil amb **Configuració** a la targeta **Equil**, o a
 ![Configuració del controlador Equil](../images/v4/Pumps/equil_settings.png)
 
 * **Alarma de bateria baixa**: us avisa quan la pila de la bomba és baixa.
-* **Alarma de reservori baix**: us avisa quan queda poca insulina al reservori.
+* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
 * **So d'alerta**: com us avisa la bomba: **Silenci**, **Només vibració**, **Només so** o **Vibració i so**.
 * **Velocitat del bolus**: amb quina rapidesa s'administra un bolus: **1,5 U/min (estàndard)**, **3 U/min**, **6 U/min** o **12 U/min**. Un bolus més ràpid pot provocar més alarmes d'oclusió.
 
