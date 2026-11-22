@@ -2,7 +2,7 @@
 
 **Это описание только для редактирования английской документации. Вся новая информация сначала должна быть добавлена на английском языке. Если вы хотите переводить на другие языки (спасибо!), используйте [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#edit-the-docs-code-syntax) section of this page.
+Подсказки, как форматировать текст (заголовок, жирный...) и ставить ссылки, см. в разделе [«Синтаксис кода»](#edit-the-docs-code-syntax) на этой странице.
 
 ## General
 
@@ -34,11 +34,11 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 3. Любой из вариантов в шаге 2 создаст новую ветку в ВАШЕМ репозитории, где будут сохранены ваши правки. Внесите правки в файл.
 
-Для страниц документации мы используем Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#edit-the-docs-code-syntax).
+Для страниц документации мы используем Markdown. Файлы имеют расширение ".md". Спецификация Markdown не зафиксирована, и сейчас для наших файлов Markdown мы используем myst_parser. Следите за правильным синтаксисом, как [описано ниже](#edit-the-docs-code-syntax).
 
 ![Ветка для правок](../images/docs_pr_edit_file.png)
 
-4. Вы работали на вкладке "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (check for typos). Если вы видите, что нужно что-то улучшить, вернитесь на вкладку редактирования и внесите еще правки. 
+4. Вы работали на вкладке "<>Edit file". Выберите вкладку "Preview changes", чтобы свежим взглядом убедиться, что все изменения выглядят так, как вы задумали (проверьте опечатки). Если вы видите, что нужно что-то улучшить, вернитесь на вкладку редактирования и внесите еще правки. 
 
 ![режим предварительного просмотра](../images/docs_pr_preview_changes.png)
 
@@ -54,7 +54,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 ![Отслеживание PR](../images/docs_pr_tracking.png)
 
-P.S.: ваш fork и ветка останутся в вашей личной учетной записи GitHub. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 7's notification area will provide a link to delete the branch once it has been closed or merged). Если вы будете следовать этой процедуре и для будущих правок, они всегда будут начинаться с актуальной версии репозиториев AndroidAPSdocs. If you choose to use another method to start a PR (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Люди часто забывают обновлять свои репозитории, поэтому мы советуем использовать описанный выше процесс PR, пока вы не научитесь выполнять "compare" (сравнение).
+P.S.: ваш fork и ветка останутся в вашей личной учетной записи GitHub. Когда вы получите уведомление, что ваш PR принят, можете удалить свою ветку, если она вам больше не нужна (в области уведомлений из шага 7 будет ссылка для удаления ветки, когда PR закрыт или принят). Если вы будете следовать этой процедуре и для будущих правок, они всегда будут начинаться с актуальной версии репозиториев AndroidAPSdocs. Если вы начинаете PR другим способом (например, редактируете, начиная с ветки master вашего fork), сначала нужно обновить ваш репозиторий: выполните "compare" (сравнение) и примите все изменения, сделанные с момента последнего обновления вашего fork. Люди часто забывают обновлять свои репозитории, поэтому мы советуем использовать описанный выше процесс PR, пока вы не научитесь выполнять "compare" (сравнение).
 
 (edit-the-docs-code-syntax)=
 
@@ -69,7 +69,7 @@ Markdown — очень простой язык форматирования т�
 Идея в том, чтобы
 
 - автор должен сначала думать о тексте, а не о форматировании,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Word and
+- текст Markdown можно было переносить между разными инструментами Markdown, а не использовать, например, закрытые инструменты, такие как Microsoft Word, и
 - можно было создавать несколько выходных форматов из одного файла Markdown.
 
 Markdown — это не на 100% фиксированный стандарт, и мы стараемся держаться как можно ближе к стандарту, чтобы
@@ -147,10 +147,10 @@ Markdown — это не на 100% фиксированный стандарт, 
 
 Изображение должно быть в формате PNG или JPEG.
 
-Image names should conform to one of the following naming rules. В примере я использую расширение png. Если вы используете JPEG, используйте расширение jpeg.
+Названия изображений должны соответствовать одному из следующих правил. В примере я использую расширение png. Если вы используете JPEG, используйте расширение jpeg.
 
 - `filename-image-xx.png`, где xx — уникальное двузначное число для изображений в этом файле.
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`, где xx — понятное имя, которое выбрал автор md-файла.
 
 Изображения лежат в папке images для английского языка и автоматически переносятся в другие языки через Crowdin. Вам для этого ничего делать не нужно!
 
@@ -161,7 +161,7 @@ Image names should conform to one of the following naming rules. В пример
 - Снимки экрана с веб-страниц должны быть шириной до **1050 пикселей**.
 - Схемы процессов должны быть шириной до **1050 пикселей**.
 - Снимки экрана приложения должны быть шириной до **500 пикселей**. Не размещайте их рядом друг с другом, если в этом нет необходимости.
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- Снимки экрана со смарт-часов (**Wear OS**) должны быть шириной до **360 пикселей**. Никогда не увеличивайте снимок экрана, который меньше.
 
 ### Ссылки
 
@@ -199,7 +199,7 @@ Image names should conform to one of the following naming rules. В пример
 
 В документацию можно добавлять блоки примечаний и предупреждений.
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Используйте их осторожно, потому что документация должна читаться как можно легче.
+Кроме того, можно добавлять сворачиваемые примечания с подробной информацией, чтобы пользователей, которым не интересны детали, они не отпугивали от чтения текста. Используйте их осторожно, потому что документация должна читаться как можно легче.
 
 #### Примечания
 
@@ -219,9 +219,9 @@ Furthermore you can add collapsing notes for detailed information, so that users
     Это предупреждение.
     
 
-    ```{admonition} Warning headline
+    ```{admonition} Заголовок предупреждения
     :class: warning
-    This is a warning.
+    Это предупреждение.
     ```
     
     #### Сворачиваемые примечания
@@ -244,7 +244,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 ## Таблицы
 
-Avoid using tables with long texts as the content is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Избегайте таблиц с длинными текстами: их содержимое трудно оформить в Markdown, обычно они не помещаются по ширине экрана телефона и, скорее всего, будут выглядеть иначе после перевода.
 
 ## Руководство по стилю
 
@@ -262,9 +262,9 @@ Avoid using tables with long texts as the content is difficult to set in Markdow
 
 По возможности используйте простой английский язык. Это помогает читателям, для которых английский не родной, и облегчает перевод документов AAPS на другие языки. Пишите так, как будто разговариваете с пользователем: представьте, что человек, для которого вы пишете, сидит напротив вас за столом. Помните: у большинства пользователей AAPS нет опыта программирования. В самой теме диабета тоже много жаргона и сокращений. Помните, что у некоторых людей диабет мог быть выявлен недавно, у них может быть меньше опыта с диабетом, чем у вас, или их могли обучать по-другому. Если вы используете сокращение, при первом упоминании напишите его полностью, а сокращение укажите сразу после него в скобках, например “super micro bolus (SMB)”. Также дайте ссылку на глоссарий. Технические термины, которые могут быть незнакомы читателю, тоже можно пояснить в скобках.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?”*
+Вместо: *“What causes high postprandial BG peaks in closed loop?”*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
+Пишите: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?”*
 
 ##### Используйте простые слова, понятные всем
 
@@ -296,7 +296,7 @@ Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loo
 
 Повелительная форма — самый быстрый способ дать указание, но авторы иногда боятся приказывать и пишут “you should do this” («вам следует сделать это») вместо простого “do this” («сделайте это»). Возможно, люди боятся, что повелительная форма звучит слишком резко. Часто это можно решить, добавив в начале слово 'please' («пожалуйста»). Но если что-то обязательно нужно сделать, лучше не писать ‘please’, потому что это оставляет читателю возможность отказаться.
 
-Instead of: *“You should just think of it as a complete statement.”*
+Вместо: *“You should just think of it as a complete statement.”*
 
 Пишите: *“Think of it as a complete statement.”*
 
@@ -310,9 +310,9 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 Пример **страдательного залога**:
 
-- *“The insulin (subject) is delivered (verb) by the pump (object).”*
+- *“The insulin (subject) is delivered (verb) by the pump (object).” («Инсулин (подлежащее) подается (глагол) помпой (дополнение).»)*
 
-*“delivered”* is a passive verb here. Подлежащее и дополнение поменялись местами по сравнению с предложением в действительном залоге. Нам пришлось сделать предложение длиннее, добавив “is” и “by the”. Также подумайте о том, чтобы начать с глагола в действительном залоге.
+Здесь *“delivered”* — глагол в страдательном залоге. Подлежащее и дополнение поменялись местами по сравнению с предложением в действительном залоге. Нам пришлось сделать предложение длиннее, добавив “is” и “by the”. Также подумайте о том, чтобы начать с глагола в действительном залоге.
 
 Вместо: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -453,7 +453,7 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 - КАК сделать
 
-- narrator directly talks to the reader: In this guide **you** will
+- рассказчик обращается прямо к читателю: «В этом руководстве **вы**...»
 
 - Будущее время -> чтобы показать конечную цель
 
@@ -527,7 +527,7 @@ Instead of: *“You should just think of it as a complete statement.”*
     
     *W лучше, чем z, потому что…*
     
-    Offer judgements and even opinions where appropriate.
+    Где уместно, высказывайте суждения и даже мнения.
     
     *x в системе y аналогичен w в системе z. Однако…*
     
@@ -553,7 +553,7 @@ Instead of: *“You should just think of it as a complete statement.”*
 
 #### Общие правила для AAPS
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- Для значений глюкозы указывайте и мг/дл, и ммоль/л каждый раз (по возможности учитывайте это и для снимков экрана).
 
 - Для единообразия пишите “AAPS”, а не “Android APS”.
 
