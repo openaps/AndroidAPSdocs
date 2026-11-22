@@ -38,7 +38,7 @@
 
 * Στην οθόνη της αντλίας, πατήστε **Σύζευξη**. Το **AAPS** αναζητά κοντινές αντλίες.
 
-* Πατήστε την αντλία σας στη λίστα.
+* Tap the entry for your pump in the list. If your phone still has an old Bluetooth pairing with this pump (for example after the pump was unpaired on the pump itself, or paired with another phone), **AAPS** removes it first and starts a new pairing. You do not need to remove the pump in the Android Bluetooth settings.
     
     ![Η οθόνη σύζευξης με μια αντλία Dana που βρέθηκε στη σάρωση](../images/DanaRS_i_Pairing.png)
 
