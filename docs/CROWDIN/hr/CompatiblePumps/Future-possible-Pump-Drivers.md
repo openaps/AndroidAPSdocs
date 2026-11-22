@@ -1,22 +1,22 @@
 # Budući (mogući) upravljački programi pumpi
 
-This is a list of some pumps on the market, the status of their support in other looping systems, and their status in AAPS. At the end there is some information about what a pump needs to be "Loop capable".
+Ovo je popis nekih pumpi na tržištu, status njihove podrške u drugim sustavima petlje i njihov status u AAPS-u. Na kraju su informacije o tome što pumpa treba da bi bila „pogodna za petlju“.
 
     {contents} Sadržaj
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Pumpe u fazi integracije u AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Uskoro:** upravljački programi za ove pumpe su u razvoju i već rade u testnim izradama.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([početna stranica](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Upravljački program za Omnipod 5 u razvoju](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([početna stranica](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Upravljački program za Tandem t:Mobi u razvoju](../images/future-pumps/tandem-mobi-driver.png)
 
 ## Pumpe koje se mogu koristiti s petljom
 
@@ -26,35 +26,35 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 **Hardver potreban za AAPS:** nema. Čini se da ima Bluetooth.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([početna stranica](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Status za petlju:** Mogući budući kandidat za petlju. Nada je da će t:slim X3 omogućiti potpuno upravljanje s telefona, što bi omogućilo podršku u AAPS-u, ali vremenski okvir i značajke još nisu poznati.
 
-**Hardver potreban za AAPS:** nema. It is expected to be Bluetooth enabled.
+**Hardver potreban za AAPS:** nema. Očekuje se da će imati Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Komentari:** Još nije izašla. Čini se da t:slim X3 u Tandemovim planovima stalno dobiva manju važnost u korist pumpe t:Mobi (uključujući verziju bez cijevi) i pumpe Sigi (njihove pumpe bez katetera).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([početna stranica](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Status za petlju:** Kandidat za petlju.
 
-**Hardver potreban za AAPS:** nema. It is Bluetooth enabled.
+**Hardver potreban za AAPS:** nema. Ima Bluetooth.
 
 ### Inzulinska pumpa Willcare ([početna stranica](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment it is not a Loop candidate, but their staff contacted us and they are interested in making the pump loopable (it seems to be missing only the get/set profile commands).
+**Status za petlju:** Trenutno nije kandidat za petlju, ali njihovo osoblje nam se javilo i zainteresirani su da pumpu prilagode za petlju (čini se da joj nedostaju samo naredbe za dohvaćanje/postavljanje profila).
 
 **Hardver potreban za AAPS:** nema. Čini se da ima Bluetooth.
 
 **Komentari:** Budući da je tvrtka zainteresirana za integraciju s AAPS-om, možda će sama napraviti implementaciju.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([početna stranica](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Status za petlju:** Kandidat za petlju. Zajednica je obrnutim inženjeringom otkrila Bluetooth protokol pumpe, pa je komunikacija s njom u načelu moguća.
 
-**Hardver potreban za AAPS:** nema. It is Bluetooth enabled.
+**Hardver potreban za AAPS:** nema. Ima Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Komentari:** Ypsopump štiti svoju Bluetooth komunikaciju jakim šifriranjem treće strane. Rad s tim šifriranjem tehnički je zahtjevan, pa je teško izraditi i održavati pouzdan upravljački program. Još ne postoji upravljački program za AAPS spreman za svakodnevnu upotrebu.
 
 ## Pumpe koje se više ne prodaju (tvrtke više ne posluju)
 
@@ -76,7 +76,7 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Tandem: t:slim X2 ([početna stranica](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Komentari:** Tandemov Bluetooth protokol otkriven je obrnutim inženjeringom, ali na t:slim X2 mogu se davati samo bolusi — isporukom bazala ne može se upravljati — pa se pumpa ne može sigurno koristiti s petljom. To se vjerojatno neće promijeniti osim ako Tandem ne dopusti potpuno upravljanje pumpom X2 s telefona, a to će vjerojatnije doći s t:slim X3.
 
 ### Accu-Chek Solo
 
