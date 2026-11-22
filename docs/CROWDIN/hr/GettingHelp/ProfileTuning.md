@@ -29,7 +29,7 @@ Ne žurite, idite polako!
 - **<u>ISKLJUČITE</u> sve [automatizacije](../DailyLifeWithAaps/Automations.md)**
 - **<u>ISKLJUČITE</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** kako ne bi pokušavali prilagoditi vaš profil.
 - Tijekom testiranja ne radite ručne radnje (ručni bolus, privremeni ciljevi itd.): pustite sustav da koristi samo postavke **Profila**.
-- For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board and Basal. On graph 2, use Carbs On Board (and Sensitivity change). On graph 3, use Deviations and Blood Glucose Impact. Kada tražite savjet, uvijek ih uključite na svoje snimke zaslona.
+- Za [dodatne grafove](#AapsScreens-section-g-additional-graphs): na grafu 1 koristite Aktivni inzulin i Bazal. Na grafu 2 koristite Aktivni ugljikohidrati (i Promjena osjetljivosti). Na grafu 3 koristite Odstupanja i Utjecaj na glukozu u krvi. Kada tražite savjet, uvijek ih uključite na svoje snimke zaslona.
 - COB=0[*](#profiletuning-cob-zero)
 
 Ostale stvari koje bi idealno trebalo izbjegavati, jer utječu na podatke i mogu dovesti do pogrešnih zaključaka:
@@ -127,7 +127,7 @@ Ako nakon nekoliko dana uočite sljedeće obrasce, razmislite o ovim promjenama:
 
 1. Najprije su vam potrebne ispravne zadane postavke bazala u vašem **Profilu**.
 2. Počnite na cilju, po mogućnosti bez negativnog IOB-a.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Vrlo točno izmjerite poznatu količinu ugljikohidrata i zabilježite vrijeme početka i početni IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Ne zaboravite pojesti ugljikohidrate ;)
+3. Zabilježite ukupno dani inzulin u **Upravljanje → Pumpa** (ili u povijesti pumpe) i nazovite ga početni inzulin. Vrlo točno izmjerite poznatu količinu ugljikohidrata i zabilježite vrijeme početka i početni IOB. Zatim unesite podatke o ugljikohidratima i bolusu u **AAPS** pomoću kalkulatora (s trenutno postavljenim I:C). Ne zaboravite pojesti ugljikohidrate ;)
 4. Nakon nekoliko sati, kada je COB=0[*](#profiletuning-cob-zero) i ponovno ste na cilju, zabilježite vrijeme završetka i završni IOB, provjerite ukupno dani inzulin kao i prije i nazovite ga završni inzulin. *NAPOMENA: Trajanje NIJE važno, samo neka je dulje od vašeg probavljanja*
 5. Od razlike između početne i završne količine inzulina oduzmite/dodajte razliku završni IOB – početni IOB. Zatim oduzmite bazalni inzulin izračunat iz postavki vašeg **Profila**.
 6. Ako je __GUK__ u ciljnom rasponu, dobit ćete ukupni inzulin potreban da se vaši ugljikohidrati „probave“. Izračunajte svoj **I:C**.
