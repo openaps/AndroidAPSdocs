@@ -313,6 +313,7 @@ Quando você seleciona outra bomba, o **AAPS** pede que você confirme a mudanç
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Bomba virtual: loop aberto - apenas sugestões do **AAPS**
   - enquanto você dá os primeiros passos com o **AAPS**, durante os primeiros [objetivos](../SettingUpAaps/CompletingTheObjectives.md)
   - para uma bomba que ainda não tem driver
