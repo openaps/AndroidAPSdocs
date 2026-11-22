@@ -4,7 +4,7 @@
 
 아래 절차는 튜브형 펌프에만 해당하며 Omnipod, Medtrum Nano, Accu-Chek Solo 같은 패치 펌프에는 해당하지 않습니다. 이 절차는 "세트 교체"라고도 합니다. "전체" 세트 교체는 인슐린 레저버와 캐뉼라를 모두 교체하는 것이고, "부분" 세트 교체는 캐뉼라만 교체하는 것입니다.
 
-패치 펌프는 자체 활성화 마법사에서 스스로 채우고 프라임하며, 캐뉼라는 이미 몸 안에 있습니다. **AAPS**는 패치 펌프에 프라임 기능을 제공하지 않습니다: **관리** 시트나 QuickLaunch에 **프라임/채우기**가 표시되지 않습니다. [호환 펌프](../Getting-Started/CompatiblePumps.md)에서 사용하는 펌프의 페이지를 참조하십시오.
+패치 펌프는 자체 활성화 마법사에서 스스로 채우고 프라임하며, 캐뉼라는 이미 몸 안에 있습니다. **AAPS**는 패치 펌프에 프라임 기능을 제공하지 않습니다: **관리** 시트나 QuickLaunch에 **프라임/채우기**가 표시되지 않습니다. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. [호환 펌프](../Getting-Started/CompatiblePumps.md)에서 사용하는 펌프의 페이지를 참조하십시오.
 
 카트리지/레저버의 실제 교체는 **AAPS**로 할 수 없으며 펌프에서 직접 해야 합니다. 교체를 마친 후에는 **AAPS**에 직접 기록해야 합니다.
 
@@ -31,6 +31,7 @@
 * 기본 프라임 양은 **프라임/채우기** 설정에서 설정/조정할 수 있습니다 — 메인 화면 검색 창에 "prime"을 입력하면 이 설정이 열립니다([설정](../SettingUpAaps/Preferences.md) 참조). 캐뉼라에 몇 단위를 프라임해야 하는지(바늘 길이와 튜브 길이에 따라 다름)는 캐뉼라 상자 안의 설명서를 확인하십시오.
 
 * 프라임 기능으로 주입한 인슐린은 **AAPS**가 활성 인슐린(IOB)을 계산할 때 고려하지 않으며, [처치 이력](#aaps-screens-treatments)에 "프라임"으로 표시됩니다.
+* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
 
 * 펌프 연결이 해제된 동안 펌프에서 주입한 볼러스 인슐린도 **AAPS**는 고려하지 않습니다. **AAPS** 연결이 해제된 동안 펌프에서 직접 볼러스를 주입했다면, 펌프를 다시 연결한 후 **인슐린** 대화 상자에서 이 인슐린을 (볼러스를 주입하지 않고) 기록할 수 있습니다(아래의 [실제로 볼러스를 주입하지 않고 주입된 인슐린을 기록하려면](#pumps-cannulas-announce-insulin) 참조).
 
