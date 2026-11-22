@@ -121,6 +121,8 @@ Druk op **Patch weggooien** op het pompscherm en bevestig. De insulinetoediening
 
 Als een kritiek alarm de patch heeft gestopt, biedt het alarm in plaats daarvan **Patch deactiveren** aan. Als je daarop drukt, wordt de patch op dezelfde manier weggegooid.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Alarmen en meldingen
