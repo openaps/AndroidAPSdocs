@@ -313,6 +313,7 @@ Kada odaberete drugu pumpu, **AAPS** traži da potvrdite promjenu:
 - [Medtrum](../CompatiblePumps/MedtrumNano.md)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 - [Carelevo](../CompatiblePumps/CareLevo.md)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)
 - Virtualna pumpa: otvorena petlja – samo prijedlozi **AAPS-a**
   - dok radite prve korake s **AAPS-om**, tijekom prvih [ciljeva](../SettingUpAaps/CompletingTheObjectives.md)
   - za pumpu koja još nema upravljački program
