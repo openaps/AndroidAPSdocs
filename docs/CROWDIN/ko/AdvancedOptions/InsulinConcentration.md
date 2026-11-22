@@ -183,6 +183,15 @@ U100 인슐린에서 시작하는 경우, 모든 프로파일, 이력 데이터,
 
 이것으로 끝입니다!
 
+```{admonition} If the profile cannot be written to the pump
+:class: warning
+The new insulin is already in the pump before the profile with the new concentration is written to it. Until it is written, the pump gives the wrong amount of insulin.
+
+- While the profile is not written yet, **AAPS** refuses boluses, SMBs, TBRs and extended boluses: *The profile with the new insulin is not written to the pump yet. Insulin cannot be given until it is written.* Prime and cancelling still work.
+- If writing the profile fails, **AAPS** raises an **Insulin change failed** alarm, and raises it again at every retry until the profile is written. **Disconnect or remove the pump**, check your BG and give insulin another way if you need it. Connect the pump again only after the profile is written.
+- If the prime itself fails, the insulin is not switched either. If the new insulin is already in the pump, do not connect the pump, and run the insulin change again.
+```
+
 인슐린을 바꿀 때 임시 **프로파일 전환**(기간이 있는 전환)이 실행 중이면, 임시 전환이 끝난 후 돌아오는 프로파일에도 새 인슐린이 적용됩니다. 이전 인슐린은 돌아오지 않습니다.
 
 ### 50% 프로파일과 함께 U200 인슐린을 사용하던 사용자의 농도 전환 (AAPS 4)
