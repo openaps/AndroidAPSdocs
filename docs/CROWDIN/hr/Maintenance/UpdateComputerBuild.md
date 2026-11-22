@@ -5,7 +5,7 @@
 **AAPS** nije dostupan za preuzimanje zbog propisa o medicinskim uređajima. Zakonito je izraditi aplikaciju za vlastitu upotrebu, ali kopiju ne smijete dati drugima! Pojedinosti pogledajte na stranici [Česta pitanja korisnika petlje](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Zatim umjesto ovog vodiča slijedite postupak sa stranice [Izrada **AAPS-a**](../SettingUpAaps/BuildingAaps.md). Jedina je razlika što umjesto izrade novog spremišta ključeva možete odabrati ono koje ste kopirali na novo računalo.
+Ako želite izraditi **AAPS** na novom računalu: kopirajte sigurnosnu kopiju datoteke spremišta ključeva na novo računalo. Zatim umjesto ovog vodiča slijedite postupak sa stranice [Izrada **AAPS-a**](../SettingUpAaps/BuildingAaps.md). Jedina je razlika što umjesto izrade novog spremišta ključeva možete odabrati ono koje ste kopirali na novo računalo.
 ```
 
 ## Pregled ažuriranja na novu verziju AAPS-a s Android Studiom
@@ -15,7 +15,7 @@ In case you want to build **AAPS** on a new computer: copy your back-up keystore
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Ako imate problema, pogledajte zasebnu stranicu [Rješavanje problema s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### Izvezite svoje postavke
 
@@ -53,7 +53,7 @@ Najmanja potrebna verzija opisana je u [uputama za izradu](#Building-APK-recomme
 * Pričekajte dok traje preuzimanje; to ćete vidjeti kao informaciju u donjoj traci. Kada završi, vidjet ćete poruku o uspjehu.
 
   ```{note}
-  Ažurirane datoteke mogu se razlikovati! This is not an indication of a problem.
+  Ažurirane datoteke mogu se razlikovati! To nije znak problema.
   ```
 
    ![Android Studio – Pull uspješan](../images/update/06_GitPullSuccess.png)
@@ -83,7 +83,7 @@ Ako ste izradu dovršili s istim postojećim spremištem ključeva u Android Stu
 U drugim slučajevima, na primjer kada za potpisani apk izradite novo spremište ključeva u Android Studiju, morat ćete izbrisati staru aplikaciju prije instalacije apk-a. **Obavezno izvezite svoje postavke!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Pogledajte upute na stranici [Prijenos i instalacija AAPS-a na vaš pametni telefon](../SettingUpAaps/TransferringAndInstallingAaps.md). Ondje gdje se primjenjuje Googleova [provjera Android razvojnih programera](#android-developer-verification) (od rujna 2026., ovisno o vašoj zemlji), instalirajte putem [ADB-a](#android-developer-verification-adb) umjesto dodirivanja APK datoteke.
 
 Nastavite [ovdje](#Update-to-new-version-check-aaps-version-on-phone).
 
@@ -95,6 +95,6 @@ Ako nešto pođe po zlu, ne paničarite.
 
 Duboko udahnite!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Zatim provjerite je li vaš problem već opisan na zasebnoj stranici [Rješavanje problema s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Ako trebate dodatnu pomoć, obratite se drugim korisnicima **AAPS-a** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) ili [Discordu](https://discord.gg/4fQUWHZ4Mw).
