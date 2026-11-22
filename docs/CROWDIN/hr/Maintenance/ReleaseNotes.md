@@ -9,7 +9,7 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. Odjeljak za rješavanje problema na stranici s uputama za ažuriranje također obrađuje najčešće poteškoće pri ažuriranju **AAPS-a**.
+Za ažuriranje na novu verziju slijedite upute u [uputama za ažuriranje](UpdateToNewVersion.md). Odjeljak za rješavanje problema na stranici s uputama za ažuriranje također obrađuje najčešće poteškoće pri ažuriranju **AAPS-a**.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
@@ -24,7 +24,7 @@ Ako ne ažurirate do datuma isteka, **AAPS** će se prebaciti na otvorenu petlju
 
 Datume kraja podrške za verzije AAPS-a pogledajte u [Kraj podrške](EndOfLife.md).
 
-**Ne zanemarujte obavijest.** Nove verzije **AAPS-a** donose važne sigurnosne ispravke. Zato svaki korisnik **AAPS-a** mora što prije ažurirati na najnoviju verziju. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Hvala na razumijevanju.
+**Ne zanemarujte obavijest.** Nove verzije **AAPS-a** donose važne sigurnosne ispravke. Zato svaki korisnik **AAPS-a** mora što prije ažurirati na najnoviju verziju. Ovo je pokušaj da se poboljša sigurnost svakog korisnika **AAPS-a** i DIY zajednice. Hvala na razumijevanju.
 
 (maintenance-android-version-aaps-version)=
 
@@ -52,17 +52,17 @@ U tablici niže pronađite svoju verziju Androida i koristite odgovarajuću verz
 Wear OS 5, razina API-ja 34 (Android 14) ima [ograničenja](#BuildingAapsWearOs-WearOS5).
 ```
 
-Versions with a heading are the latest release for each Android version (see the table above). The other releases follow in between, with their notes or a link to them on GitHub.
+Verzije s naslovom su najnovije izdanje za svaku verziju Androida (pogledajte tablicu iznad). Ostala izdanja slijede između njih, s bilješkama ili poveznicom na njih na GitHubu.
 
 (latestrelease)=
 
 (version400)=
 
-## Version 4.0.0
+## Verzija 4.0.0
 
-Release date: 31-10-2026
+Datum izdanja: 31-10-2026
 
-**New features**
+**Nove značajke**
 
 - Novo korisničko sučelje: aplikacija za telefon iznova izrađena u Jetpack Composeu @MilosKozak
 - [Globalno pretraživanje](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
@@ -77,7 +77,7 @@ Release date: 31-10-2026
 - Upravljanje inzulinom: katalog inzulina, nadimci, odabir u profilu i kalkulatoru @Philoul
 - Dodatak za kalibraciju @MilosKozak
 - [Zaglađivanje](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
-- New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
+- Nove [radnje automatizacije](#automations-automation-action): **Promijeni zaglađivanje** @olorinmaia, te **Pokreni**, **Omogući** ili **Onemogući scenu** @MilosKozak
 - [Rotacija mjesta primjene](#Aapsscreens-site-rotation): praćenje i izmjenjivanje mjesta infuzije @Philoul @MilosKozak
 - Prerada dodatka [Autotune](../AdvancedOptions/Autotune.md) @Philoul
 - Novi [widgeti](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
@@ -88,16 +88,16 @@ Release date: 31-10-2026
 - Poboljšanja performansi @MilosKozak
 - Automatski e-ugljikohidrati u bolus kalkulatoru @MilosKozak
 
-**New devices**
+**Novi uređaji**
 
 - **CareLevo**: novi [upravljački program pumpe](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
 - **Dana-i2**: podrška @MilosKozak
 - **Instara**: novi izvor CGM-a @leohunt
 
-**Pump Driver Improvements**
+**Poboljšanja upravljačkih programa pumpi**
 
 - Zasloni pregleda pumpe iznova izrađeni za Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn i Equil @MilosKozak
-- **Omnipod DASH**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
+- **Omnipod DASH**: Ref kodovi kao na PDM-u i čitljivi opisi kvarova, kompenzacija odstupanja (drift) uvijek uključena, bolje izvješćivanje o vrsti bolusa @nl-ruud
 - **Omnipod**: čvrsti datum završetka za Dash i Eros @mcnelson
 - **DanaR, RS**: emulator pumpe za testiranje @MilosKozak
 - **Equil**: emulator pumpe za testiranje @MilosKozak
@@ -114,21 +114,21 @@ Release date: 31-10-2026
 - Bolus kalkulator: stranica [vrsta obroka](#WearOsSmartwatch-wizard-meal-type) koja dijeli ugljikohidrate kao kalkulator na telefonu, i [vrijeme ugljikohidrata](#WearOsSmartwatch-wizard-carb-time) s podsjetnikom *vrijeme za jelo* na satu @olorinmaia
 - [Alarmi telefona na satu](#WearOsSmartwatch-phone-alarms): sat prikazuje alarm i nudi „Utišaj“ i „Utišaj 5 min“ @olorinmaia
 
-**Build**
+**Izrada**
 
 - CI workflowi za izradu iz oznake (tag) ili grane, mapiranje verzija JDK-a @Angus-repo
 
-**Contributors**
+**Suradnici**
 
 @MilosKozak @Philoul @olorinmaia @Kisu-Choi @leohunt @piecycle @Angus-repo @mcnelson @t1dude @premnirmal @nl-ruud
 
-Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
+Potpuni popis promjena: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
 
 ---
 
 (version3426)=
 
-## Version 3.4.2.6
+## Verzija 3.4.2.6
 
 - Equil: poboljšana stabilnost @MilosKozak
 
@@ -136,121 +136,121 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 (version3425)=
 
-**Version 3.4.2.5**
+**Verzija 3.4.2.5**
 
-- Equil fix race condition @MilosKozak
+- Equil: ispravak stanja utrke (race condition) @MilosKozak
 
 ---
 
 (version3424)=
 
-**Version 3.4.2.4**
+**Verzija 3.4.2.4**
 
-- Equil fixes @MilosKozak
-- NS profile sync fix @MilosKozak
+- Ispravci za Equil @MilosKozak
+- Ispravak sinkronizacije profila s NS-om @MilosKozak
 
 ---
 
 (version3423)=
 
-**Version 3.4.2.3**
+**Verzija 3.4.2.3**
 
-- Dash: Drift resolution @nl-ruud
-- NSClientV3: Fix gap after reconnection @MilosKozak
-- Automation: Fix deserialization @MilosKozak
-- Equil: Fix battery report @MilosKozak
-- Cleanup workflow @vanelsberg
-- Equil: improve error recovery @MilosKozak
-- DanaRS: fix domestic pump communication @MilosKozak
-- Insight: Fix TBR sync @MilosKozak
-- Dash: Fix activation bug @nl-ruud
+- Dash: rješenje za odstupanje (drift) @nl-ruud
+- NSClientV3: ispravak praznine nakon ponovnog povezivanja @MilosKozak
+- Automatizacija: ispravak deserijalizacije @MilosKozak
+- Equil: ispravak izvješća o bateriji @MilosKozak
+- Čišćenje workflowa @vanelsberg
+- Equil: poboljšan oporavak od pogrešaka @MilosKozak
+- DanaRS: ispravak komunikacije s domaćom (korejskom) pumpom @MilosKozak
+- Insight: ispravak sinkronizacije TBR-a @MilosKozak
+- Dash: ispravak pogreške pri aktivaciji @nl-ruud
 
 ---
 
 (version3422)=
 
-**Version 3.4.2.2**
+**Verzija 3.4.2.2**
 
-- Fixing issues with Equil and Medtronic
-- Improve safety of Medtrum
+- Ispravci problema s Equilom i Medtronicom
+- Poboljšana sigurnost Medtruma
 
 ---
 
 (version3421)=
 
-**Version 3.4.2.1**
+**Verzija 3.4.2.1**
 
-- Equil: fix Pairing and progress dialog @MilosKozak
+- Equil: ispravak uparivanja i dijaloga napretka @MilosKozak
 
 ---
 
 (version3420)=
 
-**Version 3.4.2.0**
+**Verzija 3.4.2.0**
 
-Release date: 02-04-2026
+Datum izdanja: 02-04-2026
 
-- Equil: Fix resistance for different models @hhfcvmars
-- Tidepool: Fix session @MilosKozak
-- Medtrum: Fix activation path by preventing double fill @MilosKozak
-- COB: Fix COB calculation (covers dangerous edge case) @MilosKozak
+- Equil: ispravak otpora za različite modele @hhfcvmars
+- Tidepool: ispravak sesije @MilosKozak
+- Medtrum: ispravak postupka aktivacije sprječavanjem dvostrukog punjenja @MilosKozak
+- COB: ispravak izračuna aktivnih ugljikohidrata (pokriva opasan rubni slučaj) @MilosKozak
 
 ---
 
 (version3410)=
 
-**Version 3.4.1.0**
+**Verzija 3.4.1.0**
 
-Release date: 08-03-2026
+Datum izdanja: 08-03-2026
 
-**Core**
+**Jezgra**
 
-- Fix DST handling @MilosKozak
-- Improve and unify normal target identification (mgdl > 99, mmol > 5.5) @MilosKozak
-- SMS: protect RESTART by PIN @MilosKozak
-- Maintenance: warn if wrong directory selected @MilosKozak
+- Ispravak rukovanja ljetnim računanjem vremena (DST) @MilosKozak
+- Poboljšano i ujednačeno prepoznavanje normalnog cilja (mg/dL > 99, mmol > 5,5) @MilosKozak
+- SMS: zaštita naredbe RESTART PIN-om @MilosKozak
+- Održavanje: upozorenje ako je odabrana pogrešna mapa @MilosKozak
 
-**Pump Driver Improvements**
+**Poboljšanja upravljačkih programa pumpi**
 
-- **Omnipod DASH**: refactor BLE driver code to omnipod/common module @jwoglom
-- **Omnipod DASH**: try to fix connection state @MilosKozak
-- **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
-- **Medtronic**: fix same encoding type displayed in settings dialog @mifi100
-- **Medtronic**: prepare pump common classes (Tandem preparation) @andy-rozman
-- **RileyLink**: encoding fix (#4519) @mifi100
-- **Equil**: expand insulin pump compatibility by serial number prefix (#4510) @hhfcvmars
-- **Equil**: add logging @MilosKozak
-- **Diaconn G8**: fix log sync bug and add firmware 3.58+ support @miyeongkim
-- **Diaconn**: fix TBR duration unit conversion @miyeongkim
-- **Diaconn**: use commandQueue.loadEvents() for history sync @miyeongkim
-- Allow insulin delivery while loop is suspended but pump is available @cschuijt
+- **Omnipod DASH**: kôd BLE upravljačkog programa premješten u modul omnipod/common @jwoglom
+- **Omnipod DASH**: pokušaj ispravka stanja veze @MilosKozak
+- **Omnipod**: provjera profila prije aktivacije Pod-a kako se Podovi ne bi bacali (#4534) @brianV
+- **Medtronic**: ispravak prikaza iste vrste kodiranja u dijalogu postavki @mifi100
+- **Medtronic**: priprema zajedničkih klasa pumpi (priprema za Tandem) @andy-rozman
+- **RileyLink**: ispravak kodiranja (#4519) @mifi100
+- **Equil**: proširena kompatibilnost inzulinskih pumpi prema prefiksu serijskog broja (#4510) @hhfcvmars
+- **Equil**: dodano bilježenje u dnevnik @MilosKozak
+- **Diaconn G8**: ispravak pogreške sinkronizacije dnevnika i dodana podrška za firmware 3.58+ @miyeongkim
+- **Diaconn**: ispravak pretvorbe jedinice trajanja TBR-a @miyeongkim
+- **Diaconn**: korištenje commandQueue.loadEvents() za sinkronizaciju povijesti @miyeongkim
+- Dopuštena isporuka inzulina dok je petlja suspendirana, ali je pumpa dostupna @cschuijt
 
-**Cloud / Backup**
+**Oblak / sigurnosna kopija**
 
-- Add backup to Google Drive @Angus-repo
-- Notify UI on cloud storage error state change @Angus-repo
-- Allow both local and cloud storage at the same time @Angus-repo
+- Dodana sigurnosna kopija na Google Drive @Angus-repo
+- Obavještavanje korisničkog sučelja o promjeni stanja pogreške pohrane u oblaku @Angus-repo
+- Dopuštena istodobna lokalna pohrana i pohrana u oblaku @Angus-repo
 
 **Tidepool**
 
-- Improve Tidepool OAuth2 migration @MilosKozak
-- Fix indefinite Tidepool BLOCKED state, fix rejecting empty SSIDs @michaeln-synapse
+- Poboljšan prijelaz Tidepoola na OAuth2 @MilosKozak
+- Ispravak trajnog stanja Tidepool BLOCKED, ispravak odbijanja praznih SSID-ova @michaeln-synapse
 
 **NSClient**
 
-- NSCv3: improve reconnection @MilosKozak
+- NSCv3: poboljšano ponovno povezivanje @MilosKozak
 
 **Wear OS**
 
-- Display New IOB in Wizard Result if IOB is used in calculations @olorinmaia
-- Fix Wear BolusProgress with Total Amount @Philoul
+- Prikaz novog aktivnog inzulina (IOB) u rezultatu kalkulatora ako se IOB koristi u izračunima @olorinmaia
+- Ispravak Wear BolusProgress s ukupnom količinom @Philoul
 
-**UI**
+**Korisničko sučelje**
 
-- Improve ic_none icon for Site Rotation @Philoul
-- Fix site rotation manage pump setting not being used @samfundev
+- Poboljšana ikona ic_none za rotaciju mjesta primjene @Philoul
+- Ispravak nekorištenja postavke pumpe za upravljanje rotacijom mjesta primjene @samfundev
 
-**Contributors**
+**Suradnici**
 
 @MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
 
@@ -258,66 +258,66 @@ Release date: 08-03-2026
 
 (version3400)=
 
-**Version 3.4.0.0**
+**Verzija 3.4.0.0**
 
-Release date: 31-12-2025
+Datum izdanja: 31-12-2025
 
-**Before upgrading:**
+**Prije nadogradnje:**
 
-* This version requires Google Android 12.0 or above. Check your phone version before attempting to update.
-* Update to latest Android Studio or better setup using browser build.
+* Ova verzija zahtijeva Google Android 12.0 ili noviji. Provjerite verziju svog telefona prije pokušaja ažuriranja.
+* Ažurirajte na najnoviji Android Studio ili, još bolje, koristite izradu u pregledniku.
 
-**New features**
+**Nove značajke**
 
-* Running mode @MilosKozak
-  * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
-  * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
-* [New CGMs](../Getting-Started/CompatiblesCgms.md) : Glunovo, Intelligo, Sinocare
-* [Site rotation](#Aapsscreens-site-rotation) support @Philoul
-* New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
-* Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
+* Način rada @MilosKozak
+  * Prikaz [povijesti statusa petlje](#AapsScreens-running-mode) na karticama tretmana
+  * Prikaz i mogućnost promjene [statusa petlje iz AAPSClienta](#RemoteControl_aapsclient).<br>NAPOMENA: potrebna je postavka [NSClient > Sinkronizacija > Primaj način rada iz NS-a](#Preferences-nsclient-synchronization)
+* [Novi CGM-ovi](../Getting-Started/CompatiblesCgms.md): Glunovo, Intelligo, Sinocare
+* Podrška za [rotaciju mjesta primjene](#Aapsscreens-site-rotation) @Philoul
+* Nova [radnja automatizacije](#automations-automation-action): omogućavanje ili onemogućavanje SMB-ova @MilosKozak
+* Syai CGM je [pouzdan izvor](#GettingStarted-TrustedBGSource) i podržava napredno filtriranje @MilosKozak
 
-**Wear OS Improvements**
+**Poboljšanja za Wear OS**
 
-* dramatically reduced battery usage @MilosKozak
-* UI improvements and fixes @olorinmaia
-* almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
-* 2 new complications for extended data @Philoul
-* Migrated to modern complication provider with DataStore @MilosKozak
+* znatno smanjena potrošnja baterije @MilosKozak
+* poboljšanja i ispravci korisničkog sučelja @olorinmaia
+* kôd gotovo potpuno iznova napisan kako bi odgovarao trenutnoj razini biblioteka (prije Wear OS 2) @MilosKozak
+* 2 nove komplikacije za proširene podatke @Philoul
+* Prelazak na moderni pružatelj komplikacija s DataStoreom @MilosKozak
 
-**Memory Leak Fixes**
+**Ispravci curenja memorije**
 
-* Fixed memory leaks in code @MilosKozak
-* Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
+* Ispravljena curenja memorije u kôdu @MilosKozak
+* Dodano prijavljivanje curenja memorije putem LeakCanaryja u Firebase Crashlytics @MilosKozak
 
-**Pump Driver Improvements**
+**Poboljšanja upravljačkih programa pumpi**
 
-* **DanaI**: fixed disconnection issues @MilosKozak
-* **RileyLink**: Speedup communication by minimizing delays @mifi100
-* **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
-* **Combo**: Fixed Test race conditions @MilosKozak @dv1
-* **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
+* **DanaI**: ispravljeni problemi s prekidom veze @MilosKozak
+* **RileyLink**: brža komunikacija smanjenjem kašnjenja @mifi100
+* **Medtrum**: dodan prikaz vremena aktivacije i starosti pumpe @vanelsberg, ispravak velikih slova u lozinci @MilosKozak
+* **Combo**: ispravljena stanja utrke (race conditions) u testovima @MilosKozak @dv1
+* **Equil**: optimizirana povezivost, smanjena potrošnja baterije @MilosKozak
 
-**Nightscout Sync**
+**Sinkronizacija s Nightscoutom**
 
-* Improved deduplication on NS failure @MilosKozak
+* Poboljšano uklanjanje duplikata pri pogrešci NS-a @MilosKozak
 
-**UI/UX Improvements**
+**Poboljšanja korisničkog sučelja i iskustva (UI/UX)**
 
-* various improvements @MilosKozak @Philoul @olorinmaia
+* razna poboljšanja @MilosKozak @Philoul @olorinmaia
 
 **Automatizacija**
 
-* New SMB control action - enable/disable SMB via automation @MilosKozak
+* Nova radnja za upravljanje SMB-om – omogućavanje/onemogućavanje SMB-a putem automatizacije @MilosKozak
 
-**Testing**
+**Testiranje**
 
-* Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
-* Improved test stability and coverage across multiple modules @MilosKozak
+* Dodani opsežni jedinični testovi za pumpe Equil, Eopatch, Dana i Medtronic @MilosKozak
+* Poboljšana stabilnost i pokrivenost testova u više modula @MilosKozak
 
 **Tidepool**
 
-* Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
+* Tidepool OAUTH2 (podrška za novu Tidepool autentifikaciju) @MilosKozak
 
 ---
 
@@ -350,7 +350,7 @@ Datum izdanja: 27-03-2025
 
 (version-enforcement)=
 
-**Starting this version, notification and version enforcement has been simplified and softened and works the following way:**
+**Od ove verzije obavijesti i nametanje verzije pojednostavljeni su i ublaženi te rade na sljedeći način:**
 
 *  Nema isteka kada je uređaj izvan mreže (ako nema veze s internetom). To znači da više nema razdoblja odgode od 60 i 90 dana.
 *  Nakon isteka nameće se način LGS
@@ -363,189 +363,189 @@ Datum izdanja: 27-03-2025
    - Dostupna je nova verzija (nema utjecaja na AAPS)
    - Aplikacija istječe na neki datum u budućnosti (još nema utjecaja na AAPS) / je istekla (AAPS će prijeći u način LGS)
 
-**News**
+**Novosti**
 
-* SMS RESTART command @MilosKozak
-* Watch Profile switch parameters @olorinmaia
-* Dark mode AAPS V2 watchface @olorinmaia
-* G7 data exchange improvements @olorinmaia
-* Widget configuration @MilosKozak
-* Radiobuttons UI improvements @olorinmaia
-* Automation: position choosing from map @MilosKozak
-* Version visible on main screens @MilosKozak
-* Compilation with existing git system is enforced (no zip downloads)
-* Show version on main screen @MilosKozak
-* Tidepool upload improvements @ConstantinMatheis
+* SMS naredba RESTART @MilosKozak
+* Parametri zamjene profila na satu @olorinmaia
+* Tamni način za Watchface AAPS V2 @olorinmaia
+* Poboljšanja razmjene podataka s G7 @olorinmaia
+* Konfiguracija widgeta @MilosKozak
+* Poboljšanja korisničkog sučelja izbornih gumba (radio buttons) @olorinmaia
+* Automatizacija: odabir položaja na karti @MilosKozak
+* Verzija vidljiva na glavnim zaslonima @MilosKozak
+* Obavezna je izrada s postojećim git sustavom (bez preuzimanja zip datoteka)
+* Prikaz verzije na glavnom zaslonu @MilosKozak
+* Poboljšanja prijenosa na Tidepool @ConstantinMatheis
 
-**Bug fixes**
+**Ispravci pogrešaka**
 
-* Dash unbonding fix @Andreas
-* Garmin fixes @robertbuessow @suside
-* Fix of IOB displaying in dialogs @olorinmaia
-* Objectives spelling and validation improvements @MilosKozak
-* Fixed rendering of emulated TBRs @MilosKozak
-* Fixed bypassing security @tdrkDev
-
----
-
-**Version 3.3.1.3**
-
-Release date: 21-01-2025
-
-**Bug fixes**
-
-* Dash: bonding is optional (default off) @MilosKozak
-* Equil: fixed bolus 10+U, alarm improvements @EquilHack
-* Garmin: watch improvements @swissalpine
-* Watch improvements @olorinmaia
-* Control loop status from watch @tdrkDev
-* Stability improvements
-
-*  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
+* Ispravak raskidanja veze (unbonding) za Dash @Andreas
+* Ispravci za Garmin @robertbuessow @suside
+* Ispravak prikaza aktivnog inzulina (IOB) u dijalozima @olorinmaia
+* Poboljšanja pravopisa i provjere u Ciljevima @MilosKozak
+* Ispravljen prikaz emuliranih privremenih bazala (TBR) @MilosKozak
+* Ispravljeno zaobilaženje sigurnosti @tdrkDev
 
 ---
 
-**Version 3.3.1.2**
+**Verzija 3.3.1.3**
 
-Release date: 15-01-2025
+Datum izdanja: 21-01-2025
+
+**Ispravci pogrešaka**
+
+* Dash: povezivanje (bonding) nije obavezno (zadano isključeno) @MilosKozak
+* Equil: ispravljen bolus od 10+ J, poboljšanja alarma @EquilHack
+* Garmin: poboljšanja za sat @swissalpine
+* Poboljšanja za sat @olorinmaia
+* Upravljanje statusom petlje sa sata @tdrkDev
+* Poboljšanja stabilnosti
+
+*  **Možda će biti potrebno novo [postavljanje Authenticatora](#sms-commands-authenticator-setup).**
+
+---
+
+**Verzija 3.3.1.2**
+
+Datum izdanja: 15-01-2025
 
 **Kako ažurirati**
 
-* [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
+* Za izradu ove verzije potrebna je [verzija Android Studija pod nazivom „Ladybug Feature Drop“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) ili novija. **To nije isto što i obični „Ladybug“.** Ako ste već izradili verziju 3.3.x, morate ponovno ažurirati Android Studio.
 
-**Bug fixes**
+**Ispravci pogrešaka**
 
-* Dash: use bonding on Android 15+
-* Restored Dexcom button on Overview
-* Equil: allowed remove non working pump
-* Warn when DynISF Adjustment Factor is zero
-* NSCv3: resolve websocket communication on phones with slightly different time
-* SMS Commands: fix OneTimePassword. **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
-* Fix issue where some preferences could not be edited anymore.
-* Fix reset of master password with virtual pump.
-* Fixed import of large settings backup files.
-
----
-
-**Version 3.3.1.0**
-
-Release date: 06-01-2025
-
-**UI changes**
-
-* [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
-* Improved Users actions layout and icons
-
-**Other functionalities**
-
-* New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
-* Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
-* NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
-
-**Technical changes & bug fixes**
-
-* Fix Insight crash @philoul
-* Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
-* Fix carbs absorption @MilosKozak
-* Fixed color of RadioButtons & CheckBoxes @MilosKozak
-* Fixed bug in DynISF percentage migration @MilosKozak
-* Resolved misplaced DynISF notification @MilosKozak
-* Fixed bug in watchfaces @philoul
+* Dash: korištenje povezivanja (bonding) na Androidu 15+
+* Vraćen gumb Dexcom u Pregledu
+* Equil: omogućeno uklanjanje pumpe koja ne radi
+* Upozorenje kada je faktor prilagodbe dinamičkog ISF-a nula
+* NSCv3: riješena komunikacija putem websocketa na telefonima s malo drukčijim vremenom
+* SMS naredbe: ispravak jednokratne lozinke (OneTimePassword). **Možda će biti potrebno novo [postavljanje Authenticatora](#sms-commands-authenticator-setup).**
+* Ispravak problema zbog kojeg se neke postavke više nisu mogle uređivati.
+* Ispravak resetiranja glavne lozinke s virtualnom pumpom.
+* Ispravljen uvoz velikih datoteka sigurnosne kopije postavki.
 
 ---
 
-**Version 3.3.0.0**
+**Verzija 3.3.1.0**
 
-Release date: 29-12-2024
+Datum izdanja: 06-01-2025
 
-**Main features**
+**Promjene korisničkog sučelja**
 
-* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior:
-  * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
-  * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
-  * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
-* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users
-  * Note : Requires latest version of xDrip+ or Juggluco.
-* New **Automation** triggers
-* Unattended settings exports
+* [Dodane boje za razlikovanje AAPSClienta i AAPSClienta2](#RemoteControl_aapsclient) @MilosKozak
+* Poboljšani izgled i ikone korisničkih radnji
+
+**Ostale funkcije**
+
+* Novi okidač automatizacije: [broj koraka](#screen-heart-rate-steps) @Roman Rihter
+* Dopušteno primanje svega pri potpunoj sinkronizaciji NSCv3 (uključujući podatke koji se prije nisu sinkronizirali, kao što je TBR) @MilosKozak
+* NSClient v3: objava (Announcement) sada radi (_tj._ iz AAPSClienta u AAPS) @MilosKozak
+
+**Tehničke promjene i ispravci pogrešaka**
+
+* Ispravak rušenja Insighta @philoul
+* Ispravak stvaranja prevelikog broja unosa deviceStatus u Nightscoutu @MilosKozak
+* Ispravak apsorpcije ugljikohidrata @MilosKozak
+* Ispravljena boja izbornih gumba (RadioButtons) i potvrdnih okvira (CheckBoxes) @MilosKozak
+* Ispravljena pogreška u prijenosu postotka dinamičkog ISF-a @MilosKozak
+* Riješena pogrešno smještena obavijest dinamičkog ISF-a @MilosKozak
+* Ispravljena pogreška u Watchfaceovima @philoul
+
+---
+
+**Verzija 3.3.0.0**
+
+Datum izdanja: 29-12-2024
+
+**Glavne značajke**
+
+* Značajka **[Dinamički ISF](../DailyLifeWithAaps/DynamicISF.md)** više nije poseban dodatak, nego je sada uključena kao opcija dodatka [OpenAPS SMB](#Config-Builder-aps), uz neke promjene u ponašanju:
+  * **Zamjena profila** i **Postotak profila** sada se uzimaju u obzir za **dinamički ISF** u pogledu jačine dinamičke osjetljivosti
+  * Izračunava se prosječni **ISF** za posljednja 24 sata i ta se vrijednost koristi za bolus kalkulator i izračun **aktivnih ugljikohidrata (COB)**. Vrijednost **ISF-a iz profila** uopće se ne koristi (osim kao rezerva kada podaci povijesti nisu dostupni)
+  * Stranica dokumentacije za dinamički ISF iznova je napisana. Pročitajte važan odjeljak [Što treba uzeti u obzir pri aktiviranju dinamičkog ISF-a](#dyn-isf-things-to-consider-when-activating-dynamicisf).
+* [Omogućite „Uvijek omogući SMB“ i „Omogući SMB nakon ugljikohidrata“](#Open-APS-features-enable-smb-always) za korisnike FreeStyle Libre 2 i Libre 3
+  * Napomena: potrebna je najnovija verzija xDrip+ ili Juggluca.
+* Novi okidači **Automatizacije**
+* Automatski izvoz postavki (bez korisnika)
 
 **Kako ažurirati**
 
-* Before upgrading:
-  * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
-  * If you use the “old” Combo driver with ruffy device, migrate to the [native Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) before update
-  * You will lose your [additional graphs](#AapsScreens-section-g-additional-graphs) on the HomeScreen during upgrade: make a manual note of your current configuration if needed, so that you can recreate them after upgrade.
-  * The [Bluetooth connectivity issues some people encounter on Android 15](../Getting-Started/Phones.md) are **NOT** solved by this release (this is an Android issue, not **AAPS**). A fix is available in 3.3.1.2.
-  * The BYODA button on the homescreen is no longer available due to Android limitations. This is fixed in 3.3.1.2.
-* Update instructions: follow the [Update to a new version](../Maintenance/UpdateToNewVersion.md) guide.
-  * [Android Studio version called "Ladybug"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already have an older version of Android Studio installed, you may need to <span style="color:red">configure the JVM version to 21</span>. See [Troubleshooting Android Studio > Incompatible Gradle JVM](#incompatible-gradle-jvm).
-  * Tip - if you do not want to lose your **AAPS** history ALWAYS do an UPDATE and NOT an UNINSTALL/INSTALL. As a precaution, back up your current **AAPS** settings and old APK to revert to an old version should anything go wrong.
-* After upgrading:
-  * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
+* Prije nadogradnje:
+  * **<span style="color:red">Ova verzija zahtijeva Google Android 11.0 ili noviji</span>**. Provjerite verziju svog telefona prije pokušaja ažuriranja.
+  * Ako koristite „stari“ upravljački program za Combo s uređajem ruffy, prije ažuriranja prijeđite na [izvorni upravljački program za Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
+  * Tijekom nadogradnje izgubit ćete svoje [dodatne grafove](#AapsScreens-section-g-additional-graphs) na početnom zaslonu: ako je potrebno, ručno zapišite svoju trenutnu konfiguraciju kako biste ih mogli ponovno stvoriti nakon nadogradnje.
+  * [Problemi s Bluetooth vezom koje neki korisnici imaju na Androidu 15](../Getting-Started/Phones.md) **NISU** riješeni ovim izdanjem (to je problem Androida, a ne **AAPS-a**). Ispravak je dostupan u 3.3.1.2.
+  * Gumb BYODA na početnom zaslonu više nije dostupan zbog ograničenja Androida. To je ispravljeno u 3.3.1.2.
+* Upute za ažuriranje: slijedite vodič [Ažuriranje na novu verziju ili granu](../Maintenance/UpdateToNewVersion.md).
+  * Za izradu ove verzije potrebna je [verzija Android Studija pod nazivom „Ladybug“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) ili novija. Ako već imate instaliranu stariju verziju Android Studija, možda ćete morati <span style="color:red">postaviti verziju JVM-a na 21</span>. Pogledajte [Rješavanje problema s Android Studiom > Incompatible Gradle JVM](#incompatible-gradle-jvm).
+  * Savjet – ako ne želite izgubiti povijest **AAPS-a**, UVIJEK napravite AŽURIRANJE, a NE DEINSTALACIJU/INSTALACIJU. Iz opreza napravite sigurnosnu kopiju trenutnih postavki **AAPS-a** i starog APK-a kako biste se mogli vratiti na staru verziju ako nešto pođe po zlu.
+* Nakon nadogradnje:
+  * Na kartici Održavanje postavite novu [postavku „AAPS mapa“](#preferences-maintenance-logdirectory).
 
-**Detailed changes**
+**Detaljne promjene**
 
-**CGMs and Pumps**
+**CGM-ovi i pumpe**
 
-* [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users @MilosKozak
-* [Medtrum driver](../CompatiblePumps/MedtrumNano.md) improvements @jbr77rr
-  * Communication improvements, including new setting to workaround problems on some smartphones
-  * Show reservoir level at start of activation
-  * Fix bug where activation returns to start and user cannot finish the activation
-  * Feedback for sync status and other clarifications
-* New supported pump : [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
-* New supported CGMs : [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer and [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
-* Insight driver rewritten to kotlin @Philoul
-* Removed old ruffy dependent Combo driver
+* [Omogućite „Uvijek omogući SMB“ i „Omogući SMB nakon ugljikohidrata“](#Open-APS-features-enable-smb-always) za korisnike FreeStyle Libre 2 i Libre 3 @MilosKozak
+* Poboljšanja [upravljačkog programa za Medtrum](../CompatiblePumps/MedtrumNano.md) @jbr77rr
+  * Poboljšanja komunikacije, uključujući novu postavku za zaobilaženje problema na nekim pametnim telefonima
+  * Prikaz razine spremnika na početku aktivacije
+  * Ispravak pogreške zbog koje se aktivacija vraća na početak i korisnik ne može dovršiti aktivaciju
+  * Povratne informacije o statusu sinkronizacije i druga pojašnjenja
+* Nova podržana pumpa: [Equil 5.3](../CompatiblePumps/Equil5.3.md) @EquilHack
+* Novi podržani CGM-ovi: [Ottai](../CompatibleCgms/OttaiM8.md) @ottai-developer i [Syai Tag](../CompatibleCgms/SyaiTagX1.md) @syai-dev
+* Upravljački program za Insight iznova napisan u Kotlinu @Philoul
+* Uklonjen stari upravljački program za Combo ovisan o ruffyju
 
-**UI changes**
+**Promjene korisničkog sučelja**
 
-* [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
-* New [QuickWizard](#Preferences-quick-wizard) options @radicalb
-  * The QuickWizard now uses the same logic for bolus calculation and display as the calculator. You can now use the “carb time” field in QuickWizard to pre-bolus.
-* New [graph scale menu](#aaps-screens-main-graph); [additional graphs menu](#AapsScreens-activate-optional-information) UI improvements @Philoul
-* [ConfigBuilder layout improvement](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
-  * Sections are now collapsed by default. Use arrow to expand.
-* Variable sensitivity visible in AAPSClient
-* BolusWizard UI improvements @kenzo44
-* Fix text display in pump tabs when using light theme @jbr77rr
+* [Jednostavni način rada](#preferences-simple-mode) zadano je uključen pri novoj instalaciji @MilosKozak
+* Nove opcije [brzog kalkulatora](#Preferences-quick-wizard) @radicalb
+  * Brzi kalkulator sada koristi istu logiku za izračun i prikaz bolusa kao i kalkulator. Sada možete koristiti polje „Vrijeme UH“ u brzom kalkulatoru za bolus prije obroka (pre-bolus).
+* Novi [izbornik mjerila grafa](#aaps-screens-main-graph); poboljšanja korisničkog sučelja [izbornika dodatnih grafova](#AapsScreens-activate-optional-information) @Philoul
+* [Poboljšan izgled Konfiguracije](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
+  * Odjeljci su sada zadano sažeti. Za proširenje koristite strelicu.
+* Promjenjiva osjetljivost vidljiva u AAPSClientu
+* Poboljšanja korisničkog sučelja bolus kalkulatora @kenzo44
+* Ispravak prikaza teksta na karticama pumpe pri korištenju svijetle teme @jbr77rr
 
-**Other functionalities**
+**Ostale funkcije**
 
-* [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
-* New [Automation trigger](#automations-automation-triggers) @vanelsberg
-  * Pod Activation (patch pump only)
-* New [Automation triggers](#automations-automation-triggers) @jbr77rr
-  * Cannula age, Insulin age, Battery age, Sensor age, Reservoir level, Pump battery level
-* Allowing negative carbs entry @MilosKozak
-* New Parameter [“AAPS directory”](#preferences-maintenance-settings) to choose a storage directory different from the default one.
-* Allow for [insulin records when pump suspended](#aaps-screens-buttons-insulin) @jbr77rr
-* Updated [Objective 2](#objectives-objective2) @MilosKozak
-  * Check that master password is set and known
-* Random carbs in test mode @MilosKozak
-* Fixed bug in TDD calculation @MilosKozak
-* SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
+* [Automatski izvoz postavki (bez korisnika)](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
+* Novi [okidač automatizacije](#automations-automation-triggers) @vanelsberg
+  * Aktivacija Pod-a (samo za pumpe bez katetera)
+* Novi [okidači automatizacije](#automations-automation-triggers) @jbr77rr
+  * Starost kanile, Starost inzulina, Starost baterije pumpe, Starost senzora, Razina spremnika, Razina baterije pumpe
+* Dopušten unos negativnih ugljikohidrata @MilosKozak
+* Novi parametar [„AAPS mapa“](#preferences-maintenance-settings) za odabir mape za pohranu različite od zadane.
+* Dopušteni [zapisi o inzulinu kada je pumpa obustavljena](#aaps-screens-buttons-insulin) @jbr77rr
+* Ažuriran [Cilj 2](#objectives-objective2) @MilosKozak
+  * Provjera je li glavna lozinka postavljena i poznata
+* Nasumični ugljikohidrati u testnom načinu @MilosKozak
+* Ispravljena pogreška u izračunu TDD-a @MilosKozak
+* SMS naredbe: mogućnost da se [**ne** šalje SMS za promjenu profila](#sms-commands-too-many-messages) koja dolazi iz NS-a @MilosKozak
 
 **Pametni satovi**
 
-* wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
-* Watch tiles from Automation actions @Philoul
-* Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
-* EXTRA: show\_user\_actions\_on\_watch\_only @MilosKozak
+* poboljšanja za sat i Watchfaceove @Philoul @MilosKozak @olorinmaia
+* Pločice na satu iz radnji automatizacije @Philoul
+* Kombinirani Watchfaceovi iz AAPS-a, AAPSClienta i AAPSClienta2 za praćenje više pacijenata @Philoul @MilosKozak
+* DODATNO: show\_user\_actions\_on\_watch\_only @MilosKozak
 
-**Technical changes**
+**Tehničke promjene**
 
-* [log files location change](#Accessing-logfiles-accessing-logfiles)
-* new internal modules structure @MilosKozak
-* split persistence layer from main code @MilosKozak
-* build files rewritten to kts @MilosKozak
-* algorithms rewritten to kotlin for better performance @MilosKozak
-* tons of new unit tests @MilosKozak and others
-* more code converted to kotlin @MilosKozak
-* new preferences management, xml \-\> kotlin @MilosKozak
-* new CI configuration, run CI on own servers @MilosKozak
-* libraries updated to latest version, toml @MilosKozak
-* migration to kotlin 2.0, java 21 @MilosKozak
+* [promjena lokacije datoteka dnevnika](#Accessing-logfiles-accessing-logfiles)
+* nova struktura internih modula @MilosKozak
+* sloj pohrane podataka odvojen od glavnog kôda @MilosKozak
+* datoteke za izradu iznova napisane u kts @MilosKozak
+* algoritmi iznova napisani u Kotlinu za bolje performanse @MilosKozak
+* mnoštvo novih jediničnih testova @MilosKozak i drugi
+* više kôda pretvoreno u Kotlin @MilosKozak
+* novo upravljanje postavkama, xml \-\> kotlin @MilosKozak
+* nova CI konfiguracija, CI se pokreće na vlastitim poslužiteljima @MilosKozak
+* biblioteke ažurirane na najnoviju verziju, toml @MilosKozak
+* prelazak na kotlin 2.0, java 21 @MilosKozak
 
 ---
 
@@ -568,94 +568,94 @@ Ovo je posljednja verzija koja podržava Android 10. Ako ne možete nadograditi 
 
 (version3200)=
 
-**Version 3.2.0.0 dedicated to @Philoul**
+**Verzija 3.2.0.0 posvećena @Philoul**
 
-Release date: 23-10-2023
+Datum izdanja: 23-10-2023
 
-**Important hints**
+**Važne napomene**
 
-- NS 15 is required
-- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. The same is valid for AAPS and AAPSClient itself.
-- Websockets in v3 plugin work in a similar manner as v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the opposite side it means delays in exchanging data. Please read [here](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
-- If you are using xdrip as cgm source you must select it again after update due to internal changes
-- Tidepool can be used as a replacement of NS to pass first objective
-- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
-- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
-- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
+- Potreban je NS 15
+- Dok se u dodatku NS v3 koriste websocketi, tretmani uneseni putem sučelja NS-a (gumb plus) i drugih aplikacija koje koriste API v1 ne šalju se u AAPS. To će biti ispravljeno u budućem izdanju NS-a. Uvijek koristite istog klijenta (v1 ili v3) u AAPS-u i AAPSClientu dok NS interno potpuno ne prijeđe na v3. Isto vrijedi i za sam AAPS i AAPSClient.
+- Websocketi u dodatku v3 rade slično kao u dodatku v1. Bez omogućenih websocketa AAPS redovito zakazuje preuzimanja iz NS-a, što bi trebalo smanjiti potrošnju energije jer NS nije stalno povezan. S druge strane, to znači kašnjenja u razmjeni podataka. Prije korištenja [ovdje](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) pročitajte važne napomene razvojnog tima!
+- Ako koristite xdrip kao izvor CGM-a, nakon ažuriranja ga morate ponovno odabrati zbog internih promjena
+- Tidepool se može koristiti umjesto NS-a za prolazak prvog cilja
+- Ako šaljete podatke u xDrip+, morate konfigurirati dodatak za sinkronizaciju s xDripom. Da biste u xDripu primali vrijednosti GUK-a iz AAPS-a, kao izvor mora biti odabran „xDrip+ Sync Follower“
+- Ako želite prijeći na upravljački program ComboV2, Ruffy se mora deinstalirati, a pumpa ponovno upariti s AAPS-om
+- Da biste koristili dodatak DynISF, morate započeti Cilj 11 (svi prethodni moraju biti završeni kako bi se mogao započeti Cilj 11)
 
 **Promjene**
 
-- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
-- ComboV2 pump driver (no need of Ruffy) @dv1
-- Medtrum Nano driver @jbr7rr
-- Korean DanaI support @MilosKozak
-- Glunovo CGM support @christinadamianou
-- G7 support @MilosKozak @rICTx-T1D @khskekec
-- NSClient v3 plugin @MilosKozak
-- Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
-- DynamicISF plugin @Chris Wilson, @tim2000s
-- Garmin watchface & HeartRate support @buessow
-- New logo @thiagomsoares
-- New watchface @Philoul
-- fixed tons of issues from 3.1 version
-- allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
-- new SMS commands LOOP LGS/CLOSED @pzadroga
-- wear translations @Andries-Smit
-- xdrip communication moved to separate module @MilosKozak
-- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
-- Diaconn driver fixes @miyeongkim
-- more database maintenance options @MilosKozak
-- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
-- Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
-- migration to kts build system @MilosKozak
-- improved CI integration @MilosKozak @buessow
-- tests cleanup @ryanhaining @MilosKozak
-- new 110k+ lines of code, changed 240k lines, 6884 changed files
+- Upravljački program za pumpu EOPatch2 / GlucomenDay @jungsomyeonggithub @MilosKozak
+- Upravljački program za pumpu ComboV2 (Ruffy nije potreban) @dv1
+- Upravljački program za Medtrum Nano @jbr7rr
+- Podrška za korejsku DanaI @MilosKozak
+- Podrška za Glunovo CGM @christinadamianou
+- Podrška za G7 @MilosKozak @rICTx-T1D @khskekec
+- Dodatak NSClient v3 @MilosKozak
+- Podrška za Tidepool @MilosKozak
+- Dodatak za zaglađivanje @MilosKozak, @justmara, eksponencijalno zaglađivanje @nichi (Tsunami), zaglađivanje prosjekom @jbr7rr
+- Dodatak DynamicISF @Chris Wilson, @tim2000s
+- Watchface za Garmin i podrška za otkucaje srca @buessow
+- Novi logotip @thiagomsoares
+- Novi Watchface @Philoul
+- ispravljeno mnoštvo problema iz verzije 3.1
+- mogućnost dodavanja bilješki na više mjesta @Sergey Zorchenko
+- Ispravci korisničkog sučelja @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
+- nove SMS naredbe LOOP LGS/CLOSED @pzadroga
+- prijevodi za sat @Andries-Smit
+- komunikacija s xDripom premještena u zaseban modul @MilosKozak
+- interne promjene: ažurirane verzije biblioteka, prelazak na rx3, nova struktura modula @MilosKozak
+- ispravci upravljačkog programa za Diaconn @miyeongkim
+- više opcija za održavanje baze podataka @MilosKozak
+- AAPSClient javlja je li glavni telefon priključen na struju @MilosKozak
+- Promjena u bolus kalkulatoru. Ako CGM nije dostupan, postotak se zanemaruje (tj. koristi se 100 %)
+- prelazak na sustav izrade kts @MilosKozak
+- poboljšana integracija CI-ja @MilosKozak @buessow
+- čišćenje testova @ryanhaining @MilosKozak
+- više od 110 tisuća novih redaka kôda, 240 tisuća promijenjenih redaka, 6884 promijenjene datoteke
 
-(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Important comments on using v3 versus v1 API for Nightscout with AAPS**
+(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)= **Važne napomene o korištenju API-ja v3 u odnosu na v1 za Nightscout s AAPS-om**
 
-v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
-- v1 sends only 2 days of data
-- v1 sends all 2 days of data on every reconnection
-- using websockets is mandatory = permanent connection, more battery consumption
-- during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
+v1 je stari protokol koji se koristi za razmjenu podataka između web stranice NS-a i poslužitelja NS-a. Ima mnoga ograničenja
+- v1 šalje samo 2 dana podataka
+- v1 pri svakom ponovnom povezivanju šalje sve podatke za 2 dana
+- korištenje websocketa je obavezno = stalna veza, veća potrošnja baterije
+- pri čestim prekidima veze s NS-om veza se pauzira na 15 minuta kako bi se spriječila velika potrošnja podataka
 
-v3 is new protocol. More safe and efficient
-- while using tokens you can better define access rights
-- protocol is more efficient on both sides (AAPS & NS)
-- It can read up to 3 months of data from NS
-- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
-- NSClient is not paused on disconnections
+v3 je novi protokol. Sigurniji i učinkovitiji
+- uz korištenje tokena možete bolje odrediti prava pristupa
+- protokol je učinkovitiji na obje strane (AAPS i NS)
+- Može čitati do 3 mjeseca podataka iz NS-a
+- na svakom uređaju možete odabrati hoćete li koristiti websockete ili ne (korištenje znači brža ažuriranja, nekorištenje znači manju potrošnju energije, ali sporija ažuriranja, tj. minute)
+- NSClient se ne pauzira pri prekidima veze
 
-LIMITATIONS
-- NS 15 must be used with AAPS 3.2
-- v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
-- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
-- remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient or SMS if you want to enter data remotely
+OGRANIČENJA
+- S AAPS-om 3.2 mora se koristiti NS 15
+- v3 ne vidi ažuriranja napravljena protokolom v1 (vjerojatno će to biti riješeno u nekoj budućoj verziji NS-a)
+- u suprotnom smjeru, zbog stare neučinkovite metode praćenja promjena, v1 vidi promjene napravljene putem v3
+- imajte na umu da NS interno zasad još koristi v1, pa ako koristite v3, podatke nije moguće unositi putem web sučelja NS-a. Ako želite unositi podatke na daljinu, morate koristiti AAPSClient ili SMS
 
-RECOMMENDED SETTING
-- because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preferred because of efficiency
-- using websockets or not using with v3 depends on your preference
-- it is HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+PREPORUČENA POSTAVKA
+- zbog svega navedenog trebali biste odabrati samo jednu metodu i koristiti je na svim uređajima (imajte na umu da u vrijeme pisanja ovog teksta svi drugi programi za prijenos podataka koriste v1). Ako odlučite prijeći na v3, odaberite v3 u AAPS-u i u svim AAPSClientima
+- v3 je bolji izbor zbog učinkovitosti
+- hoćete li s v3 koristiti websockete ili ne, ovisi o vašim željama
+- VRLO se preporučuje da AAPS prikuplja sve podatke, a zatim ih kao jedini program za prijenos šalje u NS. Svi drugi uređaji/aplikacije trebaju samo čitati iz NS-a. Time ćete spriječiti sukobe i pogreške sinkronizacije. To vrijedi i za slanje podataka o GUK-u u NS putem konektora Dexcom Share itd.
 
 ---
 
 (version3100)=
 
-**Version 3.1.0**
+**Verzija 3.1.0**
 
-Release date: 19-07-2022
+Datum izdanja: 19-07-2022
 
 [Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0)
 
 ---
 
-**Version 3.0.0**
+**Verzija 3.0.0**
 
-Release date: 31-01-2022
+Datum izdanja: 31-01-2022
 
 [Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/3.0.0)
 
@@ -663,11 +663,11 @@ Release date: 31-01-2022
 
 (version2821)=
 
-## Version 2.8.2.1
+## Verzija 2.8.2.1
 
-Release date: 05-10-2021
+Datum izdanja: 05-10-2021
 
-This version is the last one supporting Android 8. [Release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
+Ovo je posljednja verzija koja podržava Android 8. [Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1)
 
 ---
 
@@ -681,9 +681,9 @@ Datum izdanja: 23-01-2021
 
 (version-2811)= (important-hints-2-8-1-1)=
 
-**Version 2.8.1.1**
+**Verzija 2.8.1.1**
 
-Release date: 12-01-2021
+Datum izdanja: 12-01-2021
 
 [Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.1.1)
 
@@ -691,9 +691,9 @@ Release date: 12-01-2021
 
 (Releasenotes-version-2-8-0)=
 
-**Version 2.8.0**
+**Verzija 2.8.0**
 
-Release date: 01-01-2021
+Datum izdanja: 01-01-2021
 
 [Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
@@ -701,9 +701,9 @@ Release date: 01-01-2021
 
 (Releasenotes-version-2-7-0)=
 
-**Version 2.7.0**
+**Verzija 2.7.0**
 
-Release date: 24-09-2020
+Datum izdanja: 24-09-2020
 
 [Bilješke o izdanju](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
@@ -711,41 +711,41 @@ Release date: 24-09-2020
 
 (Releasenotes-version-2-6-1-4)=
 
-**Version 2.6.1.4**
+**Verzija 2.6.1.4**
 
-Release date: 04-05-2020
+Datum izdanja: 04-05-2020
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2614)
 
 ---
 
-**Version 2.6.1.3**
+**Verzija 2.6.1.3**
 
-Release date: 03-05-2020
+Datum izdanja: 03-05-2020
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2613)
 
 ---
 
-**Version 2.6.1.2**
+**Verzija 2.6.1.2**
 
-Release date: 19-04-2020
+Datum izdanja: 19-04-2020
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2612)
 
 ---
 
-**Version 2.6.1.1**
+**Verzija 2.6.1.1**
 
-Release date: 06-04-2020
+Datum izdanja: 06-04-2020
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-2611)
 
 ---
 
-**Version 2.6.1**
+**Verzija 2.6.1**
 
-Release date: 21-03-2020
+Datum izdanja: 21-03-2020
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-261)
 
@@ -753,17 +753,17 @@ Release date: 21-03-2020
 
 (Releasenotes-version-2-6-0)=
 
-**Version 2.6.0**
+**Verzija 2.6.0**
 
-Release date: 29-02-2020
+Datum izdanja: 29-02-2020
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260)
 
 ---
 
-**Version 2.5.1**
+**Verzija 2.5.1**
 
-Release date: 31-10-2019
+Datum izdanja: 31-10-2019
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-251)
 
@@ -771,49 +771,49 @@ Release date: 31-10-2019
 
 (Releasenotes-version-2-5-0)=
 
-**Version 2.5.0**
+**Verzija 2.5.0**
 
-Release date: 26-10-2019
+Datum izdanja: 26-10-2019
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250)
 
 ---
 
-**Version 2.3**
+**Verzija 2.3**
 
-Release date: 25-04-2019
+Datum izdanja: 25-04-2019
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-23)
 
 ---
 
-**Version 2.2.2**
+**Verzija 2.2.2**
 
-Release date: 07-04-2019
+Datum izdanja: 07-04-2019
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-222)
 
 ---
 
-**Version 2.2**
+**Verzija 2.2**
 
-Release date: 29-03-2019
+Datum izdanja: 29-03-2019
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-22)
 
 ---
 
-**Version 2.1**
+**Verzija 2.1**
 
-Release date: 03-03-2019
+Datum izdanja: 03-03-2019
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-21)
 
 ---
 
-**Version 2.0**
+**Verzija 2.0**
 
-Release date: 03-11-2018
+Datum izdanja: 03-11-2018
 
 [Bilješke o izdanju](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-20)
 
