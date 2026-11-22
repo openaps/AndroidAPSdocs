@@ -182,7 +182,7 @@ Lütfen **ANA PAROLANIZI KAYBETMEYİN**. Parolanızı bir yere not edin, _örne�
 
 Bu ekran yalnızca **AAPS**, **AAPS** dizininde daha önce dışa aktarılmış ayarlar bulduğunda gösterilir ("Saklanan ayarlar bulundu"). Örneğin uygulamayı yeniden yüklediğinizde veya yeni bir telefona geçtiğinizde.
 
-- Önceki yapılandırmanızı geri yüklemek için "**Ayarları içe aktar**" düğmesine basın — bkz. [Ayarları dışa ve içe aktarma](../Maintenance/ExportImportSettings.md).
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
 - Yeni bir yapılandırma ile başlamak için "**İLERİ**" düğmesine basın ve sihirbaza devam edin.
 
 ![Ayarları içe aktarın](../images/setup-wizard/Wizard-ImportSettings.png)
