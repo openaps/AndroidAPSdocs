@@ -5,7 +5,7 @@
 **AAPS** is not available to download, due to regulations concerning medical devices. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! Подробности смотрите на странице [Часто задаваемые вопросы по работе ИПЖ](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to build **AAPS** on a new computer: copy your back-up keystore file to the new computer. Затем выполните [первую сборку **AAPS**](../SettingUpAaps/BuildingAaps.md) вместо этого руководства. Разница только в том, что вместо создания нового хранилища ключей вы можете выбрать то, которое скопировали на новый компьютер.
+Если вы хотите собрать **AAPS** на новом компьютере: скопируйте резервную копию файла хранилища ключей на новый компьютер. Затем выполните [первую сборку **AAPS**](../SettingUpAaps/BuildingAaps.md) вместо этого руководства. Разница только в том, что вместо создания нового хранилища ключей вы можете выбрать то, которое скопировали на новый компьютер.
 ```
 
 ## Обзор обновления AAPS до новой версии с помощью Android Studio
@@ -15,7 +15,7 @@ In case you want to build **AAPS** on a new computer: copy your back-up keystore
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Если возникнут проблемы, смотрите отдельную страницу [Устранение неполадок Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### Export your settings
 
@@ -53,7 +53,7 @@ In case you experience problems, see separate page for [troubleshooting Android 
 * Wait while download is in progress, you will see this as info in the bottom bar. По окончании появится сообщение об успехе.
 
   ```{note}
-  Обновленные файлы могут отличаться! This is not an indication of a problem.
+  Обновленные файлы могут отличаться! Это не признак проблемы.
   ```
 
    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
@@ -83,7 +83,7 @@ In case you experience problems, see separate page for [troubleshooting Android 
 Для других сценариев, таких как создание нового хранилища ключей в Android Studio, нужно удалить старое приложение перед установкой apk. **Обязательно экспортируйте свои настройки!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Смотрите инструкцию [Перенос и установка AAPS на смартфон](../SettingUpAaps/TransferringAndInstallingAaps.md). Там, где действует [проверка разработчиков Android](#android-developer-verification) от Google (с сентября 2026 г., в зависимости от страны), устанавливайте приложение через [ADB](#android-developer-verification-adb), а не нажатием на файл APK.
 
 Продолжайте [здесь](#Update-to-new-version-check-aaps-version-on-phone).
 
@@ -95,6 +95,6 @@ See the instructions for [transferring and installing AAPS](../SettingUpAaps/Tra
 
 Выдохните!
 
-Then check if your problem is already documented on the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Затем проверьте, не описана ли ваша проблема на отдельной странице [Устранение неполадок Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 Если нужна дополнительная помощь, обратитесь к другим пользователям **AAPS** в [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) или [Discord](https://discord.gg/4fQUWHZ4Mw).
