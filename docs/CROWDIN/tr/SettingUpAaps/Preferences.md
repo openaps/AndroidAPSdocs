@@ -31,6 +31,7 @@
 - **AAPS** varsayılan olarak telefonun dilini kullanır (önerilir).
 
 - **AAPS**'i telefondan farklı bir dilde kullanmak istiyorsanız, dili burada seçin. Android 13 ve sonrasında **AAPS** bu dili Android'de kendi uygulama dili olarak kaydeder. Böylece tüm ekranları, ana ekran, widget'lar ve sayıların yazılış biçimi bu dili izler.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - Dili değiştirdiğinizde **AAPS** metinleri hemen yeni dile geçer. Bazı metinler hâlâ eski dilde görünüyorsa **AAPS**'i yeniden başlatın.
 - Android 12'de bu ayar gösterilmez: **AAPS** her zaman telefonun dilini kullanır.
@@ -86,6 +87,10 @@ Açık tema, koyu tema veya telefonun sistem ayarını izleme arasında seçim y
 
 ![Ayarlar > Koruma](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Master password
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### Uygulama koruması
 
-Uygulama korunuyorsa, **AAPS**'i açmak için ve [koruma zaman aşımından](#Preferences-password-and-pin-retention) sonra uygulamaya geri döndüğünüzde yeniden parolayı girmeniz veya telefonun biyometrik kimlik doğrulamasını kullanmanız gerekir.
+Uygulama korunuyorsa, **AAPS**'i açmak için ve [koruma zaman aşımından](#Preferences-password-and-pin-retention) sonra uygulamaya geri döndüğünüzde yeniden parolayı girmeniz veya telefonun biyometrik kimlik doğrulamasını kullanmanız gerekir. Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-Yanlış parola girilirse **AAPS** hemen kapanır. Ancak daha önce başarıyla açılmışsa arka planda çalışmaya devam eder.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Bolus protection
 
