@@ -121,6 +121,8 @@
 
 Όταν ένας κρίσιμος συναγερμός έχει σταματήσει το Patch, ο συναγερμός προσφέρει αντί γι' αυτό το κουμπί **Απενεργοποίηση Patch**. Αν το πατήσετε, το Patch απορρίπτεται με τον ίδιο τρόπο.
 
+If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+
 (carelevo-alarms-and-notifications)=
 
 ## Συναγερμοί και ειδοποιήσεις
