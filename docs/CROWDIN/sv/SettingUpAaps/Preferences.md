@@ -31,6 +31,7 @@ I **AAPS** v4 finns inställningarna på skärmen **Inställningar**. Det finns 
 - Som standard följer **AAPS** telefonens språk (rekommenderas).
 
 - Om du vill ha **AAPS** på ett annat språk än telefonen väljer du det här. På Android 13 och nyare registrerar **AAPS** det som sitt eget appspråk i Android, så att alla dess skärmar, huvudskärmen, widgetarna och sättet att skriva tal följer det.
+- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
 
 - När du byter språk visas texterna i **AAPS** direkt på det nya språket. Om vissa texter fortfarande visas på det gamla språket startar du om **AAPS**.
 - På Android 12 visas inte den här inställningen: **AAPS** använder alltid telefonens språk.
@@ -86,6 +87,10 @@ Välj mellan ljust tema, mörkt tema eller att följa telefonens systeminställn
 
 ![Inställningar > Skydd](../images/preferences/settings_protection.png)
 
+Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+
+A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+
 (Preferences-master-password)=
 ### Huvudlösenord
 
@@ -110,9 +115,9 @@ If you forgot your master password, see [How to reset the master password?](#FAQ
 
 ### Skydd för app
 
-Om appen är skyddad måste du ange lösenordet eller använda telefonens biometriska autentisering för att öppna **AAPS**, och igen när du går tillbaka till appen efter att [tidsgränsen för skydd](#Preferences-password-and-pin-retention) har gått ut.
+Om appen är skyddad måste du ange lösenordet eller använda telefonens biometriska autentisering för att öppna **AAPS**, och igen när du går tillbaka till appen efter att [tidsgränsen för skydd](#Preferences-password-and-pin-retention) har gått ut. Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
 
-**AAPS** stängs direkt om fel lösenord anges – men fortsätter att köra i bakgrunden om appen tidigare har öppnats med rätt lösenord.
+If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
 
 ### Bolusskydd
 
