@@ -45,7 +45,7 @@ Toque no botão **+** para criar uma nova cena.
 
 ### Começar a partir de um modelo
 
-Para **criar** uma cena, toque no botão **+** no ecrã Cenas. O primeiro passo é **Começar a partir de um modelo**: escolha uma cena pronta para uma situação comum — *Exercício*, *Dia de doença*, *Dia de doença — Vómitos*, *Sono*, *Noite após exercício*, *Antes da refeição*, *Álcool*, *Condução*, *Banho*, *Fase lútea*, *Tempo quente*, *Procedimento médico* — ou comece a partir de uma cena *Em branco*. Cada modelo **preenche previamente as ações recomendadas** e pode ajustar tudo nos passos seguintes.
+Para **criar** uma cena, toque no botão **+** no ecrã Cenas. O primeiro passo é **Começar a partir de um modelo**: escolha uma cena pronta para uma situação comum — *Exercício*, *Dia de doença*, *Dia de doença — Vómitos*, *Sono*, *Noite após exercício*, *Antes da refeição*, *Álcool*, *Condução*, *Banho*, *Fase lútea*, *Tempo quente*, *Procedimento médico* — ou comece a partir de uma cena *Em branco*. Cada modelo **preenche previamente as ações recomendadas** e pode ajustar tudo nos passos seguintes. For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
 
 ![«Começar a partir de um modelo» — escolha um ponto de partida](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@ Uma cena sem cena seguinte apenas pede que confirme:
 
 ![Janela Terminar cena](../images/v4/Scenes/scene_end_dialog.png)
 
-Terminar uma cena **reverte** as alterações que ela fez (por exemplo, a troca de perfil e o alvo temporário que iniciou).
+Terminar uma cena **reverte** as alterações que ela fez (por exemplo, a troca de perfil e o alvo temporário que iniciou). The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
 
 Enquanto uma cena está ativa, o perfil e o alvo no ecrã principal mostram um pequeno ícone de cena quando foi a cena que os definiu. O painel **Cenas** da navegação inferior continua disponível para iniciar outra cena:
 
