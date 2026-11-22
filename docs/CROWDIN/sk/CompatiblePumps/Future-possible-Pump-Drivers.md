@@ -14,6 +14,8 @@ Omnipod 5 ([domovská stránka](https://www.omnipod.com/))
 
 ![Ovládač Omnipod 5 sa vyvíja](../images/future-pumps/omnipod5-driver.png)
 
+See [Omnipod 5](../CompatiblePumps/Omnipod5.md) for how the driver in development works.
+
 Tandem: t:Mobi ([domovská stránka](https://www.tandemdiabetes.com/))
 
 ![Ovládač Tandem t:Mobi sa vyvíja](../images/future-pumps/tandem-mobi-driver.png)
