@@ -67,6 +67,8 @@ xDrip, ESEL gibi üretici uygulamasının bildirimlerini okuyabilir. Eksik veril
 
 **AAPS**, glikoz değerlerini arada başka bir uygulama olmadan doğrudan resmi Eversense uygulamasının bildirimlerinden okuyabilir. Eksik verileri doldurma (backfill) yoktur.
 
+This works with the **Eversense 365** app, both the US version and the version for other countries.
+
 - [**Konfigürasyon → KŞ kaynağı**](#Config-Builder-bg-source) içinde **Bildirim okuyucu** seçeneğini seçin ve sorulduğunda **AAPS**'e bildirim erişimi verin.
 - Eversense uygulamasının bildiriminde güncel glikoz değerini gösterdiğinden emin olun.
 
