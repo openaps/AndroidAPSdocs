@@ -200,13 +200,6 @@ Butoanele din partea de jos a ecranului pompei se schimbă în funcție de stare
 
 - **Discard Pod:** Removes an unfinished pod from **AAPS**. Shown only when a pod activation stopped part-way. **AAPS** asks you to confirm. După eliminare, **AAPS** nu mai poate comunica cu acea pompă: scoateți-o de pe corp.
 
-![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activează pompă
@@ -304,7 +297,7 @@ To deactivate a pod (either because it expired or because it failed):
 
 1. Deschideți ecranul pompei DASH (**Gestionați** > **Pompă**) și apăsați **Dezactivați pompa**.
 
-   ![Butonul Dezactivați pompa pe ecranul pompei DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Butonul Dezactivați pompa pe ecranul pompei DASH](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. On the **Deactivate Pod** step, press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
 
