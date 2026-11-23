@@ -200,13 +200,6 @@ DASH 펌프 화면에서 Pod를 관리합니다: Pod 활성화와 비활성화, 
 
 - **Pod 폐기:** 완료되지 않은 Pod를 **AAPS**에서 제거합니다. Pod 활성화가 중간에 멈췄을 때만 표시됩니다. **AAPS**가 확인을 요청합니다. 폐기한 후에는 **AAPS**가 그 Pod와 더 이상 통신할 수 없습니다: Pod를 몸에서 제거하십시오.
 
-![Pod 관리 메뉴](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-위 스크린샷은 별도의 **Pod 관리** 메뉴가 있던 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 **Pod 활성화**, **Pod 비활성화**, **테스트 신호음 작동**, **Pod 이력**을 포함한 이 모든 동작이 펌프 화면에 바로 있는 글자 버튼입니다.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activate Pod
@@ -304,7 +297,7 @@ Pod를 비활성화하려면 (만료되었거나 고장 났을 때):
 
 1. DASH 펌프 화면 (**관리** > **펌프**)을 열고 **Pod 비활성화**를 누르십시오.
 
-   ![DASH 펌프 화면의 Pod 비활성화 버튼](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![DASH 펌프 화면의 Pod 비활성화 버튼](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. **Pod 비활성화** 단계에서 **다음**을 누르십시오. 대화 상자가 다음과 같이 묻습니다: *비활성화된 Pod는 다시 사용할 수 없습니다. 지금 이 Pod를 비활성화하시겠습니까?* Pod 비활성화를 시작하려면 **확인**을, Pod를 유지하려면 **취소**를 누르십시오. 비활성화하면 모든 인슐린 주입이 중지되며 되돌릴 수 없습니다.
 
