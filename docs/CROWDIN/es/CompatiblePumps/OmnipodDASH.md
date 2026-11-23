@@ -200,13 +200,6 @@ Los botones de la parte inferior de la pantalla de la bomba cambian según el es
 
 - **Descartar Pod:** Quita de **AAPS** un pod sin terminar. Solo se muestra cuando una activación de pod se paró a medias. **AAPS** te pide confirmación. Después de descartarlo, **AAPS** ya no puede comunicarse con ese pod: quítatelo del cuerpo.
 
-![El menú Gestión del Pod](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-La captura de pantalla de arriba es de una versión anterior de **AAPS**, que tenía un menú **Gestión del Pod** (Pod Management) separado. En **AAPS** 4 todas estas acciones, incluidas **Activar Pod**, **Desactivar Pod**, **Reproducir sonido de prueba** e **Historial de Pod**, son botones con texto directamente en la pantalla de la bomba.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activar Pod
@@ -304,7 +297,7 @@ Para desactivar un pod (porque ha caducado o porque ha fallado):
 
 1. Abre la pantalla de la bomba DASH (**Administrar** > **Bomba**) y pulsa **Desactivar Pod**.
 
-   ![El botón Desactivar Pod en la pantalla de la bomba DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![El botón Desactivar Pod en la pantalla de la bomba DASH](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. En el paso **Desactivar Pod**, pulsa **Siguiente**. Un diálogo pregunta *Un POD desactivado no se puede volver a utilizar. ¿Quieres desactivar este POD ahora?* Pulsa **OK** para empezar a desactivar el pod, o **Cancelar** para conservarlo. La desactivación suspende toda la administración de insulina y no se puede deshacer.
 
