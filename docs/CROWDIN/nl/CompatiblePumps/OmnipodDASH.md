@@ -200,13 +200,6 @@ De knoppen onderaan het pompscherm veranderen met de status van de pod. Alleen d
 
 - **Pod verwijderen:** Verwijdert een niet-afgemaakte pod uit **AAPS**. Alleen getoond als een pod-activering halverwege is gestopt. **AAPS** vraagt je om te bevestigen. Na het verwijderen kan **AAPS** niet meer met die pod communiceren: haal hem van je lichaam.
 
-![Het menu Pod Management](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, die een apart menu **Pod Management** had. In **AAPS** 4 zijn al deze acties, ook **Activeer Pod**, **Deactiveer Pod**, **Testpieptoon afspelen** en **Pod Historie**, knoppen met tekst direct op het pompscherm.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activeer Pod
@@ -304,7 +297,7 @@ Om een pod te deactiveren (omdat hij verlopen of defect is):
 
 1. Open het DASH-pompscherm (**Beheren** > **Pomp**) en druk op **Deactiveer Pod**.
 
-   ![De knop Deactiveer Pod op het DASH-pompscherm](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![De knop Deactiveer Pod op het DASH-pompscherm](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. Druk in de stap **Deactiveer Pod** op **Volgende**. Een venster vraagt: *Een gedeactiveerde Pod kan niet opnieuw worden gebruikt. Nu deze Pod deactiveren?* Druk op **OK** om de pod te deactiveren, of op **Annuleren** om hem te houden. Deactiveren stopt alle insulinetoediening en kan niet ongedaan worden gemaakt.
 
