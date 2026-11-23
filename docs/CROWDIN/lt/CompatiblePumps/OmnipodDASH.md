@@ -200,13 +200,6 @@ Mygtukai pompos ekrano apačioje keičiasi pagal Pod būseną. Rodomi tik tie my
 
 - **Pašalinti Pod:** Pašalina nebaigtą aktyvuoti Pod iš **AAPS**. Rodomas tik tada, kai Pod aktyvavimas nutrūko pusiaukelėje. **AAPS** paprašo jūsų patvirtinimo. Pašalinus Pod, **AAPS** nebegali su juo bendrauti: nuimkite jį nuo kūno.
 
-![Pod valdymo meniu (Pod Management)](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-Aukščiau esanti ekrano kopija yra iš ankstesnės **AAPS** versijos, kurioje buvo atskiras **Pod valdymo** meniu. **AAPS** 4 versijoje visi šie veiksmai, taip pat **Aktyvuoti Pod**, **Išjungti Pod**, **Paleisti bandomąjį signalą** ir **Pod istorija**, yra mygtukai su užrašais tiesiog pompos ekrane.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activate Pod
@@ -304,7 +297,7 @@ Norėdami išjungti Pod (nes baigėsi jo naudojimo laikas arba jis sugedo):
 
 1. Atidarykite DASH pompos ekraną (**Valdymas** > **Pompa**) ir paspauskite **Išjungti Pod**.
 
-   ![Mygtukas „Išjungti Pod“ DASH pompos ekrane](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Mygtukas „Išjungti Pod“ DASH pompos ekrane](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. Žingsnyje **Išjungti Pod** paspauskite **Toliau**. Lange klausiama: *Išjungto Pod pakartotinai naudoti negalima. Išjungti šį Pod dabar?* Paspauskite **OK**, jei norite pradėti išjungti Pod, arba **Atšaukti**, jei norite jį palikti. Išjungimas sustabdo visą insulino tiekimą, ir jo atšaukti negalima.
 
