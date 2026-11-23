@@ -200,13 +200,6 @@ Gumbi na dnu zaslona pumpe mijenjaju se ovisno o stanju Pod-a. Prikazuju se samo
 
 - **Odbaci Pod:** Uklanja nedovršeni Pod iz **AAPS-a**. Prikazuje se samo kada je aktivacija Pod-a stala na pola puta. **AAPS** traži da potvrdite. Nakon odbacivanja **AAPS** više ne može komunicirati s tim Pod-om: skinite ga s tijela.
 
-![Izbornik Upravljanje Pod-om](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-Snimka zaslona iznad je iz starije verzije **AAPS-a**, koja je imala zaseban izbornik **Upravljanje Pod-om**. U **AAPS-u** 4 sve ove radnje, uključujući **Aktiviraj Pod**, **Deaktiviraj Pod**, **Reproduciraj testni zvučni signal** i **Povijest Pod-a**, gumbi su s tekstom izravno na zaslonu pumpe.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Aktiviraj Pod
@@ -304,7 +297,7 @@ Za deaktivaciju Pod-a (jer je istekao ili jer je zakazao):
 
 1. Otvorite zaslon pumpe DASH (**Upravljanje** > **Pumpa**) i pritisnite **Deaktiviraj Pod**.
 
-   ![Gumb Deaktiviraj Pod na zaslonu pumpe DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Gumb Deaktiviraj Pod na zaslonu pumpe DASH](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. U koraku **Deaktiviraj Pod** pritisnite **Sljedeći**. Dijalog pita *Deaktivirani Pod ne može se ponovno koristiti. Deaktivirati ovaj Pod sada?* Pritisnite **U redu** za početak deaktivacije Pod-a ili **Otkaži** da ga zadržite. Deaktivacija obustavlja svu isporuku inzulina i ne može se poništiti.
 
