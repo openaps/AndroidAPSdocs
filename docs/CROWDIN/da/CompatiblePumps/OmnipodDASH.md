@@ -200,13 +200,6 @@ Knapperne nederst på pumpeskærmen skifter efter podens tilstand. Kun de knappe
 
 - **Kassér Pod:** Fjerner en ufærdig pod fra **AAPS**. Vises kun, når en aktivering af en pod stoppede halvvejs. **AAPS** beder dig bekræfte. Når poden er kasseret, kan **AAPS** ikke længere kommunikere med den: fjern den fra din krop.
 
-![Menuen Pod Management](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-Skærmbilledet ovenfor er fra en tidligere **AAPS**-version, som havde en separat menu **Pod Management**. I **AAPS** 4 er alle disse handlinger, også **Aktiver Pod**, **Deaktiver Pod**, **Afspil test bip** og **Pod-historik**, knapper med tekst direkte på pumpeskærmen.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Aktiver Pod
@@ -304,7 +297,7 @@ Sådan deaktiverer du en pod (enten fordi den er udløbet, eller fordi den har s
 
 1. Åbn DASH-pumpeskærmen (**Administrer** > **Pumpe**), og tryk på **Deaktiver Pod**.
 
-   ![Knappen Deaktiver Pod på DASH-pumpeskærmen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Knappen Deaktiver Pod på DASH-pumpeskærmen](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. I trinnet **Deaktiver Pod** trykker du på **Næste**. En dialog spørger *En deaktiveret Pod kan ikke bruges igen. Deaktiver denne Pod nu?* Tryk på **OK** for at begynde at deaktivere poden eller på **Annuller** for at beholde den. Deaktivering suspenderer al insulintilførsel og kan ikke fortrydes.
 
