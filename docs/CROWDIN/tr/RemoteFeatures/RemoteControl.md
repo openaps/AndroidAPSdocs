@@ -134,21 +134,21 @@ Nightscout'un “bulutta” bir sunucu olmasının yanı sıra, doğrudan iPhone
 
 **Nightscout** uygulamasını iPhone'unuza yükledikten sonra uygulamayı açın ve kurulum adımlarını izleyerek Nightscout adresinizi girin (aşağıda, solda). Bu adresin biçimi, Nightscout'unuzun nerede barındırıldığına göre değişebilir. (_ör._ http://youraddresshere.herokuapp.com). Ardından Nightscout API secret'ınızı girin (aşağıda, sağda). API parolası sorulmazsa, uygulamanın üst kısmındaki asma kilide tıklayarak bunu girmeniz gerekir:
 
-![image](../images/remote-control-24.png)
+![image](../images/remote_control_and_following/remote-control-24.png)
 
 Kurulum hakkında daha fazla bilgi doğrudan [Nightscout](https://nightscout.github.io/nightscout/discover/) sayfasında bulunabilir
 
 İlk girişte çok basit bir ekran görürsünüz. Sağ üstteki “hamburger” menüsünü seçip aşağı kaydırarak görüntüleme seçeneklerini özelleştirin:
 
-![image](../images/remote-control-25.png)
+![image](../images/remote_control_and_following/remote-control-25.png)
 
 “Settings” (Ayarlar) bölümüne kadar aşağı kaydırın. KŞ gösteriminde varsayılan ölçek logaritmik olduğundan “scale” (ölçek) ayarını “linear” (doğrusal) yapmak isteyebilirsiniz. Pompa bazalının görünmesi için “render basal” altında “default” seçin.
 
-![image](../images/remote-control-25b.png)
+![image](../images/remote_control_and_following/remote-control-25b.png)
 
 İstediğiniz seçenekleri seçin. Alarmlar için başka bir uygulama kullanıyorsanız alarmların işaretini kaldırın.
 
-![image](../images/remote-control-26.png)
+![image](../images/remote_control_and_following/remote-control-26.png)
 
 “show plugins” bölümüne gelene kadar aşağı kaydırmaya devam edin.
 
@@ -156,7 +156,7 @@ Kurulum hakkında daha fazla bilgi doğrudan [Nightscout](https://nightscout.git
 
 Önemli: bu değişikliklerin geçerli olması için şimdi en alttaki “save” (kaydet) düğmesine tıklamanız gerekir.
 
-![image](../images/remote-control-27.png)
+![image](../images/remote_control_and_following/remote-control-27.png)
 
 “save” düğmesine bastıktan sonra uygulama ana Nightscout ekranınıza döner. Ekran aşağı yukarı şöyle görünür:
 
@@ -170,7 +170,7 @@ Kurulum hakkında daha fazla bilgi doğrudan [Nightscout](https://nightscout.git
 8. Bazal insülin profili
 9. Yeşil çizgi = geçmiş glikoz Mavi çizgiler = tahmin edilen glikoz
 
-![image](../images/remote-control-28.png)
+![image](../images/remote_control_and_following/remote-control-28.png)
 
 Nightscout uygulamasının sol üst menüsüne daha ayrıntılı bakalım:
 
@@ -179,7 +179,7 @@ Nightscout uygulamasının sol üst menüsüne daha ayrıntılı bakalım:
 3. Hamburger - tercihleri ayarlamak için
 4. Careportal - Tedavi kaydı (**AAPS**'in bunları ne zaman uyguladığı için [aşağıya](#RemoteControl_nightscout-treatments) bakın)
 
-![Nightscout üst çubuğu](../images/remote-control-29.png)
+![Nightscout üst çubuğu](../images/remote_control_and_following/remote-control-29.png)
 
 Bu ekrandaki gri sekmelerde **AAPS** sisteminin durumu hakkında çok fazla bilgi vardır (bir sekmeye dokunursanız daha da fazla bilgi görünür):
 
@@ -195,9 +195,9 @@ Bu ekrandaki gri sekmelerde **AAPS** sisteminin durumu hakkında çok fazla bilg
 10. AAPS telefonunun pil durumu
 11. Veritabanınızın boyutu. Çok dolarsa (yalnızca kendi kurduğunuz Nightscout'ta; barındırma hizmetlerinde bunu dikkate almayın) bağlantı sorunları yaşamaya başlayabilirsiniz. Bu sayıyı küçültmek için Admin tools menüsünden (hamburger menüsü üzerinden) veri silebilirsiniz.
 
-![image](../images/remote-control-30.png)
+![image](../images/remote_control_and_following/remote-control-30.png)
 
-![image](../images/remote-control-31.png)
+![image](../images/remote_control_and_following/remote-control-31.png)
 
 Açılır pencereyi kapatmak için sayfanın altındaki "refresh" düğmesine basın.
 
@@ -233,7 +233,7 @@ Bu, bildirilmiş (ama bolusu yapılmamış) karbonhidratları silmek için fayda
 
 ### Seçenek 1) AAPS'i bir Wear OS saatinden kontrol etme
 
-![Wear uzaktan kontrol 1](../images/Wear_Remote1.png)
+![Wear uzaktan kontrol 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 [Saatinizde **AAPS**'i kurduktan](../WearOS/BuildingAapsWearOS.md) sonra, akıllı saat arayüzleri ve işlevleri hakkında ayrıntılı bilgileri [Wear AAPS'in akıllı saatte kullanımı](../WearOS/WearOsSmartwatch.md) sayfasında bulabilirsiniz.
 
@@ -285,19 +285,19 @@ Popüler Samsung Galaxy Watch 4 (40mm) üzerinde **AAPS** kurulumu için özel a
 
 ### Seçenek 3) Telefondaki **AAPS**'i uzaktan kontrol etmek için saatte AAPSClient
 
-![Wear uzaktan kontrol 2](../images/Wear_Remote2.png)
+![Wear uzaktan kontrol 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 Saat yazılımı olan **AAPSClient** Wear apk'sı, doğrudan [GitHub](https://github.com/nightscout/AndroidAPS/releases/) üzerinden indirilebilir.
 
 Yazılımı indirmek için telefondaki istemci uygulamasına uyan saat uygulamasına tıklayın: **wear-aapsclient-release_**_sürüm_, **AAPSClient** ile; **wear-aapsclient2-release_**_sürüm_, **AAPSClient2** ile kullanılır (bkz. [AAPSClient, AAPSClient2 ve AAPSClient3 hakkında](#remotecontrol-aapsclient-versions)):
 
-![image](../images/github_release_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Ardından "save as" (farklı kaydet) seçin ve dosyayı bilgisayarınızda uygun bir yere kaydedin:
 
 
-![image](../images/save_as_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
