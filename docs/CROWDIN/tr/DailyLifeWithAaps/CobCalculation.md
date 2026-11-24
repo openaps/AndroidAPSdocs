@@ -53,7 +53,7 @@ Algoritma mevcut **AKRB** hesaplamasını yanlış bulursa ve kullanıcı öncek
 
 __AAPS__ normalde karbonhidrat emilimini **KŞ** sapmalarından algılar. Kullanıcı karbonhidrat girmiş ama **AAPS** bunların tahmini emilimini **KŞ** sapmalarından algılayamıyorsa, emilimi hesaplamak için bunun yerine [min_5m_carbimpact](#Preferences-min_5m_carbimpact) yöntemini kullanır (‘yedek yöntem’, İngilizcesi ‘fallback’). Bu yöntem **KŞ** sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış AKRB değerlerine yol açabilir.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Hint on wrong COB value](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Yukarıdaki ekran görüntüsünde, karbonhidrat emilimi zamanın %66'sında sapmalardan algılanan değer yerine min_5m_carbimpact ile hesaplanmıştır. Bu, kullanıcının algoritmanın hesapladığından daha az **AKRB**'ye sahip olmuş olabileceğini gösterir.
 
