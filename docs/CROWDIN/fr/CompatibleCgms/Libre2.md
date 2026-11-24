@@ -63,7 +63,7 @@ Techniquement, la glycémie actuelle est envoyée à xDrip chaque minute. Un fil
 
 → Menu hamburger → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![Paramètres avancés xDrip pour Libre 2 & valeurs brutes](../images/xDrip_Libre3_Smooth.png)
+![Paramètres avancés xDrip pour Libre 2 & valeurs brutes](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Ceci est obligatoire pour la boucle. Les courbes sont lisses et les résultats avec la boucle sont excellents. Les valeurs brutes sur lesquelles les alarmes sont basées sont un peu plus instables, mais correspondent aux valeurs que le lecteur affiche aussi. De plus, les valeurs brutes peuvent être affichées dans le graphique xDrip afin de pouvoir réagir à temps aux changements rapides. Veuillez activer Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" et "show Sensors Infos". Ainsi, les valeurs brutes sont aussi affichées sous forme de petits points blancs, et des informations supplémentaires sur le capteur sont disponibles dans le menu Système.
 
