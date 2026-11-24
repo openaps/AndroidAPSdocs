@@ -53,7 +53,7 @@ Si l'absorption minimale des glucides (min_5m_carbimpact) est utilisée à la pl
 
 Normalement, __AAPS__ détecte l'absorption des glucides à partir des écarts de **glycémie**. Si l'utilisateur a saisi des glucides mais qu'**AAPS** ne peut pas détecter leur absorption à partir des écarts de **glycémie**, il utilise la méthode [min_5m_carbimpact](#Preferences-min_5m_carbimpact) pour calculer l'absorption (méthode dite « de secours », en anglais « fallback »). Comme cette méthode calcule seulement l'absorption minimale des glucides sans tenir compte des écarts de **glycémie**, elle peut donner des valeurs de GA incorrectes.
 
-![Indication d'une valeur de GA erronée](../images/Calculator_SlowCarbAbsorption.png)
+![Indication d'une valeur de GA erronée](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 Dans la capture d'écran ci-dessus, l'absorption des glucides a été calculée 66 % du temps par min_5m_carbimpact au lieu de la valeur détectée à partir des écarts. Cela indique que l'utilisateur avait peut-être moins de **GA** que ce que l'algorithme a calculé.
 
