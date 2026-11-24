@@ -318,7 +318,7 @@ Pasirinktiniai ciferblatai, sukurti su pasirinktinio ciferblato formato 3.0 ar n
 
 ## AAPSv2 ciferblatas – paaiškinimai
 
-![AAPSv2 ciferblato paaiškinimai](../images/Watchface_Legend.png)
+![AAPSv2 ciferblato paaiškinimai](../images/wearos/Watchface_Legend.png)
 
 A – laikas nuo paskutinio ciklo vykdymo
 
