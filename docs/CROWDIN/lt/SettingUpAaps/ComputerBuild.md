@@ -255,7 +255,7 @@ Tam tikru metu Android Studio užsidarys ir vėl pasileis. Jūsų gali būti pak
 
 Tik Windows naudotojams: jei ugniasienė prašo leidimo, suteikite prieigą:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Firewall permission java](../images/Building-the-App/AndroidStudio361_18.png)
 
 Sėkmingai klonavus saugyklą, Android Studio atidarys klonuotą projektą.
 
