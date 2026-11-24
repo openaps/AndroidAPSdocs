@@ -134,21 +134,21 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 當你在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入你的 Nightscout 地址（見下方左側）。此地址的格式可能取決於你的 Nightscout 是如何託管的。(_例如_ http://youraddresshere.herokuapp.com)。然後輸入你的 Nightscout API 密碼（見下方右側）。如果未提示你輸入 API 密碼，請點擊應用程式頂部的鎖形圖示輸入密碼：
 
-![圖像](../images/remote-control-24.png)
+![圖像](../images/remote_control_and_following/remote-control-24.png)
 
 更多設置資訊可直接從 [Nightscout](https://nightscout.github.io/nightscout/discover/) 獲得
 
 當你第一次登入時，顯示非常簡單。透過選擇右上角的「漢堡選單」並向下捲動來自訂顯示選項：
 
-![圖像](../images/remote-control-25.png)
+![圖像](../images/remote_control_and_following/remote-control-25.png)
 
 向下滾動到“設置”。你可能會想將 血糖 顯示的“比例”設置為“線性”，因為預設值是對數比例，並在“渲染基礎率”下選擇“預設”以顯示幫浦的基礎率。
 
-![圖像](../images/remote-control-25b.png)
+![圖像](../images/remote_control_and_following/remote-control-25b.png)
 
 選擇你想要的選項。如果你使用其他應用程式來發出警報，請取消勾選警報。
 
-![圖像](../images/remote-control-26.png)
+![圖像](../images/remote_control_and_following/remote-control-26.png)
 
 繼續向下滾動直到找到“顯示外掛”。
 
@@ -156,7 +156,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 重要的是，你現在需要點擊底部的“儲存”，以使這些更改生效。
 
-![圖像](../images/remote-control-27.png)
+![圖像](../images/remote_control_and_following/remote-control-27.png)
 
 按下“儲存”後，應用程式將返回你的 Nightscout 主畫面，顯示如下：
 
@@ -170,7 +170,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 8. 基礎胰島素設定檔
 9. 綠線 = 歷史血糖 藍線 = 預測血糖
 
-![圖像](../images/remote-control-28.png)
+![圖像](../images/remote_control_and_following/remote-control-28.png)
 
 更詳細地查看 Nightscout 應用程式左上角的選單：
 
@@ -179,7 +179,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 3. 漢堡選單 - 用於設定偏好設定
 4. Careportal - 記錄治療（關於**AAPS** 何時套用這些紀錄，請參閱[下方](#RemoteControl_nightscout-treatments)）
 
-![Nightscout 頂端列](../images/remote-control-29.png)
+![Nightscout 頂端列](../images/remote_control_and_following/remote-control-29.png)
 
 此畫面上的灰色標籤包含大量關於 **AAPS** 系統狀態的資訊（點擊標籤可顯示更多資訊）：
 
@@ -195,9 +195,9 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 10. AAPS 手機的電池狀態
 11. 你的資料庫大小。如果它變得過於滿載（僅限 DIY Nightscout - 托管服務會忽略這一點），你可能會開始遇到連線問題。你可以通過管理工具選單（透過漢堡選單）刪除資料以減少資料庫大小。
 
-![圖像](../images/remote-control-30.png)
+![圖像](../images/remote_control_and_following/remote-control-30.png)
 
-![圖像](../images/remote-control-31.png)
+![圖像](../images/remote_control_and_following/remote-control-31.png)
 
 按下頁面底部的「重新整理」以關閉彈出視窗。
 
@@ -233,7 +233,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ### 選項 1) 從 Wear OS 手錶控制 AAPS
 
-![穿戴遠端 1](../images/Wear_Remote1.png)
+![穿戴遠端 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 一旦你[在你的手錶上設置**AAPS**](../WearOS/BuildingAapsWearOS.md)，有關智慧型手錶錶盤及其功能的詳細資訊可以在[智慧型手錶上操作 AAPS](../WearOS/WearOsSmartwatch.md)中找到。
 
@@ -285,19 +285,19 @@ b)  使用者不想輸入驗證碼（簡訊指令需要輸入驗證碼）。
 
 ### 選項 3) 在手錶上運作 AAPSClient 以遠端控制手機上的 **AAPS**
 
-![穿戴遠端 2](../images/Wear_Remote2.png)
+![穿戴遠端 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 手錶用的軟體 **AAPSClient** Wear APK，可直接從 [GitHub](https://github.com/nightscout/AndroidAPS/releases/) 下載。
 
 若要下載軟體，請點選與手機用戶端應用程式相符的手錶應用程式：**wear-aapsclient-release_**_version_ 對應 **AAPSClient**，**wear-aapsclient2-release_**_version_ 對應 **AAPSClient2**（請參閱 [AAPSClient、AAPSClient2 和 AAPSClient3 簡介](#remotecontrol-aapsclient-versions)）：
 
-![圖像](../images/github_release_wear_aapsclient_apk.png)
+![圖像](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 然後點擊“另存為”，並將文件儲存到電腦上的方便位置：
 
 
-![圖像](../images/save_as_wear_aapsclient_apk.png)
+![圖像](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
