@@ -20,7 +20,7 @@
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) 및 [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![이미지](../images/following_dexcom_follow.png)
+![이미지](../images/remote_control_and_following/following_dexcom_follow.png)
 
 * Dexcom Follow는 다양한 휴대폰(Android와 iPhone 모두)과 호환됩니다. 공식 Dexcom 앱으로 센서 데이터를 받지 않는 경우에도 Dexcom Follow를 사용할 수 있습니다.
 
@@ -47,7 +47,7 @@ Dexcom Follow를 사용하려면, 사용하는 앱에 따라 BYODA에서 직접 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![이미지](../images/following_nightguard.png)
+![이미지](../images/remote_control_and_following/following_nightguard.png)
 
 장점 (사용자 보고):
 
@@ -73,7 +73,7 @@ Dexcom Follow를 사용하려면, 사용하는 앱에 따라 BYODA에서 직접 
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![이미지](../images/following_nightwatch.png)
+![이미지](../images/remote_control_and_following/following_nightwatch.png)
 
 
 * Nightwatch는 자신을 Nightscout 클라이언트라고 소개하며, Android 휴대폰이나 태블릿에서 사용자의 Nightscout 혈당 값을 모니터링합니다.
@@ -132,7 +132,7 @@ xDripSwift는 원래의 xDrip 앱을 iOS로 옮겨 만들었으며, 이후 "xDri
 
 
 
-![이미지](../images/following_xdrip4ios.png)
+![이미지](../images/remote_control_and_following/following_xdrip4ios.png)
 
 "**Shuggah**는 무엇입니까?" 우크라이나 개발자 그룹이 xDrip4iOS의 프로젝트 코드(GitHub에 공개되어 있음)를 복사하여 사업자 계정으로 App Store에 출시했습니다. Shuggah 출시는 xDrip4iOS 개발자들과 전혀 관련이 없습니다.
 
@@ -140,9 +140,9 @@ xDripSwift는 원래의 xDrip 앱을 iOS로 옮겨 만들었으며, 이후 "xDri
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![이미지](../images/following_sugarmate.png)
+![이미지](../images/remote_control_and_following/following_sugarmate.png)
 
-![이미지](../images/following_sugarmate_graph.png)
+![이미지](../images/remote_control_and_following/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/)는 App Store에서 iPhone에 다운로드할 수 있습니다. Sugarmate는 다음과 호환됩니다:
@@ -155,7 +155,7 @@ Sugarmate 사용자들은 미국에서 Apple CarPlay와 함께 사용하여 운�
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![이미지](../images/following_spike.png)
+![이미지](../images/remote_control_and_following/following_spike.png)
 
 Spike는 기본 수신기나 팔로워 앱으로 사용할 수 있으며, 혈당, 알람, IOB 등을 제공합니다.
 
@@ -175,7 +175,7 @@ Spike는 기본 수신기나 팔로워 앱으로 사용할 수 있으며, 혈당
 
 ### M5Stack
 
-![이미지](../images/following_m5stack.png)
+![이미지](../images/remote_control_and_following/following_m5stack.png)
 
 M5Stack은 여러 용도로 프로그래밍할 수 있는 작은 상자입니다. Martin의 프로젝트 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki)은 센서 혈당 값과 추세, IOB, COB를 표시합니다. 플라스틱 상자 안에 컬러 디스플레이, micro SD 카드 슬롯, 버튼 3개, 스피커, 내장 배터리가 있습니다. 훌륭한 혈당 모니터이며, Nightscout 계정이 있으면 비교적 쉽게 설정할 수 있습니다. 보통 집 Wi-Fi에서 사용하지만, 일부 사용자는 휴대폰 Wi-Fi 핫스팟에 연결하여 오토바이를 탈 때 디스플레이로 사용한다고 보고합니다.
 
@@ -183,9 +183,9 @@ M5Stack은 여러 용도로 프로그래밍할 수 있는 작은 상자입니다
 
 SugarPixel은 연속 혈당 측정을 위한 보조 혈당 표시 및 알림 장치로, 사용자 스마트폰의 Dexcom 앱 또는 Nightscout 앱과 연결됩니다. 이 장치는 실시간 혈당 값을 표시합니다. 이 CGM 하드웨어 모니터는 무작위 톤으로 만든 소리 알림(매우 큼), 청각 장애인을 위한 진동 알림, 사용자 지정 디스플레이 옵션, 기본 제공 다중 사용자 팔로우 기능이 장점입니다.
 
-![이미지](../images/following_sugarpixel.png)
+![이미지](../images/remote_control_and_following/following_sugarpixel.png)
 
-![이미지](../images/following_sugarpixel_led_display.png)
+![이미지](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
 * SugarPixel은 사용자에게 맞게 mg/dL과 mmol/L로 여러 디스플레이 옵션을 제공하며, 혈당 값을 색으로 구분합니다.
 * 기본 화면은 혈당, 추세 화살표, 증분을 표시합니다. 증분은 마지막 측정값과 비교한 + 또는 - 변화입니다.
@@ -197,7 +197,7 @@ SugarPixel은 연속 혈당 측정을 위한 보조 혈당 표시 및 알림 장
 
 **Nightscout Clock**은 **Ulanzi TC001** 장치에서 실행되는 오픈 소스 소프트웨어입니다. Dexcom 서버 또는 Nightscout에 연결하여 실시간 혈당 값을 표시합니다.
 
-![Nightscout Clock으로 팔로우하기](../images/FollowingNightscoutClock.png)
+![Nightscout Clock으로 팔로우하기](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * 이 시계는 mmol/L과 mg/dL 단위를 모두 지원하며, 소리 알람이 있습니다.
 * 여러 가지 화면을 사용할 수 있습니다. 개요는 [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it)을 참조하십시오.
