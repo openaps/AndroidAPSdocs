@@ -317,7 +317,7 @@ These slots only work on watches running **Wear OS 5 or older**, where the custo
 
 ## APSv2 watchface - Legend
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 watchface](../images/wearos/Watchface_Legend.png)
 
 A - 上次闭环运行以来的时间
 
