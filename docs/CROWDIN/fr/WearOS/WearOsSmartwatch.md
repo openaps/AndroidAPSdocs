@@ -318,7 +318,7 @@ Ces emplacements ne fonctionnent que sur les montres sous **Wear OS 5 ou plus an
 
 ## Cadran AAPS v2 - Légende
 
-![Légende du cadran AAPS v2](../images/Watchface_Legend.png)
+![Légende du cadran AAPS v2](../images/wearos/Watchface_Legend.png)
 
 A - temps écoulé depuis le dernier calcul de la boucle
 
