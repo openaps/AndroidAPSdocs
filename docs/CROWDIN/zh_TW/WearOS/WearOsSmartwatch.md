@@ -324,7 +324,7 @@ AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。當你在手錶
 
 ## AAPSv2 手錶外觀 - 圖例
 
-![AAPSv2 手錶外觀圖例](../images/Watchface_Legend.png)
+![AAPSv2 手錶外觀圖例](../images/wearos/Watchface_Legend.png)
 
 A - 從最後一次循環運作以來的時間
 
