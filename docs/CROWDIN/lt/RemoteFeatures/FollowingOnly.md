@@ -20,7 +20,7 @@ Dažniausi būdai, naudojami kartu su **AAPS**, išsamiau aprašyti toliau.
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) ir [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![image](../images/following_dexcom_follow.png)
+![image](../images/remote_control_and_following/following_dexcom_follow.png)
 
 * Dexcom Follow veikia daugelyje telefonų (tiek Android, tiek iPhone). Dexcom Follow galima naudoti, net jei jutiklio duomenims gauti nenaudojate oficialios Dexcom programėlės.
 
@@ -47,7 +47,7 @@ Dexcom Follow atveju jutiklio duomenys tada eksportuojami iš **AAPS** telefono 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![image](../images/following_nightguard.png)
+![image](../images/remote_control_and_following/following_nightguard.png)
 
 KEEP
 
@@ -73,7 +73,7 @@ KEEP
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![image](../images/following_nightwatch.png)
+![image](../images/remote_control_and_following/following_nightwatch.png)
 
 
 * Nightwatch pristatoma kaip Nightscout klientas. Ji Android telefone arba planšetėje stebi naudotojo glikemiją Nightscout.
@@ -132,7 +132,7 @@ Jei norite, vėliau galite tapti „releaser“ (platintoju) ir [bendrinti asmen
 
 
 
-![image](../images/following_xdrip4ios.png)
+![image](../images/remote_control_and_following/following_xdrip4ios.png)
 
 „Kas yra **Shuggah**?“ Ukrainiečių kūrėjų grupė nukopijavo xDrip4iOS projekto kodą (kuris viešai skelbiamas GitHub) ir išleido jį App Store per verslo paskyrą. Shuggah versijos visiškai netvarko xDrip4iOS kūrėjai.
 
@@ -140,9 +140,9 @@ Jei norite, vėliau galite tapti „releaser“ (platintoju) ir [bendrinti asmen
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![image](../images/following_sugarmate.png)
+![image](../images/remote_control_and_following/following_sugarmate.png)
 
-![image](../images/following_sugarmate_graph.png)
+![image](../images/remote_control_and_following/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/) galima atsisiųsti į iPhone iš App Store. Sugarmate veikia su:
@@ -155,7 +155,7 @@ Sugarmate naudotojai praneša, kad JAV ją galima naudoti su Apple CarPlay ir va
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![image](../images/following_spike.png)
+![image](../images/remote_control_and_following/following_spike.png)
 
 Spike galima naudoti kaip pagrindinį imtuvą arba kaip sekėjo programėlę. Ji rodo KG, aliarmus, AIO ir kt.
 
@@ -175,7 +175,7 @@ KEEP Pagalbos galima rasti [Facebook](https://www.facebook.com/groups/1973791946
 
 ### M5Stack
 
-![image](../images/following_m5stack.png)
+![image](../images/remote_control_and_following/following_m5stack.png)
 
 M5Stack – tai maža dėžutė, kurią galima užprogramuoti daugeliui paskirčių. Martino projektas [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) rodo jutiklio glikemijos reikšmes ir tendencijas, AIO ir AAO. Tai plastikinė dėžutė su spalvotu ekranu, micro SD kortelės lizdu, 3 mygtukais, garsiakalbiu ir vidine baterija. Tai puikus glikemijos monitorius, kurį gana lengva nustatyti, jei turite Nightscout paskyrą. Dažniausiai naudotojai jį naudoja namų Wi-Fi tinkle, bet kai kurie praneša, kad naudoja jį kaip ekraną važiuodami motociklu, prijungę prie telefono Wi-Fi prieigos taško.
 
@@ -183,9 +183,9 @@ M5Stack – tai maža dėžutė, kurią galima užprogramuoti daugeliui paskirč
 
 SugarPixel – tai įrenginys, kuris rodo nuolatinio gliukozės stebėjimo duomenis ir įspėja. Jis jungiasi prie Dexcom programėlės arba Nightscout programėlės naudotojo išmaniajame telefone. Įrenginys rodo glikemijos rodmenis realiu laiku. Šis NGJ monitorius turi atsitiktinio tono garsinius įspėjimus (kurie yra labai garsūs), vibracijos įspėjimus klausos negalią turintiems žmonėms, pritaikomas ekrano parinktis ir integruotą sekimą keliems naudotojams.
 
-![image](../images/following_sugarpixel.png)
+![image](../images/remote_control_and_following/following_sugarpixel.png)
 
-![image](../images/following_sugarpixel_led_display.png)
+![image](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
 * SugarPixel turi kelias rodymo parinktis mg/dL ir mmol/l, kad atitiktų naudotojo poreikius, su glikemijos reikšmėmis skirtingomis spalvomis.
 * Standartiniame ekrano vaizde rodoma KG, tendencijos rodyklė ir pokytis. Pokytis – tai pasikeitimas + arba - nuo paskutinio rodmens.
@@ -197,7 +197,7 @@ SugarPixel – tai įrenginys, kuris rodo nuolatinio gliukozės stebėjimo duome
 
 **Nightscout Clock** yra atvirojo kodo programinė įranga, veikianti **Ulanzi TC001** įrenginyje. Ji jungiasi prie Dexcom serverių arba Nightscout ir rodo glikemijos rodmenis realiu laiku.
 
-![Sekimas su Nightscout Clock](../images/FollowingNightscoutClock.png)
+![Sekimas su Nightscout Clock](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * Laikrodis palaiko ir mmol/l, ir mg/dL vienetus, turi garsinius aliarmus.
 * Galimi keli ekrano vaizdai, jų apžvalgą rasite [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
