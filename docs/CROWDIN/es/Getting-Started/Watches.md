@@ -59,7 +59,7 @@ La mayoría de los problemas con los relojes independientes con **AAPS** vienen 
 
 Otros problemas son que es difícil conseguir suficiente duración de la batería, y los relojes con suficiente batería suelen ser grandes y gruesos. Los usuarios cuentan que tienen que luchar con el sistema operativo y los ajustes de ahorro de energía, que es difícil iniciar sensores en el reloj, que el alcance de Bluetooth es pobre (para mantener la conexión con el sensor y con la bomba) y que la resistencia al agua es dudosa. Puedes ver ejemplos en las fotos de abajo.
 
-![imagen](../images/watch_standalone_aaps_and_xdrip.png)
+![imagen](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ Los cambios recientes de **Wear OS** estropean poco a poco las esferas personali
 
 Después de [instalar **AAPS** en tu reloj](../WearOS/WearOsSmartwatch.md), podrás elegir automáticamente tu esfera preferida entre estas esferas propias de **AAPS**. En la mayoría de los relojes, solo tienes que mantener pulsada la pantalla de inicio hasta que se haga más pequeña y deslizar hacia la derecha para elegir otra pantalla:
 
-![imagen](../images/watchfaces_aaps_selection.png)
+![imagen](../images/watches/watchfaces_aaps_selection.png)
 
 Estas son las pantallas básicas incluidas en **AAPS**; hay [más esferas](#WearOS_changing-to-AAPS-watchface) y también puedes usar [complicaciones](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ Hay algunas esferas para Garmin que se integran con [AAPS](https://apps.garmin.c
 
 ![Configuración > Comunicación: la tarjeta Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) se integra directamente con **AAPS**. Muestra datos del estado del lazo (insulina activa, basal temporal) además de los valores de glucosa, y envía las lecturas de frecuencia cardiaca a **AAPS**. Está disponible en la tienda ConnectIQ; activa el complemento **Garmin** en **Configuración → Comunicación**. ![Esfera AAPS Glucose Watch con campos numerados](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) se integra directamente con **AAPS**. Muestra datos del estado del lazo (insulina activa, basal temporal) además de los valores de glucosa, y envía las lecturas de frecuencia cardiaca a **AAPS**. Está disponible en la tienda ConnectIQ; activa el complemento **Garmin** en **Configuración → Comunicación**. ![Esfera AAPS Glucose Watch con campos numerados](../images/watches/Garmin_WF-annotated.png)
 
 1. Valores de glucosa más alto y más bajo en el gráfico
 2. Cambio de glucosa por minuto
@@ -155,7 +155,7 @@ Estas son algunas opciones de relojes de solo seguimiento populares entre los us
 
 **WatchDrip+** es una app complementaria creada por la comunidad que muestra los datos de glucosa y del lazo en varios modelos de relojes inteligentes, sobre todo de las marcas Xiaomi (_p. ej._ Mi Band) y Amazfit:
 
-![imagen](../images/watch_watchdrip_plus.png)
+![imagen](../images/watches/watch_watchdrip_plus.png)
 
 Desde la versión 0.5, **WatchDrip+** lee los datos directamente de **AAPS**, sin usar xDrip+ como intermediario. En el teléfono con **AAPS**:
 
@@ -170,9 +170,9 @@ Puedes leer más sobre ellos, incluido cómo configurarlos, en el [sitio web de 
 
 ### Reloj Pebble
 
-![imagen](../images/watch_pebble.png)
+![imagen](../images/watches/watch_pebble.png)
 
-![imagen](../images/watch_pebble_watchface.png)
+![imagen](../images/watches/watch_pebble_watchface.png)
 
 
 Los relojes Pebble ([ya no se fabrican](https://en.wikipedia.org/wiki/Pebble_(watch))) se vendieron de 2013 a 2016 y todavía se pueden encontrar de segunda mano. Fitbit compró los activos de Pebble. Los usuarios de Pebble pueden usar la esfera Urchin para ver los datos de Nightscout. Los datos que se pueden mostrar incluyen IOB, la basal temporal activa y las predicciones. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
