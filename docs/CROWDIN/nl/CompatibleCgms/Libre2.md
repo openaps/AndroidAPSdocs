@@ -63,7 +63,7 @@ Technisch gezien wordt de actuele bloedglucosewaarde elke minuut naar xDrip gest
 
 → Hamburgermenu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip geavanceerde instellingen Libre 2 & ruwe waarden](../images/xDrip_Libre3_Smooth.png)
+![xDrip geavanceerde instellingen Libre 2 & ruwe waarden](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Dit is verplicht om te loopen. De grafieken zien er vloeiend uit en de loop-resultaten zijn goed. De ruwe waarden waarop de alarmen zijn gebaseerd schommelen iets meer, maar komen overeen met de waarden die de reader ook toont. Daarnaast kunnen de ruwe waarden getoond worden in de grafiek van xDrip, zodat je op tijd kunt reageren op snelle veranderingen. Zet in xDrip Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" en "show Sensors Infos" aan. Dan worden de ruwe waarden ook getoond als kleine witte stippen en is extra sensorinformatie beschikbaar in het systeemmenu.
 
