@@ -59,7 +59,7 @@ De meeste frustraties met zelfstandige **AAPS**-horloges komen door het kleine s
 
 Andere problemen: het is moeilijk om een goede batterijduur te krijgen, en horloges met een goede batterij zijn vaak groot en dik. Gebruikers melden problemen met het besturingssysteem en de energiebesparingsinstellingen, moeite met het starten van sensoren op het horloge, een slecht Bluetooth-bereik (voor de verbinding met zowel de sensor als de pomp) en twijfelachtige waterdichtheid. Voorbeelden staan op de foto's hieronder.
 
-![Afbeelding](../images/watch_standalone_aaps_and_xdrip.png)
+![Afbeelding](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ Recente wijzigingen in **Wear OS** maken de eigen **AAPS**-watchfaces steeds sle
 
 Na het [installeren van **AAPS** op je horloge](../WearOS/WearOsSmartwatch.md) kun je meteen je favoriete watchface kiezen uit deze **AAPS**-watchfaces. Op de meeste horloges druk je lang op het startscherm tot het scherm kleiner wordt, en veeg je naar rechts om een ander scherm te kiezen:
 
-![Afbeelding](../images/watchfaces_aaps_selection.png)
+![Afbeelding](../images/watches/watchfaces_aaps_selection.png)
 
 Dit zijn de basisschermen die in **AAPS** zitten. Er zijn [meer watchfaces](#WearOS_changing-to-AAPS-watchface) en je kunt ook [complicaties](#Watchfaces-complications) gebruiken.
 
@@ -122,7 +122,7 @@ In de Garmin ConnectIQ-store zijn er enkele watchfaces voor Garmin die samenwerk
 
 ![Configuratie > Communicatie: de kaart Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) werkt direct samen met **AAPS**. Het toont loopgegevens (actieve insuline, tijdelijk basaal) naast de glucosewaarden, en stuurt hartslagmetingen naar **AAPS**. Het is te vinden in de ConnectIQ-store; zet de plugin **Garmin** aan in **Configuratie → Communicatie**. ![AAPS Glucose Watch-watchface met genummerde velden](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) werkt direct samen met **AAPS**. Het toont loopgegevens (actieve insuline, tijdelijk basaal) naast de glucosewaarden, en stuurt hartslagmetingen naar **AAPS**. Het is te vinden in de ConnectIQ-store; zet de plugin **Garmin** aan in **Configuratie → Communicatie**. ![AAPS Glucose Watch-watchface met genummerde velden](../images/watches/Garmin_WF-annotated.png)
 
 1. Hoogste en laagste glucosewaarde in de grafiek
 2. Verandering van glucose per minuut
@@ -155,7 +155,7 @@ Hieronder een aantal populaire horloges om alleen te volgen bij **AAPS**-gebruik
 
 **WatchDrip+** is een companion-app van de community die glucose- en loopgegevens toont op verschillende smartwatches, vooral van de merken Xiaomi (_bijv._ Mi Band) en Amazfit:
 
-![Afbeelding](../images/watch_watchdrip_plus.png)
+![Afbeelding](../images/watches/watch_watchdrip_plus.png)
 
 Sinds versie 0.5 leest **WatchDrip+** zijn gegevens direct uit **AAPS**, zonder xDrip+ als tussenstation. Op de **AAPS**-telefoon:
 
@@ -170,9 +170,9 @@ Meer informatie, ook over het instellen, vind je op de [website van WatchDrip+](
 
 ### Pebble-horloge
 
-![Afbeelding](../images/watch_pebble.png)
+![Afbeelding](../images/watches/watch_pebble.png)
 
-![Afbeelding](../images/watch_pebble_watchface.png)
+![Afbeelding](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble-horloges ([nu niet meer gemaakt](https://en.wikipedia.org/wiki/Pebble_(watch))) waren van 2013 tot 2016 te koop, en zijn misschien nog tweedehands te vinden. Fitbit heeft de bezittingen van Pebble overgenomen. Pebble-gebruikers kunnen de Urchin-watchface gebruiken om Nightscout-gegevens te bekijken. Je kunt onder andere IOB, het actieve tijdelijk basaal en voorspellingen tonen. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.
