@@ -31,11 +31,11 @@ Vo webovom prehliadači otvorte [Google.com](https://www.google.com/) a prihlás
 
 Vpravo hore v ponuke Google vyberte aplikáciu Disk.
 
-![Spustenie aplikácie Disk Google](../images/GoogleDriveInWebbrowser.png)
+![Spustenie aplikácie Disk Google](../images/install/GoogleDriveInWebbrowser.png)
 
 Kliknite vľavo hore na **Nový** (New) (alebo kliknite pravým tlačidlom na prázdne miesto pod vašimi súbormi a priečinkami) a vyberte **Nahrať súbor** (File upload).
 
-![Nahratie súboru apk cez aplikáciu Disk Google](../images/GoogleDriveUploadFile.png)
+![Nahratie súboru apk cez aplikáciu Disk Google](../images/install/GoogleDriveUploadFile.png)
 
 Súbor apk by teraz mal byť nahratý na Disk Google.
 
@@ -43,17 +43,17 @@ Súbor apk by teraz mal byť nahratý na Disk Google.
 
 Prepnite sa do mobilu a spustite aplikáciu Disk Google. Je to predinštalovaná aplikácia a nájdete ju tam, kde sú ostatné aplikácie Google, alebo vyhľadaním jej názvu.
 
-![spustite aplikáciu Disk Google](../images/GoogleDriveMobileAPPLaunch.png)
+![spustite aplikáciu Disk Google](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Inštaláciu súboru apk spustíte ťuknutím na názov súboru v aplikácii Disk Google v mobile.
 
-![spustite inštaláciu súboru apk](../images/GoogleDriveMobileUploadedAPK.png)
+![spustite inštaláciu súboru apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Ak dostanete bezpečnostné upozornenie, že momentálne nemáte povolené inštalovať aplikácie z Disku Google, ťuknite na „Nastavenia“ a povoľte to len na tento krátky čas. Potom to znova zakážte, pretože nechať to stále povolené je bezpečnostné riziko.
 
-![Bezpečnostné upozornenie Disku Google](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Bezpečnostné upozornenie Disku Google](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Bezpečnostné upozornenie Disku Google](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Bezpečnostné upozornenie Disku Google](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Po dokončení inštalácie je tento krok hotový.
 
