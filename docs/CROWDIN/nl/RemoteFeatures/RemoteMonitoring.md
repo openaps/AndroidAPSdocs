@@ -1,6 +1,6 @@
 # Volgen op afstand
 
-![Kinderen op afstand volgen](../images/KidsMonitoring.png)
+![Kinderen op afstand volgen](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ heeft verschillende functies om kinderen met diabetes type 1 op afstand te volgen. Het maakt ook commando's op afstand mogelijk, die instructies op afstand naar __AAPS__ sturen. Op dezelfde manier kun je __AAPSClient__ ook gebruiken om de __AAPS__ van je partner of vriend op afstand te volgen.
 
