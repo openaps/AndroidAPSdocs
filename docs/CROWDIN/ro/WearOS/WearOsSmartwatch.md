@@ -318,7 +318,7 @@ These slots only work on watches running **Wear OS 5 or older**, where the custo
 
 ## Fețe de ceas AAPSv2 - Legendă
 
-![Legenda cadranului AAPSv2](../images/Watchface_Legend.png)
+![Legenda cadranului AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - timp de la ultima activare a buclei
 
