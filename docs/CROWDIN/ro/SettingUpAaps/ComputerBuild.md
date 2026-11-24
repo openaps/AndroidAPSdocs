@@ -255,7 +255,7 @@ La un moment dat, Android Studio se va închide și va începe din nou. S-ar put
 
 Doar pentru utilizatorii de Windows: Dacă firewall-ul solicită permisiune, permiteți accesul:
 
- ![Java permisiuni Firewall](../images/AndroidStudio361_18.png)
+ ![Java permisiuni Firewall](../images/Building-the-App/AndroidStudio361_18.png)
 
 După ce depozitul este clonat cu succes, Android Studio va deschide proiectul clonat.
 
