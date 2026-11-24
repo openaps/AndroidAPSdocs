@@ -20,7 +20,7 @@
 
 ### Dexcom Follow（[Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl)及[iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080)）
 
-![圖像](../images/following_dexcom_follow.png)
+![圖像](../images/remote_control_and_following/following_dexcom_follow.png)
 
 * Dexcom Follow相容於多種手機（包括Android和iPhone）。即使你未使用官方的 Dexcom 應用程式接收傳感器資料，也可以使用 Dexcom Follow。
 
@@ -47,7 +47,7 @@
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352)（iOS）
 
-![圖像](../images/following_nightguard.png)
+![圖像](../images/remote_control_and_following/following_nightguard.png)
 
 優點（用戶報告）：
 
@@ -73,7 +73,7 @@
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch)（Android）
 
-![圖像](../images/following_nightwatch.png)
+![圖像](../images/remote_control_and_following/following_nightwatch.png)
 
 
 * Nightwatch 自我介紹為 Nightscout 客戶端，並監測用戶的 Nightscout 血糖值，無論在 Android 手機或平板上。
@@ -131,7 +131,7 @@ xDripSwift 是將原始 xDrip App 移植到 iOS 後建立的，並發展成以 *
 
 
 
-![圖像](../images/following_xdrip4ios.png)
+![圖像](../images/remote_control_and_following/following_xdrip4ios.png)
 
 什麼是 **Shuggah**？一些烏克蘭開發者複製了 xDrip4iOS 的專案程式碼（該程式碼已在 GitHub 上公開分享），並透過商業帳號將其發布到 App Store。 Shuggah 的發布完全不受 xDrip4iOS 開發者管理。
 
@@ -139,9 +139,9 @@ xDripSwift 是將原始 xDrip App 移植到 iOS 後建立的，並發展成以 *
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108)（iOS）
 
-![圖像](../images/following_sugarmate.png)
+![圖像](../images/remote_control_and_following/following_sugarmate.png)
 
-![圖像](../images/following_sugarmate_graph.png)
+![圖像](../images/remote_control_and_following/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/)可從 App Store 下載到 iPhone 上。 Sugarmate 與以下設備相容：
@@ -154,7 +154,7 @@ xDripSwift 是將原始 xDrip App 移植到 iOS 後建立的，並發展成以 *
 
 ### [Spike](https://spike-app.com/)（iOS）
 
-![圖像](../images/following_spike.png)
+![圖像](../images/remote_control_and_following/following_spike.png)
 
 Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報、IOB 等功能。
 
@@ -174,7 +174,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 
 ### M5Stack
 
-![圖像](../images/following_m5stack.png)
+![圖像](../images/remote_control_and_following/following_m5stack.png)
 
 M5Stack 是一個小盒子，可以用來進行多種程式開發，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。他是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。它是一款優秀的血糖監測器，如果你有 Nightscout 帳號，設置相對簡單。用戶通常在家中的 Wi-Fi 下運行它，但有些用戶報告在摩托車駕駛時通過手機 Wi-Fi 熱點使用它作為顯示器。
 
@@ -182,9 +182,9 @@ M5Stack 是一個小盒子，可以用來進行多種程式開發，Martin 的�
 
 SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。該設備顯示實時的血糖讀取值。這款 CGM 硬體監測器提供隨機音調的音檔警示（音量非常大）、為聽力受損者設計的震動警示、可自訂的顯示選項，以及原生多使用者追蹤功能。
 
-![圖像](../images/following_sugarpixel.png)
+![圖像](../images/remote_control_and_following/following_sugarpixel.png)
 
-![圖像](../images/following_sugarpixel_led_display.png)
+![圖像](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
 * SugarPixel 提供多種顯示選項，可使用 mg/dL 或 mmol/L，並以不同顏色標示血糖值，符合使用者需求。
 * 標準錶盤顯示 BG、趨勢箭頭和增量。 Delta 是與上一次讀取值的變化值（正或負）。
@@ -196,7 +196,7 @@ SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次�
 
 **Nightscout 錶鐘** 是一個開源軟體，運行於**Ulanzi TC001** 裝置上。它可以連接到 Dexcom 伺服器或 Nightscout，並實時顯示血糖讀數。
 
-![追蹤 Nightscout 錶鐘](../images/FollowingNightscoutClock.png)
+![追蹤 Nightscout 錶鐘](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * 這個錶鐘支援 mmol/L 和 mg/dL 單位，並包含可聽到的警報。
 * 有多種顯示方式可供選擇，請參閱 [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it)，瞭解各種顯示方式。
