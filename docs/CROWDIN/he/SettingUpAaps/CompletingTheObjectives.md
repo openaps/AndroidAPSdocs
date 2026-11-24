@@ -46,7 +46,7 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 
 **משימה 2** דורשת לבצע כמה ‘מטלות’, כפי שמוצג בצילום המסך שלהלן. כל מטלה מציגה את המצב שלה (**1**): הטקסט הכתום "**עוד לא הושלם**" הופך ל-"**הושלם, כל הכבוד!**" ברגע ש-**AAPS** רושם את הפעולה. אם פעולה מסוימת עוד לא מוכרת לכם, הקישו על **רמז** (**2**) מתחת למטלה כדי לפתוח את התיעוד הקשור.
 
-![Screenshot objective 2](../images/Objective2_V2_5.png)
+![Screenshot objective 2](../images/objectives/Objective2_V2_5.png)
 
 Tasks to complete **Objective 2** are:
 - Set your **Profile** to 90% for a duration of 10 min.
@@ -96,7 +96,7 @@ The minimal time to complete this objective: **7 days**. חובה להמתין �
 
 כדי להפחית את מספר השינויים המוצעים בקצב הבזאלי בזמן לולאה פתוחה, עדיין ניתן להשתמש בטיפים המתוארים ב[**משימה 3**](#objectives-objective3). בנוסף, ניתן לשנות את האחוז המזערי לשינויים מומלצים בבזאלי בעזרת ההגדרה "**שינוי מינימלי במצב לולאה פתוחה**" ב**הגדרות ← לולאה**. The higher the value, the fewer change notifications you will receive.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Open Loop minimal request change](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 
 - If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+![Example negative IOB](../images/objectives/Objective6_negIOB.png)
 
 - הגדירו את טווח המטרה שלכם מעט גבוה יותר ממה שאליו אתם בדרך כלל מכוונים אליו, רק ליתר ביטחון.
 - הפעילו את מצב 'השהיה עקב ערך סוכר נמוך': לחצו על סמל הלולאה במסך הראשי ובחרו **השהיה עקב ערך סוכר נמוך** כמצב הפעלה.
@@ -245,6 +245,6 @@ You can then experiment with setting up a more useful **Automation**. The docume
 
 אם מסיבה כלשהי רוצים לחזור אחורה ב**משימות**, פתחו את ה**משימה** שהושלמה בעזרת "**עוד**" והקישו על "**ביטול השלמה**":
 
-![חזרה על משימות](../images/Objective_ClearFinished.png)
+![חזרה על משימות](../images/objectives/Objective_ClearFinished.png)
 
 באותו אופן, ניתן להתחיל מחדש את ה**משימה** שעליה אתם עובדים כעת בעזרת "**ביטול התחלה**".
