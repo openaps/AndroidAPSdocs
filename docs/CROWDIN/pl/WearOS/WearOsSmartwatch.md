@@ -318,7 +318,7 @@ Te miejsca działają tylko na zegarkach z **Wear OS 5 lub starszym**, gdzie wł
 
 ## Tarcza AAPSv2 – legenda
 
-![Legenda tarczy AAPSv2](../images/Watchface_Legend.png)
+![Legenda tarczy AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - czas od ostatniego uruchomienia pętli
 
