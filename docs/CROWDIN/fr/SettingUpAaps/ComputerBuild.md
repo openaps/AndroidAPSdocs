@@ -255,7 +255,7 @@ Vous allez alors voir un écran vous indiquant que le dépôt est en train d'êt
 
 Pour les utilisateurs de Windows : Si votre pare-feu demande la permission, autorisez l'accès :
 
- ![Autorisation java dans le pare-feu](../images/AndroidStudio361_18.png)
+ ![Autorisation java dans le pare-feu](../images/Building-the-App/AndroidStudio361_18.png)
 
 Une fois le dépôt cloné avec succès, Android Studio ouvrira le projet en question.
 
