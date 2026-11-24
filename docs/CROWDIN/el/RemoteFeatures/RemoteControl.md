@@ -134,21 +134,21 @@ Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring s
 
 Αφού εγκαταστήσετε την εφαρμογή **Nightscout** στο iPhone σας, ανοίξτε την και ακολουθήστε τις οδηγίες ρύθμισης. Γράψτε τη διεύθυνση του Nightscout σας (δείτε παρακάτω, αριστερά). Η μορφή της μπορεί να διαφέρει ανάλογα με το πού φιλοξενείται το Nightscout σας. (_π.χ._ http://youraddresshere.herokuapp.com). Μετά γράψτε το API secret του Nightscout σας (δείτε παρακάτω, δεξιά). Αν δεν σας ζητηθεί ο κωδικός API, πρέπει να τον γράψετε πατώντας το λουκέτο στο πάνω μέρος της εφαρμογής:
 
-![image](../images/remote-control-24.png)
+![image](../images/remote_control_and_following/remote-control-24.png)
 
 Περισσότερες πληροφορίες για τη ρύθμιση θα βρείτε απευθείας στο [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 Όταν συνδεθείτε για πρώτη φορά, θα δείτε μια πολύ απλή οθόνη. Προσαρμόστε τις επιλογές εμφάνισης: πατήστε το μενού «hamburger» (τρεις γραμμές) πάνω δεξιά και κάντε κύλιση προς τα κάτω:
 
-![image](../images/remote-control-25.png)
+![image](../images/remote_control_and_following/remote-control-25.png)
 
 Κάντε κύλιση προς τα κάτω μέχρι το «Settings». Ίσως θέλετε να αλλάξετε το «scale» σε «linear», γιατί η προεπιλογή για την εμφάνιση της γλυκόζης είναι λογαριθμική. Στο «render basal» επιλέξτε «default», ώστε να εμφανίζεται ο βασικός ρυθμός της αντλίας.
 
-![image](../images/remote-control-25b.png)
+![image](../images/remote_control_and_following/remote-control-25b.png)
 
 Επιλέξτε τις επιλογές που θέλετε. Αποεπιλέξτε τους συναγερμούς αν χρησιμοποιείτε άλλη εφαρμογή για συναγερμούς.
 
-![image](../images/remote-control-26.png)
+![image](../images/remote_control_and_following/remote-control-26.png)
 
 Συνεχίστε την κύλιση προς τα κάτω μέχρι το «show plugins».
 
@@ -156,7 +156,7 @@ Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring s
 
 Σημαντικό: τώρα πρέπει να πατήσετε «save» στο κάτω μέρος για να ισχύσουν οι αλλαγές.
 
-![image](../images/remote-control-27.png)
+![image](../images/remote_control_and_following/remote-control-27.png)
 
 Μετά το «save» η εφαρμογή επιστρέφει στην κύρια οθόνη του Nightscout, που μοιάζει κάπως έτσι:
 
@@ -170,7 +170,7 @@ Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring s
 8. Προφίλ βασικής ινσουλίνης
 9. Πράσινη γραμμή = γλυκόζη μέχρι τώρα Μπλε γραμμές = προβλεπόμενη γλυκόζη
 
-![image](../images/remote-control-28.png)
+![image](../images/remote_control_and_following/remote-control-28.png)
 
 Πιο αναλυτικά, το μενού πάνω αριστερά στην εφαρμογή Nightscout:
 
@@ -179,7 +179,7 @@ Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring s
 3. Hamburger - για τις ρυθμίσεις
 4. Careportal - καταγραφή θεραπείας (δείτε [παρακάτω](#RemoteControl_nightscout-treatments) πότε τις εφαρμόζει το **AAPS**)
 
-![Nightscout top bar](../images/remote-control-29.png)
+![Nightscout top bar](../images/remote_control_and_following/remote-control-29.png)
 
 Στις γκρι καρτέλες αυτής της οθόνης υπάρχουν πάρα πολλές πληροφορίες για την κατάσταση του συστήματος **AAPS** (και ακόμη περισσότερες αν πατήσετε την καρτέλα):
 
@@ -195,9 +195,9 @@ Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring s
 10. Κατάσταση μπαταρίας του τηλεφώνου AAPS
 11. Μέγεθος της βάσης δεδομένων σας. Αν γεμίσει πολύ (μόνο για DIY Nightscout - οι υπηρεσίες φιλοξενίας απλώς το αγνοούν), μπορεί να αρχίσετε να έχετε προβλήματα σύνδεσης. Μπορείτε να διαγράψετε δεδομένα για να μειώσετε αυτόν τον αριθμό από το μενού Admin tools (μέσω του hamburger).
 
-![image](../images/remote-control-30.png)
+![image](../images/remote_control_and_following/remote-control-30.png)
 
-![image](../images/remote-control-31.png)
+![image](../images/remote_control_and_following/remote-control-31.png)
 
 Πατήστε «refresh» στο κάτω μέρος της σελίδας για να κλείσετε το αναδυόμενο παράθυρο.
 
@@ -233,7 +233,7 @@ In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSC
 
 ### Επιλογή 1) Έλεγχος του AAPS από ρολόι Wear OS
 
-![Wear Remote 1](../images/Wear_Remote1.png)
+![Wear Remote 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 Αφού [ρυθμίσετε το **AAPS** στο ρολόι σας](../WearOS/BuildingAapsWearOS.md), αναλυτικές πληροφορίες για τα watchface και τις λειτουργίες τους θα βρείτε στη σελίδα [Ρύθμιση του AAPS στο ρολόι Wear OS σας](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSC
 
 ### Επιλογή 3) AAPSClient σε ρολόι για απομακρυσμένο έλεγχο του **AAPS** σε ένα τηλέφωνο
 
-![Wear Remote 2](../images/Wear_Remote2.png)
+![Wear Remote 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 Για να κατεβάσετε το λογισμικό, πατήστε την εφαρμογή ρολογιού που ταιριάζει με την εφαρμογή πελάτη στο τηλέφωνο: το **wear-aapsclient-release_**_έκδοση_ πάει με το **AAPSClient**, το **wear-aapsclient2-release_**_έκδοση_ πάει με το **AAPSClient2** (δείτε [Για τα AAPSClient, AAPSClient2 και AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/github_release_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Μετά επιλέξτε «save as» (αποθήκευση ως) και αποθηκεύστε το αρχείο σε ένα βολικό σημείο στον υπολογιστή σας:
 
 
-![image](../images/save_as_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
