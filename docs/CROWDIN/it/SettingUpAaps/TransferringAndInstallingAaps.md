@@ -31,11 +31,11 @@ Apri [Google.com](https://www.google.com/) nel browser e accedi al tuo account G
 
 In alto a destra seleziona l'app Drive nel menu Google.
 
-![Avvia l'app Drive](../images/GoogleDriveInWebbrowser.png)
+![Avvia l'app Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
 
-![Carica il file apk con l'app Google Drive](../images/GoogleDriveUploadFile.png)
+![Carica il file apk con l'app Google Drive](../images/install/GoogleDriveUploadFile.png)
 
 Ora il file apk dovrebbe essere caricato su Google Drive.
 
@@ -43,17 +43,17 @@ Ora il file apk dovrebbe essere caricato su Google Drive.
 
 Passa al telefono e avvia l'app Google Drive. È un'app preinstallata: la trovi dove si trovano le altre app Google, oppure cercandone il nome.
 
-![avvia l'app Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![avvia l'app Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Avvia l'installazione dell'apk toccando il nome del file nell'app Google Drive sul telefono.
 
-![avvia l'installazione dell'apk](../images/GoogleDriveMobileUploadedAPK.png)
+![avvia l'installazione dell'apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
 
-![Avviso di sicurezza di Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Avviso di sicurezza di Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Avviso di sicurezza di Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Avviso di sicurezza di Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 After the installation finishes, you are done with this step.
 
