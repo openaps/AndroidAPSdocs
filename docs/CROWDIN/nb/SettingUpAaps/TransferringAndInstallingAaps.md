@@ -31,11 +31,11 @@ Google ruller ut [Android-utviklerverifisering](#android-developer-verification)
 
 Øverst til høyre velger du Drive-appen i Google-menyen.
 
-![Start Drive-appen](../images/GoogleDriveInWebbrowser.png)
+![Start Drive-appen](../images/install/GoogleDriveInWebbrowser.png)
 
 Klikk på **Ny** øverst til venstre (eller høyreklikk på et tomt område under filene og mappene dine) og velg **Filopplasting**.
 
-![Last opp apk-filen med Google Drive-appen](../images/GoogleDriveUploadFile.png)
+![Last opp apk-filen med Google Drive-appen](../images/install/GoogleDriveUploadFile.png)
 
 Apk-filen skal nå være lastet opp til Google Drive.
 
@@ -43,17 +43,17 @@ Apk-filen skal nå være lastet opp til Google Drive.
 
 Bytt til mobilen din og start Google Drive-appen. Det er en forhåndsinstallert app, og du finner den der de andre Google-appene ligger, eller ved å søke på navnet på appen.
 
-![start Google Drive-appen](../images/GoogleDriveMobileAPPLaunch.png)
+![start Google Drive-appen](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Start installasjonen av apk-filen ved å trykke på filnavnet i Google Drive-appen på telefonen.
 
-![start installasjonen av apk-filen](../images/GoogleDriveMobileUploadedAPK.png)
+![start installasjonen av apk-filen](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Hvis du får en sikkerhetsmelding om at du ikke har lov til å installere apper fra Google Drive akkurat nå, trykker du på «Innstillinger» og tillater det for et kort øyeblikk. Slå det av igjen etterpå, siden det er en sikkerhetsrisiko å la det stå på hele tiden.
 
-![Sikkerhetsmelding i Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Sikkerhetsmelding i Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Sikkerhetsmelding i Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Sikkerhetsmelding i Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Når installasjonen er ferdig, er du ferdig med dette steget.
 
