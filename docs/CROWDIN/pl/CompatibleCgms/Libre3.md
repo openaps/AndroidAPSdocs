@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) wymaga specjalnej konfiguracji, aby przesyłać wartości BG do AAPS. Są dwa sposoby przesyłania wartości z Freestyle Libre 3 (FSL3) do AAPS.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Poniższe metody używają osobnej aplikacji Juggluco. Używa Juggluco do odbierania surowych danych z sensora co 1 minutę, które są potem przekazywane do xDrip lub AAPS. Nowe sensory możesz uruchomić w aplikacji Libre 3 albo bezpośrednio w Juggluco. Poniższy opis pokazuje, jak uruchomić sensor w aplikacji Juggluco. Jeśli sensor został uruchomiony przy zalogowanym koncie LibreView, możesz też przełączać odbiornik między Juggluco a aplikacją Libre 3.
 
@@ -38,7 +38,7 @@ Wartości glukozy odbiera aplikacja xDrip na smartfonie.
 
   → Menu (☰) → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip: ustawienia zaawansowane Libre 2 i wartości surowe](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip: ustawienia zaawansowane Libre 2 i wartości surowe](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 
