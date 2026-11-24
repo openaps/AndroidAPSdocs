@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
 
-![目标 2 截图](../images/Objective2_V2_5.png)
+![目标 2 截图](../images/objectives/Objective2_V2_5.png)
 
 完成**目标2**的任务包括：
 - 将你的**配置文件**设置为90%，持续时间为10分钟。
@@ -96,7 +96,7 @@ The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate 
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. 值越高，你收到的更改通知就越少。
 
-![开环最小请求更改](../images/OpenLoop_MinimalRequestChange2.png)
+![开环最小请求更改](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -150,7 +150,7 @@ You will still need to correct high BG values by yourself (manually with correct
 
 - If your IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in **Objective 6**.
 
-![负 IOB 示例](../images/Objective6_negIOB.png)
+![负 IOB 示例](../images/objectives/Objective6_negIOB.png)
 
 - 将你的目标范围设置得比你通常的目标稍高一些，只是为了安全起见，并增加一个安全缓冲区。
 - Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
@@ -244,6 +244,6 @@ Press "**More**" under an objective to see its tasks again:
 
 If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
 
-![回顾目标](../images/Objective_ClearFinished.png)
+![回顾目标](../images/objectives/Objective_ClearFinished.png)
 
 In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
