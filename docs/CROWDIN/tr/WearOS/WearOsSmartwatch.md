@@ -318,7 +318,7 @@ Bu yerler yalnızca özel saat arayüzünün gerçek bir saat arayüzü olarak �
 
 ## AAPSv2 saat arayüzü - Açıklama
 
-![AAPSv2 saat arayüzü açıklaması](../images/Watchface_Legend.png)
+![AAPSv2 saat arayüzü açıklaması](../images/wearos/Watchface_Legend.png)
 
 A - time since last loop run
 
