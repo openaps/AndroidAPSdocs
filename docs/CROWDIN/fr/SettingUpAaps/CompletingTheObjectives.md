@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 L'**Objectif 2** demande de faire plusieurs « tâches », comme le montre la capture d'écran ci-dessous. Chaque tâche montre son état (**1**) : le texte orange « **Pas encore terminé** » devient « **Terminé, félicitations !** » dès qu'**AAPS** a enregistré l'action. Touchez **Astuce** (**2**) sous une tâche pour ouvrir la documentation correspondante, si vous ne connaissez pas encore une action.
 
-![Capture d'écran objectif 2](../images/Objective2_V2_5.png)
+![Capture d'écran objectif 2](../images/objectives/Objective2_V2_5.png)
 
 Les tâches pour compléter l'**Objectif 2** sont :
 - Réglez votre **Profil** à 90 % pour une durée de 10 min.
@@ -96,7 +96,7 @@ Temps minimum pour compléter cet objectif : **7 jours**. Vous serez obligé d'
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Vous pouvez aussi modifier le pourcentage minimum des changements de débit basal recommandés avec le paramètre « **Mode boucle ouverte, changement minimum** » dans **Paramètres → Boucle**. Plus la valeur est élevée, moins vous recevrez de notifications de changement.
 
-![Boucle ouverte, changement minimum demandé](../images/OpenLoop_MinimalRequestChange2.png)
+![Boucle ouverte, changement minimum demandé](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Cela veut dire que pendant l'**Objectif 6**, si la glycémie du capteur baisse, 
 
 - Si votre IA est négative (voir la capture d'écran ci-dessous), un débit basal temporaire (DBT) > 100 % peut être déclenché pendant l'**Objectif 6**.
 
-![Exemple d'IA négative](../images/Objective6_negIOB.png)
+![Exemple d'IA négative](../images/objectives/Objective6_negIOB.png)
 
 - Définissez votre cible légèrement plus haute que d'habitude, par pure précaution et pour avoir un peu plus de marge de sécurité.
 - Activez le mode « Arrêt Glycémie Basse » en appuyant sur l'icône de la boucle sur l'écran principal et en choisissant **Arrêt Glycémie Basse** comme mode.
@@ -245,6 +245,6 @@ Appuyez sur « **Plus** » sous un objectif pour revoir ses tâches :
 
 Si vous voulez revenir en arrière dans les **Objectifs**, pour quelque raison que ce soit, ouvrez l'**Objectif** terminé avec « **Plus** » et touchez « **Réinitialiser l'état terminé** » :
 
-![Retour arrière dans les Objectifs](../images/Objective_ClearFinished.png)
+![Retour arrière dans les Objectifs](../images/objectives/Objective_ClearFinished.png)
 
 De la même façon, l'**Objectif** sur lequel vous travaillez actuellement peut être recommencé avec « **Réinitialiser l'état de départ** ».
