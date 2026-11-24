@@ -63,7 +63,7 @@ Tekniskt sett skickas det aktuella blodsockervärdet till xDrip varje minut. Ett
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip Advanced Settings Libre 2 och rådata](../images/xDrip_Libre3_Smooth.png)
+![xDrip Advanced Settings Libre 2 och rådata](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Detta krävs för att loopa. Kurvorna ser jämna ut och loopen ger mycket bra resultat. Rådata som larmen bygger på varierar lite mer, men stämmer med värdena som läsaren också visar. Dessutom kan rådata visas i xDrips graf, så att du hinner reagera på snabba ändringar. Slå på Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" och "show Sensors Infos". Då visas rådata också som små vita prickar, och mer sensorinformation finns i systemmenyn.
 
