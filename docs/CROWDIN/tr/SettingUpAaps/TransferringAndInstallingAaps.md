@@ -31,11 +31,11 @@ Web tarayıcınızda [Google.com](https://www.google.com/) adresini açın ve Go
 
 Sağ üstte Google menüsünden Drive uygulamasını seçin.
 
-![Drive uygulamasını başlatın](../images/GoogleDriveInWebbrowser.png)
+![Drive uygulamasını başlatın](../images/install/GoogleDriveInWebbrowser.png)
 
 Sol üstteki **New** (Yeni) düğmesine tıklayın (veya dosya ve klasörlerinizin altındaki boş bir alana sağ tıklayın) ve **File upload** (Dosya yükleme) seçeneğini seçin.
 
-![APK dosyasını Google Drive uygulamasıyla yükleme](../images/GoogleDriveUploadFile.png)
+![APK dosyasını Google Drive uygulamasıyla yükleme](../images/install/GoogleDriveUploadFile.png)
 
 Apk dosyası artık Google Drive'a yüklenmiş olmalıdır.
 
@@ -43,17 +43,17 @@ Apk dosyası artık Google Drive'a yüklenmiş olmalıdır.
 
 Telefonunuza geçin ve Google Drive uygulamasını açın. Önceden yüklü bir uygulamadır; diğer Google uygulamalarının bulunduğu yerde veya uygulamanın adını aratarak bulunabilir.
 
-![Google Drive uygulamasını başlatın](../images/GoogleDriveMobileAPPLaunch.png)
+![Google Drive uygulamasını başlatın](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Telefondaki Google Drive uygulamasında dosya adına dokunarak APK yüklemesini başlatın.
 
-![APK yüklemesini başlatın](../images/GoogleDriveMobileUploadedAPK.png)
+![APK yüklemesini başlatın](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Şu anda Google Drive'dan uygulama yüklemenize izin verilmediğini söyleyen bir güvenlik uyarısı alırsanız, "Settings" (Ayarlar) seçeneğine dokunun ve bu kısa süre için izin verin. Sonra izni tekrar kapatın, çünkü bunu sürekli açık bırakmak bir güvenlik riskidir.
 
-![Google Drive güvenlik uyarısı](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Google Drive güvenlik uyarısı](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Google Drive güvenlik uyarısı](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Google Drive güvenlik uyarısı](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Yükleme bittiğinde bu adım tamamlanmış olur.
 
