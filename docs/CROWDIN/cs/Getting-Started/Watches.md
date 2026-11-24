@@ -59,7 +59,7 @@ Většina frustrace ze samostatného provozu **AAPS** na hodinkách pramení z p
 
 Další výzvy spočívají v tom, že je těžké mít dostatečnou kapacitu baterie, a hodinky s dostatečnou baterií jsou často objemné a tlusté. Uživatelé hlásí boj s operačním systémem a nastavením úspory energie, potíže se spuštěním senzorů na hodinkách, slabý dosah Bluetooth (pro udržení spojení se senzorem i pumpou) a sporou voděodolnost. Příklady jsou na fotografiích níže.
 
-![obrázek](../images/watch_standalone_aaps_and_xdrip.png)
+![obrázek](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 Pokud chcete nastavit samostatné hodinky, přečtěte si příspěvky a komentáře ve skupině **AAPS** na Facebooku (dobré výrazy pro hledání jsou „standalone“ a „Lemfo“) a na Discordu, kde najdete další informace.
 
@@ -88,7 +88,7 @@ Nedávné změny ve **Wear OS** postupně narušují vlastní ciferníky **AAPS*
 
 Po [instalaci **AAPS** do hodinek](../WearOS/WearOsSmartwatch.md) si budete moci automaticky vybrat preferovaný ciferník z těchto ciferníků určených pro **AAPS**. Na většině hodinek stačí dlouze podržet prst na domovské obrazovce, dokud se obrazovka nezmenší, a přejetím doprava vybrat jinou obrazovku:
 
-![obrázek](../images/watchfaces_aaps_selection.png)
+![obrázek](../images/watches/watchfaces_aaps_selection.png)
 
 Toto jsou základní obrazovky zabudované v **AAPS**. Existují i [další ciferníky](#WearOS_changing-to-AAPS-watchface) a můžete také použít [komplikace](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ V obchodě Garmin ConnectIQ jsou ciferníky pro Garmin, které se propojují s [
 
 ![Konfigurace > Komunikace: karta Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) se propojuje přímo s **AAPS**. Kromě hodnot glykémie zobrazuje údaje o stavu smyčky (aktivní inzulín, dočasný bazál) a posílá do **AAPS** hodnoty tepové frekvence. Je k dispozici v obchodě ConnectIQ; povolte plugin **Garmin** v **Konfigurace → Komunikace**. ![Ciferník AAPS Glucose Watch s očíslovanými poli](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) se propojuje přímo s **AAPS**. Kromě hodnot glykémie zobrazuje údaje o stavu smyčky (aktivní inzulín, dočasný bazál) a posílá do **AAPS** hodnoty tepové frekvence. Je k dispozici v obchodě ConnectIQ; povolte plugin **Garmin** v **Konfigurace → Komunikace**. ![Ciferník AAPS Glucose Watch s očíslovanými poli](../images/watches/Garmin_WF-annotated.png)
 
 1. Nejvyšší a nejnižší hodnota glykémie v grafu
 2. Změna glykémie za minutu
@@ -155,7 +155,7 @@ Níže je několik možností hodinek pouze pro sledování, které jsou oblíbe
 
 **WatchDrip+** je doprovodná aplikace vyvíjená komunitou, která zobrazuje glykémii a data smyčky na různých modelech chytrých hodinek, hlavně značek Xiaomi (_např._ Mi Band) a Amazfit:
 
-![obrázek](../images/watch_watchdrip_plus.png)
+![obrázek](../images/watches/watch_watchdrip_plus.png)
 
 Od verze 0.5 čte **WatchDrip+** data přímo z **AAPS**, bez xDrip+ jako prostředníka. V telefonu s **AAPS**:
 
@@ -170,9 +170,9 @@ Více o nich, včetně jejich nastavení, se dočtete na [webu WatchDrip+](https
 
 ### Hodinky Pebble
 
-![obrázek](../images/watch_pebble.png)
+![obrázek](../images/watches/watch_pebble.png)
 
-![obrázek](../images/watch_pebble_watchface.png)
+![obrázek](../images/watches/watch_pebble_watchface.png)
 
 
 Hodinky Pebble ([dnes už se nevyrábí](https://en.wikipedia.org/wiki/Pebble_(watch))) se běžně prodávaly v letech 2013 až 2016 a stále mohou být k dostání z druhé ruky. Majetek firmy Pebble převzal Fitbit. Uživatelé Pebble mohou k zobrazení dat z Nightscoutu použít ciferník Urchin. Zobrazit lze například IOB, právě aktivní dočasný bazál a predikce. Pokud používáte otevřenou smyčku, můžete pomocí IFTTT vytvořit applet, který při přijetí oznámení z **AAPS** pošle SMS nebo oznámení přes Pushover.
