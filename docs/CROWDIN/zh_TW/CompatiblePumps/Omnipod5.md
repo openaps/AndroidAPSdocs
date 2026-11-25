@@ -1,11 +1,11 @@
 (omnipod5)=
 # Omnipod 5
 
-These instructions are for using **Omnipod 5** pods with **AAPS**.
+這些說明適用於搭配 **AAPS** 使用 **Omnipod 5** Pod。
 
 ```{admonition} In development
 :class: warning
-The Omnipod 5 driver is in development. It is not part of a released **AAPS** version yet and only runs in test builds. Screens and steps on this page can still change before the release.
+Omnipod 5 驅動程式仍在開發中。目前尚未納入正式發布的 **AAPS** 版本，只能在測試版本中執行。本頁的畫面和步驟在正式發布前仍可能變更。
 ```
 
 ```{contents} Table of contents
@@ -14,26 +14,26 @@ The Omnipod 5 driver is in development. It is not part of a released **AAPS** ve
 ```
 
 (omnipod5-how-it-works)=
-## How AAPS uses Omnipod 5
+## AAPS 如何使用 Omnipod 5
 
-The Omnipod 5 driver works in almost the same way as the [Omnipod DASH driver](../CompatiblePumps/OmnipodDASH.md):
+Omnipod 5 驅動程式的運作方式與 [Omnipod DASH 驅動程式](../CompatiblePumps/OmnipodDASH.md)幾乎相同：
 
-- **AAPS** connects to the pod over the phone's Bluetooth. No RileyLink or other bridge device is needed.
-- **AAPS** connects only to send a command (for example a bolus or a **TBR**) or to read the pod status, and disconnects right after.
-- **AAPS** controls the pod as a normal pump: it sets the basal rates, **TBRs**, boluses and **SMBs**. The pod's own automated mode is never used.
-- The doses and limits are the same as for DASH: boluses in 0.05 U steps, basal rates in 0.05 U/h steps (minimum 0.05 U/h), **TBRs** up to 30 U/h for up to 12 hours.
-- Extended boluses are not supported.
+- **AAPS** 透過手機的藍牙連線至 Pod。不需要 RileyLink 或其他橋接裝置。
+- **AAPS** 只會在傳送指令（例如注射或 **臨時基礎率**）或讀取 Pod 狀態時連線，並會在完成後立即中斷連線。
+- **AAPS** 會像一般幫浦一樣控制 Pod：設定基礎率、**臨時基礎率**、注射和 **微量注射**。 Pod 自己的自動模式不會啟用。
+- 劑量和限制與 DASH 相同：注射以 0.05 U 為增量，基礎率以 0.05 U/h 為增量（最低 0.05 U/h），**臨時基礎率**最高可達 30 U/h，最長可維持 12 小時。
+- 不支援延長注射。
 
-The main difference with DASH is the **personal certificate**. **AAPS** needs it to pair with an Omnipod 5 pod. You get it once, before you activate your first pod, by signing in with your GitHub account (see [Get your Omnipod 5 certificate](#omnipod5-certificate)).
+與 DASH 的主要差異在於**個人憑證**。 **AAPS** 需要此憑證才能與 Omnipod 5 Pod 配對。在註冊第一個 Pod 之前，使用 GitHub 帳號登入即可取得一次（請參閱[取得 Omnipod 5 憑證](#omnipod5-certificate)）。
 
 (omnipod5-requirements)=
 ## 需求
 
-- Omnipod 5 pods.
-- A compatible Android phone with Bluetooth Low Energy (see [Phones](../Getting-Started/Phones.md)).
-- An **AAPS** build that includes the Omnipod 5 driver.
-- A [GitHub account](#omnipod5-github-account) with a verified e-mail address, at least 7 days old.
-- An internet connection on the phone the first time you activate a pod.
+- Omnipod 5 Pod。
+- 具備藍牙低功耗功能的相容 Android 手機（請參閱[手機](../Getting-Started/Phones.md)）。
+- 包含 Omnipod 5 驅動程式的 **AAPS** 版本。
+- 擁有已驗證電子郵件地址的 [GitHub 帳號](#omnipod5-github-account)，且帳號至少已建立 7 天。
+- 第一次註冊 Pod 時，手機須能連上網際網路。
 - A supported [Continuous Glucose Monitor (CGM)](../Getting-Started/CompatiblesCgms.md), connected to **AAPS** as usual.
 
 ### Safety first
