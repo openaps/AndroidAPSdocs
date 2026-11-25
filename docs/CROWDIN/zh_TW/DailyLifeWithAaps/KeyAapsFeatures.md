@@ -18,7 +18,7 @@
 
 這些建議不會自動執行（如封閉迴路）。建議必須由使用者手動輸入到幫浦中（如果使用虛擬幫浦）或透過按鈕輸入，如果**AAPS**連接到真實幫浦。
 
-When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. 按下該項目即可查看建議（「接受新的臨時基礎率」）、速率、持續時間和原因，接著按下**執行**來套用：
+**AAPS** 有建議時，主畫面底部的導覽列會出現帶有綠點的**循環**項目。按下該項目即可查看建議（「接受新的臨時基礎率」）、速率、持續時間和原因，接著按下**執行**來套用：
 
 ![開放循環建議及「執行」按鈕](../images/screens/loop_tab.png)
 
