@@ -10,8 +10,8 @@
 ## 幫浦與AAPS的功能
 
 * 無導管貼片式幫浦，可透過手機內建的藍牙與 **AAPS** 通訊，不需要額外的通訊裝置。
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
-* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
+* **AAPS** 將 Equil 視為具有 200 U 儲液槽的貼片式幫浦：主畫面會顯示貼片式幫浦的狀態燈號。儲液槽填充、預充和更換電池都在幫浦嚮導中進行，因此不會提供**更換幫浦電池**選項。
+* **灌注/填充**功能可在 **管理**工作表、QuickLaunch，以及主畫面展開的狀態面板中使用。只有在幫浦**未放在底座上**時才使用，這樣胰島素才會注入空氣中：和所有灌注一樣，這不會計入 IOB，因此若幫浦連接時進行灌注，循環系統就不會知道注入了這些胰島素。
 * 幫浦暫停或停止時，**AAPS** 會記錄一筆 0 U/h 的臨時基礎率，因此不會將基礎胰島素計入活性胰島素。
 * 夏令時間和時區變更必須手動處理。
 
@@ -43,7 +43,7 @@
 ![Equil 驅動程式設定](../images/v4/Pumps/equil_settings.png)
 
 * **電池電量不足警示**：幫浦電池電量不足時發出警示。
-* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
+* **藥量不足警報**：儲藥槽中的胰島素量不足時會發出警告。
 * **警示音效**：設定幫浦發出警示的方式：**靜音**、**僅震動**、**僅音效**或 **震動和音效**。
 * **注射速度**：設定注射速度：**1.5 U/min（標準）**、**3 U/min**、**6 U/min**或 **12 U/min**。較快的注射速率可能會觸發更多阻塞警報。
 
