@@ -14,7 +14,7 @@ Omnipod 5（[官方網站](https://www.omnipod.com/)）
 
 ![Omnipod 5 驅動程式正在開發中](../images/future-pumps/omnipod5-driver.png)
 
-See [Omnipod 5](../CompatiblePumps/Omnipod5.md) for how the driver in development works.
+請參閱 [Omnipod 5](../CompatiblePumps/Omnipod5.md)，瞭解開發中的驅動程式如何運作。
 
 Tandem：t:Mobi（[官方網站](https://www.tandemdiabetes.com/)）
 
