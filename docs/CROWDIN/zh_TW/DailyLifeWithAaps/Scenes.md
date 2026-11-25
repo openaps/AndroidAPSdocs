@@ -45,7 +45,7 @@
 
 ### 從範本開始
 
-若要**建立**場景，請輕點「場景」畫面上的**+**按鈕。第一個步驟是**從範本開始**：選擇適用於常見情況的現成場景 — *運動*、*生病日*、*生病日 — 嘔吐*、*睡眠*、*運動後夜間*、*餐前*、*飲酒*、*開車*、*洗澡*、*黃體期*、*炎熱天氣*、*醫療處置*，或從*空白*場景開始。每個範本都會**預先填入建議的動作**，您可以在接下來的步驟中調整所有設定。 For example, the *Sleep* template lasts 8 hours and sets a temporary target: it selects your *Custom* temp target preset if you have one, otherwise you choose a preset in the *Temporary target* step.
+若要**建立**場景，請輕點「場景」畫面上的**+**按鈕。第一個步驟是**從範本開始**：選擇適用於常見情況的現成場景 — *運動*、*生病日*、*生病日 — 嘔吐*、*睡眠*、*運動後夜間*、*餐前*、*飲酒*、*開車*、*洗澡*、*黃體期*、*炎熱天氣*、*醫療處置*，或從*空白*場景開始。每個範本都會**預先填入建議的動作**，您可以在接下來的步驟中調整所有設定。例如，*睡眠*範本會持續 8 小時並設定臨時目標：如果您有*自訂*臨時目標預設值，系統會選取該預設值；否則，您可以在*臨時目標*步驟中選擇預設值。
 
 ![「從範本開始」— 選擇起始範本](../images/v4/Scenes/templates_picker.png)
 
@@ -124,7 +124,7 @@
 
 ![「結束場景」對話方塊](../images/v4/Scenes/scene_end_dialog.png)
 
-結束場景時，系統會**還原**場景所做的變更（例如切換設定檔和啟動臨時目標）。 The **End Scene** dialog lists what will be undone, for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Careportal entries made by the scene stay: the dialog then says *CarePortal entries will not be reverted*. The confirmation asks *End scene "..." and revert changes?* and lists what will be undone, one line per change: for example *Cancel temporary target*, *Revert profile change*, *Re-enable SMB* or *Cancel running mode override*. Care-portal notes stay: the list then ends with *CarePortal entries will not be reverted*. You get the same confirmation whether you end the scene from the banner on the main screen or from the Scenes screen.
+結束場景時，系統會**還原**場景所做的變更（例如切換設定檔和啟動臨時目標）。**結束場景**對話方塊會列出即將復原的項目，例如 *取消臨時目標*、*還原設定檔變更*、*重新啟用 SMB*或*取消執行中的模式覆寫*。場景建立的照護入口項目會保留：對話方塊接著會顯示 *照護入口項目不會復原*。確認視窗會詢問*結束場景「...」並還原變更？*，並逐行列出將還原的項目，例如 *取消臨時目標*、*還原設定檔變更*、*重新啟用微量注射*或*取消執行中的模式覆寫*。照護入口的備註會保留：清單最後會顯示*照護入口項目不會還原*。無論您是從主畫面橫幅還是從場景畫面結束場景，都會看到相同的確認視窗。
 
 場景啟動期間，如果場景設定了主畫面上的設定檔和目標，兩者旁邊都會顯示小型場景圖示。您仍可使用底部導覽列中的 **場景**面板來啟動其他場景：
 
