@@ -68,7 +68,7 @@ Omnipod 5 驅動程式的運作方式與 [Omnipod DASH 驅動程式](../Compatib
    - **設定**會開啟 [Omnipod 5 設定](#omnipod5-settings)。
    - **開啟外掛**會開啟 [Omnipod 5 幫浦畫面](#omnipod5-pump-screen)。
 
-![The Omnipod 5 plugin selected in Configuration > Pump](../images/v4/Pumps/omnipod5_enabled.png)
+![在「設定 > 幫浦」中選取的 Omnipod 5 外掛](../images/v4/Pumps/omnipod5_enabled.png)
 
 (omnipod5-pump-screen)=
 ## Omnipod 5 幫浦畫面
@@ -191,7 +191,7 @@ GitHub 會寄送電子郵件通知您，您的帳號已授權具有 *user:email*
 
    ***注意：**插入套管前，在藥量附近捏起外觀，有助於套管順利插入。*
 
-   ![The Insert Cannula step in progress](../images/v4/Pumps/omnipod5_wizard_insert_cannula.png)    ![「插入套管」步驟完成](../images/v4/Pumps/omnipod5_wizard_insert_cannula_done.png)
+   ![正在進行「植入導管」步驟](../images/v4/Pumps/omnipod5_wizard_insert_cannula.png)    ![「插入套管」步驟完成](../images/v4/Pumps/omnipod5_wizard_insert_cannula_done.png)
 
 9. 畫面會顯示 **藥匣已啟用** 步驟。確認套管已正確插入。如果您認為套管沒有正確插入，請更換藥量。按下 **完成**。
 
