@@ -38,7 +38,7 @@
 
 * 在幫浦畫面上，點選**配對**。 **AAPS** 會掃描附近的幫浦。
 
-* Tap the entry for your pump in the list. If your phone still has an old Bluetooth pairing with this pump (for example after the pump was unpaired on the pump itself, or paired with another phone), **AAPS** removes it first and starts a new pairing. You do not need to remove the pump in the Android Bluetooth settings.
+* 點選清單中的幫浦項目。如果手機上仍保留與此幫浦舊有的藍牙配對（例如在幫浦本身取消配對，或與另一支手機配對後），**AAPS** 會先移除舊配對，再開始新的配對。您不需要在 Android 藍牙設定中移除幫浦。
     
     ![配對畫面會列出掃描到的 Dana 幫浦](../images/DanaRS_i_Pairing.png)
 
