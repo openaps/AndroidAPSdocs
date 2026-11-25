@@ -31,7 +31,7 @@
 - 預設情況下，**AAPS** 會使用手機的語系（建議設定）。
 
 - 如果您想讓 **AAPS** 使用不同於手機的語系，請在此選擇。在 Android 13 及更新版本中，**AAPS** 會在 Android 中註冊為獨立的應用程式語系，因此所有畫面、主畫面和小工具都會使用該語系，數字的顯示方式也會隨之變更。
-- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
+- 這項設定一律稱為**語系**，而且每種語系都會以其本身的名稱列出（例如 *Deutsch*、*Français* 或 *Polski*）。因此，即使 **AAPS** 設定成您看不懂的語系，您仍然可以找到自己的語系。
 
 - 變更語系後，**AAPS** 的文字會立即切換為新的語系。如果部分文字仍顯示舊語系，請重新啟動 **AAPS**。
 - Android 12 不會顯示這項設定：**AAPS** 一律使用手機的語系。
@@ -87,9 +87,9 @@
 
 ![設定 > 保護](../images/preferences/settings_protection.png)
 
-Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+無論您選擇哪種保護方式（自訂密碼、PIN 碼或生物辨識），提示畫面也接受您的**主密碼**。如果忘記自訂密碼或 PIN 碼，請改為輸入主密碼。
 
-A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+從未輸入過的自訂密碼或 PIN 碼，會視同未設定保護：**AAPS** 不會要求您輸入。
 
 (Preferences-master-password)=
 ### 主密碼
@@ -115,9 +115,9 @@ A custom password or PIN that you never entered counts as no protection: **AAPS*
 
 ### 應用程式保護
 
-如果應用程式受到保護，您必須輸入密碼或使用手機的生物辨識驗證才能開啟 **AAPS**；超過[保護逾時](#Preferences-password-and-pin-retention)時間後重新開啟應用程式時，也必須再次驗證。 Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
+如果應用程式受到保護，您必須輸入密碼或使用手機的生物辨識驗證才能開啟 **AAPS**；超過[保護逾時](#Preferences-password-and-pin-retention)時間後重新開啟應用程式時，也必須再次驗證。在您完成驗證之前，畫面會持續遮住：提示畫面後方的血糖、活性胰島素和圖表都無法讀取。
 
-If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
+如果您取消提示，或驗證失敗，**AAPS** 會顯示*授權失敗*並關閉畫面。如果先前已成功開啟，程式仍會在背景執行。
 
 ### 注射保護
 
