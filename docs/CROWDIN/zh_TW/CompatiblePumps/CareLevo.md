@@ -121,7 +121,7 @@ CareLevo 驅動程式是 <strong x-id="1">AAPS</strong> 的新功能。首次啟
 
 如果貼片因重大警示而停止，警示畫面會改為提供 **停用貼片**選項。按下此選項會以相同方式棄置貼片。
 
-If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+如果無法連線到貼片，您仍然可以將它放棄。 **AAPS** 會將它移除，並停止計算其臨時基礎率和延長注射，但並未通知貼片本身停止。 **AAPS** 會提醒您：*無法連線到貼片。貼片已從 AAPS 中移除，但沒有停止，而且可能仍會輸注胰島素。立即取下。*請立即將貼片從身上取下。
 
 (carelevo-alarms-and-notifications)=
 
