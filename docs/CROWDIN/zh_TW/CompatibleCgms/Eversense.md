@@ -67,7 +67,7 @@ xDrip 可以讀取廠商 App 發出的通知，就像 ESEL 一樣。無法使用
 
 **AAPS** 可以直接從官方 Eversense App 發出的通知讀取血糖值，不需要透過其他 App。無法使用回填功能。
 
-This works with the **Eversense 365** app, both the US version and the version for other countries.
+這適用於 **Eversense 365** App，包括美國版本和其他國家／地區的版本。
 
 - 請在 [**組態設定 → 血糖來源**](#Config-Builder-bg-source)中選取 **通知讀取器**，並在系統詢問時授予 **AAPS** 讀取通知的權限。
 - 請確認 Eversense App 的通知中會顯示目前的血糖值。
