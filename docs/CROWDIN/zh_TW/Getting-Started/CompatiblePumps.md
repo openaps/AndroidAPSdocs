@@ -26,7 +26,7 @@ AAPS 支援多種胰島素幫浦。以下清單列出目前支援的裝置。括
 
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)（藍牙；另請參閱[基本使用技巧](#combov2-tips-for-basic-usage)）
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (藍牙)
-- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md) (Bluetooth)
+- [AP550](../CompatiblePumps/AP550-Insulin-Pump.md)（藍牙）
 - [CareLevo](../CompatiblePumps/CareLevo.md)（藍牙）
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (藍牙)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (藍牙)
@@ -39,7 +39,7 @@ AAPS 支援多種胰島素幫浦。以下清單列出目前支援的裝置。括
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md)（藍牙）
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)（藍牙）
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)（藍牙）
-- [Omnipod 5](../CompatiblePumps/Omnipod5.md) (Bluetooth; driver in development, test builds only)
+- [Omnipod 5](../CompatiblePumps/Omnipod5.md)（藍牙；驅動程式仍在開發中，僅限測試版本使用）
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)（需要[額外的通訊裝置](#CompatiblePumps-additional-communication-device)）
 
 ## 我的幫浦不在列表中
