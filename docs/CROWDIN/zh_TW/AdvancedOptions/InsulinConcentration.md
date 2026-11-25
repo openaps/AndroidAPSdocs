@@ -185,11 +185,11 @@
 
 ```{admonition} If the profile cannot be written to the pump
 :class: warning
-The new insulin is already in the pump before the profile with the new concentration is written to it. Until it is written, the pump gives the wrong amount of insulin.
+新胰島素已經放入幫浦，但尚未將含有新濃度的設定檔寫入幫浦。在寫入設定檔之前，幫浦輸注的胰島素劑量會不正確。
 
-- While the profile is not written yet, **AAPS** refuses boluses, SMBs, TBRs and extended boluses: *The profile with the new insulin is not written to the pump yet. Insulin cannot be given until it is written.* Prime and cancelling still work.
-- If writing the profile fails, **AAPS** raises an **Insulin change failed** alarm, and raises it again at every retry until the profile is written. **Disconnect or remove the pump**, check your BG and give insulin another way if you need it. Connect the pump again only after the profile is written.
-- If the prime itself fails, the insulin is not switched either. If the new insulin is already in the pump, do not connect the pump, and run the insulin change again.
+- 設定檔尚未寫入時，**AAPS** 會拒絕注射、微量注射、臨時基礎率和延長注射：*含有新胰島素的設定檔尚未寫入幫浦。寫入前無法輸注胰島素。* 預充和取消操作仍可進行。
+- 如果設定檔寫入失敗，**AAPS** 會發出**胰島素變更失敗**警示，並在每次重試時再次發出，直到設定檔寫入為止。**中斷連線或移除幫浦**，檢查血糖；如有需要，請改用其他方式輸注胰島素。請等到設定檔寫入後，再重新連線幫浦。
+- 如果預充本身失敗，胰島素也不會切換。如果新胰島素已經放入幫浦，請勿連線幫浦，並再次執行胰島素變更。
 ```
 
 如果變更胰島素時正在執行有設定時間長度的臨時**設定檔切換**，新胰島素也會套用至臨時切換結束後恢復使用的設定檔。不會切換回舊的胰島素。
