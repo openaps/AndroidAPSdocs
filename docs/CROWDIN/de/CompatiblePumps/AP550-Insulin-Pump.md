@@ -44,7 +44,7 @@ The table below lists the common buttons on the AP550 pump and what each one doe
 
 <table>
   <tr>
-    <th>Button</th>
+    <th>Schaltfläche</th>
     <th>Beschreibung</th>
   </tr>
 
@@ -278,7 +278,7 @@ When a delivery fails, the pump reports a code. The most important ones:
 | 04   | Pump battery empty                                                   |
 | 05   | Daily dose limit reached                                             |
 | 06   | Occlusion (pump pipeline blockage)                                   |
-| 07   | Reservoir empty                                                      |
+| 07   | Reservoir leer                                                       |
 | 08   | Pipeline detachment                                                  |
 | 09   | Bolus over the pump maximum                                          |
 | 10   | Low battery — or a bolus / temp basal is already running on the pump |
