@@ -31,7 +31,7 @@ In **AAPS** v4 findest Du die Einstellungen im Bildschirm **Einstellungen**. Es 
 - Standardmäßig folgt **AAPS** der Sprache des Smartphones (empfohlen).
 
 - Möchtest Du **AAPS** in einer anderen Sprache als das Smartphone verwenden, wähle sie hier aus. Ab Android 13 registriert **AAPS** sie in Android als eigene App-Sprache, sodass alle Bildschirme, der Startbildschirm, die Widgets und die Schreibweise von Zahlen ihr folgen.
-- The setting is always called **Language**, and each language is listed in its own name (for example *Deutsch*, *Français* or *Polski*). So you can find your language again, even when **AAPS** is set to a language you cannot read.
+- Die Einstellung heißt immer **Language** (auf Englisch), und jede Sprache ist in ihrem eigenen Namen aufgeführt (zum Beispiel *Deutsch*, *Français* oder *Polski*). So findest Du Deine Sprache wieder, auch wenn **AAPS** auf eine Sprache eingestellt ist, die Du nicht lesen kannst.
 
 - Wenn Du die Sprache änderst, werden die Texte von **AAPS** sofort in der neuen Sprache angezeigt. Zeigen einige Texte noch die alte Sprache, starte **AAPS** neu.
 - Unter Android 12 wird diese Einstellung nicht angezeigt: **AAPS** verwendet immer die Sprache des Smartphones.
@@ -87,9 +87,9 @@ Wähle zwischen dem hellen Design, dem dunklen Design oder der Systemeinstellung
 
 ![Settings > Protection](../images/preferences/settings_protection.png)
 
-Whatever protection you choose (custom password, PIN or biometric), the prompt also accepts your **master password**. If you forget a custom password or PIN, enter the master password instead.
+Egal welchen Schutz Du wählst (benutzerdefiniertes Passwort, PIN oder Biometrie), die Abfrage akzeptiert auch Dein **Master-Passwort**. Wenn Du ein benutzerdefiniertes Passwort oder eine PIN vergisst, gib stattdessen das Master-Passwort ein.
 
-A custom password or PIN that you never entered counts as no protection: **AAPS** does not ask for it.
+Ein benutzerdefiniertes Passwort oder eine PIN, die Du nie eingegeben hast, zählt nicht als Schutz: **AAPS** fragt nicht danach.
 
 (Preferences-master-password)=
 ### Master-Passwort
@@ -115,9 +115,9 @@ Wenn Du Dein Master-Passwort vergessen hast, siehe [Wie setze ich das Master-Pas
 
 ### Schutz der App
 
-Ist die App geschützt, musst Du das Passwort eingeben oder die biometrische Authentifizierung des Smartphones verwenden, um **AAPS** zu öffnen, und erneut, wenn Du nach Ablauf der [Zeit bis zur erneuten Authentifizierung](#Preferences-password-and-pin-retention) zurückkehrst. Until you do, the screen stays covered: your BG, IOB and graphs cannot be read behind the prompt.
+Ist die App geschützt, musst Du das Passwort eingeben oder die biometrische Authentifizierung des Smartphones verwenden, um **AAPS** zu öffnen, und erneut, wenn Du nach Ablauf der [Zeit bis zur erneuten Authentifizierung](#Preferences-password-and-pin-retention) zurückkehrst. Bis Du das tust, bleibt der Bildschirm verdeckt: Deine Glukosewerte, das IOB und die Grafiken sind hinter der Abfrage nicht lesbar.
 
-If you cancel the prompt or the authentication fails, **AAPS** shows *Authorization failed* and closes its screen. It still runs in the background if it was opened successfully before.
+Wenn Du die Abfrage abbrichst oder die Authentifizierung fehlschlägt, zeigt **AAPS** *Autorisierung fehlgeschlagen* an und schließt seinen Bildschirm. Im Hintergrund läuft es weiter, wenn es zuvor erfolgreich geöffnet wurde.
 
 ### Bolus-Schutz
 
