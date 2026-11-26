@@ -16,7 +16,7 @@ Tippe oben in der **Übersicht** (neben dem Menü ☰) auf das Feld **🔍 Suche
 
 ![Global search results, grouped by category](../images/v4/Search/search_results.png)
 
-While the box is empty, **AAPS** shows your **Recent searches**, newest first (up to ten). Tap one to run that search again, or tap the **✕** at the end of a row to remove only that search from the list. A search is added to the list when you open one of its results, so half-typed words are not kept. The list is stored on this phone only: it is not included in a settings export and is not sent to **AAPSClient**.
+Solange das Feld leer ist, zeigt **AAPS** Deine **Letzten Suchanfragen** an, die neueste zuerst (bis zu zehn). Tippe auf eine, um diese Suche noch einmal auszuführen, oder tippe auf das **✕** am Ende einer Zeile, um nur diese Suche aus der Liste zu entfernen. Eine Suche kommt erst in die Liste, wenn Du eines ihrer Ergebnisse öffnest. Halb getippte Wörter werden also nicht gespeichert. Die Liste wird nur auf diesem Smartphone gespeichert: Sie ist nicht im Export der Einstellungen enthalten und wird nicht an **AAPSClient** gesendet.
 
 Leere das Feld mit dem **✕** oder schließe die Suche mit der **Zurück**-Taste des Geräts.
 
