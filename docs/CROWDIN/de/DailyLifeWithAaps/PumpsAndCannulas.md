@@ -4,7 +4,7 @@
 
 Das unten beschriebene Verfahren gilt nur für Schlauchpumpen und ist nicht ohne weiteres auf Patchpumpen wie den Omnipod, die Medtrum Nano, die Accu-Chek Solo usw. anwendbar. Dieser Vorgang wird manchmal als „Infusionsset-Wechsel“ bezeichnet. Ein „kompletter“ Infusionsset-Wechsel umfasst Insulinreservoir und Kanüle, ein „teilweiser“ nur die Kanüle.
 
-Patch-Pumpen füllen und entlüften sich in ihrem eigenen Aktivierungsassistenten selbst, und ihre Kanüle ist bereits im Körper. **AAPS** bietet für sie kein Füllen an: **Nadelwechsel/Füllen** wird weder im Fenster **Verwalten** noch im Schnellstart angezeigt. The exception is the [Equil](../CompatiblePumps/Equil5.3.md), which can be taken off its base plate and primed into the air. Siehe die Seite Deiner Pumpe unter [Kompatible Pumpen](../Getting-Started/CompatiblePumps.md).
+Patch-Pumpen füllen und entlüften sich in ihrem eigenen Aktivierungsassistenten selbst, und ihre Kanüle ist bereits im Körper. **AAPS** bietet für sie kein Füllen an: **Nadelwechsel/Füllen** wird weder im Fenster **Verwalten** noch im Schnellstart angezeigt. Die Ausnahme ist die [Equil](../CompatiblePumps/Equil5.3.md): Sie kann von ihrer Basisplatte abgenommen und in die Luft gefüllt werden. Siehe die Seite Deiner Pumpe unter [Kompatible Pumpen](../Getting-Started/CompatiblePumps.md).
 
 Der physische Catridge-/Reservoirwechsel kann nicht über **AAPS** durchgeführt werden und muss direkt über die Pumpe erfolgen. Der erfolgte Wechsel muss in **AAPS** manuell eingetragen werden.
 
@@ -31,7 +31,7 @@ Der physische Catridge-/Reservoirwechsel kann nicht über **AAPS** durchgeführt
 * Die Standardmengen zum Füllen kannst Du in den Einstellungen für **Nadelwechsel/Füllen** festlegen bzw. anpassen. Gib dazu „prime“ in die Suchleiste des Startbildschirms ein, um sie zu öffnen (siehe [Einstellungen](../SettingUpAaps/Preferences.md)). Schau bitte im Beipackzettel Deines Katheters nach, wie viele Einheiten (je nach Nadel- und Schlauchlänge) für Deinen Katheter zur Befüllung verwendet werden sollten.
 
 * Insulin, das über die Füllfunktion abgegeben wird, berücksichtigt **AAPS** bei der Berechnung des aktiven Insulins (IOB) nicht. Es wird im [Behandlungsverlauf](#aaps-screens-treatments) als „Füllen“ markiert.
-* **Prime/Fill** also works while the pump is [disconnected](#pumps-cannulas-disconnecting) in **AAPS**, so you do not need to reconnect the pump before priming a new set. It is refused only while the pump itself reports that it is suspended.
+* **Nadelwechsel/Füllen** funktioniert auch, während die Pumpe in **AAPS** [getrennt](#pumps-cannulas-disconnecting) ist. Du musst die Pumpe also nicht wieder verbinden, bevor Du ein neues Set füllst. Es wird nur abgelehnt, solange die Pumpe selbst meldet, dass sie angehalten ist.
 
 * Boli, die während die Pumpe getrennt ist, abgegeben werden, werden in **AAPS** nicht berücksichtigt. Wenn Du direkt an der Pumpe einen Bolus abgibst, während **AAPS** getrennt ist, kannst Du dieses Insulin nach dem erneuten Verbinden der Pumpe im Dialog **Insulin** nachtragen, ohne es abzugeben (siehe unten [Abgegebenes Insulin nachtragen, ohne tatsächlich einen Bolus abzugeben](#pumps-cannulas-announce-insulin)).
 
