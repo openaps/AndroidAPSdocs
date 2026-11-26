@@ -37,11 +37,11 @@ Es gibt drei Einstellungen:
 
 ![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
 
-### Low Reservoir Alerts
+### Niedrige Reservoir-Warnungen
 
 Eine Warnung erscheint, wenn die Restmenge Insulin im Patch auf diesen Wert oder darunter sinkt. Einstellbar sind 10 bis 50 IE in Schritten von 5 IE. Standard sind 10 IE.
 
-### Patch Expiration Reminder
+### Patch-Ablauf-Erinnerung
 
 Erinnert Dich daran, wie viel Zeit noch bleibt, bis der aktuelle Patch abläuft. Einstellbar sind 1 bis 24 Stunden in Schritten von 1 Stunde. Standard sind 4 Stunden.
 
