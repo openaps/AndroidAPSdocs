@@ -60,7 +60,7 @@ Läuft ein temporärer Wechsel, zeigt die Karte **AKTIV** seinen Prozentsatz und
 
 ![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **Delete**, and the round **▶ Activate** button on the right. Wie Du im Editor die vier Zeitpläne (IC / ISF / BAS / TARG) ausfüllst, erfährst Du unter [Profile erstellen und bearbeiten](#your-aaps-profile-create-and-edit-profiles).
+Die Knöpfe unten wirken auf das **ausgewählte** Profil: **➕ Hinzufügen**, **✏️ Bearbeiten**, **⧉ Klonen** und **Löschen** sowie rechts der runde Knopf **▶ Aktivieren**. Wie Du im Editor die vier Zeitpläne (IC / ISF / BAS / TARG) ausfüllst, erfährst Du unter [Profile erstellen und bearbeiten](#your-aaps-profile-create-and-edit-profiles).
 
 **⧉ Klonen** verwendet das Symbol mit zwei Quadraten, das oft für *Kopieren* steht, aber es gibt nichts einzufügen: Die Kopie entsteht in einem Schritt. Bestätige *Profil „Normal“ klonen?*, dann wird am Ende des Karussells ein neues Profil namens *Normal Kopie* hinzugefügt und ausgewählt, bereit für **✏️ Bearbeiten** (dort kannst Du es auch umbenennen). Das ist nicht dasselbe wie das Klonen eines früheren **Profilwechsels** aus der Behandlungshistorie: Dabei entsteht ein neues Profil *mit angewendetem Prozentsatz und angewendeter Zeitverschiebung*. Siehe [Speichere den Profilwechsel, falls Du ihn später nutzen willst](#ProfileSwitch-keep-for-later).
 
