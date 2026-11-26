@@ -43,7 +43,7 @@ Die Equil-Einstellungen öffnest Du über **Einstellungen** auf der Karte **Equi
 ![Equil driver settings](../images/v4/Pumps/equil_settings.png)
 
 * **Alarm bei niedrigem Batteriestand**: Warnt Dich, wenn die Pumpenbatterie schwach ist.
-* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
+* **Insulin-Reservoir fast leer**: Warnt Dich, wenn das Insulin im Reservoir knapp wird.
 * **Warnton**: Wie die Pumpe Dich warnt: **Stummschalten**, **Nur vibrieren**, **Nur Töne** oder **Vibration und Ton**.
 * **Bolus-Geschwindigkeit**: Wie schnell ein Bolus abgegeben wird: **1.5 U/min (Standard)**, **3 IE/min**, **6 IE/min** oder **12 IE/min**. Ein schnellerer Bolus kann zu mehr Verschlussalarmen führen.
 
