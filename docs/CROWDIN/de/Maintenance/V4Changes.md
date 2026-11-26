@@ -111,7 +111,7 @@ In **AAPS** v4 ist das Insulin, das unter **Verwalten → Insulineinstellungen**
 
 Beim Update übernimmt **AAPS** das Insulin und die DIA, die in Deinen Profilwechseln aus v3 schon gespeichert sind. Findet es ältere Einträge, bei denen zwar das Insulin bekannt ist, die DIA aber nicht, verwendet es dafür eine Standard-DIA und zeigt einmalig eine Meldung an, zum Beispiel *Für ältere Einträge war keine Insulinwirkdauer gespeichert, daher wurden 9,0 Stunden für Lyumjev verwendet. Prüfe Deine Insulineinstellungen – bereits migrierte Einträge werden danach nicht mehr geändert.* Wenn Du diese Meldung siehst, prüfe Deine Insulineinstellungen.
 
-When you [import settings](../Maintenance/ExportImportSettings.md) exported from **AAPS** 3.x, **AAPS** adds the insulin of that backup to your insulin list and tells you which one, for example *Added to your insulin list from the backup: Free-Peak Oref 38m 6h U100.* This insulin is not in use yet: select the right insulin when you activate your profile, and do this before Nightscout downloads your older treatments.
+Wenn Du aus **AAPS** 3.x exportierte [Einstellungen importierst](../Maintenance/ExportImportSettings.md), fügt **AAPS** das Insulin dieser Sicherung zu Deiner Insulinliste hinzu und sagt Dir, welches, zum Beispiel *Aus der Sicherung zu deiner Insulinliste hinzugefügt: Free-Peak Oref 38m 6h U100.* Dieses Insulin ist noch nicht in Verwendung: Wähle beim Aktivieren Deines Profils das passende Insulin aus, und tu das, bevor Nightscout Deine älteren Behandlungen herunterlädt.
 
 ```{admonition} What you need to do
 :class: important
