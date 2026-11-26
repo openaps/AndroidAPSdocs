@@ -39,7 +39,7 @@ AAPS funktioniert mit einer Reihe von Insulinpumpen. Die folgende Liste zeigt di
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
-- [Omnipod 5](../CompatiblePumps/Omnipod5.md) (Bluetooth; driver in development, test builds only)
+- [Omnipod 5](../CompatiblePumps/Omnipod5.md) (Bluetooth; Treiber in Entwicklung, nur Test-Builds)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([zusätzliches Kommunikationsgerät](#CompatiblePumps-additional-communication-device) erforderlich)
 
 ## Meine Pumpe ist nicht aufgeführt
