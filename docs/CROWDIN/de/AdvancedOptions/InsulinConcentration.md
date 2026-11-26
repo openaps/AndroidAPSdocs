@@ -185,11 +185,11 @@ Das war's!
 
 ```{admonition} If the profile cannot be written to the pump
 :class: warning
-The new insulin is already in the pump before the profile with the new concentration is written to it. Until it is written, the pump gives the wrong amount of insulin.
+Das neue Insulin ist bereits in der Pumpe, bevor das Profil mit der neuen Konzentration auf die Pumpe übertragen wird. Bis es übertragen ist, gibt die Pumpe eine falsche Insulinmenge ab.
 
-- While the profile is not written yet, **AAPS** refuses boluses, SMBs, TBRs and extended boluses: *The profile with the new insulin is not written to the pump yet. Insulin cannot be given until it is written.* Prime and cancelling still work.
-- If writing the profile fails, **AAPS** raises an **Insulin change failed** alarm, and raises it again at every retry until the profile is written. **Disconnect or remove the pump**, check your BG and give insulin another way if you need it. Connect the pump again only after the profile is written.
-- If the prime itself fails, the insulin is not switched either. If the new insulin is already in the pump, do not connect the pump, and run the insulin change again.
+- Solange das Profil noch nicht übertragen ist, lehnt **AAPS** Boli, SMBs, TBRs und verzögerte Boli ab: *Das Profil mit dem neuen Insulin wurde noch nicht auf die Pumpe übertragen. Insulin kann erst abgegeben werden, nachdem die Übertragung erfolgt ist.* Füllen und Abbrechen funktionieren weiterhin.
+- Wenn das Übertragen des Profils fehlschlägt, löst **AAPS** den Alarm **Insulin-Änderung fehlgeschlagen** aus, und zwar bei jedem neuen Versuch erneut, bis das Profil übertragen ist. **Trenne die Pumpe oder nimm sie ab**, prüfe Deine Glukosewert und gib bei Bedarf auf anderem Weg Insulin. Verbinde die Pumpe erst wieder, nachdem das Profil übertragen ist.
+- Wenn schon das Füllen fehlschlägt, wird auch das Insulin nicht gewechselt. Wenn das neue Insulin bereits in der Pumpe ist, verbinde die Pumpe nicht, und führe den Insulinwechsel erneut durch.
 ```
 
 Läuft beim Insulinwechsel ein zeitlich begrenzter **Profilwechsel**, bekommt auch das Profil, das nach dem Ende des Profilwechsels wieder gilt, das neue Insulin. Das alte Insulin kommt nicht zurück.
