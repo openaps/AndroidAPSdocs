@@ -121,7 +121,7 @@ Tippe auf dem Pumpenbildschirm auf **Patch verwerfen** und bestätige. Die Insul
 
 Hat ein kritischer Alarm den Patch gestoppt, bietet der Alarm stattdessen **Patch deaktivieren** an. Tippst Du darauf, wird der Patch genauso verworfen.
 
-If the patch cannot be reached, you can still discard it. **AAPS** removes it and stops counting its temp basal and extended bolus, but the patch itself was not told to stop. **AAPS** warns you: *The patch could not be reached. It was removed from AAPS but not stopped, and it may still give insulin. Take it off.* Take the patch off your body straight away.
+Wenn der Patch nicht erreichbar ist, kannst Du ihn trotzdem verwerfen. **AAPS** entfernt ihn und berücksichtigt seine temporäre Basalrate und seinen verzögerten Bolus nicht mehr, aber der Patch selbst hat keinen Befehl zum Stoppen erhalten. **AAPS** warnt Dich: *Der Patch konnte nicht erreicht werden. Er wurde aus AAPS entfernt, aber nicht gestoppt. Möglicherweise gibt er weiterhin Insulin ab. Entferne ihn.* Nimm den Patch sofort von Deinem Körper ab.
 
 (carelevo-alarms-and-notifications)=
 
