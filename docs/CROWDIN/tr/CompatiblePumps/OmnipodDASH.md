@@ -25,7 +25,7 @@ Bu talimatlar **Omnipod DASH** nesli pompayı **(Omnipod Eros DEĞİL)** yapıla
 - Yaz saati (DST) ve saat dilimi değişiklikleri otomatik olarak uygulanmaz. Saat değiştikten sonra Pod'u elle güncellemeniz gerekir: DASH pompa ekranında **Yenile**'ye, ardından **Saati ayarla**'ya basın (Pod ile telefonun saat dilimleri farklı olduğunda görünür) veya bir **Profil değişimi** yapın (bkz. [Omnipod Dash için saat dilimi değişikliği](#timezone-traveling-with-pumps)).
 - Dash, bazal oranı yalnızca 0,05 Ü/sa adımlarla destekler. **AAPS profilinizde** bazalı 0,01 adımlarla ayarlamaya çalışırsanız, Pod oranı 0,05 adımlara yuvarlasa da AAPS uyarı vermez. DASH pompa ekranında **Pod Geçmişi**'ni açarsanız, 0,05 bazal ayarlandığını gösterir. Bu aynı zamanda **AAPS**'te DASH için izin verilen en düşük bazal oranın 0,05 Ü/sa olduğu anlamına gelir.
 - Ayar dosyası etkin Pod oturumunu içerir. Her Pod etkinleştirmesinden sonra ayarlarınızı dışa aktarın ve ayarları içe aktarmadan önce [Ayarları dışa ve içe aktarma](#omnipod-dash-export-import) bölümüne bakın.
-- Yeni bir bazal profil ayarlanırken DASH, yeni bazal **Profili** ayarlamadan önce iletimi askıya alır. İletişim kesilirse veya bir hata olursa bazal profil kendiliğinden yeniden başlamaz. Ayrıntılar için [İnsülin İletimine Devam Etme](#omnipod-dash-resuming-insulin-delivery) bölümüne bakın.
+- Yeni bir bazal profil ayarlanırken DASH, yeni bazal **Profili** ayarlamadan önce iletimi askıya alır. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Ayrıntılar için [İnsülin İletimine Devam Etme](#omnipod-dash-resuming-insulin-delivery) bölümüne bakın.
 - Alarmlar yapılandırılmışsa ve Pod'un süresi dolmak üzereyse, alarmlar susturulana kadar Pod bip sesi çıkarmaya devam eder; ayrıntılar için [Pod Alarmlarını Susturma](#omnipod-dash-silencing-pod-alerts) bölümüne bakın.
 - Pod etkinleştirme sorunlarına yol açabilen, Bluetooth ile ilgili bir dizi bilinen sorun vardır. Bilinen sorun ve bu sorunların çözümleri için [Bluetooth sorunlarını giderme](../GettingHelp/BluetoothTroubleshooting.md) sayfasına bakın.
 
@@ -150,6 +150,8 @@ Sağ üst köşedeki **Ayarlar** (dişli) simgesi [Dash ayarlarını](#omnipod-d
 
 - **Pod Zorunlu Sonu:** Pod'un ek süresinin sonu (**Pod Sona Erme** zamanından 8 saat sonra; en uzun Pod ömrü 80 saattir). Ek süre başladığında (**Pod Sona Erme** zamanında) metin sarıya, zorunlu sondan önceki son 4 saatte kırmızıya döner. Ek süre boyunca kalan süreyi de gösterir, örneğin *(17dk kaldı)*. Pod, zorunlu sonda insülin vermeyi durdurur ve değiştirilmesi gerekir.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Pod Durumu:** Pod'un durumu: **Aktif Pod Yok**, **Kurulum devam ediyor**, **Çalışıyor**, **Askıya Alındı** veya bir Pod hatasından sonra **ALARM**.
 
 - **Son Bağlantı:** **AAPS**'in Pod ile en son ne kadar önce iletişim kurduğu.
@@ -187,6 +189,7 @@ Pompa ekranının altındaki düğmeler Pod'un durumuna göre değişir. Yalnız
 - **Alarmları Sustur:** Pod'un alarm bip seslerini durdurur (örneğin Pod süre sonu veya düşük rezervuar). Yalnızca Pod'da etkin bir alarm varken gösterilir. Bkz. [Pod Alarmlarını Susturma](#omnipod-dash-silencing-pod-alerts).
 
 - **İletime devam et:** Askıya alınmış bir Pod'da insülin iletimine devam eder. Yalnızca iletim askıya alındığında gösterilir. Bkz. [İnsülin İletimine Devam Etme](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Saati ayarla:** Bazal **Profilinizi** yeniden göndererek Pod'u telefonunuzun saat dilimine göre günceller. Yalnızca Pod'un saat dilimi telefonunuzun saat diliminden farklı olduğunda gösterilir.
 
@@ -207,11 +210,6 @@ Pompa ekranının altındaki düğmeler Pod'un durumuna göre değişir. Yalnız
 1. DASH pompa ekranını açın (**Yönet** > **Pompa**) ve **Pod'u Etkinleştir**'e basın. Etkinleştirme sihirbazı açılır.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Yukarıdaki ekran görüntüsü eski bir **AAPS** sürümüne aittir. **AAPS** 4'te **Pod'u Etkinleştir**, **Pod Yönetimi** menüsü yerine doğrudan DASH pompa ekranındaki bir düğmedir.
-   ```
 
    Daha önce **AAPS**'te hiç **Profil** etkinleştirmediyseniz, sihirbaz önce **Profil gerekli** adımını gösterir: etkinleştirmede uygulanacak profili seçin ve devam edin.
 
@@ -303,6 +301,8 @@ Bir Pod'u devre dışı bırakmak için (süresi dolduğu ya da arızalandığı
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. **AAPS** Pod'u devre dışı bırakırken **Pod Devre dışı bırakılıyor** adımı gösterilir. Pod, devre dışı bırakmanın başarılı olduğunu bip sesiyle onaylar.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Bir Pod'u yalnızca onunla tüm iletişim sürekli başarısız olduğunda çık
 - Bundan sonra **AAPS** o Pod ile artık iletişim kuramaz.
 - Pod düzgün devre dışı bırakılmadığı için **insülin iletimi askıya ALINMAMIŞTIR**. **Pod'u vücudunuzdan çıkarın!**
 - **Pod Çıkarıldı** adımı, Pod durumunun silindiğini onaylar. **Bitir**'e basın. Artık yeni bir Pod etkinleştirebilirsiniz.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## İnsülin İletimine Devam Etme
-
-**NOT**: **Profil değişimleri** sırasında, PDM kullanırken olduğu gibi, **AAPS** yeni bazal **Profili** ayarlamadan önce Pod'da iletimi askıya almak zorundadır. Askıya alma ve devam ettirme komutları arasında iletişim başarısız olursa iletim askıda kalabilir. Daha fazla ayrıntı için sorun giderme bölümündeki [**İletim askıya alındı**](#omnipod-dash-delivery-suspended) kısmını okuyun.
-
-İnsülin iletimi askıya alındığında, Pod'a insülin iletimine devam etmesini söylemeniz gerekir. Komut başarıyla işlendiğinde Pod, etkin bazal **Profilinizdeki** şu anki saate ait bazal oranı kullanarak yeniden insülin verir. Pod yeniden bolus, **GBO** ve **SMB** komutlarını kabul eder.
-
-1. DASH pompa ekranını açın ve **Pod Durumu** alanında **Askıya Alındı** yazdığını kontrol edin. Pod'a normal insülin iletimine devam etmesini söylemek için **İletime devam et**'e basın.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Komut başarılı olduğunda **Pod Durumu** alanında **Çalışıyor** yazar ve **İletime devam et** düğmesi kaybolur.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Yukarıdaki ekran görüntüleri, bir onay iletişim kutusu gösteren eski bir **AAPS** sürümüne aittir. **AAPS** 4'te sonucu DASH pompa ekranında doğrularsınız: **Pod Durumu** alanında **Çalışıyor** yazar ve **İletime devam et** düğmesi kaybolur.
-   ```
-
-   Komut başarısız olursa **AAPS**, *İletim devam ettirilemedi* ile başlayan bir uyarı iletişim kutusu gösterir. **Yenile**'ye basın ve yeniden deneyin.
-
-   ![İletim devam ettirilemedi uyarısı](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Bluetooth bağlantılarıyla, pompa/Pod bağlantısının kopmasıyla veya etkin
 
 ### İletim askıya alındı
 
-  - Artık iletimi askıya alma butonu yok. Pod'u "askıya almak" istiyorsanız, x dakika için sıfır **GBO** ayarlayabilirsiniz.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - **Profil değişimleri** sırasında DASH, yeni bazal **Profili** ayarlamadan önce iletimi askıya almak zorundadır. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Bu olduğunda:
      - Bazal, SMB, Manuel bolus vb. içeren insülin iletimi olmayacaktır.
      - Komutlardan birinin onaylanmadığına dair bir bildirim olabilir: bu, hatanın ne zaman gerçekleştiğine bağlıdır.
@@ -581,6 +554,22 @@ Bluetooth bağlantılarıyla, pompa/Pod bağlantısının kopmasıyla veya etkin
   - Onaylanmamış komutlar için, onaylamak veya reddetmek üzere DASH pompa ekranında **Yenile**'ye basın.
 
 *****NOT:** Pod'dan bip sesleri duyduğunuzda, telefonu kontrol etmeden iletimin devam edeceğini varsaymayın; iletim askıda kalabilir, ***bu yüzden kontrol etmeniz gerekir!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### İnsülin İletimine Devam Etme
+
+İnsülin iletimi askıya alındığında, Pod'a insülin iletimine devam etmesini söylemeniz gerekir. Komut başarıyla işlendiğinde Pod, etkin bazal **Profilinizdeki** şu anki saate ait bazal oranı kullanarak yeniden insülin verir. Pod yeniden bolus, **GBO** ve **SMB** komutlarını kabul eder.
+
+1. DASH pompa ekranını açın ve **Pod Durumu** alanında **Askıya Alındı** yazdığını kontrol edin. Pod'a normal insülin iletimine devam etmesini söylemek için **İletime devam et**'e basın.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Komut başarılı olduğunda **Pod Durumu** alanında **Çalışıyor** yazar ve **İletime devam et** düğmesi kaybolur.
+
+   Komut başarısız olursa **AAPS**, *İletim devam ettirilemedi* ile başlayan bir uyarı iletişim kutusu gösterir. **Yenile**'ye basın ve yeniden deneyin.
+
+   ![İletim devam ettirilemedi uyarısı](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=
