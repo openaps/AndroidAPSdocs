@@ -347,7 +347,7 @@ Na tela **BT Device** (deslize para a esquerda), você pode verificar mais detal
 
 &nbsp;
 
-- **Um dispositivo NFC de terceiros não é mais necessário** Dispositivos NFC de terceiros (como Miaomiao, Bubble ou Blucon) não são mais necessários *(mas ainda podem ser usados)* para coletar leituras, porque agora o próprio sensor pode enviá-las por Bluetooth. Menos hardware significa menos coisas que podem dar errado, menos dispositivos para carregar e uma configuração mais simples.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Menos hardware significa menos coisas que podem dar errado, menos dispositivos para carregar e uma configuração mais simples.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ Na tela **BT Device** (deslize para a esquerda), você pode verificar mais detal
 
 &nbsp;
 
-- **Dispositivos NFC de terceiros ainda podem ser usados**. Sim, coloquei isto como desvantagem, mas também queria mostrar que, se algo der errado com o sensor e o LL assumir o controle dele, você sempre pode voltar a colocar um dispositivo NFC no sensor para receber leituras no xDrip. Você também pode usar esse dispositivo em vez de uma conexão Bluetooth direta, se preferir uma configuração com um dispositivo NFC de terceiros (Miaomiao, Bubble, Blucon). Às vezes, alguns telefones não funcionam bem com o vínculo Bluetooth nativo com o sensor e a leitura de dados. Você pode usar esses dispositivos como reserva ou no uso normal; de qualquer forma, você ainda tem essa opção.
+- **Dispositivos NFC de terceiros ainda podem ser usados**. Sim, coloquei isto como desvantagem, mas também queria mostrar que, se algo der errado com o sensor e o LL assumir o controle dele, você sempre pode voltar a colocar um dispositivo NFC no sensor para receber leituras no xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Às vezes, alguns telefones não funcionam bem com o vínculo Bluetooth nativo com o sensor e a leitura de dados. Você pode usar esses dispositivos como reserva ou no uso normal; de qualquer forma, você ainda tem essa opção.
 - Se você planeja usar o **FSL Reader** como dispositivo NFC para fazer leituras, você PRECISA iniciar o sensor FSL2 com o **PRIMEIRÍSSIMO escaneamento NFC** para aquecer o sensor **PRIMEIRO COM O LEITOR**.
 
 &nbsp;
