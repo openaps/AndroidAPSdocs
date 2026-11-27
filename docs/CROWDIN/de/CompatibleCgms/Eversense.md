@@ -67,7 +67,7 @@ xDrip kann wie ESEL die Benachrichtigungen der Hersteller-App auslesen. Backfill
 
 **AAPS** kann die Glukosewerte direkt aus den Benachrichtigungen der offiziellen Eversense-App lesen, ohne eine weitere App dazwischen. Backfilling ist nicht möglich.
 
-This works with the **Eversense 365** app, both the US version and the version for other countries.
+Das funktioniert mit der **Eversense 365**-App, sowohl mit der US-Version als auch mit der Version für andere Länder.
 
 - Wähle **Benachrichtigungsleser** unter [**Konfiguration → BZ-Quelle**](#Config-Builder-bg-source) und erlaube **AAPS** den Zugriff auf Benachrichtigungen, wenn Du danach gefragt wirst.
 - Achte darauf, dass die Eversense-App den aktuellen Glukosewert in ihrer Benachrichtigung anzeigt.

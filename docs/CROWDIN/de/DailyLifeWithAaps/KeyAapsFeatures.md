@@ -18,7 +18,7 @@ Informationen dazu, wie Du den Loop-Modus auswählst, und zu den übrigen Symbol
 
 Die Vorschläge werden nicht, wie im Closed Loop, automatisch ausgeführt. Die Vorschläge müssen manuell in die Pumpe (falls eine virtuelle Pumpe verwendet wird) eingegeben oder über einen Tastendruck, wenn **AAPS** mit einer echten Pumpe verbunden ist, ausgeführt werden.
 
-When **AAPS** has a suggestion, a **Loop** entry with a green dot appears in the bottom navigation of the main screen. Tippe darauf, um den Vorschlag („Neue temporäre Basalrate übernehmen“) mit Rate, Dauer und Begründung zu lesen, und tippe dann auf **Ausführen**, um ihn umzusetzen:
+Wenn **AAPS** einen Vorschlag hat, erscheint in der unteren Navigationsleiste des Startbildschirms ein Eintrag **Loop** mit einem grünen Punkt. Tippe darauf, um den Vorschlag („Neue temporäre Basalrate übernehmen“) mit Rate, Dauer und Begründung zu lesen, und tippe dann auf **Ausführen**, um ihn umzusetzen:
 
 ![Open loop suggestion with the Perform button](../images/screens/loop_tab.png)
 

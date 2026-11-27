@@ -318,7 +318,7 @@ Wear Installer 2, разработено от [Malcolm Bryant](https://www.youtu
 
 ## Циферблат AAPSv2 – легенда
 
-![Легенда на циферблата AAPSv2](../images/Watchface_Legend.png)
+![Легенда на циферблата AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A – време от последното изпълнение на кръга
 

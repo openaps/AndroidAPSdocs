@@ -20,7 +20,7 @@
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) και [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![image](../images/following_dexcom_follow.png)
+![image](../images/remote_control_and_following/following_dexcom_follow.png)
 
 * Το Dexcom Follow είναι συμβατό με πολλά τηλέφωνα (Android και iPhone). Το Dexcom Follow μπορεί να χρησιμοποιηθεί ακόμη κι αν δεν χρησιμοποιείτε την επίσημη εφαρμογή της Dexcom για να λαμβάνετε τα δεδομένα του αισθητήρα.
 
@@ -47,7 +47,7 @@
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![image](../images/following_nightguard.png)
+![image](../images/remote_control_and_following/following_nightguard.png)
 
 Πλεονεκτήματα (σύμφωνα με χρήστες):
 
@@ -73,7 +73,7 @@
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![image](../images/following_nightwatch.png)
+![image](../images/remote_control_and_following/following_nightwatch.png)
 
 
 * Το Nightwatch παρουσιάζεται ως πελάτης (client) του Nightscout και παρακολουθεί τα επίπεδα γλυκόζης του χρήστη στο Nightscout σε τηλέφωνο ή tablet Android.
@@ -132,7 +132,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 
 
-![image](../images/following_xdrip4ios.png)
+![image](../images/remote_control_and_following/following_xdrip4ios.png)
 
 «Τι είναι το **Shuggah**;» Μια ομάδα Ουκρανών προγραμματιστών αντέγραψε τον κώδικα του xDrip4iOS (που είναι δημόσιος στο GitHub) και τον κυκλοφόρησε στο App Store με επαγγελματικό λογαριασμό. Η έκδοση Shuggah δεν τη διαχειρίζονται με κανέναν τρόπο οι προγραμματιστές του xDrip4iOS.
 
@@ -140,9 +140,9 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![image](../images/following_sugarmate.png)
+![image](../images/remote_control_and_following/following_sugarmate.png)
 
-![image](../images/following_sugarmate_graph.png)
+![image](../images/remote_control_and_following/following_sugarmate_graph.png)
 
 
 Το [Sugarmate](https://sugarmate.io/) μπορεί να εγκατασταθεί σε iPhone από το App Store. Το Sugarmate είναι συμβατό με:
@@ -155,7 +155,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![image](../images/following_spike.png)
+![image](../images/remote_control_and_following/following_spike.png)
 
 Το Spike μπορεί να χρησιμοποιηθεί ως κύριος δέκτης ή ως εφαρμογή ακόλουθου και δίνει γλυκόζη αίματος, συναγερμούς, IOB και άλλα.
 
@@ -175,7 +175,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 ### M5Stack
 
-![image](../images/following_m5stack.png)
+![image](../images/remote_control_and_following/following_m5stack.png)
 
 Το M5Stack είναι ένα μικρό κουτί που μπορεί να προγραμματιστεί για πολλές εφαρμογές. Το έργο του Martin [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) δείχνει τις τιμές γλυκόζης του αισθητήρα και τις τάσεις, το IOB και το COB. Είναι σε ένα πλαστικό κουτί, με έγχρωμη οθόνη, υποδοχή κάρτας micro SD, 3 κουμπιά, ηχείο και εσωτερική μπαταρία. Είναι μια πολύ καλή οθόνη γλυκόζης αίματος και ρυθμίζεται σχετικά εύκολα αν έχετε λογαριασμό Nightscout. Οι χρήστες συνήθως το χρησιμοποιούν με το Wi-Fi του σπιτιού τους, αλλά κάποιοι το χρησιμοποιούν ως οθόνη όταν οδηγούν μοτοσικλέτα, με σύνδεση στο hotspot Wi-Fi του τηλεφώνου.
 
@@ -183,9 +183,9 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 Το SugarPixel είναι μια συσκευή που λειτουργεί ως δεύτερη οθόνη γλυκόζης με συναγερμούς για συνεχή παρακολούθηση γλυκόζης. Συνδέεται με την εφαρμογή Dexcom ή με το Nightscout στο smartphone του χρήστη. Η συσκευή δείχνει τις τιμές γλυκόζης αίματος σε πραγματικό χρόνο. Αυτή η συσκευή παρακολούθησης CGM έχει ηχητικούς συναγερμούς με τυχαίους τόνους (που είναι πάρα πολύ δυνατοί), συναγερμούς με δόνηση για άτομα με προβλήματα ακοής, προσαρμόσιμες επιλογές οθόνης και ενσωματωμένη παρακολούθηση από πολλούς χρήστες.
 
-![image](../images/following_sugarpixel.png)
+![image](../images/remote_control_and_following/following_sugarpixel.png)
 
-![image](../images/following_sugarpixel_led_display.png)
+![image](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
 * Το SugarPixel έχει πολλές επιλογές οθόνης σε mg/dl και mmol/l για τις ανάγκες του χρήστη, με τιμές γλυκόζης σε διαφορετικά χρώματα.
 * Η βασική οθόνη δείχνει γλυκόζη αίματος (BG), βέλος τάσης και διαφορά (delta). Η διαφορά (delta) είναι η αλλαγή + ή - από την προηγούμενη μέτρηση.
@@ -197,7 +197,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved in
 
 Το **Nightscout Clock** είναι λογισμικό ανοιχτού κώδικα που τρέχει στη συσκευή **Ulanzi TC001**. Συνδέεται με τους διακομιστές της Dexcom ή με το Nightscout και δείχνει τις τιμές γλυκόζης αίματος σε πραγματικό χρόνο.
 
-![Παρακολούθηση με το Nightscout Clock](../images/FollowingNightscoutClock.png)
+![Παρακολούθηση με το Nightscout Clock](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * Το ρολόι υποστηρίζει μονάδες mmol/l και mg/dl και έχει ηχητικούς συναγερμούς.
 * Υπάρχουν διάφορες οθόνες. Δείτε το [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) για μια επισκόπηση.

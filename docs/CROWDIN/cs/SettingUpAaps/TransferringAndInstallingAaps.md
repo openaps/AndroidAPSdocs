@@ -31,11 +31,11 @@ Ve webovém prohlížeči otevřete [Google.com](https://www.google.com/) a při
 
 V Google menu v pravém horním rohu vyberte aplikaci Drive.
 
-![Spuštění aplikace Disk Google](../images/GoogleDriveInWebbrowser.png)
+![Spuštění aplikace Disk Google](../images/install/GoogleDriveInWebbrowser.png)
 
 Klikněte vlevo nahoře na **New** (Nový) (nebo klikněte pravým tlačítkem do prázdného místa pod soubory a složkami) a vyberte **File upload** (Nahrát soubor).
 
-![Nahrání souboru apk do aplikace Disk Google](../images/GoogleDriveUploadFile.png)
+![Nahrání souboru apk do aplikace Disk Google](../images/install/GoogleDriveUploadFile.png)
 
 Soubor APK by teď měl být nahraný na Disku Google.
 
@@ -43,17 +43,17 @@ Soubor APK by teď měl být nahraný na Disku Google.
 
 Vezměte telefon a spusťte aplikaci Disk Google. Jedná se předinstalovanou aplikaci a najdete ji na stejném místě, kde se nachází všechny vaše Google aplikace nebo pomocí vyhledávání.
 
-![spusťte aplikaci Disk Google](../images/GoogleDriveMobileAPPLaunch.png)
+![spusťte aplikaci Disk Google](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Spusťte instalaci apk klepnutím na název souboru v aplikaci Disk Google v mobilu.
 
-![spusťte instalaci apk](../images/GoogleDriveMobileUploadedAPK.png)
+![spusťte instalaci apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Pokud se zobrazí bezpečnostní upozornění, že instalace aplikací z Disku Google teď není povolena, klepněte na „Nastavení“ a povolte ji jen na tuto krátkou chvíli. Potom ji znovu zakažte, protože nechat ji trvale povolenou je bezpečnostní riziko.
 
-![Bezpečnostní upozornění Disku Google](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Bezpečnostní upozornění Disku Google](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Bezpečnostní upozornění Disku Google](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Bezpečnostní upozornění Disku Google](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Po dokončení instalace je tento krok hotový.
 

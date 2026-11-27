@@ -134,21 +134,21 @@ Nightscout는 “클라우드”에 있는 서버이지만, iPhone의 App Store�
 
 iPhone에 **Nightscout** 앱을 설치했으면 앱을 열고 설정 안내에 따라 Nightscout 주소를 입력하십시오(아래 왼쪽 참조). 주소 형식은 Nightscout를 호스팅하는 방식에 따라 다를 수 있습니다. (_예:_ http://youraddresshere.herokuapp.com). 그런 다음 Nightscout API secret을 입력하십시오(아래 오른쪽 참조). API 비밀번호를 묻지 않으면 앱 위쪽의 자물쇠를 눌러 입력해야 합니다:
 
-![이미지](../images/remote-control-24.png)
+![이미지](../images/remote_control_and_following/remote-control-24.png)
 
 설정에 대한 자세한 정보는 [Nightscout](https://nightscout.github.io/nightscout/discover/)에서 직접 볼 수 있습니다
 
 처음 로그인하면 화면이 매우 단순합니다. 오른쪽 위의 “햄버거” 메뉴를 선택하고 아래로 스크롤하여 표시 옵션을 사용자 지정하십시오:
 
-![이미지](../images/remote-control-25.png)
+![이미지](../images/remote_control_and_following/remote-control-25.png)
 
 “Settings”(설정)까지 아래로 스크롤하십시오. 혈당 표시의 기본값이 로그 눈금이므로 “scale”을 “linear”(선형)로 바꾸는 것이 좋을 수 있습니다. 또한 펌프 기저가 표시되도록 “render basal” 아래에서 “default”를 선택하십시오.
 
-![이미지](../images/remote-control-25b.png)
+![이미지](../images/remote_control_and_following/remote-control-25b.png)
 
 원하는 옵션을 선택하십시오. 알람에 다른 앱을 사용한다면 알람을 선택 해제하십시오.
 
-![이미지](../images/remote-control-26.png)
+![이미지](../images/remote_control_and_following/remote-control-26.png)
 
 “show plugins”가 나올 때까지 계속 아래로 스크롤하십시오.
 
@@ -156,7 +156,7 @@ iPhone에 **Nightscout** 앱을 설치했으면 앱을 열고 설정 안내에 �
 
 중요: 이 변경 사항이 적용되려면 이제 아래쪽의 “save”(저장)를 눌러야 합니다.
 
-![이미지](../images/remote-control-27.png)
+![이미지](../images/remote_control_and_following/remote-control-27.png)
 
 “save”를 누르면 앱이 Nightscout 메인 화면으로 돌아가며, 대략 다음과 같이 보입니다:
 
@@ -170,7 +170,7 @@ iPhone에 **Nightscout** 앱을 설치했으면 앱을 열고 설정 안내에 �
 8. 기저 인슐린 프로파일
 9. 초록색 선 = 과거 혈당 파란색 선 = 예측 혈당
 
-![이미지](../images/remote-control-28.png)
+![이미지](../images/remote_control_and_following/remote-control-28.png)
 
 Nightscout 앱의 왼쪽 위 메뉴를 자세히 보면:
 
@@ -179,7 +179,7 @@ Nightscout 앱의 왼쪽 위 메뉴를 자세히 보면:
 3. 햄버거 - 설정용
 4. Careportal - Log treatment(처치 기록) (**AAPS**가 언제 이것을 적용하는지는 [아래](#RemoteControl_nightscout-treatments) 참조)
 
-![Nightscout 상단 바](../images/remote-control-29.png)
+![Nightscout 상단 바](../images/remote_control_and_following/remote-control-29.png)
 
 이 화면의 회색 탭에는 **AAPS** 시스템 상태에 대한 정보가 매우 많습니다(탭을 누르면 더 많은 정보가 나타납니다):
 
@@ -195,9 +195,9 @@ Nightscout 앱의 왼쪽 위 메뉴를 자세히 보면:
 10. AAPS 휴대폰의 배터리 상태
 11. 데이터베이스 크기. 너무 가득 차면(DIY Nightscout만 해당 - 호스팅 서비스는 무시하십시오) 연결 문제가 생기기 시작할 수 있습니다. Admin tools(관리 도구) 메뉴(햄버거 메뉴를 통해)에서 데이터를 삭제하여 이 숫자를 줄일 수 있습니다.
 
-![이미지](../images/remote-control-30.png)
+![이미지](../images/remote_control_and_following/remote-control-30.png)
 
-![이미지](../images/remote-control-31.png)
+![이미지](../images/remote_control_and_following/remote-control-31.png)
 
 팝업을 닫으려면 페이지 아래쪽의 "refresh"를 누르십시오.
 
@@ -233,7 +233,7 @@ Nightscout 앱의 왼쪽 위 메뉴를 자세히 보면:
 
 ### 옵션 1) Wear OS 워치로 AAPS 제어하기
 
-![Wear 원격 제어 1](../images/Wear_Remote1.png)
+![Wear 원격 제어 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 [워치에 **AAPS**를 설정](../WearOS/BuildingAapsWearOS.md)했다면, 스마트워치 페이스와 그 기능에 대한 자세한 내용은 [스마트워치에서 Wear AAPS 사용하기](../WearOS/WearOsSmartwatch.md)에서 볼 수 있습니다.
 
@@ -285,19 +285,19 @@ b)  사용자가 인증 코드 입력을 피하고 싶은 경우(SMS 명령에�
 
 ### 옵션 3) 휴대폰의 **AAPS**를 원격 제어하기 위한 워치의 AAPSClient
 
-![Wear 원격 제어 2](../images/Wear_Remote2.png)
+![Wear 원격 제어 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 워치용 소프트웨어인 **AAPSClient** Wear apk는 [GitHub](https://github.com/nightscout/AndroidAPS/releases/)에서 바로 다운로드할 수 있습니다.
 
 소프트웨어를 다운로드하려면 휴대폰의 클라이언트 앱에 맞는 워치 앱을 누르십시오: **wear-aapsclient-release_**_version_은 **AAPSClient**용, **wear-aapsclient2-release_**_version_은 **AAPSClient2**용입니다([AAPSClient, AAPSClient2, AAPSClient3에 대하여](#remotecontrol-aapsclient-versions) 참조):
 
-![이미지](../images/github_release_wear_aapsclient_apk.png)
+![이미지](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 그런 다음 "save as"(다른 이름으로 저장)를 눌러 컴퓨터의 편한 위치에 파일을 저장하십시오:
 
 
-![이미지](../images/save_as_wear_aapsclient_apk.png)
+![이미지](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 

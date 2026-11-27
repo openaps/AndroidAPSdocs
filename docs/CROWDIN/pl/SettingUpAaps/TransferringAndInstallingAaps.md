@@ -31,11 +31,11 @@ Otwórz [Google.com](https://www.google.com/) w przeglądarce i zaloguj się na 
 
 W prawym górnym rogu wybierz w menu Google aplikację Dysk.
 
-![Uruchom aplikację Dysk Google](../images/GoogleDriveInWebbrowser.png)
+![Uruchom aplikację Dysk Google](../images/install/GoogleDriveInWebbrowser.png)
 
 Kliknij **Nowy** w lewym górnym rogu (albo kliknij prawym przyciskiem myszy puste miejsce pod plikami i folderami) i wybierz **Prześlij plik**.
 
-![Wysyłanie pliku apk przez aplikację Dysk Google](../images/GoogleDriveUploadFile.png)
+![Wysyłanie pliku apk przez aplikację Dysk Google](../images/install/GoogleDriveUploadFile.png)
 
 Plik apk powinien być teraz przesłany na Dysk Google.
 
@@ -43,17 +43,17 @@ Plik apk powinien być teraz przesłany na Dysk Google.
 
 Przejdź do telefonu i uruchom aplikację Dysk Google. Jest to aplikacja zainstalowana fabrycznie. Znajdziesz ją tam, gdzie inne aplikacje Google, albo wyszukując jej nazwę.
 
-![uruchom aplikację Dysk Google](../images/GoogleDriveMobileAPPLaunch.png)
+![uruchom aplikację Dysk Google](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Uruchom instalację pliku apk, dotykając nazwy pliku w aplikacji Dysk Google na telefonie.
 
-![uruchom instalację pliku apk](../images/GoogleDriveMobileUploadedAPK.png)
+![uruchom instalację pliku apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Jeśli zobaczysz ostrzeżenie, że teraz nie możesz instalować aplikacji z Dysku Google, dotknij „Ustawienia” i zezwól na to na chwilę. Potem znowu to zablokuj, bo stale włączona opcja jest zagrożeniem dla bezpieczeństwa.
 
-![Ostrzeżenie bezpieczeństwa Dysku Google](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Ostrzeżenie bezpieczeństwa Dysku Google](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Ostrzeżenie bezpieczeństwa Dysku Google](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Ostrzeżenie bezpieczeństwa Dysku Google](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Po zakończeniu instalacji ten krok jest gotowy.
 

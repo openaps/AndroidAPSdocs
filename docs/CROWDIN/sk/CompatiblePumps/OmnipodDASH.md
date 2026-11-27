@@ -200,13 +200,6 @@ Tlačidlá v dolnej časti obrazovky pumpy sa menia podľa stavu Podu. Zobrazuj�
 
 - **Vyradiť Pod:** Odstráni nedokončený Pod z **AAPS**. Zobrazuje sa iba vtedy, keď sa aktivácia Podu zastavila v polovici. **AAPS** vás požiada o potvrdenie. Po vyradení už **AAPS** nemôže s týmto Podom komunikovať: odstráňte ho z tela.
 
-![Ponuka Správa Podu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-Snímka obrazovky vyššie je zo staršej verzie **AAPS**, ktorá mala samostatnú ponuku **Správa Podu**. V **AAPS** 4 sú všetky tieto akcie vrátane **Aktivovať Pod**, **Deaktivovať Pod**, **Prehrať testovacie pípnutie** a **História Podu** tlačidlami s textovými popismi priamo na obrazovke pumpy.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Aktivovať Pod
@@ -304,7 +297,7 @@ Deaktivácia Podu (či už preto, že expiroval, alebo preto, že zlyhal):
 
 1. Otvorte obrazovku pumpy DASH (**Spravovať** > **Pumpa**) a stlačte **Deaktivovať Pod**.
 
-   ![Tlačidlo Deaktivovať Pod na obrazovke pumpy DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Tlačidlo Deaktivovať Pod na obrazovke pumpy DASH](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. V kroku **Deaktivovať Pod** stlačte **Ďalej**. Dialóg sa spýta: *Deaktivovaný Pod už nie je možné znova použiť. Chcete teraz deaktivovať tento Pod?* Stlačením **OK** spustíte deaktiváciu Podu, stlačením **Zrušiť** si ho ponecháte. Deaktivácia zastaví všetko podávanie inzulínu a nedá sa vrátiť späť.
 

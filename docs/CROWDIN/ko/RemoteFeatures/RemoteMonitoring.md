@@ -1,6 +1,6 @@
 # 원격 모니터링
 
-![어린이 모니터링](../images/KidsMonitoring.png)
+![어린이 모니터링](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__는 1형 당뇨병 어린이를 원격으로 모니터링하는 여러 기능을 제공합니다. 또한 __AAPS__에 원격으로 지시를 보내는 원격 명령도 사용할 수 있습니다. 마찬가지로 __AAPSClient__를 원격 모니터링에 사용하여 배우자나 친구의 __AAPS__를 팔로우할 수도 있습니다.
 

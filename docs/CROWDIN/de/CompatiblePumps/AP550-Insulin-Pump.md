@@ -1,50 +1,50 @@
-# AP550 Insulin Pump
+# AP550-Insulinpumpe
 
-_Insulin Pump uAP 550S_
+_Insulinpumpe uAP 550S_
 
-_These instructions are for configuring AAPS and your pump if you use uAP 550S. The driver talks to the pump over Bluetooth LE._
+_Diese Anleitung beschreibt, wie Du AAPS und Deine Pumpe einrichtest, wenn Du die uAP 550S verwendest. Der Treiber kommuniziert mit der Pumpe über Bluetooth LE._
 
-The pump runs on standard **AAA batteries**.
+Die Pumpe läuft mit handelsüblichen **AAA-Batterien**.
 
 (AP550-Insulin-Pump-pairing-pump)=
 ## Pumpe verbinden
 
-* On the AAPS homescreen press the hamburger menu on the top left corner and go to **Config Builder**.
-* In the pump section select **AP550**. ![AAPS AP550 configure builder](../images/AP550/configureBuilder.jpg)
-* The AP550 overview screen opens. Tap the connection card which says **"Insulin pump not bound"**. You can also click the bottom botton **"Pair"**
+* Öffne oben links auf dem AAPS-Startbildschirm das Menü (☰) und wähle **Konfiguration**.
+* Wähle im Abschnitt Pumpe **AP550** aus. ![AAPS AP550 configure builder](../images/AP550/configureBuilder.jpg)
+* Der AP550-Übersichtsbildschirm öffnet sich. Tippe auf die Verbindungskarte mit der Aufschrift **„Insulin pump not bound“**. Du kannst auch unten auf die Schaltfläche **„Pair“** tippen.
 
   ![AAPS AP550 overview, not paired](../images/AP550/unbound.jpg)
 
-* The pair wizard starts. You can find the pump in two ways:
+* Der Kopplungsassistent startet. Du kannst die Pumpe auf zwei Wegen finden:
 
-  1. **Scan** — the wizard scans for nearby pumps for 15 seconds and lists them by name and serial number(The pump serial number is on the back label.). Tap your pump in the list.
-  2. **QR code** — tap "QR code scan" and point the camera at the QR code on the **back of the pump**. The QR code holds the model and serial number. AAPS then scans until it finds the pump with this serial number.
+  1. **Scan** – Der Assistent sucht 15 Sekunden lang nach Pumpen in der Nähe und listet sie mit Namen und Seriennummer auf (die Seriennummer steht auf dem Etikett auf der Rückseite). Tippe in der Liste auf Deine Pumpe.
+  2. **QR code** – Tippe auf „QR code scan“ und richte die Kamera auf den QR-Code auf der **Rückseite der Pumpe**. Der QR-Code enthält Modell und Seriennummer. AAPS sucht dann so lange, bis es die Pumpe mit dieser Seriennummer findet.
 
   ![AP550 pair wizard, scan](../images/AP550/pair.jpg)
 
-* AAPS connects to the pump ("Bluetooth is connecting...").
-* **Enter the 6-digit pairing code shown on the pump.** You must also confirm the code on the pump. This works like a normal Bluetooth pairing, for example phone and car audio. ![AP550 enter the pairing code](../images/AP550/Enter_pairing_code.jpg)
-* If the code is wrong you can try once more. After a second wrong code the link drops and you start again at the scan step.
-* When pairing succeeds you see "Pump pair successes". Press OK to return to the overview.
+* AAPS verbindet sich mit der Pumpe („Bluetooth is connecting...“).
+* **Gib den 6-stelligen Kopplungscode ein, der auf der Pumpe angezeigt wird.** Du musst den Code auch auf der Pumpe bestätigen. Das funktioniert wie eine normale Bluetooth-Kopplung, zum Beispiel zwischen Smartphone und Autoradio. ![AP550 enter the pairing code](../images/AP550/Enter_pairing_code.jpg)
+* Ist der Code falsch, kannst Du es noch einmal versuchen. Nach einem zweiten falschen Code bricht die Verbindung ab und Du beginnst wieder bei der Suche.
+* Wenn die Kopplung erfolgreich war, siehst Du „Pump pair successes“. Tippe auf OK, um zur Übersicht zurückzukehren.
 
-## Operating the pump
+## Bedienung der Pumpe
 
-The default password to enter the menu on the pump is **211**.
+Das Standard-Passwort für das Menü an der Pumpe ist **211**.
 
 
-### Unlocking the pump
+### Pumpe entsperren
 
-1. **Double-tap the circle on the screen** to wake the screen up.
-2. Tap the **unlock button**.
-3. **Swipe up** to unlock. ![AP550 unlock the pump](../images/AP550/unlock_the_pump.jpg)
+1. **Tippe zweimal auf den Kreis auf dem Display**, um sie aufzuwecken.
+2. Tippe auf die **Entsperr-Schaltfläche**.
+3. **Wische nach oben**, um zu entsperren. ![AP550 unlock the pump](../images/AP550/unlock_the_pump.jpg)
 
-### Pump buttons
+### Schaltflächen der Pumpe
 
-The table below lists the common buttons on the AP550 pump and what each one does. A single screenshot may show several buttons at once; in that case the image spans multiple rows and each button gets its own description row.
+Die Tabelle unten zeigt die gängigen Schaltflächen der AP550 und was sie jeweils bewirken. Ein Screenshot kann mehrere Schaltflächen auf einmal zeigen; dann erstreckt sich das Bild über mehrere Zeilen und jede Schaltfläche hat eine eigene Beschreibungszeile.
 
 <table>
   <tr>
-    <th>Button</th>
+    <th>Schaltfläche</th>
     <th>Beschreibung</th>
   </tr>
 
@@ -53,8 +53,8 @@ The table below lists the common buttons on the AP550 pump and what each one doe
     <td rowspan="4"><img src="../images/AP550/page-1.jpg" alt="buttons"></td>
     <td>1: Stop pump Injection</td>
   </tr>
-  <tr><td>2: bolus</td></tr>
-  <tr><td>3: basal</td></tr>
+  <tr><td>2: Bolus</td></tr>
+  <tr><td>3: Basal</td></tr>
   <tr><td>4: Change the infusion set</td></tr>
 
   <!-- Group 2: one screenshot containing 2 buttons -->
@@ -73,9 +73,9 @@ The table below lists the common buttons on the AP550 pump and what each one doe
 
   <tr>
     <td rowspan="2"><img src="../images/AP550/page-1-3-2.jpg" alt="buttons"></td>
-    <td>1: Set a temporary basal rate as a percentage.</td>
+    <td>1: Setzt eine temporäre Basalrate in Prozent.</td>
   </tr>
-  <tr><td>2: Set a temporary basal rate as a rate</td></tr>
+  <tr><td>2: Setzt eine temporäre Basalrate als absolute Rate.</td></tr>
 
   <tr>
     <td rowspan="2"><img src="../images/AP550/page-1-2.jpg" alt="buttons"></td>
@@ -101,11 +101,11 @@ The table below lists the common buttons on the AP550 pump and what each one doe
 
 </table>
 
-### Changing the reservoir and infusion set
+### Reservoir und Infusionsset wechseln
 
-The **Change the infusion set** button in the main menu is used whenever the delivery line has to be opened. There are two situations:
+Die Schaltfläche **Change the infusion set** im Hauptmenü wird immer dann verwendet, wenn die Zuleitung geöffnet werden muss. Dabei gibt es zwei Fälle:
 
-* the insulin in the reservoir is used up and the reservoir has to be replaced with a new one:
+* das Insulin im Reservoir ist aufgebraucht und das Reservoir muss durch ein neues ersetzt werden:
 
   ![AP550 change reservoir, steps 1 to 3](../images/AP550/rewind_change_reservoir_1.jpg)
 
@@ -117,7 +117,7 @@ The **Change the infusion set** button in the main menu is used whenever the del
 
   ![AP550 change reservoir, steps 13 and 14](../images/AP550/rewind_change_reservoir_5.jpg)
 
-* the infusion set (tubing and cannula) has to be replaced:
+* das Infusionsset (Schlauch und Kanüle) muss ersetzt werden:
 
   ![AP550 prime only, steps 1 to 3](../images/AP550/prime_only_1.jpg)
 
@@ -128,183 +128,183 @@ The **Change the infusion set** button in the main menu is used whenever the del
   ![AP550 prime only, steps 10 to 12](../images/AP550/prime_only_4.jpg)
 
 
-### Pump alarms
+### Alarme der Pumpe
 
-The pump shows an alarm screen when something needs your attention. The picture below shows the alarms as they appear on the pump, together with the buttons you can press. Each alarm is explained in the table.
+Die Pumpe zeigt einen Alarmbildschirm an, wenn etwas Deine Aufmerksamkeit braucht. Das Bild unten zeigt die Alarme so, wie sie auf der Pumpe erscheinen, zusammen mit den Schaltflächen, die Du drücken kannst. Jeder Alarm wird in der Tabelle erklärt.
 
 
 <table>
   <tr>
     <th>Alarm</th>
-    <th>Meaning / what to do</th>
+    <th>Bedeutung / was zu tun ist</th>
   </tr>
   <tr>
     <td rowspan="9"><img src="../images/AP550/alarm.jpg" alt="pump alarms"></td>
-    <td><strong>H1 Pump battery empty</strong> — the AAA batteries are empty. Replace them immediately.</td>
+    <td><strong>H1 Pump battery empty</strong> – die AAA-Batterien sind leer. Ersetze sie sofort.</td>
   </tr>
-  <tr><td><strong>H2 Abnormal pump motor</strong> — the pump detected a motor fault. Stop using the pump and contact your supplier.</td></tr>
-  <tr><td><strong>H3 Insulin depleted</strong> — Insulin depleted. Unable to complete delivery.</td></tr>
-  <tr><td><strong>H4 Occlusion</strong> — the tubing or cannula is blocked. Check the infusion set and replace it if needed.</td></tr>
-  <tr><td><strong>L1 Reservoir empty</strong> —  No reservoir detected.</td></tr>
-  <tr><td><strong>L2 Pipeline detachment</strong> — the tubing has come off. Reconnect or replace the infusion set.</td></tr>
-  <tr><td><strong>L3 Low battery</strong> — the batteries are almost empty. Replace them soon.</td></tr>
-  <tr><td><strong>L4 Insufficient insulin</strong> — The remaining insulin is below the alarm threshold.</td></tr>
+  <tr><td><strong>H2 Abnormal pump motor</strong> – die Pumpe hat einen Motorfehler erkannt. Verwende die Pumpe nicht weiter und wende Dich an Deinen Lieferanten.</td></tr>
+  <tr><td><strong>H3 Insulin depleted</strong> – das Insulin ist aufgebraucht. Die Abgabe kann nicht abgeschlossen werden.</td></tr>
+  <tr><td><strong>H4 Occlusion</strong> – Schlauch oder Kanüle sind blockiert (Verschluss). Prüfe das Infusionsset und ersetze es bei Bedarf.</td></tr>
+  <tr><td><strong>L1 Reservoir empty</strong> – kein Reservoir erkannt.</td></tr>
+  <tr><td><strong>L2 Pipeline detachment</strong> – der Schlauch hat sich gelöst. Verbinde das Infusionsset wieder oder ersetze es.</td></tr>
+  <tr><td><strong>L3 Low battery</strong> – die Batterien sind fast leer. Ersetze sie bald.</td></tr>
+  <tr><td><strong>L4 Insufficient insulin</strong> – die verbleibende Insulinmenge liegt unter der Alarmschwelle.</td></tr>
 </table>
 
-### Pump prompts
+### Hinweise der Pumpe
 
-Besides alarms, the pump also shows **prompts**: short screens that ask you to confirm an action or that inform you about the state of the pump. The table below shows each prompt screen and explains what it means.
+Neben Alarmen zeigt die Pumpe auch **Hinweise** an: kurze Bildschirme, auf denen Du eine Aktion bestätigen sollst oder die Dich über den Zustand der Pumpe informieren. Die Tabelle unten zeigt jeden Hinweisbildschirm und erklärt, was er bedeutet.
 
 
 <table>
   <tr>
-    <th>Prompt</th><th>Meaning</th>
-    <th>Prompt</th><th>Meaning</th>
-    <th>Prompt</th><th>Meaning</th>
+    <th>Hinweis</th><th>Bedeutung</th>
+    <th>Hinweis</th><th>Bedeutung</th>
+    <th>Hinweis</th><th>Bedeutung</th>
   </tr>
 
   <!-- Row 1: prompts 1–3 -->
   <tr>
     <td><img src="../images/AP550/prompt-01.jpg" width="140" alt="prompt 1"></td>
-    <td>The device has been powered off for too long. Please reset the time.</td>
+    <td>Das Gerät war zu lange ausgeschaltet. Bitte stelle die Uhrzeit neu ein.</td>
     <td><img src="../images/AP550/prompt-02.jpg" width="140" alt="prompt 2"></td>
-    <td>The value exceeds the maximum. Please re-enter.</td>
+    <td>Der Wert überschreitet das Maximum. Bitte gib ihn neu ein.</td>
     <td><img src="../images/AP550/prompt-03.jpg" width="140" alt="prompt 3"></td>
-    <td>Infused ** U ** minutes ago.</td>
+    <td>** IE vor ** Minuten abgegeben.</td>
   </tr>
 
   <!-- Row 2: prompts 4–6 -->
   <tr>
     <td><img src="../images/AP550/prompt-04.jpg" width="140" alt="prompt 4"></td>
-    <td>A maximum of ** U can be infused for this bolus.</td>
+    <td>Für diesen Bolus können maximal ** IE abgegeben werden.</td>
     <td><img src="../images/AP550/prompt-05.jpg" width="140" alt="prompt 5"></td>
-    <td>The 4-hour bolus limit has been reached: ** U.</td>
+    <td>Das 4-Stunden-Bolus-Limit ist erreicht: ** IE.</td>
     <td><img src="../images/AP550/prompt-06.jpg" width="140" alt="prompt 6"></td>
-    <td>The daily bolus limit has been reached: ** U.</td>
+    <td>Das tägliche Bolus-Limit ist erreicht: ** IE.</td>
   </tr>
 
   <!-- Row 3: prompts 7–9 -->
   <tr>
     <td><img src="../images/AP550/prompt-07.jpg" width="140" alt="prompt 7"></td>
-    <td>Bolus aborted. Please check the record.</td>
+    <td>Bolus abgebrochen. Bitte prüfe den Eintrag.</td>
     <td><img src="../images/AP550/prompt-08.jpg" width="140" alt="prompt 8"></td>
-    <td>Infusion cannot be resumed under the current alarm condition.</td>
+    <td>Die Abgabe kann bei der aktuellen Alarmsituation nicht fortgesetzt werden.</td>
     <td><img src="../images/AP550/prompt-09.jpg" width="140" alt="prompt 9"></td>
-    <td>Bolus in progress. Changing the infusion set is not allowed.</td>
+    <td>Bolus läuft. Das Wechseln des Infusionssets ist nicht erlaubt.</td>
   </tr>
 
   <!-- Row 4: prompts 10–12 -->
   <tr>
     <td><img src="../images/AP550/prompt-10.jpg" width="140" alt="prompt 10"></td>
-    <td>Temporary basal rate in progress. Changing the infusion set is not allowed.</td>
+    <td>Temporäre Basalrate läuft. Das Wechseln des Infusionssets ist nicht erlaubt.</td>
     <td><img src="../images/AP550/prompt-11.jpg" width="140" alt="prompt 11"></td>
-    <td>Bolus in progress. Editing is not allowed.</td>
+    <td>Bolus läuft. Bearbeiten ist nicht erlaubt.</td>
     <td><img src="../images/AP550/prompt-12.jpg" width="140" alt="prompt 12"></td>
-    <td>Temporary basal rate in progress. Editing is not allowed.</td>
+    <td>Temporäre Basalrate läuft. Bearbeiten ist nicht erlaubt.</td>
   </tr>
 
   <!-- Row 5: prompts 13–15 -->
   <tr>
     <td><img src="../images/AP550/prompt-13.jpg" width="140" alt="prompt 13"></td>
-    <td>Dose is 0. Unable to set.</td>
+    <td>Die Dosis ist 0. Einstellen nicht möglich.</td>
     <td><img src="../images/AP550/prompt-14.jpg" width="140" alt="prompt 14"></td>
-    <td>Infusion paused. Please go to the home screen to resume infusion.</td>
+    <td>Abgabe pausiert. Bitte gehe zum Startbildschirm, um die Abgabe fortzusetzen.</td>
     <td><img src="../images/AP550/prompt-15.jpg" width="140" alt="prompt 15"></td>
-    <td>All infusions are paused. Editing is not allowed.</td>
+    <td>Alle Abgaben sind pausiert. Bearbeiten ist nicht erlaubt.</td>
   </tr>
 
   <!-- Row 6: prompts 16–18 -->
   <tr>
     <td><img src="../images/AP550/prompt-16.jpg" width="140" alt="prompt 16"></td>
-    <td>Not a new battery.</td>
+    <td>Keine neue Batterie.</td>
     <td><img src="../images/AP550/prompt-17.jpg" width="140" alt="prompt 17"></td>
-    <td>Please replace the battery.</td>
+    <td>Bitte ersetze die Batterie.</td>
     <td><img src="../images/AP550/prompt-18.jpg" width="140" alt="prompt 18"></td>
-    <td>Please reset the time.</td>
+    <td>Bitte stelle die Uhrzeit neu ein.</td>
   </tr>
 
   <!-- Row 7: prompts 19–21 -->
   <tr>
     <td><img src="../images/AP550/prompt-19.jpg" width="140" alt="prompt 19"></td>
-    <td>Please reset the insulin pump parameters.</td>
+    <td>Bitte setze die Parameter der Insulinpumpe neu.</td>
     <td><img src="../images/AP550/prompt-20.jpg" width="140" alt="prompt 20"></td>
-    <td>There is an unfinished operation.</td>
+    <td>Es gibt einen nicht abgeschlossenen Vorgang.</td>
   </tr>
 </table>
 
-## Overview screen
+## Übersichtsbildschirm
 
-The AP550 overview screen shows the state of the pump:
+Der AP550-Übersichtsbildschirm zeigt den Zustand der Pumpe:
 
-* Connection card at the top: tap it to **connect** or **disconnect**.
-* Info rows: serial number, battery, last connection, daily units, reservoir, base basal rate, basal step, bolus step, firmware, max bolus, max basal.
-* **Pump History** — boluses, temp basals, alarms, refills and more. This history comes from the pump itself and stays on the phone.
-* **Stop pump Injection / Resume pump Injection** — suspend or resume the pump. AAPS asks you to confirm first.
-* **Connect Status** — a list of past connect and disconnect events.
-* **Turn pump sound on/off** — mute or unmute the pump. AAPS asks you to confirm first.
+* Verbindungskarte oben: Tippe darauf, um die Verbindung **herzustellen** oder zu **trennen**.
+* Infozeilen: Seriennummer, Batterie, letzte Verbindung, Tagesinsulin, Reservoir, Basis-Basalrate, Basal-Schrittweite, Bolus-Schrittweite, Firmware, max. Bolus, max. Basal.
+* **Pump History** – Boli, temporäre Basalraten, Alarme, Befüllungen und mehr. Dieser Verlauf stammt von der Pumpe selbst und bleibt auf dem Smartphone.
+* **Stop pump Injection / Resume pump Injection** – hält die Pumpe an oder setzt sie fort. AAPS fragt vorher nach einer Bestätigung.
+* **Connect Status** – eine Liste der bisherigen Verbindungs- und Trennungsereignisse.
+* **Turn pump sound on/off** – schaltet den Ton der Pumpe stumm oder wieder ein. AAPS fragt vorher nach einer Bestätigung.
 
 ## Einstellungen
 
-Open the pump settings through Config Builder (gear wheel next to AP550):
+Die Pumpeneinstellungen öffnest Du über die Konfiguration (Zahnrad neben AP550):
 
-* **Visualize basal as percentage** — the pump uses percent temp basals (10 % – 300 %). When this is on, AAPS sends and shows temp basals as a percent instead of U/h.
-* **Hypoglycemia risk alert** — the pump warns when a low glucose is likely in the near future. AAPS checks the risk once a day and after every bolus.
-* **Unpair** — forgets the pump.
+* **Visualize basal as percentage** – die Pumpe verwendet temporäre Basalraten in Prozent (10 % – 300 %). Ist diese Option aktiv, sendet und zeigt AAPS temporäre Basalraten in Prozent statt in IE/h.
+* **Hypoglycemia risk alert** – die Pumpe warnt, wenn eine Unterzuckerung in naher Zukunft wahrscheinlich ist. AAPS prüft das Risiko einmal am Tag und nach jedem Bolus.
+* **Unpair** – AAPS vergisst die Pumpe.
 
-## Bolus limits
+## Bolus-Limits
 
-The pump and the driver limit how much insulin can be given:
+Pumpe und Treiber begrenzen, wie viel Insulin abgegeben werden kann:
 
-* Maximum single bolus — set on the pump.
-* **4-hour total bolus limit** — 2× the pump max bolus.
-* **Daily total bolus limit** — 4× the pump max bolus.
+* Maximaler Einzelbolus – wird an der Pumpe eingestellt.
+* **Gesamt-Bolus-Limit für 4 Stunden** – das 2-Fache des maximalen Bolus der Pumpe.
+* **Tägliches Gesamt-Bolus-Limit** – das 4-Fache des maximalen Bolus der Pumpe.
 
-AAPS blocks a bolus which would go over one of these limits.
+AAPS blockiert einen Bolus, der eines dieser Limits überschreiten würde.
 
-## Errors and alarms
+## Fehler und Alarme
 
-### Errors during insulin delivery
+### Fehler bei der Insulinabgabe
 
-If the connection is lost while a bolus is running (for example you walk away from the phone), AAPS shows a message that it lost communication with the pump and asks you to **check on the pump how much bolus was actually delivered**. The real amount is read from the pump on the next connection.
+Bricht die Verbindung ab, während ein Bolus läuft (zum Beispiel, weil Du Dich vom Smartphone entfernst), zeigt AAPS eine Meldung an, dass die Kommunikation mit der Pumpe verloren gegangen ist, und bittet Dich, **an der Pumpe zu prüfen, wie viel Bolus tatsächlich abgegeben wurde**. Die tatsächliche Menge wird bei der nächsten Verbindung von der Pumpe gelesen.
 
-### Delivery error codes
+### Fehlercodes bei der Abgabe
 
-When a delivery fails, the pump reports a code. The most important ones:
+Schlägt eine Abgabe fehl, meldet die Pumpe einen Code. Die wichtigsten:
 
-| Code | Meaning                                                              |
-| ---- | -------------------------------------------------------------------- |
-| 01   | Manually paused injection                                            |
-| 03   | Abnormal pump motor                                                  |
-| 04   | Pump battery empty                                                   |
-| 05   | Daily dose limit reached                                             |
-| 06   | Occlusion (pump pipeline blockage)                                   |
-| 07   | Reservoir empty                                                      |
-| 08   | Pipeline detachment                                                  |
-| 09   | Bolus over the pump maximum                                          |
-| 10   | Low battery — or a bolus / temp basal is already running on the pump |
-| 12   | Communication error, please reconnect the pump                       |
+| Code | Bedeutung                                                                                   |
+| ---- | ------------------------------------------------------------------------------------------- |
+| 01   | Injektion manuell pausiert                                                                  |
+| 03   | Motorstörung der Pumpe                                                                      |
+| 04   | Pumpenbatterie leer                                                                         |
+| 05   | Tagesdosis-Limit erreicht                                                                   |
+| 06   | Verschluss (Leitung der Pumpe blockiert)                                                    |
+| 07   | Reservoir leer                                                                              |
+| 08   | Schlauch gelöst                                                                             |
+| 09   | Bolus über dem Maximum der Pumpe                                                            |
+| 10   | Batterie schwach – oder auf der Pumpe läuft bereits ein Bolus bzw. eine temporäre Basalrate |
+| 12   | Kommunikationsfehler, bitte verbinde die Pumpe erneut                                       |
 
 ### Verbindungsprobleme
 
-While AAPS tries to reach the pump it reminds you every few minutes:
+Während AAPS versucht, die Pumpe zu erreichen, erinnert es Dich alle paar Minuten:
 
 1. Please confirm that the pump is within searchable range.
 2. Please confirm that the pump and phone bluetooth are enabled.
 
-If AAPS receives no blood glucose data for over 10 minutes it shows a notification ("AAPS blood glucose data lost") so you can check the connection.
+Erhält AAPS länger als 10 Minuten keine Glukosedaten, zeigt es eine Benachrichtigung an („AAPS blood glucose data lost“), damit Du die Verbindung prüfen kannst.
 
-### Basal profile mismatch
+### Basalprofil stimmt nicht überein
 
-If the basal profile on the pump does not match the profile in AAPS, the pump reports its own rate (for example "pump basal rate: 0.80 U/h, please reset profile"). Re-send your profile from AAPS.
+Stimmt das Basalprofil auf der Pumpe nicht mit dem Profil in AAPS überein, meldet die Pumpe ihre eigene Rate (zum Beispiel „pump basal rate: 0.80 U/h, please reset profile“). Sende Dein Profil erneut aus AAPS.
 
-## Unpair and switching phone
+## Kopplung aufheben und Smartphone wechseln
 
-* **Unpair** — in the pump settings press "Unpair" and confirm. The driver forgets the pump address and serial number. The pump stays paired in the Android Bluetooth settings; you can remove it there too if you want.
-* **Pair a different pump** — simply start the pair wizard again. Pairing a new pump replaces the old registration, and the history of the old pump is not merged.
-* **Switching phone** — unpair on the old phone (or just pair again), then [export settings](../Maintenance/ExportImportSettings.md) on the old phone, install AAPS on the new phone, and [import settings](../Maintenance/ExportImportSettings.md). If the connection does not come back, pair the pump again as described [above](#AP550-Insulin-Pump-pairing-pump).
+* **Unpair** – Tippe in den Pumpeneinstellungen auf „Unpair“ und bestätige. Der Treiber vergisst die Adresse und die Seriennummer der Pumpe. Die Pumpe bleibt in den Android-Bluetooth-Einstellungen gekoppelt; Du kannst sie dort ebenfalls entfernen, wenn Du möchtest.
+* **Andere Pumpe koppeln** – starte einfach den Kopplungsassistenten erneut. Das Koppeln einer neuen Pumpe ersetzt die alte Registrierung, und der Verlauf der alten Pumpe wird nicht übernommen.
+* **Smartphone wechseln** – Hebe die Kopplung auf dem alten Smartphone auf (oder kopple einfach neu), dann [exportiere die Einstellungen](../Maintenance/ExportImportSettings.md) auf dem alten Smartphone, installiere AAPS auf dem neuen Smartphone und [importiere die Einstellungen](../Maintenance/ExportImportSettings.md). Kommt die Verbindung nicht zurück, kopple die Pumpe erneut, wie [oben](#AP550-Insulin-Pump-pairing-pump) beschrieben.
 
-## Timezone traveling with AP550
+## Mit der AP550 über Zeitzonen hinweg reisen
 
-The AP550 does not support time changes over 24 hours. If you travel across time zones, AAPS updates the pump time on the next connection after the phone time has changed. If the difference is over 24 hours, AAPS asks you to check the time on the phone and the pump first.
+Die AP550 unterstützt keine Zeitänderungen von mehr als 24 Stunden. Wenn Du über Zeitzonen hinweg reist, aktualisiert AAPS die Uhrzeit der Pumpe bei der nächsten Verbindung, nachdem sich die Uhrzeit des Smartphones geändert hat. Beträgt der Unterschied mehr als 24 Stunden, bittet AAPS Dich, zuerst die Uhrzeit auf dem Smartphone und der Pumpe zu prüfen.
 
-Keep in mind that time shifts on the pump can cause wrong basal records in the pump history. See also [Timezone traveling with pumps](#timezone-traveling-with-pumps).
+Beachte, dass Zeitverschiebungen auf der Pumpe zu falschen Basaleinträgen im Pumpenverlauf führen können. Siehe auch [Mit der Pumpe über Zeitzonen hinweg reisen](#timezone-traveling-with-pumps).

@@ -182,7 +182,7 @@ Wenn Du fertig bist, tippe auf „**WEITER**“, um zum nächsten Bildschirm zu 
 
 Dieser Bildschirm wird nur angezeigt, wenn **AAPS** im **AAPS**-Verzeichnis früher exportierte Einstellungen findet („Gespeicherte Einstellungen gefunden“), zum Beispiel wenn Du die App neu installierst oder auf ein neues Smartphone wechselst.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
+- Um Deine bisherige Konfiguration wiederherzustellen, tippe auf „**Einstellungen importieren**“ – siehe [Einstellungen exportieren & importieren](../Maintenance/ExportImportSettings.md). Nach einem erfolgreichen Import schließt sich der Einrichtungsassistent: Die importierten Einstellungen ersetzen die restlichen Schritte.
 - Um mit einer neuen Konfiguration zu beginnen, tippe auf „**WEITER**“ und fahre mit dem Assistenten fort.
 
 ![Importiere die Einstellungen](../images/setup-wizard/Wizard-ImportSettings.png)

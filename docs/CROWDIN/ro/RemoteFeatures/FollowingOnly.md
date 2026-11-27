@@ -20,7 +20,7 @@ Cele mai frecvente strategii utilizate în combinație cu **AAPS** sunt explicat
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) și [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![imagine](../images/following_dexcom_follow.png)
+![imagine](../images/remote_control_and_following/following_dexcom_follow.png)
 
 * Dexcom Follow este compatibil cu o gamă largă de dispozitive mobile (atât Android cât și iPhone). Dexcom Follow poate fi utilizat chiar dacă nu utilizați aplicația oficială Dexcom pentru a primi datele de la senzori.
 
@@ -47,7 +47,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![imagine](../images/following_nightguard.png)
+![imagine](../images/remote_control_and_following/following_nightguard.png)
 
 Avantaje (așa cum au fost raportate de utilizatori):
 
@@ -73,7 +73,7 @@ Dezavantaje (așa cum au fost raportate de utilizatori)
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![imagine](../images/following_nightwatch.png)
+![imagine](../images/remote_control_and_following/following_nightwatch.png)
 
 
 * Nightwatch se comercializează în calitate de client Nightscout și monitorizează nivelurile de glicemie ale utilizatorului Nightscout fie pe telefonul Android, fie pe tabletă.
@@ -132,7 +132,7 @@ If you want, you can then become a "releaser" and [share a Personal Testflight x
 
 
 
-![imagine](../images/following_xdrip4ios.png)
+![imagine](../images/remote_control_and_following/following_xdrip4ios.png)
 
 "Ce este **Shuggah**?" Un grup de dezvoltatori ucraineni au copiat codul proiectului pentru xDrip4iOS (care este partajat public pe GitHub) și l-a lansat pe App Store sub un cont de afaceri. Versiunea de Shuggah nu este gestionată în niciun fel de dezvoltatorii xDrip4iOS.
 
@@ -140,9 +140,9 @@ Grupul de Facebook [xDrip4iOS](https://www.facebook.com/groups/853994615056838/a
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![imagine](../images/following_sugarmate.png)
+![imagine](../images/remote_control_and_following/following_sugarmate.png)
 
-![imagine](../images/following_sugarmate_graph.png)
+![imagine](../images/remote_control_and_following/following_sugarmate_graph.png)
 
 
 [Sugarmate](https://sugarmate.io/) poate fi descărcat pe iPhone din magazinul de aplicații. Sugarmate este compatibil cu:
@@ -155,7 +155,7 @@ S-a raportat de către utilizatorii Sugarmate că poate fi folosit cu Apple CarP
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![imagine](../images/following_spike.png)
+![imagine](../images/remote_control_and_following/following_spike.png)
 
 Spike poate fi folosit ca receptor primar sau ca aplicație de urmărire, furnizând glicemii, alarme și IOB și multe altele.
 
@@ -175,7 +175,7 @@ Vedeți [aici](../Getting-Started/Watches.md).
 
 ### M5Stack
 
-![imagine](../images/following_m5stack.png)
+![imagine](../images/remote_control_and_following/following_m5stack.png)
 
 M5Stack este o cutie mică care poate fi programată pentru multe aplicații. Proiectul lui Martin [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) afișează valori și tendințe ale glicemiei senzorilor, IOB și COB. Este într-o cutie de plastic, dotată cu un ecran de culoare, slotul cardului microSD, 3 butoane, difuzor și baterie internă. Este un foarte bun monitor pentru glicemia și este relativ ușor de stabilit dacă ai un cont Nightscout. Utilizatorii îl rulează de obicei pe Wi-Fi-ul lor, dar unii utilizatori raportează că îl utilizează ca afișaj la motocicletă, printr-un hotspot Wi-Fi al telefonului.
 
@@ -183,9 +183,9 @@ M5Stack este o cutie mică care poate fi programată pentru multe aplicații. Pr
 
 SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișarea glicemiei pentru monitorizarea continuă a glucozei, care se conectează cu aplicația Dexcom sau cu aplicația Nightscout pe telefonul inteligent al utilizatorului. Dispozitivul afișează valorile glicemiei în timp real. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
 
-![imagine](../images/following_sugarpixel.png)
+![imagine](../images/remote_control_and_following/following_sugarpixel.png)
 
-![imagine](../images/following_sugarpixel_led_display.png)
+![imagine](../images/remote_control_and_following/following_sugarpixel_led_display.png)
 
 * SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
 * Ecranul standard afișează glicemia, săgeata de tendință și delta. Delta este schimbarea cu + sau - de la ultima citire.
@@ -197,7 +197,7 @@ SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișa
 
 **Nightscout Clock** este un software open source care rulează pe dispozitivul **Ulanzi TC001**. Se conectează cu serverele Dexcom sau Nightscout și afișează valorile glicemiei în timp real.
 
-![Urmărirea ceasului Nightscout](../images/FollowingNightscoutClock.png)
+![Urmărirea ceasului Nightscout](../images/remote_control_and_following/FollowingNightscoutClock.png)
 
 * Ceasul acceptă atât unități mmol/L, cât și mg/dL și include alarme sonore.
 * Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.

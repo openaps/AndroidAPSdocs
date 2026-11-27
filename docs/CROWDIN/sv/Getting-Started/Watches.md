@@ -59,7 +59,7 @@ Det mesta som gör fristående **AAPS**-klockor frustrerande kommer från att an
 
 Andra svårigheter är att det är svårt att få tillräcklig batteritid, och klockor med tillräckligt batteri är ofta stora och tjocka. Användare berättar om problem med operativsystemet och energisparinställningar, svårigheter att starta sensorer på klockan, dålig Bluetooth-räckvidd (för att hålla anslutningen till både sensor och pump) och osäkert vattenskydd. Exempel visas på bilderna nedan.
 
-![image](../images/watch_standalone_aaps_and_xdrip.png)
+![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 Om du vill ställa in en fristående klocka kan du läsa inlägg och kommentarer i **AAPS**-gruppen på Facebook (bra sökord är “standalone” och “Lemfo”) och på Discord för mer information.
 
@@ -88,7 +88,7 @@ Nya ändringar i **Wear OS** gör att de egna urtavlorna för **AAPS** fungerar 
 
 När du har [installerat **AAPS** på klockan](../WearOS/WearOsSmartwatch.md) kan du direkt välja den urtavla du vill ha bland dessa urtavlor för **AAPS**. På de flesta klockor trycker du bara länge på startskärmen tills skärmen krymper och sveper åt höger för att välja en annan skärm:
 
-![image](../images/watchfaces_aaps_selection.png)
+![image](../images/watches/watchfaces_aaps_selection.png)
 
 Detta är de grundläggande skärmarna som finns i **AAPS**. Det finns [fler urtavlor](#WearOS_changing-to-AAPS-watchface) och du kan också använda [komplikationer](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ Det finns några urtavlor för Garmin som är kopplade till [AAPS](https://apps.
 
 ![Konfiguration > Kommunikation: kortet Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) är direkt kopplad till **AAPS**. Den visar data om loopens status (aktivt insulin, tillfällig basal) utöver glukosvärden och skickar pulsvärden till **AAPS**. Den finns i ConnectIQ-butiken. Aktivera pluginet **Garmin** i **Konfiguration → Kommunikation**. ![Urtavlan AAPS Glucose Watch med numrerade fält](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) är direkt kopplad till **AAPS**. Den visar data om loopens status (aktivt insulin, tillfällig basal) utöver glukosvärden och skickar pulsvärden till **AAPS**. Den finns i ConnectIQ-butiken. Aktivera pluginet **Garmin** i **Konfiguration → Kommunikation**. ![Urtavlan AAPS Glucose Watch med numrerade fält](../images/watches/Garmin_WF-annotated.png)
 
 1. Högsta och lägsta glukosvärde i grafen
 2. Glukosändring per minut
@@ -155,7 +155,7 @@ Här nedan är några klockor för att bara följa som är populära bland anvä
 
 **WatchDrip+** är en hjälpapp som utvecklats av communityn. Den visar glukos- och loopdata på olika modeller av smartklockor, mest av märkena Xiaomi (_t.ex._ Mi Band) och Amazfit:
 
-![image](../images/watch_watchdrip_plus.png)
+![image](../images/watches/watch_watchdrip_plus.png)
 
 Sedan version 0.5 läser **WatchDrip+** sina data direkt från **AAPS**, utan xDrip+ som mellanled. På **AAPS**-telefonen:
 
@@ -170,9 +170,9 @@ Du kan läsa mer om dem, även hur du ställer in dem, på [webbplatsen för Wat
 
 ### Pebble-klocka
 
-![image](../images/watch_pebble.png)
+![image](../images/watches/watch_pebble.png)
 
-![image](../images/watch_pebble_watchface.png)
+![image](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble-klockor ([tillverkas inte längre](https://en.wikipedia.org/wiki/Pebble_(watch))) såldes allmänt från 2013 till 2016 och kan fortfarande finnas begagnade. Fitbit tog över Pebbles tillgångar. Användare av Pebble kan använda urtavlan Urchin för att se data från Nightscout. Data som kan visas är bland annat IOB, aktiv tillfällig basaldos och prognoser. Om du kör öppen loop kan du använda IFTTT för att skapa en applet som skickar ett SMS eller en Pushover-avisering när en avisering har kommit från **AAPS**.

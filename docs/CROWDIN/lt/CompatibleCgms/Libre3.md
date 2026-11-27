@@ -2,7 +2,7 @@
 
 Kad Freestyle Libre 3 (FSL3) KG reikšmės patektų į AAPS, reikia specialios sąrankos. Freestyle Libre 3 (FSL3) reikšmes į AAPS galima perduoti dviem būdais.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Toliau aprašyti būdai naudoja atskirą programėlę Juggluco. Šiam būdui naudojama Juggluco: ji iš jutiklio kas 1 minutę gauna neapdorotus duomenis ir perduoda juos į xDrip arba AAPS. Naujus jutiklius galima paleisti Libre 3 programėle arba tiesiai Juggluco programėle. Toliau aprašyta, kaip paleisti jutiklį Juggluco programėle. Jei jutiklis buvo paleistas prisijungus prie Libreview paskyros, kaip imtuvą galima pakaitomis naudoti Juggluco arba Libre 3 programėlę.
 
@@ -38,7 +38,7 @@ KG reikšmes gauna telefone įdiegta xDrip programėlė.
 
   → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip papildomi Libre 2 nustatymai ir neapdorotos reikšmės](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip papildomi Libre 2 nustatymai ir neapdorotos reikšmės](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 

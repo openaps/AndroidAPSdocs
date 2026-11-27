@@ -31,11 +31,11 @@ Ouvrez [Google.com](https://www.google.com/) dans votre navigateur web et connec
 
 Sur le coin supérieur droit, sélectionnez l'application Drive dans le menu Google.
 
-![Démarrer l'application Drive](../images/GoogleDriveInWebbrowser.png)
+![Démarrer l'application Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Cliquez sur **Nouveau** en haut à gauche (ou faites un clic droit sur une zone vide sous vos fichiers et dossiers) et choisissez **Importer un fichier**.
 
-![Envoyer le fichier apk avec l'application Google Drive](../images/GoogleDriveUploadFile.png)
+![Envoyer le fichier apk avec l'application Google Drive](../images/install/GoogleDriveUploadFile.png)
 
 Vous devriez maintenant voir le fichier APK téléchargé sur Google Drive.
 
@@ -43,17 +43,17 @@ Vous devriez maintenant voir le fichier APK téléchargé sur Google Drive.
 
 Passez sur votre téléphone portable et lancez l'application Google Drive. Il s'agit d'une application installée par défaut, que vous retrouverez avec les autres applications Google ou en faisant une recherche sur le nom de l'application.
 
-![démarrer l'application Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![démarrer l'application Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Lancez l'installation de l'apk en appuyant sur le nom du fichier dans l'application Google Drive sur le téléphone.
 
-![lancer l'installation de l'apk](../images/GoogleDriveMobileUploadedAPK.png)
+![lancer l'installation de l'apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Si vous recevez un avertissement de sécurité indiquant que vous n'êtes pas autorisé à installer des applications depuis Google Drive pour le moment, appuyez sur « Paramètres » et autorisez-le juste pour ce court moment. Interdisez-le ensuite de nouveau, car le laisser activé en permanence est un risque de sécurité.
 
-![Avertissement de sécurité Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Avertissement de sécurité Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Avertissement de sécurité Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Avertissement de sécurité Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Une fois l'installation terminée, cette étape est finie.
 

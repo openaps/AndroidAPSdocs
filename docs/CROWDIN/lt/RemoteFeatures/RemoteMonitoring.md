@@ -1,6 +1,6 @@
 # Nuotolinis stebėjimas
 
-![Monitoring children](../images/KidsMonitoring.png)
+![Monitoring children](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ turi kelias funkcijas 1 tipo diabetu sergančių vaikų nuotoliniam stebėjimui, taip pat leidžia siųsti nuotolines komandas, kurios perduoda nurodymus į __AAPS__ per atstumą. Taip pat __AAPSClient__ galima naudoti nuotoliniam stebėjimui, kad sektumėte partnerio ar draugo __AAPS__.
 

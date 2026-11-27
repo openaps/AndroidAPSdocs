@@ -318,7 +318,7 @@ Tieto miesta fungujú iba na hodinkách s **Wear OS 5 alebo starším**, kde vla
 
 ## Ciferník AAPSv2 – legenda
 
-![Legenda ciferníka AAPSv2](../images/Watchface_Legend.png)
+![Legenda ciferníka AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A – čas od posledného behu okruhu
 

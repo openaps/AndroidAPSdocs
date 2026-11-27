@@ -31,11 +31,11 @@ Google запроваджує [перевірку розробників Android
 
 Угорі праворуч у меню Google виберіть застосунок Drive.
 
-![Запуск застосунку Drive](../images/GoogleDriveInWebbrowser.png)
+![Запуск застосунку Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Натисніть **New** (Створити) угорі ліворуч (або клацніть правою кнопкою миші на порожньому місці під файлами та папками) і виберіть **File upload** (Завантажити файл).
 
-![Вивантаження файлу apk застосунком Google Drive](../images/GoogleDriveUploadFile.png)
+![Вивантаження файлу apk застосунком Google Drive](../images/install/GoogleDriveUploadFile.png)
 
 Файл apk тепер має бути вивантажено на Google Drive.
 
@@ -43,17 +43,17 @@ Google запроваджує [перевірку розробників Android
 
 Перейдіть на телефон і запустіть застосунок Google Drive. Це попередньо встановлений застосунок. Його можна знайти серед інших застосунків Google або пошуком за назвою.
 
-![запуск застосунку Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![запуск застосунку Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Запустіть встановлення apk: натисніть на назву файлу в застосунку Google Drive на телефоні.
 
-![запуск встановлення apk](../images/GoogleDriveMobileUploadedAPK.png)
+![запуск встановлення apk](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Якщо з'явиться повідомлення безпеки, що зараз вам не дозволено встановлювати застосунки з Google Drive, натисніть «Settings» (Налаштування) і дозвольте це на короткий час. Потім знову забороніть, бо постійно залишати цей дозвіл увімкненим небезпечно.
 
-![Повідомлення безпеки Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Повідомлення безпеки Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Повідомлення безпеки Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Повідомлення безпеки Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 Коли встановлення завершиться, цей крок виконано.
 

@@ -31,11 +31,11 @@ Google въвежда [проверката на разработчиците н
 
 Горе вдясно изберете приложението Drive в менюто на Google.
 
-![Стартиране на приложението Drive](../images/GoogleDriveInWebbrowser.png)
+![Стартиране на приложението Drive](../images/install/GoogleDriveInWebbrowser.png)
 
 Натиснете **Нов** (New) горе вляво (или щракнете с десния бутон на мишката в празно място под файловете и папките си) и изберете **Качване на файл** (File upload).
 
-![Качване на apk файла с приложението Google Drive](../images/GoogleDriveUploadFile.png)
+![Качване на apk файла с приложението Google Drive](../images/install/GoogleDriveUploadFile.png)
 
 Файлът apk вече трябва да е качен в Google Drive.
 
@@ -43,17 +43,17 @@ Google въвежда [проверката на разработчиците н
 
 Преминете на мобилния телефон и стартирайте приложението Google Drive. То е предварително инсталирано и може да се намери там, където са другите приложения на Google, или чрез търсене по името на приложението.
 
-![стартирайте приложението Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
+![стартирайте приложението Google Drive](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Стартирайте инсталирането на apk файла, като докоснете името на файла в приложението Google Drive на телефона.
 
-![стартирайте инсталирането на apk файла](../images/GoogleDriveMobileUploadedAPK.png)
+![стартирайте инсталирането на apk файла](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 Ако получите известие за сигурност, че в момента не е разрешено да инсталирате приложения от Google Drive, докоснете „Настройки“ (Settings) и разрешете това само за кратко, а след това го забранете отново, защото е риск за сигурността да остане разрешено през цялото време.
 
-![Известие за сигурност от Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Известие за сигурност от Google Drive](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Известие за сигурност от Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Известие за сигурност от Google Drive](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 След като инсталирането приключи, тази стъпка е завършена.
 

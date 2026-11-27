@@ -318,7 +318,7 @@ There are a number of watchfaces available in the standard build of the AAPS Wea
 
 ## AAPSv2 watchface - Legend
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 watchface](../images/wearos/Watchface_Legend.png)
 
 A - time since last loop run
 

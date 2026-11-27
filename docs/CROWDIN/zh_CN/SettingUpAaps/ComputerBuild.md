@@ -252,7 +252,7 @@ Make a note of the directory. 这是您的源代码存储的位置！
 
 仅针对Windows用户：如果防火墙请求权限，请允许访问：
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Firewall permission java](../images/Building-the-App/AndroidStudio361_18.png)
 
 在成功克隆存储库后，Android Studio将打开克隆的项目。
 

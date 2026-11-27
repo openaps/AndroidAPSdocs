@@ -200,13 +200,6 @@
 
 - **放棄 Pod：**從 **AAPS** 移除尚未完成啟動程序的 Pod。僅在 Pod 啟動程序中途停止時顯示。 **AAPS** 會要求您確認。放棄 Pod 後，**AAPS** 將無法再與該 Pod 通訊，請將 Pod 從身上取下。
 
-![Pod 管理選單](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-上方螢幕截圖來自較早版本的 **AAPS**，當時設有獨立的 **Pod 管理**選單。在 **AAPS** 4 中，所有這些操作都改為直接顯示在幫浦螢幕上，並以文字標示按鈕，包括**啟動 Pod**、**停用 Pod**、**播放測試嗶聲**和**Pod 歷史記錄**。
-```
-
 (omnipod-dash-activate-pod)=
 
 ## 註冊 Pod
@@ -304,7 +297,7 @@
 
 1. 開啟 DASH 幫浦頁面（**管理** > **幫浦**），然後按下 **停用藥匣**。
 
-   ![DASH 幫浦頁面上的「停用藥匣」按鈕](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![DASH 幫浦頁面上的「停用藥匣」按鈕](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. 在**停用藥量**步驟中，按下**下一步**。畫面會顯示對話方塊，詢問*已停用的藥量無法再次使用。要立即停用此藥量嗎？*按下**確定**開始停用藥量，或按下**取消**保留藥量。停用後會停止所有胰島素輸注，而且無法復原。
 

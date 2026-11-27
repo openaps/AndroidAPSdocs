@@ -59,7 +59,7 @@ While there is no clear specification which helps you to know if a watch will wo
 
 Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
 
-![image](../images/watch_standalone_aaps_and_xdrip.png)
+![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 אם אתם מעוניינים להגדיר שעון עצמאי, קראו את הפרסומים והתגובות בקבוצת **AAPS**  ב־Facebook (מונחי חיפוש טובים הם “standalone” ו־“Lemfo”) וב־Discord למידע נוסף.
 
@@ -88,7 +88,7 @@ If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of di
 
 After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
 
-![image](../images/watchfaces_aaps_selection.png)
+![image](../images/watches/watchfaces_aaps_selection.png)
 
 These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ Further details about the watchfaces, and day-to-day use, including how to make 
 
 ![הגדרות תצורה > תקשורת: הכרטיס Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. הם זמינים בחנות ConnectIQ; יש להפעיל את התוסף **Garmin** ב-**הגדרות תצורה ← תקשורת**. ![פני השעון AAPS Glucose Watch עם שדות ממוספרים](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. הם זמינים בחנות ConnectIQ; יש להפעיל את התוסף **Garmin** ב-**הגדרות תצורה ← תקשורת**. ![פני השעון AAPS Glucose Watch עם שדות ממוספרים](../images/watches/Garmin_WF-annotated.png)
 
 1. ערכי הגלוקוז הגבוה ביותר והנמוך ביותר בגרף
 2. שינוי בגלוקוז לדקה
@@ -155,7 +155,7 @@ Here below some of the follow-only watch options popular with **AAPS** users:
 
 **WatchDrip+** היא אפליקציה נלווית שפותחה על ידי הקהילה, שמציגה נתוני גלוקוז ולולאה בדגמים שונים של שעונים חכמים, בעיקר של המותגים Xiaomi (_למשל_ Mi Band) ו-Amazfit:
 
-![image](../images/watch_watchdrip_plus.png)
+![image](../images/watches/watch_watchdrip_plus.png)
 
 החל מגרסה 0.5, **WatchDrip+** קוראת את הנתונים שלה ישירות מ-**AAPS**, בלי xDrip+ כמתווך. בטלפון ה-**AAPS**:
 
@@ -170,9 +170,9 @@ Here below some of the follow-only watch options popular with **AAPS** users:
 
 ### Pebble watch
 
-![image](../images/watch_pebble.png)
+![image](../images/watches/watch_pebble.png)
 
-![image](../images/watch_pebble_watchface.png)
+![image](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. אפשרויות הנתונים המוצגים כוללות אינסולין פעיל (IOB), קצב בזאלי זמני הפעיל כעת ותחזיות. בלולאה פתוחה אפשר להשתמש ב־IFTTT כדי ליצור applet שאומר: אם התקבלה הודעה מ־**AAPS**  אז לשלוח SMS או הודעת pushover.

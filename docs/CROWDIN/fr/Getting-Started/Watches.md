@@ -59,7 +59,7 @@ La plupart des difficultés avec les montres **AAPS** autonomes viennent de l'ut
 
 Autres difficultés : il est difficile d'avoir une autonomie de batterie suffisante, et les montres avec une batterie suffisante sont souvent grosses et épaisses. Les utilisateurs signalent des problèmes avec le système et les paramètres d'économie d'énergie, des difficultés pour démarrer les capteurs sur la montre, une faible portée Bluetooth (pour garder la connexion avec le capteur et la pompe) et une étanchéité douteuse. Des exemples sont visibles sur les photos ci-dessous.
 
-![image](../images/watch_standalone_aaps_and_xdrip.png)
+![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ Les changements récents de **Wear OS** cassent peu à peu les cadrans **AAPS** 
 
 Après avoir [installé **AAPS** sur votre montre](../WearOS/WearOsSmartwatch.md), vous pourrez directement choisir votre cadran préféré parmi ces cadrans dédiés à **AAPS**. Sur la plupart des montres, il suffit d'appuyer longuement sur l'écran d'accueil jusqu'à ce que l'écran se réduise, puis de glisser vers la droite pour choisir un autre écran :
 
-![image](../images/watchfaces_aaps_selection.png)
+![image](../images/watches/watchfaces_aaps_selection.png)
 
 Ce sont les écrans de base intégrés à **AAPS**. Il existe [d'autres cadrans](#WearOS_changing-to-AAPS-watchface) et vous pouvez aussi utiliser des [complications](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ Il existe des cadrans Garmin qui s'intègrent à [AAPS](https://apps.garmin.com/
 
 ![Configuration > Communication : la carte Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) s'intègre directement à **AAPS**. Il affiche les données d'état de la boucle (insuline active, débit basal temporaire) en plus des valeurs de glycémie, et envoie la fréquence cardiaque à **AAPS**. Il est disponible sur la boutique ConnectIQ ; activez le plugin **Garmin** dans **Configuration → Communication**. ![Cadran AAPS Glucose Watch avec champs numérotés](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) s'intègre directement à **AAPS**. Il affiche les données d'état de la boucle (insuline active, débit basal temporaire) en plus des valeurs de glycémie, et envoie la fréquence cardiaque à **AAPS**. Il est disponible sur la boutique ConnectIQ ; activez le plugin **Garmin** dans **Configuration → Communication**. ![Cadran AAPS Glucose Watch avec champs numérotés](../images/watches/Garmin_WF-annotated.png)
 
 1. Valeurs de glycémie la plus haute et la plus basse sur le graphique
 2. Variation de la glycémie par minute
@@ -155,7 +155,7 @@ Voici quelques options de montres de suivi uniquement, populaires chez les utili
 
 **WatchDrip+** est une application compagnon développée par la communauté, qui affiche les données de glycémie et de boucle sur divers modèles de montres connectées, surtout des marques Xiaomi (_par ex._ Mi Band) et Amazfit :
 
-![image](../images/watch_watchdrip_plus.png)
+![image](../images/watches/watch_watchdrip_plus.png)
 
 Depuis la version 0.5, **WatchDrip+** lit ses données directement depuis **AAPS**, sans passer par xDrip+. Sur le téléphone **AAPS** :
 
@@ -170,9 +170,9 @@ Vous pouvez en savoir plus sur ces montres, y compris comment les configurer, su
 
 ### Montre Pebble
 
-![image](../images/watch_pebble.png)
+![image](../images/watches/watch_pebble.png)
 
-![image](../images/watch_pebble_watchface.png)
+![image](../images/watches/watch_pebble_watchface.png)
 
 
 Les montres Pebble ([plus fabriquées](https://en.wikipedia.org/wiki/Pebble_(watch))) ont été vendues de 2013 à 2016, et on peut encore en trouver d'occasion. Fitbit a repris les actifs de Pebble. Les utilisateurs de Pebble peuvent utiliser le cadran Urchin pour voir les données de Nightscout. Les données affichées peuvent inclure l'IA, le débit basal temporaire actif et les prédictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.

@@ -318,7 +318,7 @@ To change to a different **AAPS**  watchface, long-press the watchface on the ho
 
 ## Watchface AAPSv2 - Υπόμνημα
 
-![Υπόμνημα του watchface AAPSv2](../images/Watchface_Legend.png)
+![Υπόμνημα του watchface AAPSv2](../images/wearos/Watchface_Legend.png)
 
 A - χρόνος από την τελευταία εκτέλεση του κυκλώματος
 

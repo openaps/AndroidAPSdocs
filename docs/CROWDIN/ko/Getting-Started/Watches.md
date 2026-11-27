@@ -59,7 +59,7 @@
 
 또 다른 어려움은 충분한 배터리 수명을 얻기 어렵다는 점이고, 배터리가 충분한 워치는 크고 두꺼운 경우가 많습니다. 사용자들은 OS 및 절전 설정과 씨름하고, 워치에서 센서를 시작하기 어렵고, 블루투스 범위가 좁고(센서와 펌프 모두와 연결을 유지하기 위해), 방수 성능이 의심스럽다고 보고합니다. 예는 아래 사진에 있습니다.
 
-![이미지](../images/watch_standalone_aaps_and_xdrip.png)
+![이미지](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 단독 워치를 설정하는 데 관심이 있다면, 더 많은 정보를 얻기 위해 **AAPS** Facebook 그룹(“standalone”과 “Lemfo”로 검색하면 좋습니다)과 Discord의 게시물과 댓글을 읽으십시오.
 
@@ -88,7 +88,7 @@
 
 [워치에 **AAPS**를 설치](../WearOS/WearOsSmartwatch.md)하면, 이 **AAPS** 전용 워치 페이스 중에서 원하는 워치 페이스를 바로 선택할 수 있습니다. 대부분의 워치에서는 화면이 작아질 때까지 홈 화면을 길게 누른 다음, 오른쪽으로 밀어 다른 화면을 선택하면 됩니다:
 
-![이미지](../images/watchfaces_aaps_selection.png)
+![이미지](../images/watches/watchfaces_aaps_selection.png)
 
 이것은 **AAPS**에 들어 있는 기본 화면입니다. [다른 워치 페이스](#WearOS_changing-to-AAPS-watchface)도 있고 [컴플리케이션](#Watchfaces-complications)도 사용할 수 있습니다.
 
@@ -122,7 +122,7 @@ Garmin ConnectIQ 스토어에는 [AAPS](https://apps.garmin.com/search?keywords=
 
 ![구성 > 통신: Garmin 카드](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1)는 **AAPS**와 직접 연동됩니다. 혈당 측정값 외에 루프 상태 데이터(활성 인슐린, 임시 기저)를 보여 주고, 심박수 측정값을 **AAPS**로 보냅니다. ConnectIQ 스토어에서 받을 수 있습니다. **구성 → 통신**에서 **Garmin** 플러그인을 활성화하십시오. ![번호가 매겨진 항목이 있는 AAPS Glucose Watch 워치 페이스](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1)는 **AAPS**와 직접 연동됩니다. 혈당 측정값 외에 루프 상태 데이터(활성 인슐린, 임시 기저)를 보여 주고, 심박수 측정값을 **AAPS**로 보냅니다. ConnectIQ 스토어에서 받을 수 있습니다. **구성 → 통신**에서 **Garmin** 플러그인을 활성화하십시오. ![번호가 매겨진 항목이 있는 AAPS Glucose Watch 워치 페이스](../images/watches/Garmin_WF-annotated.png)
 
 1. 그래프의 최고 및 최저 혈당 값
 2. 분당 혈당 변화
@@ -155,7 +155,7 @@ Google은 Fitbit을 Google Health로 옮기고 있으며, EU에서는 Fitbit 워
 
 **WatchDrip+**는 커뮤니티에서 개발한 동반 앱으로, 여러 스마트워치 모델에 혈당과 루프 데이터를 표시합니다. 주로 Xiaomi(_예:_ Mi Band)와 Amazfit 브랜드입니다:
 
-![이미지](../images/watch_watchdrip_plus.png)
+![이미지](../images/watches/watch_watchdrip_plus.png)
 
 버전 0.5부터 **WatchDrip+**는 xDrip+를 중계로 쓰지 않고 **AAPS**에서 직접 데이터를 읽습니다. **AAPS** 휴대폰에서:
 
@@ -170,9 +170,9 @@ WatchDrip+의 새로고침 버튼은 **AAPS**에서는 효과가 없습니다: �
 
 ### Pebble 워치
 
-![이미지](../images/watch_pebble.png)
+![이미지](../images/watches/watch_pebble.png)
 
-![이미지](../images/watch_pebble_watchface.png)
+![이미지](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble 워치([현재 단종](https://en.wikipedia.org/wiki/Pebble_(watch)))는 2013년부터 2016년까지 판매되었고, 중고로는 아직 구할 수 있을 수 있습니다. Fitbit이 Pebble의 자산을 인수했습니다. Pebble 사용자는 Urchin 워치 페이스로 Nightscout 데이터를 볼 수 있습니다. 표시할 수 있는 데이터에는 IOB, 현재 실행 중인 임시 기저 주입량과 예측이 있습니다. 개방 루프를 사용한다면 IFTTT로 애플릿을 만들어, **AAPS**에서 알림을 받으면 SMS나 pushover 알림을 보내도록 할 수 있습니다.

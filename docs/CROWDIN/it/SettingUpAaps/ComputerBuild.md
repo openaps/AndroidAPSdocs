@@ -255,7 +255,7 @@ A un certo punto Android Studio si chiude e si riavvia. Potrebbe esserti chiesto
 
 Solo per gli utenti Windows: se il firewall chiede l'autorizzazione, consenti l'accesso:
 
- ![Firewall permission java](../images/AndroidStudio361_18.png)
+ ![Firewall permission java](../images/Building-the-App/AndroidStudio361_18.png)
 
 Quando il repository è stato clonato, Android Studio apre il progetto clonato.
 

@@ -255,7 +255,7 @@ En algún momento, Android Studio se cerrará y se abrirá de nuevo. Puede que t
 
 Solo para usuarios de Windows: si tu cortafuegos pide permiso, concede el acceso:
 
- ![Permiso del cortafuegos para java](../images/AndroidStudio361_18.png)
+ ![Permiso del cortafuegos para java](../images/Building-the-App/AndroidStudio361_18.png)
 
 Después de que el repositorio se haya clonado con éxito, Android Studio abrirá el proyecto clonado.
 

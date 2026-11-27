@@ -37,11 +37,11 @@ Es gibt drei Einstellungen:
 
 ![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
 
-### Low Reservoir Alerts
+### Niedrige Reservoir-Warnungen
 
 Eine Warnung erscheint, wenn die Restmenge Insulin im Patch auf diesen Wert oder darunter sinkt. Einstellbar sind 10 bis 50 IE in Schritten von 5 IE. Standard sind 10 IE.
 
-### Patch Expiration Reminder
+### Patch-Ablauf-Erinnerung
 
 Erinnert Dich daran, wie viel Zeit noch bleibt, bis der aktuelle Patch abläuft. Einstellbar sind 1 bis 24 Stunden in Schritten von 1 Stunde. Standard sind 4 Stunden.
 
@@ -261,7 +261,7 @@ Die einzelnen Warnungen sind unten erklärt.
 | Warnung                          | Beschreibung                                                                                                                                             |
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ende der Insulinunterbrechung    | Die gewählte Unterbrechungszeit ist vorbei. Tippe in der Benachrichtigung auf **Pumpe fortsetzen**, um die Insulinabgabe wieder zu starten.              |
-| Niedriger Reservoirstand         | The insulin left in the patch is below the amount set in **Low Reservoir Alerts**.                                                                       |
+| Niedriger Reservoirstand         | Die Restmenge Insulin im Patch liegt unter dem Wert, der unter **Niedrige Reservoir-Warnungen** eingestellt ist.                                         |
 | Patch-Nutzungsdauer abgelaufen   | Die Nutzungsdauer des Patches ist vorbei.                                                                                                                |
 | Patch läuft in Kürze ab          | Der Patch muss in 1 Stunde verworfen werden.                                                                                                             |
 | Unvollständige Patch-Aktivierung | Die Patch-Aktivierung wurde nach der Kopplung länger als 3 Minuten unterbrochen. Öffne den Pumpenbildschirm und schließe die Aktivierung des Patches ab. |

@@ -53,7 +53,7 @@
 
 보통 __AAPS__는 **혈당** 편차를 통해 탄수화물 흡수를 감지합니다. 사용자가 탄수화물을 입력했지만 **AAPS**가 **혈당** 편차로 예상 흡수를 감지할 수 없으면, 대신 [min_5m_carbimpact](#Preferences-min_5m_carbimpact) 방법으로 흡수를 계산합니다 (이른바 ‘대체 방법(fallback)’). 이 방법은 **혈당** 편차를 고려하지 않고 최소 탄수화물 흡수만 계산하므로, 잘못된 COB 값이 나올 수 있습니다.
 
-![잘못된 COB 값에 대한 안내](../images/Calculator_SlowCarbAbsorption.png)
+![잘못된 COB 값에 대한 안내](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 위의 스크린샷에서는 시간의 66% 동안 탄수화물 흡수를 편차에서 감지한 값 대신 min_5m_carbimpact로 계산했습니다. 이것은 사용자의 실제 **COB**가 알고리즘이 계산한 것보다 적었을 수 있다는 뜻입니다.
 

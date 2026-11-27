@@ -200,13 +200,6 @@ Les boutons en bas de l'écran de la pompe changent selon l'état du pod. Seuls 
 
 - **Supprimer Pod :** Retire d'**AAPS** un pod dont l'activation n'est pas terminée. Affiché seulement quand l'activation d'un pod s'est arrêtée en cours de route. **AAPS** vous demande de confirmer. Après la suppression, **AAPS** ne peut plus communiquer avec ce pod : retirez-le de votre corps.
 
-![Le menu Gestion du Pod](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**, qui avait un menu **Gestion du Pod** séparé. Dans **AAPS** 4, toutes ces actions, y compris **Activer Pod**, **Désactiver Pod**, **Tester bips** et **Historique Pod**, sont des boutons avec un texte, directement sur l'écran de la pompe.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activer Pod
@@ -304,7 +297,7 @@ Pour désactiver un pod (parce qu'il a expiré ou parce qu'il est en panne) :
 
 1. Ouvrez l'écran de la pompe DASH (**Gestion** > **Pompe**) et appuyez sur **Désactiver Pod**.
 
-   ![Le bouton Désactiver Pod sur l'écran de la pompe DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Le bouton Désactiver Pod sur l'écran de la pompe DASH](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. À l'étape **Désactiver Pod**, appuyez sur **Suivant**. Une fenêtre demande *Un Pod qui a été désactivé ne peut plus être utilisé. Désactiver ce Pod maintenant ?* Appuyez sur **OK** pour commencer la désactivation du pod, ou sur **Annuler** pour le garder. La désactivation suspend toute injection d'insuline et ne peut pas être annulée.
 

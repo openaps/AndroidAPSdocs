@@ -59,7 +59,7 @@ Bağımsız **AAPS** saatleriyle ilgili sıkıntıların çoğu, küçük bir ek
 
 Diğer zorluklar: yeterli pil ömrü elde etmek zordur ve pili yeterli olan saatler genellikle iri ve kalındır. Kullanıcılar şu sorunları bildiriyor: işletim sistemi ve güç tasarrufu ayarlarıyla uğraşmak, saatte sensör başlatmanın zorluğu, zayıf Bluetooth menzili (hem sensörle hem de pompayla bağlantıyı korumak için) ve şüpheli su geçirmezlik. Örnekler aşağıdaki fotoğraflarda gösterilmiştir.
 
-![image](../images/watch_standalone_aaps_and_xdrip.png)
+![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 Bağımsız bir saat kurmak istiyorsanız, daha fazla bilgi için **AAPS** Facebook grubundaki (iyi arama sözcükleri “standalone” ve “Lemfo”) ve Discord'daki gönderileri ve yorumları okuyun.
 
@@ -88,7 +88,7 @@ Son **Wear OS** değişiklikleri özel **AAPS** saat arayüzlerini giderek bozuy
 
 [**AAPS**'i saatinize yükledikten](../WearOS/WearOsSmartwatch.md) sonra, bu **AAPS**'e özel saat arayüzlerinden istediğinizi otomatik olarak seçebilirsiniz. Çoğu saatte ana ekrana, ekran küçülene kadar uzun basmanız ve başka bir ekran seçmek için sağa kaydırmanız yeterlidir:
 
-![image](../images/watchfaces_aaps_selection.png)
+![image](../images/watches/watchfaces_aaps_selection.png)
 
 Bunlar **AAPS**'te yerleşik temel ekranlardır. [Daha fazla saat arayüzü](#WearOS_changing-to-AAPS-watchface) vardır ve [komplikasyonları](#Watchfaces-complications) da kullanabilirsiniz.
 
@@ -122,7 +122,7 @@ Garmin ConnectIQ mağazasında [AAPS](https://apps.garmin.com/search?keywords=an
 
 ![Konfigürasyon > İletişim: Garmin kartı](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1), **AAPS** ile doğrudan çalışır. Glikoz değerlerinin yanı sıra döngü durum verilerini (aktif insülin, geçici bazal) gösterir ve kalp atış hızı değerlerini **AAPS**'e gönderir. ConnectIQ mağazasında bulunur; **Konfigürasyon → İletişim** içinde **Garmin** eklentisini etkinleştirin. ![Numaralı alanlarla AAPS Glucose Watch saat arayüzü](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1), **AAPS** ile doğrudan çalışır. Glikoz değerlerinin yanı sıra döngü durum verilerini (aktif insülin, geçici bazal) gösterir ve kalp atış hızı değerlerini **AAPS**'e gönderir. ConnectIQ mağazasında bulunur; **Konfigürasyon → İletişim** içinde **Garmin** eklentisini etkinleştirin. ![Numaralı alanlarla AAPS Glucose Watch saat arayüzü](../images/watches/Garmin_WF-annotated.png)
 
 1. Grafikteki en yüksek ve en düşük glikoz değerleri
 2. Dakika başına glikoz değişimi
@@ -155,7 +155,7 @@ Aşağıda **AAPS** kullanıcıları arasında popüler olan bazı yalnızca tak
 
 **WatchDrip+**, topluluk tarafından geliştirilen bir yardımcı uygulamadır. Glikoz ve döngü verilerini çeşitli akıllı saat modellerinde gösterir; çoğunlukla Xiaomi (_ör._ Mi Band) ve Amazfit markalarında:
 
-![image](../images/watch_watchdrip_plus.png)
+![image](../images/watches/watch_watchdrip_plus.png)
 
 **WatchDrip+** 0.5 sürümünden beri verilerini aracı olarak xDrip+ kullanmadan doğrudan **AAPS**'ten okur. **AAPS** telefonunda:
 
@@ -170,9 +170,9 @@ Kurulum dahil, bunlar hakkında daha fazla bilgiyi [WatchDrip+ web sitesinde](ht
 
 ### Pebble saat
 
-![image](../images/watch_pebble.png)
+![image](../images/watches/watch_pebble.png)
 
-![image](../images/watch_pebble_watchface.png)
+![image](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble saatler ([artık üretilmiyor](https://en.wikipedia.org/wiki/Pebble_(watch))) 2013'ten 2016'ya kadar genel satışta idi ve hâlâ ikinci el bulunabilir. Fitbit, Pebble'ın varlıklarını devraldı. Pebble kullanıcıları Nightscout verilerini görmek için Urchin saat arayüzünü kullanabilir. Gösterilen veri seçenekleri arasında AİNS, şu anda aktif geçici bazal oranı ve tahminler vardır. Açık döngü kullanıyorsanız IFTTT ile bir applet oluşturabilirsiniz: **AAPS** bir bildirim gönderdiğinde SMS veya pushover bildirimi gönderilir.

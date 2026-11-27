@@ -59,7 +59,7 @@ Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. 上表�
 
 额外的挑战是很难获得足够的电池续航时间，并且拥有足够电池续航的手表通常体积庞大且厚重。用户报告说，他们在操作系统和省电设置上遇到了困难，很难在手表上启动传感器，蓝牙连接范围较差（无法同时与传感器和泵保持连接），并且防水性能也令人质疑。以下照片展示了相关示例。
 
-![image](../images/watch_standalone_aaps_and_xdrip.png)
+![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS** Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -88,7 +88,7 @@ Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (t
 
 在[将**AAPS**安装到您的手表上](../WearOS/WearOsSmartwatch.md)之后，您将能够自动从这些专为**AAPS**设计的表盘中选择您喜欢的表盘。在大多数手表上，您只需长按主屏幕，直到屏幕缩小，然后向右滑动以选择其他屏幕：
 
-![image](../images/watchfaces_aaps_selection.png)
+![image](../images/watches/watchfaces_aaps_selection.png)
 
 这些是**AAPS**中嵌入的基本屏幕，还有[更多表盘](#WearOS_changing-to-AAPS-watchface)可供选择，您还可以使用[小工具](#Watchfaces-complications)。
 
@@ -122,7 +122,7 @@ There are some watch faces for Garmin that integrate with [AAPS](https://apps.ga
 
 ![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1)与**AAPS**实现了直接集成。它除了显示葡萄糖读数外，还显示闭环状态数据（如活性胰岛素和临时基础率），并将心率读数发送到**AAPS**。 It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1)与**AAPS**实现了直接集成。它除了显示葡萄糖读数外，还显示闭环状态数据（如活性胰岛素和临时基础率），并将心率读数发送到**AAPS**。 It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/watches/Garmin_WF-annotated.png)
 
 1. Highest and lowest glucose values on the graph
 2. Glucose change per minute
@@ -155,7 +155,7 @@ For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github
 
 **WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
 
-![image](../images/watch_watchdrip_plus.png)
+![image](../images/watches/watch_watchdrip_plus.png)
 
 Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
 
@@ -170,9 +170,9 @@ You can read more about them, including how to set them up, on the [WatchDrip+ w
 
 ### Pebble watch
 
-![image](../images/watch_pebble.png)
+![image](../images/watches/watch_pebble.png)
 
-![image](../images/watch_pebble_watchface.png)
+![image](../images/watches/watch_pebble_watchface.png)
 
 
 Pebble手表（[现已停产](https://en.wikipedia.org/wiki/Pebble_(watch))）在2013年至2016年期间公开销售，现在可能仍有二手产品可供购买。 Fitbit收购了Pebble。 Pebble用户可以使用Urchin表盘来查看Nightscout数据。显示的数据选项包括活性胰岛素（IOB）、当前活动的临时基础率和预测值。 If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS** then send either an SMS or pushover notification.

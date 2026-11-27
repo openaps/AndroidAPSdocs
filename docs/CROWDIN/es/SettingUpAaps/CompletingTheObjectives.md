@@ -46,7 +46,7 @@ Note: *You may need to wait for the next sensor glucose reading to arrive before
 
 El **Objetivo 2** pide hacer varias «tareas», como se ve en la captura de pantalla de abajo. Cada tarea muestra su estado (**1**): el texto naranja «**No completado**» cambia a «**¡Completado, bien hecho!**» en cuanto **AAPS** registra la acción. Toca **Pista** (**2**) debajo de una tarea para abrir la documentación relacionada, si todavía no conoces bien una acción concreta.
 
-![Captura de pantalla del Objetivo 2](../images/Objective2_V2_5.png)
+![Captura de pantalla del Objetivo 2](../images/objectives/Objective2_V2_5.png)
 
 Las tareas para completar el **Objetivo 2** son:
 - Pon tu **Perfil** al 90 % durante 10 min.
@@ -96,7 +96,7 @@ Tiempo mínimo para completar este objetivo: **7 días**. Es un tiempo de espera
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objectives-objective3). Además, puedes cambiar el porcentaje mínimo de los cambios recomendados de la dosis basal con el ajuste «**Cambio mínimo en modo abierto**» en **Ajustes → Lazo**. Cuanto más alto sea el valor, menos notificaciones de cambio recibirás.
 
-![Cambio mínimo de solicitud en lazo abierto](../images/OpenLoop_MinimalRequestChange2.png)
+![Cambio mínimo de solicitud en lazo abierto](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Esto significa que, durante el **Objetivo 6**, si los niveles de glucosa del sen
 
 - Si tu IOB es negativa (ver la captura de pantalla de abajo), en el **Objetivo 6** se puede activar una dosis basal temporal (TBR) > 100 %.
 
-![Ejemplo de IOB negativo](../images/Objective6_negIOB.png)
+![Ejemplo de IOB negativo](../images/objectives/Objective6_negIOB.png)
 
 - Pon tu rango objetivo un poco más alto de lo habitual, para tener un margen de seguridad.
 - Activa el modo «Suspensión por glucosa baja» pulsando el icono del lazo en la pantalla principal y eligiendo **Suspensión por glucosa baja (LGS)** como modo de funcionamiento.
@@ -245,6 +245,6 @@ Pulsa «**Más**» debajo de un objetivo para ver otra vez sus tareas:
 
 Si por cualquier motivo quieres volver atrás en los **Objetivos**, abre el **Objetivo** terminado con «**Más**» y toca «**Restablecer estado finalizado**»:
 
-![Volver atrás en los objetivos](../images/Objective_ClearFinished.png)
+![Volver atrás en los objetivos](../images/objectives/Objective_ClearFinished.png)
 
 Del mismo modo, el **Objetivo** en el que estás trabajando ahora se puede reiniciar con «**Restablecer estado iniciado**».

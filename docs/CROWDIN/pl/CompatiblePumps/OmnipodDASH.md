@@ -200,13 +200,6 @@ Przyciski na dole ekranu pompy zmieniają się zależnie od stanu Poda. Widoczne
 
 - **Usuń Poda:** Usuwa niedokończony Pod z **AAPS**. Widoczny tylko wtedy, gdy aktywacja Poda zatrzymała się w połowie. **AAPS** prosi o potwierdzenie. Po usunięciu **AAPS** nie może już komunikować się z tym Podem: zdejmij go z ciała.
 
-![Menu Pod Management (zarządzanie Podem)](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-Zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**, która miała osobne menu **Pod Management** (zarządzanie Podem). W **AAPS** 4 wszystkie te działania, w tym **Aktywuj Poda**, **Odłącz Poda**, **Odtwarzaj test dźwięku** i **Historia Poda**, są przyciskami z opisami bezpośrednio na ekranie pompy.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Aktywuj Poda
@@ -304,7 +297,7 @@ Aby dezaktywować Poda (bo stracił ważność albo uległ awarii):
 
 1. Otwórz ekran pompy DASH (**Zarządzaj** > **Pompa**) i naciśnij **Odłącz Poda**.
 
-   ![Przycisk Odłącz Poda na ekranie pompy DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Przycisk Odłącz Poda na ekranie pompy DASH](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. W kroku **Odłącz Poda** naciśnij **Dalej**. Okno pyta: *Zdeaktywowanego poda nie można użyć ponownie. Czy na pewno chcesz teraz dezaktywować tego poda?* Naciśnij **OK**, aby rozpocząć dezaktywację Poda, albo **Anuluj**, aby go zachować. Dezaktywacja wstrzymuje całe podawanie insuliny i nie można jej cofnąć.
 

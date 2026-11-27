@@ -200,13 +200,6 @@ Knapparna längst ner på pumpskärmen ändras med poddens tillstånd. Bara de k
 
 - **Kassera pod:** Tar bort en ofullständig pod från **AAPS**. Visas bara när en podaktivering avbröts halvvägs. **AAPS** ber dig bekräfta. Efter kasseringen kan **AAPS** inte längre kommunicera med den podden: ta bort den från kroppen.
 
-![Menyn Podhantering](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-Skärmbilden ovan är från en tidigare **AAPS**-version, som hade en separat meny **Podhantering**. I **AAPS** 4 är alla dessa åtgärder, bland annat **Aktivera pod**, **Inaktivera pod**, **Spela upp testljud** och **Pod-historik**, knappar med text direkt på pumpskärmen.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Aktivera en pod
@@ -304,7 +297,7 @@ Så inaktiverar du en pod (antingen för att den har gått ut eller för att den
 
 1. Öppna DASH-pumpskärmen (**Hantera** > **Pump**) och tryck på **Inaktivera pod**.
 
-   ![Knappen Inaktivera pod på DASH-pumpskärmen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Knappen Inaktivera pod på DASH-pumpskärmen](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. I steget **Inaktivera pod**, tryck på **Nästa**. En dialog frågar *En inaktiverad Pod kan inte användas igen. Inaktivera denna Pod nu?* Tryck på **OK** för att börja inaktivera podden, eller på **Avbryt** för att behålla den. Inaktiveringen pausar all insulinleverans och kan inte ångras.
 

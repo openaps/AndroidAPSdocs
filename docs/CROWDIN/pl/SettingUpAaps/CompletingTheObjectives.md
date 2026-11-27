@@ -46,7 +46,7 @@ Uwaga: *może być konieczne odczekanie na następny odczyt glukozy z sensora, z
 
 **Zadanie 2** wymaga wykonania kilku „kroków”, jak na zrzucie ekranu poniżej. Każdy krok pokazuje swój stan (**1**): pomarańczowy napis „**Nie ukończono**” zmienia się w „**Ukończono, dobra robota!**”, gdy tylko **AAPS** zarejestruje działanie. Dotknij **Podpowiedź** (**2**) pod krokiem, aby otworzyć powiązaną dokumentację, jeśli nie znasz jeszcze danego działania.
 
-![Zrzut ekranu zadania 2](../images/Objective2_V2_5.png)
+![Zrzut ekranu zadania 2](../images/objectives/Objective2_V2_5.png)
 
 Kroki do ukończenia **Zadania 2**:
 - Ustaw **Profil** na 90% na 10 min.
@@ -96,7 +96,7 @@ Minimalny czas ukończenia tego zadania: **7 dni**. To obowiązkowy czas oczekiw
 
 Aby zmniejszyć liczbę proponowanych zmian dawki bazowej w otwartej pętli, możesz nadal korzystać ze wskazówek opisanych w [**Zadaniu 3**](#objectives-objective3). Możesz też zmienić minimalny procent zalecanych zmian bazy ustawieniem „**Minimalna zmiana w trybie otwartej pętli**” w **Ustawienia → Pętla**. Im wyższa wartość, tym mniej powiadomień o zmianach dostaniesz.
 
-![Minimalna zmiana w trybie otwartej pętli](../images/OpenLoop_MinimalRequestChange2.png)
+![Minimalna zmiana w trybie otwartej pętli](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ Oznacza to, że w **Zadaniu 6**, gdy poziom glukozy z sensora spada, **AAPS** zm
 
 - Jeśli Twoje IOB jest ujemne (zobacz zrzut ekranu poniżej), w **Zadaniu 6** może zostać włączona baza tymczasowa (TBR) > 100%.
 
-![Przykład ujemnego IOB](../images/Objective6_negIOB.png)
+![Przykład ujemnego IOB](../images/objectives/Objective6_negIOB.png)
 
 - Ustaw zakres docelowy nieco wyżej niż zwykle. To dla bezpieczeństwa – daje dodatkowy margines.
 - Włącz tryb „Zawieszenie przy niskiej glikemii”: naciśnij ikonę pętli na ekranie głównym i wybierz **Zawieszenie przy niskiej glikemii** jako tryb pracy.
@@ -245,6 +245,6 @@ Naciśnij „**Więcej**” pod zadaniem, aby znowu zobaczyć jego kroki:
 
 Jeśli z jakiegoś powodu chcesz cofnąć się w **Zadaniach**, otwórz ukończone **Zadanie** przez „**Więcej**” i dotknij „**Resetuj stan zakończenia**”:
 
-![Powrót do wcześniejszych zadań](../images/Objective_ClearFinished.png)
+![Powrót do wcześniejszych zadań](../images/objectives/Objective_ClearFinished.png)
 
 W ten sam sposób **Zadanie**, nad którym teraz pracujesz, możesz zacząć od nowa przez „**Resetuj stan rozpoczęcia**”.

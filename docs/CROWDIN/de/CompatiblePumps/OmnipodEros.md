@@ -281,7 +281,7 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
 Die folgenden Schritte zeigen Dir, wie Du die Insulinabgabe unterbrichst und fortsetzt.
 
-*HINWEIS – siehst Du keine Schaltfläche **Unterbrechen***, ist sie standardmäßig ausgeblendet. Enable **Show Suspend Delivery button on the pump screen** in the [Omnipod settings](#OmnipodEros-omnipod-settings) under **Other**.
+*HINWEIS – siehst Du keine Schaltfläche **Unterbrechen***, ist sie standardmäßig ausgeblendet. Aktiviere in den [Omnipod-Einstellungen](#OmnipodEros-omnipod-settings) unter **Andere** die Option **Schaltfläche „Insulinabgabe unterbrechen“ in der Pumpenansicht anzeigen**.
 
 #### Insulinabgabe unterbrechen
 
@@ -591,7 +591,7 @@ Die Schaltflächen unten auf dem Pumpenbildschirm ändern sich je nach Situation
   Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist das eine Textschaltfläche **Zeit einstellen** auf dem Omnipod-Pumpenbildschirm.
   ```
 
-- **Unterbrechen:** Unterbricht die Insulinabgabe des aktiven Pods. Only shown if enabled in the settings (**Show Suspend Delivery button on the pump screen**).
+- **Unterbrechen:** Unterbricht die Insulinabgabe des aktiven Pods. Wird nur angezeigt, wenn es in den Einstellungen aktiviert ist (**Schaltfläche „Insulinabgabe unterbrechen“ in der Pumpenansicht anzeigen**).
 
   ![unterbrechen](../images/omnipod/ICONS/omnipod_overview_suspend.png)
 
@@ -782,7 +782,7 @@ Meldet AAPS-Benachrichtigungen und akustische Telefonwarnungen, wenn unsicher is
 
 Bietet erweiterte Einstellungen zur Unterstützung bei der Fehlersuche.
 
-- **Show Suspend Delivery button on the pump screen:** Hide or display the **Suspend** button on the Omnipod pump screen.
+- **Schaltfläche „Insulinabgabe unterbrechen“ in der Pumpenansicht anzeigen:** Blendet die Schaltfläche **Unterbrechen** auf dem Omnipod-Pumpenbildschirm aus oder ein.
 - **Button 'Pulse Log' im Menü Pod Mgmt. anzeigen:** Diese Einstellung wird noch aufgeführt, der aktuelle Pumpenbildschirm hat aber keine Schaltfläche **Pulse Log**.
 
 - **Button 'RileyLink Status' im Menü Pod Mgmt. anzeigen:** Blendet die Schaltfläche **RileyLink Status** auf dem Omnipod-Pumpenbildschirm aus oder ein.

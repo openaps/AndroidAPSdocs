@@ -2,7 +2,7 @@
 
 Freestyle Libre 3 (FSL3) vyžaduje zvláštní nastavení, aby AAPS dostával hodnoty glykémie. Hodnoty z Freestyle Libre 3 (FSL3) lze do AAPS dostat dvěma způsoby.
 
-![FL3](../images/libre3_juggluco_xdrip_data_flow.jpeg)
+![FL3](../images/libre3/libre3_juggluco_xdrip_data_flow.jpeg)
 
 Oba níže uvedené způsoby používají samostatnou aplikaci Juggluco. Používá Juggluco k příjmu surových dat ze senzoru v 1minutovém intervalu, která se pak předávají do xDrip nebo AAPS. Nové senzory lze spustit buď aplikací Libre 3, nebo přímo v Juggluco. Návod níže popisuje postup spuštění senzoru v aplikaci Juggluco. Pokud byl senzor spuštěn s přihlášeným účtem LibreView, lze také přepínat mezi Juggluco a aplikací Libre 3 jako přijímačem.
 
@@ -38,7 +38,7 @@ Hodnoty glykémie přijímá aplikace xDrip v telefonu.
 
   → Nabídka (☰) → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![Rozšířená nastavení xDrip pro Libre 2 a surové hodnoty](../images/xDrip_Libre3_Smooth.png)
+  ![Rozšířená nastavení xDrip pro Libre 2 a surové hodnoty](../images/libre3/xDrip_Libre3_Smooth.png)
 
 
 

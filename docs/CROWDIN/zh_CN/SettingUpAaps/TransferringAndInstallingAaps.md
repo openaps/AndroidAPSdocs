@@ -31,11 +31,11 @@ Google is rolling out [Android developer verification](#android-developer-verifi
 
 在右上角，从谷歌菜单中选择“云端硬盘”应用。
 
-![启动云盘应用程序](../images/GoogleDriveInWebbrowser.png)
+![启动云盘应用程序](../images/install/GoogleDriveInWebbrowser.png)
 
 Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
 
-![使用Google Drive应用程序上传apk文件](../images/GoogleDriveUploadFile.png)
+![使用Google Drive应用程序上传apk文件](../images/install/GoogleDriveUploadFile.png)
 
 现在，Apk文件应该已经上传到了Google Drive。
 
@@ -43,17 +43,17 @@ Click **New** at the top left (or right-click an empty area below your files and
 
 切换到您的手机并启动Google Drive应用。它是一个预装的应用程序，可以在其他谷歌应用程序所在的位置找到，或者通过搜索应用程序的名称来找到。
 
-![启动Google Drive应用程序](../images/GoogleDriveMobileAPPLaunch.png)
+![启动Google Drive应用程序](../images/install/GoogleDriveMobileAPPLaunch.png)
 
 Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
 
-![启动apk安装](../images/GoogleDriveMobileUploadedAPK.png)
+![启动apk安装](../images/install/GoogleDriveMobileUploadedAPK.png)
 
 In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
 
-![Google Drive安全提示](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Google Drive安全提示](../images/install/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Google Drive安全提示](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Google Drive安全提示](../images/install/GoogleDriveMobileSettingSecuritySetting.png)
 
 After the installation finishes, you are done with this step.
 

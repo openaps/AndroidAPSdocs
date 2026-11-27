@@ -59,7 +59,7 @@ Większość frustracji z samodzielnymi zegarkami **AAPS** wynika z obsługi bar
 
 Kolejne trudności: trudno uzyskać wystarczający czas pracy na baterii, a zegarki z wystarczającą baterią są często duże i grube. Użytkownicy zgłaszają walkę z systemem i ustawieniami oszczędzania energii, trudności z uruchamianiem sensorów na zegarku, słaby zasięg Bluetooth (potrzebny do utrzymania połączenia z sensorem i pompą) oraz wątpliwą wodoodporność. Przykłady pokazują poniższe zdjęcia.
 
-![image](../images/watch_standalone_aaps_and_xdrip.png)
+![image](../images/watches/watch_standalone_aaps_and_xdrip.png)
 
 Jeśli chcesz skonfigurować samodzielny zegarek, przeczytaj posty i komentarze w grupie **AAPS** na Facebooku (dobre słowa do wyszukiwania to „standalone” i „Lemfo”) oraz na Discordzie.
 
@@ -88,7 +88,7 @@ Ostatnie zmiany w **Wear OS** stopniowo psują własne tarcze zegarka **AAPS** (
 
 Po [zainstalowaniu **AAPS** na zegarku](../WearOS/WearOsSmartwatch.md) od razu możesz wybrać ulubioną tarczę spośród tych tarcz przygotowanych dla **AAPS**. Na większości zegarków wystarczy przytrzymać ekran główny, aż się zmniejszy, i przesunąć w prawo, aby wybrać inny ekran:
 
-![image](../images/watchfaces_aaps_selection.png)
+![image](../images/watches/watchfaces_aaps_selection.png)
 
 To podstawowe ekrany wbudowane w **AAPS**. Jest też [więcej tarcz zegarka](#WearOS_changing-to-AAPS-watchface) i możesz również używać [komplikacji](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ W sklepie Garmin ConnectIQ jest kilka tarcz zegarka dla Garmin, które współpr
 
 ![Konfiguracja > Komunikacja: karta Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) współpracuje bezpośrednio z **AAPS**. Oprócz odczytów glukozy pokazuje dane o stanie pętli (aktywna insulina, baza tymczasowa) i wysyła do **AAPS** odczyty tętna. Jest dostępna w sklepie ConnectIQ; włącz wtyczkę **Garmin** w **Konfiguracja → Komunikacja**. ![Tarcza AAPS Glucose Watch z ponumerowanymi polami](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) współpracuje bezpośrednio z **AAPS**. Oprócz odczytów glukozy pokazuje dane o stanie pętli (aktywna insulina, baza tymczasowa) i wysyła do **AAPS** odczyty tętna. Jest dostępna w sklepie ConnectIQ; włącz wtyczkę **Garmin** w **Konfiguracja → Komunikacja**. ![Tarcza AAPS Glucose Watch z ponumerowanymi polami](../images/watches/Garmin_WF-annotated.png)
 
 1. Najwyższa i najniższa wartość glukozy na wykresie
 2. Zmiana glukozy na minutę
@@ -155,7 +155,7 @@ Poniżej kilka zegarków do samego obserwowania, popularnych wśród użytkownik
 
 **WatchDrip+** to aplikacja towarzysząca tworzona przez społeczność. Pokazuje dane o glukozie i pętli na różnych modelach smartwatchy, głównie marek Xiaomi (_np._ Mi Band) i Amazfit:
 
-![image](../images/watch_watchdrip_plus.png)
+![image](../images/watches/watch_watchdrip_plus.png)
 
 Od wersji 0.5 **WatchDrip+** odczytuje dane bezpośrednio z **AAPS**, bez pośrednictwa xDrip+. Na telefonie **AAPS**:
 
@@ -170,9 +170,9 @@ Więcej o nich, w tym o tym, jak je skonfigurować, przeczytasz na [stronie Watc
 
 ### Zegarek Pebble
 
-![image](../images/watch_pebble.png)
+![image](../images/watches/watch_pebble.png)
 
-![image](../images/watch_pebble_watchface.png)
+![image](../images/watches/watch_pebble_watchface.png)
 
 
 Zegarki Pebble ([już nieprodukowane](https://en.wikipedia.org/wiki/Pebble_(watch))) były w sprzedaży od 2013 do 2016 roku i nadal można je kupić z drugiej ręki. Fitbit przejął majątek firmy Pebble. Użytkownicy Pebble mogą oglądać dane z Nightscout na tarczy Urchin. Wyświetlane dane to m.in. IOB, aktualna baza tymczasowa i prognozy. Przy otwartej pętli możesz użyć IFTTT, aby utworzyć aplet, który po otrzymaniu powiadomienia z **AAPS** wyśle SMS lub powiadomienie pushover.

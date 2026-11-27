@@ -200,13 +200,6 @@ Pompa ekranının altındaki düğmeler Pod'un durumuna göre değişir. Yalnız
 
 - **Pod'u Çıkar:** Tamamlanmamış bir Pod'u **AAPS**'ten kaldırır. Yalnızca bir Pod etkinleştirmesi yarıda kaldığında gösterilir. **AAPS** onaylamanızı ister. Çıkarma işleminden sonra **AAPS** artık o Pod ile iletişim kuramaz: Pod'u vücudunuzdan çıkarın.
 
-![Pod Yönetimi menüsü](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-Yukarıdaki ekran görüntüsü, ayrı bir **Pod Yönetimi** menüsü olan eski bir **AAPS** sürümüne aittir. **AAPS** 4'te **Pod'u Etkinleştir**, **Pod'u Devre Dışı Bırak**, **Test Bip Sesi Çal** ve **Pod Geçmişi** dahil tüm bu işlemler, doğrudan pompa ekranında yazılı etiketli düğmelerdir.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Pod'u Etkinleştirme
@@ -304,7 +297,7 @@ Bir Pod'u devre dışı bırakmak için (süresi dolduğu ya da arızalandığı
 
 1. DASH pompa ekranını açın (**Yönet** > **Pompa**) ve **Pod'u Devre Dışı Bırak**'a basın.
 
-   ![DASH pompa ekranındaki Pod'u Devre Dışı Bırak düğmesi](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![DASH pompa ekranındaki Pod'u Devre Dışı Bırak düğmesi](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. **Pod'u Devre Dışı Bırak** adımında **İleri**'ye basın. Bir iletişim kutusu şunu sorar: *Devre dışı bırakılmış bir Pod tekrar kullanılamaz. Bu Pod'u şimdi devre dışı bırakmak istiyor musunuz?* Pod'u devre dışı bırakmaya başlamak için **Tamam**'a, Pod'u korumak için **Vazgeç**'e basın. Devre dışı bırakma tüm insülin iletimini askıya alır ve geri alınamaz.
 

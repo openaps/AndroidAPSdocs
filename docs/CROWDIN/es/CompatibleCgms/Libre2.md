@@ -63,7 +63,7 @@ Técnicamente, el valor actual de glucosa se envía a xDrip cada minuto. Por def
 
 → Menú hamburguesa → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip: ajustes avanzados de Libre 2 y valores en bruto](../images/xDrip_Libre3_Smooth.png)
+![xDrip: ajustes avanzados de Libre 2 y valores en bruto](../images/libre3/xDrip_Libre3_Smooth.png)
 
 Esto es obligatorio para usar el lazo. Las curvas se ven suaves y los resultados del lazo son muy buenos. Los valores en bruto en los que se basan las alarmas saltan un poco más, pero coinciden con los valores que también muestra el lector. Además, los valores en bruto se pueden mostrar en el gráfico de xDrip para poder reaccionar a tiempo a cambios rápidos. Activa Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" y "show Sensors Infos" (ajustes de xDrip). Así los valores en bruto se muestran además como pequeños puntos blancos y hay más información del sensor en el menú del sistema.
 

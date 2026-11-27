@@ -53,7 +53,7 @@ Om minimal kolhydratupptagning (min_5m_carbimpact) används i stället för ett 
 
 Normalt upptäcker __AAPS__ kolhydratupptagning genom avvikelser i **BG**. Om du har angett kolhydrater men **AAPS** inte kan se den väntade upptagningen genom avvikelser i **BG**, används i stället metoden [min_5m_carbimpact](#Preferences-min_5m_carbimpact) för att beräkna upptagningen (så kallad ”fallback”). Eftersom denna metod bara beräknar den minimala kolhydratupptagningen utan att ta hänsyn till avvikelser i **BG**, kan den ge felaktiga COB-värden.
 
-![Tips om felaktigt COB-värde](../images/Calculator_SlowCarbAbsorption.png)
+![Tips om felaktigt COB-värde](../images/v4/Screens/Calculator_SlowCarbAbsorption.png)
 
 I skärmbilden ovan beräknades kolhydratupptagningen 66 % av tiden med min_5m_carbimpact i stället för med värdet från avvikelserna. Det betyder att du kanske hade mindre **COB** än algoritmen beräknade.
 

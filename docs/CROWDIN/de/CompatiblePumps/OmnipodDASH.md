@@ -200,13 +200,6 @@ Die Schaltflächen unten auf dem Pumpenbildschirm ändern sich je nach Zustand d
 
 - **Pod verwerfen:** Entfernt einen nicht fertig eingerichteten Pod aus **AAPS**. Wird nur angezeigt, wenn eine Pod-Aktivierung mittendrin abgebrochen ist. **AAPS** fragt nach einer Bestätigung. Nach dem Verwerfen kann **AAPS** nicht mehr mit diesem Pod kommunizieren: Entferne ihn von Deinem Körper.
 
-![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-Der Screenshot oben stammt aus einer früheren **AAPS**-Version, die noch ein eigenes Menü **Pod-Verwaltung** hatte. In **AAPS** 4 sind alle diese Aktionen, darunter **Pod aktivieren**, **Pod deaktivieren**, **Testton abspielen** und **Pod-Historie**, beschriftete Schaltflächen direkt auf dem Pumpenbildschirm.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Pod aktivieren
@@ -304,7 +297,7 @@ So deaktivierst Du einen Pod (weil er abgelaufen oder ausgefallen ist):
 
 1. Öffne den DASH-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **Pod deaktivieren**.
 
-   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. Tippe im Schritt **Pod deaktivieren** auf **Weiter**. Ein Dialog fragt: *Ein deaktivierter Pod kann nicht mehr verwendet werden. Diesen Pod jetzt deaktivieren?* Tippe auf **OK**, um die Deaktivierung zu starten, oder auf **Abbrechen**, um den Pod zu behalten. Die Deaktivierung stoppt jede Insulinabgabe und kann nicht rückgängig gemacht werden.
 

@@ -200,13 +200,6 @@ The buttons at the bottom of the pump screen change with the state of the pod. O
 
 - **Discard Pod:** Removes an unfinished pod from **AAPS**. Shown only when a pod activation stopped part-way. **AAPS** asks you to confirm. After discarding, **AAPS** can no longer communicate with that pod: remove it from your body.
 
-![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activate Pod
@@ -304,7 +297,7 @@ To deactivate a pod (either because it expired or because it failed):
 
 1. Open the DASH pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
 
-   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. On the **Deactivate Pod** step, press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
 

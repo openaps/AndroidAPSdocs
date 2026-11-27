@@ -1,6 +1,6 @@
 # Surveillance à distance
 
-![Le suivi des enfants](../images/KidsMonitoring.png)
+![Le suivi des enfants](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ offre plusieurs fonctions pour la surveillance à distance des enfants avec un diabète de type 1. Il permet aussi d'envoyer des commandes à distance, qui donnent des instructions à __AAPS__. De la même façon, __AAPSClient__ peut aussi servir à la surveillance à distance pour suivre l'__AAPS__ de votre partenaire ou d'un ami.
 

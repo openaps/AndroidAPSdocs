@@ -200,13 +200,6 @@ The buttons at the bottom of the pump screen change with the state of the pod. O
 
 - **Scarta pod:** rimuove da **AAPS** un pod non completato. Shown only when a pod activation stopped part-way. **AAPS** ti chiede di confermare. After discarding, **AAPS** can no longer communicate with that pod: remove it from your body.
 
-![Il menu Gestione pod](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activate Pod
@@ -304,7 +297,7 @@ Per disattivare un pod (perché è scaduto o perché si è guastato):
 
 1. Apri la schermata del micro DASH (**Gestisci** > **Micro**) e premi **Disattiva pod**.
 
-   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. On the **Deactivate Pod** step, press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. La disattivazione sospende tutta l'erogazione di insulina e non si può annullare.
 

@@ -36,7 +36,7 @@ AAPS versucht, für 1 h 30 min einen Wert von 140 mg/dl bzw. 7,8 mmol/l zu errei
 Im Closed-Loop-Modus, **SMB**s:
 
 - *können* deaktiviert sein (weiter unten diskutiert); und/oder
-- basal may be activated if **AAPS** is in negative **IOB** or < 0.
+- das Basal kann aktiviert werden, wenn **AAPS** negatives **IOB** erkennt oder < 0.
 
 Es ist eine Überlegung wert:
 
@@ -74,7 +74,7 @@ AAPS versucht, für 1 Stunde einen Wert von 160 mg/dl bzw. 8,9 mmol/l zu erreich
 Im Closed-Loop-Modus, **SMB**s:
 
 - *können* deaktiviert sein (weiter unten diskutiert); und/oder
-- basal may be activated if **AAPS** is in negative **IOB** or < 0.
+- das Basal kann aktiviert werden, wenn **AAPS** negatives **IOB** erkennt oder < 0.
 
 (TempTargets-manage-v4)=
 
@@ -88,7 +88,7 @@ Der Bildschirm hat drei Teile:
 
 1. **Kartenkarussell der Vorlagen** (oben) – wische durch Deine Vorlagen für temporäre Ziele. Jede Karte zeigt **Name**, **Zielwert** und **Dauer** der Vorlage; das gerade laufende temporäre Ziel ist hervorgehoben.
 2. **Editor** (Mitte) – das **Temporäre Ziel** und die **Dauer**, die tatsächlich angewendet werden, dazu Datum und Uhrzeit der **Aktivierung**.
-3. **Action bar** (bottom) — **➕ add**, **delete** and the **▶ activate** button.
+3. **Aktionsleiste** (unten) – **➕ Hinzufügen**, **Löschen** und der Knopf **▶ Aktivieren**.
 
 Wählst Du eine Karte aus, werden ihr **Zielwert** und ihre **Dauer** in den Editor geladen.
 
@@ -123,7 +123,7 @@ Um eine eingebaute Vorlage auf den Auslieferungszustand zurückzusetzen, wähle 
 ### Vorlagen hinzufügen und entfernen
 
 - **➕ Hinzufügen** – legt aus den aktuellen Werten im Editor eine **neue eigene Vorlage** an. Die neue Karte erscheint im Karussell.
-- **Delete** — remove the selected **custom** preset. Eingebaute Vorlagen (*Bald essen*, *Aktivität*, *Hypo*) können nicht gelöscht werden.
+- **Löschen** – entfernt die ausgewählte **eigene** Vorlage. Eingebaute Vorlagen (*Bald essen*, *Aktivität*, *Hypo*) können nicht gelöscht werden.
 
 Sobald Du mindestens zwei **eigene** Vorlagen hast, kannst Du auch ihre Reihenfolge im Karussell ändern: Tippe oben in der Leiste auf das Symbol **Reihenfolge ändern** (⇅), verschiebe die mittlere Karte mit den **◀ / ▶ Verschiebe-Knöpfen** und bestätige mit **✓**. Die eingebauten Vorlagen behalten ihren Platz – nur eigene Vorlagen lassen sich verschieben. (Die Bedienung ist dieselbe wie beim [Ändern der Reihenfolge der Profile](ProfileSwitch-ProfilePercentage.md).)
 

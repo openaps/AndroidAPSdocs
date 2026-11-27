@@ -73,7 +73,7 @@ Das **Ambulante Glukoseprofil** (**AGP**) zeigt, wie sich Dein Glukosewert norma
 
 - **Das Diagramm**: ein Tag von Mitternacht bis Mitternacht. Die Linie ist der **Median** (die Hälfte Deiner Werte zu dieser Uhrzeit lag darunter, die Hälfte darüber). Darum liegt ein Band mit der mittleren Hälfte Deiner Werte (**25–75%**) und ein breiteres Band mit den meisten Werten (**10–90%**). Ein schmales Band bedeutet, dass Dein Glukosewert zu dieser Uhrzeit von Tag zu Tag ähnlich ist. Gestrichelte Linien markieren Deine **Niedrig-Markierung**, 140 mg/dl (7,8 mmol/l) und Deine **Hoch-Markierung**.
 - **Glukoseübersicht**: die Zeit in Deinem Bereich, im engen Bereich (70–140 mg/dl oder 3,9–7,8 mmol/l), über und unter Deinem Bereich, dann Dein **Durchschnitt** und Dein **Median** der Glukosewerte. Dein Bereich ergibt sich aus der **Niedrig-Markierung** und der **Hoch-Markierung**, die unter [Zielbereich für die Grafikanzeige](#Preferences-range-for-visualization) eingestellt sind.
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings, shown in % with the same value in mmol/mol below it. Wie der HbA1c oben stimmen sie möglicherweise nicht mit Deinen HbA1c-Laborwerten überein.
+- **eA1c** und **GMI**: zwei aus Deinen CGM-Werten berechnete Schätzungen des HbA1c, angezeigt in %, darunter derselbe Wert in mmol/mol. Wie der HbA1c oben stimmen sie möglicherweise nicht mit Deinen HbA1c-Laborwerten überein.
 - **SD** (Standardabweichung) und **CV** (Variationskoeffizient): wie stark Dein Glukosewert schwankt. Ein niedrigerer Wert bedeutet einen gleichmäßigeren Glukoseverlauf.
 - **Tage**: wie viele Tage mit CGM-Daten verwendet wurden.
 

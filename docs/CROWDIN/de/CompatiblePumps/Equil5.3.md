@@ -10,8 +10,8 @@ Diese Anleitung führt Dich durch die Konfiguration der Equil-Insulinpumpe.
 ## Funktionalitäten bei der Nutzung mit AAPS
 
 * Schlauchlose Patch-Pumpe, die mit **AAPS** über das Bluetooth Deines Smartphones kommuniziert, ohne zusätzliches Kommunikationsgerät.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights. Filling the reservoir, priming and changing the battery are done in the pump wizards, so **Pump battery change** is not offered.
-* **Prime/Fill** is offered, in the **Manage** sheet, in QuickLaunch and in the expanded status panel on the main screen. Use it only while the pump is **off its base plate**, so the insulin goes into the air: like every prime, it is not counted in IOB, so a prime while the pump is attached gives insulin the loop does not know about.
+* **AAPS** behandelt die Equil als Patch-Pumpe mit einem 200-IE-Reservoir: Der Startbildschirm zeigt die Statusanzeigen für Patch-Pumpen. Das Befüllen des Reservoirs, das Füllen (Entlüften) und der Batteriewechsel erfolgen in den Assistenten der Pumpe, daher wird **Pumpenbatterie-Wechsel** nicht angeboten.
+* **Nadelwechsel/Füllen** wird angeboten: im Fenster **Verwalten**, im Schnellstart und im aufgeklappten Statusbereich auf dem Startbildschirm. Verwende es nur, solange die Pumpe **nicht auf ihrer Basisplatte sitzt**, damit das Insulin in die Luft geht: Wie jedes Füllen wird es nicht im IOB berücksichtigt. Füllen bei aufgesetzter Pumpe gibt also Insulin ab, von dem der Loop nichts weiß.
 * Solange die Pumpe angehalten oder gestoppt ist, erfasst **AAPS** eine temporäre Basalrate von 0 IE/h, sodass kein Basalinsulin im IOB berücksichtigt wird.
 * Sommerzeit- und Zeitzonenwechsel müssen manuell erledigt werden.
 
@@ -43,7 +43,7 @@ Die Equil-Einstellungen öffnest Du über **Einstellungen** auf der Karte **Equi
 ![Equil driver settings](../images/v4/Pumps/equil_settings.png)
 
 * **Alarm bei niedrigem Batteriestand**: Warnt Dich, wenn die Pumpenbatterie schwach ist.
-* **Low reservoir alarm**: warns you when the insulin in the reservoir is low.
+* **Insulin-Reservoir fast leer**: Warnt Dich, wenn das Insulin im Reservoir knapp wird.
 * **Warnton**: Wie die Pumpe Dich warnt: **Stummschalten**, **Nur vibrieren**, **Nur Töne** oder **Vibration und Ton**.
 * **Bolus-Geschwindigkeit**: Wie schnell ein Bolus abgegeben wird: **1.5 U/min (Standard)**, **3 IE/min**, **6 IE/min** oder **12 IE/min**. Ein schnellerer Bolus kann zu mehr Verschlussalarmen führen.
 

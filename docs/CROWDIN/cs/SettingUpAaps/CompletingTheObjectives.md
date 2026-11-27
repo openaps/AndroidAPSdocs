@@ -46,7 +46,7 @@ Poznámka: *Možná budete muset počkat na další hodnotu glykémie ze senzoru
 
 **Cíl 2** vyžaduje provedení několika „úkolů“, jak ukazuje snímek obrazovky níže. Každý úkol ukazuje svůj stav (**1**): oranžové „**Nedokončeno**“ se změní na „**Hotovo, gratulujeme!**“, jakmile **AAPS** akci zaregistruje. Klepněte na **Nápověda** (**2**) pod úkolem a otevře se související dokumentace, pokud danou akci ještě neznáte.
 
-![Snímek obrazovky – cíl 2](../images/Objective2_V2_5.png)
+![Snímek obrazovky – cíl 2](../images/objectives/Objective2_V2_5.png)
 
 Úkoly ke splnění **Cíle 2** jsou:
 - Nastavte svůj **Profil** na 90 % na dobu 10 min.
@@ -96,7 +96,7 @@ Minimální doba pro splnění tohoto cíle: **7 dní**. To je povinná čekací
 
 Abyste v otevřené smyčce snížili počet navržených změn bazální dávky, můžete stále použít tipy popsané v [**Cíli 3**](#objectives-objective3). Navíc můžete změnit minimální procento pro doporučené změny bazální dávky pomocí nastavení „**Minimální změna v otevřené smyčce**“ v **Nastavení → Smyčka**. Čím vyšší hodnota, tím méně oznámení o změnách dostanete.
 
-![Minimální změna v otevřené smyčce](../images/OpenLoop_MinimalRequestChange2.png)
+![Minimální změna v otevřené smyčce](../images/objectives/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
@@ -151,7 +151,7 @@ To znamená, že když jste v **Cíli 6** a glykémie ze senzoru klesá, **AAPS*
 
 - Pokud je váš IOB záporný (viz snímek obrazovky níže), může se v **Cíli 6** spustit dočasný bazál (TBR) > 100 %.
 
-![Příklad záporného IOB](../images/Objective6_negIOB.png)
+![Příklad záporného IOB](../images/objectives/Objective6_negIOB.png)
 
 - Nastavte cílový rozsah o něco výše než by byl obvyklý cíl, tak abyste měli jistotu a vytvořili si bezpečnostní rezervu.
 - Režim „Ochrana před nízkou glykémií“ zapnete stisknutím ikony smyčky na hlavní obrazovce a výběrem režimu smyčky **Ochrana před nízkou glykémií**.
@@ -245,6 +245,6 @@ Stiskněte „**Více**“ pod cílem, abyste znovu viděli jeho úkoly:
 
 Pokud se z jakéhokoli důvodu chcete v **Cílech** vrátit, otevřete dokončený **Cíl** pomocí „**Více**“ a klepněte na „**Resetovat dokončený stav**“:
 
-![Návrat k předchozímu cíli](../images/Objective_ClearFinished.png)
+![Návrat k předchozímu cíli](../images/objectives/Objective_ClearFinished.png)
 
 Stejným způsobem můžete **Cíl**, na kterém právě pracujete, spustit znovu pomocí „**Resetovat zahájený stav**“.

@@ -182,7 +182,7 @@
 
 只有當 **AAPS** 在 **AAPS** 目錄中找到先前匯出的設定（「找到已儲存的設定」）時，才會顯示此畫面。例如，重新安裝應用程式或換用新手機時，就可能會看到此畫面。
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md). After a successful import the Setup Wizard closes: the imported settings replace the remaining steps.
+- 若要還原先前的組態，請按下「**匯入設定**」— 請參閱 [匯出與匯入設定](../Maintenance/ExportImportSettings.md)。成功匯入後，設定嚮導會關閉：匯入的設定會取代剩餘步驟。
 - 若要使用新的組態，請按一下「**下一步**」，並繼續操作嚮導。
 
 ![匯入設置](../images/setup-wizard/Wizard-ImportSettings.png)

@@ -1,6 +1,6 @@
 # Fjärrövervakning
 
-![Övervaka barn](../images/KidsMonitoring.png)
+![Övervaka barn](../images/remote_control_and_following/KidsMonitoring.png)
 
 __AAPS__ har flera funktioner för fjärrövervakning av barn med typ 1-diabetes. Det går också att skicka kommandon på distans, som ger instruktioner till __AAPS__. På samma sätt kan __AAPSClient__ också användas för fjärrövervakning, för att följa din partners eller väns __AAPS__.
 

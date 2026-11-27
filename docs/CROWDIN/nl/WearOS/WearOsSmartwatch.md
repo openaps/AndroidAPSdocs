@@ -318,7 +318,7 @@ Deze vakken werken alleen op horloges met **Wear OS 5 of ouder**, waar de aangep
 
 ## AAPSv2-watchface - legenda
 
-![Legenda AAPSv2-watchface](../images/Watchface_Legend.png)
+![Legenda AAPSv2-watchface](../images/wearos/Watchface_Legend.png)
 
 A - tijd sinds laatste uitvoering loop
 

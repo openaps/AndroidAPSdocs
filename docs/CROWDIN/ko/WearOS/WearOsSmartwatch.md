@@ -318,7 +318,7 @@ AAPS Wear OS APK의 표준 빌드에는 여러 워치 페이스가 들어 있습
 
 ## AAPSv2 워치 페이스 - 범례
 
-![AAPSv2 워치 페이스 범례](../images/Watchface_Legend.png)
+![AAPSv2 워치 페이스 범례](../images/wearos/Watchface_Legend.png)
 
 A - 마지막 루프 실행 후 지난 시간
 

@@ -57,16 +57,16 @@
 ```
 
 <div class="admonition dropdown">
-<p class="admonition-title">Updating your copy (existing AAPS Builder repository)</p>
+<p class="admonition-title">更新您的版本（現有的 AAPS Builder 存放庫）</p>
 
-The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. 您的 `KEYSTORE_SET` 密鑰維持不變。
+建置步驟會為您更新：每次建置時，您的存放庫都會執行 AAPS 開發人員在 nightscout/aaps-builder 中發佈的版本，而您的存放庫不會有任何變更。只有在 [文件更新與變更](../Maintenance/DocumentationUpdate.md)公告需要更新時（例如新增建置變體），或是您的存放庫是依據本頁較早版本或舊範本建立時，才需要替換工作流程檔案；後者只需替換一次。您的 `KEYSTORE_SET` 密鑰維持不變。
 
-1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">開啟最新版工作流程</a>
 
-   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+   使用電腦時，請點選檔案右上方的**複製圖示**（「複製原始檔」）。使用手機時，請改為開啟<a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">純文字版本</a>，長按文字 → **全選** → **複製**。
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">開啟我的工作流程檔案</a>
 
-   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code>. 點選檔案右上方的 **⋯** 選單，然後點選 **編輯檔案…就地**（在電腦上，按一下鉛筆圖示）。
+   在 <code class="aapsb-repoUrl"></code> 中開啟 `.github/workflows/build.yml`。點選檔案右上方的 **⋯** 選單，然後點選 **編輯檔案…就地**（在電腦上，按一下鉛筆圖示）。
 3. 將整份內容替換為已複製的工作流程（使用手機時：長按 → **全選** → **貼上**），然後連續點選兩次 **提交變更…**。檔案的第一行會顯示版本。
 
 </div>

@@ -200,13 +200,6 @@ Ensure you have read and understand this whole guide, have read and understand t
 
 - **השלכת הפוד:** מסיר מ-**AAPS** פוד שהפעלתו לא הושלמה. מוצג רק כאשר הפעלת פוד נעצרה באמצע. **AAPS** מבקש אישור. לאחר ההשלכה, **AAPS** כבר לא יכול לתקשר עם הפוד הזה: יש להסיר אותו מהגוף.
 
-![תפריט ניהול הפוד](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-```{admonition} Older screenshot
-:class: note
-צילום המסך למעלה הוא מגרסה קודמת של **AAPS**, שבה היה תפריט נפרד בשם **ניהול פוד**. ב-**AAPS** 4 כל הפעולות האלה, כולל **הפעלת פוד**, **השבתת פוד**, **השמעת צפצוף ניסיון** ו-**היסטוריית הפוד**, הן לחצנים עם תוויות טקסט ישירות במסך המשאבה.
-```
-
 (omnipod-dash-activate-pod)=
 
 ## Activate Pod
@@ -304,7 +297,7 @@ Ensure you have read and understand this whole guide, have read and understand t
 
 1. יש לפתוח את מסך המשאבה DASH (**ניהול** > **משאבה**) וללחוץ על **השבתת פוד**.
 
-   ![הלחצן השבתת פוד במסך המשאבה DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![הלחצן השבתת פוד במסך המשאבה DASH](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 2. בשלב **השבתת פוד**, יש ללחוץ על **הבא**. חלון שואל *לא ניתן להשתמש שוב בפוד שהושבת. להשבית את הפוד הזה עכשיו?* יש ללחוץ על **אישור** כדי להתחיל בהשבתת הפוד, או על **ביטול** כדי להשאיר אותו פעיל. ההשבתה עוצרת את כל מתן האינסולין ולא ניתן לבטל אותה.
 

@@ -134,21 +134,21 @@ Nightscout är en server i ”molnet”, men det finns också en egen **Nightsco
 
 När du har installerat **Nightscout**-appen på din iPhone, öppna appen och följ anvisningarna för inställning. Ange din Nightscout-adress (se nedan, till vänster). Hur adressen ser ut kan variera beroende på var din Nightscout körs. (_t.ex._ http://youraddresshere.herokuapp.com). Ange sedan din API-hemlighet för Nightscout (se nedan, till höger). Om du inte blir ombedd att ange ditt API-lösenord måste du ange det genom att trycka på hänglåset högst upp i appen:
 
-![image](../images/remote-control-24.png)
+![image](../images/remote_control_and_following/remote-control-24.png)
 
 Mer information om inställningen finns direkt hos [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 När du loggar in första gången ser du en mycket enkel vy. Anpassa visningsalternativen genom att välja ”hamburgermenyn” uppe till höger och skrolla ned:
 
-![image](../images/remote-control-25.png)
+![image](../images/remote_control_and_following/remote-control-25.png)
 
 Skrolla ned till ”Settings” (Inställningar). Du kanske vill ändra ”scale” (skala) till ”linear” (linjär), eftersom BG visas logaritmiskt som standard. Under ”render basal” väljer du ”default” så att pumpens basal visas.
 
-![image](../images/remote-control-25b.png)
+![image](../images/remote_control_and_following/remote-control-25b.png)
 
 Välj de alternativ du vill ha. Avmarkera larm om du använder en annan app för larm.
 
-![image](../images/remote-control-26.png)
+![image](../images/remote_control_and_following/remote-control-26.png)
 
 Fortsätt att skrolla ned tills du kommer till ”show plugins”.
 
@@ -156,7 +156,7 @@ Se till att ”careportal” är markerat. Du kan också välja olika andra vär
 
 Viktigt: du måste nu trycka på ”save” (spara) längst ned för att ändringarna ska gälla.
 
-![image](../images/remote-control-27.png)
+![image](../images/remote_control_and_following/remote-control-27.png)
 
 När du har tryckt på ”save” går appen tillbaka till Nightscouts huvudskärm, som ser ut ungefär så här:
 
@@ -170,7 +170,7 @@ När du har tryckt på ”save” går appen tillbaka till Nightscouts huvudskä
 8. Basalinsulinprofil
 9. Grön linje = tidigare glukosvärden Blå linjer = förutsagda glukosvärden
 
-![image](../images/remote-control-28.png)
+![image](../images/remote_control_and_following/remote-control-28.png)
 
 En närmare titt på menyn uppe till vänster i Nightscout-appen:
 
@@ -179,7 +179,7 @@ En närmare titt på menyn uppe till vänster i Nightscout-appen:
 3. Hamburgermeny – för inställningar
 4. Careportal – logga behandling (se [nedan](#RemoteControl_nightscout-treatments) om när **AAPS** tillämpar dessa)
 
-![Nightscouts övre fält](../images/remote-control-29.png)
+![Nightscouts övre fält](../images/remote_control_and_following/remote-control-29.png)
 
 Det finns mycket information om statusen för **AAPS**-systemet i de grå flikarna på den här skärmen (och ännu mer information visas om du trycker på fliken):
 
@@ -195,9 +195,9 @@ Det finns mycket information om statusen för **AAPS**-systemet i de grå flikar
 10. Batteristatus för AAPS-telefonen
 11. Storleken på din databas. Om den blir för full (bara för egen Nightscout – värdtjänster kan bortse från detta) kan du börja få anslutningsproblem. Du kan ta bort data för att minska storleken i menyn Admin tools (via hamburgermenyn).
 
-![image](../images/remote-control-30.png)
+![image](../images/remote_control_and_following/remote-control-30.png)
 
-![image](../images/remote-control-31.png)
+![image](../images/remote_control_and_following/remote-control-31.png)
 
 Tryck på ”refresh” längst ned på sidan för att stänga rutan.
 
@@ -233,7 +233,7 @@ Det kan vara användbart för att ta bort kolhydrater som angetts (men som ingen
 
 ### Alternativ 1) Styra AAPS från en klocka med Wear OS
 
-![Wear-fjärrstyrning 1](../images/Wear_Remote1.png)
+![Wear-fjärrstyrning 1](../images/remote_control_and_following/Wear_Remote1.png)
 
 När du har [ställt in **AAPS** på din klocka](../WearOS/BuildingAapsWearOS.md) finns utförlig information om urtavlorna och deras funktioner i [Använda Wear AAPS på en smartklocka](../WearOS/WearOsSmartwatch.md).
 
@@ -285,19 +285,19 @@ Specifika guider för att ställa in **AAPS** på den populära Samsung Galaxy W
 
 ### Alternativ 3) AAPSClient på en klocka för fjärrstyrning av **AAPS** på en telefon
 
-![Wear-fjärrstyrning 2](../images/Wear_Remote2.png)
+![Wear-fjärrstyrning 2](../images/remote_control_and_following/Wear_Remote2.png)
 
 Programvaran för klockan, **AAPSClient** Wear-apk, kan laddas ned direkt från [GitHub](https://github.com/nightscout/AndroidAPS/releases/).
 
 För att ladda ned programvaran klickar du på den klockapp som passar klientappen på telefonen: **wear-aapsclient-release_**_version_ hör till **AAPSClient**, **wear-aapsclient2-release_**_version_ hör till **AAPSClient2** (se [Om AAPSClient, AAPSClient2 och AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/github_release_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/github_release_wear_aapsclient_apk.png)
 
 
 Välj sedan ”Spara som” och spara filen på ett lämpligt ställe på datorn:
 
 
-![image](../images/save_as_wear_aapsclient_apk.png)
+![image](../images/remote_control_and_following/save_as_wear_aapsclient_apk.png)
 
 
 
