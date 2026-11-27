@@ -145,7 +145,7 @@ Følg vejledningen:
 
 ### Batteriniveau for Libre smart reader
 
-- Batteriniveauet for broer som MiaoMiao og Bubble kan vises i AAPS (ikke Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Detaljer findes på [siden med skærmbilleder](#screens-sensor-level-battery).
 
 ### Forbind Libre-sender & start sensor
