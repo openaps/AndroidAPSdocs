@@ -16,12 +16,13 @@ Some bridges are still available on the market:
 
 ## 1. Using xDrip
 
--   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases). 
 -   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 -    You also need OOP2 for Libre 1 US (and Libre 2 EU).
 -   Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Using Diabox
 
 - Diabox is the vendor app for Bubble.
