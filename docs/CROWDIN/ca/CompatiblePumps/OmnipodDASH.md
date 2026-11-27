@@ -25,7 +25,7 @@ Característiques principals de l'**Omnipod DASH** («DASH»):
 - Els canvis d'horari d'estiu i de zona horària no s'apliquen automàticament. Després d'un canvi d'hora, heu d'actualitzar el pod manualment: premeu **Actualitzar** a la pantalla de la bomba DASH i després premeu **Configurar hora** (apareix quan la zona horària del pod i la del telèfon són diferents) o feu un **canvi de perfil** (vegeu [Canvi de zona horària amb Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash només admet la taxa basal en passos de 0,05 U/h. Si intenteu establir la basal en passos de 0,01 al vostre **perfil d'AAPS**, AAPS no mostrarà cap avís, tot i que el pod arrodonirà la taxa a passos de 0,05. Si obriu l'**Historial del pod** a la pantalla de la bomba DASH, hi veureu que s'ha establert una basal de 0,05. Això també vol dir que la taxa basal més baixa que admet el DASH a **AAPS** és 0,05 U/h.
 - El fitxer de configuració conté la sessió activa del pod. Exporteu la configuració després de cada activació de pod, i llegiu [Exportar i importar la configuració](#omnipod-dash-export-import) abans d'importar una configuració.
-- Quan s'estableix un nou perfil basal, DASH suspèn el lliurament abans d'establir el nou **perfil** basal. Si hi ha una interrupció o un error de comunicació, el perfil basal no es tornarà a iniciar automàticament. Vegeu la secció [Reprendre el lliurament d'insulina](#omnipod-dash-resuming-insulin-delivery) per a més detalls.
+- Quan s'estableix un nou perfil basal, DASH suspèn el lliurament abans d'establir el nou **perfil** basal. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Vegeu la secció [Reprendre el lliurament d'insulina](#omnipod-dash-resuming-insulin-delivery) per a més detalls.
 - Si les alertes estan configurades i el pod està a punt de caducar, el pod continuarà fent bips fins que silencieu les alertes; vegeu [Silenciar les alertes del pod](#omnipod-dash-silencing-pod-alerts) per a més detalls.
 - Hi ha diversos problemes coneguts amb el Bluetooth que poden causar problemes en l'activació del pod. Vegeu [Problemes relacionats amb el Bluetooth](../GettingHelp/BluetoothTroubleshooting.md) per al problema conegut i les solucions.
 
@@ -150,6 +150,8 @@ La icona **Configuració** (engranatge) de la cantonada superior dreta obre la [
 
 - **Fi definitiva del pod:** El final del període de gràcia del pod (8 hores després de **El pod expira**, per a una vida màxima del pod de 80 hores). El text es torna groc quan comença el període de gràcia (a **El pod expira**) i vermell durant les últimes 4 hores abans de la fi definitiva. Durant el període de gràcia també mostra el temps que queda, per exemple *(queden 17m)*. El pod deixa de lliurar insulina a la fi definitiva i s'ha de canviar.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Estat pod:** L'estat del pod: **Cap pod actiu**, **Configuració en curs**, **Funcionant**, **Suspès** o, després d'un error del pod, **ALARM**.
 
 - **Última connexió:** Quant de temps fa que **AAPS** es va comunicar per última vegada amb el pod.
@@ -187,6 +189,7 @@ Els botons de la part inferior de la pantalla de la bomba canvien segons l'estat
 - **Silenciar alertes:** Atura els bips d'alerta del pod (per exemple, de caducitat del pod o de reservori baix). Només es mostra mentre el pod té una alerta activa. Vegeu [Silenciar les alertes del pod](#omnipod-dash-silencing-pod-alerts).
 
 - **Reprendre lliurament:** Reprèn el lliurament d'insulina d'un pod suspès. Només es mostra quan el lliurament està suspès. Vegeu [Reprendre el lliurament d'insulina](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Configurar hora:** Posa el pod a la zona horària del telèfon tornant a enviar el vostre **perfil** basal. Només es mostra quan la zona horària del pod és diferent de la del telèfon.
 
@@ -207,11 +210,6 @@ Els botons de la part inferior de la pantalla de la bomba canvien segons l'estat
 1. Obriu la pantalla de la bomba DASH (**Gestionar** > **Bomba**) i premeu **Activar pod**. S'obre l'assistent d'activació.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   La captura de pantalla de dalt és d'una versió anterior d'**AAPS**. A **AAPS** 4, **Activar pod** és un botó directament a la pantalla de la bomba DASH, en lloc d'estar al menú **Gestió del pod**.
-   ```
 
    Si mai no heu activat cap **perfil** a **AAPS**, l'assistent primer mostra el pas **Cal un perfil**: seleccioneu el perfil que s'aplicarà en l'activació i continueu.
 
@@ -303,6 +301,8 @@ Per desactivar un pod (perquè ha caducat o perquè ha fallat):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. Es mostra el pas **Desactivant pod** mentre **AAPS** desactiva el pod. El pod fa bips per confirmar que la desactivació s'ha fet correctament.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Descarteu un pod només quan tota la comunicació amb ell continua fallant. Si *
 - Després, **AAPS** ja no es pot comunicar amb aquest pod.
 - **El lliurament d'insulina NO s'ha suspès**, perquè el pod no s'ha desactivat correctament. **Traieu el pod del cos!**
 - El pas **Pod descartat** confirma que s'ha descartat l'estat del pod. Premeu **Finalitzar**. Ara podeu activar un pod nou.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Reprendre el lliurament d'insulina
-
-**NOTA**: Durant els **canvis de perfil**, igual que amb el PDM, **AAPS** ha de suspendre el lliurament del pod abans d'establir el nou **perfil** basal. Si la comunicació falla entre les ordres de suspendre i reprendre, el lliurament pot quedar suspès. Llegiu [**Lliurament suspès**](#omnipod-dash-delivery-suspended) a la secció de resolució de problemes per a més detalls.
-
-Quan el lliurament d'insulina està suspès, heu de dir al pod que reprengui el lliurament d'insulina. Quan l'ordre s'ha processat correctament, el pod torna a lliurar insulina amb la taxa basal de l'hora actual del vostre **perfil** basal actiu. El pod torna a acceptar ordres de bolus, **TBR** i **SMB**.
-
-1. Obriu la pantalla de la bomba DASH i comproveu que el camp **Estat pod** mostra **Suspès**. Premeu **Reprendre lliurament** per dir al pod que reprengui el lliurament normal d'insulina.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Quan l'ordre s'ha fet correctament, el camp **Estat pod** mostra **Funcionant** i el botó **Reprendre lliurament** desapareix.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Les captures de pantalla de dalt són d'una versió anterior d'**AAPS**, que mostrava un diàleg de confirmació. A **AAPS** 4 confirmeu el resultat a la pantalla de la bomba DASH: el camp **Estat pod** mostra **Funcionant** i el botó **Reprendre lliurament** ja no hi és.
-   ```
-
-   Si l'ordre falla, **AAPS** mostra un diàleg d'avís que comença amb *Error en reprendre lliurament*. Premeu **Actualitzar** i torneu-ho a provar.
-
-   ![L'avís Error en reprendre lliurament](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Per a problemes coneguts amb connexions Bluetooth, talls de connexió amb bombes
 
 ### Lliurament suspès
 
-  - Ja no hi ha botó per suspendre. Si voleu «suspendre» el pod, podeu establir una **TBR** de zero durant x minuts.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Durant els **canvis de perfil**, DASH ha de suspendre el lliurament abans d'establir el nou **perfil** basal. Si la comunicació falla entre les dues ordres, el lliurament pot quedar suspès. Quan passa això:
      - No hi haurà lliurament d'insulina, això inclou la basal, els SMB, els bolus manuals, etc.
      - Pot aparèixer un avís que una de les ordres no està confirmada: depèn de quan s'ha produït l'error.
@@ -581,6 +554,22 @@ Per a problemes coneguts amb connexions Bluetooth, talls de connexió amb bombes
   - Per a les ordres no confirmades, premeu **Actualitzar** a la pantalla de la bomba DASH per confirmar-les o descartar-les.
 
 *****NOTA:** Quan sentiu bips del pod, no doneu per fet que el lliurament continuarà sense comprovar el telèfon; el lliurament pot quedar suspès, ***per tant, cal que ho comproveu!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Reprendre el lliurament d'insulina
+
+Quan el lliurament d'insulina està suspès, heu de dir al pod que reprengui el lliurament d'insulina. Quan l'ordre s'ha processat correctament, el pod torna a lliurar insulina amb la taxa basal de l'hora actual del vostre **perfil** basal actiu. El pod torna a acceptar ordres de bolus, **TBR** i **SMB**.
+
+1. Obriu la pantalla de la bomba DASH i comproveu que el camp **Estat pod** mostra **Suspès**. Premeu **Reprendre lliurament** per dir al pod que reprengui el lliurament normal d'insulina.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Quan l'ordre s'ha fet correctament, el camp **Estat pod** mostra **Funcionant** i el botó **Reprendre lliurament** desapareix.
+
+   Si l'ordre falla, **AAPS** mostra un diàleg d'avís que comença amb *Error en reprendre lliurament*. Premeu **Actualitzar** i torneu-ho a provar.
+
+   ![L'avís Error en reprendre lliurament](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=
