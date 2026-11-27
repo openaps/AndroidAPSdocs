@@ -25,7 +25,7 @@
 - 夏令時間和時區變更不會自動套用。變更時間後，您必須手動更新藥匣：在 DASH 幫浦螢幕上按下**重新整理**，接著按下**設定時間**（藥匣與手機的時區不同時會顯示此選項），或執行**設定檔切換**（請參閱[Omnipod DASH 的時區變更](#timezone-traveling-with-pumps)）。
 - Dash 僅支援以 0.05 U/h 步階設定的基礎率。如果你嘗試在 **AAPS 設定檔** 中以 0.01 的步階設定基礎率，AAPS 不會提出警告，儘管 Pod 會將該速率進位到 0.05 的步階。如果您在 DASH 幫浦螢幕上開啟**藥匣記錄**，會看到已設定 0.05 的基礎率。這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
 - 設定檔包含目前使用中的藥匣工作階段。每次啟動藥匣後，請匯出設定檔；匯入設定檔之前，請參閱[匯出及匯入設定檔](#omnipod-dash-export-import)。
-- 當設定新的基礎率設定檔時，DASH 會先暫停輸注，然後再設定新的基礎率設定檔。若通訊中斷或發生錯誤，基礎率設定檔不會自動重新開始。詳細內容請參閱 [恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery) 章節。
+- 當設定新的基礎率設定檔時，DASH 會先暫停輸注，然後再設定新的基礎率設定檔。 If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. 詳細內容請參閱 [恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery) 章節。
 - 如果已設定警示，且 Pod 即將到期，Pod 會持續發出嗶聲，直到將警示靜音為止；詳情請參閱 [靜音 Pod 警示](#omnipod-dash-silencing-pod-alerts)。
 - 有多項已知的藍牙問題可能導致 Pod 註冊異常。請參閱 [藍牙疑難排解](../GettingHelp/BluetoothTroubleshooting.md)，以了解已知問題與對應的解決方案。
 
@@ -150,6 +150,8 @@
 
 - **Pod 最終期限：**Pod 寬限期結束的時間（**Pod 到期時間**後 8 小時，Pod 最長使用時間為 80 小時）。寬限期開始時（即**Pod 到期時間**），文字會變成黃色；最終期限前最後 4 小時則會變成紅色。寬限期間也會顯示剩餘時間，例如 *（剩餘 17 分鐘）*。到達最終期限時，Pod 會停止輸注胰島素，必須更換。
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Pod 狀態：**Pod 的狀態：**沒有啟用中的 Pod**、**設定進行中**、**運作中**、**暫停**，或 Pod 發生故障後顯示的**警報**。
 
 - **上次連線：****AAPS** 上次與 Pod 通訊至今經過的時間。
@@ -187,6 +189,7 @@
 - **將警示靜音：**停止 Pod 警示嗶聲（例如 Pod 即將到期或儲液槽容量不足時的警示）。僅在 Pod 有啟動中的警示時顯示。請參閱[將 Pod 警示靜音](#omnipod-dash-silencing-pod-alerts)。
 
 - **恢復輸注：**恢復已暫停的 Pod 輸注胰島素。僅在輸注暫停時顯示。請參閱[恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery)。
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **設定時間：**再次傳送您的基礎設定檔，將 Pod 的時區更新為與手機相同的時區。僅在 Pod 的時區與手機的時區不同時顯示。
 
@@ -207,11 +210,6 @@
 1. 開啟 DASH 幫浦螢幕（**管理** > **幫浦**），然後按下**啟動 Pod**。啟動精靈隨即開啟。
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   上方螢幕截圖來自較早版本的 **AAPS**。在 **AAPS** 4 中，**啟動 Pod** 是 DASH 幫浦螢幕上的按鈕，不再位於 **Pod 管理**選單中。
-   ```
 
    如果您從未在 **AAPS** 中啟用過**設定檔**，精靈會先顯示**需要設定檔**步驟：選取要在啟動時套用的設定檔，然後繼續。
 
@@ -303,6 +301,8 @@
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. 停用藥量時，畫面會顯示**正在停用藥量**步驟。藥量會發出嗶聲，確認停用成功。
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@
 - 之後，**AAPS**就無法再與該藥量通訊。
 - **胰島素輸注並未停止**，因為藥量未正確停用。**請將藥量從身上取下！**
 - **已放棄藥量**步驟會確認藥量狀態已放棄。按下 **完成**。現在可以啟用新的藥量。
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## 恢復胰島素輸送
-
-**注意**：進行**設定檔切換**時（例如使用 PDM），**AAPS**必須先停止藥量輸注，再設定新的基礎**設定檔**。如果停止輸注和恢復輸注的指令之間通訊失敗，輸注可能會持續處於停止狀態。在問題排除部分閱讀[**暫停交付**](#omnipod-dash-delivery-suspended)以獲取更多詳細資訊。
-
-胰島素輸注停止後，您需要告知藥量恢復輸注。指令成功處理後，藥量會依照您目前啟用的基礎**設定檔**，按照目前時間所對應的基礎率再次輸注胰島素。藥量也會再次接受注射、**TBR** 和**SMB**指令。
-
-1. 開啟 DASH 幫浦畫面，確認**藥量狀態**欄位顯示**已停止**。按下**恢復輸注**，告知藥量恢復正常輸注胰島素。
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. 指令成功後，**藥量狀態**欄位會顯示**運作中**，且**恢復輸注**按鈕會消失。
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   上方的螢幕截圖來自較舊版本的 **AAPS**，該版本會顯示確認對話方塊。在 **AAPS** 4 中，請在 DASH 幫浦畫面確認結果：**藥量狀態**欄位會顯示 **運作中**，且 **恢復輸注** 按鈕會消失。
-   ```
-
-   如果指令失敗，**AAPS**會顯示警告對話方塊，開頭文字為*恢復輸注失敗*。按下**重新整理**，然後再試一次。
-
-   ![「恢復輸注失敗」警告](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ DASH 幫浦畫面會以下列方式顯示胰島素量：
 
 ### 暫停輸送
 
-  - 現在已無暫停按鈕。如果你想要「暫停」藥量，你可以將臨時基礎率設置為零，持續 x 分鐘。
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - 在**設定檔切換**期間，DASH 必須在設置新的基礎**設定檔**之前暫停送藥。如果兩個指令之間的通訊失敗，則輸送可能會保持暫停。當這種情況發生時：
      - 將不會有胰島素輸送，包括基礎率、SMB、手動注射等。
      - 可能會通知某個指令未確認：這取決於失敗發生的時間。
@@ -581,6 +554,22 @@ DASH 幫浦畫面會以下列方式顯示胰島素量：
   - 若指令尚未確認，請在 DASH 幫浦畫面按下**重新整理**，以確認或拒絕指令。
 
 *****注意：** 當您聽到來自 Pod 的嗶聲時，請不要在未檢查手機的情況下就假設輸送會持續進行，輸送可能仍維持暫停狀態，***所以您需要檢查！******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### 恢復胰島素輸送
+
+胰島素輸注停止後，您需要告知藥量恢復輸注。指令成功處理後，藥量會依照您目前啟用的基礎**設定檔**，按照目前時間所對應的基礎率再次輸注胰島素。藥量也會再次接受注射、**TBR** 和**SMB**指令。
+
+1. 開啟 DASH 幫浦畫面，確認**藥量狀態**欄位顯示**已停止**。按下**恢復輸注**，告知藥量恢復正常輸注胰島素。
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. 指令成功後，**藥量狀態**欄位會顯示**運作中**，且**恢復輸注**按鈕會消失。
+
+   如果指令失敗，**AAPS**會顯示警告對話方塊，開頭文字為*恢復輸注失敗*。按下**重新整理**，然後再試一次。
+
+   ![「恢復輸注失敗」警告](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=
