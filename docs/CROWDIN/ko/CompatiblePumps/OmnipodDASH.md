@@ -25,7 +25,7 @@
 - 일광 절약 시간(DST)과 시간대 변경은 자동으로 적용되지 않습니다. 시계가 바뀐 후에는 Pod를 직접 업데이트해야 합니다: DASH 펌프 화면에서 **새로고침**을 누른 다음, **시간 설정** (Pod와 휴대폰의 시간대가 다를 때 표시됨)을 누르거나 **프로파일 전환**을 하십시오 ([Omnipod Dash의 시간대 변경](#timezone-traveling-with-pumps) 참조).
 - Dash는 기저 주입량을 0.05 U/h 단위로만 지원합니다. **AAPS 프로파일**에서 기저를 0.01 단위로 설정하면, Pod가 주입량을 0.05 단위로 올림하는데도 AAPS는 경고를 표시하지 않습니다. DASH 펌프 화면에서 **Pod 이력**을 열면 0.05 기저가 설정되었다고 표시됩니다. 그래서 **AAPS**에서 DASH가 허용하는 가장 낮은 기저 주입량도 0.05U/h입니다.
 - 설정 파일에는 활성 Pod 세션이 들어 있습니다. Pod를 활성화할 때마다 설정을 내보내고, 설정을 가져오기 전에 [설정 내보내기와 가져오기](#omnipod-dash-export-import)를 읽으십시오.
-- 새 기저 프로파일을 설정할 때 DASH는 새 기저 **프로파일**을 설정하기 전에 주입을 중지합니다. 통신이 끊기거나 오류가 생기면 기저 프로파일은 자동으로 다시 시작되지 않습니다. 자세한 내용은 [인슐린 주입 재개](#omnipod-dash-resuming-insulin-delivery) 부분을 참조하십시오.
+- 새 기저 프로파일을 설정할 때 DASH는 새 기저 **프로파일**을 설정하기 전에 주입을 중지합니다. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. 자세한 내용은 [인슐린 주입 재개](#omnipod-dash-resuming-insulin-delivery) 부분을 참조하십시오.
 - 경고가 설정되어 있고 Pod가 곧 만료되면, 경고를 음소거할 때까지 Pod가 계속 신호음을 냅니다. 자세한 내용은 [Pod 경고 음소거](#omnipod-dash-silencing-pod-alerts)를 참조하십시오.
 - Pod 활성화 문제를 일으킬 수 있는 블루투스 관련 알려진 문제가 여러 가지 있습니다. 이런 문제의 알려진 원인과 해결 방법은 [블루투스 문제 해결](../GettingHelp/BluetoothTroubleshooting.md)을 참조하십시오.
 
@@ -150,6 +150,8 @@ DASH 펌프 화면에서 Pod를 관리합니다: Pod 활성화와 비활성화, 
 
 - **Pod 최종 종료:** Pod 유예 기간이 끝나는 시간입니다 (**Pod 만료** 8시간 후, Pod 최대 사용 시간은 80시간). 유예 기간이 시작되면 (**Pod 만료** 시점) 글자가 노란색으로 바뀌고, 최종 종료 전 마지막 4시간 동안 빨간색으로 바뀝니다. 유예 기간 동안에는 남은 시간도 표시됩니다. 예: *(17분 남음)*. Pod는 최종 종료 시점에 인슐린 주입을 멈추므로 반드시 교체해야 합니다.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Pod 상태:** Pod의 상태입니다: **활성화된 Pod 없음**, **설정 진행 중**, **실행 중**, **중지됨** 또는 Pod 결함 후에는 **ALARM**.
 
 - **마지막 연결:** **AAPS**가 Pod와 마지막으로 통신한 지 얼마나 지났는지 보여 줍니다.
@@ -187,6 +189,7 @@ DASH 펌프 화면에서 Pod를 관리합니다: Pod 활성화와 비활성화, 
 - **경고 음소거:** Pod 경고 신호음 (예: Pod 만료 또는 레저버 부족)을 멈춥니다. Pod에 활성 경고가 있을 때만 표시됩니다. [Pod 경고 음소거](#omnipod-dash-silencing-pod-alerts)를 참조하십시오.
 
 - **주입 재개:** 중지된 Pod의 인슐린 주입을 재개합니다. 주입이 중지되었을 때만 표시됩니다. [인슐린 주입 재개](#omnipod-dash-resuming-insulin-delivery)를 참조하십시오.
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **시간 설정:** 기저 **프로파일**을 다시 보내서 Pod를 휴대폰의 시간대로 업데이트합니다. Pod의 시간대가 휴대폰의 시간대와 다를 때만 표시됩니다.
 
@@ -207,11 +210,6 @@ DASH 펌프 화면에서 Pod를 관리합니다: Pod 활성화와 비활성화, 
 1. DASH 펌프 화면 (**관리** > **펌프**)을 열고 **Pod 활성화**를 누르십시오. 활성화 마법사가 열립니다.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   위 스크린샷은 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 **Pod 활성화**가 **Pod 관리** 메뉴가 아니라 DASH 펌프 화면에 바로 있는 버튼입니다.
-   ```
 
    **AAPS**에서 **프로파일**을 한 번도 활성화한 적이 없다면, 마법사는 먼저 **프로파일 필요** 단계를 보여 줍니다: 활성화할 때 적용할 프로파일을 선택하고 계속하십시오.
 
@@ -303,6 +301,8 @@ Pod를 비활성화하려면 (만료되었거나 고장 났을 때):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. **AAPS**가 Pod를 비활성화하는 동안 **Pod 비활성화 중** 단계가 표시됩니다. 비활성화가 성공하면 Pod가 신호음을 내어 알려 줍니다.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Pod와의 모든 통신이 계속 실패할 때만 Pod를 폐기하십시오. **
 - 그 후에는 **AAPS**가 그 Pod와 더 이상 통신할 수 없습니다.
 - Pod가 제대로 비활성화되지 않았기 때문에 **인슐린 주입은 중지되지 않았습니다**. **Pod를 몸에서 제거하십시오!**
 - **Pod 폐기됨** 단계에서 Pod 상태가 폐기되었음을 확인할 수 있습니다. **완료**를 누르십시오. 이제 새 Pod를 활성화할 수 있습니다.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## 인슐린 주입 재개
-
-**참고**: **프로파일 전환** 중에는 PDM을 사용할 때와 마찬가지로 **AAPS**가 새 기저 **프로파일**을 설정하기 전에 Pod의 주입을 중지해야 합니다. 중지 명령과 재개 명령 사이에 통신이 실패하면 주입이 중지된 상태로 남을 수 있습니다. 자세한 내용은 문제 해결 부분의 [**주입 중지됨**](#omnipod-dash-delivery-suspended)을 읽으십시오.
-
-인슐린 주입이 중지되었을 때는 Pod에 인슐린 주입을 재개하라고 명령해야 합니다. 명령이 성공적으로 처리되면, Pod는 활성 기저 **프로파일**의 현재 시간 기저 주입량으로 다시 인슐린을 주입합니다. Pod는 다시 볼러스, **TBR**, **SMB** 명령을 받아들입니다.
-
-1. DASH 펌프 화면을 열고 **Pod 상태** 항목에 **중지됨**이 표시되는지 확인하십시오. **주입 재개**를 눌러 Pod에 정상적인 인슐린 주입을 재개하라고 명령하십시오.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. 명령이 성공하면 **Pod 상태** 항목에 **실행 중**이 표시되고 **주입 재개** 버튼이 사라집니다.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   위 스크린샷은 확인 대화 상자를 보여 주던 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 DASH 펌프 화면에서 결과를 확인합니다: **Pod 상태** 항목에 **실행 중**이 표시되고 **주입 재개** 버튼이 사라집니다.
-   ```
-
-   명령이 실패하면 **AAPS**는 *주입 재개 실패함*으로 시작하는 경고 대화 상자를 표시합니다. **새로고침**을 누르고 다시 시도하십시오.
-
-   ![주입 재개 실패 경고](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ DASH 펌프 화면은 잔량을 다음과 같이 표시합니다:
 
 ### 주입 중지됨
 
-  - 일시 중지 버튼은 더 이상 없습니다. Pod를 "일시 중지"하려면 x분 동안 0 **TBR**을 설정할 수 있습니다.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - **프로파일 전환** 중에 DASH는 새 기저 **프로파일**을 설정하기 전에 주입을 중지해야 합니다. 두 명령 사이에 통신이 실패하면 주입이 중지된 상태로 남을 수 있습니다. 이런 일이 생기면:
      - 인슐린이 전혀 주입되지 않습니다. 기저, SMB, 수동 볼러스 등이 모두 포함됩니다.
      - 명령 중 하나가 확인되지 않았다는 알림이 나타날 수 있습니다. 이는 실패가 언제 일어났는지에 따라 다릅니다.
@@ -581,6 +554,22 @@ DASH 펌프 화면은 잔량을 다음과 같이 표시합니다:
   - 확인되지 않은 명령은 DASH 펌프 화면에서 **새로고침**을 눌러 성공 여부를 확인하십시오.
 
 *****참고:** Pod에서 신호음이 들리면 휴대폰을 확인하지 않고 주입이 계속될 것이라고 생각하지 마십시오. 주입이 중지된 상태로 남아 있을 수 있으므로 ***반드시 확인해야 합니다!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### 인슐린 주입 재개
+
+인슐린 주입이 중지되었을 때는 Pod에 인슐린 주입을 재개하라고 명령해야 합니다. 명령이 성공적으로 처리되면, Pod는 활성 기저 **프로파일**의 현재 시간 기저 주입량으로 다시 인슐린을 주입합니다. Pod는 다시 볼러스, **TBR**, **SMB** 명령을 받아들입니다.
+
+1. DASH 펌프 화면을 열고 **Pod 상태** 항목에 **중지됨**이 표시되는지 확인하십시오. **주입 재개**를 눌러 Pod에 정상적인 인슐린 주입을 재개하라고 명령하십시오.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. 명령이 성공하면 **Pod 상태** 항목에 **실행 중**이 표시되고 **주입 재개** 버튼이 사라집니다.
+
+   명령이 실패하면 **AAPS**는 *주입 재개 실패함*으로 시작하는 경고 대화 상자를 표시합니다. **새로고침**을 누르고 다시 시도하십시오.
+
+   ![주입 재개 실패 경고](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=
