@@ -25,7 +25,7 @@ Główne cechy **Omnipod DASH** („DASH”):
 - Zmiany czasu letniego/zimowego i strefy czasowej nie są stosowane automatycznie. Po zmianie zegara musisz ręcznie zaktualizować Poda: naciśnij **Odśwież** na ekranie pompy DASH, a potem naciśnij **Ustaw czas** (widoczne, gdy strefy czasowe Poda i telefonu się różnią) albo wykonaj **Zmianę profilu** (zobacz [Zmiana strefy czasowej dla Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash obsługuje dawkę bazową tylko w krokach co 0,05 U/h. Jeśli spróbujesz ustawić bazę w krokach co 0,01 w swoim **profilu AAPS**, AAPS nie wyświetli ostrzeżenia, choć Pod zaokrągli dawkę w górę do kroku 0,05. Jeśli otworzysz **Historię Poda** na ekranie pompy DASH, zobaczysz, że ustawiono bazę 0,05. Oznacza to także, że najniższa dawka bazowa dozwolona dla DASH w **AAPS** to 0,05 U/h.
 - Plik ustawień zawiera aktywną sesję Poda. Eksportuj ustawienia po każdej aktywacji Poda, a przed importem ustawień przeczytaj część [Eksport i import ustawień](#omnipod-dash-export-import).
-- Przy ustawianiu nowego profilu bazowego DASH wstrzyma podawanie przed ustawieniem nowego **Profilu** bazowego. Jeśli wystąpi przerwa w komunikacji lub błąd, profil bazowy nie uruchomi się ponownie automatycznie. Szczegóły znajdziesz w części [Wznowienie podawania insuliny](#omnipod-dash-resuming-insulin-delivery).
+- Przy ustawianiu nowego profilu bazowego DASH wstrzyma podawanie przed ustawieniem nowego **Profilu** bazowego. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Szczegóły znajdziesz w części [Wznowienie podawania insuliny](#omnipod-dash-resuming-insulin-delivery).
 - Jeśli alarmy są skonfigurowane, a Pod zaraz straci ważność, Pod będzie pikał, dopóki alarmy nie zostaną wyciszone. Szczegóły znajdziesz w części [Wyciszanie alarmów Poda](#omnipod-dash-silencing-pod-alerts).
 - Istnieje kilka znanych problemów z Bluetooth, które mogą powodować kłopoty z aktywacją Poda. Znany problem i jego rozwiązania opisuje strona [Rozwiązywanie problemów z Bluetooth](../GettingHelp/BluetoothTroubleshooting.md).
 
@@ -150,6 +150,8 @@ Ikona **Ustawienia** (koło zębate) w prawym górnym rogu otwiera [ustawienia D
 
 - **Twardy koniec Poda:** Koniec okresu dodatkowego Poda (8 godzin po **Pod traci ważność**, czyli maksymalny czas pracy Poda to 80 godzin). Tekst zmienia kolor na żółty, gdy zaczyna się okres dodatkowy (w chwili **Pod traci ważność**), a na czerwony w ostatnich 4 godzinach przed twardym końcem. W okresie dodatkowym pokazuje też pozostały czas, na przykład *(17m remaining)*. W chwili twardego końca Pod przestaje podawać insulinę i musi zostać wymieniony.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Status Poda:** Stan Poda: **Brak akt. Poda**, **Konfiguracja w toku**, **W działaniu**, **Wstrzymany** albo, po błędzie Poda, **ALARM**.
 
 - **Ostatnie połączenie:** Ile czasu minęło od ostatniej komunikacji **AAPS** z Podem.
@@ -187,6 +189,7 @@ Przyciski na dole ekranu pompy zmieniają się zależnie od stanu Poda. Widoczne
 - **Wycisz alarmy:** Zatrzymuje sygnały dźwiękowe alarmów Poda (na przykład o końcu ważności Poda lub niskim poziomie w zbiorniku). Widoczny tylko wtedy, gdy Pod ma aktywny alarm. Zobacz [Wyciszanie alarmów Poda](#omnipod-dash-silencing-pod-alerts).
 
 - **Wznów podawanie:** Wznawia podawanie insuliny we wstrzymanym Podzie. Widoczny tylko wtedy, gdy podawanie jest wstrzymane. Zobacz [Wznowienie podawania insuliny](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Ustaw czas:** Ustawia w Podzie strefę czasową Twojego telefonu, wysyłając ponownie Twój **Profil** bazowy. Widoczny tylko wtedy, gdy strefa czasowa Poda różni się od strefy czasowej telefonu.
 
@@ -207,11 +210,6 @@ Przyciski na dole ekranu pompy zmieniają się zależnie od stanu Poda. Widoczne
 1. Otwórz ekran pompy DASH (**Zarządzaj** > **Pompa**) i naciśnij **Aktywuj Poda**. Otworzy się kreator aktywacji.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**. W **AAPS** 4 **Aktywuj Poda** to przycisk bezpośrednio na ekranie pompy DASH, a nie w menu **Pod Management**.
-   ```
 
    Jeśli nigdy wcześniej nie aktywowałeś **Profilu** w **AAPS**, kreator najpierw pokaże krok **Wymagany profil**: wybierz profil, który ma zostać użyty przy aktywacji, i kontynuuj.
 
@@ -303,6 +301,8 @@ Aby dezaktywować Poda (bo stracił ważność albo uległ awarii):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. Krok **Deaktywuję Poda** jest widoczny, gdy **AAPS** dezaktywuje Poda. Pod wyda sygnał dźwiękowy, aby potwierdzić udaną dezaktywację.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Usuwaj Poda tylko wtedy, gdy cała komunikacja z nim stale zawodzi. Jeśli **AAP
 - Potem **AAPS** nie może już komunikować się z tym Podem.
 - **Podawanie insuliny NIE zostało wstrzymane**, ponieważ Pod nie został prawidłowo dezaktywowany. **Zdejmij Poda z ciała!**
 - Krok **Pod usunięty** potwierdza, że stan Poda został usunięty. Naciśnij **Zakończ**. Teraz możesz aktywować nowy Pod.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Wznowienie podawania insuliny
-
-**UWAGA**: Podczas **Zmian Profilu**, tak jak przy używaniu PDM, **AAPS** musi wstrzymać podawanie w Podzie przed ustawieniem nowego **Profilu** bazowego. Jeśli komunikacja zawiedzie między poleceniami wstrzymania i wznowienia, podawanie może pozostać wstrzymane. Więcej szczegółów znajdziesz w części [**Podawanie wstrzymane**](#omnipod-dash-delivery-suspended) w rozwiązywaniu problemów.
-
-Gdy podawanie insuliny jest wstrzymane, musisz polecić Podowi wznowienie podawania insuliny. Gdy polecenie zostanie wykonane, Pod znów podaje insulinę według dawki bazowej na obecną godzinę z Twojego aktywnego **Profilu** bazowego. Pod znów przyjmuje polecenia bolusa, **TBR** i **SMB**.
-
-1. Otwórz ekran pompy DASH i sprawdź, czy pole **Status Poda** pokazuje **Wstrzymany**. Naciśnij **Wznów podawanie**, aby polecić Podowi wznowienie normalnego podawania insuliny.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Gdy polecenie się uda, pole **Status Poda** pokaże **W działaniu**, a przycisk **Wznów podawanie** zniknie.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Zrzuty ekranu powyżej pochodzą z wcześniejszej wersji **AAPS**, która pokazywała okno potwierdzenia. W **AAPS** 4 wynik potwierdzasz na ekranie pompy DASH: pole **Status Poda** pokazuje **W działaniu**, a przycisku **Wznów podawanie** już nie ma.
-   ```
-
-   Jeśli polecenie się nie uda, **AAPS** pokaże okno ostrzeżenia zaczynające się od *Nie udało się wznowić podawania*. Naciśnij **Odśwież** i spróbuj ponownie.
-
-   ![Ostrzeżenie Nie udało się wznowić podawania](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Znane problemy z połączeniami Bluetooth, zanikami połączenia z pompą/Podem 
 
 ### Podawanie wstrzymane
 
-  - Nie ma już przycisku wstrzymania. Jeśli chcesz „wstrzymać” Poda, możesz ustawić zerową **TBR** na x minut.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Podczas **Zmian Profilu** DASH musi wstrzymać podawanie przed ustawieniem nowego **Profilu** bazowego. Jeśli komunikacja zawiedzie między tymi dwoma poleceniami, podawanie może pozostać wstrzymane. Gdy tak się stanie:
      - Insulina nie będzie podawana. Dotyczy to bazy, SMB, bolusów ręcznych itd.
      - Może pojawić się powiadomienie, że jedno z poleceń nie zostało potwierdzone: zależy to od chwili, w której wystąpił błąd.
@@ -581,6 +554,22 @@ Znane problemy z połączeniami Bluetooth, zanikami połączenia z pompą/Podem 
   - W przypadku niepotwierdzonych poleceń naciśnij **Odśwież** na ekranie pompy DASH, aby je potwierdzić lub odrzucić.
 
 *****UWAGA:** Gdy słyszysz pikanie Poda, nie zakładaj, że podawanie będzie kontynuowane, bez sprawdzenia telefonu. Podawanie może pozostać wstrzymane, ***więc musisz to sprawdzić!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Wznowienie podawania insuliny
+
+Gdy podawanie insuliny jest wstrzymane, musisz polecić Podowi wznowienie podawania insuliny. Gdy polecenie zostanie wykonane, Pod znów podaje insulinę według dawki bazowej na obecną godzinę z Twojego aktywnego **Profilu** bazowego. Pod znów przyjmuje polecenia bolusa, **TBR** i **SMB**.
+
+1. Otwórz ekran pompy DASH i sprawdź, czy pole **Status Poda** pokazuje **Wstrzymany**. Naciśnij **Wznów podawanie**, aby polecić Podowi wznowienie normalnego podawania insuliny.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Gdy polecenie się uda, pole **Status Poda** pokaże **W działaniu**, a przycisk **Wznów podawanie** zniknie.
+
+   Jeśli polecenie się nie uda, **AAPS** pokaże okno ostrzeżenia zaczynające się od *Nie udało się wznowić podawania*. Naciśnij **Odśwież** i spróbuj ponownie.
+
+   ![Ostrzeżenie Nie udało się wznowić podawania](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=
