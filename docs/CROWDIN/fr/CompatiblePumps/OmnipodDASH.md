@@ -25,7 +25,7 @@ Caractéristiques principales de l'**Omnipod DASH** (« DASH ») :
 - Les changements d'heure d'été et de fuseau horaire ne sont pas appliqués automatiquement. Après un changement d'heure, vous devez mettre à jour le pod à la main : appuyez sur **Actualiser** sur l'écran de la pompe DASH, puis appuyez sur **Définir l'heure** (affiché quand les fuseaux horaires du pod et du téléphone sont différents) ou faites un **Changement de profil** (voir [Changement de fuseau horaire pour l'Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash ne prend en charge le débit basal que par pas de 0,05 U/h. Si vous essayez de définir le basal par pas de 0,01 dans votre **profil AAPS**, AAPS ne donnera pas d'avertissement, même si le pod arrondira le débit au pas de 0,05 supérieur. Si vous ouvrez l'**Historique Pod** sur l'écran de la pompe DASH, il affichera qu'un basal de 0,05 a été défini. Cela veut aussi dire que le débit basal le plus bas permis par le DASH dans **AAPS** est de 0,05 U/h.
 - Le fichier de paramètres contient la session de Pod active. Exportez vos paramètres après chaque activation de Pod, et lisez [Exporter et importer les paramètres](#omnipod-dash-export-import) avant d'importer des paramètres.
-- Quand un nouveau profil basal est défini, DASH suspend l'injection avant de définir le nouveau **Profil** basal. En cas d'interruption ou d'erreur de communication, le profil basal ne redémarrera pas automatiquement. Voir la section [Reprendre l'injection d'insuline](#omnipod-dash-resuming-insulin-delivery) pour plus de détails.
+- Quand un nouveau profil basal est défini, DASH suspend l'injection avant de définir le nouveau **Profil** basal. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Voir la section [Reprendre l'injection d'insuline](#omnipod-dash-resuming-insulin-delivery) pour plus de détails.
 - Si les alertes sont configurées et que le pod va bientôt expirer, le pod continuera à biper jusqu'à ce que les alertes soient mises en silence, voir [Mettre en silence les alertes du Pod](#omnipod-dash-silencing-pod-alerts) pour plus de détails.
 - Il existe plusieurs problèmes connus avec le Bluetooth qui peuvent causer des problèmes d'activation du pod. Voir [Dépannage Bluetooth](../GettingHelp/BluetoothTroubleshooting.md) pour les problèmes connus et leurs solutions.
 
@@ -150,6 +150,8 @@ L'icône **Paramètres** (roue dentée) en haut à droite ouvre les [paramètres
 
 - **Fin matériel du Pod :** La fin de la période de grâce du pod (8 heures après **Pod expire le**, pour une durée de vie maximale du pod de 80 heures). Le texte devient jaune au début de la période de grâce (à **Pod expire le**) et rouge pendant les 4 dernières heures avant la fin matériel. Pendant la période de grâce, il affiche aussi le temps restant, par exemple *(17m restantes)*. Le pod arrête d'injecter de l'insuline à la fin matériel et doit être changé.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **État du Pod :** L'état du pod : **Pas de Pod actif**, **Configuration en cours**, **En cours d'exécution**, **Suspendu** ou, après un défaut du pod, **ALARM**.
 
 - **Dernière connexion :** Depuis combien de temps **AAPS** n'a pas communiqué avec le pod.
@@ -187,6 +189,7 @@ Les boutons en bas de l'écran de la pompe changent selon l'état du pod. Seuls 
 - **Alertes silencieuses :** Arrête les bips d'alerte du pod (par exemple expiration du pod ou réservoir bas). Affiché seulement quand le pod a une alerte active. Voir [Mettre en silence les alertes du Pod](#omnipod-dash-silencing-pod-alerts).
 
 - **Reprendre l'injection :** Reprend l'injection d'insuline sur un pod suspendu. Affiché seulement quand l'injection est suspendue. Voir [Reprendre l'injection d'insuline](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Définir l'heure :** Met le pod au fuseau horaire de votre téléphone en renvoyant votre **Profil** basal. Affiché seulement quand le fuseau horaire du pod est différent de celui de votre téléphone.
 
@@ -207,11 +210,6 @@ Les boutons en bas de l'écran de la pompe changent selon l'état du pod. Seuls 
 1. Ouvrez l'écran de la pompe DASH (**Gestion** > **Pompe**) et appuyez sur **Activer Pod**. L'assistant d'activation s'ouvre.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, **Activer Pod** est un bouton directement sur l'écran de la pompe DASH, et non plus dans le menu **Gestion du Pod**.
-   ```
 
    Si vous n'avez jamais activé de **Profil** dans **AAPS**, l'assistant affiche d'abord l'étape **Profil nécessaire** : choisissez le profil à appliquer lors de l'activation et continuez.
 
@@ -303,6 +301,8 @@ Pour désactiver un pod (parce qu'il a expiré ou parce qu'il est en panne) :
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. L'étape **Désactivation du Pod** s'affiche pendant qu'**AAPS** désactive le pod. Le pod bipe pour confirmer que la désactivation a réussi.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Ne supprimez un pod que si toute communication avec lui échoue sans arrêt. Si 
 - Ensuite, **AAPS** ne peut plus communiquer avec ce pod.
 - **L'injection d'insuline n'a PAS été suspendue**, car le pod n'a pas été désactivé correctement. **Retirez le pod de votre corps !**
 - L'étape **Pod supprimé** confirme que l'état du pod a été supprimé. Appuyez sur **Terminer**. Vous pouvez maintenant activer un nouveau pod.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Reprendre l'injection d'insuline
-
-**REMARQUE** : Lors des **Changements de profil**, comme avec le PDM, **AAPS** doit suspendre l'injection sur le pod avant de définir le nouveau **Profil** basal. Si la communication échoue entre les commandes de suspension et de reprise, l'injection peut rester suspendue. Lisez [**Injection suspendue**](#omnipod-dash-delivery-suspended) dans la section de dépannage pour plus de détails.
-
-Quand l'injection d'insuline est suspendue, vous devez dire au pod de reprendre l'injection d'insuline. Quand la commande a été traitée avec succès, le pod injecte de nouveau l'insuline avec le débit basal de l'heure actuelle de votre **Profil** basal actif. Le pod accepte de nouveau les commandes de bolus, de **DBT** et de **SMB**.
-
-1. Ouvrez l'écran de la pompe DASH et vérifiez que le champ **État du Pod** affiche **Suspendu**. Appuyez sur **Reprendre l'injection** pour dire au pod de reprendre l'injection normale d'insuline.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Quand la commande a réussi, le champ **État du Pod** affiche **En cours d'exécution** et le bouton **Reprendre l'injection** disparaît.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Les captures d'écran ci-dessus viennent d'une version plus ancienne d'**AAPS**, qui affichait une fenêtre de confirmation. Dans **AAPS** 4, vous vérifiez le résultat sur l'écran de la pompe DASH : le champ **État du Pod** affiche **En cours d'exécution** et le bouton **Reprendre l'injection** a disparu.
-   ```
-
-   Si la commande échoue, **AAPS** affiche une fenêtre d'avertissement qui commence par *Échec de la reprise de l'injection*. Appuyez sur **Actualiser** et réessayez.
-
-   ![L'avertissement Échec de la reprise de l'injection](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Pour les problèmes connus de connexion Bluetooth, de pertes de connexion avec l
 
 ### Injection suspendue
 
-  - Il n'y a plus de bouton de suspension. Si vous voulez « suspendre » le pod, vous pouvez définir un **DBT** à zéro pendant x minutes.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Lors des **Changements de profil**, DASH doit suspendre l'injection avant de définir le nouveau **Profil** basal. Si la communication échoue entre les deux commandes, l'injection peut rester suspendue. Dans ce cas :
      - Il n'y aura aucune injection d'insuline, y compris le basal, les SMB, les bolus manuels, etc.
      - Une notification peut indiquer qu'une des commandes n'est pas confirmée : cela dépend du moment où l'échec s'est produit.
@@ -581,6 +554,22 @@ Pour les problèmes connus de connexion Bluetooth, de pertes de connexion avec l
   - Pour les commandes non confirmées, appuyez sur **Actualiser** sur l'écran de la pompe DASH pour les confirmer ou les refuser.
 
 *****REMARQUE :** Quand vous entendez des bips du pod, ne supposez pas que l'injection va continuer sans vérifier le téléphone. L'injection peut rester suspendue, ***vous devez donc vérifier !******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Reprendre l'injection d'insuline
+
+Quand l'injection d'insuline est suspendue, vous devez dire au pod de reprendre l'injection d'insuline. Quand la commande a été traitée avec succès, le pod injecte de nouveau l'insuline avec le débit basal de l'heure actuelle de votre **Profil** basal actif. Le pod accepte de nouveau les commandes de bolus, de **DBT** et de **SMB**.
+
+1. Ouvrez l'écran de la pompe DASH et vérifiez que le champ **État du Pod** affiche **Suspendu**. Appuyez sur **Reprendre l'injection** pour dire au pod de reprendre l'injection normale d'insuline.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Quand la commande a réussi, le champ **État du Pod** affiche **En cours d'exécution** et le bouton **Reprendre l'injection** disparaît.
+
+   Si la commande échoue, **AAPS** affiche une fenêtre d'avertissement qui commence par *Échec de la reprise de l'injection*. Appuyez sur **Actualiser** et réessayez.
+
+   ![L'avertissement Échec de la reprise de l'injection](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=
