@@ -82,7 +82,7 @@ Encara que no necessiteu l'aplicació xDrip com a **Origen glucèmia**, la podeu
 
 ## Què podeu fer mentre espereu els mòduls
 
-De vegades es tarda una mica a tenir tots els mòduls per tancar el llaç. Però no us preocupeu, hi ha moltes coses que podeu fer mentre espereu. Cal **obligatòriament** comprovar i (si cal) ajustar les taxes basals (BR), la ràtio insulina:carbohidrats (IC), els factors de sensibilitat a la insulina (ISF), etc. I potser el llaç obert és una bona manera de provar el sistema i familiaritzar-vos amb **AAPS**. En aquest mode, **AAPS** dona recomanacions de tractament que podeu fer manualment.
+De vegades es tarda una mica a tenir tots els mòduls per tancar el llaç. Però no us preocupeu, hi ha moltes coses que podeu fer mentre espereu. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. I potser el llaç obert és una bona manera de provar el sistema i familiaritzar-vos amb **AAPS**. En aquest mode, **AAPS** dona recomanacions de tractament que podeu fer manualment.
 
 Podeu continuar llegint aquesta documentació, contactar amb altres usuaris del llaç en línia o en persona, [llegir](../UsefulLinks/BackgroundReading.md) documentació o el que escriuen altres usuaris del llaç (tot i que heu d'anar amb compte: no tot és correcte ni adequat per a vosaltres).
 
