@@ -25,7 +25,7 @@ Key characteristics of the **Omnipod DASH** ('DASH'):
 - DST and timezone changes are not applied automatically. After a clock change you must update the pod manually: press **Refresh** on the DASH pump screen, then press **Set time** (shown when the pod and phone time zones differ) or perform a **Profile Switch** (see [Timezone change for Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you open **Pod History** on the DASH pump screen, it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The settings file contains the active Pod session. Export your settings after each Pod activation, and see [Export and import settings](#omnipod-dash-export-import) before importing settings.
-- Quando imposti un nuovo profilo basale, DASH sospende l'erogazione prima di impostare il nuovo **Profilo** basale. Se c'è un'interruzione della comunicazione o un errore, il profilo basale non riparte automaticamente. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
+- Quando imposti un nuovo profilo basale, DASH sospende l'erogazione prima di impostare il nuovo **Profilo** basale. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
 - There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
 
@@ -150,6 +150,8 @@ The **Settings** (gear) icon in the top-right corner opens the [Dash settings](#
 
 - **Fine definitiva pod:** la fine del periodo di tolleranza del pod (8 ore dopo **Scadenza pod**, per una durata massima del pod di 80 ore). Il testo diventa giallo quando inizia il periodo di tolleranza (a **Scadenza pod**) e rosso nelle ultime 4 ore prima della fine definitiva. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Stato pod:** lo stato del pod: **Nessun pod attivo**, **Configurazione in corso**, **In esecuzione**, **Sospeso** oppure, dopo un guasto del pod, **ALARM**.
 
 - **Last Connection:** How long ago **AAPS** last communicated with the pod.
@@ -187,6 +189,7 @@ The buttons at the bottom of the pump screen change with the state of the pod. O
 - **Silence Alerts:** Stops the pod alert beeps (for example pod expiry or low reservoir). Shown only while the pod has an active alert. See [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts).
 
 - **Riprendi erogazione:** riprende l'erogazione di insulina su un pod sospeso. Shown only when delivery is suspended. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Set time:** Updates the pod to the time zone of your phone by sending your basal **Profile** again. Shown only when the time zone of the pod differs from the time zone of your phone.
 
@@ -207,11 +210,6 @@ The buttons at the bottom of the pump screen change with the state of the pod. O
 1. Apri la schermata del micro DASH (**Gestisci** > **Micro**) e premi **Attiva pod**. Si apre la procedura guidata di attivazione.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
-   ```
 
    If you have never activated a **Profile** in **AAPS** before, the wizard first shows the **Profile required** step: select the profile to apply on activation and continue.
 
@@ -303,6 +301,8 @@ Per disattivare un pod (perché è scaduto o perché si è guastato):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. The **Deactivating Pod** step is shown while **AAPS** deactivates the pod. The pod beeps to confirm that deactivation was successful.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Only discard a pod when all communication with it keeps failing. Se **AAPS** rie
 - Dopo, **AAPS** non può più comunicare con quel pod.
 - **L'erogazione di insulina NON è stata sospesa**, perché il pod non è stato disattivato correttamente. **Remove the pod from your body!**
 - The **Pod Discarded** step confirms that the pod state has been discarded. Premi **Termina**. Ora puoi attivare un nuovo pod.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Resuming Insulin Delivery
-
-**NOTE**: During **Profile Switches**, like when using the PDM, **AAPS** must suspend delivery on the pod before setting the new basal **Profile**. Se la comunicazione si interrompe tra il comando di sospensione e quello di ripresa, l'erogazione può restare sospesa. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
-
-When insulin delivery is suspended, you need to tell the pod to resume insulin delivery. When the command has been processed successfully, the pod delivers insulin again using the basal rate for the current time from your active basal **Profile**. Il pod accetta di nuovo i comandi per bolo, **TBR** e **SMB**.
-
-1. Apri la schermata del micro DASH e controlla che il campo **Stato pod** mostri **Sospeso**. Premi **Riprendi erogazione** per dire al pod di riprendere la normale erogazione di insulina.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. When the command was successful, the **Pod Status** field shows **Running** and the **Resume Delivery** button disappears.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   The screenshots above are from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the **Pod Status** field shows **Running** and the **Resume Delivery** button is gone.
-   ```
-
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to resume delivery*. Premi **Aggiorna** e riprova.
-
-   ![The Failed to resume delivery warning](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 
 ### Erogazione sospesa
 
-  - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Durante i **Cambi profilo**, DASH deve sospendere l'erogazione prima di impostare il nuovo **Profilo** basale. Se la comunicazione si interrompe tra i due comandi, l'erogazione può restare sospesa. Quando succede:
      - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
      - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
@@ -581,6 +554,22 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
   - For unconfirmed commands, press **Refresh** on the DASH pump screen to confirm or deny them.
 
 *****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Resuming Insulin Delivery
+
+When insulin delivery is suspended, you need to tell the pod to resume insulin delivery. When the command has been processed successfully, the pod delivers insulin again using the basal rate for the current time from your active basal **Profile**. Il pod accetta di nuovo i comandi per bolo, **TBR** e **SMB**.
+
+1. Apri la schermata del micro DASH e controlla che il campo **Stato pod** mostri **Sospeso**. Premi **Riprendi erogazione** per dire al pod di riprendere la normale erogazione di insulina.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. When the command was successful, the **Pod Status** field shows **Running** and the **Resume Delivery** button disappears.
+
+   If the command fails, **AAPS** shows a warning dialog starting with *Failed to resume delivery*. Premi **Aggiorna** e riprova.
+
+   ![The Failed to resume delivery warning](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=
