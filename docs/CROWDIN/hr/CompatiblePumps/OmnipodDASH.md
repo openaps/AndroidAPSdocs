@@ -25,7 +25,7 @@ Glavne značajke **Omnipoda DASH** („DASH“):
 - Ljetno računanje vremena i promjene vremenske zone ne primjenjuju se automatski. Nakon promjene sata morate ručno ažurirati Pod: pritisnite **Osvježi** na zaslonu pumpe DASH, zatim pritisnite **Postavi vrijeme** (prikazuje se kada se vremenske zone Pod-a i telefona razlikuju) ili napravite **zamjenu profila** (pogledajte [Promjena vremenske zone za Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash podržava bazalnu stopu samo u koracima od 0,05 J/h. Ako u svom **AAPS profilu** pokušate postaviti bazal u koracima od 0,01, AAPS vas neće upozoriti, iako će Pod zaokružiti stopu na korake od 0,05. Ako otvorite **Povijest Pod-a** na zaslonu pumpe DASH, prikazat će se da je postavljen bazal od 0,05. To također znači da je najniža bazalna stopa koju DASH dopušta u **AAPS-u** 0,05 J/h.
 - Datoteka postavki sadrži aktivnu sesiju Pod-a. Izvezite svoje postavke nakon svake aktivacije Pod-a i prije uvoza postavki pročitajte [Izvoz i uvoz postavki](#omnipod-dash-export-import).
-- Kada se postavlja novi bazalni profil, DASH će obustaviti isporuku prije postavljanja novog bazalnog **Profila**. Ako dođe do prekida komunikacije ili pogreške, bazalni profil se neće automatski ponovno pokrenuti. Pojedinosti potražite u odjeljku [Nastavak isporuke inzulina](#omnipod-dash-resuming-insulin-delivery).
+- Kada se postavlja novi bazalni profil, DASH će obustaviti isporuku prije postavljanja novog bazalnog **Profila**. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Pojedinosti potražite u odjeljku [Nastavak isporuke inzulina](#omnipod-dash-resuming-insulin-delivery).
 - Ako su upozorenja postavljena i Pod uskoro istječe, Pod će se oglašavati zvučnim signalima dok se upozorenja ne utišaju, pojedinosti potražite u [Utišavanje upozorenja Pod-a](#omnipod-dash-silencing-pod-alerts).
 - Postoji niz poznatih problema s Bluetoothom koji mogu uzrokovati probleme pri aktivaciji Pod-a. Poznate probleme i njihova rješenja pogledajte u [Problemi s Bluetoothom](../GettingHelp/BluetoothTroubleshooting.md).
 
@@ -150,6 +150,8 @@ Ikona **Postavke** (zupčanik) u gornjem desnom kutu otvara [postavke Dasha](#om
 
 - **Konačni istek Pod-a:** Kraj produženog razdoblja Pod-a (8 sati nakon **Pod istječe**, za najdulji vijek Pod-a od 80 sati). Tekst postaje žut kada počne dodatno razdoblje (u trenutku **Pod istječe**), a crven u zadnja 4 sata prije konačnog isteka. Tijekom produženog razdoblja prikazuje i preostalo vrijeme, na primjer *(preostalo 17 min)*. Pod prestaje isporučivati inzulin u trenutku konačnog isteka i mora se zamijeniti.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Status Pod-a:** Stanje Pod-a: **Nema aktivnog Pod-a**, **Postavljanje u tijeku**, **U tijeku**, **Suspendiran** ili, nakon kvara Pod-a, **ALARM**.
 
 - **Zadnja uspostava veze:** Prije koliko vremena je **AAPS** zadnji put komunicirao s Pod-om.
@@ -187,6 +189,7 @@ Gumbi na dnu zaslona pumpe mijenjaju se ovisno o stanju Pod-a. Prikazuju se samo
 - **Utišaj upozorenja:** Zaustavlja zvučne signale upozorenja Pod-a (na primjer istek Pod-a ili niska razina spremnika). Prikazuje se samo dok Pod ima aktivno upozorenje. Pogledajte [Utišavanje upozorenja Pod-a](#omnipod-dash-silencing-pod-alerts).
 
 - **Nastavi isporuku:** Nastavlja isporuku inzulina na suspendiranom Pod-u. Prikazuje se samo kada je isporuka obustavljena. Pogledajte [Nastavak isporuke inzulina](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Postavi vrijeme:** Prebacuje Pod na vremensku zonu vašeg telefona tako da ponovno pošalje vaš bazalni **Profil**. Prikazuje se samo kada se vremenska zona Pod-a razlikuje od vremenske zone vašeg telefona.
 
@@ -207,11 +210,6 @@ Gumbi na dnu zaslona pumpe mijenjaju se ovisno o stanju Pod-a. Prikazuju se samo
 1. Otvorite zaslon pumpe DASH (**Upravljanje** > **Pumpa**) i pritisnite **Aktiviraj Pod**. Otvara se čarobnjak za aktivaciju.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Snimka zaslona iznad je iz starije verzije **AAPS-a**. U **AAPS-u** 4 **Aktiviraj Pod** je gumb izravno na zaslonu pumpe DASH, a ne u izborniku **Upravljanje Pod-om**.
-   ```
 
    Ako nikada prije niste aktivirali **Profil** u **AAPS-u**, čarobnjak prvo prikazuje korak **Potreban je profil**: odaberite profil koji će se primijeniti pri aktivaciji i nastavite.
 
@@ -303,6 +301,8 @@ Za deaktivaciju Pod-a (jer je istekao ili jer je zakazao):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. Korak **Deaktiviranje Pod-a** prikazuje se dok **AAPS** deaktivira Pod. Pod se oglašava zvučnim signalom kako bi potvrdio da je deaktivacija uspjela.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Odbacite Pod samo kada sva komunikacija s njim stalno ne uspijeva. Ako **AAPS** 
 - Nakon toga **AAPS** više ne može komunicirati s tim Pod-om.
 - **Isporuka inzulina NIJE obustavljena** jer Pod nije ispravno deaktiviran. **Skinite Pod s tijela!**
 - Korak **Pod odbačen** potvrđuje da je stanje Pod-a odbačeno. Pritisnite **Završi**. Sada možete aktivirati novi Pod.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Nastavak isporuke inzulina
-
-**NAPOMENA**: Tijekom **zamjene profila**, kao i s PDM-om, **AAPS** mora obustaviti isporuku na Pod-u prije postavljanja novog bazalnog **Profila**. Ako komunikacija ne uspije između naredbi za obustavu i nastavak, isporuka može ostati obustavljena. Više pojedinosti pročitajte u [**Isporuka obustavljena**](#omnipod-dash-delivery-suspended) u odjeljku za rješavanje problema.
-
-Kada je isporuka inzulina obustavljena, morate reći Pod-u da nastavi isporuku inzulina. Kada je naredba uspješno obrađena, Pod ponovno isporučuje inzulin prema bazalnoj stopi za trenutno vrijeme iz vašeg aktivnog bazalnog **Profila**. Pod ponovno prihvaća naredbe za bolus, **TBR** i **SMB**.
-
-1. Otvorite zaslon pumpe DASH i provjerite prikazuje li polje **Status Pod-a** vrijednost **Suspendiran**. Pritisnite **Nastavi isporuku** kako biste rekli Pod-u da nastavi normalnu isporuku inzulina.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Kada je naredba uspjela, polje **Status Pod-a** prikazuje **U tijeku**, a gumb **Nastavi isporuku** nestaje.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Snimke zaslona iznad su iz starije verzije **AAPS-a**, koja je prikazivala dijalog za potvrdu. U **AAPS-u** 4 rezultat potvrđujete na zaslonu pumpe DASH: polje **Status Pod-a** prikazuje **U tijeku**, a gumba **Nastavi isporuku** više nema.
-   ```
-
-   Ako naredba ne uspije, **AAPS** prikazuje dijalog upozorenja koji počinje s *Nastavak isporuke nije uspio*. Pritisnite **Osvježi** i pokušajte ponovno.
-
-   ![Upozorenje Nastavak isporuke nije uspio](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Za poznate probleme s Bluetooth vezama, prekidima veze s pumpom/Pod-ovima ili pr
 
 ### Isporuka obustavljena
 
-  - Gumba za suspendiranje više nema. Ako želite „suspendirati“ Pod, možete postaviti nulti **TBR** na x minuta.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Tijekom **zamjene profila** DASH mora obustaviti isporuku prije postavljanja novog bazalnog **Profila**. Ako komunikacija ne uspije između dviju naredbi, isporuka može ostati obustavljena. Kada se to dogodi:
      - Neće biti isporuke inzulina, to uključuje bazal, SMB, ručne boluse itd.
      - Može se pojaviti obavijest da jedna od naredbi nije potvrđena: to ovisi o tome kada je došlo do pogreške.
@@ -581,6 +554,22 @@ Za poznate probleme s Bluetooth vezama, prekidima veze s pumpom/Pod-ovima ili pr
   - Za nepotvrđene naredbe pritisnite **Osvježi** na zaslonu pumpe DASH kako biste ih potvrdili ili odbili.
 
 *****NAPOMENA:** Kada čujete zvučne signale Pod-a, nemojte pretpostaviti da će se isporuka nastaviti bez provjere na telefonu, isporuka može ostati obustavljena, ***zato morate provjeriti!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Nastavak isporuke inzulina
+
+Kada je isporuka inzulina obustavljena, morate reći Pod-u da nastavi isporuku inzulina. Kada je naredba uspješno obrađena, Pod ponovno isporučuje inzulin prema bazalnoj stopi za trenutno vrijeme iz vašeg aktivnog bazalnog **Profila**. Pod ponovno prihvaća naredbe za bolus, **TBR** i **SMB**.
+
+1. Otvorite zaslon pumpe DASH i provjerite prikazuje li polje **Status Pod-a** vrijednost **Suspendiran**. Pritisnite **Nastavi isporuku** kako biste rekli Pod-u da nastavi normalnu isporuku inzulina.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Kada je naredba uspjela, polje **Status Pod-a** prikazuje **U tijeku**, a gumb **Nastavi isporuku** nestaje.
+
+   Ako naredba ne uspije, **AAPS** prikazuje dijalog upozorenja koji počinje s *Nastavak isporuke nije uspio*. Pritisnite **Osvježi** i pokušajte ponovno.
+
+   ![Upozorenje Nastavak isporuke nije uspio](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=
