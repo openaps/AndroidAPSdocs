@@ -82,7 +82,7 @@ Korisnici izrađuju [popis testiranih telefona i satova](#Phones-list-of-tested-
 
 ## Što raditi dok čekate module
 
-Ponekad treba neko vrijeme da nabavite sve module za zatvaranje petlje. Ali bez brige, puno toga možete raditi dok čekate. **Nužno** je provjeriti i (kada je potrebno) prilagoditi bazalne stope (BR), omjer inzulina i ugljikohidrata (IC), faktore osjetljivosti na inzulin (ISF) itd. A otvorena petlja može biti dobar način da testirate sustav i upoznate se s **AAPS**-om. U tom načinu rada **AAPS** daje preporuke za tretmane koje možete ručno izvršiti.
+Ponekad treba neko vrijeme da nabavite sve module za zatvaranje petlje. Ali bez brige, puno toga možete raditi dok čekate. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. A otvorena petlja može biti dobar način da testirate sustav i upoznate se s **AAPS**-om. U tom načinu rada **AAPS** daje preporuke za tretmane koje možete ručno izvršiti.
 
 Možete nastaviti čitati dokumentaciju ovdje, povezati se s drugim korisnicima petlje na internetu ili uživo, [čitati](../UsefulLinks/BackgroundReading.md) dokumentaciju ili ono što pišu drugi korisnici petlje (ali budite oprezni, nije sve točno ili dobro za vas).
 
