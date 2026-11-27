@@ -81,7 +81,7 @@ Podeu calibrar el Libre2 **amb un desplaçament de -40 mg/dl a +20 mg/dl \[-2,2 
 
 ## 3. Fer servir Diabox
 
-- Instal·leu [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). A «Settings», «Integration», activeu «Share data with other apps».
+- Instal·leu [Diabox](https://t.me/s/DiaboxApp). A «Settings», «Integration», activeu «Share data with other apps».
 
 ![Diabox](../images/Diabox.png)
 
