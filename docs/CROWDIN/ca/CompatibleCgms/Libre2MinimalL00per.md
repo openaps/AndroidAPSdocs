@@ -347,7 +347,7 @@ A la pantalla **BT Device** (llisqueu cap a l'esquerra) podeu comprovar més det
 
 &nbsp;
 
-- **Ja no cal un lector NFC extern** Els lectors NFC externs (com Miaomiao, Bubble o Blucon) ja no són necessaris *(però encara es poden fer servir)* per obtenir lectures, perquè ara el sensor sol les pot enviar per Bluetooth. Menys maquinari vol dir menys coses que poden fallar, menys dispositius per carregar i una configuració més simple.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Menys maquinari vol dir menys coses que poden fallar, menys dispositius per carregar i una configuració més simple.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ A la pantalla **BT Device** (llisqueu cap a l'esquerra) podeu comprovar més det
 
 &nbsp;
 
-- **Encara es poden fer servir lectors NFC externs**. Sí, ho he posat com a desavantatge, però també volia dir que, si alguna cosa va malament amb el sensor i LL en pren el control, sempre podeu tornar a posar un lector NFC sobre el sensor per rebre lectures a xDrip. També podeu fer servir aquest dispositiu en lloc d'una connexió Bluetooth directa si us sentiu més còmodes amb una configuració amb un lector NFC extern (Miaomiao, Bubble, Blucon). De vegades alguns telèfons no funcionen bé amb la vinculació Bluetooth nativa del sensor i la recollida de dades. Podeu fer servir aquests dispositius com a reserva o d'ús normal; en tot cas, continueu tenint aquesta opció.
+- **Encara es poden fer servir lectors NFC externs**. Sí, ho he posat com a desavantatge, però també volia dir que, si alguna cosa va malament amb el sensor i LL en pren el control, sempre podeu tornar a posar un lector NFC sobre el sensor per rebre lectures a xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). De vegades alguns telèfons no funcionen bé amb la vinculació Bluetooth nativa del sensor i la recollida de dades. Podeu fer servir aquests dispositius com a reserva o d'ús normal; en tot cas, continueu tenint aquesta opció.
 - Si voleu fer servir el **lector FSL** com a lector NFC per fer lectures, HEU D'iniciar el sensor FSL2 amb el **PRIMER ESCANEIG NFC** per escalfar el sensor **PRIMER AMB EL LECTOR**.
 
 &nbsp;
