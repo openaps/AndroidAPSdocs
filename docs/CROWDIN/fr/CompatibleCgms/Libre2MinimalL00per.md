@@ -347,7 +347,7 @@ Sur l'écran **BT Device** (balayez vers la gauche), vous pouvez vérifier d'aut
 
 &nbsp;
 
-- **Un appareil de scan NFC tiers n'est plus nécessaire** Les appareils de scan NFC tiers (comme Miaomiao, Bubble ou Blucon) ne sont plus nécessaires *(mais peuvent encore être utilisés)* pour obtenir les valeurs, car le capteur seul peut maintenant les envoyer par Bluetooth. Moins de matériel signifie moins de pannes possibles, moins d'appareils à recharger et une configuration plus simple.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Moins de matériel signifie moins de pannes possibles, moins d'appareils à recharger et une configuration plus simple.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ Sur l'écran **BT Device** (balayez vers la gauche), vous pouvez vérifier d'aut
 
 &nbsp;
 
-- **Les appareils de scan NFC tiers peuvent encore être utilisés**. Oui, j'ai mis cela dans les inconvénients, mais je voulais aussi montrer que si quelque chose ne va pas avec le capteur et que LL en prend le contrôle, vous pouvez toujours revenir à un appareil de scan NFC posé sur le capteur pour obtenir les valeurs dans xDrip. Vous pouvez aussi utiliser cet appareil à la place d'une connexion Bluetooth directe si vous êtes plus à l'aise avec une configuration qui utilise un appareil de scan NFC tiers (Miaomiao, Bubble, Blucon). Certains téléphones ne fonctionnent pas bien avec l'association Bluetooth native au capteur et la récupération des données. Vous pouvez utiliser ces appareils en secours ou de façon normale. Dans les deux cas, vous gardez cette option.
+- **Les appareils de scan NFC tiers peuvent encore être utilisés**. Oui, j'ai mis cela dans les inconvénients, mais je voulais aussi montrer que si quelque chose ne va pas avec le capteur et que LL en prend le contrôle, vous pouvez toujours revenir à un appareil de scan NFC posé sur le capteur pour obtenir les valeurs dans xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Certains téléphones ne fonctionnent pas bien avec l'association Bluetooth native au capteur et la récupération des données. Vous pouvez utiliser ces appareils en secours ou de façon normale. Dans les deux cas, vous gardez cette option.
 - Si vous voulez utiliser le **lecteur FSL** comme appareil de scan NFC pour lire les valeurs, vous DEVEZ démarrer le capteur FSL2 avec le **TOUT PREMIER scan NFC** pour préchauffer le capteur **D'ABORD AVEC LE LECTEUR**.
 
 &nbsp;
