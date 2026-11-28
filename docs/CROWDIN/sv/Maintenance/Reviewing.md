@@ -90,6 +90,8 @@ Under AGP ritar kortet **Glukospentagon (CGP)** fem mått på ditt glukos under 
 - **Rå TDD** / **Filtrerad TDD**: välj total daglig dos som den gavs, eller TDD minus insulinet för kolhydrater.
 - **Cykeloffset**: flyttar starten på cykeln (0 till 27 dagar).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Det behövs minst 56 dagar med data (2 cykler). Med mindre data visar kortet **Inte tillräckligt med data (behöver minst 56 dagar för 2 cykler)**. Mönstret beräknas bara när du öppnar fliken **Cykel**, eftersom det läser data för 168 dagar.
 
 (aaps-screens-treatments)=
