@@ -90,6 +90,8 @@ O **Padrão de ciclos da TDD** sobrepõe os seus totais diários de insulina em 
 - **TDD bruto** / **TDD limpo**: escolha a dose diária total como foi administrada, ou a TDD menos a insulina dos carboidratos.
 - **Deslocamento do ciclo**: move o início do ciclo (de 0 a 27 dias).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 São necessários pelo menos 56 dias de dados (2 ciclos). Com menos dados, o cartão mostra **Dados insuficientes (são necessários pelo menos 56 dias para 2 ciclos)**. O padrão só é calculado quando você abre a aba **Ciclo**, porque ele lê 168 dias de dados.
 
 (aaps-screens-treatments)=
