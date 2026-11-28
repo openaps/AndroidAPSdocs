@@ -90,6 +90,8 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 - **TDD גולמי** / **TDD מתוקן**: בחירה בין המינון היומי הכולל כפי שניתן, לבין ה-TDD פחות האינסולין שניתן לפחמימות.
 - **היסט מחזור**: מזיז את תחילת המחזור (0 עד 27 ימים).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 נדרשים לפחות 56 ימים של נתונים (2 מחזורים). כשיש פחות נתונים, הכרטיס מציג **אין מספיק נתונים (נדרשים לפחות 56 ימים עבור 2 מחזורים)**. הדפוס מחושב רק כשפותחים את הלשונית **מחזור**, כי הוא קורא 168 ימים של נתונים.
 
 (aaps-screens-treatments)=
