@@ -90,6 +90,8 @@ AGP 아래의 **혈당 오각형 (CGP)** 카드는 최근 14일 혈당의 다섯
 - **원시 TDD** / **정리된 TDD**: 주입된 그대로의 총 일일 용량 또는 탄수화물용 인슐린을 뺀 TDD를 선택합니다.
 - **주기 오프셋**: 주기의 시작을 옮깁니다(0일에서 27일).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 최소 56일(주기 2개)의 데이터가 필요합니다. 데이터가 이보다 적으면 카드에 **데이터가 부족합니다 (주기 2개에 최소 56일 필요)**가 표시됩니다. 패턴은 168일의 데이터를 읽기 때문에 **주기** 탭을 열 때만 계산됩니다.
 
 (aaps-screens-treatments)=
