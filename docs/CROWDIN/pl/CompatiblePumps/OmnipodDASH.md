@@ -399,12 +399,7 @@ Przydaje się do sprawdzenia bolusów, TBR i poleceń bazy wysłanych do Poda. P
 
 2. Otworzy się ekran **Historia Poda** z wybranym filtrem **Wszystkie**. Lista pokazuje każde polecenie z jego czasem i wynikiem, od najnowszych, pogrupowane według dni. Użyj przycisków filtrów u góry (na przykład **Bolusy** lub **Dawki Bazowe**), aby pokazać tylko jeden rodzaj poleceń. Naciśnij strzałkę wstecz, aby wrócić na ekran pompy DASH.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Drugi zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**, w której rodzaj polecenia wybierało się z listy **Type** (typ). W **AAPS** 4 używasz przycisków filtrów pokazanych na pierwszym zrzucie ekranu.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    Przy bolusach po ilości podany jest rodzaj bolusa, jeśli nie jest to zwykły bolus, na przykład *0.05 U (SMB)* albo *0.05 U (Korekta bazowa)*. Korekta bazowa to bardzo mały bolus (jeden impuls Poda, 0,05 U), który sterownik wysyła sam; nie zlecałeś go.
 
@@ -495,18 +490,13 @@ Wybierz, czy **AAPS** ma odtwarzać dźwięk z powiadomieniami, gdy nie ma pewno
 
 ## Wiek insuliny i kaniuli
 
-[Wiersz stanu](#screens-sensor-level-battery) na ekranie głównym pokazuje wiek Twojej insuliny i kaniuli. Przy Omnipodzie działa to trochę inaczej niż przy pompach z drenem.
+[Wiersz stanu](#screens-sensor-level-battery) na ekranie głównym pokazuje wiek Twojej insuliny i kaniuli. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS** automatycznie zapisuje wymianę kaniuli i wymianę insuliny przy każdej aktywacji Poda. Dzięki temu wiek **Insulina** i **Kaniula** jest zerowany po każdej wymianie Poda. Nie musisz zapisywać tych zmian samodzielnie za pomocą **Napełnij/Wypełnij**. Dzieje się tak, ponieważ Pod wprowadza kaniulę bezpośrednio do skóry w miejscu, w którym jest przyklejony: Omnipod nie używa drenu.
+**AAPS** automatycznie zapisuje wymianę kaniuli i wymianę insuliny przy każdej aktywacji Poda. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Nie musisz zapisywać tych zmian samodzielnie za pomocą **Napełnij/Wypełnij**. Dzieje się tak, ponieważ Pod wprowadza kaniulę bezpośrednio do skóry w miejscu, w którym jest przyklejony: Omnipod nie używa drenu.
 
 Wiek **Bateria pompy** nie jest pokazywany: bateria i zbiornik insuliny są wbudowane w każdy Pod, a bateria zawsze działa dłużej niż sam Pod (maksymalnie 80 godzin).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-Zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**, w której ten wiek był pokazywany w części **Portal opieki** zakładki **Akcje**. W **AAPS** 4 jest on pokazywany w wierszu stanu na ekranie głównym.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Poziom
 
