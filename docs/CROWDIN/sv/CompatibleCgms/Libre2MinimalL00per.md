@@ -347,7 +347,7 @@ På skärmen **BT Device** (svep åt vänster) kan du se fler detaljer om sensor
 
 &nbsp;
 
-- **NFC-läsare från tredje part behövs inte längre** NFC-läsare från tredje part, till exempel Miaomiao, Bubble eller Blucon, behövs inte längre *(men kan fortfarande användas)* för att samla in värden, eftersom sensorn nu kan skicka dem själv via Bluetooth. Mindre hårdvara betyder färre saker som kan gå fel, färre enheter att ladda och en enklare uppsättning.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Mindre hårdvara betyder färre saker som kan gå fel, färre enheter att ladda och en enklare uppsättning.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ På skärmen **BT Device** (svep åt vänster) kan du se fler detaljer om sensor
 
 &nbsp;
 
-- **NFC-läsare från tredje part kan fortfarande användas**. Ja, jag räknade upp detta som en nackdel, men jag vill också påpeka att om något går fel med sensorn och LL tar över den, kan du alltid gå tillbaka till att sätta en NFC-läsare på sensorn för att få värden i xDrip. Du kan också använda en sådan enhet i stället för en direkt Bluetooth-anslutning om du känner dig tryggare med en NFC-läsare från tredje part (Miaomiao, Bubble, Blucon). Ibland fungerar vissa telefoner inte så bra med sensorns egen Bluetooth-bindning och datahämtning. Du kan använda dessa enheter som reserv eller till vardags. Det finns alltså fortfarande som alternativ.
+- **NFC-läsare från tredje part kan fortfarande användas**. Ja, jag räknade upp detta som en nackdel, men jag vill också påpeka att om något går fel med sensorn och LL tar över den, kan du alltid gå tillbaka till att sätta en NFC-läsare på sensorn för att få värden i xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Ibland fungerar vissa telefoner inte så bra med sensorns egen Bluetooth-bindning och datahämtning. Du kan använda dessa enheter som reserv eller till vardags. Det finns alltså fortfarande som alternativ.
 - Om du tänker använda **FSL-läsaren** som NFC-läsare för att hämta värden MÅSTE du starta FSL2-sensorn med den **ALLRA FÖRSTA NFC-skanningen** för att värma upp sensorn med **LÄSAREN FÖRST**.
 
 &nbsp;
