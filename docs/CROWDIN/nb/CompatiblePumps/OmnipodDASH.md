@@ -399,12 +399,7 @@ Den er nyttig for å kontrollere bolusene, de midlertidige basalene og basalkomm
 
 2. Skjermen **Pod-historikk** åpnes med filteret **Alle** valgt. Den lister opp hver kommando med tidspunkt og resultat, nyeste først, gruppert etter dag. Bruk filterknappene øverst (for eksempel **Boluser** eller **Basaldoser**) for å vise bare én type kommando. Trykk på tilbakepilen for å gå tilbake til DASH-pumpeskjermen.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Det andre skjermbildet ovenfor er fra en tidligere **AAPS**-versjon, der du valgte kommandotypen fra en **Type**-liste. I **AAPS** 4 bruker du filterknappene som vises i det første skjermbildet.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    For boluser følges mengden av bolustypen når det ikke er en vanlig bolus, for eksempel *0,05 E (SMB)* eller *0,05 E (Basalkorreksjon)*. En basalkorreksjon er en svært liten bolus (én pod-puls, 0,05 E) som driveren sender på egen hånd; du har ikke bedt om den.
 
@@ -495,18 +490,13 @@ Velg om **AAPS** skal spille av en lyd med varslingene sine når det er usikkert
 
 ## Alder på insulin og kanyle
 
-[Statusraden](#screens-sensor-level-battery) på hovedskjermen viser alderen på insulinet og kanylen din. Med Omnipod virker disse litt annerledes enn med slangepumper.
+[Statusraden](#screens-sensor-level-battery) på hovedskjermen viser alderen på insulinet og kanylen din. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS** registrerer automatisk et kanylebytte og et insulinbytte hver gang du aktiverer en pod. Dette nullstiller alderen på **Insulin** og **Kanyle** etter hvert pod-bytte. Du trenger ikke å registrere dem selv med **Prime/fylling**. Det er fordi poden setter kanylen rett inn i huden der den er festet: Omnipod bruker ikke slange.
+**AAPS** registrerer automatisk et kanylebytte og et insulinbytte hver gang du aktiverer en pod. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Du trenger ikke å registrere dem selv med **Prime/fylling**. Det er fordi poden setter kanylen rett inn i huden der den er festet: Omnipod bruker ikke slange.
 
 Alder på **Pumpebatteri** rapporteres ikke: batteriet og insulinreservoaret er innebygd i hver pod, og batteriet varer alltid lenger enn selve poden (maksimalt 80 timer).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-Skjermbildet ovenfor er fra en tidligere **AAPS**-versjon, der disse aldrene ble vist i delen **Helseportal** på fanen **Handlinger**. I **AAPS** 4 vises de i statusraden på hovedskjermen.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Nivå
 
