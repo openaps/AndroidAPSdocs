@@ -81,7 +81,7 @@ Du kan kalibrere Libre2 **med en forskyvning på -40 mg/dL til +20 mg/dL \[-2.2 
 
 ## 3. Bruke Diabox
 
-- Installer [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). Under Settings, Integration aktiverer du Share data with other apps.
+- Installer [Diabox](https://t.me/s/DiaboxApp). Under Settings, Integration aktiverer du Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
