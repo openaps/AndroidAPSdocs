@@ -90,6 +90,8 @@ Sota l'AGP, la targeta **Pentàgon de glucosa (CGP)** dibuixa cinc mesures dels 
 - **TDD brut** / **TDD net**: trieu la dosi diària total tal com s'ha lliurat, o la TDD sense la insulina per als carbohidrats.
 - **Desplaçament del cicle**: mou l'inici del cicle (de 0 a 27 dies).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Calen almenys 56 dies de dades (2 cicles). Amb menys dades, la targeta mostra **No hi ha prou dades (calen almenys 56 dies per a 2 cicles)**. El patró només es calcula quan obriu la pestanya **Cicle**, perquè llegeix 168 dies de dades.
 
 (aaps-screens-treatments)=
