@@ -90,6 +90,8 @@ Debajo del AGP, la tarjeta **Pentágono de glucosa (CGP)** dibuja como un pentá
 - **TDD Bruta** / **TDD Limpia**: elige la dosis diaria total tal como se administró, o la TDD menos la insulina para carbohidratos.
 - **Desfase de ciclo**: mueve el inicio del ciclo (de 0 a 27 días).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Se necesitan al menos 56 días de datos (2 ciclos). Con menos datos, la tarjeta muestra **No hay datos suficientes (se necesitan al menos 56 días para 2 ciclos)**. El patrón solo se calcula cuando abres la pestaña **Ciclo**, porque lee 168 días de datos.
 
 (aaps-screens-treatments)=
