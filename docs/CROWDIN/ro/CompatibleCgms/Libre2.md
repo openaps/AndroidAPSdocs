@@ -81,7 +81,7 @@ Puteți calibra Libre2 **cu un decalaj de la -40 mg/dL la +20 mg/dL \[de la -2,2
 
 ## 3. Utilizarea Diabox
 
-- Instalați [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). În Setări, Integrare, activați Partajarea datelor cu alte aplicații.
+- Instalați [Diabox](https://t.me/s/DiaboxApp). În Setări, Integrare, activați Partajarea datelor cu alte aplicații.
 
 ![Diabox](../images/Diabox.png)
 
