@@ -90,6 +90,8 @@ AGP 下方的**血糖五角圖（CGP）**卡片會將過去 14 天的五項血�
 - **原始 TDD**／**清理後的 TDD**：選擇使用實際注射的每日總劑量，或扣除用於碳水化合物的胰島素後的 TDD。
 - **週期偏移**：調整週期的起始日（0 到 27 天）。
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 至少需要 56 天的資料（2 個週期）。資料不足時，卡片會顯示**資料不足（至少需要 56 天的資料，才能顯示 2 個週期）**。只有在開啟**週期**分頁時才會計算模式，因為計算時會讀取 168 天的資料。
 
 (aaps-screens-treatments)=
