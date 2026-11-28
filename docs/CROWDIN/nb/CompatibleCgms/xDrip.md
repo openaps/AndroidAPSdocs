@@ -145,7 +145,7 @@ Følg instruksjonene:
 
 ### Batterinivå for Libre-senderen
 
-- Batterinivået til sendere som MiaoMiao og Bubble kan vises i AAPS (ikke Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Du finner detaljer på [siden med skjermbilder](#screens-sensor-level-battery).
 
 ### Koble til Libre-senderen og start sensoren
