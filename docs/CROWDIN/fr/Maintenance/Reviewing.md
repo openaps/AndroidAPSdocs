@@ -90,6 +90,8 @@ Sous l'AGP, la carte **Pentagone glucose (CGP)** dessine cinq mesures de vos 14 
 - **DTQ brute** / **DTQ nettoyée** : choisissez la dose totale quotidienne telle qu'elle a été délivrée, ou la DTQ sans l'insuline des glucides.
 - **Décalage du cycle** : déplace le début du cycle (0 à 27 jours).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Il faut au moins 56 jours de données (2 cycles). Avec moins de données, la carte affiche **Pas assez de données (nécessite au moins 56 jours pour 2 cycles)**. Le schéma est calculé seulement quand vous ouvrez l'onglet **Cycle**, car il lit 168 jours de données.
 
 (aaps-screens-treatments)=
