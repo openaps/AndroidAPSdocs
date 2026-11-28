@@ -145,7 +145,7 @@ Postupujte podle návodů:
 
 ### Úroveň baterie čtečky Libre
 
-- Úroveň baterie můstků, jako jsou MiaoMiao a Bubble, lze zobrazit v AAPS (ne u Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Podrobnosti najdete na [stránce se snímky obrazovky](#screens-sensor-level-battery).
 
 ### Připojte vysílač Libre a spusťte senzor
