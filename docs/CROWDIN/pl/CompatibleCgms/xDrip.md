@@ -145,7 +145,7 @@ Postępuj według instrukcji:
 
 ### Poziom baterii czytnika Libre Smart Reader
 
-- Poziom baterii mostków, takich jak MiaoMiao i Bubble, może być wyświetlany w AAPS (nie dotyczy Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Szczegóły znajdziesz na [stronie ze zrzutami ekranu](#screens-sensor-level-battery).
 
 ### Połącz nadajnik Libre i uruchom sensor
