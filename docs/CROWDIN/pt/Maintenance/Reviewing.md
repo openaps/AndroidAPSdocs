@@ -90,6 +90,8 @@ O **Padrão cíclico da TID** sobrepõe os seus totais diários de insulina em c
 - **TID bruta** / **TID limpa**: escolha a dose diária total tal como foi administrada, ou a TID sem a insulina para os hidratos de carbono.
 - **Desvio do ciclo**: muda o início do ciclo (de 0 a 27 dias).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 São precisos pelo menos 56 dias de dados (2 ciclos). Com menos dados, o cartão mostra **Dados insuficientes (são necessários pelo menos 56 dias para 2 ciclos)**. O padrão só é calculado quando abre o separador **Ciclo**, porque lê 168 dias de dados.
 
 (aaps-screens-treatments)=
