@@ -82,7 +82,7 @@ Net jei programėlės xDrip nenaudojate kaip **glikemijos šaltinio**, vis tiek 
 
 ## What to do while waiting for modules
 
-Kartais tenka palaukti, kol gaunate visus komponentus, kurių reikia uždarajam ciklui. Nesijaudinkite, laukdami galite padaryti daug. **Būtina** patikrinti ir, kai reikia, pritaikyti valandinę bazę (BR), insulino ir angliavandenių santykį (IA), jautrumo insulinui faktorių (JIF) ir kt. Atviras ciklas gali būti geras būdas išbandyti sistemą ir susipažinti su **AAPS**. Šiuo režimu **AAPS** pateikia gydymo rekomendacijas, kurias galite vykdyti rankiniu būdu.
+Kartais tenka palaukti, kol gaunate visus komponentus, kurių reikia uždarajam ciklui. Nesijaudinkite, laukdami galite padaryti daug. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. Atviras ciklas gali būti geras būdas išbandyti sistemą ir susipažinti su **AAPS**. Šiuo režimu **AAPS** pateikia gydymo rekomendacijas, kurias galite vykdyti rankiniu būdu.
 
 Galite toliau skaityti šią dokumentaciją, bendrauti su kitais ciklo sistemų naudotojais internetu ar gyvai, [skaityti](../UsefulLinks/BackgroundReading.md) dokumentaciją arba kitų naudotojų tekstus (tik būkite atsargūs: ne viskas yra teisinga ar jums tinka atkartoti).
 
