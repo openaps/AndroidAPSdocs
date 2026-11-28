@@ -90,6 +90,8 @@ Ispod AGP-a kartica **Glukozni pentagon (CGP)** prikazuje pet mjera vaše glukoz
 - **Sirovi TDD** / **Očišćeni TDD**: odaberite ukupnu dnevnu dozu kako je isporučena ili TDD bez inzulina za ugljikohidrate.
 - **Pomak ciklusa**: pomiče početak ciklusa (od 0 do 27 dana).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Potrebno je najmanje 56 dana podataka (2 ciklusa). Ako ima manje podataka, kartica prikazuje **Nema dovoljno podataka (potrebno je najmanje 56 dana za 2 ciklusa)**. Obrazac se izračunava samo kada otvorite karticu **Ciklus**, jer čita podatke za 168 dana.
 
 (aaps-screens-treatments)=
