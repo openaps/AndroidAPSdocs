@@ -399,12 +399,7 @@ Korisna je za provjeru bolusa, TBR-ova i bazalnih naredbi poslanih Pod-u. Ostale
 
 2. Zaslon **Povijest Pod-a** otvara se s odabranim filtrom **Svi**. Prikazuje svaku naredbu s vremenom i rezultatom, najnovije prve, grupirano po danima. Gumbima filtra na vrhu (na primjer **Bolusi** ili **Bazali**) prikažite samo jednu vrstu naredbi. Pritisnite strelicu natrag za povratak na zaslon pumpe DASH.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Druga snimka zaslona iznad je iz starije verzije **AAPS-a**, u kojoj ste vrstu naredbe birali s popisa **Type** (vrsta). U **AAPS-u** 4 koristite gumbe filtra prikazane na prvoj snimci zaslona.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    Za boluse, iza količine slijedi vrsta bolusa kada to nije normalni bolus, na primjer *0,05 J (SMB)* ili *0,05 J (Korekcija bazala)*. Korekcija bazala je vrlo mali bolus (jedan impuls Pod-a, 0,05 J) koji upravljački program šalje sam; vi ga niste zatražili.
 
@@ -495,18 +490,13 @@ Odaberite hoće li **AAPS** uz svoje obavijesti reproducirati zvuk kada nije sig
 
 ## Starost inzulina i kanile
 
-[Redak statusa](#screens-sensor-level-battery) na glavnom zaslonu prikazuje starost vašeg inzulina i kanile. S Omnipodom to radi malo drugačije nego s pumpama s cijevi.
+[Redak statusa](#screens-sensor-level-battery) na glavnom zaslonu prikazuje starost vašeg inzulina i kanile. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS** automatski bilježi promjenu kanile i promjenu inzulina svaki put kada aktivirate Pod. Time se starost za **Inzulin** i **Kanila** vraća na nulu nakon svake zamjene Pod-a. Ne morate ih sami bilježiti pomoću **Punjenje**. To je zato što Pod umeće kanilu izravno u kožu na mjestu gdje je pričvršćen: Omnipod ne koristi cijev.
+**AAPS** automatski bilježi promjenu kanile i promjenu inzulina svaki put kada aktivirate Pod. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Ne morate ih sami bilježiti pomoću **Punjenje**. To je zato što Pod umeće kanilu izravno u kožu na mjestu gdje je pričvršćen: Omnipod ne koristi cijev.
 
 Starost **Baterija pumpe** ne prikazuje se: baterija i spremnik inzulina ugrađeni su u svaki Pod, a baterija uvijek traje dulje od samog Pod-a (najviše 80 sati).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-Snimka zaslona iznad je iz starije verzije **AAPS-a**, u kojoj je ta starost bila prikazana u odjeljku **Careportal** na kartici **Radnje**. U **AAPS-u** 4 prikazuje se u retku statusa na glavnom zaslonu.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Razina
 
