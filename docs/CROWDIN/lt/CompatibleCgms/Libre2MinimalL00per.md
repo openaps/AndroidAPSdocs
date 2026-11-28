@@ -347,7 +347,7 @@ Ekrane **BT Device** (perbraukite į kairę) galite patikrinti daugiau jutiklio 
 
 &nbsp;
 
-- **Trečiųjų šalių NFC skenavimo įrenginio nebereikia** Trečiųjų šalių NFC skenavimo įrenginių (pvz., Miaomiao, Bubble ar Blucon) reikšmėms gauti nebereikia *(bet juos vis dar galima naudoti)*, nes jutiklis pats gali jas perduoti per Bluetooth. Mažiau įrangos – mažiau gedimų, mažiau įkraunamų įrenginių ir paprastesnė sąranka.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Mažiau įrangos – mažiau gedimų, mažiau įkraunamų įrenginių ir paprastesnė sąranka.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ Ekrane **BT Device** (perbraukite į kairę) galite patikrinti daugiau jutiklio 
 
 &nbsp;
 
-- **Trečiųjų šalių NFC skenavimo įrenginius vis dar galima naudoti**. Taip, tai įrašiau prie trūkumų, bet norėjau pabrėžti, kad jei su jutikliu kas nors nepavyksta ir LL perima jo valdymą, visada galite uždėti ant jutiklio NFC skenavimo įrenginį ir gauti reikšmes xDrip. Šį įrenginį taip pat galite naudoti vietoje tiesioginio Bluetooth ryšio, jei jums patogiau naudoti sąranką su trečiosios šalies NFC skenavimo įrenginiu (Miaomiao, Bubble, Blucon). Kartais kai kurie telefonai prastai veikia su tiesioginiu jutiklio Bluetooth susiejimu ir duomenų gavimu. Šiuos įrenginius galite naudoti kaip atsarginį variantą arba nuolat – bet kuriuo atveju ši galimybė jums lieka.
+- **Trečiųjų šalių NFC skenavimo įrenginius vis dar galima naudoti**. Taip, tai įrašiau prie trūkumų, bet norėjau pabrėžti, kad jei su jutikliu kas nors nepavyksta ir LL perima jo valdymą, visada galite uždėti ant jutiklio NFC skenavimo įrenginį ir gauti reikšmes xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Kartais kai kurie telefonai prastai veikia su tiesioginiu jutiklio Bluetooth susiejimu ir duomenų gavimu. Šiuos įrenginius galite naudoti kaip atsarginį variantą arba nuolat – bet kuriuo atveju ši galimybė jums lieka.
 - Jei **FSL Reader** ketinate naudoti kaip NFC skenavimo įrenginį reikšmėms gauti, FSL2 jutiklį PRIVALOTE paleisti **PAČIU PIRMUOJU NFC skenavimu**, kad jutiklis būtų įšildytas **PIRMIAUSIA SKAITYTUVU**.
 
 &nbsp;
