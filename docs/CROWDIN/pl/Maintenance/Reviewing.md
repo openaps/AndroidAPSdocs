@@ -90,6 +90,8 @@ Pod AGP karta **Pentagon glukozy (CGP)** rysuje pięć miar Twojej glukozy z ost
 - **Surowe TDD** / **Oczyszczone TDD**: wybierz dawkę dobową w takiej postaci, w jakiej została podana, albo TDD minus insulina na posiłki.
 - **Przesunięcie cyklu**: przesuwa początek cyklu (od 0 do 27 dni).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Potrzeba co najmniej 56 dni danych (2 cykle). Przy mniejszej ilości danych karta pokazuje **Za mało danych (potrzeba co najmniej 56 dni dla 2 cykli).** Wzorzec jest obliczany dopiero po otwarciu karty **Cykl**, bo odczytuje dane z 168 dni.
 
 (aaps-screens-treatments)=
