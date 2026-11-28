@@ -399,12 +399,7 @@ Ele é útil para verificar os bólus, as TBRs e os comandos de basal que foram 
 
 2. A tela **Histórico do Pod** abre com o filtro **Todos** selecionado. Ela lista cada comando com a hora e o resultado, os mais novos primeiro, agrupados por dia. Use os botões de filtro no alto (por exemplo **Bólus** ou **Basais**) para mostrar só um tipo de comando. Pressione a seta de voltar para retornar à tela da bomba DASH.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   A segunda captura de tela acima é de uma versão anterior do **AAPS**, em que você escolhia o tipo de comando em uma lista **Type** (Tipo). No **AAPS** 4, você usa os botões de filtro mostrados na primeira captura de tela.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    Para bólus, a quantidade é seguida pelo tipo de bólus quando não é um bólus normal, por exemplo *0,05 U (SMB)* ou *0,05 U (Correção basal)*. Uma correção basal é um bólus muito pequeno (um pulso do pod, 0,05 U) que o driver envia sozinho; você não pediu esse bólus.
 
@@ -495,18 +490,13 @@ Escolha se o **AAPS** toca um som com as suas notificações quando não tem cer
 
 ## Idade da insulina e da cânula
 
-A [linha de status](#screens-sensor-level-battery) na tela principal mostra a idade da sua insulina e da cânula. Com o Omnipod, isso funciona um pouco diferente do que com bombas com tubo.
+A [linha de status](#screens-sensor-level-battery) na tela principal mostra a idade da sua insulina e da cânula. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-O **AAPS** registra uma troca de cânula e uma troca de insulina automaticamente cada vez que você ativa um pod. Isso zera as idades de **Insulina** e **Cânula** depois de cada troca de pod. Você não precisa registrá-las você mesmo com **Purgar/Preencher**. Isso porque o pod insere a cânula diretamente na pele onde ele está colado: o Omnipod não usa tubo.
+O **AAPS** registra uma troca de cânula e uma troca de insulina automaticamente cada vez que você ativa um pod. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Você não precisa registrá-las você mesmo com **Purgar/Preencher**. Isso porque o pod insere a cânula diretamente na pele onde ele está colado: o Omnipod não usa tubo.
 
 A idade da **Bateria da bomba** não é informada: a bateria e o reservatório de insulina são integrados em cada pod, e a bateria sempre dura mais do que o próprio pod (no máximo 80 horas).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-A captura de tela acima é de uma versão anterior do **AAPS**, em que essas idades eram mostradas na seção **CarePortal** da aba **Ações**. No **AAPS** 4, elas são mostradas na linha de status da tela principal.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Nível
 
