@@ -90,6 +90,8 @@ AGP'nin altında, **Glikoz Pentagonu (CGP)** kartı son 14 gününüzün glikozu
 - **Ham GTD** / **Temizlenmiş GTD**: verildiği şekliyle günlük toplam dozu veya karbonhidratlar için verilen insülin çıkarılmış GTD'yi seçin.
 - **Döngü kayması**: döngünün başlangıcını kaydırır (0 ile 27 gün arası).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 En az 56 günlük veri (2 döngü) gerekir. Daha az veri varsa kart **Yeterli veri yok (2 döngü için en az 56 gün gerekli)** mesajını gösterir. Model yalnızca **Döngü** sekmesini açtığınızda hesaplanır, çünkü 168 günlük veriyi okur.
 
 (aaps-screens-treatments)=
