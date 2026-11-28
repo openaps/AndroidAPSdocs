@@ -399,12 +399,7 @@
 
 2. 開啟「**Pod 歷程記錄**」畫面時，預設會選取「**全部**」篩選條件。畫面會依日期分組，並依時間由新到舊列出每個指令及其結果。使用畫面上方的篩選按鈕（例如「**注射**」或「**基礎胰島素**」），即可只顯示一種類型的指令。按下返回箭頭，回到 DASH 幫浦畫面。
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   上方第二張螢幕擷圖來自較舊版本的 **AAPS**，當時您需要從「**類型**」清單中選取指令類型。在 **AAPS** 4 中，請使用第一張螢幕擷圖所示的篩選按鈕。
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    若不是一般注射，注射劑量後方會標示注射類型，例如 *0.05 U（微量注射）*或 *0.05 U（基礎胰島素修正）*。基礎胰島素修正是非常小量的注射（一次 Pod 脈衝，0.05 U），由驅動程式自行傳送，並非由您要求。
 
@@ -495,18 +490,13 @@ Pod 到期、關機及儲液槽低液量警示。 Pod 啟動期間變更這些�
 
 ## 胰島素與導管使用時間
 
-主畫面的[狀態列](#screens-sensor-level-battery)會顯示胰島素與導管的使用時間。 Omnipod 的運作方式與管路式幫浦略有不同。
+主畫面的[狀態列](#screens-sensor-level-battery)會顯示胰島素與導管的使用時間。 With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-每次啟用 Pod 時，**AAPS** 都會自動記錄更換導管及胰島素。每次更換 Pod 後，**胰島素**與**導管**的使用時間都會重設為零。您不需要使用 **預充／填充**自行記錄。這是因為 Pod 會將導管直接插入其附著處的外觀中：Omnipod 不使用管路。
+每次啟用 Pod 時，**AAPS** 都會自動記錄更換導管及胰島素。 This resets the **Patch pump** and **Insulin** ages to zero after every pod change. 您不需要使用 **預充／填充**自行記錄。這是因為 Pod 會將導管直接插入其附著處的外觀中：Omnipod 不使用管路。
 
 不會回報**幫浦電池**的使用時間：電池和胰島素儲液槽都裝在 Pod 內，而且電池的續航時間一定比 Pod 本身的使用時間長（最長 80 小時）。
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-上方的螢幕截圖來自較早期的 **AAPS** 版本，當時這些使用時間顯示在 **動作**分頁的 **照護入口**區段。在 **AAPS** 4 中，這些資訊會顯示在主畫面的狀態列。
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### 等級
 
