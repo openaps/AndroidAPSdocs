@@ -399,12 +399,7 @@ Ensure you have read and understand this whole guide, have read and understand t
 
 2. המסך **היסטוריית הפוד** נפתח כשהמסנן **הכול** נבחר. הוא מציג כל פקודה עם השעה והתוצאה שלה, מהחדשה לישנה, מקובצות לפי ימים. ניתן להשתמש בלחצני הסינון בחלק העליון (למשל **בולוסים** או **בזאלים**) כדי להציג רק סוג אחד של פקודות. יש ללחוץ על חץ החזרה כדי לחזור למסך המשאבה DASH.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   צילום המסך השני למעלה הוא מגרסה קודמת של **AAPS**, שבה בחרתם את סוג הפקודה מרשימת **סוג**. ב-**AAPS** 4 משתמשים בלחצני הסינון שמוצגים בצילום המסך הראשון.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    בבולוסים, אחרי הכמות מופיע סוג הבולוס כשזה לא בולוס רגיל, למשל *0.05 U (SMB)* או *0.05 U (תיקון בזאלי)*. תיקון בזאלי הוא בולוס קטן מאוד (פעימה אחת של הפוד, 0.05 U) שמנהל ההתקן שולח בעצמו; לא אתם ביקשתם אותו.
 
@@ -495,18 +490,13 @@ Ensure you have read and understand this whole guide, have read and understand t
 
 ## גיל האינסולין והצינורית
 
-[שורת המצב](#screens-sensor-level-battery) במסך הראשי מציגה את הגיל של האינסולין ושל הצינורית. ב-Omnipod הם פועלים מעט אחרת מאשר במשאבות עם צינורית.
+[שורת המצב](#screens-sensor-level-battery) במסך הראשי מציגה את הגיל של האינסולין ושל הצינורית. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS** רושם אוטומטית החלפת צינורית והחלפת אינסולין בכל פעם שמפעילים פוד. כך הגיל של **אינסולין** ושל **צינורית** מתאפס לאחר כל החלפת פוד. אין צורך לרשום אותם בעצמכם עם **תיחול/מילוי**. הסיבה היא שהפוד מכניס את הצינורית ישירות לעור במקום שבו הוא מודבק: Omnipod לא משתמש בצינור.
+**AAPS** רושם אוטומטית החלפת צינורית והחלפת אינסולין בכל פעם שמפעילים פוד. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. אין צורך לרשום אותם בעצמכם עם **תיחול/מילוי**. הסיבה היא שהפוד מכניס את הצינורית ישירות לעור במקום שבו הוא מודבק: Omnipod לא משתמש בצינור.
 
 הגיל של **סוללת המשאבה** לא מדווח: הסוללה ומכל האינסולין מובנים בכל פוד, והסוללה תמיד מחזיקה יותר זמן מהפוד עצמו (80 שעות לכל היותר).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-צילום המסך למעלה הוא מגרסה קודמת של **AAPS**, שבה הגילים האלה הוצגו בסעיף **פורטל טיפולים** של הלשונית **פעולות**. ב-**AAPS** 4 הם מוצגים בשורת המצב במסך הראשי.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Level
 
