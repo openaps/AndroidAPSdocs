@@ -90,6 +90,8 @@ Under AGP tegner kortet **Glukosepentagon (CGP)** fem mål for glukosen din de s
 - **Rå TDD** / **Renset TDD**: velg den totale daglige dosen slik den ble gitt, eller TDD minus insulin for karbohydrater.
 - **Syklusforskyvning**: flytter starten på syklusen (0 til 27 dager).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Det trengs minst 56 dager med data (2 sykluser). Med mindre data viser kortet **Ikke nok data (trenger minst 56 dager for 2 sykluser)**. Mønsteret beregnes bare når du åpner fanen **Syklus**, fordi det leser 168 dager med data.
 
 (aaps-screens-treatments)=
