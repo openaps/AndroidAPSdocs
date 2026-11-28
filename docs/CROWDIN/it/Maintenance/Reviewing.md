@@ -90,6 +90,8 @@ Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your l
 - **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
 - **Scostamento ciclo**: sposta l'inizio del ciclo (da 0 a 27 giorni).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Servono almeno 56 giorni di dati (2 cicli). Con meno dati, la scheda mostra **Dati insufficienti (servono almeno 56 giorni per 2 cicli)**. Il pattern viene calcolato solo quando apri la scheda **Ciclo**, perché legge 168 giorni di dati.
 
 (aaps-screens-treatments)=
