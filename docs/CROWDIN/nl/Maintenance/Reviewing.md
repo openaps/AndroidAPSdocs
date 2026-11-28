@@ -90,6 +90,8 @@ Onder het AGP tekent de kaart **Glucose Pentagon (CGP)** vijf maten van je gluco
 - **Onbewerkte TDD** / **Opgeschoond TDD**: kies de totale dagelijkse dosis zoals toegediend, of de TDD min de insuline voor koolhydraten.
 - **Cyclus verschuiving**: verschuift het begin van de cyclus (0 tot 27 dagen).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Er zijn minstens 56 dagen aan gegevens (2 cycli) nodig. Met minder gegevens toont de kaart **Niet genoeg gegevens (minstens 56 dagen nodig voor 2 cycli)**. Het patroon wordt pas berekend als je het tabblad **Cyclus** opent, omdat het de gegevens van 168 dagen leest.
 
 (aaps-screens-treatments)=
