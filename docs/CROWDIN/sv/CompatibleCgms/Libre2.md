@@ -81,7 +81,7 @@ Du kan kalibrera Libre2 **med en förskjutning (offset) på -40 mg/dL till +20 m
 
 ## 3. Använda Diabox
 
-- Installera [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). Gå till Settings, Integration och slå på Share data with other apps.
+- Installera [Diabox](https://t.me/s/DiaboxApp). Gå till Settings, Integration och slå på Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
