@@ -145,7 +145,7 @@ Urmați instrucțiunile:
 
 ### Nivelul bateriei cititorului inteligent Libre
 
-- Nivelul bateriei punților precum MiaoMiao și Bubble poate fi afișat în AAPS (nu Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Detalii pot fi găsite pe pagina [capturi de ecran](#screens-sensor-level-battery).
 
 ### Conectați transmițătorul Libre & porniți senzorul
