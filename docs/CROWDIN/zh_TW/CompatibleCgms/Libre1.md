@@ -10,17 +10,18 @@
 市面上仍有一些橋接器可購買：
 
 -   [MiaoMiao 讀取器](https://www.miaomiao.cool/)（版本 1、2 或 3），也可在 AliExpress 上購買。
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) 來自歐洲供應商（[BubbleShop](https://bubbleshop.eu/)），或俄羅斯用戶請見 [此處](https://vk.com/saharmonitor/)。也可在 AliExpress 上購買。
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). 也可在 AliExpress 上購買。
 -   適用於俄羅斯用戶的 Atom。
 
 ## 1. 使用 xDrip
 
--   xDrip 支援 Miaomiao、Bubble、Blucon、Atom 和 LibreAlarm。
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   除非你需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，你應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
 -   請依照[xDrip 設定頁面](../CompatibleCgms/xDrip.md)上的設定指示操作。
 -    你還需要適用於 Libre 1 US（和 Libre 2 EU）的OOP2。
 -   在 [**組態設定 → 血糖來源**](#Config-Builder-bg-source)中選擇 xDrip。
 
+(libre1-diabox)=
 ## 2. 使用 Diabox
 
 - Diabox 是 Bubble 的官方應用程式。
