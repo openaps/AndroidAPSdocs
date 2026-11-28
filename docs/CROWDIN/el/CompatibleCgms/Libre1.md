@@ -10,17 +10,18 @@
 Μερικές γέφυρες υπάρχουν ακόμα στην αγορά:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (έκδοση 1, 2 ή 3), διαθέσιμο και στο AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) από Ευρωπαίους πωλητές ([BubbleShop](https://bubbleshop.eu/)) ή, για χρήστες από τη Ρωσία, [εδώ](https://vk.com/saharmonitor/). Διαθέσιμο και στο AliExpress.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Διαθέσιμο και στο AliExpress.
 -   Atom για χρήστες από τη Ρωσία.
 
 ## 1. Χρήση του xDrip
 
--   Το xDrip υποστηρίζει Miaomiao, Bubble, Blucon, Atom και LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Μπορείτε με ασφάλεια να κατεβάσετε το [πιο πρόσφατο APK (σταθερό)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), εκτός αν χρειάζεστε νέες λειτουργίες. Τότε χρησιμοποιήστε το πιο πρόσφατο [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Ακολουθήστε τις οδηγίες ρύθμισης στη [σελίδα ρυθμίσεων του xDrip](../CompatibleCgms/xDrip.md).
 -    Χρειάζεστε επίσης το OOP2 για το Libre 1 US (και το Libre 2 EU).
 -   Επιλέξτε xDrip στη [**Διαμόρφωση → Πηγή BG**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Χρήση του Diabox
 
 - Το Diabox είναι η εφαρμογή του κατασκευαστή για το Bubble.
