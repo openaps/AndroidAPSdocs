@@ -10,17 +10,18 @@ Patikrinkite, ar tarpinis ryšio įrenginys ir programėlė, kurią norite naudo
 Some bridges are still available on the market:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (version 1, 2 or 3) also available on AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Also available on AliExpress.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Also available on AliExpress.
 -   Atom for Russian users.
 
 ## 1. xDrip naudojimas
 
--   xDrip palaiko Miaomiao, Bubble, Blucon, Atom ir LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Vadovaukitės nustatymo instrukcijomis [xDrip nustatymų puslapyje](../CompatibleCgms/xDrip.md).
 -    You also need OOP2 for Libre 1 US (and Libre 2 EU).
 -   Pasirinkite xDrip skiltyje [**Konfigūracija → Glikemijos šaltinis**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Using Diabox
 
 - Diabox is the vendor app for Bubble.
