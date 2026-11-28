@@ -399,12 +399,7 @@ Pod'a gönderilen bolusları, GBO'ları ve bazal komutlarını kontrol etmek iç
 
 2. **Pod Geçmişi** ekranı, **Tümü** filtresi seçili olarak açılır. Her komutu zamanı ve sonucuyla, en yenisi en üstte ve güne göre gruplanmış olarak listeler. Yalnızca bir komut türünü göstermek için üstteki filtre düğmelerini kullanın (örneğin **Boluslar** veya **Bazallar**). DASH pompa ekranına dönmek için geri okuna basın.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Yukarıdaki ikinci ekran görüntüsü, komut türünü bir **Tür** listesinden seçtiğiniz eski bir **AAPS** sürümüne aittir. **AAPS** 4'te ilk ekran görüntüsünde gösterilen filtre düğmelerini kullanırsınız.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    Boluslarda, normal bolus olmadığında miktarın ardından bolus türü gelir; örneğin *0,05 Ü (SMB)* veya *0,05 Ü (Bazal düzeltme)*. Bazal düzeltme, sürücünün kendiliğinden gönderdiği çok küçük bir bolustur (bir Pod darbesi, 0,05 Ü); bunu siz istemediniz.
 
@@ -495,18 +490,13 @@ Bir GBO'nun, SMB'nin veya bolusun verilip verilmediğinden emin olunamadığınd
 
 ## İnsülin ve kanül yaşı
 
-Ana ekrandaki [durum satırı](#screens-sensor-level-battery) insülininizin ve kanülünüzün yaşını gösterir. Omnipod'da bunlar hortumlu pompalardan biraz farklı çalışır.
+Ana ekrandaki [durum satırı](#screens-sensor-level-battery) insülininizin ve kanülünüzün yaşını gösterir. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS**, her Pod etkinleştirdiğinizde otomatik olarak bir kanül değişimi ve bir insülin değişimi kaydeder. Bu, her Pod değişiminden sonra **İnsülin** ve **Kanül** yaşlarını sıfırlar. Bunları **Hazırla/doldur** ile kendiniz kaydetmeniz gerekmez. Bunun nedeni, Pod'un kanülü yapıştırıldığı yerde doğrudan cilde yerleştirmesidir: Omnipod hortum kullanmaz.
+**AAPS**, her Pod etkinleştirdiğinizde otomatik olarak bir kanül değişimi ve bir insülin değişimi kaydeder. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Bunları **Hazırla/doldur** ile kendiniz kaydetmeniz gerekmez. Bunun nedeni, Pod'un kanülü yapıştırıldığı yerde doğrudan cilde yerleştirmesidir: Omnipod hortum kullanmaz.
 
 **Pompa pili** yaşı bildirilmez: pil ve insülin rezervuarı her Pod'un içinde yerleşiktir ve pil her zaman Pod'un kendisinden daha uzun dayanır (en fazla 80 saat).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-Yukarıdaki ekran görüntüsü, bu yaşların **Eylemler** sekmesinin **Careportal** bölümünde gösterildiği eski bir **AAPS** sürümüne aittir. **AAPS** 4'te bu yaşlar ana ekrandaki durum satırında gösterilir.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Level
 
