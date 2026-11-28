@@ -90,6 +90,8 @@ Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your l
 - **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
 - **Cycle offset**: moves the start of the cycle (0 to 27 days).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
 
 (aaps-screens-treatments)=
