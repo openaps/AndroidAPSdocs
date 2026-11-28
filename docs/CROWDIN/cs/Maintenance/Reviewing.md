@@ -90,6 +90,8 @@ Pod AGP karta **Glukózový pentagon (CGP)** vykresluje pět ukazatelů vaší g
 - **Surová CDD** / **Očištěná CDD**: zvolte celkovou denní dávku tak, jak byla podána, nebo CDD bez inzulínu na sacharidy.
 - **Posun cyklu**: posune začátek cyklu (0 až 27 dní).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Jsou potřeba data alespoň za 56 dní (2 cykly). Při menším množství dat karta ukazuje **Nedostatek dat (potřeba alespoň 56 dní pro 2 cykly)**. Vzor se počítá, jen když otevřete kartu **Cyklus**, protože načítá data za 168 dní.
 
 (aaps-screens-treatments)=
