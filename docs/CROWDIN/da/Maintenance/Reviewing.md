@@ -90,6 +90,8 @@ Under AGP tegner kortet **Glukose-pentagon (CGP)** fem mål for dit blodsukker i
 - **Rå TDD** / **Renset TDD**: vælg den samlede daglige dosis, som den blev leveret, eller TDD minus insulin til kulhydrater.
 - **Cyklusforskydning**: flytter starten af cyklussen (0 til 27 dage).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Der skal bruges data fra mindst 56 dage (2 cyklusser). Med færre data viser kortet **Ikke nok data (kræver mindst 56 dage for 2 cyklusser)**. Mønsteret beregnes kun, når du åbner fanen **Cyklus**, fordi det læser data fra 168 dage.
 
 (aaps-screens-treatments)=
