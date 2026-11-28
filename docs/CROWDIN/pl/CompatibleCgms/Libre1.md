@@ -10,17 +10,18 @@ Sprawdź, czy mostek i aplikacja, której chcesz używać, są zgodne z Twoim se
 Niektóre mostki są nadal dostępne w sprzedaży:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (wersja 1, 2 lub 3), dostępny także na AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) od europejskich sprzedawców ([BubbleShop](https://bubbleshop.eu/)) lub dla użytkowników z Rosji [tutaj](https://vk.com/saharmonitor/). Dostępny także na AliExpress.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Dostępny także na AliExpress.
 -   Atom dla użytkowników z Rosji.
 
 ## 1. Używanie xDrip
 
--   xDrip obsługuje Miaomiao, Bubble, Blucon, Atom i LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Możesz bezpiecznie pobrać [najnowszy plik APK (stabilny)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk). Jeśli potrzebujesz najnowszych funkcji, użyj najnowszej wersji [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Postępuj według instrukcji konfiguracji na [stronie ustawień xDrip](../CompatibleCgms/xDrip.md).
 -    Dla Libre 1 US (i Libre 2 EU) potrzebujesz także OOP2.
 -   Wybierz xDrip w [**Konfiguracja → Źródło BG**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Używanie Diabox
 
 - Diabox to aplikacja producenta mostka Bubble.
