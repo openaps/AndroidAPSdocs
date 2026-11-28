@@ -145,7 +145,7 @@ Dexcom 感測器和發射器本身的所有相關資訊（包括啟動、停止�
 
 ### Libre 智慧讀取器電池電量
 
-- 如 MiaoMiao 和 Bubble 等橋接器的電池電量可以顯示在 AAPS 中（Blucon 不支援）。
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - 詳細資訊請參閱[螢幕截圖頁面](#screens-sensor-level-battery)。
 
 ### 連線 Libre 傳輸器並啟動傳感器
