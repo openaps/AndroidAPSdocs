@@ -10,17 +10,18 @@ Verifique se a ponte e o app que você quer usar são compatíveis com o seu sen
 Algumas pontes ainda estão à venda:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (versão 1, 2 ou 3), também disponível no AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) de vendedores europeus ([BubbleShop](https://bubbleshop.eu/)) ou, para usuários na Rússia, [aqui](https://vk.com/saharmonitor/). Também disponível no AliExpress.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Também disponível no AliExpress.
 -   Atom para usuários na Rússia.
 
 ## 1. Usando o xDrip
 
--   O xDrip é compatível com Miaomiao, Bubble, Blucon, Atom e LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Você pode baixar com segurança o [APK mais recente (estável)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), a menos que precise de funções recentes. Nesse caso, use o [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases) mais recente.
 -   Siga as instruções de configuração na [página de configurações do xDrip](../CompatibleCgms/xDrip.md).
 -    Você também precisa do OOP2 para o Libre 1 US (e o Libre 2 EU).
 -   Selecione xDrip em [**Configuração → Fonte de BG**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Usando o Diabox
 
 - O Diabox é o app do fabricante do Bubble.
