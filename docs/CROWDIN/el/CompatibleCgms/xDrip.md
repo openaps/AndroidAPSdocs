@@ -145,7 +145,7 @@ If you use AAPS, you must activate broadcasting in xDrip's Inter-App settings so
 
 ### Επίπεδο μπαταρίας του Libre smart reader
 
-- Το επίπεδο μπαταρίας γεφυρών όπως το MiaoMiao και το Bubble μπορεί να εμφανίζεται στο AAPS (όχι για το Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Λεπτομέρειες θα βρείτε στη [σελίδα με τις οθόνες](#screens-sensor-level-battery).
 
 ### Συνδέστε τον πομπό Libre & ξεκινήστε τον αισθητήρα
