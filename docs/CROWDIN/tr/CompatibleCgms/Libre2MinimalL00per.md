@@ -347,7 +347,7 @@ xDrip ana ekranının sol üstündeki hamburger menüye basın ve **System Statu
 
 &nbsp;
 
-- **Üçüncü taraf NFC tarama cihazına artık gerek yok** Sensör artık değerleri tek başına Bluetooth ile gönderebildiği için, değer toplamak için (Miaomiao, Bubble veya Blucon gibi) üçüncü taraf NFC tarama cihazlarına artık gerek yoktur *(ama yine de kullanılabilirler)*. Daha az donanım; daha az arıza, şarj edilecek daha az cihaz ve daha sade bir kurulum demektir.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Daha az donanım; daha az arıza, şarj edilecek daha az cihaz ve daha sade bir kurulum demektir.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ xDrip ana ekranının sol üstündeki hamburger menüye basın ve **System Statu
 
 &nbsp;
 
-- **Üçüncü taraf NFC tarama cihazları hâlâ kullanılabilir**. Evet, bunu bir dezavantaj olarak yazdım, ama şunu da belirtmek istedim: sensörde bir sorun olursa ve LL kontrolü ele geçirirse, xDrip'te değer almak için her zaman sensörün üzerine bir NFC tarama cihazı yerleştirme yoluna dönebilirsiniz. Üçüncü taraf bir NFC tarama cihazıyla (Miaomiao, Bubble, Blucon) kurulmuş bir sistem size daha rahat geliyorsa, doğrudan Bluetooth bağlantısı yerine bu cihazı da kullanabilirsiniz. Bazı telefonlar, sensörle yerleşik Bluetooth bağlanması ve veri alma konusunda iyi çalışmaz. Bu cihazları yedek olarak veya normal kullanım için kullanabilirsiniz; her iki durumda da bu seçenek elinizdedir.
+- **Üçüncü taraf NFC tarama cihazları hâlâ kullanılabilir**. Evet, bunu bir dezavantaj olarak yazdım, ama şunu da belirtmek istedim: sensörde bir sorun olursa ve LL kontrolü ele geçirirse, xDrip'te değer almak için her zaman sensörün üzerine bir NFC tarama cihazı yerleştirme yoluna dönebilirsiniz. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Bazı telefonlar, sensörle yerleşik Bluetooth bağlanması ve veri alma konusunda iyi çalışmaz. Bu cihazları yedek olarak veya normal kullanım için kullanabilirsiniz; her iki durumda da bu seçenek elinizdedir.
 - Değer okumak için **FSL Reader**'ı bir NFC tarama cihazı olarak kullanmayı planlıyorsanız, sensörü ısıtmak için FSL2 sensörünü **İLK NFC taramasıyla** **ÖNCE OKUYUCU İLE** başlatmanız GEREKİR.
 
 &nbsp;
