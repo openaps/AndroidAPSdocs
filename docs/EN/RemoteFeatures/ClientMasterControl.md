@@ -1,5 +1,6 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+(master-client-control-signed-remote-control)=
+# Master ↔ Client control
 
 From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
 

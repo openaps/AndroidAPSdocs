@@ -1,4 +1,5 @@
-# Build instructions for the command-line
+(build-instructions-for-the-command-line)=
+# Command-line build
 
 ```{admonition} For users familiar with the command-line and git
 :class: note

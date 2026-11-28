@@ -1,4 +1,5 @@
-# Operation of AAPS via your Wear OS smartwatch
+(operation-of-aaps-via-your-wear-os-smartwatch)=
+# Remote control from a Wear OS watch
 
 (Watchfaces-aaps-watchfaces)=
 

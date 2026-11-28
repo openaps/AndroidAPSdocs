@@ -437,7 +437,59 @@ def add_tool_page_meta(app, pagename, templatename, context, doctree):
                                '<meta name="robots" content="noindex">\n'
                                % tool_pages[pagename]) + context.get('metatags', '')
 
+
+# Translation-proof sidebar menu.
+# The sidebar is built from the toctrees in index.md. On Crowdin every toctree fence is ONE string, so
+# any English edit used to drop the whole block back to English in every language until it was
+# re-approved. The toctrees therefore carry no text any more:
+#   - an entry is a bare path: Sphinx shows the page's own (translated) H1;
+#   - an entry written as "- <page.md>" shows "- " + that H1 (an indented sub-entry);
+#   - a toctree without :caption: takes the heading of the section it sits in, which is an ordinary
+#     translatable string. custom.css hides the duplicate caption on the index page itself.
+from docutils import nodes as _nodes
+from sphinx import addnodes as _addnodes
+
+def _caption_from_heading(app, doctree):
+    for toc in doctree.findall(_addnodes.toctree):
+        if toc.get('caption'):
+            continue
+        section = toc.parent
+        while section is not None and not isinstance(section, _nodes.section):
+            section = section.parent
+        if section is not None and len(section) and isinstance(section[0], _nodes.title):
+            toc['caption'] = toc['rawcaption'] = section[0].astext()
+
+def _remember_dash_entries(app, doctree):
+    refs = getattr(app.env, 'dash_toc_entries', set())
+    for toc in doctree.findall(_addnodes.toctree):
+        for title, ref in toc['entries']:
+            if (title or '').strip() == '-':
+                refs.add((app.env.docname, ref))
+    app.env.dash_toc_entries = refs
+
+def _merge_dash_entries(app, env, docnames, other):
+    env.dash_toc_entries = getattr(env, 'dash_toc_entries', set()) | getattr(other, 'dash_toc_entries', set())
+
+def _apply_dash_entries(app, env):
+    # Runs once all pages are read, so every H1 is known. The sidebar is rendered from
+    # env.master_doctree (cached in memory), the index page body from the pickled doctree: update both.
+    refs = getattr(env, 'dash_toc_entries', set())
+    for docname in {d for d, _ in refs}:
+        if docname not in env.all_docs:
+            continue
+        doctree = env.master_doctree if docname == env.config.root_doc else env.get_doctree(docname)
+        for toc in doctree.findall(_addnodes.toctree):
+            toc['entries'] = [
+                ('- ' + env.titles[ref].astext() if (docname, ref) in refs and ref in env.titles else title, ref)
+                for title, ref in toc['entries']
+            ]
+        app.builder.write_doctree(docname, doctree.deepcopy())
+
 def setup(app):
+    app.connect('doctree-read', _caption_from_heading)
+    app.connect('doctree-read', _remember_dash_entries)
+    app.connect('env-merge-info', _merge_dash_entries)
+    app.connect('env-updated', _apply_dash_entries)
     app.connect('html-page-context', add_tool_page_meta)
     app.add_config_value('recommonmark_config', {
             # 'url_resolver': lambda url: github_doc_root + url,

@@ -1,5 +1,6 @@
 (food)=
-# Food (your food database)
+(food-your-food-database)=
+# Food database
 
 The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
 

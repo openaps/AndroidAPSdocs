@@ -1,4 +1,5 @@
-# How to translate strings for the AAPS app or the documentation
+(how-to-translate-strings-for-the-aaps-app-or-the-documentation)=
+# Translating the app and the docs
 
 * For the strings used in the app go to [https://crowdin.com/project/androidaps](https://crowdin.com/project/androidaps) and login using your GitHub account
 * For the documentation please visit [https://crowdin.com/project/androidapsdocs](https://crowdin.com/project/androidapsdocs) and login using your GitHub account

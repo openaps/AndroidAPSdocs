@@ -1,5 +1,6 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+(quicklaunch-overview-quick-action-toolbar)=
+# QuickLaunch toolbar
 
 **QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
 

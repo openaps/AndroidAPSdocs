@@ -1,4 +1,5 @@
-# For Clinicians – A General Introduction and Guide to AAPS
+(for-clinicians-a-general-introduction-and-guide-to-aaps)=
+# For clinicians: an introduction and guide to AAPS
 
 ```{note}
 This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).

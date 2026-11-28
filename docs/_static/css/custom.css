@@ -184,3 +184,15 @@ pre code {
 .rst-content .error .admonition-title:before {
   content: "\f057";
 }
+
+/* The index page shows each section heading right above its toctree; the toctree caption (copied from
+   that heading by shared.conf.py for the sidebar) would repeat it, so hide it in the page body only. */
+.toctree-wrapper > p.caption {
+  display: none;
+}
+
+/* Keep the documentation index on the start page compact: one line per page, no sub-sections.
+   (:titlesonly: would do the same but also removes the current page's sub-sections from the sidebar.) */
+.toctree-wrapper li ul {
+  display: none;
+}

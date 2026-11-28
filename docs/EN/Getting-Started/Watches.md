@@ -1,4 +1,5 @@
-# Smartwatches and AAPS
+(smartwatches-and-aaps)=
+# Compatible smartwatches
 
 Various smartwatches can be used to display some of the information available in **AAPS** or perform remote actions.
 

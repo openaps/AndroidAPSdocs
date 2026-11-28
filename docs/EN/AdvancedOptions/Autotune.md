@@ -1,4 +1,5 @@
-# How to use Autotune plugin
+(how-to-use-autotune-plugin)=
+# Autotune
 
 Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 

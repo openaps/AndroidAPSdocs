@@ -1,4 +1,5 @@
-# Phones
+(phones)=
+# Compatible phones
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 

@@ -71,154 +71,155 @@ Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower bl
 
 ## AAPS Documentation Index
 
+### Using this documentation
+
 ```{toctree}
-:caption: Using this documentation
 :titlesonly:
 
-Change language and version <./NavigateDoc/ChangeLanguageVersion.md>
-Search the documentation <./NavigateDoc/SearchDoc.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-```
-```{toctree}
-:caption: 1) Getting started
-
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Component Overview <./Getting-Started/ComponentOverview.md>
-- Compatible pumps <./Getting-Started/CompatiblePumps.md>
-- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-- Compatible phones  <./Getting-Started/Phones.md>
-- Compatible watches  <./Getting-Started/Watches.md>
+./NavigateDoc/ChangeLanguageVersion.md
+./NavigateDoc/SearchDoc.md
+./Maintenance/DocumentationUpdate.md
 ```
 
-```{toctree}
-:caption: 2) Build the app
+### 1) Getting started
 
-Dedicated Google account for AAPS (optional) <./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-```
 ```{toctree}
-:caption: 3) Setting up the reporting server
-
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
-- Nightscout <./SettingUpAaps/Nightscout.md>
-- Tidepool <./SettingUpAaps/Tidepool.md>
-```
-```{toctree}
-:caption: 4) Configure AAPS
-
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Settings <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+./Getting-Started/Introduction.md
+./Getting-Started/PreparingForAaps.md
+./Getting-Started/ComponentOverview.md
+- <./Getting-Started/CompatiblePumps.md>
+- <./Getting-Started/CompatiblesCgms.md>
+- <./Getting-Started/Phones.md>
+- <./Getting-Started/Watches.md>
 ```
 
+### 2) Build the app
+
 ```{toctree}
-:caption: 5) Daily Life with AAPS
-
-AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
-Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
-COB calculation <./DailyLifeWithAaps/CobCalculation.md>
-Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
-Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
-Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
-Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
-Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
-QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
-Scenes <./DailyLifeWithAaps/Scenes.md>
-Automations <./DailyLifeWithAaps/Automations.md>
-QuickLaunch toolbar <./DailyLifeWithAaps/QuickLaunch.md>
-Home screen widgets <./DailyLifeWithAaps/Widgets.md>
-Food database <./DailyLifeWithAaps/Food.md>
-Global search <./DailyLifeWithAaps/GlobalSearch.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS for children <./DailyLifeWithAaps/AapsForChildren.md>
-Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
-Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
-
+./UsefulLinks/DedicatedGoogleAccountForAaps.md
+./SettingUpAaps/BuildingAaps.md
+- <./SettingUpAaps/BrowserBuild.md>
+- <./SettingUpAaps/ComputerBuild.md>
+- <./SettingUpAaps/CLIBuild.md>
+./SettingUpAaps/TransferringAndInstallingAaps.md
 ```
 
+### 3) Setting up the reporting server
+
 ```{toctree}
-:caption: 6) Remote AAPS features
-
-Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
-Following Only <./RemoteFeatures/FollowingOnly.md>
-Android Auto <./RemoteFeatures/AndroidAuto.md>
-Remote control <./RemoteFeatures/RemoteControl.md>
-The AAPSClient app <./RemoteFeatures/AapsClient.md>
-Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
-SMS Commands <./RemoteFeatures/SMSCommands.md>
-
-```
-```{toctree}
-:caption: 7) Wear OS Smartwatches
-
-AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
-Use the smartwatch <./WearOS/WearOsSmartwatch.md>
-Remote control <./RemoteFeatures/RemoteControlWearOS.md>
-Custom watchfaces reference <./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md>
-Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
+./SettingUpAaps/SettingUpTheReportingServer.md
+- <./SettingUpAaps/Nightscout.md>
+- <./SettingUpAaps/Tidepool.md>
 ```
 
+### 4) Configure AAPS
+
 ```{toctree}
-:caption: 8) Maintenance of AAPS
-
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-What changed in AAPS v4 <./Maintenance/V4Changes.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
-End of life <./Maintenance/EndOfLife.md>
-
+./SettingUpAaps/SetupWizard.md
+./SettingUpAaps/YourAapsProfile.md
+./SettingUpAaps/ChangeAapsConfiguration.md
+- <./SettingUpAaps/ConfigBuilder.md>
+- <./SettingUpAaps/Preferences.md>
+./SettingUpAaps/CompletingTheObjectives.md
 ```
 
-```{toctree}
-:caption: 9) Help & Troubleshooting
+### 5) Daily Life with AAPS
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
-- Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-- Reinstalling AAPS (new keystore) <./GettingHelp/ReinstallAaps.md>
-- Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
-FAQ <./UsefulLinks/FAQ.md>
+```{toctree}
+./DailyLifeWithAaps/AapsScreens.md
+./DailyLifeWithAaps/KeyAapsFeatures.md
+./DailyLifeWithAaps/CobCalculation.md
+./DailyLifeWithAaps/SensitivityDetectionAndCob.md
+./DailyLifeWithAaps/DynamicISF.md
+./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md
+./DailyLifeWithAaps/TempTargets.md
+./DailyLifeWithAaps/ExtendedCarbs.md
+./DailyLifeWithAaps/QuickWizards.md
+./DailyLifeWithAaps/Scenes.md
+./DailyLifeWithAaps/Automations.md
+./DailyLifeWithAaps/QuickLaunch.md
+./DailyLifeWithAaps/Widgets.md
+./DailyLifeWithAaps/Food.md
+./DailyLifeWithAaps/GlobalSearch.md
+./Maintenance/Reviewing.md
+./DailyLifeWithAaps/AapsForChildren.md
+./DailyLifeWithAaps/PumpsAndCannulas.md
+./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md
 ```
 
+### 6) Remote AAPS features
+
 ```{toctree}
-:caption: 10) Advanced AAPS options
-
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Autotune <./AdvancedOptions/Autotune.md>
-Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
-
+./RemoteFeatures/RemoteMonitoring.md
+./RemoteFeatures/FollowingOnly.md
+./RemoteFeatures/AndroidAuto.md
+./RemoteFeatures/RemoteControl.md
+./RemoteFeatures/AapsClient.md
+./RemoteFeatures/ClientMasterControl.md
+./RemoteFeatures/SMSCommands.md
 ```
+
+### 7) Wear OS Smartwatches
+
 ```{toctree}
-:caption: 11) How to support AAPS
-
-How to help <./SupportingAaps/HowCanIHelp.md>
-Editing the docs <./SupportingAaps/HowToEditTheDocs.md>
-Translating the app and docs <./SupportingAaps/Translations.md>
-State of translations <./SupportingAaps/StateOfTranslations.md>
-Open Humans Uploader <./SupportingAaps/OpenHumans.md>
-
+./WearOS/BuildingAapsWearOS.md
+./WearOS/WearOsSmartwatch.md
+./RemoteFeatures/RemoteControlWearOS.md
+./ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md
+./ExchangeSiteCustomWatchfaces/index.md
 ```
-```{toctree}
-:caption: 12) Resources
 
-Glossary <./UsefulLinks/Glossary.md>
-General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
-For Clinicians <./UsefulLinks/ClinicianGuideToAaps.md>
+### 8) Maintenance of AAPS
+
+```{toctree}
+./Maintenance/ExportImportSettings.md
+./Maintenance/ReleaseNotes.md
+./Maintenance/V4Changes.md
+./Maintenance/UpdateToNewVersion.md
+- <./Maintenance/UpdateBrowserBuild.md>
+- <./Maintenance/UpdateComputerBuild.md>
+./Maintenance/EndOfLife.md
+```
+
+### 9) Help & Troubleshooting
+
+```{toctree}
+./GettingHelp/WhereCanIGetHelp.md
+./GettingHelp/GeneralTroubleshooting.md
+- <./GettingHelp/BluetoothTroubleshooting.md>
+- <./GettingHelp/TroubleshootingNsClient.md>
+- <./GettingHelp/TroubleshootingAndroidStudio.md>
+- <./GettingHelp/BrowserBuildTroubleshooting.md>
+- <./GettingHelp/ReinstallAaps.md>
+- <./GettingHelp/AccessingLogFiles.md>
+./UsefulLinks/FAQ.md
+```
+
+### 10) Advanced AAPS options
+
+```{toctree}
+./AdvancedOptions/FullClosedLoop.md
+./GettingHelp/ProfileTuning.md
+./AdvancedOptions/Autotune.md
+./AdvancedOptions/InsulinConcentration.md
+./AdvancedOptions/DevBranch.md
+./AdvancedOptions/BrowserBuildCherryPick.md
+```
+
+### 11) How to support AAPS
+
+```{toctree}
+./SupportingAaps/HowCanIHelp.md
+./SupportingAaps/HowToEditTheDocs.md
+./SupportingAaps/Translations.md
+./SupportingAaps/StateOfTranslations.md
+./SupportingAaps/OpenHumans.md
+```
+
+### 12) Resources
+
+```{toctree}
+./UsefulLinks/Glossary.md
+./UsefulLinks/BackgroundReading.md
+./UsefulLinks/ClinicianGuideToAaps.md
 ```

@@ -1,4 +1,5 @@
-# Tweaking the AAPS' Profile
+(tweaking-the-aaps-profile)=
+# Profile tuning guide
 
 ```{admonition} This is NOT a medical advice
 :class: warning

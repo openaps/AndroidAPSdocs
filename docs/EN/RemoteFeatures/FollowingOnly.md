@@ -1,4 +1,5 @@
-# Following AAPS (no interaction with the AAPS system) 
+(following-aaps-no-interaction-with-the-aaps-system)=
+# Following only (no remote control)
 
 In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with **AAPS**. 
 
