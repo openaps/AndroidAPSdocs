@@ -399,12 +399,7 @@ Het is handig om de bolussen, TBR's en basaalopdrachten te controleren die naar 
 
 2. Het scherm **Pod Historie** opent met het filter **Alle** geselecteerd. Het toont elke opdracht met de tijd en het resultaat, nieuwste eerst, gegroepeerd per dag. Gebruik de filterknoppen bovenaan (bijvoorbeeld **Bolussen** of **Basaalstanden**) om maar één type opdracht te tonen. Druk op de terugpijl om terug te gaan naar het DASH-pompscherm.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   De tweede schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, waarin je het type opdracht koos uit een lijst **Type**. In **AAPS** 4 gebruik je de filterknoppen uit de eerste schermafbeelding.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    Bij bolussen staat na de hoeveelheid het type bolus als het geen normale bolus is, bijvoorbeeld *0,05 E (SMB)* of *0,05 E (Basaal correctie)*. Een basaalcorrectie is een heel kleine bolus (één puls van de pod, 0,05 E) die de driver zelf stuurt; jij hebt er niet om gevraagd.
 
@@ -495,18 +490,13 @@ Kies of **AAPS** een geluid afspeelt bij zijn meldingen als het niet zeker is of
 
 ## Leeftijd van insuline en canule
 
-De [statusregel](#screens-sensor-level-battery) op het hoofdscherm toont de leeftijd van je insuline en canule. Bij Omnipod werkt dit iets anders dan bij pompen met een slang.
+De [statusregel](#screens-sensor-level-battery) op het hoofdscherm toont de leeftijd van je insuline en canule. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS** registreert automatisch een canulewissel en een insulinewissel elke keer dat je een pod activeert. Daardoor worden de leeftijden van **Insuline** en **Canule** na elke podwissel op nul gezet. Je hoeft ze niet zelf te registreren met **Prime/Vul**. Dit komt doordat de pod de canule direct in de huid brengt op de plek waar hij geplakt is: Omnipod gebruikt geen slang.
+**AAPS** registreert automatisch een canulewissel en een insulinewissel elke keer dat je een pod activeert. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Je hoeft ze niet zelf te registreren met **Prime/Vul**. Dit komt doordat de pod de canule direct in de huid brengt op de plek waar hij geplakt is: Omnipod gebruikt geen slang.
 
 De leeftijd van de **Pomp batterij** wordt niet gemeld: de batterij en het insulinereservoir zitten in elke pod, en de batterij gaat altijd langer mee dan de pod zelf (maximaal 80 uur).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, waarin deze leeftijden werden getoond in het deel **Careportal** van het tabblad **Acties**. In **AAPS** 4 worden ze getoond in de statusregel op het hoofdscherm.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Niveau
 
