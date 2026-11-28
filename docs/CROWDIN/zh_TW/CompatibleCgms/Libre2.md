@@ -80,7 +80,7 @@ xDrip 不支援直接連線至美國和澳洲的 Libre 2。僅支持 Libre 2 和
 
 ## 3. 使用 Diabox
 
-- 安裝 [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)。在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
+- 安裝 [Diabox](https://t.me/s/DiaboxApp)。在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
 
 ![Diabox](../images/Diabox.png)
 

@@ -347,7 +347,7 @@ Between 3 and 15 minutes enough data is collected to display the first values. *
 
 &nbsp;
 
-- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao, Bubble or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Less hardware means less things to go wrong, less devices to charge and a more minimalistic setup.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Less hardware means less things to go wrong, less devices to charge and a more minimalistic setup.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ Between 3 and 15 minutes enough data is collected to display the first values. *
 
 &nbsp;
 
-- **3rd Party NFC Scanning Devices can still be used**. כן, ציינתי זאת כחיסרון, אבל רציתי גם להדגיש: אם משהו משתבש בחיישן ו־LL משתלט עליו, תמיד אפשר לחזור להצמדת מכשיר סריקת NFC לחיישן כדי לקבל קריאות ב־xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Bubble, Blucon). Sometimes certain phones do not operate well with the native Bluetooth sensor bonding and data retrieval. You can use these devices as a backup or as normal usage, either way you still have this as an option.
+- **3rd Party NFC Scanning Devices can still be used**. כן, ציינתי זאת כחיסרון, אבל רציתי גם להדגיש: אם משהו משתבש בחיישן ו־LL משתלט עליו, תמיד אפשר לחזור להצמדת מכשיר סריקת NFC לחיישן כדי לקבל קריאות ב־xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Sometimes certain phones do not operate well with the native Bluetooth sensor bonding and data retrieval. You can use these devices as a backup or as normal usage, either way you still have this as an option.
 - אם מתכננים להשתמש ב־**FSL Reader** כמכשיר סריקת NFC לקבלת קריאות, חובה להפעיל את חיישן FSL2 ב**סריקת ה־NFC הראשונה**, שמחממת את החיישן, **קודם עם הקורא**.
 
 &nbsp;

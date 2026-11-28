@@ -25,7 +25,7 @@ Belangrijkste kenmerken van de **Omnipod DASH** ('DASH'):
 - Zomertijd en wijzigingen van tijdzone worden niet automatisch toegepast. Na een wijziging van de klok moet je de pod zelf bijwerken: druk op **Vernieuwen** op het DASH-pompscherm en druk dan op **Tijd instellen** (zichtbaar als de tijdzones van pod en telefoon verschillen) of doe een **Profiel wissel** (zie [Tijdzonewijziging voor Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash ondersteunt alleen basaalstanden in stappen van 0,05 E/u. Als je in je **AAPS-profiel** een basaal instelt met stappen van 0,01, geeft AAPS geen waarschuwing, ook al rondt de pod de stand naar boven af op stappen van 0,05. Als je **Pod Historie** opent op het DASH-pompscherm, zie je dat er 0,05 basaal is ingesteld. Dit betekent ook dat de laagste basaalstand die de DASH in **AAPS** toestaat 0,05 E/u is.
 - Het instellingenbestand bevat de actieve Pod-sessie. Exporteer je instellingen na elke Pod-activering, en lees [Instellingen exporteren en importeren](#omnipod-dash-export-import) voordat je instellingen importeert.
-- Bij het instellen van een nieuw basaal profiel onderbreekt DASH de toediening voordat het nieuwe basale **Profiel** wordt ingesteld. Bij een onderbreking van de communicatie of een fout start het basale profiel niet vanzelf opnieuw. Zie het deel [Insulinetoediening hervatten](#omnipod-dash-resuming-insulin-delivery) voor details.
+- Bij het instellen van een nieuw basaal profiel onderbreekt DASH de toediening voordat het nieuwe basale **Profiel** wordt ingesteld. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Zie het deel [Insulinetoediening hervatten](#omnipod-dash-resuming-insulin-delivery) voor details.
 - Als waarschuwingen zijn ingesteld en de pod bijna verloopt, blijft de pod piepen tot de waarschuwingen zijn stilgezet. Zie [Pod-alarmen stilzetten](#omnipod-dash-silencing-pod-alerts) voor details.
 - Er zijn een aantal bekende problemen met Bluetooth die problemen bij het activeren van een pod kunnen geven. Zie [Bluetooth-probleemoplossing](../GettingHelp/BluetoothTroubleshooting.md) voor de bekende problemen en oplossingen.
 
@@ -150,6 +150,8 @@ Het pictogram **Instellingen** (tandwiel) rechtsboven opent de [Dash-instellinge
 
 - **Harde einddatum Pod:** Het einde van de extra tijd van de pod (8 uur na **Pod verloopt**, voor een maximale levensduur van de pod van 80 uur). De tekst wordt geel als de extra tijd begint (bij **Pod verloopt**) en rood in de laatste 4 uur voor het harde einde. Tijdens de extra tijd toont het veld ook de resterende tijd, bijvoorbeeld *(17m resterend)*. Bij het harde einde stopt de pod met insuline toedienen en moet hij vervangen worden.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Pod Status:** De status van de pod: **Geen actieve Pod**, **Setup wordt uitgevoerd**, **Actief**, **Onderbroken** of, na een pod-fout, **ALARM**.
 
 - **Laatste verbinding:** Hoe lang geleden **AAPS** voor het laatst met de pod communiceerde.
@@ -187,6 +189,7 @@ De knoppen onderaan het pompscherm veranderen met de status van de pod. Alleen d
 - **Alarmen dempen:** Stopt de piepjes van pod-waarschuwingen (bijvoorbeeld pod verloopt of laag reservoir). Alleen getoond als de pod een actieve waarschuwing heeft. Zie [Pod-alarmen stilzetten](#omnipod-dash-silencing-pod-alerts).
 
 - **Toediening hervatten:** Hervat de insulinetoediening op een onderbroken pod. Alleen getoond als de toediening onderbroken is. Zie [Insulinetoediening hervatten](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Tijd instellen:** Zet de pod op de tijdzone van je telefoon door je basale **Profiel** opnieuw te sturen. Alleen getoond als de tijdzone van de pod anders is dan de tijdzone van je telefoon.
 
@@ -207,11 +210,6 @@ De knoppen onderaan het pompscherm veranderen met de status van de pod. Alleen d
 1. Open het DASH-pompscherm (**Beheren** > **Pomp**) en druk op **Activeer Pod**. De wizard voor activering opent.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 is **Activeer Pod** een knop direct op het DASH-pompscherm, in plaats van in het menu **Pod Management**.
-   ```
 
    Als je nog nooit een **Profiel** hebt geactiveerd in **AAPS**, toont de wizard eerst de stap **Profiel vereist**: kies het profiel dat bij het activeren moet worden gebruikt en ga verder.
 
@@ -303,6 +301,8 @@ Om een pod te deactiveren (omdat hij verlopen of defect is):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. De stap **Pod wordt gedeactiveerd** wordt getoond terwijl **AAPS** de pod deactiveert. De pod piept om te bevestigen dat het deactiveren gelukt is.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Verwijder een pod alleen als alle communicatie ermee blijft mislukken. Als **AAP
 - Daarna kan **AAPS** niet meer met die pod communiceren.
 - **De insulinetoediening is NIET gestopt**, omdat de pod niet goed is gedeactiveerd. **Haal de pod van je lichaam!**
 - De stap **Pod is verwijderd** bevestigt dat de status van de pod is verwijderd. Druk op **Voltooien**. Je kunt nu een nieuwe pod activeren.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Insulinetoediening hervatten
-
-**LET OP**: Bij een **Profiel wissel** moet **AAPS**, net als de PDM, de toediening op de pod onderbreken voordat het nieuwe basale **Profiel** wordt ingesteld. Als de communicatie mislukt tussen de opdrachten om te onderbreken en te hervatten, kan de toediening onderbroken blijven. Lees [**Toediening onderbroken**](#omnipod-dash-delivery-suspended) in het deel probleemoplossing voor meer details.
-
-Als de insulinetoediening onderbroken is, moet je de pod vertellen dat hij de insulinetoediening moet hervatten. Als de opdracht goed is verwerkt, dient de pod weer insuline toe met de basaalstand voor de huidige tijd uit je actieve basale **Profiel**. De pod accepteert dan weer opdrachten voor bolus, **TBR** en **SMB**.
-
-1. Open het DASH-pompscherm en controleer of het veld **Pod Status** **Onderbroken** toont. Druk op **Toediening hervatten** om de pod te vertellen dat hij de normale insulinetoediening moet hervatten.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Als de opdracht gelukt is, toont het veld **Pod Status** **Actief** en verdwijnt de knop **Toediening hervatten**.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   De schermafbeeldingen hierboven komen uit een eerdere **AAPS**-versie, die een bevestigingsvenster toonde. In **AAPS** 4 zie je het resultaat op het DASH-pompscherm: het veld **Pod Status** toont **Actief** en de knop **Toediening hervatten** is weg.
-   ```
-
-   Als de opdracht mislukt, toont **AAPS** een waarschuwing die begint met *Hervatten van insulinetoediening is mislukt*. Druk op **Vernieuwen** en probeer het opnieuw.
-
-   ![De waarschuwing Hervatten van insulinetoediening is mislukt](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Voor bekende problemen met Bluetooth-verbindingen, het wegvallen van pomp/pods, 
 
 ### Toediening onderbroken
 
-  - Er is geen knop meer om te onderbreken. Als je de pod wilt "onderbreken", kun je een **TBR** van nul instellen voor x minuten.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Bij een **Profiel wissel** moet DASH de toediening onderbreken voordat het nieuwe basale **Profiel** wordt ingesteld. Als de communicatie tussen de twee opdrachten mislukt, kan de toediening onderbroken blijven. Als dit gebeurt:
      - Er wordt geen insuline toegediend, ook geen basaal, SMB, handmatige bolus enz.
      - Je kunt een melding krijgen dat een van de opdrachten niet bevestigd is: dit hangt af van het moment waarop de fout gebeurde.
@@ -581,6 +554,22 @@ Voor bekende problemen met Bluetooth-verbindingen, het wegvallen van pomp/pods, 
   - Voor niet-bevestigde opdrachten druk je op **Vernieuwen** op het DASH-pompscherm om ze te bevestigen of af te wijzen.
 
 *****LET OP:** Als je de pod hoort piepen, ga er dan niet van uit dat de toediening doorgaat zonder op de telefoon te kijken. De toediening kan onderbroken blijven, ***dus je moet het controleren!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Insulinetoediening hervatten
+
+Als de insulinetoediening onderbroken is, moet je de pod vertellen dat hij de insulinetoediening moet hervatten. Als de opdracht goed is verwerkt, dient de pod weer insuline toe met de basaalstand voor de huidige tijd uit je actieve basale **Profiel**. De pod accepteert dan weer opdrachten voor bolus, **TBR** en **SMB**.
+
+1. Open het DASH-pompscherm en controleer of het veld **Pod Status** **Onderbroken** toont. Druk op **Toediening hervatten** om de pod te vertellen dat hij de normale insulinetoediening moet hervatten.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Als de opdracht gelukt is, toont het veld **Pod Status** **Actief** en verdwijnt de knop **Toediening hervatten**.
+
+   Als de opdracht mislukt, toont **AAPS** een waarschuwing die begint met *Hervatten van insulinetoediening is mislukt*. Druk op **Vernieuwen** en probeer het opnieuw.
+
+   ![De waarschuwing Hervatten van insulinetoediening is mislukt](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=

@@ -82,7 +82,7 @@ Aunque no necesites la app xDrip como **Fuente de glucosa**, puedes usarla igual
 
 ## Qué hacer mientras se espera a los módulos
 
-A veces se tarda un tiempo en tener todos los módulos para cerrar el lazo. Pero no te preocupes, hay muchas cosas que puedes hacer mientras esperas. Es **necesario** revisar y (si hace falta) ajustar las dosis basales (BR), el ratio de insulina-carbohidratos (IC), los factores de sensibilidad a la insulina (ISF), etc. Y quizás el lazo abierto sea una buena forma de probar el sistema y familiarizarte con **AAPS**. En este modo, **AAPS** da recomendaciones de tratamiento que puedes aplicar a mano.
+A veces se tarda un tiempo en tener todos los módulos para cerrar el lazo. Pero no te preocupes, hay muchas cosas que puedes hacer mientras esperas. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. Y quizás el lazo abierto sea una buena forma de probar el sistema y familiarizarte con **AAPS**. En este modo, **AAPS** da recomendaciones de tratamiento que puedes aplicar a mano.
 
 Puedes seguir leyendo esta documentación, hablar con otros loopers en internet o en persona, [leer](../UsefulLinks/BackgroundReading.md) documentación o lo que escriben otros loopers (aunque debes tener cuidado: no todo es correcto ni bueno para que tú lo copies).
 

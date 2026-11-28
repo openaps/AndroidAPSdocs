@@ -25,7 +25,7 @@ Viktige egenskaper ved **Omnipod DASH** («DASH»):
 - Sommertid og tidssonebytter brukes ikke automatisk. Etter en klokkeendring må du oppdatere poden manuelt: trykk på **Oppdater** på DASH-pumpeskjermen, og trykk deretter på **Angi tid** (vises når tidssonen på poden og telefonen er ulik), eller gjør et **Profilbytte** (se [Tidssonebytte for Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash støtter bare basaldoser i steg på 0,05 E/t. Hvis du prøver å sette basal med steg på 0,01 i **AAPS-profilen** din, gir AAPS ingen advarsel, selv om poden runder dosen opp til steg på 0,05. Hvis du åpner **Pod-historikk** på DASH-pumpeskjermen, viser den at basal ble satt til 0,05. Det betyr også at den laveste basaldosen DASH tillater i **AAPS**, er 0,05 E/t.
 - Innstillingsfilen inneholder den aktive pod-økten. Eksporter innstillingene dine etter hver pod-aktivering, og se [Eksportere og importere innstillinger](#omnipod-dash-export-import) før du importerer innstillinger.
-- Når en ny basalprofil settes, pauser DASH leveringen før den nye basal-**profilen** settes. Hvis kommunikasjonen blir avbrutt eller det oppstår en feil, starter ikke basalprofilen automatisk igjen. Se avsnittet [Gjenoppta insulinleveringen](#omnipod-dash-resuming-insulin-delivery) for detaljer.
+- Når en ny basalprofil settes, pauser DASH leveringen før den nye basal-**profilen** settes. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Se avsnittet [Gjenoppta insulinleveringen](#omnipod-dash-resuming-insulin-delivery) for detaljer.
 - Hvis varsler er satt opp og poden er i ferd med å utløpe, fortsetter poden å pipe til varslene dempes, se [Dempe pod-varsler](#omnipod-dash-silencing-pod-alerts) for detaljer.
 - Det finnes en rekke kjente problemer med Bluetooth som kan gi problemer med pod-aktivering. Se [Feilsøking av Bluetooth](../GettingHelp/BluetoothTroubleshooting.md) for det kjente problemet og løsninger på disse problemene.
 
@@ -150,6 +150,8 @@ Ikonet **Innstillinger** (tannhjulet) øverst til høyre åpner [Dash-innstillin
 
 - **Pod avslutter:** Slutten på podens ekstraperiode (8 timer etter **Pod utløper**, for en maksimal levetid på 80 timer). Teksten blir gul når ekstraperioden starter (ved **Pod utløper**), og rød de siste 4 timene før den endelige slutten. I ekstraperioden viser den også tiden som er igjen, for eksempel *(17 min igjen)*. Poden slutter å levere insulin ved den endelige slutten, og må byttes.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Podstatus:** Tilstanden til poden: **Ingen aktiv Pod**, **Oppsett pågår**, **Kjører**, **Pauset** eller, etter en pod-feil, **ALARM**.
 
 - **Siste tilkobling:** Hvor lenge siden **AAPS** sist kommuniserte med poden.
@@ -187,6 +189,7 @@ Knappene nederst på pumpeskjermen endrer seg med tilstanden til poden. Bare kna
 - **Demp varsler:** Stopper varselpipene fra poden (for eksempel for utløp eller lavt reservoar). Vises bare mens poden har et aktivt varsel. Se [Dempe pod-varsler](#omnipod-dash-silencing-pod-alerts).
 
 - **Gjenoppta levering:** Gjenopptar insulinleveringen på en pauset pod. Vises bare når leveringen er pauset. Se [Gjenoppta insulinleveringen](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Angi tid:** Oppdaterer poden til tidssonen på telefonen din ved å sende basal-**profilen** din på nytt. Vises bare når tidssonen på poden er en annen enn tidssonen på telefonen din.
 
@@ -207,11 +210,6 @@ Knappene nederst på pumpeskjermen endrer seg med tilstanden til poden. Bare kna
 1. Åpne DASH-pumpeskjermen (**Administrer** > **Pumpe**), og trykk på **Aktiver Pod**. Aktiveringsveiviseren åpnes.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Skjermbildet ovenfor er fra en tidligere **AAPS**-versjon. I **AAPS** 4 er **Aktiver Pod** en knapp direkte på DASH-pumpeskjermen i stedet for i menyen **Pod Management**.
-   ```
 
    Hvis du aldri har aktivert en **profil** i **AAPS** før, viser veiviseren først steget **Profil kreves**: velg profilen som skal brukes ved aktivering, og fortsett.
 
@@ -303,6 +301,8 @@ Slik deaktiverer du en pod (enten fordi den er utløpt, eller fordi den har svik
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. Steget **Deaktiverer Pod** vises mens **AAPS** deaktiverer poden. Poden piper for å bekrefte at deaktiveringen var vellykket.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Forkast en pod bare når all kommunikasjon med den fortsetter å mislykkes. Hvis
 - Etter det kan **AAPS** ikke lenger kommunisere med den poden.
 - **Insulinleveringen er IKKE pauset**, fordi poden ikke ble deaktivert på riktig måte. **Fjern poden fra kroppen!**
 - Steget **Pod forkastet** bekrefter at pod-tilstanden er forkastet. Trykk på **Fullfør**. Du kan nå aktivere en ny pod.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Gjenoppta insulinleveringen
-
-**MERK**: Ved **profilbytter** må **AAPS**, som når du bruker PDM-en, pause leveringen på poden før den nye basal-**profilen** settes. Hvis kommunikasjonen svikter mellom pause- og gjenoppta-kommandoene, kan leveringen forbli pauset. Les [**Levering pauset**](#omnipod-dash-delivery-suspended) i feilsøkingsdelen for flere detaljer.
-
-Når insulinleveringen er pauset, må du be poden om å gjenoppta insulinleveringen. Når kommandoen er behandlet, leverer poden insulin igjen med basaldosen for gjeldende tidspunkt fra den aktive basal-**profilen** din. Poden godtar igjen kommandoer for bolus, **midlertidig basal** og **SMB**.
-
-1. Åpne DASH-pumpeskjermen, og kontroller at feltet **Podstatus** viser **Pauset**. Trykk på **Gjenoppta levering** for å be poden om å gjenoppta normal insulinlevering.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Når kommandoen var vellykket, viser feltet **Podstatus** **Kjører**, og knappen **Gjenoppta levering** forsvinner.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Skjermbildene ovenfor er fra en tidligere **AAPS**-versjon, som viste en bekreftelsesdialog. I **AAPS** 4 bekrefter du resultatet på DASH-pumpeskjermen: feltet **Podstatus** viser **Kjører**, og knappen **Gjenoppta levering** er borte.
-   ```
-
-   Hvis kommandoen mislykkes, viser **AAPS** en advarselsdialog som begynner med *Kunne ikke gjenoppta leveringen*. Trykk på **Oppdater**, og prøv igjen.
-
-   ![Advarselen Kunne ikke gjenoppta leveringen](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ For kjente problemer med Bluetooth-tilkoblinger, frafall av pumpe/pods, eller pr
 
 ### Levering pauset
 
-  - Det finnes ikke lenger noen pauseknapp. Hvis du vil «pause» poden, kan du sette en **midlertidig basal** på null i x minutter.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Ved **profilbytter** må DASH pause leveringen før den nye basal-**profilen** settes. Hvis kommunikasjonen svikter mellom de to kommandoene, kan leveringen forbli pauset. Når dette skjer:
      - Det blir ingen insulinlevering, og det gjelder basal, SMB, manuell bolus osv.
      - Det kan komme et varsel om at en av kommandoene er ubekreftet: det avhenger av når feilen oppsto.
@@ -581,6 +554,22 @@ For kjente problemer med Bluetooth-tilkoblinger, frafall av pumpe/pods, eller pr
   - For ubekreftede kommandoer, trykk på **Oppdater** på DASH-pumpeskjermen for å bekrefte eller avkrefte dem.
 
 *****MERK:** Når du hører pip fra poden, ikke ta det for gitt at leveringen fortsetter uten å sjekke telefonen; leveringen kan forbli pauset, ***så du må sjekke!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Gjenoppta insulinleveringen
+
+Når insulinleveringen er pauset, må du be poden om å gjenoppta insulinleveringen. Når kommandoen er behandlet, leverer poden insulin igjen med basaldosen for gjeldende tidspunkt fra den aktive basal-**profilen** din. Poden godtar igjen kommandoer for bolus, **midlertidig basal** og **SMB**.
+
+1. Åpne DASH-pumpeskjermen, og kontroller at feltet **Podstatus** viser **Pauset**. Trykk på **Gjenoppta levering** for å be poden om å gjenoppta normal insulinlevering.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Når kommandoen var vellykket, viser feltet **Podstatus** **Kjører**, og knappen **Gjenoppta levering** forsvinner.
+
+   Hvis kommandoen mislykkes, viser **AAPS** en advarselsdialog som begynner med *Kunne ikke gjenoppta leveringen*. Trykk på **Oppdater**, og prøv igjen.
+
+   ![Advarselen Kunne ikke gjenoppta leveringen](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=

@@ -145,7 +145,7 @@ Suivez les instructions :
 
 ### Niveau de batterie du transmetteur Freestyle Libre
 
-- Le niveau de batterie des bridges comme MiaoMiao et Bubble peut être affiché dans AAPS (pas pour Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Les détails se trouvent sur la [page des captures d'écran](#screens-sensor-level-battery).
 
 ### Connecter le transmetteur Libre & démarrer le capteur

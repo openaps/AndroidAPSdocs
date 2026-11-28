@@ -347,7 +347,7 @@
 
 &nbsp;
 
-- **不再需要第三方 NFC 掃描裝置** 像 (Miaomiao, Bubble 或 Blucon)的第三方 NFC 掃描裝置不再需要 *(但仍可使用)* 來收集讀取值，因為現在傳感器可以透過藍牙自己傳送讀取值。更少的硬體意味著更少的故障，更少的設備需要充電，搭配更簡約的設置。
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. 更少的硬體意味著更少的故障，更少的設備需要充電，搭配更簡約的設置。
 
 &nbsp;
 
@@ -379,7 +379,7 @@
 
 &nbsp;
 
-- **第三方NFC掃描設備仍然可以使用**。沒錯，我將這點列為缺點，但也想指出，如果傳感器發生問題，且 LL 接管了傳感器，您還是可以將 NFC 掃描裝置貼在傳感器上，改用 xDrip 取得讀取值。如果您更喜歡使用第三方NFC掃描設備（如MiaoMiao、Bubble、Blucon）組成的設置，而非直接的藍牙連接，也可以使用此裝置。有時某些手機與原生藍牙傳感器的綁定和資料檢索不良。您可以將這些設備作為備用或正常使用，無論如何您仍然有這個選項。
+- **第三方NFC掃描設備仍然可以使用**。沒錯，我將這點列為缺點，但也想指出，如果傳感器發生問題，且 LL 接管了傳感器，您還是可以將 NFC 掃描裝置貼在傳感器上，改用 xDrip 取得讀取值。 You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). 有時某些手機與原生藍牙傳感器的綁定和資料檢索不良。您可以將這些設備作為備用或正常使用，無論如何您仍然有這個選項。
 - 如果您打算使用 **FSL Reader** 作為 NFC 掃描裝置來取得讀取值，您**必須使用 Reader 進行第一次 NFC 掃描**，才能啟動 FSL2 傳感器並讓傳感器暖機。
 
 &nbsp;

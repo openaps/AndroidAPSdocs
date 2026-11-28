@@ -81,7 +81,7 @@ Você pode calibrar o Libre2 **com um deslocamento (offset) de -40 mg/dl a +20 m
 
 ## 3. Usar o Diabox
 
-- Instale o [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). Em Settings, Integration, ative Share data with other apps (compartilhar dados com outros apps).
+- Instale o [Diabox](https://t.me/s/DiaboxApp). Em Settings, Integration, ative Share data with other apps (compartilhar dados com outros apps).
 
 ![Diabox](../images/Diabox.png)
 

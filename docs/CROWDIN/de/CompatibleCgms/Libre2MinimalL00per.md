@@ -347,7 +347,7 @@ Auf dem **BT Device** Tab (nach links wischen) kannst Du weitere Verbindungsdeta
 
 &nbsp;
 
-- **Drittanbieter-Geräte zum Scannen werden nicht mehr benötigt:** Da der Sensor die Messwerte mittlerweile per Bluetooth überträgt, werden Drittanbieter-Geräte (z. B. (Miaomiao, Bubble oder Blucon) nicht mehr benötigt *(sie können aber weiterhin genutzt werden)*. Weniger Hardware bedeutet weniger Fehlerquellen, weniger Dinge, die geladen werden müssen und ein vereinfachtes Setup.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Weniger Hardware bedeutet weniger Fehlerquellen, weniger Dinge, die geladen werden müssen und ein vereinfachtes Setup.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ Auf dem **BT Device** Tab (nach links wischen) kannst Du weitere Verbindungsdeta
 
 &nbsp;
 
-- **NFC-Scan-Geräte von Drittanbietern können weiterhin genutzt werden**. Ich habe das zwar als Nachteil aufgeführt, möchte aber auch darauf hinweisen: Wenn mit dem Sensor etwas schiefgeht und LL die Kontrolle darüber übernimmt, kannst Du jederzeit auf ein NFC-Scan-Gerät auf dem Sensor zurückgreifen, um Messwerte in xDrip zu erhalten. Wenn Du Dich mit einem Setup, dass einen Drittanbieter NFC-Scan-Gerät (Miaomiao, Bubble, Blucon) enthält, wohler fühlst, kannst Du das Gerät auch anstelle einer direkten Bluetooth-Verbindung verwenden. In einzelnen Fällen und für bestimme Smartphones funktioniert die native Bluetooth-Verbindung und -Datenabfrage zum Sensor nicht verlässlich. In dieser Situation können diese Geräte entweder als Backup oder regulär genutzt werden. Wie dem auch sei, Du hast die Möglichkeit.
+- **NFC-Scan-Geräte von Drittanbietern können weiterhin genutzt werden**. Ich habe das zwar als Nachteil aufgeführt, möchte aber auch darauf hinweisen: Wenn mit dem Sensor etwas schiefgeht und LL die Kontrolle darüber übernimmt, kannst Du jederzeit auf ein NFC-Scan-Gerät auf dem Sensor zurückgreifen, um Messwerte in xDrip zu erhalten. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). In einzelnen Fällen und für bestimme Smartphones funktioniert die native Bluetooth-Verbindung und -Datenabfrage zum Sensor nicht verlässlich. In dieser Situation können diese Geräte entweder als Backup oder regulär genutzt werden. Wie dem auch sei, Du hast die Möglichkeit.
 - Wenn Du das **Lesegerät** als NFC-Scan-Gerät für Messwerte nutzen möchtest, MUSST Du den Libre 2-Sensor mit dem **ALLERERSTEN NFC-Scan** starten, um die Aufwärmphase **ZUERST MIT DEM LESEGERÄT** einzuleiten.
 
 &nbsp;

@@ -81,7 +81,7 @@ You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 m
 
 ## 3. 使用 Diabox
 
-- 安装[Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)。在“设置”、“集成”中，启用“与其他应用程序共享数据”。
+- 安装 [Diabox](https://t.me/s/DiaboxApp)。在“设置”、“集成”中，启用“与其他应用程序共享数据”。
 
 ![Diabox](../images/Diabox.png)
 

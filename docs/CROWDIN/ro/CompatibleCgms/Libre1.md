@@ -10,17 +10,18 @@ Verificați dacă puntea și aplicația pe care doriți să le utilizați sunt c
 Unele punți sunt încă disponibile pe piață:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (versiunea 1, 2 sau 3) este de asemenea disponibil pe AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) de la vânzătorii europeni ([BubbleShop](https://bubbleshop.eu/)) sau pentru utilizatorii ruși [aici](https://vk.com/saharmonitor/). De asemenea, este disponibil pe AliExpress.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). De asemenea, este disponibil pe AliExpress.
 -   Atom pentru utilizatorii ruși.
 
 ## 1. Utilizarea xDrip
 
--   xDrip acceptă Miaomiao, Bubble, Blucon, Atom și LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Puteți descărca în siguranță [ultimul APK (stabil)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) dacă nu aveți nevoie de caracteristici recente, caz în care ar trebui să utilizați cel mai recent [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Urmați instrucțiunile de configurare de pe [pagina de setări xDrip](../CompatibleCgms/xDrip.md).
 -    De asemenea, aveți nevoie de OOP2 pentru Libre 1 SUA (și Libre 2 UE).
 -   Selectați xDrip în [**Configurație → Sursă glicemie**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Utilizarea Diabox
 
 - Diabox este aplicația furnizorului Bubble.

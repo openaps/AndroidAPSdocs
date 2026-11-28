@@ -82,7 +82,7 @@ Aj keď aplikáciu xDrip nepotrebujete ako **zdroj glykémie**, môžete ju aj t
 
 ## Čo robiť počas čakania na moduly
 
-Niekedy chvíľu trvá, kým získate všetky moduly na uzavretie okruhu. Ale žiadny strach, počas čakania sa dá robiť veľa vecí. Je **nevyhnutné** skontrolovať a (v prípade potreby) upraviť bazálne dávky (BR), inzulínovo-sacharidový pomer (IC), faktory citlivosti na inzulín (ISF) atď. A možno je otvorený okruh dobrý spôsob, ako otestovať systém a zoznámiť sa s **AAPS**. V tomto režime systém **AAPS** poskytuje odporúčania, ktoré môžete vykonať manuálne.
+Niekedy chvíľu trvá, kým získate všetky moduly na uzavretie okruhu. Ale žiadny strach, počas čakania sa dá robiť veľa vecí. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. A možno je otvorený okruh dobrý spôsob, ako otestovať systém a zoznámiť sa s **AAPS**. V tomto režime systém **AAPS** poskytuje odporúčania, ktoré môžete vykonať manuálne.
 
 Môžete pokračovať v čítaní dokumentácie tu, spojiť sa s inými používateľmi okruhu online alebo osobne, [čítať](../UsefulLinks/BackgroundReading.md) dokumentáciu alebo to, čo píšu iní používatelia okruhu (aj keď musíte byť opatrní: nie všetko je správne alebo vhodné, aby ste to po nich opakovali).
 

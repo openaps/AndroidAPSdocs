@@ -347,7 +347,7 @@ Op het scherm **BT Device** (veeg naar links) kun je meer verbindingsdetails van
 
 &nbsp;
 
-- **NFC-scanners van derden niet meer nodig** NFC-scanners van derden, zoals Miaomiao, Bubble of Blucon, zijn niet meer nodig *(maar je kunt ze nog wel gebruiken)* om waarden te verzamelen, omdat de sensor ze nu zelf via Bluetooth kan leveren. Minder hardware betekent minder dingen die mis kunnen gaan, minder apparaten om op te laden en een eenvoudigere opstelling.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Minder hardware betekent minder dingen die mis kunnen gaan, minder apparaten om op te laden en een eenvoudigere opstelling.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ Op het scherm **BT Device** (veeg naar links) kun je meer verbindingsdetails van
 
 &nbsp;
 
-- **NFC-scanners van derden kunnen nog steeds gebruikt worden**. Ja, ik noemde dit een nadeel, maar ik wil ook laten zien dat je, als er iets misgaat met de sensor en LL de controle overneemt, altijd terug kunt vallen op een NFC-scanner op de sensor om waarden in xDrip te krijgen. Je kunt ook zo'n apparaat gebruiken in plaats van een directe Bluetooth-verbinding, als je je prettiger voelt bij een opstelling met een NFC-scanner van derden (Miaomiao, Bubble, Blucon). Soms werken sommige telefoons niet goed met de directe Bluetooth-koppeling met de sensor en het ophalen van data. Je kunt deze apparaten als reserve of voor normaal gebruik inzetten. Hoe dan ook, je hebt deze mogelijkheid nog steeds.
+- **NFC-scanners van derden kunnen nog steeds gebruikt worden**. Ja, ik noemde dit een nadeel, maar ik wil ook laten zien dat je, als er iets misgaat met de sensor en LL de controle overneemt, altijd terug kunt vallen op een NFC-scanner op de sensor om waarden in xDrip te krijgen. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Soms werken sommige telefoons niet goed met de directe Bluetooth-koppeling met de sensor en het ophalen van data. Je kunt deze apparaten als reserve of voor normaal gebruik inzetten. Hoe dan ook, je hebt deze mogelijkheid nog steeds.
 - Wil je de **FSL-reader** gebruiken als NFC-scanner om waarden te lezen, dan MOET je de FSL2 sensor opwarmen met de **ALLEREERSTE NFC-scan** en dat **EERST MET DE READER** doen.
 
 &nbsp;

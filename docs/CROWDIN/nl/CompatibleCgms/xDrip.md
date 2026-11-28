@@ -145,7 +145,7 @@ Volg de instructies:
 
 ### Batterijniveau van opzetapparaatje voor FSL
 
-- Het batterijniveau van bridges zoals MiaoMiao en Bubble kan in AAPS worden getoond (niet van Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Details staan op de [pagina met schermafbeeldingen](#screens-sensor-level-battery).
 
 ### Verbind Libre opzetapparaatje & start sensor

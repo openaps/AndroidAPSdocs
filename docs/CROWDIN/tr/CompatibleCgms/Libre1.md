@@ -10,17 +10,18 @@ Kullanmak istediğiniz köprünün ve uygulamanın sensörünüzle uyumlu olduğ
 Piyasada hâlâ bazı köprüler satılmaktadır:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (sürüm 1, 2 veya 3) AliExpress'te de satılır.
--   Avrupalı satıcılardan ([BubbleShop](https://bubbleshop.eu/)) [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) veya Rusya'daki kullanıcılar için [buradan](https://vk.com/saharmonitor/). AliExpress'te de satılır.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). AliExpress'te de satılır.
 -   Rusya'daki kullanıcılar için Atom.
 
 ## 1. xDrip kullanımı
 
--   xDrip; Miaomiao, Bubble, Blucon, Atom ve LibreAlarm'ı destekler.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Yeni özelliklere ihtiyacınız yoksa [en son APK'yı (kararlı)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) güvenle indirebilirsiniz. Yeni özelliklere ihtiyacınız varsa en son [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases) sürümünü kullanın.
 -   [xDrip ayarları sayfasındaki](../CompatibleCgms/xDrip.md) kurulum talimatlarını izleyin.
 -    Libre 1 US (ve Libre 2 EU) için OOP2 de gerekir.
 -   [**Konfigürasyon → KŞ kaynağı**](#Config-Builder-bg-source) içinde xDrip'i seçin.
 
+(libre1-diabox)=
 ## 2. Diabox kullanımı
 
 - Diabox, Bubble'ın üretici uygulamasıdır.

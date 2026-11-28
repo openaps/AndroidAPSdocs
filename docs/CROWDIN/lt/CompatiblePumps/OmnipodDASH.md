@@ -25,7 +25,7 @@ Pagrindinės **Omnipod DASH** („DASH“) savybės:
 - Vasaros laiko ir laiko juostos pakeitimai automatiškai nepritaikomi. Pasikeitus laikui, Pod turite atnaujinti rankiniu būdu: DASH pompos ekrane paspauskite **Atnaujinti**, tada paspauskite **Nustatyti laiką** (rodomas, kai Pod ir telefono laiko juostos skiriasi) arba atlikite **profilio keitimą** (žr. [Laiko juostos keitimas su Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash palaiko tik valandinę bazę 0,05 V/val. žingsniais. Jei savo **AAPS profilyje** bandote nustatyti valandinę bazę 0,01 žingsniais, AAPS neįspės, nors Pod suapvalins reikšmę iki 0,05 žingsnio. Jei DASH pompos ekrane atidarysite **Pod istorija**, ten bus parodyta, kad nustatyta 0,05 valandinė bazė. Tai taip pat reiškia, kad mažiausia DASH valandinė bazė, leidžiama **AAPS**, yra 0,05 V/val.
 - Nustatymų faile yra aktyvi Pod sesija. Eksportuokite nustatymus po kiekvieno Pod aktyvavimo, o prieš importuodami nustatymus perskaitykite skyrių [Nustatymų eksportavimas ir importavimas](#omnipod-dash-export-import).
-- Nustatydamas naują valandinės bazės profilį, DASH sustabdo insulino tiekimą prieš nustatydamas naują valandinės bazės **profilį**. Jei ryšys nutrūksta arba įvyksta klaida, valandinės bazės profilis automatiškai iš naujo nepasileidžia. Daugiau informacijos rasite skyriuje [Insulino tiekimo atnaujinimas](#omnipod-dash-resuming-insulin-delivery).
+- Nustatydamas naują valandinės bazės profilį, DASH sustabdo insulino tiekimą prieš nustatydamas naują valandinės bazės **profilį**. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Daugiau informacijos rasite skyriuje [Insulino tiekimo atnaujinimas](#omnipod-dash-resuming-insulin-delivery).
 - Jei perspėjimai nustatyti ir Pod naudojimo laikas tuoj baigsis, Pod pypsės tol, kol perspėjimai bus nutildyti. Daugiau informacijos rasite skyriuje [Pod perspėjimų nutildymas](#omnipod-dash-silencing-pod-alerts).
 - Yra keletas žinomų Bluetooth problemų, dėl kurių gali nepavykti aktyvuoti Pod. Žinomas problemas ir jų sprendimus rasite puslapyje [Bluetooth trikčių šalinimas](../GettingHelp/BluetoothTroubleshooting.md).
 
@@ -150,6 +150,8 @@ O taip ekranas atrodo su aktyviu Pod:
 
 - **Pod veikimo pabaiga:** Pod papildomo laiko pabaiga (8 valandos po **Pod naudojimo pabaiga**, iš viso Pod gali veikti ne ilgiau kaip 80 valandų). Tekstas tampa geltonas, kai prasideda papildomas laikas (ties **Pod naudojimo pabaiga**), ir raudonas paskutines 4 valandas iki veikimo pabaigos. Papildomo laiko metu taip pat rodoma, kiek laiko liko, pavyzdžiui, *(17m remaining)*. Veikimo pabaigoje Pod nustoja tiekti insuliną, todėl jį reikia pakeisti.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Pod būklė:** Pod būsena: **Nėra aktyvaus Pod**, **Nustatoma**, **Vykdoma**, **Sustabdyta** arba, po Pod gedimo, **ALARM**.
 
 - **Paskutinis prisijungimas:** Prieš kiek laiko **AAPS** paskutinį kartą bendravo su Pod.
@@ -187,6 +189,7 @@ Mygtukai pompos ekrano apačioje keičiasi pagal Pod būseną. Rodomi tik tie my
 - **Nutildyti perspėjimus:** Sustabdo Pod perspėjimų pypsėjimą (pavyzdžiui, dėl Pod naudojimo pabaigos ar senkančio rezervuaro). Rodomas tik tada, kai Pod turi aktyvų perspėjimą. Žr. [Pod perspėjimų nutildymas](#omnipod-dash-silencing-pod-alerts).
 
 - **Atnaujinti insulino tiekimą:** Atnaujina insulino tiekimą sustabdytame Pod. Rodomas tik tada, kai insulino tiekimas sustabdytas. Žr. [Insulino tiekimo atnaujinimas](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Nustatyti laiką:** Pakeičia Pod laiko juostą į telefono laiko juostą, iš naujo išsiųsdamas jūsų valandinės bazės **profilį**. Rodomas tik tada, kai Pod laiko juosta skiriasi nuo telefono laiko juostos.
 
@@ -207,11 +210,6 @@ Mygtukai pompos ekrano apačioje keičiasi pagal Pod būseną. Rodomi tik tie my
 1. Atidarykite DASH pompos ekraną (**Valdymas** > **Pompa**) ir paspauskite **Aktyvuoti Pod**. Atsidaro aktyvavimo vedlys.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Aukščiau esanti ekrano kopija yra iš ankstesnės **AAPS** versijos. **AAPS** 4 versijoje **Aktyvuoti Pod** yra mygtukas tiesiog DASH pompos ekrane, o ne **Pod valdymo** meniu.
-   ```
 
    Jei **AAPS** dar niekada neaktyvavote **profilio**, vedlys pirmiausia parodo žingsnį **Reikalingas profilis**: pasirinkite profilį, kuris bus pritaikytas aktyvuojant, ir tęskite.
 
@@ -303,6 +301,8 @@ Norėdami išjungti Pod (nes baigėsi jo naudojimo laikas arba jis sugedo):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. Kol **AAPS** išjungia Pod, rodomas žingsnis **Pod išjungiamas**. Pod pypteli, patvirtindamas, kad išjungimas pavyko.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Pašalinkite Pod tik tada, kai visi bandymai su juo susisiekti nuolat nepavyksta
 - Po to **AAPS** nebegali bendrauti su tuo Pod.
 - **Insulino tiekimas NĖRA sustabdytas**, nes Pod nebuvo tinkamai išjungtas. **Nuimkite Pod nuo kūno!**
 - Žingsnis **Pod pašalintas** patvirtina, kad Pod būsena pašalinta. Paspauskite **Baigti**. Dabar galite aktyvuoti naują Pod.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Insulino tiekimo atnaujinimas
-
-**PASTABA**: **Profilio keitimo** metu, kaip ir naudojant PDM, **AAPS** turi sustabdyti insulino tiekimą Pod prieš nustatydama naują valandinės bazės **profilį**. Jei tarp sustabdymo ir atnaujinimo komandų nutrūksta ryšys, insulino tiekimas gali likti sustabdytas. Daugiau informacijos rasite trikčių šalinimo skyriuje [**Insulino tiekimas sustabdytas**](#omnipod-dash-delivery-suspended).
-
-Kai insulino tiekimas sustabdytas, turite nurodyti Pod atnaujinti insulino tiekimą. Kai komanda sėkmingai įvykdoma, Pod vėl tiekia insuliną pagal jūsų aktyvaus valandinės bazės **profilio** valandinę bazę dabartiniam laikui. Pod vėl priima boluso, **laikinos bazės** ir **SMB** komandas.
-
-1. Atidarykite DASH pompos ekraną ir patikrinkite, ar lauke **Pod būklė** rodoma **Sustabdyta**. Paspauskite **Atnaujinti insulino tiekimą**, kad Pod atnaujintų įprastą insulino tiekimą.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Kai komanda pavyksta, lauke **Pod būklė** rodoma **Vykdoma**, o mygtukas **Atnaujinti insulino tiekimą** išnyksta.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Aukščiau esančios ekrano kopijos yra iš ankstesnės **AAPS** versijos, kurioje buvo rodomas patvirtinimo langas. **AAPS** 4 versijoje rezultatą patikrinate DASH pompos ekrane: lauke **Pod būklė** rodoma **Vykdoma**, o mygtuko **Atnaujinti insulino tiekimą** nebėra.
-   ```
-
-   Jei komanda nepavyksta, **AAPS** parodo įspėjimo langą, kuris prasideda žodžiais *Nepavyko atnaujinti insulino tiekimo*. Paspauskite **Atnaujinti** ir bandykite dar kartą.
-
-   ![Įspėjimas „Nepavyko atnaujinti insulino tiekimo“](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Dėl žinomų Bluetooth ryšio problemų, pompos / Pod ryšio nutrūkimų arba a
 
 ### Insulino tiekimas sustabdytas
 
-  - Mygtuko „sustabdyti“ nebėra. Jei norite „sustabdyti“ Pod, galite nustatyti nulinę **laikiną bazę** x minučių.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - **Profilio keitimo** metu DASH turi sustabdyti insulino tiekimą prieš nustatydamas naują valandinės bazės **profilį**. Jei tarp šių dviejų komandų nutrūksta ryšys, insulino tiekimas gali likti sustabdytas. Kai taip atsitinka:
      - Insulinas visai netiekiamas: nėra valandinės bazės, SMB, rankinių bolusų ir pan.
      - Gali būti rodomas pranešimas, kad viena iš komandų nepatvirtinta: tai priklauso nuo to, kada įvyko klaida.
@@ -581,6 +554,22 @@ Dėl žinomų Bluetooth ryšio problemų, pompos / Pod ryšio nutrūkimų arba a
   - Nepatvirtintoms komandoms patvirtinti arba paneigti DASH pompos ekrane paspauskite **Atnaujinti**.
 
 *****PASTABA:** Išgirdę Pod pypsėjimą, nemanykite, kad insulino tiekimas tęsis, nepatikrinę telefono: tiekimas gali likti sustabdytas, ***todėl būtinai patikrinkite!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Insulino tiekimo atnaujinimas
+
+Kai insulino tiekimas sustabdytas, turite nurodyti Pod atnaujinti insulino tiekimą. Kai komanda sėkmingai įvykdoma, Pod vėl tiekia insuliną pagal jūsų aktyvaus valandinės bazės **profilio** valandinę bazę dabartiniam laikui. Pod vėl priima boluso, **laikinos bazės** ir **SMB** komandas.
+
+1. Atidarykite DASH pompos ekraną ir patikrinkite, ar lauke **Pod būklė** rodoma **Sustabdyta**. Paspauskite **Atnaujinti insulino tiekimą**, kad Pod atnaujintų įprastą insulino tiekimą.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Kai komanda pavyksta, lauke **Pod būklė** rodoma **Vykdoma**, o mygtukas **Atnaujinti insulino tiekimą** išnyksta.
+
+   Jei komanda nepavyksta, **AAPS** parodo įspėjimo langą, kuris prasideda žodžiais *Nepavyko atnaujinti insulino tiekimo*. Paspauskite **Atnaujinti** ir bandykite dar kartą.
+
+   ![Įspėjimas „Nepavyko atnaujinti insulino tiekimo“](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=

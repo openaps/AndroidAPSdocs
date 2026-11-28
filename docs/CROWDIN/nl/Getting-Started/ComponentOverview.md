@@ -82,7 +82,7 @@ Ook als je de xDrip-app niet als **BG bron** nodig hebt, kun je hem toch gebruik
 
 ## Wat te doen tijdens het wachten op onderdelen
 
-Het duurt soms even voordat je alle onderdelen hebt om de loop te sluiten. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. Het is **nodig** om je basaalstanden (BR), koolhydraatratio (IC), insulinegevoeligheidsfactoren (ISF) enz. te controleren en (waar nodig) aan te passen. En misschien is de open loop een goede manier om het systeem te testen en **AAPS** te leren kennen. In deze modus geeft **AAPS** behandeladviezen die je zelf met de hand uitvoert.
+Het duurt soms even voordat je alle onderdelen hebt om de loop te sluiten. Maar geen zorgen, er zijn een heleboel dingen die je kunt doen tijdens het wachten. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. En misschien is de open loop een goede manier om het systeem te testen en **AAPS** te leren kennen. In deze modus geeft **AAPS** behandeladviezen die je zelf met de hand uitvoert.
 
 Je kunt hier verder lezen in de documentatie, online of offline contact zoeken met andere loopers, documentatie [lezen](../UsefulLinks/BackgroundReading.md) of lezen wat andere loopers schrijven (wees wel voorzichtig: niet alles klopt of is goed voor jou om na te doen).
 

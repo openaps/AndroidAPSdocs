@@ -81,7 +81,7 @@ Du kannst den Libre2 **mit einem Offset von -40 mg/dl bis +20 mg/dl \[-2,2 mmol/
 
 ## 3. Diabox nutzen
 
-- Installiere [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In den Einstellungen, Integration, aktiviere die Datenfreigabe für andere Apps.
+- Installiere [Diabox](https://t.me/s/DiaboxApp). In den Einstellungen, Integration, aktiviere die Datenfreigabe für andere Apps.
 
 ![Diabox](../images/Diabox.png)
 

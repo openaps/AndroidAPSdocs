@@ -82,7 +82,7 @@ Selv om du ikke har brug for xDrip-appen som **BS-kilde**, kan du stadig bruge d
 
 ## Hvad du kan gøre, mens du venter på modulerne
 
-Det tager nogle gange et stykke tid at få alle modulerne til at lukke loopet. Men bare rolig, der er mange ting, du kan gøre, mens du venter. Det er **nødvendigt** at kontrollere og (hvor det er relevant) tilpasse basalrater (BR), insulin til kulhydrat-forhold (IC), insulinfølsomhedsfaktorer (ISF) osv. Og måske kan åbent loop være en god måde at teste systemet på og lære **AAPS** at kende. I denne tilstand giver **AAPS** forslag til behandling, som du selv kan udføre.
+Det tager nogle gange et stykke tid at få alle modulerne til at lukke loopet. Men bare rolig, der er mange ting, du kan gøre, mens du venter. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. Og måske kan åbent loop være en god måde at teste systemet på og lære **AAPS** at kende. I denne tilstand giver **AAPS** forslag til behandling, som du selv kan udføre.
 
 Du kan blive ved med at læse dokumentationen her, komme i kontakt med andre loopere online eller offline, [læse](../UsefulLinks/BackgroundReading.md) dokumentation, eller hvad andre loopere skriver (men vær forsigtig: ikke alt er rigtigt eller godt for dig at gøre efter).
 

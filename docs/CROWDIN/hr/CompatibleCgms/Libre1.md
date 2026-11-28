@@ -10,17 +10,18 @@ Provjerite jesu li most i aplikacija koju želite koristiti kompatibilni s vaši
 Neki mostovi još se mogu kupiti:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (verzija 1, 2 ili 3), dostupan i na AliExpressu.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) od europskih prodavača ([BubbleShop](https://bubbleshop.eu/)) ili za korisnike u Rusiji [ovdje](https://vk.com/saharmonitor/). Dostupno i na AliExpressu.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Dostupno i na AliExpressu.
 -   Atom za korisnike u Rusiji.
 
 ## 1. Korištenje xDripa
 
--   xDrip podržava Miaomiao, Bubble, Blucon, Atom i LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Možete bez brige preuzeti [najnoviji APK (stabilni)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), osim ako trebate najnovije značajke; tada koristite najnoviji [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Slijedite upute za postavljanje na stranici [Postavke xDripa](../CompatibleCgms/xDrip.md).
 -    Za Libre 1 US (i Libre 2 EU) trebate i OOP2.
 -   Odaberite xDrip u [**Konfiguracija → Izvor GUK-a**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Korištenje Diaboxa
 
 - Diabox je aplikacija proizvođača za Bubble.

@@ -25,7 +25,7 @@ Características principales de **Omnipod DASH** («DASH»):
 - Los cambios de horario de verano y de zona horaria no se aplican automáticamente. Después de un cambio de hora debes actualizar el pod a mano: pulsa **Actualizar** en la pantalla de la bomba DASH y después pulsa **Ajustar la hora** (aparece cuando la zona horaria del pod y la del teléfono son distintas) o haz un **Cambio de perfil** (consulta [Cambio de zona horaria con Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash solo admite la tasa basal en pasos de 0,05 U/h. Si intentas poner la basal en pasos de 0,01 en tu **perfil de AAPS**, AAPS no mostrará ningún aviso, aunque el pod redondeará la tasa hacia arriba a pasos de 0,05. Si abres **Historial de Pod** en la pantalla de la bomba DASH, verás que se puso una basal de 0,05. Esto también significa que la tasa basal más baja que permite DASH en **AAPS** es 0,05 U/h.
 - El archivo de ajustes contiene la sesión del pod activo. Exporta tus ajustes después de cada activación de pod, y lee [Exportar e importar ajustes](#omnipod-dash-export-import) antes de importar ajustes.
-- Al poner un nuevo perfil basal, DASH suspende la administración antes de poner el nuevo **Perfil** basal. Si hay una interrupción de la comunicación o un error, el perfil basal no se reinicia automáticamente. Consulta la sección [Reanudar la administración de insulina](#omnipod-dash-resuming-insulin-delivery) para más detalles.
+- Al poner un nuevo perfil basal, DASH suspende la administración antes de poner el nuevo **Perfil** basal. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Consulta la sección [Reanudar la administración de insulina](#omnipod-dash-resuming-insulin-delivery) para más detalles.
 - Si las alertas están configuradas y el pod está a punto de caducar, el pod seguirá pitando hasta que se silencien las alertas; consulta [Silenciar alertas del pod](#omnipod-dash-silencing-pod-alerts) para más detalles.
 - Hay varios problemas conocidos con Bluetooth que pueden causar problemas al activar el pod. Consulta [Solución de problemas de Bluetooth](../GettingHelp/BluetoothTroubleshooting.md) para el problema conocido y las soluciones a estos problemas.
 
@@ -150,6 +150,8 @@ El icono **Ajustes** (engranaje) de la esquina superior derecha abre los [ajuste
 
 - **Fin de vida del Pod:** El final del periodo de gracia del pod (8 horas después de **El Pod caduca**, para una vida máxima del pod de 80 horas). El texto se pone amarillo cuando empieza el periodo de gracia (en **El Pod caduca**) y rojo en las últimas 4 horas antes del fin de vida. Durante el periodo de gracia también muestra el tiempo que queda, por ejemplo *(17m restantes)*. El pod deja de administrar insulina al llegar al fin de vida y hay que cambiarlo.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Estado del Pod:** El estado del pod: **Ningún Pod activo**, **Configuración en curso**, **Funcionando**, **Suspendido** o, después de un fallo del pod, **ALARM**.
 
 - **Última conexión:** Hace cuánto tiempo se comunicó **AAPS** con el pod por última vez.
@@ -187,6 +189,7 @@ Los botones de la parte inferior de la pantalla de la bomba cambian según el es
 - **Silenciar alertas:** Para los pitidos de alerta del pod (por ejemplo, caducidad del pod o reservorio bajo). Solo se muestra mientras el pod tiene una alerta activa. Consulta [Silenciar alertas del pod](#omnipod-dash-silencing-pod-alerts).
 
 - **Reanudar la entrega:** Reanuda la administración de insulina en un pod suspendido. Solo se muestra cuando la administración está suspendida. Consulta [Reanudar la administración de insulina](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Ajustar la hora:** Pone el pod en la zona horaria de tu teléfono enviando otra vez tu **Perfil** basal. Solo se muestra cuando la zona horaria del pod es distinta de la de tu teléfono.
 
@@ -207,11 +210,6 @@ Los botones de la parte inferior de la pantalla de la bomba cambian según el es
 1. Abre la pantalla de la bomba DASH (**Administrar** > **Bomba**) y pulsa **Activar Pod**. Se abre el asistente de activación.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   La captura de pantalla de arriba es de una versión anterior de **AAPS**. En **AAPS** 4, **Activar Pod** es un botón directamente en la pantalla de la bomba DASH, en lugar de estar en el menú **Gestión del Pod**.
-   ```
 
    Si nunca has activado un **Perfil** en **AAPS**, el asistente muestra primero el paso **Perfil requerido**: selecciona el perfil que se aplicará en la activación y continúa.
 
@@ -303,6 +301,8 @@ Para desactivar un pod (porque ha caducado o porque ha fallado):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. Se muestra el paso **Desactivando el Pod** mientras **AAPS** desactiva el pod. El pod pita para confirmar que la desactivación se hizo con éxito.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Descarta un pod solo cuando toda la comunicación con él sigue fallando. Si **A
 - Después de eso, **AAPS** ya no puede comunicarse con ese pod.
 - **La administración de insulina NO se ha suspendido**, porque el pod no se desactivó correctamente. **¡Quítate el pod del cuerpo!**
 - El paso **Pod descartado** confirma que el estado del pod se ha descartado. Pulsa **Finalizar**. Ahora puedes activar un pod nuevo.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Reanudar la administración de insulina
-
-**NOTA**: Durante los **Cambios de perfil**, igual que con el PDM, **AAPS** debe suspender la administración en el pod antes de poner el nuevo **Perfil** basal. Si la comunicación falla entre los comandos de suspender y reanudar, la administración puede quedar suspendida. Lee [**Administración suspendida**](#omnipod-dash-delivery-suspended) en la sección de solución de problemas para más detalles.
-
-Cuando la administración de insulina está suspendida, tienes que decirle al pod que la reanude. Cuando el comando se procesa con éxito, el pod vuelve a administrar insulina con la tasa basal de la hora actual de tu **Perfil** basal activo. El pod vuelve a aceptar comandos de bolo, **TBR** y **SMB**.
-
-1. Abre la pantalla de la bomba DASH y comprueba que el campo **Estado del Pod** muestra **Suspendido**. Pulsa **Reanudar la entrega** para decirle al pod que reanude la administración normal de insulina.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Cuando el comando tiene éxito, el campo **Estado del Pod** muestra **Funcionando** y el botón **Reanudar la entrega** desaparece.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Las capturas de pantalla de arriba son de una versión anterior de **AAPS**, que mostraba un diálogo de confirmación. En **AAPS** 4 compruebas el resultado en la pantalla de la bomba DASH: el campo **Estado del Pod** muestra **Funcionando** y el botón **Reanudar la entrega** ya no está.
-   ```
-
-   Si el comando falla, **AAPS** muestra un diálogo de aviso que empieza con *Error al reanudar la entrega*. Pulsa **Actualizar** e inténtalo otra vez.
-
-   ![El aviso Error al reanudar la entrega](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Para problemas conocidos con conexiones Bluetooth, cortes de conexión de la bom
 
 ### Administración suspendida
 
-  - Ya no hay botón de suspender. Si quieres «suspender» el pod, puedes poner una **TBR** a cero durante x minutos.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Durante los **Cambios de perfil**, DASH debe suspender la administración antes de poner el nuevo **Perfil** basal. Si la comunicación falla entre los dos comandos, la administración puede quedar suspendida. Cuando esto pasa:
      - No habrá administración de insulina: ni basal, ni SMB, ni bolo manual, etc.
      - Puede aparecer una notificación de que uno de los comandos no está confirmado: depende de cuándo ocurrió el fallo.
@@ -581,6 +554,22 @@ Para problemas conocidos con conexiones Bluetooth, cortes de conexión de la bom
   - Para los comandos no confirmados, pulsa **Actualizar** en la pantalla de la bomba DASH para confirmarlos o rechazarlos.
 
 *****NOTA:** Cuando oigas pitidos del pod, no des por hecho que la administración seguirá sin mirar el teléfono: la administración podría seguir suspendida, ***¡así que tienes que comprobarlo!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Reanudar la administración de insulina
+
+Cuando la administración de insulina está suspendida, tienes que decirle al pod que la reanude. Cuando el comando se procesa con éxito, el pod vuelve a administrar insulina con la tasa basal de la hora actual de tu **Perfil** basal activo. El pod vuelve a aceptar comandos de bolo, **TBR** y **SMB**.
+
+1. Abre la pantalla de la bomba DASH y comprueba que el campo **Estado del Pod** muestra **Suspendido**. Pulsa **Reanudar la entrega** para decirle al pod que reanude la administración normal de insulina.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Cuando el comando tiene éxito, el campo **Estado del Pod** muestra **Funcionando** y el botón **Reanudar la entrega** desaparece.
+
+   Si el comando falla, **AAPS** muestra un diálogo de aviso que empieza con *Error al reanudar la entrega*. Pulsa **Actualizar** e inténtalo otra vez.
+
+   ![El aviso Error al reanudar la entrega](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=

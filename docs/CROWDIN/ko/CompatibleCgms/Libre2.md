@@ -81,7 +81,7 @@ Libre2는 **-40 mg/dL에서 +20 mg/dL까지 \[-2.2 mmol/L에서 +1.1 mmol/L까�
 
 ## 3. Diabox 사용하기
 
-- [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)를 설치하십시오. Settings의 Integration에서 Share data with other apps를 켜십시오.
+- [Diabox](https://t.me/s/DiaboxApp)를 설치하십시오. Settings의 Integration에서 Share data with other apps를 켜십시오.
 
 ![Diabox](../images/Diabox.png)
 

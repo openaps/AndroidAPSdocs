@@ -81,7 +81,7 @@ You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL \[-2.2 m
 
 ## 3. Diabox gebruiken
 
-- Installeer [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). Ga in Diabox naar Settings, Integration en zet Share data with other apps aan.
+- Installeer [Diabox](https://t.me/s/DiaboxApp). Ga in Diabox naar Settings, Integration en zet Share data with other apps aan.
 
 ![Diabox](../images/Diabox.png)
 

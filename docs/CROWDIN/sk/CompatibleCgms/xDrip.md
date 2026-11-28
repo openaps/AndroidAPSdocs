@@ -145,7 +145,7 @@ Postupujte podľa pokynov:
 
 ### Úroveň batérie čítačky Libre smart reader
 
-- Úroveň batérie mostíkov ako MiaoMiao a Bubble sa dá zobraziť v AAPS (nie Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Podrobnosti nájdete na [stránke so snímkami obrazovky](#screens-sensor-level-battery).
 
 ### Pripojte vysielač Libre a spustite senzor

@@ -347,7 +347,7 @@ xDrip Overview 화면 왼쪽 위의 햄버거 메뉴를 누르고 **System Statu
 
 &nbsp;
 
-- **타사 NFC 스캔 기기가 더 이상 필요 없음** 이제 센서만으로 Bluetooth를 통해 측정값을 보낼 수 있으므로, Miaomiao, Bubble, Blucon 같은 타사 NFC 스캔 기기는 측정값 수집에 더 이상 필요하지 않습니다*(그래도 계속 사용할 수는 있습니다)*. 하드웨어가 적을수록 문제가 생길 곳이 적고, 충전할 기기가 줄며, 구성이 더 간단해집니다.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. 하드웨어가 적을수록 문제가 생길 곳이 적고, 충전할 기기가 줄며, 구성이 더 간단해집니다.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ xDrip Overview 화면 왼쪽 위의 햄버거 메뉴를 누르고 **System Statu
 
 &nbsp;
 
-- **타사 NFC 스캔 기기는 계속 사용할 수 있음**. 네, 이것을 단점으로 적었지만, 센서에 문제가 생겨 LL이 센서 제어권을 가져가더라도 언제든지 센서에 NFC 스캔 기기를 붙여 xDrip에서 측정값을 받을 수 있다는 점도 말하고 싶었습니다. 타사 NFC 스캔 기기(Miaomiao, Bubble, Blucon)를 사용하는 구성이 더 편하다면, 직접 Bluetooth 연결 대신 이 기기를 사용할 수도 있습니다. 일부 휴대폰은 센서와의 자체 Bluetooth 본딩 및 데이터 수신이 잘 되지 않을 때가 있습니다. 이 기기들은 백업용으로 쓰거나 평소에 쓸 수 있습니다. 어느 쪽이든 선택지로 남아 있습니다.
+- **타사 NFC 스캔 기기는 계속 사용할 수 있음**. 네, 이것을 단점으로 적었지만, 센서에 문제가 생겨 LL이 센서 제어권을 가져가더라도 언제든지 센서에 NFC 스캔 기기를 붙여 xDrip에서 측정값을 받을 수 있다는 점도 말하고 싶었습니다. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). 일부 휴대폰은 센서와의 자체 Bluetooth 본딩 및 데이터 수신이 잘 되지 않을 때가 있습니다. 이 기기들은 백업용으로 쓰거나 평소에 쓸 수 있습니다. 어느 쪽이든 선택지로 남아 있습니다.
 - **FSL Reader**를 측정용 NFC 스캔 기기로 사용하려면, **맨 처음 NFC 스캔**으로 센서를 워밍업할 때 반드시 **리더기로 먼저** FSL2 센서를 시작해야 합니다.
 
 &nbsp;

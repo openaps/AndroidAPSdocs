@@ -25,7 +25,7 @@ Wichtige Merkmale des **Omnipod DASH** („DASH“):
 - Sommerzeit- und Zeitzonenwechsel werden nicht automatisch übernommen. Nach einer Zeitumstellung musst Du den Pod manuell anpassen: Tippe auf dem DASH-Pumpenbildschirm auf **Aktualisieren** und dann auf **Zeit einstellen** (wird angezeigt, wenn sich die Zeitzonen von Pod und Smartphone unterscheiden) oder führe einen **Profilwechsel** durch (siehe [Zeitzonenwechsel beim Omnipod DASH](#timezone-traveling-with-pumps)).
 - Dash unterstützt nur Basalraten in 0,05 IE/h Schritten. Solltest Du versuchen in Deinem **AAPS-Profil** Basalraten mit 0,01 Schritten zu hinterlegen, wirst Du keine Warnmeldung von AAPS erhalten. Der Pod wird die Basalrate auf 0,05 Schritte aufrunden. Wenn Du auf dem DASH-Pumpenbildschirm die **Pod-Historie** öffnest, wird angezeigt, dass eine Basalrate von 0,05 gesetzt wurde. Dies bedeutet auch, dass die kleinst mögliche Basalrate des DASH in **AAPS** 0,05 IE/h beträgt.
 - Die Einstellungsdatei enthält die aktive Pod-Sitzung. Exportiere Deine Einstellungen nach jeder Pod-Aktivierung und lies [Einstellungen exportieren und importieren](#omnipod-dash-export-import), bevor Du Einstellungen importierst.
-- Beim Setzen eines neuen Basalprofils unterbricht der DASH die Insulinabgabe, bevor das neue Basalprofil **Profil** gesetzt wird. Wenn es eine Kommunikationsstörung oder einen Fehler gibt, wird das Basalprofil nicht automatisch neu gestartet. Mehr Details hierzu findest Du im Abschnitt [Insulinabgabe fortsetzen](#omnipod-dash-resuming-insulin-delivery).
+- Beim Setzen eines neuen Basalprofils unterbricht der DASH die Insulinabgabe, bevor das neue Basalprofil **Profil** gesetzt wird. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Mehr Details hierzu findest Du im Abschnitt [Insulinabgabe fortsetzen](#omnipod-dash-resuming-insulin-delivery).
 - Wenn Alarme konfiguriert sind und der Pod bald ablaufen wird, wird der Pod solange piepen, bis die Alarme stumm geschaltet werden. Der Abschnitt [Pod-Alarme stummschalten](#omnipod-dash-silencing-pod-alerts) enthält detailliertere Informationen.
 - Es gibt eine Reihe von bekannten Bluetooth-Auffälligkeiten, die Probleme mit der Pod-Aktivierung verursachen können. Lies im Abschnitt [Bluetooth-Fehlerbehebung](../GettingHelp/BluetoothTroubleshooting.md) nach, um mehr über die Lösungsmöglichkeiten zu diesen Problemen zu erfahren.
 
@@ -150,6 +150,8 @@ Das Symbol **Einstellungen** (Zahnrad) oben rechts öffnet die [DASH-Einstellung
 
 - **Enddatum des Pods:** Das Ende der Kulanzzeit des Pods (8 Stunden nach **Pod läuft ab**, also eine maximale Pod-Laufzeit von 80 Stunden). Der Text wird gelb, wenn die Kulanzzeit beginnt (bei **Pod läuft ab**), und rot in den letzten 4 Stunden vor dem endgültigen Ende. Während der Kulanzzeit wird außerdem die verbleibende Zeit angezeigt, zum Beispiel *(17m remaining)*. Zum endgültigen Ende stoppt der Pod die Insulinabgabe und muss gewechselt werden.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Pod Status:** Der Zustand des Pods: **Kein aktiver Pod**, **Einrichtung im Gange**, **In Betrieb**, **Angehalten** oder nach einem Pod-Fehler **ALARM**.
 
 - **Letzte Verbindung:** Wie lange es her ist, dass **AAPS** zuletzt mit dem Pod kommuniziert hat.
@@ -187,6 +189,7 @@ Die Schaltflächen unten auf dem Pumpenbildschirm ändern sich je nach Zustand d
 - **Alarme stummschalten:** Stoppt die Signaltöne der Pod-Warnungen (zum Beispiel bei Pod-Ablauf oder niedrigem Reservoir). Wird nur angezeigt, solange der Pod eine aktive Warnung hat. Siehe [Pod-Warnungen stummschalten](#omnipod-dash-silencing-pod-alerts).
 
 - **Abgabe fortsetzen:** Setzt die Insulinabgabe eines unterbrochenen Pods fort. Wird nur angezeigt, wenn die Abgabe unterbrochen ist. Siehe [Insulinabgabe fortsetzen](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Zeit einstellen:** Stellt den Pod auf die Zeitzone Deines Smartphones um, indem Dein Basal-**Profil** erneut gesendet wird. Wird nur angezeigt, wenn sich die Zeitzone des Pods von der Deines Smartphones unterscheidet.
 
@@ -207,11 +210,6 @@ Die Schaltflächen unten auf dem Pumpenbildschirm ändern sich je nach Zustand d
 1. Öffne den DASH-Pumpenbildschirm (**Verwalten** > **Pumpe**) und tippe auf **Pod aktivieren**. Der Aktivierungsassistent öffnet sich.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Der Screenshot oben stammt aus einer früheren **AAPS**-Version. In **AAPS** 4 ist **Pod aktivieren** eine Schaltfläche direkt auf dem DASH-Pumpenbildschirm statt im Menü **Pod-Verwaltung**.
-   ```
 
    Hast Du in **AAPS** noch nie ein **Profil** aktiviert, zeigt der Assistent zuerst den Schritt **Profil erforderlich**: Wähle das Profil, das bei der Aktivierung angewendet werden soll, und fahre fort.
 
@@ -303,6 +301,8 @@ So deaktivierst Du einen Pod (weil er abgelaufen oder ausgefallen ist):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. Während **AAPS** den Pod deaktiviert, wird der Schritt **Deaktiviere den Pod...** angezeigt. Der Pod piept, um die erfolgreiche Deaktivierung zu bestätigen.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Verwirf einen Pod nur, wenn die Kommunikation mit ihm dauerhaft fehlschlägt. Ka
 - Danach kann **AAPS** nicht mehr mit diesem Pod kommunizieren.
 - **Die Insulinabgabe wurde NICHT unterbrochen**, weil der Pod nicht ordnungsgemäß deaktiviert wurde. **Entferne den Pod von Deinem Körper!**
 - Der Schritt **Pod verworfen** bestätigt, dass der Pod-Zustand verworfen wurde. Tippe auf **Abschließen**. Du kannst jetzt einen neuen Pod aktivieren.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Insulinabgabe fortsetzen
-
-**HINWEIS**: Bei **Profilwechseln** muss **AAPS** (wie auch der PDM) die Abgabe am Pod unterbrechen, bevor das neue Basal-**Profil** gesetzt wird. Schlägt die Kommunikation zwischen dem Befehl zum Unterbrechen und dem zum Fortsetzen fehl, kann die Abgabe unterbrochen bleiben. Lies [**Insulinabgabe unterbrochen**](#omnipod-dash-delivery-suspended) im Abschnitt Fehlerbehebung für weitere Details.
-
-Ist die Insulinabgabe unterbrochen, musst Du den Pod anweisen, die Insulinabgabe fortzusetzen. Wurde der Befehl erfolgreich verarbeitet, gibt der Pod wieder Insulin ab, mit der Basalrate, die in Deinem aktiven Basal-**Profil** für die aktuelle Uhrzeit gilt. Der Pod nimmt wieder Befehle für Bolus, **TBR** und **SMB** an.
-
-1. Öffne den DASH-Pumpenbildschirm und prüfe, ob das Feld **Pod Status** **Angehalten** zeigt. Tippe auf **Abgabe fortsetzen**, damit der Pod die normale Insulinabgabe fortsetzt.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. War der Befehl erfolgreich, zeigt das Feld **Pod Status** **In Betrieb**, und die Schaltfläche **Abgabe fortsetzen** verschwindet.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Die Screenshots oben stammen aus einer früheren **AAPS**-Version, die einen Bestätigungsdialog angezeigt hat. In **AAPS** 4 siehst Du das Ergebnis auf dem DASH-Pumpenbildschirm: Das Feld **Pod Status** zeigt **In Betrieb**, und die Schaltfläche **Abgabe fortsetzen** ist verschwunden.
-   ```
-
-   Schlägt der Befehl fehl, zeigt **AAPS** einen Warndialog, der mit *Insulinabgabe konnte nicht gestartet werden* beginnt. Tippe auf **Aktualisieren** und versuche es noch einmal.
-
-   ![The Failed to resume delivery warning](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Bei bekannten Problemen mit Bluetooth-Verbindungen, Pumpen/Pods oder Aktivierung
 
 ### Insulinabgabe unterbrochen
 
-  - Es gibt keine Unterbrechen-Taste mehr. Wenn Du die Insulinabgabe unterbrechen möchtest, kannst Du eine Null-**TBR** für x Minuten setzen.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Während eines **Profilwechsels** muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-**Profil** gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen bleiben. Wenn das passiert:
      - Es gibt dann keine Insulinabgabe; dies schließt Basal, SMB, manuelle Boli usw. ein.
      - Es kann eine Benachrichtigung geben, dass einer der Befehle unbestätigt blieb: Dies hängt davon ab, wann der Fehler aufgetreten ist.
@@ -581,6 +554,22 @@ Bei bekannten Problemen mit Bluetooth-Verbindungen, Pumpen/Pods oder Aktivierung
   - Bei unbestätigten Befehlen tippe auf dem DASH-Pumpenbildschirm auf **Aktualisieren**, um sie bestätigen oder ablehnen zu lassen.
 
 *****HINWEIS:** Wenn Du Pieptöne vom Pod hörst, kannst Du nicht davon ausgehen, dass die Insulinabgabe ohne Überprüfung im Smartphone fortgesetzt wird. Die Abgabe könnte weiterhin ausgesetzt bleiben, ***also musst Du prüfen, was los ist!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Insulinabgabe fortsetzen
+
+Ist die Insulinabgabe unterbrochen, musst Du den Pod anweisen, die Insulinabgabe fortzusetzen. Wurde der Befehl erfolgreich verarbeitet, gibt der Pod wieder Insulin ab, mit der Basalrate, die in Deinem aktiven Basal-**Profil** für die aktuelle Uhrzeit gilt. Der Pod nimmt wieder Befehle für Bolus, **TBR** und **SMB** an.
+
+1. Öffne den DASH-Pumpenbildschirm und prüfe, ob das Feld **Pod Status** **Angehalten** zeigt. Tippe auf **Abgabe fortsetzen**, damit der Pod die normale Insulinabgabe fortsetzt.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. War der Befehl erfolgreich, zeigt das Feld **Pod Status** **In Betrieb**, und die Schaltfläche **Abgabe fortsetzen** verschwindet.
+
+   Schlägt der Befehl fehl, zeigt **AAPS** einen Warndialog, der mit *Insulinabgabe konnte nicht gestartet werden* beginnt. Tippe auf **Aktualisieren** und versuche es noch einmal.
+
+   ![The Failed to resume delivery warning](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=

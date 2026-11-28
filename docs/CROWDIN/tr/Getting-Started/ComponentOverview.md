@@ -82,7 +82,7 @@ xDrip uygulamasına **KŞ kaynağı** olarak ihtiyacınız olmasa bile, onu yine
 
 ## Modülleri beklerken yapılması gerekenler
 
-Döngüyü kapatmak için gereken tüm modülleri edinmek bazen biraz zaman alır. Ama merak etmeyin, beklerken yapabileceğiniz çok şey var. Bazal oranları (BR), insülin-karbonhidrat oranını (IC), insülin duyarlılık faktörlerini (İDF) vb. kontrol etmek ve (gerekirse) ayarlamak **gereklidir**. Belki açık döngü de sistemi test etmek ve **AAPS**'i tanımak için iyi bir yol olabilir. Bu modda **AAPS**, elle uygulayabileceğiniz tedavi önerileri verir.
+Döngüyü kapatmak için gereken tüm modülleri edinmek bazen biraz zaman alır. Ama merak etmeyin, beklerken yapabileceğiniz çok şey var. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. Belki açık döngü de sistemi test etmek ve **AAPS**'i tanımak için iyi bir yol olabilir. Bu modda **AAPS**, elle uygulayabileceğiniz tedavi önerileri verir.
 
 Buradaki dokümanları okumaya devam edebilir, diğer döngü kullanıcılarıyla çevrimiçi veya yüz yüze iletişim kurabilir, dokümanları veya diğer döngü kullanıcılarının yazdıklarını [okuyabilirsiniz](../UsefulLinks/BackgroundReading.md) (yine de dikkatli olun: her şey doğru değildir veya sizin için uygun olmayabilir).
 

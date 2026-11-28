@@ -347,7 +347,7 @@ Na obrazovke **BT Device** (potiahnite doľava) môžete overiť ďalšie podrob
 
 &nbsp;
 
-- **Skenovacie zariadenie NFC od tretej strany už nie je potrebné** Skenovacie zariadenia NFC od tretích strán (napr. Miaomiao, Bubble alebo Blucon) už nie sú potrebné *(ale stále sa dajú použiť)* na zber hodnôt, pretože senzor ich teraz dokáže posielať sám cez Bluetooth. Menej hardvéru znamená menej vecí, ktoré sa môžu pokaziť, menej zariadení na nabíjanie a minimalistickejšiu zostavu.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Menej hardvéru znamená menej vecí, ktoré sa môžu pokaziť, menej zariadení na nabíjanie a minimalistickejšiu zostavu.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ Na obrazovke **BT Device** (potiahnite doľava) môžete overiť ďalšie podrob
 
 &nbsp;
 
-- **Skenovacie zariadenia NFC od tretích strán sa stále dajú používať**. Áno, uviedol som to ako nevýhodu, ale chcel som tiež upozorniť, že ak sa so senzorom niečo pokazí a LL nad ním prevezme kontrolu, vždy sa môžete vrátiť k tomu, že na senzor umiestnite skenovacie zariadenie NFC a budete dostávať hodnoty v xDrip. Ak vám viac vyhovuje zostava so skenovacím zariadením NFC od tretej strany (Miaomiao, Bubble, Blucon), môžete ho použiť aj namiesto priameho pripojenia cez Bluetooth. Niektoré telefóny niekedy nefungujú dobre s priamym spárovaním senzora cez Bluetooth a získavaním dát. Tieto zariadenia môžete používať ako zálohu alebo bežne, v každom prípade je to stále jedna z možností.
+- **Skenovacie zariadenia NFC od tretích strán sa stále dajú používať**. Áno, uviedol som to ako nevýhodu, ale chcel som tiež upozorniť, že ak sa so senzorom niečo pokazí a LL nad ním prevezme kontrolu, vždy sa môžete vrátiť k tomu, že na senzor umiestnite skenovacie zariadenie NFC a budete dostávať hodnoty v xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Niektoré telefóny niekedy nefungujú dobre s priamym spárovaním senzora cez Bluetooth a získavaním dát. Tieto zariadenia môžete používať ako zálohu alebo bežne, v každom prípade je to stále jedna z možností.
 - Ak plánujete používať **čítačku FSL Reader** ako zariadenie na skenovanie NFC a načítavanie hodnôt, MUSÍTE senzor FSL2 spustiť **ÚPLNE PRVÝM skenovaním NFC**, ktorým sa senzor začne zahrievať, **a to NAJPRV ČÍTAČKOU**.
 
 &nbsp;

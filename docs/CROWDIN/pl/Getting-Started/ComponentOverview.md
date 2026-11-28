@@ -82,7 +82,7 @@ Nawet jeśli nie potrzebujesz aplikacji xDrip jako **Źródło BG**, nadal może
 
 ## Co robić, czekając na moduły
 
-Czasem trzeba trochę poczekać, zanim zbierzesz wszystkie moduły potrzebne do zamknięcia pętli. Ale nie martw się, w tym czasie możesz zrobić wiele rzeczy. **Koniecznie** sprawdź i (w razie potrzeby) dostosuj dawki bazowe (BR), współczynnik insulina/węglowodany (IC), współczynnik wrażliwości na insulinę (ISF) itd. I być może otwarta pętla będzie dobrym sposobem na przetestowanie systemu i zapoznanie się z **AAPS**. Korzystając z tego trybu, **AAPS** podaje rekomendacje dotyczące leczenia, które możesz wykonać ręcznie.
+Czasem trzeba trochę poczekać, zanim zbierzesz wszystkie moduły potrzebne do zamknięcia pętli. Ale nie martw się, w tym czasie możesz zrobić wiele rzeczy. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. I być może otwarta pętla będzie dobrym sposobem na przetestowanie systemu i zapoznanie się z **AAPS**. Korzystając z tego trybu, **AAPS** podaje rekomendacje dotyczące leczenia, które możesz wykonać ręcznie.
 
 Możesz dalej czytać tę dokumentację, kontaktować się z innymi użytkownikami pętli online lub offline, [czytać](../UsefulLinks/BackgroundReading.md) materiały lub to, co piszą inni użytkownicy pętli (zachowaj jednak ostrożność: nie wszystko jest poprawne lub dobre do powtórzenia u Ciebie).
 

@@ -145,7 +145,7 @@ Follow the instructions:
 
 ### Libre智能读卡器电池电量
 
-- MiaoMiao和Bubble等网桥设备的电池电量可在AAPS中显示（Blucon除外）。
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - 详情请参阅[截图页面](#screens-sensor-level-battery)。
 
 ### 连接Libre发射器并启动传感器

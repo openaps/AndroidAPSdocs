@@ -81,7 +81,7 @@ Libre2'yi **-40 mg/dL ile +20 mg/dL \[-2,2 mmol/L ile +1,1 mmol/L\] arasında bi
 
 ## 3. Diabox kullanın
 
-- [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)'ı kurun. Settings, Integration içinde Share data with other apps seçeneğini açın.
+- [Diabox](https://t.me/s/DiaboxApp)'ı kurun. Settings, Integration içinde Share data with other apps seçeneğini açın.
 
 ![Diabox](../images/Diabox.png)
 

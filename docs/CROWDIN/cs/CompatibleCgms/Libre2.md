@@ -81,7 +81,7 @@ Libre2 můžete kalibrovat **s posunem od -40 mg/dl do +20 mg/dl \[od -2,2 mmol/
 
 ## 3. Použití Diabox
 
-- Nainstalujte [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). V Settings, Integration zapněte Share data with other apps.
+- Nainstalujte [Diabox](https://t.me/s/DiaboxApp). V Settings, Integration zapněte Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 

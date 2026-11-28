@@ -145,7 +145,7 @@ Folge den Anweisungen:
 
 ### Batteriestand Libre Smart Reader
 
-- Der Batteriestand von Bluethooth-Bridges (wie z.B. MiaoMiao oder Bubble) kann in AAPS angezeigt werden (nicht möglich beim BluCon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Details findest Du auf der [Screenshots-Seite](#screens-sensor-level-battery).
 
 ### Libre Transmitter verbinden und Sensor starten

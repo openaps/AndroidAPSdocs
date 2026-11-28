@@ -10,17 +10,18 @@ Prüfe im Vorfeld, ob die App und die Bridge mit Deinem Sensor kompatibel sind.
 Einige dieser Bridges sind noch auf dem Markt verfügbar:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (Version 1, 2 oder 3) auch auf AliExpress verfügbar.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) von europäischen Anbietern ([BubbleShop](https://bubbleshop.eu/)) oder für russische Benutzer [hier](https://vk.com/saharmonitor/). Auch auf AliExpress verfügbar.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Auch auf AliExpress verfügbar.
 -   Atom für russische Nutzer.
 
 ## 1. xDrip+ verwenden
 
--   xDrip unterstützt Miaomiao, Bubble, Blucon, Atom und LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Du kannst die [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) einfach herunterladen, es sei denn, Du benötigst aktuelle Funktionen, in diesem Fall solltest Du den neuesten [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases) verwenden.
 -   Folge den Anweisungen zum Einrichten auf der Seite [xDrip-Einstellungen](../CompatibleCgms/xDrip.md).
 -    Du brauchst für den Libre 1 US (und Libre 2 EU) auch OOP2.
 -   Wähle xDrip unter [**Konfiguration → BZ-Quelle**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Diabox verwenden
 
 - Diabox ist die Herteller-App für den Bubble.

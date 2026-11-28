@@ -145,7 +145,7 @@ Sigue las instrucciones:
 
 ### Nivel de batería del lector inteligente del Libre
 
-- El nivel de batería de puentes como MiaoMiao y Bubble se puede mostrar en AAPS (no el de Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Puedes encontrar los detalles en la [página de capturas de pantalla](#screens-sensor-level-battery).
 
 ### Conectar el transmisor Libre e iniciar el sensor

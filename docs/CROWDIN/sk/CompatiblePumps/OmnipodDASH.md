@@ -25,7 +25,7 @@ Hlavné vlastnosti **Omnipod DASH** („DASH“):
 - Zmeny letného času a časového pásma sa neuplatnia automaticky. Po zmene času musíte Pod aktualizovať ručne: na obrazovke pumpy DASH stlačte **Obnoviť** a potom stlačte **Nastaviť čas** (zobrazí sa, keď sa časové pásmo Podu a telefónu líšia) alebo vykonajte **Prepnutie profilu** (pozrite [Zmena časového pásma pre Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash podporuje bazálnu dávku iba v krokoch po 0,05 U/h. Ak sa pokúsite nastaviť bazál s krokmi 0,01 vo svojom **profile AAPS**, AAPS nezobrazí varovanie, hoci Pod zaokrúhli dávku nahor na kroky po 0,05. Ak na obrazovke pumpy DASH otvoríte **História Podu**, zobrazí sa, že bol nastavený bazál 0,05. To tiež znamená, že najnižšia bazálna dávka, ktorú DASH v **AAPS** povolí, je 0,05 U/h.
 - Súbor s nastaveniami obsahuje aktívnu reláciu Podu. Po každej aktivácii Podu exportujte nastavenia a pred importom nastavení si prečítajte časť [Export a import nastavení](#omnipod-dash-export-import).
-- Pri nastavovaní nového bazálneho profilu DASH pozastaví podávanie pred nastavením nového bazálneho **profilu**. Ak dôjde k prerušeniu komunikácie alebo k chybe, bazálny profil sa automaticky znova nespustí. Podrobnosti nájdete v časti [Obnovenie podávania inzulínu](#omnipod-dash-resuming-insulin-delivery).
+- Pri nastavovaní nového bazálneho profilu DASH pozastaví podávanie pred nastavením nového bazálneho **profilu**. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. Podrobnosti nájdete v časti [Obnovenie podávania inzulínu](#omnipod-dash-resuming-insulin-delivery).
 - Ak sú výstrahy nastavené a Pod sa blíži ku koncu platnosti, Pod bude pípať, kým výstrahy nestíšite, podrobnosti nájdete v časti [Stíšenie výstrah Podu](#omnipod-dash-silencing-pod-alerts).
 - Existuje niekoľko známych problémov s Bluetooth, ktoré môžu spôsobiť problémy pri aktivácii Podu. Známy problém a riešenia týchto problémov nájdete v časti [Problémy súvisiace s Bluetooth](../GettingHelp/BluetoothTroubleshooting.md).
 
@@ -150,6 +150,8 @@ Ikona **Nastavenia** (ozubené koliesko) v pravom hornom rohu otvorí [nastaveni
 
 - **Definitívny koniec Podu:** Koniec lehoty Podu (8 hodín po **Expirácia Podu**, teda maximálna životnosť Podu je 80 hodín). Text sa zafarbí nažlto, keď začne lehota (v čase **Expirácia Podu**), a načerveno počas posledných 4 hodín pred definitívnym koncom. Počas lehoty zobrazuje aj zostávajúci čas, napríklad *(zostáva 17 min)*. Na definitívnom konci Pod prestane podávať inzulín a musí sa vymeniť.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **Stav Podu:** Stav Podu: **Žiadny aktívny Pod**, **Prebieha inštalácia**, **V prevádzke**, **Pozastavené** alebo po chybe Podu **ALARM**.
 
 - **Posledné spojenie:** Ako dávno **AAPS** naposledy komunikoval s Podom.
@@ -187,6 +189,7 @@ Tlačidlá v dolnej časti obrazovky pumpy sa menia podľa stavu Podu. Zobrazuj�
 - **Stíšiť alarmy:** Zastaví pípanie výstrah Podu (napríklad pri expirácii Podu alebo nízkej hladine zásobníka). Zobrazuje sa iba vtedy, keď má Pod aktívnu výstrahu. Pozrite [Stíšenie výstrah Podu](#omnipod-dash-silencing-pod-alerts).
 
 - **Obnoviť podávanie:** Obnoví podávanie inzulínu na pozastavenom Pode. Zobrazuje sa iba vtedy, keď je podávanie pozastavené. Pozrite [Obnovenie podávania inzulínu](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **Nastaviť čas:** Aktualizuje Pod na časové pásmo vášho telefónu tak, že znova odošle váš bazálny **profil**. Zobrazuje sa iba vtedy, keď sa časové pásmo Podu líši od časového pásma vášho telefónu.
 
@@ -207,11 +210,6 @@ Tlačidlá v dolnej časti obrazovky pumpy sa menia podľa stavu Podu. Zobrazuj�
 1. Otvorte obrazovku pumpy DASH (**Spravovať** > **Pumpa**) a stlačte **Aktivovať Pod**. Otvorí sa sprievodca aktiváciou.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Snímka obrazovky vyššie je zo staršej verzie **AAPS**. V **AAPS** 4 je **Aktivovať Pod** tlačidlo priamo na obrazovke pumpy DASH, nie v ponuke **Správa Podu**.
-   ```
 
    Ak ste v **AAPS** ešte nikdy neaktivovali **profil**, sprievodca najprv zobrazí krok **Vyžaduje sa profil**: vyberte profil, ktorý sa má pri aktivácii použiť, a pokračujte.
 
@@ -303,6 +301,8 @@ Deaktivácia Podu (či už preto, že expiroval, alebo preto, že zlyhal):
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. Krok **Deaktivácia Podu** sa zobrazuje, kým **AAPS** deaktivuje Pod. Pod pípne na potvrdenie, že deaktivácia bola úspešná.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Pod vyraďte iba vtedy, keď všetka komunikácia s ním opakovane zlyháva. Ak 
 - Potom už **AAPS** nemôže s týmto Podom komunikovať.
 - **Podávanie inzulínu NEBOLO pozastavené**, pretože Pod nebol riadne deaktivovaný. **Odstráňte Pod z tela!**
 - Krok **Pod vyradený** potvrdzuje, že stav Podu bol vyradený. Stlačte **Dokončiť**. Teraz môžete aktivovať nový Pod.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Obnovenie podávania inzulínu
-
-**POZNÁMKA**: Počas **Prepnutí profilu** musí **AAPS**, rovnako ako pri používaní PDM, pozastaviť podávanie na Pode pred nastavením nového bazálneho **profilu**. Ak medzi príkazmi na pozastavenie a obnovenie zlyhá komunikácia, podávanie môže zostať pozastavené. Viac podrobností nájdete v časti [**Podávanie pozastavené**](#omnipod-dash-delivery-suspended) v riešení problémov.
-
-Keď je podávanie inzulínu pozastavené, musíte Podu povedať, aby podávanie inzulínu obnovil. Keď je príkaz úspešne spracovaný, Pod znova podáva inzulín podľa bazálnej dávky pre aktuálny čas z vášho aktívneho bazálneho **profilu**. Pod znova prijíma príkazy na bolus, **TBR** a **SMB**.
-
-1. Otvorte obrazovku pumpy DASH a skontrolujte, či pole **Stav Podu** zobrazuje **Pozastavené**. Stlačením **Obnoviť podávanie** poviete Podu, aby obnovil normálne podávanie inzulínu.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. Keď bol príkaz úspešný, pole **Stav Podu** zobrazuje **V prevádzke** a tlačidlo **Obnoviť podávanie** zmizne.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Snímky obrazovky vyššie sú zo staršej verzie **AAPS**, ktorá zobrazovala potvrdzovací dialóg. V **AAPS** 4 výsledok overíte na obrazovke pumpy DASH: pole **Stav Podu** zobrazuje **V prevádzke** a tlačidlo **Obnoviť podávanie** zmizlo.
-   ```
-
-   Ak príkaz zlyhá, **AAPS** zobrazí varovný dialóg, ktorý začína textom *Podávanie inzulínu sa nepodarilo spustiť*. Stlačte **Obnoviť** a skúste to znova.
-
-   ![Varovanie Podávanie inzulínu sa nepodarilo spustiť](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ Známe problémy s Bluetooth spojením, výpadky pumpy/Podov alebo problémy s a
 
 ### Podávanie pozastavené
 
-  - Tlačidlo pozastavenia už neexistuje. Ak chcete Pod „pozastaviť“, môžete na x minút nastaviť nulový dočasný bazál (**TBR**).
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - Počas **Prepnutí profilu** musí DASH pozastaviť podávanie pred nastavením nového bazálneho **profilu**. Ak medzi týmito dvoma príkazmi zlyhá komunikácia, podávanie môže zostať pozastavené. Keď sa to stane:
      - Nebude sa podávať žiadny inzulín, teda ani bazál, SMB, ručné bolusy atď.
      - Môže sa zobraziť notifikácia, že jeden z príkazov nie je potvrdený: závisí to od toho, kedy k zlyhaniu došlo.
@@ -581,6 +554,22 @@ Známe problémy s Bluetooth spojením, výpadky pumpy/Podov alebo problémy s a
   - Pri nepotvrdených príkazoch stlačte **Obnoviť** na obrazovke pumpy DASH, aby sa potvrdili alebo zamietli.
 
 *****POZNÁMKA:** Keď počujete pípanie Podu, nepredpokladajte bez kontroly telefónu, že podávanie bude pokračovať, podávanie môže zostať pozastavené, ***takže to musíte skontrolovať!******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Obnovenie podávania inzulínu
+
+Keď je podávanie inzulínu pozastavené, musíte Podu povedať, aby podávanie inzulínu obnovil. Keď je príkaz úspešne spracovaný, Pod znova podáva inzulín podľa bazálnej dávky pre aktuálny čas z vášho aktívneho bazálneho **profilu**. Pod znova prijíma príkazy na bolus, **TBR** a **SMB**.
+
+1. Otvorte obrazovku pumpy DASH a skontrolujte, či pole **Stav Podu** zobrazuje **Pozastavené**. Stlačením **Obnoviť podávanie** poviete Podu, aby obnovil normálne podávanie inzulínu.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. Keď bol príkaz úspešný, pole **Stav Podu** zobrazuje **V prevádzke** a tlačidlo **Obnoviť podávanie** zmizne.
+
+   Ak príkaz zlyhá, **AAPS** zobrazí varovný dialóg, ktorý začína textom *Podávanie inzulínu sa nepodarilo spustiť*. Stlačte **Obnoviť** a skúste to znova.
+
+   ![Varovanie Podávanie inzulínu sa nepodarilo spustiť](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=

@@ -82,7 +82,7 @@ I když aplikaci xDrip nepotřebujete jako **Zdroj glykémie**, můžete ji pře
 
 ## Co dělat při čekání na moduly
 
-Získat všechny moduly pro uzavření smyčky někdy chvíli trvá. Ale žádné obavy, je mnoho věcí, které můžete při čekání udělat. Je **nutné** zkontrolovat a (kde je to vhodné) upravit bazální dávky (BR), inzulínosacharidový poměr (IC), citlivost na inzulín (ISF) atd. A otevřená smyčka může být dobrý způsob, jak systém vyzkoušet a seznámit se s **AAPS**. V tomto režimu vám **AAPS** dává doporučení k léčbě, která můžete provést ručně.
+Získat všechny moduly pro uzavření smyčky někdy chvíli trvá. Ale žádné obavy, je mnoho věcí, které můžete při čekání udělat. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. A otevřená smyčka může být dobrý způsob, jak systém vyzkoušet a seznámit se s **AAPS**. V tomto režimu vám **AAPS** dává doporučení k léčbě, která můžete provést ručně.
 
 Můžete dál číst tuto dokumentaci, spojit se s dalšími uživateli smyčky online i osobně, [číst](../UsefulLinks/BackgroundReading.md) dokumentaci nebo to, co píší jiní uživatelé smyčky (i když musíte být opatrní, ne všechno je správné nebo vhodné, abyste to opakovali).
 

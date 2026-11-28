@@ -81,7 +81,7 @@ The raw values are very helpful when the blood sugar is moving fast. גם אם �
 
 ## 3. Use Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 

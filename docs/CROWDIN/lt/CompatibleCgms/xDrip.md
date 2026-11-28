@@ -145,7 +145,7 @@ Vadovaukitės šiomis instrukcijomis:
 
 ### Libre išmaniojo skaitytuvo baterijos lygis
 
-- Tiltų, pavyzdžiui, MiaoMiao ir Bubble, baterijos lygį galima rodyti AAPS (Blucon – ne).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Daugiau informacijos rasite puslapyje [AAPS ekranai](#screens-sensor-level-battery).
 
 ### Libre siųstuvo prijungimas ir jutiklio paleidimas

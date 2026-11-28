@@ -81,7 +81,7 @@ xDrip не підтримує пряме підключення до Libre 2 US 
 
 ## 3. Використання Diabox
 
-- Встановіть [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). У Diabox відкрийте Settings (Налаштування) → Integration та увімкніть Share data with other apps (Ділитися даними з іншими застосунками).
+- Встановіть [Diabox](https://t.me/s/DiaboxApp). У Diabox відкрийте Settings (Налаштування) → Integration та увімкніть Share data with other apps (Ділитися даними з іншими застосунками).
 
 ![Diabox](../images/Diabox.png)
 

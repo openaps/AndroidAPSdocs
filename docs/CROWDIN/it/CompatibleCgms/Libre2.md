@@ -81,7 +81,7 @@ Puoi calibrare il Libre2 **con uno scostamento da -40 mg/dL a +20 mg/dL \[da -2.
 
 ## 3. Usare Diabox
 
-- Installa [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, attiva Share data with other apps.
+- Installa [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, attiva Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 

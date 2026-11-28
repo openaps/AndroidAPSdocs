@@ -82,7 +82,7 @@ Auch wenn Du die xDrip-App nicht als **BZ-Quelle** brauchst, kannst Du sie trotz
 
 ## Wartezeit überbrücken
 
-Manchmal dauert es eine Weile, alle Module für den Closed Loop zusammenzubekommen. Aber keine Sorge, es gibt viele Dinge, die Du in der Zwischenzeit machen kannst. Es ist **absolut wichtig**, Deine Basalrate (BR), die KH-Faktoren (IC), Korrekturfaktoren (ISF) etc. intensiv zu prüfen und ggf. anzupassen. Der Open Loop ist zudem eine sehr gute Möglichkeit, das System kennenzulernen und mit **AAPS** vertraut zu werden. In diesem Modus gibt **AAPS** Behandlungsempfehlungen, die Du manuell ausführen kannst.
+Manchmal dauert es eine Weile, alle Module für den Closed Loop zusammenzubekommen. Aber keine Sorge, es gibt viele Dinge, die Du in der Zwischenzeit machen kannst. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. Der Open Loop ist zudem eine sehr gute Möglichkeit, das System kennenzulernen und mit **AAPS** vertraut zu werden. In diesem Modus gibt **AAPS** Behandlungsempfehlungen, die Du manuell ausführen kannst.
 
 Du kannst Dich weiter durch die Dokumentation Wiki arbeiten, online und offline mit anderen Loopern in Kontakt treten, weitere [Hintergrundinfos](../UsefulLinks/BackgroundReading.md) oder Berichte von anderen Loopern lesen. Sei aber vorsichtig, nicht alle Anwenderberichte müssen richtig oder für Deinen Fall zutreffend sein.
 

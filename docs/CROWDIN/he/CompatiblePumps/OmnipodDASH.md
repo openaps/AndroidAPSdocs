@@ -25,7 +25,7 @@
 - המעבר לשעון קיץ/חורף ושינויי אזור הזמן אינם מוחלים אוטומטית. לאחר שינוי שעון יש לעדכן את הפוד ידנית: ללחוץ על **רענן** במסך המשאבה DASH, ואז ללחוץ על **הגדרת שעה** (מוצג כאשר אזורי הזמן בפוד ובטלפון שונים) או לבצע **החלפת פרופיל** (ראו [שינוי אזור זמן עבור Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash תומכת בקצב בזאלי במדרגות של 0.05 U/h בלבד. אם תנסו להגדיר קצב בזאלי במדרגות של 0.01 ב**פרופיל AAPS** שלכם, AAPS לא יציג אזהרה, אף שהפוד יעגל את המינון כלפי מעלה למדרגות של 0.05. אם תפתחו את **היסטוריית הפוד** במסך המשאבה DASH, יוצג שם שהוגדר קצב בזאלי של 0.05. משמעות הדבר היא גם שהקצב הבזאלי הנמוך ביותר ש־DASH מאפשרת ב־**AAPS** הוא 0.05U/h.
 - קובץ ההגדרות מכיל את הפוד הפעיל. ייצאו את ההגדרות לאחר כל הפעלת פוד, וקראו את [ייצוא וייבוא הגדרות](#omnipod-dash-export-import) לפני ייבוא הגדרות.
-- בעת הגדרת פרופיל בזאלי חדש, DASH תשהה את מתן האינסולין לפני הגדרת ה**פרופיל** הבזאלי החדש. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
+- בעת הגדרת פרופיל בזאלי חדש, DASH תשהה את מתן האינסולין לפני הגדרת ה**פרופיל** הבזאלי החדש. If there is a communication interruption or error, delivery can stay suspended until **AAPS** sets the basal profile again (every 15 minutes) or you resume it manually. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
 - There are a number of known issues with Bluetooth which can cause pod activation problems. לבעיות המוכרות ולפתרונותיהן, ראו [פתרון תקלות Bluetooth](../GettingHelp/BluetoothTroubleshooting.md).
 
@@ -150,6 +150,8 @@ Ensure you have read and understand this whole guide, have read and understand t
 
 - **מועד הסיום הסופי של הפוד:** סוף תקופת החסד של הפוד (8 שעות אחרי **תפוגת הפוד**, כלומר חיי פוד של 80 שעות לכל היותר). הטקסט הופך לצהוב כשתקופת החסד מתחילה (ב**תפוגת הפוד**) ולאדום ב-4 השעות האחרונות לפני הסיום הסופי. במהלך תקופת החסד מוצג גם הזמן שנותר, למשל *(17m remaining)*. בסיום הסופי הפוד מפסיק לתת אינסולין, ויש להחליף אותו.
 
+  ![Pod Expires in yellow and Pod Hard End in red, less than an hour before the hard end](../images/v4/Pumps/dash_pump_screen_grace_period.png)
+
 - **סטטוס הפוד:** מצב הפוד: **אין פוד פעיל**, **התקנה בביצוע**, **פועל**, **מושהה** או, לאחר תקלה בפוד, **ALARM**.
 
 - **חיבור אחרון:** לפני כמה זמן **AAPS** תקשר עם הפוד בפעם האחרונה.
@@ -187,6 +189,7 @@ Ensure you have read and understand this whole guide, have read and understand t
 - **השתקת התראות:** מפסיק את צפצופי ההתראה של הפוד (למשל תפוגת הפוד או מכל נמוך). מוצג רק כאשר יש לפוד התראה פעילה. ראו [השתקת התראות הפוד](#omnipod-dash-silencing-pod-alerts).
 
 - **חידוש הזרקה:** מחדש את מתן האינסולין בפוד מושהה. מוצג רק כאשר מתן האינסולין מושהה. ראו [חידוש מתן אינסולין](#omnipod-dash-resuming-insulin-delivery).
+  - *There is no **Suspend** button. To stop insulin delivery for a while, use **Disconnect pump** from the [loop icon](#AapsScreens-loop-status) on the main screen: see [Disconnecting the pump](#pumps-cannulas-disconnecting).*
 
 - **הגדרת שעה:** מעדכן את הפוד לאזור הזמן של הטלפון, על ידי שליחה חוזרת של **פרופיל** הבזאלי שלכם. מוצג רק כאשר אזור הזמן של הפוד שונה מאזור הזמן של הטלפון.
 
@@ -207,11 +210,6 @@ Ensure you have read and understand this whole guide, have read and understand t
 1. יש לפתוח את מסך המשאבה DASH (**ניהול** > **משאבה**) וללחוץ על **הפעלת פוד**. אשף ההפעלה נפתח.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
-
-   ```{admonition} Older screenshot
-   :class: note
-   צילום המסך למעלה הוא מגרסה קודמת של **AAPS**. ב-**AAPS** 4 **הפעלת פוד** הוא לחצן ישירות במסך המשאבה DASH, ולא בתפריט **ניהול פוד**.
-   ```
 
    אם מעולם לא הפעלתם **פרופיל** ב-**AAPS**, האשף מציג קודם את השלב **נדרש פרופיל**: יש לבחור את הפרופיל שיוחל בזמן ההפעלה ולהמשיך.
 
@@ -303,6 +301,8 @@ Ensure you have read and understand this whole guide, have read and understand t
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+   ![The confirmation before deactivating the pod](../images/v4/Pumps/dash_deactivate_confirm.png)
+
 3. השלב **בתהליך השבתת הפוד** מוצג בזמן ש-**AAPS** משבית את הפוד. הפוד מצפצף כדי לאשר שההשבתה הצליחה.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
@@ -336,33 +336,6 @@ Ensure you have read and understand this whole guide, have read and understand t
 - לאחר מכן **AAPS** כבר לא יכול לתקשר עם הפוד הזה.
 - **מתן האינסולין לא הושהה**, כי הפוד לא הושבת כראוי. **יש להסיר את הפוד מהגוף!**
 - השלב **הפוד הושלך** מאשר שמצב הפוד נמחק. יש ללחוץ על **סיום**. כעת ניתן להפעיל פוד חדש.
-
-(omnipod-dash-resuming-insulin-delivery)=
-
-## Resuming Insulin Delivery
-
-**הערה**: בזמן **החלפת פרופיל**, כמו בשימוש ב-PDM, **AAPS** חייב להשהות את מתן האינסולין בפוד לפני הגדרת ה**פרופיל** הבזאלי החדש. אם התקשורת נכשלת בין פקודת ההשהיה לפקודת החידוש, מתן האינסולין עלול להישאר מושהה. לפרטים נוספים יש לקרוא את [**מתן האינסולין מושהה**](#omnipod-dash-delivery-suspended) בסעיף פתרון התקלות.
-
-כאשר מתן האינסולין מושהה, יש להורות לפוד לחדש את מתן האינסולין. כשהפקודה מעובדת בהצלחה, הפוד נותן שוב אינסולין לפי הקצב הבזאלי לשעה הנוכחית ב**פרופיל** הבזאלי הפעיל שלכם. הפוד מקבל שוב פקודות לבולוס, **TBR** ו-**SMB**.
-
-1. יש לפתוח את מסך המשאבה DASH ולבדוק שהשדה **סטטוס הפוד** מציג **מושהה**. יש ללחוץ על **חידוש הזרקה** כדי להורות לפוד לחדש את מתן האינסולין הרגיל.
-
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
-
-2. כשהפקודה הצליחה, השדה **סטטוס הפוד** מציג **פועל** והלחצן **חידוש הזרקה** נעלם.
-
-   ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
-
-   ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   צילומי המסך למעלה הם מגרסה קודמת של **AAPS**, שהציגה חלון אישור. ב-**AAPS** 4 בודקים את התוצאה במסך המשאבה DASH: השדה **סטטוס הפוד** מציג **פועל** והלחצן **חידוש הזרקה** נעלם.
-   ```
-
-   אם הפקודה נכשלת, **AAPS** מציג חלון אזהרה שמתחיל ב-*חידוש ההזרקה נכשל*. יש ללחוץ על **רענן** ולנסות שוב.
-
-   ![האזהרה חידוש ההזרקה נכשל](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -570,7 +543,7 @@ This section covers common known issues and solutions for Omnipod DASH use with 
 
 ### Delivery suspended
 
-  - אין יותר כפתור של הפסקת הזרקה. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
+  - The DASH pump screen has no **Suspend** button. To stop insulin delivery for a while, press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** with the duration you need. **AAPS** sets a zero **TBR** on the pod and keeps your **IOB** correct. See [Disconnecting the pump](#pumps-cannulas-disconnecting).
   - בעת **החלפת פרופיל**, DASH חייבת להשהות את מתן האינסולין לפני הגדרת ה**פרופיל** הבזאלי החדש. אם התקשורת נכשלת בין שתי הפקודות, מתן האינסולין עלול להישאר מושהה. כשזה קורה:
      - לא יהיה מתן אינסולין, כולל בזאלי, SMB, בולוס ידני וכו'.
      - ייתכן שתהיה הודעה על כך שאחת הפקודות אינה מאושרת: זה תלוי במועד התרחשות הכשל.
@@ -581,6 +554,22 @@ This section covers common known issues and solutions for Omnipod DASH use with 
   - עבור פקודות שלא אושרו, יש ללחוץ על **רענן** במסך המשאבה DASH כדי לאשר או לשלול אותן.
 
 *****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
+
+(omnipod-dash-resuming-insulin-delivery)=
+
+#### Resuming Insulin Delivery
+
+כאשר מתן האינסולין מושהה, יש להורות לפוד לחדש את מתן האינסולין. כשהפקודה מעובדת בהצלחה, הפוד נותן שוב אינסולין לפי הקצב הבזאלי לשעה הנוכחית ב**פרופיל** הבזאלי הפעיל שלכם. הפוד מקבל שוב פקודות לבולוס, **TBR** ו-**SMB**.
+
+1. יש לפתוח את מסך המשאבה DASH ולבדוק שהשדה **סטטוס הפוד** מציג **מושהה**. יש ללחוץ על **חידוש הזרקה** כדי להורות לפוד לחדש את מתן האינסולין הרגיל.
+
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
+
+2. כשהפקודה הצליחה, השדה **סטטוס הפוד** מציג **פועל** והלחצן **חידוש הזרקה** נעלם.
+
+   אם הפקודה נכשלת, **AAPS** מציג חלון אזהרה שמתחיל ב-*חידוש ההזרקה נכשל*. יש ללחוץ על **רענן** ולנסות שוב.
+
+   ![האזהרה חידוש ההזרקה נכשל](../images/v4/Pumps/dash_resume_failed.png)
 
 ---
 (omnipod-dash-pod-failures)=

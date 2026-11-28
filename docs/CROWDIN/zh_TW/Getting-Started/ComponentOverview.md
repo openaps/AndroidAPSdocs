@@ -82,7 +82,7 @@ Combo、Insight 及舊版 Medtronic 是穩定的幫浦，且可以迴路使用�
 
 ## 等待模組期間該做什麼
 
-有時候獲得所有模組以完成迴路需要一些時間。但不用擔心，還有很多事情可以在等待期間進行。確定需要檢查和（如有需要）調整基礎率（BR）、胰島素-碳水比（IC）、胰島素敏感性因子（ISF）等是**必要的**。或許開放迴路可以是一個測試該系統並熟悉 **AAPS** 的好方法。使用此模式，**AAPS** 會提供您可以手動執行的治療建議。
+有時候獲得所有模組以完成迴路需要一些時間。但不用擔心，還有很多事情可以在等待期間進行。 It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. 或許開放迴路可以是一個測試該系統並熟悉 **AAPS** 的好方法。使用此模式，**AAPS** 會提供您可以手動執行的治療建議。
 
 你可以繼續閱讀這裡的文件，與其他閉環系統用戶線上或離線交流，或[閱讀](../UsefulLinks/BackgroundReading.md)文件或其他用戶撰寫的內容（即使需要小心，不是所有內容都正確或適合你複製）。
 

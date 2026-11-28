@@ -145,7 +145,7 @@
 
 ### Рівень заряду батареї Libre smart reader
 
-- Рівень заряду батареї мостів, таких як MiaoMiao і Bubble, можна показувати в AAPS (але не Blucon).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Подробиці дивіться на [сторінці зі знімками екрана](#screens-sensor-level-battery).
 
 ### Підключіть трансмітер Libre і запустіть сенсор
