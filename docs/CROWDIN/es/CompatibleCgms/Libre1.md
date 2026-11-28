@@ -10,17 +10,18 @@ Comprueba que el puente y la app que quieres usar son compatibles con tu sensor.
 Algunos puentes todavía se venden:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (versión 1, 2 o 3), también disponible en AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) de vendedores europeos ([BubbleShop](https://bubbleshop.eu/)) o, para usuarios de Rusia, [aquí](https://vk.com/saharmonitor/). También disponible en AliExpress.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). También disponible en AliExpress.
 -   Atom para usuarios de Rusia.
 
 ## 1. Usar xDrip
 
--   xDrip es compatible con Miaomiao, Bubble, Blucon, Atom y LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Puedes descargar sin riesgo el [último APK (estable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), salvo que necesites funciones recientes. En ese caso, usa la última [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Sigue las instrucciones de configuración de la [página de ajustes de xDrip](../CompatibleCgms/xDrip.md).
 -    También necesitas OOP2 para Libre 1 US (y Libre 2 EU).
 -   Selecciona xDrip en [**Configuración → Fuente de glucosa**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Usar Diabox
 
 - Diabox es la app del fabricante para Bubble.
