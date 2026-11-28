@@ -399,12 +399,7 @@ Sie ist nützlich, um die an den Pod gesendeten Boli, TBRs und Basalbefehle zu p
 
 2. Der Bildschirm **Pod-Historie** öffnet sich mit dem Filter **Alle**. Er listet jeden Befehl mit Uhrzeit und Ergebnis auf, die neuesten zuerst, nach Tagen gruppiert. Mit den Filterschaltflächen oben (zum Beispiel **Boli** oder **Basal**) zeigst Du nur eine Art von Befehlen an. Tippe auf den Zurück-Pfeil, um zum DASH-Pumpenbildschirm zurückzukehren.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Der zweite Screenshot oben stammt aus einer früheren **AAPS**-Version, in der Du die Art des Befehls aus einer Liste **Typ** ausgewählt hast. In **AAPS** 4 nutzt Du die Filterschaltflächen aus dem ersten Screenshot.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    Bei Boli folgt auf die Menge die Bolusart, wenn es kein normaler Bolus ist, zum Beispiel *0,05 IE (SMB)* oder *0,05 IE (Basal Korrektur)*. Eine Basalkorrektur ist ein sehr kleiner Bolus (ein Pod-Puls, 0,05 IE), den der Treiber von sich aus sendet; Du hast ihn nicht angefordert.
 
@@ -495,18 +490,13 @@ Lege fest, ob **AAPS** zu seinen Benachrichtigungen einen Ton abspielt, wenn uns
 
 ## Alter von Insulin und Kanüle
 
-Die [Statuszeile](#screens-sensor-level-battery) auf dem Startbildschirm zeigt das Alter Deines Insulins und Deiner Kanüle. Beim Omnipod funktioniert das etwas anders als bei Pumpen mit Schlauch.
+Die [Statuszeile](#screens-sensor-level-battery) auf dem Startbildschirm zeigt das Alter Deines Insulins und Deiner Kanüle. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS** erfasst bei jeder Pod-Aktivierung automatisch einen Kanülen- und einen Insulinwechsel. Dadurch werden das Alter von **Insulin** und **Kanüle** nach jedem Pod-Wechsel auf null gesetzt. Du musst sie nicht selbst über **Nadelwechsel/Füllen** erfassen. Das liegt daran, dass der Pod die Kanüle direkt an der Stelle in die Haut einführt, an der er klebt: Der Omnipod hat keinen Schlauch.
+**AAPS** erfasst bei jeder Pod-Aktivierung automatisch einen Kanülen- und einen Insulinwechsel. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Du musst sie nicht selbst über **Nadelwechsel/Füllen** erfassen. Das liegt daran, dass der Pod die Kanüle direkt an der Stelle in die Haut einführt, an der er klebt: Der Omnipod hat keinen Schlauch.
 
 Das Alter der **Pumpenbatterie** wird nicht angezeigt: Batterie und Insulinreservoir sind in jeden Pod eingebaut, und die Batterie hält immer länger als der Pod selbst (maximal 80 Stunden).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-Der Screenshot oben stammt aus einer früheren **AAPS**-Version, in der dieses Alter im Bereich **Careportal** des Reiters **Aktionen** angezeigt wurde. In **AAPS** 4 wird es in der Statuszeile auf dem Startbildschirm angezeigt.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Level
 
