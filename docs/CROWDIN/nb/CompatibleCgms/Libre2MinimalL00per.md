@@ -347,7 +347,7 @@ På skjermen **BT Device** (sveip til venstre) kan du se flere detaljer om tilko
 
 &nbsp;
 
-- **NFC-skanneenhet fra tredjepart trengs ikke lenger** NFC-skanneenheter fra tredjepart (som Miaomiao, Bubble eller Blucon) trengs ikke lenger *(men kan fortsatt brukes)* for å samle inn målinger, siden sensoren alene nå kan levere dem via Bluetooth. Mindre maskinvare betyr færre ting som kan gå galt, færre enheter å lade og et mer minimalistisk oppsett.
+- **3rd party NFC scanning device no longer required** 3rd party NFC scanning devices such as (Miaomiao or Blucon) are no longer needed *(but can still be used)* to collect readings as the sensor alone can deliver them now via Bluetooth. Mindre maskinvare betyr færre ting som kan gå galt, færre enheter å lade og et mer minimalistisk oppsett.
 
 &nbsp;
 
@@ -379,7 +379,7 @@ På skjermen **BT Device** (sveip til venstre) kan du se flere detaljer om tilko
 
 &nbsp;
 
-- **NFC-skanneenheter fra tredjepart kan fortsatt brukes**. Ja, jeg førte dette opp som en ulempe, men jeg ville også påpeke at hvis noe går galt med sensoren og LL tar kontroll over den, kan du alltid falle tilbake på å sette en NFC-skanneenhet på sensoren for å få målinger i xDrip. Du kan også bruke en slik enhet i stedet for en direkte Bluetooth-tilkobling hvis du er mer komfortabel med et oppsett med en NFC-skanneenhet fra tredjepart (Miaomiao, Bubble, Blucon). Noen telefoner fungerer ikke så godt med direkte Bluetooth-binding til sensoren og henting av data. Du kan bruke disse enhetene som reserve eller til vanlig bruk; uansett har du fortsatt dette som et alternativ.
+- **NFC-skanneenheter fra tredjepart kan fortsatt brukes**. Ja, jeg førte dette opp som en ulempe, men jeg ville også påpeke at hvis noe går galt med sensoren og LL tar kontroll over den, kan du alltid falle tilbake på å sette en NFC-skanneenhet på sensoren for å få målinger i xDrip. You can also use this device instead of a direct Bluetooth connection if you are more comfortable with a setup consisting of a 3rd party NFC scanning device (Miaomiao, Blucon). Noen telefoner fungerer ikke så godt med direkte Bluetooth-binding til sensoren og henting av data. Du kan bruke disse enhetene som reserve eller til vanlig bruk; uansett har du fortsatt dette som et alternativ.
 - Hvis du planlegger å bruke **FSL Reader** som NFC-skanneenhet for å ta målinger, MÅ du starte FSL2-sensoren med den **ALLER FØRSTE NFC-skanningen** for å varme opp sensoren med **READER FØRST**.
 
 &nbsp;
