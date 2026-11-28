@@ -399,12 +399,7 @@ Joje patogu patikrinti į Pod išsiųstus bolusus, laikinas bazes ir valandinės
 
 2. Atsidaro ekranas **Pod istorija**, kuriame pasirinktas filtras **Visi**. Jame išvardytos visos komandos su laiku ir rezultatu, naujausios viršuje, sugrupuotos pagal dienas. Viršuje esančiais filtro mygtukais (pavyzdžiui, **Bolusai** arba **Bazė**) galite rodyti tik vieno tipo komandas. Paspauskite rodyklę atgal, kad grįžtumėte į DASH pompos ekraną.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Antroji aukščiau esanti ekrano kopija yra iš ankstesnės **AAPS** versijos, kurioje komandos tipą pasirinkdavote iš sąrašo **Tipas**. **AAPS** 4 versijoje naudojate filtro mygtukus, parodytus pirmojoje ekrano kopijoje.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    Bolusų atveju po kiekio nurodomas boluso tipas, jei tai ne įprastas bolusas, pavyzdžiui, *0,05 V (SMB)* arba *0,05 V (Bazės korekcija)*. Bazės korekcija yra labai mažas bolusas (vienas Pod impulsas, 0,05 V), kurį tvarkyklė siunčia pati; jūs jo neprašėte.
 
@@ -495,18 +490,13 @@ Pasirinkite, ar **AAPS** leidžia garsą su savo pranešimais, kai neaišku, ar 
 
 ## Insulino ir kaniulės amžius
 
-Pagrindinio ekrano [būsenos eilutėje](#screens-sensor-level-battery) rodomas jūsų insulino ir kaniulės amžius. Su Omnipod jie veikia šiek tiek kitaip nei su pompomis su vamzdeliu.
+Pagrindinio ekrano [būsenos eilutėje](#screens-sensor-level-battery) rodomas jūsų insulino ir kaniulės amžius. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-Kiekvieną kartą aktyvuojant Pod, **AAPS** automatiškai įrašo kaniulės keitimą ir insulino keitimą. Todėl po kiekvieno Pod keitimo amžiai **Insulinas** ir **Kaniulė** nustatomi į nulį. Jums nereikia jų įrašyti patiems per **Užpildymas**. Taip yra todėl, kad Pod įveda kaniulę tiesiai į odą toje vietoje, kur yra priklijuotas: Omnipod nenaudoja vamzdelio.
+Kiekvieną kartą aktyvuojant Pod, **AAPS** automatiškai įrašo kaniulės keitimą ir insulino keitimą. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Jums nereikia jų įrašyti patiems per **Užpildymas**. Taip yra todėl, kad Pod įveda kaniulę tiesiai į odą toje vietoje, kur yra priklijuotas: Omnipod nenaudoja vamzdelio.
 
 **Pompos baterija**: amžius nerodomas, nes baterija ir insulino rezervuaras yra įmontuoti kiekviename Pod, o baterija visada veikia ilgiau nei pats Pod (daugiausia 80 valandų).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-Aukščiau esanti ekrano kopija yra iš ankstesnės **AAPS** versijos, kurioje šie amžiai buvo rodomi skirtuko **Veiksmai** skyriuje **Terapija**. **AAPS** 4 versijoje jie rodomi pagrindinio ekrano būsenos eilutėje.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Level
 
