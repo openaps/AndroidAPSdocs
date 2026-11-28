@@ -82,7 +82,7 @@ Même si vous n'avez pas besoin de l'application xDrip comme **Source GLY**, vou
 
 ## Que faire en attendant les composants
 
-Cela peut prendre du temps de réunir tous les composants nécessaires pour une boucle fermée. Mais pas de soucis, il y a beaucoup de choses que vous pouvez faire en attendant. Il est **nécessaire** de vérifier et (si besoin) d'adapter les débits de basal (DB), le ratio glucides/insuline (G/I), la sensibilité à l'insuline (SI), etc. Et la boucle ouverte peut être un bon moyen de tester le système, et se familiariser avec **AAPS**. En utilisant ce mode, **AAPS** donne des recommandations de traitement, que vous pouvez appliquer manuellement.
+Cela peut prendre du temps de réunir tous les composants nécessaires pour une boucle fermée. Mais pas de soucis, il y a beaucoup de choses que vous pouvez faire en attendant. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. Et la boucle ouverte peut être un bon moyen de tester le système, et se familiariser avec **AAPS**. En utilisant ce mode, **AAPS** donne des recommandations de traitement, que vous pouvez appliquer manuellement.
 
 Vous pouvez continuer à lire la documentation ici, entrer en contact avec d'autres boucleurs en ligne ou hors ligne, [lire](../UsefulLinks/BackgroundReading.md) de la documentation ou ce que d'autres boucleurs écrivent (mais restez prudent : tout n'est pas correct ni bon à reproduire pour vous).
 
