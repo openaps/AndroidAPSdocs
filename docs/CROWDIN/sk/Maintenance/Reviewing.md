@@ -90,6 +90,8 @@ Pod AGP karta **Glucose Pentagon (CGP)** zobrazuje päť ukazovateľov vašej gl
 - **Celková denná dávka (CDD)** / **Celková denná dávka (CDD) - vyčistená**: vyberte celkovú dennú dávku tak, ako bola podaná, alebo CDD mínus inzulín na sacharidy.
 - **Posun cyklu**: posunie začiatok cyklu (0 až 27 dní).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Potrebné sú dáta aspoň za 56 dní (2 cykly). Ak je dát menej, karta zobrazí **Nedostatok dát (sú potrebné aspoň 56 dní pre 2 cykly)**. Vzor sa vypočíta až vtedy, keď otvoríte kartu **Cyklus**, pretože načítava dáta za 168 dní.
 
 (aaps-screens-treatments)=
