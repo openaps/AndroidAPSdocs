@@ -145,7 +145,7 @@ Dexcom 센서와 트랜스미터 자체에 관한 모든 내용(시작, 중지, 
 
 ### Libre smart reader 배터리 잔량
 
-- MiaoMiao와 Bubble 같은 브리지의 배터리 잔량을 AAPS에 표시할 수 있습니다(Blucon은 안 됨).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - 자세한 내용은 [스크린샷 페이지](#screens-sensor-level-battery)에서 볼 수 있습니다.
 
 ### Libre 트랜스미터 연결 & 센서 시작
