@@ -399,12 +399,7 @@ Pod에 보낸 볼러스, TBR, 기저 명령을 확인할 때 유용합니다. �
 
 2. **Pod 이력** 화면이 **전체** 필터가 선택된 상태로 열립니다. 모든 명령이 시간과 결과와 함께 최신 순으로, 날짜별로 묶여서 표시됩니다. 위쪽의 필터 버튼 (예: **볼러스** 또는 **기저**)을 사용하여 한 가지 유형의 명령만 표시하십시오. 뒤로 화살표를 눌러 DASH 펌프 화면으로 돌아가십시오.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   위의 두 번째 스크린샷은 **유형** 목록에서 명령 유형을 고르던 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 첫 번째 스크린샷에 보이는 필터 버튼을 사용합니다.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    볼러스가 일반 볼러스가 아니면 양 뒤에 볼러스 유형이 표시됩니다. 예: *0.05 U (SMB)* 또는 *0.05 U (기저 보정)*. 기저 보정은 드라이버가 스스로 보내는 아주 작은 볼러스 (Pod 펄스 1회, 0.05 U)입니다. 사용자가 요청한 것이 아닙니다.
 
@@ -495,18 +490,13 @@ TBR, SMB 또는 볼러스가 주입되었는지 불확실할 때와 주입이 �
 
 ## 인슐린 및 캐뉼라 사용 기간
 
-메인 화면의 [상태 표시줄](#screens-sensor-level-battery)에 인슐린과 캐뉼라의 사용 기간이 표시됩니다. Omnipod에서는 튜브 펌프와 조금 다르게 작동합니다.
+메인 화면의 [상태 표시줄](#screens-sensor-level-battery)에 인슐린과 캐뉼라의 사용 기간이 표시됩니다. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS**는 Pod를 활성화할 때마다 캐뉼라 교체와 인슐린 교체를 자동으로 기록합니다. 그래서 Pod를 교체할 때마다 **인슐린**과 **캐뉼라** 사용 기간이 0으로 초기화됩니다. **프라임/채우기**로 직접 기록할 필요가 없습니다. Pod는 붙인 곳의 피부에 캐뉼라를 바로 삽입하기 때문입니다: Omnipod는 튜브를 사용하지 않습니다.
+**AAPS**는 Pod를 활성화할 때마다 캐뉼라 교체와 인슐린 교체를 자동으로 기록합니다. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. **프라임/채우기**로 직접 기록할 필요가 없습니다. Pod는 붙인 곳의 피부에 캐뉼라를 바로 삽입하기 때문입니다: Omnipod는 튜브를 사용하지 않습니다.
 
 **펌프 배터리** 사용 기간은 보고되지 않습니다: 배터리와 인슐린 레저버가 각 Pod에 들어 있으며, 배터리는 항상 Pod 자체보다 오래 갑니다 (최대 80시간).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-위 스크린샷은 이 사용 기간이 **동작** 탭의 **케어포털** 부분에 표시되던 이전 **AAPS** 버전의 것입니다. **AAPS** 4에서는 메인 화면의 상태 표시줄에 표시됩니다.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Level
 
