@@ -90,6 +90,8 @@ Unter dem AGP zeichnet die Karte **Glukose Pentagon (CGP)** fünf Kennzahlen Dei
 - **Roh-TDD** / **TDD bereinigt**: Wähle die Gesamttagesdosis, wie sie abgegeben wurde, oder die TDD abzüglich des Insulins für Kohlenhydrate.
 - **Zyklusverschiebung**: verschiebt den Beginn des Zyklus (0 bis 27 Tage).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Es werden Daten von mindestens 56 Tagen (2 Zyklen) benötigt. Mit weniger Daten zeigt die Karte **Nicht genügend Daten (benötigt mindestens 56 Tage für 2 Zyklen)**. Das Muster wird erst berechnet, wenn Du den Reiter **Zyklus** öffnest, weil dafür Daten von 168 Tagen gelesen werden.
 
 (aaps-screens-treatments)=
