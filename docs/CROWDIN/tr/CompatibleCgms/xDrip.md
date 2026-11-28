@@ -145,7 +145,7 @@ Talimatları izleyin:
 
 ### Libre akıllı okuyucu pil seviyesi
 
-- MiaoMiao ve Bubble gibi köprülerin pil seviyesi AAPS'te gösterilebilir (Blucon hariç).
+- Battery level of bridges such as MiaoMiao can be displayed in AAPS (not Blucon).
 - Ayrıntıları [ekran görüntüleri sayfasında](#screens-sensor-level-battery) bulabilirsiniz.
 
 ### Libre Vericiyi Bağla & sensörü başlat
