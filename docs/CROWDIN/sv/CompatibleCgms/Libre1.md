@@ -10,17 +10,18 @@ Kontrollera att bryggan och appen du vill använda fungerar med din sensor.
 Några bryggor finns fortfarande att köpa:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (version 1, 2 eller 3) finns också på AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) från europeiska återförsäljare ([BubbleShop](https://bubbleshop.eu/)) eller för ryska användare [här](https://vk.com/saharmonitor/). Finns också på AliExpress.
+-   Bubble / Mini / Nano from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Finns också på AliExpress.
 -   Atom för ryska användare.
 
 ## 1. Använda xDrip
 
--   xDrip stöder Miaomiao, Bubble, Blucon, Atom och LibreAlarm.
+-   xDrip supports Miaomiao, Blucon, Atom and LibreAlarm.
 -   Du kan tryggt ladda ned [senaste APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk). Om du behöver nya funktioner ska du i stället använda senaste [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Följ instruktionerna på [sidan om xDrip-inställningar](../CompatibleCgms/xDrip.md).
 -    Du behöver också OOP2 för Libre 1 US (och Libre 2 EU).
 -   Välj xDrip i [**Konfiguration → BG-källa**](#Config-Builder-bg-source).
 
+(libre1-diabox)=
 ## 2. Använda Diabox
 
 - Diabox är tillverkarens app för Bubble.
