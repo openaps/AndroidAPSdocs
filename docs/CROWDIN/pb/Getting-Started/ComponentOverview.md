@@ -82,7 +82,7 @@ Mesmo que você não precise do app xDrip como sua **Fonte de BG**, você ainda 
 
 ## O que fazer enquanto espera pelos módulos
 
-Às vezes leva um tempo para conseguir todos os módulos para fechar o loop. Mas não se preocupe, há muitas coisas que você pode fazer enquanto espera. É **necessário** verificar e (quando for preciso) ajustar as taxas basais (BR), a relação insulina-carboidratos (IC), os fatores de sensibilidade à insulina (ISF) etc. E talvez o loop aberto seja uma boa forma de testar o sistema e se familiarizar com o **AAPS**. Nesse modo, o **AAPS** dá recomendações de tratamento que você pode executar manualmente.
+Às vezes leva um tempo para conseguir todos os módulos para fechar o loop. Mas não se preocupe, há muitas coisas que você pode fazer enquanto espera. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. E talvez o loop aberto seja uma boa forma de testar o sistema e se familiarizar com o **AAPS**. Nesse modo, o **AAPS** dá recomendações de tratamento que você pode executar manualmente.
 
 Você pode continuar lendo a documentação aqui, entrar em contato com outros loopers online ou offline, [ler](../UsefulLinks/BackgroundReading.md) documentação ou o que outros loopers escrevem (mas tenha cuidado: nem tudo está correto ou é bom para você repetir).
 
