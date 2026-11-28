@@ -90,6 +90,8 @@ Po AGP kortelėje **Išsamus gliukozės penkiakampis (CGP)** penkiakampiu pavaiz
 - **Neapdorota BPD** / **Išvalyta BPD**: pasirinkite bendrą paros dozę tokią, kokia suleista, arba BPD be insulino angliavandeniams.
 - **Ciklo poslinkis**: perkelia ciklo pradžią (nuo 0 iki 27 dienų).
 
+![Statistics: the Cycle tab with the TDD Cycle Pattern](../images/Maintenance/statistics_cycle.png)
+
 Reikia bent 56 dienų duomenų (2 ciklų). Jei duomenų mažiau, kortelėje rodoma **Nepakanka duomenų (2 ciklams reikia bent 56 dienų)**. Dėsningumas skaičiuojamas tik atvėrus skirtuką **BPD ciklas**, nes jam nuskaitomi 168 dienų duomenys.
 
 (aaps-screens-treatments)=
