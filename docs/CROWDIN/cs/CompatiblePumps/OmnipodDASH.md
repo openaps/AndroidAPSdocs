@@ -399,12 +399,7 @@ Hodí se ke kontrole bolusů, TBR a bazálních příkazů, které byly do podu 
 
 2. Otevře se obrazovka **Historie Podu** s vybraným filtrem **Vše**. Obsahuje všechny příkazy s časem a výsledkem, nejnovější nahoře, seskupené podle dnů. Pomocí tlačítek filtru nahoře (například **Bolusy** nebo **Bazály**) zobrazíte jen jeden typ příkazů. Stisknutím šipky zpět se vrátíte na obrazovku pumpy DASH.
 
-   ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   Druhý snímek obrazovky výše je ze starší verze **AAPS**, kde se typ příkazu vybíral ze seznamu **Type** (typ). V **AAPS** 4 používáte tlačítka filtru, která ukazuje první snímek obrazovky.
-   ```
+   ![The Pod History filter buttons](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![The Pod History list with TBRs, an SMB and a basal correction](../images/v4/Pumps/dash_pod_history_list.png)
 
    U bolusů následuje za množstvím typ bolusu, pokud nejde o normální bolus, například *0,05 U (SMB)* nebo *0,05 U (Korekce bazálu)*. Korekce bazálu je velmi malý bolus (jeden pulz podu, 0,05 U), který ovladač posílá sám; vy jste o něj nežádali.
 
@@ -495,18 +490,13 @@ Zvolte, zda má **AAPS** přehrát zvuk se svými oznámeními, když si není j
 
 ## Stáří inzulínu a kanyly
 
-[Stavový řádek](#screens-sensor-level-battery) na hlavní obrazovce ukazuje stáří vašeho inzulínu a kanyly. U Omnipodu to funguje trochu jinak než u pump s hadičkou.
+[Stavový řádek](#screens-sensor-level-battery) na hlavní obrazovce ukazuje stáří vašeho inzulínu a kanyly. With Omnipod, these work a little differently than with tube-based pumps: the cannula row is called **Patch pump**.
 
-**AAPS** při každé aktivaci podu automaticky zaznamená výměnu kanyly a výměnu inzulínu. Tím se stáří **Inzulín** a **Kanyla** po každé výměně podu vynuluje. Nemusíte je zaznamenávat sami pomocí **Plnění/doplňování**. Je to proto, že pod zavádí kanylu přímo do kůže v místě, kde je nalepený: Omnipod nepoužívá hadičku.
+**AAPS** při každé aktivaci podu automaticky zaznamená výměnu kanyly a výměnu inzulínu. This resets the **Patch pump** and **Insulin** ages to zero after every pod change. Nemusíte je zaznamenávat sami pomocí **Plnění/doplňování**. Je to proto, že pod zavádí kanylu přímo do kůže v místě, kde je nalepený: Omnipod nepoužívá hadičku.
 
 Stáří **Baterie pumpy** se nehlásí: baterie i zásobník inzulínu jsou součástí každého podu a baterie vždy vydrží déle než samotný pod (maximálně 80 hodin).
 
-![ACT_1](../images/DASH_images/Actions_Tab/dash_actions_tab_careportal_ages.png)
-
-```{admonition} Older screenshot
-:class: note
-Snímek obrazovky výše je ze starší verze **AAPS**, kde se tato stáří zobrazovala v části **Péče** na kartě **Akce**. V **AAPS** 4 se zobrazují ve stavovém řádku na hlavní obrazovce.
-```
+![Expanded status panel with Omnipod DASH: Patch pump and Insulin ages, no Pump battery row](../images/v4/Pumps/dash_status_panel.png)
 
 ### Úroveň
 
