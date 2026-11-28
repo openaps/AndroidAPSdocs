@@ -82,7 +82,7 @@ Användare gör en [lista över testade telefoner och klockor](#Phones-list-of-t
 
 ## Vad du kan göra medan du väntar på modulerna
 
-Ibland tar det ett tag att få alla moduler som behövs för att sluta loopen. Men oroa dig inte, det finns mycket du kan göra medan du väntar. Det är **nödvändigt** att kontrollera och (vid behov) anpassa basaldoser (BR), KH-kvot (IC), insulinkänslighetsfaktorer (ISF) och så vidare. Och öppen loop kan vara ett bra sätt att testa systemet och lära känna **AAPS**. I det här läget ger **AAPS** förslag på behandlingar som du kan utföra manuellt.
+Ibland tar det ett tag att få alla moduler som behövs för att sluta loopen. Men oroa dig inte, det finns mycket du kan göra medan du väntar. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carb ratio (IC), insulin-sensitivity-factors (ISF) etc. Och öppen loop kan vara ett bra sätt att testa systemet och lära känna **AAPS**. I det här läget ger **AAPS** förslag på behandlingar som du kan utföra manuellt.
 
 Du kan fortsätta läsa dokumentationen här, kontakta andra loopare online eller offline, [läsa](../UsefulLinks/BackgroundReading.md) dokumentation eller det som andra loopare skriver (men var försiktig, allt är inte korrekt eller bra för dig att göra likadant).
 
